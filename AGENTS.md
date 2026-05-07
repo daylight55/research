@@ -1,10 +1,11 @@
 # Technical Research Repository Instructions
 
-このリポジトリは、広範な技術調査をテーマ別ディレクトリで継続管理するためのものです。
+このリポジトリは、広範な技術調査をカテゴリ別ディレクトリで継続管理するためのものです。
 
 ## Repository Structure
 
-- 新しい調査テーマは `research/<topic>/` を作成して管理する。
+- 新しい調査テーマは `research/<category>/<topic>/` を作成して管理する。
+- `<category>` は調査領域を表す短い kebab-case 名にする。例: `ai-systems`, `enterprise-ai-platforms`, `developer-tools`, `data-infrastructure`。
 - 各テーマには原則として次を置く。
   - `report.md`: 調査レポート本文
   - `research-tasks.md`: 調査タスク、完了状況、追加深掘り候補
@@ -43,4 +44,3 @@ Excalidraw MCPやNanobanaa CLIが利用できない場合は、Mermaidで代替�
 - 学術的厳密さと実務判断の両方を重視する。
 - 主張、根拠、限界、実務含意を分けて書く。
 - 「できること」と「できないこと」を明確にする。
-

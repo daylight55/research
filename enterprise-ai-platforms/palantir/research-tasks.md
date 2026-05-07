@@ -20,12 +20,16 @@ Palantir Technologiesを、企業・政府向けAI/データ運用プラット�
 - [x] **6. 批判的評価**: 監視、軍事利用、医療データ、ベンダーロックイン、説明責任、AIガバナンスの論点を整理する。
 - [x] **7. レポート作成**: 日本語の実務向けレポートとして結論、根拠、限界、導入判断をまとめる。
 - [x] **8. 図解追加**: Mermaidでアーキテクチャ、導入プロセス、リスク評価を追加する。
-- [ ] **9. 追加深掘り候補**: Palantir Foundry代替アーキテクチャ、Graphiti/Knowledge Graphとの比較、公共部門調達リスク評価、AIP類似OSS構成のPoCを別テーマ化する。
+- [x] **9. 歴史・思想分析**: 創業、Gotham、Foundry、政府調達、S-1、The Technological Republic、イスラエル関連論点から、Palantirの深層構造と実務的含意を整理する。
+- [ ] **10. 追加深掘り候補**: Palantir Foundry代替アーキテクチャ、Graphiti/Knowledge Graphとの比較、公共部門調達リスク評価、AIP類似OSS構成のPoCを別テーマ化する。
 
 ## 主要ソース
 
 - Palantir公式ドキュメント: AIP、Foundry、Ontology、Apollo
 - Palantir Investor Relations / SEC: 2025 Form 10-K、Q1 2026 Business Update / press release
+- Palantir SEC: 2020 Form S-1
+- Palantir: 2022 Annual Letter
+- Penguin Random House: The Technological Republic press release
 - NHS England: Federated Data Platform contract explainer
 - Amnesty International: Palantir and human rights due diligence report
 - Medact: NHS Palantir/FDP briefing

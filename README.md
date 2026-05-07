@@ -5,21 +5,20 @@
 ## Structure
 
 ```text
-research/
-  <category>/
-    <topic>/
-      report.md
-      research-tasks.md
+<category>/
+  <topic>/
+    report.md
+    research-tasks.md
 ```
 
 ## Current Reports
 
-- [AI / LLM / Ontology / Organizational Memory](research/ai-systems/ai-llm-ontology-memory/report.md)
-- [Palantir](research/enterprise-ai-platforms/palantir/report.md)
+- [AI / LLM / Ontology / Organizational Memory](ai-systems/ai-llm-ontology-memory/report.md)
+- [Palantir](enterprise-ai-platforms/palantir/report.md)
 
 ## Policy
 
-各調査テーマは `research/<category>/<topic>/` に分け、少なくとも次のファイルを置きます。
+各調査テーマは `<category>/<topic>/` に分け、少なくとも次のファイルを置きます。
 
 - `report.md`: 調査結果の本文
 - `research-tasks.md`: 調査タスク、残課題、追加深掘り候補

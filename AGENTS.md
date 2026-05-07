@@ -4,8 +4,8 @@
 
 ## Repository Structure
 
-- 新しい調査テーマは `<category>/<topic>/` を作成して管理する。
-- `<category>` は調査領域を表す短い kebab-case 名にする。例: `ai-systems`, `enterprise-ai-platforms`, `developer-tools`, `data-infrastructure`。
+- 新しい調査テーマは `category/<category-name>/<topic>/` を作成して管理する。
+- `<category-name>` は調査領域を表す短い kebab-case 名にする。例: `ai-systems`, `enterprise-ai-platforms`, `developer-tools`, `data-infrastructure`。
 - 各テーマには原則として次を置く。
   - `report.md`: 調査レポート本文
   - `research-tasks.md`: 調査タスク、完了状況、追加深掘り候補

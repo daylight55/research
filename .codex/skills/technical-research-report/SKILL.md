@@ -1,6 +1,6 @@
 ---
 name: technical-research-report
-description: Use when creating or updating research reports in this repository, especially broad technical investigations, literature-backed technology surveys, AI/LLM/MCP/ontology/memory research, source-grounded reports, diagram-rich explanations, or practical adoption recommendations. Store research outputs under root-level category/topic directories: <category>/<topic>/.
+description: Use when creating or updating research reports in this repository, especially broad technical investigations, literature-backed technology surveys, AI/LLM/MCP/ontology/memory research, source-grounded reports, diagram-rich explanations, or practical adoption recommendations. Store research outputs under category/<category-name>/<topic>/.
 ---
 
 # Technical Research Report
@@ -9,9 +9,9 @@ Use this skill for any report or investigation in this repository.
 
 ## Output Location
 
-- Put each topic under `<category>/<topic>/` at the repository root.
-- Treat `<category>/<topic>/` as the canonical location for research information in this repository. Do not put new reports under a top-level `research/` directory.
-- Use a short kebab-case category directory such as `ai-systems`, `enterprise-ai-platforms`, `developer-tools`, or `data-infrastructure`.
+- Put each topic under `category/<category-name>/<topic>/`.
+- Treat `category/<category-name>/<topic>/` as the canonical location for research information in this repository. Do not put new reports under a top-level `research/` directory or directly at the repository root.
+- Use a short kebab-case category name such as `ai-systems`, `enterprise-ai-platforms`, `developer-tools`, or `data-infrastructure`.
 - Maintain at least:
   - `report.md`
   - `research-tasks.md`

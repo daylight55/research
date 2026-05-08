@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from '@/site-config'
+import { withBase } from '@/utils'
 import '../styles/global.css'
 import { ViewTransitions } from 'astro:transitions'
 
@@ -12,7 +13,7 @@ export interface Props {
 
 const { title, description = siteConfig.description, ogImage, articleDate } = Astro.props
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
-const socialImageURL = new URL(ogImage ? ogImage : '/open-graph.png', Astro.url).href
+const socialImageURL = new URL(withBase(ogImage ? ogImage : '/open-graph.png'), Astro.site).href
 
 const titleSeparator = '•'
 
@@ -23,7 +24,7 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 <!-- Global Metadata -->
 <meta charset='utf-8' />
 <meta name='viewport' content='width=device-width,initial-scale=1' />
-<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+<link rel='icon' type='image/svg+xml' href={withBase('/favicon.svg')} />
 <meta name='generator' content={Astro.generator} />
 
 <!-- Canonical URL -->
@@ -63,5 +64,4 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 <meta property='twitter:image' content={socialImageURL} />
 
 <!-- RSS auto-discovery -->
-<link rel='alternate' type='application/rss+xml' title={siteConfig.title} href='/rss.xml' />
-
+<link rel='alternate' type='application/rss+xml' title={siteConfig.title} href={withBase('/rss.xml')} />

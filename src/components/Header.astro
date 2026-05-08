@@ -5,10 +5,11 @@ import Search from '@/components/Search'
 import TagIcon from './icons/TagIcon.astro'
 import ToggleTheme from './ToggleTheme.astro'
 import { SOCIALNETWORKS } from '@/data/links'
+import { withBase } from '@/utils'
 ---
 
 <header class='relative flex items-center h-12 font-semibold'>
-	<a class='text-lg mr-auto' href='/'>Home</a>
+	<a class='text-lg mr-auto' href={withBase('/')}>Home</a>
 
 	<div
 		id='astro-header-drawer'

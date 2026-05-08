@@ -4,9 +4,13 @@ import tailwind from '@astrojs/tailwind'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 import { siteConfig } from './src/data/site.config'
 
+const site = process.env.ASTRO_SITE ?? siteConfig.site
+const base = process.env.ASTRO_BASE ?? '/'
+
 // https://astro.build/config
 export default defineConfig({
-	site: siteConfig.site,
+	site,
+	base,
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,

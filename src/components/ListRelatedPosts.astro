@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 
-import { cn } from '@/utils'
+import { cn, withBase } from '@/utils'
 import { Image } from 'astro:assets'
 
 type Props = {
@@ -28,7 +28,7 @@ const { posts } = Astro.props
 							/>
 						</div>
 						<header class='flex justify-center items-center'>
-							<a class='font-medium  hover:underline' href={`/post/${post.slug}/`}>
+							<a class='font-medium  hover:underline' href={withBase(`/post/${post.slug}/`)}>
 								{post.data.title}
 							</a>
 						</header>

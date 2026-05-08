@@ -1,0 +1,121 @@
+name: Pages PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: pages-preview-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event_name != 'pull_request' || github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Detect Astro project
+        id: detect
+        shell: bash
+        run: |
+          if [[ -f package.json && -f astro.config.mjs ]]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Setup pnpm
+        if: steps.detect.outputs.enabled == 'true'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        if: steps.detect.outputs.enabled == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        if: steps.detect.outputs.enabled == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        if: steps.detect.outputs.enabled == 'true'
+        run: pnpm build
+
+      - name: Publish PR preview
+        if: steps.detect.outputs.enabled == 'true' && github.event_name == 'pull_request'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
+          destination_dir: pr-${{ github.event.pull_request.number }}
+          keep_files: true
+
+      - name: Publish main site
+        if: steps.detect.outputs.enabled == 'true' && github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
+          keep_files: true
+
+      - name: Comment preview URL
+        if: steps.detect.outputs.enabled == 'true' && github.event_name == 'pull_request'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pages-preview
+          message: |
+            GitHub Pages preview:
+            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/
+
+      - name: Comment skipped preview
+        if: steps.detect.outputs.enabled != 'true' && github.event_name == 'pull_request'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pages-preview
+          message: |
+            GitHub Pages preview was skipped because this branch does not contain an Astro project at the repository root.
+
+  cleanup:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cleanup PR preview
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { execFileSync } = require('node:child_process')
+            const fs = require('node:fs')
+            const repo = process.env.GITHUB_REPOSITORY
+            const token = process.env.GITHUB_TOKEN
+            const pr = context.payload.pull_request.number
+            const url = `https://x-access-token:${token}@github.com/${repo}.git`
+
+            execFileSync('git', ['clone', '--depth', '1', '--branch', 'gh-pages', url, 'gh-pages'], { stdio: 'inherit' })
+            process.chdir('gh-pages')
+
+            const dir = `pr-${pr}`
+            if (!fs.existsSync(dir)) {
+              core.info(`${dir} does not exist; nothing to clean up.`)
+              return
+            }
+
+            fs.rmSync(dir, { recursive: true, force: true })
+            execFileSync('git', ['config', 'user.name', 'github-actions[bot]'])
+            execFileSync('git', ['config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com'])
+            execFileSync('git', ['add', '-A'])
+            execFileSync('git', ['commit', '-m', `Remove preview for PR #${pr}`], { stdio: 'inherit' })
+            execFileSync('git', ['push', 'origin', 'gh-pages'], { stdio: 'inherit' })

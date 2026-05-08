@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	/* body {
+		transition: background-color 0.5s ease;
+	} */
+
+	.prose code {
+		@apply text-base;
+	}
+
+	/* prose styles here */
+	.prose h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply text-zinc-800 dark:text-zinc-100   !important;
+	}
+
+	html.dark .shiki,
+	html.dark .shiki span {
+	  color: var(--shiki-dark) !important;
+	  background-color: theme(colors.gray.900) !important;
+	}
+}
+
+.glass {
+	background: rgba(57, 56, 56, 0.52);
+	backdrop-filter: blur(13px) saturate(150%);
+	-webkit-backdrop-filter: blur(13px) saturate(150%);
+	z-index: -1;
+}
+
+.shadow {
+	box-shadow: -5px 3px 8px 1px rgba(0, 0, 0, 0.12);
+}
+
+@layer base {
+	.prose { max-width: 78ch; }
+	.prose a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+	.prose pre { border-radius: 8px; }
+}
+:root { --accent: #e34f6f; --accent-soft: #ffe1e9; --paper: #ffffff; --ink-muted: #646070; }
+body { background: #fbfbfd; }
+html.dark body { background: #101018; }
+.research-hero { border: 1px solid rgba(227, 79, 111, .18); background: linear-gradient(135deg, #ffffff 0%, #fff0f4 42%, #edf7f5 100%); }
+html.dark .research-hero { background: linear-gradient(135deg, #181722 0%, #2a1720 45%, #10201e 100%); }
+.research-chip { background: #ffe1e9; color: #97314a; }
+html.dark .research-chip { background: rgba(227, 79, 111, .17); color: #ffb6c8; }
+
+@font-face { font-family: 'Manrope'; src: url('/fonts/Manrope-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('/fonts/Manrope-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Manrope'; src: url('/fonts/Manrope-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+body { font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif; }

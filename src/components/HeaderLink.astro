@@ -1,0 +1,20 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+import { cn, withBase, withoutBase } from '@/utils'
+type Props = HTMLAttributes<'a'>
+
+const { href, class: className, ...props } = Astro.props
+
+const { pathname } = Astro.url
+const currentPath = withoutBase(pathname)
+const isActive = href === currentPath || href === currentPath.replace(/\/$/, '')
+---
+
+<a
+	href={withBase(href)}
+	class={cn(isActive ? 'text-opacity-100' : 'text-opacity-60', className)}
+	rel='noopener noreferrer '
+	{...props}
+>
+	<slot />
+</a>

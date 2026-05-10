@@ -16,6 +16,7 @@ category/
 
 - [AI / LLM / Ontology / Organizational Memory](category/ai-systems/ai-llm-ontology-memory/report.md)
 - [Palantir](category/enterprise-ai-platforms/palantir/report.md)
+- [戸建てを購入するときの注意点](category/real-estate/detached-house-purchase-checklist/report.md)
 
 ## Policy
 

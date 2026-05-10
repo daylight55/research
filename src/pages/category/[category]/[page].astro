@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout'
 import ListPosts from '@/components/ListPosts'
 import ListCategories from '@/components/ListCategories'
 import TitlePage from '@/components/TitlePage'
-import { sluglify, unsluglify, getCategories, getPosts } from '@/utils'
+import { sluglify, getCategories, getPosts } from '@/utils'
 import { siteConfig } from '@/data/site.config'
 import Pagination from '@/components/Pagination'
 
@@ -12,9 +12,8 @@ export async function getStaticPaths({ paginate }: any) {
 	const allPosts = await getPosts()
 
 	return categories.flatMap((category: string) => {
-		const unsluglifyNameCategory = unsluglify(category!.toLowerCase())
 		const filteredPosts = allPosts.filter(
-			(post) => post.data.category.toLowerCase() === unsluglifyNameCategory
+			(post) => post.data.category.toLowerCase() === category.toLowerCase()
 		)
 
 		return paginate(filteredPosts, {
@@ -28,9 +27,8 @@ export async function getStaticPaths({ paginate }: any) {
 const params = Astro.params
 const { page } = Astro.props
 
-const unsluglifyNameCategory = unsluglify(params.category!.toLowerCase())
 const categoryName = (await getCategories()).find(
-	(category) => category.toLowerCase() === unsluglifyNameCategory
+	(category) => sluglify(category.toLowerCase()) === params.category!.toLowerCase()
 )
 const posts = page.data
 ---

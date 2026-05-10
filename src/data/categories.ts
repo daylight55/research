@@ -1,2 +1,2 @@
 // Research report categories
-export const CATEGORIES = ['ai-systems', 'enterprise-ai-platforms'] as const
+export const CATEGORIES = ['ai-systems', 'enterprise-ai-platforms', 'macro-finance'] as const

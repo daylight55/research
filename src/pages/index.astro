@@ -2,10 +2,11 @@
 import ListCategories from '@/components/ListCategories'
 import ListPosts from '@/components/ListPosts'
 import BaseLayout from '@/layouts/BaseLayout'
-import { getPosts } from '@/utils'
+import { getCategories, getPosts } from '@/utils'
 import { siteConfig } from '@/site-config'
 
 const posts = await getPosts()
+const categories = await getCategories()
 const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
 ---
 
@@ -30,7 +31,7 @@ const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
 					<div class='text-sm text-gray-600 dark:text-gray-300'>Reports</div>
 				</div>
 				<div class='rounded-md bg-white/70 p-4 shadow-sm dark:bg-white/10'>
-					<div class='text-3xl font-semibold'>2</div>
+					<div class='text-3xl font-semibold'>{categories.length}</div>
 					<div class='text-sm text-gray-600 dark:text-gray-300'>Categories</div>
 				</div>
 				<div class='rounded-md bg-white/70 p-4 shadow-sm dark:bg-white/10'>

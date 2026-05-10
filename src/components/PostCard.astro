@@ -75,14 +75,17 @@ const {
 		const showAnimations = localStorage.getItem('animations') === 'true'
 
 		if (showAnimations) {
-			animate(
-				'.effect',
-				{
-					opacity: [0, 1],
-					clipPath: ['circle(0% at 0% 0%)', 'circle(100% at 50% 50%)']
-				},
-				{ duration: 2, easing: 'ease' }
-			)
+			const effectElements = document.querySelectorAll('.effect')
+			Array.from(effectElements).forEach((element) => {
+				animate(
+					element,
+					{
+						opacity: [0, 1],
+						clipPath: ['circle(0% at 0% 0%)', 'circle(100% at 50% 50%)']
+					},
+					{ duration: 2, easing: 'ease' }
+				)
+			})
 		} else {
 			images.forEach((img) => {
 				img.classList.remove('opacity-0')

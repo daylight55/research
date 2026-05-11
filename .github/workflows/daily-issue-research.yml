@@ -1,0 +1,242 @@
+name: Daily Issue Research
+
+on:
+  schedule:
+    # 00:00 JST every day.
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "Optional issue number to research immediately"
+        required: false
+        type: string
+      labels:
+        description: "Comma-separated labels used for scheduled issue selection"
+        required: false
+        default: "daily-research"
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: daily-issue-research
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    outputs:
+      issue_found: ${{ steps.select_issue.outputs.issue_found }}
+      issue_number: ${{ steps.select_issue.outputs.issue_number }}
+      pr_url: ${{ steps.create_pr.outputs.pr_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Select research issue
+        id: select_issue
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.inputs.issue_number || '' }}
+          LABELS: ${{ github.event.inputs.labels || 'daily-research' }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p .github/codex/runtime
+
+          if [[ -n "${ISSUE_NUMBER}" ]]; then
+            gh issue view "${ISSUE_NUMBER}" \
+              --json number,title,body,labels,url,state \
+              > .github/codex/runtime/selected-issue.json
+          else
+            label_args=()
+            IFS=',' read -ra labels <<< "${LABELS}"
+            for label in "${labels[@]}"; do
+              label="$(echo "${label}" | xargs)"
+              if [[ -n "${label}" ]]; then
+                gh label create "${label}" \
+                  --description "Issue is eligible for scheduled Codex research" \
+                  --color "5319E7" \
+                  2>/dev/null || true
+                label_args+=(--label "${label}")
+              fi
+            done
+
+            gh issue list \
+              --state open \
+              "${label_args[@]}" \
+              --json number,title,body,labels,url,createdAt,updatedAt \
+              --limit 100 \
+              | jq 'map(select(([.labels[].name] | index("research-pr-opened") | not) and ([.labels[].name] | index("research-skip") | not))) | sort_by(.updatedAt, .createdAt, .number) | .[0] // empty' \
+              > .github/codex/runtime/selected-issue.json
+          fi
+
+          if [[ ! -s .github/codex/runtime/selected-issue.json ]] || [[ "$(cat .github/codex/runtime/selected-issue.json)" == "null" ]]; then
+            echo "issue_found=false" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          issue_number="$(jq -r '.number' .github/codex/runtime/selected-issue.json)"
+          issue_title="$(jq -r '.title' .github/codex/runtime/selected-issue.json)"
+
+          echo "issue_found=true" >> "${GITHUB_OUTPUT}"
+          echo "issue_number=${issue_number}" >> "${GITHUB_OUTPUT}"
+          {
+            echo "issue_title<<EOF"
+            echo "${issue_title}"
+            echo "EOF"
+          } >> "${GITHUB_OUTPUT}"
+
+      - name: Compose Codex prompt
+        if: steps.select_issue.outputs.issue_found == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cp .github/codex/prompts/daily-issue-research.md .github/codex/runtime/daily-research-prompt.md
+
+          {
+            echo
+            echo "## Selected Issue Context"
+            echo
+            jq -r '"- Issue: #\(.number) \(.title)\n- URL: \(.url)\n- Labels: \([.labels[].name] | join(", "))"' .github/codex/runtime/selected-issue.json
+            echo
+            echo "### Issue Body"
+            echo
+            jq -r '.body // "(no body)"' .github/codex/runtime/selected-issue.json
+          } >> .github/codex/runtime/daily-research-prompt.md
+
+      - name: Setup pnpm
+        if: steps.select_issue.outputs.issue_found == 'true'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        if: steps.select_issue.outputs.issue_found == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        if: steps.select_issue.outputs.issue_found == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Run Codex research
+        if: steps.select_issue.outputs.issue_found == 'true'
+        id: run_codex
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: .github/codex/runtime/daily-research-prompt.md
+          output-file: codex-output.md
+          safety-strategy: drop-sudo
+          sandbox: workspace-write
+          codex-args: --search
+          effort: high
+          allow-bots: true
+
+      - name: Remove runtime prompt artifacts
+        if: always()
+        shell: bash
+        run: |
+          rm -rf .github/codex/runtime codex-output.md
+
+      - name: Check generated diff
+        if: steps.select_issue.outputs.issue_found == 'true'
+        id: diff_check
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git diff --check
+
+          if git diff --quiet --exit-code; then
+            echo "has_changes=false" >> "${GITHUB_OUTPUT}"
+          else
+            echo "has_changes=true" >> "${GITHUB_OUTPUT}"
+          fi
+
+      - name: Create research pull request
+        if: steps.diff_check.outputs.has_changes == 'true'
+        id: create_pr
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
+          ISSUE_TITLE: ${{ steps.select_issue.outputs.issue_title }}
+          CODEX_FINAL_MESSAGE: ${{ steps.run_codex.outputs.final-message }}
+        run: |
+          set -euo pipefail
+
+          branch="codex/daily-research-${ISSUE_NUMBER}-${GITHUB_RUN_ID}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "${branch}"
+          git add -A
+          git commit -m "Add daily research report for issue #${ISSUE_NUMBER}"
+          git push origin "${branch}"
+
+          pr_body="$(mktemp)"
+          {
+            echo "Closes #${ISSUE_NUMBER}"
+            echo
+            echo "Daily Codex research run for: ${ISSUE_TITLE}"
+            echo
+            echo "## Codex summary"
+            echo
+            if [[ -n "${CODEX_FINAL_MESSAGE}" ]]; then
+              echo "${CODEX_FINAL_MESSAGE}"
+            else
+              echo "Codex did not return a final message."
+            fi
+          } > "${pr_body}"
+
+          pr_url="$(gh pr create \
+            --title "Daily research: #${ISSUE_NUMBER} ${ISSUE_TITLE}" \
+            --body-file "${pr_body}" \
+            --base main \
+            --head "${branch}")"
+
+          echo "pr_url=${pr_url}" >> "${GITHUB_OUTPUT}"
+
+      - name: Mark issue with PR
+        if: steps.create_pr.outputs.pr_url != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
+          PR_URL: ${{ steps.create_pr.outputs.pr_url }}
+        run: |
+          set -euo pipefail
+
+          gh label create research-pr-opened \
+            --description "A daily Codex research PR has been opened for this issue" \
+            --color "0E8A16" \
+            --force
+
+          gh issue edit "${ISSUE_NUMBER}" --add-label research-pr-opened
+          gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR opened: ${PR_URL}"
+
+      - name: Comment when no issue was selected
+        if: steps.select_issue.outputs.issue_found == 'false'
+        run: |
+          echo "No open issue matched the configured daily research labels."
+
+      - name: Comment when Codex produced no diff
+        if: steps.select_issue.outputs.issue_found == 'true' && steps.diff_check.outputs.has_changes == 'false'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
+          CODEX_FINAL_MESSAGE: ${{ steps.run_codex.outputs.final-message }}
+        run: |
+          gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research ran, but no repository changes were produced.
+
+          ${CODEX_FINAL_MESSAGE}"

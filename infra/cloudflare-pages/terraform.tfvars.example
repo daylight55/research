@@ -1,0 +1,12 @@
+account_id      = "00000000000000000000000000000000"
+github_owner_id = "00000000"
+github_repo_id  = "000000000"
+
+# Keep null to avoid coupling this infrastructure PR to a specific frontend build.
+# For the Astro variants, a later PR can set:
+# build_config = {
+#   build_command   = "pnpm build"
+#   destination_dir = "dist"
+#   root_dir        = "/"
+#   build_caching   = true
+# }

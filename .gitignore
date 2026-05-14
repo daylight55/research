@@ -29,3 +29,10 @@ dist/
 .astro/
 
 node_modules
+
+# Terraform local state
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example

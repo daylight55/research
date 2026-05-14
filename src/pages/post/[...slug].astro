@@ -1,0 +1,105 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content'
+import BlogPost from '@/layouts/BlogPost'
+import Code from '@/components/mdx/Code'
+import ListRelatedPosts from '@/components/ListRelatedPosts'
+import Share from '@/components/Share'
+import TableOfContents from '@/components/TableOfContents'
+import { getPosts } from '@/utils'
+import SButton from '@/components/mdx/SButton'
+import Disqus from '@/components/Disqus'
+import { disqusConfig } from '@/data/disqus.config'
+
+const posts = await getCollection('blog')
+export async function getStaticPaths() {
+	const posts = await getPosts()
+
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post
+	}))
+}
+type Props = CollectionEntry<'blog'>
+
+const post = Astro.props
+const MAX_POSTS = 3
+const getRelatedPosts = (post: Props) => {
+	const lowercaseTags = post.data.tags.map((tag) => tag.toLowerCase())
+	const relatedPosts = posts.filter(
+		(p) => p.slug !== post.slug && p.data.tags.some((t) => lowercaseTags.includes(t.toLowerCase()))
+	)
+	return relatedPosts.slice(0, MAX_POSTS)
+}
+
+const relatedPosts = getRelatedPosts(post)
+
+const { Content, headings, remarkPluginFrontmatter } = await post.render()
+
+const disqusEnabled = disqusConfig.enabled
+---
+
+<BlogPost
+	id={post.id}
+	data={post.data}
+	headings={headings}
+	readTime={remarkPluginFrontmatter.minutesRead}
+>
+	<div class='grid grid-cols-1 gap-10 mt-8 lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-16'>
+		<!-- aside  -->
+		<aside class='hidden lg:flex flex-col gap-8 pr-2'>
+			<Share />
+			<div class='sticky top-24 self-start hidden lg:block transition-all duration-200'>
+				{headings && headings.length > 0 && <TableOfContents {headings} />}
+			</div>
+		</aside>
+
+		<!-- post -->
+		<article class='max-w-full w-full'>
+			<div class='prose prose-base md:prose-lg dark:prose-invert mb-12 min-w-full max-w-none prose-p:leading-8 prose-li:leading-8'>
+				<Content components={{ pre: Code, SButton }} />
+			</div>
+
+			<!-- related posts -->
+			<footer>
+				<h2 class='font-bold text-lg dark:text-white mb-6'>Related Posts</h2>
+				<ListRelatedPosts posts={relatedPosts} />
+			</footer>
+		</article>
+	</div>
+
+	{disqusEnabled && <Disqus />}
+</BlogPost>
+
+<script>
+	const renderMermaid = async () => {
+		const blocks = Array.from(document.querySelectorAll('pre code')).filter((code) => /^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram|erDiagram|journey|gantt|pie|timeline|mindmap|quadrantChart|requirementDiagram|c4Context)\b/.test((code.textContent || '').trim()))
+		if (blocks.length === 0) return
+
+		const { default: mermaid } = await import('mermaid')
+		mermaid.initialize({
+			startOnLoad: false,
+			securityLevel: 'strict',
+			theme: document.documentElement.classList.contains('dark') ? 'dark' : 'neutral'
+		})
+
+		for (const [index, code] of blocks.entries()) {
+			const pre = code.closest('pre')
+			if (!pre || pre.dataset.mermaidRendered === 'true') continue
+
+			try {
+				const id = `mermaid-${index}-${crypto.randomUUID()}`
+				const { svg } = await mermaid.render(id, code.textContent || '')
+				const figure = document.createElement('figure')
+				figure.className = 'my-8 overflow-x-auto rounded-md border border-black/10 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-white/5'
+				figure.innerHTML = svg
+				pre.dataset.mermaidRendered = 'true'
+				pre.replaceWith(figure)
+			} catch (error) {
+				console.warn('Failed to render Mermaid diagram', error)
+			}
+		}
+	}
+
+	renderMermaid()
+	document.addEventListener('astro:after-swap', renderMermaid)
+</script>

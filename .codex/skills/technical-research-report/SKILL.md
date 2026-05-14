@@ -37,7 +37,8 @@ Use this skill for any report or investigation in this repository.
    - open questions
 7. Write or update `report.md`.
 8. Verify links, unresolved placeholders, and internal consistency.
-9. Commit and push when the user asked for repository updates.
+9. When the user asks for repository publication, such as `PRにして`, `PRを作成して`, or `レポートにまとめてPRにして`, do not stop at local files. Commit, push, and create a GitHub Pull Request. Write the PR title and body in Japanese, using `.github/PULL_REQUEST_TEMPLATE.md` as the structure.
+10. User-requested changes may be committed per work unit without asking for separate commit approval. Before committing, inspect the intended diff and avoid staging unrelated changes.
 
 ## Citation Requirements
 
@@ -118,3 +119,7 @@ Before finishing:
 - The report distinguishes evidence from inference.
 - `research-tasks.md` reflects completed and remaining work.
 - `git diff --check` passes before committing.
+- Before committing a user-requested change, the staged diff includes only the intended files.
+- If creating a PR, unresolved placeholders such as `TBD`, `TODO`, `未定`, `要確認`, and `FIXME` have been checked and removed or intentionally explained.
+- If creating a PR, the PR title and body are written in Japanese and follow `.github/PULL_REQUEST_TEMPLATE.md`.
+- If creating a PR, the final response includes the verified PR URL, base branch, head branch, and draft/ready state.

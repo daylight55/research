@@ -45,27 +45,27 @@ variable "github_owner_id" {
 }
 
 variable "preview_branch_includes" {
-  description = "Preview deployment branch allowlist. Empty means Cloudflare default behavior."
+  description = "Preview deployment branch allowlist. Null means Cloudflare default behavior."
   type        = list(string)
-  default     = []
+  default     = null
 }
 
 variable "preview_branch_excludes" {
-  description = "Preview deployment branch denylist. Empty means Cloudflare default behavior."
+  description = "Preview deployment branch denylist. Null means Cloudflare default behavior."
   type        = list(string)
-  default     = []
+  default     = null
 }
 
 variable "path_includes" {
   description = "Optional repository path include filters for Pages builds."
   type        = list(string)
-  default     = []
+  default     = null
 }
 
 variable "path_excludes" {
   description = "Optional repository path exclude filters for Pages builds."
   type        = list(string)
-  default     = []
+  default     = null
 }
 
 variable "build_config" {

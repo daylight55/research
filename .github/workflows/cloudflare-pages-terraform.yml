@@ -54,6 +54,7 @@ jobs:
     environment: cloudflare-pages
     env:
       TF_VAR_account_id: ${{ vars.TF_VAR_CLOUDFLARE_ACCOUNT_ID }}
+      TF_VAR_project_name: daylight-research
       TF_VAR_github_owner_id: ${{ vars.TF_VAR_GITHUB_OWNER_ID }}
       TF_VAR_github_repo_id: ${{ vars.TF_VAR_GITHUB_REPO_ID }}
       TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -95,6 +96,24 @@ jobs:
 
       - name: Terraform init
         run: terraform init -backend-config=backend.hcl
+
+      - name: Import existing Pages project
+        shell: bash
+        run: |
+          if terraform state show cloudflare_pages_project.research >/dev/null 2>&1; then
+            echo "Cloudflare Pages project is already managed in Terraform state."
+            exit 0
+          fi
+
+          if curl --fail --silent --show-error \
+            --header "Authorization: Bearer ${TF_VAR_cloudflare_api_token}" \
+            --header "Content-Type: application/json" \
+            "https://api.cloudflare.com/client/v4/accounts/${TF_VAR_account_id}/pages/projects/${TF_VAR_project_name}" \
+            >/dev/null; then
+            terraform import cloudflare_pages_project.research "${TF_VAR_account_id}/${TF_VAR_project_name}"
+          else
+            echo "Cloudflare Pages project does not exist yet; Terraform will create it."
+          fi
 
       - name: Terraform plan
         run: terraform plan -out=tfplan

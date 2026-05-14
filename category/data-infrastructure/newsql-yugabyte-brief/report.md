@@ -1,8 +1,8 @@
 # NewSQLとYugabyteDBの最近の潮流
 
-作成日: 2026-05-10  
-調査方式: 実務面談準備向けのナラティブレビュー / 製品評価  
-カテゴリ: data-infrastructure  
+作成日: 2026-05-10
+調査方式: 実務面談準備向けのナラティブレビュー / 製品評価
+カテゴリ: data-infrastructure
 対象: NewSQL / Distributed SQLの重要概念、2026年時点の潮流、YugabyteDBのサービス概要、Yugabyte担当者との面談準備
 
 ## 引用方針

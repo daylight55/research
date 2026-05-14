@@ -27,8 +27,9 @@ export async function getStaticPaths({ paginate }: any) {
 const params = Astro.params
 const { page } = Astro.props
 
+const slugCategory = params.category!.toLowerCase()
 const categoryName = (await getCategories()).find(
-	(category) => sluglify(category.toLowerCase()) === params.category!.toLowerCase()
+	(category) => sluglify(category.toLowerCase()) === slugCategory
 )
 const posts = page.data
 ---

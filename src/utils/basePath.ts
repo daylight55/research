@@ -13,10 +13,6 @@ export function withBase(path: string) {
 	}
 
 	const normalizedPath = path.startsWith('/') ? path : `/${path}`
-	if (normalizedBase && (normalizedPath === normalizedBase || normalizedPath.startsWith(`${normalizedBase}/`))) {
-		return normalizedPath
-	}
-
 	return `${normalizedBase}${normalizedPath}` || '/'
 }
 

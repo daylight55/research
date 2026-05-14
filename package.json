@@ -1,8 +1,8 @@
 {
-  "name": "daylight-research-lab",
+  "name": "daylight-research-atlas",
   "type": "module",
   "version": "1.1.0",
-  "description": "カテゴリを横断して、仮説・出典・実務含意を軽快に探索するリサーチサイト。",
+  "description": "AI、データ、組織ナレッジの調査レポートを読むための静的リサーチアトラス。",
   "author": "danielcgilibert",
   "license": "GPL-3.0-only",
   "repository": {

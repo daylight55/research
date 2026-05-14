@@ -15,6 +15,19 @@
 
 調査レポート、技術選定、研究整理、論文比較、実務導入方針を作るときは、repo-local skill `technical-research-report` を使う。
 
+## Astro Site Publication Workflow
+
+- `category/<category-name>/<topic>/report.md` と `research-tasks.md` を追加しただけでは、トップページやカテゴリページには表示されない。
+- Webサイト上に表示する調査レポートは、必ず対応する `src/content/blog/<slug>.mdx` を追加する。
+- 新しいカテゴリを使う場合は、`src/data/categories.ts` の `CATEGORIES` に追加する。既存カテゴリとのコンフリクト時は、main側のカテゴリを消さずに和集合で解消する。
+- トップページなどの件数表示は固定値にしない。カテゴリ数は `CATEGORIES.length` など、実データから算出する。
+- PRやプレビュー表示を求められた場合は、`pnpm build` を実行し、生成ログに次が含まれることを確認する。
+  - `/post/<slug>/index.html`
+  - `/category/<category-name>/1/index.html`
+  - `/index.html`
+- さらに、`dist/index.html` またはローカル preview への `curl` で、トップページに `<slug>`、記事タイトル、カテゴリリンクが含まれることを確認する。
+- 「トップページに出ていない」「レンダリング対象に入っていない」と言われたら、まず `src/content/blog/*.mdx` と `src/data/categories.ts` の登録漏れを疑う。
+
 ## GitHub Publication Workflow
 
 - ユーザーが「PRにして」「PRを作成して」「レポートにまとめてPRにして」など、PR化やGitHub公開を求めた場合は、ローカルファイル作成で止めず、コミット、push、Pull Request作成まで行う。

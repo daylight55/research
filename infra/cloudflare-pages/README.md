@@ -18,4 +18,3 @@ terraform plan
 Set `CLOUDFLARE_API_TOKEN` in the environment or pass `cloudflare_api_token` through a secure tfvars mechanism.
 
 The Cloudflare account must already have the GitHub repository connected. Cloudflare's Terraform resource uses the connected provider's numeric `repo_id` and `owner_id`.
-

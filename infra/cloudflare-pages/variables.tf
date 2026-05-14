@@ -78,4 +78,3 @@ variable "build_config" {
   })
   default = null
 }
-

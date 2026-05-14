@@ -12,4 +12,3 @@ output "pages_domains" {
   description = "Custom domains attached to the Pages project."
   value       = cloudflare_pages_project.research.domains
 }
-

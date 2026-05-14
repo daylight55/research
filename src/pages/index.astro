@@ -4,6 +4,7 @@ import ListPosts from '@/components/ListPosts'
 import BaseLayout from '@/layouts/BaseLayout'
 import { getPosts } from '@/utils'
 import { siteConfig } from '@/site-config'
+import { CATEGORIES } from '@/data/categories'
 
 const posts = await getPosts()
 const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
@@ -14,8 +15,12 @@ const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
 		<div class='grid gap-8 md:grid-cols-[1.3fr_.7fr] md:items-end'>
 			<div class='grid gap-5'>
 				<div class='flex flex-wrap gap-2'>
-					<span class='research-chip rounded-full px-3 py-1 text-sm font-semibold'>Astro + OpenBlog</span>
-					<span class='research-chip rounded-full px-3 py-1 text-sm font-semibold'>Cloudflare Pages ready</span>
+					<span class='research-chip rounded-full px-3 py-1 text-sm font-semibold'
+						>Astro + OpenBlog</span
+					>
+					<span class='research-chip rounded-full px-3 py-1 text-sm font-semibold'
+						>Cloudflare Pages ready</span
+					>
 				</div>
 				<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-6xl'>
 					{siteConfig.title}
@@ -30,7 +35,7 @@ const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
 					<div class='text-sm text-gray-600 dark:text-gray-300'>Reports</div>
 				</div>
 				<div class='rounded-md bg-white/70 p-4 shadow-sm dark:bg-white/10'>
-					<div class='text-3xl font-semibold'>2</div>
+					<div class='text-3xl font-semibold'>{CATEGORIES.length}</div>
 					<div class='text-sm text-gray-600 dark:text-gray-300'>Categories</div>
 				</div>
 				<div class='rounded-md bg-white/70 p-4 shadow-sm dark:bg-white/10'>
@@ -44,7 +49,11 @@ const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
 	<div class='grid gap-8'>
 		<div class='grid gap-4'>
 			<div>
-				<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>Index</p>
+				<p
+					class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'
+				>
+					Index
+				</p>
 				<h2 class='text-2xl font-semibold'>調査カテゴリ</h2>
 			</div>
 			<div class='overflow-x-auto pb-1'>

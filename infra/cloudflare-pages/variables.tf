@@ -16,6 +16,18 @@ variable "project_name" {
   default     = "daylight-research"
 }
 
+variable "custom_domain_name" {
+  description = "Custom production domain attached to the Cloudflare Pages project."
+  type        = string
+  default     = "research.daylight55.dev"
+}
+
+variable "custom_domain_zone_id" {
+  description = "Cloudflare DNS zone ID for the custom production domain."
+  type        = string
+  default     = null
+}
+
 variable "production_branch" {
   description = "Branch used for production deployments."
   type        = string
@@ -69,12 +81,17 @@ variable "path_excludes" {
 }
 
 variable "build_config" {
-  description = "Optional build config. Leave null to keep the Pages project independent of the app build method."
+  description = "Cloudflare Pages build config for the Astro production site."
   type = object({
     build_command   = optional(string)
     destination_dir = optional(string)
     root_dir        = optional(string)
     build_caching   = optional(bool)
   })
-  default = null
+  default = {
+    build_command   = "pnpm build"
+    destination_dir = "dist"
+    root_dir        = "/"
+    build_caching   = true
+  }
 }

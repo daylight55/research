@@ -12,3 +12,8 @@ output "pages_domains" {
   description = "Custom domains attached to the Pages project."
   value       = cloudflare_pages_project.research.domains
 }
+
+output "pages_custom_domain" {
+  description = "Primary custom production domain."
+  value       = cloudflare_pages_domain.custom_domain.name
+}

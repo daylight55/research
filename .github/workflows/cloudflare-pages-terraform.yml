@@ -56,6 +56,7 @@ jobs:
       TF_VAR_account_id: ${{ vars.TF_VAR_CLOUDFLARE_ACCOUNT_ID }}
       TF_VAR_project_name: daylight-research
       TF_VAR_custom_domain_name: daylight55.dev
+      TF_VAR_custom_domain_zone_id: ${{ vars.TF_VAR_CUSTOM_DOMAIN_ZONE_ID }}
       TF_VAR_github_owner_id: ${{ vars.TF_VAR_GITHUB_OWNER_ID }}
       TF_VAR_github_repo_id: ${{ vars.TF_VAR_GITHUB_REPO_ID }}
       TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -97,26 +98,6 @@ jobs:
 
       - name: Terraform init
         run: terraform init -backend-config=backend.hcl
-
-      - name: Resolve custom domain zone
-        shell: bash
-        run: |
-          zone_response="$(curl --fail --silent --show-error \
-            --get \
-            --header "Authorization: Bearer ${TF_VAR_cloudflare_api_token}" \
-            --header "Content-Type: application/json" \
-            --data-urlencode "name=${TF_VAR_custom_domain_name}" \
-            "https://api.cloudflare.com/client/v4/zones")"
-
-          zone_id="$(jq --raw-output '.result[0].id // empty' <<< "${zone_response}")"
-
-          if [[ -z "${zone_id}" ]]; then
-            echo "Could not find Cloudflare DNS zone for ${TF_VAR_custom_domain_name}."
-            exit 1
-          fi
-
-          echo "TF_VAR_custom_domain_zone_id=${zone_id}" >> "$GITHUB_ENV"
-          echo "CUSTOM_DOMAIN_ZONE_ID=${zone_id}" >> "$GITHUB_ENV"
 
       - name: Import existing Pages project
         shell: bash
@@ -168,12 +149,12 @@ jobs:
             --header "Content-Type: application/json" \
             --data-urlencode "name=${TF_VAR_custom_domain_name}" \
             --data-urlencode "type=CNAME" \
-            "https://api.cloudflare.com/client/v4/zones/${CUSTOM_DOMAIN_ZONE_ID}/dns_records")"
+            "https://api.cloudflare.com/client/v4/zones/${TF_VAR_custom_domain_zone_id}/dns_records")"
 
           dns_record_id="$(jq --raw-output --arg content "${TF_VAR_project_name}.pages.dev" '.result[] | select(.content == $content) | .id' <<< "${dns_response}" | head -n 1)"
 
           if [[ -n "${dns_record_id}" ]]; then
-            terraform import cloudflare_dns_record.pages_custom_domain "${CUSTOM_DOMAIN_ZONE_ID}/${dns_record_id}"
+            terraform import cloudflare_dns_record.pages_custom_domain "${TF_VAR_custom_domain_zone_id}/${dns_record_id}"
           else
             echo "Custom domain DNS record does not exist yet; Terraform will create it."
           fi

@@ -6,6 +6,19 @@ on:
   push:
     branches-ignore: [main]
   workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "Optional pull request number to comment on"
+        required: false
+        type: string
+      preview_branch:
+        description: "Optional branch name to deploy as a Cloudflare preview branch"
+        required: false
+        type: string
+      checkout_ref:
+        description: "Optional ref to check out for workflow_dispatch runs"
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -13,7 +26,7 @@ permissions:
   deployments: write
 
 concurrency:
-  group: cloudflare-pages-preview-${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+  group: cloudflare-pages-preview-${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || inputs.preview_branch || github.ref_name }}
   cancel-in-progress: true
 
 env:
@@ -30,13 +43,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || inputs.checkout_ref || github.sha }}
 
       - name: Resolve preview branch
         id: preview_branch
         shell: bash
         env:
-          RAW_BRANCH: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+          RAW_BRANCH: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || inputs.preview_branch || github.ref_name }}
         run: |
           set -euo pipefail
 
@@ -79,10 +92,11 @@ jobs:
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment preview URL
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' || inputs.pr_number != ''
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           header: cloudflare-pages-preview
+          number: ${{ github.event_name == 'pull_request' && github.event.pull_request.number || inputs.pr_number }}
           message: |
             Cloudflare Pages preview deployed.
 

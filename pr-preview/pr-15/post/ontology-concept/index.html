@@ -1,0 +1,669 @@
+<!DOCTYPE html><html lang="ja" class="scroll-smooth" data-astro-cid-37fxchfa> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/research/pr-preview/pr-15/favicon.svg"><meta name="generator" content="Astro v4.0.8"><!-- Canonical URL --><link rel="canonical" href="https://daylight55.github.io/research/pr-preview/pr-15/post/ontology-concept/"><!-- Primary Meta Tags --><title>オントロジー概念の基礎と実務活用 • Daylight Research Atlas</title><!-- ViewTransitions  --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><!-- SEO --><meta name="title" content="オントロジー概念の基礎と実務活用 • Daylight Research Atlas"><meta name="description" content="哲学的存在論、知識表現、Semantic Web標準、知識グラフ、業務AIでのoperational ontologyを整理する基礎レポート。"><meta name="author" content="daylight55"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://daylight55.github.io/research/pr-preview/pr-15/post/ontology-concept/"><meta property="og:title" content="オントロジー概念の基礎と実務活用"><meta property="og:description" content="哲学的存在論、知識表現、Semantic Web標準、知識グラフ、業務AIでのoperational ontologyを整理する基礎レポート。"><meta property="og:image" content="https://daylight55.github.io/research/pr-preview/pr-15/research/pr-preview/pr-15/_astro/placeholder-hero.ZqYaJ2Hs.jpg"><meta property="article:author" content="daylight55"><meta property="article:published_time" content="2026-05-09T00:00:00.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://daylight55.github.io/research/pr-preview/pr-15/post/ontology-concept/"><meta property="twitter:title" content="オントロジー概念の基礎と実務活用"><meta property="twitter:description" content="哲学的存在論、知識表現、Semantic Web標準、知識グラフ、業務AIでのoperational ontologyを整理する基礎レポート。"><meta property="twitter:image" content="https://daylight55.github.io/research/pr-preview/pr-15/research/pr-preview/pr-15/_astro/placeholder-hero.ZqYaJ2Hs.jpg"><!-- RSS auto-discovery --><link rel="alternate" type="application/rss+xml" title="Daylight Research Atlas" href="/research/pr-preview/pr-15/rss.xml"><script>
+	function getTheme() {
+		const storedTheme = typeof localStorage !== 'undefined' && localStorage.getItem('theme')
+
+		return (
+			storedTheme || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+		)
+	}
+
+	function setTheme(newTheme) {
+		const html = document.documentElement
+		const isDark = newTheme === 'dark'
+
+		html.classList.toggle('dark', isDark)
+		html.classList.toggle('light', !isDark)
+
+		localStorage.setItem('theme', newTheme)
+	}
+
+	// set initial theme
+	setTheme(getTheme())
+	document.addEventListener('astro:after-swap', () => setTheme(getTheme()))
+
+	document.addEventListener('theme-change', (e) => {
+		setTheme(e.detail.theme)
+	})
+</script><script>
+	if (!('animations' in localStorage)) {
+		localStorage.setItem('animations', 'true')
+	} else {
+		localStorage.setItem('animations', 'false')
+	}
+</script><link rel="stylesheet" href="/research/pr-preview/pr-15/_astro/_page_.Dxl-tPLL.css" />
+<link rel="stylesheet" href="/research/pr-preview/pr-15/_astro/_slug_.C95dlhQ2.css" /><script type="module" src="/research/pr-preview/pr-15/_astro/hoisted.rTRSRPRl.js"></script></head> <body class="bg-[#f8f7f2] text-[#181713] dark:bg-[#11110f] dark:text-[#f4efe4]" data-astro-cid-37fxchfa> <main class="px-5 sm:mx-auto sm:max-w-2xl sm:px-8 lg:px-0 antialiased md:max-w-6xl grid gap-12 mt-4 overflow-hidden md:overflow-visible" data-astro-cid-37fxchfa> <header class="relative flex items-center h-12 font-semibold"> <a class="text-lg mr-auto" href="/research/pr-preview/pr-15/">Home</a> <div id="astro-header-drawer" class="shadow rounded-l-lg md:bg-transparent dark:md:bg-transparent bg-white dark:bg-[#0a0910] md:shadow-none md:rounded-none md:border-none md:h-auto md:static absolute transition-transform duration-300 ease-in translate-x-96 md:translate-x-0 top-12 -right-5 pl-4 pt-6 pb-4 md:p-0 h-[200px] w-[200px] z-50"> <nav class="flex h-full flex-col justify-between gap-12 text-left md:flex-row md:w-full md:gap-5"> <div class="flex flex-col gap-4 md:flex-row md:border-r-2 border-black pr-4 dark:border-white"> <a href="/research/pr-preview/pr-15/tags" class="text-opacity-60 flex items-center gap-1 text-2xl md:text-base" rel="noopener noreferrer ">  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-6" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M7.859 6h-2.834a2.025 2.025 0 0 0 -2.025 2.025v2.834c0 .537 .213 1.052 .593 1.432l6.116 6.116a2.025 2.025 0 0 0 2.864 0l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-6.117 -6.116a2.025 2.025 0 0 0 -1.431 -.593z"></path> <path d="M17.573 18.407l2.834 -2.834a2.025 2.025 0 0 0 0 -2.864l-7.117 -7.116"></path> <path d="M6 9h-.01"></path> </svg> Tags
+ </a> </div> <div class="flex justify-center items-center md:justify-end gap-3 md:p-0"> <a href="https://github.com/danielcgilibert/blog-template" class="text-opacity-60" rel="noopener noreferrer " target="_blank" aria-label="Github">  <span><svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-6" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path> </svg> </span>  </a><a href="https://github.com/danielcgilibert/blog-template" class="text-opacity-60" rel="noopener noreferrer " target="_blank" aria-label="Twitter">  <span><svg xmlns="http://www.w3.org/2000/svg" class="w-8 md:w-6" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path> </svg> </span>  </a> </div> </nav> </div> <div class="flex items-center gap-3 md:pl-3" data-astro-transition-persist="navbar"> <div> <site-search id="search" class="ms-auto"> <button data-open-modal disabled class="flex items-center justify-center rounded-md gap-1"> <svg aria-label="search" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"> <path stroke="none" d="M0 0h24v24H0z"></path> <path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6"></path> </svg> <!-- <span class='md:hidden text-2xl'> Search</span> --> </button> <dialog aria-label="search" class="h-full max-h-full w-full max-w-full border border-zinc-400 bg-white dark:bg-[#0a0910ec] shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0"> <div class="dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6"> <button data-close-modal class="ms-auto cursor-pointer rounded-full bg-black text-white px-4 py-2 dark:bg-white dark:text-black">Close</button> <div class="search-container dark:text-white"> <div id="pagefind__search"></div> </div> </div> </dialog> </site-search>   </div>  <theme-toggle class="relative h-6 w-6"> <button id="toggle-theme" class="group" aria-label="Toggle Theme"> <span class="absolute left-0 right-0 top-0 opacity-0 group-aria-pressed:opacity-100"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun-high" width="24" height="24" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"></path> <path d="M6.343 17.657l-1.414 1.414"></path> <path d="M6.343 6.343l-1.414 -1.414"></path> <path d="M17.657 6.343l1.414 -1.414"></path> <path d="M17.657 17.657l1.414 1.414"></path> <path d="M4 12h-2"></path> <path d="M12 4v-2"></path> <path d="M20 12h2"></path> <path d="M12 20v2"></path> </svg> </span> <span class="absolute left-0 right-0 top-0 opacity-0 group-aria-[pressed=false]:opacity-100"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path> </svg> </span> </button> </theme-toggle> <script>
+	const button = document.getElementById('toggle-theme')
+
+	function setButtonPresssed() {
+		const bodyThemeIsDark = document.documentElement.classList.contains('dark')
+		button.setAttribute('aria-pressed', String(bodyThemeIsDark))
+	}
+	setButtonPresssed()
+</script> <button id="astro-header-drawer-button" type="button" class="md:ml-6 md:hidden"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.25" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M4 6l16 0"></path> <path d="M4 12l16 0"></path> <path d="M4 18l16 0"></path> </svg> <span class="sr-only">Show Menu</span> </button> </div> </header>   <article class="min-w-full md:py-4 sm:max-w-none md:max-w-none"> <header class="mb-3 flex flex-col justify-center items-center gap-6"> <div class="flex flex-col gap-2"> <div class="flex items-center justify-center gap-x-1"> <p class="text-center text-sm text-opacity-50">
+Published <time class="text-sm font-bold text-opacity-60" datetime="2026-05-09T00:00:00.000Z"> May 9, 2026 </time> </p> <p class="text-center text-sm text-opacity-50 font-bold">
+- 1 min read </p> </div> <h1 class="text-center text-4xl md:text-6xl md:pb-2.5 font-semibold"> オントロジー概念の基礎と実務活用 </h1> </div> <div class="flex flex-wrap justify-center items-center gap-2 gap-y-4 md:gap-5"> <a href="/research/pr-preview/pr-15/tags/ontology" aria-label="Ontology"> <span class="bg-indigo-600 font-semibold text-white dark:bg-indigo-900 dark:text-white shadow text-sm w-fit px-2 py-1 md:px-5 md:py-2 rounded-full"> Ontology </span> </a><a href="/research/pr-preview/pr-15/tags/knowledge%20graph" aria-label="Knowledge Graph"> <span class="bg-indigo-600 font-semibold text-white dark:bg-indigo-900 dark:text-white shadow text-sm w-fit px-2 py-1 md:px-5 md:py-2 rounded-full"> Knowledge Graph </span> </a><a href="/research/pr-preview/pr-15/tags/semantic%20web" aria-label="Semantic Web"> <span class="bg-indigo-600 font-semibold text-white dark:bg-indigo-900 dark:text-white shadow text-sm w-fit px-2 py-1 md:px-5 md:py-2 rounded-full"> Semantic Web </span> </a><a href="/research/pr-preview/pr-15/tags/ai" aria-label="AI"> <span class="bg-indigo-600 font-semibold text-white dark:bg-indigo-900 dark:text-white shadow text-sm w-fit px-2 py-1 md:px-5 md:py-2 rounded-full"> AI </span> </a> </div> </header> <img src="/research/pr-preview/pr-15/_astro/placeholder-hero.ZqYaJ2Hs_ZCWyE9.jpg" loading="eager" class="my-8 aspect-[16/9] w-full rounded-md object-cover" alt="img of オントロジー概念の基礎と実務活用" width="1200" height="675" decoding="async"> <hr> <div>  <div class="grid grid-cols-1 gap-10 mt-8 lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-16"> <!-- aside  --> <aside class="hidden lg:flex flex-col gap-8 pr-2"> <div class="flex flex-col gap-2"> <span class="mb-1 font-bold text-2xl">Share</span> <ul class="flex gap-3 text-black dark:text-white"> <li> <a href="https://twitter.com/intent/tweet?text=このレポートを共有 https://daylight55.github.io/research/pr-preview/pr-15/post/ontology-concept/" aria-label="Share on Twitter"><!--?xml version="1.0" ?--><svg height="32px" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M448,512l-384,0c-35.328,0 -64,-28.672 -64,-64l0,-384c0,-35.328 28.672,-64 64,-64l384,0c35.328,0 64,28.672 64,64l0,384c0,35.328 -28.672,64 -64,64Z" id="Dark_Blue" style="fill:#1da1f2;fill-rule:nonzero;"></path><path d="M196.608,386.048c120.704,0 186.752,-100.096 186.752,-186.752c0,-2.816 0,-5.632 -0.128,-8.448c12.8,-9.216 23.936,-20.864 32.768,-34.048c-11.776,5.248 -24.448,8.704 -37.76,10.368c13.568,-8.064 23.936,-20.992 28.928,-36.352c-12.672,7.552 -26.752,12.928 -41.728,15.872c-12.032,-12.8 -29.056,-20.736 -47.872,-20.736c-36.224,0 -65.664,29.44 -65.664,65.664c0,5.12 0.64,10.112 1.664,14.976c-54.528,-2.688 -102.912,-28.928 -135.296,-68.608c-5.632,9.728 -8.832,20.992 -8.832,33.024c0,22.784 11.648,42.88 29.184,54.656c-10.752,-0.384 -20.864,-3.328 -29.696,-8.192l0,0.896c0,31.744 22.656,58.368 52.608,64.384c-5.504,1.536 -11.264,2.304 -17.28,2.304c-4.224,0 -8.32,-0.384 -12.288,-1.152c8.32,26.112 32.64,45.056 61.312,45.568c-22.528,17.664 -50.816,28.16 -81.536,28.16c-5.248,0 -10.496,-0.256 -15.616,-0.896c28.928,18.432 63.488,29.312 100.48,29.312" id="Logo__x2014__FIXED" style="fill:#fff;fill-rule:nonzero;"></path></g></svg></a> </li> <li> <a href="https://www.linkedin.com/shareArticle?mini=true&#38;url=https://daylight55.github.io/research/pr-preview/pr-15/post/ontology-concept/" aria-label="Share on LinkedIn"> <svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M32,30c0,1.104-0.896,2-2,2H2c-1.104,0-2-0.896-2-2V2c0-1.104,0.896-2,2-2h28c1.104,0,2,0.896,2,2V30z" fill="#007BB5"></path><g><rect fill="#FFFFFF" height="14" width="4" x="7" y="11"></rect><path d="M20.499,11c-2.791,0-3.271,1.018-3.499,2v-2h-4v14h4v-8c0-1.297,0.703-2,2-2c1.266,0,2,0.688,2,2v8h4v-7    C25,14,24.479,11,20.499,11z" fill="#FFFFFF"></path><circle cx="9" cy="8" fill="#FFFFFF" r="2"></circle></g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></a> </li> </ul> </div> <div class="sticky top-24 self-start hidden lg:block transition-all duration-200">  </div> </aside> <!-- post --> <article class="max-w-full w-full"> <div class="prose prose-base md:prose-lg dark:prose-invert mb-12 min-w-full max-w-none prose-p:leading-8 prose-li:leading-8"> <h1 id="オントロジー概念の基礎と実務活用">オントロジー概念の基礎と実務活用</h1>
+<p>作成日: 2026-05-09
+調査方式: ナラティブレビュー
+対象: 哲学的オントロジー、知識表現、Semantic Web標準、知識グラフ、業務AIにおける operational ontology</p>
+<h2 id="引用方針">引用方針</h2>
+<p>本文では、重要な定義や標準仕様の近くに <code>出典メモ:</code> を置く。長い逐語引用は避け、必要な原文句だけを短く示し、日本語で要約する。仕様、論文、公式ドキュメントを優先し、二次情報は補助に留める。</p>
+<h2 id="1-エグゼクティブサマリー">1. エグゼクティブサマリー</h2>
+<p>オントロジーは、文脈によって意味が変わる。哲学では「何が存在するのか」を問う分野であり、情報科学では「ある領域に存在する概念、関係、制約を明示的に定義したもの」を指す。業務AIの文脈では、さらに一歩進んで、顧客、案件、契約、障害、承認、アクション、権限、監査ログを同じ業務世界モデルに載せる設計思想として使われる。</p>
+<p>本レポートの結論は以下である。</p>
+<ol>
+<li>オントロジーは単なる用語集ではない。概念の分類、関係、属性、制約、推論可能性、同一性、出典、更新ルールを含む。</li>
+<li>taxonomy、controlled vocabulary、schema、data model、knowledge graph はオントロジーと重なるが同一ではない。オントロジーは「何をどういうものとして扱うか」を明示する意味モデルである。</li>
+<li>RDF/OWL はオントロジーをWeb上で機械可読に表す代表的な標準だが、すべての実務でOWLが必要になるわけではない。分類体系ならSKOS、検証ならSHACL、厳密な推論ならOWL、業務実行ならアプリケーション側の権限・ワークフロー設計が必要になる。</li>
+<li>LLM時代のオントロジーは、「LLMに意味理解を注入する魔法」ではない。LLMが参照・検索・生成・ツール実行するときの語彙、対象、関係、制約、証跡を揃える情報設計である。</li>
+<li>実務では巨大な全社オントロジーから始めるべきではない。最初は特定ユースケースに対して、competency questions、主要オブジェクト、関係、制約、出典、更新責任を定義する ontology lite から始めるのが現実的である。</li>
+</ol>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic">flowchart</span><span style="color:#82AAFF"> TD</span></span>
+<span class="line"><span style="color:#BABED8">  Phil</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"哲学的オントロジー&#x3C;br/>何が存在するのか"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> KR</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"知識表現のオントロジー&#x3C;br/>概念・関係・制約の明示仕様"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  KR </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Web</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Semantic Web / Linked Data&#x3C;br/>RDF・OWL・SKOS・SPARQL・SHACL"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Web </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> KG</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Knowledge Graph&#x3C;br/>識別子・関係・文脈・出典"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  KG </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Ops</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Operational Ontology&#x3C;br/>業務対象・状態・行為・権限・監査"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Ops </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> AI</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"LLM / Agent活用&#x3C;br/>検索・推論支援・ツール実行・判断支援"</span><span style="color:#89DDFF;font-style:italic">]</span></span></code></pre>
+<h2 id="2-まず何が紛らわしいのか">2. まず何が紛らわしいのか</h2>
+<p>「オントロジー」という言葉が分かりにくい理由は、少なくとも三つの伝統が同じ語を使っているからである。</p>
+<p>第一に、哲学の ontology は存在論である。これは「何が存在するのか」「存在者をどのように分類できるのか」「性質、関係、出来事、時間、部分全体、可能性はどのような存在様式を持つのか」を問う。情報システム設計のための用語ではなく、存在や実在のカテゴリーを扱う基礎哲学である。</p>
+<p>出典メモ: Stanford Encyclopedia of Philosophy の <a href="https://plato.stanford.edu/entries/metaphysics/">Metaphysics</a> は、アリストテレスの第一哲学から現代形而上学までの射程を整理している。ここでの ontology は、情報システムのスキーマではなく、存在者一般を問う哲学的問題として扱われる。</p>
+<p>第二に、AI・知識表現の ontology は、ある領域における概念化を明示的に仕様化したものである。Gruber (1993) の有名な定義は、オントロジーを「conceptualization の specification」と捉える。ここで重要なのは、対象世界そのものではなく、人間またはシステムがその領域をどう概念化するかを明示する点である。</p>
+<p>出典メモ: Gruber の <a href="https://doi.org/10.1006/knac.1993.1008">A Translation Approach to Portable Ontology Specifications</a> および著者ページの <a href="https://tomgruber.org/writing/ontolingua-kaj-1993/">definition note</a> は、オントロジーを「概念化の仕様」として位置づける。Noy and McGuinness の <a href="https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html">Ontology Development 101</a> も、この定義を実務的な開発手順に展開している。</p>
+<p>第三に、近年の業務AI・データ基盤では、ontology が semantic layer、canonical data model、business object layer、digital twin に近い意味で使われることがある。Palantir Foundry の Ontology は、RDF/OWL仕様そのものではなく、データ、オブジェクト、関係、アクション、関数、動的セキュリティを統合する operational layer として説明されている。</p>
+<p>出典メモ: Palantir の <a href="https://www.palantir.com/docs/foundry/ontology/overview">Ontology overview</a> は、Ontology を組織の operational layer と説明し、semantic elements と kinetic elements を含むと述べる。これはW3C OWLのような標準言語の説明ではなく、業務プラットフォーム上の実行可能な意味モデルである。</p>
+<h2 id="3-オントロジーの短い研究史">3. オントロジーの短い研究史</h2>
+<p>情報科学におけるオントロジーは、哲学から借りた語を、AIの知識共有と再利用の問題へ移植したところから発展した。1980年代から1990年代の知識ベースシステムでは、専門家の知識をルールやフレームで表現する試みが進んだが、個別システムに閉じた知識は再利用しにくかった。オントロジーは、領域知識を移植可能で共有可能な仕様として定義するための手段になった。</p>
+<p>Gruber (1993) の定義は、オントロジーを「特定システムの内部実装」ではなく「知識共有のための明示仕様」として扱った。Guarino (1998) 以降の formal ontology は、概念名の一覧では足りないことを強調した。同一性、依存性、部分全体、性質、役割、出来事のような基礎カテゴリーを誤ると、システム間の意味の接続が壊れるからである。</p>
+<p>出典メモ: Guarino の <a href="https://www.loa.istc.cnr.it/wp-content/uploads/2020/03/FOIS98.pdf">Formal Ontology and Information Systems</a> は、ontology-driven information systems の視点を提示する。Barry Smith の <a href="https://ontology.buffalo.edu/smith/articles/fois1998.pdf">Basic Concepts of Formal Ontology</a> は、日常世界の対象を扱うための formal ontology の基礎概念を整理している。</p>
+<p>2000年代には、Semantic Web がこの系譜をWeb標準へ接続した。RDFはWeb上のリソースについて主語・述語・目的語のトリプルで記述するデータモデルを提供し、OWLはクラス、プロパティ、個体、制約、推論のためのより豊かな表現を提供した。SPARQLはRDFグラフを問い合わせる言語になり、SKOSは分類体系やシソーラスのような半形式的知識組織システムをWeb上で共有しやすくした。</p>
+<p>出典メモ: Semantic Web の構想は Berners-Lee, Hendler, and Lassila の <a href="https://lassila.org/publications/2001/SciAm.html">The Semantic Web</a> を参照。RDFの基本は W3C <a href="https://www.w3.org/TR/rdf-primer/">RDF 1.1 Primer</a>、OWL 2 は W3C <a href="https://www.w3.org/TR/owl-primer/">OWL 2 Primer</a> と <a href="https://www.w3.org/TR/owl2-overview/">OWL 2 Overview</a> を参照。</p>
+<p>2010年代以降は、知識グラフという言葉が広く使われるようになった。知識グラフは必ずしも厳密なOWLオントロジーを持つとは限らない。実務では、ノード、エッジ、識別子、出典、文脈、更新履歴を扱う大規模グラフデータとして運用されることが多い。Hogan et al. (2021) は、知識グラフを、動的で大規模なデータ集合を扱うためのグラフベースの知識表現として包括的に整理している。</p>
+<p>出典メモ: Hogan et al. の <a href="https://arxiv.org/abs/2003.02320">Knowledge Graphs</a> は、知識グラフのデータモデル、クエリ言語、スキーマ、識別子、文脈、作成・品質評価・公開を体系的に扱う。知識グラフはオントロジーを含みうるが、両者は同義ではない。</p>
+<h2 id="4-オントロジーを構成する要素">4. オントロジーを構成する要素</h2>
+<p>実務上、オントロジーは次の要素で構成される。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>要素</th><th>意味</th><th>例</th></tr></thead><tbody><tr><td>Domain</td><td>対象領域</td><td>技術調査、医療、製造、営業、法務</td></tr><tr><td>Class / Type</td><td>種類、概念カテゴリ</td><td>Source、Claim、Customer、Contract</td></tr><tr><td>Individual / Instance</td><td>個別対象</td><td>ある論文、ある顧客、ある契約</td></tr><tr><td>Property / Attribute</td><td>対象の性質</td><td>作成日、著者、契約額、リスク度</td></tr><tr><td>Relation</td><td>対象間の関係</td><td>cites、supports、owns、dependsOn</td></tr><tr><td>Axiom / Rule</td><td>成り立つべき制約や推論規則</td><td>契約は必ず顧客に紐づく</td></tr><tr><td>Constraint</td><td>データが満たすべき検証条件</td><td>日付必須、ステータス列挙、重複禁止</td></tr><tr><td>Provenance</td><td>出典・来歴</td><td>どの文書、誰の発言、どのAPI結果か</td></tr><tr><td>Governance</td><td>更新責任・承認・権限</td><td>誰が定義を変えられるか</td></tr></tbody></table>
+<p>この一覧から分かる通り、オントロジーは「単語の意味を説明する辞書」ではない。語彙を定義するだけなら controlled vocabulary で足りる。階層分類だけなら taxonomy で足りる。データ項目の型と必須条件だけなら schema で足りる。オントロジーは、それらを含みつつ、領域をどう概念化し、どの関係と制約を正当なものとして扱うかを明示する。</p>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic">classDiagram</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">  class</span><span style="color:#FFCB6B"> Ontology</span><span style="color:#89DDFF;font-style:italic"> {</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">Domain</span><span style="color:#FFCB6B"> scope</span></span>
+<span class="line"><span style="color:#BABED8">    +CompetencyQuestion[] </span><span style="color:#C792EA">questions</span></span>
+<span class="line"><span style="color:#BABED8">    +Class[] </span><span style="color:#C792EA">classes</span></span>
+<span class="line"><span style="color:#BABED8">    +Relation[] </span><span style="color:#C792EA">relations</span></span>
+<span class="line"><span style="color:#BABED8">    +Axiom[] </span><span style="color:#C792EA">axioms</span></span>
+<span class="line"><span style="color:#BABED8">    +Constraint[] </span><span style="color:#C792EA">constraints</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">ProvenancePolicy</span><span style="color:#FFCB6B"> provenance</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">GovernancePolicy</span><span style="color:#FFCB6B"> governance</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">  }</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">  class</span><span style="color:#FFCB6B"> ConceptClass</span><span style="color:#89DDFF;font-style:italic"> {</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">name</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">definition</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">synonyms</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">examples</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">  }</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">  class</span><span style="color:#FFCB6B"> Relation</span><span style="color:#89DDFF;font-style:italic"> {</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">domain</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">range</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">meaning</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">cardinality</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">  }</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">  class</span><span style="color:#FFCB6B"> Constraint</span><span style="color:#89DDFF;font-style:italic"> {</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">target</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">rule</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">    +</span><span style="color:#C792EA">severity</span></span>
+<span class="line"><span style="color:#89DDFF;font-style:italic">  }</span></span>
+<span class="line"><span style="color:#FFCB6B">  Ontology</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#FFCB6B"> ConceptClass</span></span>
+<span class="line"><span style="color:#FFCB6B">  Ontology</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#FFCB6B"> Relation</span></span>
+<span class="line"><span style="color:#FFCB6B">  Ontology</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#FFCB6B"> Constraint</span></span></code></pre>
+<p>Noy and McGuinness は、オントロジー開発を「一度で完成する定義作業」ではなく、対象領域と目的を定め、重要な用語を列挙し、クラス階層、プロパティ、制約、インスタンスを反復的に作る工程として説明している。最初に問うべきなのは「世界を完全に分類するにはどうするか」ではなく、「このオントロジーで答えたい質問は何か」である。この質問は competency questions と呼ばれる。</p>
+<p>出典メモ: <a href="https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html">Ontology Development 101</a> は、オントロジー開発を反復的プロセスとして説明し、クラス、スロット、制約、インスタンスを順に設計する。ここでの実務方針は同ガイドの方法を、現代のデータ・AI基盤向けに読み替えている。</p>
+<h2 id="5-近い概念との違い">5. 近い概念との違い</h2>
+<p>オントロジーを理解するには、近い概念と並べるのが最も早い。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>概念</th><th>主な目的</th><th>典型例</th><th>オントロジーとの関係</th></tr></thead><tbody><tr><td>Glossary</td><td>用語の説明</td><td>社内用語集</td><td>定義文はあるが、関係・制約・推論は弱い</td></tr><tr><td>Controlled vocabulary</td><td>表記ゆれ抑制</td><td>タグ一覧、標準コード</td><td>語彙統制の基礎になる</td></tr><tr><td>Taxonomy</td><td>階層分類</td><td>業種分類、製品カテゴリ</td><td><code>is-a</code> 階層はオントロジーの一部になりうる</td></tr><tr><td>Thesaurus</td><td>同義語・上位語・関連語</td><td>図書館件名標目</td><td>SKOSで表しやすい</td></tr><tr><td>Schema</td><td>データ構造</td><td>JSON Schema、DB schema</td><td>型・項目・必須条件を定義するが、概念意味は限定的</td></tr><tr><td>Data model</td><td>データ設計</td><td>ER図、UMLクラス図</td><td>オントロジーより実装寄りの場合が多い</td></tr><tr><td>Knowledge graph</td><td>実体と関係のグラフ</td><td>Wikidata、企業KG</td><td>オントロジーを使って構造化されることがある</td></tr><tr><td>Semantic layer</td><td>BI/分析の共通意味層</td><td>指標定義、メトリクス層</td><td>業務語彙の共通化という点で重なる</td></tr><tr><td>Operational ontology</td><td>業務対象と行為の意味層</td><td>Palantir Foundry Ontology</td><td>意味モデルにアクション・権限・監査を足す</td></tr></tbody></table>
+<p>分類体系や用語集は、オントロジーの入口として有用である。しかし、たとえば「顧客」「契約」「請求」という言葉を定義しただけでは、契約が必ず一つ以上の顧客に紐づくのか、顧客が法人と個人で別クラスなのか、請求の取消はどの状態で許されるのかは分からない。こうした関係・制約・状態遷移・権限が必要になった時点で、単なる用語集からオントロジー設計へ進む。</p>
+<p>SKOSは、この境界領域を扱う実務的な標準である。シソーラス、分類体系、件名標目のような semi-formal な知識組織システムをRDFで表現できる。厳密な論理推論を狙うOWLより軽く、既存の分類・タグ体系を機械可読にする用途に向く。</p>
+<p>出典メモ: W3C <a href="https://www.w3.org/TR/skos-primer/">SKOS Primer</a> は、SKOSをシソーラス、分類体系、件名標目のような知識組織システムを表すRDF vocabularyとして説明する。SKOSは、OWLの厳密さとWeb上の弱構造データの間をつなぐ bridge として位置づけられている。</p>
+<h2 id="6-semantic-web標準の役割">6. Semantic Web標準の役割</h2>
+<p>オントロジーを実装するとき、W3C系の標準は今も重要である。ただし、それぞれの標準は役割が違う。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>標準・語彙</th><th>役割</th><th>実務での使いどころ</th></tr></thead><tbody><tr><td>RDF</td><td>主語・述語・目的語のグラフデータモデル</td><td>データをWeb識別子で結び、異種データを統合する</td></tr><tr><td>RDFS</td><td>RDF語彙の基本スキーマ</td><td>クラス、サブクラス、プロパティの基本定義</td></tr><tr><td>OWL 2</td><td>論理ベースのオントロジー言語</td><td>整合性検証、分類推論、暗黙知識の明示化</td></tr><tr><td>OWL 2 Profiles</td><td>推論性能と表現力の調整</td><td>大規模分類、DB連携、ルール的推論に合わせる</td></tr><tr><td>SPARQL</td><td>RDFグラフ問い合わせ言語</td><td>RDFデータの検索・集計・結合</td></tr><tr><td>SKOS</td><td>分類・シソーラス表現</td><td>タグ、分類体系、件名標目、軽量語彙管理</td></tr><tr><td>SHACL</td><td>RDFグラフ検証</td><td>必須項目、型、範囲、整合性チェック</td></tr><tr><td>schema.org</td><td>Web上の構造化データ語彙</td><td>Webページ、メール、JSON-LDの意味注釈</td></tr></tbody></table>
+<p>RDFはデータモデルであり、OWLはオントロジー言語であり、SHACLは検証言語である。この区別は実務上かなり重要である。OWLは、open world assumption のもとで「明示されていないことは偽とは限らない」と扱う。これはWeb上の分散知識には適しているが、業務データの入力検証では違和感を生みやすい。業務システムで「契約に顧客IDがないならエラー」と言いたい場合、SHACLやアプリケーション側の検証が必要になる。</p>
+<p>出典メモ: W3C <a href="https://www.w3.org/TR/rdf-primer/">RDF 1.1 Primer</a> は、RDF statement を subject、predicate、object の triples として説明する。W3C <a href="https://www.w3.org/TR/owl-primer/">OWL 2 Primer</a> は、OWLをクラス、プロパティ、個体、データ値を扱うSemantic Web用のオントロジー言語として説明する。W3C <a href="https://www.w3.org/TR/shacl/">SHACL</a> は、RDF graph を shapes graph に対して検証する制約言語として定義されている。</p>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic">flowchart</span><span style="color:#82AAFF"> LR</span></span>
+<span class="line"><span style="color:#BABED8">  RDF</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"RDF&#x3C;br/>グラフデータモデル"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> RDFS</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"RDFS&#x3C;br/>基本語彙・クラス階層"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  RDFS </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> OWL</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"OWL 2&#x3C;br/>論理表現・推論"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  RDF </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> SPARQL</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"SPARQL&#x3C;br/>問い合わせ"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  RDF </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> SKOS</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"SKOS&#x3C;br/>分類・シソーラス"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  RDF </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> SHACL</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"SHACL&#x3C;br/>データ検証"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Vocab</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"schema.org等の語彙"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> RDF</span></span></code></pre>
+<p>OWL 2には複数のプロファイルがある。OWL 2 EL、QL、RLは、表現力を制限する代わりに特定の推論タスクを実用的に扱いやすくする。これは「より厳密なオントロジーほど常に良い」という発想への反例である。オントロジー設計では、答えたい質問、データ量、推論の必要性、更新頻度、運用者のスキルに合わせて形式度を選ぶ必要がある。</p>
+<p>出典メモ: W3C <a href="https://www.w3.org/TR/owl2-profiles/">OWL 2 Profiles</a> は、OWL 2 EL、QL、RLを、OWL DLより制限された構文サブセットとして定義する。選択は、オントロジー構造と推論タスクに依存する。</p>
+<h2 id="7-上位オントロジーとドメインオントロジー">7. 上位オントロジーとドメインオントロジー</h2>
+<p>オントロジーには粒度がある。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>種類</th><th>対象</th><th>例</th><th>利点</th><th>注意点</th></tr></thead><tbody><tr><td>Top-level / Upper ontology</td><td>どの領域にも現れる抽象カテゴリ</td><td>object、process、quality、role</td><td>ドメイン間の相互運用性</td><td>抽象度が高く、現場に遠い</td></tr><tr><td>Domain ontology</td><td>特定領域</td><td>医療、製造、法務、研究管理</td><td>実務に近い</td><td>領域外に広げにくい</td></tr><tr><td>Application ontology</td><td>特定アプリ・業務</td><td>障害対応、調査レポート管理</td><td>すぐ使える</td><td>汎用性は低い</td></tr><tr><td>Task ontology</td><td>特定タスク</td><td>レビュー、承認、検索、推薦</td><td>AI/ワークフローに接続しやすい</td><td>範囲が狭い</td></tr></tbody></table>
+<p>BFOは上位オントロジーの代表例で、ISO/IEC 21838-2:2021として標準化されている。上位オントロジーは、異なるドメインオントロジーを接続するときに役立つ。ただし、個人や小規模チームの実務では、最初からBFOのような上位オントロジーを導入するより、対象ワークフローに必要なクラスと関係を明示するほうが成果につながりやすい。</p>
+<p>出典メモ: ISO の <a href="https://www.iso.org/standard/74572.html">ISO/IEC 21838-2:2021</a> は、Basic Formal Ontologyを top-level ontology の要件に適合するものとして説明する。BFOは相互運用性には有効だが、導入には抽象概念への理解とモデリング規律が必要である。</p>
+<h2 id="8-llm時代にオントロジーが再び重要になる理由">8. LLM時代にオントロジーが再び重要になる理由</h2>
+<p>LLMは大量の言語パターンから柔軟な応答を生成できるが、業務上の対象を自動的に正しく識別するわけではない。「この顧客」「この契約」「この障害」「この主張」「この出典」がどの実体を指すかは、外部データ、識別子、権限、出典、状態と接続しなければ安定しない。</p>
+<p>オントロジーは、LLMの弱点を直接消すのではなく、LLMが使う外部世界の足場を作る。</p>
+<ol>
+<li><strong>語彙を揃える</strong>: 同じ意味を別名で呼ぶ、別の意味を同じ名で呼ぶ問題を減らす。</li>
+<li><strong>対象を識別する</strong>: 自然言語の「顧客A」をシステム上の一意なオブジェクトに接続する。</li>
+<li><strong>関係を明示する</strong>: 主張が出典に支えられる、障害がサービスに影響する、契約が顧客に属する、という関係を定義する。</li>
+<li><strong>制約を与える</strong>: 許される状態遷移、必須属性、権限、承認条件を定義する。</li>
+<li><strong>検索を改善する</strong>: ベクトル検索だけでは拾いにくい階層、同義語、関係、時間、出典を使える。</li>
+<li><strong>評価を可能にする</strong>: LLM出力が定義済みの概念・関係・制約に合っているか検証できる。</li>
+</ol>
+<p>Pan et al. (2023) は、LLMと知識グラフの統合を、KG-enhanced LLMs、LLM-augmented KGs、Synergized LLMs + KGs の三方向で整理している。この整理は、オントロジーとLLMの関係にも当てはまる。オントロジーはLLMの入力文脈を補強し、LLMはオントロジーの構築・補完・整合確認を支援できる。ただし、LLMが生成したクラスや関係をそのまま正しいオントロジーとして採用するのは危険である。</p>
+<p>出典メモ: Pan et al. の <a href="https://arxiv.org/abs/2306.08302">Unifying Large Language Models and Knowledge Graphs: A Roadmap</a> は、LLMとKGの統合を三つの枠組みに整理する。Hitzler et al. の <a href="https://arxiv.org/abs/2411.09601">Accelerating Knowledge Graph and Ontology Engineering with Large Language Models</a> は、LLMが ontology modeling、extension、population、alignment などを加速しうる一方、モジュール性と評価が重要になると論じる。</p>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic">flowchart</span><span style="color:#82AAFF"> TD</span></span>
+<span class="line"><span style="color:#BABED8">  User</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"User request&#x3C;br/>自然言語"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> LLM</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"LLM"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Ont</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Ontology&#x3C;br/>語彙・対象・関係・制約"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> LLM</span></span>
+<span class="line"><span style="color:#BABED8">  KG</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Knowledge Graph&#x3C;br/>実体・出典・履歴"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> LLM</span></span>
+<span class="line"><span style="color:#BABED8">  Tools</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Tools / APIs&#x3C;br/>検索・DB・業務操作"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> LLM</span></span>
+<span class="line"><span style="color:#BABED8">  LLM </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Draft</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"提案・抽出・回答"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Draft </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Validate</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Ontology / SHACL / Business Rule Validation"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Validate </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Human</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Human Review / Approval"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Human </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Update</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"更新・監査ログ"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Update </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> KG</span></span></code></pre>
+<h2 id="9-業務aiでの-operational-ontology">9. 業務AIでの operational ontology</h2>
+<p>業務AIでは、オントロジーは静的な知識表現だけでは足りない。AIエージェントが業務に関わるなら、どの対象を参照できるか、どの状態なら何を実行できるか、誰の承認が必要か、実行結果がどこに記録されるかを定義する必要がある。この層を operational ontology と呼ぶと分かりやすい。</p>
+<p>Palantir Foundry Ontology はこの発想を前面に出している。Objects、properties、links という semantic elements だけでなく、actions、functions、dynamic security という kinetic elements を含む。つまり、単に「注文とは何か」を定義するのではなく、「注文に対して誰が何を実行でき、その結果がどのシステムに反映されるか」まで扱う。</p>
+<p>出典メモ: Palantir <a href="https://www.palantir.com/docs/foundry/ontology/overview">Ontology overview</a> は、Ontologyが datasets、virtual tables、models の上に位置し、それらを現実世界の対象に接続すると説明する。Palantir <a href="https://www.palantir.com/docs/foundry/platform-overview/overview">Platform overview</a> は、Actionsを企業の verbs として、意思決定をOntologyや外部システムへ永続化するものとして説明している。</p>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic">flowchart</span><span style="color:#82AAFF"> LR</span></span>
+<span class="line"><span style="color:#BABED8">  Data</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Datasets / APIs / Documents"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> Objects</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Objects&#x3C;br/>Customer・Contract・Incident"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Objects </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Links</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Links&#x3C;br/>owns・affects・dependsOn"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Objects </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> States</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"States&#x3C;br/>draft・approved・closed"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  States </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Actions</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Actions&#x3C;br/>approve・notify・cancel"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Actions </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Policies</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Permissions / Approval"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Policies </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Audit</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Audit / Decision Capture"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Audit </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Outcomes</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Outcomes / Feedback"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Outcomes </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Objects</span></span></code></pre>
+<p>この考え方はPalantir固有ではない。業務AIを安全に動かすには、どのプラットフォームでも同じ問題に直面する。RAGで文書を検索できても、検索結果が現在有効か、誰に見せてよいか、どの操作に使ってよいかは別問題である。オントロジーは、この「意味」「状態」「行為可能性」「責任」を一つの設計対象にする。</p>
+<h2 id="10-オントロジーを作る実務手順">10. オントロジーを作る実務手順</h2>
+<p>最初から完全なオントロジーを作ろうとすると失敗しやすい。実務では、次の順で小さく作る。</p>
+<h3 id="101-スコープを一文で書く">10.1 スコープを一文で書く</h3>
+<p>例: 「このオントロジーは、技術調査レポートにおけるテーマ、出典、主張、証拠、判断、リスクを管理するためのものである。」</p>
+<p>スコープ外も明示する。たとえば、論文投稿管理、予算管理、個人学習履歴は初期スコープ外にする。</p>
+<h3 id="102-competency-questions-を決める">10.2 Competency questions を決める</h3>
+<p>オントロジーで答えたい質問を先に決める。</p>
+<ul>
+<li>どの主張が、どの出典に支えられているか。</li>
+<li>どの出典は一次情報で、どれは二次情報か。</li>
+<li>どの判断は、どのリスクと前提に依存しているか。</li>
+<li>どの調査テーマは、どのカテゴリに属するか。</li>
+<li>古くなりやすい情報はどれか。</li>
+</ul>
+<h3 id="103-最小クラスを定義する">10.3 最小クラスを定義する</h3>
+<p>最初は5から10個程度でよい。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Class</th><th>定義</th></tr></thead><tbody><tr><td>Topic</td><td>調査対象となる問い・テーマ</td></tr><tr><td>Report</td><td>調査結果をまとめた文書</td></tr><tr><td>Source</td><td>根拠として参照する文献・公式資料・仕様</td></tr><tr><td>Claim</td><td>レポート内の検証可能な主張</td></tr><tr><td>Evidence</td><td>Claimを支える具体的根拠</td></tr><tr><td>Decision</td><td>実務上の判断・推奨</td></tr><tr><td>Risk</td><td>限界、未確認事項、失敗可能性</td></tr><tr><td>Concept</td><td>再利用したい抽象概念</td></tr></tbody></table>
+<h3 id="104-関係を定義する">10.4 関係を定義する</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Relation</th><th>Domain</th><th>Range</th><th>意味</th></tr></thead><tbody><tr><td>hasSource</td><td>Claim</td><td>Source</td><td>主張が出典に支えられる</td></tr><tr><td>supports</td><td>Evidence</td><td>Claim</td><td>証拠が主張を支持する</td></tr><tr><td>contradicts</td><td>Source / Evidence</td><td>Claim</td><td>反証または対立する</td></tr><tr><td>dependsOn</td><td>Decision</td><td>Claim / Risk</td><td>判断が前提に依存する</td></tr><tr><td>belongsTo</td><td>Report</td><td>Topic</td><td>レポートがテーマに属する</td></tr><tr><td>hasConcept</td><td>Report</td><td>Concept</td><td>レポートが概念を扱う</td></tr><tr><td>supersedes</td><td>Claim / Decision</td><td>Claim / Decision</td><td>新しい主張・判断が古いものを置き換える</td></tr></tbody></table>
+<h3 id="105-制約と検証を決める">10.5 制約と検証を決める</h3>
+<p>最初の制約は少なくてよい。</p>
+<ul>
+<li>Claim は最低1つの Source または Evidence を持つ。</li>
+<li>Source は <code>primary</code> / <code>secondary</code> / <code>official</code> / <code>paper</code> / <code>spec</code> の種別を持つ。</li>
+<li>Decision は前提、理由、リスクを持つ。</li>
+<li>時間依存の強い Claim は確認日を持つ。</li>
+<li>公式ロードマップでない将来予測は「公表情報からの推定」と明記する。</li>
+</ul>
+<p>こうした制約は、RDF/SHACLで書いてもよいし、Markdownテンプレート、JSON Schema、TypeScript型、CIチェックで実装してもよい。重要なのは、形式言語を使うこと自体ではなく、何を守るべき意味制約として扱うかである。</p>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic">flowchart</span><span style="color:#82AAFF"> TD</span></span>
+<span class="line"><span style="color:#BABED8">  Scope</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"1. Scope"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> CQ</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"2. Competency Questions"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  CQ </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Classes</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"3. Classes / Types"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Classes </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Relations</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"4. Relations"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Relations </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Constraints</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"5. Constraints"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Constraints </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Instances</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"6. Instances / Examples"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Instances </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Review</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"7. Domain Review"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Review </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Iterate</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"8. Iterate / Version"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Iterate </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> CQ</span></span></code></pre>
+<h2 id="11-どの程度形式化すべきか">11. どの程度形式化すべきか</h2>
+<p>オントロジー設計の失敗は、形式化不足と形式化過剰の両方から起きる。判断基準は「何を達成したいか」である。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>目的</th><th>推奨レベル</th><th>実装候補</th></tr></thead><tbody><tr><td>用語の揺れを減らす</td><td>Controlled vocabulary</td><td>Markdown、CSV、Notion DB</td></tr><tr><td>階層分類したい</td><td>Taxonomy / SKOS</td><td>SKOS、YAML、DB</td></tr><tr><td>レポートやソースの関係を辿りたい</td><td>Lightweight ontology / KG</td><td>property graph、RDF、JSON-LD</td></tr><tr><td>データ入力を検証したい</td><td>Schema + constraints</td><td>JSON Schema、SHACL、DB constraint</td></tr><tr><td>暗黙関係を推論したい</td><td>OWL / rule engine</td><td>OWL 2 profile、Datalog</td></tr><tr><td>業務操作まで制御したい</td><td>Operational ontology</td><td>API、権限、監査、ワークフロー</td></tr></tbody></table>
+<p>個人や小規模チームの知識管理では、いきなりOWLで全概念を定義するより、Markdown/JSON/YAMLで ontology lite を作り、必要になった関係だけをグラフ化するほうがよい。大規模な相互運用、外部公開、標準語彙との接続、論理推論が必要になった段階で、RDF/OWL/SHACLを検討する。</p>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic">flowchart</span><span style="color:#82AAFF"> TD</span></span>
+<span class="line"><span style="color:#BABED8">  Q</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"何をしたいか?"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> A</span><span style="color:#89DDFF;font-style:italic">{</span><span style="color:#C3E88D">"同義語・分類だけ?"</span><span style="color:#89DDFF;font-style:italic">}</span></span>
+<span class="line"><span style="color:#BABED8">  A </span><span style="color:#89DDFF;font-style:italic">--</span><span style="color:#C3E88D"> Yes </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> SKOS</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Controlled vocabulary / Taxonomy / SKOS"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  A </span><span style="color:#89DDFF;font-style:italic">--</span><span style="color:#C3E88D"> No </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> B</span><span style="color:#89DDFF;font-style:italic">{</span><span style="color:#C3E88D">"関係を辿りたい?"</span><span style="color:#89DDFF;font-style:italic">}</span></span>
+<span class="line"><span style="color:#BABED8">  B </span><span style="color:#89DDFF;font-style:italic">--</span><span style="color:#C3E88D"> Yes </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> KG</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Lightweight ontology / Knowledge graph"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  B </span><span style="color:#89DDFF;font-style:italic">--</span><span style="color:#C3E88D"> No </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> C</span><span style="color:#89DDFF;font-style:italic">{</span><span style="color:#C3E88D">"入力検証が必要?"</span><span style="color:#89DDFF;font-style:italic">}</span></span>
+<span class="line"><span style="color:#BABED8">  C </span><span style="color:#89DDFF;font-style:italic">--</span><span style="color:#C3E88D"> Yes </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> SHACL</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Schema / SHACL / DB constraints"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  C </span><span style="color:#89DDFF;font-style:italic">--</span><span style="color:#C3E88D"> No </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> D</span><span style="color:#89DDFF;font-style:italic">{</span><span style="color:#C3E88D">"推論が必要?"</span><span style="color:#89DDFF;font-style:italic">}</span></span>
+<span class="line"><span style="color:#BABED8">  D </span><span style="color:#89DDFF;font-style:italic">--</span><span style="color:#C3E88D"> Yes </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> OWL</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"OWL / Rules / Reasoner"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  D </span><span style="color:#89DDFF;font-style:italic">--</span><span style="color:#C3E88D"> No </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Lite</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Ontology lite in docs"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  OWL </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> E</span><span style="color:#89DDFF;font-style:italic">{</span><span style="color:#C3E88D">"業務操作も必要?"</span><span style="color:#89DDFF;font-style:italic">}</span></span>
+<span class="line"><span style="color:#BABED8">  KG </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> E</span></span>
+<span class="line"><span style="color:#BABED8">  SHACL </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> E</span></span>
+<span class="line"><span style="color:#BABED8">  E </span><span style="color:#89DDFF;font-style:italic">--</span><span style="color:#C3E88D"> Yes </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Ops</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Operational ontology + workflow + permissions"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  E </span><span style="color:#89DDFF;font-style:italic">--</span><span style="color:#C3E88D"> No </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Maintain</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Versioning / review / governance"</span><span style="color:#89DDFF;font-style:italic">]</span></span></code></pre>
+<h2 id="12-リスクと限界">12. リスクと限界</h2>
+<h3 id="121-偽の精密さ">12.1 偽の精密さ</h3>
+<p>概念名をクラスにしただけで、世界を正確に表現できた気になりやすい。実際には、定義の境界、例外、同義語、組織ごとの用法、更新責任が曖昧なまま残る。オントロジーは現実のコピーではなく、目的に応じたモデルである。</p>
+<h3 id="122-合意形成の不足">12.2 合意形成の不足</h3>
+<p>オントロジー開発は、技術作業であると同時に合意形成である。「顧客」「契約」「完了」「重大障害」の意味は、部署やシステムによって異なる。合意なしにLLMで抽出した語彙を採用すると、現場の実務意味とずれたモデルができる。</p>
+<p>出典メモ: <a href="https://arxiv.org/abs/2210.12026">Ontology Development is Consensus Creation, Not (Merely) Representation</a> は、参照オントロジー開発を単なる知識表現ではなく合意形成として捉える。LLMによる自動生成は補助になりうるが、合意形成を代替しない。</p>
+<h3 id="123-過剰形式化">12.3 過剰形式化</h3>
+<p>すべてを厳密に定義しようとすると、運用負荷が増え、更新されないオントロジーになる。特に変化の速いAI製品、業務ルール、組織体制では、完全性より更新可能性のほうが重要になる場合が多い。</p>
+<h3 id="124-open-world-と-closed-world-の混同">12.4 Open world と closed world の混同</h3>
+<p>OWLのようなWeb向け論理は、明示されていないことを偽とみなさない。一方、業務システムの検証では、必須項目がないならエラーにしたい。オントロジー言語、検証言語、アプリケーション制約の役割を混ぜると、期待した振る舞いと違う結果になる。</p>
+<h3 id="125-llm任せの危険">12.5 LLM任せの危険</h3>
+<p>LLMは語彙候補、関係候補、定義文、例外パターンを出す補助として有用である。しかし、LLMは組織内の正式定義、権限、責任、現場の暗黙ルールを自動的には知らない。LLMが作ったオントロジーは、必ず出典、例、反例、ドメイン専門家レビュー、テストデータで検証する必要がある。</p>
+<h2 id="13-実務での推奨方針">13. 実務での推奨方針</h2>
+<p>このリポジトリや個人の研究ワークフローで使うなら、最初の目標は「形式的に美しいオントロジー」ではなく、「再利用できる知識資産を迷わず置ける意味モデル」にするべきである。</p>
+<p>推奨は以下である。</p>
+<ol>
+<li>まず <code>Topic</code>、<code>Report</code>、<code>Source</code>、<code>Claim</code>、<code>Evidence</code>、<code>Decision</code>、<code>Risk</code>、<code>Concept</code> の ontology lite をMarkdownで定義する。</li>
+<li>各レポートに、主要な Claim と Source を近接配置する。これは既存の <code>出典メモ:</code> ルールと相性がよい。</li>
+<li>時間依存の主張には <code>確認日</code> を持たせる。AI製品、仕様、価格、ロードマップは必ず再確認対象にする。</li>
+<li>分類だけで足りる領域はSKOS的に扱う。たとえば <code>category/ai-systems</code>、<code>category/knowledge-systems</code> は軽量分類でよい。</li>
+<li>将来的に検索・可視化・MCP連携を強めるなら、Markdownのfrontmatter、JSON-LD、または小さなproperty graphへ変換できる形で設計する。</li>
+<li>OWLは、論理推論や外部語彙との厳密な相互運用が必要になってから検討する。</li>
+</ol>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0"><code><span class="line"><span style="color:#89DDFF;font-style:italic">graph</span><span style="color:#82AAFF"> TD</span></span>
+<span class="line"><span style="color:#BABED8">  Topic</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Topic&#x3C;br/>ontology-concept"</span><span style="color:#89DDFF;font-style:italic">]</span><span style="color:#89DDFF;font-style:italic"> --></span><span style="color:#BABED8"> Report</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Report&#x3C;br/>report.md"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Report </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Claim1</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Claim&#x3C;br/>Ontology is not just glossary"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Report </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Claim2</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Claim&#x3C;br/>LLM needs grounding layer"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Claim1 </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Source1</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Source&#x3C;br/>Gruber 1993"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Claim1 </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Source2</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Source&#x3C;br/>Ontology Development 101"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Claim2 </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Source3</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Source&#x3C;br/>Pan et al. 2023"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Claim2 </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Source4</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Source&#x3C;br/>Palantir Ontology docs"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Report </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Risk</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Risk&#x3C;br/>over-formalization"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Report </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Decision</span><span style="color:#89DDFF;font-style:italic">[</span><span style="color:#C3E88D">"Decision&#x3C;br/>start with ontology lite"</span><span style="color:#89DDFF;font-style:italic">]</span></span>
+<span class="line"><span style="color:#BABED8">  Decision </span><span style="color:#89DDFF;font-style:italic">--></span><span style="color:#BABED8"> Risk</span></span></code></pre>
+<p>最小実装としては、以下のようなfrontmatterでも十分に価値がある。</p>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0"><code><span class="line"><span style="color:#F07178">topic</span><span style="color:#89DDFF">:</span><span style="color:#C3E88D"> ontology-concept</span></span>
+<span class="line"><span style="color:#F07178">category</span><span style="color:#89DDFF">:</span><span style="color:#C3E88D"> knowledge-systems</span></span>
+<span class="line"><span style="color:#F07178">concepts</span><span style="color:#89DDFF">:</span></span>
+<span class="line"><span style="color:#89DDFF">  -</span><span style="color:#C3E88D"> ontology</span></span>
+<span class="line"><span style="color:#89DDFF">  -</span><span style="color:#C3E88D"> knowledge-graph</span></span>
+<span class="line"><span style="color:#89DDFF">  -</span><span style="color:#C3E88D"> semantic-web</span></span>
+<span class="line"><span style="color:#89DDFF">  -</span><span style="color:#C3E88D"> operational-ontology</span></span>
+<span class="line"><span style="color:#F07178">claims</span><span style="color:#89DDFF">:</span></span>
+<span class="line"><span style="color:#89DDFF">  -</span><span style="color:#F07178"> id</span><span style="color:#89DDFF">:</span><span style="color:#C3E88D"> claim-ontology-not-glossary</span></span>
+<span class="line"><span style="color:#F07178">    status</span><span style="color:#89DDFF">:</span><span style="color:#C3E88D"> supported</span></span>
+<span class="line"><span style="color:#F07178">    sources</span><span style="color:#89DDFF">:</span></span>
+<span class="line"><span style="color:#89DDFF">      -</span><span style="color:#C3E88D"> gruber-1993</span></span>
+<span class="line"><span style="color:#89DDFF">      -</span><span style="color:#C3E88D"> ontology-101</span></span>
+<span class="line"><span style="color:#89DDFF">  -</span><span style="color:#F07178"> id</span><span style="color:#89DDFF">:</span><span style="color:#C3E88D"> claim-llm-needs-grounding-layer</span></span>
+<span class="line"><span style="color:#F07178">    status</span><span style="color:#89DDFF">:</span><span style="color:#C3E88D"> supported</span></span>
+<span class="line"><span style="color:#F07178">    sources</span><span style="color:#89DDFF">:</span></span>
+<span class="line"><span style="color:#89DDFF">      -</span><span style="color:#C3E88D"> pan-2023-llm-kg</span></span>
+<span class="line"><span style="color:#89DDFF">      -</span><span style="color:#C3E88D"> palantir-ontology-overview</span></span>
+<span class="line"><span style="color:#F07178">review</span><span style="color:#89DDFF">:</span></span>
+<span class="line"><span style="color:#F07178">  freshness_sensitive</span><span style="color:#89DDFF">:</span><span style="color:#FF9CAC"> true</span></span>
+<span class="line"><span style="color:#F07178">  last_checked</span><span style="color:#89DDFF">:</span><span style="color:#BABED8"> 2026-05-09</span></span></code></pre>
+<h2 id="14-まとめ">14. まとめ</h2>
+<p>オントロジーは「世界の完全な分類表」ではない。ある目的のために、対象領域をどのような概念、関係、制約、出典、更新責任で扱うかを明示した意味モデルである。</p>
+<p>哲学的には存在のカテゴリーを問う。知識表現では共有可能な概念仕様を作る。Semantic WebではRDF/OWL/SKOS/SPARQL/SHACLを通じてWeb上で機械可読にする。業務AIでは、データ、業務対象、状態、行為、権限、監査をつなぐ operational ontology へ拡張される。</p>
+<p>LLM時代に重要なのは、オントロジーを神秘化しないことである。LLMの回答品質を上げるための飾りではなく、AIが組織の現実を誤って参照・操作しないようにするための設計資産である。最初は小さく、具体的な問いから始め、実際のデータとレビューで更新し続けるのがよい。</p>
+<h2 id="参考情報">参考情報</h2>
+<ul>
+<li>Tom Gruber, “A Translation Approach to Portable Ontology Specifications” <a href="https://doi.org/10.1006/knac.1993.1008">https://doi.org/10.1006/knac.1993.1008</a></li>
+<li>Tom Gruber, “Definition of Ontology as Specification” <a href="https://tomgruber.org/writing/ontolingua-kaj-1993/">https://tomgruber.org/writing/ontolingua-kaj-1993/</a></li>
+<li>Natalya F. Noy and Deborah L. McGuinness, “Ontology Development 101” <a href="https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html">https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html</a></li>
+<li>Nicola Guarino, “Formal Ontology and Information Systems” <a href="https://www.loa.istc.cnr.it/wp-content/uploads/2020/03/FOIS98.pdf">https://www.loa.istc.cnr.it/wp-content/uploads/2020/03/FOIS98.pdf</a></li>
+<li>Barry Smith, “Basic Concepts of Formal Ontology” <a href="https://ontology.buffalo.edu/smith/articles/fois1998.pdf">https://ontology.buffalo.edu/smith/articles/fois1998.pdf</a></li>
+<li>Tim Berners-Lee, James Hendler, Ora Lassila, “The Semantic Web” <a href="https://lassila.org/publications/2001/SciAm.html">https://lassila.org/publications/2001/SciAm.html</a></li>
+<li>W3C, “RDF 1.1 Primer” <a href="https://www.w3.org/TR/rdf-primer/">https://www.w3.org/TR/rdf-primer/</a></li>
+<li>W3C, “OWL 2 Web Ontology Language Primer” <a href="https://www.w3.org/TR/owl-primer/">https://www.w3.org/TR/owl-primer/</a></li>
+<li>W3C, “OWL 2 Web Ontology Language Document Overview” <a href="https://www.w3.org/TR/owl2-overview/">https://www.w3.org/TR/owl2-overview/</a></li>
+<li>W3C, “OWL 2 Web Ontology Language Profiles” <a href="https://www.w3.org/TR/owl2-profiles/">https://www.w3.org/TR/owl2-profiles/</a></li>
+<li>W3C, “SKOS Simple Knowledge Organization System Primer” <a href="https://www.w3.org/TR/skos-primer/">https://www.w3.org/TR/skos-primer/</a></li>
+<li>W3C, “SHACL Shapes Constraint Language” <a href="https://www.w3.org/TR/shacl/">https://www.w3.org/TR/shacl/</a></li>
+<li>W3C, “SPARQL 1.1 Query Language” <a href="https://www.w3.org/TR/sparql11-query/">https://www.w3.org/TR/sparql11-query/</a></li>
+<li>ISO, “ISO/IEC 21838-2:2021 Basic Formal Ontology” <a href="https://www.iso.org/standard/74572.html">https://www.iso.org/standard/74572.html</a></li>
+<li>Schema.org <a href="https://schema.org/">https://schema.org/</a></li>
+<li>Aidan Hogan et al., “Knowledge Graphs” <a href="https://arxiv.org/abs/2003.02320">https://arxiv.org/abs/2003.02320</a></li>
+<li>Shirui Pan et al., “Unifying Large Language Models and Knowledge Graphs: A Roadmap” <a href="https://arxiv.org/abs/2306.08302">https://arxiv.org/abs/2306.08302</a></li>
+<li>Pascal Hitzler et al., “Accelerating Knowledge Graph and Ontology Engineering with Large Language Models” <a href="https://arxiv.org/abs/2411.09601">https://arxiv.org/abs/2411.09601</a></li>
+<li>”Ontology Development is Consensus Creation, Not (Merely) Representation” <a href="https://arxiv.org/abs/2210.12026">https://arxiv.org/abs/2210.12026</a></li>
+<li>Palantir, “Ontology overview” <a href="https://www.palantir.com/docs/foundry/ontology/overview">https://www.palantir.com/docs/foundry/ontology/overview</a></li>
+<li>Palantir, “Platform overview” <a href="https://www.palantir.com/docs/foundry/platform-overview/overview">https://www.palantir.com/docs/foundry/platform-overview/overview</a></li>
+<li>Stanford Encyclopedia of Philosophy, “Metaphysics” <a href="https://plato.stanford.edu/entries/metaphysics/">https://plato.stanford.edu/entries/metaphysics/</a></li>
+</ul> </div> <!-- related posts --> <footer> <h2 class="font-bold text-lg dark:text-white mb-6">Related Posts</h2> <section class="flex flex-col md:flex-row sm:justify-between gap-8"> <div class="flex flex-wrap gap-2"> <div class="min-h-full"> <img src="/research/pr-preview/pr-15/_astro/placeholder-hero.ZqYaJ2Hs_ZtY0of.webp" class="w-16 h-16 object-cover rounded-full  " alt="img of AI・LLM・オントロジー・組織記憶" width="200" height="200" loading="lazy" decoding="async"> </div> <header class="flex justify-center items-center"> <a class="font-medium  hover:underline" href="/research/pr-preview/pr-15/post/ai-llm-ontology-memory/"> AI・LLM・オントロジー・組織記憶 </a> </header> </div><div class="flex flex-wrap gap-2"> <div class="min-h-full"> <img src="/research/pr-preview/pr-15/_astro/banner.BelI91fy_Z1kpWMM.webp" class="w-16 h-16 object-cover rounded-full  " alt="img of Palantir: Operational AI Platform の深層構造" width="200" height="200" loading="lazy" decoding="async"> </div> <header class="flex justify-center items-center"> <a class="font-medium  hover:underline" href="/research/pr-preview/pr-15/post/palantir-operational-ai-platform/"> Palantir: Operational AI Platform の深層構造 </a> </header> </div> </section> </footer> </article> </div>  </div> </article>  <footer class="flex justify-center items-center w-full px-16 h-28 border-t-2">
+&copy; 2026 daylight55. All rights reserved.
+</footer> </main>   </body> </html>  

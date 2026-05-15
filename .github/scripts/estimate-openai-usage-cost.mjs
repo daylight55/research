@@ -25,22 +25,27 @@ if (!Number.isFinite(startTime) || startTime <= 0) {
   throw new Error("OPENAI_USAGE_START_TIME must be a Unix timestamp.");
 }
 
-const usage = await fetchUsageWithRetry();
+const usageResult = await fetchUsageWithRetry();
+const usage = usageResult.data;
 const totals = aggregateUsage(usage);
 const estimate = estimateCost(totals, model);
+const modelBreakdown = aggregateUsageByModel(usage);
 
 const body = [
   "## OpenAI usage estimate",
   "",
   `- Window: ${formatTime(startTime)} - ${formatTime(endTime)}`,
-  `- Model filter: \`${model}\``,
+  `- Configured model: \`${model}\``,
+  `- Usage query: ${usageResult.queryDescription}`,
   `- Requests: ${totals.requests.toLocaleString("en-US")}`,
   `- Input tokens: ${totals.inputTokens.toLocaleString("en-US")}`,
   `- Cached input tokens: ${totals.cachedInputTokens.toLocaleString("en-US")}`,
   `- Output tokens: ${totals.outputTokens.toLocaleString("en-US")}`,
   `- Estimated cost: **$${estimate.toFixed(4)}**`,
   "",
-  "This estimate is based on the OpenAI organization usage API and the workflow's configured model price. Usage reporting can be delayed, so a near-zero estimate may mean data has not landed yet.",
+  ...formatModelBreakdown(modelBreakdown),
+  "",
+  "This estimate is based on the OpenAI organization usage API and the workflow's configured model price. If the configured model returns no rows, the script falls back to all models in the same time window because provider-side usage model names can be more specific than the configured alias. Usage reporting can still be delayed, so a near-zero estimate may mean data has not landed yet.",
   "",
 ].join("\n");
 
@@ -50,19 +55,32 @@ async function fetchUsageWithRetry() {
   const attempts = Number(process.env.OPENAI_USAGE_ATTEMPTS || 6);
   const delaySeconds = Number(process.env.OPENAI_USAGE_DELAY_SECONDS || 20);
   let lastData = [];
+  let lastQueryDescription = `configured model only: \`${model}\``;
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
-    lastData = await fetchUsage();
+    lastData = await fetchUsage({ modelFilter: model });
+    if (!hasUsage(lastData)) {
+      const fallbackData = await fetchUsage({ modelFilter: undefined });
+      if (hasUsage(fallbackData)) {
+        return {
+          data: fallbackData,
+          queryDescription: `all models fallback after \`${model}\` returned no usage rows`,
+        };
+      }
+      lastData = fallbackData;
+      lastQueryDescription = `all models fallback after \`${model}\` returned no usage rows`;
+    }
+
     if (hasUsage(lastData) || attempt === attempts) {
-      return lastData;
+      return { data: lastData, queryDescription: lastQueryDescription };
     }
     await sleep(delaySeconds * 1000);
   }
 
-  return lastData;
+  return { data: lastData, queryDescription: lastQueryDescription };
 }
 
-async function fetchUsage() {
+async function fetchUsage({ modelFilter }) {
   const allData = [];
   let page;
 
@@ -72,7 +90,9 @@ async function fetchUsage() {
     url.searchParams.set("end_time", String(endTime));
     url.searchParams.set("bucket_width", "1m");
     url.searchParams.set("limit", "180");
-    url.searchParams.append("models", model);
+    if (modelFilter) {
+      url.searchParams.append("models", modelFilter);
+    }
     url.searchParams.append("group_by", "model");
     if (page) {
       url.searchParams.set("page", page);
@@ -118,6 +138,29 @@ function aggregateUsage(buckets) {
   return totals;
 }
 
+function aggregateUsageByModel(buckets) {
+  const byModel = new Map();
+
+  for (const bucket of buckets) {
+    for (const result of bucket.results || []) {
+      const modelName = result.model || "(unreported)";
+      const totals = byModel.get(modelName) || {
+        inputTokens: 0,
+        cachedInputTokens: 0,
+        outputTokens: 0,
+        requests: 0,
+      };
+      totals.inputTokens += Number(result.input_tokens || 0);
+      totals.cachedInputTokens += Number(result.input_cached_tokens || 0);
+      totals.outputTokens += Number(result.output_tokens || 0);
+      totals.requests += Number(result.num_model_requests || 0);
+      byModel.set(modelName, totals);
+    }
+  }
+
+  return [...byModel.entries()].sort(([, a], [, b]) => b.requests - a.requests);
+}
+
 function estimateCost(totals, modelName) {
   const prices = pricesPerMillion[modelName];
   if (!prices) {
@@ -130,6 +173,26 @@ function estimateCost(totals, modelName) {
     (totals.cachedInputTokens / 1_000_000) * prices.cachedInput +
     (totals.outputTokens / 1_000_000) * prices.output
   );
+}
+
+function formatModelBreakdown(modelRows) {
+  if (modelRows.length === 0) {
+    return ["Model breakdown: no usage rows returned."];
+  }
+
+  return [
+    "Model breakdown:",
+    "",
+    "| Model | Requests | Input | Cached input | Output |",
+    "| --- | ---: | ---: | ---: | ---: |",
+    ...modelRows.map(([modelName, totals]) => [
+      `| \`${modelName}\``,
+      totals.requests.toLocaleString("en-US"),
+      totals.inputTokens.toLocaleString("en-US"),
+      totals.cachedInputTokens.toLocaleString("en-US"),
+      `${totals.outputTokens.toLocaleString("en-US")} |`,
+    ].join(" | ")),
+  ];
 }
 
 function hasUsage(buckets) {

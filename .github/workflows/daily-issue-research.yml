@@ -178,6 +178,11 @@ jobs:
         run: |
           set -euo pipefail
 
+          git ls-files --modified --others --exclude-standard -z -- '*.md' '*.mdx' \
+            | while IFS= read -r -d '' file; do
+                perl -0pi -e 's/[ \t]+$//mg; s/\n+\z/\n/s' "${file}"
+              done
+
           # Include newly created files in diff checks without staging contents.
           git add --intent-to-add .
           git diff --check

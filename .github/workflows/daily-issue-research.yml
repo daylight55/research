@@ -137,7 +137,8 @@ jobs:
           output-file: codex-output.md
           safety-strategy: drop-sudo
           sandbox: workspace-write
-          effort: high
+          model: gpt-5.4-mini
+          effort: medium
           allow-bots: true
 
       - name: Remove runtime prompt artifacts

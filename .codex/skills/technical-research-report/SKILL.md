@@ -17,6 +17,23 @@ Use this skill for any report or investigation in this repository.
   - `research-tasks.md`
 - Add optional folders only when useful: `figures/`, `sources/`, `notes/`, `prototype/`.
 
+## Astro Site Visibility
+
+If the report must appear on the website, PR preview, top page, or category pages, `category/<category-name>/<topic>/report.md` is not enough.
+
+Also do all of the following:
+
+1. Add a matching `src/content/blog/<slug>.mdx` entry with frontmatter and the report body.
+2. Add any new category to `src/data/categories.ts`.
+3. Preserve existing categories when rebasing or resolving conflicts; merge category lists as a union.
+4. Avoid hardcoded homepage counts. Use data-derived values such as `posts.length` and `CATEGORIES.length`.
+5. Run `pnpm build`.
+6. Confirm the build generated:
+   - `dist/index.html`
+   - `dist/post/<slug>/index.html`
+   - `dist/category/<category-name>/1/index.html`
+7. Check `dist/index.html` or `curl` against local preview for the slug, title, and category link before saying the report is visible.
+
 ## Research Workflow
 
 1. Define the research question, audience, and practical decision the report should support.
@@ -37,7 +54,9 @@ Use this skill for any report or investigation in this repository.
    - open questions
 7. Write or update `report.md`.
 8. Verify links, unresolved placeholders, and internal consistency.
-9. Commit and push when the user asked for repository updates.
+9. If website visibility or preview visibility is part of the deliverable, complete the Astro Site Visibility checklist before publication.
+10. When the user asks for repository publication, such as `PRにして`, `PRを作成して`, or `レポートにまとめてPRにして`, do not stop at local files. Commit, push, and create a GitHub Pull Request. Write the PR title and body in Japanese, using `.github/PULL_REQUEST_TEMPLATE.md` as the structure.
+11. User-requested changes may be committed per work unit without asking for separate commit approval. Before committing, inspect the intended diff and avoid staging unrelated changes.
 
 ## Citation Requirements
 
@@ -118,3 +137,8 @@ Before finishing:
 - The report distinguishes evidence from inference.
 - `research-tasks.md` reflects completed and remaining work.
 - `git diff --check` passes before committing.
+- Before committing a user-requested change, the staged diff includes only the intended files.
+- If creating a PR, unresolved placeholders such as `TBD`, `TODO`, `未定`, `要確認`, and `FIXME` have been checked and removed or intentionally explained.
+- If creating a PR, the PR title and body are written in Japanese and follow `.github/PULL_REQUEST_TEMPLATE.md`.
+- If creating a PR, the final response includes the verified PR URL, base branch, head branch, and draft/ready state.
+- If website visibility was expected, a matching `src/content/blog/<slug>.mdx` exists, any new category is registered in `src/data/categories.ts`, `pnpm build` generated the post/category/index pages, and the top page HTML contains the slug/title/category.

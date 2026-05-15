@@ -34,7 +34,7 @@ jobs:
       pr_url: ${{ steps.create_pr.outputs.pr_url }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Select research issue
         id: select_issue

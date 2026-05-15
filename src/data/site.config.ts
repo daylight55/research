@@ -10,7 +10,7 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-	site: 'https://research.pages.dev/',
+	site: 'https://research.daylight55.dev/',
 	author: 'daylight55',
 	title: 'Daylight Research Atlas',
 	description: 'AI、データ、組織ナレッジの調査レポートを読むための静的リサーチアトラス。',

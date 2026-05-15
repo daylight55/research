@@ -1,0 +1,60 @@
+name: Cloudflare Pages Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: cloudflare-pages-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  ASTRO_SITE: https://daylight55.dev
+  ASTRO_BASE: /
+
+jobs:
+  deploy:
+    name: Deploy production site
+    runs-on: ubuntu-latest
+    environment: cloudflare-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.TF_VAR_CLOUDFLARE_ACCOUNT_ID }}
+          packageManager: pnpm
+          command: pages deploy dist --project-name=daylight-research --branch=main
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print deployment URL
+        env:
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+        run: |
+          echo "Cloudflare Pages deployment: ${DEPLOYMENT_URL}"

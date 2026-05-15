@@ -3,8 +3,6 @@ name: Pages PR Preview
 on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
-  push:
-    branches: [main]
 
 permissions:
   contents: write
@@ -65,15 +63,6 @@ jobs:
           pages-base-url: ${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
           wait-for-pages-deployment: false
           qr-code: false
-
-      - name: Publish main site
-        if: steps.detect.outputs.enabled == 'true' && github.event_name == 'push'
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./dist
-          keep_files: true
 
       - name: Comment skipped preview
         if: steps.detect.outputs.enabled != 'true' && github.event_name == 'pull_request'

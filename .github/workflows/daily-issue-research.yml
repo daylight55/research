@@ -137,7 +137,6 @@ jobs:
           output-file: codex-output.md
           safety-strategy: drop-sudo
           sandbox: workspace-write
-          codex-args: --search
           effort: high
           allow-bots: true
 

@@ -25,6 +25,12 @@ issue.
 - If the report should be visible on the Astro site, add or update the matching
   `src/content/blog/<topic>.mdx` entry and `src/data/categories.ts` category
   wiring as needed.
+- When creating `src/content/blog/<topic>.mdx`, use
+  `.github/codex/templates/blog-entry.mdx` as the site-entry shape.
+  Put the article body directly in the MDX file after frontmatter. Do not import
+  `category/<category-name>/<topic>/report.md` into the MDX file, because
+  imported Markdown headings are not exposed to Astro's article table of
+  contents and the desktop sidebar becomes empty.
 
 ## Research Standards
 

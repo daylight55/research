@@ -1,0 +1,35 @@
+---
+title: '<REPORT_TITLE>'
+description: '<ONE_SENTENCE_DESCRIPTION>'
+pubDate: '<YYYY-MM-DD>'
+heroImage: '../../assets/images/placeholder-hero.jpg'
+category: '<CATEGORY_NAME>'
+tags: ['<TAG_1>', '<TAG_2>']
+draft: false
+---
+
+<!--
+Daily research site entry template.
+
+Keep the article body directly in this MDX file after the frontmatter.
+Do not import `category/<category>/<topic>/report.md` as a component.
+Imported Markdown renders the article body, but Astro does not expose imported
+headings through `post.render().headings`, so the article table-of-contents
+sidebar becomes empty.
+
+Recommended workflow:
+1. Write the canonical report at `category/<category>/<topic>/report.md`.
+2. Copy the report body below this comment in `src/content/blog/<topic>.mdx`.
+3. Keep the top-level `# <Title>` heading from the report body.
+4. Keep Mermaid fences and `出典メモ:` paragraphs unchanged.
+-->
+
+# <REPORT_TITLE>
+
+作成日: <YYYY-MM-DD>
+調査方式: <narrative review / literature review / product evaluation / architecture survey>
+対象: <scope>
+
+## 引用方針
+
+## 1. エグゼクティブサマリー

@@ -127,6 +127,13 @@ jobs:
         if: steps.select_issue.outputs.issue_found == 'true'
         run: pnpm install --frozen-lockfile
 
+      - name: Record OpenAI usage window
+        if: steps.select_issue.outputs.issue_found == 'true'
+        id: openai_usage_window
+        shell: bash
+        run: |
+          echo "start_time=$(date +%s)" >> "${GITHUB_OUTPUT}"
+
       - name: Run Codex research
         if: steps.select_issue.outputs.issue_found == 'true'
         id: run_codex
@@ -140,6 +147,23 @@ jobs:
           model: gpt-5.4-mini
           effort: medium
           allow-bots: true
+
+      - name: Estimate OpenAI usage cost
+        if: always() && steps.select_issue.outputs.issue_found == 'true'
+        continue-on-error: true
+        id: openai_usage_cost
+        shell: bash
+        env:
+          OPENAI_ADMIN_KEY: ${{ secrets.OPENAI_ADMIN_KEY }}
+          OPENAI_USAGE_START_TIME: ${{ steps.openai_usage_window.outputs.start_time }}
+          OPENAI_USAGE_MODEL: gpt-5.4-mini
+          OPENAI_USAGE_OUTPUT_FILE: ${{ runner.temp }}/openai-usage-comment.md
+        run: |
+          set -euo pipefail
+
+          export OPENAI_USAGE_END_TIME="$(date +%s)"
+          node .github/scripts/estimate-openai-usage-cost.mjs
+          echo "comment_path=${OPENAI_USAGE_OUTPUT_FILE}" >> "${GITHUB_OUTPUT}"
 
       - name: Remove runtime prompt artifacts
         if: always()
@@ -205,6 +229,20 @@ jobs:
             --head "${branch}")"
 
           echo "pr_url=${pr_url}" >> "${GITHUB_OUTPUT}"
+
+      - name: Comment OpenAI usage on PR
+        if: steps.create_pr.outputs.pr_url != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_URL: ${{ steps.create_pr.outputs.pr_url }}
+          OPENAI_USAGE_COMMENT: ${{ steps.openai_usage_cost.outputs.comment_path }}
+        run: |
+          set -euo pipefail
+
+          if [[ -s "${OPENAI_USAGE_COMMENT}" ]]; then
+            gh pr comment "${PR_URL}" --body-file "${OPENAI_USAGE_COMMENT}"
+          fi
 
       - name: Mark issue with PR
         if: steps.create_pr.outputs.pr_url != ''

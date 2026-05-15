@@ -49,6 +49,7 @@ jobs:
           fi
 
           echo "branch=${branch}" >> "${GITHUB_OUTPUT}"
+          echo "alias=${branch:0:28}" >> "${GITHUB_OUTPUT}"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -86,4 +87,5 @@ jobs:
             Cloudflare Pages preview deployed.
 
             - Branch: `${{ steps.preview_branch.outputs.branch }}`
-            - URL: ${{ steps.deploy.outputs.deployment-url }}
+            - Branch alias URL: https://${{ steps.preview_branch.outputs.alias }}.${{ env.CLOUDFLARE_PAGES_PROJECT }}.pages.dev
+            - Deployment URL: ${{ steps.deploy.outputs.deployment-url }}

@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  ASTRO_SITE: https://daylight55.dev
+  ASTRO_SITE: https://research.daylight55.dev
   ASTRO_BASE: /
 
 jobs:

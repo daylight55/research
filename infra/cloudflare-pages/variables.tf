@@ -19,7 +19,7 @@ variable "project_name" {
 variable "custom_domain_name" {
   description = "Custom production domain attached to the Cloudflare Pages project."
   type        = string
-  default     = "daylight55.dev"
+  default     = "research.daylight55.dev"
 }
 
 variable "custom_domain_zone_id" {

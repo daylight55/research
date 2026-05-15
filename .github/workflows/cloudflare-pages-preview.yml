@@ -11,6 +11,10 @@ on:
         description: "Optional pull request number to comment on"
         required: false
         type: string
+      issue_number:
+        description: "Optional issue number to comment on"
+        required: false
+        type: string
       preview_branch:
         description: "Optional branch name to deploy as a Cloudflare preview branch"
         required: false
@@ -22,6 +26,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
   pull-requests: write
   deployments: write
 
@@ -103,3 +108,22 @@ jobs:
             - Branch: `${{ steps.preview_branch.outputs.branch }}`
             - Branch alias URL: https://${{ steps.preview_branch.outputs.alias }}.${{ env.CLOUDFLARE_PAGES_PROJECT }}.pages.dev
             - Deployment URL: ${{ steps.deploy.outputs.deployment-url }}
+
+      - name: Comment preview URL on issue
+        if: inputs.issue_number != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+          PR_NUMBER: ${{ inputs.pr_number }}
+          BRANCH: ${{ steps.preview_branch.outputs.branch }}
+          ALIAS_URL: https://${{ steps.preview_branch.outputs.alias }}.${{ env.CLOUDFLARE_PAGES_PROJECT }}.pages.dev
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+        run: |
+          set -euo pipefail
+
+          gh issue comment "${ISSUE_NUMBER}" --body "Cloudflare Pages preview deployed for PR #${PR_NUMBER}.
+
+          - Branch: \`${BRANCH}\`
+          - Branch alias URL: ${ALIAS_URL}
+          - Deployment URL: ${DEPLOYMENT_URL}"

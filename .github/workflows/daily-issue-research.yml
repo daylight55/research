@@ -178,9 +178,11 @@ jobs:
         run: |
           set -euo pipefail
 
+          # Include newly created files in diff checks without staging contents.
+          git add --intent-to-add .
           git diff --check
 
-          if git diff --quiet --exit-code; then
+          if [[ -z "$(git status --porcelain)" ]]; then
             echo "has_changes=false" >> "${GITHUB_OUTPUT}"
           else
             echo "has_changes=true" >> "${GITHUB_OUTPUT}"

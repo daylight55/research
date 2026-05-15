@@ -1,0 +1,89 @@
+name: Cloudflare Pages Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+  deployments: write
+
+concurrency:
+  group: cloudflare-pages-preview-${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+  cancel-in-progress: true
+
+env:
+  ASTRO_SITE: https://research.daylight55.dev
+  ASTRO_BASE: /
+  CLOUDFLARE_PAGES_PROJECT: daylight-research
+
+jobs:
+  preview:
+    name: Deploy branch preview
+    runs-on: ubuntu-latest
+    environment: cloudflare-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+
+      - name: Resolve preview branch
+        id: preview_branch
+        shell: bash
+        env:
+          RAW_BRANCH: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
+        run: |
+          set -euo pipefail
+
+          branch="$(printf '%s' "${RAW_BRANCH}" \
+            | tr '[:upper:]' '[:lower:]' \
+            | sed -E 's#[^a-z0-9._-]+#-#g; s#^-+##; s#-+$##')"
+
+          if [[ -z "${branch}" ]]; then
+            branch="preview-${GITHUB_RUN_ID}"
+          fi
+
+          echo "branch=${branch}" >> "${GITHUB_OUTPUT}"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Deploy to Cloudflare Pages preview
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.TF_VAR_CLOUDFLARE_ACCOUNT_ID }}
+          packageManager: pnpm
+          command: pages deploy dist --project-name=${{ env.CLOUDFLARE_PAGES_PROJECT }} --branch=${{ steps.preview_branch.outputs.branch }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Comment preview URL
+        if: github.event_name == 'pull_request'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: cloudflare-pages-preview
+          message: |
+            Cloudflare Pages preview deployed.
+
+            - Branch: `${{ steps.preview_branch.outputs.branch }}`
+            - URL: ${{ steps.deploy.outputs.deployment-url }}

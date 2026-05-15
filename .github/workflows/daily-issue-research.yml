@@ -288,6 +288,7 @@ jobs:
           gh workflow run cloudflare-pages-preview.yml \
             --ref "${GITHUB_REF_NAME}" \
             -f pr_number="${PR_NUMBER}" \
+            -f issue_number="${ISSUE_NUMBER}" \
             -f preview_branch="${PREVIEW_BRANCH}" \
             -f checkout_ref="${PREVIEW_BRANCH}"
 

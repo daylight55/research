@@ -190,6 +190,13 @@ jobs:
           git add --intent-to-add .
           git diff --check
 
+          changed_blog_entries="$(git ls-files --modified --others --exclude-standard -- 'src/content/blog/*.mdx' || true)"
+          if [[ -n "${changed_blog_entries}" ]] \
+            && grep -nE "import[[:space:]]+.*from[[:space:]]+['\"]\\.\\./\\.\\./\\.\\./category/|<Report[[:space:]]*/>" ${changed_blog_entries}; then
+            echo "::error::Site entries must copy the report body directly into src/content/blog/*.mdx. Do not import category/.../report.md, because imported Markdown headings are not available to the article sidebar."
+            exit 1
+          fi
+
           if [[ -z "$(git status --porcelain)" ]]; then
             echo "has_changes=false" >> "${GITHUB_OUTPUT}"
           else

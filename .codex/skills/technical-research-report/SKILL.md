@@ -28,19 +28,20 @@ Also do all of the following:
 1. Add a matching `src/content/blog/<slug>.mdx` entry with frontmatter and the report body.
 2. Add any new category to `src/data/categories.ts`.
 3. Preserve existing categories when rebasing or resolving conflicts; merge category lists as a union.
-4. Avoid hardcoded homepage counts. Use data-derived values such as `posts.length` and `CATEGORIES.length`.
-5. Use `.github/codex/templates/blog-entry.mdx` as the shape for new site entries.
+4. Treat the article header image as a minor supporting element. Do not add low-information Codex-generated abstract category images by default; prefer existing meaningful images or a restrained placeholder until a genuinely useful source image or diagram exists.
+5. Avoid hardcoded homepage counts. Use data-derived values such as `posts.length` and `CATEGORIES.length`.
+6. Use `.github/codex/templates/blog-entry.mdx` as the shape for new site entries.
    Keep the report body directly in the MDX file after frontmatter. Do not use
    `import Report from '../../../category/.../report.md'` plus `<Report />`;
    imported Markdown headings are not exposed to Astro's table-of-contents data,
    which makes the desktop article sidebar empty.
-6. Run `pnpm build`.
-7. Confirm the build generated:
+7. Run `pnpm build`.
+8. Confirm the build generated:
    - `dist/index.html`
    - `dist/post/<slug>/index.html`
    - `dist/category/<category-name>/1/index.html`
-8. Check `dist/index.html` or `curl` against local preview for the slug, title, and category link before saying the report is visible.
-9. After PR creation, use the Cloudflare Pages Preview PR comment or GitHub Actions run details to identify the Cloudflare preview URL. When preview visibility is part of the deliverable, verify that Cloudflare URL with `curl` for the slug, title, and category link before reporting.
+9. Check `dist/index.html` or `curl` against local preview for the slug, title, and category link before saying the report is visible.
+10. After PR creation, use the Cloudflare Pages Preview PR comment or GitHub Actions run details to identify the Cloudflare preview URL. When preview visibility is part of the deliverable, verify that Cloudflare URL with `curl` for the slug, title, and category link before reporting.
 
 ## Research Workflow
 

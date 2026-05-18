@@ -20,6 +20,7 @@
 - `category/<category-name>/<topic>/report.md` と `research-tasks.md` を追加しただけでは、トップページやカテゴリページには表示されない。
 - Webサイト上に表示する調査レポートは、必ず対応する `src/content/blog/<slug>.mdx` を追加する。
 - 新しいカテゴリを使う場合は、`src/data/categories.ts` の `CATEGORIES` に追加する。既存カテゴリとのコンフリクト時は、main側のカテゴリを消さずに和集合で解消する。
+- サイト用記事のヘッダー画像は補助要素として控えめに扱う。本文の可読性を優先し、情報的価値が薄いCodex生成の抽象画像をカテゴリ画像として追加しない。
 - トップページなどの件数表示は固定値にしない。カテゴリ数は `CATEGORIES.length` など、実データから算出する。
 - PRプレビューは Cloudflare Pages Preview を優先する。Cloudflare Pages の branch alias URL または deployment URL で表示確認できる場合、GitHub Pages のPRプレビューは不要とする。
 - PRやプレビュー表示を求められた場合は、`pnpm build` を実行し、生成ログに次が含まれることを確認する。

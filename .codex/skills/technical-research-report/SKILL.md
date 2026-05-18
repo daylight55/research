@@ -21,23 +21,27 @@ Use this skill for any report or investigation in this repository.
 
 If the report must appear on the website, PR preview, top page, or category pages, `category/<category-name>/<topic>/report.md` is not enough.
 
+Cloudflare Pages Preview is the preferred PR preview surface for this repository. If the Cloudflare branch alias URL or deployment URL renders the report, a separate GitHub Pages PR preview is not required.
+
 Also do all of the following:
 
 1. Add a matching `src/content/blog/<slug>.mdx` entry with frontmatter and the report body.
 2. Add any new category to `src/data/categories.ts`.
 3. Preserve existing categories when rebasing or resolving conflicts; merge category lists as a union.
-4. Avoid hardcoded homepage counts. Use data-derived values such as `posts.length` and `CATEGORIES.length`.
-5. Use `.github/codex/templates/blog-entry.mdx` as the shape for new site entries.
+4. Treat the article header image as a minor supporting element. Do not add low-information Codex-generated abstract category images by default; prefer existing meaningful images or a restrained placeholder until a genuinely useful source image or diagram exists.
+5. Avoid hardcoded homepage counts. Use data-derived values such as `posts.length` and `CATEGORIES.length`.
+6. Use `.github/codex/templates/blog-entry.mdx` as the shape for new site entries.
    Keep the report body directly in the MDX file after frontmatter. Do not use
    `import Report from '../../../category/.../report.md'` plus `<Report />`;
    imported Markdown headings are not exposed to Astro's table-of-contents data,
    which makes the desktop article sidebar empty.
-6. Run `pnpm build`.
-7. Confirm the build generated:
+7. Run `pnpm build`.
+8. Confirm the build generated:
    - `dist/index.html`
    - `dist/post/<slug>/index.html`
    - `dist/category/<category-name>/1/index.html`
-8. Check `dist/index.html` or `curl` against local preview for the slug, title, and category link before saying the report is visible.
+9. Check `dist/index.html` or `curl` against local preview for the slug, title, and category link before saying the report is visible.
+10. After PR creation, use the Cloudflare Pages Preview PR comment or GitHub Actions run details to identify the Cloudflare preview URL. When preview visibility is part of the deliverable, verify that Cloudflare URL with `curl` for the slug, title, and category link before reporting.
 
 ## Research Workflow
 
@@ -60,8 +64,10 @@ Also do all of the following:
 7. Write or update `report.md`.
 8. Verify links, unresolved placeholders, and internal consistency.
 9. If website visibility or preview visibility is part of the deliverable, complete the Astro Site Visibility checklist before publication.
-10. When the user asks for repository publication, such as `PRにして`, `PRを作成して`, or `レポートにまとめてPRにして`, do not stop at local files. Commit, push, and create a GitHub Pull Request. Write the PR title and body in Japanese, using `.github/PULL_REQUEST_TEMPLATE.md` as the structure.
-11. User-requested changes may be committed per work unit without asking for separate commit approval. Before committing, inspect the intended diff and avoid staging unrelated changes.
+10. For research requests in this repository, treat a draft Pull Request as the standard delivery path even when the user does not explicitly say `PRにして`. Do not stop at chat-only reporting or local files unless the user explicitly says not to create files, not to publish, or that a chat-only answer is enough.
+11. When publishing a research report, add the site entry needed for Astro visibility, run the required checks, commit, push, and create a GitHub Pull Request. Write the PR title and body in Japanese, using `.github/PULL_REQUEST_TEMPLATE.md` as the structure.
+12. After creating or updating the PR, check CI with `gh pr checks <PR_NUMBER>` or equivalent. If any check is failing, cancelled, or pending, inspect the relevant GitHub Actions run/logs and either fix the root cause or explicitly report why the non-successful run is superseded or non-actionable.
+13. User-requested changes may be committed per work unit without asking for separate commit approval. Before committing, inspect the intended diff and avoid staging unrelated changes.
 
 ## Citation Requirements
 
@@ -112,8 +118,6 @@ Use this default shape unless the topic needs something else:
 調査方式: <narrative review / literature review / product evaluation / architecture survey>
 対象: <scope>
 
-## 引用方針
-
 ## 1. エグゼクティブサマリー
 
 ## 2. 背景と研究史
@@ -145,5 +149,6 @@ Before finishing:
 - Before committing a user-requested change, the staged diff includes only the intended files.
 - If creating a PR, unresolved placeholders such as `TBD`, `TODO`, `未定`, `要確認`, and `FIXME` have been checked and removed or intentionally explained.
 - If creating a PR, the PR title and body are written in Japanese and follow `.github/PULL_REQUEST_TEMPLATE.md`.
+- If creating or updating a PR, CI status has been checked after push, and any failing/cancelled/pending check has been investigated before reporting completion.
 - If creating a PR, the final response includes the verified PR URL, base branch, head branch, and draft/ready state.
-- If website visibility was expected, a matching `src/content/blog/<slug>.mdx` exists, any new category is registered in `src/data/categories.ts`, `pnpm build` generated the post/category/index pages, and the top page HTML contains the slug/title/category.
+- If website visibility was expected, a matching `src/content/blog/<slug>.mdx` exists, any new category is registered in `src/data/categories.ts`, `pnpm build` generated the post/category/index pages, the top page HTML contains the slug/title/category, and the Cloudflare Pages preview URL has been checked when available.

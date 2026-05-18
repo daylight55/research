@@ -63,7 +63,7 @@ const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
 
 		<div>
 			<h2 class='mb-4 text-2xl font-semibold'>Latest Reports</h2>
-			<ListPosts FirstBig={true} posts={posts} />
+			<ListPosts posts={posts} />
 		</div>
 	</div>
 </BaseLayout>

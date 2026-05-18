@@ -23,8 +23,8 @@
 
 	html.dark .shiki,
 	html.dark .shiki span {
-	  color: var(--shiki-dark) !important;
-	  background-color: theme(colors.gray.900) !important;
+		color: var(--shiki-dark) !important;
+		background-color: theme(colors.gray.900) !important;
 	}
 }
 
@@ -40,19 +40,110 @@
 }
 
 @layer base {
-	.prose { max-width: 78ch; }
-	.prose a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
-	.prose pre { border-radius: 8px; }
+	.prose {
+		max-width: 78ch;
+	}
+	.prose a {
+		text-decoration-thickness: 1px;
+		text-underline-offset: 3px;
+	}
+	.prose pre {
+		border-radius: 8px;
+	}
 }
-:root { --accent: #3457d5; --accent-soft: #dbe4ff; --paper: #fffdf7; --ink-muted: #5f655d; }
-body { background: #f8f7f2; }
-html.dark body { background: #11110f; }
-.research-hero { border: 1px solid rgba(52, 87, 213, .18); background: linear-gradient(135deg, #fffdf7 0%, #eef3ff 48%, #f7f4e8 100%); }
-html.dark .research-hero { background: linear-gradient(135deg, #171713 0%, #151d31 52%, #11110f 100%); border-color: rgba(150, 170, 255, .2); }
-.research-chip { background: #e9eefc; color: #233b8f; }
-html.dark .research-chip { background: rgba(106, 132, 255, .18); color: #c9d4ff; }
 
-@font-face { font-family: 'Manrope'; src: url('/fonts/Manrope-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Manrope'; src: url('/fonts/Manrope-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Manrope'; src: url('/fonts/Manrope-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
-body { font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif; }
+.mermaid-figure {
+	overflow: hidden;
+}
+
+.mermaid-viewport {
+	height: clamp(16rem, 36vw, 28rem);
+	width: 100%;
+	overflow: hidden;
+	border-radius: 6px;
+	background:
+		linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px), #f8fafc;
+	background-size: 24px 24px;
+}
+
+html.dark .mermaid-viewport {
+	background:
+		linear-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(148, 163, 184, 0.14) 1px, transparent 1px), rgba(15, 23, 42, 0.8);
+}
+
+.mermaid-viewport svg {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.mermaid-viewport .svg-pan-zoom-control {
+	fill: rgba(255, 255, 255, 0.9);
+	stroke: rgba(100, 116, 139, 0.75);
+}
+
+.mermaid-viewport .svg-pan-zoom-control-background {
+	fill: rgba(255, 255, 255, 0.92);
+	stroke: rgba(100, 116, 139, 0.75);
+}
+
+html.dark .mermaid-viewport .svg-pan-zoom-control,
+html.dark .mermaid-viewport .svg-pan-zoom-control-background {
+	fill: rgba(15, 23, 42, 0.9);
+	stroke: rgba(148, 163, 184, 0.8);
+}
+:root {
+	--accent: #3457d5;
+	--accent-soft: #dbe4ff;
+	--paper: #fffdf7;
+	--ink-muted: #5f655d;
+}
+body {
+	background: #f8f7f2;
+}
+html.dark body {
+	background: #11110f;
+}
+.research-hero {
+	border: 1px solid rgba(52, 87, 213, 0.18);
+	background: linear-gradient(135deg, #fffdf7 0%, #eef3ff 48%, #f7f4e8 100%);
+}
+html.dark .research-hero {
+	background: linear-gradient(135deg, #171713 0%, #151d31 52%, #11110f 100%);
+	border-color: rgba(150, 170, 255, 0.2);
+}
+.research-chip {
+	background: #e9eefc;
+	color: #233b8f;
+}
+html.dark .research-chip {
+	background: rgba(106, 132, 255, 0.18);
+	color: #c9d4ff;
+}
+
+@font-face {
+	font-family: 'Manrope';
+	src: url('/fonts/Manrope-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Manrope';
+	src: url('/fonts/Manrope-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Manrope';
+	src: url('/fonts/Manrope-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+body {
+	font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+}

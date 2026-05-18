@@ -55,7 +55,9 @@ const disqusEnabled = disqusConfig.enabled
 
 		<!-- post -->
 		<article class='max-w-full w-full'>
-			<div class='prose prose-base md:prose-lg dark:prose-invert mb-12 min-w-full max-w-none prose-p:leading-8 prose-li:leading-8'>
+			<div
+				class='prose prose-base md:prose-lg dark:prose-invert mb-12 min-w-full max-w-none prose-p:leading-8 prose-li:leading-8'
+			>
 				<Content components={{ pre: Code, SButton }} />
 			</div>
 
@@ -72,14 +74,46 @@ const disqusEnabled = disqusConfig.enabled
 
 <script>
 	const renderMermaid = async () => {
-		const blocks = Array.from(document.querySelectorAll('pre code')).filter((code) => /^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram|erDiagram|journey|gantt|pie|timeline|mindmap|quadrantChart|requirementDiagram|c4Context)\b/.test((code.textContent || '').trim()))
+		const blocks = Array.from(document.querySelectorAll('pre code')).filter((code) =>
+			/^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram|erDiagram|journey|gantt|pie|timeline|mindmap|quadrantChart|requirementDiagram|c4Context)\b/.test(
+				(code.textContent || '').trim()
+			)
+		)
 		if (blocks.length === 0) return
 
 		const { default: mermaid } = await import('mermaid')
+		const { default: svgPanZoom } = await import('svg-pan-zoom')
 		mermaid.initialize({
 			startOnLoad: false,
 			securityLevel: 'strict',
-			theme: document.documentElement.classList.contains('dark') ? 'dark' : 'neutral'
+			theme: 'base',
+			look: 'classic',
+			flowchart: {
+				curve: 'basis',
+				htmlLabels: true,
+				padding: 12
+			},
+			themeVariables: document.documentElement.classList.contains('dark')
+				? {
+						background: 'transparent',
+						primaryColor: '#182033',
+						primaryTextColor: '#f8fafc',
+						primaryBorderColor: '#64748b',
+						lineColor: '#94a3b8',
+						tertiaryColor: '#111827',
+						fontFamily: 'Manrope, ui-sans-serif, system-ui, sans-serif',
+						fontSize: '15px'
+					}
+				: {
+						background: 'transparent',
+						primaryColor: '#f8fafc',
+						primaryTextColor: '#111827',
+						primaryBorderColor: '#cbd5e1',
+						lineColor: '#64748b',
+						tertiaryColor: '#eef2ff',
+						fontFamily: 'Manrope, ui-sans-serif, system-ui, sans-serif',
+						fontSize: '15px'
+					}
 		})
 
 		for (const [index, code] of blocks.entries()) {
@@ -90,10 +124,43 @@ const disqusEnabled = disqusConfig.enabled
 				const id = `mermaid-${index}-${crypto.randomUUID()}`
 				const { svg } = await mermaid.render(id, code.textContent || '')
 				const figure = document.createElement('figure')
-				figure.className = 'my-8 overflow-x-auto rounded-md border border-black/10 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-white/5'
-				figure.innerHTML = svg
+				figure.className =
+					'mermaid-figure my-8 rounded-md border border-black/10 bg-white p-3 shadow-sm dark:border-white/10 dark:bg-white/5'
+				const viewport = document.createElement('div')
+				viewport.className = 'mermaid-viewport'
+				viewport.innerHTML = svg
+				const svgElement = viewport.querySelector('svg')
+				if (svgElement) {
+					svgElement.removeAttribute('height')
+					svgElement.setAttribute('width', '100%')
+					svgElement.setAttribute('height', '100%')
+					svgElement.setAttribute('preserveAspectRatio', 'xMidYMid meet')
+					svgElement.style.maxWidth = 'none'
+				}
+				figure.append(viewport)
 				pre.dataset.mermaidRendered = 'true'
 				pre.replaceWith(figure)
+				if (svgElement) {
+					const panZoom = svgPanZoom(svgElement, {
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+						minZoom: 0.5,
+						maxZoom: 8,
+						zoomScaleSensitivity: 0.25,
+						mouseWheelZoomEnabled: false,
+						dblClickZoomEnabled: true,
+						preventMouseEventsDefault: true
+					})
+					const resetView = () => {
+						panZoom.resize()
+						panZoom.updateBBox()
+						panZoom.fit()
+						panZoom.center()
+					}
+					requestAnimationFrame(resetView)
+					new ResizeObserver(resetView).observe(viewport)
+				}
 			} catch (error) {
 				console.warn('Failed to render Mermaid diagram', error)
 			}

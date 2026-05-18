@@ -60,8 +60,9 @@ Also do all of the following:
 7. Write or update `report.md`.
 8. Verify links, unresolved placeholders, and internal consistency.
 9. If website visibility or preview visibility is part of the deliverable, complete the Astro Site Visibility checklist before publication.
-10. When the user asks for repository publication, such as `PRにして`, `PRを作成して`, or `レポートにまとめてPRにして`, do not stop at local files. Commit, push, and create a GitHub Pull Request. Write the PR title and body in Japanese, using `.github/PULL_REQUEST_TEMPLATE.md` as the structure.
-11. User-requested changes may be committed per work unit without asking for separate commit approval. Before committing, inspect the intended diff and avoid staging unrelated changes.
+10. For research requests in this repository, treat a draft Pull Request as the standard delivery path even when the user does not explicitly say `PRにして`. Do not stop at chat-only reporting or local files unless the user explicitly says not to create files, not to publish, or that a chat-only answer is enough.
+11. When publishing a research report, add the site entry needed for Astro visibility, run the required checks, commit, push, and create a GitHub Pull Request. Write the PR title and body in Japanese, using `.github/PULL_REQUEST_TEMPLATE.md` as the structure.
+12. User-requested changes may be committed per work unit without asking for separate commit approval. Before committing, inspect the intended diff and avoid staging unrelated changes.
 
 ## Citation Requirements
 

@@ -21,11 +21,13 @@
 - Webサイト上に表示する調査レポートは、必ず対応する `src/content/blog/<slug>.mdx` を追加する。
 - 新しいカテゴリを使う場合は、`src/data/categories.ts` の `CATEGORIES` に追加する。既存カテゴリとのコンフリクト時は、main側のカテゴリを消さずに和集合で解消する。
 - トップページなどの件数表示は固定値にしない。カテゴリ数は `CATEGORIES.length` など、実データから算出する。
+- PRプレビューは Cloudflare Pages Preview を優先する。Cloudflare Pages の branch alias URL または deployment URL で表示確認できる場合、GitHub Pages のPRプレビューは不要とする。
 - PRやプレビュー表示を求められた場合は、`pnpm build` を実行し、生成ログに次が含まれることを確認する。
   - `/post/<slug>/index.html`
   - `/category/<category-name>/1/index.html`
   - `/index.html`
 - さらに、`dist/index.html` またはローカル preview への `curl` で、トップページに `<slug>`、記事タイトル、カテゴリリンクが含まれることを確認する。
+- PR作成後は Cloudflare Pages Preview のコメントまたは `gh pr checks` の run URL からプレビューURLを確認し、必要に応じて Cloudflare preview URL に対して `<slug>`、記事タイトル、カテゴリリンクが含まれることを `curl` で確認する。
 - 「トップページに出ていない」「レンダリング対象に入っていない」と言われたら、まず `src/content/blog/*.mdx` と `src/data/categories.ts` の登録漏れを疑う。
 
 ## GitHub Publication Workflow

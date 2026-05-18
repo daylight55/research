@@ -21,6 +21,8 @@ Use this skill for any report or investigation in this repository.
 
 If the report must appear on the website, PR preview, top page, or category pages, `category/<category-name>/<topic>/report.md` is not enough.
 
+Cloudflare Pages Preview is the preferred PR preview surface for this repository. If the Cloudflare branch alias URL or deployment URL renders the report, a separate GitHub Pages PR preview is not required.
+
 Also do all of the following:
 
 1. Add a matching `src/content/blog/<slug>.mdx` entry with frontmatter and the report body.
@@ -38,6 +40,7 @@ Also do all of the following:
    - `dist/post/<slug>/index.html`
    - `dist/category/<category-name>/1/index.html`
 8. Check `dist/index.html` or `curl` against local preview for the slug, title, and category link before saying the report is visible.
+9. After PR creation, use the Cloudflare Pages Preview PR comment or GitHub Actions run details to identify the Cloudflare preview URL. When preview visibility is part of the deliverable, verify that Cloudflare URL with `curl` for the slug, title, and category link before reporting.
 
 ## Research Workflow
 
@@ -149,4 +152,4 @@ Before finishing:
 - If creating a PR, the PR title and body are written in Japanese and follow `.github/PULL_REQUEST_TEMPLATE.md`.
 - If creating or updating a PR, CI status has been checked after push, and any failing/cancelled/pending check has been investigated before reporting completion.
 - If creating a PR, the final response includes the verified PR URL, base branch, head branch, and draft/ready state.
-- If website visibility was expected, a matching `src/content/blog/<slug>.mdx` exists, any new category is registered in `src/data/categories.ts`, `pnpm build` generated the post/category/index pages, and the top page HTML contains the slug/title/category.
+- If website visibility was expected, a matching `src/content/blog/<slug>.mdx` exists, any new category is registered in `src/data/categories.ts`, `pnpm build` generated the post/category/index pages, the top page HTML contains the slug/title/category, and the Cloudflare Pages preview URL has been checked when available.

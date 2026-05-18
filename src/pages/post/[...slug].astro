@@ -82,10 +82,12 @@ const disqusEnabled = disqusConfig.enabled
 		if (blocks.length === 0) return
 
 		const { default: mermaid } = await import('mermaid')
+		const { renderMermaidSVG } = await import('beautiful-mermaid')
 		const { default: svgPanZoom } = await import('svg-pan-zoom')
 		mermaid.initialize({
 			startOnLoad: false,
 			securityLevel: 'strict',
+			htmlLabels: true,
 			theme: 'base',
 			look: 'classic',
 			flowchart: {
@@ -115,6 +117,39 @@ const disqusEnabled = disqusConfig.enabled
 						fontSize: '15px'
 					}
 		})
+		const beautifulMermaidPattern =
+			/^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram|stateDiagram-v2|erDiagram|xychart-beta)\b/
+		const beautifulMermaidTheme = document.documentElement.classList.contains('dark')
+			? {
+					bg: '#0f172a',
+					fg: '#f8fafc',
+					line: '#94a3b8',
+					accent: '#38bdf8',
+					muted: '#cbd5e1',
+					surface: '#111827',
+					border: '#64748b',
+					transparent: true,
+					padding: 32,
+					nodeSpacing: 52,
+					layerSpacing: 56,
+					thoroughness: 6
+				}
+			: {
+					bg: '#ffffff',
+					fg: '#111827',
+					line: '#64748b',
+					accent: '#2563eb',
+					muted: '#475569',
+					surface: '#f8fafc',
+					border: '#cbd5e1',
+					transparent: true,
+					padding: 32,
+					nodeSpacing: 52,
+					layerSpacing: 56,
+					thoroughness: 6
+				}
+		const removeExternalFontImport = (svg) =>
+			svg.replace(/@import url\('https:\/\/fonts\.googleapis\.com[^;]+;\n?/g, '')
 
 		for (const [index, code] of blocks.entries()) {
 			const pre = code.closest('pre')
@@ -122,12 +157,27 @@ const disqusEnabled = disqusConfig.enabled
 
 			try {
 				const id = `mermaid-${index}-${crypto.randomUUID()}`
-				const { svg } = await mermaid.render(id, code.textContent || '')
+				const source = (code.textContent || '').trim()
+				let svg = ''
+				let renderer = 'mermaid'
+				if (beautifulMermaidPattern.test(source)) {
+					try {
+						svg = removeExternalFontImport(renderMermaidSVG(source, beautifulMermaidTheme))
+						renderer = 'beautiful-mermaid'
+					} catch (error) {
+						console.warn('Falling back to Mermaid renderer', error)
+					}
+				}
+				if (!svg) {
+					const rendered = await mermaid.render(id, source)
+					svg = rendered.svg
+				}
 				const figure = document.createElement('figure')
 				figure.className =
 					'mermaid-figure my-8 rounded-md border border-black/10 bg-white p-3 shadow-sm dark:border-white/10 dark:bg-white/5'
 				const viewport = document.createElement('div')
 				viewport.className = 'mermaid-viewport'
+				viewport.dataset.renderer = renderer
 				viewport.innerHTML = svg
 				const svgElement = viewport.querySelector('svg')
 				if (svgElement) {

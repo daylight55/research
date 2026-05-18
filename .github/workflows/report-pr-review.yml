@@ -1,0 +1,197 @@
+name: Report PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - "category/**"
+      - "src/content/blog/**"
+      - "src/data/categories.ts"
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "Pull request number to review"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: report-pr-review-${{ github.event.pull_request.number || inputs.pr_number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    name: Review report with Codex
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve pull request
+        id: pr
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number || inputs.pr_number }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p .github/codex/runtime
+          gh api "repos/${REPOSITORY}/pulls/${PR_NUMBER}" > .github/codex/runtime/pr.json
+
+          echo "number=${PR_NUMBER}" >> "${GITHUB_OUTPUT}"
+          echo "title=$(jq -r '.title' .github/codex/runtime/pr.json)" >> "${GITHUB_OUTPUT}"
+          echo "url=$(jq -r '.html_url' .github/codex/runtime/pr.json)" >> "${GITHUB_OUTPUT}"
+          echo "head_sha=$(jq -r '.head.sha' .github/codex/runtime/pr.json)" >> "${GITHUB_OUTPUT}"
+          echo "head_ref=$(jq -r '.head.ref' .github/codex/runtime/pr.json)" >> "${GITHUB_OUTPUT}"
+          echo "draft=$(jq -r '.draft' .github/codex/runtime/pr.json)" >> "${GITHUB_OUTPUT}"
+
+      - name: Stop on draft pull request
+        if: steps.pr.outputs.draft == 'true'
+        shell: bash
+        run: |
+          echo "Draft pull request. Skipping report review."
+
+      - name: Checkout pull request
+        if: steps.pr.outputs.draft != 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.pr.outputs.head_sha }}
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        if: steps.pr.outputs.draft != 'true'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        if: steps.pr.outputs.draft != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        if: steps.pr.outputs.draft != 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Compose Codex review prompt
+        if: steps.pr.outputs.draft != 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          PR_TITLE: ${{ steps.pr.outputs.title }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p .github/codex/runtime
+          cp .github/codex/prompts/report-pr-review.md .github/codex/runtime/report-pr-review-prompt.md
+
+          {
+            echo
+            echo "- PR: #${PR_NUMBER} ${PR_TITLE}"
+            echo "- URL: ${PR_URL}"
+            echo
+            echo "### Changed Files"
+            echo
+            gh pr diff "${PR_NUMBER}" --name-only
+            echo
+            echo "### Pull Request Diff"
+            echo
+            gh pr diff "${PR_NUMBER}" --patch
+          } >> .github/codex/runtime/report-pr-review-prompt.md
+
+      - name: Run Codex report review
+        if: steps.pr.outputs.draft != 'true'
+        id: run_codex
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: .github/codex/runtime/report-pr-review-prompt.md
+          output-file: codex-output.md
+          safety-strategy: drop-sudo
+          sandbox: workspace-write
+          model: gpt-5.4-mini
+          effort: medium
+          allow-bots: true
+
+      - name: Read review result
+        if: steps.pr.outputs.draft != 'true'
+        id: review_result
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          result_path=".github/codex/runtime/report-review-result.json"
+          if [[ ! -s "${result_path}" ]]; then
+            mkdir -p .github/codex/runtime
+            jq -n --arg summary "Codex review did not produce a structured result file." \
+              '{status:"changes_requested", summary:$summary, comments:[$summary], verification:[]}' \
+              > "${result_path}"
+          fi
+
+          jq -e '.status == "approved" or .status == "changes_requested"' "${result_path}" >/dev/null
+
+          status="$(jq -r '.status' "${result_path}")"
+          echo "status=${status}" >> "${GITHUB_OUTPUT}"
+
+          {
+            echo "comment_body<<EOF"
+            jq -r '
+              "## Codex report review\n\n" +
+              "- Status: `" + .status + "`\n" +
+              "- Summary: " + (.summary // "") + "\n\n" +
+              (if (.comments // []) | length > 0 then
+                "### Requested fixes\n" + ((.comments // []) | map("- " + .) | join("\n")) + "\n\n"
+              else "" end) +
+              (if (.verification // []) | length > 0 then
+                "### Verification\n" + ((.verification // []) | map("- " + .) | join("\n")) + "\n\n"
+              else "" end)
+            ' "${result_path}"
+            echo "EOF"
+          } >> "${GITHUB_OUTPUT}"
+
+      - name: Comment requested fixes
+        if: steps.pr.outputs.draft != 'true' && steps.review_result.outputs.status == 'changes_requested'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          COMMENT_BODY: ${{ steps.review_result.outputs.comment_body }}
+        run: |
+          set -euo pipefail
+
+          gh pr comment "${PR_NUMBER}" --body "${COMMENT_BODY}
+
+          <!-- codex-report-review -->"
+
+      - name: Merge approved pull request
+        if: steps.pr.outputs.draft != 'true' && steps.review_result.outputs.status == 'approved'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          COMMENT_BODY: ${{ steps.review_result.outputs.comment_body }}
+        run: |
+          set -euo pipefail
+
+          gh pr comment "${PR_NUMBER}" --body "${COMMENT_BODY}
+
+          Codex review passed. Attempting to merge this pull request."
+
+          gh pr merge "${PR_NUMBER}" \
+            --squash \
+            --delete-branch \
+            --subject "Merge reviewed research report PR #${PR_NUMBER}" \
+            --body "Merged after Codex report review passed."
+
+      - name: Clean runtime artifacts
+        if: always()
+        shell: bash
+        run: |
+          rm -rf .github/codex/runtime codex-output.md

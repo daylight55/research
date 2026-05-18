@@ -1,0 +1,185 @@
+name: Apply Codex PR Comment
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: apply-codex-pr-comment-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    name: Apply actionable Codex comment
+    if: >
+      github.event.issue.pull_request != null &&
+      contains(github.event.comment.body, '<!-- codex-report-review -->')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve pull request
+        id: pr
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p .github/codex/runtime
+          gh api "repos/${REPOSITORY}/pulls/${PR_NUMBER}" > .github/codex/runtime/pr.json
+
+          head_repo="$(jq -r '.head.repo.full_name' .github/codex/runtime/pr.json)"
+          if [[ "${head_repo}" != "${REPOSITORY}" ]]; then
+            echo "same_repo=false" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          echo "same_repo=true" >> "${GITHUB_OUTPUT}"
+          echo "head_ref=$(jq -r '.head.ref' .github/codex/runtime/pr.json)" >> "${GITHUB_OUTPUT}"
+          echo "head_sha=$(jq -r '.head.sha' .github/codex/runtime/pr.json)" >> "${GITHUB_OUTPUT}"
+          echo "base_ref=$(jq -r '.base.ref' .github/codex/runtime/pr.json)" >> "${GITHUB_OUTPUT}"
+
+      - name: Checkout pull request branch
+        if: steps.pr.outputs.same_repo == 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.pr.outputs.head_ref }}
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        if: steps.pr.outputs.same_repo == 'true'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        if: steps.pr.outputs.same_repo == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        if: steps.pr.outputs.same_repo == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Compose Codex prompt
+        if: steps.pr.outputs.same_repo == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.issue.number }}
+          COMMENT_URL: ${{ github.event.comment.html_url }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p .github/codex/runtime
+          cp .github/codex/prompts/apply-pr-comment.md .github/codex/runtime/apply-pr-comment-prompt.md
+
+          {
+            echo
+            echo "- PR: #${PR_NUMBER}"
+            echo "- Comment URL: ${COMMENT_URL}"
+            echo
+            echo "### Comment Body"
+            echo
+            jq -r '.comment.body' "${GITHUB_EVENT_PATH}"
+            echo
+            echo "### Changed Files"
+            echo
+            gh pr diff "${PR_NUMBER}" --name-only
+          } >> .github/codex/runtime/apply-pr-comment-prompt.md
+
+      - name: Run Codex fix
+        if: steps.pr.outputs.same_repo == 'true'
+        id: run_codex
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: .github/codex/runtime/apply-pr-comment-prompt.md
+          output-file: codex-output.md
+          safety-strategy: drop-sudo
+          sandbox: workspace-write
+          model: gpt-5.4-mini
+          effort: medium
+          allow-bots: true
+
+      - name: Check generated diff
+        if: steps.pr.outputs.same_repo == 'true'
+        id: diff_check
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf .github/codex/runtime codex-output.md
+
+          git ls-files --modified --others --exclude-standard -z -- '*.md' '*.mdx' \
+            | while IFS= read -r -d '' file; do
+                perl -0pi -e 's/[ \t]+$//mg; s/\n+\z/\n/s' "${file}"
+              done
+
+          git add --intent-to-add .
+          git diff --check
+
+          changed_blog_entries="$(git ls-files --modified --others --exclude-standard -- 'src/content/blog/*.mdx' || true)"
+          if [[ -n "${changed_blog_entries}" ]] \
+            && grep -nE "import[[:space:]]+.*from[[:space:]]+['\"]\\.\\./\\.\\./\\.\\./category/|<Report[[:space:]]*/>" ${changed_blog_entries}; then
+            echo "::error::Site entries must copy the report body directly into src/content/blog/*.mdx."
+            exit 1
+          fi
+
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "has_changes=false" >> "${GITHUB_OUTPUT}"
+          else
+            echo "has_changes=true" >> "${GITHUB_OUTPUT}"
+          fi
+
+      - name: Commit and push fixes
+        if: steps.diff_check.outputs.has_changes == 'true'
+        shell: bash
+        env:
+          HEAD_REF: ${{ steps.pr.outputs.head_ref }}
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Apply Codex review comment"
+          git push origin "HEAD:${HEAD_REF}"
+
+      - name: Comment result
+        if: steps.pr.outputs.same_repo == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.issue.number }}
+          HAS_CHANGES: ${{ steps.diff_check.outputs.has_changes }}
+          CODEX_FINAL_MESSAGE: ${{ steps.run_codex.outputs.final-message }}
+        run: |
+          set -euo pipefail
+
+          if [[ "${HAS_CHANGES}" == "true" ]]; then
+            gh pr comment "${PR_NUMBER}" --body "Codex review comment was applied and pushed.
+
+            ${CODEX_FINAL_MESSAGE}"
+          else
+            gh pr comment "${PR_NUMBER}" --body "Codex reviewed the comment, but produced no repository changes.
+
+            ${CODEX_FINAL_MESSAGE}"
+          fi
+
+      - name: Comment unsupported fork PR
+        if: steps.pr.outputs.same_repo == 'false'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh pr comment "${PR_NUMBER}" --body "Codex review comment was not applied automatically because this pull request branch is not in the base repository."

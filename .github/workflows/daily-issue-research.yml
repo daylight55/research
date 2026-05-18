@@ -1,9 +1,8 @@
-name: Daily Issue Research
+name: Issue Research
 
 on:
-  schedule:
-    # 00:00 JST every day.
-    - cron: "0 15 * * *"
+  issues:
+    types: [opened]
   workflow_dispatch:
     inputs:
       issue_number:
@@ -18,7 +17,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: daily-issue-research
+  group: issue-research-${{ github.event.issue.number || github.event.inputs.issue_number || 'manual' }}
   cancel-in-progress: false
 
 jobs:
@@ -39,7 +38,7 @@ jobs:
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
-          ISSUE_NUMBER: ${{ github.event.inputs.issue_number || '' }}
+          ISSUE_NUMBER: ${{ github.event.issue.number || github.event.inputs.issue_number || '' }}
         run: |
           set -euo pipefail
 
@@ -59,6 +58,16 @@ jobs:
           fi
 
           if [[ ! -s .github/codex/runtime/selected-issue.json ]] || [[ "$(cat .github/codex/runtime/selected-issue.json)" == "null" ]]; then
+            echo "issue_found=false" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          if [[ "$(jq -r '.state' .github/codex/runtime/selected-issue.json)" != "OPEN" ]]; then
+            echo "issue_found=false" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          if jq -e '(([.labels[].name] | index("research-pr-opened")) != null) or (([.labels[].name] | index("research-skip")) != null)' .github/codex/runtime/selected-issue.json >/dev/null; then
             echo "issue_found=false" >> "${GITHUB_OUTPUT}"
             exit 0
           fi
@@ -195,20 +204,20 @@ jobs:
         run: |
           set -euo pipefail
 
-          branch="codex/daily-research-${ISSUE_NUMBER}-${GITHUB_RUN_ID}"
+          branch="codex/issue-research-${ISSUE_NUMBER}-${GITHUB_RUN_ID}"
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "${branch}"
           git add -A
-          git commit -m "Add daily research report for issue #${ISSUE_NUMBER}"
+          git commit -m "Add research report for issue #${ISSUE_NUMBER}"
           git push origin "${branch}"
 
           pr_body="$(mktemp)"
           {
             echo "Closes #${ISSUE_NUMBER}"
             echo
-            echo "Daily Codex research run for: ${ISSUE_TITLE}"
+            echo "Codex issue research run for: ${ISSUE_TITLE}"
             echo
             echo "## Codex summary"
             echo
@@ -220,7 +229,7 @@ jobs:
           } > "${pr_body}"
 
           pr_url="$(gh pr create \
-            --title "Daily research: #${ISSUE_NUMBER} ${ISSUE_TITLE}" \
+            --title "Issue research: #${ISSUE_NUMBER} ${ISSUE_TITLE}" \
             --body-file "${pr_body}" \
             --base main \
             --head "${branch}")"
@@ -255,18 +264,19 @@ jobs:
           set -euo pipefail
 
           gh label create research-pr-opened \
-            --description "A daily Codex research PR has been opened for this issue" \
+            --description "A Codex issue research PR has been opened for this issue" \
             --color "0E8A16" \
             --force
 
           gh issue edit "${ISSUE_NUMBER}" --add-label research-pr-opened
-          gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR opened: ${PR_URL}"
+          gh issue comment "${ISSUE_NUMBER}" --body "Codex issue research PR opened: ${PR_URL}"
 
       - name: Dispatch Cloudflare branch preview
         if: steps.create_pr.outputs.pr_url != ''
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
           PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
           PREVIEW_BRANCH: ${{ steps.create_pr.outputs.branch }}
         run: |
@@ -279,10 +289,23 @@ jobs:
             -f preview_branch="${PREVIEW_BRANCH}" \
             -f checkout_ref="${PREVIEW_BRANCH}"
 
+      - name: Dispatch Codex report review
+        if: steps.create_pr.outputs.pr_url != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
+        run: |
+          set -euo pipefail
+
+          gh workflow run report-pr-review.yml \
+            --ref "${GITHUB_REF_NAME}" \
+            -f pr_number="${PR_NUMBER}"
+
       - name: Comment when no issue was selected
         if: steps.select_issue.outputs.issue_found == 'false'
         run: |
-          echo "No open issue matched the configured daily research labels."
+          echo "No open issue was selected for issue research."
 
       - name: Comment when Codex produced no diff
         if: steps.select_issue.outputs.issue_found == 'true' && steps.diff_check.outputs.has_changes == 'false'
@@ -292,6 +315,6 @@ jobs:
           ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
           CODEX_FINAL_MESSAGE: ${{ steps.run_codex.outputs.final-message }}
         run: |
-          gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research ran, but no repository changes were produced.
+          gh issue comment "${ISSUE_NUMBER}" --body "Codex issue research ran, but no repository changes were produced.
 
           ${CODEX_FINAL_MESSAGE}"

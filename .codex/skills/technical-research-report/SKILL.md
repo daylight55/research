@@ -118,8 +118,6 @@ Use this default shape unless the topic needs something else:
 調査方式: <narrative review / literature review / product evaluation / architecture survey>
 対象: <scope>
 
-## 引用方針
-
 ## 1. エグゼクティブサマリー
 
 ## 2. 背景と研究史

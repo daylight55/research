@@ -57,9 +57,12 @@
 }
 
 .mermaid-viewport {
+	display: flex;
+	justify-content: center;
 	width: 100%;
 	overflow-x: auto;
 	overflow-y: hidden;
+	padding: 1rem;
 	border-radius: 6px;
 	background: #f8fafc;
 }
@@ -71,8 +74,8 @@ html.dark .mermaid-viewport {
 .mermaid-viewport svg {
 	display: block;
 	height: auto;
-	min-width: 42rem;
-	width: 100%;
+	min-width: min(22rem, 100%);
+	width: min(100%, 24rem);
 }
 :root {
 	--accent: #3457d5;

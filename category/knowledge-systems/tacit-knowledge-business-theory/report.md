@@ -21,7 +21,7 @@
 生成AI時代のトレンドは、「暗黙知をAIに全部吸い出す」方向ではなく、「人が観察し、語り、反省し、検証するプロセスをAIで補助する」方向に進んでいる。LLM、RAG、会話型エージェント、業務ログ分析は、暗黙知の断片を拾うには有用である。しかし、暗黙知は文書の欠落ではなく、実践、状況、身体、共同体、評価規準に結びつくため、AIで作った要約をそのまま「組織知」と見なすと、現場の判断構造を壊す。
 
 ```mermaid
-flowchart LR
+flowchart TD
   A["実践<br/>判断・違和感"] --> B["観察<br/>手がかりを記録"]
   B --> C["語り<br/>本人の言葉"]
   C --> D["対話<br/>理由を掘る"]
@@ -79,7 +79,7 @@ flowchart LR
 ビジネス領域で暗黙知を広めた代表理論が、Nonaka の組織的知識創造論である。Nonaka (1994) は、組織知識が暗黙知と形式知の継続的対話から生まれると論じ、四つの変換モードを示した。Socialization は暗黙知から暗黙知への共有、Externalization は暗黙知から形式知への表現、Combination は形式知から形式知への統合、Internalization は形式知から暗黙知への身体化である。
 
 ```mermaid
-flowchart LR
+flowchart TD
   S["Socialization: 共同経験"] --> E["Externalization: 比喩・対話"]
   E --> C["Combination: 文書・体系化"]
   C --> I["Internalization: 実践・訓練"]
@@ -165,7 +165,7 @@ AI 導入では、プロンプト研修やツール配布だけでは足りな�
 7. 現場で試し、反例を集めて更新する。
 
 ```mermaid
-flowchart LR
+flowchart TD
   P["対象業務"] --> C["実ケース"]
   C --> O["観察<br/>行為・道具"]
   C --> I["聞き取り<br/>本人の語り"]

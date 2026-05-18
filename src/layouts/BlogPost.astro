@@ -81,7 +81,7 @@ const articleDate = pubDate.toISOString()
 				const index = document.querySelector(`aside a[href="#${entry.target.id}"]`)
 
 				if (entry.isIntersecting) {
-					index?.classList.remove('text-gray-500', 'dark:text-gray-400', 'border-transparent')
+					index?.classList.remove('text-gray-600', 'dark:text-gray-400', 'border-transparent')
 					index?.classList.add(
 						'border-indigo-500',
 						'text-indigo-700',
@@ -91,7 +91,7 @@ const articleDate = pubDate.toISOString()
 						'duration-200'
 					)
 				} else {
-					index?.classList.add('text-gray-500', 'dark:text-gray-400', 'border-transparent')
+					index?.classList.add('text-gray-600', 'dark:text-gray-400', 'border-transparent')
 					index?.classList.remove(
 						'border-indigo-500',
 						'text-indigo-700',

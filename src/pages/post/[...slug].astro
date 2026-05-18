@@ -83,7 +83,6 @@ const disqusEnabled = disqusConfig.enabled
 
 		const { default: mermaid } = await import('mermaid')
 		const { renderMermaidSVG } = await import('beautiful-mermaid')
-		const { default: svgPanZoom } = await import('svg-pan-zoom')
 		mermaid.initialize({
 			startOnLoad: false,
 			securityLevel: 'strict',
@@ -183,34 +182,12 @@ const disqusEnabled = disqusConfig.enabled
 				if (svgElement) {
 					svgElement.removeAttribute('height')
 					svgElement.setAttribute('width', '100%')
-					svgElement.setAttribute('height', '100%')
 					svgElement.setAttribute('preserveAspectRatio', 'xMidYMid meet')
 					svgElement.style.maxWidth = 'none'
 				}
 				figure.append(viewport)
 				pre.dataset.mermaidRendered = 'true'
 				pre.replaceWith(figure)
-				if (svgElement) {
-					const panZoom = svgPanZoom(svgElement, {
-						controlIconsEnabled: true,
-						fit: true,
-						center: true,
-						minZoom: 0.5,
-						maxZoom: 8,
-						zoomScaleSensitivity: 0.25,
-						mouseWheelZoomEnabled: false,
-						dblClickZoomEnabled: true,
-						preventMouseEventsDefault: true
-					})
-					const resetView = () => {
-						panZoom.resize()
-						panZoom.updateBBox()
-						panZoom.fit()
-						panZoom.center()
-					}
-					requestAnimationFrame(resetView)
-					new ResizeObserver(resetView).observe(viewport)
-				}
 			} catch (error) {
 				console.warn('Failed to render Mermaid diagram', error)
 			}

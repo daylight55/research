@@ -20,9 +20,6 @@ importers:
       mermaid:
         specifier: ^11.14.0
         version: 11.14.0
-      svg-pan-zoom:
-        specifier: ^3.6.2
-        version: 3.6.2
     devDependencies:
       '@astrojs/mdx':
         specifier: 2.0.3
@@ -3293,9 +3290,6 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
-
-  svg-pan-zoom@3.6.2:
-    resolution: {integrity: sha512-JwnvRWfVKw/Xzfe6jriFyfey/lWJLq4bUh2jwoR5ChWQuQoOH8FEh1l/bEp46iHHKHEJWIyFJETbazraxNWECg==}
 
   synckit@0.9.3:
     resolution: {integrity: sha512-JJoOEKTfL1urb1mDoEblhD9NhEbWmq9jHEMEnxoC4ujUaZ4itA8vKgwkFAyNClgxplLi9tsUKX+EduK0p/l7sg==}
@@ -7501,8 +7495,6 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
-
-  svg-pan-zoom@3.6.2: {}
 
   synckit@0.9.3:
     dependencies:

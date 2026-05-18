@@ -3,9 +3,10 @@ import { type CollectionEntry, getCollection } from 'astro:content'
 import BlogPost from '@/layouts/BlogPost'
 import Code from '@/components/mdx/Code'
 import ListRelatedPosts from '@/components/ListRelatedPosts'
+import FormattedDate from '@/components/FormattedDate'
 import Share from '@/components/Share'
 import TableOfContents from '@/components/TableOfContents'
-import { getPosts } from '@/utils'
+import { getPosts, withBase } from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import Disqus from '@/components/Disqus'
 import { disqusConfig } from '@/data/disqus.config'
@@ -45,9 +46,65 @@ const disqusEnabled = disqusConfig.enabled
 	readTime={remarkPluginFrontmatter.minutesRead}
 >
 	<div
-		class='grid grid-cols-1 gap-8 mt-8 lg:grid-cols-[9rem_minmax(0,48rem)_9rem] lg:justify-center lg:gap-8'
+		class='grid grid-cols-1 gap-8 mt-8 lg:grid-cols-[11rem_minmax(0,48rem)_11rem] lg:justify-center lg:gap-4'
 	>
-		<div class='hidden lg:block' aria-hidden='true'></div>
+		<!-- article context -->
+		<aside class='hidden lg:flex flex-col gap-6 pr-3 text-sm text-gray-600 dark:text-gray-400'>
+			<section class='flex flex-col gap-2'>
+				<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+					Report
+				</p>
+				<div class='flex flex-col gap-1.5 leading-snug'>
+					<span>{post.data.category}</span>
+					<FormattedDate date={post.data.pubDate} />
+					<span>{remarkPluginFrontmatter.minutesRead}</span>
+				</div>
+			</section>
+
+			<section class='flex flex-col gap-2'>
+				<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+					Tags
+				</p>
+				<ul class='flex flex-col gap-1.5'>
+					{
+						post.data.tags.map((tag) => (
+							<li>
+								<a
+									href={withBase(`/tags/${encodeURIComponent(tag.toLowerCase())}`)}
+									class='leading-snug text-gray-600 underline decoration-black/20 underline-offset-4 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:decoration-white/20 dark:hover:text-indigo-300'
+								>
+									{tag}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+
+			{
+				relatedPosts.length > 0 && (
+					<section class='flex flex-col gap-2'>
+						<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+							Related
+						</p>
+						<ul class='flex flex-col gap-2.5'>
+							{relatedPosts.map((relatedPost) => (
+								<li>
+									<a
+										href={withBase(`/post/${relatedPost.slug}/`)}
+										class='block leading-snug text-gray-600 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:hover:text-indigo-300'
+									>
+										{relatedPost.data.title}
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				)
+			}
+
+			<Share />
+		</aside>
 
 		<!-- post -->
 		<article class='max-w-none w-full'>
@@ -58,7 +115,7 @@ const disqusEnabled = disqusConfig.enabled
 			</div>
 
 			<!-- related posts -->
-			<footer>
+			<footer class='lg:hidden'>
 				<h2 class='font-bold text-lg dark:text-white mb-6'>Related Posts</h2>
 				<ListRelatedPosts posts={relatedPosts} />
 			</footer>

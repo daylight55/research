@@ -61,16 +61,11 @@
 	overflow-x: auto;
 	overflow-y: hidden;
 	border-radius: 6px;
-	background:
-		linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px), #f8fafc;
-	background-size: 24px 24px;
+	background: #f8fafc;
 }
 
 html.dark .mermaid-viewport {
-	background:
-		linear-gradient(rgba(148, 163, 184, 0.14) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(148, 163, 184, 0.14) 1px, transparent 1px), rgba(15, 23, 42, 0.8);
+	background: rgba(15, 23, 42, 0.8);
 }
 
 .mermaid-viewport svg {

@@ -13,6 +13,7 @@ This branch prototypes an Astro static site for the research report repository.
 - [AI / LLM / Ontology / Organizational Memory](category/ai-systems/ai-llm-ontology-memory/report.md)
 - [Palantir](category/enterprise-ai-platforms/palantir/report.md)
 - [オントロジー概念の基礎と実務活用](category/knowledge-systems/ontology-concept/report.md)
+- [暗黙知の定義・ビジネス理論・生成AI時代のトレンド](category/knowledge-systems/tacit-knowledge-business-theory/report.md)
 - [NewSQLとYugabyteDBの最近の潮流](category/data-infrastructure/newsql-yugabyte-brief/report.md)
 - [戸建てを購入するときの注意点](category/real-estate/detached-house-purchase-checklist/report.md)
 
@@ -32,6 +33,7 @@ category/
 
 - [AI / LLM / Ontology / Organizational Memory](category/ai-systems/ai-llm-ontology-memory/report.md)
 - [Palantir](category/enterprise-ai-platforms/palantir/report.md)
+- [暗黙知の定義・ビジネス理論・生成AI時代のトレンド](category/knowledge-systems/tacit-knowledge-business-theory/report.md)
 - [金利政策と物価・賃金・債券・債務・為替介入の入門](category/macro-finance/interest-rate-policy-primer/report.md)
 
 ## Policy

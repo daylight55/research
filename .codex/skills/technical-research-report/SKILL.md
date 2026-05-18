@@ -62,7 +62,8 @@ Also do all of the following:
 9. If website visibility or preview visibility is part of the deliverable, complete the Astro Site Visibility checklist before publication.
 10. For research requests in this repository, treat a draft Pull Request as the standard delivery path even when the user does not explicitly say `PRにして`. Do not stop at chat-only reporting or local files unless the user explicitly says not to create files, not to publish, or that a chat-only answer is enough.
 11. When publishing a research report, add the site entry needed for Astro visibility, run the required checks, commit, push, and create a GitHub Pull Request. Write the PR title and body in Japanese, using `.github/PULL_REQUEST_TEMPLATE.md` as the structure.
-12. User-requested changes may be committed per work unit without asking for separate commit approval. Before committing, inspect the intended diff and avoid staging unrelated changes.
+12. After creating or updating the PR, check CI with `gh pr checks <PR_NUMBER>` or equivalent. If any check is failing, cancelled, or pending, inspect the relevant GitHub Actions run/logs and either fix the root cause or explicitly report why the non-successful run is superseded or non-actionable.
+13. User-requested changes may be committed per work unit without asking for separate commit approval. Before committing, inspect the intended diff and avoid staging unrelated changes.
 
 ## Citation Requirements
 
@@ -146,5 +147,6 @@ Before finishing:
 - Before committing a user-requested change, the staged diff includes only the intended files.
 - If creating a PR, unresolved placeholders such as `TBD`, `TODO`, `未定`, `要確認`, and `FIXME` have been checked and removed or intentionally explained.
 - If creating a PR, the PR title and body are written in Japanese and follow `.github/PULL_REQUEST_TEMPLATE.md`.
+- If creating or updating a PR, CI status has been checked after push, and any failing/cancelled/pending check has been investigated before reporting completion.
 - If creating a PR, the final response includes the verified PR URL, base branch, head branch, and draft/ready state.
 - If website visibility was expected, a matching `src/content/blog/<slug>.mdx` exists, any new category is registered in `src/data/categories.ts`, `pnpm build` generated the post/category/index pages, and the top page HTML contains the slug/title/category.

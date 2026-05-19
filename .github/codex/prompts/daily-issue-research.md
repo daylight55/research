@@ -27,6 +27,12 @@ issue.
   wiring as needed.
 - When creating `src/content/blog/<topic>.mdx`, use
   `.github/codex/templates/blog-entry.mdx` as the site-entry shape.
+  Include `rssSummary` in frontmatter as a concise RSS/share summary. Keep it
+  understandable outside the site UI and distinct from long article prose.
+  Include `heroImageQuery` as a short English Unsplash search phrase for an
+  informative landscape header image. Keep `heroImage` as the placeholder;
+  automation will replace it with a downloaded local image when the query is
+  present.
   Put the article body directly in the MDX file after frontmatter. Do not import
   `category/<category-name>/<topic>/report.md` into the MDX file, because
   imported Markdown headings are not exposed to Astro's article table of

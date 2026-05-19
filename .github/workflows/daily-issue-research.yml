@@ -54,7 +54,7 @@ jobs:
               --state open \
               --json number,title,body,labels,url,createdAt,updatedAt \
               --limit 100 \
-              | jq 'map(select(([.labels[].name] | index("research-pr-opened") | not) and ([.labels[].name] | index("research-skip") | not))) | sort_by(.updatedAt, .createdAt, .number) | .[0] // empty' \
+              | jq 'map(select(([.labels[].name] | index("research-pr-opened") | not) and ([.labels[].name] | index("research-skip") | not))) | sort_by(.createdAt, .number) | .[0] // empty' \
               > .github/codex/runtime/selected-issue.json
           fi
 

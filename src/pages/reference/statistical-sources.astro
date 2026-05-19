@@ -1,0 +1,238 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+
+const sourceGroups = [
+	{
+		title: '基礎統計・開発指標',
+		description:
+			'国別プロファイルの土台になる人口、GDP、貧困、教育、インフラ、開発水準を確認する。',
+		sources: [
+			{
+				name: 'World Bank Open Data / DataBank',
+				url: 'https://data.worldbank.org/',
+				use: 'GDP、人口、成長率、貧困、教育、インフラ、FDI、貿易など。国別比較の第一候補。'
+			},
+			{
+				name: 'World Development Indicators',
+				url: 'https://datatopics.worldbank.org/world-development-indicators',
+				use: '200以上の国・地域を対象にした長期時系列の開発指標。'
+			},
+			{
+				name: 'IMF World Economic Outlook',
+				url: 'https://www.imf.org/en/Publications/WEO/weo-database',
+				use: 'GDP、インフレ、失業、財政、経常収支、IMF予測。マクロ経済の現状確認に使う。'
+			},
+			{
+				name: 'UNdata',
+				url: 'https://data.un.org/',
+				use: '国連統計部門の横断データ。国民経済計算、人口、エネルギー、産業、貿易など。'
+			},
+			{
+				name: 'UNDP Human Development Data Center',
+				url: 'https://hdr.undp.org/data-center',
+				use: 'HDI、格差調整HDI、ジェンダー、不平等、貧困など生活水準の比較。'
+			},
+			{
+				name: 'Our World in Data',
+				url: 'https://ourworldindata.org/',
+				use: '人口、健康、教育、エネルギー、CO2、民主主義などを素早く可視化して把握する。'
+			}
+		]
+	},
+	{
+		title: '政治体制・民主主義・自由度',
+		description: '選挙、権威主義化、市民的自由、法の支配を定量的に比較する。',
+		sources: [
+			{
+				name: 'V-Dem Dataset',
+				url: 'https://www.v-dem.net/vdemds.html',
+				use: '民主主義、選挙、自由、熟議、平等などを細かく分解できる学術向けデータ。'
+			},
+			{
+				name: 'Freedom House: Freedom in the World',
+				url: 'https://freedomhouse.org/report-types/freedom-world',
+				use: '政治的権利と市民的自由の国別評価。国別説明が読みやすい。'
+			},
+			{
+				name: 'Worldwide Governance Indicators',
+				url: 'https://www.worldbank.org/en/publication/worldwide-governance-indicators',
+				use: '政府有効性、法の支配、汚職抑制、規制品質、政治的安定など。'
+			}
+		]
+	},
+	{
+		title: '安全保障・軍事・紛争',
+		description: '軍事費、核、紛争、国内暴力、治安リスクを見る。',
+		sources: [
+			{
+				name: 'SIPRI Military Expenditure Database',
+				url: 'https://www.sipri.org/research/armaments/milex/milex_database',
+				use: '国別軍事支出の長期時系列。防衛力や地域緊張の定量比較に使う。'
+			},
+			{
+				name: 'SIPRI Yearbook',
+				url: 'https://www.sipri.org/yearbook',
+				use: '核戦力、軍備管理、武器移転、安全保障環境の年次整理。'
+			},
+			{
+				name: 'UCDP',
+				url: 'https://ucdp.uu.se/',
+				use: '国家間戦争、内戦、組織的暴力の研究用データ。'
+			},
+			{
+				name: 'ACLED',
+				url: 'https://acleddata.com/',
+				use: '抗議、暴動、政治暴力のイベントデータ。現地治安や内戦の動きを追う。'
+			}
+		]
+	},
+	{
+		title: '貿易・産業・資源',
+		description: '輸出入構造、関税、食料、エネルギー、重要資源を見る。',
+		sources: [
+			{
+				name: 'UN Comtrade',
+				url: 'https://comtradeplus.un.org/',
+				use: '国別・品目別・相手国別の輸出入。サプライチェーン調査の基本。'
+			},
+			{
+				name: 'WTO Tariff & Trade Data',
+				url: 'https://www.wto.org/english/tratop_e/tariffs_e/tariff_data_e.htm',
+				use: '関税、貿易額、150以上の経済圏の公式貿易データ。'
+			},
+			{
+				name: 'FAOSTAT',
+				url: 'https://www.fao.org/faostat/',
+				use: '農業、食料、土地利用、森林、栄養。食料安全保障や農業輸出の分析に使う。'
+			},
+			{
+				name: 'IEA Data and Statistics',
+				url: 'https://www.iea.org/data-and-statistics',
+				use: '電力、石油、ガス、再エネ、CO2。エネルギー安全保障の確認に使う。'
+			}
+		]
+	},
+	{
+		title: '人口・移民・難民',
+		description: '人口構造、都市化、移民、難民、国内避難民を確認する。',
+		sources: [
+			{
+				name: 'UN Population Division',
+				url: 'https://population.un.org/wpp/',
+				use: '人口、出生率、死亡率、年齢構成、将来推計。'
+			},
+			{
+				name: 'UNHCR Refugee Data Finder',
+				url: 'https://popstats.unhcr.org/refugee-statistics/',
+				use: '難民、庇護申請者、国内避難民、無国籍者。紛争・人道危機の把握に使う。'
+			},
+			{
+				name: 'IOM Migration Data Portal',
+				url: 'https://www.migrationdataportal.org/',
+				use: '国際移民、送金、移住傾向、移民政策。'
+			}
+		]
+	},
+	{
+		title: '健康・教育・労働',
+		description: '生活水準、市民生活、人的資本、労働市場を見る。',
+		sources: [
+			{
+				name: 'WHO Data / Global Health Observatory',
+				url: 'https://data.who.int/',
+				use: '平均寿命、死因、感染症、医療制度、保健支出。'
+			},
+			{
+				name: 'UNESCO Institute for Statistics',
+				url: 'https://uis.unesco.org/',
+				use: '就学率、識字率、教育支出、教育格差。'
+			},
+			{
+				name: 'ILOSTAT',
+				url: 'https://ilostat.ilo.org/',
+				use: '失業率、労働参加率、若年雇用、労働時間、非公式雇用。'
+			}
+		]
+	}
+]
+
+const minimumSet = [
+	'World Bank: GDP、人口、成長率、貧困、教育、インフラ',
+	'IMF WEO: 最新マクロ経済と予測',
+	'V-Dem または Freedom House: 政治体制・自由度',
+	'SIPRI: 軍事費・軍備',
+	'UN Comtrade または WTO: 貿易構造',
+	'UNHCR または IOM: 難民・移民',
+	'WHO または UNDP: 健康・人間開発',
+	'IEA または FAOSTAT: エネルギー・食料・資源'
+]
+---
+
+<BaseLayout title='基本情報・統計ソース'>
+	<section class='grid gap-5'>
+		<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
+			Reference
+		</p>
+		<div class='grid gap-4'>
+			<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-5xl'>
+				国別調査に使う統計・データソース一覧
+			</h1>
+			<p class='max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300'>
+				国際政治・経済・安全保障・人口・生活水準を比較するときに使う基本情報の入口です。国別プロファイルを書くときは、最新年、推計か実績か、指標定義の違いを確認してから使います。
+			</p>
+		</div>
+	</section>
+
+	<section class='grid gap-4'>
+		<h2 class='text-2xl font-semibold'>最小セット</h2>
+		<div class='grid gap-3 md:grid-cols-2'>
+			{
+				minimumSet.map((item) => (
+					<div class='rounded-md border border-black/10 bg-white/70 p-4 leading-7 dark:border-white/10 dark:bg-white/10'>
+						{item}
+					</div>
+				))
+			}
+		</div>
+	</section>
+
+	<section class='grid gap-6'>
+		{
+			sourceGroups.map((group) => (
+				<div class='grid gap-4'>
+					<div>
+						<h2 class='text-2xl font-semibold'>{group.title}</h2>
+						<p class='mt-2 leading-7 text-gray-700 dark:text-gray-300'>{group.description}</p>
+					</div>
+					<div class='grid gap-3'>
+						{group.sources.map((source) => (
+							<a
+								href={source.url}
+								target='_blank'
+								rel='noreferrer'
+								class='grid gap-2 rounded-md border border-black/10 bg-white/70 p-4 transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-sm dark:border-white/10 dark:bg-white/10 dark:hover:border-white/30'
+							>
+								<div class='font-semibold'>{source.name}</div>
+								<p class='leading-7 text-gray-700 dark:text-gray-300'>{source.use}</p>
+							</a>
+						))}
+					</div>
+				</div>
+			))
+		}
+	</section>
+
+	<section
+		class='rounded-md border border-black/10 bg-white/70 p-5 dark:border-white/10 dark:bg-white/10'
+	>
+		<h2 class='text-2xl font-semibold'>使うときの注意</h2>
+		<div class='mt-3 grid gap-3 leading-7 text-gray-700 dark:text-gray-300'>
+			<p>
+				国際統計は指標ごとに最新年が異なります。GDPは直近推計があっても、貧困、健康、教育、難民、労働の指標は数年前が最新ということがあります。
+			</p>
+			<p>
+				レポートでは、数値そのものだけでなく、データ年、推計か実績か、出典機関、指標定義、欠損国の扱いを本文近くに明記します。
+			</p>
+		</div>
+	</section>
+</BaseLayout>

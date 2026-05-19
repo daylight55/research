@@ -4,49 +4,38 @@ import ListPosts from '@/components/ListPosts'
 import BaseLayout from '@/layouts/BaseLayout'
 import { getPosts, withBase } from '@/utils'
 import { siteConfig } from '@/site-config'
-import { CATEGORIES } from '@/data/categories'
 
 const posts = await getPosts()
-const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
 ---
 
 <BaseLayout title='Home'>
-	<section class='research-hero rounded-lg px-6 py-10 md:px-10 md:py-14'>
-		<div class='grid gap-8 md:grid-cols-[1.3fr_.7fr] md:items-end'>
-			<div class='grid gap-5'>
-				<div class='flex flex-wrap gap-2'>
-					<span class='research-chip rounded-full px-3 py-1 text-sm font-semibold'
-						>Astro + OpenBlog</span
-					>
-					<span class='research-chip rounded-full px-3 py-1 text-sm font-semibold'
-						>Cloudflare Pages ready</span
-					>
-				</div>
-				<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-6xl'>
-					{siteConfig.title}
-				</h1>
-				<p class='max-w-2xl text-lg leading-8 text-gray-700 dark:text-gray-200'>
-					{siteConfig.description}
-				</p>
-			</div>
-			<div class='grid grid-cols-3 gap-3 text-center md:grid-cols-1'>
-				<div class='rounded-md bg-white/70 p-4 shadow-sm dark:bg-white/10'>
-					<div class='text-3xl font-semibold'>{posts.length}</div>
-					<div class='text-sm text-gray-600 dark:text-gray-300'>Reports</div>
-				</div>
-				<div class='rounded-md bg-white/70 p-4 shadow-sm dark:bg-white/10'>
-					<div class='text-3xl font-semibold'>{CATEGORIES.length}</div>
-					<div class='text-sm text-gray-600 dark:text-gray-300'>Categories</div>
-				</div>
-				<div class='rounded-md bg-white/70 p-4 shadow-sm dark:bg-white/10'>
-					<div class='text-3xl font-semibold'>{totalTags}</div>
-					<div class='text-sm text-gray-600 dark:text-gray-300'>Tags</div>
-				</div>
-			</div>
+	<section class='grid gap-4 border-b border-black/10 pb-8 dark:border-white/10'>
+		<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
+			Research Atlas
+		</p>
+		<div class='grid gap-3'>
+			<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-5xl'>
+				{siteConfig.title}
+			</h1>
+			<p class='max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300'>
+				{siteConfig.description}
+			</p>
 		</div>
 	</section>
 
 	<div class='grid gap-8'>
+		<section>
+			<div class='mb-4 grid gap-2'>
+				<p
+					class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'
+				>
+					Reports
+				</p>
+				<h2 class='text-2xl font-semibold'>最新レポート</h2>
+			</div>
+			<ListPosts posts={posts} />
+		</section>
+
 		<div class='grid gap-4'>
 			<div>
 				<p
@@ -59,11 +48,6 @@ const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
 			<div class='overflow-x-auto pb-1'>
 				<ListCategories />
 			</div>
-		</div>
-
-		<div>
-			<h2 class='mb-4 text-2xl font-semibold'>Latest Reports</h2>
-			<ListPosts posts={posts} />
 		</div>
 
 		<section class='grid gap-4'>

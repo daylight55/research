@@ -47,6 +47,25 @@ const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
 	</section>
 
 	<div class='grid gap-8'>
+		<div class='grid gap-4'>
+			<div>
+				<p
+					class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'
+				>
+					Index
+				</p>
+				<h2 class='text-2xl font-semibold'>調査カテゴリ</h2>
+			</div>
+			<div class='overflow-x-auto pb-1'>
+				<ListCategories />
+			</div>
+		</div>
+
+		<div>
+			<h2 class='mb-4 text-2xl font-semibold'>Latest Reports</h2>
+			<ListPosts posts={posts} />
+		</div>
+
 		<section class='grid gap-4'>
 			<div>
 				<p
@@ -73,24 +92,5 @@ const totalTags = new Set(posts.flatMap((post) => post.data.tags)).size
 				>
 			</a>
 		</section>
-
-		<div class='grid gap-4'>
-			<div>
-				<p
-					class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'
-				>
-					Index
-				</p>
-				<h2 class='text-2xl font-semibold'>調査カテゴリ</h2>
-			</div>
-			<div class='overflow-x-auto pb-1'>
-				<ListCategories />
-			</div>
-		</div>
-
-		<div>
-			<h2 class='mb-4 text-2xl font-semibold'>Latest Reports</h2>
-			<ListPosts posts={posts} />
-		</div>
 	</div>
 </BaseLayout>

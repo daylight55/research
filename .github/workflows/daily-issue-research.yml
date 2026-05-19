@@ -327,7 +327,7 @@ jobs:
 
           gh run watch "${PREVIEW_RUN_ID}" --exit-status --interval 10
 
-      - name: Merge completed research pull request
+      - name: Enable auto-merge for completed research pull request
         if: steps.dispatch_preview.outputs.preview_run_id != ''
         shell: bash
         env:
@@ -338,19 +338,43 @@ jobs:
         run: |
           set -euo pipefail
 
-          pr_state="$(gh pr view "${PR_NUMBER}" --json state --jq '.state')"
+          pr_json="$(gh pr view "${PR_NUMBER}" --json id,state)"
+          pr_id="$(jq -r '.id' <<< "${pr_json}")"
+          pr_state="$(jq -r '.state' <<< "${pr_json}")"
+
           if [[ "${pr_state}" != "OPEN" ]]; then
-            echo "::error::PR #${PR_NUMBER} is not open; current state is ${pr_state}."
-            exit 1
+            if [[ "${pr_state}" == "MERGED" ]]; then
+              echo "PR #${PR_NUMBER} is already merged."
+              exit 0
+            else
+              echo "::error::PR #${PR_NUMBER} is not open; current state is ${pr_state}."
+              exit 1
+            fi
           fi
 
-          gh pr merge "${PR_NUMBER}" \
-            --squash \
-            --delete-branch \
-            --subject "Daily research: #${ISSUE_NUMBER} ${ISSUE_TITLE}" \
-            --body "Generated, built, previewed, and merged by the Daily Issue Research workflow."
+          gh api graphql \
+            -f query='
+              mutation($pullRequestId: ID!, $commitHeadline: String!, $commitBody: String!) {
+                enablePullRequestAutoMerge(input: {
+                  pullRequestId: $pullRequestId,
+                  mergeMethod: SQUASH,
+                  commitHeadline: $commitHeadline,
+                  commitBody: $commitBody
+                }) {
+                  pullRequest {
+                    number
+                    autoMergeRequest {
+                      enabledAt
+                    }
+                  }
+                }
+              }
+            ' \
+            -f pullRequestId="${pr_id}" \
+            -f commitHeadline="Daily research: #${ISSUE_NUMBER} ${ISSUE_TITLE}" \
+            -f commitBody="Generated, built, previewed, and queued for auto-merge by the Daily Issue Research workflow."
 
-          gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR #${PR_NUMBER} was built, previewed, and merged into main."
+          gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR #${PR_NUMBER} was built, previewed, and queued for auto-merge into main."
 
       - name: Comment when no issue was selected
         if: steps.select_issue.outputs.issue_found == 'false'

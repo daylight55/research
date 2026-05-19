@@ -18,13 +18,16 @@ issue.
 
 - Follow `AGENTS.md`.
 - Use the repo-local `technical-research-report` skill if available.
-- Put research under `category/<category-name>/<topic>/`.
-- Each topic should have at least:
-  - `report.md`
-  - `research-tasks.md`
-- If the report should be visible on the Astro site, add or update the matching
-  `src/content/blog/<topic>.mdx` entry and `src/data/categories.ts` category
-  wiring as needed.
+- Write the reader-facing report body directly in
+  `src/content/blog/<topic>.mdx`. Treat this MDX file as the canonical article
+  body for website-visible reports.
+- Do not create `category/<category-name>/<topic>/report.md` as a second copy
+  of the same article body. Duplicate report bodies drift and make the workflow
+  slower.
+- Use `category/<category-name>/<topic>/` only for support material such as
+  `research-tasks.md`, `notes/`, `sources/`, `figures/`, or prototypes when
+  they are useful.
+- Add or update `src/data/categories.ts` category wiring as needed.
 - When creating `src/content/blog/<topic>.mdx`, use
   `.github/codex/templates/blog-entry.mdx` as the site-entry shape.
   Include `rssSummary` in frontmatter as a concise RSS/share summary. Keep it
@@ -56,7 +59,7 @@ issue.
 - Make the report standalone: a future reader should not need the GitHub issue
   to understand the topic.
 - Keep `research-tasks.md` as a resumable task record with completed checks and
-  deeper follow-up candidates.
+  deeper follow-up candidates when a separate task log is useful.
 - Run focused verification before finishing. At minimum, check for unresolved
   placeholders and run `git diff --check`. If site content changed and
   dependencies are installed, run `pnpm build`.

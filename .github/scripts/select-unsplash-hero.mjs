@@ -1,12 +1,39 @@
 import { execFileSync } from 'node:child_process'
+import { existsSync, readFileSync } from 'node:fs'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
+
+function loadDotEnv(file = '.env') {
+	if (!existsSync(file)) return
+
+	for (const line of readFileSync(file, 'utf8').split(/\r?\n/)) {
+		const trimmed = line.trim()
+		if (!trimmed || trimmed.startsWith('#')) continue
+
+		const match = trimmed.match(/^([A-Za-z_][A-Za-z0-9_]*)=(.*)$/)
+		if (!match) continue
+
+		const [, key, rawValue] = match
+		if (process.env[key]) continue
+
+		process.env[key] = rawValue.trim().replace(/^['"]|['"]$/g, '')
+	}
+}
+
+loadDotEnv()
 
 const ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY
 const IMAGE_DIR = path.join('src', 'assets', 'images', 'hero')
 const PLACEHOLDER_RE = /placeholder|banner\.jpg|book\.jpg|placeholder-social/i
 
 function changedBlogEntries() {
+	if (process.argv.includes('--all')) {
+		return execFileSync('git', ['ls-files', 'src/content/blog/*.mdx'], { encoding: 'utf8' })
+			.split('\n')
+			.map((line) => line.trim())
+			.filter(Boolean)
+	}
+
 	const output = execFileSync(
 		'git',
 		['ls-files', '--modified', '--others', '--exclude-standard', '--', 'src/content/blog/*.mdx'],
@@ -105,14 +132,32 @@ async function selectHero(file) {
 		throw new Error('UNSPLASH_ACCESS_KEY is required when heroImageQuery is set')
 	}
 
-	const searchUrl = new URL('https://api.unsplash.com/search/photos')
-	searchUrl.searchParams.set('query', query)
-	searchUrl.searchParams.set('orientation', 'landscape')
-	searchUrl.searchParams.set('content_filter', 'high')
-	searchUrl.searchParams.set('per_page', '10')
+	const queries = query
+		.split(',')
+		.map((candidate) => candidate.trim())
+		.filter(Boolean)
 
-	const result = await fetchJson(searchUrl)
-	const photo = result.results?.find((candidate) => candidate.urls?.raw && candidate.links?.download_location)
+	let photo
+	let selectedQuery = ''
+
+	for (const candidateQuery of queries) {
+		const searchUrl = new URL('https://api.unsplash.com/search/photos')
+		searchUrl.searchParams.set('query', candidateQuery)
+		searchUrl.searchParams.set('orientation', 'landscape')
+		searchUrl.searchParams.set('content_filter', 'high')
+		searchUrl.searchParams.set('per_page', '10')
+
+		const result = await fetchJson(searchUrl)
+		photo = result.results?.find(
+			(candidate) => candidate.urls?.raw && candidate.links?.download_location
+		)
+
+		if (photo) {
+			selectedQuery = candidateQuery
+			break
+		}
+	}
+
 	if (!photo) {
 		throw new Error(`No Unsplash photo found for query: ${query}`)
 	}
@@ -136,7 +181,7 @@ async function selectHero(file) {
 	nextFrontmatter = upsertScalar(nextFrontmatter, 'heroImageCreditUrl', photoCreditUrl(photo), 'heroImageCredit')
 
 	await writeFile(file, source.replace(full, `---\n${nextFrontmatter}\n---`))
-	console.log(`Selected Unsplash hero for ${file}: ${query}`)
+	console.log(`Selected Unsplash hero for ${file}: ${selectedQuery}`)
 	return true
 }
 
@@ -144,7 +189,14 @@ const files = changedBlogEntries()
 let changed = false
 
 for (const file of files) {
-	changed = (await selectHero(file)) || changed
+	try {
+		changed = (await selectHero(file)) || changed
+	} catch (error) {
+		console.error(`Failed to select Unsplash hero for ${file}: ${error.message}`)
+		if (!process.argv.includes('--all')) {
+			throw error
+		}
+	}
 }
 
 if (!changed) {

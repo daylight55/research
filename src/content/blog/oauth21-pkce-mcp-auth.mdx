@@ -1,6 +1,7 @@
 ---
 title: 'OAuth 2.1 PKCEフローとMCP認証認可の実務ガイド'
 description: 'MCPサーバー、OIDCプロバイダー、OAuthクライアント、Claude系クライアント、OpenAPI-only APIの関係を、初学者向けに通信フローと設定観点で整理する。'
+rssSummary: 'OAuth 2.1 PKCE、OIDC、MCPサーバー、Claude系クライアントの認証認可フローを実務向けに整理する。'
 pubDate: '2026-05-15'
 heroImage: '../../assets/images/placeholder-hero.jpg'
 category: 'developer-tools'
@@ -13,7 +14,6 @@ draft: false
 作成日: 2026-05-15
 調査方式: 仕様調査と製品ドキュメントレビュー
 対象: MCPサーバー、OIDCプロバイダー、OAuthクライアント、Claude系クライアント、OpenAPI-onlyな既存APIをMCP化する設計
-
 
 ## 1. エグゼクティブサマリー
 
@@ -50,13 +50,13 @@ flowchart LR
 
 MCP、OIDC、OAuthは役割が異なる。ここを混同すると設定が崩れる。
 
-| 役割 | 何をするか | 典型的な実体 |
-|---|---|---|
-| MCPサーバー | ツール・リソース・プロンプトを公開する。HTTPでは保護リソースとして振る舞う。 | 自作MCPサーバー、業務システムのMCPラッパー |
-| OAuth認可サーバー | 認可コード発行、トークン発行、クライアント認証を担う。 | Auth0、Keycloak、Entra ID、Okta |
-| OIDCプロバイダー | OAuthにIDトークンやDiscoveryを加える。 | 同上。OIDC Discoveryを公開することが多い |
-| OAuthクライアント | ブラウザ認可を開始し、コードをトークンに交換する。 | Claude系クライアント、独自MCPクライアント |
-| リソースサーバー | アクセストークンを検証してAPIを許可する。 | MCPサーバー、上流API、API Gateway |
+| 役割              | 何をするか                                                                   | 典型的な実体                               |
+| ----------------- | ---------------------------------------------------------------------------- | ------------------------------------------ |
+| MCPサーバー       | ツール・リソース・プロンプトを公開する。HTTPでは保護リソースとして振る舞う。 | 自作MCPサーバー、業務システムのMCPラッパー |
+| OAuth認可サーバー | 認可コード発行、トークン発行、クライアント認証を担う。                       | Auth0、Keycloak、Entra ID、Okta            |
+| OIDCプロバイダー  | OAuthにIDトークンやDiscoveryを加える。                                       | 同上。OIDC Discoveryを公開することが多い   |
+| OAuthクライアント | ブラウザ認可を開始し、コードをトークンに交換する。                           | Claude系クライアント、独自MCPクライアント  |
+| リソースサーバー  | アクセストークンを検証してAPIを許可する。                                    | MCPサーバー、上流API、API Gateway          |
 
 MCP仕様の認可章では、HTTPサーバーは Protected Resource Metadata を公開し、クライアントはそこから認可サーバーのメタデータを見つけ、OAuth 2.1 の規則で認可を進める。OAuth 2.1 自体は draft だが、Authorization Code と PKCE を中心に整理され、Implicit flow は採らない方向である。
 

@@ -1,6 +1,7 @@
 ---
 title: 'オントロジー概念の基礎と実務活用'
 description: '哲学的存在論、知識表現、Semantic Web標準、知識グラフ、業務AIでのoperational ontologyを整理する基礎レポート。'
+rssSummary: '存在論、Semantic Web、知識グラフ、業務AIにおける operational ontology を基礎から整理する。'
 pubDate: '2026-05-09'
 heroImage: '../../assets/images/placeholder-hero.jpg'
 category: 'knowledge-systems'
@@ -13,7 +14,6 @@ draft: false
 作成日: 2026-05-09
 調査方式: ナラティブレビュー
 対象: 哲学的オントロジー、知識表現、Semantic Web標準、知識グラフ、業務AIにおける operational ontology
-
 
 ## 1. エグゼクティブサマリー
 
@@ -72,17 +72,17 @@ Gruber (1993) の定義は、オントロジーを「特定システムの内部
 
 実務上、オントロジーは次の要素で構成される。
 
-| 要素 | 意味 | 例 |
-|---|---|---|
-| Domain | 対象領域 | 技術調査、医療、製造、営業、法務 |
-| Class / Type | 種類、概念カテゴリ | Source、Claim、Customer、Contract |
-| Individual / Instance | 個別対象 | ある論文、ある顧客、ある契約 |
-| Property / Attribute | 対象の性質 | 作成日、著者、契約額、リスク度 |
-| Relation | 対象間の関係 | cites、supports、owns、dependsOn |
-| Axiom / Rule | 成り立つべき制約や推論規則 | 契約は必ず顧客に紐づく |
-| Constraint | データが満たすべき検証条件 | 日付必須、ステータス列挙、重複禁止 |
-| Provenance | 出典・来歴 | どの文書、誰の発言、どのAPI結果か |
-| Governance | 更新責任・承認・権限 | 誰が定義を変えられるか |
+| 要素                  | 意味                       | 例                                 |
+| --------------------- | -------------------------- | ---------------------------------- |
+| Domain                | 対象領域                   | 技術調査、医療、製造、営業、法務   |
+| Class / Type          | 種類、概念カテゴリ         | Source、Claim、Customer、Contract  |
+| Individual / Instance | 個別対象                   | ある論文、ある顧客、ある契約       |
+| Property / Attribute  | 対象の性質                 | 作成日、著者、契約額、リスク度     |
+| Relation              | 対象間の関係               | cites、supports、owns、dependsOn   |
+| Axiom / Rule          | 成り立つべき制約や推論規則 | 契約は必ず顧客に紐づく             |
+| Constraint            | データが満たすべき検証条件 | 日付必須、ステータス列挙、重複禁止 |
+| Provenance            | 出典・来歴                 | どの文書、誰の発言、どのAPI結果か  |
+| Governance            | 更新責任・承認・権限       | 誰が定義を変えられるか             |
 
 この一覧から分かる通り、オントロジーは「単語の意味を説明する辞書」ではない。語彙を定義するだけなら controlled vocabulary で足りる。階層分類だけなら taxonomy で足りる。データ項目の型と必須条件だけなら schema で足りる。オントロジーは、それらを含みつつ、領域をどう概念化し、どの関係と制約を正当なものとして扱うかを明示する。
 
@@ -128,17 +128,17 @@ Noy and McGuinness は、オントロジー開発を「一度で完成する定�
 
 オントロジーを理解するには、近い概念と並べるのが最も早い。
 
-| 概念 | 主な目的 | 典型例 | オントロジーとの関係 |
-|---|---|---|---|
-| Glossary | 用語の説明 | 社内用語集 | 定義文はあるが、関係・制約・推論は弱い |
-| Controlled vocabulary | 表記ゆれ抑制 | タグ一覧、標準コード | 語彙統制の基礎になる |
-| Taxonomy | 階層分類 | 業種分類、製品カテゴリ | `is-a` 階層はオントロジーの一部になりうる |
-| Thesaurus | 同義語・上位語・関連語 | 図書館件名標目 | SKOSで表しやすい |
-| Schema | データ構造 | JSON Schema、DB schema | 型・項目・必須条件を定義するが、概念意味は限定的 |
-| Data model | データ設計 | ER図、UMLクラス図 | オントロジーより実装寄りの場合が多い |
-| Knowledge graph | 実体と関係のグラフ | Wikidata、企業KG | オントロジーを使って構造化されることがある |
-| Semantic layer | BI/分析の共通意味層 | 指標定義、メトリクス層 | 業務語彙の共通化という点で重なる |
-| Operational ontology | 業務対象と行為の意味層 | Palantir Foundry Ontology | 意味モデルにアクション・権限・監査を足す |
+| 概念                  | 主な目的               | 典型例                    | オントロジーとの関係                             |
+| --------------------- | ---------------------- | ------------------------- | ------------------------------------------------ |
+| Glossary              | 用語の説明             | 社内用語集                | 定義文はあるが、関係・制約・推論は弱い           |
+| Controlled vocabulary | 表記ゆれ抑制           | タグ一覧、標準コード      | 語彙統制の基礎になる                             |
+| Taxonomy              | 階層分類               | 業種分類、製品カテゴリ    | `is-a` 階層はオントロジーの一部になりうる        |
+| Thesaurus             | 同義語・上位語・関連語 | 図書館件名標目            | SKOSで表しやすい                                 |
+| Schema                | データ構造             | JSON Schema、DB schema    | 型・項目・必須条件を定義するが、概念意味は限定的 |
+| Data model            | データ設計             | ER図、UMLクラス図         | オントロジーより実装寄りの場合が多い             |
+| Knowledge graph       | 実体と関係のグラフ     | Wikidata、企業KG          | オントロジーを使って構造化されることがある       |
+| Semantic layer        | BI/分析の共通意味層    | 指標定義、メトリクス層    | 業務語彙の共通化という点で重なる                 |
+| Operational ontology  | 業務対象と行為の意味層 | Palantir Foundry Ontology | 意味モデルにアクション・権限・監査を足す         |
 
 分類体系や用語集は、オントロジーの入口として有用である。しかし、たとえば「顧客」「契約」「請求」という言葉を定義しただけでは、契約が必ず一つ以上の顧客に紐づくのか、顧客が法人と個人で別クラスなのか、請求の取消はどの状態で許されるのかは分からない。こうした関係・制約・状態遷移・権限が必要になった時点で、単なる用語集からオントロジー設計へ進む。
 
@@ -150,16 +150,16 @@ SKOSは、この境界領域を扱う実務的な標準である。シソーラ�
 
 オントロジーを実装するとき、W3C系の標準は今も重要である。ただし、それぞれの標準は役割が違う。
 
-| 標準・語彙 | 役割 | 実務での使いどころ |
-|---|---|---|
-| RDF | 主語・述語・目的語のグラフデータモデル | データをWeb識別子で結び、異種データを統合する |
-| RDFS | RDF語彙の基本スキーマ | クラス、サブクラス、プロパティの基本定義 |
-| OWL 2 | 論理ベースのオントロジー言語 | 整合性検証、分類推論、暗黙知識の明示化 |
-| OWL 2 Profiles | 推論性能と表現力の調整 | 大規模分類、DB連携、ルール的推論に合わせる |
-| SPARQL | RDFグラフ問い合わせ言語 | RDFデータの検索・集計・結合 |
-| SKOS | 分類・シソーラス表現 | タグ、分類体系、件名標目、軽量語彙管理 |
-| SHACL | RDFグラフ検証 | 必須項目、型、範囲、整合性チェック |
-| schema.org | Web上の構造化データ語彙 | Webページ、メール、JSON-LDの意味注釈 |
+| 標準・語彙     | 役割                                   | 実務での使いどころ                            |
+| -------------- | -------------------------------------- | --------------------------------------------- |
+| RDF            | 主語・述語・目的語のグラフデータモデル | データをWeb識別子で結び、異種データを統合する |
+| RDFS           | RDF語彙の基本スキーマ                  | クラス、サブクラス、プロパティの基本定義      |
+| OWL 2          | 論理ベースのオントロジー言語           | 整合性検証、分類推論、暗黙知識の明示化        |
+| OWL 2 Profiles | 推論性能と表現力の調整                 | 大規模分類、DB連携、ルール的推論に合わせる    |
+| SPARQL         | RDFグラフ問い合わせ言語                | RDFデータの検索・集計・結合                   |
+| SKOS           | 分類・シソーラス表現                   | タグ、分類体系、件名標目、軽量語彙管理        |
+| SHACL          | RDFグラフ検証                          | 必須項目、型、範囲、整合性チェック            |
+| schema.org     | Web上の構造化データ語彙                | Webページ、メール、JSON-LDの意味注釈          |
 
 RDFはデータモデルであり、OWLはオントロジー言語であり、SHACLは検証言語である。この区別は実務上かなり重要である。OWLは、open world assumption のもとで「明示されていないことは偽とは限らない」と扱う。これはWeb上の分散知識には適しているが、業務データの入力検証では違和感を生みやすい。業務システムで「契約に顧客IDがないならエラー」と言いたい場合、SHACLやアプリケーション側の検証が必要になる。
 
@@ -183,12 +183,12 @@ OWL 2には複数のプロファイルがある。OWL 2 EL、QL、RLは、表現
 
 オントロジーには粒度がある。
 
-| 種類 | 対象 | 例 | 利点 | 注意点 |
-|---|---|---|---|---|
-| Top-level / Upper ontology | どの領域にも現れる抽象カテゴリ | object、process、quality、role | ドメイン間の相互運用性 | 抽象度が高く、現場に遠い |
-| Domain ontology | 特定領域 | 医療、製造、法務、研究管理 | 実務に近い | 領域外に広げにくい |
-| Application ontology | 特定アプリ・業務 | 障害対応、調査レポート管理 | すぐ使える | 汎用性は低い |
-| Task ontology | 特定タスク | レビュー、承認、検索、推薦 | AI/ワークフローに接続しやすい | 範囲が狭い |
+| 種類                       | 対象                           | 例                             | 利点                          | 注意点                   |
+| -------------------------- | ------------------------------ | ------------------------------ | ----------------------------- | ------------------------ |
+| Top-level / Upper ontology | どの領域にも現れる抽象カテゴリ | object、process、quality、role | ドメイン間の相互運用性        | 抽象度が高く、現場に遠い |
+| Domain ontology            | 特定領域                       | 医療、製造、法務、研究管理     | 実務に近い                    | 領域外に広げにくい       |
+| Application ontology       | 特定アプリ・業務               | 障害対応、調査レポート管理     | すぐ使える                    | 汎用性は低い             |
+| Task ontology              | 特定タスク                     | レビュー、承認、検索、推薦     | AI/ワークフローに接続しやすい | 範囲が狭い               |
 
 BFOは上位オントロジーの代表例で、ISO/IEC 21838-2:2021として標準化されている。上位オントロジーは、異なるドメインオントロジーを接続するときに役立つ。ただし、個人や小規模チームの実務では、最初からBFOのような上位オントロジーを導入するより、対象ワークフローに必要なクラスと関係を明示するほうが成果につながりやすい。
 
@@ -270,28 +270,28 @@ flowchart LR
 
 最初は5から10個程度でよい。
 
-| Class | 定義 |
-|---|---|
-| Topic | 調査対象となる問い・テーマ |
-| Report | 調査結果をまとめた文書 |
-| Source | 根拠として参照する文献・公式資料・仕様 |
-| Claim | レポート内の検証可能な主張 |
-| Evidence | Claimを支える具体的根拠 |
-| Decision | 実務上の判断・推奨 |
-| Risk | 限界、未確認事項、失敗可能性 |
-| Concept | 再利用したい抽象概念 |
+| Class    | 定義                                   |
+| -------- | -------------------------------------- |
+| Topic    | 調査対象となる問い・テーマ             |
+| Report   | 調査結果をまとめた文書                 |
+| Source   | 根拠として参照する文献・公式資料・仕様 |
+| Claim    | レポート内の検証可能な主張             |
+| Evidence | Claimを支える具体的根拠                |
+| Decision | 実務上の判断・推奨                     |
+| Risk     | 限界、未確認事項、失敗可能性           |
+| Concept  | 再利用したい抽象概念                   |
 
 ### 10.4 関係を定義する
 
-| Relation | Domain | Range | 意味 |
-|---|---|---|---|
-| hasSource | Claim | Source | 主張が出典に支えられる |
-| supports | Evidence | Claim | 証拠が主張を支持する |
-| contradicts | Source / Evidence | Claim | 反証または対立する |
-| dependsOn | Decision | Claim / Risk | 判断が前提に依存する |
-| belongsTo | Report | Topic | レポートがテーマに属する |
-| hasConcept | Report | Concept | レポートが概念を扱う |
-| supersedes | Claim / Decision | Claim / Decision | 新しい主張・判断が古いものを置き換える |
+| Relation    | Domain            | Range            | 意味                                   |
+| ----------- | ----------------- | ---------------- | -------------------------------------- |
+| hasSource   | Claim             | Source           | 主張が出典に支えられる                 |
+| supports    | Evidence          | Claim            | 証拠が主張を支持する                   |
+| contradicts | Source / Evidence | Claim            | 反証または対立する                     |
+| dependsOn   | Decision          | Claim / Risk     | 判断が前提に依存する                   |
+| belongsTo   | Report            | Topic            | レポートがテーマに属する               |
+| hasConcept  | Report            | Concept          | レポートが概念を扱う                   |
+| supersedes  | Claim / Decision  | Claim / Decision | 新しい主張・判断が古いものを置き換える |
 
 ### 10.5 制約と検証を決める
 
@@ -321,14 +321,14 @@ flowchart TD
 
 オントロジー設計の失敗は、形式化不足と形式化過剰の両方から起きる。判断基準は「何を達成したいか」である。
 
-| 目的 | 推奨レベル | 実装候補 |
-|---|---|---|
-| 用語の揺れを減らす | Controlled vocabulary | Markdown、CSV、Notion DB |
-| 階層分類したい | Taxonomy / SKOS | SKOS、YAML、DB |
-| レポートやソースの関係を辿りたい | Lightweight ontology / KG | property graph、RDF、JSON-LD |
-| データ入力を検証したい | Schema + constraints | JSON Schema、SHACL、DB constraint |
-| 暗黙関係を推論したい | OWL / rule engine | OWL 2 profile、Datalog |
-| 業務操作まで制御したい | Operational ontology | API、権限、監査、ワークフロー |
+| 目的                             | 推奨レベル                | 実装候補                          |
+| -------------------------------- | ------------------------- | --------------------------------- |
+| 用語の揺れを減らす               | Controlled vocabulary     | Markdown、CSV、Notion DB          |
+| 階層分類したい                   | Taxonomy / SKOS           | SKOS、YAML、DB                    |
+| レポートやソースの関係を辿りたい | Lightweight ontology / KG | property graph、RDF、JSON-LD      |
+| データ入力を検証したい           | Schema + constraints      | JSON Schema、SHACL、DB constraint |
+| 暗黙関係を推論したい             | OWL / rule engine         | OWL 2 profile、Datalog            |
+| 業務操作まで制御したい           | Operational ontology      | API、権限、監査、ワークフロー     |
 
 個人や小規模チームの知識管理では、いきなりOWLで全概念を定義するより、Markdown/JSON/YAMLで ontology lite を作り、必要になった関係だけをグラフ化するほうがよい。大規模な相互運用、外部公開、標準語彙との接続、論理推論が必要になった段階で、RDF/OWL/SHACLを検討する。
 

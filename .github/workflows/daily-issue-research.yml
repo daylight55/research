@@ -206,6 +206,7 @@ jobs:
           set -euo pipefail
 
           branch="codex/daily-research-${ISSUE_NUMBER}-${GITHUB_RUN_ID}"
+          base_ref_oid="$(git rev-parse HEAD)"
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -239,6 +240,7 @@ jobs:
           echo "pr_url=${pr_url}" >> "${GITHUB_OUTPUT}"
           echo "pr_number=${pr_number}" >> "${GITHUB_OUTPUT}"
           echo "branch=${branch}" >> "${GITHUB_OUTPUT}"
+          echo "base_ref_oid=${base_ref_oid}" >> "${GITHUB_OUTPUT}"
 
       - name: Comment OpenAI usage on PR
         if: steps.create_pr.outputs.pr_url != ''
@@ -327,7 +329,7 @@ jobs:
 
           gh run watch "${PREVIEW_RUN_ID}" --exit-status --interval 10
 
-      - name: Enable auto-merge for completed research pull request
+      - name: Merge completed research pull request
         if: steps.dispatch_preview.outputs.preview_run_id != ''
         shell: bash
         env:
@@ -335,12 +337,14 @@ jobs:
           PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
           ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
           ISSUE_TITLE: ${{ steps.select_issue.outputs.issue_title }}
+          EXPECTED_BASE_REF_OID: ${{ steps.create_pr.outputs.base_ref_oid }}
         run: |
           set -euo pipefail
 
-          pr_json="$(gh pr view "${PR_NUMBER}" --json id,state)"
-          pr_id="$(jq -r '.id' <<< "${pr_json}")"
+          pr_json="$(gh pr view "${PR_NUMBER}" --json state,headRefOid,baseRefOid)"
           pr_state="$(jq -r '.state' <<< "${pr_json}")"
+          head_ref_oid="$(jq -r '.headRefOid' <<< "${pr_json}")"
+          base_ref_oid="$(jq -r '.baseRefOid' <<< "${pr_json}")"
 
           if [[ "${pr_state}" != "OPEN" ]]; then
             if [[ "${pr_state}" == "MERGED" ]]; then
@@ -352,29 +356,19 @@ jobs:
             fi
           fi
 
-          gh api graphql \
-            -f query='
-              mutation($pullRequestId: ID!, $commitHeadline: String!, $commitBody: String!) {
-                enablePullRequestAutoMerge(input: {
-                  pullRequestId: $pullRequestId,
-                  mergeMethod: SQUASH,
-                  commitHeadline: $commitHeadline,
-                  commitBody: $commitBody
-                }) {
-                  pullRequest {
-                    number
-                    autoMergeRequest {
-                      enabledAt
-                    }
-                  }
-                }
-              }
-            ' \
-            -f pullRequestId="${pr_id}" \
-            -f commitHeadline="Daily research: #${ISSUE_NUMBER} ${ISSUE_TITLE}" \
-            -f commitBody="Generated, built, previewed, and queued for auto-merge by the Daily Issue Research workflow."
+          if [[ "${base_ref_oid}" != "${EXPECTED_BASE_REF_OID}" ]]; then
+            echo "::error::PR #${PR_NUMBER} base changed from ${EXPECTED_BASE_REF_OID} to ${base_ref_oid} after generation and preview. Re-run the workflow on the latest main before merging."
+            exit 1
+          fi
 
-          gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR #${PR_NUMBER} was built, previewed, and queued for auto-merge into main."
+          gh pr merge "${PR_NUMBER}" \
+            --squash \
+            --delete-branch \
+            --match-head-commit "${head_ref_oid}" \
+            --subject "Daily research: #${ISSUE_NUMBER} ${ISSUE_TITLE}" \
+            --body "Generated, built, previewed, and merged by the Daily Issue Research workflow."
+
+          gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR #${PR_NUMBER} was built, previewed, and merged into main."
 
       - name: Comment when no issue was selected
         if: steps.select_issue.outputs.issue_found == 'false'

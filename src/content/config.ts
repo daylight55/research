@@ -8,12 +8,16 @@ const blog = defineCollection({
 			title: z.string().max(80),
 			description: z.string(),
 			rssSummary: z.string().optional(),
+			heroImageQuery: z.string().optional(),
 			// Transform string to Date object
 			pubDate: z
 				.string()
 				.or(z.date())
 				.transform((val) => new Date(val)),
 			heroImage: image(),
+			heroImageAlt: z.string().optional(),
+			heroImageCredit: z.string().optional(),
+			heroImageCreditUrl: z.string().url().optional(),
 			category: z.enum(CATEGORIES),
 			tags: z.array(z.string()),
 			draft: z.boolean().default(false)

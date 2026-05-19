@@ -183,6 +183,12 @@ jobs:
             echo "has_changes=true" >> "${GITHUB_OUTPUT}"
           fi
 
+      - name: Select Unsplash hero images
+        if: steps.diff_check.outputs.has_changes == 'true'
+        env:
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: node .github/scripts/select-unsplash-hero.mjs
+
       - name: Build generated site
         if: steps.diff_check.outputs.has_changes == 'true'
         run: pnpm build

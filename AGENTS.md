@@ -6,9 +6,11 @@
 
 - 新しい調査テーマは `category/<category-name>/<topic>/` を作成して管理する。
 - `<category-name>` は調査領域を表す短い kebab-case 名にする。例: `ai-systems`, `enterprise-ai-platforms`, `developer-tools`, `data-infrastructure`。
-- 各テーマには原則として次を置く。
-  - `report.md`: 調査レポート本文
+- Webサイト上に表示する調査テーマでは、`src/content/blog/<slug>.mdx` を本文の正本として扱う。
+- `category/<category-name>/<topic>/` は、調査タスク、補助メモ、収集資料、実験などの置き場とする。本文を `report.md` と `src/content/blog/*.mdx` に二重管理しない。
+- 各テーマには必要に応じて次を置く。
   - `research-tasks.md`: 調査タスク、完了状況、追加深掘り候補
+  - `notes/`, `sources/`, `figures/`, `prototype/`: 補助資料、収集資料、図版、PoC
 - PoC、実験、収集資料が必要な場合は同じテーマ配下に `prototype/`、`notes/`、`sources/`、`figures/` などを追加する。
 
 ## Required Skill
@@ -17,8 +19,9 @@
 
 ## Astro Site Publication Workflow
 
-- `category/<category-name>/<topic>/report.md` と `research-tasks.md` を追加しただけでは、トップページやカテゴリページには表示されない。
-- Webサイト上に表示する調査レポートは、必ず対応する `src/content/blog/<slug>.mdx` を追加する。
+- Webサイト上に表示する調査レポートは、最初から `src/content/blog/<slug>.mdx` に本文を書く。
+- `category/<category-name>/<topic>/report.md` を別途作ってからMDXへコピーする運用は避ける。本文が二重化し、片方だけ浅い/古い状態になりやすいため。
+- `category/<category-name>/<topic>/research-tasks.md` は、調査タスクや残課題を管理したい場合にだけ追加する。
 - 新しいカテゴリを使う場合は、`src/data/categories.ts` の `CATEGORIES` に追加する。既存カテゴリとのコンフリクト時は、main側のカテゴリを消さずに和集合で解消する。
 - サイト用記事のヘッダー画像は補助要素として控えめに扱う。本文の可読性を優先し、情報的価値が薄いCodex生成の抽象画像をカテゴリ画像として追加しない。
 - トップページなどの件数表示は固定値にしない。カテゴリ数は `CATEGORIES.length` など、実データから算出する。

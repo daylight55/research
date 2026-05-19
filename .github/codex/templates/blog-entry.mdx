@@ -11,17 +11,13 @@ draft: false
 <!--
 Daily research site entry template.
 
-Keep the article body directly in this MDX file after the frontmatter.
-Do not import `category/<category>/<topic>/report.md` as a component.
-Imported Markdown renders the article body, but Astro does not expose imported
-headings through `post.render().headings`, so the article table-of-contents
-sidebar becomes empty.
+Write the full article body directly in this MDX file after the frontmatter.
+Do not maintain a separate `category/<category>/<topic>/report.md` copy, and do
+not import Markdown as a component. Imported Markdown renders the body, but
+Astro does not expose imported headings through `post.render().headings`, so the
+article table-of-contents sidebar becomes empty.
 
-Recommended workflow:
-1. Write the canonical report at `category/<category>/<topic>/report.md`.
-2. Copy the report body below this comment in `src/content/blog/<topic>.mdx`.
-3. Keep the top-level `# <Title>` heading from the report body.
-4. Keep Mermaid fences and `出典メモ:` paragraphs unchanged.
+Keep Mermaid fences and `出典メモ:` paragraphs in the article body.
 -->
 
 # <REPORT_TITLE>

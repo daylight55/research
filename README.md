@@ -1,46 +1,23 @@
-# daylight55/research Astro site (atlas)
+# daylight55/research
 
-This branch prototypes an Astro static site for the research report repository.
+公開サイト: https://research.daylight55.dev/
 
-- Base theme: OpenBlog by danielcgilibert
-- Variant: 白基調の読み物向けデザイン
-- Content source: Markdown reports under `category/<category>/<topic>/report.md`, copied into Astro content entries for this prototype
-- Build: `pnpm install && pnpm build`
-- Output: `dist/`
+このリポジトリは、技術調査レポートをカテゴリ別に蓄積し、Astro製の静的サイトとして公開するためのリポジトリです。本文として公開する記事は `src/content/blog/*.mdx` に置き、調査タスク、補助メモ、収集資料、PoCなどは `category/<category-name>/<topic>/` 配下で管理します。
 
-## Current Reports
+## 概要
 
-- [AI / LLM / Ontology / Organizational Memory](category/ai-systems/ai-llm-ontology-memory/report.md)
-- [Palantir](category/enterprise-ai-platforms/palantir/report.md)
-- [オントロジー概念の基礎と実務活用](category/knowledge-systems/ontology-concept/report.md)
-- [暗黙知の定義・ビジネス理論・生成AI時代のトレンド](category/knowledge-systems/tacit-knowledge-business-theory/report.md)
-- [NewSQLとYugabyteDBの最近の潮流](category/data-infrastructure/newsql-yugabyte-brief/report.md)
-- [戸建てを購入するときの注意点](category/real-estate/detached-house-purchase-checklist/report.md)
+- `src/content/blog/*.mdx`: 公開サイトに表示する記事本文の正本。
+- `category/<category-name>/<topic>/`: 調査テーマごとの作業領域。
+- `category/<category-name>/<topic>/research-tasks.md`: 調査タスク、完了状況、追加深掘り候補。
+- `category/<category-name>/<topic>/notes/`, `sources/`, `figures/`, `prototype/`: 補助資料、収集資料、図版、PoC。
+- `src/data/categories.ts`: サイトで使うカテゴリ定義。
 
-Cloudflare Pages infrastructure is intentionally handled in a separate branch so this design branch does not own hosting configuration.
+## ワークフロー
 
-## Repository Structure
-
-```text
-category/
-  <category-name>/
-    <topic>/
-      report.md
-      research-tasks.md
-```
-
-## Current Reports
-
-- [AI / LLM / Ontology / Organizational Memory](category/ai-systems/ai-llm-ontology-memory/report.md)
-- [Palantir](category/enterprise-ai-platforms/palantir/report.md)
-- [暗黙知の定義・ビジネス理論・生成AI時代のトレンド](category/knowledge-systems/tacit-knowledge-business-theory/report.md)
-- [金利政策と物価・賃金・債券・債務・為替介入の入門](category/macro-finance/interest-rate-policy-primer/report.md)
-
-## Policy
-
-各調査テーマは `category/<category-name>/<topic>/` に分け、少なくとも次のファイルを置きます。
-
-- `report.md`: 調査結果の本文
-- `research-tasks.md`: 調査タスク、残課題、追加深掘り候補
-
-調査が実装やPoCに進む場合は、同じテーマディレクトリ内に `prototype/`、`notes/`、`sources/` などを追加します。
+1. 調査テーマごとに `category/<category-name>/<topic>/` を作成する。
+2. 必要に応じて `research-tasks.md`、`notes/`、`sources/`、`figures/`、`prototype/` を追加する。
+3. 公開記事は最初から `src/content/blog/<slug>.mdx` に書き、`report.md` との二重管理を避ける。
+4. 新しいカテゴリを使う場合は `src/data/categories.ts` に追加する。
+5. Mermaidなどの差分管理しやすい図解を本文に含める。
+6. `pnpm build` を実行し、対象記事、カテゴリページ、トップページが生成されることを確認する。
+7. Pull Requestを作成し、Cloudflare Pages Previewまたはビルド成果物で公開表示を確認する。

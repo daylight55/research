@@ -8,7 +8,7 @@ import { SOCIALNETWORKS } from '@/data/links'
 import { withBase } from '@/utils'
 ---
 
-<header class='relative flex items-center h-12 font-semibold'>
+<header class='relative flex h-14 items-center font-semibold'>
 	<a class='text-lg mr-auto' href={withBase('/')}>Home</a>
 
 	<div
@@ -16,10 +16,10 @@ import { withBase } from '@/utils'
 		class='shadow rounded-l-lg md:bg-transparent dark:md:bg-transparent bg-white dark:bg-[#0a0910] md:shadow-none md:rounded-none md:border-none md:h-auto md:static absolute transition-transform duration-300 ease-in translate-x-96 md:translate-x-0 top-12 -right-5 pl-4 pt-6 pb-4 md:p-0 h-[200px] w-[200px] z-50'
 	>
 		<nav
-			class='flex h-full flex-col justify-between gap-12 text-left md:flex-row md:w-full md:gap-5'
+			class='flex h-full flex-col justify-between gap-12 text-left md:flex-row md:w-full md:items-center md:gap-6'
 		>
 			<div
-				class='flex flex-col gap-4 md:flex-row md:border-r-2 border-black pr-4 dark:border-white'
+				class='flex flex-col gap-4 md:flex-row md:items-center md:gap-5 md:border-r md:border-black/70 md:pr-5 dark:md:border-white/70'
 			>
 				<HeaderLink
 					href='/reference/statistical-sources'
@@ -31,23 +31,23 @@ import { withBase } from '@/utils'
 					<TagIcon /> Tags
 				</HeaderLink>
 			</div>
-
-			<div class='flex justify-center items-center md:justify-end gap-3 md:p-0'>
-				{
-					SOCIALNETWORKS.map((network) => (
-						<HeaderLink class='' href={network.url} target='_blank' aria-label={network.name}>
-							<span>{<network.icon />} </span>
-						</HeaderLink>
-					))
-				}
-			</div>
 		</nav>
 	</div>
 
-	<div class='flex items-center gap-3 md:pl-3' transition:persist='navbar'>
-		<div>
-			<Search />
-		</div>
+	<div class='flex items-center gap-2 md:pl-2' transition:persist='navbar'>
+		{
+			SOCIALNETWORKS.map((network) => (
+				<HeaderLink
+					class='inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors hover:bg-black/5 dark:hover:bg-white/10 [&_svg]:h-6 [&_svg]:w-6'
+					href={network.url}
+					target='_blank'
+					aria-label={network.name}
+				>
+					<network.icon />
+				</HeaderLink>
+			))
+		}
+		<Search />
 		<ToggleTheme />
 		<button id='astro-header-drawer-button' type='button' class='md:ml-6 md:hidden'>
 			<MenuIcon />

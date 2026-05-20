@@ -1,10 +1,14 @@
 ---
-import { siteConfig } from '@/data/site.config'
-import TwitterColorIcon from './icons/TwitterColorIcon.astro'
+import XIcon from './icons/XIcon.astro'
 import LinkedinColorIcon from './icons/LinkedinColorIcon.astro'
-const message = siteConfig.shareMessage
+interface Props {
+	title: string
+}
 
+const { title } = Astro.props
 const URL = Astro.url.href
+const xShareUrl = `https://x.com/intent/post?text=${encodeURIComponent(`${title} - ${URL}`)}`
+const linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(URL)}`
 ---
 
 <div class='flex flex-col gap-2'>
@@ -14,14 +18,21 @@ const URL = Astro.url.href
 	<ul class='flex gap-2 text-black dark:text-white [&_svg]:h-5 [&_svg]:w-5 [&_svg]:opacity-80'>
 		<li>
 			<a
-				href={`https://twitter.com/intent/tweet?text=${message + ' ' + URL}`}
-				aria-label='Share on Twitter'><TwitterColorIcon /></a
+				href={xShareUrl}
+				target='_blank'
+				rel='noopener noreferrer'
+				aria-label='Share on X'
+				class='inline-flex h-8 w-8 items-center justify-center rounded-md transition-colors hover:bg-black/5 dark:hover:bg-white/10'
+				><XIcon /></a
 			>
 		</li>
 		<li>
 			<a
-				href={`https://www.linkedin.com/shareArticle?mini=true&url=${URL}`}
+				href={linkedInShareUrl}
+				target='_blank'
+				rel='noopener noreferrer'
 				aria-label='Share on LinkedIn'
+				class='inline-flex h-8 w-8 items-center justify-center rounded-md transition-colors hover:bg-black/5 dark:hover:bg-white/10'
 			>
 				<LinkedinColorIcon /></a
 			>

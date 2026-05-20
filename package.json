@@ -1,13 +1,13 @@
 {
-	"name": "daylight-research-atlas",
+	"name": "personal-research-atlas",
 	"type": "module",
 	"version": "1.1.0",
-	"description": "AI、データ、組織ナレッジの調査レポートを読むための静的リサーチアトラス。",
-	"author": "danielcgilibert",
+	"description": "AI、データ、組織ナレッジの調査レポートを自分向けに蓄積して読むための静的アトラス。",
+	"author": "daylight55",
 	"license": "GPL-3.0-only",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/danielcgilibert/blog-template"
+		"url": "https://github.com/daylight55/research"
 	},
 	"keywords": [
 		"astro",
@@ -17,7 +17,7 @@
 		"astro-b"
 	],
 	"bugs": {
-		"url": "https://github.com/danielcgilibert/blog-template/issues"
+		"url": "https://github.com/daylight55/research/issues"
 	},
 	"scripts": {
 		"dev": "astro dev",

@@ -5,8 +5,12 @@ import '@pagefind/default-ui/css/ui.css'
 import SearchIcon from '@/components/icons/SearchIcon'
 ---
 
-<site-search id='search' class='ms-auto'>
-	<button data-open-modal disabled class='flex items-center justify-center rounded-md gap-1'>
+<site-search id='search' class='inline-flex'>
+	<button
+		data-open-modal
+		disabled
+		class='flex h-9 w-9 items-center justify-center rounded-md transition-colors hover:bg-black/5 dark:hover:bg-white/10'
+	>
 		<SearchIcon />
 		<!-- <span class='md:hidden text-2xl'> Search</span> -->
 	</button>

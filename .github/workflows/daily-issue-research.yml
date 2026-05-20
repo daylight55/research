@@ -341,10 +341,10 @@ jobs:
         run: |
           set -euo pipefail
 
-          pr_json="$(gh pr view "${PR_NUMBER}" --json state,headRefOid,baseRefOid)"
+          pr_json="$(gh pr view "${PR_NUMBER}" --json state,headRefOid)"
           pr_state="$(jq -r '.state' <<< "${pr_json}")"
           head_ref_oid="$(jq -r '.headRefOid' <<< "${pr_json}")"
-          base_ref_oid="$(jq -r '.baseRefOid' <<< "${pr_json}")"
+          current_main_ref_oid="$(gh api repos/${GITHUB_REPOSITORY}/git/ref/heads/main --jq '.object.sha')"
 
           if [[ "${pr_state}" != "OPEN" ]]; then
             if [[ "${pr_state}" == "MERGED" ]]; then
@@ -356,8 +356,8 @@ jobs:
             fi
           fi
 
-          if [[ "${base_ref_oid}" != "${EXPECTED_BASE_REF_OID}" ]]; then
-            echo "::error::PR #${PR_NUMBER} base changed from ${EXPECTED_BASE_REF_OID} to ${base_ref_oid} after generation and preview. Re-run the workflow on the latest main before merging."
+          if [[ "${current_main_ref_oid}" != "${EXPECTED_BASE_REF_OID}" ]]; then
+            echo "::error::main changed from ${EXPECTED_BASE_REF_OID} to ${current_main_ref_oid} after generation and preview. Re-run the workflow on the latest main before merging PR #${PR_NUMBER}."
             exit 1
           fi
 

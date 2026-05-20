@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout'
 import ListPosts from '@/components/ListPosts'
 import TitlePage from '@/components/TitlePage'
-import { getNewsPosts } from '@/utils'
+import { getNewsPosts, withBase } from '@/utils'
 
 const newsPosts = await getNewsPosts()
 ---
@@ -13,6 +13,20 @@ const newsPosts = await getNewsPosts()
 		<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>
 			世界・日本の技術トレンド、公式発表、研究動向、脆弱性情報、政策・規制の変化を継続的に追うためのニュース記事一覧。
 		</p>
+		<a
+			href={withBase('/news/rss.xml')}
+			class='w-fit text-sm font-semibold text-gray-900 underline-offset-4 hover:underline dark:text-gray-100'
+		>
+			News RSS
+		</a>
 	</div>
-	<ListPosts posts={newsPosts} />
+	{
+		newsPosts.length > 0 ? (
+			<ListPosts posts={newsPosts} />
+		) : (
+			<p class='rounded-md border border-black/10 bg-white/70 p-5 leading-7 text-gray-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-300'>
+				現在公開中のニュース記事はありません。調査方針や情報源は Reference に移しました。
+			</p>
+		)
+	}
 </BaseLayout>

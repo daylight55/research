@@ -1,0 +1,38 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+import { REFERENCE_ITEMS } from '@/data/references'
+import { withBase } from '@/utils'
+---
+
+<BaseLayout title='Reference'>
+	<section class='grid gap-5'>
+		<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
+			Reference
+		</p>
+		<div class='grid gap-4'>
+			<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-5xl'>常設リファレンス</h1>
+			<p class='max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300'>
+				調査記事を書く前に参照する、統計・データソース、技術ニュースの収集方針、一次情報の入口をまとめます。
+			</p>
+		</div>
+	</section>
+
+	<section class='grid gap-3'>
+		{
+			REFERENCE_ITEMS.map((item) => (
+				<a
+					href={withBase(item.href)}
+					class='group grid gap-4 rounded-md border border-black/10 bg-white/70 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:bg-white/10 dark:hover:border-white/30 md:grid-cols-[1fr_auto] md:items-center'
+				>
+					<div class='grid gap-2'>
+						<h2 class='text-xl font-semibold'>{item.title}</h2>
+						<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>{item.description}</p>
+					</div>
+					<span class='text-sm font-semibold text-gray-900 transition group-hover:translate-x-1 dark:text-gray-100'>
+						開く →
+					</span>
+				</a>
+			))
+		}
+	</section>
+</BaseLayout>

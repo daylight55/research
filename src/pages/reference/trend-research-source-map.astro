@@ -1,0 +1,299 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+
+const collectionRules = [
+	'発見ソースと本文根拠を分ける。編集メディアやSNSは入口に留め、事実は公式発表、仕様、論文、GitHub release、政府文書で確認する。',
+	'速報性より再利用性を優先する。価格、ロードマップ、仕様、規制、脆弱性は確認日を残し、後続記事で更新する。',
+	'公式ロードマップがない将来予測は「公表情報からの推定」と明記する。',
+	'日本向けの実務影響を書く場合は、海外一次情報だけでなく国内行政、国内ベンダー、国内注意喚起の有無も確認する。'
+]
+
+const sourceGroups = [
+	{
+		title: 'AI・基盤モデル',
+		description: 'モデル、API、価格、enterprise controls、AI safety、研究成果の変化を確認する。',
+		sources: [
+			{
+				name: 'OpenAI News / Research / Docs',
+				url: 'https://openai.com/news/',
+				feed: 'https://openai.com/news/rss.xml',
+				use: 'モデル、API、価格、推論・エージェント機能、利用規約、研究発表を確認する。'
+			},
+			{
+				name: 'Anthropic News / Research',
+				url: 'https://www.anthropic.com/news',
+				feed: '',
+				use: 'Claude、MCP、AI safety、enterprise機能、security report、研究発表を確認する。'
+			},
+			{
+				name: 'Google DeepMind Blog',
+				url: 'https://deepmind.google/blog/',
+				feed: '',
+				use: 'Gemini、AI for science、ロボティクス、研究成果、プロダクト連携を見る。'
+			},
+			{
+				name: 'Google Research Blog',
+				url: 'https://research.google/blog/',
+				feed: '',
+				use: '研究分野ラベル付きの最新記事から、論文・実装・プロダクト化の方向を見る。'
+			},
+			{
+				name: 'Meta AI Blog',
+				url: 'https://ai.meta.com/blog/',
+				feed: '',
+				use: 'オープンモデル、研究成果、AIインフラ、開発者エコシステムを確認する。'
+			},
+			{
+				name: 'arXiv API',
+				url: 'https://export.arxiv.org/api/query',
+				feed: 'https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&sortBy=submittedDate&sortOrder=descending',
+				use: 'cs.AI、cs.LG、cs.CL、cs.CVの早期研究シグナルを拾う。査読前のため単独根拠にしない。'
+			}
+		]
+	},
+	{
+		title: '開発者ツール・クラウド・OSS',
+		description: '実装可能性、開発者採用、OSS supply chain、クラウド機能の変化を見る。',
+		sources: [
+			{
+				name: 'GitHub Changelog',
+				url: 'https://github.blog/changelog/',
+				feed: 'https://github.blog/changelog/feed/',
+				use: 'Copilot、Actions、CodeQL、security advisories、enterprise governanceの変更を追う。'
+			},
+			{
+				name: 'GitHub Releases / repository tags',
+				url: 'https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases',
+				feed: '',
+				use: '主要OSSの実リリース、破壊的変更、移行期限、採用速度を確認する。'
+			},
+			{
+				name: 'Cloudflare Blog',
+				url: 'https://blog.cloudflare.com/',
+				feed: 'https://blog.cloudflare.com/rss/',
+				use: 'edge、Workers、security、AI inference、ネットワーク基盤の実装可能性を見る。'
+			},
+			{
+				name: 'AWS News Blog',
+				url: 'https://aws.amazon.com/blogs/aws/',
+				feed: 'https://aws.amazon.com/blogs/aws/feed/',
+				use: 'AWS新機能、リージョン展開、データ・AI・セキュリティサービスの更新を確認する。'
+			},
+			{
+				name: 'Google Cloud Blog',
+				url: 'https://cloud.google.com/blog/',
+				feed: '',
+				use: 'Vertex AI、data cloud、security、infrastructureの機能追加と事例を見る。'
+			},
+			{
+				name: 'Azure Updates',
+				url: 'https://azure.microsoft.com/en-us/updates/',
+				feed: '',
+				use: 'Azure、Microsoft security、Copilot系の提供状況とリージョン差を確認する。'
+			},
+			{
+				name: 'CNCF Blog / Kubernetes Blog / OpenSSF',
+				url: 'https://www.cncf.io/blog/',
+				feed: '',
+				use: 'クラウドネイティブ、Kubernetes、ソフトウェアサプライチェーン標準化の流れを見る。'
+			}
+		]
+	},
+	{
+		title: 'サイバーセキュリティ・脆弱性',
+		description: '悪用確認、深刻度、OSS依存関係、国内影響、対策期限を分けて見る。',
+		sources: [
+			{
+				name: 'CISA Known Exploited Vulnerabilities Catalog',
+				url: 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog',
+				feed: 'https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json',
+				use: '実際に悪用確認済みの脆弱性を優先度判断に使う。JSONで定期取得できる。'
+			},
+			{
+				name: 'NIST National Vulnerability Database',
+				url: 'https://nvd.nist.gov/',
+				feed: 'https://nvd.nist.gov/vuln/data-feeds',
+				use: 'CVE、CVSS、CPE、参照URLを確認する。深刻度だけでなく悪用有無と組み合わせる。'
+			},
+			{
+				name: 'GitHub Advisory Database',
+				url: 'https://github.com/advisories',
+				feed: '',
+				use: 'GitHub-originated advisoriesとCVEを含むOSS脆弱性の入口として使う。'
+			},
+			{
+				name: 'OSV.dev',
+				url: 'https://osv.dev/',
+				feed: '',
+				use: 'OSSパッケージ単位の脆弱性照合、依存関係影響確認、SBOM連携に使う。'
+			},
+			{
+				name: 'JPCERT/CC RSS',
+				url: 'https://www.jpcert.or.jp/rss/index.html',
+				feed: 'https://www.jpcert.or.jp/rss/jpcert.rdf',
+				use: '日本語の注意喚起、Weekly Report、JVN新着、国内利用者への影響確認に使う。'
+			},
+			{
+				name: 'IPA 情報セキュリティ',
+				url: 'https://www.ipa.go.jp/security/',
+				feed: '',
+				use: '国内向けの脆弱性対策、10大脅威、DX白書、IT人材白書を確認する。'
+			}
+		]
+	},
+	{
+		title: '政策・行政・規制',
+		description: '制度、予算、標準、個人情報、行政DX、産業政策の一次情報を確認する。',
+		sources: [
+			{
+				name: 'デジタル庁 RSS',
+				url: 'https://www.digital.go.jp/rss',
+				feed: 'https://www.digital.go.jp/rss',
+				use: '行政DX、マイナンバー、ガバメントクラウド、AI政策、データ連携の更新を見る。'
+			},
+			{
+				name: '経済産業省 RSS',
+				url: 'https://www.meti.go.jp/english/rss/index.html',
+				feed: 'https://www.meti.go.jp/english/rss/latest.xml',
+				use: '半導体、AI、情報産業、スタートアップ、サイバーセキュリティ、産業政策を確認する。'
+			},
+			{
+				name: 'e-Gov RSSフィード',
+				url: 'https://www.e-gov.go.jp/service-policy/rssfeed.html',
+				feed: 'https://www.e-gov.go.jp/news/rss/news.rdf',
+				use: '法令、行政手続、パブリックコメント、行政文書更新の入口として使う。'
+			},
+			{
+				name: 'NIST Blogs',
+				url: 'https://www.nist.gov/blogs',
+				feed: '',
+				use: 'AI標準、CAISI、Cybersecurity Insights、標準化動向の公的視点を追う。'
+			},
+			{
+				name: 'NISC',
+				url: 'https://www.nisc.go.jp/',
+				feed: '',
+				use: '政府横断のサイバーセキュリティ政策、重要インフラ、注意喚起を確認する。'
+			}
+		]
+	},
+	{
+		title: '半導体・ハードウェア・市場',
+		description: '製品、製造、投資、供給制約、規制・補助金、市場数量を分けて見る。',
+		sources: [
+			{
+				name: 'NVIDIA Technical Blog / Newsroom',
+				url: 'https://developer.nvidia.com/blog/',
+				feed: 'https://developer.nvidia.com/blog/feed/',
+				use: 'GPU、CUDA、AI inference、ネットワーク、開発者向け実装情報を見る。'
+			},
+			{
+				name: 'AMD, Intel, TSMC, Samsung, Kioxia, Micron official news',
+				url: 'https://www.tsmc.com/english/news',
+				feed: '',
+				use: '製品発表、量産時期、設備投資、顧客採用、供給制約を企業別に確認する。'
+			},
+			{
+				name: 'SEMI',
+				url: 'https://www.semi.org/en/news-resources/press',
+				feed: '',
+				use: '半導体製造装置、材料、地域投資、業界調査の補助情報として使う。'
+			},
+			{
+				name: 'JEITA',
+				url: 'https://www.jeita.or.jp/english/',
+				feed: '',
+				use: '日本の電子情報産業、統計、政策提言、国内市場動向を見る。'
+			},
+			{
+				name: 'U.S. BIS / CHIPS Program Office',
+				url: 'https://www.bis.gov/',
+				feed: '',
+				use: '輸出規制、補助金、半導体産業政策、対中規制の一次情報を確認する。'
+			}
+		]
+	}
+]
+---
+
+<BaseLayout title='技術トレンド調査に使う情報源マップ'>
+	<section class='grid gap-5'>
+		<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
+			Reference
+		</p>
+		<div class='grid gap-4'>
+			<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-5xl'>
+				技術トレンド調査に使う情報源マップ
+			</h1>
+			<p class='max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300'>
+				世界・日本の技術トレンドを日次で追い、ニュース記事や長文レポートへつなげるための常設リファレンスです。ニュース媒体の一覧ではなく、公式発表、RSS/API、研究・実装シグナル、規制・脆弱性情報を層に分けて扱います。
+			</p>
+		</div>
+	</section>
+
+	<section class='grid gap-4'>
+		<h2 class='text-2xl font-semibold'>参照方針</h2>
+		<div class='grid gap-3 md:grid-cols-2'>
+			{
+				collectionRules.map((rule) => (
+					<div class='rounded-md border border-black/10 bg-white/70 p-4 leading-7 dark:border-white/10 dark:bg-white/10'>
+						{rule}
+					</div>
+				))
+			}
+		</div>
+	</section>
+
+	<section class='grid gap-6'>
+		{
+			sourceGroups.map((group) => (
+				<div class='grid gap-4'>
+					<div>
+						<h2 class='text-2xl font-semibold'>{group.title}</h2>
+						<p class='mt-2 leading-7 text-gray-700 dark:text-gray-300'>{group.description}</p>
+					</div>
+					<div class='grid gap-3'>
+						{group.sources.map((source) => (
+							<a
+								href={source.url}
+								target='_blank'
+								rel='noreferrer'
+								class='grid gap-2 rounded-md border border-black/10 bg-white/70 p-4 transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-sm dark:border-white/10 dark:bg-white/10 dark:hover:border-white/30'
+							>
+								<div class='flex flex-wrap items-baseline gap-x-3 gap-y-1'>
+									<div class='font-semibold'>{source.name}</div>
+									{source.feed && (
+										<span class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+											RSS / API
+										</span>
+									)}
+								</div>
+								<p class='leading-7 text-gray-700 dark:text-gray-300'>{source.use}</p>
+								{source.feed && (
+									<p class='break-all text-sm leading-6 text-gray-500 dark:text-gray-400'>
+										取得先: {source.feed}
+									</p>
+								)}
+							</a>
+						))}
+					</div>
+				</div>
+			))
+		}
+	</section>
+
+	<section
+		class='rounded-md border border-black/10 bg-white/70 p-5 dark:border-white/10 dark:bg-white/10'
+	>
+		<h2 class='text-2xl font-semibold'>日次ニュース化の判断</h2>
+		<div class='mt-3 grid gap-3 leading-7 text-gray-700 dark:text-gray-300'>
+			<p>
+				収集した情報は、AI、security、developer-tools、data-infrastructure、semiconductor、policy-japan
+				に分類し、実務影響、新規性、信頼度、日本への波及、追跡必要性を見て記事化するか判断します。
+			</p>
+			<p>
+				日次ニュースは短く、背景、何が変わったか、実務含意、未確認点、出典を明記します。週次では単発ニュースではなく、同じ方向に動く複数シグナルを束ねて長文レポート候補にします。
+			</p>
+		</div>
+	</section>
+</BaseLayout>

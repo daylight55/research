@@ -2,10 +2,11 @@
 import ListCategories from '@/components/ListCategories'
 import ListPosts from '@/components/ListPosts'
 import BaseLayout from '@/layouts/BaseLayout'
-import { getPosts, withBase } from '@/utils'
+import { getNewsPosts, getReportPosts, withBase } from '@/utils'
 import { siteConfig } from '@/site-config'
 
-const posts = await getPosts()
+const latestNewsPosts = await getNewsPosts(3)
+const reportPosts = await getReportPosts()
 ---
 
 <BaseLayout title='Home'>
@@ -25,6 +26,26 @@ const posts = await getPosts()
 
 	<div class='grid gap-8'>
 		<section>
+			<div class='mb-4 grid gap-2 md:grid-cols-[1fr_auto] md:items-end'>
+				<div>
+					<p
+						class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'
+					>
+						News
+					</p>
+					<h2 class='text-2xl font-semibold'>最新ニュース</h2>
+				</div>
+				<a
+					href={withBase('/news/')}
+					class='text-sm font-semibold text-gray-900 underline-offset-4 hover:underline dark:text-gray-100'
+				>
+					すべて見る →
+				</a>
+			</div>
+			<ListPosts posts={latestNewsPosts} />
+		</section>
+
+		<section>
 			<div class='mb-4 grid gap-2'>
 				<p
 					class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'
@@ -33,7 +54,7 @@ const posts = await getPosts()
 				</p>
 				<h2 class='text-2xl font-semibold'>最新レポート</h2>
 			</div>
-			<ListPosts posts={posts} />
+			<ListPosts posts={reportPosts} />
 		</section>
 
 		<div class='grid gap-4'>

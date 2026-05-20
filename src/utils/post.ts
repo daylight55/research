@@ -18,6 +18,14 @@ export const getPosts = async (max?: number) => {
 		.slice(0, max)
 }
 
+export const getReportPosts = async (max?: number) => {
+	return (await getPosts()).filter((post) => post.data.contentType === 'report').slice(0, max)
+}
+
+export const getNewsPosts = async (max?: number) => {
+	return (await getPosts()).filter((post) => post.data.contentType === 'news').slice(0, max)
+}
+
 export const getTags = async () => {
 	const posts = await getCollection('blog')
 	const tags = new Set()
@@ -50,4 +58,3 @@ export const filterPostsByCategory = async (category: string) => {
 		.filter((post) => !post.data.draft)
 		.filter((post) => post.data.category.toLowerCase() === category)
 }
-

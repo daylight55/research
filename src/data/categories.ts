@@ -6,6 +6,7 @@ export const CATEGORIES = [
 	'knowledge-systems',
 	'philosophy-knowledge',
 	'data-infrastructure',
+	'tech-news',
 	'semiconductor-memory',
 	'macro-finance',
 	'geopolitics'

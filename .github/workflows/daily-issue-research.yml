@@ -29,7 +29,6 @@ jobs:
       issue_number: ${{ steps.select_issue.outputs.issue_number }}
       pr_url: ${{ steps.create_pr.outputs.pr_url }}
       pr_number: ${{ steps.create_pr.outputs.pr_number }}
-      preview_branch: ${{ steps.create_pr.outputs.branch }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -274,63 +273,9 @@ jobs:
           gh issue edit "${ISSUE_NUMBER}" --add-label research-pr-opened
           gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR opened: ${PR_URL}"
 
-      - name: Dispatch Cloudflare branch preview
-        if: steps.create_pr.outputs.pr_url != ''
-        id: dispatch_preview
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-          PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
-          ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
-          PREVIEW_BRANCH: ${{ steps.create_pr.outputs.branch }}
-        run: |
-          set -euo pipefail
-
-          dispatch_started_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-
-          gh workflow run cloudflare-pages-preview.yml \
-            --ref "${GITHUB_REF_NAME}" \
-            -f pr_number="${PR_NUMBER}" \
-            -f issue_number="${ISSUE_NUMBER}" \
-            -f preview_branch="${PREVIEW_BRANCH}" \
-            -f checkout_ref="${PREVIEW_BRANCH}"
-
-          preview_run_id=""
-          for _ in {1..30}; do
-            preview_run_id="$(gh run list \
-              --workflow cloudflare-pages-preview.yml \
-              --branch "${GITHUB_REF_NAME}" \
-              --event workflow_dispatch \
-              --json databaseId,createdAt,status \
-              --jq 'map(select(.createdAt >= "'"${dispatch_started_at}"'")) | sort_by(.createdAt) | reverse | .[0].databaseId // ""')"
-
-            if [[ -n "${preview_run_id}" ]]; then
-              break
-            fi
-
-            sleep 5
-          done
-
-          if [[ -z "${preview_run_id}" ]]; then
-            echo "::error::Could not find dispatched Cloudflare Pages preview run."
-            exit 1
-          fi
-
-          echo "preview_run_id=${preview_run_id}" >> "${GITHUB_OUTPUT}"
-
-      - name: Wait for Cloudflare branch preview
-        if: steps.dispatch_preview.outputs.preview_run_id != ''
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-          PREVIEW_RUN_ID: ${{ steps.dispatch_preview.outputs.preview_run_id }}
-        run: |
-          set -euo pipefail
-
-          gh run watch "${PREVIEW_RUN_ID}" --exit-status --interval 10
-
       - name: Merge completed research pull request
-        if: steps.dispatch_preview.outputs.preview_run_id != ''
+        if: steps.create_pr.outputs.pr_url != ''
+        id: merge_pr
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -366,9 +311,56 @@ jobs:
             --delete-branch \
             --match-head-commit "${head_ref_oid}" \
             --subject "Daily research: #${ISSUE_NUMBER} ${ISSUE_TITLE}" \
-            --body "Generated, built, previewed, and merged by the Daily Issue Research workflow."
+            --body "Generated, built, and merged by the Daily Issue Research workflow."
 
-          gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR #${PR_NUMBER} was built, previewed, and merged into main."
+          gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR #${PR_NUMBER} was built and merged into main."
+
+      - name: Dispatch Cloudflare production deploy
+        if: steps.merge_pr.outcome == 'success'
+        id: dispatch_production_deploy
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          dispatch_started_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          gh workflow run cloudflare-pages-deploy.yml --ref main
+
+          deploy_run_id=""
+          for _ in {1..30}; do
+            deploy_run_id="$(gh run list \
+              --workflow cloudflare-pages-deploy.yml \
+              --branch main \
+              --event workflow_dispatch \
+              --json databaseId,createdAt,status \
+              --jq 'map(select(.createdAt >= "'"${dispatch_started_at}"'")) | sort_by(.createdAt) | reverse | .[0].databaseId // ""')"
+
+            if [[ -n "${deploy_run_id}" ]]; then
+              break
+            fi
+
+            sleep 5
+          done
+
+          if [[ -z "${deploy_run_id}" ]]; then
+            echo "::error::Could not find dispatched Cloudflare Pages production deploy run."
+            exit 1
+          fi
+
+          echo "deploy_run_id=${deploy_run_id}" >> "${GITHUB_OUTPUT}"
+
+      - name: Wait for Cloudflare production deploy
+        if: steps.dispatch_production_deploy.outputs.deploy_run_id != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEPLOY_RUN_ID: ${{ steps.dispatch_production_deploy.outputs.deploy_run_id }}
+        run: |
+          set -euo pipefail
+
+          gh run watch "${DEPLOY_RUN_ID}" --exit-status --interval 10
 
       - name: Comment when no issue was selected
         if: steps.select_issue.outputs.issue_found == 'false'

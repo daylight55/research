@@ -37,14 +37,12 @@ draft: false
 
 ```mermaid
 flowchart LR
-  A["AI研究史"] --> B["LLMの構造"]
-  B --> C["人間との差分"]
-  C --> D["記号接地"]
-  D --> E["Operational Ontology"]
-  E --> F["Temporal Memory / Graphiti"]
-  F --> G["MCP / Tooling"]
-  G --> H["組織実務への導入"]
-  H --> I["評価・監査・改善"]
+  A["AI研究史"] --> B["LLM構造"]
+  B --> C["記号接地"]
+  C --> D["Ontology"]
+  D --> E["Memory"]
+  E --> F["MCP接続"]
+  F --> G["評価・監査"]
 ```
 
 ## 2. AIの歴史をどう捉えるべきか
@@ -72,13 +70,13 @@ AIの歴史は、単純な「人間に近づく技術の進歩」ではなく、
 ```mermaid
 timeline
   title AIパラダイムの推移
-  1950s : Dartmouth Proposal : 記号AIの成立
-  1970s : Physical Symbol System : 探索と記号操作
-  1980s : Backpropagation : ニューラルネットワーク復興
-  2010s : Deep Learning : 表現学習と大規模データ
-  2017 : Transformer : 自己注意による文脈処理
-  2020s : Foundation Models : 大規模事前学習と汎用化
-  2024+ : Agents / MCP / Memory : 外部環境と行為への接続
+  1950s : 記号AI
+  1970s : 記号操作
+  1980s : NN復興
+  2010s : 深層学習
+  2017 : Transformer
+  2020s : 基盤モデル
+  2024+ : Agent接続
 ```
 
 ## 3. LLMの原理と構造の本質
@@ -123,14 +121,11 @@ Bender et al. (2021) は、大規模言語モデルの環境負荷、データ�
 
 ```mermaid
 flowchart TD
-  T["Text / Code / Data"] --> Tok["Tokenization"]
-  Tok --> Emb["Embedding"]
-  Emb --> Attn["Multi-head Self-Attention"]
-  Attn --> FFN["Feed-forward Layers"]
-  FFN --> Logits["Next-token Distribution"]
-  Logits --> Out["Generated Output"]
-  Out --> Align["Instruction Tuning / RLHF / Constitutional AI"]
-  Align --> Use["Task-oriented Assistant Behavior"]
+  T["入力"] --> Tok["トークン化"]
+  Tok --> Attn["文脈処理"]
+  Attn --> Out["次トークン生成"]
+  Out --> Align["指示調整"]
+  Align --> Use["支援行動"]
 ```
 
 ## 4. 人間との違いをどこに見出すべきか
@@ -154,17 +149,11 @@ LLMと人間の違いを「人間には心がある、AIにはない」という
 
 ```mermaid
 flowchart LR
-  H["人間"] --> H1["身体性"]
-  H --> H2["目的形成"]
-  H --> H3["責任"]
-  H --> H4["暗黙知"]
-  H --> H5["社会的信用"]
-
-  L["LLM"] --> L1["分布的表現"]
-  L --> L2["文脈内推論"]
-  L --> L3["外部記憶依存"]
-  L --> L4["ツール実行"]
-  L --> L5["監査設計が必要"]
+  H["人間"] --> HC["身体・目的・責任"]
+  L["LLM"] --> LC["表現・推論・ツール"]
+  HC --> G["差分の理解"]
+  LC --> G
+  G --> D["設計と監査"]
 ```
 
 ## 5. 実務でAIにインプット可能な情報
@@ -197,14 +186,12 @@ AIまたは人間の判断が、どの結果を生んだかを記録する。こ
 
 ```mermaid
 flowchart TD
-  D1["Documents"] --> AI["AI Input Layer"]
-  D2["Structured Data"] --> AI
-  D3["Business Objects"] --> AI
-  D4["Actions / Decisions"] --> AI
-  D5["Feedback / Outcomes"] --> AI
-  AI --> Work["業務判断・提案・実行"]
-  Work --> Log["判断ログ"]
-  Log --> D5
+  D["文書・データ"] --> AI["AI入力層"]
+  BO["業務オブジェクト"] --> AI
+  AI --> W["判断・提案"]
+  W --> L["判断ログ"]
+  L --> F["結果フィードバック"]
+  F --> AI
 ```
 
 ## 6. 記号接地の方法
@@ -257,14 +244,11 @@ Palantir FoundryのOntologyはこの点を強く押し出している。Palantir
 
 ```mermaid
 flowchart TD
-  BO["Business Object"] --> Attr["Attributes"]
-  BO --> Rel["Relations"]
-  BO --> State["State Machine"]
-  BO --> Action["Allowed Actions"]
-  BO --> Policy["Permissions / Policy"]
-  BO --> Evidence["Evidence / Lineage"]
-  Action --> Audit["Audit Log"]
-  Audit --> Feedback["Outcome Feedback"]
+  BO["業務オブジェクト"] --> Rel["関係・状態"]
+  BO --> Act["許可された行為"]
+  Act --> Pol["権限・承認"]
+  Pol --> Aud["監査ログ"]
+  Aud --> FB["結果学習"]
 ```
 
 ## 8. Graphitiのアプローチの是非
@@ -303,16 +287,12 @@ Graphitiは、LLMの外部記憶として有望である。ただし、最初か
 
 ```mermaid
 flowchart LR
-  Conv["Conversations"] --> Ext["Entity / Relation Extraction"]
-  Docs["Documents"] --> Ext
-  Events["Business Events"] --> Ext
-  Ext --> TKG["Temporal Knowledge Graph"]
-  TKG --> Search["Hybrid Search"]
-  TKG --> Reason["Context Assembly"]
-  TKG --> Audit["Source / Time Audit"]
-  Search --> Agent["LLM Agent"]
-  Reason --> Agent
-  Audit --> Reviewer["Human Review"]
+  Src["会話・文書・イベント"] --> Ext["関係抽出"]
+  Ext --> TKG["Temporal KG"]
+  TKG --> Ctx["文脈組み立て"]
+  TKG --> Aud["出典・時刻"]
+  Ctx --> Agent["LLM Agent"]
+  Aud --> Rev["人間レビュー"]
 ```
 
 ## 9. 暗黙知を組織活用する方策
@@ -368,13 +348,11 @@ Palantir型の発想の強みは、AIを単なるチャットUIに閉じ込め�
 
 ```mermaid
 flowchart TD
-  Data["Data Assets"] --> Ont["Foundry-style Ontology"]
-  Logic["Functions / Models"] --> Ont
-  Sec["Dynamic Security"] --> Ont
-  Ont --> Obj["Objects / Links"]
-  Obj --> Act["Actions"]
-  Act --> Dec["Decisions"]
-  Dec --> Ops["Operational Outcomes"]
+  Data["データ資産"] --> Ont["Ontology"]
+  Logic["関数・モデル"] --> Ont
+  Ont --> Obj["対象・関係"]
+  Obj --> Act["行為"]
+  Act --> Ops["業務結果"]
   Ops --> Ont
 ```
 
@@ -404,16 +382,12 @@ Anthropicの方向性は、モデル単体の性能競争から、業務エー�
 
 ```mermaid
 flowchart LR
-  MCP["MCP"] --> Conn["Enterprise Connectors"]
-  Skills["Skills"] --> Work["Repeatable Workflows"]
-  Sub["Subagents"] --> Team["Agent Teams"]
-  Context["Long Context"] --> Long["Long-running Tasks"]
-  Labs["Labs"] --> Preview["Experimental Features"]
-  Conn --> Platform["Enterprise Agent Platform"]
+  MCP["MCP"] --> Conn["接続"]
+  Skills["Skills"] --> Work["反復手順"]
+  Sub["Subagents"] --> Team["分担実行"]
+  Conn --> Platform["Agent基盤"]
   Work --> Platform
   Team --> Platform
-  Long --> Platform
-  Preview --> Platform
 ```
 
 ## 12. MCPでどこまで対応可能か
@@ -472,17 +446,11 @@ MCPは「接続の標準」であり、Operational Ontologyは「接続された
 
 ```mermaid
 flowchart TD
-  Agent["LLM / Agent"] --> Client["MCP Client"]
-  Client --> Tools["Tools"]
-  Client --> Resources["Resources"]
-  Client --> Prompts["Prompts"]
-  Client --> Sampling["Sampling"]
-  Tools --> APIs["Business APIs"]
-  Resources --> Docs["Docs / DB / Files"]
-  Prompts --> Flows["Workflow Templates"]
-  APIs --> Ont["Operational Ontology"]
-  Docs --> Ont
-  Ont --> Audit["Policy / Audit / Approval"]
+  Agent["LLM Agent"] --> Client["MCP Client"]
+  Client --> Surface["Tools / Resources"]
+  Surface --> Data["API・文書"]
+  Data --> Ont["Ontology"]
+  Ont --> Aud["監査・承認"]
 ```
 
 ## 13. 実務導入の推奨方針

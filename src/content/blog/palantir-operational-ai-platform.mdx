@@ -36,13 +36,13 @@ Palantirは、単なる分析ツール企業でも、LLMアプリ企業でもな
 
 ```mermaid
 flowchart LR
-  A["外部データ: ERP / CRM / IoT / 文書 / センサー"] --> B["Foundry: データ統合・変換・品質・系譜"]
-  B --> C["Ontology: Object / Link / Action / Function / Security"]
-  C --> D["AIP: LLM・エージェント・評価・自動化"]
-  D --> E["業務アプリ: 供給計画・防衛・医療・金融・製造"]
-  E --> F["Action Log / Audit / Governance"]
+  A["外部データ"] --> B["Foundry"]
+  B --> C["Ontology"]
+  C --> D["AIP"]
+  D --> E["業務アプリ"]
+  E --> F["監査ログ"]
   F --> C
-  G["Apollo: 複数クラウド・閉域・エッジへの継続デプロイ"] --> B
+  G["Apollo"] --> B
   G --> D
 ```
 
@@ -69,13 +69,13 @@ S-1でPalantirは、2003年に counterterrorism operations 向けソフトウェ
 ```mermaid
 timeline
   title Palantirの進化を貫く軸
-  2003 : Counterterrorism softwareとして創業
-  2008 : Gotham : 情報分析から現場行動への接続
-  2010s : Foundry : 商用・公共機関のデータOS化
-  2016-2018 : U.S. Army訴訟 : 商用ソフトを政府調達へ入れる突破口
-  2020 : Direct listing : 創業者支配と「選ぶ顧客」を明文化
-  2023+ : AIP : Ontology上でLLM/Agentを業務Actionへ接続
-  2025+ : Technological Republic : 国家・防衛・産業基盤への思想的回帰
+  2003 : 創業
+  2008 : Gotham拡大
+  2010s : Foundry展開
+  2016-2018 : Army訴訟
+  2020 : Direct listing
+  2023+ : AIP
+  2025+ : 国家基盤論
 ```
 
 Palantirが特殊なのは、政府と大企業を「顧客」ではなく「制度的な巨大生物」として見ている点である。2022年のCEO年次書簡でKarpは、創業時は防衛・情報機関のためのソフトウェアを作る会社であり、彼らには予算と人員があったが必要なソフトウェアがなかったと書いた。また、二十世紀の堀は産業構造にあったが、今世紀の唯一の堀はソフトウェアだと主張した。この見方では、Palantirの競争相手は単なるBIベンダーではない。官僚制、旧来SI、部門別SaaS、Excel、調達制度、組織のデータ不全そのものが競争相手になる。
@@ -117,23 +117,19 @@ Palantirを理解する鍵はOntologyである。一般的なRDF/OWL型のオン
 ```mermaid
 flowchart TB
   subgraph "Semantic Layer"
-    O["Object Types"]
-    P["Properties"]
-    L["Link Types"]
+    M["Objects / Links"]
     I["Interfaces"]
   end
   subgraph "Kinetic Layer"
-    A["Action Types"]
-    F["Functions"]
-    S["Dynamic Security"]
+    A["Actions / Functions"]
+    S["Security"]
     AL["Action Log"]
   end
-  O --> A
-  L --> A
+  M --> A
+  I --> A
   A --> AL
-  F --> A
   S --> A
-  AL --> O
+  AL --> M
 ```
 
 ## 4. AIP: LLMを業務に接続する層

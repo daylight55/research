@@ -33,13 +33,13 @@ Graphiti と MCP を組み合わせると、AI エージェントに「会話セ
 
 ```mermaid
 flowchart LR
-  U["User / Analyst / Business Agent"] --> H["Host<br/>Claude Desktop / Cursor / Custom App"]
-  H --> M["MCP Server<br/>Memory interface"]
-  M --> G["Graphiti<br/>Temporal knowledge graph"]
-  G --> S["Sources<br/>Docs / chat / tickets / CRM / DB"]
-  G --> A["Audit / provenance / writeback"]
+  U["User / Agent"] --> H["Host"]
+  H --> M["MCP Server"]
+  M --> G["Graphiti"]
+  G --> S["Sources"]
+  G --> A["Audit"]
   A --> G
-  H --> P["Policy / approval layer"]
+  H --> P["Policy"]
   P -->|allow write| M
 ```
 
@@ -55,13 +55,10 @@ Graphiti の価値は、単なる「会話ログの保存」ではない。会�
 
 ```mermaid
 flowchart TD
-  E["Episode / conversation / event"] --> X["Entity extraction"]
-  E --> R["Relation extraction"]
-  X --> N["Entity nodes"]
-  R --> Ed["Edges with time / provenance"]
-  N --> H["Hybrid search"]
-  Ed --> H
-  H --> Ans["Memory-aware answer / tool context"]
+  E["Episode"] --> X["抽出"]
+  X --> G["Temporal KG"]
+  G --> H["Hybrid search"]
+  H --> Ans["回答文脈"]
 ```
 
 ## 3. 従来の RAG / ベクトル DB / Knowledge Graph との違い
@@ -183,13 +180,12 @@ Graphiti を選ぶ理由は、関係と時系列を扱えることにある。Me
 
 ```mermaid
 flowchart TD
-  U["User / Agent"] --> R["Read MCP<br/>Graphiti memory"]
-  U --> W["Write / Action MCP<br/>CRM / Ticket / Workflow"]
+  U["User / Agent"] --> R["Read MCP"]
+  U --> W["Write MCP"]
   R --> KG["Temporal KG"]
   W --> SYS["System of record"]
   SYS --> KG
-  KG --> R
-  AP["Approval / policy"] --> W
+  AP["Approval"] --> W
 ```
 
 このパターンでは、Graphiti は「思い出すための層」であり、業務システムは「確定するための層」である。両者を分けると、間違った記憶が業務データを汚しにくい。
@@ -248,12 +244,11 @@ Graphiti と MCP を組み合わせるなら、次の順で進めるのがよい
 ```mermaid
 flowchart TD
   A["文書RAG"] --> B["変化する関係を抽出"]
-  B --> C["Graphiti temporal KG"]
+  B --> C["Graphiti KG"]
   C --> D["Read-only MCP"]
   D --> E["Host / client"]
-  E --> F["人間の判断"]
-  F --> G["Approval付き writeback"]
-  G --> C
+  E --> F["人間承認"]
+  F --> C
 ```
 
 ## 参考情報

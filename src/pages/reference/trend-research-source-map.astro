@@ -5,7 +5,8 @@ const collectionRules = [
 	'発見ソースと本文根拠を分ける。編集メディアやSNSは入口に留め、事実は公式発表、仕様、論文、GitHub release、政府文書で確認する。',
 	'速報性より再利用性を優先する。価格、ロードマップ、仕様、規制、脆弱性は確認日を残し、後続記事で更新する。',
 	'公式ロードマップがない将来予測は「公表情報からの推定」と明記する。',
-	'日本向けの実務影響を書く場合は、海外一次情報だけでなく国内行政、国内ベンダー、国内注意喚起の有無も確認する。'
+	'日本向けの実務影響を書く場合は、海外一次情報だけでなく国内行政、国内ベンダー、国内注意喚起の有無も確認する。',
+	'日本・国際政治情勢は、速報をそのまま要約せず、制度、主要アクター、国内圧力、外交・安全保障・市場への波及、未確定事項を分けて整理する。'
 ]
 
 const sourceGroups = [
@@ -178,6 +179,49 @@ const sourceGroups = [
 		]
 	},
 	{
+		title: '日本政治・国際政治・地政学',
+		description:
+			'国内政治、外交、安全保障、制裁、紛争、選挙、国際機関の動きを一次情報と権威あるデータで確認する。',
+		sources: [
+			{
+				name: '首相官邸 / 外務省 / 防衛省',
+				url: 'https://www.mofa.go.jp/mofaj/',
+				feed: '',
+				use: '日本政府の外交声明、首脳会談、条約、制裁、安全保障政策、海外安全情報を確認する。'
+			},
+			{
+				name: '国会会議録検索システム',
+				url: 'https://kokkai.ndl.go.jp/',
+				feed: '',
+				use: '国内政治争点、政府答弁、与野党の論点、法案審議の一次資料として使う。'
+			},
+			{
+				name: 'United Nations News / Security Council',
+				url: 'https://news.un.org/',
+				feed: 'https://news.un.org/feed/subscribe/en/news/all/rss.xml',
+				use: '国連安保理、総会、人道危機、停戦、制裁、国際法上の論点を確認する。'
+			},
+			{
+				name: 'G7 / NATO / EU official statements',
+				url: 'https://www.g7italy.it/en/',
+				feed: '',
+				use: '主要民主主義国の共同声明、対外政策、制裁、軍事・経済安全保障の足並みを見る。'
+			},
+			{
+				name: 'International Crisis Group',
+				url: 'https://www.crisisgroup.org/',
+				feed: '',
+				use: '紛争・政治危機の背景、主要アクター、和平交渉、悪化シナリオを二次分析として補助的に使う。'
+			},
+			{
+				name: 'V-Dem / Freedom House / ACLED',
+				url: 'https://www.v-dem.net/',
+				feed: '',
+				use: '民主主義、自由度、政治暴力、抗議運動の比較データを、国別レポートの構造把握に使う。'
+			}
+		]
+	},
+	{
 		title: '半導体・ハードウェア・市場',
 		description: '製品、製造、投資、供給制約、規制・補助金、市場数量を分けて見る。',
 		sources: [
@@ -216,17 +260,17 @@ const sourceGroups = [
 ]
 ---
 
-<BaseLayout title='技術トレンド調査に使う情報源マップ'>
+<BaseLayout title='News調査に使う情報源マップ'>
 	<section class='grid gap-5'>
 		<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
 			Reference
 		</p>
 		<div class='grid gap-4'>
 			<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-5xl'>
-				技術トレンド調査に使う情報源マップ
+				News調査に使う情報源マップ
 			</h1>
 			<p class='max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300'>
-				世界・日本の技術トレンドを日次で追い、ニュース記事や長文レポートへつなげるための常設リファレンスです。ニュース媒体の一覧ではなく、公式発表、RSS/API、研究・実装シグナル、規制・脆弱性情報を層に分けて扱います。
+				世界・日本の技術トレンド、日本・国際政治情勢を日次で追い、ニュース記事や長文レポートへつなげるための常設リファレンスです。ニュース媒体の一覧ではなく、公式発表、RSS/API、研究・実装シグナル、規制・脆弱性情報、政府・国際機関の一次資料を層に分けて扱います。
 			</p>
 		</div>
 	</section>
@@ -289,10 +333,11 @@ const sourceGroups = [
 		<div class='mt-3 grid gap-3 leading-7 text-gray-700 dark:text-gray-300'>
 			<p>
 				収集した情報は、AI、security、developer-tools、data-infrastructure、semiconductor、policy-japan
+				、japan-politics、geopolitics
 				に分類し、実務影響、新規性、信頼度、日本への波及、追跡必要性を見て記事化するか判断します。
 			</p>
 			<p>
-				日次ニュースは短く、背景、何が変わったか、実務含意、未確認点、出典を明記します。週次では単発ニュースではなく、同じ方向に動く複数シグナルを束ねて長文レポート候補にします。
+				日次ニュースは短く、背景、何が変わったか、実務含意、未確認点、出典を明記します。政治情勢では、制度、主要アクター、国内圧力、外交・安全保障・市場への波及を分けて整理します。週次では単発ニュースではなく、同じ方向に動く複数シグナルを束ねて長文レポート候補にします。
 			</p>
 		</div>
 	</section>

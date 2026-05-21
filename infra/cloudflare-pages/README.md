@@ -2,9 +2,9 @@
 
 This module creates the Cloudflare Pages project for `daylight55/research`.
 
-The Pages project is intentionally build-method agnostic. `build_config` defaults to `null`, so this infrastructure branch can be reviewed independently from whichever Astro design branch is selected.
+Production deploys are run by the `Cloudflare Pages Deploy` GitHub Actions workflow using Wrangler direct upload. Cloudflare's automatic Git production deploys are disabled to avoid competing deploy paths.
 
-Cloudflare's current Astro guide documents `npm run build` and `dist` as the standard dashboard values, but this module exposes those as optional variables instead of hard-coding them.
+Automatic preview deployments and PR comments are disabled. Re-enable `preview_deployment_setting` only when PR preview URLs are explicitly needed again.
 
 ## Usage
 

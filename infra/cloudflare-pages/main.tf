@@ -17,10 +17,8 @@ resource "cloudflare_pages_project" "research" {
       repo_id                        = var.github_repo_id
       production_branch              = var.production_branch
       production_deployments_enabled = false
-      pr_comments_enabled            = true
-      preview_deployment_setting     = "all"
-      preview_branch_includes        = var.preview_branch_includes
-      preview_branch_excludes        = var.preview_branch_excludes
+      pr_comments_enabled            = false
+      preview_deployment_setting     = "none"
       path_includes                  = var.path_includes
       path_excludes                  = var.path_excludes
     }

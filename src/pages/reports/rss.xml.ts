@@ -1,15 +1,15 @@
 import rss from '@astrojs/rss'
 import type { APIRoute } from 'astro'
 import { siteConfig } from '@/site-config'
-import { getNewsPosts, withBase } from '@/utils'
+import { getReportPosts, withBase } from '@/utils'
 
 export const GET: APIRoute = async (context) => {
-	const posts = await getNewsPosts()
+	const posts = await getReportPosts()
 
 	return rss({
-		title: `${siteConfig.title} News`,
+		title: `${siteConfig.title} Reports`,
 		description:
-			'世界・日本の技術トレンド、公式発表、研究動向、脆弱性情報、政策・規制、日本・国際政治情勢の変化を追うニュース記事。',
+			'AI、データ、組織ナレッジ、技術、経済、地政学の長文調査レポートを追うRSSフィード。',
 		site: context.site ?? siteConfig.site,
 		items: posts.map((post) => ({
 			title: post.data.title,

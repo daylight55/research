@@ -68,6 +68,18 @@ variable "path_excludes" {
   default     = null
 }
 
+variable "preview_branch_includes" {
+  description = "Optional branch include filters for Cloudflare Pages preview deployments."
+  type        = list(string)
+  default     = ["*"]
+}
+
+variable "preview_branch_excludes" {
+  description = "Optional branch exclude filters for Cloudflare Pages preview deployments."
+  type        = list(string)
+  default     = null
+}
+
 variable "build_config" {
   description = "Cloudflare Pages build config for the Astro production site."
   type = object({

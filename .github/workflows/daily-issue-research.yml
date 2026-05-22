@@ -31,6 +31,7 @@ env:
 jobs:
   research:
     runs-on: ubuntu-latest
+    environment: codex-production
     outputs:
       issue_found: ${{ steps.select_issue.outputs.issue_found }}
       issue_number: ${{ steps.select_issue.outputs.issue_number }}

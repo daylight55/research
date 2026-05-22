@@ -26,20 +26,25 @@ policy / technical decisions.
 - Follow `AGENTS.md`.
 - Write the reader-facing article body directly in
   `content/blog/daily-trends-<YYYY-MM-DD>.mdx`.
-- Use `contentType: news` in frontmatter.
-- Use `category: tech-news` unless the repository has added a more specific
-  News category.
-- Use `.github/codex/templates/blog-entry.mdx` as the frontmatter shape, but
-  adapt the body for a concise News digest instead of a long-form report.
-- Include `rssSummary` as a short standalone summary for RSS and sharing.
-- Include `heroImageQuery` as a short English Unsplash search phrase for an
-  informative landscape header image. Keep `heroImage` as the placeholder;
-  automation will replace it with a downloaded local image when the query is
-  present.
+- Use `.github/codex/templates/news-digest.mdx` as the required article shape.
+- Keep the frontmatter fields from the News template, including
+  `contentType: news`, `category: tech-news`, `rssSummary`, and
+  `heroImageQuery`.
 - Do not create a second copy under `category/<category-name>/<topic>/report.md`.
 - If support notes are useful, put them under
   `category/tech-news/daily-trends-<YYYY-MM-DD>/`, but keep the article body in
   the MDX file.
+
+## Context Budget Rules
+
+- Do not scan or read existing `src/content/blog/*.mdx` articles for style,
+  structure, or examples.
+- Do not read `.github/codex/templates/blog-entry.mdx`; it is for long-form
+  research reports, not News digests.
+- Read only the News template, `AGENTS.md`, and the minimum site files needed to
+  confirm schema or routing if validation fails.
+- Spend research tokens on current sources for the fifteen topics, not on
+  repository article examples.
 
 ## Research Standards
 

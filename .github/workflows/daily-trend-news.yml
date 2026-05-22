@@ -255,13 +255,20 @@ jobs:
           set -euo pipefail
 
           branch="codex/daily-trend-news-${REPORT_DATE}-${GITHUB_RUN_ID}"
+          base_ref_oid="$(git rev-parse HEAD)"
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "${branch}"
           git add -A
           git commit -m "Add daily trend news for ${REPORT_DATE}"
-          git push origin "${branch}"
+          gh api \
+            --method POST \
+            "repos/${GITHUB_REPOSITORY}/git/refs" \
+            -f ref="refs/heads/${branch}" \
+            -f sha="${base_ref_oid}" \
+            >/dev/null
+          git push origin "HEAD:${branch}"
 
           pr_body="$(mktemp)"
           {

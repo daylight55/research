@@ -48,7 +48,7 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ vars.TF_VAR_CLOUDFLARE_ACCOUNT_ID }}
+          accountId: ${{ secrets.TF_VAR_CLOUDFLARE_ACCOUNT_ID }}
           packageManager: pnpm
           command: pages deploy dist --project-name=daylight-research --branch=main
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}

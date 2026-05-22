@@ -3,8 +3,6 @@ name: Cloudflare Pages Preview
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-  push:
-    branches-ignore: [main]
   workflow_dispatch:
     inputs:
       pr_number:

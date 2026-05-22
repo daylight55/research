@@ -59,12 +59,17 @@ const reportPosts = await getReportPosts()
 		{
 			latestNewsPosts.length > 0 ? (
 				<div class='relative'>
-					<div class='flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 sm:-mx-0'>
+					<div
+						class={cn(
+							'flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 sm:-mx-0',
+							latestNewsPosts.length === 1 && 'justify-center'
+						)}
+					>
 						{latestNewsPosts.map((post) => (
 							<a
 								href={withBase(`/post/${post.id}/`)}
 								class={cn(
-									'group grid w-72 shrink-0 snap-start grid-rows-[auto_1fr] overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 sm:w-[20rem]',
+									'group grid w-full shrink-0 snap-start grid-rows-[auto_1fr] overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 sm:w-[20rem]',
 									getCategorySurfaceClass(post.data.category)
 								)}
 							>

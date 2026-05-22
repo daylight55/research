@@ -168,15 +168,31 @@ jobs:
         if: steps.select_issue.outputs.issue_found == 'true'
         run: pnpm install --frozen-lockfile
 
-      - name: Record OpenAI usage window
+      - name: Restore cached generated article
         if: steps.select_issue.outputs.issue_found == 'true'
+        id: restore_generated_article
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ runner.temp }}/generated-article-cache
+          key: daily-issue-research-${{ steps.select_issue.outputs.issue_number }}
+
+      - name: Apply cached generated article
+        if: steps.restore_generated_article.outputs.cache-hit == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          tar -xzf "${RUNNER_TEMP}/generated-article-cache/generated-article.tar.gz" -C .
+
+      - name: Record OpenAI usage window
+        if: steps.select_issue.outputs.issue_found == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
         id: openai_usage_window
         shell: bash
         run: |
           echo "start_time=$(date +%s)" >> "${GITHUB_OUTPUT}"
 
       - name: Run Codex research
-        if: steps.select_issue.outputs.issue_found == 'true'
+        if: steps.select_issue.outputs.issue_found == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
         id: run_codex
         uses: openai/codex-action@v1
         with:
@@ -189,8 +205,15 @@ jobs:
           effort: medium
           allow-bots: true
 
+      - name: Restore Node for site build
+        if: steps.select_issue.outputs.issue_found == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
       - name: Estimate OpenAI usage cost
-        if: always() && steps.select_issue.outputs.issue_found == 'true'
+        if: always() && steps.select_issue.outputs.issue_found == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
         continue-on-error: true
         id: openai_usage_cost
         shell: bash
@@ -243,7 +266,7 @@ jobs:
           fi
 
       - name: Select Unsplash hero images
-        if: steps.diff_check.outputs.has_changes == 'true'
+        if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
         env:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: node .github/scripts/select-unsplash-hero.mjs
@@ -251,6 +274,26 @@ jobs:
       - name: Build generated site
         if: steps.diff_check.outputs.has_changes == 'true'
         run: pnpm build
+
+      - name: Create generated article cache archive
+        if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p "${RUNNER_TEMP}/generated-article-cache"
+          generated_files="${RUNNER_TEMP}/generated-files.txt"
+          git ls-files --modified --others --exclude-standard -z \
+            > "${generated_files}"
+          tar --null -czf "${RUNNER_TEMP}/generated-article-cache/generated-article.tar.gz" \
+            --files-from "${generated_files}"
+
+      - name: Save generated article cache
+        if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ runner.temp }}/generated-article-cache
+          key: daily-issue-research-${{ steps.select_issue.outputs.issue_number }}
 
       - name: Create research pull request
         if: steps.diff_check.outputs.has_changes == 'true'
@@ -261,6 +304,7 @@ jobs:
           ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
           ISSUE_TITLE: ${{ steps.select_issue.outputs.issue_title }}
           CODEX_FINAL_MESSAGE: ${{ steps.run_codex.outputs.final-message }}
+          GENERATED_ARTICLE_CACHE_HIT: ${{ steps.restore_generated_article.outputs.cache-hit }}
           DAILY_CI_START_EPOCH: ${{ steps.daily_ci_time.outputs.start_epoch }}
           DAILY_CI_START_ISO: ${{ steps.daily_ci_time.outputs.start_iso }}
         run: |
@@ -301,7 +345,9 @@ jobs:
             echo
             echo "## Codex summary"
             echo
-            if [[ -n "${CODEX_FINAL_MESSAGE}" ]]; then
+            if [[ "${GENERATED_ARTICLE_CACHE_HIT}" == "true" ]]; then
+              echo "Generated article artifacts were restored from the issue cache, so Codex generation was skipped."
+            elif [[ -n "${CODEX_FINAL_MESSAGE}" ]]; then
               echo "${CODEX_FINAL_MESSAGE}"
             else
               echo "Codex did not return a final message."

@@ -1,0 +1,71 @@
+---
+type Props = {
+	href: string
+	source: string
+	title: string
+	description?: string
+	imageUrl?: string
+	imageAlt?: string
+}
+
+const { href, source, title, description, imageUrl, imageAlt } = Astro.props
+const host = (() => {
+	try {
+		return new URL(href).hostname.replace(/^www\./, '')
+	} catch {
+		return ''
+	}
+})()
+const escapeSvgText = (value: string) =>
+	value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+const svgSource = escapeSvgText(source)
+const svgHost = escapeSvgText(host)
+const fallbackImage = `data:image/svg+xml,${encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#eef2ff"/>
+  <rect x="32" y="32" width="576" height="296" rx="18" fill="#ffffff" opacity="0.78"/>
+  <text x="64" y="104" fill="#64748b" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="6">NEWS SOURCE</text>
+  <text x="64" y="206" fill="#111827" font-family="Arial, sans-serif" font-size="52" font-weight="700">${svgSource}</text>
+  <text x="64" y="272" fill="#475569" font-family="Arial, sans-serif" font-size="26">${svgHost}</text>
+</svg>
+`)}`
+const displayImageUrl = imageUrl ?? fallbackImage
+---
+
+<a
+	href={href}
+	target='_blank'
+	rel='noreferrer'
+	class='not-prose my-5 grid overflow-hidden rounded-md border border-black/10 bg-white/80 text-gray-900 no-underline shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:bg-white/10 dark:text-gray-100 dark:hover:border-white/30 sm:grid-cols-[13rem_1fr]'
+>
+	<div class='aspect-[16/9] bg-gray-100 dark:bg-gray-900 sm:aspect-auto'>
+		<img
+			src={displayImageUrl}
+			alt={imageAlt ?? `${source} のニュース画像`}
+			loading='lazy'
+			decoding='async'
+			class='h-full w-full object-cover'
+		/>
+	</div>
+	<div class='grid content-between gap-3 p-4'>
+		<div class='grid gap-2'>
+			<div class='text-xs font-semibold tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+				出典メモ / {source}
+			</div>
+			<div class='text-base font-semibold leading-6'>{title}</div>
+			{
+				description && (
+					<p class='m-0 line-clamp-3 text-sm leading-6 text-gray-700 dark:text-gray-300'>
+						{description}
+					</p>
+				)
+			}
+		</div>
+		<div
+			class='flex items-center justify-between gap-3 text-sm font-semibold text-gray-700 dark:text-gray-200'
+		>
+			<span class='truncate'>{host}</span>
+			<span class='shrink-0'>開く →</span>
+		</div>
+	</div>
+</a>

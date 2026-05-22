@@ -12,6 +12,8 @@ tags: ['news', 'politics', 'economy', 'technology']
 draft: false
 ---
 
+import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
+
 # 2026-05-22 ホットトレンド: 政治・経済・技術
 
 この24〜48時間は、政治では米国のAI・金融規制と対中・対台の緊張が同時進行し、経済ではインフレ再燃と金利見通しの悪化が市場を揺らし、技術ではGoogle I/Oを軸にAIが「会話」から「実行」へ移る流れが一段と強まりました。全体としては、政策・市場・製品発表が相互に連動する局面です。
@@ -26,7 +28,12 @@ draft: false
 
 実務への含意: AIベンダー、SaaS、公共調達に関わる企業は、モデル利用やログ管理、サイバー統制の追加要件に備える必要があります。
 
-出典メモ: [Axios](https://www.axios.com/2026/05/21/trump-ai-executive-order-postponed-why)
+<NewsSourceCard
+	href='https://www.axios.com/2026/05/21/trump-ai-executive-order-postponed-why'
+	source='Axios'
+	title='Trump AI executive order postponed'
+	description='AIとサイバーセキュリティ監督を強める大統領令の延期を報じた元記事。'
+/>
 
 ### 政治 2. 米政権、金融犯罪対策を強化
 
@@ -36,7 +43,12 @@ draft: false
 
 実務への含意: 銀行、決済、暗号資産、越境送金の各事業者は、KYC/AMLルールと取引監視の再点検が必要です。
 
-出典メモ: [The White House](https://www.whitehouse.gov/fact-sheets/2026/05/fact-sheet-president-donald-j-trump-strengthens-measures-against-illicit-financial-activity/)
+<NewsSourceCard
+	href='https://www.whitehouse.gov/fact-sheets/2026/05/fact-sheet-president-donald-j-trump-strengthens-measures-against-illicit-financial-activity/'
+	source='The White House'
+	title='Measures against illicit financial activity'
+	description='不正資金移動や金融犯罪対策に関するホワイトハウスの発表。'
+/>
 
 ### 政治 3. スターマー首相、党内求心力低下
 
@@ -46,7 +58,14 @@ draft: false
 
 実務への含意: 英国市場や英国向け事業は、政策の継続性だけでなく、内閣改造や党内圧力による方針変更も織り込む必要があります。
 
-出典メモ: [AP News](https://apnews.com/article/1d253316385e6813b7844509eb12038d)
+<NewsSourceCard
+	href='https://apnews.com/article/1d253316385e6813b7844509eb12038d'
+	source='AP News'
+	title='Political chaos around Starmer and UK Labour'
+	description='英労働党内の混乱とスターマー首相への圧力を整理したAPの記事。'
+	imageUrl='https://dims.apnews.com/dims4/default/43f2473/2147483647/strip/true/crop/2329x1552+0+1/resize/980x653!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F58%2F94%2F490caa1ceeb5e7d284e2510d9c7b%2F90813e7864bd4973ac10b91a448d3da9'
+	imageAlt='英国議会と政治報道の関連画像'
+/>
 
 ### 政治 4. 台湾、防衛装備売却に慎重な期待
 
@@ -56,7 +75,12 @@ draft: false
 
 実務への含意: 半導体、物流、防衛関連の企業は、制裁や輸出管理の変更に加え、調達遅延のリスクを点検すべきです。
 
-出典メモ: [Reuters](https://www.reuters.com/world/asia-pacific/taiwan-defense-ministry-cautiously-optimistic-about-us-arms-sale-this-year-2026-05-19/)
+<NewsSourceCard
+	href='https://www.reuters.com/world/asia-pacific/taiwan-defense-ministry-cautiously-optimistic-about-us-arms-sale-this-year-2026-05-19/'
+	source='Reuters'
+	title='Taiwan defense ministry cautiously optimistic about U.S. arms sale'
+	description='台湾国防部が米国からの武器売却に慎重な期待を示したというReuters報道。'
+/>
 
 ### 政治 5. 中国、台湾問題を「最重要課題」と再主張
 
@@ -66,7 +90,12 @@ draft: false
 
 実務への含意: 米中間の輸出規制、部材調達、クラウド・通信機器の供給網は、短期の報道でも動かされやすい状態です。
 
-出典メモ: [Reuters Connect](https://www.reutersconnect.com/item/china-calls-taiwan-most-important-issue-in-repositioning-us-relationship/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBMDUwMzE0MDUyMDI2UlAx)
+<NewsSourceCard
+	href='https://www.reutersconnect.com/item/china-calls-taiwan-most-important-issue-in-repositioning-us-relationship/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1ZBMDUwMzE0MDUyMDI2UlAx'
+	source='Reuters Connect'
+	title='China calls Taiwan the most important issue'
+	description='米中関係における台湾問題の位置づけを伝えるReuters Connectの記事。'
+/>
 
 ## 経済
 
@@ -78,7 +107,12 @@ draft: false
 
 実務への含意: 資金調達や設備投資の前提金利は、早めに高めへ修正しておく方が安全です。
 
-出典メモ: [Reuters](https://www.investing.com/news/economy-news/nomura-forecasts-no-fed-rate-cuts-in-2026-as-inflation-rises-4705740)
+<NewsSourceCard
+	href='https://www.investing.com/news/economy-news/nomura-forecasts-no-fed-rate-cuts-in-2026-as-inflation-rises-4705740'
+	source='Investing.com'
+	title='Nomura forecasts no Fed rate cuts in 2026'
+	description='インフレ再燃を背景に、野村が2026年のFRB利下げなしを見込むという報道。'
+/>
 
 ### 経済 2. FRB、決済口座の新枠組みを提案
 
@@ -88,7 +122,14 @@ draft: false
 
 実務への含意: 決済、送金、BaaS、暗号資産周辺の事業者は、参入コスト低下の恩恵と、監督要件の強化を同時に見ておくべきです。
 
-出典メモ: [Federal Reserve](https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260521a.htm)
+<NewsSourceCard
+	href='https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260521a.htm'
+	source='Federal Reserve'
+	title='New framework for payment account access'
+	description='非銀行事業者による決済口座アクセスの新枠組みに関するFRB発表。'
+	imageUrl='https://www.federalreserve.gov/images/Social_Default_Image.jpg'
+	imageAlt='Federal Reserveのソーシャル共有画像'
+/>
 
 ### 経済 3. 原油高、米イラン交渉の停滞で続く
 
@@ -98,7 +139,12 @@ draft: false
 
 実務への含意: エネルギーコストが利益率を圧迫する業界は、為替と同様に原油ヘッジを検討する局面です。
 
-出典メモ: [Reuters](https://www.aa.com.tr/en/economy/oil-prices-rise-this-week-as-us-iran-peace-talks-stall-/3577407)
+<NewsSourceCard
+	href='https://www.aa.com.tr/en/economy/oil-prices-rise-this-week-as-us-iran-peace-talks-stall-/3577407'
+	source='Anadolu'
+	title='Oil prices rise as U.S.-Iran talks stall'
+	description='米イラン交渉停滞を背景に原油価格が上昇したというエネルギー市場記事。'
+/>
 
 ### 経済 4. 米株、インフレ懸念で反落
 
@@ -108,7 +154,14 @@ draft: false
 
 実務への含意: 生成AIや成長株への期待は残る一方、バリュエーションの前提は金利で簡単に崩れます。
 
-出典メモ: [Reuters](https://www.spokesman.com/stories/2026/may/21/wall-street-falls-as-waning-mideast-peace-hopes-fu/)
+<NewsSourceCard
+	href='https://www.spokesman.com/stories/2026/may/21/wall-street-falls-as-waning-mideast-peace-hopes-fu/'
+	source='Spokesman.com'
+	title='Wall Street falls as oil surge fuels inflation worries'
+	description='中東情勢と原油高が米株市場のインフレ懸念を強めたという市場記事。'
+	imageUrl='https://thumb.spokesman.com/tWO81sfV0jM58cm-XvXyLZZHnEo=/1200x630/smart/media.spokesman.com/photos/2026/05/21/6a0f4ec34c1d6.image.jpg'
+	imageAlt='米株市場下落を伝える市場ニュース画像'
+/>
 
 ### 経済 5. 日本のPMI、景気減速と価格上昇圧力
 
@@ -118,7 +171,12 @@ draft: false
 
 実務への含意: 日本市場向けの価格改定、在庫、採用計画は、需要減速と原価上昇の両方を前提に組むべきです。
 
-出典メモ: [S&P Global](https://www.spglobal.com/marketintelligence/en/news-insights/research/japan-flash-pmi-may-2026)
+<NewsSourceCard
+	href='https://www.spglobal.com/marketintelligence/en/news-insights/research/japan-flash-pmi-may-2026'
+	source='S&P Global'
+	title='Japan Flash PMI May 2026'
+	description='日本の景気拡大鈍化と価格上昇圧力を示すS&P GlobalのPMI速報。'
+/>
 
 ## 技術
 
@@ -130,7 +188,14 @@ draft: false
 
 実務への含意: 既存のAI実装は、応答速度、推論コスト、ツール呼び出し性能を再評価するタイミングです。
 
-出典メモ: [Google Blog](https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/)
+<NewsSourceCard
+	href='https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/'
+	source='Google Blog'
+	title='Building the agentic future: Developer highlights from I/O 2026'
+	description='Google I/O 2026の開発者向けAI発表をまとめた公式ブログ。'
+	imageUrl='https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IO_Dev_Highlights.width-1300.png'
+	imageAlt='Google I/O 2026 developer highlightsの共有画像'
+/>
 
 ### 技術 2. Geminiアプリ、エージェント化を加速
 
@@ -140,7 +205,14 @@ draft: false
 
 実務への含意: B2C/B2Bを問わず、プロンプト応答中心のUIから、状態を持つアシスタント設計へ移行する準備が必要です。
 
-出典メモ: [Google Blog](https://blog.google/products/gemini/)
+<NewsSourceCard
+	href='https://blog.google/products/gemini/'
+	source='Google Blog'
+	title='Gemini'
+	description='Geminiアプリと関連機能の更新をまとめるGoogle公式ページ。'
+	imageUrl='https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_SparkIcon_.max-1440x810.png'
+	imageAlt='Geminiの共有画像'
+/>
 
 ### 技術 3. SearchにAIエージェントと新検索ボックス
 
@@ -150,7 +222,14 @@ draft: false
 
 実務への含意: SEO/SEM、商品説明、FAQ、ナレッジベースは、AI検索前提で再設計した方が有利です。
 
-出典メモ: [Google Blog](https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/)
+<NewsSourceCard
+	href='https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/'
+	source='Google Blog'
+	title='I/O 2026'
+	description='Google I/O 2026の発表一覧と検索・AI体験の更新をまとめる公式ページ。'
+	imageUrl='https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IOCollection_social.max-1440x810.png'
+	imageAlt='Google I/O 2026 collectionの共有画像'
+/>
 
 ### 技術 4. AntigravityとManaged Agentsで開発導線を再設計
 
@@ -160,7 +239,14 @@ draft: false
 
 実務への含意: 仕様検討、試作、テスト、運用監視までを、エージェント前提の開発プロセスに置き換える余地があります。
 
-出典メモ: [Google Blog](https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/)
+<NewsSourceCard
+	href='https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/'
+	source='Google Blog'
+	title='Antigravity and Managed Agents'
+	description='Antigravity、Managed Agents、AI Studioなど開発者向け導線の発表。'
+	imageUrl='https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IO_Dev_Highlights.width-1300.png'
+	imageAlt='Google I/O 2026 developer highlightsの共有画像'
+/>
 
 ### 技術 5. OpenAI、Dellと組みCodexをハイブリッド/オンプレへ
 
@@ -170,7 +256,12 @@ draft: false
 
 実務への含意: データ所在、監査、権限管理、推論コストの4点を満たせるかが、AI導入の採否を左右します。
 
-出典メモ: [OpenAI](https://openai.com/index/openai-and-dell-bring-codex-to-enterprise/)
+<NewsSourceCard
+	href='https://openai.com/index/openai-and-dell-bring-codex-to-enterprise/'
+	source='OpenAI'
+	title='OpenAI and Dell bring Codex to enterprise'
+	description='Codexを企業のハイブリッド/オンプレミス環境へ広げるOpenAIとDellの提携発表。'
+/>
 
 ## 横断的な見立て
 

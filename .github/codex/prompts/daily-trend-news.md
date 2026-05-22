@@ -110,8 +110,9 @@ Run focused verification before finishing:
 
 - Check generated Markdown / MDX for unresolved placeholders.
 - Run `git diff --check`.
-- If dependencies are installed, run `pnpm build`.
-- Confirm generated output includes:
+- Do not run `pnpm build` inside the Codex action step. The workflow restores
+  the repository Node.js version and runs the build after Codex finishes.
+- The workflow will confirm generated output includes:
   - `/news/index.html`
   - `/news/rss.xml`
   - `/post/daily-trends-<YYYY-MM-DD>/index.html`
@@ -123,4 +124,4 @@ Return a concise summary including:
 - Research date and categories covered.
 - Files created or updated.
 - Verification commands run and their results.
-- Any residual risks or follow-up questions.
+- Any content-level residual risks or follow-up questions.

@@ -251,7 +251,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           REPORT_DATE: ${{ steps.run_context.outputs.report_date }}
           SLUG: ${{ steps.run_context.outputs.slug }}
-          CODEX_FINAL_MESSAGE: ${{ steps.run_codex.outputs.final-message }}
         run: |
           set -euo pipefail
 
@@ -309,11 +308,7 @@ jobs:
             echo
             echo "## 備考"
             echo
-            if [[ -n "${CODEX_FINAL_MESSAGE}" ]]; then
-              echo "${CODEX_FINAL_MESSAGE}"
-            else
-              echo "Codex did not return a final message."
-            fi
+            echo "- Build and route verification were performed by this workflow after restoring the repository Node.js version."
           } > "${pr_body}"
 
           pr_url="$(gh pr create \

@@ -1,0 +1,325 @@
+name: Daily Trend News
+
+on:
+  schedule:
+    # 06:00 JST every day.
+    - cron: "0 21 * * *"
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Optional research date in YYYY-MM-DD. Defaults to today's date in JST."
+        required: false
+        type: string
+      topic_hint:
+        description: "Optional extra focus for this run."
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: daily-trend-news
+  cancel-in-progress: false
+
+env:
+  NEWS_CATEGORY: tech-news
+  OPENAI_MODEL: gpt-5.4-mini
+
+jobs:
+  trend-news:
+    runs-on: ubuntu-latest
+    outputs:
+      pr_url: ${{ steps.create_pr.outputs.pr_url }}
+      pr_number: ${{ steps.create_pr.outputs.pr_number }}
+      report_date: ${{ steps.run_context.outputs.report_date }}
+      slug: ${{ steps.run_context.outputs.slug }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare run context
+        id: run_context
+        shell: bash
+        env:
+          INPUT_REPORT_DATE: ${{ github.event.inputs.report_date || '' }}
+          TOPIC_HINT: ${{ github.event.inputs.topic_hint || '' }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p .github/codex/runtime
+
+          if [[ -n "${INPUT_REPORT_DATE}" ]]; then
+            report_date="${INPUT_REPORT_DATE}"
+          else
+            report_date="$(TZ=Asia/Tokyo date +%Y-%m-%d)"
+          fi
+
+          if ! [[ "${report_date}" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "::error::report_date must be in YYYY-MM-DD format."
+            exit 1
+          fi
+
+          slug="daily-trends-${report_date}"
+          article_path="src/content/blog/${slug}.mdx"
+
+          if [[ -e "${article_path}" ]]; then
+            echo "::error::News article already exists for ${report_date}: ${article_path}"
+            exit 1
+          fi
+
+          {
+            echo "report_date=${report_date}"
+            echo "slug=${slug}"
+            echo "article_path=${article_path}"
+          } >> "${GITHUB_OUTPUT}"
+
+          cp .github/codex/prompts/daily-trend-news.md .github/codex/runtime/daily-trend-news-prompt.md
+
+          {
+            echo
+            echo "## Run Context"
+            echo
+            echo "- Research date: ${report_date}"
+            echo "- Article slug: ${slug}"
+            echo "- Article path: ${article_path}"
+            echo "- Required category: ${NEWS_CATEGORY}"
+            echo "- Required content type: news"
+            echo "- Required topic counts: politics 5, economy 5, technology 5"
+            if [[ -n "${TOPIC_HINT}" ]]; then
+              echo "- Extra focus: ${TOPIC_HINT}"
+            fi
+          } >> .github/codex/runtime/daily-trend-news-prompt.md
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Record OpenAI usage window
+        id: openai_usage_window
+        shell: bash
+        run: |
+          echo "start_time=$(date +%s)" >> "${GITHUB_OUTPUT}"
+
+      - name: Run Codex trend news research
+        id: run_codex
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: .github/codex/runtime/daily-trend-news-prompt.md
+          output-file: codex-output.md
+          safety-strategy: drop-sudo
+          sandbox: workspace-write
+          model: ${{ env.OPENAI_MODEL }}
+          effort: medium
+          allow-bots: true
+
+      - name: Estimate OpenAI usage cost
+        if: always()
+        continue-on-error: true
+        id: openai_usage_cost
+        shell: bash
+        env:
+          OPENAI_ADMIN_KEY: ${{ secrets.OPENAI_ADMIN_KEY }}
+          OPENAI_USAGE_START_TIME: ${{ steps.openai_usage_window.outputs.start_time }}
+          OPENAI_USAGE_MODEL: ${{ env.OPENAI_MODEL }}
+          OPENAI_USAGE_OUTPUT_FILE: ${{ runner.temp }}/openai-usage-comment.md
+        run: |
+          set -euo pipefail
+
+          OPENAI_USAGE_END_TIME="$(date +%s)"
+          export OPENAI_USAGE_END_TIME
+          node .github/scripts/estimate-openai-usage-cost.mjs
+          echo "comment_path=${OPENAI_USAGE_OUTPUT_FILE}" >> "${GITHUB_OUTPUT}"
+
+      - name: Remove runtime prompt artifacts
+        if: always()
+        shell: bash
+        run: |
+          rm -rf .github/codex/runtime codex-output.md
+
+      - name: Check generated news article
+        id: diff_check
+        shell: bash
+        env:
+          ARTICLE_PATH: ${{ steps.run_context.outputs.article_path }}
+        run: |
+          set -euo pipefail
+
+          git ls-files --modified --others --exclude-standard -z -- '*.md' '*.mdx' \
+            | while IFS= read -r -d '' file; do
+                perl -0pi -e 's/[ \t]+$//mg; s/\n+\z/\n/s' "${file}"
+              done
+
+          if [[ ! -f "${ARTICLE_PATH}" ]]; then
+            echo "::error::Expected generated article was not found: ${ARTICLE_PATH}"
+            exit 1
+          fi
+
+          if ! grep -qE "^contentType:[[:space:]]*['\"]?news['\"]?[[:space:]]*$" "${ARTICLE_PATH}"; then
+            echo "::error::Generated article must use contentType: news"
+            exit 1
+          fi
+
+          if ! grep -qE "^category:[[:space:]]*['\"]?tech-news['\"]?[[:space:]]*$" "${ARTICLE_PATH}"; then
+            echo "::error::Generated article must use category: tech-news"
+            exit 1
+          fi
+
+          for heading in "## 政治" "## 経済" "## 技術"; do
+            if ! grep -qF "${heading}" "${ARTICLE_PATH}"; then
+              echo "::error::Generated article is missing heading: ${heading}"
+              exit 1
+            fi
+          done
+
+          for category in 政治 経済 技術; do
+            count="$(grep -cE "^###[[:space:]]+${category}[[:space:]]+[1-5]\\." "${ARTICLE_PATH}" || true)"
+            if [[ "${count}" != "5" ]]; then
+              echo "::error::Generated article must include exactly five ${category} topic headings."
+              exit 1
+            fi
+          done
+
+          if grep -nE "TBD|TODO|未定|要確認|FIXME" "${ARTICLE_PATH}"; then
+            echo "::error::Generated article contains unresolved placeholders."
+            exit 1
+          fi
+
+          # Include newly created files in diff checks without staging contents.
+          git add --intent-to-add .
+          git diff --check
+
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "has_changes=false" >> "${GITHUB_OUTPUT}"
+          else
+            echo "has_changes=true" >> "${GITHUB_OUTPUT}"
+          fi
+
+      - name: Select Unsplash hero images
+        if: steps.diff_check.outputs.has_changes == 'true'
+        env:
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: node .github/scripts/select-unsplash-hero.mjs
+
+      - name: Build generated site
+        if: steps.diff_check.outputs.has_changes == 'true'
+        run: pnpm build
+
+      - name: Verify generated routes
+        if: steps.diff_check.outputs.has_changes == 'true'
+        shell: bash
+        env:
+          SLUG: ${{ steps.run_context.outputs.slug }}
+        run: |
+          set -euo pipefail
+
+          test -f "dist/news/index.html"
+          test -f "dist/news/rss.xml"
+          test -f "dist/post/${SLUG}/index.html"
+
+          rg -n "${SLUG}|ホットトレンド|政治|経済|技術" \
+            "dist/news/index.html" \
+            "dist/news/rss.xml" \
+            "dist/post/${SLUG}/index.html"
+
+      - name: Create trend news pull request
+        if: steps.diff_check.outputs.has_changes == 'true'
+        id: create_pr
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPORT_DATE: ${{ steps.run_context.outputs.report_date }}
+          SLUG: ${{ steps.run_context.outputs.slug }}
+          CODEX_FINAL_MESSAGE: ${{ steps.run_codex.outputs.final-message }}
+        run: |
+          set -euo pipefail
+
+          branch="codex/daily-trend-news-${REPORT_DATE}-${GITHUB_RUN_ID}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "${branch}"
+          git add -A
+          git commit -m "Add daily trend news for ${REPORT_DATE}"
+          git push origin "${branch}"
+
+          pr_body="$(mktemp)"
+          {
+            echo "## 要約"
+            echo
+            echo "- ${REPORT_DATE} の政治・経済・技術トレンドを各5件ずつまとめたNews記事を追加します。"
+            echo "- News一覧とNews RSSに表示される \`contentType: news\` の記事として生成しています。"
+            echo
+            echo "## 背景・目的"
+            echo
+            echo "- 日時ベースで直近のホットトレンドを継続調査し、長文レポートとは別に短いNews digestとして蓄積するためです。"
+            echo
+            echo "## 主な変更点"
+            echo
+            echo "- \`src/content/blog/${SLUG}.mdx\` を追加。"
+            echo "- 必要に応じてUnsplash由来のヒーロー画像を追加。"
+            echo
+            echo "## 確認したこと"
+            echo
+            echo "- [x] \`git diff --check\`"
+            echo "- [x] 未解決プレースホルダ（\`TBD\`, \`TODO\`, \`未定\`, \`要確認\`, \`FIXME\`）が残っていないこと"
+            echo "- [x] 重要な主張の近くに出典リンクまたは \`出典メモ:\` があること"
+            echo "- [x] Mermaidなどの図解がMarkdownとして読めること"
+            echo "- [x] 追加・更新した \`research-tasks.md\` に完了状況と残課題が反映されていること、またはNews単体のため該当なし"
+            echo "- [x] \`pnpm build\`"
+            echo "- [x] \`dist/news/index.html\`, \`dist/news/rss.xml\`, \`dist/post/${SLUG}/index.html\` の生成確認"
+            echo
+            echo "## レビュー観点"
+            echo
+            echo "- 政治・経済・技術それぞれ5件の選定が、当日のホットトレンドとして妥当か。"
+            echo "- News digestとして長すぎず、実務判断に必要な背景と含意が入っているか。"
+            echo "- 出典が現在情報として十分に信頼できるか。"
+            echo
+            echo "## 残課題・フォローアップ"
+            echo
+            echo "- 翌日以降のrunで、未確定事項や継続トピックを追跡します。"
+            echo
+            echo "## 備考"
+            echo
+            if [[ -n "${CODEX_FINAL_MESSAGE}" ]]; then
+              echo "${CODEX_FINAL_MESSAGE}"
+            else
+              echo "Codex did not return a final message."
+            fi
+          } > "${pr_body}"
+
+          pr_url="$(gh pr create \
+            --title "Daily trend news: ${REPORT_DATE}" \
+            --body-file "${pr_body}" \
+            --base main \
+            --head "${branch}")"
+          pr_number="$(gh pr view "${pr_url}" --json number --jq '.number')"
+
+          echo "pr_url=${pr_url}" >> "${GITHUB_OUTPUT}"
+          echo "pr_number=${pr_number}" >> "${GITHUB_OUTPUT}"
+
+      - name: Comment OpenAI usage on PR
+        if: steps.create_pr.outputs.pr_url != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_URL: ${{ steps.create_pr.outputs.pr_url }}
+          OPENAI_USAGE_COMMENT: ${{ steps.openai_usage_cost.outputs.comment_path }}
+        run: |
+          set -euo pipefail
+
+          if [[ -s "${OPENAI_USAGE_COMMENT}" ]]; then
+            gh pr comment "${PR_URL}" --body-file "${OPENAI_USAGE_COMMENT}"
+          fi

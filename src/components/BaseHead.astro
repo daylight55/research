@@ -2,7 +2,7 @@
 import { siteConfig } from '@/site-config'
 import { withBase } from '@/utils'
 import '../styles/global.css'
-import { ViewTransitions } from 'astro:transitions'
+import { ClientRouter } from 'astro:transitions'
 
 export interface Props {
 	title: string
@@ -32,8 +32,8 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 <!-- Primary Meta Tags -->
 <title>{siteTitle}</title>
 
-<!-- ViewTransitions  -->
-<ViewTransitions />
+<!-- Client-side routing and view transitions -->
+<ClientRouter />
 
 <!-- SEO -->
 <meta name='title' content={siteTitle} />

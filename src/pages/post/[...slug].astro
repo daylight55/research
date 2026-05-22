@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content'
+import { type CollectionEntry, getCollection, render } from 'astro:content'
 import BlogPost from '@/layouts/BlogPost'
 import Code from '@/components/mdx/Code'
 import ListRelatedPosts from '@/components/ListRelatedPosts'
@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 	const posts = await getPosts()
 
 	return posts.map((post) => ({
-		params: { slug: post.slug },
+		params: { slug: post.id },
 		props: post
 	}))
 }
@@ -27,14 +27,14 @@ const MAX_POSTS = 3
 const getRelatedPosts = (post: Props) => {
 	const lowercaseTags = post.data.tags.map((tag) => tag.toLowerCase())
 	const relatedPosts = posts.filter(
-		(p) => p.slug !== post.slug && p.data.tags.some((t) => lowercaseTags.includes(t.toLowerCase()))
+		(p) => p.id !== post.id && p.data.tags.some((t) => lowercaseTags.includes(t.toLowerCase()))
 	)
 	return relatedPosts.slice(0, MAX_POSTS)
 }
 
 const relatedPosts = getRelatedPosts(post)
 
-const { Content, headings, remarkPluginFrontmatter } = await post.render()
+const { Content, headings, remarkPluginFrontmatter } = await render(post)
 
 const disqusEnabled = disqusConfig.enabled
 ---
@@ -96,7 +96,7 @@ const disqusEnabled = disqusConfig.enabled
 								{relatedPosts.map((relatedPost) => (
 									<li>
 										<a
-											href={withBase(`/post/${relatedPost.slug}/`)}
+											href={withBase(`/post/${relatedPost.id}/`)}
 											class='block leading-snug text-gray-600 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:hover:text-indigo-300'
 										>
 											{relatedPost.data.title}

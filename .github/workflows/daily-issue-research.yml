@@ -21,6 +21,10 @@ concurrency:
   group: daily-issue-research
   cancel-in-progress: false
 
+env:
+  RESEARCH_READY_LABEL: daily-research
+  AUTO_MERGE_LABEL: daily-research-auto-merge
+
 jobs:
   research:
     runs-on: ubuntu-latest
@@ -39,6 +43,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_NUMBER: ${{ github.event.inputs.issue_number || '' }}
+          RESEARCH_READY_LABEL: ${{ env.RESEARCH_READY_LABEL }}
+          AUTO_MERGE_LABEL: ${{ env.AUTO_MERGE_LABEL }}
         run: |
           set -euo pipefail
 
@@ -53,11 +59,17 @@ jobs:
               --state open \
               --json number,title,body,labels,url,createdAt,updatedAt \
               --limit 100 \
-              | jq 'map(select(([.labels[].name] | index("research-pr-opened") | not) and ([.labels[].name] | index("research-skip") | not))) | sort_by(.createdAt, .number) | .[0] // empty' \
+              | jq --arg ready_label "${RESEARCH_READY_LABEL}" 'map(select(([.labels[].name] | index($ready_label)) and ([.labels[].name] | index("research-pr-opened") | not) and ([.labels[].name] | index("research-skip") | not))) | sort_by(.createdAt, .number) | .[0] // empty' \
               > .github/codex/runtime/selected-issue.json
           fi
 
           if [[ ! -s .github/codex/runtime/selected-issue.json ]] || [[ "$(cat .github/codex/runtime/selected-issue.json)" == "null" ]]; then
+            echo "issue_found=false" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          if ! jq -e --arg ready_label "${RESEARCH_READY_LABEL}" '[.labels[].name] | index($ready_label)' .github/codex/runtime/selected-issue.json >/dev/null; then
+            echo "Issue is missing required label: ${RESEARCH_READY_LABEL}"
             echo "issue_found=false" >> "${GITHUB_OUTPUT}"
             exit 0
           fi
@@ -67,6 +79,11 @@ jobs:
 
           echo "issue_found=true" >> "${GITHUB_OUTPUT}"
           echo "issue_number=${issue_number}" >> "${GITHUB_OUTPUT}"
+          if jq -e --arg auto_merge_label "${AUTO_MERGE_LABEL}" '[.labels[].name] | index($auto_merge_label)' .github/codex/runtime/selected-issue.json >/dev/null; then
+            echo "auto_merge_allowed=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "auto_merge_allowed=false" >> "${GITHUB_OUTPUT}"
+          fi
           {
             echo "issue_title<<EOF"
             echo "${issue_title}"
@@ -274,7 +291,7 @@ jobs:
           gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR opened: ${PR_URL}"
 
       - name: Merge completed research pull request
-        if: steps.create_pr.outputs.pr_url != ''
+        if: steps.create_pr.outputs.pr_url != '' && steps.select_issue.outputs.auto_merge_allowed == 'true'
         id: merge_pr
         shell: bash
         env:
@@ -365,7 +382,7 @@ jobs:
       - name: Comment when no issue was selected
         if: steps.select_issue.outputs.issue_found == 'false'
         run: |
-          echo "No open issue matched the configured daily research labels."
+          echo "No open issue matched the configured daily research labels. Add the daily-research label to explicitly allow automated research."
 
       - name: Comment when Codex produced no diff
         if: steps.select_issue.outputs.issue_found == 'true' && steps.diff_check.outputs.has_changes == 'false'

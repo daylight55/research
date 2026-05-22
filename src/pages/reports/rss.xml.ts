@@ -15,7 +15,7 @@ export const GET: APIRoute = async (context) => {
 			title: post.data.title,
 			description: post.data.rssSummary ?? post.data.description,
 			pubDate: post.data.pubDate,
-			link: withBase(`/post/${post.slug}/`),
+			link: withBase(`/post/${post.id}/`),
 			categories: [post.data.category, ...post.data.tags]
 		}))
 	})

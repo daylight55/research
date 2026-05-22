@@ -1,6 +1,9 @@
 ---
 import HeaderLink from '@/components/HeaderLink'
 import MenuIcon from './icons/MenuIcon.astro'
+import NewsIcon from './icons/NewsIcon.astro'
+import ReferenceIcon from './icons/ReferenceIcon.astro'
+import ReportIcon from './icons/ReportIcon.astro'
 import Search from '@/components/Search'
 import TagIcon from './icons/TagIcon.astro'
 import ToggleTheme from './ToggleTheme.astro'
@@ -13,21 +16,36 @@ import { withBase } from '@/utils'
 
 	<div
 		id='astro-header-drawer'
-		class='shadow rounded-l-lg md:bg-transparent dark:md:bg-transparent bg-white dark:bg-[#0a0910] md:shadow-none md:rounded-none md:border-none md:h-auto md:static absolute transition-transform duration-300 ease-in translate-x-96 md:translate-x-0 top-12 -right-5 pl-4 pt-6 pb-4 md:p-0 h-[200px] w-[200px] z-50'
+		class='shadow rounded-l-lg md:bg-transparent dark:md:bg-transparent bg-white dark:bg-[#0a0910] md:shadow-none md:rounded-none md:border-none md:h-auto md:w-auto md:static absolute transition-transform duration-300 ease-in translate-x-96 md:translate-x-0 top-12 -right-5 pl-4 pt-6 pb-4 md:p-0 h-auto w-[220px] z-50'
 	>
 		<nav
 			class='flex h-full flex-col justify-between gap-12 text-left md:flex-row md:w-full md:items-center md:gap-6'
 		>
 			<div
-				class='flex flex-col gap-4 md:flex-row md:items-center md:gap-5 md:border-r md:border-black/70 md:pr-5 dark:md:border-white/70'
+				class='flex flex-col gap-4 md:flex-row md:flex-nowrap md:items-center md:gap-5 md:border-r md:border-black/70 md:pr-5 dark:md:border-white/70'
 			>
-				<HeaderLink href='/news/' class='flex items-center gap-1 text-2xl md:text-base'>
-					News Report
+				<HeaderLink
+					href='/news/'
+					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
+				>
+					<NewsIcon /> News
 				</HeaderLink>
-				<HeaderLink href='/reference/' class='flex items-center gap-1 text-2xl md:text-base'>
-					Reference
+				<HeaderLink
+					href='/reports/'
+					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
+				>
+					<ReportIcon /> Report
 				</HeaderLink>
-				<HeaderLink href='/tags' class='flex items-center gap-1 text-2xl md:text-base'>
+				<HeaderLink
+					href='/reference/'
+					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
+				>
+					<ReferenceIcon /> Reference
+				</HeaderLink>
+				<HeaderLink
+					href='/tags'
+					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
+				>
 					<TagIcon /> Tags
 				</HeaderLink>
 			</div>

@@ -159,7 +159,8 @@ async function selectHero(file) {
 	}
 
 	if (!photo) {
-		throw new Error(`No Unsplash photo found for query: ${query}`)
+		console.warn(`No Unsplash photo found for ${file}; keeping existing heroImage: ${query}`)
+		return false
 	}
 
 	const slug = path.basename(file, path.extname(file))

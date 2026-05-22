@@ -12,8 +12,8 @@ interface SiteConfig {
 export const siteConfig: SiteConfig = {
 	site: 'https://research.daylight55.dev/',
 	author: 'daylight55',
-	title: 'Personal Research Atlas',
-	description: 'AI、データ、組織ナレッジの調査レポートを自分向けに蓄積して読むための静的アトラス。',
+	title: 'AI Research Atlas',
+	description: 'AI Research Atlas',
 	lang: 'ja-JP',
 	ogLocale: 'ja_JP',
 	shareMessage: 'このレポートを共有',

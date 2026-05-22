@@ -41,6 +41,9 @@ policy / technical decisions.
   structure, or examples.
 - Do not read `.github/codex/templates/blog-entry.mdx`; it is for long-form
   research reports, not News digests.
+- Do not run broad file inventory commands that enumerate existing articles,
+  such as `rg --files content src` or `find content/blog`; use exact file paths
+  from this prompt instead.
 - Read only the News template, `AGENTS.md`, and the minimum site files needed to
   confirm schema or routing if validation fails.
 - Spend research tokens on current sources for the fifteen topics, not on

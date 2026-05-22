@@ -14,8 +14,7 @@
 - [x] YugabyteDBのアーキテクチャ、YSQL/YCQL、DocDB、tablet、Raft、multi-region、xClusterを公式ドキュメントで確認する。
 - [x] YugabyteDB Aeon、Aeon BYOC、Anywhere、Voyager、Mekoの公開情報を確認する。
 - [x] YugabyteDB v2025.2 LTS、PostgreSQL 15 compatibility、EPCM、pgvector/AI関連訴求を確認する。
-- [x] `report.md` に日本語レポートを作成する。
-- [x] Astro preview用に `src/content/blog/newsql-yugabyte-brief.mdx` を作成する。
+- [x] Astro preview用に `content/blog/newsql-yugabyte-brief.mdx` を作成する。
 
 ## 残課題・追加深掘り候補
 

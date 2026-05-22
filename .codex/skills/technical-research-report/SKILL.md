@@ -9,20 +9,20 @@ Use this skill for any report or investigation in this repository.
 
 ## Output Location
 
-- For website-facing reports, write the article body directly in `src/content/blog/<slug>.mdx`. Treat that MDX file as the canonical reader-facing text.
-- Do not maintain duplicate bodies in both `category/<category-name>/<topic>/report.md` and `src/content/blog/<slug>.mdx`. The duplicate-report pattern makes one copy drift, become shallow, or stop midway.
+- For website-facing reports, write the article body directly in `content/blog/<slug>.mdx`. Treat that MDX file as the canonical reader-facing text.
+- Do not maintain duplicate bodies in both `category/<category-name>/<topic>/report.md` and `content/blog/<slug>.mdx`. The duplicate-report pattern makes one copy drift, become shallow, or stop midway.
 - Use `category/<category-name>/<topic>/` only when supporting materials are useful: `research-tasks.md`, `notes/`, `sources/`, `figures/`, `prototype/`.
 - Use a short kebab-case category name such as `ai-systems`, `enterprise-ai-platforms`, `developer-tools`, or `data-infrastructure`.
 
 ## Astro Site Visibility
 
-If the report must appear on the website, PR preview, top page, or category pages, `src/content/blog/<slug>.mdx` is the primary deliverable.
+If the report must appear on the website, PR preview, top page, or category pages, `content/blog/<slug>.mdx` is the primary deliverable.
 
 Cloudflare Pages Preview is the preferred PR preview surface for this repository. If the Cloudflare branch alias URL or deployment URL renders the report, a separate GitHub Pages PR preview is not required.
 
 Also do all of the following:
 
-1. Add or update `src/content/blog/<slug>.mdx` with frontmatter and the full article body.
+1. Add or update `content/blog/<slug>.mdx` with frontmatter and the full article body.
 2. Add any new category to `src/data/categories.ts`.
 3. Preserve existing categories when rebasing or resolving conflicts; merge category lists as a union.
 4. Treat the article header image as a minor supporting element. Do not add low-information Codex-generated abstract category images by default; prefer existing meaningful images or a restrained placeholder until a genuinely useful source image or diagram exists.
@@ -59,7 +59,7 @@ Also do all of the following:
    - product claims
    - inference from public announcements
    - open questions
-7. Write or update the full article body in `src/content/blog/<slug>.mdx`.
+7. Write or update the full article body in `content/blog/<slug>.mdx`.
 8. Verify links, unresolved placeholders, and internal consistency.
 9. If website visibility or preview visibility is part of the deliverable, complete the Astro Site Visibility checklist before publication.
 10. For research requests in this repository, treat a draft Pull Request as the standard delivery path even when the user does not explicitly say `PRにして`. Do not stop at chat-only reporting or local files unless the user explicitly says not to create files, not to publish, or that a chat-only answer is enough.
@@ -160,4 +160,4 @@ Before finishing:
 - If creating a PR, the PR title and body are written in Japanese and follow `.github/PULL_REQUEST_TEMPLATE.md`.
 - If creating or updating a PR, CI status has been checked after push, and any failing/cancelled/pending check has been investigated before reporting completion.
 - If creating a PR, the final response includes the verified PR URL, base branch, head branch, and draft/ready state.
-- If website visibility was expected, the full article is in `src/content/blog/<slug>.mdx`, any new category is registered in `src/data/categories.ts`, `pnpm build` generated the post/category/index pages, the top page HTML contains the slug/title/category, and the Cloudflare Pages preview URL has been checked when available.
+- If website visibility was expected, the full article is in `content/blog/<slug>.mdx`, any new category is registered in `src/data/categories.ts`, `pnpm build` generated the post/category/index pages, the top page HTML contains the slug/title/category, and the Cloudflare Pages preview URL has been checked when available.

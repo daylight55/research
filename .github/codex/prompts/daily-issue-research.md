@@ -23,7 +23,7 @@ drivers, risks, and practical implications.
 - Follow `AGENTS.md`.
 - Use the repo-local `technical-research-report` skill if available.
 - Write the reader-facing report body directly in
-  `src/content/blog/<topic>.mdx`. Treat this MDX file as the canonical article
+  `content/blog/<topic>.mdx`. Treat this MDX file as the canonical article
   body for website-visible reports.
 - Do not create `category/<category-name>/<topic>/report.md` as a second copy
   of the same article body. Duplicate report bodies drift and make the workflow
@@ -32,7 +32,7 @@ drivers, risks, and practical implications.
   `research-tasks.md`, `notes/`, `sources/`, `figures/`, or prototypes when
   they are useful.
 - Add or update `src/data/categories.ts` category wiring as needed.
-- When creating `src/content/blog/<topic>.mdx`, use
+- When creating `content/blog/<topic>.mdx`, use
   `.github/codex/templates/blog-entry.mdx` as the site-entry shape.
   Include `rssSummary` in frontmatter as a concise RSS/share summary. Keep it
   understandable outside the site UI and distinct from long article prose.

@@ -1,10 +1,22 @@
-# Palantir調査レポート
+---
+title: 'Palantir: Operational AI Platform の深層構造'
+description: 'Foundry、Ontology、AIP、Apolloを、組織の意思決定と監査まで含む運用AI基盤として読む調査レポート。'
+rssSummary: 'Palantir Foundry、Ontology、AIP、Apolloを運用AI基盤として読み解き、導入判断の論点を整理する。'
+pubDate: '2026-05-07'
+heroImage: '../../src/assets/images/hero/palantir-operational-ai-platform.jpg'
+heroImageAlt: 'graphs of performance analytics on a laptop screen'
+heroImageCredit: 'Photo by Luke Chesser on Unsplash'
+heroImageCreditUrl: 'https://unsplash.com/@lukechesser?utm_source=daylight_research_atlas&utm_medium=referral'
+heroImageQuery: 'enterprise data operations dashboard'
+category: 'enterprise-ai-platforms'
+tags: ['Palantir', 'Ontology', 'AIP', 'Governance']
+draft: false
+---
 
 作成日: 2026-05-07  
 調査方式: 実務意思決定向けのナラティブレビュー  
 カテゴリ: enterprise-ai-platforms  
 対象: Palantir Technologies、Foundry、Ontology、AIP、Apollo、政府・商用導入、リスクと実務導入判断
-
 
 ## 1. エグゼクティブサマリー
 
@@ -24,13 +36,13 @@ Palantirは、単なる分析ツール企業でも、LLMアプリ企業でもな
 
 ```mermaid
 flowchart LR
-  A["外部データ: ERP / CRM / IoT / 文書 / センサー"] --> B["Foundry: データ統合・変換・品質・系譜"]
-  B --> C["Ontology: Object / Link / Action / Function / Security"]
-  C --> D["AIP: LLM・エージェント・評価・自動化"]
-  D --> E["業務アプリ: 供給計画・防衛・医療・金融・製造"]
-  E --> F["Action Log / Audit / Governance"]
+  A["外部データ"] --> B["Foundry"]
+  B --> C["Ontology"]
+  C --> D["AIP"]
+  D --> E["業務アプリ"]
+  E --> F["監査ログ"]
   F --> C
-  G["Apollo: 複数クラウド・閉域・エッジへの継続デプロイ"] --> B
+  G["Apollo"] --> B
   G --> D
 ```
 
@@ -57,13 +69,13 @@ S-1でPalantirは、2003年に counterterrorism operations 向けソフトウェ
 ```mermaid
 timeline
   title Palantirの進化を貫く軸
-  2003 : Counterterrorism softwareとして創業
-  2008 : Gotham : 情報分析から現場行動への接続
-  2010s : Foundry : 商用・公共機関のデータOS化
-  2016-2018 : U.S. Army訴訟 : 商用ソフトを政府調達へ入れる突破口
-  2020 : Direct listing : 創業者支配と「選ぶ顧客」を明文化
-  2023+ : AIP : Ontology上でLLM/Agentを業務Actionへ接続
-  2025+ : Technological Republic : 国家・防衛・産業基盤への思想的回帰
+  2003 : 創業
+  2008 : Gotham拡大
+  2010s : Foundry展開
+  2016-2018 : Army訴訟
+  2020 : Direct listing
+  2023+ : AIP
+  2025+ : 国家基盤論
 ```
 
 Palantirが特殊なのは、政府と大企業を「顧客」ではなく「制度的な巨大生物」として見ている点である。2022年のCEO年次書簡でKarpは、創業時は防衛・情報機関のためのソフトウェアを作る会社であり、彼らには予算と人員があったが必要なソフトウェアがなかったと書いた。また、二十世紀の堀は産業構造にあったが、今世紀の唯一の堀はソフトウェアだと主張した。この見方では、Palantirの競争相手は単なるBIベンダーではない。官僚制、旧来SI、部門別SaaS、Excel、調達制度、組織のデータ不全そのものが競争相手になる。
@@ -105,23 +117,19 @@ Palantirを理解する鍵はOntologyである。一般的なRDF/OWL型のオン
 ```mermaid
 flowchart TB
   subgraph "Semantic Layer"
-    O["Object Types"]
-    P["Properties"]
-    L["Link Types"]
+    M["Objects / Links"]
     I["Interfaces"]
   end
   subgraph "Kinetic Layer"
-    A["Action Types"]
-    F["Functions"]
-    S["Dynamic Security"]
+    A["Actions / Functions"]
+    S["Security"]
     AL["Action Log"]
   end
-  O --> A
-  L --> A
+  M --> A
+  I --> A
   A --> AL
-  F --> A
   S --> A
-  AL --> O
+  AL --> M
 ```
 
 ## 4. AIP: LLMを業務に接続する層
@@ -165,13 +173,13 @@ Palantirの財務は、2024年から2026年にかけて大きく加速してい�
 
 成長の読み方には注意がいる。Palantir自身はAIPと米国市場の加速を強調するが、政府案件、防衛需要、AI投資サイクル、営業手法、既存顧客拡大が同時に効いている。AIPだけが原因だと断定するのは過剰である。ただし、米国商用売上の伸び、顧客数、100万ドル以上の案件数を見る限り、少なくともAIPは商用拡大の販売メカニズムを強めている。
 
-| 指標 | 2026年Q1 | 読み方 |
-|---|---:|---|
-| 売上 | 16.33億ドル | 前年比85%成長 |
-| 米国売上 | 12.82億ドル | 前年比104%成長 |
-| 米国商用売上 | 5.95億ドル | 前年比133%成長 |
-| 米国政府売上 | 6.87億ドル | 前年比84%成長 |
-| 100万ドル以上案件 | 206件 | 大口案件化が進む |
+| 指標               |            2026年Q1 | 読み方                          |
+| ------------------ | ------------------: | ------------------------------- |
+| 売上               |         16.33億ドル | 前年比85%成長                   |
+| 米国売上           |         12.82億ドル | 前年比104%成長                  |
+| 米国商用売上       |          5.95億ドル | 前年比133%成長                  |
+| 米国政府売上       |          6.87億ドル | 前年比84%成長                   |
+| 100万ドル以上案件  |               206件 | 大口案件化が進む                |
 | 通期売上ガイダンス | 76.50億-76.62億ドル | 2026年通期で前年比71%成長見込み |
 
 出典メモ: 上表は [Palantir Q1 2026 press release](https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm) のHighlightsとGuidanceに基づく。
@@ -257,16 +265,16 @@ AIPは、LLMを業務Actionに接続するため、通常のチャットボッ�
 
 ## 10. 主要アプローチ比較
 
-| 観点 | Palantir | Snowflake/Databricks + BI/ML | 自社データ基盤 + OSS Agent | 通常のLLM SaaS |
-|---|---|---|---|---|
-| 中核価値 | 業務OntologyとActionまで統合 | データ処理・分析・ML基盤 | 自由度と可搬性 | 導入速度 |
-| 業務実行 | 強い。Action/Workflowまで含む | 個別実装が必要 | 自社開発が必要 | 弱い |
-| ガバナンス | 製品機能は厚いが設定依存 | データガバナンス中心 | 設計次第 | サービス依存 |
-| 導入速度 | Palantir支援で速い | 既存基盤次第 | 遅い | 速い |
-| ロックイン | 高い | 中 | 低-中 | 中 |
-| 公共・防衛適性 | 高い | 案件次第 | 高いが構築負荷大 | 低-中 |
-| AIエージェント実行 | Ontology接続で強い | 別途構築 | 自由だが重い | 限定的 |
-| 向く組織 | 複雑で高価値な運用課題を持つ大組織 | データチームが強い組織 | 技術主権を重視する組織 | 軽量な知識業務 |
+| 観点               | Palantir                           | Snowflake/Databricks + BI/ML | 自社データ基盤 + OSS Agent | 通常のLLM SaaS |
+| ------------------ | ---------------------------------- | ---------------------------- | -------------------------- | -------------- |
+| 中核価値           | 業務OntologyとActionまで統合       | データ処理・分析・ML基盤     | 自由度と可搬性             | 導入速度       |
+| 業務実行           | 強い。Action/Workflowまで含む      | 個別実装が必要               | 自社開発が必要             | 弱い           |
+| ガバナンス         | 製品機能は厚いが設定依存           | データガバナンス中心         | 設計次第                   | サービス依存   |
+| 導入速度           | Palantir支援で速い                 | 既存基盤次第                 | 遅い                       | 速い           |
+| ロックイン         | 高い                               | 中                           | 低-中                      | 中             |
+| 公共・防衛適性     | 高い                               | 案件次第                     | 高いが構築負荷大           | 低-中          |
+| AIエージェント実行 | Ontology接続で強い                 | 別途構築                     | 自由だが重い               | 限定的         |
+| 向く組織           | 複雑で高価値な運用課題を持つ大組織 | データチームが強い組織       | 技術主権を重視する組織     | 軽量な知識業務 |
 
 ## 11. 実務導入判断
 

@@ -26,5 +26,5 @@
 
 ## メモ
 
-- 本稿では、要約を正本にせず、`src/content/blog/comprehensive-understanding-paraphrase-risk.mdx` を本文の正本として管理する。
+- 本稿では、要約を正本にせず、`content/blog/comprehensive-understanding-paraphrase-risk.mdx` を本文の正本として管理する。
 - 未解決のプレースホルダは残していない。

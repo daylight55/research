@@ -62,7 +62,7 @@ jobs:
           fi
 
           slug="daily-trends-${report_date}"
-          article_path="src/content/blog/${slug}.mdx"
+          article_path="content/blog/${slug}.mdx"
 
           if [[ -e "${article_path}" ]]; then
             echo "::error::News article already exists for ${report_date}: ${article_path}"
@@ -276,7 +276,7 @@ jobs:
             echo
             echo "## 主な変更点"
             echo
-            echo "- \`src/content/blog/${SLUG}.mdx\` を追加。"
+            echo "- \`content/blog/${SLUG}.mdx\` を追加。"
             echo "- 必要に応じてUnsplash由来のヒーロー画像を追加。"
             echo
             echo "## 確認したこと"

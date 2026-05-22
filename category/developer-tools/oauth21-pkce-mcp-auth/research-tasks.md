@@ -14,8 +14,7 @@ MCPサーバー、OIDCプロバイダー、OAuthクライアント、Claude系�
 - [x] Anthropic の remote MCP / Claude connector の設定情報を確認した。
 - [x] MCPサーバー、認可サーバー、OAuthクライアント、Claude、OpenAPI-onlyサービスの役割分担を整理した。
 - [x] Mermaid 図を追加した。
-- [x] `report.md` を日本語で standalone に整備した。
-- [x] `src/content/blog` 用の公開エントリを追加した。
+- [x] `content/blog/oauth21-pkce-mcp-auth.mdx` に公開本文を整備した。
 - [ ] 追加深掘り: Keycloak、Auth0、Entra ID など具体的 IdP 別の設定例を追記する。
 - [ ] 追加深掘り: Claude の実際の connector UI と redirect/callback の具体値を、必要なら画面付きで補足する。
 - [ ] 追加深掘り: OpenAPI adapter の最小実装テンプレートを別テーマとして切り出す。

@@ -14,7 +14,7 @@
   - [x] Wittgenstein, *Tractatus Logico-Philosophicus*（Wikisource 版）
   - [x] Stanford Encyclopedia of Philosophy の Wittgenstein 項目
 - [x] Astro site 反映
-  - [x] `src/content/blog/polanyi-wittgenstein-tacit-knowledge.mdx` を作成
+  - [x] `content/blog/polanyi-wittgenstein-tacit-knowledge.mdx` を作成
   - [x] `src/data/categories.ts` に新カテゴリを追加
 - [x] 文章品質確認
   - [x] `出典メモ:` を本文近くに配置

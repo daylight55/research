@@ -25,7 +25,7 @@ policy / technical decisions.
 
 - Follow `AGENTS.md`.
 - Write the reader-facing article body directly in
-  `src/content/blog/daily-trends-<YYYY-MM-DD>.mdx`.
+  `content/blog/daily-trends-<YYYY-MM-DD>.mdx`.
 - Use `contentType: news` in frontmatter.
 - Use `category: tech-news` unless the repository has added a more specific
   News category.

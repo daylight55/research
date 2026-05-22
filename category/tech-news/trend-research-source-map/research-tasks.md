@@ -8,7 +8,7 @@
 - [x] 世界向けの AI、開発者ツール、クラウド、OSS、セキュリティ、半導体の主要情報源を整理した。
 - [x] 日本向けの政策、行政、セキュリティ、産業ニュースの主要情報源を整理した。
 - [x] 日次ニュース化の収集、重複排除、重要度採点、一次確認、週次統括フローを定義した。
-- [x] Webサイト表示用の本文を `src/content/blog/trend-research-source-map.mdx` に直接作成した。
+- [x] Webサイト表示用の本文を `content/blog/trend-research-source-map.mdx` に直接作成した。
 
 ## 次に深掘りする候補
 

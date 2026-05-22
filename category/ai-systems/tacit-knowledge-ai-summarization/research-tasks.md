@@ -5,7 +5,7 @@
 - [x] Polanyi の暗黙知と `from-to` / `subsidiary awareness` / `focal awareness` を確認
 - [x] Nonaka & Takeuchi の SECI の基本構造を確認
 - [x] LLM の grounding / fidelity / hallucination に関する主要論文を確認
-- [x] `src/content/blog/tacit-knowledge-ai-summarization.mdx` に本文を作成
+- [x] `content/blog/tacit-knowledge-ai-summarization.mdx` に本文を作成
 - [x] Mermaid 図解と比較表を追加
 - [x] `git diff --check` で差分の整形エラーを確認
 

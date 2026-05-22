@@ -28,7 +28,7 @@ const PLACEHOLDER_RE = /placeholder|banner\.jpg|book\.jpg|placeholder-social/i
 
 function changedBlogEntries() {
 	if (process.argv.includes('--all')) {
-		return execFileSync('git', ['ls-files', 'src/content/blog/*.mdx'], { encoding: 'utf8' })
+		return execFileSync('git', ['ls-files', 'content/blog/*.mdx'], { encoding: 'utf8' })
 			.split('\n')
 			.map((line) => line.trim())
 			.filter(Boolean)
@@ -36,7 +36,7 @@ function changedBlogEntries() {
 
 	const output = execFileSync(
 		'git',
-		['ls-files', '--modified', '--others', '--exclude-standard', '--', 'src/content/blog/*.mdx'],
+		['ls-files', '--modified', '--others', '--exclude-standard', '--', 'content/blog/*.mdx'],
 		{ encoding: 'utf8' }
 	)
 	return output

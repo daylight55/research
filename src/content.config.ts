@@ -4,7 +4,7 @@ import { z } from 'astro/zod'
 import { CATEGORIES } from '@/data/categories'
 
 const blog = defineCollection({
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
+	loader: glob({ base: './content/blog', pattern: '**/*.{md,mdx}' }),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string().max(80),

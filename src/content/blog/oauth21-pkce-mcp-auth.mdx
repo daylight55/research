@@ -43,11 +43,11 @@ Claude系の remote connector では、ユーザーは接続先URLを追加し�
 flowchart LR
   U["利用者"] --> C["Claude系MCPクライアント"]
   C --> M["MCPサーバー"]
-  M --> PRM["Protected Resource Metadata"]
-  C --> AS["OAuth/OIDC Authorization Server"]
+  M --> PRM["Resource Metadata"]
+  C --> AS["認可サーバー"]
   AS --> TOK["Token endpoint"]
   C -->|Bearer token| M
-  M --> API["上流API / DB / OpenAPIラッパー"]
+  M --> API["上流API"]
 ```
 
 ## 2. まず押さえるべき用語

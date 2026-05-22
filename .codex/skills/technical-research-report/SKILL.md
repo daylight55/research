@@ -105,6 +105,17 @@ Recommended diagram types:
 - graph for ontology/entity relationships
 - comparison table for alternatives
 
+Mermaid authoring constraints:
+
+- Use Mermaid as a compact aid to the prose, not as a replacement for the prose.
+- Keep one Mermaid diagram to 3-7 nodes by default. Do not exceed 9 nodes unless the user explicitly asks for a dense technical diagram.
+- Keep node labels short: prefer short noun phrases; target about 15 Japanese characters and cap at about 25 characters. Put explanations in prose near the diagram.
+- Use `flowchart LR` only for simple left-to-right relationships or comparisons. If it becomes wide, split it or use a Markdown table.
+- Use `flowchart TD` only for short procedures of about 3-5 steps. If it exceeds 6 steps, write the detailed sequence as a numbered list and diagram only the core loop.
+- For `timeline`, use years plus short event names only. Explain event details in the paragraph or `出典メモ:` immediately around the diagram.
+- Do not mix timeline, architecture, operational steps, and risks in one diagram. Decide one purpose per diagram: history, relationship, procedure, or comparison.
+- Before publishing, verify the rendered Mermaid in local preview or generated HTML. If text is unreadable, whitespace is excessive, or the diagram needs too much scrolling to understand, simplify or split it.
+
 ## Report Structure
 
 Use this default shape unless the topic needs something else:

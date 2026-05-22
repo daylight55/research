@@ -56,13 +56,20 @@
 	overflow: hidden;
 }
 
+.mermaid-figure[data-layout='compact'] {
+	width: fit-content;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .mermaid-viewport {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	width: 100%;
 	overflow-x: auto;
 	overflow-y: hidden;
-	padding: 1rem;
+	padding: 0.5rem;
 	border-radius: 6px;
 	background: #f8fafc;
 }
@@ -71,11 +78,35 @@ html.dark .mermaid-viewport {
 	background: rgba(15, 23, 42, 0.8);
 }
 
+.mermaid-figure[data-layout='compact'] .mermaid-viewport {
+	width: fit-content;
+	max-width: 100%;
+}
+
 .mermaid-viewport svg {
 	display: block;
 	height: auto;
-	min-width: min(22rem, 100%);
-	width: min(100%, 24rem);
+	max-width: none;
+	min-width: 0;
+	width: min(100%, var(--mermaid-intrinsic-width, 48rem));
+}
+
+.mermaid-viewport[data-aspect='portrait'],
+.mermaid-viewport[data-direction='TD'],
+.mermaid-viewport[data-direction='TB'] {
+	justify-content: center;
+}
+
+.mermaid-viewport[data-aspect='portrait'] svg,
+.mermaid-viewport[data-direction='TD'] svg,
+.mermaid-viewport[data-direction='TB'] svg {
+	min-width: 0;
+	width: min(100%, var(--mermaid-intrinsic-width, 38rem), 38rem);
+}
+
+.mermaid-viewport[data-diagram='timeline'] svg {
+	min-width: 96rem;
+	width: max(96rem, var(--mermaid-intrinsic-width, 96rem));
 }
 :root {
 	--accent: #3457d5;

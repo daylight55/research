@@ -46,11 +46,11 @@ NewSQLはその反動として現れた。重要なのは、NewSQLが単一の�
 
 ```mermaid
 flowchart LR
-  A["従来RDBMS<br/>SQL / ACID / JOIN<br/>単一ノード中心"] --> B["限界<br/>水平スケール<br/>グローバル可用性<br/>運用自動化"]
-  C["NoSQL<br/>シャーディング<br/>高可用性<br/>柔軟なデータモデル"] --> D["代償<br/>弱い一貫性<br/>SQL/JOIN制限<br/>移植性低下"]
-  B --> E["NewSQL / Distributed SQL"]
-  D --> E
-  E --> F["SQL + ACID + 水平スケール + 分散合意 + 自動運用"]
+  RDB["従来RDBMS"] --> Gap["スケール限界"]
+  NoSQL["NoSQL"] --> Trade["一貫性の代償"]
+  Gap --> NewSQL["NewSQL"]
+  Trade --> NewSQL
+  NewSQL --> Goal["SQL + 分散"]
 ```
 
 重要概念は次の通りである。
@@ -93,21 +93,12 @@ YugabyteDBは、大きく見ると `YSQL/YCQLのquery layer` と `DocDB storage 
 
 ```mermaid
 flowchart TB
-  App["Application / ORM / psql / ysqlsh"] --> YSQL["YSQL<br/>PostgreSQL-compatible API"]
-  App --> YCQL["YCQL<br/>Cassandra-inspired API"]
-  YSQL --> T1["YB-TServer"]
-  YCQL --> T1
-  YSQL --> T2["YB-TServer"]
-  YSQL --> T3["YB-TServer"]
-  M["YB-Master<br/>Catalog / placement / cluster orchestration"] --> T1
-  M --> T2
-  M --> T3
-  T1 --> D1["DocDB / RocksDB<br/>tablet replicas"]
-  T2 --> D2["DocDB / RocksDB<br/>tablet replicas"]
-  T3 --> D3["DocDB / RocksDB<br/>tablet replicas"]
-  D1 <-->|"Raft quorum"| D2
-  D2 <-->|"Raft quorum"| D3
-  D1 <-->|"Raft quorum"| D3
+  App["アプリ"] --> API["YSQL / YCQL"]
+  API --> TS["YB-TServer群"]
+  Master["YB-Master"] --> TS
+  TS --> Doc["DocDB / RocksDB"]
+  Doc --> Raft["Raft複製"]
+  Raft --> Doc
 ```
 
 YugabyteDBを理解するうえで重要なのは、「PostgreSQLをそのまま複数台で動かしている」のではなく、PostgreSQL互換のquery layerを分散ストレージ層に接続している点である。このため、PostgreSQLのエコシステム互換性は強い価値だが、性能特性は単一PostgreSQLと同じではない。分散DBでは、primary key設計、tablet分割、region配置、connection pooling、長いトランザクション、schema migration、sequence利用が設計対象になる。
@@ -150,14 +141,12 @@ YugabyteDBが向いているのは、単一PostgreSQLの運用限界が明確で
 
 ```mermaid
 flowchart TD
-  Q1["単一PostgreSQL/Auroraで性能・可用性が足りているか"] -->|Yes| A1["まず現行DBを継続<br/>read replica / partition / cachingを検討"]
-  Q1 -->|No| Q2["SQL/ACID/ORM互換を維持したいか"]
-  Q2 -->|No| A2["NoSQL / event sourcing / specialized storeも候補"]
-  Q2 -->|Yes| Q3["multi-region / write scale / DR要件が明確か"]
-  Q3 -->|No| A3["単一リージョンPostgres強化かAurora系を優先"]
-  Q3 -->|Yes| Q4["分散DB向けの設計変更を受け入れられるか"]
-  Q4 -->|No| A4["移行リスク高。まずPoCで互換性と性能を検証"]
-  Q4 -->|Yes| A5["YugabyteDB / CockroachDB / Spanner / Aurora DSQLを比較PoC"]
+  Q1["現行DBで足りる?"] -->|Yes| Keep["継続・最適化"]
+  Q1 -->|No| Q2["SQL互換が必要?"]
+  Q2 -->|No| Alt["別方式も検討"]
+  Q2 -->|Yes| Q3["分散要件が明確?"]
+  Q3 -->|Yes| PoC["比較PoC"]
+  Q3 -->|No| Keep
 ```
 
 ## 8. Yugabyte担当者に聞くとよい質問

@@ -49,14 +49,11 @@ draft: false
 
 ```mermaid
 flowchart TB
-  A["東芝メモリの源流: NAND発明 / BiCS FLASH"] --> B["Kioxia: NAND / SSD専業に近い事業体"]
-  B --> C["製造基盤: 四日市・北上"]
-  C --> D["JV: Western Digital / SanDisk"]
-  B --> E["技術: BiCS FLASH / CBA / QLC / HBF"]
-  E --> F["製品: client SSD / enterprise SSD / high-capacity SSD"]
-  F --> G["需要: AI data center / cloud / smartphone / PC / automotive"]
-  G --> H["業績: NAND価格と稼働率に強く連動"]
-  H --> I["リスク: 市況循環 / 設備投資 / 顧客集中 / 競争"]
+  A["NANDの源流"] --> B["Kioxia"]
+  B --> C["製造基盤 / WD連携"]
+  B --> E["BiCS / SSD"]
+  E --> F["AI・クラウド需要"]
+  F --> G["市況リスク"]
 ```
 
 ## 2. 会社の位置付け
@@ -93,15 +90,11 @@ AIデータセンター向けには、二つの製品方向が見える。第一
 
 ```mermaid
 flowchart TB
-  A["Raw NAND / BiCS FLASH"] --> B["CBA: CMOS and array wafer bonding"]
-  B --> C["TLC / QLC die"]
-  C --> D["SSD controller / firmware / FDP / security"]
-  D --> E["Enterprise SSD: CM9, performance and power efficiency"]
-  D --> F["High-capacity SSD: LC9, 122.88TB / 245.76TB"]
-  C --> G["High-bandwidth flash module prototype"]
-  E --> H["AI server storage"]
-  F --> H
-  G --> I["MEC / edge AI / memory-storage hierarchy"]
+  A["BiCS NAND"] --> B["CBA"]
+  B --> C["TLC / QLC"]
+  C --> D["SSD制御"]
+  D --> E["Enterprise / 大容量SSD"]
+  C --> F["HBF試作 / AI需要"]
 ```
 
 ## 4. 需給と業績

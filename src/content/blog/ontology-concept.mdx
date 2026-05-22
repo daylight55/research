@@ -33,11 +33,11 @@ draft: false
 
 ```mermaid
 flowchart TD
-  Phil["哲学的オントロジー<br/>何が存在するのか"] --> KR["知識表現のオントロジー<br/>概念・関係・制約の明示仕様"]
-  KR --> Web["Semantic Web / Linked Data<br/>RDF・OWL・SKOS・SPARQL・SHACL"]
-  Web --> KG["Knowledge Graph<br/>識別子・関係・文脈・出典"]
-  KG --> Ops["Operational Ontology<br/>業務対象・状態・行為・権限・監査"]
-  Ops --> AI["LLM / Agent活用<br/>検索・推論支援・ツール実行・判断支援"]
+  Phil["哲学的存在論"] --> KR["知識表現"]
+  KR --> Web["Semantic Web"]
+  Web --> KG["Knowledge Graph"]
+  KG --> Ops["業務Ontology"]
+  Ops --> AI["LLM活用"]
 ```
 
 ## 2. まず何が紛らわしいのか
@@ -217,15 +217,10 @@ Pan et al. (2023) は、LLMと知識グラフの統合を、KG-enhanced LLMs、L
 
 ```mermaid
 flowchart TD
-  User["User request<br/>自然言語"] --> LLM["LLM"]
-  Ont["Ontology<br/>語彙・対象・関係・制約"] --> LLM
-  KG["Knowledge Graph<br/>実体・出典・履歴"] --> LLM
-  Tools["Tools / APIs<br/>検索・DB・業務操作"] --> LLM
-  LLM --> Draft["提案・抽出・回答"]
-  Draft --> Validate["Ontology / SHACL / Business Rule Validation"]
-  Validate --> Human["Human Review / Approval"]
-  Human --> Update["更新・監査ログ"]
-  Update --> KG
+  Ctx["要求・知識"] --> LLM["LLM"]
+  LLM --> Draft["提案・回答"]
+  Draft --> Val["検証"]
+  Val --> Human["人間承認"]
 ```
 
 ## 9. 業務AIでの operational ontology
@@ -238,14 +233,12 @@ Palantir Foundry Ontology はこの発想を前面に出している。Objects�
 
 ```mermaid
 flowchart LR
-  Data["Datasets / APIs / Documents"] --> Objects["Objects<br/>Customer・Contract・Incident"]
-  Objects --> Links["Links<br/>owns・affects・dependsOn"]
-  Objects --> States["States<br/>draft・approved・closed"]
-  States --> Actions["Actions<br/>approve・notify・cancel"]
-  Actions --> Policies["Permissions / Approval"]
-  Policies --> Audit["Audit / Decision Capture"]
-  Audit --> Outcomes["Outcomes / Feedback"]
-  Outcomes --> Objects
+  Data["データ源"] --> Obj["業務対象"]
+  Obj --> Links["関係"]
+  Obj --> State["状態"]
+  State --> Act["行為"]
+  Act --> Audit["監査"]
+  Audit --> Obj
 ```
 
 この考え方はPalantir固有ではない。業務AIを安全に動かすには、どのプラットフォームでも同じ問題に直面する。RAGで文書を検索できても、検索結果が現在有効か、誰に見せてよいか、どの操作に使ってよいかは別問題である。オントロジーは、この「意味」「状態」「行為可能性」「責任」を一つの設計対象にする。
@@ -311,14 +304,11 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-  Scope["1. Scope"] --> CQ["2. Competency Questions"]
-  CQ --> Classes["3. Classes / Types"]
-  Classes --> Relations["4. Relations"]
-  Relations --> Constraints["5. Constraints"]
-  Constraints --> Instances["6. Instances / Examples"]
-  Instances --> Review["7. Domain Review"]
-  Review --> Iterate["8. Iterate / Version"]
-  Iterate --> CQ
+  Scope["範囲を決める"] --> CQ["問いを置く"]
+  CQ --> Model["概念と関係"]
+  Model --> Rule["制約を加える"]
+  Rule --> Review["ドメイン確認"]
+  Review --> Iterate["改訂"]
 ```
 
 ## 11. どの程度形式化すべきか
@@ -338,20 +328,14 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-  Q["何をしたいか?"] --> A{"同義語・分類だけ?"}
-  A -- Yes --> SKOS["Controlled vocabulary / Taxonomy / SKOS"]
-  A -- No --> B{"関係を辿りたい?"}
-  B -- Yes --> KG["Lightweight ontology / Knowledge graph"]
-  B -- No --> C{"入力検証が必要?"}
-  C -- Yes --> SHACL["Schema / SHACL / DB constraints"]
-  C -- No --> D{"推論が必要?"}
-  D -- Yes --> OWL["OWL / Rules / Reasoner"]
-  D -- No --> Lite["Ontology lite in docs"]
-  OWL --> E{"業務操作も必要?"}
-  KG --> E
-  SHACL --> E
-  E -- Yes --> Ops["Operational ontology + workflow + permissions"]
-  E -- No --> Maintain["Versioning / review / governance"]
+  Q["目的を決める"] --> Tax["分類だけ"]
+  Q --> KG["関係探索"]
+  Q --> Val["入力検証"]
+  Q --> Ops["業務操作"]
+  Tax --> Gov["改訂・統制"]
+  KG --> Gov
+  Val --> Gov
+  Ops --> Gov
 ```
 
 ## 12. リスクと限界
@@ -393,16 +377,11 @@ LLMは語彙候補、関係候補、定義文、例外パターンを出す補�
 
 ```mermaid
 graph TD
-  Topic["Topic<br/>ontology-concept"] --> Report["Report<br/>report.md"]
-  Report --> Claim1["Claim<br/>Ontology is not just glossary"]
-  Report --> Claim2["Claim<br/>LLM needs grounding layer"]
-  Claim1 --> Source1["Source<br/>Gruber 1993"]
-  Claim1 --> Source2["Source<br/>Ontology Development 101"]
-  Claim2 --> Source3["Source<br/>Pan et al. 2023"]
-  Claim2 --> Source4["Source<br/>Palantir Ontology docs"]
-  Report --> Risk["Risk<br/>over-formalization"]
-  Report --> Decision["Decision<br/>start with ontology lite"]
-  Decision --> Risk
+  Topic["Ontology記事"] --> Claims["主要主張"]
+  Claims --> Sources["出典"]
+  Claims --> Risks["過剰形式化"]
+  Claims --> Decision["軽量開始"]
+  Decision --> Review["継続レビュー"]
 ```
 
 最小実装としては、以下のようなfrontmatterでも十分に価値がある。

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout'
+import ListCategories from '@/components/ListCategories'
 import ListPosts from '@/components/ListPosts'
 import TitlePage from '@/components/TitlePage'
 import { getReportPosts, withBase } from '@/utils'
@@ -19,6 +20,9 @@ const reportPosts = await getReportPosts()
 		>
 			Report RSS
 		</a>
+	</div>
+	<div class='mb-6 min-w-0'>
+		<ListCategories />
 	</div>
 	<ListPosts posts={reportPosts} />
 </BaseLayout>

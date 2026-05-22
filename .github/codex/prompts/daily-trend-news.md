@@ -76,11 +76,11 @@ Use this structure:
 2. Opening summary:
    - one short paragraph explaining the day / window and the overall signal
 3. `## 政治`
-   - five numbered items with headings `### 政治 1.` through `### 政治 5.`
+   - five items with concise `### <TOPIC_TITLE>` headings
 4. `## 経済`
-   - five numbered items with headings `### 経済 1.` through `### 経済 5.`
+   - five items with concise `### <TOPIC_TITLE>` headings
 5. `## 技術`
-   - five numbered items with headings `### 技術 1.` through `### 技術 5.`
+   - five items with concise `### <TOPIC_TITLE>` headings
 6. `## 横断的な見立て`
    - three to five bullets connecting categories and explaining why the set of
      topics matters
@@ -90,6 +90,8 @@ Use this structure:
 For each of the fifteen topic items, include:
 
 - a concise heading
+- do not prefix topic headings with category names or numbers such as
+  `政治 1.`, `経済 2.`, or `技術 3.`
 - `何が起きたか`
 - `なぜ重要か`
 - `実務への含意`

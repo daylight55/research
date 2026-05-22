@@ -63,7 +63,7 @@ const reportPosts = await getReportPosts()
 						<a
 							href={withBase(`/post/${post.id}/`)}
 							class={cn(
-								'group grid w-full shrink-0 snap-start grid-rows-[auto_1fr] overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 sm:w-[20rem]',
+								'group grid w-[min(82vw,20rem)] shrink-0 snap-start grid-rows-[auto_1fr] overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30',
 								getCategorySurfaceClass(post.data.category)
 							)}
 						>

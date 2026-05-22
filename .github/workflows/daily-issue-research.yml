@@ -109,6 +109,16 @@ jobs:
             jq -r '.body // "(no body)"' .github/codex/runtime/selected-issue.json
           } >> .github/codex/runtime/daily-research-prompt.md
 
+      - name: Record Daily CI start time
+        if: steps.select_issue.outputs.issue_found == 'true'
+        id: daily_ci_time
+        shell: bash
+        run: |
+          {
+            echo "start_epoch=$(date +%s)"
+            echo "start_iso=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          } >> "${GITHUB_OUTPUT}"
+
       - name: Setup pnpm
         if: steps.select_issue.outputs.issue_found == 'true'
         uses: pnpm/action-setup@v4
@@ -160,7 +170,8 @@ jobs:
         run: |
           set -euo pipefail
 
-          export OPENAI_USAGE_END_TIME="$(date +%s)"
+          OPENAI_USAGE_END_TIME="$(date +%s)"
+          export OPENAI_USAGE_END_TIME
           node .github/scripts/estimate-openai-usage-cost.mjs
           echo "comment_path=${OPENAI_USAGE_OUTPUT_FILE}" >> "${GITHUB_OUTPUT}"
 
@@ -186,9 +197,9 @@ jobs:
           git add --intent-to-add .
           git diff --check
 
-          changed_blog_entries="$(git ls-files --modified --others --exclude-standard -- 'src/content/blog/*.mdx' || true)"
-          if [[ -n "${changed_blog_entries}" ]] \
-            && grep -nE "import[[:space:]]+.*from[[:space:]]+['\"]\\.\\./\\.\\./\\.\\./category/|<Report[[:space:]]*/>" ${changed_blog_entries}; then
+          mapfile -t changed_blog_entries < <(git ls-files --modified --others --exclude-standard -- 'src/content/blog/*.mdx' || true)
+          if (( ${#changed_blog_entries[@]} > 0 )) \
+            && grep -nE "import[[:space:]]+.*from[[:space:]]+['\"]\\.\\./\\.\\./\\.\\./category/|<Report[[:space:]]*/>" -- "${changed_blog_entries[@]}"; then
             echo "::error::Site entries must copy the report body directly into src/content/blog/*.mdx. Do not import category/.../report.md, because imported Markdown headings are not available to the article sidebar."
             exit 1
           fi
@@ -218,6 +229,8 @@ jobs:
           ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
           ISSUE_TITLE: ${{ steps.select_issue.outputs.issue_title }}
           CODEX_FINAL_MESSAGE: ${{ steps.run_codex.outputs.final-message }}
+          DAILY_CI_START_EPOCH: ${{ steps.daily_ci_time.outputs.start_epoch }}
+          DAILY_CI_START_ISO: ${{ steps.daily_ci_time.outputs.start_iso }}
         run: |
           set -euo pipefail
 
@@ -231,11 +244,24 @@ jobs:
           git commit -m "Add daily research report for issue #${ISSUE_NUMBER}"
           git push origin "${branch}"
 
+          daily_ci_end_epoch="$(date +%s)"
+          daily_ci_end_iso="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          daily_ci_elapsed_seconds="$((daily_ci_end_epoch - DAILY_CI_START_EPOCH))"
+          daily_ci_elapsed_minutes="$((daily_ci_elapsed_seconds / 60))"
+          daily_ci_elapsed_remaining_seconds="$((daily_ci_elapsed_seconds % 60))"
+
           pr_body="$(mktemp)"
           {
             echo "Closes #${ISSUE_NUMBER}"
             echo
             echo "Daily Codex research run for: ${ISSUE_TITLE}"
+            echo
+            echo "## Daily CI execution time"
+            echo
+            printf -- "- Elapsed: %dm %02ds (%d seconds)\n" "${daily_ci_elapsed_minutes}" "${daily_ci_elapsed_remaining_seconds}" "${daily_ci_elapsed_seconds}"
+            echo "- Started: ${DAILY_CI_START_ISO}"
+            echo "- Finished: ${daily_ci_end_iso}"
+            echo "- Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
             echo
             echo "## Codex summary"
             echo
@@ -253,10 +279,12 @@ jobs:
             --head "${branch}")"
           pr_number="$(gh pr view "${pr_url}" --json number --jq '.number')"
 
-          echo "pr_url=${pr_url}" >> "${GITHUB_OUTPUT}"
-          echo "pr_number=${pr_number}" >> "${GITHUB_OUTPUT}"
-          echo "branch=${branch}" >> "${GITHUB_OUTPUT}"
-          echo "base_ref_oid=${base_ref_oid}" >> "${GITHUB_OUTPUT}"
+          {
+            echo "pr_url=${pr_url}"
+            echo "pr_number=${pr_number}"
+            echo "branch=${branch}"
+            echo "base_ref_oid=${base_ref_oid}"
+          } >> "${GITHUB_OUTPUT}"
 
       - name: Comment OpenAI usage on PR
         if: steps.create_pr.outputs.pr_url != ''
@@ -306,7 +334,7 @@ jobs:
           pr_json="$(gh pr view "${PR_NUMBER}" --json state,headRefOid)"
           pr_state="$(jq -r '.state' <<< "${pr_json}")"
           head_ref_oid="$(jq -r '.headRefOid' <<< "${pr_json}")"
-          current_main_ref_oid="$(gh api repos/${GITHUB_REPOSITORY}/git/ref/heads/main --jq '.object.sha')"
+          current_main_ref_oid="$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/heads/main" --jq '.object.sha')"
 
           if [[ "${pr_state}" != "OPEN" ]]; then
             if [[ "${pr_state}" == "MERGED" ]]; then

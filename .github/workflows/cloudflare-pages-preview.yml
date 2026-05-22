@@ -67,7 +67,9 @@ jobs:
           fi
 
           echo "branch=${branch}" >> "${GITHUB_OUTPUT}"
-          echo "alias=${branch:0:28}" >> "${GITHUB_OUTPUT}"
+          alias="${branch:0:28}"
+          alias="$(printf '%s' "${alias}" | sed -E 's#[-.]+$##')"
+          echo "alias=${alias}" >> "${GITHUB_OUTPUT}"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4

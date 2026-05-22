@@ -36,9 +36,9 @@ const displayImageUrl = imageUrl ?? fallbackImage
 	href={href}
 	target='_blank'
 	rel='noreferrer'
-	class='not-prose my-5 grid overflow-hidden rounded-md border border-black/10 bg-white/80 text-gray-900 no-underline shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:bg-white/10 dark:text-gray-100 dark:hover:border-white/30 sm:grid-cols-[13rem_1fr]'
+	class='not-prose my-5 grid overflow-hidden rounded-md border border-black/10 bg-white/80 text-gray-900 no-underline shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:bg-white/10 dark:text-gray-100 dark:hover:border-white/30 sm:h-40 sm:grid-cols-[13rem_1fr]'
 >
-	<div class='aspect-[16/9] bg-gray-100 dark:bg-gray-900 sm:aspect-auto'>
+	<div class='h-40 bg-gray-100 dark:bg-gray-900 sm:h-full'>
 		<img
 			src={displayImageUrl}
 			alt={imageAlt ?? `${source} のニュース画像`}
@@ -55,7 +55,7 @@ const displayImageUrl = imageUrl ?? fallbackImage
 			<div class='text-base font-semibold leading-6'>{title}</div>
 			{
 				description && (
-					<p class='m-0 line-clamp-3 text-sm leading-6 text-gray-700 dark:text-gray-300'>
+					<p class='m-0 line-clamp-2 text-sm leading-6 text-gray-700 dark:text-gray-300'>
 						{description}
 					</p>
 				)

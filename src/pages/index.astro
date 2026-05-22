@@ -11,6 +11,20 @@ const reportPosts = await getReportPosts()
 ---
 
 <BaseLayout title='Home'>
+	<section class='grid gap-4 border-b border-black/10 pb-8 dark:border-white/10'>
+		<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
+			Personal Atlas
+		</p>
+		<div class='grid gap-3'>
+			<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-5xl'>
+				{siteConfig.title}
+			</h1>
+			<p class='max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300'>
+				{siteConfig.description}
+			</p>
+		</div>
+	</section>
+
 	<section
 		tabindex='0'
 		class='group relative z-10 border-b border-black/10 pb-3 text-sm dark:border-white/10'
@@ -62,20 +76,6 @@ const reportPosts = await getReportPosts()
 					</p>
 				)
 			}
-		</div>
-	</section>
-
-	<section class='grid gap-4 border-b border-black/10 pb-8 dark:border-white/10'>
-		<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
-			Personal Atlas
-		</p>
-		<div class='grid gap-3'>
-			<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-5xl'>
-				{siteConfig.title}
-			</h1>
-			<p class='max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300'>
-				{siteConfig.description}
-			</p>
 		</div>
 	</section>
 

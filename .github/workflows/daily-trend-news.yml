@@ -31,6 +31,7 @@ env:
 jobs:
   trend-news:
     runs-on: ubuntu-latest
+    environment: codex-production
     outputs:
       pr_url: ${{ steps.create_pr.outputs.pr_url }}
       pr_number: ${{ steps.create_pr.outputs.pr_number }}

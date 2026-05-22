@@ -233,7 +233,8 @@ jobs:
 
           pr_body="$(mktemp)"
           {
-            echo "Closes #${ISSUE_NUMBER}"
+            echo "<!-- daily-research-target-issue:${ISSUE_NUMBER} -->"
+            echo "Target issue: #${ISSUE_NUMBER}"
             echo
             echo "Daily Codex research run for: ${ISSUE_TITLE}"
             echo
@@ -331,6 +332,25 @@ jobs:
             --body "Generated, built, and merged by the Daily Issue Research workflow."
 
           gh issue comment "${ISSUE_NUMBER}" --body "Daily Codex research PR #${PR_NUMBER} was built and merged into main."
+
+      - name: Close completed research issue
+        if: steps.merge_pr.outcome == 'success'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
+          PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
+        run: |
+          set -euo pipefail
+
+          issue_state="$(gh issue view "${ISSUE_NUMBER}" --json state --jq '.state')"
+          if [[ "${issue_state}" == "OPEN" ]]; then
+            gh issue close "${ISSUE_NUMBER}" \
+              --reason completed \
+              --comment "Closing because daily Codex research PR #${PR_NUMBER} was merged into main."
+          else
+            echo "Issue #${ISSUE_NUMBER} is already ${issue_state}; no close action needed."
+          fi
 
       - name: Dispatch Cloudflare production deploy
         if: steps.merge_pr.outcome == 'success'

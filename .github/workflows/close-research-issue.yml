@@ -1,0 +1,38 @@
+name: Close Research Issue
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  issues: write
+  pull-requests: read
+
+jobs:
+  close-issue:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close target issue
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          set -euo pipefail
+
+          issue_number="$(grep -Eo '<!-- daily-research-target-issue:[0-9]+ -->' <<< "${PR_BODY}" | grep -Eo '[0-9]+' | head -n 1 || true)"
+          if [[ -z "${issue_number}" ]]; then
+            echo "No daily research target issue marker found on PR #${PR_NUMBER}; skipping."
+            exit 0
+          fi
+
+          issue_state="$(gh issue view "${issue_number}" --json state --jq '.state')"
+          if [[ "${issue_state}" == "OPEN" ]]; then
+            gh issue close "${issue_number}" \
+              --reason completed \
+              --comment "Closing because daily Codex research PR #${PR_NUMBER} was merged into main."
+          else
+            echo "Issue #${issue_number} is already ${issue_state}; no close action needed."
+          fi

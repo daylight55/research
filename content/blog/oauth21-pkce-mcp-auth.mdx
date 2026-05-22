@@ -15,10 +15,6 @@ draft: false
 
 # OAuth 2.1 PKCEフローとMCP認証認可の実務ガイド
 
-作成日: 2026-05-15
-調査方式: 仕様調査と製品ドキュメントレビュー
-対象: MCPサーバー、OIDCプロバイダー、OAuthクライアント、Claude系クライアント、OpenAPI-onlyな既存APIをMCP化する設計
-
 ## 1. エグゼクティブサマリー
 
 MCPサーバーの認証認可は、実務上は「MCPサーバーが保護リソースとして振る舞い、OAuth 2.1 の Authorization Code + PKCE でトークンを取得し、その Bearer token で MCP ツール呼び出しを許可する」流れとして理解すると分かりやすい。MCPの最新公開仕様では、HTTP系のMCPサーバーは Protected Resource Metadata を公開し、クライアントはそこから Authorization Server Metadata と OIDC Discovery をたどって認可サーバーを特定する前提になっている。OAuth 2.1 は2026年5月時点でも Internet-Draft で、Authorization Code flow と PKCE を前提にする整理が主流である。

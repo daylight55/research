@@ -123,10 +123,6 @@ Use this default shape unless the topic needs something else:
 ```markdown
 # <Title>
 
-作成日: YYYY-MM-DD
-調査方式: <narrative review / literature review / product evaluation / architecture survey>
-対象: <scope>
-
 ## 1. エグゼクティブサマリー
 
 ## 2. 背景と研究史

@@ -191,6 +191,13 @@ jobs:
             fi
           done
 
+          for tone in politics economy technology; do
+            if ! grep -qF "<NewsDigestSection tone='${tone}'>" "${ARTICLE_PATH}"; then
+              echo "::error::Generated article is missing NewsDigestSection wrapper: ${tone}"
+              exit 1
+            fi
+          done
+
           for category in 政治 経済 技術; do
             count="$(awk -v category="${category}" '
               $0 == "## " category { in_section = 1; next }

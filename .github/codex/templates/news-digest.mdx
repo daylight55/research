@@ -12,9 +12,13 @@ tags: ['news', 'politics', 'economy', 'technology']
 draft: false
 ---
 
+import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
+
 # <YYYY-MM-DD> ホットトレンド: 政治・経済・技術
 
 <直近24-48時間の全体シグナルを1段落で要約する。>
+
+<NewsDigestSection tone='politics'>
 
 ## 政治
 
@@ -68,6 +72,10 @@ draft: false
 
 出典メモ: <SOURCE_LINKS>
 
+</NewsDigestSection>
+
+<NewsDigestSection tone='economy'>
+
 ## 経済
 
 ### <TOPIC_TITLE>
@@ -120,6 +128,10 @@ draft: false
 
 出典メモ: <SOURCE_LINKS>
 
+</NewsDigestSection>
+
+<NewsDigestSection tone='technology'>
+
 ## 技術
 
 ### <TOPIC_TITLE>
@@ -171,6 +183,8 @@ draft: false
 実務への含意: <1-2文>
 
 出典メモ: <SOURCE_LINKS>
+
+</NewsDigestSection>
 
 ## 横断的な見立て
 

@@ -7,11 +7,13 @@ const unsluglifyNameCategory = sluglify(name.toLowerCase())
 
 const isActive =
 	activeCategory?.toLocaleLowerCase() === unsluglifyNameCategory ||
-	(currentPath === '/' && name === 'View All')
+	(currentPath === '/reports/' && name === 'View All')
 ---
 
 <a
-	href={withBase(name === 'View All' ? '/' : sluglify(`/category/${unsluglifyNameCategory}/1`))}
+	href={withBase(
+		name === 'View All' ? '/reports/' : sluglify(`/category/${unsluglifyNameCategory}/1`)
+	)}
 	class={cn(
 		`inline-flex min-h-9 items-center rounded-md border border-black/10 bg-white/70 px-2.5 py-1.5 text-sm font-semibold text-gray-700 shadow-sm transition duration-150 ease-linear first-letter:uppercase hover:-translate-y-0.5 hover:border-black/25 hover:bg-white hover:text-gray-950 hover:shadow-md dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-white/30 dark:hover:bg-white/15 dark:hover:text-white`,
 		`shrink-0 whitespace-nowrap`,

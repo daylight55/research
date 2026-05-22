@@ -1,0 +1,129 @@
+name: Cloudflare Pages Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "Optional pull request number to comment on"
+        required: false
+        type: string
+      issue_number:
+        description: "Optional issue number to comment on"
+        required: false
+        type: string
+      preview_branch:
+        description: "Optional branch name to deploy as a Cloudflare preview branch"
+        required: false
+        type: string
+      checkout_ref:
+        description: "Optional ref to check out for workflow_dispatch runs"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+  deployments: write
+
+concurrency:
+  group: cloudflare-pages-preview-${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || inputs.preview_branch || github.ref_name }}
+  cancel-in-progress: true
+
+env:
+  ASTRO_SITE: https://research.daylight55.dev
+  ASTRO_BASE: /
+  CLOUDFLARE_PAGES_PROJECT: daylight-research
+
+jobs:
+  preview:
+    name: Deploy branch preview
+    runs-on: ubuntu-latest
+    environment: cloudflare-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || inputs.checkout_ref || github.sha }}
+
+      - name: Resolve preview branch
+        id: preview_branch
+        shell: bash
+        env:
+          RAW_BRANCH: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || inputs.preview_branch || github.ref_name }}
+        run: |
+          set -euo pipefail
+
+          branch="$(printf '%s' "${RAW_BRANCH}" \
+            | tr '[:upper:]' '[:lower:]' \
+            | sed -E 's#[^a-z0-9._-]+#-#g; s#^-+##; s#-+$##')"
+
+          if [[ -z "${branch}" ]]; then
+            branch="preview-${GITHUB_RUN_ID}"
+          fi
+
+          echo "branch=${branch}" >> "${GITHUB_OUTPUT}"
+          echo "alias=${branch:0:28}" >> "${GITHUB_OUTPUT}"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Deploy to Cloudflare Pages preview
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.TF_VAR_CLOUDFLARE_ACCOUNT_ID }}
+          packageManager: pnpm
+          command: pages deploy dist --project-name=${{ env.CLOUDFLARE_PAGES_PROJECT }} --branch=${{ steps.preview_branch.outputs.branch }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Comment preview URL
+        if: github.event_name == 'pull_request' || inputs.pr_number != ''
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: cloudflare-pages-preview
+          number: ${{ github.event_name == 'pull_request' && github.event.pull_request.number || inputs.pr_number }}
+          message: |
+            Cloudflare Pages preview deployed.
+
+            - Branch: `${{ steps.preview_branch.outputs.branch }}`
+            - Branch alias URL: https://${{ steps.preview_branch.outputs.alias }}.${{ env.CLOUDFLARE_PAGES_PROJECT }}.pages.dev
+            - Deployment URL: ${{ steps.deploy.outputs.deployment-url }}
+
+      - name: Comment preview URL on issue
+        if: inputs.issue_number != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+          PR_NUMBER: ${{ inputs.pr_number }}
+          BRANCH: ${{ steps.preview_branch.outputs.branch }}
+          ALIAS_URL: https://${{ steps.preview_branch.outputs.alias }}.${{ env.CLOUDFLARE_PAGES_PROJECT }}.pages.dev
+          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
+        run: |
+          set -euo pipefail
+
+          gh issue comment "${ISSUE_NUMBER}" --body "Cloudflare Pages preview deployed for PR #${PR_NUMBER}.
+
+          - Branch: \`${BRANCH}\`
+          - Branch alias URL: ${ALIAS_URL}
+          - Deployment URL: ${DEPLOYMENT_URL}"

@@ -318,8 +318,27 @@ jobs:
             --head "${branch}")"
           pr_number="$(gh pr view "${pr_url}" --json number --jq '.number')"
 
-          echo "pr_url=${pr_url}" >> "${GITHUB_OUTPUT}"
-          echo "pr_number=${pr_number}" >> "${GITHUB_OUTPUT}"
+          {
+            echo "pr_url=${pr_url}"
+            echo "pr_number=${pr_number}"
+            echo "branch=${branch}"
+          } >> "${GITHUB_OUTPUT}"
+
+      - name: Dispatch Cloudflare preview deploy
+        if: steps.create_pr.outputs.pr_url != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
+          PREVIEW_BRANCH: ${{ steps.create_pr.outputs.branch }}
+        run: |
+          set -euo pipefail
+
+          gh workflow run cloudflare-pages-preview.yml \
+            --ref main \
+            -f pr_number="${PR_NUMBER}" \
+            -f preview_branch="${PREVIEW_BRANCH}" \
+            -f checkout_ref="${PREVIEW_BRANCH}"
 
       - name: Comment OpenAI usage on PR
         if: steps.create_pr.outputs.pr_url != ''

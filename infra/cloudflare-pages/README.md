@@ -4,7 +4,7 @@ This module creates the Cloudflare Pages project for `daylight55/research`.
 
 Production deploys are run by the `Cloudflare Pages Deploy` GitHub Actions workflow using Wrangler direct upload. Cloudflare's automatic Git production deploys are disabled to avoid competing deploy paths.
 
-Automatic preview deployments and PR comments are disabled. Re-enable `preview_deployment_setting` only when PR preview URLs are explicitly needed again.
+PR preview deployments are enabled for all branches. The repository also has a `Cloudflare Pages Preview` GitHub Actions workflow that can deploy previews with Wrangler direct upload and leave a sticky PR comment with the preview URL.
 
 ## Usage
 

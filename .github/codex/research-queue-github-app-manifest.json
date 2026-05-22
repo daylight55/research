@@ -1,0 +1,11 @@
+{
+  "name": "daylight55-research-queue",
+  "url": "https://github.com/daylight55/research",
+  "description": "Private app for the daylight55/research Daily Issue Research workflow to read and update daylight55/research-queue issues.",
+  "redirect_url": "http://127.0.0.1:37651/github-app-manifest/callback",
+  "public": false,
+  "default_permissions": {
+    "issues": "write"
+  },
+  "default_events": []
+}

@@ -26,6 +26,19 @@ Required repository permissions:
 
 No webhook is required.
 
+The reusable manifest is stored at
+`.github/codex/research-queue-github-app-manifest.json`. To recreate the app,
+run:
+
+```bash
+node .github/codex/scripts/register-research-queue-github-app.mjs
+```
+
+The script opens the GitHub App manifest flow in the default browser, exchanges
+the returned manifest `code`, and sets the required `daylight55/research`
+repository secrets. After the app is created, install it only on
+`daylight55/research-queue`.
+
 ## Secrets in `daylight55/research`
 
 Store the GitHub App credentials as repository secrets in `daylight55/research`:

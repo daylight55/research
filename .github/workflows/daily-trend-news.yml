@@ -237,7 +237,7 @@ jobs:
           test -f "dist/news/rss.xml"
           test -f "dist/post/${SLUG}/index.html"
 
-          rg -n "${SLUG}|ホットトレンド|政治|経済|技術" \
+          grep -nE "${SLUG}|ホットトレンド|政治|経済|技術" \
             "dist/news/index.html" \
             "dist/news/rss.xml" \
             "dist/post/${SLUG}/index.html"

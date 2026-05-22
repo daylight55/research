@@ -167,7 +167,7 @@ async function selectHero(file) {
 	const outputPath = path.join(IMAGE_DIR, `${slug}.jpg`)
 	await downloadImage(photo, outputPath)
 
-	const relativeHeroPath = path.posix.join('../../assets/images/hero', `${slug}.jpg`)
+	const relativeHeroPath = path.posix.join('../../src/assets/images/hero', `${slug}.jpg`)
 	const alt =
 		readScalar(raw, 'heroImageAlt') ||
 		photo.alt_description ||

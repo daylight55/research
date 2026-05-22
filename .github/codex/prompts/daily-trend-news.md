@@ -30,6 +30,8 @@ policy / technical decisions.
 - Keep the frontmatter fields from the News template, including
   `contentType: news`, `category: tech-news`, `rssSummary`, and
   `heroImageQuery`.
+- Keep the `NewsDigestSection` import from the News template and wrap the
+  politics, economy, and technology blocks with it.
 - Do not create a second copy under `category/<category-name>/<topic>/report.md`.
 - If support notes are useful, put them under
   `category/tech-news/daily-trends-<YYYY-MM-DD>/`, but keep the article body in
@@ -75,21 +77,35 @@ Use this structure:
    `YYYY-MM-DD ホットトレンド: 政治・経済・技術`
 2. Opening summary:
    - one short paragraph explaining the day / window and the overall signal
-3. `## 政治`
-   - five numbered items with headings `### 政治 1.` through `### 政治 5.`
-4. `## 経済`
-   - five numbered items with headings `### 経済 1.` through `### 経済 5.`
-5. `## 技術`
-   - five numbered items with headings `### 技術 1.` through `### 技術 5.`
-6. `## 横断的な見立て`
+3. `<NewsDigestSection tone='politics'>`
+   - wrap the complete politics block in this component so the rendered page
+     shows the category range with a politics background
+4. `## 政治`
+   - five items with concise `### <TOPIC_TITLE>` headings
+5. `</NewsDigestSection>`
+6. `<NewsDigestSection tone='economy'>`
+   - wrap the complete economy block in this component so the rendered page
+     shows the category range with an economy background
+7. `## 経済`
+   - five items with concise `### <TOPIC_TITLE>` headings
+8. `</NewsDigestSection>`
+9. `<NewsDigestSection tone='technology'>`
+   - wrap the complete technology block in this component so the rendered page
+     shows the category range with a technology background
+10. `## 技術`
+   - five items with concise `### <TOPIC_TITLE>` headings
+11. `</NewsDigestSection>`
+12. `## 横断的な見立て`
    - three to five bullets connecting categories and explaining why the set of
      topics matters
-7. `## 追跡すべき未確定事項`
+13. `## 追跡すべき未確定事項`
    - practical follow-up points for the next daily run
 
 For each of the fifteen topic items, include:
 
 - a concise heading
+- do not prefix topic headings with category names or numbers such as
+  `政治 1.`, `経済 2.`, or `技術 3.`
 - `何が起きたか`
 - `なぜ重要か`
 - `実務への含意`

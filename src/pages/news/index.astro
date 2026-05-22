@@ -1,7 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout'
 import TitlePage from '@/components/TitlePage'
-import { getNewsPosts, withBase } from '@/utils'
+import {
+	cn,
+	getCategoryAccentClass,
+	getCategorySurfaceClass,
+	getNewsPosts,
+	withBase
+} from '@/utils'
 import { Image } from 'astro:assets'
 
 const newsPosts = await getNewsPosts()
@@ -26,7 +32,10 @@ const newsPosts = await getNewsPosts()
 				{newsPosts.map((post) => (
 					<a
 						href={withBase(`/post/${post.id}/`)}
-						class='group grid overflow-hidden rounded-md border border-black/10 bg-white/70 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:bg-white/10 dark:hover:border-white/30 sm:grid-cols-[10rem_1fr]'
+						class={cn(
+							'group grid overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 sm:grid-cols-[10rem_1fr]',
+							getCategorySurfaceClass(post.data.category)
+						)}
 					>
 						<div class='h-32 bg-gray-100 dark:bg-gray-900 sm:h-full'>
 							<Image
@@ -41,7 +50,14 @@ const newsPosts = await getNewsPosts()
 						<div class='grid gap-2 p-4'>
 							<div class='flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-semibold tracking-[0.14em] text-gray-500 dark:text-gray-400'>
 								<span>{post.data.pubDate.toLocaleDateString('ja-JP')}</span>
-								<span>{post.data.category}</span>
+								<span
+									class={cn(
+										'rounded-full border bg-white/55 px-2 py-0.5 tracking-[0.08em] dark:bg-black/15',
+										getCategoryAccentClass(post.data.category)
+									)}
+								>
+									{post.data.category}
+								</span>
 							</div>
 							<h2 class='line-clamp-2 text-lg font-semibold leading-7 text-gray-900 dark:text-gray-100'>
 								{post.data.title}

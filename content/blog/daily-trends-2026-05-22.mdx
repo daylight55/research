@@ -14,15 +14,18 @@ tags: ['news', 'politics', 'economy', 'technology']
 draft: false
 ---
 
+import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 
 # 2026-05-22 ホットトレンド: 政治・経済・技術
 
 この24〜48時間は、政治では米国のAI・金融規制と対中・対台の緊張が同時進行し、経済ではインフレ再燃と金利見通しの悪化が市場を揺らし、技術ではGoogle I/Oを軸にAIが「会話」から「実行」へ移る流れが一段と強まりました。全体としては、政策・市場・製品発表が相互に連動する局面です。
 
+<NewsDigestSection tone='politics'>
+
 ## 政治
 
-### 政治 1. トランプ政権、AI監督強化は延期
+### トランプ政権、AI監督強化は延期
 
 何が起きたか: Axios報道では、トランプ大統領がAIとサイバーセキュリティの監督を強める大統領令の署名を延期しました。支持層の一部でAIへの警戒感が高まり、政権内の調整が続いています。
 
@@ -37,7 +40,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	description='AIとサイバーセキュリティ監督を強める大統領令の延期を報じた元記事。'
 />
 
-### 政治 2. 米政権、金融犯罪対策を強化
+### 米政権、金融犯罪対策を強化
 
 何が起きたか: ホワイトハウスは、米金融システム内の不正資金移動やマネロン対策を強める大統領令の方針を示しました。銀行と非銀行の情報共有、監視強化が焦点です。
 
@@ -52,7 +55,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	description='不正資金移動や金融犯罪対策に関するホワイトハウスの発表。'
 />
 
-### 政治 3. スターマー首相、党内求心力低下
+### スターマー首相、党内求心力低下
 
 何が起きたか: APは、英国のキア・スターマー首相が地方選での大敗後、党内での求心力を失いつつあると報じました。本人は「仕事を続ける」と強調しています。
 
@@ -69,7 +72,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	imageAlt='英国議会と政治報道の関連画像'
 />
 
-### 政治 4. 台湾、防衛装備売却に慎重な期待
+### 台湾、防衛装備売却に慎重な期待
 
 何が起きたか: Reutersによると、台湾国防部は米国からの武器売却に慎重ながら期待を示しました。対米防衛協力は、台湾海峡の抑止を左右する継続論点です。
 
@@ -84,7 +87,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	description='台湾国防部が米国からの武器売却に慎重な期待を示したというReuters報道。'
 />
 
-### 政治 5. 中国、台湾問題を「最重要課題」と再主張
+### 中国、台湾問題を「最重要課題」と再主張
 
 何が起きたか: Reutersは、中国側が台湾を米中関係で最重要の論点と位置づけ、トランプ氏との接触後もその立場を崩していないと伝えました。首脳間の議論でも大きな突破口は見えていません。
 
@@ -99,9 +102,13 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	description='米中関係における台湾問題の位置づけを伝えるReuters Connectの記事。'
 />
 
+</NewsDigestSection>
+
+<NewsDigestSection tone='economy'>
+
 ## 経済
 
-### 経済 1. ノムラ、2026年のFRB利下げなしを予想
+### ノムラ、2026年のFRB利下げなしを予想
 
 何が起きたか: Reuters報道では、野村が米連邦準備理事会は2026年に利下げを実施しない可能性が高いとみています。インフレが再び強まり、政策当局のスタンスが慎重になっているためです。
 
@@ -116,7 +123,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	description='インフレ再燃を背景に、野村が2026年のFRB利下げなしを見込むという報道。'
 />
 
-### 経済 2. FRB、決済口座の新枠組みを提案
+### FRB、決済口座の新枠組みを提案
 
 何が起きたか: 米連邦準備制度は、一定条件を満たす非銀行事業者向けに決済口座を開く新たな枠組みを提案しました。フィンテックや決済事業者のアクセス改善が論点です。
 
@@ -133,7 +140,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	imageAlt='Federal Reserveのソーシャル共有画像'
 />
 
-### 経済 3. 原油高、米イラン交渉の停滞で続く
+### 原油高、米イラン交渉の停滞で続く
 
 何が起きたか: Reutersは、米イランの和平・核交渉が進まず、原油価格が上昇基調にあると報じました。中東リスクが再び供給懸念として意識されています。
 
@@ -148,7 +155,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	description='米イラン交渉停滞を背景に原油価格が上昇したというエネルギー市場記事。'
 />
 
-### 経済 4. 米株、インフレ懸念で反落
+### 米株、インフレ懸念で反落
 
 何が起きたか: Reutersは、株式市場がインフレ再燃への懸念から下落したと伝えました。原油高が「長期高金利」のシナリオを補強しています。
 
@@ -165,7 +172,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	imageAlt='米株市場下落を伝える市場ニュース画像'
 />
 
-### 経済 5. 日本のPMI、景気減速と価格上昇圧力
+### 日本のPMI、景気減速と価格上昇圧力
 
 何が起きたか: S&P Globalの速報PMIでは、日本の景気拡大は鈍化し、サービス活動は横ばい気味でした。一方で販売価格の上昇圧力は強いままです。
 
@@ -180,9 +187,13 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	description='日本の景気拡大鈍化と価格上昇圧力を示すS&P GlobalのPMI速報。'
 />
 
+</NewsDigestSection>
+
+<NewsDigestSection tone='technology'>
+
 ## 技術
 
-### 技術 1. Gemini 3.5 Flashを投入
+### Gemini 3.5 Flashを投入
 
 何が起きたか: Google I/Oで、Googleは高速応答を重視したGemini 3.5 Flash系の更新を打ち出しました。低遅延と実用性を前面に出したモデル強化です。
 
@@ -199,7 +210,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	imageAlt='Google I/O 2026 developer highlightsの共有画像'
 />
 
-### 技術 2. Geminiアプリ、エージェント化を加速
+### Geminiアプリ、エージェント化を加速
 
 何が起きたか: GoogleはGeminiアプリを、受け身のチャットではなく、日次ブリーフや事前提案を返すエージェント型の体験へ広げました。
 
@@ -216,7 +227,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	imageAlt='Geminiの共有画像'
 />
 
-### 技術 3. SearchにAIエージェントと新検索ボックス
+### SearchにAIエージェントと新検索ボックス
 
 何が起きたか: Googleは検索体験にAIエージェント機能をさらに組み込み、検索ボックスの使い方そのものを更新しました。探すだけでなく、要約・比較・実行までを一体化する流れです。
 
@@ -233,7 +244,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	imageAlt='Google I/O 2026 collectionの共有画像'
 />
 
-### 技術 4. AntigravityとManaged Agentsで開発導線を再設計
+### AntigravityとManaged Agentsで開発導線を再設計
 
 何が起きたか: Googleは、開発者向けにAntigravity系のエージェント体験、Gemini APIのManaged Agents、AI StudioのAndroid向けワークフローを前面に出しました。
 
@@ -250,7 +261,7 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	imageAlt='Google I/O 2026 developer highlightsの共有画像'
 />
 
-### 技術 5. OpenAI、Dellと組みCodexをハイブリッド/オンプレへ
+### OpenAI、Dellと組みCodexをハイブリッド/オンプレへ
 
 何が起きたか: DellはOpenAIとの提携を通じ、Codexを含むAIワークロードを企業の既存環境やデータのある場所へ持ち込む方向を示しました。企業導入の現場最適がテーマです。
 
@@ -264,6 +275,8 @@ import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 	title='OpenAI and Dell bring Codex to enterprise'
 	description='Codexを企業のハイブリッド/オンプレミス環境へ広げるOpenAIとDellの提携発表。'
 />
+
+</NewsDigestSection>
 
 ## 横断的な見立て
 

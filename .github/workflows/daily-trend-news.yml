@@ -191,13 +191,30 @@ jobs:
             fi
           done
 
+          for tone in politics economy technology; do
+            if ! grep -qF "<NewsDigestSection tone='${tone}'>" "${ARTICLE_PATH}"; then
+              echo "::error::Generated article is missing NewsDigestSection wrapper: ${tone}"
+              exit 1
+            fi
+          done
+
           for category in 政治 経済 技術; do
-            count="$(grep -cE "^###[[:space:]]+${category}[[:space:]]+[1-5]\\." "${ARTICLE_PATH}" || true)"
+            count="$(awk -v category="${category}" '
+              $0 == "## " category { in_section = 1; next }
+              in_section && /^## / { in_section = 0 }
+              in_section && /^###[[:space:]]+/ { count++ }
+              END { print count + 0 }
+            ' "${ARTICLE_PATH}")"
             if [[ "${count}" != "5" ]]; then
               echo "::error::Generated article must include exactly five ${category} topic headings."
               exit 1
             fi
           done
+
+          if grep -nE "^###[[:space:]]+(政治|経済|技術)[[:space:]]+[1-5]\\." "${ARTICLE_PATH}"; then
+            echo "::error::Topic headings must not include category-number prefixes."
+            exit 1
+          fi
 
           if grep -nE "TBD|TODO|未定|要確認|FIXME" "${ARTICLE_PATH}"; then
             echo "::error::Generated article contains unresolved placeholders."

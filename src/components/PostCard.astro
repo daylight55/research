@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets'
 import FormattedDate from '@/components/FormattedDate'
 import ArrowUp from '@/components/icons/ArrowUp'
-import { withBase } from '@/utils'
+import { cn, getCategorySurfaceClass, withBase } from '@/utils'
 
 const {
 	id,
@@ -13,7 +13,12 @@ const {
 } = Astro.props
 ---
 
-<article class='grid grid-rows-[auto_1fr] min-h-full group'>
+<article
+	class={cn(
+		'grid min-h-full grid-rows-[auto_1fr] rounded-md p-2 transition-colors group',
+		getCategorySurfaceClass(category)
+	)}
+>
 	<a class='relative block aspect-[16/9] overflow-hidden' href={withBase(`/post/${slug}/`)}>
 		<Image
 			src={heroImage}
@@ -35,7 +40,7 @@ const {
 					<span class='text-sm'> {readTime}</span>
 				</div>
 
-				<span class='pb-4'>{category}</span>
+				<span class='rounded-full border border-white/40 bg-white/20 px-2 py-0.5'>{category}</span>
 			</div>
 		</div>
 	</a>

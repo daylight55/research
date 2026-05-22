@@ -1,6 +1,7 @@
 export { sluglify, unsluglify } from './sluglify'
 export { cn } from './cn'
 export { withBase, withoutBase } from './basePath'
+export { getCategoryAccentClass, getCategorySurfaceClass } from './categoryStyles'
 export {
 	getCategories,
 	getPosts,

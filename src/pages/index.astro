@@ -16,7 +16,7 @@ import { siteConfig } from '@/site-config'
 import { Image } from 'astro:assets'
 
 const latestNewsPosts = await getNewsPosts(12)
-const reportPosts = await getReportPosts()
+const reportPosts = await getReportPosts(6)
 ---
 
 <BaseLayout title='Home'>

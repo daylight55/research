@@ -273,7 +273,13 @@ jobs:
           git switch -c "${branch}"
           git add -A
           git commit -m "Add daily research report"
-          git push origin "${branch}"
+          gh api \
+            --method POST \
+            "repos/${GITHUB_REPOSITORY}/git/refs" \
+            -f ref="refs/heads/${branch}" \
+            -f sha="${base_ref_oid}" \
+            >/dev/null
+          git push origin "HEAD:${branch}"
 
           daily_ci_end_epoch="$(date +%s)"
           daily_ci_end_iso="$(date -u +%Y-%m-%dT%H:%M:%SZ)"

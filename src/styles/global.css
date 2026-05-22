@@ -105,8 +105,8 @@ html.dark .mermaid-viewport {
 }
 
 .mermaid-viewport[data-diagram='timeline'] svg {
-	min-width: 96rem;
-	width: max(96rem, var(--mermaid-intrinsic-width, 96rem));
+	min-width: min(42rem, 100%);
+	width: min(var(--mermaid-intrinsic-width, 56rem), 56rem);
 }
 :root {
 	--accent: #3457d5;

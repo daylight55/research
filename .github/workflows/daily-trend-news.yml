@@ -289,7 +289,8 @@ jobs:
         id: create_pr
         shell: bash
         env:
-          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
+          GH_TOKEN: ${{ github.token }}
+          PR_GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           REPORT_DATE: ${{ steps.run_context.outputs.report_date }}
           SLUG: ${{ steps.run_context.outputs.slug }}
         run: |
@@ -352,12 +353,12 @@ jobs:
             echo "- Build and route verification were performed by this workflow after restoring the repository Node.js version."
           } > "${pr_body}"
 
-          pr_url="$(gh pr create \
+          pr_url="$(GH_TOKEN="${PR_GH_TOKEN}" gh pr create \
             --title "Daily trend news: ${REPORT_DATE}" \
             --body-file "${pr_body}" \
             --base main \
             --head "${branch}")"
-          pr_number="$(gh pr view "${pr_url}" --json number --jq '.number')"
+          pr_number="$(GH_TOKEN="${PR_GH_TOKEN}" gh pr view "${pr_url}" --json number --jq '.number')"
 
           {
             echo "pr_url=${pr_url}"

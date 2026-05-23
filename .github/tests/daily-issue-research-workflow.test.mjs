@@ -42,8 +42,8 @@ assert.match(
 
 assert.match(
 	workflow,
-	/- name: Create research pull request[\s\S]*?GH_TOKEN: \$\{\{ steps\.research_app_token\.outputs\.token \}\}/,
-	'Daily Issue Research should create PRs with the GitHub App token, not GITHUB_TOKEN',
+	/- name: Create research pull request[\s\S]*?GH_TOKEN: \$\{\{ github\.token \}\}[\s\S]*?PR_GH_TOKEN: \$\{\{ steps\.research_app_token\.outputs\.token \}\}[\s\S]*?GH_TOKEN="\$\{PR_GH_TOKEN\}" gh pr create/,
+	'Daily Issue Research should push refs with GITHUB_TOKEN and create PRs with the GitHub App token',
 )
 
 assert.match(
@@ -54,6 +54,6 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
-	/- name: Create trend news pull request[\s\S]*?GH_TOKEN: \$\{\{ steps\.research_app_token\.outputs\.token \}\}/,
-	'Daily Trend News should create PRs with the GitHub App token, not GITHUB_TOKEN',
+	/- name: Create trend news pull request[\s\S]*?GH_TOKEN: \$\{\{ github\.token \}\}[\s\S]*?PR_GH_TOKEN: \$\{\{ steps\.research_app_token\.outputs\.token \}\}[\s\S]*?GH_TOKEN="\$\{PR_GH_TOKEN\}" gh pr create/,
+	'Daily Trend News should push refs with GITHUB_TOKEN and create PRs with the GitHub App token',
 )

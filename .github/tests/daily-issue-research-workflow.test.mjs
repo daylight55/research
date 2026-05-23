@@ -47,6 +47,18 @@ assert.match(
 )
 
 assert.match(
+	workflow,
+	/- name: Merge completed research pull request[\s\S]*?if: steps\.create_pr\.outputs\.pr_url != ''/,
+	'Daily Issue Research should merge created research PRs without requiring an opt-in label',
+)
+
+assert.doesNotMatch(
+	workflow,
+	/auto_merge_allowed|daily-research-auto-merge|AUTO_MERGE_LABEL/,
+	'Daily Issue Research should not gate auto-merge on an issue label',
+)
+
+assert.match(
 	trendWorkflow,
 	/- name: Create research repository token[\s\S]*?id: research_app_token[\s\S]*?uses: actions\/create-github-app-token@v3[\s\S]*?repositories: \$\{\{ env\.RESEARCH_REPOSITORY \}\}/,
 	'Daily Trend News should create a GitHub App installation token for the research repository',
@@ -56,6 +68,18 @@ assert.match(
 	trendWorkflow,
 	/- name: Create trend news pull request[\s\S]*?GH_TOKEN: \$\{\{ github\.token \}\}[\s\S]*?PR_GH_TOKEN: \$\{\{ steps\.research_app_token\.outputs\.token \}\}[\s\S]*?GH_TOKEN="\$\{PR_GH_TOKEN\}" gh pr create/,
 	'Daily Trend News should push refs with GITHUB_TOKEN and create PRs with the GitHub App token',
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Create trend news pull request[\s\S]*?echo "base_ref_oid=\$\{base_ref_oid\}"/,
+	'Daily Trend News should record the base ref used before generating the merge PR',
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Merge completed trend news pull request[\s\S]*?if: steps\.create_pr\.outputs\.pr_url != ''[\s\S]*?--match-head-commit "\$\{head_ref_oid\}"/,
+	'Daily Trend News should merge created trend PRs in the same workflow run',
 )
 
 assert.match(

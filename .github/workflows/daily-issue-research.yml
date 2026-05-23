@@ -25,7 +25,6 @@ env:
   RESEARCH_REPOSITORY: research
   RESEARCH_QUEUE_REPOSITORY: daylight55/research-queue
   RESEARCH_READY_LABEL: daily-research
-  AUTO_MERGE_LABEL: daily-research-auto-merge
   RESEARCH_QUEUE_APP_ID: ${{ secrets.RESEARCH_QUEUE_APP_ID }}
   RESEARCH_QUEUE_APP_PRIVATE_KEY: ${{ secrets.RESEARCH_QUEUE_APP_PRIVATE_KEY }}
 
@@ -85,7 +84,6 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.inputs.issue_number || '' }}
           RESEARCH_QUEUE_REPOSITORY: ${{ env.RESEARCH_QUEUE_REPOSITORY }}
           RESEARCH_READY_LABEL: ${{ env.RESEARCH_READY_LABEL }}
-          AUTO_MERGE_LABEL: ${{ env.AUTO_MERGE_LABEL }}
         run: |
           set -euo pipefail
 
@@ -120,14 +118,9 @@ jobs:
           issue_number="$(jq -r '.number' .github/codex/runtime/selected-issue.json)"
           issue_title="$(jq -r '.title' .github/codex/runtime/selected-issue.json)"
 
-          echo "issue_found=true" >> "${GITHUB_OUTPUT}"
-          echo "issue_number=${issue_number}" >> "${GITHUB_OUTPUT}"
-          if jq -e --arg auto_merge_label "${AUTO_MERGE_LABEL}" '[.labels[].name] | index($auto_merge_label)' .github/codex/runtime/selected-issue.json >/dev/null; then
-            echo "auto_merge_allowed=true" >> "${GITHUB_OUTPUT}"
-          else
-            echo "auto_merge_allowed=false" >> "${GITHUB_OUTPUT}"
-          fi
           {
+            echo "issue_found=true"
+            echo "issue_number=${issue_number}"
             echo "issue_title<<EOF"
             echo "${issue_title}"
             echo "EOF"
@@ -435,7 +428,7 @@ jobs:
             --body "Daily Codex research PR opened: ${PR_URL}"
 
       - name: Merge completed research pull request
-        if: steps.create_pr.outputs.pr_url != '' && steps.select_issue.outputs.auto_merge_allowed == 'true'
+        if: steps.create_pr.outputs.pr_url != ''
         id: merge_pr
         shell: bash
         env:

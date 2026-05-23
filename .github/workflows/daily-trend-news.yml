@@ -88,6 +88,12 @@ jobs:
 
           slug="daily-trends-${report_date}"
           article_path="content/blog/${slug}.mdx"
+          topic_hint_hash=""
+          cache_key="daily-trend-news-${report_date}"
+          if [[ -n "${TOPIC_HINT}" ]]; then
+            topic_hint_hash="$(printf '%s' "${TOPIC_HINT}" | sha256sum | cut -d' ' -f1 | cut -c1-12)"
+            cache_key="${cache_key}-${topic_hint_hash}"
+          fi
 
           if [[ -e "${article_path}" ]]; then
             echo "::error::News article already exists for ${report_date}: ${article_path}"
@@ -98,6 +104,7 @@ jobs:
             echo "report_date=${report_date}"
             echo "slug=${slug}"
             echo "article_path=${article_path}"
+            echo "cache_key=${cache_key}"
           } >> "${GITHUB_OUTPUT}"
 
           cp .github/codex/prompts/daily-trend-news.md .github/codex/runtime/daily-trend-news-prompt.md
@@ -131,13 +138,30 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Restore cached generated news article
+        id: restore_generated_news_article
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ runner.temp }}/generated-news-article-cache
+          key: ${{ steps.run_context.outputs.cache_key }}
+
+      - name: Apply cached generated news article
+        if: steps.restore_generated_news_article.outputs.cache-hit == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          tar -xzf "${RUNNER_TEMP}/generated-news-article-cache/generated-news-article.tar.gz" -C .
+
       - name: Record OpenAI usage window
+        if: steps.restore_generated_news_article.outputs.cache-hit != 'true'
         id: openai_usage_window
         shell: bash
         run: |
           echo "start_time=$(date +%s)" >> "${GITHUB_OUTPUT}"
 
       - name: Run Codex trend news research
+        if: steps.restore_generated_news_article.outputs.cache-hit != 'true'
         id: run_codex
         uses: openai/codex-action@v1
         with:
@@ -157,7 +181,7 @@ jobs:
           cache: pnpm
 
       - name: Estimate OpenAI usage cost
-        if: always()
+        if: always() && steps.restore_generated_news_article.outputs.cache-hit != 'true'
         continue-on-error: true
         id: openai_usage_cost
         shell: bash
@@ -256,7 +280,7 @@ jobs:
           fi
 
       - name: Select Unsplash hero images
-        if: steps.diff_check.outputs.has_changes == 'true'
+        if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_news_article.outputs.cache-hit != 'true'
         env:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: node .github/scripts/select-unsplash-hero.mjs
@@ -284,6 +308,26 @@ jobs:
             "dist/news/rss.xml" \
             "dist/post/${SLUG}/index.html"
 
+      - name: Create generated news article cache archive
+        if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_news_article.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p "${RUNNER_TEMP}/generated-news-article-cache"
+          generated_files="${RUNNER_TEMP}/generated-news-files.txt"
+          git ls-files --modified --others --exclude-standard -z \
+            > "${generated_files}"
+          tar --null -czf "${RUNNER_TEMP}/generated-news-article-cache/generated-news-article.tar.gz" \
+            --files-from "${generated_files}"
+
+      - name: Save generated news article cache
+        if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_news_article.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ runner.temp }}/generated-news-article-cache
+          key: ${{ steps.run_context.outputs.cache_key }}
+
       - name: Create trend news pull request
         if: steps.diff_check.outputs.has_changes == 'true'
         id: create_pr
@@ -293,6 +337,7 @@ jobs:
           PR_GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           REPORT_DATE: ${{ steps.run_context.outputs.report_date }}
           SLUG: ${{ steps.run_context.outputs.slug }}
+          GENERATED_NEWS_ARTICLE_CACHE_HIT: ${{ steps.restore_generated_news_article.outputs.cache-hit }}
         run: |
           set -euo pipefail
 
@@ -351,6 +396,9 @@ jobs:
             echo "## 備考"
             echo
             echo "- Build and route verification were performed by this workflow after restoring the repository Node.js version."
+            if [[ "${GENERATED_NEWS_ARTICLE_CACHE_HIT}" == "true" ]]; then
+              echo "- Generated news article artifacts were restored from the date cache, so Codex generation was skipped."
+            fi
           } > "${pr_body}"
 
           pr_url="$(GH_TOKEN="${PR_GH_TOKEN}" gh pr create \

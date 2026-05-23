@@ -311,7 +311,8 @@ jobs:
         id: create_pr
         shell: bash
         env:
-          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
+          GH_TOKEN: ${{ github.token }}
+          PR_GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
           ISSUE_TITLE: ${{ steps.select_issue.outputs.issue_title }}
           CODEX_FINAL_MESSAGE: ${{ steps.run_codex.outputs.final-message }}
@@ -365,12 +366,12 @@ jobs:
             fi
           } > "${pr_body}"
 
-          pr_url="$(gh pr create \
+          pr_url="$(GH_TOKEN="${PR_GH_TOKEN}" gh pr create \
             --title "Daily research: ${ISSUE_TITLE}" \
             --body-file "${pr_body}" \
             --base main \
             --head "${branch}")"
-          pr_number="$(gh pr view "${pr_url}" --json number --jq '.number')"
+          pr_number="$(GH_TOKEN="${PR_GH_TOKEN}" gh pr view "${pr_url}" --json number --jq '.number')"
 
           {
             echo "pr_url=${pr_url}"

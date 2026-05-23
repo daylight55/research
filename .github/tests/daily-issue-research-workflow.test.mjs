@@ -102,6 +102,24 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
+	/import NewsSourceCard from '\.\.\/\.\.\/src\/components\/mdx\/NewsSourceCard\.astro'/,
+	'trend news workflow should require generated articles to import NewsSourceCard',
+)
+
+assert.match(
+	trendWorkflow,
+	/source_card_count="\$\(grep -cF "<NewsSourceCard" "\$\{ARTICLE_PATH\}" \|\| true\)"[\s\S]*?source_card_count < 15/,
+	'trend news workflow should require at least one NewsSourceCard source memo card per topic',
+)
+
+assert.match(
+	trendWorkflow,
+	/NewsSourceCard for source memos instead of plain 出典メモ: lines/,
+	'trend news workflow should reject plain source memo lines in News digests',
+)
+
+assert.match(
+	trendWorkflow,
 	/- name: Save generated news article cache[\s\S]*?uses: actions\/cache\/save@v4[\s\S]*?key: \$\{\{ steps\.run_context\.outputs\.cache_key \}\}/,
 	'trend news workflow should save completed generated news artifacts in the run cache',
 )

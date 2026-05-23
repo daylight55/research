@@ -22,6 +22,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
+  RESEARCH_REPOSITORY: research
   RESEARCH_QUEUE_REPOSITORY: daylight55/research-queue
   RESEARCH_READY_LABEL: daily-research
   AUTO_MERGE_LABEL: daily-research-auto-merge
@@ -64,6 +65,16 @@ jobs:
           private-key: ${{ env.RESEARCH_QUEUE_APP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
           repositories: research-queue
+
+      - name: Create research repository token
+        if: steps.queue_app_config.outputs.configured == 'true'
+        id: research_app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ env.RESEARCH_QUEUE_APP_ID }}
+          private-key: ${{ env.RESEARCH_QUEUE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ env.RESEARCH_REPOSITORY }}
 
       - name: Select research issue
         if: steps.queue_app_config.outputs.configured == 'true'
@@ -301,6 +312,7 @@ jobs:
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+          PR_GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
           ISSUE_TITLE: ${{ steps.select_issue.outputs.issue_title }}
           CODEX_FINAL_MESSAGE: ${{ steps.run_codex.outputs.final-message }}
@@ -354,12 +366,12 @@ jobs:
             fi
           } > "${pr_body}"
 
-          pr_url="$(gh pr create \
+          pr_url="$(GH_TOKEN="${PR_GH_TOKEN}" gh pr create \
             --title "Daily research: ${ISSUE_TITLE}" \
             --body-file "${pr_body}" \
             --base main \
             --head "${branch}")"
-          pr_number="$(gh pr view "${pr_url}" --json number --jq '.number')"
+          pr_number="$(GH_TOKEN="${PR_GH_TOKEN}" gh pr view "${pr_url}" --json number --jq '.number')"
 
           {
             echo "pr_url=${pr_url}"
@@ -372,7 +384,7 @@ jobs:
         if: steps.create_pr.outputs.pr_url != ''
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           PR_URL: ${{ steps.create_pr.outputs.pr_url }}
           OPENAI_USAGE_COMMENT: ${{ steps.openai_usage_cost.outputs.comment_path }}
         run: |
@@ -386,7 +398,7 @@ jobs:
         if: steps.create_pr.outputs.pr_url != ''
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
           PREVIEW_BRANCH: ${{ steps.create_pr.outputs.branch }}
         run: |
@@ -427,7 +439,7 @@ jobs:
         id: merge_pr
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
           ISSUE_NUMBER: ${{ steps.select_issue.outputs.issue_number }}
           ISSUE_TITLE: ${{ steps.select_issue.outputs.issue_title }}
@@ -506,7 +518,7 @@ jobs:
         id: dispatch_production_deploy
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
         run: |
           set -euo pipefail
 
@@ -541,7 +553,7 @@ jobs:
         if: steps.dispatch_production_deploy.outputs.deploy_run_id != ''
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           DEPLOY_RUN_ID: ${{ steps.dispatch_production_deploy.outputs.deploy_run_id }}
         run: |
           set -euo pipefail

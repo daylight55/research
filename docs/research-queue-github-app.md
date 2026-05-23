@@ -1,7 +1,11 @@
 # Private Research Queue GitHub App
 
-`daylight55/research` reads research topics from the private
-`daylight55/research-queue` repository.
+`daylight55/research` uses a private GitHub App for two automated surfaces:
+
+- reading and updating research topics from the private
+  `daylight55/research-queue` repository
+- creating, commenting on, dispatching previews for, and optionally merging
+  generated PRs in `daylight55/research`
 
 ## Queue repository
 
@@ -16,12 +20,17 @@ automatically.
 
 ## GitHub App permissions
 
-Create a private GitHub App owned by `daylight55` and install it only on
-`daylight55/research-queue`.
+Create a private GitHub App owned by `daylight55` and install it on:
+
+- `daylight55/research`
+- `daylight55/research-queue`
 
 Required repository permissions:
 
 - Metadata: read
+- Contents: read and write
+- Pull requests: read and write
+- Actions: read and write
 - Issues: read and write
 
 No webhook is required.

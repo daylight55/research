@@ -25,6 +25,9 @@ concurrency:
   cancel-in-progress: false
 
 env:
+  RESEARCH_REPOSITORY: research
+  RESEARCH_QUEUE_APP_ID: ${{ secrets.RESEARCH_QUEUE_APP_ID }}
+  RESEARCH_QUEUE_APP_PRIVATE_KEY: ${{ secrets.RESEARCH_QUEUE_APP_PRIVATE_KEY }}
   NEWS_CATEGORY: tech-news
   OPENAI_MODEL: gpt-5.4-mini
 
@@ -40,6 +43,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Check research app configuration
+        id: research_app_config
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${RESEARCH_QUEUE_APP_ID}" || -z "${RESEARCH_QUEUE_APP_PRIVATE_KEY}" ]]; then
+            echo "::error::Research GitHub App secrets are not configured. Set RESEARCH_QUEUE_APP_ID and RESEARCH_QUEUE_APP_PRIVATE_KEY before creating daily trend PRs."
+            exit 1
+          fi
+
+      - name: Create research repository token
+        id: research_app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ env.RESEARCH_QUEUE_APP_ID }}
+          private-key: ${{ env.RESEARCH_QUEUE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ env.RESEARCH_REPOSITORY }}
 
       - name: Prepare run context
         id: run_context
@@ -311,6 +334,7 @@ jobs:
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+          PR_GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           REPORT_DATE: ${{ steps.run_context.outputs.report_date }}
           SLUG: ${{ steps.run_context.outputs.slug }}
           GENERATED_NEWS_ARTICLE_CACHE_HIT: ${{ steps.restore_generated_news_article.outputs.cache-hit }}
@@ -377,12 +401,12 @@ jobs:
             fi
           } > "${pr_body}"
 
-          pr_url="$(gh pr create \
+          pr_url="$(GH_TOKEN="${PR_GH_TOKEN}" gh pr create \
             --title "Daily trend news: ${REPORT_DATE}" \
             --body-file "${pr_body}" \
             --base main \
             --head "${branch}")"
-          pr_number="$(gh pr view "${pr_url}" --json number --jq '.number')"
+          pr_number="$(GH_TOKEN="${PR_GH_TOKEN}" gh pr view "${pr_url}" --json number --jq '.number')"
 
           {
             echo "pr_url=${pr_url}"
@@ -394,7 +418,7 @@ jobs:
         if: steps.create_pr.outputs.pr_url != ''
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
           PREVIEW_BRANCH: ${{ steps.create_pr.outputs.branch }}
         run: |
@@ -410,7 +434,7 @@ jobs:
         if: steps.create_pr.outputs.pr_url != ''
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           PR_URL: ${{ steps.create_pr.outputs.pr_url }}
           OPENAI_USAGE_COMMENT: ${{ steps.openai_usage_cost.outputs.comment_path }}
         run: |

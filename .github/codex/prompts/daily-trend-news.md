@@ -30,8 +30,12 @@ policy / technical decisions.
 - Keep the frontmatter fields from the News template, including
   `contentType: news`, `category: tech-news`, `rssSummary`, and
   `heroImageQuery`.
-- Keep the `NewsDigestSection` import from the News template and wrap the
-  politics, economy, and technology blocks with it.
+- Keep the `NewsDigestSection` and `NewsSourceCard` imports from the News
+  template.
+- Wrap the politics, economy, and technology blocks with `NewsDigestSection`.
+- For each individual topic, render source attribution with a `NewsSourceCard`
+  immediately after the `何が起きたか` / `なぜ重要か` / `実務への含意`
+  paragraphs. Do not leave a plain `出典メモ:` text line in News digests.
 - Do not create a second copy under `category/<category-name>/<topic>/report.md`.
 - If support notes are useful, put them under
   `category/tech-news/daily-trends-<YYYY-MM-DD>/`, but keep the article body in
@@ -63,7 +67,10 @@ policy / technical decisions.
   - international organizations and statistical agencies
   - reputable news wires or specialist outlets when primary sources are not yet
     available
-- Place source links near the supported claims using `出典メモ:`.
+- Place source links near the supported claims.
+- In News digests, implement that near-claim source note as an embedded
+  `NewsSourceCard`, not as a plain Markdown sentence. Use the component title
+  and description to summarize what the source supports.
 - Clearly label uncertain, fast-moving, or inferred points.
 - Avoid long verbatim quotations.
 
@@ -109,7 +116,30 @@ For each of the fifteen topic items, include:
 - `何が起きたか`
 - `なぜ重要か`
 - `実務への含意`
-- `出典メモ:`
+- one `NewsSourceCard` source memo card
+
+Use this component shape after each topic item:
+
+```mdx
+<NewsSourceCard
+	href='<SOURCE_URL>'
+	source='<SOURCE_NAME>'
+	title='<SOURCE_TITLE>'
+	description='<ONE_SENTENCE_SOURCE_MEMO>'
+	imageUrl='<OPTIONAL_IMAGE_URL>'
+	imageAlt='<OPTIONAL_IMAGE_ALT>'
+/>
+```
+
+Rules for source memo cards:
+
+- Include at least one `NewsSourceCard` for each of the fifteen topics.
+- `href`, `source`, `title`, and `description` are required.
+- `imageUrl` and `imageAlt` are optional; omit them when no reliable image is
+  available.
+- Prefer the source that directly supports the topic's most important factual
+  claim.
+- Do not replace cards with a bare `出典メモ:` paragraph.
 
 ## Scope Control
 
@@ -125,6 +155,8 @@ For each of the fifteen topic items, include:
 Run focused verification before finishing:
 
 - Check generated Markdown / MDX for unresolved placeholders.
+- Confirm the article imports `NewsSourceCard` and contains at least fifteen
+  `<NewsSourceCard ... />` blocks.
 - Run `git diff --check`.
 - Do not run `pnpm build` inside the Codex action step. The workflow restores
   the repository Node.js version and runs the build after Codex finishes.

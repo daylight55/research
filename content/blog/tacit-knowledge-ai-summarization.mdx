@@ -26,7 +26,7 @@ draft: false
 3. 要約は情報量だけでなく、例外、優先順位、判断の手がかり、責任の所在を削ることで歪みを生む。
 4. 実務では、AI に「一次整理」をさせ、人間が「意味づけ・検証・責任引き受け」を担う二段構えが最も安全である。
 
-出典メモ: Polanyi の暗黙知は University of Chicago Press の [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html) と Polanyi Society の [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) で確認できる。SECI は Nonaka & Takeuchi の [The Knowledge-Creating Company](https://hbr.org/1991/11/the-knowledge-creating-company-2) と書籍版の [Google Books 項目](https://books.google.com/books/about/The_Knowledge_Creating_Company.html?id=pSHhzwEACAAJ) が一次情報の入口になる。LLM の限界は、テキストだけの学習に対する grounding 批判を示す [Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf) と、言語モデルの規模拡大と汎用性を示す [Brown et al.](https://arxiv.org/abs/2005.14165) を並べて読むと位置づけやすい。
+<SourceNote>Polanyi の暗黙知は University of Chicago Press の [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html) と Polanyi Society の [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) で確認できる。SECI は Nonaka & Takeuchi の [The Knowledge-Creating Company](https://hbr.org/1991/11/the-knowledge-creating-company-2) と書籍版の [Google Books 項目](https://books.google.com/books/about/The_Knowledge_Creating_Company.html?id=pSHhzwEACAAJ) が一次情報の入口になる。LLM の限界は、テキストだけの学習に対する grounding 批判を示す [Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf) と、言語モデルの規模拡大と汎用性を示す [Brown et al.](https://arxiv.org/abs/2005.14165) を並べて読むと位置づけやすい。</SourceNote>
 
 ```mermaid
 flowchart LR
@@ -50,11 +50,11 @@ flowchart LR
 
 Polanyi の重要点は、「私たちは言葉にできる以上のことを知っている」というだけではない。より重要なのは、知ることが `from-to` の統合であり、焦点化された対象を支える周辺的な気づきがある、という構造である。したがって、暗黙知を完全な文章に変換できないことは失敗ではなく、知識の構造そのものに属する。
 
-出典メモ: Polanyi の `subsidiary awareness` と `focal awareness` は [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) に整理がある。『暗黙知』の代表的な命題 "we can know more than we can tell" は [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html) の紹介文でも確認できる。
+<SourceNote>Polanyi の `subsidiary awareness` と `focal awareness` は [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) に整理がある。『暗黙知』の代表的な命題 "we can know more than we can tell" は [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html) の紹介文でも確認できる。</SourceNote>
 
 Nonaka & Takeuchi の SECI は、暗黙知と形式知が `社会化` `外化` `連結` `内面化` を通じて螺旋的に循環する、という組織知識創造のモデルである。ここで注意すべきなのは、SECI は「全部を文書化できる」という約束ではなく、知識移転の設計図であることだ。AI はこの設計図の一部を高速化できるが、現場の身体的学習そのものを置き換えるわけではない。
 
-出典メモ: SECI の基本説明は [HBR の原文](https://hbr.org/1991/11/the-knowledge-creating-company-2) と [Google Books の書誌項目](https://books.google.com/books/about/The_Knowledge_Creating_Company.html?id=pSHhzwEACAAJ) を起点にたどれる。ここでの「設計図」という表現は、公表文献からの実務上の解釈である。
+<SourceNote>SECI の基本説明は [HBR の原文](https://hbr.org/1991/11/the-knowledge-creating-company-2) と [Google Books の書誌項目](https://books.google.com/books/about/The_Knowledge_Creating_Company.html?id=pSHhzwEACAAJ) を起点にたどれる。ここでの「設計図」という表現は、公表文献からの実務上の解釈である。</SourceNote>
 
 ## 3. LLM が暗黙知を扱える範囲
 
@@ -68,13 +68,13 @@ LLM は、文章の中に既に表れているパターンを強く扱える。�
 
 翻訳と要約は、暗黙知を明示化する入口として有効だが、同時に危険でもある。なぜなら、要約は必ず `選択` だからである。モデルは文脈の中から目立つ語を残し、低頻度だが重要な注記を落としやすい。特に、例外条件、保留、迷い、失敗事例、現場特有の比喩は、要約で真っ先に平板化される。これは公表研究と実務観察からの推定である。
 
-出典メモ: LLM の事実性・忠実性の問題は、幻覚や不忠実な要約を扱う [survey](https://arxiv.org/abs/2311.05232) と、要約の品質が参照文書との整合に依存する後続研究で整理されている。ここでの「平板化」は、これらの研究を踏まえた実務上の推定であり、単一論文の直接主張ではない。
+<SourceNote>LLM の事実性・忠実性の問題は、幻覚や不忠実な要約を扱う [survey](https://arxiv.org/abs/2311.05232) と、要約の品質が参照文書との整合に依存する後続研究で整理されている。ここでの「平板化」は、これらの研究を踏まえた実務上の推定であり、単一論文の直接主張ではない。</SourceNote>
 
 ### 3.3 実務プロセスの観点
 
 知識移転は、文章を配るだけでは終わらない。実際には、師弟関係、レビュー、反復、失敗の共有、環境の違いへの適応が含まれる。LLM はこの流れのうち、収集・整形・検索・翻訳・分類の部分に強い。一方、現場での `見て覚える` `やってみて修正する` `文脈に応じて止める` は、人間のフィードバックが必要である。これはSECIの `社会化` と `内面化` が、テキスト処理だけでは完結しないことの言い換えでもある。
 
-出典メモ: この段落は、SECI の `社会化` と `内面化` を、Polanyi の暗黙知と Bender & Koller の grounding 問題をつないだ公表情報からの推定である。AI が補助できるのは主に `外化` と `連結` で、`共同化` と `内面化` は訓練・観察・身体化が残る。
+<SourceNote>この段落は、SECI の `社会化` と `内面化` を、Polanyi の暗黙知と Bender & Koller の grounding 問題をつないだ公表情報からの推定である。AI が補助できるのは主に `外化` と `連結` で、`共同化` と `内面化` は訓練・観察・身体化が残る。</SourceNote>
 
 ## 4. 要約で何が失われるか
 
@@ -100,7 +100,7 @@ flowchart TB
 
 この図で重要なのは、失われるのが「詳細」だけではないことだ。詳細の中には、例外条件、判断のしきい値、責任の線引きが含まれる。したがって、AI要約の失敗は情報欠落ではなく、実務制御の欠落として現れる。これは公表文献からの推定である。
 
-出典メモ: Polanyi の `from-to` 構造は [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) にある。LLM が事実性や忠実性で失敗しうる点は [hallucination survey](https://arxiv.org/abs/2311.05232) が整理している。要約の具体的な失敗モードは、faithfulness と factuality を扱う [On Faithfulness and Factuality in Abstractive Summarization](https://aclanthology.org/2020.acl-main.173/) や [A Survey of Hallucination in Natural Language Generation](https://arxiv.org/abs/2311.05232) を合わせて読むと把握しやすい。
+<SourceNote>Polanyi の `from-to` 構造は [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) にある。LLM が事実性や忠実性で失敗しうる点は [hallucination survey](https://arxiv.org/abs/2311.05232) が整理している。要約の具体的な失敗モードは、faithfulness と factuality を扱う [On Faithfulness and Factuality in Abstractive Summarization](https://aclanthology.org/2020.acl-main.173/) や [A Survey of Hallucination in Natural Language Generation](https://arxiv.org/abs/2311.05232) を合わせて読むと把握しやすい。</SourceNote>
 
 ## 5. SECI と AI の相性
 
@@ -113,7 +113,7 @@ flowchart TB
 
 この表は、SECI の理論をそのまま AI に当てはめたものではない。むしろ、AI を使うときの安全な役割分担を示した実務上の推定である。AI は暗黙知の抽出器というより、`外化` と `連結` を高速化する編集補助と見る方が筋がよい。
 
-出典メモ: SECI の基本構造は [HBR](https://hbr.org/1991/11/the-knowledge-creating-company-2) に依拠する。AI との相性は、Polanyi の暗黙知論と LLM の grounding / fidelity 制約を合わせた公表情報からの推定である。
+<SourceNote>SECI の基本構造は [HBR](https://hbr.org/1991/11/the-knowledge-creating-company-2) に依拠する。AI との相性は、Polanyi の暗黙知論と LLM の grounding / fidelity 制約を合わせた公表情報からの推定である。</SourceNote>
 
 ## 6. 実務指針
 
@@ -143,7 +143,7 @@ flowchart TB
 | 責任者         | 最終判断を誰が引き受けたか   |
 | 更新日         | いつ再点検するか             |
 
-出典メモ: 以上は Polanyi の暗黙知論と Nonaka の SECI を、実務の知識管理に落とした整理である。AI 要約や翻訳の忠実性に関する懸念は [hallucination survey](https://arxiv.org/abs/2311.05232) と [Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf) を参照するとよい。
+<SourceNote>以上は Polanyi の暗黙知論と Nonaka の SECI を、実務の知識管理に落とした整理である。AI 要約や翻訳の忠実性に関する懸念は [hallucination survey](https://arxiv.org/abs/2311.05232) と [Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf) を参照するとよい。</SourceNote>
 
 ## 7. リスク・限界
 
@@ -155,7 +155,7 @@ flowchart TB
 
 したがって、AI 活用の成否は `要約の長さ` ではなく、`例外を残せたか` `判断の根拠を残せたか` `現場で再現できたか` で測るべきである。
 
-出典メモ: 暗黙知の非還元性は [Polanyi Society](https://polanyisociety.org/mp-structure.htm) と [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html)。LLM の限界は [Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf)、有用性は [Brown et al.](https://arxiv.org/abs/2005.14165) に依拠する。ここでの `測るべき` は、これらの研究を踏まえた実務上の推定である。
+<SourceNote>暗黙知の非還元性は [Polanyi Society](https://polanyisociety.org/mp-structure.htm) と [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html)。LLM の限界は [Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf)、有用性は [Brown et al.](https://arxiv.org/abs/2005.14165) に依拠する。ここでの `測るべき` は、これらの研究を踏まえた実務上の推定である。</SourceNote>
 
 ## 8. 推奨方針
 
@@ -165,4 +165,4 @@ flowchart TB
 
 この方針なら、AI はナレッジ管理の補助輪として働くが、熟達や判断を無理に機械化することは避けられる。暗黙知を守りたいなら、要約を捨てるのではなく、要約を「一次資料に戻れる入口」にするのがよい。
 
-出典メモ: 以上は Polanyi の tacit knowing と SECI を、LLM の grounding / fidelity 制約に照らしてまとめた統合的な推定である。一次資料は [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html)、[The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm)、[The Knowledge-Creating Company](https://hbr.org/1991/11/the-knowledge-creating-company-2)、[Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf) を参照。
+<SourceNote>以上は Polanyi の tacit knowing と SECI を、LLM の grounding / fidelity 制約に照らしてまとめた統合的な推定である。一次資料は [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html)、[The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm)、[The Knowledge-Creating Company](https://hbr.org/1991/11/the-knowledge-creating-company-2)、[Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf) を参照。</SourceNote>

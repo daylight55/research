@@ -31,8 +31,9 @@ reading flow.
 
 ## What This Repository Does
 
-- Publishes articles from `articles/<slug>/index.mdx`.
-- Publishes research trails from `articles/<slug>/research-log.mdx` when present.
+- Publishes reports from `articles/report/<slug>/index.mdx`.
+- Publishes news digests from `articles/news/<slug>/index.mdx`.
+- Publishes research trails from `articles/<type>/<slug>/research-log.mdx` when present.
 - Builds the site with Astro.
 - Keeps category metadata in `src/data/categories.ts`.
 - Keeps generation prompts, templates, scripts, and workflow tests under `ops/`.
@@ -41,9 +42,14 @@ reading flow.
 
 ```text
 articles/
-  <slug>/
-    index.mdx
-    research-log.mdx
+  report/
+    <slug>/
+      index.mdx
+      research-log.mdx
+  news/
+    <slug>/
+      index.mdx
+      research-log.mdx
 src/
 public/
 ops/

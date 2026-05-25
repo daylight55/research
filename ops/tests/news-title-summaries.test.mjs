@@ -19,7 +19,7 @@ function readScalar(frontmatter, key) {
 }
 
 test('news article titles summarize the day after the date', () => {
-	const files = execFileSync('git', ['ls-files', 'content/blog/*.mdx'], { encoding: 'utf8' })
+	const files = execFileSync('git', ['ls-files', 'articles/news/*/index.mdx'], { encoding: 'utf8' })
 		.split('\n')
 		.map((line) => line.trim())
 		.filter(Boolean)

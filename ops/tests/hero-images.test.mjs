@@ -27,7 +27,7 @@ function canonicalPostKey(file) {
 }
 
 test('published blog entries use concrete non-duplicated hero images', () => {
-	const files = execFileSync('git', ['ls-files', 'articles/*/index.mdx'], { encoding: 'utf8' })
+	const files = execFileSync('git', ['ls-files', 'articles/*/*/index.mdx'], { encoding: 'utf8' })
 		.split('\n')
 		.map((line) => line.trim())
 		.filter(Boolean)

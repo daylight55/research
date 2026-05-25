@@ -87,7 +87,7 @@ jobs:
           fi
 
           slug="daily-trends-${report_date}"
-          article_path="articles/${slug}/index.mdx"
+          article_path="articles/news/${slug}/index.mdx"
           topic_hint_hash=""
           cache_key="daily-trend-news-${report_date}"
           if [[ -n "${TOPIC_HINT}" ]]; then
@@ -270,7 +270,7 @@ jobs:
             fi
           done
 
-          if ! grep -qF "import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'" "${ARTICLE_PATH}"; then
+          if ! grep -qF "import NewsSourceCard from '../../../src/components/mdx/NewsSourceCard.astro'" "${ARTICLE_PATH}"; then
             echo "::error::Generated article must import NewsSourceCard for embedded source memo cards."
             exit 1
           fi
@@ -442,7 +442,7 @@ jobs:
             echo
             echo "## 主な変更点"
             echo
-            echo "- \`articles/${SLUG}/index.mdx\` を追加。"
+            echo "- \`articles/news/${SLUG}/index.mdx\` を追加。"
             echo "- 必要に応じてUnsplash由来のヒーロー画像を追加。"
             echo
             echo "## 確認したこと"

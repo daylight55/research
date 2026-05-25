@@ -39,7 +39,12 @@ drivers, risks, and practical implications.
   Include `heroImageQuery` as a short English Unsplash search phrase for an
   informative landscape header image. Keep `heroImage` as the placeholder;
   automation will replace it with a downloaded local image when the query is
-  present.
+  present. Choose a specific query that differs from existing articles where
+  possible: use the report's key company, person, product, place, institution,
+  or event rather than broad stock-photo phrases. If Unsplash returns an image
+  that duplicates an existing article hero, the automation will retry with
+  alternate terms, so include multiple comma-separated candidate phrases when a
+  topic has several good visual anchors.
   Put the article body directly in the MDX file after frontmatter. Do not import
   `category/<category-name>/<topic>/report.md` into the MDX file, because
   imported Markdown headings are not exposed to Astro's article table of

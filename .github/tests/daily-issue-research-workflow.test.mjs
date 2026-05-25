@@ -119,6 +119,30 @@ assert.match(
 )
 
 assert.match(
+	workflow,
+	/- name: Verify unique hero images[\s\S]*?pnpm test:hero-images/,
+	'Daily Issue Research should verify all published hero images are concrete and unique after selecting Unsplash heroes',
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Verify unique hero images[\s\S]*?pnpm test:hero-images/,
+	'Daily Trend News should verify all published hero images are concrete and unique after selecting Unsplash heroes',
+)
+
+assert.match(
+	trendWorkflow,
+	/heroImageQuery.*generic news collage query/,
+	'trend news workflow should reject generic catch-image search phrases',
+)
+
+assert.match(
+	trendWorkflow,
+	/image_url_count="\$\(grep -cF "imageUrl=" "\$\{ARTICLE_PATH\}" \|\| true\)"[\s\S]*?image_url_count < 15/,
+	'trend news workflow should require imageUrl on each NewsSourceCard',
+)
+
+assert.match(
 	trendWorkflow,
 	/- name: Save generated news article cache[\s\S]*?uses: actions\/cache\/save@v4[\s\S]*?key: \$\{\{ steps\.run_context\.outputs\.cache_key \}\}/,
 	'trend news workflow should save completed generated news artifacts in the run cache',

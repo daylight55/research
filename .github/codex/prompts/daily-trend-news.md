@@ -30,6 +30,11 @@ policy / technical decisions.
 - Keep the frontmatter fields from the News template, including
   `contentType: news`, `category: tech-news`, `rssSummary`, and
   `heroImageQuery`.
+- Treat the News catch image as high priority. Set `heroImageQuery` to
+  person-, organization-, company-, location-, or event-specific English search
+  terms from the selected topics. Do not use generic phrases such as
+  `news collage`, `politics economy technology`, `global newsroom`, or
+  `data streams`.
 - Keep the `NewsDigestSection` and `NewsSourceCard` imports from the News
   template.
 - Wrap the politics, economy, and technology blocks with `NewsDigestSection`.
@@ -126,8 +131,8 @@ Use this component shape after each topic item:
 	source='<SOURCE_NAME>'
 	title='<SOURCE_TITLE>'
 	description='<ONE_SENTENCE_SOURCE_MEMO>'
-	imageUrl='<OPTIONAL_IMAGE_URL>'
-	imageAlt='<OPTIONAL_IMAGE_ALT>'
+	imageUrl='<SOURCE_ARTICLE_OR_PERSON_COMPANY_TOPIC_IMAGE_URL>'
+	imageAlt='<SOURCE_CARD_IMAGE_ALT_TEXT>'
 />
 ```
 
@@ -135,8 +140,13 @@ Rules for source memo cards:
 
 - Include at least one `NewsSourceCard` for each of the fifteen topics.
 - `href`, `source`, `title`, and `description` are required.
-- `imageUrl` and `imageAlt` are optional; omit them when no reliable image is
-  available.
+- `imageUrl` and `imageAlt` are required for every News topic card.
+- Prefer a reliable image directly attached to the source article, official
+  announcement, company page, regulator page, or public agency page.
+- If the source article has no reliable related image, use an Unsplash or web
+  search image that is specific to the topic's key person, organization,
+  company, location, product, or event. Avoid generic newspaper, abstract data,
+  newsroom, stock-market, or technology-background images.
 - Prefer the source that directly supports the topic's most important factual
   claim.
 - Do not replace cards with a bare `出典メモ:` paragraph.
@@ -157,6 +167,10 @@ Run focused verification before finishing:
 - Check generated Markdown / MDX for unresolved placeholders.
 - Confirm the article imports `NewsSourceCard` and contains at least fifteen
   `<NewsSourceCard ... />` blocks.
+- Confirm every `NewsSourceCard` has `imageUrl` and `imageAlt`.
+- Confirm `heroImageQuery` is specific to people, organizations, companies,
+  locations, or events from the selected topics and is not a generic news
+  collage query.
 - Run `git diff --check`.
 - Do not run `pnpm build` inside the Codex action step. The workflow restores
   the repository Node.js version and runs the build after Codex finishes.

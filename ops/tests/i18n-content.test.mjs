@@ -4,10 +4,30 @@ import { join } from 'node:path'
 import test from 'node:test'
 
 const repoRoot = new URL('../..', import.meta.url)
-const blogDir = join(repoRoot.pathname, 'content/blog')
+const articlesDir = join(repoRoot.pathname, 'articles')
 const referenceDir = join(repoRoot.pathname, 'src/pages/reference')
 const englishReferenceDir = join(repoRoot.pathname, 'src/pages/en/reference')
+const articleTypes = ['report', 'news']
 const japaneseText = /[\u3040-\u30ff\u3400-\u9fff]/
+
+async function articleSlugs(type, locale = 'ja') {
+	const dir = locale === 'en' ? join(articlesDir, type, 'en') : join(articlesDir, type)
+	const entries = await readdir(dir, { withFileTypes: true })
+	return entries
+		.filter((entry) => entry.isDirectory() && entry.name !== 'en')
+		.map((entry) => entry.name)
+		.sort()
+}
+
+async function englishArticleFiles() {
+	const files = []
+	for (const type of articleTypes) {
+		for (const slug of await articleSlugs(type, 'en')) {
+			files.push({ type, slug, path: join(articlesDir, type, 'en', slug, 'index.mdx') })
+		}
+	}
+	return files
+}
 
 test('Astro i18n is configured for Japanese and English', async () => {
 	const config = await readFile(join(repoRoot.pathname, 'astro.config.mjs'), 'utf8')
@@ -17,35 +37,26 @@ test('Astro i18n is configured for Japanese and English', async () => {
 	assert.match(config, /defaultLocale\s*:\s*['"]ja['"]/)
 })
 
-test('English articles mirror every Japanese article slug', async () => {
-	const japanesePosts = (await readdir(blogDir))
-		.filter((name) => name.endsWith('.mdx'))
-		.map((name) => name.replace(/\.mdx$/, ''))
-		.sort()
+test('English articles mirror every Japanese article slug by article type', async () => {
+	for (const type of articleTypes) {
+		const japanesePosts = await articleSlugs(type)
+		const englishPosts = await articleSlugs(type, 'en')
 
-	const englishPosts = (await readdir(join(blogDir, 'en')))
-		.filter((name) => name.endsWith('.mdx'))
-		.map((name) => name.replace(/\.mdx$/, ''))
-		.sort()
-
-	assert.ok(japanesePosts.length > 0)
-	assert.deepEqual(englishPosts, japanesePosts)
+		assert.ok(japanesePosts.length > 0)
+		assert.deepEqual(englishPosts, japanesePosts)
+	}
 })
 
 test('English Mermaid diagrams do not contain Japanese labels', async () => {
-	const englishPostFiles = (await readdir(join(blogDir, 'en')))
-		.filter((name) => name.endsWith('.mdx'))
-		.sort()
-
-	for (const file of englishPostFiles) {
-		const source = await readFile(join(blogDir, 'en', file), 'utf8')
+	for (const file of await englishArticleFiles()) {
+		const source = await readFile(file.path, 'utf8')
 		const mermaidBlocks = [...source.matchAll(/```mermaid\n([\s\S]*?)\n```/g)]
 
 		for (const block of mermaidBlocks) {
 			assert.doesNotMatch(
 				block[1],
 				japaneseText,
-				`${file} Mermaid diagrams should use English labels only`
+				`${file.type}/${file.slug} Mermaid diagrams should use English labels only`
 			)
 		}
 	}
@@ -86,13 +97,14 @@ test('Codex translation workflow exists for missing English articles', async () 
 		'utf8'
 	)
 	const prompt = await readFile(
-		join(repoRoot.pathname, '.github/codex/prompts/translate-blog-en.md'),
+		join(repoRoot.pathname, 'ops/codex/prompts/translate-blog-en.md'),
 		'utf8'
 	)
 
 	assert.match(workflow, /workflow_dispatch:/)
 	assert.match(workflow, /codex/i)
-	assert.match(workflow, /content\/blog\/en/)
+	assert.match(workflow, /articles\/report\/en/)
+	assert.match(workflow, /articles\/news\/en/)
 	assert.match(prompt, /Do not use TeX-style backtick quotes/)
 	assert.match(prompt, /Mermaid diagram labels/)
 	assert.match(prompt, /news digest articles/)
@@ -117,6 +129,7 @@ test('preferred locale provider detects browser language and persists manual swi
 	assert.match(layout, /<FloatingLocaleSwitch\s+locale=\{locale\}\s*\/>/)
 	assert.match(provider, /navigator\.languages/)
 	assert.match(provider, /window\.localStorage\.getItem\(STORAGE_KEY\)/)
+	assert.match(provider, /window\.location\.replace/)
 	assert.match(provider, /window\.location\.replace/)
 	assert.match(provider, /canRedirectToEnglish/)
 	assert.match(header, /data-locale-switch='ja'/)

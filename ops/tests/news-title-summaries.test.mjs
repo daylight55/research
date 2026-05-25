@@ -48,7 +48,9 @@ test('news article titles summarize the day after the date', () => {
 })
 
 test('translated news digest labels stay paragraph-separated', () => {
-	const files = execFileSync('git', ['ls-files', 'content/blog/en/*.mdx'], { encoding: 'utf8' })
+	const files = execFileSync('git', ['ls-files', 'articles/news/en/*/index.mdx'], {
+		encoding: 'utf8'
+	})
 		.split('\n')
 		.map((line) => line.trim())
 		.filter(Boolean)

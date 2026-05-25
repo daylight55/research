@@ -2,16 +2,17 @@
 import { Image } from 'astro:assets'
 import FormattedDate from '@/components/FormattedDate'
 import ArrowUp from '@/components/icons/ArrowUp'
-import { cn, getCategorySurfaceClass, getPostUrl } from '@/utils'
+import { DEFAULT_LOCALE, cn, getCategorySurfaceClass, localizedPath } from '@/utils'
 
 const {
 	id,
 	data: { title, description, pubDate, heroImage, category },
 	readTime,
 	slug,
+	locale = DEFAULT_LOCALE,
 	isPriority = false
 } = Astro.props
-const postUrl = getPostUrl({ id: slug })
+const postUrl = localizedPath(locale, `/post/${slug}/`)
 ---
 
 <article

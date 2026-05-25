@@ -22,7 +22,9 @@ function sha256(file) {
 }
 
 function canonicalPostKey(file) {
-	const postId = file.replace(/^content\/blog\//, '').replace(/\.mdx$/, '')
+	const postId = file
+		.replace(/^articles\/(?:report|news)\//, '')
+		.replace(/\/index\.mdx$/, '')
 	return postId.startsWith('en/') ? postId.slice('en/'.length) : postId
 }
 

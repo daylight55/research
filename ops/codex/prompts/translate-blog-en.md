@@ -4,10 +4,10 @@ Translate missing Japanese articles into English for the Astro research site.
 
 Rules:
 
-- Source articles are the canonical Japanese files under `content/blog/*.mdx`.
-- Create one English article per missing source under `content/blog/en/<same-slug>.mdx`.
+- Source articles are the canonical Japanese files under `articles/report/<slug>/index.mdx` and `articles/news/<slug>/index.mdx`.
+- Create one English article per missing source under `articles/report/en/<same-slug>/index.mdx` or `articles/news/en/<same-slug>/index.mdx`, matching the source article type.
 - Preserve all frontmatter keys and values unless the value is Japanese prose that should be translated, such as `title`, `description`, `rssSummary`, `heroImageAlt`, and `heroImageCredit`.
-- Adjust relative `heroImage` paths from `../../src/...` to `../../../src/...` because English articles live one directory deeper.
+- Adjust relative `heroImage` paths from `../../../src/...` to `../../../../src/...` because English articles live one directory deeper than the Japanese article directories.
 - Translate the Markdown/MDX body into natural English while preserving headings, tables, lists, Mermaid blocks, MDX components, links, and source URLs.
 - Translate Mermaid diagram labels, axis labels, sequence participants, and messages into English. Do not leave Japanese text inside English Mermaid blocks.
 - Keep source-adjacent `出典メモ:` paragraphs as English `Source note:` paragraphs.

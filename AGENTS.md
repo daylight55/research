@@ -27,9 +27,9 @@
 - トップページなどの件数表示は固定値にしない。カテゴリ数は `CATEGORIES.length` など、実データから算出する。
 - PRプレビューは既定では作成しない。プレビュー表示を明示的に求められた場合だけ、現在のデプロイ方式に合わせて一時的な確認手段を用意する。
 - 日英対応では、日本語を正本として扱い、公開される記事・reference・導線を更新する場合は同じPRで英語側も同期する。翻訳レビューなどテストで規定できない人手確認が残る場合は、自動マージせず残課題として明記する。
-- `content/blog/<slug>.mdx` を追加・更新した場合は `content/blog/en/<same-slug>.mdx` も追加・更新する。英語生成を別ジョブに回す場合も、PR内で同期状態をテストし、未生成のまま公開導線だけ増やさない。
+- `articles/report/<slug>/index.mdx` または `articles/news/<slug>/index.mdx` を追加・更新した場合は、対応する `articles/report/en/<slug>/index.mdx` または `articles/news/en/<slug>/index.mdx` も追加・更新する。英語生成を別ジョブに回す場合も、PR内で同期状態をテストし、未生成のまま公開導線だけ増やさない。
 - `src/pages/reference/<slug>.astro` を追加・更新した場合は `src/pages/en/reference/<slug>.astro` も追加・更新する。reference一覧やトップページのカードは、`getReferenceItems(locale)` のようなlocale-awareな共有データから引き、片方だけの手書き重複を避ける。
-- 英語ページ内のMermaid、reference本文、カード説明、出典周辺ラベルには日本語を残さない。日本語混入や日英route parityは `.github/tests/i18n-content.test.mjs` で検出できる形にする。
+- 英語ページ内のMermaid、reference本文、カード説明、出典周辺ラベルには日本語を残さない。日本語混入や日英route parityは `ops/tests/i18n-content.test.mjs` で検出できる形にする。
 - PRやプレビュー表示を求められた場合、または公開対象の本文を更新した場合は、`pnpm build` を実行し、生成ログに次が含まれることを確認する。
   - `/post/<slug>/index.html`
   - `research-log.mdx` がある場合は `/post/<slug>/research/index.html`

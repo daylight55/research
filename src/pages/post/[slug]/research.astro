@@ -2,7 +2,7 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content'
 import BaseLayout from '@/layouts/BaseLayout'
 import Code from '@/components/mdx/Code'
-import { getPostSlug, withBase } from '@/utils'
+import { DEFAULT_LOCALE, getPostLocale, getPostSlug, withBase } from '@/utils'
 
 type Props = {
 	post: CollectionEntry<'blog'>
@@ -10,7 +10,7 @@ type Props = {
 }
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog')
+	const posts = (await getCollection('blog')).filter((post) => getPostLocale(post) === DEFAULT_LOCALE)
 	const researchEntries = await getCollection('articleResearch')
 	const researchBySlug = new Map(researchEntries.map((entry) => [getPostSlug(entry), entry]))
 

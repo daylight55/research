@@ -452,7 +452,7 @@ jobs:
             echo "- [x] 重要な主張の近くに \`NewsSourceCard\` があり、各カードに関連画像が設定されていること"
             echo "- [x] News のキャッチ画像検索語が汎用ニュース語句ではなく、人物・組織・企業・場所・イベントに寄っていること"
             echo "- [x] Mermaidなどの図解がMarkdownとして読めること"
-            echo "- [x] 追加・更新した \`research-tasks.md\` に完了状況と残課題が反映されていること、またはNews単体のため該当なし"
+            echo "- [x] 追加・更新した \`research-log.mdx\` に調査プロセスと残課題が反映されていること、またはNews単体のため該当なし"
             echo "- [x] \`pnpm build\`"
             echo "- [x] \`dist/news/index.html\`, \`dist/news/rss.xml\`, \`dist/post/${SLUG}/index.html\` の生成確認"
             echo

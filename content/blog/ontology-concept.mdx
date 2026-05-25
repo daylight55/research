@@ -42,15 +42,15 @@ flowchart TD
 
 第一に、哲学の ontology は存在論である。これは「何が存在するのか」「存在者をどのように分類できるのか」「性質、関係、出来事、時間、部分全体、可能性はどのような存在様式を持つのか」を問う。情報システム設計のための用語ではなく、存在や実在のカテゴリーを扱う基礎哲学である。
 
-出典メモ: Stanford Encyclopedia of Philosophy の [Metaphysics](https://plato.stanford.edu/entries/metaphysics/) は、アリストテレスの第一哲学から現代形而上学までの射程を整理している。ここでの ontology は、情報システムのスキーマではなく、存在者一般を問う哲学的問題として扱われる。
+<SourceNote>Stanford Encyclopedia of Philosophy の [Metaphysics](https://plato.stanford.edu/entries/metaphysics/) は、アリストテレスの第一哲学から現代形而上学までの射程を整理している。ここでの ontology は、情報システムのスキーマではなく、存在者一般を問う哲学的問題として扱われる。</SourceNote>
 
 第二に、AI・知識表現の ontology は、ある領域における概念化を明示的に仕様化したものである。Gruber (1993) の有名な定義は、オントロジーを「conceptualization の specification」と捉える。ここで重要なのは、対象世界そのものではなく、人間またはシステムがその領域をどう概念化するかを明示する点である。
 
-出典メモ: Gruber の [A Translation Approach to Portable Ontology Specifications](https://doi.org/10.1006/knac.1993.1008) および著者ページの [definition note](https://tomgruber.org/writing/ontolingua-kaj-1993/) は、オントロジーを「概念化の仕様」として位置づける。Noy and McGuinness の [Ontology Development 101](https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html) も、この定義を実務的な開発手順に展開している。
+<SourceNote>Gruber の [A Translation Approach to Portable Ontology Specifications](https://doi.org/10.1006/knac.1993.1008) および著者ページの [definition note](https://tomgruber.org/writing/ontolingua-kaj-1993/) は、オントロジーを「概念化の仕様」として位置づける。Noy and McGuinness の [Ontology Development 101](https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html) も、この定義を実務的な開発手順に展開している。</SourceNote>
 
 第三に、近年の業務AI・データ基盤では、ontology が semantic layer、canonical data model、business object layer、digital twin に近い意味で使われることがある。Palantir Foundry の Ontology は、RDF/OWL仕様そのものではなく、データ、オブジェクト、関係、アクション、関数、動的セキュリティを統合する operational layer として説明されている。
 
-出典メモ: Palantir の [Ontology overview](https://www.palantir.com/docs/foundry/ontology/overview) は、Ontology を組織の operational layer と説明し、semantic elements と kinetic elements を含むと述べる。これはW3C OWLのような標準言語の説明ではなく、業務プラットフォーム上の実行可能な意味モデルである。
+<SourceNote>Palantir の [Ontology overview](https://www.palantir.com/docs/foundry/ontology/overview) は、Ontology を組織の operational layer と説明し、semantic elements と kinetic elements を含むと述べる。これはW3C OWLのような標準言語の説明ではなく、業務プラットフォーム上の実行可能な意味モデルである。</SourceNote>
 
 ## 3. オントロジーの短い研究史
 
@@ -58,15 +58,15 @@ flowchart TD
 
 Gruber (1993) の定義は、オントロジーを「特定システムの内部実装」ではなく「知識共有のための明示仕様」として扱った。Guarino (1998) 以降の formal ontology は、概念名の一覧では足りないことを強調した。同一性、依存性、部分全体、性質、役割、出来事のような基礎カテゴリーを誤ると、システム間の意味の接続が壊れるからである。
 
-出典メモ: Guarino の [Formal Ontology and Information Systems](https://www.loa.istc.cnr.it/wp-content/uploads/2020/03/FOIS98.pdf) は、ontology-driven information systems の視点を提示する。Barry Smith の [Basic Concepts of Formal Ontology](https://ontology.buffalo.edu/smith/articles/fois1998.pdf) は、日常世界の対象を扱うための formal ontology の基礎概念を整理している。
+<SourceNote>Guarino の [Formal Ontology and Information Systems](https://www.loa.istc.cnr.it/wp-content/uploads/2020/03/FOIS98.pdf) は、ontology-driven information systems の視点を提示する。Barry Smith の [Basic Concepts of Formal Ontology](https://ontology.buffalo.edu/smith/articles/fois1998.pdf) は、日常世界の対象を扱うための formal ontology の基礎概念を整理している。</SourceNote>
 
 2000年代には、Semantic Web がこの系譜をWeb標準へ接続した。RDFはWeb上のリソースについて主語・述語・目的語のトリプルで記述するデータモデルを提供し、OWLはクラス、プロパティ、個体、制約、推論のためのより豊かな表現を提供した。SPARQLはRDFグラフを問い合わせる言語になり、SKOSは分類体系やシソーラスのような半形式的知識組織システムをWeb上で共有しやすくした。
 
-出典メモ: Semantic Web の構想は Berners-Lee, Hendler, and Lassila の [The Semantic Web](https://lassila.org/publications/2001/SciAm.html) を参照。RDFの基本は W3C [RDF 1.1 Primer](https://www.w3.org/TR/rdf-primer/)、OWL 2 は W3C [OWL 2 Primer](https://www.w3.org/TR/owl-primer/) と [OWL 2 Overview](https://www.w3.org/TR/owl2-overview/) を参照。
+<SourceNote>Semantic Web の構想は Berners-Lee, Hendler, and Lassila の [The Semantic Web](https://lassila.org/publications/2001/SciAm.html) を参照。RDFの基本は W3C [RDF 1.1 Primer](https://www.w3.org/TR/rdf-primer/)、OWL 2 は W3C [OWL 2 Primer](https://www.w3.org/TR/owl-primer/) と [OWL 2 Overview](https://www.w3.org/TR/owl2-overview/) を参照。</SourceNote>
 
 2010年代以降は、知識グラフという言葉が広く使われるようになった。知識グラフは必ずしも厳密なOWLオントロジーを持つとは限らない。実務では、ノード、エッジ、識別子、出典、文脈、更新履歴を扱う大規模グラフデータとして運用されることが多い。Hogan et al. (2021) は、知識グラフを、動的で大規模なデータ集合を扱うためのグラフベースの知識表現として包括的に整理している。
 
-出典メモ: Hogan et al. の [Knowledge Graphs](https://arxiv.org/abs/2003.02320) は、知識グラフのデータモデル、クエリ言語、スキーマ、識別子、文脈、作成・品質評価・公開を体系的に扱う。知識グラフはオントロジーを含みうるが、両者は同義ではない。
+<SourceNote>Hogan et al. の [Knowledge Graphs](https://arxiv.org/abs/2003.02320) は、知識グラフのデータモデル、クエリ言語、スキーマ、識別子、文脈、作成・品質評価・公開を体系的に扱う。知識グラフはオントロジーを含みうるが、両者は同義ではない。</SourceNote>
 
 ## 4. オントロジーを構成する要素
 
@@ -122,7 +122,7 @@ classDiagram
 
 Noy and McGuinness は、オントロジー開発を「一度で完成する定義作業」ではなく、対象領域と目的を定め、重要な用語を列挙し、クラス階層、プロパティ、制約、インスタンスを反復的に作る工程として説明している。最初に問うべきなのは「世界を完全に分類するにはどうするか」ではなく、「このオントロジーで答えたい質問は何か」である。この質問は competency questions と呼ばれる。
 
-出典メモ: [Ontology Development 101](https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html) は、オントロジー開発を反復的プロセスとして説明し、クラス、スロット、制約、インスタンスを順に設計する。ここでの実務方針は同ガイドの方法を、現代のデータ・AI基盤向けに読み替えている。
+<SourceNote>[Ontology Development 101](https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html) は、オントロジー開発を反復的プロセスとして説明し、クラス、スロット、制約、インスタンスを順に設計する。ここでの実務方針は同ガイドの方法を、現代のデータ・AI基盤向けに読み替えている。</SourceNote>
 
 ## 5. 近い概念との違い
 
@@ -144,7 +144,7 @@ Noy and McGuinness は、オントロジー開発を「一度で完成する定�
 
 SKOSは、この境界領域を扱う実務的な標準である。シソーラス、分類体系、件名標目のような semi-formal な知識組織システムをRDFで表現できる。厳密な論理推論を狙うOWLより軽く、既存の分類・タグ体系を機械可読にする用途に向く。
 
-出典メモ: W3C [SKOS Primer](https://www.w3.org/TR/skos-primer/) は、SKOSをシソーラス、分類体系、件名標目のような知識組織システムを表すRDF vocabularyとして説明する。SKOSは、OWLの厳密さとWeb上の弱構造データの間をつなぐ bridge として位置づけられている。
+<SourceNote>W3C [SKOS Primer](https://www.w3.org/TR/skos-primer/) は、SKOSをシソーラス、分類体系、件名標目のような知識組織システムを表すRDF vocabularyとして説明する。SKOSは、OWLの厳密さとWeb上の弱構造データの間をつなぐ bridge として位置づけられている。</SourceNote>
 
 ## 6. Semantic Web標準の役割
 
@@ -163,7 +163,7 @@ SKOSは、この境界領域を扱う実務的な標準である。シソーラ�
 
 RDFはデータモデルであり、OWLはオントロジー言語であり、SHACLは検証言語である。この区別は実務上かなり重要である。OWLは、open world assumption のもとで「明示されていないことは偽とは限らない」と扱う。これはWeb上の分散知識には適しているが、業務データの入力検証では違和感を生みやすい。業務システムで「契約に顧客IDがないならエラー」と言いたい場合、SHACLやアプリケーション側の検証が必要になる。
 
-出典メモ: W3C [RDF 1.1 Primer](https://www.w3.org/TR/rdf-primer/) は、RDF statement を subject、predicate、object の triples として説明する。W3C [OWL 2 Primer](https://www.w3.org/TR/owl-primer/) は、OWLをクラス、プロパティ、個体、データ値を扱うSemantic Web用のオントロジー言語として説明する。W3C [SHACL](https://www.w3.org/TR/shacl/) は、RDF graph を shapes graph に対して検証する制約言語として定義されている。
+<SourceNote>W3C [RDF 1.1 Primer](https://www.w3.org/TR/rdf-primer/) は、RDF statement を subject、predicate、object の triples として説明する。W3C [OWL 2 Primer](https://www.w3.org/TR/owl-primer/) は、OWLをクラス、プロパティ、個体、データ値を扱うSemantic Web用のオントロジー言語として説明する。W3C [SHACL](https://www.w3.org/TR/shacl/) は、RDF graph を shapes graph に対して検証する制約言語として定義されている。</SourceNote>
 
 ```mermaid
 flowchart LR
@@ -177,7 +177,7 @@ flowchart LR
 
 OWL 2には複数のプロファイルがある。OWL 2 EL、QL、RLは、表現力を制限する代わりに特定の推論タスクを実用的に扱いやすくする。これは「より厳密なオントロジーほど常に良い」という発想への反例である。オントロジー設計では、答えたい質問、データ量、推論の必要性、更新頻度、運用者のスキルに合わせて形式度を選ぶ必要がある。
 
-出典メモ: W3C [OWL 2 Profiles](https://www.w3.org/TR/owl2-profiles/) は、OWL 2 EL、QL、RLを、OWL DLより制限された構文サブセットとして定義する。選択は、オントロジー構造と推論タスクに依存する。
+<SourceNote>W3C [OWL 2 Profiles](https://www.w3.org/TR/owl2-profiles/) は、OWL 2 EL、QL、RLを、OWL DLより制限された構文サブセットとして定義する。選択は、オントロジー構造と推論タスクに依存する。</SourceNote>
 
 ## 7. 上位オントロジーとドメインオントロジー
 
@@ -192,7 +192,7 @@ OWL 2には複数のプロファイルがある。OWL 2 EL、QL、RLは、表現
 
 BFOは上位オントロジーの代表例で、ISO/IEC 21838-2:2021として標準化されている。上位オントロジーは、異なるドメインオントロジーを接続するときに役立つ。ただし、個人や小規模チームの実務では、最初からBFOのような上位オントロジーを導入するより、対象ワークフローに必要なクラスと関係を明示するほうが成果につながりやすい。
 
-出典メモ: ISO の [ISO/IEC 21838-2:2021](https://www.iso.org/standard/74572.html) は、Basic Formal Ontologyを top-level ontology の要件に適合するものとして説明する。BFOは相互運用性には有効だが、導入には抽象概念への理解とモデリング規律が必要である。
+<SourceNote>ISO の [ISO/IEC 21838-2:2021](https://www.iso.org/standard/74572.html) は、Basic Formal Ontologyを top-level ontology の要件に適合するものとして説明する。BFOは相互運用性には有効だが、導入には抽象概念への理解とモデリング規律が必要である。</SourceNote>
 
 ## 8. LLM時代にオントロジーが再び重要になる理由
 
@@ -209,7 +209,7 @@ LLMは大量の言語パターンから柔軟な応答を生成できるが、�
 
 Pan et al. (2023) は、LLMと知識グラフの統合を、KG-enhanced LLMs、LLM-augmented KGs、Synergized LLMs + KGs の三方向で整理している。この整理は、オントロジーとLLMの関係にも当てはまる。オントロジーはLLMの入力文脈を補強し、LLMはオントロジーの構築・補完・整合確認を支援できる。ただし、LLMが生成したクラスや関係をそのまま正しいオントロジーとして採用するのは危険である。
 
-出典メモ: Pan et al. の [Unifying Large Language Models and Knowledge Graphs: A Roadmap](https://arxiv.org/abs/2306.08302) は、LLMとKGの統合を三つの枠組みに整理する。Hitzler et al. の [Accelerating Knowledge Graph and Ontology Engineering with Large Language Models](https://arxiv.org/abs/2411.09601) は、LLMが ontology modeling、extension、population、alignment などを加速しうる一方、モジュール性と評価が重要になると論じる。
+<SourceNote>Pan et al. の [Unifying Large Language Models and Knowledge Graphs: A Roadmap](https://arxiv.org/abs/2306.08302) は、LLMとKGの統合を三つの枠組みに整理する。Hitzler et al. の [Accelerating Knowledge Graph and Ontology Engineering with Large Language Models](https://arxiv.org/abs/2411.09601) は、LLMが ontology modeling、extension、population、alignment などを加速しうる一方、モジュール性と評価が重要になると論じる。</SourceNote>
 
 ```mermaid
 flowchart TD
@@ -225,7 +225,7 @@ flowchart TD
 
 Palantir Foundry Ontology はこの発想を前面に出している。Objects、properties、links という semantic elements だけでなく、actions、functions、dynamic security という kinetic elements を含む。つまり、単に「注文とは何か」を定義するのではなく、「注文に対して誰が何を実行でき、その結果がどのシステムに反映されるか」まで扱う。
 
-出典メモ: Palantir [Ontology overview](https://www.palantir.com/docs/foundry/ontology/overview) は、Ontologyが datasets、virtual tables、models の上に位置し、それらを現実世界の対象に接続すると説明する。Palantir [Platform overview](https://www.palantir.com/docs/foundry/platform-overview/overview) は、Actionsを企業の verbs として、意思決定をOntologyや外部システムへ永続化するものとして説明している。
+<SourceNote>Palantir [Ontology overview](https://www.palantir.com/docs/foundry/ontology/overview) は、Ontologyが datasets、virtual tables、models の上に位置し、それらを現実世界の対象に接続すると説明する。Palantir [Platform overview](https://www.palantir.com/docs/foundry/platform-overview/overview) は、Actionsを企業の verbs として、意思決定をOntologyや外部システムへ永続化するものとして説明している。</SourceNote>
 
 ```mermaid
 flowchart LR
@@ -344,7 +344,7 @@ flowchart TD
 
 オントロジー開発は、技術作業であると同時に合意形成である。「顧客」「契約」「完了」「重大障害」の意味は、部署やシステムによって異なる。合意なしにLLMで抽出した語彙を採用すると、現場の実務意味とずれたモデルができる。
 
-出典メモ: [Ontology Development is Consensus Creation, Not (Merely) Representation](https://arxiv.org/abs/2210.12026) は、参照オントロジー開発を単なる知識表現ではなく合意形成として捉える。LLMによる自動生成は補助になりうるが、合意形成を代替しない。
+<SourceNote>[Ontology Development is Consensus Creation, Not (Merely) Representation](https://arxiv.org/abs/2210.12026) は、参照オントロジー開発を単なる知識表現ではなく合意形成として捉える。LLMによる自動生成は補助になりうるが、合意形成を代替しない。</SourceNote>
 
 ### 12.3 過剰形式化
 
@@ -365,7 +365,7 @@ LLMは語彙候補、関係候補、定義文、例外パターンを出す補�
 推奨は以下である。
 
 1. まず `Topic`、`Report`、`Source`、`Claim`、`Evidence`、`Decision`、`Risk`、`Concept` の ontology lite をMarkdownで定義する。
-2. 各レポートに、主要な Claim と Source を近接配置する。これは既存の `出典メモ:` ルールと相性がよい。
+2. 各レポートに、主要な Claim と Source を近接配置する。これは既存の `<SourceNote>` ルールと相性がよい。
 3. 時間依存の主張には `確認日` を持たせる。AI製品、仕様、価格、ロードマップは必ず再確認対象にする。
 4. 分類だけで足りる領域はSKOS的に扱う。たとえば `category/ai-systems`、`category/knowledge-systems` は軽量分類でよい。
 5. 将来的に検索・可視化・MCP連携を強めるなら、Markdownのfrontmatter、JSON-LD、または小さなproperty graphへ変換できる形で設計する。

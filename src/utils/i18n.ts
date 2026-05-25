@@ -7,19 +7,36 @@ export const SUPPORTED_LOCALES = ['ja', 'en'] as const
 export type Locale = (typeof SUPPORTED_LOCALES)[number]
 
 type BlogPost = CollectionEntry<'blog'>
+type PostLike = Pick<BlogPost, 'id'>
+
+const ARTICLE_TYPES = new Set(['report', 'news'])
 
 export function isLocale(value: string | undefined): value is Locale {
 	return SUPPORTED_LOCALES.includes(value as Locale)
 }
 
-export function getPostLocale(post: Pick<BlogPost, 'id'>): Locale {
-	const [firstSegment] = post.id.split('/')
-	return isLocale(firstSegment) && firstSegment !== DEFAULT_LOCALE ? firstSegment : DEFAULT_LOCALE
+export function getPostLocale(post: PostLike): Locale {
+	const [firstSegment, secondSegment] = post.id.split('/')
+	if (isLocale(firstSegment) && firstSegment !== DEFAULT_LOCALE) return firstSegment
+	if (ARTICLE_TYPES.has(firstSegment) && isLocale(secondSegment) && secondSegment !== DEFAULT_LOCALE) {
+		return secondSegment
+	}
+	return DEFAULT_LOCALE
 }
 
-export function getPostSlug(post: Pick<BlogPost, 'id'>): string {
-	const locale = getPostLocale(post)
-	return locale === DEFAULT_LOCALE ? post.id : post.id.replace(`${locale}/`, '')
+export function articleSlugFromId(id: string): string {
+	const segments = id.split('/').filter(Boolean)
+	const last = segments.at(-1)
+	if (last === 'index' || last === 'research' || last === 'research-log') {
+		segments.pop()
+	}
+
+	const normalized = segments.filter((segment) => !isLocale(segment) && !ARTICLE_TYPES.has(segment))
+	return normalized.join('/')
+}
+
+export function getPostSlug(post: PostLike): string {
+	return articleSlugFromId(post.id)
 }
 
 export function stripLocaleFromPath(pathname: string): string {
@@ -35,7 +52,7 @@ export function localizedPath(locale: Locale, path = '/'): string {
 	return withBase(href)
 }
 
-export function getPostUrl(post: Pick<BlogPost, 'id'>): string {
+export function getPostUrl(post: PostLike): string {
 	return localizedPath(getPostLocale(post), `/post/${getPostSlug(post)}/`)
 }
 

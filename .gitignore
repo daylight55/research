@@ -3,7 +3,7 @@ dist/
 # generated types
 .astro/
 .playwright-cli/
-.github/codex/runtime/
+ops/codex/runtime/
 codex-output.md
 
 # dependencies

@@ -52,8 +52,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          node .github/scripts/translate-blog-en.mjs | tee .github/codex/runtime/translate-blog-en-output.txt
-          missing_count="$(sed -n 's/^missing=//p' .github/codex/runtime/translate-blog-en-output.txt)"
+          node ops/scripts/translate-blog-en.mjs | tee ops/codex/runtime/translate-blog-en-output.txt
+          missing_count="$(sed -n 's/^missing=//p' ops/codex/runtime/translate-blog-en-output.txt)"
           echo "missing_count=${missing_count}" >> "${GITHUB_OUTPUT}"
 
       - name: Run Codex translation
@@ -61,7 +61,7 @@ jobs:
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          prompt-file: .github/codex/runtime/translate-blog-en-prompt.md
+          prompt-file: ops/codex/runtime/translate-blog-en-prompt.md
           output-file: codex-output.md
           safety-strategy: drop-sudo
           sandbox: workspace-write
@@ -74,7 +74,7 @@ jobs:
         run: |
           set -euo pipefail
           git diff --check
-          ! rg -n '\b(TBD|TODO|FIXME|未定|要確認)\b' content/blog/en
+          ! rg -n '\b(TBD|TODO|FIXME|未定|要確認)\b' articles/report/en articles/news/en
           pnpm build
 
       - name: Create translation pull request
@@ -96,7 +96,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "${branch}"
-          git add content/blog/en
+          git add articles/report/en articles/news/en
           git commit -m "Add English blog translations"
           git push origin "${branch}"
 
@@ -106,7 +106,7 @@ jobs:
             echo "- Codex translation job により不足していた英語版記事を追加します。"
             echo
             echo "## 背景・目的"
-            echo "- 日本語記事を正本としつつ、英語版を \`content/blog/en/\` に生成して ja/en 切り替え対象にします。"
+            echo "- 日本語記事を正本としつつ、英語版を \`articles/report/en/\` と \`articles/news/en/\` に生成して ja/en 切り替え対象にします。"
             echo
             echo "## 主な変更点"
             echo "- Missing English articles: ${MISSING_COUNT}"

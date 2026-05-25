@@ -50,6 +50,10 @@
 - push後はPRが最新の `main` とコンフリクトしていないことを確認する。`gh pr view <PR番号> --json mergeable,mergeStateStatus` で `CONFLICTING` / `DIRTY` の場合は、`origin/main` を取り込み、コンフリクトを解消してから再pushする。
 - PR作成後は `gh pr checks <PR番号>` などでCI状態を確認する。失敗、キャンセル、pendingが残る場合は、該当runのログと最新runの状態を確認し、失敗原因を修正またはキャンセル理由を明示してから報告する。
 - Cloudflare Pages Preview などのPreview系workflowがある場合は、PRのhead branchまたはPR番号に対応する最新runを確認する。Previewが失敗している、またはchecksが出ていない場合は、`gh run list` / `gh run view --log` で原因を確認し、必要なら再pushまたはworkflow再実行後に再確認する。
+- ユーザーが明示的に命令した実装・修正・更新について、その命令内容を規定するテストまたは検証手順を追加・更新した場合は、PR本文の「確認したこと」に該当テストを明記する。
+- ユーザーが「マージしない」「レビュー待ち」「draftのまま」など明示しない限り、命令内容を規定するテスト、`git diff --check`、未解決プレースホルダ検査、必要な `pnpm build`、Preview系workflow、すべての必須CIが成功し、PRが `main` とコンフリクトしていなければ、自動マージを有効化または実行する。
+- 自動マージ前にdraft PRはreadyに変更してよい。ただし、調査本文の事実確認、人手翻訳レビュー、外部承認などテストで十分に規定できないレビュー観点が残る場合は自動マージせず、残る確認事項をPR本文と報告に明記する。
+- 自動マージはhead commitを固定して行う。`gh pr merge <PR番号> --squash --auto --match-head-commit <head_sha>` を優先し、リポジトリ設定でauto-mergeが使えない場合は、全条件を再確認した直後に `gh pr merge <PR番号> --squash --match-head-commit <head_sha>` を使う。
 - PR作成後は、PR URL、base branch、head branch、draft/ready状態を確認してユーザーに報告する。
 
 ## Research Standards

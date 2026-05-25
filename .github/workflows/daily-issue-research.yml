@@ -87,13 +87,13 @@ jobs:
         run: |
           set -euo pipefail
 
-          mkdir -p .github/codex/runtime
+          mkdir -p ops/codex/runtime
 
           if [[ -n "${ISSUE_NUMBER}" ]]; then
             gh issue view "${ISSUE_NUMBER}" \
               --repo "${RESEARCH_QUEUE_REPOSITORY}" \
               --json number,title,body,labels,url,state \
-              > .github/codex/runtime/selected-issue.json
+              > ops/codex/runtime/selected-issue.json
           else
             gh issue list \
               --repo "${RESEARCH_QUEUE_REPOSITORY}" \
@@ -101,22 +101,22 @@ jobs:
               --json number,title,body,labels,url,createdAt,updatedAt \
               --limit 100 \
               | jq --arg ready_label "${RESEARCH_READY_LABEL}" 'map(select(([.labels[].name] | index($ready_label)) and ([.labels[].name] | index("research-pr-opened") | not) and ([.labels[].name] | index("research-skip") | not))) | sort_by(.createdAt, .number) | .[0] // empty' \
-              > .github/codex/runtime/selected-issue.json
+              > ops/codex/runtime/selected-issue.json
           fi
 
-          if [[ ! -s .github/codex/runtime/selected-issue.json ]] || [[ "$(cat .github/codex/runtime/selected-issue.json)" == "null" ]]; then
+          if [[ ! -s ops/codex/runtime/selected-issue.json ]] || [[ "$(cat ops/codex/runtime/selected-issue.json)" == "null" ]]; then
             echo "issue_found=false" >> "${GITHUB_OUTPUT}"
             exit 0
           fi
 
-          if ! jq -e --arg ready_label "${RESEARCH_READY_LABEL}" '[.labels[].name] | index($ready_label)' .github/codex/runtime/selected-issue.json >/dev/null; then
+          if ! jq -e --arg ready_label "${RESEARCH_READY_LABEL}" '[.labels[].name] | index($ready_label)' ops/codex/runtime/selected-issue.json >/dev/null; then
             echo "Issue is missing required label: ${RESEARCH_READY_LABEL}"
             echo "issue_found=false" >> "${GITHUB_OUTPUT}"
             exit 0
           fi
 
-          issue_number="$(jq -r '.number' .github/codex/runtime/selected-issue.json)"
-          issue_title="$(jq -r '.title' .github/codex/runtime/selected-issue.json)"
+          issue_number="$(jq -r '.number' ops/codex/runtime/selected-issue.json)"
+          issue_title="$(jq -r '.title' ops/codex/runtime/selected-issue.json)"
 
           {
             echo "issue_found=true"
@@ -132,18 +132,18 @@ jobs:
         run: |
           set -euo pipefail
 
-          cp .github/codex/prompts/daily-issue-research.md .github/codex/runtime/daily-research-prompt.md
+          cp ops/codex/prompts/daily-issue-research.md ops/codex/runtime/daily-research-prompt.md
 
           {
             echo
             echo "## Selected Issue Context"
             echo
-            jq -r '"- Issue: #\(.number) \(.title)\n- URL: \(.url)\n- Labels: \([.labels[].name] | join(", "))"' .github/codex/runtime/selected-issue.json
+            jq -r '"- Issue: #\(.number) \(.title)\n- URL: \(.url)\n- Labels: \([.labels[].name] | join(", "))"' ops/codex/runtime/selected-issue.json
             echo
             echo "### Issue Body"
             echo
-            jq -r '.body // "(no body)"' .github/codex/runtime/selected-issue.json
-          } >> .github/codex/runtime/daily-research-prompt.md
+            jq -r '.body // "(no body)"' ops/codex/runtime/selected-issue.json
+          } >> ops/codex/runtime/daily-research-prompt.md
 
       - name: Record Daily CI start time
         if: steps.select_issue.outputs.issue_found == 'true'
@@ -201,7 +201,7 @@ jobs:
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          prompt-file: .github/codex/runtime/daily-research-prompt.md
+          prompt-file: ops/codex/runtime/daily-research-prompt.md
           output-file: codex-output.md
           safety-strategy: drop-sudo
           sandbox: workspace-write
@@ -231,14 +231,14 @@ jobs:
 
           OPENAI_USAGE_END_TIME="$(date +%s)"
           export OPENAI_USAGE_END_TIME
-          node .github/scripts/estimate-openai-usage-cost.mjs
+          node ops/scripts/estimate-openai-usage-cost.mjs
           echo "comment_path=${OPENAI_USAGE_OUTPUT_FILE}" >> "${GITHUB_OUTPUT}"
 
       - name: Remove runtime prompt artifacts
         if: always()
         shell: bash
         run: |
-          rm -rf .github/codex/runtime codex-output.md
+          rm -rf ops/codex/runtime codex-output.md
 
       - name: Check generated diff
         if: steps.select_issue.outputs.issue_found == 'true'
@@ -256,10 +256,10 @@ jobs:
           git add --intent-to-add .
           git diff --check
 
-          mapfile -t changed_blog_entries < <(git ls-files --modified --others --exclude-standard -- 'content/blog/*.mdx' || true)
+          mapfile -t changed_blog_entries < <(git ls-files --modified --others --exclude-standard -- 'articles/*/index.mdx' || true)
           if (( ${#changed_blog_entries[@]} > 0 )) \
-            && grep -nE "import[[:space:]]+.*from[[:space:]]+['\"](\\.\\./\\.\\./|\\.\\./\\.\\./\\.\\./)category/|<Report[[:space:]]*/>" -- "${changed_blog_entries[@]}"; then
-            echo "::error::Site entries must copy the report body directly into content/blog/*.mdx. Do not import category/.../report.md, because imported Markdown headings are not available to the article sidebar."
+            && grep -nE "import[[:space:]]+.*report\\.md|<Report[[:space:]]*/>" -- "${changed_blog_entries[@]}"; then
+            echo "::error::Site entries must copy the report body directly into articles/*/index.mdx. Do not import a separate report body, because imported Markdown headings are not available to the article sidebar."
             exit 1
           fi
 
@@ -273,7 +273,7 @@ jobs:
         if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
         env:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
-        run: node .github/scripts/select-unsplash-hero.mjs
+        run: node ops/scripts/select-unsplash-hero.mjs
 
       - name: Verify unique hero images
         if: steps.diff_check.outputs.has_changes == 'true'

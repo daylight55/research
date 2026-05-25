@@ -1,17 +1,15 @@
 # Technical Research Repository Instructions
 
-このリポジトリは、広範な技術調査をカテゴリ別ディレクトリで継続管理するためのものです。
+このリポジトリは、広範な技術調査を記事単位の浅いディレクトリで継続管理するためのものです。
 
 ## Repository Structure
 
-- 新しい調査テーマは `category/<category-name>/<topic>/` を作成して管理する。
-- `<category-name>` は調査領域を表す短い kebab-case 名にする。例: `ai-systems`, `enterprise-ai-platforms`, `developer-tools`, `data-infrastructure`。
-- Webサイト上に表示する調査テーマでは、`content/blog/<slug>.mdx` を本文の正本として扱う。
-- `category/<category-name>/<topic>/` は、調査タスク、補助メモ、収集資料、実験などの置き場とする。本文用の `report.md` は作らない。
-- 各テーマには必要に応じて次を置く。
-  - `research-tasks.md`: 調査タスク、完了状況、追加深掘り候補
-  - `notes/`, `sources/`, `figures/`, `prototype/`: 補助資料、収集資料、図版、PoC
-- PoC、実験、収集資料が必要な場合は同じテーマ配下に `prototype/`、`notes/`、`sources/`、`figures/` などを追加する。
+- 新しい調査テーマは `articles/<slug>/` を作成して管理する。
+- `<slug>` は記事URLにも使う短い kebab-case 名にする。例: `graphiti-mcp-memory`, `oauth21-pkce-mcp-auth`。
+- Webサイト上に表示する調査テーマでは、`articles/<slug>/index.mdx` を本文の正本として扱う。
+- 公開可能な調査プロセス、根拠、判断ログがある場合は `articles/<slug>/research.mdx` にまとめる。
+- `notes/`, `sources/`, `figures/`, `prototype/` などの非公開作業ディレクトリは原則作らない。公開価値のある情報は `research.mdx` に要約、リンク、図表として含める。
+- 記事本文から `research.mdx` へ辿れる導線を維持する。サイト側に調査ログが存在する場合は `/post/<slug>/research/` を公開する。
 
 ## Required Skill
 
@@ -19,9 +17,9 @@
 
 ## Astro Site Publication Workflow
 
-- Webサイト上に表示する調査レポートは、最初から `content/blog/<slug>.mdx` に本文を書く。
-- `category/<category-name>/<topic>/report.md` を作ってからMDXへコピーする運用は禁止する。本文が二重化し、片方だけ浅い/古い状態になりやすいため。
-- `category/<category-name>/<topic>/research-tasks.md` は、調査タスクや残課題を管理したい場合にだけ追加する。
+- Webサイト上に表示する調査レポートは、最初から `articles/<slug>/index.mdx` に本文を書く。
+- `report.md` などの別本文を作ってから `index.mdx` へコピーする運用は禁止する。本文が二重化し、片方だけ浅い/古い状態になりやすいため。
+- 調査タスクや残課題を公開する場合は、単独のタスクリストではなく `articles/<slug>/research.mdx` に調査プロセスとしてまとめる。
 - 新しいカテゴリを使う場合は、`src/data/categories.ts` の `CATEGORIES` に追加する。既存カテゴリとのコンフリクト時は、main側のカテゴリを消さずに和集合で解消する。
 - サイト用記事のヘッダー画像は補助要素として控えめに扱う。本文の可読性を優先し、情報的価値が薄いCodex生成の抽象画像をカテゴリ画像として追加しない。
 - トップページなどの件数表示は固定値にしない。カテゴリ数は `CATEGORIES.length` など、実データから算出する。
@@ -32,11 +30,12 @@
 - 英語ページ内のMermaid、reference本文、カード説明、出典周辺ラベルには日本語を残さない。日本語混入や日英route parityは `.github/tests/i18n-content.test.mjs` で検出できる形にする。
 - PRやプレビュー表示を求められた場合、または公開対象の本文を更新した場合は、`pnpm build` を実行し、生成ログに次が含まれることを確認する。
   - `/post/<slug>/index.html`
+  - `articles/<slug>/research.mdx` がある場合は `/post/<slug>/research/index.html`
   - `/category/<category-name>/1/index.html`
   - `/index.html`
 - さらに、`dist/index.html` またはローカル preview への `curl` で、トップページに `<slug>`、記事タイトル、カテゴリリンクが含まれることを確認する。
 - PR作成後は `gh pr checks` でCI状態を確認する。プレビュー表示を明示的に求められた場合は、発行された一時URLに対して `<slug>`、記事タイトル、カテゴリリンクが含まれることを `curl` で確認する。
-- 「トップページに出ていない」「レンダリング対象に入っていない」と言われたら、まず `content/blog/*.mdx` と `src/data/categories.ts` の登録漏れを疑う。
+- 「トップページに出ていない」「レンダリング対象に入っていない」と言われたら、まず `articles/<slug>/index.mdx` と `src/data/categories.ts` の登録漏れを疑う。
 
 ## GitHub Publication Workflow
 

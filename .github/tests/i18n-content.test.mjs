@@ -14,20 +14,19 @@ test('Astro i18n is configured for Japanese and English', async () => {
 	assert.match(config, /defaultLocale\s*:\s*['"]ja['"]/)
 })
 
-test('translation planner detects Japanese articles missing English versions', async () => {
+test('English articles mirror every Japanese article slug', async () => {
 	const japanesePosts = (await readdir(blogDir))
 		.filter((name) => name.endsWith('.mdx'))
 		.map((name) => name.replace(/\.mdx$/, ''))
 		.sort()
 
-	const script = await readFile(
-		join(repoRoot.pathname, '.github/scripts/translate-blog-en.mjs'),
-		'utf8'
-	)
+	const englishPosts = (await readdir(join(blogDir, 'en')))
+		.filter((name) => name.endsWith('.mdx'))
+		.map((name) => name.replace(/\.mdx$/, ''))
+		.sort()
 
 	assert.ok(japanesePosts.length > 0)
-	assert.match(script, /content\/blog\/en/)
-	assert.match(script, /missing/i)
+	assert.deepEqual(englishPosts, japanesePosts)
 })
 
 test('Codex translation workflow exists for missing English articles', async () => {

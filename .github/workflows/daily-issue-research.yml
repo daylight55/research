@@ -275,6 +275,10 @@ jobs:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: node .github/scripts/select-unsplash-hero.mjs
 
+      - name: Verify unique hero images
+        if: steps.diff_check.outputs.has_changes == 'true'
+        run: pnpm test:hero-images
+
       - name: Build generated site
         if: steps.diff_check.outputs.has_changes == 'true'
         run: pnpm build

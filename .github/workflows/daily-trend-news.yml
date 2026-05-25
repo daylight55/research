@@ -257,8 +257,36 @@ jobs:
             exit 1
           fi
 
+          image_url_count="$(grep -cF "imageUrl=" "${ARTICLE_PATH}" || true)"
+          if (( image_url_count < 15 )); then
+            echo "::error::Generated article must include imageUrl on each NewsSourceCard. Use the source article image when reliable; otherwise use a person-, organization-, company-, location-, or event-specific Unsplash/web image. Found ${image_url_count}."
+            exit 1
+          fi
+
+          image_alt_count="$(grep -cF "imageAlt=" "${ARTICLE_PATH}" || true)"
+          if (( image_alt_count < 15 )); then
+            echo "::error::Generated article must include imageAlt on each NewsSourceCard image. Found ${image_alt_count}."
+            exit 1
+          fi
+
           if grep -nE "^出典メモ:" "${ARTICLE_PATH}"; then
             echo "::error::News articles must use NewsSourceCard for source memos instead of plain 出典メモ: lines."
+            exit 1
+          fi
+
+          hero_query="$(
+            awk '
+              /^heroImageQuery:/ {
+                sub(/^heroImageQuery:[[:space:]]*/, "")
+                gsub(/^['\''"]|['\''"]$/, "")
+                print
+                exit
+              }
+            ' "${ARTICLE_PATH}"
+          )"
+          hero_query_normalized="$(tr '[:upper:]' '[:lower:]' <<< "${hero_query}")"
+          if [[ "${hero_query_normalized}" =~ ^[[:space:]]*(news|daily|hot|trend|trends|headline|headlines|collage|politics|economy|technology|global|abstract|data|streams|desk|newsroom|editorial)([[:space:]]+(news|daily|hot|trend|trends|headline|headlines|collage|politics|economy|technology|global|abstract|data|streams|desk|newsroom|editorial))*[[:space:]]*$ ]]; then
+            echo "::error::heroImageQuery uses a generic news collage query; use person, organization, company, location, or event-specific catch-image search terms."
             exit 1
           fi
 
@@ -300,6 +328,10 @@ jobs:
         env:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: node .github/scripts/select-unsplash-hero.mjs
+
+      - name: Verify unique hero images
+        if: steps.diff_check.outputs.has_changes == 'true'
+        run: pnpm test:hero-images
 
       - name: Build generated site
         if: steps.diff_check.outputs.has_changes == 'true'
@@ -393,7 +425,8 @@ jobs:
             echo
             echo "- [x] \`git diff --check\`"
             echo "- [x] 未解決プレースホルダ（\`TBD\`, \`TODO\`, \`未定\`, \`要確認\`, \`FIXME\`）が残っていないこと"
-            echo "- [x] 重要な主張の近くに出典リンクまたは \`出典メモ:\` があること"
+            echo "- [x] 重要な主張の近くに \`NewsSourceCard\` があり、各カードに関連画像が設定されていること"
+            echo "- [x] News のキャッチ画像検索語が汎用ニュース語句ではなく、人物・組織・企業・場所・イベントに寄っていること"
             echo "- [x] Mermaidなどの図解がMarkdownとして読めること"
             echo "- [x] 追加・更新した \`research-tasks.md\` に完了状況と残課題が反映されていること、またはNews単体のため該当なし"
             echo "- [x] \`pnpm build\`"

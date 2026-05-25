@@ -16,6 +16,7 @@ const blog = defineCollection({
 			heroImageAlt: z.string().optional(),
 			heroImageCredit: z.string().optional(),
 			heroImageCreditUrl: z.string().url().optional(),
+			heroImageSourceId: z.string().optional(),
 			contentType: z.enum(['report', 'news']).default('report'),
 			category: z.enum(CATEGORIES),
 			tags: z.array(z.string()),

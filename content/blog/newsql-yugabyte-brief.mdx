@@ -17,11 +17,11 @@ draft: false
 
 NewSQLは、NoSQLが広げた水平スケールと高可用性の要求に対して、SQL、ACIDトランザクション、リレーショナルモデルを捨てずに応答しようとした系譜である。初期は「RDBMSを分散化する」議論だったが、現在の主戦場は `Distributed SQL`、`Cloud-native Postgres compatibility`、`multi-region active-active`、`serverless managed database`、`AI/agent workloads` へ移っている。
 
-出典メモ: CattellのSIGMOD Record調査は、Web 2.0由来のOLTP負荷が従来DBMSの水平スケール限界を突いたこと、NoSQLがACIDや一貫性を一部犠牲にしたこと、そして新しいSQL系システムがSQLとACIDを維持したまま水平スケールを狙ったことを整理している。[Cattell, Scalable SQL and NoSQL Data Stores](https://sigmod.org/publications/sigmodRecord/1012/04.surveys.cattell.pdf) を参照。
+<SourceNote>CattellのSIGMOD Record調査は、Web 2.0由来のOLTP負荷が従来DBMSの水平スケール限界を突いたこと、NoSQLがACIDや一貫性を一部犠牲にしたこと、そして新しいSQL系システムがSQLとACIDを維持したまま水平スケールを狙ったことを整理している。[Cattell, Scalable SQL and NoSQL Data Stores](https://sigmod.org/publications/sigmodRecord/1012/04.surveys.cattell.pdf) を参照。</SourceNote>
 
 YugabyteDBはこの潮流の中で、PostgreSQL互換APIを前面に出した分散SQLデータベースである。中核サービスは、OSSのYugabyteDB、フルマネージドのYugabyteDB Aeon、セルフマネージドDBaaSのYugabyteDB Anywhere、移行ツール/サービスのYugabyteDB Voyagerで構成される。2026年時点で話を聞くなら、単なる「NewSQL製品」ではなく、「PostgreSQL互換のまま、マルチリージョン、クラウド/オンプレ/Kubernetes、レガシーDB移行、AIアプリ基盤まで広げようとしている会社」と見た方がよい。
 
-出典メモ: YugabyteDB公式の製品比較は、Aeon、Anywhere、OSSの提供形態、PostgreSQL runtime compatibility、ACID transactions、multi-region、xCluster、CDC、Voyagerなどを整理している。[Compare YugabyteDB Products](https://www.yugabyte.com/compare-products/) を参照。
+<SourceNote>YugabyteDB公式の製品比較は、Aeon、Anywhere、OSSの提供形態、PostgreSQL runtime compatibility、ACID transactions、multi-region、xCluster、CDC、Voyagerなどを整理している。[Compare YugabyteDB Products](https://www.yugabyte.com/compare-products/) を参照。</SourceNote>
 
 Yugabyteが現在強く押し出している領域は、公開情報から見る限り次の4つである。
 
@@ -30,7 +30,7 @@ Yugabyteが現在強く押し出している領域は、公開情報から見る
 3. データベースモダナイゼーション: VoyagerでPostgreSQL、MySQL、Oracleなどからの移行を支援し、AI-powered assessment/modernizationを訴求している。
 4. AI/agentワークロード: pgvector、MCP Server、LangChain/LlamaIndex等の連携、Mekoというagent-native data layerを前面に出し始めている。
 
-出典メモ: PostgreSQL 15化は [YugabyteDB PostgreSQL 15 features](https://docs.yugabyte.com/stable/api/ysql/pg15-features/) に基づく。AI/agent訴求とMekoは [YugabyteDB latest release](https://www.yugabyte.com/latest-release/) と [Meko documentation](https://docs.mekodata.ai/) に基づく。ここでの「注力」は公式ロードマップではなく、公表済みページ・製品導線からの推定である。
+<SourceNote>PostgreSQL 15化は [YugabyteDB PostgreSQL 15 features](https://docs.yugabyte.com/stable/api/ysql/pg15-features/) に基づく。AI/agent訴求とMekoは [YugabyteDB latest release](https://www.yugabyte.com/latest-release/) と [Meko documentation](https://docs.mekodata.ai/) に基づく。ここでの「注力」は公式ロードマップではなく、公表済みページ・製品導線からの推定である。</SourceNote>
 
 ## 2. NewSQLの重要概念
 
@@ -38,7 +38,7 @@ NewSQLを一文で言えば、「SQLとACIDを維持したまま、NoSQL級の�
 
 NewSQLはその反動として現れた。重要なのは、NewSQLが単一のアーキテクチャ名ではない点である。Spanner系の時刻APIと合意形成、Calvin系の決定的トランザクション順序、Raft/Paxosで複製される分散KV上のSQL、ストレージとSQL層の分離、既存PostgreSQL/MySQL互換を重視する実装など、複数の設計系譜がある。
 
-出典メモ: Google Spanner論文は、グローバルスケールで同期レプリケーションされたデータベースが、外部一貫性のある分散トランザクションをサポートしたと説明している。[Google Research, Spanner](https://research.google.com/archive/spanner.html) を参照。
+<SourceNote>Google Spanner論文は、グローバルスケールで同期レプリケーションされたデータベースが、外部一貫性のある分散トランザクションをサポートしたと説明している。[Google Research, Spanner](https://research.google.com/archive/spanner.html) を参照。</SourceNote>
 
 ```mermaid
 flowchart LR
@@ -65,13 +65,13 @@ flowchart LR
 
 初期NewSQLの価値は、SQLとACIDを捨てずに水平スケールできることだった。2026年時点の購買理由はもう少し具体的で、「既存アプリ、ORM、運用者、監査、SQL資産を活かしたい」「ただし単一PostgreSQLではmulti-regionや書き込みスケールが足りない」という形になっている。YugabyteDBはPostgreSQL runtime compatibility、CockroachDBはPostgreSQL wire/protocol互換、SpannerはPostgreSQL interface、Aurora DSQLはPostgreSQL-compatibleを訴求する。
 
-出典メモ: YugabyteDBのYSQLはPostgreSQL query layerのforkを再利用し、データ型、クエリ、式、関数、ストアドプロシージャ、トリガー、拡張などをPostgreSQLと同様に動かす設計だと説明している。[YugabyteDB PostgreSQL 15 features](https://docs.yugabyte.com/stable/api/ysql/pg15-features/) を参照。SpannerはGoogleSQLとPostgreSQLの2 dialectを持つ。[Spanner documentation](https://docs.cloud.google.com/spanner/docs?authuser=0) を参照。
+<SourceNote>YugabyteDBのYSQLはPostgreSQL query layerのforkを再利用し、データ型、クエリ、式、関数、ストアドプロシージャ、トリガー、拡張などをPostgreSQLと同様に動かす設計だと説明している。[YugabyteDB PostgreSQL 15 features](https://docs.yugabyte.com/stable/api/ysql/pg15-features/) を参照。SpannerはGoogleSQLとPostgreSQLの2 dialectを持つ。[Spanner documentation](https://docs.cloud.google.com/spanner/docs?authuser=0) を参照。</SourceNote>
 
 ### 3.2 Cloud / Serverless / Managedが標準化する
 
 運用負荷を下げることが、分散SQLの採用条件になっている。分散DBは、合意形成、leader配置、tablet/region配置、backup、upgrade、schema change、CDC、障害復旧を含むため、従来DBより運用面が複雑になりやすい。そこで各社は、フルマネージド、serverless、BYOC、Kubernetes operator、Terraform provider、observability、performance advisorを前面に出している。
 
-出典メモ: YugabyteDB AeonはAWS/Azure/GCP上のfully managed DBaaS、Anywhereは任意環境でのself-managed DBaaSとして説明されている。[YugabyteDB Aeon FAQ](https://docs.yugabyte.com/stable/faq/yugabytedb-managed-faq/)、[YugabyteDB Anywhere](https://docs.yugabyte.com/stable/yugabyte-platform/) を参照。Aurora DSQLはserverlessでインフラ管理不要と説明されている。[AWS Aurora DSQL documentation](https://docs.aws.amazon.com/aurora-dsql/latest/userguide/what-is-aurora-dsql.html) を参照。
+<SourceNote>YugabyteDB AeonはAWS/Azure/GCP上のfully managed DBaaS、Anywhereは任意環境でのself-managed DBaaSとして説明されている。[YugabyteDB Aeon FAQ](https://docs.yugabyte.com/stable/faq/yugabytedb-managed-faq/)、[YugabyteDB Anywhere](https://docs.yugabyte.com/stable/yugabyte-platform/) を参照。Aurora DSQLはserverlessでインフラ管理不要と説明されている。[AWS Aurora DSQL documentation](https://docs.aws.amazon.com/aurora-dsql/latest/userguide/what-is-aurora-dsql.html) を参照。</SourceNote>
 
 ### 3.3 AI/agent向けデータ基盤への拡張
 
@@ -79,13 +79,13 @@ flowchart LR
 
 YugabyteDBはpgvectorとHNSW indexing、MCP Server、LangChain/LlamaIndex/Bedrock/Vertex AI連携、Mekoを訴求している。Spannerもvector search、graph、search、AI/ML連携を前面に出している。TiDBもAI agents、transactions、analytics、vector searchを同じページで訴求している。これは、公表情報から見る限り、分散SQLが「グローバルOLTP」だけでなく「AI-native operational data plane」へ広がる動きである。
 
-出典メモ: YugabyteDB latest releaseは、MCP Server、LangChain/OLLama/LlamaIndex/Bedrock/Vertex AI連携、pgvector、Performance Advisor、Mekoを掲載している。[YugabyteDB latest release](https://www.yugabyte.com/latest-release/) を参照。Spanner docsはvector search、MCP、Graph、full-text searchを同じ製品ドキュメントに含めている。[Spanner documentation](https://docs.cloud.google.com/spanner/docs?authuser=0) を参照。TiDBはAI agents、ACID、transactions、analytics、vector searchを訴求している。[PingCAP](https://www.pingcap.com/) を参照。
+<SourceNote>YugabyteDB latest releaseは、MCP Server、LangChain/OLLama/LlamaIndex/Bedrock/Vertex AI連携、pgvector、Performance Advisor、Mekoを掲載している。[YugabyteDB latest release](https://www.yugabyte.com/latest-release/) を参照。Spanner docsはvector search、MCP、Graph、full-text searchを同じ製品ドキュメントに含めている。[Spanner documentation](https://docs.cloud.google.com/spanner/docs?authuser=0) を参照。TiDBはAI agents、ACID、transactions、analytics、vector searchを訴求している。[PingCAP](https://www.pingcap.com/) を参照。</SourceNote>
 
 ## 4. YugabyteDBのアーキテクチャ
 
 YugabyteDBは、大きく見ると `YSQL/YCQLのquery layer` と `DocDB storage layer` に分かれる。YSQLはPostgreSQL互換のSQL API、YCQLはCassandra-inspired APIである。ストレージ層では、データをtabletに分割し、DocDBがRocksDB上にデータを保持し、Raftでtabletを複製する。YB-Masterはカタログ管理とクラスタ編成、YB-TServerはtabletの保持とクエリ処理を担う。
 
-出典メモ: YugabyteDB architectureは、query layerとstorage layer、YSQL/YCQL、DocDB on RocksDB、sharding、Raft replication、YB-Master/YB-TServerを説明している。[YugabyteDB Architecture](https://docs.yugabyte.com/stable/architecture/) を参照。
+<SourceNote>YugabyteDB architectureは、query layerとstorage layer、YSQL/YCQL、DocDB on RocksDB、sharding、Raft replication、YB-Master/YB-TServerを説明している。[YugabyteDB Architecture](https://docs.yugabyte.com/stable/architecture/) を参照。</SourceNote>
 
 ```mermaid
 flowchart TB
@@ -110,11 +110,11 @@ YugabyteDBを理解するうえで重要なのは、「PostgreSQLをそのまま
 | YugabyteDB Voyager  | 既存DBからの移行ツール/サービス                    | Oracle/PostgreSQL/MySQL移行で詰まるschema/transaction pattern |
 | Meko                | agent-native data layer                            | 成熟度、料金、YugabyteDB/Aeonとの関係、MCPと監査              |
 
-出典メモ: Aeon FAQは、AeonをAWS/Azure/GCP上のfully managed YugabyteDB-as-a-Serviceと説明している。[YugabyteDB Aeon FAQ](https://docs.yugabyte.com/stable/faq/yugabytedb-managed-faq/) を参照。Anywhere docsは、on-prem、public cloud、Kubernetes、single-/multi-region topologiesでYugabyteDB universesをdeploy/operateするself-managed DBaaSと説明している。[YugabyteDB Anywhere](https://docs.yugabyte.com/stable/yugabyte-platform/) を参照。Voyager docsは、PostgreSQL、MySQL、OracleからYugabyteDB Aeon/Anywhere/OSSへ移行するend-to-end migrationを説明している。[YugabyteDB Voyager docs](https://docs.yugabyte.com/stable/yugabyte-voyager/) を参照。
+<SourceNote>Aeon FAQは、AeonをAWS/Azure/GCP上のfully managed YugabyteDB-as-a-Serviceと説明している。[YugabyteDB Aeon FAQ](https://docs.yugabyte.com/stable/faq/yugabytedb-managed-faq/) を参照。Anywhere docsは、on-prem、public cloud、Kubernetes、single-/multi-region topologiesでYugabyteDB universesをdeploy/operateするself-managed DBaaSと説明している。[YugabyteDB Anywhere](https://docs.yugabyte.com/stable/yugabyte-platform/) を参照。Voyager docsは、PostgreSQL、MySQL、OracleからYugabyteDB Aeon/Anywhere/OSSへ移行するend-to-end migrationを説明している。[YugabyteDB Voyager docs](https://docs.yugabyte.com/stable/yugabyte-voyager/) を参照。</SourceNote>
 
 MekoはYugabyteDB本体とは別導線で出てきているagent-native data layerである。Mekoの公式ページは、multi-agent systems向けのcollective memory、shared knowledge、decision traces、single MCP endpoint、unified data layerを訴求しており、YugabyteDB上に構築されていると説明している。現時点では成熟した汎用DBサービスというより、YugabyteがAI agent時代のデータ基盤に賭けているシグナルとして見るのが妥当である。
 
-出典メモ: Meko公式サイトは「The Data Layer for Agents That Learn Together」とし、MCP endpoint、vector/SQL/graph/search、serverless architectureを説明している。[Meko](https://mekodata.ai/)、[Meko Documentation](https://docs.mekodata.ai/) を参照。ここでの位置づけは公表情報からの推定である。
+<SourceNote>Meko公式サイトは「The Data Layer for Agents That Learn Together」とし、MCP endpoint、vector/SQL/graph/search、serverless architectureを説明している。[Meko](https://mekodata.ai/)、[Meko Documentation](https://docs.mekodata.ai/) を参照。ここでの位置づけは公表情報からの推定である。</SourceNote>
 
 ## 6. Yugabyteが今注力していると見える領域
 
@@ -127,7 +127,7 @@ MekoはYugabyteDB本体とは別導線で出てきているagent-native data lay
 | AI/agent workloads      | pgvector、MCP Server、LangChain/LlamaIndex連携、Meko               | RAG/agent memory用途で、専用vector DBと比べた勝ち筋/限界                     |
 | Operational tooling     | Performance Advisor、observability、rolling upgrades、backup/PITR  | 本番SREが見るべきSLO、アラート、障害訓練、アップグレード頻度                 |
 
-出典メモ: v2025.2 LTS release notesは、xCluster automatic mode、connection manager改善、write pipelining、pgvector with indexing、HNSW、PostgreSQL互換機能などを挙げている。[YugabyteDB v2025.2 release notes](https://docs.yugabyte.com/stable/releases/ybdb-releases/v2025.2/) を参照。注力領域は公式ロードマップではなく、公表済みリリースと製品ページからの推定である。
+<SourceNote>v2025.2 LTS release notesは、xCluster automatic mode、connection manager改善、write pipelining、pgvector with indexing、HNSW、PostgreSQL互換機能などを挙げている。[YugabyteDB v2025.2 release notes](https://docs.yugabyte.com/stable/releases/ybdb-releases/v2025.2/) を参照。注力領域は公式ロードマップではなく、公表済みリリースと製品ページからの推定である。</SourceNote>
 
 ## 7. 導入判断の観点
 

@@ -20,7 +20,9 @@ not import Markdown as a component. Imported Markdown renders the body, but
 Astro does not expose imported headings through `post.render().headings`, so the
 article table-of-contents sidebar becomes empty.
 
-Keep Mermaid fences and `出典メモ:` paragraphs in the article body.
+Keep Mermaid fences in the article body. Use `<SourceNote>...</SourceNote>`
+near the claim it supports instead of plain `出典メモ:` paragraphs. `SourceNote`
+is registered by the post renderer, so do not import it in ordinary report MDX.
 -->
 
 # <REPORT_TITLE>

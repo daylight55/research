@@ -1,0 +1,61 @@
+---
+type Props = {
+	label?: string
+}
+
+const { label = '出典' } = Astro.props
+---
+
+<span class='source-note' role='note'>
+	<span aria-hidden='true'>（</span><span class='source-note-label'>{label}:</span>
+	<slot /><span aria-hidden='true'>）</span>
+</span>
+
+<style is:global>
+	.prose .source-note {
+		display: inline;
+		color: #6b7280;
+		font-size: 0.82em;
+		font-weight: 400;
+		line-height: 1.65;
+	}
+
+	.prose .source-note-label {
+		margin-inline-end: 0.2em;
+		font-weight: 600;
+	}
+
+	.prose .source-note a {
+		color: inherit;
+		text-decoration-color: rgba(107, 114, 128, 0.45);
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.18em;
+	}
+
+	.prose .source-note a:hover {
+		color: #374151;
+		text-decoration-color: currentColor;
+	}
+
+	html.dark .prose .source-note {
+		color: #9ca3af;
+	}
+
+	html.dark .prose .source-note a {
+		text-decoration-color: rgba(156, 163, 175, 0.5);
+	}
+
+	html.dark .prose .source-note a:hover {
+		color: #d1d5db;
+	}
+
+	@media (prefers-contrast: more) {
+		.prose .source-note {
+			color: #4b5563;
+		}
+
+		html.dark .prose .source-note {
+			color: #d1d5db;
+		}
+	}
+</style>

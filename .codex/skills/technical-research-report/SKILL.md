@@ -73,8 +73,9 @@ Also do all of the following:
 ## Citation Requirements
 
 - Place citations near the claims they support, not only in a final bibliography.
-- Use a short `出典メモ:` paragraph after important claims or paragraphs.
-- Include the link in the `出典メモ:` itself.
+- Use `<SourceNote>...</SourceNote>` near important claims or paragraphs. It renders as a small, muted, parenthesized citation note in article prose.
+- Include source links inside the `SourceNote` itself.
+- `SourceNote` is registered by the post renderer, so ordinary report MDX does not need an import. News digests are the exception: keep using `NewsSourceCard` there.
 - When quoting source wording, keep quotes short and specific.
 - For copyrighted sources, do not paste long passages. Prefer brief quoted phrases plus Japanese paraphrase.
 - If a source is an official roadmap, call it a roadmap. If not, write `公表情報からの推定`.
@@ -83,8 +84,7 @@ Good pattern:
 
 ```markdown
 Anthropicの方向性は、MCP、長文脈、エージェント実行、企業統制に寄っている。
-
-出典メモ: MCP発表は [Anthropic, Introducing the Model Context Protocol](...)。Opus 4.6の1M contextとagent teamsは [Claude Opus 4.6](...) に基づく。ここでの「方向性」は公式ロードマップではなく、公表済み機能からの推定である。
+<SourceNote>MCP発表は [Anthropic, Introducing the Model Context Protocol](...)。Opus 4.6の1M contextとagent teamsは [Claude Opus 4.6](...) に基づく。ここでの「方向性」は公式ロードマップではなく、公表済み機能からの推定である。</SourceNote>
 ```
 
 ## Diagram Requirements
@@ -115,7 +115,7 @@ Mermaid authoring constraints:
 - Keep node labels short: prefer short noun phrases; target about 15 Japanese characters and cap at about 25 characters. Put explanations in prose near the diagram.
 - Use `flowchart LR` only for simple left-to-right relationships or comparisons. If it becomes wide, split it or use a Markdown table.
 - Use `flowchart TD` only for short procedures of about 3-5 steps. If it exceeds 6 steps, write the detailed sequence as a numbered list and diagram only the core loop.
-- For `timeline`, use years plus short event names only. Explain event details in the paragraph or `出典メモ:` immediately around the diagram.
+- For `timeline`, use years plus short event names only. Explain event details in the paragraph or `<SourceNote>...</SourceNote>` immediately around the diagram.
 - Do not mix timeline, architecture, operational steps, and risks in one diagram. Decide one purpose per diagram: history, relationship, procedure, or comparison.
 - Before publishing, verify the rendered Mermaid in local preview or generated HTML. If text is unreadable, whitespace is excessive, or the diagram needs too much scrolling to understand, simplify or split it.
 

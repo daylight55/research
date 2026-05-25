@@ -27,7 +27,7 @@
 		"preview": "astro preview",
 		"postbuild": "pagefind --site dist",
 		"test:workflows": "node .github/tests/daily-issue-research-workflow.test.mjs && node --test .github/tests/publication-workflow-policy.test.mjs",
-		"test:content": "node --test .github/tests/news-title-summaries.test.mjs",
+		"test:content": "node --test .github/tests/news-title-summaries.test.mjs .github/tests/source-note-citations.test.mjs",
 		"test:i18n": "node --test .github/tests/i18n-content.test.mjs",
 		"test:hero-images": "node --test .github/tests/select-unsplash-hero.test.mjs .github/tests/hero-images.test.mjs .github/tests/news-source-card-images.test.mjs",
 		"format:check": "prettier --plugin-search-dir=. --check .",

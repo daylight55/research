@@ -71,7 +71,9 @@ drivers, risks, and practical implications.
     security implications where relevant
   - Japan-facing implications when they materially affect policy, markets,
     supply chains, security, or business decisions
-- Place source links near the supported claims using `出典メモ:`.
+- Place source links near the supported claims using `<SourceNote>...</SourceNote>`.
+  The post renderer registers `SourceNote`, so do not import it in ordinary
+  report MDX. It should read as a short, muted, parenthesized citation note.
 - Clearly separate established facts, product/vendor claims, public-information
   inference, open questions, limitations, and practical implications.
 - If no official roadmap exists, write `公表情報からの推定`.

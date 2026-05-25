@@ -49,17 +49,17 @@ AIの歴史は、単純な「人間に近づく技術の進歩」ではなく、
 
 この時期の出発点は、McCarthy、Minsky、Rochester、Shannonによる1955年のDartmouth Proposalである。同提案は、学習や知能の諸側面を精密に記述できれば機械でシミュレートできるという研究仮説を掲げた。Newell and Simon (1976) は physical symbol system hypothesis を提示し、知能を記号と探索の計算過程として捉えた。この見方は、知識を明示ルールとして持つシステムに強い理論的支柱を与えた。
 
-出典メモ: [Dartmouth Proposal](https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html) は、AI研究を「learning」や「intelligence」を機械でシミュレートする計画として提示した。Newell and Simonの記号処理観は [Computer Science as Empirical Inquiry](https://cacm.acm.org/research/computer-science-as-empirical-inquiry/) を参照。
+<SourceNote>[Dartmouth Proposal](https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html) は、AI研究を「learning」や「intelligence」を機械でシミュレートする計画として提示した。Newell and Simonの記号処理観は [Computer Science as Empirical Inquiry](https://cacm.acm.org/research/computer-science-as-empirical-inquiry/) を参照。</SourceNote>
 
 その後、統計的機械学習は、手で規則を書く代わりに、データから規則性を学ぶ方向へ移行した。さらに深層学習は、特徴量設計そのものを学習に取り込み、画像認識、音声認識、自然言語処理を大きく進展させた。
 
 ニューラルネットワークの復興には、Rumelhart, Hinton, and Williams (1986) の誤差逆伝播法が決定的だった。LeCun, Bengio, and Hinton (2015) は、深層学習を、表現そのものを階層的に学ぶ方法として整理した。2010年代の進展は、単に計算資源が増えたからではなく、データ、GPU、最適化、正則化、ネットワーク構造、ベンチマークが同時に成熟した結果である。
 
-出典メモ: 誤差逆伝播は [Rumelhart, Hinton, and Williams (1986)](https://www.nature.com/articles/323533a0)、深層学習の総説は [LeCun, Bengio, and Hinton (2015)](https://www.nature.com/articles/nature14539)。後者は深層学習を、複数の表現レベルを学習する方法として整理している。
+<SourceNote>誤差逆伝播は [Rumelhart, Hinton, and Williams (1986)](https://www.nature.com/articles/323533a0)、深層学習の総説は [LeCun, Bengio, and Hinton (2015)](https://www.nature.com/articles/nature14539)。後者は深層学習を、複数の表現レベルを学習する方法として整理している。</SourceNote>
 
 2017年のTransformerは、系列データを処理するうえで再帰や畳み込みに依存せず、注意機構によって文脈中の要素間関係を直接扱う設計を示した。これが現代LLMの中心的基盤になった。GPT-3以降は、大規模事前学習とプロンプトによる few-shot / zero-shot 的な利用が広まり、「タスクごとに個別モデルを作る」から「汎用モデルに文脈を与えて解かせる」へ重心が移った。
 
-出典メモ: Transformerの原論文 [Attention Is All You Need](https://arxiv.org/abs/1706.03762) は、Transformerを "based solely on attention mechanisms" と説明する。GPT-3の [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) は、スケール拡大によりタスク非依存の few-shot 性能が改善することを報告した。
+<SourceNote>Transformerの原論文 [Attention Is All You Need](https://arxiv.org/abs/1706.03762) は、Transformerを "based solely on attention mechanisms" と説明する。GPT-3の [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) は、スケール拡大によりタスク非依存の few-shot 性能が改善することを報告した。</SourceNote>
 
 2024年以降の実務上の焦点は、モデル単体から、エージェント、ツール利用、長文脈、外部記憶、権限、監査、業務アプリ統合へ移っている。これはAIが「回答するソフトウェア」から「業務環境内で行為するソフトウェア」へ移行していることを意味する。
 
@@ -81,7 +81,7 @@ LLMを理解する際の要点は、次の五つである。
 
 LLMの研究文脈では、2017年のTransformerだけでなく、BERT、GPT-3、InstructGPT、Constitutional AI、Foundation Modelsの議論を合わせて読む必要がある。BERT (Devlin et al., 2018) は双方向文脈を事前学習で獲得し、GPT-3 (Brown et al., 2020) は大規模自己回帰モデルが few-shot 性能を示すことを実証した。Bommasani et al. (2021) は、これらを foundation models と呼び、能力だけでなく、バイアス、評価、法的・社会的リスクを含む基盤技術として整理した。
 
-出典メモ: BERTは [Devlin et al. (2018)](https://arxiv.org/abs/1810.04805)、GPT-3は [Brown et al. (2020)](https://arxiv.org/abs/2005.14165)、foundation modelの概念整理は [Bommasani et al. (2021)](https://arxiv.org/abs/2108.07258)。ここでは、個別タスク用モデルから基盤モデルへ移る研究史として引用している。
+<SourceNote>BERTは [Devlin et al. (2018)](https://arxiv.org/abs/1810.04805)、GPT-3は [Brown et al. (2020)](https://arxiv.org/abs/2005.14165)、foundation modelの概念整理は [Bommasani et al. (2021)](https://arxiv.org/abs/2108.07258)。ここでは、個別タスク用モデルから基盤モデルへ移る研究史として引用している。</SourceNote>
 
 ### 3.1 トークン化
 
@@ -93,7 +93,7 @@ Transformerの中心は自己注意である。自己注意は、入力中の各
 
 Vaswani et al. (2017) の貢献は、RNNやCNNを使わずに注意機構だけで系列変換を構成できることを示した点にある。LLMでは、各層の多頭注意が異なる関係を捕捉し、フィードフォワード層がその表現を変換する。これが「意味理解」に見える振る舞いの技術的基盤である。ただし、注意重みをそのまま人間可読な説明とみなすのは危険で、解釈可能性研究でも注意と説明の関係は慎重に扱われている。
 
-出典メモ: [Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) は、従来の系列変換モデルが recurrent / convolutional network に基づいていたのに対し、Transformerでは recurrence と convolution を捨てたと述べる。このレポートの「自己注意中心」という説明はこの設計上の差分に基づく。
+<SourceNote>[Vaswani et al. (2017)](https://arxiv.org/abs/1706.03762) は、従来の系列変換モデルが recurrent / convolutional network に基づいていたのに対し、Transformerでは recurrence と convolution を捨てたと述べる。このレポートの「自己注意中心」という説明はこの設計上の差分に基づく。</SourceNote>
 
 ### 3.3 事前学習とスケーリング
 
@@ -105,7 +105,7 @@ LLMは大量のテキストやコードを用いて、次のトークン、ま�
 
 Ouyang et al. (2022) は、GPT-3を人間フィードバックで指示追従させる InstructGPT を示した。Bai et al. (2022) の Constitutional AI は、人間ラベルだけに頼らず、明示された原則に基づくAIフィードバックで有害性を下げる方向を示した。実務上は、これらの手法は「モデルに倫理を内蔵した」ことを意味しない。出力傾向を改善したにすぎず、権限、監査、承認、ログ、評価はシステム側に残る。
 
-出典メモ: [Ouyang et al. (2022)](https://arxiv.org/abs/2203.02155) は、モデルを大きくするだけではユーザー意図への追従は保証されないとし、human feedbackで fine-tune する方法を示す。[Bai et al. (2022)](https://arxiv.org/abs/2212.08073) は、"rules or principles" によるAIフィードバックを Constitutional AI と呼んでいる。
+<SourceNote>[Ouyang et al. (2022)](https://arxiv.org/abs/2203.02155) は、モデルを大きくするだけではユーザー意図への追従は保証されないとし、human feedbackで fine-tune する方法を示す。[Bai et al. (2022)](https://arxiv.org/abs/2212.08073) は、"rules or principles" によるAIフィードバックを Constitutional AI と呼んでいる。</SourceNote>
 
 ### 3.5 推論ではなく「推論可能な圧縮」
 
@@ -113,7 +113,7 @@ LLMの出力は論理エンジンの証明ではない。多くの場合、膨�
 
 Bender et al. (2021) は、大規模言語モデルの環境負荷、データ由来のバイアス、形式だけを模倣する危険を批判した。一方で、Brown et al. (2020) 以降の結果は、統計的予測だけでは軽視できない汎用性を示した。両者は矛盾しない。LLMは人間と同じ意味理解を持つと断定できないが、外部環境と組み合わせれば高い実務価値を持つ。
 
-出典メモ: 批判的観点は [Bender et al. (2021)](https://dl.acm.org/doi/10.1145/3442188.3445922)、能力面の実証は [Brown et al. (2020)](https://arxiv.org/abs/2005.14165)。本レポートでは、この二つを「LLMは過小評価も過大評価も避けるべき技術」と読む。
+<SourceNote>批判的観点は [Bender et al. (2021)](https://dl.acm.org/doi/10.1145/3442188.3445922)、能力面の実証は [Brown et al. (2020)](https://arxiv.org/abs/2005.14165)。本レポートでは、この二つを「LLMは過小評価も過大評価も避けるべき技術」と読む。</SourceNote>
 
 ```mermaid
 flowchart TD
@@ -130,7 +130,7 @@ LLMと人間の違いを「人間には心がある、AIにはない」という
 
 この論点には哲学と認知科学の長い議論がある。Searle (1980) の中国語の部屋は、記号操作だけでは意味理解にならないと主張した。Dreyfusは、古典的AIが身体性、状況性、熟練、世界内存在を過小評価していると批判した。Clark and Chalmers (1998) は、認知が脳内だけでなく外部環境に拡張される可能性を論じた。Lake et al. (2017) は、人間らしい学習には、少数事例からの一般化、因果モデル、構成性、直感心理学・物理学が必要だと整理した。
 
-出典メモ: 記号操作と理解の差は [Searle (1980)](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/minds-brains-and-programs/8D8E2A8A4C5A96E7C4A5385DAB3D27C1)、外部環境まで含む認知の捉え方は [Clark and Chalmers (1998)](https://academic.oup.com/analysis/article-abstract/58/1/7/153111)、人間らしい学習の要件は [Lake et al. (2017)](https://www.cambridge.org/core/product/A9535B1D745A0377E16C590E14B94993) を参照。
+<SourceNote>記号操作と理解の差は [Searle (1980)](https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/minds-brains-and-programs/8D8E2A8A4C5A96E7C4A5385DAB3D27C1)、外部環境まで含む認知の捉え方は [Clark and Chalmers (1998)](https://academic.oup.com/analysis/article-abstract/58/1/7/153111)、人間らしい学習の要件は [Lake et al. (2017)](https://www.cambridge.org/core/product/A9535B1D745A0377E16C590E14B94993) を参照。</SourceNote>
 
 | 観点   | 人間                                         | LLM                                                          |
 | ------ | -------------------------------------------- | ------------------------------------------------------------ |
@@ -158,7 +158,7 @@ AI活用の成否は「どのモデルを使うか」よりも「何を入力可
 
 この章は、RAG、知識グラフ、業務データモデリング、ワークフロー管理の交差点にある。Lewis et al. (2020) のRAGやGuu et al. (2020) のREALMは、モデル内部に全知識を持たせるのではなく、検索された外部知識を生成に接続する方向を示した。実務では、この検索対象が単なる文書コーパスに留まると、業務状態、権限、履歴、例外の扱いが弱くなる。
 
-出典メモ: RAGは [Lewis et al. (2020)](https://arxiv.org/abs/2005.11401)、REALMは [Guu et al. (2020)](https://proceedings.mlr.press/v119/guu20a.html)。ここでは、検索拡張を「文書検索」だけで終わらせず、業務オブジェクト・状態・行為まで広げる必要があるという実務上の含意として引用している。
+<SourceNote>RAGは [Lewis et al. (2020)](https://arxiv.org/abs/2005.11401)、REALMは [Guu et al. (2020)](https://proceedings.mlr.press/v119/guu20a.html)。ここでは、検索拡張を「文書検索」だけで終わらせず、業務オブジェクト・状態・行為まで広げる必要があるという実務上の含意として引用している。</SourceNote>
 
 ### 5.1 第1層: 文書
 
@@ -194,7 +194,7 @@ flowchart TD
 
 記号接地問題は、記号が記号同士の関係だけで閉じていると、何を意味しているのかがシステム内では決まらないという問題である。Harnadは、単なる言語的入出力だけでは接地が不十分であり、感覚運動的な接続が必要だと論じた。
 
-出典メモ: [Harnad (1990)](https://www.southampton.ac.uk/~harnad/Papers/Harnad/harnad90.sgproblem.html) の Symbol Grounding Problem がこの章の基礎である。本レポートでは、ロボット身体そのものではなく、業務対象・行為・結果・責任への接続として再解釈している。
+<SourceNote>[Harnad (1990)](https://www.southampton.ac.uk/~harnad/Papers/Harnad/harnad90.sgproblem.html) の Symbol Grounding Problem がこの章の基礎である。本レポートでは、ロボット身体そのものではなく、業務対象・行為・結果・責任への接続として再解釈している。</SourceNote>
 
 LLM時代の記号接地は、古典的な「記号AI対コネクショニズム」の再演ではない。LLMは分布的表現により言語内の関係を強力に扱えるが、業務で問題になるのは「この顧客」「この契約」「この障害」「この承認」のような個別対象への接続である。したがって、接地は哲学的意味理解の完全解決ではなく、参照、行為、結果、責任を閉じる情報アーキテクチャとして設計する。
 
@@ -224,7 +224,7 @@ flowchart LR
 
 Gruber (1993) は、オントロジーを概念化の明示的仕様として定義した。Guarino (1998) 以降の formal ontology は、概念の分類だけでなく、同一性、依存性、部分全体関係、役割、イベントといった基礎的区別を重視した。Berners-Lee, Hendler, and Lassila (2001) のSemantic Webは、Web上の情報を機械が処理可能な意味構造へ接続する構想だった。これらの系譜は、現代の業務AIにおいて「LLMが触る対象をどう定義するか」という問題に戻ってくる。
 
-出典メモ: オントロジーを「明示的仕様」として扱う定義は [Gruber (1993)](https://doi.org/10.1006/knac.1993.1008)、Semantic Webの構想は [Berners-Lee, Hendler, and Lassila (2001)](https://lassila.org/publications/2001/SciAm.html)。この節では、知識表現としての系譜と、業務操作レイヤーとしての現代的用法を分けている。
+<SourceNote>オントロジーを「明示的仕様」として扱う定義は [Gruber (1993)](https://doi.org/10.1006/knac.1993.1008)、Semantic Webの構想は [Berners-Lee, Hendler, and Lassila (2001)](https://lassila.org/publications/2001/SciAm.html)。この節では、知識表現としての系譜と、業務操作レイヤーとしての現代的用法を分けている。</SourceNote>
 
 1. **哲学的オントロジー**: 何が存在するのかを問う。
 2. **知識表現としてのオントロジー**: 概念、関係、制約を機械可読に定義する。
@@ -234,7 +234,7 @@ AI活用に必要なのは、3番目を含むオントロジーである。単�
 
 Palantir FoundryのOntologyはこの点を強く押し出している。PalantirはOntologyを、データセット、仮想テーブル、モデルの上に位置し、設備、製品、注文、金融取引などの現実世界の対象に接続する operational layer と説明している。また、意味要素だけでなく、アクション、関数、動的セキュリティといった kinetic elements を含むと述べている。
 
-出典メモ: Palantirの [Why create an Ontology?](https://www.palantir.com/docs/foundry/ontology/why-ontology) は、Ontologyを組織の "common language" として説明し、意思決定結果の capture と writeback を強調する。Action types、Functions、Permissionsの具体項目は同ドキュメントのナビゲーションおよび関連ページ群で確認できる。
+<SourceNote>Palantirの [Why create an Ontology?](https://www.palantir.com/docs/foundry/ontology/why-ontology) は、Ontologyを組織の "common language" として説明し、意思決定結果の capture と writeback を強調する。Action types、Functions、Permissionsの具体項目は同ドキュメントのナビゲーションおよび関連ページ群で確認できる。</SourceNote>
 
 この考え方は、LLM時代に非常に重要である。LLMは自然言語で多様な要求を受けられるが、その要求を安全に実務へ反映するには、「どのオブジェクトに対して、どの状態で、誰の権限で、どの行為を許すか」を明確にする必要がある。
 
@@ -251,11 +251,11 @@ flowchart TD
 
 Graphitiは、Zepの文脈基盤の中核にある時間認識型のコンテキストグラフエンジンである。公式READMEでは、静的な知識グラフではなく、事実の時間的変化、出所、エピソード、カスタム型、ハイブリッド検索を扱うものとして説明されている。Zep論文では、Graphitiを通じて会話データと業務データを動的に統合し、履歴関係を維持するアプローチが示されている。
 
-出典メモ: Graphiti READMEは、Graphitiを [temporal context graphs for AI agents](https://github.com/getzep/graphiti) のフレームワークと説明し、事実の変化、provenance、prescribed / learned ontologyを扱うと述べる。Zep論文は [Rasmussen et al. (2025)](https://arxiv.org/abs/2501.13956)。
+<SourceNote>Graphiti READMEは、Graphitiを [temporal context graphs for AI agents](https://github.com/getzep/graphiti) のフレームワークと説明し、事実の変化、provenance、prescribed / learned ontologyを扱うと述べる。Zep論文は [Rasmussen et al. (2025)](https://arxiv.org/abs/2501.13956)。</SourceNote>
 
 Graphitiを評価するには、RAGの限界と比較するのが分かりやすい。RAGは、関連文書を検索して生成に渡す強力なパターンだが、文書断片の時系列、事実の更新、人物・案件・意思決定の関係、矛盾する証跡の扱いは実装依存になりやすい。Zep / Graphiti (Rasmussen et al., 2025) は、エージェント記憶を時間つき知識グラフとして扱うことで、この弱点を補う設計を示している。
 
-出典メモ: [Zep論文](https://arxiv.org/abs/2501.13956) は、既存RAGを static document retrieval に限られがちだとし、Graphitiを temporally-aware knowledge graph engine として位置づける。Graphiti READMEも、古い事実を削除せず validity window で管理する設計を説明している。
+<SourceNote>[Zep論文](https://arxiv.org/abs/2501.13956) は、既存RAGを static document retrieval に限られがちだとし、Graphitiを temporally-aware knowledge graph engine として位置づける。Graphiti READMEも、古い事実を削除せず validity window で管理する設計を説明している。</SourceNote>
 
 ### 8.1 評価できる点
 
@@ -297,7 +297,7 @@ flowchart LR
 
 Polanyi (1966) の暗黙知論は、「人は語れる以上のことを知っている」という問題を提示した。Nonaka (1994) とNonaka and Takeuchi (1995) は、暗黙知と形式知の変換を、共同化、表出化、連結化、内面化の循環として整理した。Brown and Duguid (1991) は、学習とイノベーションが公式マニュアルだけでなく、実践共同体の中で起こることを示した。AI導入では、この系譜を「暗黙知を全部テキスト化する」話に矮小化してはいけない。
 
-出典メモ: 暗黙知の基礎は [Polanyi, The Tacit Dimension](https://openlibrary.org/books/OL5990259M/The_tacit_dimension.)、SECIモデルの源流は [Nonaka (1994)](https://pubsonline.informs.org/doi/10.1287/orsc.5.1.14) と [Nonaka and Takeuchi (1995)](https://academic.oup.com/book/52097)。実践共同体の観点は [Brown and Duguid (1991)](https://pubsonline.informs.org/doi/fpi/10.1287/orsc.2.1.40)。
+<SourceNote>暗黙知の基礎は [Polanyi, The Tacit Dimension](https://openlibrary.org/books/OL5990259M/The_tacit_dimension.)、SECIモデルの源流は [Nonaka (1994)](https://pubsonline.informs.org/doi/10.1287/orsc.5.1.14) と [Nonaka and Takeuchi (1995)](https://academic.oup.com/book/52097)。実践共同体の観点は [Brown and Duguid (1991)](https://pubsonline.informs.org/doi/fpi/10.1287/orsc.2.1.40)。</SourceNote>
 
 AI時代の暗黙知活用は、暗黙知を完全に形式知化することではない。むしろ、暗黙知が発揮された場面を捕捉し、再利用可能な形で周辺情報と接続することである。
 
@@ -325,7 +325,7 @@ flowchart LR
 
 Palantir Foundry Ontologyは、AI時代の業務システム設計における重要な参照点である。Palantirのドキュメントでは、Ontologyは組織の operational layer であり、データを現実世界の対象へ接続し、意思決定、アクション、セキュリティを統合すると説明されている。
 
-出典メモ: [Palantir Ontology overview](https://www.palantir.com/docs/foundry/ontology/overview) と [Why create an Ontology?](https://www.palantir.com/docs/foundry/ontology/why-ontology) を参照。後者はOntologyを組織の "digital twin" と呼び、decision capture、writeback、action typesを通じて意思決定をデータ化すると説明している。
+<SourceNote>[Palantir Ontology overview](https://www.palantir.com/docs/foundry/ontology/overview) と [Why create an Ontology?](https://www.palantir.com/docs/foundry/ontology/why-ontology) を参照。後者はOntologyを組織の "digital twin" と呼び、decision capture、writeback、action typesを通じて意思決定をデータ化すると説明している。</SourceNote>
 
 Palantirの特徴は、オントロジーを静的な知識表現に閉じず、業務対象、権限、アクション、意思決定を統合する運用層として扱う点にある。これはSemantic WebやOWLの伝統と矛盾しないが、重点が異なる。RDF/OWL系のオントロジーが「概念と関係の表現」を重視するのに対し、Foundry Ontologyは「現実の業務対象を安全に操作するための層」として提示されている。
 
@@ -358,7 +358,7 @@ Anthropicは詳細な将来ロードマップを包括的には公開してい�
 
 この章は、公式ロードマップの引用ではなく、Anthropicの公開済み製品・仕様・発表からの推定である。2024年11月のMCP発表、Claude CodeのMCP連携、Subagents、Skills、Opus 4.6の1M context betaとagent teams、Labs、金融向けagent templatesは、同じ方向を示している。つまり、Anthropicは「単発応答のLLM」から「長時間タスクを分解し、外部ツールを使い、組織の権限下で実行するエージェント基盤」へ重心を移している。
 
-出典メモ: MCP発表は [Anthropic, Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)。Opus 4.6の1M token context、context compaction、agent teamsは [Claude Opus 4.6](https://www.anthropic.com/news/claude-opus-4-6) に基づく。ここでの「方向性」は公式ロードマップではなく、公表済み機能からの推定である。
+<SourceNote>MCP発表は [Anthropic, Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)。Opus 4.6の1M token context、context compaction、agent teamsは [Claude Opus 4.6](https://www.anthropic.com/news/claude-opus-4-6) に基づく。ここでの「方向性」は公式ロードマップではなく、公表済み機能からの推定である。</SourceNote>
 
 ### 11.1 公表情報から見える方向性
 
@@ -390,11 +390,11 @@ flowchart LR
 
 MCPは、AIアプリケーションと外部システムを接続する標準プロトコルである。AnthropicはMCPを、データソースやツールをAIに接続するための標準として説明している。公式仕様では、Tools、Resources、Prompts、Sampling、Roots、Elicitation、Authorization などが扱われる。
 
-出典メモ: AnthropicのMCP発表は、MCPを "open standard" として、AI assistants と data sources を接続するものと説明している。MCP公式の [What is MCP?](https://modelcontextprotocol.io/docs/getting-started/intro) も、AI applicationsを external systems に接続する標準と説明する。
+<SourceNote>AnthropicのMCP発表は、MCPを "open standard" として、AI assistants と data sources を接続するものと説明している。MCP公式の [What is MCP?](https://modelcontextprotocol.io/docs/getting-started/intro) も、AI applicationsを external systems に接続する標準と説明する。</SourceNote>
 
 MCPの位置づけは、HTTPやSQLのように万能な意味論ではなく、接続の共通インターフェースである。公式仕様では、server features として Resources、Prompts、Tools、client features として Sampling、Roots などが定義される。2025年以降の仕様では、認可やセキュリティ考慮も整備されている。実務では、MCP serverを作ること自体より、どの操作を公開し、どの権限で実行し、どのログを残すかが本質になる。
 
-出典メモ: MCP serverの基本機能は [Understanding MCP servers](https://modelcontextprotocol.io/docs/learn/server-concepts)。同ページはTools、Resources、Promptsを三つのbuilding blocksとして説明し、toolsはモデルが呼び出す操作、resourcesは文脈情報、promptsはテンプレートと位置づける。
+<SourceNote>MCP serverの基本機能は [Understanding MCP servers](https://modelcontextprotocol.io/docs/learn/server-concepts)。同ページはTools、Resources、Promptsを三つのbuilding blocksとして説明し、toolsはモデルが呼び出す操作、resourcesは文脈情報、promptsはテンプレートと位置づける。</SourceNote>
 
 ### 12.1 MCPでできること
 

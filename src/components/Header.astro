@@ -65,6 +65,7 @@ const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
 		>
 			<a
 				href={localizedPath('ja', currentContentPath)}
+				data-locale-switch='ja'
 				class:list={[
 					'px-2 py-1 transition hover:bg-black/5 dark:hover:bg-white/10',
 					locale === 'ja' && 'bg-black text-white dark:bg-white dark:text-black'
@@ -75,6 +76,7 @@ const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
 			</a>
 			<a
 				href={localizedPath('en', currentContentPath)}
+				data-locale-switch='en'
 				class:list={[
 					'px-2 py-1 transition hover:bg-black/5 dark:hover:bg-white/10',
 					locale === 'en' && 'bg-black text-white dark:bg-white dark:text-black'

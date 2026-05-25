@@ -39,3 +39,20 @@ test('Codex translation workflow exists for missing English articles', async () 
 	assert.match(workflow, /codex/i)
 	assert.match(workflow, /content\/blog\/en/)
 })
+
+test('preferred locale provider detects browser language and persists manual switches', async () => {
+	const layout = await readFile(join(repoRoot.pathname, 'src/layouts/BaseLayout.astro'), 'utf8')
+	const provider = await readFile(
+		join(repoRoot.pathname, 'src/components/ProviderLocale.astro'),
+		'utf8'
+	)
+	const header = await readFile(join(repoRoot.pathname, 'src/components/Header.astro'), 'utf8')
+
+	assert.match(layout, /<ProviderLocale\s*\/>/)
+	assert.match(provider, /navigator\.languages/)
+	assert.match(provider, /window\.localStorage\.getItem\(STORAGE_KEY\)/)
+	assert.match(provider, /window\.location\.replace/)
+	assert.match(provider, /canRedirectToEnglish/)
+	assert.match(header, /data-locale-switch='ja'/)
+	assert.match(header, /data-locale-switch='en'/)
+})

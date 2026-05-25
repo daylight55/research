@@ -21,6 +21,11 @@ function sha256(file) {
 	return createHash('sha256').update(readFileSync(file)).digest('hex')
 }
 
+function canonicalPostKey(file) {
+	const postId = file.replace(/^content\/blog\//, '').replace(/\.mdx$/, '')
+	return postId.startsWith('en/') ? postId.slice('en/'.length) : postId
+}
+
 test('published blog entries use concrete non-duplicated hero images', () => {
 	const files = execFileSync('git', ['ls-files', 'content/blog/*.mdx'], { encoding: 'utf8' })
 		.split('\n')
@@ -44,10 +49,11 @@ test('published blog entries use concrete non-duplicated hero images', () => {
 		assert.ok(existsSync(imagePath), `${file} hero image should exist: ${imagePath}`)
 
 		const hash = sha256(imagePath)
+		const duplicate = seen.get(hash)
 		assert.ok(
-			!seen.has(hash),
-			`${file} duplicates hero image used by ${seen.get(hash)}: ${imagePath}`
+			!duplicate || duplicate.postKey === canonicalPostKey(file),
+			`${file} duplicates hero image used by ${duplicate?.file}: ${imagePath}`
 		)
-		seen.set(hash, file)
+		seen.set(hash, { file, postKey: canonicalPostKey(file) })
 	}
 })

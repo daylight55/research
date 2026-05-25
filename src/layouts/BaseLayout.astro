@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ProviderTheme from '@/components/ProviderTheme'
 import ProviderAnimations from '@/components/ProviderAnimations'
+import ProviderLocale from '@/components/ProviderLocale'
 import TwSizeIndicator from '@/components/TwSizeIndicator'
 import { DEFAULT_LOCALE } from '@/utils'
 const { title, description, image, articleDate, locale = DEFAULT_LOCALE } = Astro.props
@@ -12,6 +13,7 @@ const { title, description, image, articleDate, locale = DEFAULT_LOCALE } = Astr
 <html lang={locale} class='scroll-smooth'>
 	<head>
 		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
+		<ProviderLocale />
 		<ProviderTheme />
 		<ProviderAnimations />
 	</head>

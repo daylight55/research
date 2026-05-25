@@ -1,8 +1,23 @@
 ---
-import { cn, sluglify, withBase, withoutBase } from '@/utils'
+import {
+	cn,
+	DEFAULT_LOCALE,
+	localizedPath,
+	sluglify,
+	stripLocaleFromPath,
+	type Locale
+} from '@/utils'
 
-const { name = 'View All', activeCategory } = Astro.props
-const currentPath = withoutBase(Astro.url.pathname)
+const {
+	name = 'View All',
+	activeCategory,
+	locale = DEFAULT_LOCALE
+} = Astro.props as {
+	name?: string
+	activeCategory?: string
+	locale?: Locale
+}
+const currentPath = stripLocaleFromPath(Astro.url.pathname)
 const unsluglifyNameCategory = sluglify(name.toLowerCase())
 
 const isActive =
@@ -11,7 +26,8 @@ const isActive =
 ---
 
 <a
-	href={withBase(
+	href={localizedPath(
+		locale,
 		name === 'View All' ? '/reports/' : sluglify(`/category/${unsluglifyNameCategory}/1`)
 	)}
 	class={cn(

@@ -11,6 +11,10 @@ const base = process.env.ASTRO_BASE ?? '/'
 export default defineConfig({
 	site,
 	base,
+	i18n: {
+		locales: ['ja', 'en'],
+		defaultLocale: 'ja'
+	},
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,
@@ -25,8 +29,8 @@ export default defineConfig({
 			shikiConfig: {
 				experimentalThemes: {
 					light: 'vitesse-light',
-					dark: 'material-theme-palenight',
-				  },
+					dark: 'material-theme-palenight'
+				},
 				wrap: true
 			},
 			drafts: true

@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+import TitlePage from '@/components/TitlePage'
+import { REFERENCE_ITEMS } from '@/data/references'
+import { localizedPath } from '@/utils'
+
+const locale = 'en'
+---
+
+<BaseLayout title='Reference' locale={locale}>
+	<TitlePage title='Reference' />
+	<div class='grid gap-3'>
+		{
+			REFERENCE_ITEMS.map((item) => (
+				<a
+					href={localizedPath(locale, item.href)}
+					class='group grid gap-4 rounded-md border border-black/10 bg-white/70 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:bg-white/10 dark:hover:border-white/30 md:grid-cols-[1fr_auto] md:items-center'
+				>
+					<div class='grid gap-2'>
+						<h2 class='text-xl font-semibold'>{item.title}</h2>
+						<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>{item.description}</p>
+					</div>
+					<span class='text-sm font-semibold text-gray-900 transition group-hover:translate-x-1 dark:text-gray-100'>
+						Open →
+					</span>
+				</a>
+			))
+		}
+	</div>
+</BaseLayout>

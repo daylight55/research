@@ -6,12 +6,13 @@ import ListRelatedPosts from '@/components/ListRelatedPosts'
 import FormattedDate from '@/components/FormattedDate'
 import Share from '@/components/Share'
 import TableOfContents from '@/components/TableOfContents'
-import { getPosts, withBase } from '@/utils'
+import { DEFAULT_LOCALE, getPostUrl, getPosts, localizedPath } from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import Disqus from '@/components/Disqus'
 import { disqusConfig } from '@/data/disqus.config'
 
-const posts = await getCollection('blog')
+const locale = DEFAULT_LOCALE
+const posts = (await getCollection('blog')).filter((post) => post.id.split('/')[0] !== 'en')
 export async function getStaticPaths() {
 	const posts = await getPosts()
 
@@ -44,6 +45,7 @@ const disqusEnabled = disqusConfig.enabled
 	data={post.data}
 	headings={headings}
 	readTime={remarkPluginFrontmatter.minutesRead}
+	locale={locale}
 >
 	<div
 		class='grid grid-cols-1 gap-8 mt-8 lg:grid-cols-[9rem_minmax(0,1fr)_9rem] lg:justify-center lg:gap-4 xl:grid-cols-[10rem_minmax(0,56rem)_10rem] 2xl:grid-cols-[12rem_minmax(0,62rem)_12rem]'
@@ -75,7 +77,7 @@ const disqusEnabled = disqusConfig.enabled
 							post.data.tags.map((tag) => (
 								<li>
 									<a
-										href={withBase(`/tags/${encodeURIComponent(tag.toLowerCase())}`)}
+										href={localizedPath(locale, `/tags/${encodeURIComponent(tag.toLowerCase())}`)}
 										class='leading-snug text-gray-600 underline decoration-black/20 underline-offset-4 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:decoration-white/20 dark:hover:text-indigo-300'
 									>
 										#{tag}
@@ -96,7 +98,7 @@ const disqusEnabled = disqusConfig.enabled
 								{relatedPosts.map((relatedPost) => (
 									<li>
 										<a
-											href={withBase(`/post/${relatedPost.id}/`)}
+											href={getPostUrl(relatedPost)}
 											class='block leading-snug text-gray-600 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:hover:text-indigo-300'
 										>
 											{relatedPost.data.title}

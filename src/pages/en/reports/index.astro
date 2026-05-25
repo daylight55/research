@@ -1,0 +1,23 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+import ListCategories from '@/components/ListCategories'
+import ListPosts from '@/components/ListPosts'
+import TitlePage from '@/components/TitlePage'
+import { getReportPosts } from '@/utils'
+
+const locale = 'en'
+const reportPosts = await getReportPosts(undefined, locale)
+---
+
+<BaseLayout title='Reports' locale={locale}>
+	<TitlePage title='Reports' />
+	<div class='mb-6 grid gap-2'>
+		<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>
+			Long-form research reports translated from the Japanese atlas.
+		</p>
+	</div>
+	<div class='mb-6 min-w-0'>
+		<ListCategories locale={locale} />
+	</div>
+	<ListPosts posts={reportPosts} locale={locale} />
+</BaseLayout>

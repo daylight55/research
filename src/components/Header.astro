@@ -8,11 +8,14 @@ import Search from '@/components/Search'
 import TagIcon from './icons/TagIcon.astro'
 import ToggleTheme from './ToggleTheme.astro'
 import { SOCIALNETWORKS } from '@/data/links'
-import { withBase } from '@/utils'
+import { DEFAULT_LOCALE, localizedPath, stripLocaleFromPath, type Locale } from '@/utils'
+
+const { locale = DEFAULT_LOCALE } = Astro.props as { locale?: Locale }
+const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
 ---
 
 <header class='relative flex h-14 items-center font-semibold'>
-	<a class='text-lg mr-auto' href={withBase('/')}>Home</a>
+	<a class='text-lg mr-auto' href={localizedPath(locale, '/')}>Home</a>
 
 	<div
 		id='astro-header-drawer'
@@ -26,24 +29,28 @@ import { withBase } from '@/utils'
 			>
 				<HeaderLink
 					href='/news/'
+					locale={locale}
 					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
 				>
 					<NewsIcon /> News
 				</HeaderLink>
 				<HeaderLink
 					href='/reports/'
+					locale={locale}
 					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
 				>
 					<ReportIcon /> Reports
 				</HeaderLink>
 				<HeaderLink
 					href='/reference/'
+					locale={locale}
 					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
 				>
 					<ReferenceIcon /> Reference
 				</HeaderLink>
 				<HeaderLink
 					href='/tags'
+					locale={locale}
 					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
 				>
 					<TagIcon /> Tags
@@ -53,9 +60,34 @@ import { withBase } from '@/utils'
 	</div>
 
 	<div class='flex items-center gap-2 md:pl-2' transition:persist='navbar'>
+		<div
+			class='flex items-center rounded-md border border-black/10 text-xs font-bold dark:border-white/10'
+		>
+			<a
+				href={localizedPath('ja', currentContentPath)}
+				class:list={[
+					'px-2 py-1 transition hover:bg-black/5 dark:hover:bg-white/10',
+					locale === 'ja' && 'bg-black text-white dark:bg-white dark:text-black'
+				]}
+				aria-current={locale === 'ja' ? 'page' : undefined}
+			>
+				JA
+			</a>
+			<a
+				href={localizedPath('en', currentContentPath)}
+				class:list={[
+					'px-2 py-1 transition hover:bg-black/5 dark:hover:bg-white/10',
+					locale === 'en' && 'bg-black text-white dark:bg-white dark:text-black'
+				]}
+				aria-current={locale === 'en' ? 'page' : undefined}
+			>
+				EN
+			</a>
+		</div>
 		{
 			SOCIALNETWORKS.map((network) => (
 				<HeaderLink
+					locale={locale}
 					class='inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors hover:bg-black/5 dark:hover:bg-white/10 [&_svg]:h-6 [&_svg]:w-6'
 					href={network.url}
 					target='_blank'

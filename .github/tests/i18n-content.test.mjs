@@ -5,6 +5,9 @@ import test from 'node:test'
 
 const repoRoot = new URL('../..', import.meta.url)
 const blogDir = join(repoRoot.pathname, 'content/blog')
+const referenceDir = join(repoRoot.pathname, 'src/pages/reference')
+const englishReferenceDir = join(repoRoot.pathname, 'src/pages/en/reference')
+const japaneseText = /[\u3040-\u30ff\u3400-\u9fff]/
 
 test('Astro i18n is configured for Japanese and English', async () => {
 	const config = await readFile(join(repoRoot.pathname, 'astro.config.mjs'), 'utf8')
@@ -33,7 +36,6 @@ test('English Mermaid diagrams do not contain Japanese labels', async () => {
 	const englishPostFiles = (await readdir(join(blogDir, 'en')))
 		.filter((name) => name.endsWith('.mdx'))
 		.sort()
-	const japaneseText = /[\u3040-\u30ff\u3400-\u9fff]/
 
 	for (const file of englishPostFiles) {
 		const source = await readFile(join(blogDir, 'en', file), 'utf8')
@@ -47,6 +49,35 @@ test('English Mermaid diagrams do not contain Japanese labels', async () => {
 			)
 		}
 	}
+})
+
+test('English reference pages mirror Japanese reference routes', async () => {
+	const japaneseReferencePages = (await readdir(referenceDir))
+		.filter((name) => name.endsWith('.astro') && name !== 'index.astro')
+		.sort()
+
+	const englishReferencePages = (await readdir(englishReferenceDir))
+		.filter((name) => name.endsWith('.astro') && name !== 'index.astro')
+		.sort()
+
+	assert.ok(japaneseReferencePages.length > 0)
+	assert.deepEqual(englishReferencePages, japaneseReferencePages)
+})
+
+test('English reference pages and index data do not contain Japanese text', async () => {
+	const englishReferencePages = (await readdir(englishReferenceDir))
+		.filter((name) => name.endsWith('.astro'))
+		.sort()
+	const referenceData = await readFile(join(repoRoot.pathname, 'src/data/references.ts'), 'utf8')
+
+	for (const file of englishReferencePages) {
+		const source = await readFile(join(englishReferenceDir, file), 'utf8')
+		assert.doesNotMatch(source, japaneseText, `${file} should use English user-facing text`)
+	}
+
+	assert.match(referenceData, /title:\s*\{\s*ja:/)
+	assert.match(referenceData, /description:\s*\{\s*ja:/)
+	assert.match(referenceData, /export function getReferenceItems/)
 })
 
 test('Codex translation workflow exists for missing English articles', async () => {
@@ -67,6 +98,7 @@ test('Codex translation workflow exists for missing English articles', async () 
 	assert.match(prompt, /news digest articles/)
 	assert.match(prompt, /What happened:/)
 	assert.match(prompt, /Implications for practice:/)
+	assert.match(prompt, /Reference pages/)
 })
 
 test('preferred locale provider detects browser language and persists manual switches', async () => {

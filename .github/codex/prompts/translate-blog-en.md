@@ -16,3 +16,9 @@ Rules:
 - Do not translate code identifiers, URLs, file paths, product names, or proper nouns unless an established English name exists.
 - Do not add placeholders such as `TBD`, `TODO`, `FIXME`, `未定`, or `要確認`.
 - After writing files, run `pnpm build` and ensure the generated English article pages are present under `dist/en/post/`.
+
+Reference pages:
+
+- When a Japanese reference page is added or updated under `src/pages/reference/<slug>.astro`, add or update the matching English page under `src/pages/en/reference/<slug>.astro` in the same change.
+- Keep shared reference lists in locale-aware data helpers, such as `getReferenceItems(locale)`, so the Japanese and English indexes stay synchronized.
+- English reference pages must not contain Japanese user-facing text.

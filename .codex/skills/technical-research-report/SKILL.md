@@ -23,23 +23,28 @@ Cloudflare Pages Preview is the preferred PR preview surface for this repository
 Also do all of the following:
 
 1. Add or update `content/blog/<slug>.mdx` with frontmatter and the full article body.
-2. Add any new category to `src/data/categories.ts`.
-3. Preserve existing categories when rebasing or resolving conflicts; merge category lists as a union.
-4. Treat the article header image as a minor supporting element. Do not add low-information Codex-generated abstract category images by default; prefer existing meaningful images or a restrained placeholder until a genuinely useful source image or diagram exists.
-5. Avoid hardcoded homepage counts. Use data-derived values such as `posts.length` and `CATEGORIES.length`.
-6. Use `.github/codex/templates/blog-entry.mdx` as the shape for new site entries.
+2. Add or update the matching English article under `content/blog/en/<same-slug>.mdx` in the same PR, unless the user explicitly asks to defer translation. Japanese is the canonical source, but published routes must remain synchronized.
+3. Add any new category to `src/data/categories.ts`.
+4. Preserve existing categories when rebasing or resolving conflicts; merge category lists as a union.
+5. Treat the article header image as a minor supporting element. Do not add low-information Codex-generated abstract category images by default; prefer existing meaningful images or a restrained placeholder until a genuinely useful source image or diagram exists.
+6. Avoid hardcoded homepage counts. Use data-derived values such as `posts.length` and `CATEGORIES.length`.
+7. Use `.github/codex/templates/blog-entry.mdx` as the shape for new site entries.
    Keep the full article body directly in the MDX file after frontmatter. Do not
    write a separate `report.md` first and copy it later, and do not use
    `import Report from '../../../category/.../report.md'` plus `<Report />`.
    Imported Markdown headings are not exposed to Astro's table-of-contents data,
    which makes the desktop article sidebar empty.
-7. Run `pnpm build`.
-8. Confirm the build generated:
-   - `dist/index.html`
-   - `dist/post/<slug>/index.html`
-   - `dist/category/<category-name>/1/index.html`
-9. Check `dist/index.html` or `curl` against local preview for the slug, title, and category link before saying the report is visible.
-10. After PR creation, use the Cloudflare Pages Preview PR comment or GitHub Actions run details to identify the Cloudflare preview URL. When preview visibility is part of the deliverable, verify that Cloudflare URL with `curl` for the slug, title, and category link before reporting.
+8. For reference pages, keep `src/pages/reference/<slug>.astro` and `src/pages/en/reference/<slug>.astro` in route parity. Use locale-aware shared data such as `getReferenceItems(locale)` for reference indexes and homepage cards.
+9. Keep English article Mermaid diagrams, English reference pages, and English card copy free of Japanese user-facing text.
+10. Run `pnpm build`.
+11. Confirm the build generated:
+
+- `dist/index.html`
+- `dist/post/<slug>/index.html`
+- `dist/category/<category-name>/1/index.html`
+
+12. Check `dist/index.html` or `curl` against local preview for the slug, title, and category link before saying the report is visible.
+13. After PR creation, use the Cloudflare Pages Preview PR comment or GitHub Actions run details to identify the Cloudflare preview URL. When preview visibility is part of the deliverable, verify that Cloudflare URL with `curl` for the slug, title, and category link before reporting.
 
 ## Research Workflow
 
@@ -148,6 +153,8 @@ Use this default shape unless the topic needs something else:
 Before finishing:
 
 - No `TBD`, `TODO`, `未定`, or unresolved placeholders.
+- Japanese and English published routes are synchronized for articles and reference pages.
+- English article Mermaid diagrams and English reference pages contain no Japanese user-facing text.
 - Important claims have nearby links.
 - Current product/spec claims were verified against current sources.
 - Diagrams render as Mermaid-compatible Markdown where possible.

@@ -1,0 +1,360 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+
+const locale = 'en'
+
+const collectionRules = [
+	'Separate discovery sources from evidence sources. Editorial media and social media can be useful entry points, but facts should be checked against official announcements, specifications, papers, GitHub releases, and government documents.',
+	'Prioritize reuse over speed. For prices, roadmaps, specifications, regulation, and vulnerabilities, keep the confirmation date so later articles can update the point cleanly.',
+	'When no official roadmap exists, label future-facing claims as an inference from public information.',
+	'When writing about practical impact for Japan, check not only overseas primary sources but also Japanese government agencies, domestic vendors, and domestic advisories.',
+	'For Japanese and international politics, do not merely summarize breaking news. Separate institutions, key actors, domestic pressures, diplomatic, security, and market spillovers, and unresolved points.'
+]
+
+const sourceGroups = [
+	{
+		title: 'AI and foundation models',
+		description:
+			'Track changes in models, APIs, pricing, enterprise controls, AI safety, and research.',
+		sources: [
+			{
+				name: 'OpenAI News / Research / Docs',
+				url: 'https://openai.com/news/',
+				feed: 'https://openai.com/news/rss.xml',
+				use: 'Check models, APIs, pricing, reasoning and agent features, usage policies, and research announcements.'
+			},
+			{
+				name: 'Anthropic News / Research',
+				url: 'https://www.anthropic.com/news',
+				feed: '',
+				use: 'Track Claude, MCP, AI safety, enterprise features, security reports, and research announcements.'
+			},
+			{
+				name: 'Google DeepMind Blog',
+				url: 'https://deepmind.google/blog/',
+				feed: '',
+				use: 'Watch Gemini, AI for science, robotics, research results, and product integration.'
+			},
+			{
+				name: 'Google Research Blog',
+				url: 'https://research.google/blog/',
+				feed: '',
+				use: 'Use field-labeled research posts to spot movement from papers to implementation and products.'
+			},
+			{
+				name: 'Meta AI Blog',
+				url: 'https://ai.meta.com/blog/',
+				feed: '',
+				use: 'Track open models, research results, AI infrastructure, and the developer ecosystem.'
+			},
+			{
+				name: 'arXiv API',
+				url: 'https://export.arxiv.org/api/query',
+				feed: 'https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&sortBy=submittedDate&sortOrder=descending',
+				use: 'Collect early research signals from cs.AI, cs.LG, cs.CL, and cs.CV. Do not treat preprints as standalone evidence.'
+			}
+		]
+	},
+	{
+		title: 'Developer tools, cloud, and OSS',
+		description:
+			'Track implementability, developer adoption, the OSS supply chain, and cloud feature changes.',
+		sources: [
+			{
+				name: 'GitHub Changelog',
+				url: 'https://github.blog/changelog/',
+				feed: 'https://github.blog/changelog/feed/',
+				use: 'Track changes in Copilot, Actions, CodeQL, security advisories, and enterprise governance.'
+			},
+			{
+				name: 'GitHub Releases / repository tags',
+				url: 'https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases',
+				feed: '',
+				use: 'Check real releases, breaking changes, migration deadlines, and adoption pace for major OSS projects.'
+			},
+			{
+				name: 'Cloudflare Blog',
+				url: 'https://blog.cloudflare.com/',
+				feed: 'https://blog.cloudflare.com/rss/',
+				use: 'Watch edge, Workers, security, AI inference, and network-infrastructure implementation options.'
+			},
+			{
+				name: 'AWS News Blog',
+				url: 'https://aws.amazon.com/blogs/aws/',
+				feed: 'https://aws.amazon.com/blogs/aws/feed/',
+				use: 'Check new AWS features, regional expansion, and updates to data, AI, and security services.'
+			},
+			{
+				name: 'Google Cloud Blog',
+				url: 'https://cloud.google.com/blog/',
+				feed: '',
+				use: 'Track Vertex AI, data cloud, security, and infrastructure feature additions and cases.'
+			},
+			{
+				name: 'Azure Updates',
+				url: 'https://azure.microsoft.com/en-us/updates/',
+				feed: '',
+				use: 'Check availability and regional differences for Azure, Microsoft security, and Copilot-related services.'
+			},
+			{
+				name: 'CNCF Blog / Kubernetes Blog / OpenSSF',
+				url: 'https://www.cncf.io/blog/',
+				feed: '',
+				use: 'Follow cloud native, Kubernetes, and software supply-chain standardization.'
+			}
+		]
+	},
+	{
+		title: 'Cybersecurity and vulnerabilities',
+		description:
+			'Separate confirmed exploitation, severity, OSS dependencies, domestic impact, and remediation deadlines.',
+		sources: [
+			{
+				name: 'CISA Known Exploited Vulnerabilities Catalog',
+				url: 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog',
+				feed: 'https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json',
+				use: 'Use confirmed exploited vulnerabilities for priority decisions. The catalog is available as JSON.'
+			},
+			{
+				name: 'NIST National Vulnerability Database',
+				url: 'https://nvd.nist.gov/',
+				feed: 'https://nvd.nist.gov/vuln/data-feeds',
+				use: 'Check CVE, CVSS, CPE, and reference URLs. Combine severity with exploitation status.'
+			},
+			{
+				name: 'GitHub Advisory Database',
+				url: 'https://github.com/advisories',
+				feed: '',
+				use: 'Use as an entry point for OSS vulnerabilities, including GitHub-originated advisories and CVEs.'
+			},
+			{
+				name: 'OSV.dev',
+				url: 'https://osv.dev/',
+				feed: '',
+				use: 'Map vulnerabilities at package level, check dependency impact, and connect with SBOM workflows.'
+			},
+			{
+				name: 'JPCERT/CC RSS',
+				url: 'https://www.jpcert.or.jp/rss/index.html',
+				feed: 'https://www.jpcert.or.jp/rss/jpcert.rdf',
+				use: 'Check Japanese advisories, weekly reports, JVN updates, and domestic user impact.'
+			},
+			{
+				name: 'IPA Information Security',
+				url: 'https://www.ipa.go.jp/security/',
+				feed: '',
+				use: 'Check domestic vulnerability guidance, top-threat reports, digital transformation white papers, and IT workforce reports.'
+			}
+		]
+	},
+	{
+		title: 'Policy, government, and regulation',
+		description:
+			'Check primary sources for institutions, budgets, standards, privacy, government digital transformation, and industrial policy.',
+		sources: [
+			{
+				name: 'Digital Agency RSS',
+				url: 'https://www.digital.go.jp/rss',
+				feed: 'https://www.digital.go.jp/rss',
+				use: 'Track government digital transformation, My Number, government cloud, AI policy, and data-linkage updates.'
+			},
+			{
+				name: 'METI RSS',
+				url: 'https://www.meti.go.jp/english/rss/index.html',
+				feed: 'https://www.meti.go.jp/english/rss/latest.xml',
+				use: 'Check semiconductors, AI, the information industry, startups, cybersecurity, and industrial policy.'
+			},
+			{
+				name: 'e-Gov RSS feeds',
+				url: 'https://www.e-gov.go.jp/service-policy/rssfeed.html',
+				feed: 'https://www.e-gov.go.jp/news/rss/news.rdf',
+				use: 'Use as an entry point for laws, administrative procedures, public comments, and document updates.'
+			},
+			{
+				name: 'NIST Blogs',
+				url: 'https://www.nist.gov/blogs',
+				feed: '',
+				use: 'Follow public-sector perspectives on AI standards, CAISI, Cybersecurity Insights, and standardization trends.'
+			},
+			{
+				name: 'NISC',
+				url: 'https://www.nisc.go.jp/',
+				feed: '',
+				use: 'Check cross-government cybersecurity policy, critical infrastructure, and advisories.'
+			}
+		]
+	},
+	{
+		title: 'Japanese politics, international politics, and geopolitics',
+		description:
+			'Check domestic politics, diplomacy, security, sanctions, conflicts, elections, and international institutions through primary sources and authoritative data.',
+		sources: [
+			{
+				name: 'Prime Minister of Japan / MOFA / MOD',
+				url: 'https://www.mofa.go.jp/mofaj/',
+				feed: '',
+				use: 'Check Japanese government diplomatic statements, summit meetings, treaties, sanctions, security policy, and overseas safety information.'
+			},
+			{
+				name: 'National Diet Proceedings Search System',
+				url: 'https://kokkai.ndl.go.jp/',
+				feed: '',
+				use: 'Use as primary material for domestic political issues, government answers, ruling and opposition party arguments, and bill deliberations.'
+			},
+			{
+				name: 'United Nations News / Security Council',
+				url: 'https://news.un.org/',
+				feed: 'https://news.un.org/feed/subscribe/en/news/all/rss.xml',
+				use: 'Check the UN Security Council, General Assembly, humanitarian crises, ceasefires, sanctions, and international-law issues.'
+			},
+			{
+				name: 'G7 / NATO / EU official statements',
+				url: 'https://www.g7italy.it/en/',
+				feed: '',
+				use: 'Track joint statements, foreign policy, sanctions, and military and economic security alignment among major democracies.'
+			},
+			{
+				name: 'International Crisis Group',
+				url: 'https://www.crisisgroup.org/',
+				feed: '',
+				use: 'Use as secondary analysis for conflict and political-crisis background, key actors, peace talks, and deterioration scenarios.'
+			},
+			{
+				name: 'V-Dem / Freedom House / ACLED',
+				url: 'https://www.v-dem.net/',
+				feed: '',
+				use: 'Use comparative data on democracy, freedom, political violence, and protest movements to structure country reports.'
+			}
+		]
+	},
+	{
+		title: 'Semiconductors, hardware, and markets',
+		description:
+			'Separate products, manufacturing, investment, supply constraints, regulation, subsidies, and market volumes.',
+		sources: [
+			{
+				name: 'NVIDIA Technical Blog / Newsroom',
+				url: 'https://developer.nvidia.com/blog/',
+				feed: 'https://developer.nvidia.com/blog/feed/',
+				use: 'Watch GPUs, CUDA, AI inference, networking, and implementation details for developers.'
+			},
+			{
+				name: 'AMD, Intel, TSMC, Samsung, Kioxia, Micron official news',
+				url: 'https://www.tsmc.com/english/news',
+				feed: '',
+				use: 'Check product announcements, mass-production timing, capital investment, customer adoption, and supply constraints by company.'
+			},
+			{
+				name: 'SEMI',
+				url: 'https://www.semi.org/en/news-resources/press',
+				feed: '',
+				use: 'Use as supporting information for semiconductor equipment, materials, regional investment, and industry research.'
+			},
+			{
+				name: 'JEITA',
+				url: 'https://www.jeita.or.jp/english/',
+				feed: '',
+				use: 'Track Japan electronics and information technology industries, statistics, policy proposals, and domestic market trends.'
+			},
+			{
+				name: 'U.S. BIS / CHIPS Program Office',
+				url: 'https://www.bis.gov/',
+				feed: '',
+				use: 'Check primary information on export controls, subsidies, semiconductor industrial policy, and China-related restrictions.'
+			}
+		]
+	}
+]
+---
+
+<BaseLayout title='Source map for news research' locale={locale}>
+	<section class='grid gap-5'>
+		<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
+			Reference
+		</p>
+		<div class='grid gap-4'>
+			<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-5xl'>
+				Source map for news research
+			</h1>
+			<p class='max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300'>
+				This standing reference supports daily tracking of global and Japanese technology trends,
+				Japanese politics, and international politics, then turns the signals into news posts or
+				long-form reports. It is not a list of news outlets. It separates official announcements,
+				RSS and API feeds, research and implementation signals, regulatory and vulnerability
+				information, and primary materials from governments and international organizations.
+			</p>
+		</div>
+	</section>
+
+	<section class='grid gap-4'>
+		<h2 class='text-2xl font-semibold'>Reference policy</h2>
+		<div class='grid gap-3 md:grid-cols-2'>
+			{
+				collectionRules.map((rule) => (
+					<div class='rounded-md border border-black/10 bg-white/70 p-4 leading-7 dark:border-white/10 dark:bg-white/10'>
+						{rule}
+					</div>
+				))
+			}
+		</div>
+	</section>
+
+	<section class='grid gap-6'>
+		{
+			sourceGroups.map((group) => (
+				<div class='grid gap-4'>
+					<div>
+						<h2 class='text-2xl font-semibold'>{group.title}</h2>
+						<p class='mt-2 leading-7 text-gray-700 dark:text-gray-300'>{group.description}</p>
+					</div>
+					<div class='grid gap-3'>
+						{group.sources.map((source) => (
+							<a
+								href={source.url}
+								target='_blank'
+								rel='noreferrer'
+								class='grid gap-2 rounded-md border border-black/10 bg-white/70 p-4 transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-sm dark:border-white/10 dark:bg-white/10 dark:hover:border-white/30'
+							>
+								<div class='flex flex-wrap items-baseline gap-x-3 gap-y-1'>
+									<div class='font-semibold'>{source.name}</div>
+									{source.feed && (
+										<span class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+											RSS / API
+										</span>
+									)}
+								</div>
+								<p class='leading-7 text-gray-700 dark:text-gray-300'>{source.use}</p>
+								{source.feed && (
+									<p class='break-all text-sm leading-6 text-gray-500 dark:text-gray-400'>
+										Feed: {source.feed}
+									</p>
+								)}
+							</a>
+						))}
+					</div>
+				</div>
+			))
+		}
+	</section>
+
+	<section
+		class='rounded-md border border-black/10 bg-white/70 p-5 dark:border-white/10 dark:bg-white/10'
+	>
+		<h2 class='text-2xl font-semibold'>Daily news judgment</h2>
+		<div class='mt-3 grid gap-3 leading-7 text-gray-700 dark:text-gray-300'>
+			<p>
+				Classify collected information into AI, security, developer-tools, data-infrastructure,
+				semiconductor, policy-japan, japan-politics, and geopolitics. Decide whether to turn it into
+				an article by checking practical impact, novelty, confidence, spillover to Japan, and
+				whether it needs follow-up.
+			</p>
+			<p>
+				Daily news should stay concise while stating the background, what changed, practical
+				implications, unresolved points, and sources. For political developments, separate
+				institutions, key actors, domestic pressures, and diplomatic, security, and market
+				spillovers. Weekly reporting should group multiple signals moving in the same direction
+				instead of treating each item as isolated news.
+			</p>
+		</div>
+	</section>
+</BaseLayout>

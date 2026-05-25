@@ -55,4 +55,5 @@ test('preferred locale provider detects browser language and persists manual swi
 	assert.match(provider, /canRedirectToEnglish/)
 	assert.match(header, /data-locale-switch='ja'/)
 	assert.match(header, /data-locale-switch='en'/)
+	assert.doesNotMatch(header, /transition:persist='navbar'/)
 })

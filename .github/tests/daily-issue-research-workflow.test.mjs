@@ -144,6 +144,12 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
+	/image_alt_count="\$\(grep -cF "imageAlt=" "\$\{ARTICLE_PATH\}" \|\| true\)"[\s\S]*?image_alt_count < 15/,
+	'trend news workflow should require imageAlt on each NewsSourceCard',
+)
+
+assert.match(
+	trendWorkflow,
 	/- name: Save generated news article cache[\s\S]*?uses: actions\/cache\/save@v4[\s\S]*?key: \$\{\{ steps\.run_context\.outputs\.cache_key \}\}/,
 	'trend news workflow should save completed generated news artifacts in the run cache',
 )

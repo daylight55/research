@@ -15,6 +15,7 @@ draft: false
 ---
 
 import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
+import NewsSourceCard from '../../src/components/mdx/NewsSourceCard.astro'
 
 # 2026-05-23 ホットトレンド: 政治・経済・技術
 
@@ -32,7 +33,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: 調達部門は短期の価格変動だけでなく、米国内回帰や原産地規則の変更を前提に複数シナリオで見積もる必要がある。
 
-出典メモ: [Reuters配信のUSTR発言](https://www.investing.com/news/economy-news/ustr-greer-sees-no-immediate-chip-tariffs-but-says-protection-important-for-sector-4707278)。
+<NewsSourceCard
+	href='https://www.investing.com/news/economy-news/ustr-greer-sees-no-immediate-chip-tariffs-but-says-protection-important-for-sector-4707278'
+	source='Investing.com / Reuters'
+	title='USTR Greer sees no immediate chip tariffs'
+	description='半導体関税の即時発動はない一方、サプライチェーン保護は重要だとするUSTR発言を伝えた記事。'
+	imageUrl='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'
+	imageAlt='半導体回路とチップの接写'
+/>
 
 ### 米中AIガードレール
 
@@ -42,7 +50,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: 中国関連のAI案件は、輸出管理だけでなく、データ移転やモデル利用条件まで含めて法務レビューを厚くした方がよい。
 
-出典メモ: [Reuters配信の米中AI対話](https://www.investing.com/news/stock-market-news/us-china-are-discussing-ai-guardrails-to-safeguard-most-powerful-models-bessent-says-4687993)。
+<NewsSourceCard
+	href='https://www.investing.com/news/stock-market-news/us-china-are-discussing-ai-guardrails-to-safeguard-most-powerful-models-bessent-says-4687993'
+	source='Investing.com / Reuters'
+	title='U.S. and China are discussing AI guardrails'
+	description='米中当局が高性能AIモデルの安全策や運用上のガードレールを協議しているとする報道。'
+	imageUrl='https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80'
+	imageAlt='AIモデルとデジタルネットワークを示す抽象画像'
+/>
 
 ### 移民司法とNYC摘発
 
@@ -52,7 +67,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: 外国人雇用のある組織は、在留資格、I-9相当の確認、緊急時の法務連絡網を再点検しておくべきだ。
 
-出典メモ: [U.S. Department of Justice 発表](https://www.justice.gov/opa/pr/eoir-announces-77-immigration-judges-and-5-temporary-immigration-judges) と [Reuters配信のNYC摘発増](https://www.streetinsider.com/Reuters/New+York+City+federal+immigration+arrests+up+more+than+70%25%2C+audit+says/26538192.html)。
+<NewsSourceCard
+	href='https://www.justice.gov/opa/pr/eoir-announces-77-immigration-judges-and-5-temporary-immigration-judges'
+	source='U.S. Department of Justice'
+	title='EOIR announces 77 immigration judges and 5 temporary immigration judges'
+	description='移民裁判官と臨時移民裁判官の任命を公表した米司法省の一次情報。'
+	imageUrl='https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png'
+	imageAlt='米司法省の公式共有画像'
+/>
 
 ### ウクライナ和平の再始動
 
@@ -62,7 +84,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: エネルギー、物流、防衛関連の判断は、戦況だけでなく「交渉の有無」で大きく変わるため、ヘッドライン監視を続ける必要がある。
 
-出典メモ: [Reuters配信のウクライナ和平報道](https://www.marketscreener.com/news/zelenskiy-says-he-expects-us-proposals-on-new-formats-of-peace-talks-ce7f5adfd08cf327/)。
+<NewsSourceCard
+	href='https://www.marketscreener.com/news/zelenskiy-says-he-expects-us-proposals-on-new-formats-of-peace-talks-ce7f5adfd08cf327/'
+	source='MarketScreener / Reuters'
+	title='Zelenskiy says he expects US proposals on new formats for peace talks'
+	description='ゼレンスキー大統領が和平協議の新形式に関する米国案を待っていると述べたReuters配信記事。'
+	imageUrl='https://cdn.zonebourse.com/static/resize/768/432//images/reuters/2026-04/2026-04-24T114925Z_1_LYNXMPEM3N0OI_RTROPTP_4_UKRAINE-CRISIS-EU.JPG'
+	imageAlt='ウクライナ情勢をめぐる欧州首脳会談の関連画像'
+/>
 
 ### イラン核物資の返還
 
@@ -72,7 +101,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: エネルギー、海運、保険は、原油だけでなくホルムズ海峡周辺のエスカレーションも含めてストレステストしたい。
 
-出典メモ: [Reuters配信のイラン核物資をめぐる発言](https://www.investing.com/news/commodities-news/trump-vows-us-will-retrieve-uranium-from-iran-4704672)。
+<NewsSourceCard
+	href='https://www.investing.com/news/commodities-news/trump-vows-us-will-retrieve-uranium-from-iran-4704672'
+	source='Investing.com / Reuters'
+	title='Trump vows U.S. will retrieve uranium from Iran'
+	description='イランの高濃縮ウランを米国が最終的に回収するとするトランプ大統領発言を伝えた記事。'
+	imageUrl='https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&w=1200&q=80'
+	imageAlt='イラン国旗と外交交渉を想起させる関連画像'
+/>
 
 </NewsDigestSection>
 
@@ -88,7 +124,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: 調達・物流・価格設定は、需要の強弱だけでなく地政学プレミアムを上乗せして見直した方がよい。
 
-出典メモ: [Reuters配信の原油高と市場反応](https://www.investing.com/news/commodities-news/us-oil-prices-rise-as-investors-doubt-breakthrough-in-usiran-peace-talks-4705545)。
+<NewsSourceCard
+	href='https://www.investing.com/news/commodities-news/us-oil-prices-rise-as-investors-doubt-breakthrough-in-usiran-peace-talks-4705545'
+	source='Investing.com / Reuters'
+	title='U.S. oil prices rise as investors doubt breakthrough in U.S.-Iran peace talks'
+	description='米イラン協議の停滞観測を背景に原油価格が上昇したことを伝えた市場記事。'
+	imageUrl='https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1200&q=80'
+	imageAlt='石油精製設備とエネルギー市場の関連画像'
+/>
 
 ### FRBは据え置き維持
 
@@ -98,7 +141,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: 借入更新や長期プロジェクトは、金利がすぐ下がらない前提で採算を組み直しておきたい。
 
-出典メモ: [FRB議長会見の記録](https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260429.pdf) と [Reuters配信のFRBコメント](https://www.streetinsider.com/Reuters/Fed%2Bpolicy%2Bin%2Bgood%2Bplace%2Bto%2Brespond%2Bto%2Bshocks%2C%2BBarkin%2Bsays/26533192.html)。
+<NewsSourceCard
+	href='https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260429.pdf'
+	source='Federal Reserve'
+	title='FOMC press conference transcript'
+	description='政策金利をめぐるFRBの現状認識を確認できる議長会見記録。'
+	imageUrl='https://www.federalreserve.gov/images/social-media/social-default-image-opengraph.jpg'
+	imageAlt='米連邦準備制度理事会の公式共有画像'
+/>
 
 ### IMFは逆風継続
 
@@ -108,7 +158,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: 輸出入計画は、需要だけでなく物流費・保険料・通貨変動を含めた保守的な前提に寄せるべきだ。
 
-出典メモ: [IMFの世界経済見通し](https://www.imf.org/en/Publications/WEO) と [Reuters配信のIMFコメント](https://www.streetinsider.com/Reuters/IMF%2Bsays%2Bconstructive%2BUS-China%2Bdialogue%2C%2Breduced%2Btensions%2Bgood%2Bfor%2Bworld%2Beconomy/26493052.html)。
+<NewsSourceCard
+	href='https://www.imf.org/en/Publications/WEO'
+	source='International Monetary Fund'
+	title='World Economic Outlook'
+	description='世界経済の下振れリスクや成長見通しを確認するためのIMF公式ページ。'
+	imageUrl='https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80'
+	imageAlt='国際経済と金融市場を示すオフィスの会議風景'
+/>
 
 ### Softcat、AI需要で上方修正
 
@@ -118,7 +175,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: ベンダー選定では、ライセンス価格だけでなく、供給納期と保守能力を見ないと全体最適を外しやすい。
 
-出典メモ: [Reuters配信のSoftcat上方修正](https://www.streetinsider.com/Reuters/UK%27s%2BSoftcat%2Bboosts%2Bprofit%2Bguidance%2Bon%2Bstrong%2Bcorporate%2Bdemand%2Bfor%2BAI%2Btech/26537773.html)。
+<NewsSourceCard
+	href='https://www.streetinsider.com/Reuters/UK%27s%2BSoftcat%2Bboosts%2Bprofit%2Bguidance%2Bon%2Bstrong%2Bcorporate%2Bdemand%2Bfor%2BAI%2Btech/26537773.html'
+	source='StreetInsider / Reuters'
+	title="UK's Softcat boosts profit guidance on strong corporate demand for AI tech"
+	description='AIインフラ需要を背景にSoftcatが利益見通しを引き上げたとするReuters配信記事。'
+	imageUrl='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80'
+	imageAlt='企業ITとAI導入を想起させるノートPCの作業風景'
+/>
 
 ### NVIDIAとIREN、5GW提携
 
@@ -128,7 +192,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: AI関連の設備投資を検討する企業は、GPU単価だけでなく、電源契約と施設制約を先に押さえる必要がある。
 
-出典メモ: [NVIDIAの発表](https://nvidianews.nvidia.com/news/nvidia-and-iren-announce-strategic-partnership-to-accelerate-deployment-of-up-to-5-gigawatts-of-ai-infrastructure)。
+<NewsSourceCard
+	href='https://nvidianews.nvidia.com/news/nvidia-and-iren-announce-strategic-partnership-to-accelerate-deployment-of-up-to-5-gigawatts-of-ai-infrastructure'
+	source='NVIDIA Newsroom'
+	title='NVIDIA and IREN announce strategic partnership'
+	description='NVIDIAとIRENが最大5GW規模のAIインフラ展開に向けた戦略提携を発表した一次情報。'
+	imageUrl='https://nvidianews.nvidia.com/media/sites/219/images/social-image.jpg'
+	imageAlt='NVIDIA Newsroomの公式共有画像'
+/>
 
 </NewsDigestSection>
 
@@ -144,7 +215,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: 既存プロダクトは、会話UIの追加より先に、タスク分解と失敗時のリカバリ設計を見直した方がよい。
 
-出典メモ: [Google I/O 2026 の公式発表](https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/)。
+<NewsSourceCard
+	href='https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/'
+	source='Google Blog'
+	title='Building the agentic future: Developer highlights from I/O 2026'
+	description='Google I/O 2026で発表されたGeminiやエージェント開発機能をまとめた公式ブログ。'
+	imageUrl='https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IO_Dev_Highlights.width-1300.png'
+	imageAlt='Google I/O 2026 developer highlightsの共有画像'
+/>
 
 ### GPT-5.5がAPIへ
 
@@ -154,7 +232,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: 本番導入済みのワークフローは、5.5を前提に再ベンチマークし、コスト、遅延、失敗モードを更新したい。
 
-出典メモ: [OpenAIのGPT-5.5発表](https://openai.com/index/introducing-gpt-5-5/)。
+<NewsSourceCard
+	href='https://openai.com/index/introducing-gpt-5-5/'
+	source='OpenAI'
+	title='Introducing GPT-5.5'
+	description='GPT-5.5のAPIとChatGPT展開に関するOpenAIの公式発表。'
+	imageUrl='https://images.ctfassets.net/kftzwdyauwt9/32jPyVqUObkTrIIyA6tJV1/4eb384b5bb2f21ccea5de7665858a37a/Frame.png?fm=webp&q=90&w=1200'
+	imageAlt='OpenAI公式記事の共有画像'
+/>
 
 ### Codexがオンプレへ
 
@@ -164,7 +249,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: 機密コードや社内データを扱う組織は、SaaS利用か自社環境かを二択でなく、運用要件から逆算して決めるべきだ。
 
-出典メモ: [OpenAIとDellの発表](https://openai.com/index/dell-codex-enterprise-partnership/)。
+<NewsSourceCard
+	href='https://openai.com/index/dell-codex-enterprise-partnership/'
+	source='OpenAI'
+	title='OpenAI and Dell Technologies partner to bring Codex to hybrid and on-premises enterprise environments'
+	description='CodexをDellのAI Data PlatformやAI Factoryと接続する提携を説明したOpenAI公式発表。'
+	imageUrl='https://cdn-chilj.nitrocdn.com/gYFaTcLxknXlucWgXPjHDdhAuyobJjHx/assets/images/optimized/rev-ff0851f/winbuzzer.com/wp-content/uploads/2026/03/OpenAI-Codex-app-Windows-1068x601-1067x.jpg'
+	imageAlt='OpenAI Codexアプリの画面イメージ'
+/>
 
 ### NVIDIAが記録更新
 
@@ -174,7 +266,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: AIスタックの導入計画は、GPU価格だけでなく、供給遅延と電力制約まで含めた工程管理が必要だ。
 
-出典メモ: [NVIDIAのQ1 FY2027決算](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx)。
+<NewsSourceCard
+	href='https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-First-Quarter-Fiscal-2027/default.aspx'
+	source='NVIDIA Investor Relations'
+	title='NVIDIA announces financial results for first quarter fiscal 2027'
+	description='NVIDIAのFY2027第1四半期決算とデータセンター売上の動向を示す公式発表。'
+	imageUrl='https://nvidianews.nvidia.com/media/sites/219/images/social-image.jpg'
+	imageAlt='NVIDIA Newsroomの公式共有画像'
+/>
 
 ### ASMLの供給逼迫
 
@@ -184,7 +283,14 @@ import NewsDigestSection from '../../src/components/mdx/NewsDigestSection.astro'
 
 実務への含意: 半導体の調達と設備投資は、需要予測だけでなく装置の受注残と立ち上がり時期を前提に組み立てる必要がある。
 
-出典メモ: [ASMLの四半期結果](https://www.asml.com/en/news/press-releases/2026/q1-2026-financial-results) と [Reuters配信のASML報道](https://www.reuters.com/technology/asml-ceo-says-tight-supply-booming-chip-market-2026-05-20/)。
+<NewsSourceCard
+	href='https://www.asml.com/en/news/press-releases/2026/q1-2026-financial-results'
+	source='ASML'
+	title='Q1 2026 financial results'
+	description='先端半導体装置の需要と供給状況を確認できるASMLの四半期結果。'
+	imageUrl='https://images.unsplash.com/photo-1562408590-e32931084e23?auto=format&fit=crop&w=1200&q=80'
+	imageAlt='半導体製造装置とクリーンルームを想起させる関連画像'
+/>
 
 </NewsDigestSection>
 

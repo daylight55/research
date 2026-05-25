@@ -76,6 +76,9 @@ policy / technical decisions.
 - In News digests, implement that near-claim source note as an embedded
   `NewsSourceCard`, not as a plain Markdown sentence. Use the component title
   and description to summarize what the source supports.
+- Treat citation-card imagery as important article content, not decoration.
+  Add a relevant image to every `NewsSourceCard` whenever a source, official
+  page, web search result, or Unsplash result can reasonably support the topic.
 - Clearly label uncertain, fast-moving, or inferred points.
 - Avoid long verbatim quotations.
 
@@ -147,6 +150,9 @@ Rules for source memo cards:
   search image that is specific to the topic's key person, organization,
   company, location, product, or event. Avoid generic newspaper, abstract data,
   newsroom, stock-market, or technology-background images.
+- If no article-attached image is visible, do not leave the card image blank.
+  Fall back in this order: official organization image, related source via web
+  search, topic-specific Unsplash image.
 - Prefer the source that directly supports the topic's most important factual
   claim.
 - Do not replace cards with a bare `出典メモ:` paragraph.

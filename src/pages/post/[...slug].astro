@@ -6,7 +6,7 @@ import ListRelatedPosts from '@/components/ListRelatedPosts'
 import FormattedDate from '@/components/FormattedDate'
 import Share from '@/components/Share'
 import TableOfContents from '@/components/TableOfContents'
-import { DEFAULT_LOCALE, getPostUrl, getPosts, localizedPath } from '@/utils'
+import { DEFAULT_LOCALE, getPostSlug, getPostUrl, getPosts, localizedPath } from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import SourceNote from '@/components/mdx/SourceNote'
 import Disqus from '@/components/Disqus'
@@ -18,13 +18,14 @@ export async function getStaticPaths() {
 	const posts = await getPosts()
 
 	return posts.map((post) => ({
-		params: { slug: post.id },
+		params: { slug: getPostSlug(post) },
 		props: post
 	}))
 }
 type Props = CollectionEntry<'blog'>
 
 const post = Astro.props
+const postSlug = getPostSlug(post)
 const MAX_POSTS = 3
 const getRelatedPosts = (post: Props) => {
 	const lowercaseTags = post.data.tags.map((tag) => tag.toLowerCase())
@@ -35,6 +36,8 @@ const getRelatedPosts = (post: Props) => {
 }
 
 const relatedPosts = getRelatedPosts(post)
+const researchEntries = await getCollection('articleResearch')
+const hasResearchLog = researchEntries.some((entry) => getPostSlug(entry) === postSlug)
 
 const { Content, headings, remarkPluginFrontmatter } = await render(post)
 const glossaryTerms = (remarkPluginFrontmatter.glossaryTerms ?? []).slice(0, 18)
@@ -67,6 +70,22 @@ const disqusEnabled = disqusConfig.enabled
 						<span>{remarkPluginFrontmatter.minutesRead}</span>
 					</div>
 				</section>
+
+				{
+					hasResearchLog && (
+						<section class='flex flex-col gap-2'>
+							<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+								Research
+							</p>
+							<a
+								href={localizedPath(locale, `/post/${postSlug}/research/`)}
+								class='leading-snug text-gray-600 underline decoration-black/20 underline-offset-4 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:decoration-white/20 dark:hover:text-indigo-300'
+							>
+								調査プロセスを見る
+							</a>
+						</section>
+					)
+				}
 
 				<section class='flex flex-col gap-2'>
 					<p
@@ -144,6 +163,28 @@ const disqusEnabled = disqusConfig.enabled
 				class='prose prose-base md:prose-lg dark:prose-invert mb-12 min-w-full max-w-none prose-p:leading-8 prose-li:leading-8'
 			>
 				<Content components={{ pre: Code, SButton, SourceNote }} />
+
+				{
+					hasResearchLog && (
+						<section class='not-prose mt-12 rounded-md border border-black/10 bg-white/70 p-5 dark:border-white/10 dark:bg-white/10'>
+							<p class='text-sm font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+								Research Trail
+							</p>
+							<h2 class='mt-2 text-xl font-semibold text-gray-900 dark:text-gray-100'>
+								調査プロセス
+							</h2>
+							<p class='mt-2 leading-7 text-gray-700 dark:text-gray-300'>
+								この記事で参照した問い、根拠、判断の流れは公開可能な調査ログとして確認できます。
+							</p>
+							<a
+								href={localizedPath(locale, `/post/${postSlug}/research/`)}
+								class='mt-4 inline-flex w-fit items-center rounded-full border border-black/10 px-4 py-2 text-sm font-semibold text-gray-900 transition hover:border-black/30 hover:bg-white dark:border-white/10 dark:text-gray-100 dark:hover:border-white/30 dark:hover:bg-white/10'
+							>
+								調査プロセスを見る
+							</a>
+						</section>
+					)
+				}
 			</div>
 
 			<!-- related posts -->

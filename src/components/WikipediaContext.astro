@@ -9,22 +9,27 @@ import {
 type Props = {
 	label: string
 	locale: Locale
+	searchQuery?: string
+	validationKeywords?: string[]
 }
 
-const { label, locale } = Astro.props
+const { label, locale, searchQuery = label, validationKeywords = [] } = Astro.props
 const isEnglish = locale === 'en'
-const wikipediaUrl = createWikipediaUrl(label, locale)
-const searchApiUrl = createWikipediaSearchApiUrl(label, locale)
+const wikipediaUrl = createWikipediaUrl(searchQuery, locale)
+const searchApiUrl = createWikipediaSearchApiUrl(searchQuery, locale, 5)
 const summaryApiUrlTemplate = createWikipediaSummaryApiUrl('__TITLE__', locale).replace(
 	'__TITLE__',
 	'__TITLE__'
 )
+const validationKeywordText = validationKeywords.join('|')
 ---
 
 <section
 	class='grid gap-4 rounded-md border border-black/10 bg-white/70 p-5 dark:border-white/10 dark:bg-white/5'
 	data-wikipedia-context
 	data-label={label}
+	data-search-query={searchQuery}
+	data-validation-keywords={validationKeywordText}
 	data-search-api-url={searchApiUrl}
 	data-summary-api-url-template={summaryApiUrlTemplate}
 	data-fallback-url={wikipediaUrl}
@@ -38,6 +43,10 @@ const summaryApiUrlTemplate = createWikipediaSummaryApiUrl('__TITLE__', locale).
 		? 'External context could not be loaded. Use the search link to inspect Wikipedia directly.'
 		: '外部コンテキストを読み込めませんでした。検索リンクからWikipediaを直接確認してください。'}
 	data-source-label={isEnglish ? 'Wikipedia summary' : 'Wikipedia概要'}
+	data-fit-label={isEnglish ? 'Category Fit' : 'カテゴリ整合性'}
+	data-fit-match-label={isEnglish ? 'Matched' : '一致候補'}
+	data-fit-review-label={isEnglish ? 'Review' : '要確認'}
+	data-candidate-label={isEnglish ? 'Alternative candidates' : '代替候補'}
 >
 	<div class='grid gap-3' data-wikipedia-result>
 		<p class='text-sm leading-7 text-gray-600 dark:text-gray-400'>
@@ -48,6 +57,18 @@ const summaryApiUrlTemplate = createWikipediaSummaryApiUrl('__TITLE__', locale).
 			}
 		</p>
 	</div>
+	{
+		validationKeywords.length > 0 && (
+			<div class='flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400'>
+				<span class='font-semibold uppercase tracking-[0.12em]'>
+					{isEnglish ? 'Check Keywords' : '照合キーワード'}
+				</span>
+				{validationKeywords.map((keyword) => (
+					<span class='rounded-md bg-black/[0.04] px-2 py-1 dark:bg-white/10'>{keyword}</span>
+				))}
+			</div>
+		)
+	}
 	<a
 		href={wikipediaUrl}
 		target='_blank'
@@ -63,6 +84,42 @@ const summaryApiUrlTemplate = createWikipediaSummaryApiUrl('__TITLE__', locale).
 	const createSummaryUrl = (template, title) =>
 		template.replace('__TITLE__', encodeURIComponent(title))
 
+	const createWikipediaPageUrl = (template, title) => {
+		const summaryUrl = new URL(createSummaryUrl(template, title))
+		return `${summaryUrl.origin}/wiki/${encodeURIComponent(title)}`
+	}
+
+	const stripHtml = (value = '') => value.replace(/<[^>]+>/g, ' ')
+
+	const normalizeScoreText = (value = '') => value.toLowerCase().normalize('NFKC')
+
+	const getValidationKeywords = (root) =>
+		(root.dataset.validationKeywords ?? '')
+			.split('|')
+			.map((keyword) => keyword.trim())
+			.filter(Boolean)
+
+	const scoreCandidate = (root, candidate, summary) => {
+		const label = normalizeScoreText(root.dataset.label ?? '')
+		const query = normalizeScoreText(root.dataset.searchQuery ?? '')
+		const title = normalizeScoreText(candidate.title ?? summary?.title ?? '')
+		const snippet = normalizeScoreText(stripHtml(candidate.snippet ?? ''))
+		const extract = normalizeScoreText(summary?.extract ?? '')
+		const pageText = `${title} ${snippet} ${extract}`
+		const keywords = getValidationKeywords(root)
+		const matchedKeywords = keywords.filter((keyword) =>
+			pageText.includes(normalizeScoreText(keyword))
+		)
+
+		let score = Number(candidate.score ?? 0) / 1000
+		if (title === label) score += 40
+		if (title.includes(label)) score += 20
+		if (query && pageText.includes(query)) score += 8
+		score += matchedKeywords.length * 12
+
+		return { score, matchedKeywords }
+	}
+
 	const renderMessage = (container, message) => {
 		container.innerHTML = ''
 		const paragraph = document.createElement('p')
@@ -71,7 +128,14 @@ const summaryApiUrlTemplate = createWikipediaSummaryApiUrl('__TITLE__', locale).
 		container.append(paragraph)
 	}
 
-	const renderSummary = (root, resultContainer, summary, sourceLabel) => {
+	const renderSummary = (
+		root,
+		resultContainer,
+		summary,
+		sourceLabel,
+		matchedKeywords,
+		candidates
+	) => {
 		const pageUrl = summary.content_urls?.desktop?.page ?? summary.content_urls?.mobile?.page
 		const extract = summary.extract
 		if (!pageUrl || !extract) {
@@ -98,8 +162,51 @@ const summaryApiUrlTemplate = createWikipediaSummaryApiUrl('__TITLE__', locale).
 		cite.textContent = summary.title ?? sourceLabel
 		figcaption.append(`${sourceLabel}: `, cite)
 
-		figure.append(blockquote, figcaption)
+		const fit = document.createElement('p')
+		fit.className = 'text-xs leading-5 text-gray-500 dark:text-gray-400'
+		const fitState =
+			matchedKeywords.length > 0 ? root.dataset.fitMatchLabel : root.dataset.fitReviewLabel
+		const matchedText = matchedKeywords.length > 0 ? `: ${matchedKeywords.join(', ')}` : ''
+		fit.textContent = `${root.dataset.fitLabel}: ${fitState}${matchedText}`
+
+		figure.append(blockquote, figcaption, fit)
 		resultContainer.append(figure)
+
+		const alternatives = candidates
+			.filter((candidate) => candidate.title && candidate.title !== summary.title)
+			.slice(0, 3)
+		if (alternatives.length > 0) {
+			const details = document.createElement('details')
+			details.className = 'text-sm text-gray-600 dark:text-gray-400'
+			const summaryElement = document.createElement('summary')
+			summaryElement.className = 'cursor-pointer font-semibold text-gray-700 dark:text-gray-300'
+			summaryElement.textContent = root.dataset.candidateLabel
+			const list = document.createElement('ul')
+			list.className = 'mt-2 grid gap-1'
+			for (const candidate of alternatives) {
+				const item = document.createElement('li')
+				const candidateLink = document.createElement('a')
+				candidateLink.className =
+					'underline decoration-black/20 underline-offset-4 hover:text-indigo-700 dark:decoration-white/20 dark:hover:text-indigo-300'
+				candidateLink.href = createWikipediaPageUrl(
+					root.dataset.summaryApiUrlTemplate,
+					candidate.title
+				)
+				candidateLink.target = '_blank'
+				candidateLink.rel = 'noopener noreferrer'
+				candidateLink.textContent = candidate.title
+				item.append(candidateLink)
+				list.append(item)
+			}
+			details.append(summaryElement, list)
+			resultContainer.append(details)
+		}
+	}
+
+	const fetchSummary = async (root, title) => {
+		const summaryResponse = await fetch(createSummaryUrl(root.dataset.summaryApiUrlTemplate, title))
+		if (!summaryResponse.ok) return null
+		return summaryResponse.json()
 	}
 
 	const initWikipediaContexts = async () => {
@@ -116,18 +223,30 @@ const summaryApiUrlTemplate = createWikipediaSummaryApiUrl('__TITLE__', locale).
 				const searchResponse = await fetch(root.dataset.searchApiUrl)
 				if (!searchResponse.ok) throw new Error('Wikipedia search failed')
 				const searchData = await searchResponse.json()
-				const title = searchData.query?.search?.[0]?.title
-				if (!title) {
+				const candidates = searchData.query?.search ?? []
+				if (candidates.length === 0) {
 					renderMessage(resultContainer, root.dataset.emptyText)
 					continue
 				}
 
-				const summaryResponse = await fetch(
-					createSummaryUrl(root.dataset.summaryApiUrlTemplate, title)
+				const scoredCandidates = []
+				for (const candidate of candidates) {
+					const summary = await fetchSummary(root, candidate.title)
+					if (!summary) continue
+					const score = scoreCandidate(root, candidate, summary)
+					scoredCandidates.push({ candidate, summary, ...score })
+				}
+
+				const selected = scoredCandidates.sort((a, b) => b.score - a.score)[0]
+				if (!selected) throw new Error('Wikipedia summary failed')
+				renderSummary(
+					root,
+					resultContainer,
+					selected.summary,
+					root.dataset.sourceLabel,
+					selected.matchedKeywords,
+					candidates
 				)
-				if (!summaryResponse.ok) throw new Error('Wikipedia summary failed')
-				const summary = await summaryResponse.json()
-				renderSummary(root, resultContainer, summary, root.dataset.sourceLabel)
 			} catch {
 				renderMessage(resultContainer, root.dataset.errorText)
 			}

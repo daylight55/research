@@ -4,7 +4,7 @@ import { z } from 'astro/zod'
 import { CATEGORIES } from '@/data/categories'
 
 const blog = defineCollection({
-	loader: glob({ base: './content/blog', pattern: '**/*.{md,mdx}' }),
+	loader: glob({ base: './articles', pattern: '**/index.{md,mdx}' }),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string().max(80),
@@ -24,4 +24,11 @@ const blog = defineCollection({
 		})
 })
 
-export const collections = { blog }
+const articleResearch = defineCollection({
+	loader: glob({ base: './articles', pattern: '**/research-log.{md,mdx}' }),
+	schema: z.object({
+		title: z.string().optional()
+	})
+})
+
+export const collections = { blog, articleResearch }

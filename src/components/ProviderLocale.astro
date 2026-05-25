@@ -56,18 +56,6 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 		}
 	}
 
-	const detectBrowserLocale = () => {
-		const languages = navigator.languages?.length ? navigator.languages : [navigator.language]
-
-		for (const language of languages) {
-			const normalized = language.toLowerCase()
-			if (normalized === 'ja' || normalized.startsWith('ja-')) return 'ja'
-			if (normalized === 'en' || normalized.startsWith('en-')) return 'en'
-		}
-
-		return DEFAULT_LOCALE
-	}
-
 	const canRedirectToEnglish = (contentPath) => {
 		if (contentPath === '/') return true
 		if (['/news/', '/reports/', '/reference/', '/tags/'].includes(contentPath)) return true
@@ -92,7 +80,7 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 			return
 		}
 
-		const preferredLocale = getStoredLocale() ?? detectBrowserLocale()
+		const preferredLocale = getStoredLocale() ?? DEFAULT_LOCALE
 		if (preferredLocale !== 'en' || !canRedirectToEnglish(contentPath)) return
 
 		const targetPath = withBase(localizedPath('en', contentPath))

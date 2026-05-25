@@ -23,10 +23,6 @@ type Props = {
 
 const { id, nodes, edges, caption } = Astro.props
 const graphData = JSON.stringify({ nodes, edges })
-const nodeKindLabel = (kind: GraphNode['kind']) => {
-	if (kind === 'post') return 'Article'
-	return 'Term'
-}
 ---
 
 <figure
@@ -34,33 +30,6 @@ const nodeKindLabel = (kind: GraphNode['kind']) => {
 >
 	<div id={id} class='knowledge-graph__canvas' data-knowledge-graph></div>
 	<script type='application/json' id={`${id}-data`} data-graph={graphData}></script>
-	<div class='border-t border-black/10 px-4 py-4 dark:border-white/10'>
-		<section class='grid gap-2'>
-			<h3
-				class='text-sm font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400'
-			>
-				Node Definitions
-			</h3>
-			<dl class='grid gap-3'>
-				{
-					nodes.map((node) => (
-						<div class='grid gap-1 rounded-md bg-black/[0.03] p-3 dark:bg-white/[0.04]'>
-							<dt class='flex flex-wrap items-baseline gap-2 text-sm font-semibold text-gray-900 dark:text-gray-100'>
-								<span>{node.label}</span>
-								<span class='text-xs font-medium uppercase tracking-[0.1em] text-gray-500 dark:text-gray-400'>
-									{nodeKindLabel(node.kind)}
-								</span>
-							</dt>
-							<dd class='text-sm leading-6 text-gray-600 dark:text-gray-400'>
-								{node.description ??
-									`${node.label} is a ${nodeKindLabel(node.kind).toLowerCase()} node in this concept map.`}
-							</dd>
-						</div>
-					))
-				}
-			</dl>
-		</section>
-	</div>
 	<figcaption
 		class='border-t border-black/10 px-4 py-3 text-sm text-gray-600 dark:border-white/10 dark:text-gray-400'
 	>

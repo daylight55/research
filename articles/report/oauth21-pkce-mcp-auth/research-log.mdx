@@ -1,0 +1,20 @@
+# OAuth 2.1 PKCEフローとMCP認証認可 調査タスク
+
+作成日: 2026-05-15
+
+## 目的
+
+MCPサーバー、OIDCプロバイダー、OAuthクライアント、Claude系クライアント、OpenAPI-onlyな既存APIの関係を整理し、初学者でも実装順に追える説明を作る。
+
+## タスク
+
+- [x] MCP 2025-11-25 の認可仕様を確認した。
+- [x] OAuth 2.1 draft と PKCE RFC を確認した。
+- [x] OIDC Discovery と Authorization Server Metadata の役割を確認した。
+- [x] Anthropic の remote MCP / Claude connector の設定情報を確認した。
+- [x] MCPサーバー、認可サーバー、OAuthクライアント、Claude、OpenAPI-onlyサービスの役割分担を整理した。
+- [x] Mermaid 図を追加した。
+- [x] `articles/oauth21-pkce-mcp-auth/index.mdx` に公開本文を整備した。
+- [ ] 追加深掘り: Keycloak、Auth0、Entra ID など具体的 IdP 別の設定例を追記する。
+- [ ] 追加深掘り: Claude の実際の connector UI と redirect/callback の具体値を、必要なら画面付きで補足する。
+- [ ] 追加深掘り: OpenAPI adapter の最小実装テンプレートを別テーマとして切り出す。

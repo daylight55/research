@@ -19,8 +19,10 @@ export {
 	buildGlossaryIndex,
 	createGlossarySlug,
 	createWikipediaSearchApiUrl,
+	createWikipediaSearchQuery,
 	createWikipediaSummaryApiUrl,
 	createWikipediaUrl,
+	createWikipediaValidationKeywords,
 	extractGlossaryTermsFromMarkdown,
 	groupGlossaryTermsByCategory,
 	linkFirstGlossaryMentions

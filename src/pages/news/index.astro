@@ -6,6 +6,7 @@ import {
 	getCategoryAccentClass,
 	getCategorySurfaceClass,
 	getNewsPosts,
+	getPostSlug,
 	withBase
 } from '@/utils'
 import { Image } from 'astro:assets'
@@ -31,7 +32,7 @@ const newsPosts = await getNewsPosts()
 			<div class='grid gap-3'>
 				{newsPosts.map((post) => (
 					<a
-						href={withBase(`/post/${post.id}/`)}
+						href={withBase(`/post/${getPostSlug(post)}/`)}
 						class={cn(
 							'group grid overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 sm:grid-cols-[10rem_1fr]',
 							getCategorySurfaceClass(post.data.category)

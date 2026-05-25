@@ -110,13 +110,18 @@ const graphEdges = [
 			</dl>
 		</header>
 
-		<WikipediaContext label={term.label} locale={locale} />
+		<WikipediaContext
+			label={term.label}
+			locale={locale}
+			searchQuery={term.wikipediaSearchQuery}
+			validationKeywords={term.wikipediaValidationKeywords}
+		/>
 
 		<KnowledgeGraph
 			id={`glossary-term-${term.slug}-graph-en`}
 			nodes={graphNodes}
 			edges={graphEdges}
-			caption={`A concept map for ${term.label}. Node definitions are listed below.`}
+			caption={`A concept map for ${term.label}.`}
 		/>
 
 		<div class='grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]'>

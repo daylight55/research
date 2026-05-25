@@ -38,6 +38,8 @@ export type GlossaryIndexTerm = {
 	postCount: number
 	explanation: string
 	wikipediaUrl: string
+	wikipediaSearchQuery: string
+	wikipediaValidationKeywords: string[]
 	contexts: GlossaryTermContext[]
 	posts: GlossaryPostReference[]
 	relatedTerms: { label: string; slug: string; weight: number }[]
@@ -57,6 +59,52 @@ type GlossaryLocale = 'ja' | 'en'
 
 const MAX_TERMS_PER_ARTICLE = 6
 const MAX_RELATED_TERMS = 12
+const MAX_WIKIPEDIA_CONTEXT_KEYWORDS = 8
+
+const CATEGORY_WIKIPEDIA_CONTEXT_EN: Record<string, string[]> = {
+	'ai-systems': [
+		'artificial intelligence',
+		'machine learning',
+		'large language model',
+		'knowledge graph',
+		'agent'
+	],
+	'enterprise-ai-platforms': [
+		'enterprise software',
+		'operational artificial intelligence',
+		'Palantir',
+		'data platform'
+	],
+	'developer-tools': ['software', 'protocol', 'authentication', 'API', 'developer tools'],
+	'knowledge-systems': ['knowledge representation', 'semantic web', 'ontology', 'knowledge graph'],
+	'philosophy-knowledge': ['philosophy', 'knowledge', 'tacit knowledge', 'epistemology'],
+	'data-infrastructure': ['database', 'SQL', 'distributed database', 'data infrastructure'],
+	'tech-news': ['technology', 'company', 'product', 'industry'],
+	'semiconductor-memory': ['semiconductor', 'memory', 'NAND', 'SSD'],
+	'macro-finance': ['economics', 'monetary policy', 'inflation', 'finance'],
+	geopolitics: ['international relations', 'government', 'war', 'geopolitics'],
+	'real-estate': ['real estate', 'housing', 'mortgage', 'property']
+}
+
+const CATEGORY_WIKIPEDIA_CONTEXT_JA: Record<string, string[]> = {
+	'ai-systems': ['人工知能', '機械学習', '大規模言語モデル', 'ナレッジグラフ', 'エージェント'],
+	'enterprise-ai-platforms': ['企業ソフトウェア', '運用AI', 'Palantir', 'データ基盤'],
+	'developer-tools': ['ソフトウェア', 'プロトコル', '認証', 'API', '開発者'],
+	'knowledge-systems': [
+		'知識表現',
+		'セマンティックウェブ',
+		'オントロジー',
+		'ナレッジグラフ',
+		'情報科学'
+	],
+	'philosophy-knowledge': ['哲学', '知識', '暗黙知', '認識論'],
+	'data-infrastructure': ['データベース', 'SQL', '分散データベース', 'データ基盤'],
+	'tech-news': ['技術', '企業', '製品', '産業'],
+	'semiconductor-memory': ['半導体', 'メモリ', 'NAND', 'SSD'],
+	'macro-finance': ['経済', '金融政策', 'インフレ', '金融'],
+	geopolitics: ['国際関係', '政府', '戦争', '地政学'],
+	'real-estate': ['不動産', '住宅', '住宅ローン', '物件']
+}
 
 const JAPANESE_TERM_PATTERN =
 	/[A-Za-z][A-Za-z0-9.+#-]*(?:[ \t]+[A-Za-z][A-Za-z0-9.+#-]*)?[ \t]*[\p{Script=Han}\p{Script=Katakana}ー]{2,}/gu
@@ -441,12 +489,70 @@ const createTermExplanation = (term: GlossaryIndexTerm, locale: GlossaryLocale) 
 	return `${term.label} は、${primaryPost.category} カテゴリの記事「${primaryPost.title}」で扱われている用語です。`
 }
 
+const uniqueValues = (values: string[]) => {
+	const seen = new Set<string>()
+	const unique: string[] = []
+	for (const value of values.map(normalizeWhitespace).filter(Boolean)) {
+		const key = value.toLowerCase()
+		if (seen.has(key)) continue
+		seen.add(key)
+		unique.push(value)
+	}
+	return unique
+}
+
+const getTermCategories = (term: Pick<GlossaryIndexTerm, 'posts'>) =>
+	uniqueValues(term.posts.map((post) => post.category))
+
+const getWikipediaCategoryKeywords = (categories: string[], locale: GlossaryLocale) => {
+	const contextMap = locale === 'en' ? CATEGORY_WIKIPEDIA_CONTEXT_EN : CATEGORY_WIKIPEDIA_CONTEXT_JA
+	return uniqueValues(categories.flatMap((category) => contextMap[category] ?? [category]))
+}
+
+const getTermTitleKeywords = (term: Pick<GlossaryIndexTerm, 'posts'>) =>
+	uniqueValues(
+		term.posts
+			.flatMap((post) => [post.title, post.description ?? ''])
+			.flatMap(
+				(text) => text.match(/[A-Z][A-Za-z0-9.+#-]{2,}(?:\s+[A-Z][A-Za-z0-9.+#-]{2,}){0,2}/g) ?? []
+			)
+	)
+
+export const createWikipediaValidationKeywords = (
+	term: Pick<GlossaryIndexTerm, 'label' | 'posts' | 'relatedTerms'>,
+	locale: GlossaryLocale = 'ja'
+) => {
+	const categories = getTermCategories(term)
+	const categoryKeywords = getWikipediaCategoryKeywords(categories, locale)
+	const relatedKeywords = term.relatedTerms.slice(0, 5).map((related) => related.label)
+	const titleKeywords = getTermTitleKeywords(term).filter(
+		(keyword) => keyword.toLowerCase() !== term.label.toLowerCase()
+	)
+
+	return uniqueValues([...categoryKeywords, ...relatedKeywords, ...titleKeywords]).slice(
+		0,
+		MAX_WIKIPEDIA_CONTEXT_KEYWORDS
+	)
+}
+
+export const createWikipediaSearchQuery = (
+	term: Pick<GlossaryIndexTerm, 'label' | 'posts' | 'relatedTerms'>,
+	locale: GlossaryLocale = 'ja'
+) => {
+	void locale
+	return term.label
+}
+
 export const createWikipediaUrl = (label: string, locale: GlossaryLocale = 'ja') => {
 	const wikipediaLocale = locale === 'en' ? 'en' : 'ja'
 	return `https://${wikipediaLocale}.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(label)}`
 }
 
-export const createWikipediaSearchApiUrl = (label: string, locale: GlossaryLocale = 'ja') => {
+export const createWikipediaSearchApiUrl = (
+	label: string,
+	locale: GlossaryLocale = 'ja',
+	limit = 5
+) => {
 	const wikipediaLocale = locale === 'en' ? 'en' : 'ja'
 	const params = new URLSearchParams({
 		action: 'query',
@@ -454,7 +560,7 @@ export const createWikipediaSearchApiUrl = (label: string, locale: GlossaryLocal
 		srsearch: label,
 		format: 'json',
 		origin: '*',
-		srlimit: '1'
+		srlimit: String(limit)
 	})
 	return `https://${wikipediaLocale}.wikipedia.org/w/api.php?${params.toString()}`
 }
@@ -544,6 +650,8 @@ export function buildGlossaryIndex(
 					postCount: 1,
 					explanation: '',
 					wikipediaUrl: createWikipediaUrl(term.label, locale),
+					wikipediaSearchQuery: term.label,
+					wikipediaValidationKeywords: [],
 					contexts: context ? [context] : [],
 					posts: [postRef],
 					relatedTerms: []
@@ -579,6 +687,9 @@ export function buildGlossaryIndex(
 					a.label.localeCompare(b.label)
 			)
 			.slice(0, MAX_RELATED_TERMS)
+		term.wikipediaValidationKeywords = createWikipediaValidationKeywords(term, locale)
+		term.wikipediaSearchQuery = createWikipediaSearchQuery(term, locale)
+		term.wikipediaUrl = createWikipediaUrl(term.wikipediaSearchQuery, locale)
 	}
 
 	const terms = Array.from(bySlug.values()).sort(

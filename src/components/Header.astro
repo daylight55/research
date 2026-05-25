@@ -12,6 +12,8 @@ import { DEFAULT_LOCALE, localizedPath, stripLocaleFromPath, type Locale } from 
 
 const { locale = DEFAULT_LOCALE } = Astro.props as { locale?: Locale }
 const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
+const drawerLinkClass =
+	'inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-lg leading-7 md:text-base md:leading-normal [&_svg]:h-6 [&_svg]:w-6'
 ---
 
 <header class='relative flex h-14 items-center font-semibold'>
@@ -27,40 +29,19 @@ const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
 			<div
 				class='flex flex-col gap-4 md:flex-row md:flex-nowrap md:items-center md:gap-5 md:border-r md:border-black/70 md:pr-5 dark:md:border-white/70'
 			>
-				<HeaderLink
-					href='/news/'
-					locale={locale}
-					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
-				>
+				<HeaderLink href='/news/' locale={locale} class={drawerLinkClass}>
 					<NewsIcon /> News
 				</HeaderLink>
-				<HeaderLink
-					href='/reports/'
-					locale={locale}
-					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
-				>
+				<HeaderLink href='/reports/' locale={locale} class={drawerLinkClass}>
 					<ReportIcon /> Reports
 				</HeaderLink>
-				<HeaderLink
-					href='/reference/'
-					locale={locale}
-					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
-				>
+				<HeaderLink href='/reference/' locale={locale} class={drawerLinkClass}>
 					<ReferenceIcon /> Reference
 				</HeaderLink>
-				<HeaderLink
-					href='/glossary/'
-					locale={locale}
-					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
-				>
-					<ReferenceIcon />
-					Glossary
+				<HeaderLink href='/glossary/' locale={locale} class={drawerLinkClass}>
+					<ReferenceIcon /> Glossary
 				</HeaderLink>
-				<HeaderLink
-					href='/tags'
-					locale={locale}
-					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
-				>
+				<HeaderLink href='/tags' locale={locale} class={drawerLinkClass}>
 					<TagIcon /> Tags
 				</HeaderLink>
 			</div>

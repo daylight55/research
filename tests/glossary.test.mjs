@@ -4,7 +4,9 @@ import test from 'node:test'
 import {
 	buildGlossaryIndex,
 	createWikipediaSearchApiUrl,
+	createWikipediaSearchQuery,
 	createWikipediaSummaryApiUrl,
+	createWikipediaValidationKeywords,
 	extractGlossaryTermsFromMarkdown,
 	groupGlossaryTermsByCategory,
 	linkFirstGlossaryMentions
@@ -47,6 +49,7 @@ test('builds a glossary index with post counts and related terms', () => {
 	const mcp = index.terms.find((term) => term.slug === 'mcp')
 	assert.equal(mcp?.postCount, 1)
 	assert.match(mcp?.explanation ?? '', /Graphiti と MCP の関係/)
+	assert.equal(mcp?.wikipediaSearchQuery, 'MCP')
 	assert.equal(mcp?.wikipediaUrl, 'https://ja.wikipedia.org/wiki/Special:Search?search=MCP')
 	assert.deepEqual(
 		mcp?.contexts.slice(0, 1).map((context) => context.postId),
@@ -108,16 +111,48 @@ Ontology は Knowledge Graph の概念設計に関わる。
 test('creates Wikipedia API URLs for external glossary context', () => {
 	assert.equal(
 		createWikipediaSearchApiUrl('MCP'),
-		'https://ja.wikipedia.org/w/api.php?action=query&list=search&srsearch=MCP&format=json&origin=*&srlimit=1'
+		'https://ja.wikipedia.org/w/api.php?action=query&list=search&srsearch=MCP&format=json&origin=*&srlimit=5'
 	)
 	assert.equal(
-		createWikipediaSearchApiUrl('MCP', 'en'),
-		'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=MCP&format=json&origin=*&srlimit=1'
+		createWikipediaSearchApiUrl('MCP', 'en', 3),
+		'https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=MCP&format=json&origin=*&srlimit=3'
 	)
 	assert.equal(
 		createWikipediaSummaryApiUrl('Model Context Protocol', 'en'),
 		'https://en.wikipedia.org/api/rest_v1/page/summary/Model%20Context%20Protocol?redirect=true'
 	)
+})
+
+test('builds context-aware Wikipedia search queries and validation keywords', () => {
+	const term = {
+		label: 'Ontology',
+		posts: [
+			{
+				id: 'ontology-concept',
+				title: 'Ontology and Knowledge Graph',
+				description: 'Semantic Web and knowledge representation.',
+				category: 'knowledge-systems'
+			}
+		],
+		relatedTerms: [
+			{ label: 'RDF', slug: 'rdf', weight: 2 },
+			{ label: 'OWL', slug: 'owl', weight: 2 }
+		]
+	}
+
+	assert.equal(createWikipediaSearchQuery(term, 'en'), 'Ontology')
+	assert.deepEqual(createWikipediaValidationKeywords(term, 'en').slice(0, 4), [
+		'knowledge representation',
+		'semantic web',
+		'ontology',
+		'knowledge graph'
+	])
+	assert.deepEqual(createWikipediaValidationKeywords(term, 'ja').slice(0, 4), [
+		'知識表現',
+		'セマンティックウェブ',
+		'オントロジー',
+		'ナレッジグラフ'
+	])
 })
 
 test('builds English glossary explanations from English article context', () => {

@@ -232,6 +232,30 @@ jobs:
             exit 1
           fi
 
+          article_title="$(
+            awk '
+              /^title:/ {
+                sub(/^title:[[:space:]]*/, "")
+                gsub(/^['\''"]|['\''"]$/, "")
+                print
+                exit
+              }
+            ' "${ARTICLE_PATH}"
+          )"
+          article_h1="$(awk '/^#[[:space:]]+/ { sub(/^#[[:space:]]+/, ""); print; exit }' "${ARTICLE_PATH}")"
+          if [[ "${article_title}" != "${article_h1}" ]]; then
+            echo "::error::News article title and H1 must match."
+            exit 1
+          fi
+          if [[ ! "${article_title}" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]].{12,}$ ]]; then
+            echo "::error::News article title must be a date followed by a substantive summary phrase."
+            exit 1
+          fi
+          if [[ "${article_title}" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]]+ホットトレンド[:：][[:space:]]*政治・経済・技術$ ]]; then
+            echo "::error::News article title must summarize the day's overall situation instead of listing generic categories."
+            exit 1
+          fi
+
           for heading in "## 政治" "## 経済" "## 技術"; do
             if ! grep -qF "${heading}" "${ARTICLE_PATH}"; then
               echo "::error::Generated article is missing heading: ${heading}"

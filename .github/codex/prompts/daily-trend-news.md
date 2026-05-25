@@ -30,6 +30,10 @@ policy / technical decisions.
 - Keep the frontmatter fields from the News template, including
   `contentType: news`, `category: tech-news`, `rssSummary`, and
   `heroImageQuery`.
+- Set the article `title` and H1 to `YYYY-MM-DD <SUMMARY_PHRASE>`, where the
+  phrase after the date summarizes all fifteen topics or describes the most
+  important situation of the day. Do not use generic category-list titles such
+  as `YYYY-MM-DD ホットトレンド: 政治・経済・技術`.
 - Treat the News catch image as high priority. Set `heroImageQuery` to
   person-, organization-, company-, location-, or event-specific English search
   terms from the selected topics. Do not use generic phrases such as
@@ -89,7 +93,11 @@ Write in Japanese for readers who need a fast but decision-useful overview.
 Use this structure:
 
 1. Title:
-   `YYYY-MM-DD ホットトレンド: 政治・経済・技術`
+   `YYYY-MM-DD <SUMMARY_PHRASE>`
+   - The phrase after the date must be a compact Japanese summary of the full
+     article or the day's most notable situation.
+   - Avoid generic labels that only list categories, such as
+     `ホットトレンド: 政治・経済・技術`.
 2. Opening summary:
    - one short paragraph explaining the day / window and the overall signal
 3. `<NewsDigestSection tone='politics'>`
@@ -171,6 +179,8 @@ Rules for source memo cards:
 Run focused verification before finishing:
 
 - Check generated Markdown / MDX for unresolved placeholders.
+- Confirm `title` and the H1 are identical and use a date plus a substantive
+  summary phrase, not a generic category-list title.
 - Confirm the article imports `NewsSourceCard` and contains at least fifteen
   `<NewsSourceCard ... />` blocks.
 - Confirm every `NewsSourceCard` has `imageUrl` and `imageAlt`.

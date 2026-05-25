@@ -7,9 +7,9 @@
 - 新しい調査テーマは `articles/<slug>/` を作成して管理する。
 - `<slug>` は記事URLにも使う短い kebab-case 名にする。例: `graphiti-mcp-memory`, `oauth21-pkce-mcp-auth`。
 - Webサイト上に表示する調査テーマでは、`articles/<slug>/index.mdx` を本文の正本として扱う。
-- 公開可能な調査プロセス、根拠、判断ログがある場合は `articles/<slug>/research.mdx` にまとめる。
-- `notes/`, `sources/`, `figures/`, `prototype/` などの非公開作業ディレクトリは原則作らない。公開価値のある情報は `research.mdx` に要約、リンク、図表として含める。
-- 記事本文から `research.mdx` へ辿れる導線を維持する。サイト側に調査ログが存在する場合は `/post/<slug>/research/` を公開する。
+- 公開可能な調査プロセス、根拠、判断ログがある場合は `articles/<slug>/research-log.mdx` にまとめる。
+- `notes/`, `sources/`, `figures/`, `prototype/` などの非公開作業ディレクトリは原則作らない。公開価値のある情報は `research-log.mdx` に要約、リンク、図表として含める。
+- 記事本文から `research-log.mdx` へ辿れる導線を維持する。サイト側に調査ログが存在する場合は `/post/<slug>/research/` を公開する。
 
 ## Required Skill
 
@@ -19,7 +19,7 @@
 
 - Webサイト上に表示する調査レポートは、最初から `articles/<slug>/index.mdx` に本文を書く。
 - `report.md` などの別本文を作ってから `index.mdx` へコピーする運用は禁止する。本文が二重化し、片方だけ浅い/古い状態になりやすいため。
-- 調査タスクや残課題を公開する場合は、単独のタスクリストではなく `articles/<slug>/research.mdx` に調査プロセスとしてまとめる。
+- 調査タスクや残課題を公開する場合は、単独のタスクリストではなく `articles/<slug>/research-log.mdx` に調査プロセスとしてまとめる。
 - 新しいカテゴリを使う場合は、`src/data/categories.ts` の `CATEGORIES` に追加する。既存カテゴリとのコンフリクト時は、main側のカテゴリを消さずに和集合で解消する。
 - サイト用記事のヘッダー画像は補助要素として控えめに扱う。本文の可読性を優先し、情報的価値が薄いCodex生成の抽象画像をカテゴリ画像として追加しない。
 - トップページなどの件数表示は固定値にしない。カテゴリ数は `CATEGORIES.length` など、実データから算出する。
@@ -30,7 +30,7 @@
 - 英語ページ内のMermaid、reference本文、カード説明、出典周辺ラベルには日本語を残さない。日本語混入や日英route parityは `.github/tests/i18n-content.test.mjs` で検出できる形にする。
 - PRやプレビュー表示を求められた場合、または公開対象の本文を更新した場合は、`pnpm build` を実行し、生成ログに次が含まれることを確認する。
   - `/post/<slug>/index.html`
-  - `articles/<slug>/research.mdx` がある場合は `/post/<slug>/research/index.html`
+  - `articles/<slug>/research-log.mdx` がある場合は `/post/<slug>/research/index.html`
   - `/category/<category-name>/1/index.html`
   - `/index.html`
 - さらに、`dist/index.html` またはローカル preview への `curl` で、トップページに `<slug>`、記事タイトル、カテゴリリンクが含まれることを確認する。

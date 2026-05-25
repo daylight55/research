@@ -25,7 +25,7 @@ const blog = defineCollection({
 })
 
 const articleResearch = defineCollection({
-	loader: glob({ base: './articles', pattern: '**/research.{md,mdx}' }),
+	loader: glob({ base: './articles', pattern: '**/research-log.{md,mdx}' }),
 	schema: z.object({
 		title: z.string().optional()
 	})

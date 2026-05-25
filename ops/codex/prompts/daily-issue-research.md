@@ -28,10 +28,10 @@ drivers, risks, and practical implications.
 - Do not create `report.md` or another second copy of the same article body.
   Duplicate report bodies drift and make the workflow slower.
 - If the investigation process is useful to readers, write it in
-  `articles/<topic>/research.mdx` as a public research trail: questions checked,
+  `articles/<topic>/research-log.mdx` as a public research trail: questions checked,
   key sources, rejected evidence, limits, and how those findings affected the
   article. Do not create private `notes/`, `sources/`, or `figures/`
-  directories; summarize publishable material in `research.mdx`.
+  directories; summarize publishable material in `research-log.mdx`.
 - Add or update `src/data/categories.ts` category wiring as needed.
 - When creating `articles/<topic>/index.mdx`, use
   `ops/codex/templates/blog-entry.mdx` as the site-entry shape.
@@ -89,7 +89,7 @@ drivers, risks, and practical implications.
   who need a high-level but decision-useful overview, not only a news recap.
   Summarize what happened, why it matters, what structural forces are behind it,
   what may change next, and what remains uncertain.
-- Keep public investigation notes in `articles/<topic>/research.mdx` when a
+- Keep public investigation notes in `articles/<topic>/research-log.mdx` when a
   separate research trail is useful.
 - Run focused verification before finishing. At minimum, check for unresolved
   placeholders and run `git diff --check`. If site content changed and

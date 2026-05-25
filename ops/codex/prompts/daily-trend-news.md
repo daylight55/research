@@ -47,7 +47,7 @@ policy / technical decisions.
   paragraphs. Do not leave a plain `出典メモ:` text line in News digests.
 - Do not create `report.md` or another second copy of the same article body.
 - If a public research trail is useful, put it in
-  `articles/daily-trends-<YYYY-MM-DD>/research.mdx`; otherwise keep only the
+  `articles/daily-trends-<YYYY-MM-DD>/research-log.mdx`; otherwise keep only the
   article body in `index.mdx`.
 
 ## Context Budget Rules

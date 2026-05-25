@@ -1,5 +1,5 @@
 import type { APIRoute, GetStaticPaths } from 'astro'
-import { getPosts } from '@/utils'
+import { getPostSlug, getPosts } from '@/utils'
 
 type Props = {
 	body: string
@@ -9,7 +9,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	const posts = await getPosts()
 
 	return posts.map((post) => ({
-		params: { slug: post.id },
+		params: { slug: getPostSlug(post) },
 		props: { body: post.body }
 	}))
 }

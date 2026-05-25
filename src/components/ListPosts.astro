@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, render } from 'astro:content'
 import PostCard from '@/components/PostCard'
-import { DEFAULT_LOCALE, type Locale } from '@/utils'
+import { DEFAULT_LOCALE, getPostSlug, type Locale } from '@/utils'
 
 type Props = {
 	posts: CollectionEntry<'blog'>[]
@@ -22,8 +22,8 @@ const { posts, locale = DEFAULT_LOCALE } = Astro.props
 				<PostCard
 					id={post.id}
 					data={post.data}
-					slug={post.id}
 					locale={locale}
+					slug={getPostSlug(post)}
 					readTime={remarkPluginFrontmatter.minutesRead}
 					isPriority={index === 0}
 				/>

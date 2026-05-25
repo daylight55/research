@@ -113,7 +113,7 @@ test('Codex translation workflow exists for missing English articles', async () 
 	assert.match(prompt, /Reference pages/)
 })
 
-test('preferred locale provider detects browser language and persists manual switches', async () => {
+test('preferred locale provider defaults to Japanese and persists manual switches', async () => {
 	const layout = await readFile(join(repoRoot.pathname, 'src/layouts/BaseLayout.astro'), 'utf8')
 	const provider = await readFile(
 		join(repoRoot.pathname, 'src/components/ProviderLocale.astro'),
@@ -127,8 +127,10 @@ test('preferred locale provider detects browser language and persists manual swi
 
 	assert.match(layout, /<ProviderLocale\s*\/>/)
 	assert.match(layout, /<FloatingLocaleSwitch\s+locale=\{locale\}\s*\/>/)
-	assert.match(provider, /navigator\.languages/)
 	assert.match(provider, /window\.localStorage\.getItem\(STORAGE_KEY\)/)
+	assert.match(provider, /getStoredLocale\(\) \?\? DEFAULT_LOCALE/)
+	assert.doesNotMatch(provider, /navigator\.languages/)
+	assert.doesNotMatch(provider, /navigator\.language/)
 	assert.match(provider, /window\.location\.replace/)
 	assert.match(provider, /window\.location\.replace/)
 	assert.match(provider, /canRedirectToEnglish/)

@@ -34,10 +34,18 @@ test('Codex translation workflow exists for missing English articles', async () 
 		join(repoRoot.pathname, '.github/workflows/translate-blog-en.yml'),
 		'utf8'
 	)
+	const prompt = await readFile(
+		join(repoRoot.pathname, '.github/codex/prompts/translate-blog-en.md'),
+		'utf8'
+	)
 
 	assert.match(workflow, /workflow_dispatch:/)
 	assert.match(workflow, /codex/i)
 	assert.match(workflow, /content\/blog\/en/)
+	assert.match(prompt, /Do not use TeX-style backtick quotes/)
+	assert.match(prompt, /news digest articles/)
+	assert.match(prompt, /What happened:/)
+	assert.match(prompt, /Implications for practice:/)
 })
 
 test('preferred locale provider detects browser language and persists manual switches', async () => {

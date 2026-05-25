@@ -2,6 +2,7 @@
 import BaseHead from '@/components/BaseHead'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import FloatingLocaleSwitch from '@/components/FloatingLocaleSwitch'
 import ProviderTheme from '@/components/ProviderTheme'
 import ProviderAnimations from '@/components/ProviderAnimations'
 import ProviderLocale from '@/components/ProviderLocale'
@@ -26,6 +27,7 @@ const { title, description, image, articleDate, locale = DEFAULT_LOCALE } = Astr
 			<slot />
 			<Footer />
 		</main>
+		<FloatingLocaleSwitch locale={locale} />
 		<TwSizeIndicator />
 		<style>
 			body {

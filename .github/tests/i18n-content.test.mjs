@@ -47,8 +47,13 @@ test('preferred locale provider detects browser language and persists manual swi
 		'utf8'
 	)
 	const header = await readFile(join(repoRoot.pathname, 'src/components/Header.astro'), 'utf8')
+	const floatingSwitch = await readFile(
+		join(repoRoot.pathname, 'src/components/FloatingLocaleSwitch.astro'),
+		'utf8'
+	)
 
 	assert.match(layout, /<ProviderLocale\s*\/>/)
+	assert.match(layout, /<FloatingLocaleSwitch\s+locale=\{locale\}\s*\/>/)
 	assert.match(provider, /navigator\.languages/)
 	assert.match(provider, /window\.localStorage\.getItem\(STORAGE_KEY\)/)
 	assert.match(provider, /window\.location\.replace/)
@@ -56,4 +61,10 @@ test('preferred locale provider detects browser language and persists manual swi
 	assert.match(header, /data-locale-switch='ja'/)
 	assert.match(header, /data-locale-switch='en'/)
 	assert.doesNotMatch(header, /transition:persist='navbar'/)
+	assert.match(floatingSwitch, /aria-label='Language'/)
+	assert.match(floatingSwitch, /fixed bottom-4 right-4/)
+	assert.match(floatingSwitch, /localizedPath\('ja', currentContentPath\)/)
+	assert.match(floatingSwitch, /localizedPath\('en', currentContentPath\)/)
+	assert.match(floatingSwitch, /data-locale-switch='ja'/)
+	assert.match(floatingSwitch, /data-locale-switch='en'/)
 })

@@ -1,22 +1,54 @@
 # daylight55/research
 
-公開サイト: https://research.daylight55.dev/
+Public site: https://research.daylight55.dev/
 
-このリポジトリは、技術調査レポートを記事単位で蓄積し、Astro製の静的サイトとして公開するためのリポジトリです。公開記事は `articles/<slug>/index.mdx`、公開可能な調査プロセスは `articles/<slug>/research-log.mdx` にまとめます。
+This repository is a public research atlas for technical, economic, geopolitical,
+and knowledge-system topics. It is built to keep research outputs readable as
+articles while preserving enough of the research trail for readers to inspect
+how conclusions were reached.
 
-## 概要
+## Concept
 
-- `articles/<slug>/index.mdx`: 公開サイトに表示する記事本文の正本。
-- `articles/<slug>/research-log.mdx`: 公開可能な調査プロセス、根拠、判断ログ。必要な記事だけに置く。
-- `src/data/categories.ts`: サイトで使うカテゴリ定義。
-- `ops/`: Codex生成プロンプト、テンプレート、運用スクリプト、ワークフロー用テスト。
+The project treats each article as a durable research artifact, not a one-off
+note. The goal is to connect current source-based investigation with practical
+judgment: what happened, why it matters, what is still uncertain, and what a
+technical or business decision maker should watch next.
 
-## ワークフロー
+When useful and publishable, an article also has a research log. The log records
+the questions checked, sources used, assumptions made, rejected leads, and open
+follow-ups. This makes the article easier to audit without cluttering the main
+reading flow.
 
-1. 調査テーマごとに `articles/<slug>/` を作成する。
-2. 公開記事は最初から `articles/<slug>/index.mdx` に書く。
-3. 調査過程を公開できる場合は `articles/<slug>/research-log.mdx` にまとめ、記事本文から辿れるようにする。
-4. 新しいカテゴリを使う場合は `src/data/categories.ts` に追加する。
-5. Mermaidなどの差分管理しやすい図解を本文に含める。
-6. `pnpm build` を実行し、対象記事、カテゴリページ、トップページが生成されることを確認する。
-7. Pull Requestを作成し、Cloudflare Pages Previewまたはビルド成果物で公開表示を確認する。
+## What You Can Find
+
+- Long-form research reports on AI systems, data infrastructure, developer
+  tools, organizational knowledge, finance, geopolitics, and related domains.
+- News-style digests for recent political, economic, and technology signals.
+- Source notes placed near the claims they support.
+- Diagrams and tables when they make the argument easier to verify.
+- Optional research logs linked from article pages when the investigation trail
+  is useful to publish.
+
+## What This Repository Does
+
+- Publishes articles from `articles/<slug>/index.mdx`.
+- Publishes research trails from `articles/<slug>/research-log.mdx` when present.
+- Builds the site with Astro.
+- Keeps category metadata in `src/data/categories.ts`.
+- Keeps generation prompts, templates, scripts, and workflow tests under `ops/`.
+
+## Repository Shape
+
+```text
+articles/
+  <slug>/
+    index.mdx
+    research-log.mdx
+src/
+public/
+ops/
+infra/
+```
+
+`index.mdx` is the canonical article body. `research-log.mdx` is optional and
+should contain only information that is appropriate to publish.

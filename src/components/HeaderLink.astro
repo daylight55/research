@@ -1,17 +1,26 @@
 ---
 import type { HTMLAttributes } from 'astro/types'
-import { cn, withBase, withoutBase } from '@/utils'
+import { cn, DEFAULT_LOCALE, localizedPath, stripLocaleFromPath, type Locale } from '@/utils'
 type Props = HTMLAttributes<'a'>
 
-const { href, class: className, ...props } = Astro.props
+const {
+	href,
+	class: className,
+	locale = DEFAULT_LOCALE,
+	...props
+} = Astro.props as Props & {
+	locale?: Locale
+}
 
 const { pathname } = Astro.url
-const currentPath = withoutBase(pathname)
+const currentPath = stripLocaleFromPath(pathname)
 const isActive = href === currentPath || href === currentPath.replace(/\/$/, '')
+const isInternalPath = typeof href === 'string' && href.startsWith('/')
+const resolvedHref = isInternalPath ? localizedPath(locale, href) : href
 ---
 
 <a
-	href={withBase(href)}
+	href={resolvedHref}
 	class={cn(isActive ? 'text-opacity-100' : 'text-opacity-60', className)}
 	rel='noopener noreferrer '
 	{...props}

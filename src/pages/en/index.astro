@@ -1,0 +1,167 @@
+---
+import ListCategories from '@/components/ListCategories'
+import ListPosts from '@/components/ListPosts'
+import ArrowUp from '@/components/icons/ArrowUp'
+import BaseLayout from '@/layouts/BaseLayout'
+import {
+	cn,
+	getCategoryAccentClass,
+	getCategorySurfaceClass,
+	getNewsPosts,
+	getPostUrl,
+	getReportPosts,
+	localizedPath
+} from '@/utils'
+import { getReferenceItems } from '@/data/references'
+import { siteConfig } from '@/site-config'
+import { Image } from 'astro:assets'
+
+const locale = 'en'
+const latestNewsPosts = await getNewsPosts(12, locale)
+const reportPosts = await getReportPosts(undefined, locale)
+const referenceItems = getReferenceItems(locale)
+---
+
+<BaseLayout title='Home' locale={locale}>
+	<section class='grid gap-4 border-b border-black/10 pb-8 dark:border-white/10'>
+		<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
+			Personal Atlas
+		</p>
+		<div class='grid gap-3'>
+			<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-5xl'>
+				{siteConfig.title}
+			</h1>
+		</div>
+	</section>
+
+	<section class='grid gap-4 border-b border-black/10 pb-8 dark:border-white/10'>
+		<div class='grid gap-3 md:grid-cols-[1fr_auto] md:items-end'>
+			<div class='grid gap-2'>
+				<p
+					class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'
+				>
+					News
+				</p>
+				<h2 class='text-2xl font-semibold'>Latest News</h2>
+			</div>
+			<div class='flex items-center gap-4 text-sm'>
+				<a
+					href={localizedPath(locale, '/news/')}
+					class='font-semibold text-gray-700 underline-offset-4 hover:underline dark:text-gray-200'
+				>
+					All →
+				</a>
+			</div>
+		</div>
+		{
+			latestNewsPosts.length > 0 ? (
+				<div class='min-w-0 max-w-full overflow-x-auto overscroll-x-contain pb-2'>
+					<div class='flex snap-x snap-mandatory flex-nowrap gap-4'>
+						{latestNewsPosts.map((post) => (
+							<a
+								href={getPostUrl(post)}
+								class={cn(
+									'group grid flex-[0_0_100%] snap-start grid-rows-[auto_1fr] overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 sm:flex-[0_0_20rem] md:flex-[0_0_22rem]',
+									getCategorySurfaceClass(post.data.category)
+								)}
+							>
+								<div class='aspect-[16/9] overflow-hidden'>
+									<Image
+										src={post.data.heroImage}
+										width={520}
+										height={292}
+										format='webp'
+										class='h-full w-full object-cover transition duration-200 group-hover:scale-[101%]'
+										alt={post.data.heroImageAlt ?? `img of ${post.data.title}`}
+									/>
+								</div>
+								<div class='grid content-between gap-4 p-4'>
+									<div class='grid gap-2'>
+										<div class='flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+											<span>{post.data.pubDate.toLocaleDateString('en-US')}</span>
+											<span
+												class={cn(
+													'rounded-full border bg-white/55 px-2 py-0.5 tracking-[0.08em] dark:bg-black/15',
+													getCategoryAccentClass(post.data.category)
+												)}
+											>
+												{post.data.category}
+											</span>
+										</div>
+										<h3 class='line-clamp-2 text-base font-semibold leading-6 text-gray-900 dark:text-gray-100'>
+											{post.data.title}
+										</h3>
+										<p class='line-clamp-3 text-sm leading-6 text-gray-700 dark:text-gray-300'>
+											{post.data.rssSummary ?? post.data.description}
+										</p>
+									</div>
+									<span class='flex w-fit items-center gap-1 rounded-full text-sm font-semibold text-gray-900 transition-transform duration-150 ease-in-out group-hover:translate-x-1 dark:text-gray-100'>
+										Read Post{' '}
+										<span class='mt-[1px] transition-transform duration-250 ease-in-out group-hover:rotate-45'>
+											<ArrowUp width='18' height='18' />
+										</span>
+									</span>
+								</div>
+							</a>
+						))}
+					</div>
+				</div>
+			) : (
+				<p class='rounded-md border border-black/10 bg-white/70 p-5 leading-7 text-gray-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-300'>
+					English translations have not been generated yet. Run the translation workflow to publish
+					English articles.
+				</p>
+			)
+		}
+	</section>
+
+	<section class='min-w-0'>
+		<div class='mb-4 grid gap-2 md:grid-cols-[1fr_auto] md:items-end'>
+			<div class='grid gap-2'>
+				<p
+					class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'
+				>
+					Reports
+				</p>
+				<h2 class='text-2xl font-semibold'>Latest Reports</h2>
+			</div>
+			<a
+				href={localizedPath(locale, '/reports/')}
+				class='w-fit font-semibold text-gray-700 underline-offset-4 hover:underline dark:text-gray-200'
+			>
+				All →
+			</a>
+		</div>
+		<div class='mb-5 min-w-0'>
+			<ListCategories locale={locale} />
+		</div>
+		<ListPosts posts={reportPosts} locale={locale} />
+	</section>
+
+	<section class='grid gap-4'>
+		<div>
+			<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
+				Reference
+			</p>
+			<h2 class='text-2xl font-semibold'>Reference</h2>
+		</div>
+		<div class='grid gap-3'>
+			{
+				referenceItems.map((item) => (
+					<a
+						href={localizedPath(locale, item.href)}
+						class='group grid gap-4 rounded-md border border-black/10 bg-white/70 p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:bg-white/10 dark:hover:border-white/30 md:grid-cols-[1fr_auto] md:items-center'
+					>
+						<div class='grid gap-2'>
+							<h3 class='text-xl font-semibold'>{item.title}</h3>
+							<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>{item.description}</p>
+						</div>
+						<span class='text-sm font-semibold text-gray-900 transition group-hover:translate-x-1 dark:text-gray-100'>
+							Open →
+						</span>
+					</a>
+				))
+			}
+		</div>
+	</section>
+</BaseLayout>

@@ -2,15 +2,19 @@
 import BaseHead from '@/components/BaseHead'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import FloatingLocaleSwitch from '@/components/FloatingLocaleSwitch'
 import ProviderTheme from '@/components/ProviderTheme'
 import ProviderAnimations from '@/components/ProviderAnimations'
+import ProviderLocale from '@/components/ProviderLocale'
 import TwSizeIndicator from '@/components/TwSizeIndicator'
-const { title, description, image, articleDate } = Astro.props
+import { DEFAULT_LOCALE } from '@/utils'
+const { title, description, image, articleDate, locale = DEFAULT_LOCALE } = Astro.props
 ---
 
-<html lang='ja' class='scroll-smooth'>
+<html lang={locale} class='scroll-smooth'>
 	<head>
 		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
+		<ProviderLocale />
 		<ProviderTheme />
 		<ProviderAnimations />
 	</head>
@@ -19,10 +23,11 @@ const { title, description, image, articleDate } = Astro.props
 		<main
 			class='px-5 sm:mx-auto sm:max-w-2xl sm:px-8 lg:px-0 antialiased md:max-w-[82rem] 2xl:max-w-[90rem] grid gap-12 mt-4 overflow-hidden md:overflow-visible'
 		>
-			<Header />
+			<Header locale={locale} />
 			<slot />
 			<Footer />
 		</main>
+		<FloatingLocaleSwitch locale={locale} />
 		<TwSizeIndicator />
 		<style>
 			body {

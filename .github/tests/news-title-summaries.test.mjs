@@ -46,3 +46,38 @@ test('news article titles summarize the day after the date', () => {
 		assert.equal(h1, title, `${file} H1 should match frontmatter title`)
 	}
 })
+
+test('translated news digest labels stay paragraph-separated', () => {
+	const files = execFileSync('git', ['ls-files', 'content/blog/en/*.mdx'], { encoding: 'utf8' })
+		.split('\n')
+		.map((line) => line.trim())
+		.filter(Boolean)
+
+	const digestLabelRe = /^(What happened|Why it matters|Implications for practice):/
+	const staleLabelRe = /^(What Happened|Why it's important|Practical Implications):/
+
+	for (const file of files) {
+		const source = readFileSync(file, 'utf8')
+		assert.doesNotMatch(
+			source,
+			/``[^`\n]+?''/,
+			`${file} should use normal quotation marks instead of TeX-style backtick quotes`
+		)
+
+		const frontmatter = frontmatterOf(source, file)
+		if (readScalar(frontmatter, 'contentType') !== 'news') continue
+		if (readScalar(frontmatter, 'draft') === 'true') continue
+
+		const lines = source.split('\n')
+		for (const [index, line] of lines.entries()) {
+			assert.doesNotMatch(line, staleLabelRe, `${file}:${index + 1} should use canonical labels`)
+			if (!digestLabelRe.test(line) && !line.startsWith('<NewsSourceCard')) continue
+
+			assert.equal(
+				lines[index - 1],
+				'',
+				`${file}:${index + 1} should have a blank line before news digest labels and cards`
+			)
+		}
+	}
+})

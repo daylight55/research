@@ -1,0 +1,26 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+import ListPosts from '@/components/ListPosts'
+import TitlePage from '@/components/TitlePage'
+import { getPostByTag, getTags } from '@/utils'
+
+const locale = 'en'
+
+export async function getStaticPaths() {
+	const tags = await getTags('en')
+
+	return tags.map((tag) => ({
+		params: { tag },
+		props: { tag }
+	}))
+}
+
+const { tag } = Astro.props
+
+const posts = await getPostByTag(tag, locale)
+---
+
+<BaseLayout title={`#${tag}`} locale={locale}>
+	<TitlePage title={`#${tag}`} />
+	<ListPosts posts={posts} locale={locale} />
+</BaseLayout>

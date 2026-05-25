@@ -1,0 +1,131 @@
+name: Translate Blog English
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: translate-blog-en
+  cancel-in-progress: false
+
+env:
+  RESEARCH_REPOSITORY: research
+  RESEARCH_QUEUE_APP_ID: ${{ secrets.RESEARCH_QUEUE_APP_ID }}
+  RESEARCH_QUEUE_APP_PRIVATE_KEY: ${{ secrets.RESEARCH_QUEUE_APP_PRIVATE_KEY }}
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    environment: codex-production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create research repository token
+        id: research_app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ env.RESEARCH_QUEUE_APP_ID }}
+          private-key: ${{ env.RESEARCH_QUEUE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ env.RESEARCH_REPOSITORY }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Prepare Codex translation prompt
+        id: prepare_prompt
+        shell: bash
+        run: |
+          set -euo pipefail
+          node .github/scripts/translate-blog-en.mjs | tee .github/codex/runtime/translate-blog-en-output.txt
+          missing_count="$(sed -n 's/^missing=//p' .github/codex/runtime/translate-blog-en-output.txt)"
+          echo "missing_count=${missing_count}" >> "${GITHUB_OUTPUT}"
+
+      - name: Run Codex translation
+        if: steps.prepare_prompt.outputs.missing_count != '0'
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: .github/codex/runtime/translate-blog-en-prompt.md
+          output-file: codex-output.md
+          safety-strategy: drop-sudo
+          sandbox: workspace-write
+          model: gpt-5.4-mini
+          effort: medium
+          allow-bots: true
+
+      - name: Validate translated site
+        if: steps.prepare_prompt.outputs.missing_count != '0'
+        run: |
+          set -euo pipefail
+          git diff --check
+          ! rg -n '\b(TBD|TODO|FIXME|未定|要確認)\b' content/blog/en
+          pnpm build
+
+      - name: Create translation pull request
+        if: steps.prepare_prompt.outputs.missing_count != '0'
+        id: create_pr
+        shell: bash
+        env:
+          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
+          MISSING_COUNT: ${{ steps.prepare_prompt.outputs.missing_count }}
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet; then
+            echo "No translation changes were produced."
+            exit 0
+          fi
+
+          branch="codex/translate-blog-en-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "${branch}"
+          git add content/blog/en
+          git commit -m "Add English blog translations"
+          git push origin "${branch}"
+
+          pr_body="$(mktemp)"
+          {
+            echo "## 要約"
+            echo "- Codex translation job により不足していた英語版記事を追加します。"
+            echo
+            echo "## 背景・目的"
+            echo "- 日本語記事を正本としつつ、英語版を \`content/blog/en/\` に生成して ja/en 切り替え対象にします。"
+            echo
+            echo "## 主な変更点"
+            echo "- Missing English articles: ${MISSING_COUNT}"
+            echo
+            echo "## 確認したこと"
+            echo "- \`git diff --check\`"
+            echo "- 未解決プレースホルダ検査"
+            echo "- \`pnpm build\`"
+            echo
+            echo "## レビュー観点"
+            echo "- 翻訳の意味保持、出典メモ、MDX構造、Mermaid/表の保持"
+            echo
+            echo "## 残課題・フォローアップ"
+            echo "- 翻訳品質の人手レビュー"
+          } > "${pr_body}"
+
+          gh pr create \
+            --draft \
+            --title "英語版記事を追加" \
+            --body-file "${pr_body}" \
+            --base main \
+            --head "${branch}"

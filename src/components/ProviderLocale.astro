@@ -1,0 +1,114 @@
+---
+const basePath = import.meta.env.BASE_URL ?? '/'
+---
+
+<script define:vars={{ basePath }}>
+	const STORAGE_KEY = 'preferredLocale'
+	const DEFAULT_LOCALE = 'ja'
+	const SUPPORTED_LOCALES = ['ja', 'en']
+
+	const normalizeBase = (value) => {
+		if (!value || value === '/') return ''
+		return value.endsWith('/') ? value.slice(0, -1) : value
+	}
+
+	const base = normalizeBase(basePath)
+
+	const withoutBase = (pathname) => {
+		if (!base) return pathname
+		if (pathname === base) return '/'
+		return pathname.startsWith(`${base}/`) ? pathname.slice(base.length) : pathname
+	}
+
+	const withBase = (pathname) => `${base}${pathname}` || '/'
+
+	const normalizePath = (pathname) => {
+		const normalized = pathname.startsWith('/') ? pathname : `/${pathname}`
+		return normalized.endsWith('/') ? normalized : `${normalized}/`
+	}
+
+	const getPathLocale = (pathname) => {
+		const normalized = normalizePath(withoutBase(pathname))
+		return normalized === '/en/' || normalized.startsWith('/en/') ? 'en' : DEFAULT_LOCALE
+	}
+
+	const stripLocale = (pathname) => {
+		const normalized = normalizePath(withoutBase(pathname))
+		return normalized === '/en/' ? '/' : normalized.replace(/^\/en\//, '/')
+	}
+
+	const getStoredLocale = () => {
+		try {
+			const stored = window.localStorage.getItem(STORAGE_KEY)
+			return SUPPORTED_LOCALES.includes(stored) ? stored : undefined
+		} catch {
+			return undefined
+		}
+	}
+
+	const setStoredLocale = (locale) => {
+		if (!SUPPORTED_LOCALES.includes(locale)) return
+
+		try {
+			window.localStorage.setItem(STORAGE_KEY, locale)
+		} catch {
+			// Ignore unavailable storage and keep language selection URL-based.
+		}
+	}
+
+	const detectBrowserLocale = () => {
+		const languages = navigator.languages?.length ? navigator.languages : [navigator.language]
+
+		for (const language of languages) {
+			const normalized = language.toLowerCase()
+			if (normalized === 'ja' || normalized.startsWith('ja-')) return 'ja'
+			if (normalized === 'en' || normalized.startsWith('en-')) return 'en'
+		}
+
+		return DEFAULT_LOCALE
+	}
+
+	const canRedirectToEnglish = (contentPath) => {
+		if (contentPath === '/') return true
+		if (['/news/', '/reports/', '/reference/', '/tags/'].includes(contentPath)) return true
+		return (
+			contentPath.startsWith('/post/') ||
+			contentPath.startsWith('/category/') ||
+			contentPath.startsWith('/tags/')
+		)
+	}
+
+	const localizedPath = (locale, contentPath) => {
+		const normalized = normalizePath(contentPath)
+		return locale === DEFAULT_LOCALE ? normalized : `/en${normalized}`
+	}
+
+	const syncLocale = () => {
+		const currentLocale = getPathLocale(window.location.pathname)
+		const contentPath = stripLocale(window.location.pathname)
+
+		if (currentLocale === 'en') {
+			setStoredLocale('en')
+			return
+		}
+
+		const preferredLocale = getStoredLocale() ?? detectBrowserLocale()
+		if (preferredLocale !== 'en' || !canRedirectToEnglish(contentPath)) return
+
+		const targetPath = withBase(localizedPath('en', contentPath))
+		const target = `${targetPath}${window.location.search}${window.location.hash}`
+		window.location.replace(target)
+	}
+
+	document.addEventListener('click', (event) => {
+		if (!(event.target instanceof Element)) return
+
+		const switchLink = event.target.closest('[data-locale-switch]')
+		if (!(switchLink instanceof HTMLElement)) return
+
+		setStoredLocale(switchLink.dataset.localeSwitch)
+	})
+
+	document.addEventListener('astro:page-load', syncLocale)
+	syncLocale()
+</script>

@@ -1,0 +1,44 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+import ListPosts from '@/components/ListPosts'
+import ListCategories from '@/components/ListCategories'
+import TitlePage from '@/components/TitlePage'
+import { getCategories, getPosts, sluglify } from '@/utils'
+import { siteConfig } from '@/data/site.config'
+import Pagination from '@/components/Pagination'
+
+const locale = 'en'
+
+export async function getStaticPaths({ paginate }: any) {
+	const categories = await getCategories('en')
+	const allPosts = await getPosts(undefined, 'en')
+
+	return categories.flatMap((category: string) => {
+		const filteredPosts = allPosts.filter(
+			(post) => post.data.category.toLowerCase() === category.toLowerCase()
+		)
+
+		return paginate(filteredPosts, {
+			params: {
+				category: sluglify(category.toLowerCase())
+			},
+			pageSize: siteConfig.paginationSize
+		})
+	})
+}
+const params = Astro.params
+const { page } = Astro.props
+
+const slugCategory = params.category!.toLowerCase()
+const categoryName = (await getCategories(locale)).find(
+	(category) => sluglify(category.toLowerCase()) === slugCategory
+)
+const posts = page.data
+---
+
+<BaseLayout title={categoryName} locale={locale}>
+	<TitlePage title={categoryName} />
+	<ListCategories activeCategory={params.category} locale={locale} />
+	<ListPosts posts={posts} locale={locale} />
+	<Pagination page={page} />
+</BaseLayout>

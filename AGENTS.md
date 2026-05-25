@@ -26,6 +26,10 @@
 - サイト用記事のヘッダー画像は補助要素として控えめに扱う。本文の可読性を優先し、情報的価値が薄いCodex生成の抽象画像をカテゴリ画像として追加しない。
 - トップページなどの件数表示は固定値にしない。カテゴリ数は `CATEGORIES.length` など、実データから算出する。
 - PRプレビューは既定では作成しない。プレビュー表示を明示的に求められた場合だけ、現在のデプロイ方式に合わせて一時的な確認手段を用意する。
+- 日英対応では、日本語を正本として扱い、公開される記事・reference・導線を更新する場合は同じPRで英語側も同期する。翻訳レビューなどテストで規定できない人手確認が残る場合は、自動マージせず残課題として明記する。
+- `content/blog/<slug>.mdx` を追加・更新した場合は `content/blog/en/<same-slug>.mdx` も追加・更新する。英語生成を別ジョブに回す場合も、PR内で同期状態をテストし、未生成のまま公開導線だけ増やさない。
+- `src/pages/reference/<slug>.astro` を追加・更新した場合は `src/pages/en/reference/<slug>.astro` も追加・更新する。reference一覧やトップページのカードは、`getReferenceItems(locale)` のようなlocale-awareな共有データから引き、片方だけの手書き重複を避ける。
+- 英語ページ内のMermaid、reference本文、カード説明、出典周辺ラベルには日本語を残さない。日本語混入や日英route parityは `.github/tests/i18n-content.test.mjs` で検出できる形にする。
 - PRやプレビュー表示を求められた場合、または公開対象の本文を更新した場合は、`pnpm build` を実行し、生成ログに次が含まれることを確認する。
   - `/post/<slug>/index.html`
   - `/category/<category-name>/1/index.html`
@@ -47,7 +51,13 @@
 - PR作成前に、対象差分を確認し、無関係な変更を含めない。
 - ユーザーが明示的に依頼した変更は、作業単位ごとにコミットしてよい。追加確認なしでコミットしてよいが、コミット前に対象差分を確認し、無関係な変更を含めない。
 - 少なくとも `git diff --check` を実行し、Markdown内の未解決プレースホルダ（例: `TBD`, `TODO`, `未定`, `要確認`, `FIXME`）が残っていないことを確認する。
+- push後はPRが最新の `main` とコンフリクトしていないことを確認する。`gh pr view <PR番号> --json mergeable,mergeStateStatus` で `CONFLICTING` / `DIRTY` の場合は、`origin/main` を取り込み、コンフリクトを解消してから再pushする。
 - PR作成後は `gh pr checks <PR番号>` などでCI状態を確認する。失敗、キャンセル、pendingが残る場合は、該当runのログと最新runの状態を確認し、失敗原因を修正またはキャンセル理由を明示してから報告する。
+- Cloudflare Pages Preview などのPreview系workflowがある場合は、PRのhead branchまたはPR番号に対応する最新runを確認する。Previewが失敗している、またはchecksが出ていない場合は、`gh run list` / `gh run view --log` で原因を確認し、必要なら再pushまたはworkflow再実行後に再確認する。
+- ユーザーが明示的に命令した実装・修正・更新について、その命令内容を規定するテストまたは検証手順を追加・更新した場合は、PR本文の「確認したこと」に該当テストを明記する。
+- ユーザーが「マージしない」「レビュー待ち」「draftのまま」など明示しない限り、命令内容を規定するテスト、`git diff --check`、未解決プレースホルダ検査、必要な `pnpm build`、Preview系workflow、すべての必須CIが成功し、PRが `main` とコンフリクトしていなければ、自動マージを有効化または実行する。
+- 自動マージ前にdraft PRはreadyに変更してよい。ただし、調査本文の事実確認、人手翻訳レビュー、外部承認などテストで十分に規定できないレビュー観点が残る場合は自動マージせず、残る確認事項をPR本文と報告に明記する。
+- 自動マージはhead commitを固定して行う。`gh pr merge <PR番号> --squash --auto --match-head-commit <head_sha>` を優先し、リポジトリ設定でauto-mergeが使えない場合は、全条件を再確認した直後に `gh pr merge <PR番号> --squash --match-head-commit <head_sha>` を使う。
 - PR作成後は、PR URL、base branch、head branch、draft/ready状態を確認してユーザーに報告する。
 
 ## Research Standards

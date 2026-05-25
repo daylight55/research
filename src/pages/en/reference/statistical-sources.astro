@@ -1,0 +1,251 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+
+const locale = 'en'
+
+const sourceGroups = [
+	{
+		title: 'Basic statistics and development indicators',
+		description:
+			'Check the population, GDP, poverty, education, infrastructure, and development level that form the base of a country profile.',
+		sources: [
+			{
+				name: 'World Bank Open Data / DataBank',
+				url: 'https://data.worldbank.org/',
+				use: 'GDP, population, growth, poverty, education, infrastructure, FDI, and trade. The first stop for country comparisons.'
+			},
+			{
+				name: 'World Development Indicators',
+				url: 'https://datatopics.worldbank.org/world-development-indicators',
+				use: 'Long time-series development indicators covering more than 200 economies and regions.'
+			},
+			{
+				name: 'IMF World Economic Outlook',
+				url: 'https://www.imf.org/en/Publications/WEO/weo-database',
+				use: 'GDP, inflation, unemployment, fiscal balances, current accounts, and IMF forecasts for macroeconomic checks.'
+			},
+			{
+				name: 'UNdata',
+				url: 'https://data.un.org/',
+				use: 'Cross-cutting UN statistics, including national accounts, population, energy, industry, and trade.'
+			},
+			{
+				name: 'UNDP Human Development Data Center',
+				url: 'https://hdr.undp.org/data-center',
+				use: 'HDI, inequality-adjusted HDI, gender indicators, inequality, and poverty for living-standard comparisons.'
+			},
+			{
+				name: 'Our World in Data',
+				url: 'https://ourworldindata.org/',
+				use: 'Fast visualization for population, health, education, energy, CO2, democracy, and related topics.'
+			}
+		]
+	},
+	{
+		title: 'Political systems, democracy, and freedom',
+		description:
+			'Compare elections, autocratization, civil liberties, and rule of law quantitatively.',
+		sources: [
+			{
+				name: 'V-Dem Dataset',
+				url: 'https://www.v-dem.net/vdemds.html',
+				use: 'Research-grade data that decomposes democracy, elections, liberty, deliberation, and equality into detailed indicators.'
+			},
+			{
+				name: 'Freedom House: Freedom in the World',
+				url: 'https://freedomhouse.org/report-types/freedom-world',
+				use: 'Country assessments of political rights and civil liberties with readable country narratives.'
+			},
+			{
+				name: 'Worldwide Governance Indicators',
+				url: 'https://www.worldbank.org/en/publication/worldwide-governance-indicators',
+				use: 'Government effectiveness, rule of law, control of corruption, regulatory quality, and political stability.'
+			}
+		]
+	},
+	{
+		title: 'Security, military, and conflict',
+		description:
+			'Review military spending, nuclear forces, conflict, domestic violence, and security risks.',
+		sources: [
+			{
+				name: 'SIPRI Military Expenditure Database',
+				url: 'https://www.sipri.org/research/armaments/milex/milex_database',
+				use: 'Long time-series country military expenditure data for comparing defense capacity and regional tension.'
+			},
+			{
+				name: 'SIPRI Yearbook',
+				url: 'https://www.sipri.org/yearbook',
+				use: 'Annual synthesis of nuclear forces, arms control, arms transfers, and the security environment.'
+			},
+			{
+				name: 'UCDP',
+				url: 'https://ucdp.uu.se/',
+				use: 'Research data on interstate war, civil war, and organized violence.'
+			},
+			{
+				name: 'ACLED',
+				url: 'https://acleddata.com/',
+				use: 'Event data on protests, riots, and political violence for tracking local security and civil-war dynamics.'
+			}
+		]
+	},
+	{
+		title: 'Trade, industry, and resources',
+		description:
+			'Examine import and export structure, tariffs, food, energy, and critical resources.',
+		sources: [
+			{
+				name: 'UN Comtrade',
+				url: 'https://comtradeplus.un.org/',
+				use: 'Exports and imports by country, commodity, and partner. A baseline for supply-chain research.'
+			},
+			{
+				name: 'WTO Tariff & Trade Data',
+				url: 'https://www.wto.org/english/tratop_e/tariffs_e/tariff_data_e.htm',
+				use: 'Tariffs, trade values, and official trade data for more than 150 economies.'
+			},
+			{
+				name: 'FAOSTAT',
+				url: 'https://www.fao.org/faostat/',
+				use: 'Agriculture, food, land use, forestry, and nutrition for food-security and agricultural export analysis.'
+			},
+			{
+				name: 'IEA Data and Statistics',
+				url: 'https://www.iea.org/data-and-statistics',
+				use: 'Electricity, oil, gas, renewables, and CO2 for checking energy security.'
+			}
+		]
+	},
+	{
+		title: 'Population, migration, and refugees',
+		description:
+			'Check population structure, urbanization, migration, refugees, and internally displaced people.',
+		sources: [
+			{
+				name: 'UN Population Division',
+				url: 'https://population.un.org/wpp/',
+				use: 'Population, fertility, mortality, age structure, and future projections.'
+			},
+			{
+				name: 'UNHCR Refugee Data Finder',
+				url: 'https://popstats.unhcr.org/refugee-statistics/',
+				use: 'Refugees, asylum seekers, internally displaced people, and stateless people for conflict and humanitarian-crisis context.'
+			},
+			{
+				name: 'IOM Migration Data Portal',
+				url: 'https://www.migrationdataportal.org/',
+				use: 'International migration, remittances, migration trends, and migration policy.'
+			}
+		]
+	},
+	{
+		title: 'Health, education, and labor',
+		description: 'Review living standards, civic life, human capital, and the labor market.',
+		sources: [
+			{
+				name: 'WHO Data / Global Health Observatory',
+				url: 'https://data.who.int/',
+				use: 'Life expectancy, causes of death, infectious diseases, health systems, and health expenditure.'
+			},
+			{
+				name: 'UNESCO Institute for Statistics',
+				url: 'https://uis.unesco.org/',
+				use: 'Enrollment, literacy, education expenditure, and education inequality.'
+			},
+			{
+				name: 'ILOSTAT',
+				url: 'https://ilostat.ilo.org/',
+				use: 'Unemployment, labor-force participation, youth employment, working hours, and informal employment.'
+			}
+		]
+	}
+]
+
+const minimumSet = [
+	'World Bank: GDP, population, growth, poverty, education, and infrastructure',
+	'IMF WEO: current macroeconomic conditions and forecasts',
+	'V-Dem or Freedom House: political system and freedom',
+	'SIPRI: military spending and armaments',
+	'UN Comtrade or WTO: trade structure',
+	'UNHCR or IOM: refugees and migration',
+	'WHO or UNDP: health and human development',
+	'IEA or FAOSTAT: energy, food, and resources'
+]
+---
+
+<BaseLayout title='Basic statistics and data sources' locale={locale}>
+	<section class='grid gap-5'>
+		<p class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'>
+			Reference
+		</p>
+		<div class='grid gap-4'>
+			<h1 class='max-w-4xl text-4xl font-semibold leading-tight md:text-5xl'>
+				Statistics and data sources for country research
+			</h1>
+			<p class='max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300'>
+				This is the entry point for basic data used when comparing international politics,
+				economics, security, demographics, and living standards. When writing a country profile,
+				check the latest available year, whether a value is estimated or observed, and how each
+				indicator is defined.
+			</p>
+		</div>
+	</section>
+
+	<section class='grid gap-4'>
+		<h2 class='text-2xl font-semibold'>Minimum set</h2>
+		<div class='grid gap-3 md:grid-cols-2'>
+			{
+				minimumSet.map((item) => (
+					<div class='rounded-md border border-black/10 bg-white/70 p-4 leading-7 dark:border-white/10 dark:bg-white/10'>
+						{item}
+					</div>
+				))
+			}
+		</div>
+	</section>
+
+	<section class='grid gap-6'>
+		{
+			sourceGroups.map((group) => (
+				<div class='grid gap-4'>
+					<div>
+						<h2 class='text-2xl font-semibold'>{group.title}</h2>
+						<p class='mt-2 leading-7 text-gray-700 dark:text-gray-300'>{group.description}</p>
+					</div>
+					<div class='grid gap-3'>
+						{group.sources.map((source) => (
+							<a
+								href={source.url}
+								target='_blank'
+								rel='noreferrer'
+								class='grid gap-2 rounded-md border border-black/10 bg-white/70 p-4 transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-sm dark:border-white/10 dark:bg-white/10 dark:hover:border-white/30'
+							>
+								<div class='font-semibold'>{source.name}</div>
+								<p class='leading-7 text-gray-700 dark:text-gray-300'>{source.use}</p>
+							</a>
+						))}
+					</div>
+				</div>
+			))
+		}
+	</section>
+
+	<section
+		class='rounded-md border border-black/10 bg-white/70 p-5 dark:border-white/10 dark:bg-white/10'
+	>
+		<h2 class='text-2xl font-semibold'>Usage notes</h2>
+		<div class='mt-3 grid gap-3 leading-7 text-gray-700 dark:text-gray-300'>
+			<p>
+				International statistics do not update on the same cycle across indicators. GDP may have
+				recent estimates while poverty, health, education, refugee, and labor indicators can lag by
+				several years.
+			</p>
+			<p>
+				In reports, cite not only the number but also the data year, whether it is estimated or
+				observed, the source institution, the indicator definition, and how missing countries are
+				handled.
+			</p>
+		</div>
+	</section>
+</BaseLayout>

@@ -23,23 +23,28 @@ Cloudflare Pages Preview is the preferred PR preview surface for this repository
 Also do all of the following:
 
 1. Add or update `content/blog/<slug>.mdx` with frontmatter and the full article body.
-2. Add any new category to `src/data/categories.ts`.
-3. Preserve existing categories when rebasing or resolving conflicts; merge category lists as a union.
-4. Treat the article header image as a minor supporting element. Do not add low-information Codex-generated abstract category images by default; prefer existing meaningful images or a restrained placeholder until a genuinely useful source image or diagram exists.
-5. Avoid hardcoded homepage counts. Use data-derived values such as `posts.length` and `CATEGORIES.length`.
-6. Use `.github/codex/templates/blog-entry.mdx` as the shape for new site entries.
+2. Add or update the matching English article under `content/blog/en/<same-slug>.mdx` in the same PR, unless the user explicitly asks to defer translation. Japanese is the canonical source, but published routes must remain synchronized.
+3. Add any new category to `src/data/categories.ts`.
+4. Preserve existing categories when rebasing or resolving conflicts; merge category lists as a union.
+5. Treat the article header image as a minor supporting element. Do not add low-information Codex-generated abstract category images by default; prefer existing meaningful images or a restrained placeholder until a genuinely useful source image or diagram exists.
+6. Avoid hardcoded homepage counts. Use data-derived values such as `posts.length` and `CATEGORIES.length`.
+7. Use `.github/codex/templates/blog-entry.mdx` as the shape for new site entries.
    Keep the full article body directly in the MDX file after frontmatter. Do not
    write a separate `report.md` first and copy it later, and do not use
    `import Report from '../../../category/.../report.md'` plus `<Report />`.
    Imported Markdown headings are not exposed to Astro's table-of-contents data,
    which makes the desktop article sidebar empty.
-7. Run `pnpm build`.
-8. Confirm the build generated:
-   - `dist/index.html`
-   - `dist/post/<slug>/index.html`
-   - `dist/category/<category-name>/1/index.html`
-9. Check `dist/index.html` or `curl` against local preview for the slug, title, and category link before saying the report is visible.
-10. After PR creation, use the Cloudflare Pages Preview PR comment or GitHub Actions run details to identify the Cloudflare preview URL. When preview visibility is part of the deliverable, verify that Cloudflare URL with `curl` for the slug, title, and category link before reporting.
+8. For reference pages, keep `src/pages/reference/<slug>.astro` and `src/pages/en/reference/<slug>.astro` in route parity. Use locale-aware shared data such as `getReferenceItems(locale)` for reference indexes and homepage cards.
+9. Keep English article Mermaid diagrams, English reference pages, and English card copy free of Japanese user-facing text.
+10. Run `pnpm build`.
+11. Confirm the build generated:
+
+- `dist/index.html`
+- `dist/post/<slug>/index.html`
+- `dist/category/<category-name>/1/index.html`
+
+12. Check `dist/index.html` or `curl` against local preview for the slug, title, and category link before saying the report is visible.
+13. After PR creation, use the Cloudflare Pages Preview PR comment or GitHub Actions run details to identify the Cloudflare preview URL. When preview visibility is part of the deliverable, verify that Cloudflare URL with `curl` for the slug, title, and category link before reporting.
 
 ## Research Workflow
 
@@ -66,6 +71,9 @@ Also do all of the following:
 11. When publishing a research report, add or update the MDX site entry needed for Astro visibility, run the required checks, commit, push, and create a GitHub Pull Request. Write the PR title and body in Japanese, using `.github/PULL_REQUEST_TEMPLATE.md` as the structure.
 12. After creating or updating the PR, check CI with `gh pr checks <PR_NUMBER>` or equivalent. If any check is failing, cancelled, or pending, inspect the relevant GitHub Actions run/logs and either fix the root cause or explicitly report why the non-successful run is superseded or non-actionable.
 13. User-requested changes may be committed per work unit without asking for separate commit approval. Before committing, inspect the intended diff and avoid staging unrelated changes.
+14. When the requested change is covered by explicit tests or verification steps, list those checks in the PR body. If the requested checks, `git diff --check`, unresolved-placeholder scan, required build, preview workflow, and all required CI pass, and the PR is not conflicting with `main`, enable or perform auto-merge unless the user explicitly asked to keep the PR unmerged or in draft.
+15. Before auto-merge, convert draft PRs to ready if the remaining review surface is covered by tests. Do not auto-merge when factual review, translation review, external approval, or other human judgment remains outside the requested tests; instead, state the residual review item in the PR and final report.
+16. Use a head-commit guard for auto-merge. Prefer `gh pr merge <PR_NUMBER> --squash --auto --match-head-commit <HEAD_SHA>`; if repository auto-merge is unavailable, re-check the conditions immediately before `gh pr merge <PR_NUMBER> --squash --match-head-commit <HEAD_SHA>`.
 
 ## Citation Requirements
 
@@ -145,6 +153,8 @@ Use this default shape unless the topic needs something else:
 Before finishing:
 
 - No `TBD`, `TODO`, `未定`, or unresolved placeholders.
+- Japanese and English published routes are synchronized for articles and reference pages.
+- English article Mermaid diagrams and English reference pages contain no Japanese user-facing text.
 - Important claims have nearby links.
 - Current product/spec claims were verified against current sources.
 - Diagrams render as Mermaid-compatible Markdown where possible.
@@ -155,5 +165,6 @@ Before finishing:
 - If creating a PR, unresolved placeholders such as `TBD`, `TODO`, `未定`, `要確認`, and `FIXME` have been checked and removed or intentionally explained.
 - If creating a PR, the PR title and body are written in Japanese and follow `.github/PULL_REQUEST_TEMPLATE.md`.
 - If creating or updating a PR, CI status has been checked after push, and any failing/cancelled/pending check has been investigated before reporting completion.
+- If requested behavior is captured by tests and no human-only review remains, auto-merge has been enabled or completed with a head-commit guard.
 - If creating a PR, the final response includes the verified PR URL, base branch, head branch, and draft/ready state.
 - If website visibility was expected, the full article is in `content/blog/<slug>.mdx`, any new category is registered in `src/data/categories.ts`, `pnpm build` generated the post/category/index pages, the top page HTML contains the slug/title/category, and the Cloudflare Pages preview URL has been checked when available.

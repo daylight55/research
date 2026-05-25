@@ -1,0 +1,131 @@
+import assert from 'node:assert/strict'
+import { readdir, readFile } from 'node:fs/promises'
+import { join } from 'node:path'
+import test from 'node:test'
+
+const repoRoot = new URL('../..', import.meta.url)
+const blogDir = join(repoRoot.pathname, 'content/blog')
+const referenceDir = join(repoRoot.pathname, 'src/pages/reference')
+const englishReferenceDir = join(repoRoot.pathname, 'src/pages/en/reference')
+const japaneseText = /[\u3040-\u30ff\u3400-\u9fff]/
+
+test('Astro i18n is configured for Japanese and English', async () => {
+	const config = await readFile(join(repoRoot.pathname, 'astro.config.mjs'), 'utf8')
+
+	assert.match(config, /i18n\s*:/)
+	assert.match(config, /locales\s*:\s*\[\s*['"]ja['"]\s*,\s*['"]en['"]\s*\]/)
+	assert.match(config, /defaultLocale\s*:\s*['"]ja['"]/)
+})
+
+test('English articles mirror every Japanese article slug', async () => {
+	const japanesePosts = (await readdir(blogDir))
+		.filter((name) => name.endsWith('.mdx'))
+		.map((name) => name.replace(/\.mdx$/, ''))
+		.sort()
+
+	const englishPosts = (await readdir(join(blogDir, 'en')))
+		.filter((name) => name.endsWith('.mdx'))
+		.map((name) => name.replace(/\.mdx$/, ''))
+		.sort()
+
+	assert.ok(japanesePosts.length > 0)
+	assert.deepEqual(englishPosts, japanesePosts)
+})
+
+test('English Mermaid diagrams do not contain Japanese labels', async () => {
+	const englishPostFiles = (await readdir(join(blogDir, 'en')))
+		.filter((name) => name.endsWith('.mdx'))
+		.sort()
+
+	for (const file of englishPostFiles) {
+		const source = await readFile(join(blogDir, 'en', file), 'utf8')
+		const mermaidBlocks = [...source.matchAll(/```mermaid\n([\s\S]*?)\n```/g)]
+
+		for (const block of mermaidBlocks) {
+			assert.doesNotMatch(
+				block[1],
+				japaneseText,
+				`${file} Mermaid diagrams should use English labels only`
+			)
+		}
+	}
+})
+
+test('English reference pages mirror Japanese reference routes', async () => {
+	const japaneseReferencePages = (await readdir(referenceDir))
+		.filter((name) => name.endsWith('.astro') && name !== 'index.astro')
+		.sort()
+
+	const englishReferencePages = (await readdir(englishReferenceDir))
+		.filter((name) => name.endsWith('.astro') && name !== 'index.astro')
+		.sort()
+
+	assert.ok(japaneseReferencePages.length > 0)
+	assert.deepEqual(englishReferencePages, japaneseReferencePages)
+})
+
+test('English reference pages and index data do not contain Japanese text', async () => {
+	const englishReferencePages = (await readdir(englishReferenceDir))
+		.filter((name) => name.endsWith('.astro'))
+		.sort()
+	const referenceData = await readFile(join(repoRoot.pathname, 'src/data/references.ts'), 'utf8')
+
+	for (const file of englishReferencePages) {
+		const source = await readFile(join(englishReferenceDir, file), 'utf8')
+		assert.doesNotMatch(source, japaneseText, `${file} should use English user-facing text`)
+	}
+
+	assert.match(referenceData, /title:\s*\{\s*ja:/)
+	assert.match(referenceData, /description:\s*\{\s*ja:/)
+	assert.match(referenceData, /export function getReferenceItems/)
+})
+
+test('Codex translation workflow exists for missing English articles', async () => {
+	const workflow = await readFile(
+		join(repoRoot.pathname, '.github/workflows/translate-blog-en.yml'),
+		'utf8'
+	)
+	const prompt = await readFile(
+		join(repoRoot.pathname, '.github/codex/prompts/translate-blog-en.md'),
+		'utf8'
+	)
+
+	assert.match(workflow, /workflow_dispatch:/)
+	assert.match(workflow, /codex/i)
+	assert.match(workflow, /content\/blog\/en/)
+	assert.match(prompt, /Do not use TeX-style backtick quotes/)
+	assert.match(prompt, /Mermaid diagram labels/)
+	assert.match(prompt, /news digest articles/)
+	assert.match(prompt, /What happened:/)
+	assert.match(prompt, /Implications for practice:/)
+	assert.match(prompt, /Reference pages/)
+})
+
+test('preferred locale provider detects browser language and persists manual switches', async () => {
+	const layout = await readFile(join(repoRoot.pathname, 'src/layouts/BaseLayout.astro'), 'utf8')
+	const provider = await readFile(
+		join(repoRoot.pathname, 'src/components/ProviderLocale.astro'),
+		'utf8'
+	)
+	const header = await readFile(join(repoRoot.pathname, 'src/components/Header.astro'), 'utf8')
+	const floatingSwitch = await readFile(
+		join(repoRoot.pathname, 'src/components/FloatingLocaleSwitch.astro'),
+		'utf8'
+	)
+
+	assert.match(layout, /<ProviderLocale\s*\/>/)
+	assert.match(layout, /<FloatingLocaleSwitch\s+locale=\{locale\}\s*\/>/)
+	assert.match(provider, /navigator\.languages/)
+	assert.match(provider, /window\.localStorage\.getItem\(STORAGE_KEY\)/)
+	assert.match(provider, /window\.location\.replace/)
+	assert.match(provider, /canRedirectToEnglish/)
+	assert.match(header, /data-locale-switch='ja'/)
+	assert.match(header, /data-locale-switch='en'/)
+	assert.doesNotMatch(header, /transition:persist='navbar'/)
+	assert.match(floatingSwitch, /aria-label='Language'/)
+	assert.match(floatingSwitch, /fixed bottom-4 right-4/)
+	assert.match(floatingSwitch, /localizedPath\('ja', currentContentPath\)/)
+	assert.match(floatingSwitch, /localizedPath\('en', currentContentPath\)/)
+	assert.match(floatingSwitch, /data-locale-switch='ja'/)
+	assert.match(floatingSwitch, /data-locale-switch='en'/)
+})

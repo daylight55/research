@@ -37,6 +37,7 @@ const getRelatedPosts = (post: Props) => {
 const relatedPosts = getRelatedPosts(post)
 
 const { Content, headings, remarkPluginFrontmatter } = await render(post)
+const glossaryTerms = (remarkPluginFrontmatter.glossaryTerms ?? []).slice(0, 18)
 
 const disqusEnabled = disqusConfig.enabled
 ---
@@ -87,6 +88,28 @@ const disqusEnabled = disqusConfig.enabled
 						}
 					</ul>
 				</section>
+
+				{
+					glossaryTerms.length > 0 && (
+						<section class='flex flex-col gap-2'>
+							<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+								Glossary
+							</p>
+							<ul class='flex flex-col gap-1.5'>
+								{glossaryTerms.map((term) => (
+									<li>
+										<a
+											href={localizedPath(locale, `/glossary/${term.slug}/`)}
+											class='leading-snug text-gray-600 underline decoration-black/20 underline-offset-4 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:decoration-white/20 dark:hover:text-indigo-300'
+										>
+											{term.label}
+										</a>
+									</li>
+								))}
+							</ul>
+						</section>
+					)
+				}
 
 				{
 					relatedPosts.length > 0 && (

@@ -1,0 +1,619 @@
+type PostLike = {
+	id: string
+	body?: string
+	data: {
+		title: string
+		description?: string
+		category: string
+		tags?: string[]
+		draft?: boolean
+	}
+}
+
+export type GlossaryTerm = {
+	label: string
+	slug: string
+	count: number
+	sources: string[]
+}
+
+export type GlossaryPostReference = {
+	id: string
+	title: string
+	description?: string
+	category: string
+}
+
+export type GlossaryTermContext = {
+	postId: string
+	postTitle: string
+	category: string
+	excerpt: string
+}
+
+export type GlossaryIndexTerm = {
+	label: string
+	slug: string
+	count: number
+	postCount: number
+	explanation: string
+	wikipediaUrl: string
+	contexts: GlossaryTermContext[]
+	posts: GlossaryPostReference[]
+	relatedTerms: { label: string; slug: string; weight: number }[]
+}
+
+export type GlossaryIndex = {
+	terms: GlossaryIndexTerm[]
+	bySlug: Map<string, GlossaryIndexTerm>
+}
+
+export type GlossaryCategoryGroup = {
+	category: string
+	terms: GlossaryIndexTerm[]
+}
+
+type GlossaryLocale = 'ja' | 'en'
+
+const MAX_TERMS_PER_ARTICLE = 6
+const MAX_RELATED_TERMS = 12
+
+const JAPANESE_TERM_PATTERN =
+	/[A-Za-z][A-Za-z0-9.+#-]*(?:[ \t]+[A-Za-z][A-Za-z0-9.+#-]*)?[ \t]*[\p{Script=Han}\p{Script=Katakana}ー]{2,}/gu
+const LATIN_TERM_PATTERN =
+	/\b(?:[A-Z][A-Za-z0-9.+#-]*|[A-Z]{2,})(?:[ \t]+(?:[A-Z][A-Za-z0-9.+#-]*|[A-Z]{2,})){0,3}\b/g
+const HEADING_PATTERN = /^#{1,3}\s+(.+)$/gm
+const STOPWORDS = new Set([
+	'AI',
+	'API',
+	'HTTP',
+	'URL',
+	'Web',
+	'News',
+	'Reports',
+	'Reference',
+	'Tags',
+	'FAQ',
+	'README',
+	'Executive Summary',
+	'Effective situations',
+	"Situations where it doesn't work",
+	'Cases to be introduced',
+	'Cases to still avoid',
+	'Google I',
+	'参考情報',
+	'補足',
+	'効く場面',
+	'効かない場面',
+	'導入すべきケース',
+	'まだ避けるべきケース',
+	'横断的な見立て',
+	'追跡すべき未確定事項',
+	'政治',
+	'経済',
+	'技術',
+	'Daily Trends'
+])
+
+const ENGLISH_STOPWORDS = new Set([
+	'a',
+	'an',
+	'and',
+	'as',
+	'at',
+	'by',
+	'for',
+	'from',
+	'have',
+	'how',
+	'however',
+	'if',
+	'in',
+	'into',
+	'is',
+	'it',
+	'may',
+	'of',
+	'on',
+	'or',
+	'rather',
+	'see',
+	'source',
+	'the',
+	'therefore',
+	'this',
+	'to',
+	'what',
+	'when',
+	'where',
+	'why',
+	'article',
+	'articles',
+	'archives',
+	'check',
+	'claim',
+	'experts',
+	'first',
+	'implications',
+	'infrastructure',
+	'land',
+	'ministry',
+	'politics',
+	'president',
+	'referenced',
+	'reference',
+	'technology',
+	'there',
+	'transport',
+	'tourism',
+	'economy',
+	'news',
+	'cross-sectional',
+	'cross-sectional-view',
+	'uncertainty',
+	'track',
+	'uncertainty-to-track',
+	'april',
+	'march',
+	'may'
+])
+
+const normalizeWhitespace = (value: string) => value.replace(/\s+/g, ' ').trim()
+
+export const createGlossarySlug = (label: string) =>
+	normalizeWhitespace(label)
+		.normalize('NFKC')
+		.toLowerCase()
+		.replace(/[・/／]+/g, '-')
+		.replace(/[^\p{Letter}\p{Number}.+# -]+/gu, '')
+		.replace(/\s+/g, '-')
+		.replace(/-+/g, '-')
+		.replace(/^-|-$/g, '')
+
+const stripFrontmatter = (markdown: string) => markdown.replace(/^\s*---[\s\S]*?---\s*/, '')
+
+const stripMarkdownSyntax = (markdown: string) =>
+	stripFrontmatter(markdown)
+		.replace(/^import\s+.+$/gm, ' ')
+		.replace(/<[/]?[A-Z][\s\S]*?(?:\/>|>)/g, ' ')
+		.replace(/```[\s\S]*?```/g, ' ')
+		.replace(/`([^`]+)`/g, '$1')
+		.replace(/!\[[^\]]*\]\([^)]+\)/g, ' ')
+		.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+		.replace(/^#{1,6}\s+/gm, '')
+		.replace(/^>\s?/gm, '')
+		.replace(/[*_~]/g, '')
+		.replace(/<[^>]+>/g, ' ')
+		.replace(/\s+/g, ' ')
+		.trim()
+
+const parseInlineYamlList = (value: string) =>
+	value
+		.replace(/^\[/, '')
+		.replace(/\]$/, '')
+		.split(',')
+		.map((item) => item.trim().replace(/^['"]|['"]$/g, ''))
+		.filter(Boolean)
+
+const parseFrontmatterTerms = (markdown: string) => {
+	const frontmatter = markdown.match(/^\s*---\n([\s\S]*?)\n---/)?.[1] ?? ''
+	const terms: string[] = []
+	const inlineTags = frontmatter.match(/^tags:\s*(\[.+\])$/m)?.[1]
+	if (inlineTags) {
+		terms.push(...parseInlineYamlList(inlineTags))
+	} else {
+		const tagsBlock = frontmatter.match(/^tags:\s*\n((?:\s+-\s+.+\n?)+)/m)?.[1]
+		if (tagsBlock) {
+			terms.push(
+				...tagsBlock
+					.split('\n')
+					.map((line) =>
+						line
+							.trim()
+							.replace(/^-\s+/, '')
+							.replace(/^['"]|['"]$/g, '')
+					)
+					.filter(Boolean)
+			)
+		}
+	}
+
+	return terms
+}
+
+const shouldKeepTerm = (label: string, source: string) => {
+	if (!label || STOPWORDS.has(label)) return false
+	if (label.length < 2 || label.length > 48) return false
+	const latinWords = label.match(/[A-Za-z][A-Za-z0-9.+#-]*/g) ?? []
+	const latinOnly = latinWords.join(' ') === label.replace(/\s+/g, ' ')
+	if (latinOnly && latinWords.length > 0) {
+		const lowerWords = latinWords.map((word) => word.toLowerCase())
+		if (lowerWords.every((word) => ENGLISH_STOPWORDS.has(word))) return false
+		if (lowerWords.length <= 3 && ENGLISH_STOPWORDS.has(lowerWords[0])) return false
+		if (
+			source !== 'frontmatter' &&
+			latinWords.length === 1 &&
+			!/^[A-Z0-9.+#-]{2,}$/.test(label) &&
+			!/[A-Z][a-z0-9.+#-]{2,}/.test(label) &&
+			!/[A-Z][a-z0-9.+#-]*[A-Z]/.test(label)
+		) {
+			return false
+		}
+	}
+	if (/^\d/.test(label)) return false
+	if (/^\d{4}[-/年]/.test(label)) return false
+	if (/\.(?:pdf|md|htm|html)$/i.test(label)) return false
+	if (/[。！？!?]/.test(label)) return false
+	if (/\b(?:GitHub|Bureau|Statistics|Card|Share)\b/i.test(label)) return false
+	if (/(?:Card|Section|Component|Layout)$/.test(label)) return false
+	if (/(?:する|した|している|している|なった|なっている|続く|示した|固める|入った)$/.test(label)) {
+		return false
+	}
+	if (/[\p{Script=Hiragana}]/u.test(label) && !/[A-Za-z]/.test(label) && label.length > 12) {
+		return false
+	}
+	if (/[\p{Script=Hiragana}]/u.test(label) && /[A-Za-z]/.test(label) && label.length > 24) {
+		return false
+	}
+	return /[\p{Letter}\p{Script=Han}\p{Script=Katakana}\p{Script=Hiragana}]/u.test(label)
+}
+
+const scoreTerm = (term: GlossaryTerm) => {
+	let score = term.count
+	if (term.sources.includes('frontmatter')) score += 100
+	if (term.sources.includes('heading')) score += 20
+	if (
+		/[\p{Script=Han}\p{Script=Katakana}ー]{2,}/u.test(term.label) &&
+		/[A-Za-z]/.test(term.label)
+	) {
+		score += 8
+	}
+	if (/^[A-Z0-9.+#-]{2,}$/.test(term.label)) score += 6
+	if (/^[A-Z][A-Za-z0-9.+#-]+(?:\s+[A-Z][A-Za-z0-9.+#-]+){1,3}$/.test(term.label)) {
+		score += 6
+	}
+	if (term.label.length > 32) score -= 12
+	if (
+		term.sources.includes('heading') &&
+		term.count <= 1 &&
+		!term.sources.includes('frontmatter')
+	) {
+		score -= 24
+	}
+	return score
+}
+
+const shouldPromoteExtractedTerm = (term: GlossaryTerm) => {
+	if (term.sources.includes('frontmatter')) return true
+	if (term.count >= 2) return true
+	if (
+		/[\p{Script=Han}\p{Script=Katakana}ー]{2,}/u.test(term.label) &&
+		/[A-Za-z]/.test(term.label)
+	) {
+		return /(サーバー?|基盤|モデル|インフラ|認証|メモリ|記憶|グラフ)/.test(term.label)
+	}
+	if (/^[A-Z0-9.+#-]{2,}$/.test(term.label)) return true
+	if (/^[A-Z][A-Za-z0-9.+#-]+(?:\s+[A-Z][A-Za-z0-9.+#-]+){1,3}$/.test(term.label)) {
+		return true
+	}
+	return false
+}
+
+const pushCandidate = (terms: Map<string, GlossaryTerm>, label: string, source: string) => {
+	const normalizedLabel = normalizeWhitespace(label.replace(/[`*_#]/g, ''))
+	if (!shouldKeepTerm(normalizedLabel, source)) return
+
+	const slug = createGlossarySlug(normalizedLabel)
+	if (!slug) return
+
+	const existing = terms.get(slug)
+	if (existing) {
+		existing.count += 1
+		if (!existing.sources.includes(source)) existing.sources.push(source)
+		return
+	}
+
+	terms.set(slug, {
+		label: normalizedLabel,
+		slug,
+		count: 1,
+		sources: [source]
+	})
+}
+
+export function extractGlossaryTermsFromMarkdown(
+	markdown: string,
+	maxTerms = MAX_TERMS_PER_ARTICLE
+) {
+	const terms = new Map<string, GlossaryTerm>()
+	const body = stripFrontmatter(markdown)
+	const bodyWithoutHeadings = body
+		.replace(/^import\s+.+$/gm, ' ')
+		.replace(/<[/]?[A-Z][\s\S]*?(?:\/>|>)/g, ' ')
+		.replace(HEADING_PATTERN, ' ')
+
+	for (const tag of parseFrontmatterTerms(markdown)) {
+		pushCandidate(terms, tag, 'frontmatter')
+	}
+
+	for (const match of body.matchAll(HEADING_PATTERN)) {
+		if (!match[0].startsWith('# ')) {
+			pushCandidate(terms, match[1], 'heading')
+		}
+	}
+
+	for (const match of bodyWithoutHeadings.matchAll(JAPANESE_TERM_PATTERN)) {
+		pushCandidate(terms, match[0], 'body')
+	}
+
+	for (const match of bodyWithoutHeadings.matchAll(LATIN_TERM_PATTERN)) {
+		pushCandidate(terms, match[0], 'body')
+	}
+
+	return Array.from(terms.values())
+		.filter(shouldPromoteExtractedTerm)
+		.sort((a, b) => {
+			const sourceRank = (term: GlossaryTerm) =>
+				term.sources.includes('frontmatter') ? 0 : term.sources.includes('heading') ? 1 : 2
+			const rankDifference = sourceRank(a) - sourceRank(b)
+			if (rankDifference !== 0) return rankDifference
+			if (sourceRank(a) === 0) return 0
+			return scoreTerm(b) - scoreTerm(a)
+		})
+		.slice(0, maxTerms)
+}
+
+const isWordChar = (character: string) => /[\p{Letter}\p{Number}_-]/u.test(character)
+
+const findTermIndex = (text: string, label: string) => {
+	const haystack = text.toLowerCase()
+	const needle = label.toLowerCase()
+	let index = haystack.indexOf(needle)
+
+	while (index >= 0) {
+		const before = index > 0 ? text[index - 1] : ''
+		const after = text[index + label.length] ?? ''
+		const needsBoundary = /^[A-Za-z0-9 .+#-]+$/.test(label)
+		if (!needsBoundary || ((!before || !isWordChar(before)) && (!after || !isWordChar(after)))) {
+			return index
+		}
+		index = haystack.indexOf(needle, index + needle.length)
+	}
+
+	return -1
+}
+
+const findMarkdownLinkRanges = (markdown: string) => {
+	const ranges: { start: number; end: number }[] = []
+	const linkPattern = /\[[^\]]+\]\([^)]+\)/g
+	for (const match of markdown.matchAll(linkPattern)) {
+		ranges.push({ start: match.index ?? 0, end: (match.index ?? 0) + match[0].length })
+	}
+	return ranges
+}
+
+const isInsideRange = (index: number, ranges: { start: number; end: number }[]) =>
+	ranges.some((range) => index >= range.start && index < range.end)
+
+const splitSentences = (text: string) =>
+	text
+		.split(/(?<=[。！？!?])\s+|\n+/)
+		.map(normalizeWhitespace)
+		.filter((sentence) => sentence.length >= 12)
+
+const createContextExcerpt = (body: string, label: string) => {
+	const text = stripMarkdownSyntax(body)
+	const directSentence = splitSentences(text).find(
+		(sentence) => findTermIndex(sentence, label) >= 0
+	)
+	const fallbackIndex = findTermIndex(text, label)
+	if (!directSentence && fallbackIndex < 0) return ''
+
+	const excerpt =
+		directSentence ??
+		text.slice(
+			Math.max(0, fallbackIndex - 64),
+			Math.min(text.length, fallbackIndex + label.length + 120)
+		)
+	return excerpt.length > 180 ? `${excerpt.slice(0, 177)}...` : excerpt
+}
+
+const createTermExplanation = (term: GlossaryIndexTerm, locale: GlossaryLocale) => {
+	const primaryPost = term.posts[0]
+	const primaryContext = term.contexts[0]
+	if (!primaryPost) {
+		return locale === 'en'
+			? `${term.label} is a term extracted from articles on this site.`
+			: `${term.label} は、このサイトの記事から抽出された用語です。`
+	}
+
+	const usage = primaryPost.description || primaryContext?.excerpt
+	if (usage) {
+		if (locale === 'en') {
+			return `${term.label} appears in "${primaryPost.title}" in the context of: "${usage}"`
+		}
+		return `${term.label} は、記事「${primaryPost.title}」では「${usage}」という文脈で扱われています。`
+	}
+
+	if (locale === 'en') {
+		return `${term.label} appears in the ${primaryPost.category} article "${primaryPost.title}".`
+	}
+	return `${term.label} は、${primaryPost.category} カテゴリの記事「${primaryPost.title}」で扱われている用語です。`
+}
+
+export const createWikipediaUrl = (label: string, locale: GlossaryLocale = 'ja') => {
+	const wikipediaLocale = locale === 'en' ? 'en' : 'ja'
+	return `https://${wikipediaLocale}.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(label)}`
+}
+
+export const createWikipediaSearchApiUrl = (label: string, locale: GlossaryLocale = 'ja') => {
+	const wikipediaLocale = locale === 'en' ? 'en' : 'ja'
+	const params = new URLSearchParams({
+		action: 'query',
+		list: 'search',
+		srsearch: label,
+		format: 'json',
+		origin: '*',
+		srlimit: '1'
+	})
+	return `https://${wikipediaLocale}.wikipedia.org/w/api.php?${params.toString()}`
+}
+
+export const createWikipediaSummaryApiUrl = (title: string, locale: GlossaryLocale = 'ja') => {
+	const wikipediaLocale = locale === 'en' ? 'en' : 'ja'
+	return `https://${wikipediaLocale}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}?redirect=true`
+}
+
+export function linkFirstGlossaryMentions(
+	markdown: string,
+	terms: Pick<GlossaryTerm, 'label' | 'slug'>[],
+	basePath = ''
+) {
+	let linked = markdown
+	const seen = new Set<string>()
+
+	for (const term of [...terms].sort((a, b) => b.label.length - a.label.length)) {
+		if (seen.has(term.slug)) continue
+		const ranges = findMarkdownLinkRanges(linked)
+		let index = findTermIndex(linked, term.label)
+		while (index >= 0 && isInsideRange(index, ranges)) {
+			const offset = index + term.label.length
+			index = findTermIndex(linked.slice(offset), term.label)
+			if (index >= 0) index += offset
+		}
+		if (index < 0) continue
+
+		const mention = linked.slice(index, index + term.label.length)
+		const href = `${basePath}/glossary/${encodeURIComponent(term.slug)}/`
+		linked = `${linked.slice(0, index)}[${mention}](${href})${linked.slice(index + term.label.length)}`
+		seen.add(term.slug)
+	}
+
+	return linked
+}
+
+export function buildGlossaryIndex(
+	posts: PostLike[],
+	locale: GlossaryLocale = 'ja'
+): GlossaryIndex {
+	const bySlug = new Map<string, GlossaryIndexTerm>()
+	const cooccurrences = new Map<string, Map<string, number>>()
+	const termOrder = new Map<string, number>()
+
+	for (const post of posts.filter((entry) => !entry.data.draft)) {
+		const terms = extractGlossaryTermsFromMarkdown(post.body ?? '')
+		const postRef = {
+			id: post.id,
+			title: post.data.title,
+			description: post.data.description,
+			category: post.data.category
+		}
+
+		for (const term of terms) {
+			const contextExcerpt = createContextExcerpt(post.body ?? '', term.label)
+			const context = contextExcerpt
+				? {
+						postId: post.id,
+						postTitle: post.data.title,
+						category: post.data.category,
+						excerpt: contextExcerpt
+					}
+				: null
+			const existing = bySlug.get(term.slug)
+			if (existing) {
+				existing.count += term.count
+				if (!existing.posts.some((candidate) => candidate.id === post.id)) {
+					existing.posts.push(postRef)
+					existing.postCount += 1
+				}
+				if (
+					context &&
+					!existing.contexts.some(
+						(candidate) =>
+							candidate.postId === context.postId && candidate.excerpt === context.excerpt
+					)
+				) {
+					existing.contexts.push(context)
+				}
+			} else {
+				termOrder.set(term.slug, termOrder.size)
+				bySlug.set(term.slug, {
+					label: term.label,
+					slug: term.slug,
+					count: term.count,
+					postCount: 1,
+					explanation: '',
+					wikipediaUrl: createWikipediaUrl(term.label, locale),
+					contexts: context ? [context] : [],
+					posts: [postRef],
+					relatedTerms: []
+				})
+			}
+		}
+
+		for (const source of terms) {
+			const related = cooccurrences.get(source.slug) ?? new Map<string, number>()
+			for (const target of terms) {
+				if (source.slug === target.slug) continue
+				related.set(target.slug, (related.get(target.slug) ?? 0) + 1)
+			}
+			cooccurrences.set(source.slug, related)
+		}
+	}
+
+	for (const term of bySlug.values()) {
+		term.contexts = term.contexts.slice(0, 6)
+		term.explanation = createTermExplanation(term, locale)
+		term.relatedTerms = Array.from(cooccurrences.get(term.slug)?.entries() ?? [])
+			.map(([slug, weight]) => {
+				const related = bySlug.get(slug)
+				return related ? { label: related.label, slug: related.slug, weight } : null
+			})
+			.filter((related): related is { label: string; slug: string; weight: number } =>
+				Boolean(related)
+			)
+			.sort(
+				(a, b) =>
+					b.weight - a.weight ||
+					(termOrder.get(a.slug) ?? 0) - (termOrder.get(b.slug) ?? 0) ||
+					a.label.localeCompare(b.label)
+			)
+			.slice(0, MAX_RELATED_TERMS)
+	}
+
+	const terms = Array.from(bySlug.values()).sort(
+		(a, b) => b.postCount - a.postCount || b.count - a.count || a.label.localeCompare(b.label)
+	)
+
+	return { terms, bySlug }
+}
+
+export function groupGlossaryTermsByCategory(
+	terms: GlossaryIndexTerm[],
+	categoryOrder: readonly string[] = []
+): GlossaryCategoryGroup[] {
+	const categoryRank = new Map(categoryOrder.map((category, index) => [category, index]))
+	const groups = new Map<string, GlossaryIndexTerm[]>()
+
+	for (const term of terms) {
+		const categories = new Set(term.posts.map((post) => post.category))
+		for (const category of categories) {
+			const groupTerms = groups.get(category) ?? []
+			groupTerms.push(term)
+			groups.set(category, groupTerms)
+		}
+	}
+
+	return Array.from(groups.entries())
+		.map(([category, groupTerms]) => ({
+			category,
+			terms: groupTerms.sort(
+				(a, b) => b.postCount - a.postCount || b.count - a.count || a.label.localeCompare(b.label)
+			)
+		}))
+		.sort((a, b) => {
+			const rankA = categoryRank.get(a.category) ?? Number.MAX_SAFE_INTEGER
+			const rankB = categoryRank.get(b.category) ?? Number.MAX_SAFE_INTEGER
+			return rankA - rankB || a.category.localeCompare(b.category)
+		})
+}

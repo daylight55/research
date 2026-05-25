@@ -1,0 +1,208 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '@/layouts/BaseLayout'
+import KnowledgeGraph from '@/components/KnowledgeGraph'
+import WikipediaContext from '@/components/WikipediaContext'
+import {
+	DEFAULT_LOCALE,
+	buildGlossaryIndex,
+	getPostLocale,
+	getPostUrl,
+	localizedPath
+} from '@/utils'
+
+const locale = DEFAULT_LOCALE
+
+export async function getStaticPaths() {
+	const posts = (await getCollection('blog')).filter(
+		(post) => getPostLocale(post) === DEFAULT_LOCALE
+	)
+	const glossary = buildGlossaryIndex(posts)
+
+	return glossary.terms.map((term) => ({
+		params: { term: term.slug },
+		props: { term }
+	}))
+}
+
+const { term } = Astro.props
+
+const graphNodes = [
+	{
+		id: term.slug,
+		label: term.label,
+		description: `${term.explanation} 使用記事数: ${term.postCount}件。`,
+		href: localizedPath(locale, `/glossary/${term.slug}/`),
+		kind: 'term' as const
+	},
+	...term.relatedTerms.slice(0, 10).map((related) => ({
+		id: related.slug,
+		label: related.label,
+		description: `「${term.label}」の関連語。`,
+		href: localizedPath(locale, `/glossary/${related.slug}/`),
+		kind: 'term' as const
+	})),
+	...term.posts.slice(0, 8).map((post) => ({
+		id: `post-${post.id}`,
+		label: post.title,
+		description: `${term.label} が登場する ${post.category} カテゴリの記事。${post.description ?? ''}`,
+		href: getPostUrl(post),
+		kind: 'post' as const
+	}))
+]
+const graphEdges = [
+	...term.relatedTerms.slice(0, 10).map((related) => ({
+		id: `${term.slug}-${related.slug}`,
+		source: term.slug,
+		target: related.slug,
+		weight: related.weight
+	})),
+	...term.posts.slice(0, 8).map((post) => ({
+		id: `${term.slug}-post-${post.id}`,
+		source: term.slug,
+		target: `post-${post.id}`,
+		weight: 1
+	}))
+]
+---
+
+<BaseLayout
+	title={`${term.label} | 用語辞典`}
+	description={`${term.label} が登場する記事と関連語。`}
+	locale={locale}
+>
+	<section class='grid gap-8'>
+		<header class='grid gap-3'>
+			<a
+				href={localizedPath(locale, '/glossary/')}
+				class='w-fit text-sm font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
+			>
+				用語辞典へ戻る
+			</a>
+			<h1 class='text-4xl font-semibold md:text-5xl'>{term.label}</h1>
+			<dl class='flex flex-wrap gap-3 text-sm'>
+				<div
+					class='rounded-md border border-black/10 bg-white/70 px-3 py-2 dark:border-white/10 dark:bg-white/5'
+				>
+					<dt
+						class='text-xs font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400'
+					>
+						Articles
+					</dt>
+					<dd class='text-base font-semibold text-gray-900 dark:text-gray-100'>{term.postCount}</dd>
+				</div>
+				<div
+					class='rounded-md border border-black/10 bg-white/70 px-3 py-2 dark:border-white/10 dark:bg-white/5'
+				>
+					<dt
+						class='text-xs font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400'
+					>
+						References
+					</dt>
+					<dd class='text-base font-semibold text-gray-900 dark:text-gray-100'>
+						{term.contexts.length}
+					</dd>
+				</div>
+				<div
+					class='rounded-md border border-black/10 bg-white/70 px-3 py-2 dark:border-white/10 dark:bg-white/5'
+				>
+					<dt
+						class='text-xs font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400'
+					>
+						Related Terms
+					</dt>
+					<dd class='text-base font-semibold text-gray-900 dark:text-gray-100'>
+						{term.relatedTerms.length}
+					</dd>
+				</div>
+			</dl>
+		</header>
+
+		<WikipediaContext label={term.label} locale={locale} />
+
+		<KnowledgeGraph
+			id={`glossary-term-${term.slug}-graph`}
+			nodes={graphNodes}
+			edges={graphEdges}
+			caption={`${term.label} の概念マップ。ノード定義は下に明記しています。`}
+		/>
+
+		<div class='grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]'>
+			<div class='grid gap-8'>
+				<section class='grid gap-4'>
+					<h2 class='text-2xl font-semibold'>記事内関連</h2>
+					<ul class='grid gap-4'>
+						{
+							term.contexts.map((context) => (
+								<li class='rounded-md border border-black/10 bg-white/70 p-4 dark:border-white/10 dark:bg-white/5'>
+									<a
+										href={getPostUrl({ id: context.postId })}
+										class='font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
+									>
+										{context.postTitle}
+									</a>
+									<figure class='mt-3 grid gap-2 border-l-2 border-indigo-300 pl-3 dark:border-indigo-500'>
+										<blockquote
+											cite={getPostUrl({ id: context.postId })}
+											class='text-sm leading-7 text-gray-700 dark:text-gray-300'
+										>
+											{context.excerpt}
+										</blockquote>
+										<figcaption class='text-xs font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400'>
+											引用: <cite>{context.postTitle}</cite>
+										</figcaption>
+									</figure>
+									<p class='mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400'>
+										{context.category}
+									</p>
+								</li>
+							))
+						}
+					</ul>
+				</section>
+
+				<section class='grid gap-4'>
+					<h2 class='text-2xl font-semibold'>登場記事</h2>
+					<ul class='grid gap-4'>
+						{
+							term.posts.map((post) => (
+								<li class='rounded-md border border-black/10 bg-white/70 p-4 dark:border-white/10 dark:bg-white/5'>
+									<a
+										href={getPostUrl(post)}
+										class='font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
+									>
+										{post.title}
+									</a>
+									<p class='mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400'>
+										{post.description}
+									</p>
+									<p class='mt-2 text-xs font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400'>
+										{post.category}
+									</p>
+								</li>
+							))
+						}
+					</ul>
+				</section>
+			</div>
+
+			<aside class='grid content-start gap-3'>
+				<h2 class='text-xl font-semibold'>関連語</h2>
+				<ul class='flex flex-wrap gap-2'>
+					{
+						term.relatedTerms.map((related) => (
+							<li>
+								<a
+									href={localizedPath(locale, `/glossary/${related.slug}/`)}
+									class='inline-flex rounded-md border border-black/10 px-3 py-1.5 text-sm text-gray-700 transition-colors hover:border-indigo-400 hover:text-indigo-700 dark:border-white/10 dark:text-gray-300 dark:hover:border-indigo-300 dark:hover:text-indigo-300'
+								>
+									{related.label}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</aside>
+		</div>
+	</section>
+</BaseLayout>

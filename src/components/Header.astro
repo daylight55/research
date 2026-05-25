@@ -49,6 +49,14 @@ const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
 					<ReferenceIcon /> Reference
 				</HeaderLink>
 				<HeaderLink
+					href='/glossary/'
+					locale={locale}
+					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'
+				>
+					<ReferenceIcon />
+					Glossary
+				</HeaderLink>
+				<HeaderLink
 					href='/tags'
 					locale={locale}
 					class='inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-2xl md:text-base'

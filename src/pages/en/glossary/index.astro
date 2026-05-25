@@ -1,0 +1,115 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '@/layouts/BaseLayout'
+import KnowledgeGraph from '@/components/KnowledgeGraph'
+import { CATEGORIES } from '@/data/categories'
+import {
+	buildGlossaryIndex,
+	getPostLocale,
+	groupGlossaryTermsByCategory,
+	localizedPath
+} from '@/utils'
+
+const locale = 'en'
+const posts = (await getCollection('blog')).filter((post) => getPostLocale(post) === locale)
+const glossary = buildGlossaryIndex(posts, locale)
+const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
+const graphTerms = glossary.terms.slice(0, 36)
+const graphNodes = graphTerms.map((term) => ({
+	id: term.slug,
+	label: term.label,
+	description: `${term.explanation} Used in ${term.postCount} articles.`,
+	href: localizedPath(locale, `/glossary/${term.slug}/`),
+	kind: 'term' as const
+}))
+const graphEdges = graphTerms.flatMap((term) =>
+	term.relatedTerms
+		.filter(
+			(related) =>
+				term.slug < related.slug && graphTerms.some((candidate) => candidate.slug === related.slug)
+		)
+		.slice(0, 3)
+		.map((related) => ({
+			id: `${term.slug}-${related.slug}`,
+			source: term.slug,
+			target: related.slug,
+			weight: related.weight
+		}))
+)
+---
+
+<BaseLayout
+	title='Glossary'
+	description='A concept map of technical terms and important nouns extracted from articles.'
+	locale={locale}
+>
+	<section class='grid gap-8'>
+		<header class='grid gap-3'>
+			<p class='text-sm font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+				Glossary
+			</p>
+			<h1 class='text-4xl font-semibold md:text-5xl'>Glossary</h1>
+			<p class='max-w-3xl leading-8 text-gray-700 dark:text-gray-300'>
+				Technical terms and important noun phrases are extracted from article tags, headings, and
+				body text, then organized as shared concepts across articles.
+			</p>
+		</header>
+
+		<KnowledgeGraph
+			id='glossary-overview-graph-en'
+			nodes={graphNodes}
+			edges={graphEdges}
+			caption='A concept map for frequently used terms. Node definitions are listed below.'
+		/>
+
+		<section class='grid gap-4'>
+			<div class='grid gap-2'>
+				<h2 class='text-2xl font-semibold'>Terms by Category</h2>
+				<p class='max-w-3xl text-sm leading-7 text-gray-600 dark:text-gray-400'>
+					Terms are grouped by the article categories where they appear. Terms used across multiple
+					categories appear in each relevant category.
+				</p>
+			</div>
+			<div class='grid gap-8'>
+				{
+					glossaryGroups.map((group) => (
+						<section class='grid gap-3'>
+							<div class='flex flex-wrap items-baseline justify-between gap-3 border-b border-black/10 pb-2 dark:border-white/10'>
+								<div>
+									<h3 class='text-xl font-semibold'>{group.category}</h3>
+									<p class='mt-1 text-sm text-gray-600 dark:text-gray-400'>
+										{group.terms.length} terms
+									</p>
+								</div>
+								<a
+									href={localizedPath(locale, `/category/${group.category}/1/`)}
+									class='text-sm font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
+								>
+									View articles in this category
+								</a>
+							</div>
+							<ul class='grid gap-3 md:grid-cols-2 xl:grid-cols-3'>
+								{group.terms.map((term) => (
+									<li class='rounded-md border border-black/10 bg-white/70 p-4 dark:border-white/10 dark:bg-white/5'>
+										<a
+											href={localizedPath(locale, `/glossary/${term.slug}/`)}
+											class='font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
+										>
+											{term.label}
+										</a>
+										<p class='mt-2 text-sm text-gray-600 dark:text-gray-400'>
+											Used in {term.postCount} articles / {term.relatedTerms.length} related terms
+										</p>
+										<p class='mt-3 text-sm leading-6 text-gray-700 dark:text-gray-300'>
+											{term.explanation}
+										</p>
+									</li>
+								))}
+							</ul>
+						</section>
+					))
+				}
+			</div>
+		</section>
+	</section>
+</BaseLayout>

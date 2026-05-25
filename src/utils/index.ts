@@ -16,6 +16,16 @@ export type { Locale } from './i18n'
 export { getCategoryAccentClass, getCategorySurfaceClass } from './categoryStyles'
 export { renderNewsRssContent, renderReportRssContent } from './rssContent'
 export {
+	buildGlossaryIndex,
+	createGlossarySlug,
+	createWikipediaSearchApiUrl,
+	createWikipediaSummaryApiUrl,
+	createWikipediaUrl,
+	extractGlossaryTermsFromMarkdown,
+	groupGlossaryTermsByCategory,
+	linkFirstGlossaryMentions
+} from './glossary'
+export {
 	getCategories,
 	getPosts,
 	getReportPosts,
@@ -25,3 +35,4 @@ export {
 	filterPostsByCategory
 } from './post'
 export { remarkReadingTime } from './readTime'
+export { remarkGlossary } from './remarkGlossary'

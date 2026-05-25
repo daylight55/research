@@ -108,6 +108,27 @@ html.dark .mermaid-viewport {
 	min-width: min(42rem, 100%);
 	width: min(var(--mermaid-intrinsic-width, 56rem), 56rem);
 }
+
+.knowledge-graph__canvas {
+	height: min(58vh, 34rem);
+	min-height: 24rem;
+	width: 100%;
+	background:
+		linear-gradient(rgba(52, 87, 213, 0.05) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(52, 87, 213, 0.05) 1px, transparent 1px), #fffdf7;
+	background-size: 28px 28px;
+}
+
+html.dark .knowledge-graph__canvas {
+	background:
+		linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px), #111827;
+}
+
+.prose .glossary-term-link {
+	font-weight: 600;
+	text-decoration-style: dotted;
+}
 :root {
 	--accent: #3457d5;
 	--accent-soft: #dbe4ff;

@@ -35,11 +35,11 @@ Source note: The Google Spanner paper describes a globally synchronously replica
 
 ```mermaid
 flowchart LR
-  RDB["従来RDBMS"] --> Gap["スケール限界"]
-  NoSQL["NoSQL"] --> Trade["一貫性の代償"]
+  RDB["Traditional RDBMS"] --> Gap["Scale limits"]
+  NoSQL["NoSQL"] --> Trade["Consistency trade-off"]
   Gap --> NewSQL["NewSQL"]
   Trade --> NewSQL
-  NewSQL --> Goal["SQL + 分散"]
+  NewSQL --> Goal["SQL + distributed"]
 ```
 
 The key concepts are:
@@ -76,11 +76,11 @@ Source note: YugabyteDB architecture describes the query layer and storage layer
 
 ```mermaid
 flowchart TB
-  App["アプリ"] --> API["YSQL / YCQL"]
-  API --> TS["YB-TServer群"]
+  App["Application"] --> API["YSQL / YCQL"]
+  API --> TS["YB-TServer group"]
   Master["YB-Master"] --> TS
   TS --> Doc["DocDB / RocksDB"]
-  Doc --> Raft["Raft複製"]
+  Doc --> Raft["Raft replication"]
   Raft --> Doc
 ```
 
@@ -120,11 +120,11 @@ Conversely, if PostgreSQL/Aurora, which scales vertically in a single region, is
 
 ```mermaid
 flowchart TD
-  Q1["現行DBで足りる?"] -->|Yes| Keep["継続・最適化"]
-  Q1 -->|No| Q2["SQL互換が必要?"]
-  Q2 -->|No| Alt["別方式も検討"]
-  Q2 -->|Yes| Q3["分散要件が明確?"]
-  Q3 -->|Yes| PoC["比較PoC"]
+  Q1["Is the current DB enough?"] -->|Yes| Keep["Continue and optimize"]
+  Q1 -->|No| Q2["Need SQL compatibility?"]
+  Q2 -->|No| Alt["Consider other approaches"]
+  Q2 -->|Yes| Q3["Are distributed requirements clear?"]
+  Q3 -->|Yes| PoC["Comparative PoC"]
   Q3 -->|No| Keep
 ```
 

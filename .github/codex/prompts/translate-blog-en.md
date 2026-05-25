@@ -9,6 +9,7 @@ Rules:
 - Preserve all frontmatter keys and values unless the value is Japanese prose that should be translated, such as `title`, `description`, `rssSummary`, `heroImageAlt`, and `heroImageCredit`.
 - Adjust relative `heroImage` paths from `../../src/...` to `../../../src/...` because English articles live one directory deeper.
 - Translate the Markdown/MDX body into natural English while preserving headings, tables, lists, Mermaid blocks, MDX components, links, and source URLs.
+- Translate Mermaid diagram labels, axis labels, sequence participants, and messages into English. Do not leave Japanese text inside English Mermaid blocks.
 - Keep source-adjacent `出典メモ:` paragraphs as English `Source note:` paragraphs.
 - Do not use TeX-style backtick quotes such as ``example''. Use normal double quotes for quoted phrases.
 - For news digest articles, keep the topic labels as standalone paragraphs with blank lines between `What happened:`, `Why it matters:`, `Implications for practice:`, and the following `NewsSourceCard`, matching the Japanese layout.

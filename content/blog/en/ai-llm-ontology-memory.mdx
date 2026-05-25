@@ -31,12 +31,12 @@ The conclusions of this report are as follows.
 
 ```mermaid
 flowchart LR
-  A["AI研究史"] --> B["LLM構造"]
-  B --> C["記号接地"]
+  A["AI history"] --> B["LLM structure"]
+  B --> C["Symbol grounding"]
   C --> D["Ontology"]
   D --> E["Memory"]
-  E --> F["MCP接続"]
-  F --> G["評価・監査"]
+  E --> F["MCP connections"]
+  F --> G["Evaluation and audit"]
 ```
 
 ## 2. How should we understand the history of AI?
@@ -54,14 +54,14 @@ The focus in practice after 2024 will shift from a single model to agents, tool 
 
 ```mermaid
 timeline
-  title AIパラダイムの推移
-  1950s : 記号AI
-  1970s : 記号操作
-  1980s : NN復興
-  2010s : 深層学習
+  title AI paradigm shifts
+  1950s : Symbolic AI
+  1970s : Symbol manipulation
+  1980s : Neural network revival
+  2010s : Deep learning
   2017 : Transformer
-  2020s : 基盤モデル
-  2024+ : Agent接続
+  2020s : Foundation models
+  2024+ : Agent connections
 ```
 
 ## 3. Essence of LLM principle and structure
@@ -98,11 +98,11 @@ Source note: [Bender et al. (2021)](https://dl.acm.org/doi/10.1145/3442188.34459
 
 ```mermaid
 flowchart TD
-  T["入力"] --> Tok["トークン化"]
-  Tok --> Attn["文脈処理"]
-  Attn --> Out["次トークン生成"]
-  Out --> Align["指示調整"]
-  Align --> Use["支援行動"]
+  T["Input"] --> Tok["Tokenization"]
+  Tok --> Attn["Context processing"]
+  Attn --> Out["Next-token generation"]
+  Out --> Align["Instruction tuning"]
+  Align --> Use["Assisted action"]
 ```
 
 ## 4. Where should we find the difference with humans?
@@ -122,11 +122,11 @@ Rather than viewing AI as a replacement for humans, it is important to design it
 
 ```mermaid
 flowchart LR
-  H["人間"] --> HC["身体・目的・責任"]
-  L["LLM"] --> LC["表現・推論・ツール"]
-  HC --> G["差分の理解"]
+  H["Human"] --> HC["Body, purpose, responsibility"]
+  L["LLM"] --> LC["Representation, reasoning, tools"]
+  HC --> G["Understand the gap"]
   LC --> G
-  G --> D["設計と監査"]
+  G --> D["Design and audit"]
 ```
 
 ## 5. Information that can be input to AI in practice
@@ -157,11 +157,11 @@ Record which results were produced by AI or human decisions. Without this, AI ut
 
 ```mermaid
 flowchart TD
-  D["文書・データ"] --> AI["AI入力層"]
-  BO["業務オブジェクト"] --> AI
-  AI --> W["判断・提案"]
-  W --> L["判断ログ"]
-  L --> F["結果フィードバック"]
+  D["Documents and data"] --> AI["AI input layer"]
+  BO["Business objects"] --> AI
+  AI --> W["Judgment and proposals"]
+  W --> L["Decision logs"]
+  L --> F["Outcome feedback"]
   F --> AI
 ```
 
@@ -181,11 +181,11 @@ Symbolic grounding in practical AI does not necessarily mean having a robot body
 
 ```mermaid
 flowchart LR
-  S["記号<br/>顧客A・障害B・承認C"] --> O["業務オブジェクト"]
-  O --> St["状態<br/>未対応・承認済み・障害中"]
-  St --> Ac["行為<br/>送信・承認・復旧"]
-  Ac --> Re["結果<br/>売上・品質・リスク"]
-  Re --> Au["責任・監査"]
+  S["Symbols<br/>Customer A, incident B, approval C"] --> O["Business objects"]
+  O --> St["State<br/>Open, approved, in incident"]
+  St --> Ac["Actions<br/>Send, approve, recover"]
+  Ac --> Re["Outcomes<br/>Revenue, quality, risk"]
+  Re --> Au["Accountability and audit"]
   Au --> S
 ```
 
@@ -205,11 +205,11 @@ Source note: The definition that treats ontologies as "explicit specifications" 
 
 ```mermaid
 flowchart TD
-  BO["業務オブジェクト"] --> Rel["関係・状態"]
-  BO --> Act["許可された行為"]
-  Act --> Pol["権限・承認"]
-  Pol --> Aud["監査ログ"]
-  Aud --> FB["結果学習"]
+  BO["Business objects"] --> Rel["Relations and state"]
+  BO --> Act["Permitted actions"]
+  Act --> Pol["Permissions and approvals"]
+  Pol --> Aud["Audit logs"]
+  Aud --> FB["Outcome learning"]
 ```
 
 ## 8. Pros and cons of Graphiti's approach
@@ -245,12 +245,12 @@ Graphiti is promising as an external memory for LLM. However, rather than creati
 
 ```mermaid
 flowchart LR
-  Src["会話・文書・イベント"] --> Ext["関係抽出"]
+  Src["Conversations, documents, events"] --> Ext["Relation extraction"]
   Ext --> TKG["Temporal KG"]
-  TKG --> Ctx["文脈組み立て"]
-  TKG --> Aud["出典・時刻"]
+  TKG --> Ctx["Context assembly"]
+  TKG --> Aud["Sources and timestamps"]
   Ctx --> Agent["LLM Agent"]
-  Aud --> Rev["人間レビュー"]
+  Aud --> Rev["Human review"]
 ```
 
 ## 9. Strategies for utilizing tacit knowledge in organizations
@@ -271,11 +271,11 @@ The practical measures are as follows.
 
 ```mermaid
 flowchart LR
-  Tacit["暗黙知<br/>経験・勘・状況判断"] --> Capture["場面捕捉<br/>会話・レビュー・障害対応"]
-  Capture --> Externalize["外化<br/>論点・判断基準・ケース"]
-  Externalize --> Structure["構造化<br/>オブジェクト・関係・状態"]
-  Structure --> Reuse["再利用<br/>検索・提案・教育"]
-  Reuse --> Internalize["再内面化<br/>実践・レビュー・訓練"]
+  Tacit["Tacit knowledge<br/>Experience, intuition, situational judgment"] --> Capture["Situation capture<br/>Conversations, reviews, incidents"]
+  Capture --> Externalize["Externalization<br/>Issues, criteria, cases"]
+  Externalize --> Structure["Structuring<br/>Objects, relations, state"]
+  Structure --> Reuse["Reuse<br/>Search, suggestions, training"]
+  Reuse --> Internalize["Re-internalization<br/>Practice, review, training"]
   Internalize --> Tacit
 ```
 
@@ -297,11 +297,11 @@ The strength of Palantir-type thinking is that it connects AI to changes in the 
 
 ```mermaid
 flowchart TD
-  Data["データ資産"] --> Ont["Ontology"]
-  Logic["関数・モデル"] --> Ont
-  Ont --> Obj["対象・関係"]
-  Obj --> Act["行為"]
-  Act --> Ops["業務結果"]
+  Data["Data assets"] --> Ont["Ontology"]
+  Logic["Functions and models"] --> Ont
+  Ont --> Obj["Objects and relations"]
+  Obj --> Act["Actions"]
+  Act --> Ops["Business outcomes"]
   Ops --> Ont
 ```
 
@@ -328,10 +328,10 @@ However, you should avoid making a definitive statement that "Anthropic will def
 
 ```mermaid
 flowchart LR
-  MCP["MCP"] --> Conn["接続"]
-  Skills["Skills"] --> Work["反復手順"]
-  Sub["Subagents"] --> Team["分担実行"]
-  Conn --> Platform["Agent基盤"]
+  MCP["MCP"] --> Conn["Connections"]
+  Skills["Skills"] --> Work["Repeatable procedures"]
+  Sub["Subagents"] --> Team["Distributed execution"]
+  Conn --> Platform["Agent platform"]
   Work --> Platform
   Team --> Platform
 ```
@@ -391,9 +391,9 @@ MCP is a "standard for connectivity" and Operational Ontology is "a layer that d
 flowchart TD
   Agent["LLM Agent"] --> Client["MCP Client"]
   Client --> Surface["Tools / Resources"]
-  Surface --> Data["API・文書"]
+  Surface --> Data["APIs and documents"]
   Data --> Ont["Ontology"]
-  Ont --> Aud["監査・承認"]
+  Ont --> Aud["Audit and approval"]
 ```
 
 ## 13. Recommended policy for practical implementation
@@ -437,12 +437,12 @@ The effectiveness of the introduction will be measured not only by the quality o
 
 ```mermaid
 flowchart LR
-  Scope["限定テーマ"] --> Build["小さなOntology"]
-  Build --> Connect["MCPで接続"]
+  Scope["Narrow scope"] --> Build["Small ontology"]
+  Build --> Connect["Connect via MCP"]
   Connect --> Memory["Temporal Memory PoC"]
   Memory --> Review["Human Review"]
-  Review --> Metrics["評価指標"]
-  Metrics --> Expand["成功領域だけ拡張"]
+  Review --> Metrics["Evaluation metrics"]
+  Metrics --> Expand["Expand only proven areas"]
 ```
 
 ## 14. Final recommendation

@@ -21,11 +21,11 @@ This mechanism is not a simple straight line. When wages rise, households' purch
 
 ```mermaid
 flowchart LR
-  P["インフレ圧力"] --> R["利上げ"]
-  R --> B["借入コスト上昇"]
-  B --> D["需要抑制"]
-  D --> S["物価鈍化"]
-  R --> FX["為替・債券へ波及"]
+  P["Inflation pressure"] --> R["Rate hikes"]
+  R --> B["Higher borrowing costs"]
+  B --> D["Demand restraint"]
+  D --> S["Slower price growth"]
+  R --> FX["Spillover to FX and bonds"]
   FX --> S
 ```
 
@@ -51,11 +51,11 @@ On the other hand, lowering interest rates makes it easier to borrow money. It w
 
 ```mermaid
 flowchart TB
-  A["利上げ"] --> B["市場金利上昇"]
-  B --> C["家計・企業に波及"]
-  C --> D["消費・投資が鈍る"]
-  D --> E["需要が落ち着く"]
-  E --> F["物価圧力が弱まる"]
+  A["Rate hikes"] --> B["Market rates rise"]
+  B --> C["Spillover to households and firms"]
+  C --> D["Consumption and investment slow"]
+  D --> E["Demand cools"]
+  E --> F["Price pressure weakens"]
 ```
 
 What is important is that there is a time lag in interest rate policy. Raising interest rates today does not mean that all prices will fall tomorrow. It works over months or years through variable rate loans, corporate refinancing, foreign exchange, wage negotiations, and corporate pricing changes.
@@ -81,12 +81,12 @@ In household finances, the burden of housing loans and credit card loans increas
 
 ```mermaid
 flowchart LR
-  R["金利上昇"] --> HH["家計: 住宅ローン・消費者ローン"]
-  R --> CO["企業: 銀行融資・社債・投資採算"]
-  R --> GOV["政府: 国債の借り換え・利払い"]
-  HH --> DEM["消費の抑制"]
-  CO --> INV["投資・採用の抑制"]
-  GOV --> FISC["財政余地の低下"]
+  R["Higher interest rates"] --> HH["Households: mortgages and consumer loans"]
+  R --> CO["Firms: bank loans, bonds, investment returns"]
+  R --> GOV["Government: debt rollover and interest payments"]
+  HH --> DEM["Consumption restraint"]
+  CO --> INV["Investment and hiring restraint"]
+  GOV --> FISC["Reduced fiscal room"]
 ```
 
 What is easy to misunderstand here is that "interest rate hikes are not just an issue for people who are in debt." If companies pass on increased borrowing costs to prices, it will affect consumers. If the government's interest payments increase, it will affect future tax and spending discussions. If banks' lending stance becomes stricter, it will also affect the employment of people who are not in debt.
@@ -113,12 +113,12 @@ Foreign exchange intervention is not price policy itself. The purpose is to supp
 
 ```mermaid
 flowchart TB
-  A["米国金利高"] --> B["ドル買い・円売り"]
-  B --> C["円安・ドル高"]
-  C --> D["輸入物価上昇"]
-  D --> E["国内物価圧力"]
+  A["High US rates"] --> B["Buy dollars, sell yen"]
+  B --> C["Yen weakness, dollar strength"]
+  C --> D["Higher import prices"]
+  D --> E["Domestic price pressure"]
 
-  F["介入: 円買い需要"] --> C
+  F["Intervention: yen-buying demand"] --> C
 ```
 
 ## 8. Chains that are especially easy to see in Japan
@@ -130,12 +130,12 @@ Third, the impact on the government bond market is significant. In an economy wi
 
 ```mermaid
 flowchart LR
-  FX["円安"] --> IMP["輸入物価上昇"]
-  IMP --> CPI["国内物価上昇"]
-  CPI --> W["賃上げ圧力"]
-  W --> PT["価格転嫁"]
+  FX["Yen weakness"] --> IMP["Higher import prices"]
+  IMP --> CPI["Domestic inflation"]
+  CPI --> W["Wage pressure"]
+  W --> PT["Price pass-through"]
   PT --> CPI
-  CPI --> BOJ["日銀判断"]
+  CPI --> BOJ["BOJ decision"]
   BOJ --> FX
 ```
 

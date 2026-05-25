@@ -32,13 +32,13 @@ The practical points are as follows.
 
 ```mermaid
 flowchart LR
-  U["利用者"] --> C["Claude系MCPクライアント"]
-  C --> M["MCPサーバー"]
+  U["User"] --> C["Claude-style MCP client"]
+  C --> M["MCP server"]
   M --> PRM["Resource Metadata"]
-  C --> AS["認可サーバー"]
+  C --> AS["Authorization server"]
   AS --> TOK["Token endpoint"]
   C -->|Bearer token| M
-  M --> API["上流API"]
+  M --> API["Upstream API"]
 ```
 
 ## 2. Terms you should know first
@@ -61,23 +61,23 @@ Source note: See [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) and [draft-i
 
 ```mermaid
 sequenceDiagram
-  participant User as 利用者
-  participant Client as MCPクライアント
-  participant MCP as MCPサーバー
+  participant User as User
+  participant Client as MCP client
+  participant MCP as MCP server
   participant AS as Authorization Server / OIDC Provider
 
-  User->>Client: MCPツール実行
-  Client->>MCP: リクエスト(トークンなし)
+  User->>Client: Run MCP tool
+  Client->>MCP: Request without token
   MCP-->>Client: 401 + resource metadata
-  Client->>MCP: metadata取得
-  MCP-->>Client: 認可サーバー情報
+  Client->>MCP: Fetch metadata
+  MCP-->>Client: Authorization server information
   Client->>AS: discovery / authorization request
-  AS-->>User: ブラウザでログイン・同意
+  AS-->>User: Login and consent in browser
   AS-->>Client: authorization code
   Client->>AS: token request + PKCE code_verifier
   AS-->>Client: access token
-  Client->>MCP: Bearer token付き再試行
-  MCP-->>Client: ツール結果
+  Client->>MCP: Retry with Bearer token
+  MCP-->>Client: Tool result
 ```
 
 ### 3.1 First response
@@ -166,7 +166,7 @@ flowchart TD
   A["OpenAPI-only API"] --> B["MCP adapter/server"]
   B --> C["OAuth 2.1 PKCE"]
   C --> D["Claude / MCP client"]
-  B --> E["業務DB / 内部API"]
+  B --> E["Business DB / internal API"]
 ```
 
 With this configuration, OpenAPI operations can be exposed as tools as they are. Conversely, even if you add only authorization with OpenAPI, what the MCP client understands is the MCP tool schema, so a conversion layer is necessary.

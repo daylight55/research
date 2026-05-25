@@ -28,11 +28,11 @@ The conclusions of this report are as follows.
 
 ```mermaid
 flowchart LR
-  A["外部データ"] --> B["Foundry"]
+  A["External data"] --> B["Foundry"]
   B --> C["Ontology"]
   C --> D["AIP"]
-  D --> E["業務アプリ"]
-  E --> F["監査ログ"]
+  D --> E["Business apps"]
+  E --> F["Audit logs"]
   F --> C
   G["Apollo"] --> B
   G --> D
@@ -54,14 +54,14 @@ This origin remains consistent up to the present AIP. Gotham's theme was "findin
 
 ```mermaid
 timeline
-  title Palantirの進化を貫く軸
-  2003 : 創業
-  2008 : Gotham拡大
-  2010s : Foundry展開
-  2016-2018 : Army訴訟
+  title Through-line in Palantir's evolution
+  2003 : Founded
+  2008 : GothamExpansion
+  2010s : FoundryRollout
+  2016-2018 : Armylawsuit
   2020 : Direct listing
   2023+ : AIP
-  2025+ : 国家基盤論
+  2025+ : National infrastructure thesis
 ```
 
 Palantir is unique in that it views governments and large corporations as "institutional behemoths" rather than "customers." In his 2022 CEO annual letter, Karp wrote that when the company started, it made software for defense and intelligence agencies, and while they had the budget and staff, they didn't have the software they needed. He also argued that while the moat of the 20th century was industrial structure, the only moat of this century is software. In this view, Palantir's competitors are not just BI vendors. Bureaucracy, traditional SI, departmental SaaS, Excel, procurement systems, and organizational data insufficiency themselves become competitors.
@@ -111,21 +111,21 @@ Palantir's AIP aims to transform LLMs from "answer generation engines" to "agent
 
 ```mermaid
 sequenceDiagram
-  participant User as 現場ユーザー
+  participant User as Operational user
   participant Agent as AIP Agent
   participant Ont as Ontology
   participant LLM as LLM / Model
   participant Act as Action / Function
   participant Log as Audit Log
 
-  User->>Agent: 業務質問・依頼
-  Agent->>Ont: 権限内のオブジェクト取得
-  Agent->>LLM: 文脈付き推論
-  LLM-->>Agent: 提案・実行計画
-  Agent->>Act: 承認済みActionを呼び出し
-  Act->>Ont: 状態変更
-  Act->>Log: 誰が何を変えたか記録
-  Log-->>User: 監査可能な結果
+  User->>Agent: Business question or request
+  Agent->>Ont: Fetch authorized objects
+  Agent->>LLM: Reason with context
+  LLM-->>Agent: Proposal and execution plan
+  Agent->>Act: Call approved action
+  Act->>Ont: State change
+  Act->>Log: Record who changed what
+  Log-->>User: Auditable result
 ```
 
 ## 5. Apollo: Palantir's hidden strengths
@@ -172,19 +172,19 @@ Palantir's risk lies in "too much integration" rather than a lack of functionali
 
 ```mermaid
 quadrantChart
-  title Palantir導入リスクの整理
-  x-axis "限定的な業務影響" --> "基幹意思決定への影響大"
-  y-axis "低い個人・公共リスク" --> "高い個人・公共リスク"
-  quadrant-1 "最も厳格な統制が必要"
-  quadrant-2 "透明性・同意・監査が必要"
-  quadrant-3 "通常のIT統制で足りる可能性"
-  quadrant-4 "業務継続・ロックイン中心"
-  "製造ライン最適化": [0.55, 0.35]
-  "サプライチェーン計画": [0.62, 0.42]
-  "医療待機リスト管理": [0.72, 0.78]
-  "警察・移民執行": [0.86, 0.93]
-  "軍事状況認識": [0.90, 0.88]
-  "社内文書検索": [0.30, 0.25]
+  title Mapping Palantir adoption risk
+  x-axis "Limited business impact" --> "High impact on core decisions"
+  y-axis "Low personal and public risk" --> "High personal and public risk"
+  quadrant-1 "Strictest controls needed"
+  quadrant-2 "Transparency, consent, audit needed"
+  quadrant-3 "Standard IT controls may suffice"
+  quadrant-4 "Business continuity and lock-in focus"
+  "Production-line optimization": [0.55, 0.35]
+  "Supply-chain planning": [0.62, 0.42]
+  "Healthcare waitlist management": [0.72, 0.78]
+  "Police and immigration enforcement": [0.86, 0.93]
+  "Military situational awareness": [0.90, 0.88]
+  "Internal document search": [0.30, 0.25]
 ```
 
 ### 9.1 Surveillance/Military/Security Use

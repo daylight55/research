@@ -30,14 +30,14 @@ The conclusions are as follows.
 
 ```mermaid
 flowchart TD
-  A["候補物件を見つける"] --> B["総予算を作る<br/>物件価格 + 諸費用 + 予備費 + 修繕費"]
-  B --> C{"土地として安全か"}
-  C -->|未確認| C1["登記・接道・境界・私道・都市計画・災害を確認"]
-  C -->|OK| D{"建物として妥当か"}
-  D -->|未確認| D1["インスペクション・修繕履歴・保証・耐震・断熱を確認"]
-  D -->|OK| E{"契約で戻れるか"}
-  E -->|未確認| E1["ローン特約・手付解除・契約不適合責任・引渡条件を確認"]
-  E -->|OK| F["購入判断"]
+  A["Find a candidate property"] --> B["Build a full budget<br/>Price + fees + reserve + repairs"]
+  B --> C{"Is the land safe?"}
+  C -->|Unchecked| C1["Check registry, access, boundaries, private roads, zoning, hazards"]
+  C -->|OK| D{"Is the building sound?"}
+  D -->|Unchecked| D1["Check inspection, repair history, warranty, seismic resistance, insulation"]
+  D -->|OK| E{"Can the contract be exited?"}
+  E -->|Unchecked| E1["Check loan contingency, deposit cancellation, nonconformity liability, handover terms"]
+  E -->|OK| F["Purchase decision"]
   C1 --> C
   D1 --> D
   E1 --> E
@@ -114,12 +114,12 @@ The inherent risk of detached houses is more likely to remain on the land than o
 
 ```mermaid
 flowchart LR
-  A["登記"] --> A1["所有者<br/>抵当権<br/>地役権<br/>借地権"]
-  B["道路"] --> B1["接道義務<br/>私道負担<br/>セットバック<br/>通行・掘削承諾"]
-  C["都市計画"] --> C1["用途地域<br/>建ぺい率<br/>容積率<br/>市街化調整区域"]
-  D["境界"] --> D1["境界標<br/>地積測量図<br/>越境<br/>擁壁"]
-  E["災害"] --> E1["洪水<br/>土砂<br/>津波<br/>高潮<br/>地盤"]
-  A1 --> F["再建築・利用・担保価値"]
+  A["Registry"] --> A1["Owner<br/>Mortgage<br/>Easement<br/>Leasehold"]
+  B["Roads"] --> B1["Road access<br/>Private-road burden<br/>Setback<br/>Passage and excavation consent"]
+  C["Zoning"] --> C1["Use district<br/>Building coverage<br/>FAR<br/>Urbanization-control area"]
+  D["Boundaries"] --> D1["Boundary markers<br/>Survey map<br/>Encroachment<br/>Retaining wall"]
+  E["Hazards"] --> E1["Flood<br/>Landslide<br/>Tsunami<br/>Storm surge<br/>Ground"]
+  A1 --> F["Rebuildability, use, collateral value"]
   B1 --> F
   C1 --> F
   D1 --> F

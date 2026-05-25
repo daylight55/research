@@ -28,12 +28,12 @@ The practical arguments of this paper are the following four points.
 
 ```mermaid
 flowchart LR
-  A["暗黙知"] --> B["観察・記録"]
-  B --> C["AI要約"]
-  C --> D["形式知"]
-  D --> E["人間検証"]
-  E --> F["実践へ戻す"]
-  X["失われる文脈"] -.-> C
+  A["Tacit knowledge"] --> B["Observation and recording"]
+  B --> C["AI summary"]
+  C --> D["Explicit knowledge"]
+  D --> E["HumanValidation"]
+  E --> F["Return to practice"]
+  X["Lost context"] -.-> C
 ```
 
 ## 2. Background and research history
@@ -81,11 +81,11 @@ There are at least four mechanisms by which summaries create distortions.
 
 ```mermaid
 flowchart TB
-  A["現場の経験"] --> B["観察メモ / AI要約"]
-  B --> C["読みやすい手順書"]
-  C --> D["現場での適用"]
-  D --> E["例外に遭遇"]
-  E --> F["正しいが使えない"]
+  A["Field experience"] --> B["Observation notes / AI summary"]
+  B --> C["Readable procedure"]
+  C --> D["Field application"]
+  D --> E["Encounter an exception"]
+  E --> F["Correct but unusable"]
 ```
 
 What's important about this diagram is that it's not just the "details" that are lost. Details include exception conditions, decision thresholds, and lines of responsibility. Therefore, the failure of AI summarization appears not as a lack of information but as a lack of practical control. This is an estimate from published literature.

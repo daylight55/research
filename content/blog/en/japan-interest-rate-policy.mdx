@@ -27,11 +27,11 @@ The conclusions of this report are as follows.
 
 ```mermaid
 flowchart LR
-  BOJ["日銀政策金利"] --> Short["短期金利"]
-  Short --> Loan["預金・貸出"]
-  BOJ --> JGB["長期金利"]
-  JGB --> Fixed["固定ローン"]
-  FX["為替・輸入物価"] --> Inf["物価見通し"]
+  BOJ["BOJ policy rate"] --> Short["Short-term rates"]
+  Short --> Loan["Deposits and loans"]
+  BOJ --> JGB["Long-term rates"]
+  JGB --> Fixed["Fixed-rate mortgages"]
+  FX["FX and import prices"] --> Inf["Inflation outlook"]
   Inf --> BOJ
 ```
 
@@ -88,11 +88,11 @@ YCC was rational during the deflationary period. At a time when expected inflati
 
 ```mermaid
 flowchart TD
-  A["低インフレ"] --> B["YCCで金利抑制"]
-  B --> C["資金調達を支える"]
-  B --> D["価格発見が弱まる"]
-  D --> E["出口リスク"]
-  F["インフレ局面"] --> E
+  A["Low inflation"] --> B["Suppress rates with YCC"]
+  B --> C["Support financing"]
+  B --> D["Price discovery weakens"]
+  D --> E["Exit risk"]
+  F["Inflation phase"] --> E
 ```
 
 In March 2024, the Bank of Japan determined that QQE with YCC and the negative interest rate policy had played their role, and shifted to a framework in which short-term interest rates are the main policy tool. This is an important institutional change. The Bank of Japan has not completely ignored long-term interest rates, and has said that it can respond to sudden increases in long-term interest rates by increasing its purchases of government bonds and limit-market operations, but its permanent 10-year interest rate target has ended.

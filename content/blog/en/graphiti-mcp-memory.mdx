@@ -46,10 +46,10 @@ Graphiti's value goes beyond simply "saving conversation logs." The goal is to t
 
 ```mermaid
 flowchart TD
-  E["Episode"] --> X["抽出"]
+  E["Episode"] --> X["Extraction"]
   X --> G["Temporal KG"]
   G --> H["Hybrid search"]
-  H --> Ans["回答文脈"]
+  H --> Ans["Answer context"]
 ```
 
 ## 3. Differences from traditional RAG / Vector DB / Knowledge Graph
@@ -94,13 +94,13 @@ sequenceDiagram
   participant G as Graphiti
   participant P as Policy/Approval
 
-  U->>H: 質問
+  U->>H: Question
   H->>M: search/query tool call
   M->>G: temporal search
   G-->>M: facts / entities / provenance
   M-->>H: context
-  H-->>U: 回答
-  alt 書き込みが必要
+  H-->>U: Answer
+  alt Writeback needed
     H->>P: approval request
     P-->>H: allow / deny
     H->>M: write tool call
@@ -215,11 +215,11 @@ If you want to combine Graphiti and MCP, it is best to proceed in the following 
 
 ```mermaid
 flowchart TD
-  A["文書RAG"] --> B["変化する関係を抽出"]
+  A["Document RAG"] --> B["Extract changing relations"]
   B --> C["Graphiti KG"]
   C --> D["Read-only MCP"]
   D --> E["Host / client"]
-  E --> F["人間承認"]
+  E --> F["Human approval"]
   F --> C
 ```
 

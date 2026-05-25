@@ -28,11 +28,11 @@ The conclusions of this report are as follows.
 
 ```mermaid
 flowchart TD
-  Phil["哲学的存在論"] --> KR["知識表現"]
+  Phil["Philosophical ontology"] --> KR["Knowledge representation"]
   KR --> Web["Semantic Web"]
   Web --> KG["Knowledge Graph"]
-  KG --> Ops["業務Ontology"]
-  Ops --> AI["LLM活用"]
+  KG --> Ops["Business ontology"]
+  Ops --> AI["LLM use"]
 ```
 
 ## 2. First of all, what is confusing?
@@ -144,12 +144,12 @@ Source note: W3C [RDF 1.1 Primer](https://www.w3.org/TR/rdf-primer/) describes R
 
 ```mermaid
 flowchart LR
-  RDF["RDF<br/>グラフデータモデル"] --> RDFS["RDFS<br/>基本語彙・クラス階層"]
-  RDFS --> OWL["OWL 2<br/>論理表現・推論"]
-  RDF --> SPARQL["SPARQL<br/>問い合わせ"]
-  RDF --> SKOS["SKOS<br/>分類・シソーラス"]
-  RDF --> SHACL["SHACL<br/>データ検証"]
-  Vocab["schema.org等の語彙"] --> RDF
+  RDF["RDF<br/>Graph data model"] --> RDFS["RDFS<br/>Basic vocabulary and class hierarchy"]
+  RDFS --> OWL["OWL 2<br/>Logical expression and reasoning"]
+  RDF --> SPARQL["SPARQL<br/>Query"]
+  RDF --> SKOS["SKOS<br/>Classification and thesaurus"]
+  RDF --> SHACL["SHACL<br/>Data validation"]
+  Vocab["schema.org vocabularies"] --> RDF
 ```
 
 OWL 2 has multiple profiles. OWL 2 EL, QL, and RL make certain reasoning tasks more pragmatically tractable at the cost of limiting their expressive power. This is a counterexample to the idea that a more rigorous ontology is always better. When designing an ontology, it is necessary to choose the degree of formality according to the questions to be answered, the amount of data, the need for inference, the frequency of updates, and the skills of the operator.
@@ -183,10 +183,10 @@ Rather than directly erasing the weaknesses of LLM, ontology creates a scaffoldi
 
 ```mermaid
 flowchart TD
-  Ctx["要求・知識"] --> LLM["LLM"]
-  LLM --> Draft["提案・回答"]
-  Draft --> Val["検証"]
-  Val --> Human["人間承認"]
+  Ctx["Requirements and knowledge"] --> LLM["LLM"]
+  LLM --> Draft["Proposals and answers"]
+  Draft --> Val["Validation"]
+  Val --> Human["Human approval"]
 ```
 
 ## 9. Operational ontology in business AI
@@ -197,11 +197,11 @@ Source note: Palantir [Ontology overview](https://www.palantir.com/docs/foundry/
 
 ```mermaid
 flowchart LR
-  Data["データ源"] --> Obj["業務対象"]
-  Obj --> Links["関係"]
-  Obj --> State["状態"]
-  State --> Act["行為"]
-  Act --> Audit["監査"]
+  Data["Data sources"] --> Obj["Business object"]
+  Obj --> Links["Relations"]
+  Obj --> State["State"]
+  State --> Act["Actions"]
+  Act --> Audit["Audit"]
   Audit --> Obj
 ```
 
@@ -265,11 +265,11 @@ The initial constraints may be fewer.
 
 ```mermaid
 flowchart TD
-  Scope["範囲を決める"] --> CQ["問いを置く"]
-  CQ --> Model["概念と関係"]
-  Model --> Rule["制約を加える"]
-  Rule --> Review["ドメイン確認"]
-  Review --> Iterate["改訂"]
+  Scope["Define scope"] --> CQ["Set questions"]
+  CQ --> Model["Concepts and relations"]
+  Model --> Rule["Add constraints"]
+  Rule --> Review["Domain review"]
+  Review --> Iterate["Revision"]
 ```
 
 ## 11. How formal should it be?
@@ -287,11 +287,11 @@ For knowledge management by individuals or small teams, it is better to create a
 
 ```mermaid
 flowchart TD
-  Q["目的を決める"] --> Tax["分類だけ"]
-  Q --> KG["関係探索"]
-  Q --> Val["入力検証"]
-  Q --> Ops["業務操作"]
-  Tax --> Gov["改訂・統制"]
+  Q["Define purpose"] --> Tax["Classification only"]
+  Q --> KG["Relation exploration"]
+  Q --> Val["InputValidation"]
+  Q --> Ops["Business operations"]
+  Tax --> Gov["Revision and governance"]
   KG --> Gov
   Val --> Gov
   Ops --> Gov
@@ -334,11 +334,11 @@ The recommendations are as follows.
 
 ```mermaid
 graph TD
-  Topic["Ontology記事"] --> Claims["主要主張"]
-  Claims --> Sources["出典"]
-  Claims --> Risks["過剰形式化"]
-  Claims --> Decision["軽量開始"]
-  Decision --> Review["継続レビュー"]
+  Topic["Ontology article"] --> Claims["Key claims"]
+  Claims --> Sources["Sources"]
+  Claims --> Risks["Over-formalization"]
+  Claims --> Decision["Start lightweight"]
+  Decision --> Review["Continuous review"]
 ```
 
 As a minimal implementation, a frontmatter like the one below is quite valuable.

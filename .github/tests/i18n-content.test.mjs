@@ -29,6 +29,26 @@ test('English articles mirror every Japanese article slug', async () => {
 	assert.deepEqual(englishPosts, japanesePosts)
 })
 
+test('English Mermaid diagrams do not contain Japanese labels', async () => {
+	const englishPostFiles = (await readdir(join(blogDir, 'en')))
+		.filter((name) => name.endsWith('.mdx'))
+		.sort()
+	const japaneseText = /[\u3040-\u30ff\u3400-\u9fff]/
+
+	for (const file of englishPostFiles) {
+		const source = await readFile(join(blogDir, 'en', file), 'utf8')
+		const mermaidBlocks = [...source.matchAll(/```mermaid\n([\s\S]*?)\n```/g)]
+
+		for (const block of mermaidBlocks) {
+			assert.doesNotMatch(
+				block[1],
+				japaneseText,
+				`${file} Mermaid diagrams should use English labels only`
+			)
+		}
+	}
+})
+
 test('Codex translation workflow exists for missing English articles', async () => {
 	const workflow = await readFile(
 		join(repoRoot.pathname, '.github/workflows/translate-blog-en.yml'),
@@ -43,6 +63,7 @@ test('Codex translation workflow exists for missing English articles', async () 
 	assert.match(workflow, /codex/i)
 	assert.match(workflow, /content\/blog\/en/)
 	assert.match(prompt, /Do not use TeX-style backtick quotes/)
+	assert.match(prompt, /Mermaid diagram labels/)
 	assert.match(prompt, /news digest articles/)
 	assert.match(prompt, /What happened:/)
 	assert.match(prompt, /Implications for practice:/)

@@ -27,7 +27,7 @@
 		"preview": "astro preview",
 		"postbuild": "pagefind --site dist",
 		"test:workflows": "node .github/tests/daily-issue-research-workflow.test.mjs",
-		"test:hero-images": "node --test .github/tests/select-unsplash-hero.test.mjs .github/tests/hero-images.test.mjs",
+		"test:hero-images": "node --test .github/tests/select-unsplash-hero.test.mjs .github/tests/hero-images.test.mjs .github/tests/news-source-card-images.test.mjs",
 		"format:check": "prettier --plugin-search-dir=. --check .",
 		"format": "prettier --plugin-search-dir=. --write .",
 		"lint": "eslint ."

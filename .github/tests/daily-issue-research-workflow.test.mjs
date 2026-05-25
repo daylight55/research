@@ -108,6 +108,18 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
+	/News article title must summarize the day's overall situation instead of listing generic categories/,
+	'trend news workflow should reject generic date plus category-list titles',
+)
+
+assert.match(
+	trendWorkflow,
+	/News article title and H1 must match/,
+	'trend news workflow should require News title and H1 to match',
+)
+
+assert.match(
+	trendWorkflow,
 	/source_card_count="\$\(grep -cF "<NewsSourceCard" "\$\{ARTICLE_PATH\}" \|\| true\)"[\s\S]*?source_card_count < 15/,
 	'trend news workflow should require at least one NewsSourceCard source memo card per topic',
 )

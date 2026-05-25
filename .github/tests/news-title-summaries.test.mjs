@@ -1,0 +1,48 @@
+import { strict as assert } from 'node:assert'
+import { readFileSync } from 'node:fs'
+import { execFileSync } from 'node:child_process'
+import { test } from 'node:test'
+
+const GENERIC_NEWS_TITLE_RE =
+	/^\d{4}-\d{2}-\d{2}\s+ホットトレンド[:：]\s*政治・経済・技術$/
+
+function frontmatterOf(source, file) {
+	const match = source.match(/^---\n([\s\S]*?)\n---/)
+	assert.ok(match, `${file} should start with frontmatter`)
+	return match[1]
+}
+
+function readScalar(frontmatter, key) {
+	const match = frontmatter.match(new RegExp(`^${key}:\\s*(.*)$`, 'm'))
+	if (!match) return ''
+	return match[1].trim().replace(/^['"]|['"]$/g, '')
+}
+
+test('news article titles summarize the day after the date', () => {
+	const files = execFileSync('git', ['ls-files', 'content/blog/*.mdx'], { encoding: 'utf8' })
+		.split('\n')
+		.map((line) => line.trim())
+		.filter(Boolean)
+
+	for (const file of files) {
+		const source = readFileSync(file, 'utf8')
+		const frontmatter = frontmatterOf(source, file)
+		if (readScalar(frontmatter, 'contentType') !== 'news') continue
+		if (readScalar(frontmatter, 'draft') === 'true') continue
+
+		const title = readScalar(frontmatter, 'title')
+		assert.match(title, /^\d{4}-\d{2}-\d{2}\s+\S/, `${file} title should start with a date`)
+		assert.doesNotMatch(
+			title,
+			GENERIC_NEWS_TITLE_RE,
+			`${file} title should summarize the overall situation, not just list categories`
+		)
+		assert.ok(
+			title.replace(/^\d{4}-\d{2}-\d{2}\s+/, '').length >= 12,
+			`${file} title should include a substantive summary after the date`
+		)
+
+		const h1 = source.match(/^#\s+(.+)$/m)?.[1] ?? ''
+		assert.equal(h1, title, `${file} H1 should match frontmatter title`)
+	}
+})

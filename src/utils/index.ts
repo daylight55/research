@@ -14,7 +14,7 @@ export {
 } from './i18n'
 export type { Locale } from './i18n'
 export { getCategoryAccentClass, getCategorySurfaceClass } from './categoryStyles'
-export { renderNewsRssContent } from './rssContent'
+export { renderNewsRssContent, renderReportRssContent } from './rssContent'
 export {
 	getCategories,
 	getPosts,

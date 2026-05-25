@@ -40,12 +40,22 @@ const renderSourceCard = (block: string) => {
 	return `<aside>${image}${source}<p><a href="${escapeHtmlAttribute(card.href)}">${escapeHtmlText(card.title)}</a></p>${description}</aside>`
 }
 
-export const renderNewsRssContent = (body: string) => {
+export const renderRssContent = (body: string) => {
 	const content: string[] = []
 	const lines = body.split('\n')
+	let inFencedBlock = false
 
 	for (let index = 0; index < lines.length; index += 1) {
 		const trimmed = lines[index].trim()
+
+		if (trimmed.startsWith('```')) {
+			inFencedBlock = !inFencedBlock
+			continue
+		}
+
+		if (inFencedBlock) {
+			continue
+		}
 
 		if (
 			trimmed === '' ||
@@ -82,3 +92,39 @@ export const renderNewsRssContent = (body: string) => {
 
 	return content.join('\n')
 }
+
+export const renderReportRssContent = (body: string) => {
+	const lines = body.split('\n')
+	const summaryStart = lines.findIndex((line) =>
+		/^##\s+(?:\d+\.\s*)?(?:エグゼクティブサマリー|Executive Summary|概要|要約)\s*$/i.test(
+			line.trim()
+		)
+	)
+
+	if (summaryStart === -1) {
+		return ''
+	}
+
+	const sectionLines = []
+
+	for (let index = summaryStart; index < lines.length; index += 1) {
+		const trimmed = lines[index].trim()
+
+		if (index > summaryStart && /^#{2,}\s+/.test(trimmed)) {
+			break
+		}
+
+		if (trimmed.startsWith('出典メモ:')) {
+			continue
+		}
+
+		const sourceNoteStart = lines[index].indexOf('出典メモ:')
+		sectionLines.push(
+			sourceNoteStart === -1 ? lines[index] : lines[index].slice(0, sourceNoteStart)
+		)
+	}
+
+	return renderRssContent(sectionLines.join('\n'))
+}
+
+export const renderNewsRssContent = renderRssContent

@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss'
 import type { APIRoute } from 'astro'
 import { siteConfig } from '@/site-config'
-import { getReportPosts, withBase } from '@/utils'
+import { getReportPosts, renderReportRssContent, withBase } from '@/utils'
 
 export const GET: APIRoute = async (context) => {
 	const posts = await getReportPosts()
@@ -14,6 +14,7 @@ export const GET: APIRoute = async (context) => {
 		items: posts.map((post) => ({
 			title: post.data.title,
 			description: post.data.rssSummary ?? post.data.description,
+			content: renderReportRssContent(post.body),
 			pubDate: post.data.pubDate,
 			link: withBase(`/post/${post.id}/`),
 			categories: [post.data.category, ...post.data.tags]

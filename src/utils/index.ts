@@ -2,7 +2,7 @@ export { sluglify, unsluglify } from './sluglify'
 export { cn } from './cn'
 export { withBase, withoutBase } from './basePath'
 export { getCategoryAccentClass, getCategorySurfaceClass } from './categoryStyles'
-export { renderNewsRssContent } from './rssContent'
+export { renderNewsRssContent, renderReportRssContent } from './rssContent'
 export {
 	getCategories,
 	getPosts,

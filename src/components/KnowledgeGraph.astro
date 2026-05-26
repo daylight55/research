@@ -25,17 +25,74 @@ const { id, nodes, edges, caption } = Astro.props
 const graphData = JSON.stringify({ nodes, edges })
 ---
 
-<figure
-	class='knowledge-graph my-8 overflow-hidden rounded-md border border-black/10 bg-white shadow-sm dark:border-white/10 dark:bg-white/5'
->
+<figure class='knowledge-graph my-8 overflow-hidden rounded-md border'>
 	<div id={id} class='knowledge-graph__canvas' data-knowledge-graph></div>
 	<script type='application/json' id={`${id}-data`} data-graph={graphData}></script>
-	<figcaption
-		class='border-t border-black/10 px-4 py-3 text-sm text-gray-600 dark:border-white/10 dark:text-gray-400'
-	>
+	<figcaption class='knowledge-graph__caption px-4 py-3 text-sm'>
 		{caption}
 	</figcaption>
 </figure>
+
+<style>
+	.knowledge-graph {
+		position: relative;
+		isolation: isolate;
+		border-color: rgba(34, 211, 238, 0.44);
+		background:
+			linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+			radial-gradient(circle at 50% 0%, rgba(236, 72, 153, 0.18), transparent 42%), #05070d;
+		background-size:
+			28px 28px,
+			28px 28px,
+			auto,
+			auto;
+		box-shadow:
+			0 0 0 1px rgba(236, 72, 153, 0.2),
+			0 24px 70px rgba(2, 6, 23, 0.36),
+			inset 0 0 34px rgba(34, 211, 238, 0.12);
+		color-scheme: dark;
+	}
+
+	.knowledge-graph::before {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		pointer-events: none;
+		content: '';
+		background: linear-gradient(transparent 50%, rgba(15, 23, 42, 0.36) 50%);
+		background-size: 100% 6px;
+		mix-blend-mode: screen;
+		opacity: 0.42;
+	}
+
+	.knowledge-graph::after {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		pointer-events: none;
+		content: '';
+		background:
+			linear-gradient(90deg, transparent, rgba(125, 211, 252, 0.13), transparent),
+			linear-gradient(180deg, rgba(250, 204, 21, 0.08), transparent 26%);
+		opacity: 0.72;
+	}
+
+	.knowledge-graph__canvas {
+		position: relative;
+		z-index: 1;
+		min-height: clamp(22rem, 56vw, 34rem);
+		background: transparent;
+	}
+
+	.knowledge-graph__caption {
+		position: relative;
+		z-index: 1;
+		border-top: 1px solid rgba(34, 211, 238, 0.32);
+		background: rgba(2, 6, 23, 0.88);
+		color: rgb(165, 243, 252);
+	}
+</style>
 
 <script>
 	let cytoscapeLoader
@@ -102,8 +159,8 @@ const graphData = JSON.stringify({ nodes, edges })
 			if (!(dataScript instanceof HTMLElement) || !dataScript.dataset.graph) return
 
 			const graph = JSON.parse(dataScript.dataset.graph)
-			const isDark = document.documentElement.classList.contains('dark')
 			const positions = getStablePositions(graph.nodes)
+			const hubNodeId = graph.nodes[0]?.id
 
 			const cy = cytoscape({
 				container,
@@ -114,7 +171,8 @@ const graphData = JSON.stringify({ nodes, edges })
 							label: node.label,
 							description: node.description,
 							href: node.href,
-							kind: node.kind ?? 'term'
+							kind: node.kind ?? 'term',
+							role: node.id === hubNodeId ? 'hub' : (node.kind ?? 'term')
 						},
 						position: positions.get(node.id)
 					})),
@@ -131,46 +189,88 @@ const graphData = JSON.stringify({ nodes, edges })
 					{
 						selector: 'node',
 						style: {
-							'background-color': isDark ? '#1d4ed8' : '#3457d5',
-							'border-color': isDark ? '#bfdbfe' : '#1e3a8a',
+							'background-color': '#07111f',
+							'border-color': '#22d3ee',
 							'border-width': 2,
-							color: isDark ? '#f8fafc' : '#111827',
+							color: '#e0f2fe',
 							label: 'data(label)',
 							'font-family': 'Manrope, ui-sans-serif, system-ui, sans-serif',
 							'font-size': 11,
 							'font-weight': 700,
 							height: 48,
 							'overlay-opacity': 0,
-							'text-background-color': isDark ? '#111827' : '#fffdf7',
-							'text-background-opacity': 0.82,
-							'text-background-padding': 3,
+							'shadow-blur': 16,
+							'shadow-color': '#22d3ee',
+							'shadow-opacity': 0.42,
+							'shadow-offset-x': 0,
+							'shadow-offset-y': 0,
+							'text-background-color': '#020617',
+							'text-background-opacity': 0.78,
+							'text-background-padding': 4,
 							'text-max-width': 96,
+							'text-outline-color': '#020617',
+							'text-outline-width': 2,
 							'text-valign': 'center',
 							'text-wrap': 'wrap',
 							width: 48
 						}
 					},
 					{
+						selector: 'node[role = "hub"]',
+						style: {
+							'background-color': '#101827',
+							'border-color': '#f0fdfa',
+							'border-width': 3,
+							color: '#f8fafc',
+							height: 64,
+							'shadow-blur': 26,
+							'shadow-color': '#67e8f9',
+							'shadow-opacity': 0.7,
+							width: 64
+						}
+					},
+					{
 						selector: 'node[kind = "post"]',
 						style: {
-							'background-color': isDark ? '#0f766e' : '#0d9488',
-							'border-color': isDark ? '#99f6e4' : '#115e59',
+							'background-color': '#2a1022',
+							'border-color': '#f472b6',
+							color: '#fff1f2',
 							shape: 'round-rectangle',
 							height: 54,
+							'shadow-color': '#f472b6',
+							'shadow-opacity': 0.5,
 							width: 64
 						}
 					},
 					{
 						selector: 'edge',
 						style: {
-							color: isDark ? '#e2e8f0' : '#334155',
+							color: '#a5f3fc',
 							'curve-style': 'bezier',
-							'line-color': isDark ? '#64748b' : '#94a3b8',
-							'line-opacity': 0.8,
+							'line-color': '#22d3ee',
+							'line-opacity': 0.68,
 							'overlay-opacity': 0,
-							'target-arrow-color': isDark ? '#64748b' : '#94a3b8',
+							'shadow-blur': 12,
+							'shadow-color': '#22d3ee',
+							'shadow-opacity': 0.3,
+							'target-arrow-color': '#67e8f9',
 							'target-arrow-shape': 'triangle',
 							width: 'mapData(weight, 1, 6, 1.5, 4)'
+						}
+					},
+					{
+						selector: 'node:selected',
+						style: {
+							'border-color': '#facc15',
+							'shadow-color': '#facc15',
+							'shadow-opacity': 0.8
+						}
+					},
+					{
+						selector: 'edge:selected',
+						style: {
+							'line-color': '#facc15',
+							'target-arrow-color': '#facc15'
 						}
 					}
 				],

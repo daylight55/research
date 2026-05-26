@@ -293,6 +293,11 @@ jobs:
             exit 1
           fi
 
+          if grep -nF "imageUrl='https://source.unsplash.com/" "${ARTICLE_PATH}" || grep -nF 'imageUrl="https://source.unsplash.com/' "${ARTICLE_PATH}"; then
+            echo "::error::NewsSourceCard images must use stable direct image URLs. Do not use deprecated source.unsplash.com dynamic URLs."
+            exit 1
+          fi
+
           if grep -nE "^出典メモ:" "${ARTICLE_PATH}"; then
             echo "::error::News articles must use NewsSourceCard for source memos instead of plain 出典メモ: lines."
             exit 1

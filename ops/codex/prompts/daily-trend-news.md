@@ -147,7 +147,7 @@ Use this component shape after each topic item:
 	source='<SOURCE_NAME>'
 	title='<SOURCE_TITLE>'
 	description='<ONE_SENTENCE_SOURCE_MEMO>'
-	imageUrl='<SOURCE_ARTICLE_OR_PERSON_COMPANY_TOPIC_IMAGE_URL>'
+	imageUrl='<STABLE_SOURCE_ARTICLE_OR_IMAGES_UNSPLASH_PHOTO_URL>'
 	imageAlt='<SOURCE_CARD_IMAGE_ALT_TEXT>'
 />
 ```
@@ -163,6 +163,9 @@ Rules for source memo cards:
   search image that is specific to the topic's key person, organization,
   company, location, product, or event. Avoid generic newspaper, abstract data,
   newsroom, stock-market, or technology-background images.
+- Do not use `https://source.unsplash.com/...` dynamic or featured URLs. They
+  are deprecated and can return 503. Use stable direct image URLs such as
+  `https://images.unsplash.com/photo-...?...` or an official article image URL.
 - If no article-attached image is visible, do not leave the card image blank.
   Fall back in this order: official organization image, related source via web
   search, topic-specific Unsplash image.

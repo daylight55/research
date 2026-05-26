@@ -44,6 +44,9 @@ const displayImageUrl = imageUrl ?? fallbackImage
 			alt={imageAlt ?? `${source} のニュース画像`}
 			loading='lazy'
 			decoding='async'
+			referrerpolicy='no-referrer'
+			data-fallback-src={fallbackImage}
+			onerror='this.onerror=null; this.src=this.dataset.fallbackSrc'
 			class='h-full w-full object-cover'
 		/>
 	</div>

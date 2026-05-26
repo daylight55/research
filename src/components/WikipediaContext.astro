@@ -29,6 +29,12 @@ const summaryApiUrlTemplate = createWikipediaSummaryApiUrl('__TITLE__', wikipedi
 	'__TITLE__',
 	'__TITLE__'
 )
+const localizedSearchApiUrl =
+	!isEnglish && wikipediaIsEnglish ? createWikipediaSearchApiUrl(searchQuery, 'ja', 3) : ''
+const localizedSummaryApiUrlTemplate =
+	!isEnglish && wikipediaIsEnglish
+		? createWikipediaSummaryApiUrl('__TITLE__', 'ja').replace('__TITLE__', '__TITLE__')
+		: ''
 const validationKeywordText = validationKeywords.join('|')
 ---
 
@@ -40,6 +46,8 @@ const validationKeywordText = validationKeywords.join('|')
 	data-validation-keywords={validationKeywordText}
 	data-search-api-url={searchApiUrl}
 	data-summary-api-url-template={summaryApiUrlTemplate}
+	data-localized-search-api-url={localizedSearchApiUrl}
+	data-localized-summary-api-url-template={localizedSummaryApiUrlTemplate}
 	data-summary-language={isEnglish ? 'en' : 'ja'}
 	data-fallback-url={wikipediaUrl}
 	data-loading-text={isEnglish
@@ -60,7 +68,9 @@ const validationKeywordText = validationKeywords.join('|')
 	data-summary-fallback-label={isEnglish ? 'Summary' : '要約'}
 	data-summary-unavailable-text={isEnglish
 		? 'Local LLM summarization is unavailable in this browser, so this is a simplified summary from the Wikipedia extract.'
-		: 'このブラウザではローカルLLM要約を利用できないため、Wikipedia概要から簡易要約しています。'}
+		: '原文の引用は下のWikipedia原文で確認できます。'}
+	data-localized-summary-label={isEnglish ? 'Localized Wikipedia summary' : '日本語Wikipedia概要'}
+	data-original-excerpt-label={isEnglish ? 'Wikipedia excerpt' : 'Wikipedia原文'}
 	data-fit-label={isEnglish ? 'Category Fit' : 'カテゴリ整合性'}
 	data-fit-match-label={isEnglish ? 'Matched' : '一致候補'}
 	data-fit-review-label={isEnglish ? 'Review' : '要確認'}
@@ -154,10 +164,50 @@ const validationKeywordText = validationKeywords.join('|')
 
 	const createFallbackSummary = (extract) => splitSummarySentences(extract).slice(0, 2).join(' ')
 
+	const fetchSummary = async (template, title) => {
+		const summaryResponse = await fetch(createSummaryUrl(template, title))
+		if (!summaryResponse.ok) return null
+		return summaryResponse.json()
+	}
+
+	const fetchLocalizedSummary = async (root) => {
+		if (!root.dataset.localizedSearchApiUrl || !root.dataset.localizedSummaryApiUrlTemplate) {
+			return null
+		}
+
+		const searchResponse = await fetch(root.dataset.localizedSearchApiUrl)
+		if (!searchResponse.ok) return null
+		const searchData = await searchResponse.json()
+		const candidates = searchData.query?.search ?? []
+		for (const candidate of candidates) {
+			if (!candidate.title) continue
+			const summary = await fetchSummary(
+				root.dataset.localizedSummaryApiUrlTemplate,
+				candidate.title
+			)
+			if (summary?.extract) return summary
+		}
+		return null
+	}
+
 	const createContextSummary = async (root, extract) => {
+		const shouldUseJapanese = root.dataset.summaryLanguage === 'ja'
+		if (shouldUseJapanese) {
+			const localizedSummary = await fetchLocalizedSummary(root)
+			if (localizedSummary?.extract) {
+				return {
+					label: root.dataset.localizedSummaryLabel,
+					text: createFallbackSummary(localizedSummary.extract),
+					note: root.dataset.summaryUnavailableText
+				}
+			}
+		}
+
 		const fallback = {
 			label: root.dataset.summaryFallbackLabel,
-			text: createFallbackSummary(extract),
+			text: shouldUseJapanese
+				? '日本語要約を生成できませんでした。Wikipedia原文とリンクから内容を確認してください。'
+				: createFallbackSummary(extract),
 			note: root.dataset.summaryUnavailableText
 		}
 
@@ -210,8 +260,8 @@ const validationKeywordText = validationKeywords.join('|')
 		if (link instanceof HTMLAnchorElement) link.href = pageUrl
 
 		resultContainer.innerHTML = ''
-		const figure = document.createElement('figure')
-		figure.className = 'grid gap-2 border-l-2 border-indigo-300 pl-3 dark:border-indigo-500'
+		const wrapper = document.createElement('div')
+		wrapper.className = 'grid gap-3'
 
 		const blockquote = document.createElement('blockquote')
 		blockquote.className = 'text-sm leading-7 text-gray-700 dark:text-gray-300'
@@ -253,8 +303,23 @@ const validationKeywordText = validationKeywords.join('|')
 			summaryBox.append(note)
 		}
 
-		figure.append(blockquote, figcaption, summaryBox, fit)
-		resultContainer.append(figure)
+		const excerptFigure = document.createElement('figure')
+		excerptFigure.className = 'grid gap-2 border-l-2 border-indigo-300 pl-3 dark:border-indigo-500'
+		excerptFigure.append(blockquote, figcaption)
+
+		if (root.dataset.summaryLanguage === 'ja') {
+			const excerptDetails = document.createElement('details')
+			excerptDetails.className = 'text-sm text-gray-600 dark:text-gray-400'
+			const excerptSummary = document.createElement('summary')
+			excerptSummary.className = 'cursor-pointer font-semibold text-gray-700 dark:text-gray-300'
+			excerptSummary.textContent = root.dataset.originalExcerptLabel
+			excerptDetails.append(excerptSummary, excerptFigure)
+			wrapper.append(summaryBox, fit, excerptDetails)
+		} else {
+			wrapper.append(excerptFigure, summaryBox, fit)
+		}
+
+		resultContainer.append(wrapper)
 
 		const alternatives = candidates
 			.filter((candidate) => candidate.title && candidate.title !== summary.title)
@@ -287,12 +352,6 @@ const validationKeywordText = validationKeywords.join('|')
 		}
 	}
 
-	const fetchSummary = async (root, title) => {
-		const summaryResponse = await fetch(createSummaryUrl(root.dataset.summaryApiUrlTemplate, title))
-		if (!summaryResponse.ok) return null
-		return summaryResponse.json()
-	}
-
 	const initWikipediaContexts = async () => {
 		const roots = document.querySelectorAll('[data-wikipedia-context]')
 		for (const root of roots) {
@@ -315,7 +374,7 @@ const validationKeywordText = validationKeywords.join('|')
 
 				const scoredCandidates = []
 				for (const candidate of candidates) {
-					const summary = await fetchSummary(root, candidate.title)
+					const summary = await fetchSummary(root.dataset.summaryApiUrlTemplate, candidate.title)
 					if (!summary) continue
 					const score = scoreCandidate(root, candidate, summary)
 					scoredCandidates.push({ candidate, summary, ...score })

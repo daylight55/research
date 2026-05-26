@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import BaseLayout from '@/layouts/BaseLayout'
+import GlossaryTermCard from '@/components/GlossaryTermCard'
 import KnowledgeGraph from '@/components/KnowledgeGraph'
 import { CATEGORIES } from '@/data/categories'
 import {
@@ -89,20 +90,11 @@ const graphEdges = graphTerms.flatMap((term) =>
 							</div>
 							<ul class='grid gap-3 md:grid-cols-2 xl:grid-cols-3'>
 								{group.terms.map((term) => (
-									<li class='rounded-md border border-black/10 bg-white/70 p-4 dark:border-white/10 dark:bg-white/5'>
-										<a
-											href={localizedPath(locale, `/glossary/${term.slug}/`)}
-											class='font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
-										>
-											{term.label}
-										</a>
-										<p class='mt-2 text-sm text-gray-600 dark:text-gray-400'>
-											{term.postCount}件の記事で使用 / 関連語 {term.relatedTerms.length}件
-										</p>
-										<p class='mt-3 text-sm leading-6 text-gray-700 dark:text-gray-300'>
-											{term.explanation}
-										</p>
-									</li>
+									<GlossaryTermCard
+										term={term}
+										href={localizedPath(locale, `/glossary/${term.slug}/`)}
+										meta={`${term.postCount}件の記事で使用 / 関連語 ${term.relatedTerms.length}件`}
+									/>
 								))}
 							</ul>
 						</section>

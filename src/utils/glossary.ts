@@ -1,3 +1,5 @@
+import type { ImageMetadata } from 'astro'
+
 type PostLike = {
 	id: string
 	body?: string
@@ -7,6 +9,8 @@ type PostLike = {
 		category: string
 		tags?: string[]
 		draft?: boolean
+		heroImage?: ImageMetadata
+		heroImageAlt?: string
 	}
 }
 
@@ -22,6 +26,8 @@ export type GlossaryPostReference = {
 	title: string
 	description?: string
 	category: string
+	heroImage?: ImageMetadata
+	heroImageAlt?: string
 }
 
 export type GlossaryTermContext = {
@@ -37,6 +43,9 @@ export type GlossaryIndexTerm = {
 	count: number
 	postCount: number
 	explanation: string
+	image?: ImageMetadata
+	imageAlt?: string
+	imageSourceTitle?: string
 	wikipediaUrl: string
 	wikipediaLocale: WikipediaLocale
 	wikipediaSearchQuery: string
@@ -626,7 +635,9 @@ export function buildGlossaryIndex(
 			id: post.id,
 			title: post.data.title,
 			description: post.data.description,
-			category: post.data.category
+			category: post.data.category,
+			heroImage: post.data.heroImage,
+			heroImageAlt: post.data.heroImageAlt
 		}
 
 		for (const term of terms) {
@@ -646,6 +657,11 @@ export function buildGlossaryIndex(
 					existing.posts.push(postRef)
 					existing.postCount += 1
 				}
+				if (!existing.image && postRef.heroImage) {
+					existing.image = postRef.heroImage
+					existing.imageAlt = postRef.heroImageAlt
+					existing.imageSourceTitle = postRef.title
+				}
 				if (
 					context &&
 					!existing.contexts.some(
@@ -664,6 +680,9 @@ export function buildGlossaryIndex(
 					count: term.count,
 					postCount: 1,
 					explanation: '',
+					image: postRef.heroImage,
+					imageAlt: postRef.heroImageAlt,
+					imageSourceTitle: postRef.heroImage ? postRef.title : undefined,
 					wikipediaUrl: createWikipediaUrl(term.label, wikipediaLocale),
 					wikipediaLocale,
 					wikipediaSearchQuery: term.label,

@@ -41,6 +41,8 @@ test('builds a glossary index with post counts and related terms', () => {
 				title: 'Graphiti MCP Memory',
 				description: 'Graphiti と MCP の関係',
 				category: 'ai-systems',
+				heroImage: { src: '/graphiti.jpg', width: 1200, height: 675, format: 'jpg' },
+				heroImageAlt: 'Graphiti knowledge graph',
 				tags: ['Graphiti', 'MCP', 'Knowledge Graph']
 			},
 			body: sampleBody
@@ -50,6 +52,9 @@ test('builds a glossary index with post counts and related terms', () => {
 	const mcp = index.terms.find((term) => term.slug === 'mcp')
 	assert.equal(mcp?.postCount, 1)
 	assert.match(mcp?.explanation ?? '', /Graphiti と MCP の関係/)
+	assert.equal(mcp?.image?.src, '/graphiti.jpg')
+	assert.equal(mcp?.imageAlt, 'Graphiti knowledge graph')
+	assert.equal(mcp?.imageSourceTitle, 'Graphiti MCP Memory')
 	assert.equal(mcp?.wikipediaLocale, 'en')
 	assert.equal(mcp?.wikipediaSearchQuery, 'MCP')
 	assert.equal(mcp?.wikipediaUrl, 'https://en.wikipedia.org/wiki/Special:Search?search=MCP')

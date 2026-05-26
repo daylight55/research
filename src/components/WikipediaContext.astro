@@ -148,6 +148,16 @@ const validationKeywordText = validationKeywords.join('|')
 		return { score, matchedKeywords }
 	}
 
+	const hasTitleMatch = (root, candidate, summary) => {
+		const label = normalizeScoreText(root.dataset.label ?? '')
+		const query = normalizeScoreText(root.dataset.searchQuery ?? '')
+		const title = normalizeScoreText(candidate.title ?? summary?.title ?? '')
+		if (!title) return false
+		if (query && query !== label)
+			return title === query || (query.length >= 4 && title.includes(query))
+		return title === label || (label.length >= 4 && title.includes(label))
+	}
+
 	const renderMessage = (container, message) => {
 		container.innerHTML = ''
 		const paragraph = document.createElement('p')
@@ -380,7 +390,9 @@ const validationKeywordText = validationKeywords.join('|')
 					scoredCandidates.push({ candidate, summary, ...score })
 				}
 
-				const selected = scoredCandidates.sort((a, b) => b.score - a.score)[0]
+				const selected = scoredCandidates
+					.filter((candidate) => hasTitleMatch(root, candidate.candidate, candidate.summary))
+					.sort((a, b) => b.score - a.score)[0]
 				if (!selected) throw new Error('Wikipedia summary failed')
 				await renderSummary(
 					root,

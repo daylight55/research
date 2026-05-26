@@ -7,6 +7,7 @@ type PostLike = {
 		title: string
 		description?: string
 		category: string
+		contentType?: string
 		tags?: string[]
 		draft?: boolean
 		heroImage?: ImageMetadata
@@ -68,7 +69,7 @@ export type GlossaryCategoryGroup = {
 type GlossaryLocale = 'ja' | 'en'
 export type WikipediaLocale = 'ja' | 'en'
 
-const MAX_TERMS_PER_ARTICLE = 6
+const MAX_TERMS_PER_ARTICLE = 5
 const MAX_RELATED_TERMS = 12
 const MAX_WIKIPEDIA_CONTEXT_KEYWORDS = 8
 const ENGLISH_WIKIPEDIA_LABEL_PATTERN = /^[A-Za-z0-9][A-Za-z0-9 .+#&'():-]*$/
@@ -125,16 +126,100 @@ const LATIN_TERM_PATTERN =
 const HEADING_PATTERN = /^#{1,3}\s+(.+)$/gm
 const STOPWORDS = new Set([
 	'AI',
+	'AI需要',
 	'API',
+	'AP',
+	'Apple Group',
+	'Are',
+	'Arms Transfer Strategy',
+	'AIT',
+	'B2B',
+	'B2C',
+	'BI',
+	'Boundary',
+	'CBA',
+	'CAP',
+	'BiCS FLASH',
+	'Cognitive Task Analysis',
+	'FA',
+	'DB',
+	'DGBAS',
+	'Dell Group',
+	'DRAM',
+	'Did',
+	'Fixed',
+	'Garbage',
+	'GAAP',
+	'GDP',
+	'EUMAM',
+	'HBM',
+	'HBF',
+	'HDD',
+	'HDD置換',
+	'Housing Dispute Resolution Support',
+	'ICT',
+	'Leave',
+	'LR',
+	'IMF',
 	'HTTP',
+	'JATEC',
+	'JV',
+	'NGO',
+	'NVMe SSD',
+	'PMI',
+	'PC',
+	'PRACTICE',
+	'PURL',
+	'S-1',
 	'URL',
+	'OK',
+	'OHCHR',
 	'Web',
 	'News',
 	'Reports',
 	'Reference',
+	'Registration',
 	'Tags',
 	'FAQ',
 	'README',
+	'Can',
+	'Comprehensive',
+	'Consider',
+	'GPU',
+	'KIOXIA Holdings',
+	'Kitakami Plant',
+	'NSATU',
+	'OS',
+	'Points',
+	'Philosophicus',
+	'QLC',
+	'Save',
+	'Samsung',
+	'Sandisk Group',
+	'SEP',
+	'SK',
+	'SK Group',
+	'Silence',
+	'Smart Devices',
+	'Storage',
+	'Support',
+	'Tacit',
+	'US Policy',
+	'US',
+	'U.S',
+	'Ukraine Facility',
+	'TAD',
+	'Tb',
+	'TB',
+	'TD',
+	'TLC',
+	'Toshiba Memory',
+	'Toshiba',
+	'Unchecked',
+	'Water',
+	'World Bank',
+	'YMTC',
+	'Yokkaichi',
 	'Executive Summary',
 	'Effective situations',
 	"Situations where it doesn't work",
@@ -152,7 +237,9 @@ const STOPWORDS = new Set([
 	'政治',
 	'経済',
 	'技術',
-	'Daily Trends'
+	'Daily Trends',
+	'住宅購入',
+	'戸建て'
 ])
 
 const ENGLISH_STOPWORDS = new Set([
@@ -213,12 +300,121 @@ const ENGLISH_STOPWORDS = new Set([
 	'uncertainty',
 	'track',
 	'uncertainty-to-track',
+	'action',
+	'actions',
+	'bank',
+	'client',
+	'cross-cutting-view',
+	'checklist',
+	'defense',
+	'governance',
+	'humanitarian',
+	'implications',
+	'memory',
+	'open-items-to-track',
+	'philosophy',
+	'supremeleader',
+	'war',
 	'april',
 	'march',
 	'may'
 ])
 
+const GLOSSARY_LABEL_ALIASES = new Map([
+	['AI 要約', 'AI要約'],
+	['MCP サーバ', 'MCPサーバー'],
+	['MCP サーバー', 'MCPサーバー'],
+	['NANDフラッシュ', 'NAND'],
+	['Michael Polanyi', 'Polanyi'],
+	['PRC', 'China'],
+	['ROC', 'Taiwan'],
+	['SECI モデル', 'SECI'],
+	['SECIモデル', 'SECI'],
+	['SSDs', 'SSD'],
+	['Tractatus Logico-Philosophique', 'Tractatus'],
+	['Ludwig Wittgenstein', 'Wittgenstein']
+])
+
+const SOURCE_OR_REFERENCE_LABEL_PATTERN =
+	/\b(?:AAAI|Amnesty International|CEC|CSIS|Google Books|Human Rights Watch|IAEA GOV|Medact|National Tax Agency|Neighborhood Association|NHS England|ODIHR|OFAC|OSCE|PACE|Reuters|Rossiyskaya Gazeta|Source|Stanford Encyclopedia|U\.S\. Treasury|UChicago Press|UNHCR|USIP Iran Primer|Western Digital|Wikipedia|Wikisource|Zakon Rada|Chicago Press|Polanyi Society|Constitute Project)\b/i
+
+const WIKIPEDIA_SEARCH_QUERY_OVERRIDES = new Map([
+	['agents', 'Intelligent agent'],
+	['ai要約', '自動要約'],
+	['aip', 'Palantir Artificial Intelligence Platform'],
+	['apollo', 'Palantir Apollo'],
+	['boj', 'Bank of Japan'],
+	['claude', 'Claude (language model)'],
+	['constitution', 'Constitution of Iran'],
+	['cpi', 'Consumer price index'],
+	['elections', 'Election'],
+	['eu', 'European Union'],
+	['generative ai', 'Generative AI'],
+	['graphiti', 'Zep Graphiti temporal knowledge graph'],
+	['human rights', 'Human rights'],
+	['irgc', 'Islamic Revolutionary Guard Corps'],
+	['jcpoa', 'Iran nuclear deal'],
+	['khamenei', 'Ali Khamenei'],
+	['khomeini', 'Ruhollah Khomeini'],
+	['knowledge graph', 'Knowledge graph'],
+	['llm', 'Large language model'],
+	['martial law', 'Martial law'],
+	['mcp', 'Model Context Protocol'],
+	['mcpサーバー', 'Model Context Protocol server'],
+	['monetary policy', 'Monetary policy'],
+	['mortgage', 'Mortgage'],
+	['nand', 'Flash memory'],
+	['oauth 2.1', 'OAuth'],
+	['ohchr', 'Office of the United Nations High Commissioner for Human Rights'],
+	['oidc', 'OpenID'],
+	['ontology', 'Ontology (information science)'],
+	['owl', 'Web Ontology Language'],
+	['pkce', 'Proof Key for Code Exchange'],
+	['polanyi', 'Michael Polanyi'],
+	['protests', 'Protest'],
+	['prc', 'China'],
+	['putin', 'Vladimir Putin'],
+	['rag', 'Retrieval-augmented generation'],
+	['rdf', 'Resource Description Framework'],
+	['sanctions', 'Economic sanctions'],
+	['seci', 'SECI model'],
+	['semantic web', 'Semantic Web'],
+	['semiconductors', 'Semiconductor'],
+	['ssd', 'Solid-state drive'],
+	['tacit knowledge', 'Tacit knowledge'],
+	['tractatus', 'Tractatus Logico-Philosophicus'],
+	['uk', 'United Kingdom'],
+	['un', 'United Nations'],
+	['value judgment', 'Value judgment'],
+	['wittgenstein', 'Ludwig Wittgenstein'],
+	['ycc', 'Yield curve control'],
+	['zelensky', 'Volodymyr Zelenskyy'],
+	['債券', '債券'],
+	['決算', ''],
+	['金利政策', '金融政策'],
+	['戸建て', '一戸建て'],
+	['住宅購入', ''],
+	['為替', '外国為替'],
+	['物価', '物価'],
+	['賃金', '賃金']
+])
+
+const WIKIPEDIA_VALIDATION_KEYWORDS_BY_LABEL = new Map([
+	['aip', ['Palantir', 'artificial intelligence platform']],
+	['graphiti', ['Zep', 'temporal knowledge graph', 'agent memory']],
+	['mcp', ['model context protocol', 'anthropic', 'tools']],
+	['mcpサーバー', ['model context protocol', 'server', 'tools']],
+	['ontology', ['information science', 'knowledge representation', 'semantic web']],
+	['rag', ['retrieval', 'generation', 'large language model']],
+	['seci', ['knowledge management', 'tacit knowledge', 'explicit knowledge']]
+])
+
 const normalizeWhitespace = (value: string) => value.replace(/\s+/g, ' ').trim()
+
+const normalizeGlossaryLabel = (label: string) => {
+	const normalized = normalizeWhitespace(label.replace(/[`*_#]/g, '')).normalize('NFKC')
+	return GLOSSARY_LABEL_ALIASES.get(normalized) ?? normalized
+}
 
 export const createGlossarySlug = (label: string) =>
 	normalizeWhitespace(label)
@@ -232,8 +428,14 @@ export const createGlossarySlug = (label: string) =>
 
 const stripFrontmatter = (markdown: string) => markdown.replace(/^\s*---[\s\S]*?---\s*/, '')
 
-const stripMarkdownSyntax = (markdown: string) =>
+const stripExtractionNoise = (markdown: string) =>
 	stripFrontmatter(markdown)
+		.replace(/<SourceNote\b[\s\S]*?<\/SourceNote>/g, ' ')
+		.replace(/\s*(?:Source notes?|出典メモ):[\s\S]*?(?=\n\s*\n|\n#{1,6}\s|$)/gim, ' ')
+		.replace(/\n##\s+(?:参考情報|References|Sources|出典)[\s\S]*$/i, ' ')
+
+const stripMarkdownSyntax = (markdown: string) =>
+	stripExtractionNoise(markdown)
 		.replace(/^import\s+.+$/gm, ' ')
 		.replace(/<[/]?[A-Z][\s\S]*?(?:\/>|>)/g, ' ')
 		.replace(/```[\s\S]*?```/g, ' ')
@@ -281,9 +483,28 @@ const parseFrontmatterTerms = (markdown: string) => {
 	return terms
 }
 
+const getFrontmatterValue = (markdown: string, key: string) => {
+	const frontmatter = markdown.match(/^\s*---\n([\s\S]*?)\n---/)?.[1] ?? ''
+	return (
+		frontmatter
+			.match(new RegExp(`^${key}:\\s*(.+)$`, 'm'))?.[1]
+			?.trim()
+			.replace(/^['"]|['"]$/g, '') ?? ''
+	)
+}
+
 const shouldKeepTerm = (label: string, source: string) => {
 	if (!label || STOPWORDS.has(label)) return false
 	if (label.length < 2 || label.length > 48) return false
+	if (SOURCE_OR_REFERENCE_LABEL_PATTERN.test(label)) return false
+	if (/^[A-Z]\d$/i.test(label)) return false
+	if (/^[A-Z]{1,3}-\d+$/i.test(label)) return false
+	if (/[A-Z]{2,}\d/.test(label)) return false
+	if (/[A-Za-z]\d{3,}/.test(label)) return false
+	if (source !== 'frontmatter' && /^[A-Z][a-z]+[A-Z][A-Za-z]+$/.test(label)) return false
+	if (/(?:方向|国境地帯|試作)$/.test(label)) return false
+	if (/(?:単一セグメント|単体)$/.test(label)) return false
+	if (/^(?:AI活用|AI時代|LIM|Logical Philosophy|チェックリスト|決算)$/.test(label)) return false
 	const latinWords = label.match(/[A-Za-z][A-Za-z0-9.+#-]*/g) ?? []
 	const latinOnly = latinWords.join(' ') === label.replace(/\s+/g, ' ')
 	if (latinOnly && latinWords.length > 0) {
@@ -306,6 +527,14 @@ const shouldKeepTerm = (label: string, source: string) => {
 	if (/[。！？!?]/.test(label)) return false
 	if (/\b(?:GitHub|Bureau|Statistics|Card|Share)\b/i.test(label)) return false
 	if (/(?:Card|Section|Component|Layout)$/.test(label)) return false
+	if (
+		source !== 'frontmatter' &&
+		/(?:が|を|へ|で|から|まで|より|の).{1,18}(?:始動|加速|拡大|後退|上昇|低下|急増|再編|揺らす|動かす|重なる)$/.test(
+			label
+		)
+	) {
+		return false
+	}
 	if (/(?:する|した|している|している|なった|なっている|続く|示した|固める|入った)$/.test(label)) {
 		return false
 	}
@@ -345,22 +574,24 @@ const scoreTerm = (term: GlossaryTerm) => {
 
 const shouldPromoteExtractedTerm = (term: GlossaryTerm) => {
 	if (term.sources.includes('frontmatter')) return true
-	if (term.count >= 2) return true
+	if (term.count >= 3) return true
 	if (
 		/[\p{Script=Han}\p{Script=Katakana}ー]{2,}/u.test(term.label) &&
 		/[A-Za-z]/.test(term.label)
 	) {
-		return /(サーバー?|基盤|モデル|インフラ|認証|メモリ|記憶|グラフ)/.test(term.label)
+		return (
+			term.count >= 2 && /(サーバー?|基盤|モデル|インフラ|認証|メモリ|記憶|グラフ)/.test(term.label)
+		)
 	}
-	if (/^[A-Z0-9.+#-]{2,}$/.test(term.label)) return true
+	if (/^[A-Z0-9.+#-]{2,}$/.test(term.label)) return term.count >= 2
 	if (/^[A-Z][A-Za-z0-9.+#-]+(?:\s+[A-Z][A-Za-z0-9.+#-]+){1,3}$/.test(term.label)) {
-		return true
+		return term.count >= 2
 	}
 	return false
 }
 
 const pushCandidate = (terms: Map<string, GlossaryTerm>, label: string, source: string) => {
-	const normalizedLabel = normalizeWhitespace(label.replace(/[`*_#]/g, ''))
+	const normalizedLabel = normalizeGlossaryLabel(label)
 	if (!shouldKeepTerm(normalizedLabel, source)) return
 
 	const slug = createGlossarySlug(normalizedLabel)
@@ -386,7 +617,8 @@ export function extractGlossaryTermsFromMarkdown(
 	maxTerms = MAX_TERMS_PER_ARTICLE
 ) {
 	const terms = new Map<string, GlossaryTerm>()
-	const body = stripFrontmatter(markdown)
+	const body = stripExtractionNoise(markdown)
+	const contentType = getFrontmatterValue(markdown, 'contentType')
 	const bodyWithoutHeadings = body
 		.replace(/^import\s+.+$/gm, ' ')
 		.replace(/<[/]?[A-Z][\s\S]*?(?:\/>|>)/g, ' ')
@@ -394,6 +626,13 @@ export function extractGlossaryTermsFromMarkdown(
 
 	for (const tag of parseFrontmatterTerms(markdown)) {
 		pushCandidate(terms, tag, 'frontmatter')
+	}
+
+	if (contentType === 'news') {
+		return Array.from(terms.values())
+			.filter(shouldPromoteExtractedTerm)
+			.sort((a, b) => scoreTerm(b) - scoreTerm(a))
+			.slice(0, maxTerms)
 	}
 
 	for (const match of body.matchAll(HEADING_PATTERN)) {
@@ -521,6 +760,28 @@ const getWikipediaCategoryKeywords = (categories: string[], locale: GlossaryLoca
 	return uniqueValues(categories.flatMap((category) => contextMap[category] ?? [category]))
 }
 
+const quoteYamlString = (value: string) => JSON.stringify(value)
+
+const createExtractionFrontmatterForPost = (post: PostLike) => {
+	const tags = post.data.tags ?? []
+	return [
+		'---',
+		`title: ${quoteYamlString(post.data.title)}`,
+		`category: ${quoteYamlString(post.data.category)}`,
+		post.data.contentType ? `contentType: ${quoteYamlString(post.data.contentType)}` : '',
+		tags.length ? `tags: [${tags.map(quoteYamlString).join(', ')}]` : '',
+		'---'
+	]
+		.filter(Boolean)
+		.join('\n')
+}
+
+const createExtractionMarkdownForPost = (post: PostLike) => {
+	const frontmatter = createExtractionFrontmatterForPost(post)
+
+	return `${frontmatter}\n\n${post.body ?? ''}`
+}
+
 const isEnglishWikipediaLabel = (label: string) =>
 	ENGLISH_WIKIPEDIA_LABEL_PATTERN.test(normalizeWhitespace(label))
 
@@ -528,7 +789,7 @@ export const getWikipediaLocaleForLabel = (
 	label: string,
 	locale: GlossaryLocale = 'ja'
 ): WikipediaLocale => {
-	if (locale === 'en') return 'en'
+	if (locale === 'en' && isEnglishWikipediaLabel(label)) return 'en'
 	return isEnglishWikipediaLabel(label) ? 'en' : 'ja'
 }
 
@@ -545,6 +806,10 @@ export const createWikipediaValidationKeywords = (
 	term: Pick<GlossaryIndexTerm, 'label' | 'posts' | 'relatedTerms'>,
 	locale: WikipediaLocale = 'ja'
 ) => {
+	const labelKeywords =
+		locale === 'en'
+			? WIKIPEDIA_VALIDATION_KEYWORDS_BY_LABEL.get(normalizeWhitespace(term.label).toLowerCase())
+			: undefined
 	const categories = getTermCategories(term)
 	const categoryKeywords = getWikipediaCategoryKeywords(categories, locale)
 	const relatedKeywords = term.relatedTerms.slice(0, 5).map((related) => related.label)
@@ -552,10 +817,12 @@ export const createWikipediaValidationKeywords = (
 		(keyword) => keyword.toLowerCase() !== term.label.toLowerCase()
 	)
 
-	return uniqueValues([...categoryKeywords, ...relatedKeywords, ...titleKeywords]).slice(
-		0,
-		MAX_WIKIPEDIA_CONTEXT_KEYWORDS
-	)
+	return uniqueValues([
+		...(labelKeywords ?? []),
+		...categoryKeywords,
+		...relatedKeywords,
+		...titleKeywords
+	]).slice(0, MAX_WIKIPEDIA_CONTEXT_KEYWORDS)
 }
 
 export const createWikipediaSearchQuery = (
@@ -563,6 +830,10 @@ export const createWikipediaSearchQuery = (
 	locale: WikipediaLocale = 'ja'
 ) => {
 	void locale
+	const override = WIKIPEDIA_SEARCH_QUERY_OVERRIDES.get(
+		normalizeWhitespace(term.label).toLowerCase()
+	)
+	if (override) return override
 	return term.label
 }
 
@@ -630,7 +901,13 @@ export function buildGlossaryIndex(
 	const termOrder = new Map<string, number>()
 
 	for (const post of posts.filter((entry) => !entry.data.draft)) {
-		const terms = extractGlossaryTermsFromMarkdown(post.body ?? '')
+		const frontmatterTerms = extractGlossaryTermsFromMarkdown(createExtractionFrontmatterForPost(post))
+		const maxTerms =
+			frontmatterTerms.length >= 3 && post.data.category === 'semiconductor-memory'
+				? frontmatterTerms.length
+				: MAX_TERMS_PER_ARTICLE
+		const extractionMarkdown = createExtractionMarkdownForPost(post)
+		const terms = extractGlossaryTermsFromMarkdown(extractionMarkdown, maxTerms)
 		const postRef = {
 			id: post.id,
 			title: post.data.title,

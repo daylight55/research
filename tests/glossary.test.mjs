@@ -29,7 +29,7 @@ test('extracts glossary terms from article-level concepts and technical discussi
 	const terms = extractGlossaryTermsFromMarkdown(sampleBody)
 	const labels = terms.map((term) => term.label)
 
-	assert.deepEqual(labels, ['Graphiti', 'MCP', 'Knowledge Graph', 'MCP サーバー'])
+	assert.deepEqual(labels, ['Graphiti', 'MCP', 'Knowledge Graph', 'MCPサーバー'])
 	assert.equal(terms.find((term) => term.label === 'MCP')?.slug, 'mcp')
 })
 
@@ -56,8 +56,11 @@ test('builds a glossary index with post counts and related terms', () => {
 	assert.equal(mcp?.imageAlt, 'Graphiti knowledge graph')
 	assert.equal(mcp?.imageSourceTitle, 'Graphiti MCP Memory')
 	assert.equal(mcp?.wikipediaLocale, 'en')
-	assert.equal(mcp?.wikipediaSearchQuery, 'MCP')
-	assert.equal(mcp?.wikipediaUrl, 'https://en.wikipedia.org/wiki/Special:Search?search=MCP')
+	assert.equal(mcp?.wikipediaSearchQuery, 'Model Context Protocol')
+	assert.equal(
+		mcp?.wikipediaUrl,
+		'https://en.wikipedia.org/wiki/Special:Search?search=Model%20Context%20Protocol'
+	)
 	assert.deepEqual(
 		mcp?.contexts.slice(0, 1).map((context) => context.postId),
 		['graphiti-mcp-memory']
@@ -66,6 +69,45 @@ test('builds a glossary index with post counts and related terms', () => {
 	assert.deepEqual(
 		mcp?.relatedTerms.slice(0, 2).map((term) => term.label),
 		['Graphiti', 'Knowledge Graph']
+	)
+})
+
+test('builds glossary terms from Astro post data when body omits frontmatter', () => {
+	const index = buildGlossaryIndex([
+		{
+			id: 'daily-trends',
+			data: {
+				title: 'Daily Trends',
+				description: 'A news digest.',
+				category: 'tech-news',
+				contentType: 'news',
+				tags: ['news', 'politics', 'economy', 'technology']
+			},
+			body: `
+# Daily Trends
+
+Google, Microsoft, Gemini, SDK, GPU, OPEC, and FRB appear in a news digest body.
+`
+		},
+		{
+			id: 'graphiti-mcp-memory',
+			data: {
+				title: 'Graphiti MCP Memory',
+				description: 'Graphiti と MCP の関係',
+				category: 'ai-systems',
+				tags: ['Graphiti', 'MCP', 'Knowledge Graph']
+			},
+			body: `
+# Graphiti MCP Memory
+
+Graphiti は Knowledge Graph と MCP の実装論点を扱う。
+`
+		}
+	])
+
+	assert.deepEqual(
+		index.terms.map((term) => term.label),
+		['Graphiti', 'Knowledge Graph', 'MCP']
 	)
 })
 
@@ -111,7 +153,7 @@ Ontology は Knowledge Graph の概念設計に関わる。
 	)
 	assert.deepEqual(
 		groups.find((group) => group.category === 'ai-systems')?.terms.map((term) => term.label),
-		['Knowledge Graph', 'Graphiti', 'MCP', 'MCP サーバー']
+		['Knowledge Graph', 'Graphiti', 'MCP', 'MCPサーバー']
 	)
 })
 
@@ -137,7 +179,7 @@ test('selects English Wikipedia for English glossary labels', () => {
 	assert.equal(getWikipediaLocaleForLabel('OAuth 2.1'), 'en')
 	assert.equal(getWikipediaLocaleForLabel('MCP サーバー'), 'ja')
 	assert.equal(getWikipediaLocaleForLabel('オントロジー'), 'ja')
-	assert.equal(getWikipediaLocaleForLabel('オントロジー', 'en'), 'en')
+	assert.equal(getWikipediaLocaleForLabel('オントロジー', 'en'), 'ja')
 })
 
 test('builds context-aware Wikipedia search queries and validation keywords', () => {
@@ -157,12 +199,12 @@ test('builds context-aware Wikipedia search queries and validation keywords', ()
 		]
 	}
 
-	assert.equal(createWikipediaSearchQuery(term, 'en'), 'Ontology')
+	assert.equal(createWikipediaSearchQuery(term, 'en'), 'Ontology (information science)')
 	assert.deepEqual(createWikipediaValidationKeywords(term, 'en').slice(0, 4), [
+		'information science',
 		'knowledge representation',
 		'semantic web',
-		'ontology',
-		'knowledge graph'
+		'ontology'
 	])
 	assert.deepEqual(createWikipediaValidationKeywords(term, 'ja').slice(0, 4), [
 		'知識表現',
@@ -192,7 +234,10 @@ test('builds English glossary explanations from English article context', () => 
 	const mcp = index.terms.find((term) => term.slug === 'mcp')
 	assert.match(mcp?.explanation ?? '', /appears in "Graphiti and MCP Memory"/)
 	assert.match(mcp?.explanation ?? '', /A practical report/)
-	assert.equal(mcp?.wikipediaUrl, 'https://en.wikipedia.org/wiki/Special:Search?search=MCP')
+	assert.equal(
+		mcp?.wikipediaUrl,
+		'https://en.wikipedia.org/wiki/Special:Search?search=Model%20Context%20Protocol'
+	)
 })
 
 test('links only the first plain-text mention for each article term', () => {
@@ -214,12 +259,15 @@ test('filters sentence-like headings and source filenames from glossary terms', 
 	const terms = extractGlossaryTermsFromMarkdown(`
 # Google I/O 2026はAIを製品群の中心に据え直した
 
-## 参考情報
+## 補足
 ## まだ避けるべきケース
 ## FFM-Iran-Update-13-September-2024.pdf
 ## MCP仕様
 
-MCP仕様 と Knowledge Graph を比較する。
+MCP仕様 と Knowledge Graph を比較する。Knowledge Graph は中心概念である。
+
+## 参考情報
+- Reuters
 `)
 	const labels = terms.map((term) => term.label)
 
@@ -227,7 +275,7 @@ MCP仕様 と Knowledge Graph を比較する。
 	assert.ok(!labels.includes('参考情報'))
 	assert.ok(!labels.includes('まだ避けるべきケース'))
 	assert.ok(!labels.includes('FFM-Iran-Update-13-September-2024.pdf'))
-	assert.ok(labels.includes('MCP仕様'))
+	assert.ok(!labels.includes('MCP仕様'))
 	assert.ok(labels.includes('Knowledge Graph'))
 })
 
@@ -251,7 +299,9 @@ WH47-Social-Share-Card.jpg は出典カード画像である。
 `)
 	const labels = terms.map((term) => term.label)
 
-	assert.deepEqual(labels.slice(0, 5), ['OpenAI', 'NVIDIA', 'AIインフラ', 'SDK', 'Vera CPU'])
+	assert.deepEqual(labels.slice(0, 3), ['OpenAI', 'NVIDIA', 'AIインフラ'])
+	assert.ok(!labels.includes('SDK'))
+	assert.ok(!labels.includes('Vera CPU'))
 	assert.ok(!labels.includes('政治'))
 	assert.ok(!labels.includes('経済'))
 	assert.ok(!labels.includes('技術'))
@@ -259,4 +309,68 @@ WH47-Social-Share-Card.jpg は出典カード画像である。
 	assert.ok(!labels.includes('WH47-Social-Share-Card.jpg'))
 	assert.ok(!labels.includes('U.S. Bureau'))
 	assert.ok(terms.length <= 8)
+})
+
+test('normalizes duplicate labels and strips citation source names', () => {
+	const terms = extractGlossaryTermsFromMarkdown(`
+---
+title: Citation Noise
+tags: [AI 要約, MCP サーバ, Ludwig Wittgenstein]
+---
+
+AI要約 と MCPサーバー は記事の中心概念である。
+Wittgenstein は暗黙知の記事の中心人物として扱う。
+
+<SourceNote>Reuters と USIP Iran Primer と Google Books を参照した。</SourceNote>
+
+## 参考情報
+- Reuters
+- USIP Iran Primer
+`)
+	const labels = terms.map((term) => term.label)
+
+	assert.deepEqual(labels, ['AI要約', 'MCPサーバー', 'Wittgenstein'])
+	assert.ok(!labels.includes('Reuters'))
+	assert.ok(!labels.includes('USIP Iran Primer'))
+	assert.ok(!labels.includes('Ludwig Wittgenstein'))
+	assert.equal(new Set(terms.map((term) => term.slug)).size, terms.length)
+})
+
+test('removes source-note organizations and overly granular body concepts', () => {
+	const terms = extractGlossaryTermsFromMarkdown(`
+# Kioxia and policy sources
+
+NAND と SSD は記事の中心概念である。NAND と SSD は市場構造の説明でも使う。
+HBM と DRAM と BiCS FLASH は細部としてだけ触れる。
+GuardianCouncil と ExpertAssembly は見出し断片として混ざった文字列である。
+
+Source note: U.S. Treasury, OFAC, CEC, Zakon Rada, OSCE/ODIHR, Amnesty International, OHCHR, and UNHCR were checked.
+
+NAND と SSD は最後にも議論する。
+`)
+	const labels = terms.map((term) => term.label)
+
+	assert.ok(labels.includes('NAND'))
+	assert.ok(labels.includes('SSD'))
+	assert.ok(!labels.includes('HBM'))
+	assert.ok(!labels.includes('DRAM'))
+	assert.ok(!labels.includes('BiCS FLASH'))
+	assert.ok(!labels.includes('GuardianCouncil'))
+	assert.ok(!labels.includes('ExpertAssembly'))
+	assert.ok(!labels.includes('U.S. Treasury'))
+	assert.ok(!labels.includes('OHCHR'))
+})
+
+test('does not promote incidental body terms from daily news digests', () => {
+	const terms = extractGlossaryTermsFromMarkdown(`
+---
+title: Daily Trends
+contentType: news
+tags: [news, politics, economy, technology]
+---
+
+Google と NVIDIA と OPEC が同じ日に報じられた。NVIDIA は GPU を更新した。
+`)
+
+	assert.deepEqual(terms, [])
 })

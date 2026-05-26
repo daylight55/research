@@ -7,6 +7,7 @@ import FormattedDate from '@/components/FormattedDate'
 import Share from '@/components/Share'
 import TableOfContents from '@/components/TableOfContents'
 import MermaidRenderer from '@/components/MermaidRenderer'
+import ArrowUpRight from '@/components/icons/ArrowUpRight'
 import { DEFAULT_LOCALE, getPostSlug, getPostUrl, getPosts, localizedPath } from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import SourceNote from '@/components/mdx/SourceNote'
@@ -79,8 +80,9 @@ const disqusEnabled = disqusConfig.enabled
 							</p>
 							<a
 								href={localizedPath(locale, `/post/${postSlug}/research/`)}
-								class='leading-snug text-gray-600 underline decoration-black/20 underline-offset-4 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:decoration-white/20 dark:hover:text-indigo-300'
+								class='inline-flex items-center gap-1.5 rounded-md border border-black/10 bg-white/70 px-3 py-2 font-semibold leading-snug text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-300 [&_svg]:h-4 [&_svg]:w-4'
 							>
+								<ArrowUpRight />
 								調査プロセスを見る
 							</a>
 						</section>
@@ -144,23 +146,23 @@ const disqusEnabled = disqusConfig.enabled
 
 				{
 					hasResearchLog && (
-						<section class='not-prose mt-12 rounded-md border border-black/10 bg-white/70 p-5 dark:border-white/10 dark:bg-white/10'>
-							<p class='text-sm font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
-								Research Trail
-							</p>
-							<h2 class='mt-2 text-xl font-semibold text-gray-900 dark:text-gray-100'>
-								調査プロセス
-							</h2>
-							<p class='mt-2 leading-7 text-gray-700 dark:text-gray-300'>
-								この記事で参照した問い、根拠、判断の流れは公開可能な調査ログとして確認できます。
-							</p>
-							<a
-								href={localizedPath(locale, `/post/${postSlug}/research/`)}
-								class='mt-4 inline-flex w-fit items-center rounded-full border border-black/10 px-4 py-2 text-sm font-semibold text-gray-900 transition hover:border-black/30 hover:bg-white dark:border-white/10 dark:text-gray-100 dark:hover:border-white/30 dark:hover:bg-white/10'
-							>
-								調査プロセスを見る
-							</a>
-						</section>
+						<a
+							href={localizedPath(locale, `/post/${postSlug}/research/`)}
+							class='not-prose group mt-12 grid gap-4 rounded-lg border border-indigo-200 bg-indigo-50/70 p-5 text-gray-900 no-underline shadow-sm transition hover:-translate-y-0.5 hover:border-indigo-300 hover:bg-indigo-50 hover:shadow-md dark:border-indigo-300/20 dark:bg-indigo-300/10 dark:text-gray-100 dark:hover:border-indigo-300/40 sm:grid-cols-[1fr_auto] sm:items-center'
+						>
+							<span>
+								<span class='block text-sm font-semibold uppercase tracking-[0.14em] text-indigo-700 dark:text-indigo-200'>
+									Research Trail
+								</span>
+								<span class='mt-2 block text-xl font-semibold'>調査プロセスを読む</span>
+								<span class='mt-2 block leading-7 text-gray-700 dark:text-gray-300'>
+									参照した問い、資料選定、採用しなかった情報、判断基準を公開ログとして確認できます。
+								</span>
+							</span>
+							<span class='inline-flex h-11 w-11 items-center justify-center rounded-full bg-indigo-600 text-white transition group-hover:bg-indigo-700 dark:bg-indigo-300 dark:text-indigo-950 dark:group-hover:bg-indigo-200'>
+								<ArrowUpRight />
+							</span>
+						</a>
 					)
 				}
 			</div>

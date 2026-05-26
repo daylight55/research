@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content'
 import BaseLayout from '@/layouts/BaseLayout'
 import Code from '@/components/mdx/Code'
+import ArrowUpRight from '@/components/icons/ArrowUpRight'
 import { DEFAULT_LOCALE, getPostLocale, getPostSlug, withBase } from '@/utils'
 
 type Props = {
@@ -10,7 +11,9 @@ type Props = {
 }
 
 export async function getStaticPaths() {
-	const posts = (await getCollection('blog')).filter((post) => getPostLocale(post) === DEFAULT_LOCALE)
+	const posts = (await getCollection('blog')).filter(
+		(post) => getPostLocale(post) === DEFAULT_LOCALE
+	)
 	const researchEntries = await getCollection('articleResearch')
 	const researchBySlug = new Map(researchEntries.map((entry) => [getPostSlug(entry), entry]))
 
@@ -30,16 +33,17 @@ export async function getStaticPaths() {
 const { post, research } = Astro.props
 const postSlug = getPostSlug(post)
 const { Content } = await render(research)
-const title = `${post.data.title}の調査プロセス`
+const title = research.data.title ?? `${post.data.title}の調査プロセス`
 ---
 
 <BaseLayout title={title} description={post.data.description} image={post.data.heroImage?.src}>
-	<article class='mx-auto grid max-w-3xl gap-8 py-4'>
-		<header class='grid gap-4 border-b border-black/10 pb-6 dark:border-white/10'>
+	<article class='mx-auto grid max-w-4xl gap-8 py-4'>
+		<header class='research-hero grid gap-6 rounded-lg px-5 py-6 shadow-sm sm:px-8 sm:py-8'>
 			<a
 				href={withBase(`/post/${postSlug}/`)}
-				class='w-fit text-sm font-semibold text-gray-700 underline-offset-4 hover:underline dark:text-gray-200'
+				class='inline-flex w-fit items-center gap-2 rounded-full border border-black/10 bg-white/75 px-3 py-1.5 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-200 [&_svg]:h-4 [&_svg]:w-4'
 			>
+				<ArrowUpRight />
 				記事本文へ戻る
 			</a>
 			<div class='grid gap-2'>
@@ -53,14 +57,14 @@ const title = `${post.data.title}の調査プロセス`
 				>
 					{title}
 				</h1>
-				<p class='leading-7 text-gray-700 dark:text-gray-300'>
-					この記事を作るために確認した問い、根拠、判断の流れを公開可能な範囲でまとめた記録です。
+				<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>
+					この記事を作るために立てた問い、資料選定、採用しなかった情報、判断基準、更新条件を公開可能な範囲でまとめた記録です。
 				</p>
 			</div>
 		</header>
 
 		<div
-			class='prose prose-base max-w-none dark:prose-invert md:prose-lg prose-p:leading-8 prose-li:leading-8'
+			class='prose prose-base max-w-none rounded-lg border border-black/10 bg-white/85 px-5 py-6 dark:border-white/10 dark:bg-white/5 dark:prose-invert sm:px-8 md:prose-lg prose-h2:border-t prose-h2:border-black/10 prose-h2:pt-7 prose-h2:first:border-t-0 prose-h2:first:pt-0 prose-p:leading-8 prose-li:leading-8 prose-table:text-sm dark:prose-h2:border-white/10'
 		>
 			<Content components={{ pre: Code }} />
 		</div>

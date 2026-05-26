@@ -1,13 +1,12 @@
----
-const basePath = import.meta.env.BASE_URL ?? '/'
----
+<script>
+	import { navigate } from 'astro:transitions/client'
 
-<script define:vars={{ basePath }}>
+	const basePath = import.meta.env.BASE_URL ?? '/'
 	const STORAGE_KEY = 'preferredLocale'
 	const SCROLL_KEY = 'localeSwitchScroll'
-	const TRANSITION_KEY = 'localeSwitchTransition'
 	const DEFAULT_LOCALE = 'ja'
 	const SUPPORTED_LOCALES = ['ja', 'en']
+	let pendingScrollRestore = null
 
 	const normalizeBase = (value) => {
 		if (!value || value === '/') return ''
@@ -47,31 +46,6 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 		}
 	}
 
-	const markTransitionForReveal = () => {
-		try {
-			window.sessionStorage.setItem(TRANSITION_KEY, 'true')
-		} catch {
-			// Ignore unavailable storage; the navigation still works.
-		}
-	}
-
-	const prepareTransitionReveal = () => {
-		try {
-			if (window.sessionStorage.getItem(TRANSITION_KEY) !== 'true') return
-			window.sessionStorage.removeItem(TRANSITION_KEY)
-			document.documentElement.classList.add('locale-switch-reveal')
-		} catch {
-			// Ignore unavailable storage and render normally.
-		}
-	}
-
-	const clearTransitionClasses = () => {
-		document.documentElement.classList.remove('locale-switching')
-		window.setTimeout(() => {
-			document.documentElement.classList.remove('locale-switch-reveal')
-		}, 260)
-	}
-
 	const getScrollableHeight = () =>
 		Math.max(
 			document.documentElement.scrollHeight,
@@ -80,34 +54,47 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 		)
 
 	const saveScrollPosition = (targetLocale) => {
+		const maxScroll = Math.max(1, getScrollableHeight() - window.innerHeight)
+		const saved = {
+			locale: targetLocale,
+			path: stripLocale(window.location.pathname),
+			y: window.scrollY,
+			ratio: window.scrollY / maxScroll,
+			time: Date.now()
+		}
+
 		try {
-			const maxScroll = Math.max(1, getScrollableHeight() - window.innerHeight)
-			window.sessionStorage.setItem(
-				SCROLL_KEY,
-				JSON.stringify({
-					locale: targetLocale,
-					path: stripLocale(window.location.pathname),
-					y: window.scrollY,
-					ratio: window.scrollY / maxScroll,
-					time: Date.now()
-				})
-			)
+			window.sessionStorage.setItem(SCROLL_KEY, JSON.stringify(saved))
 		} catch {
 			// Ignore unavailable storage; navigation still works normally.
+		}
+
+		pendingScrollRestore = saved
+		return saved
+	}
+
+	const readSavedScrollPosition = () => {
+		if (pendingScrollRestore) return pendingScrollRestore
+
+		try {
+			const raw = window.sessionStorage.getItem(SCROLL_KEY)
+			return raw ? JSON.parse(raw) : null
+		} catch {
+			return null
+		}
+	}
+
+	const clearSavedScrollPosition = () => {
+		pendingScrollRestore = null
+		try {
+			window.sessionStorage.removeItem(SCROLL_KEY)
+		} catch {
+			// Ignore unavailable storage; the pending in-memory value is already cleared.
 		}
 	}
 
 	const restoreScrollPosition = () => {
-		let saved
-
-		try {
-			const raw = window.sessionStorage.getItem(SCROLL_KEY)
-			if (!raw) return
-			saved = JSON.parse(raw)
-			window.sessionStorage.removeItem(SCROLL_KEY)
-		} catch {
-			return
-		}
+		const saved = readSavedScrollPosition()
 
 		if (!saved || Date.now() - saved.time > 10000) return
 		if (saved.locale !== getPathLocale(window.location.pathname)) return
@@ -115,6 +102,8 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 
 		const scrollWithoutSmooth = () => {
 			const maxScroll = Math.max(0, getScrollableHeight() - window.innerHeight)
+			if (maxScroll <= 0 && saved.y > 0) return false
+
 			const targetY = Math.min(saved.y ?? maxScroll * (saved.ratio ?? 0), maxScroll)
 			const root = document.documentElement
 			const previousBehavior = root.style.scrollBehavior
@@ -122,55 +111,56 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 			root.style.scrollBehavior = 'auto'
 			window.scrollTo({ top: targetY, left: 0, behavior: 'instant' })
 			root.style.scrollBehavior = previousBehavior
+			return Math.abs(window.scrollY - targetY) < 4
 		}
 
-		scrollWithoutSmooth()
-		window.requestAnimationFrame(scrollWithoutSmooth)
-		window.setTimeout(scrollWithoutSmooth, 80)
+		const clearWhenRestored = () => {
+			if (scrollWithoutSmooth()) clearSavedScrollPosition()
+		}
+
+		clearWhenRestored()
+		window.requestAnimationFrame(clearWhenRestored)
+		window.setTimeout(clearWhenRestored, 80)
+		window.setTimeout(clearWhenRestored, 180)
+		window.setTimeout(clearWhenRestored, 400)
+		window.setTimeout(clearWhenRestored, 800)
+		window.setTimeout(clearWhenRestored, 1200)
 	}
 
-	document.addEventListener('click', (event) => {
-		if (!(event.target instanceof Element)) return
+	document.addEventListener(
+		'click',
+		(event) => {
+			if (!(event.target instanceof Element)) return
 
-		const switchLink = event.target.closest('a[data-locale-switch]')
-		if (!(switchLink instanceof HTMLAnchorElement)) return
-		if (event.defaultPrevented) return
-		if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
-			return
-		if (switchLink.target && switchLink.target !== '_self') return
+			const switchLink = event.target.closest('a[data-locale-switch]')
+			if (!(switchLink instanceof HTMLAnchorElement)) return
+			if (event.defaultPrevented) return
+			if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+				return
+			if (switchLink.target && switchLink.target !== '_self') return
 
-		const targetLocale = switchLink.dataset.localeSwitch
-		setStoredLocale(targetLocale)
+			const targetLocale = switchLink.dataset.localeSwitch
+			setStoredLocale(targetLocale)
 
-		const targetUrl = new URL(switchLink.href, window.location.href)
-		if (targetUrl.href === window.location.href) {
+			const targetUrl = new URL(switchLink.href, window.location.href)
+			if (targetUrl.href === window.location.href) {
+				event.preventDefault()
+				return
+			}
+
 			event.preventDefault()
-			return
-		}
+			saveScrollPosition(targetLocale)
+			Promise.resolve(navigate(targetUrl.href)).then(() => {
+				restoreScrollPosition()
+				window.setTimeout(restoreScrollPosition, 0)
+			})
+		},
+		{ capture: true }
+	)
 
-		event.preventDefault()
-		saveScrollPosition(targetLocale)
-		markTransitionForReveal()
-
-		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-		if (!reduceMotion) {
-			document.documentElement.classList.add('locale-switching')
-		}
-
-		window.setTimeout(
-			() => {
-				window.location.assign(targetUrl.href)
-			},
-			reduceMotion ? 0 : 140
-		)
-	})
-
-	prepareTransitionReveal()
 	window.addEventListener('pagereveal', restoreScrollPosition)
 	document.addEventListener('DOMContentLoaded', restoreScrollPosition)
 	document.addEventListener('astro:page-load', () => {
 		restoreScrollPosition()
 	})
-	window.addEventListener('pageshow', clearTransitionClasses)
-	document.addEventListener('DOMContentLoaded', clearTransitionClasses)
 </script>

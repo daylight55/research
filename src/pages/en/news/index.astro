@@ -30,7 +30,7 @@ const newsPosts = await getNewsPosts(undefined, locale)
 						<a
 							href={getPostUrl(post)}
 							class={cn(
-								'group grid flex-[0_0_100%] snap-start overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 sm:flex-[0_0_22rem] sm:grid-cols-[10rem_1fr]',
+								'group grid flex-[0_0_100%] snap-start overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 sm:grid-cols-[10rem_1fr] md:flex-[0_0_calc((100%_-_1rem)/2)] xl:flex-[0_0_calc((100%_-_2rem)/3)]',
 								getCategorySurfaceClass(post.data.category)
 							)}
 						>

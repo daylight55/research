@@ -1,11 +1,12 @@
----
-const basePath = import.meta.env.BASE_URL ?? '/'
----
+<script>
+	import { navigate } from 'astro:transitions/client'
 
-<script define:vars={{ basePath }}>
+	const basePath = import.meta.env.BASE_URL ?? '/'
 	const STORAGE_KEY = 'preferredLocale'
+	const SCROLL_KEY = 'localeSwitchScroll'
 	const DEFAULT_LOCALE = 'ja'
 	const SUPPORTED_LOCALES = ['ja', 'en']
+	let pendingScrollRestore = null
 
 	const normalizeBase = (value) => {
 		if (!value || value === '/') return ''
@@ -19,8 +20,6 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 		if (pathname === base) return '/'
 		return pathname.startsWith(`${base}/`) ? pathname.slice(base.length) : pathname
 	}
-
-	const withBase = (pathname) => `${base}${pathname}` || '/'
 
 	const normalizePath = (pathname) => {
 		const normalized = pathname.startsWith('/') ? pathname : `/${pathname}`
@@ -37,15 +36,6 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 		return normalized === '/en/' ? '/' : normalized.replace(/^\/en\//, '/')
 	}
 
-	const getStoredLocale = () => {
-		try {
-			const stored = window.localStorage.getItem(STORAGE_KEY)
-			return SUPPORTED_LOCALES.includes(stored) ? stored : undefined
-		} catch {
-			return undefined
-		}
-	}
-
 	const setStoredLocale = (locale) => {
 		if (!SUPPORTED_LOCALES.includes(locale)) return
 
@@ -56,47 +46,121 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 		}
 	}
 
-	const canRedirectToEnglish = (contentPath) => {
-		if (contentPath === '/') return true
-		if (['/news/', '/reports/', '/reference/', '/tags/'].includes(contentPath)) return true
-		return (
-			contentPath.startsWith('/post/') ||
-			contentPath.startsWith('/category/') ||
-			contentPath.startsWith('/tags/')
+	const getScrollableHeight = () =>
+		Math.max(
+			document.documentElement.scrollHeight,
+			document.body?.scrollHeight ?? 0,
+			document.documentElement.clientHeight
 		)
-	}
 
-	const localizedPath = (locale, contentPath) => {
-		const normalized = normalizePath(contentPath)
-		return locale === DEFAULT_LOCALE ? normalized : `/en${normalized}`
-	}
-
-	const syncLocale = () => {
-		const currentLocale = getPathLocale(window.location.pathname)
-		const contentPath = stripLocale(window.location.pathname)
-
-		if (currentLocale === 'en') {
-			setStoredLocale('en')
-			return
+	const saveScrollPosition = (targetLocale) => {
+		const maxScroll = Math.max(1, getScrollableHeight() - window.innerHeight)
+		const saved = {
+			locale: targetLocale,
+			path: stripLocale(window.location.pathname),
+			y: window.scrollY,
+			ratio: window.scrollY / maxScroll,
+			time: Date.now()
 		}
 
-		const preferredLocale = getStoredLocale() ?? DEFAULT_LOCALE
-		if (preferredLocale !== 'en' || !canRedirectToEnglish(contentPath)) return
+		try {
+			window.sessionStorage.setItem(SCROLL_KEY, JSON.stringify(saved))
+		} catch {
+			// Ignore unavailable storage; navigation still works normally.
+		}
 
-		const targetPath = withBase(localizedPath('en', contentPath))
-		const target = `${targetPath}${window.location.search}${window.location.hash}`
-		window.location.replace(target)
+		pendingScrollRestore = saved
+		return saved
 	}
 
-	document.addEventListener('click', (event) => {
-		if (!(event.target instanceof Element)) return
+	const readSavedScrollPosition = () => {
+		if (pendingScrollRestore) return pendingScrollRestore
 
-		const switchLink = event.target.closest('[data-locale-switch]')
-		if (!(switchLink instanceof HTMLElement)) return
+		try {
+			const raw = window.sessionStorage.getItem(SCROLL_KEY)
+			return raw ? JSON.parse(raw) : null
+		} catch {
+			return null
+		}
+	}
 
-		setStoredLocale(switchLink.dataset.localeSwitch)
+	const clearSavedScrollPosition = () => {
+		pendingScrollRestore = null
+		try {
+			window.sessionStorage.removeItem(SCROLL_KEY)
+		} catch {
+			// Ignore unavailable storage; the pending in-memory value is already cleared.
+		}
+	}
+
+	const restoreScrollPosition = () => {
+		const saved = readSavedScrollPosition()
+
+		if (!saved || Date.now() - saved.time > 10000) return
+		if (saved.locale !== getPathLocale(window.location.pathname)) return
+		if (saved.path !== stripLocale(window.location.pathname)) return
+
+		const scrollWithoutSmooth = () => {
+			const maxScroll = Math.max(0, getScrollableHeight() - window.innerHeight)
+			if (maxScroll <= 0 && saved.y > 0) return false
+
+			const targetY = Math.min(saved.y ?? maxScroll * (saved.ratio ?? 0), maxScroll)
+			const root = document.documentElement
+			const previousBehavior = root.style.scrollBehavior
+
+			root.style.scrollBehavior = 'auto'
+			window.scrollTo({ top: targetY, left: 0, behavior: 'instant' })
+			root.style.scrollBehavior = previousBehavior
+			return Math.abs(window.scrollY - targetY) < 4
+		}
+
+		const clearWhenRestored = () => {
+			if (scrollWithoutSmooth()) clearSavedScrollPosition()
+		}
+
+		clearWhenRestored()
+		window.requestAnimationFrame(clearWhenRestored)
+		window.setTimeout(clearWhenRestored, 80)
+		window.setTimeout(clearWhenRestored, 180)
+		window.setTimeout(clearWhenRestored, 400)
+		window.setTimeout(clearWhenRestored, 800)
+		window.setTimeout(clearWhenRestored, 1200)
+	}
+
+	document.addEventListener(
+		'click',
+		(event) => {
+			if (!(event.target instanceof Element)) return
+
+			const switchLink = event.target.closest('a[data-locale-switch]')
+			if (!(switchLink instanceof HTMLAnchorElement)) return
+			if (event.defaultPrevented) return
+			if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+				return
+			if (switchLink.target && switchLink.target !== '_self') return
+
+			const targetLocale = switchLink.dataset.localeSwitch
+			setStoredLocale(targetLocale)
+
+			const targetUrl = new URL(switchLink.href, window.location.href)
+			if (targetUrl.href === window.location.href) {
+				event.preventDefault()
+				return
+			}
+
+			event.preventDefault()
+			saveScrollPosition(targetLocale)
+			Promise.resolve(navigate(targetUrl.href)).then(() => {
+				restoreScrollPosition()
+				window.setTimeout(restoreScrollPosition, 0)
+			})
+		},
+		{ capture: true }
+	)
+
+	window.addEventListener('pagereveal', restoreScrollPosition)
+	document.addEventListener('DOMContentLoaded', restoreScrollPosition)
+	document.addEventListener('astro:page-load', () => {
+		restoreScrollPosition()
 	})
-
-	document.addEventListener('astro:page-load', syncLocale)
-	syncLocale()
 </script>

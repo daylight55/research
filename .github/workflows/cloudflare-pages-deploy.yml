@@ -40,6 +40,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Check homepage news carousel
+        run: pnpm test:ui
+
       - name: Build
         run: pnpm build
 

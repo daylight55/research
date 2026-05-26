@@ -6,6 +6,7 @@ import ListRelatedPosts from '@/components/ListRelatedPosts'
 import FormattedDate from '@/components/FormattedDate'
 import Share from '@/components/Share'
 import TableOfContents from '@/components/TableOfContents'
+import MermaidRenderer from '@/components/MermaidRenderer'
 import { getPostSlug, getPostUrl, getPosts, localizedPath } from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import SourceNote from '@/components/mdx/SourceNote'
@@ -160,3 +161,5 @@ const disqusEnabled = disqusConfig.enabled
 
 	{disqusEnabled && <Disqus />}
 </BlogPost>
+
+<MermaidRenderer />

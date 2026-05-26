@@ -62,6 +62,22 @@ test('English Mermaid diagrams do not contain Japanese labels', async () => {
 	}
 })
 
+test('localized post pages include the shared Mermaid renderer', async () => {
+	const japanesePostPage = await readFile(
+		join(repoRoot.pathname, 'src/pages/post/[...slug].astro'),
+		'utf8'
+	)
+	const englishPostPage = await readFile(
+		join(repoRoot.pathname, 'src/pages/en/post/[...slug].astro'),
+		'utf8'
+	)
+
+	for (const source of [japanesePostPage, englishPostPage]) {
+		assert.match(source, /import MermaidRenderer from '@\/components\/MermaidRenderer'/)
+		assert.match(source, /<MermaidRenderer \/>/)
+	}
+})
+
 test('English reference pages mirror Japanese reference routes', async () => {
 	const japaneseReferencePages = (await readdir(referenceDir))
 		.filter((name) => name.endsWith('.astro') && name !== 'index.astro')

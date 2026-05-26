@@ -35,35 +35,59 @@ const graphData = JSON.stringify({ nodes, edges })
 
 <style>
 	.knowledge-graph {
+		--graph-cyan: 34, 211, 238;
+		--graph-pink: 244, 114, 182;
+		--graph-yellow: 250, 204, 21;
 		position: relative;
 		isolation: isolate;
-		border-color: rgba(34, 211, 238, 0.44);
+		border-color: rgba(var(--graph-cyan), 0.54);
 		background:
-			linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
-			linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px),
-			radial-gradient(circle at 50% 0%, rgba(236, 72, 153, 0.18), transparent 42%), #05070d;
+			linear-gradient(rgba(var(--graph-cyan), 0.16) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(var(--graph-cyan), 0.16) 1px, transparent 1px),
+			linear-gradient(rgba(var(--graph-cyan), 0.045) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(var(--graph-cyan), 0.045) 1px, transparent 1px),
+			linear-gradient(135deg, rgba(var(--graph-pink), 0.16), transparent 28%),
+			linear-gradient(315deg, rgba(var(--graph-yellow), 0.08), transparent 32%), #02050b;
 		background-size:
-			28px 28px,
-			28px 28px,
+			40px 40px,
+			40px 40px,
+			8px 8px,
+			8px 8px,
+			auto,
 			auto,
 			auto;
 		box-shadow:
-			0 0 0 1px rgba(236, 72, 153, 0.2),
+			0 0 0 1px rgba(var(--graph-pink), 0.26),
 			0 24px 70px rgba(2, 6, 23, 0.36),
-			inset 0 0 34px rgba(34, 211, 238, 0.12);
+			inset 0 0 0 1px rgba(var(--graph-cyan), 0.24),
+			inset 0 0 44px rgba(var(--graph-cyan), 0.14);
 		color-scheme: dark;
 	}
 
 	.knowledge-graph::before {
 		position: absolute;
-		inset: 0;
+		inset: 12px;
 		z-index: 0;
 		pointer-events: none;
 		content: '';
-		background: linear-gradient(transparent 50%, rgba(15, 23, 42, 0.36) 50%);
-		background-size: 100% 6px;
-		mix-blend-mode: screen;
-		opacity: 0.42;
+		background:
+			linear-gradient(rgba(var(--graph-cyan), 0.74), rgba(var(--graph-cyan), 0.74)) left top / 58px
+				1px no-repeat,
+			linear-gradient(rgba(var(--graph-cyan), 0.74), rgba(var(--graph-cyan), 0.74)) left top / 1px
+				58px no-repeat,
+			linear-gradient(rgba(var(--graph-cyan), 0.74), rgba(var(--graph-cyan), 0.74)) right top / 58px
+				1px no-repeat,
+			linear-gradient(rgba(var(--graph-cyan), 0.74), rgba(var(--graph-cyan), 0.74)) right top / 1px
+				58px no-repeat,
+			linear-gradient(rgba(var(--graph-pink), 0.72), rgba(var(--graph-pink), 0.72)) left bottom /
+				58px 1px no-repeat,
+			linear-gradient(rgba(var(--graph-pink), 0.72), rgba(var(--graph-pink), 0.72)) left bottom /
+				1px 58px no-repeat,
+			linear-gradient(rgba(var(--graph-yellow), 0.58), rgba(var(--graph-yellow), 0.58)) right
+				bottom / 58px 1px no-repeat,
+			linear-gradient(rgba(var(--graph-yellow), 0.58), rgba(var(--graph-yellow), 0.58)) right
+				bottom / 1px 58px no-repeat;
+		opacity: 0.84;
 	}
 
 	.knowledge-graph::after {
@@ -73,9 +97,10 @@ const graphData = JSON.stringify({ nodes, edges })
 		pointer-events: none;
 		content: '';
 		background:
-			linear-gradient(90deg, transparent, rgba(125, 211, 252, 0.13), transparent),
-			linear-gradient(180deg, rgba(250, 204, 21, 0.08), transparent 26%);
-		opacity: 0.72;
+			repeating-linear-gradient(0deg, transparent 0 5px, rgba(148, 163, 184, 0.09) 5px 6px),
+			linear-gradient(90deg, transparent, rgba(var(--graph-cyan), 0.18), transparent),
+			linear-gradient(180deg, rgba(var(--graph-yellow), 0.09), transparent 24%);
+		opacity: 0.76;
 	}
 
 	.knowledge-graph__canvas {
@@ -85,12 +110,37 @@ const graphData = JSON.stringify({ nodes, edges })
 		background: transparent;
 	}
 
+	.knowledge-graph__canvas::before {
+		position: absolute;
+		inset: 18px;
+		z-index: 0;
+		pointer-events: none;
+		content: '';
+		border: 1px solid rgba(var(--graph-cyan), 0.16);
+		background:
+			linear-gradient(
+				90deg,
+				transparent 0 49%,
+				rgba(var(--graph-cyan), 0.28) 49% 51%,
+				transparent 51%
+			),
+			linear-gradient(
+				0deg,
+				transparent 0 49%,
+				rgba(var(--graph-cyan), 0.18) 49% 51%,
+				transparent 51%
+			);
+	}
+
 	.knowledge-graph__caption {
 		position: relative;
 		z-index: 1;
-		border-top: 1px solid rgba(34, 211, 238, 0.32);
-		background: rgba(2, 6, 23, 0.88);
+		border-top: 1px solid rgba(var(--graph-cyan), 0.38);
+		background: rgba(2, 6, 23, 0.92);
 		color: rgb(165, 243, 252);
+		font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
 	}
 </style>
 
@@ -189,44 +239,45 @@ const graphData = JSON.stringify({ nodes, edges })
 					{
 						selector: 'node',
 						style: {
-							'background-color': '#07111f',
-							'border-color': '#22d3ee',
+							'background-color': '#06101d',
+							'border-color': '#67e8f9',
 							'border-width': 2,
 							color: '#e0f2fe',
 							label: 'data(label)',
 							'font-family': 'Manrope, ui-sans-serif, system-ui, sans-serif',
 							'font-size': 11,
-							'font-weight': 700,
-							height: 48,
+							'font-weight': 800,
+							height: 34,
 							'overlay-opacity': 0,
-							'shadow-blur': 16,
+							shape: 'round-rectangle',
+							'shadow-blur': 20,
 							'shadow-color': '#22d3ee',
-							'shadow-opacity': 0.42,
+							'shadow-opacity': 0.55,
 							'shadow-offset-x': 0,
 							'shadow-offset-y': 0,
 							'text-background-color': '#020617',
-							'text-background-opacity': 0.78,
-							'text-background-padding': 4,
-							'text-max-width': 96,
+							'text-background-opacity': 0,
+							'text-background-padding': 2,
+							'text-max-width': 112,
 							'text-outline-color': '#020617',
-							'text-outline-width': 2,
+							'text-outline-width': 3,
 							'text-valign': 'center',
 							'text-wrap': 'wrap',
-							width: 48
+							width: 74
 						}
 					},
 					{
 						selector: 'node[role = "hub"]',
 						style: {
-							'background-color': '#101827',
+							'background-color': '#0f172a',
 							'border-color': '#f0fdfa',
 							'border-width': 3,
 							color: '#f8fafc',
-							height: 64,
-							'shadow-blur': 26,
+							height: 50,
+							'shadow-blur': 30,
 							'shadow-color': '#67e8f9',
-							'shadow-opacity': 0.7,
-							width: 64
+							'shadow-opacity': 0.86,
+							width: 92
 						}
 					},
 					{
@@ -235,11 +286,10 @@ const graphData = JSON.stringify({ nodes, edges })
 							'background-color': '#2a1022',
 							'border-color': '#f472b6',
 							color: '#fff1f2',
-							shape: 'round-rectangle',
-							height: 54,
+							height: 58,
 							'shadow-color': '#f472b6',
-							'shadow-opacity': 0.5,
-							width: 64
+							'shadow-opacity': 0.64,
+							width: 90
 						}
 					},
 					{
@@ -248,14 +298,16 @@ const graphData = JSON.stringify({ nodes, edges })
 							color: '#a5f3fc',
 							'curve-style': 'bezier',
 							'line-color': '#22d3ee',
-							'line-opacity': 0.68,
+							'line-opacity': 0.78,
 							'overlay-opacity': 0,
-							'shadow-blur': 12,
+							'shadow-blur': 18,
 							'shadow-color': '#22d3ee',
-							'shadow-opacity': 0.3,
+							'shadow-opacity': 0.46,
+							'target-arrow-fill': 'filled',
 							'target-arrow-color': '#67e8f9',
 							'target-arrow-shape': 'triangle',
-							width: 'mapData(weight, 1, 6, 1.5, 4)'
+							'arrow-scale': 0.9,
+							width: 'mapData(weight, 1, 6, 2, 5)'
 						}
 					},
 					{

@@ -23,6 +23,11 @@ function hasProp(block, prop) {
 	return new RegExp(`\\b${prop}=(['"])\\S[\\s\\S]*?\\1`).test(block)
 }
 
+function readProp(block, prop) {
+	const match = block.match(new RegExp(`\\b${prop}=(['"])([\\s\\S]*?)\\1`))
+	return match?.[2] ?? ''
+}
+
 test('published news articles provide images for every NewsSourceCard', () => {
 	const files = execFileSync('git', ['ls-files', 'articles/news/*/index.mdx'], { encoding: 'utf8' })
 		.split('\n')
@@ -51,6 +56,17 @@ test('published news articles provide images for every NewsSourceCard', () => {
 				!/imageUrl=(['"])data:image\//.test(card),
 				`${file} NewsSourceCard ${index + 1} should use a real article, official, web, or Unsplash image`
 			)
+			assert.ok(
+				!/^https:\/\/source\.unsplash\.com\//.test(readProp(card, 'imageUrl')),
+				`${file} NewsSourceCard ${index + 1} should not use deprecated source.unsplash.com dynamic image URLs`
+			)
 		})
 	}
+})
+
+test('NewsSourceCard falls back when remote card images fail to load', () => {
+	const component = readFileSync('src/components/mdx/NewsSourceCard.astro', 'utf8')
+
+	assert.match(component, /data-fallback-src=\{fallbackImage\}/)
+	assert.match(component, /onerror=['"]this\.onerror=null; this\.src=this\.dataset\.fallbackSrc['"]/)
 })

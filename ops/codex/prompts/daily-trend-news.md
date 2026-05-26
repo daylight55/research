@@ -43,7 +43,7 @@ policy / technical decisions.
   template.
 - Wrap the politics, economy, and technology blocks with `NewsDigestSection`.
 - For each individual topic, render source attribution with a `NewsSourceCard`
-  immediately after the `何が起きたか` / `なぜ重要か` / `実務への含意`
+  immediately after the `何が起きたか` / `なぜ重要か` / `今後の注視点`
   paragraphs. Do not leave a plain `出典メモ:` text line in News digests.
 - Do not create `report.md` or another second copy of the same article body.
 - If a public research trail is useful, put it in
@@ -136,7 +136,8 @@ For each of the fifteen topic items, include:
   `政治 1.`, `経済 2.`, or `技術 3.`
 - `何が起きたか`
 - `なぜ重要か`
-- `実務への含意`
+- `今後の注視点`: the reader-facing takeaway should explain what to monitor next
+  after this news, not a generic business action item.
 - one `NewsSourceCard` source memo card
 
 Use this component shape after each topic item:

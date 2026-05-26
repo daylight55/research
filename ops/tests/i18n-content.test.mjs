@@ -141,7 +141,7 @@ test('Codex translation workflow exists for missing English articles', async () 
 	assert.match(prompt, /Mermaid diagram labels/)
 	assert.match(prompt, /news digest articles/)
 	assert.match(prompt, /What happened:/)
-	assert.match(prompt, /Implications for practice:/)
+	assert.match(prompt, /What to watch:/)
 	assert.match(prompt, /Reference pages/)
 })
 

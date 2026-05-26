@@ -55,8 +55,9 @@ test('translated news digest labels stay paragraph-separated', () => {
 		.map((line) => line.trim())
 		.filter(Boolean)
 
-	const digestLabelRe = /^(What happened|Why it matters|Implications for practice):/
-	const staleLabelRe = /^(What Happened|Why it's important|Practical Implications):/
+	const digestLabelRe = /^(What happened|Why it matters|What to watch):/
+	const staleLabelRe =
+		/^(What Happened|Why it's important|Implications for practice|Practical implication|Practical Implications):/
 
 	for (const file of files) {
 		const source = readFileSync(file, 'utf8')
@@ -81,5 +82,30 @@ test('translated news digest labels stay paragraph-separated', () => {
 				`${file}:${index + 1} should have a blank line before news digest labels and cards`
 			)
 		}
+	}
+})
+
+test('news digests use forward-looking watch labels instead of practice implication labels', () => {
+	const files = execFileSync('git', ['ls-files', 'articles/news/*/index.mdx', 'articles/news/en/*/index.mdx'], {
+		encoding: 'utf8'
+	})
+		.split('\n')
+		.map((line) => line.trim())
+		.filter(Boolean)
+
+	for (const file of files) {
+		const source = readFileSync(file, 'utf8')
+		const frontmatter = frontmatterOf(source, file)
+		if (readScalar(frontmatter, 'contentType') !== 'news') continue
+		if (readScalar(frontmatter, 'draft') === 'true') continue
+
+		assert.doesNotMatch(
+			source,
+			/^(業務への含意|実務への含意|Implications for practice|Practical implication):/m,
+			`${file} should not use stale practice implication labels`
+		)
+
+		const expectedLabel = file.includes('/en/') ? 'What to watch:' : '今後の注視点:'
+		assert.match(source, new RegExp(`^${expectedLabel}`, 'm'), `${file} should use ${expectedLabel}`)
 	}
 })

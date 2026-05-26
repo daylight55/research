@@ -9,15 +9,23 @@ import {
 type Props = {
 	label: string
 	locale: Locale
+	wikipediaLocale?: Locale
 	searchQuery?: string
 	validationKeywords?: string[]
 }
 
-const { label, locale, searchQuery = label, validationKeywords = [] } = Astro.props
+const {
+	label,
+	locale,
+	wikipediaLocale = locale,
+	searchQuery = label,
+	validationKeywords = []
+} = Astro.props
 const isEnglish = locale === 'en'
-const wikipediaUrl = createWikipediaUrl(searchQuery, locale)
-const searchApiUrl = createWikipediaSearchApiUrl(searchQuery, locale, 5)
-const summaryApiUrlTemplate = createWikipediaSummaryApiUrl('__TITLE__', locale).replace(
+const wikipediaIsEnglish = wikipediaLocale === 'en'
+const wikipediaUrl = createWikipediaUrl(searchQuery, wikipediaLocale)
+const searchApiUrl = createWikipediaSearchApiUrl(searchQuery, wikipediaLocale, 5)
+const summaryApiUrlTemplate = createWikipediaSummaryApiUrl('__TITLE__', wikipediaLocale).replace(
 	'__TITLE__',
 	'__TITLE__'
 )
@@ -42,7 +50,16 @@ const validationKeywordText = validationKeywords.join('|')
 	data-error-text={isEnglish
 		? 'External context could not be loaded. Use the search link to inspect Wikipedia directly.'
 		: '外部コンテキストを読み込めませんでした。検索リンクからWikipediaを直接確認してください。'}
-	data-source-label={isEnglish ? 'Wikipedia summary' : 'Wikipedia概要'}
+	data-source-label={isEnglish
+		? 'Wikipedia summary'
+		: wikipediaIsEnglish
+			? 'English Wikipedia'
+			: 'Wikipedia'}
+	data-llm-summary-label={isEnglish ? 'LLM Summary' : 'LLM要約'}
+	data-summary-fallback-label={isEnglish ? 'Summary' : '要約'}
+	data-summary-unavailable-text={isEnglish
+		? 'Local LLM summarization is unavailable in this browser, so this is a simplified summary from the Wikipedia extract.'
+		: 'このブラウザではローカルLLM要約を利用できないため、Wikipedia概要から簡易要約しています。'}
 	data-fit-label={isEnglish ? 'Category Fit' : 'カテゴリ整合性'}
 	data-fit-match-label={isEnglish ? 'Matched' : '一致候補'}
 	data-fit-review-label={isEnglish ? 'Review' : '要確認'}
@@ -128,7 +145,50 @@ const validationKeywordText = validationKeywords.join('|')
 		container.append(paragraph)
 	}
 
-	const renderSummary = (
+	const splitSummarySentences = (text = '') =>
+		text
+			.split(/(?<=[。！？!?])\s*|(?<=[.!?])\s+/)
+			.map((sentence) => sentence.trim())
+			.filter(Boolean)
+
+	const createFallbackSummary = (extract) => splitSummarySentences(extract).slice(0, 2).join(' ')
+
+	const createContextSummary = async (root, extract) => {
+		const fallback = {
+			label: root.dataset.summaryFallbackLabel,
+			text: createFallbackSummary(extract),
+			note: root.dataset.summaryUnavailableText
+		}
+
+		if (!('Summarizer' in self)) return fallback
+
+		const options = {
+			type: 'key-points',
+			format: 'plain-text',
+			length: 'short'
+		}
+
+		try {
+			const availability = await self.Summarizer.availability(options)
+			if (availability !== 'available') return fallback
+
+			const summarizer = await self.Summarizer.create(options)
+			const text = await summarizer.summarize(extract, {
+				context: root.dataset.label
+			})
+			await summarizer.destroy?.()
+
+			return {
+				label: root.dataset.llmSummaryLabel,
+				text: text || fallback.text,
+				note: ''
+			}
+		} catch {
+			return fallback
+		}
+	}
+
+	const renderSummary = async (
 		root,
 		resultContainer,
 		summary,
@@ -169,7 +229,28 @@ const validationKeywordText = validationKeywords.join('|')
 		const matchedText = matchedKeywords.length > 0 ? `: ${matchedKeywords.join(', ')}` : ''
 		fit.textContent = `${root.dataset.fitLabel}: ${fitState}${matchedText}`
 
-		figure.append(blockquote, figcaption, fit)
+		const contextSummary = await createContextSummary(root, extract)
+		const summaryBox = document.createElement('div')
+		summaryBox.className = 'grid gap-1 rounded-md bg-black/[0.03] p-3 dark:bg-white/[0.04]'
+
+		const summaryTitle = document.createElement('p')
+		summaryTitle.className =
+			'text-xs font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400'
+		summaryTitle.textContent = contextSummary.label
+
+		const summaryParagraph = document.createElement('p')
+		summaryParagraph.className = 'text-sm leading-7 text-gray-700 dark:text-gray-300'
+		summaryParagraph.textContent = contextSummary.text
+		summaryBox.append(summaryTitle, summaryParagraph)
+
+		if (contextSummary.note) {
+			const note = document.createElement('p')
+			note.className = 'text-xs leading-5 text-gray-500 dark:text-gray-400'
+			note.textContent = contextSummary.note
+			summaryBox.append(note)
+		}
+
+		figure.append(blockquote, figcaption, summaryBox, fit)
 		resultContainer.append(figure)
 
 		const alternatives = candidates
@@ -239,7 +320,7 @@ const validationKeywordText = validationKeywords.join('|')
 
 				const selected = scoredCandidates.sort((a, b) => b.score - a.score)[0]
 				if (!selected) throw new Error('Wikipedia summary failed')
-				renderSummary(
+				await renderSummary(
 					root,
 					resultContainer,
 					selected.summary,

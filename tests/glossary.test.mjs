@@ -8,6 +8,7 @@ import {
 	createWikipediaSummaryApiUrl,
 	createWikipediaValidationKeywords,
 	extractGlossaryTermsFromMarkdown,
+	getWikipediaLocaleForLabel,
 	groupGlossaryTermsByCategory,
 	linkFirstGlossaryMentions
 } from '../src/utils/glossary.ts'
@@ -49,8 +50,9 @@ test('builds a glossary index with post counts and related terms', () => {
 	const mcp = index.terms.find((term) => term.slug === 'mcp')
 	assert.equal(mcp?.postCount, 1)
 	assert.match(mcp?.explanation ?? '', /Graphiti と MCP の関係/)
+	assert.equal(mcp?.wikipediaLocale, 'en')
 	assert.equal(mcp?.wikipediaSearchQuery, 'MCP')
-	assert.equal(mcp?.wikipediaUrl, 'https://ja.wikipedia.org/wiki/Special:Search?search=MCP')
+	assert.equal(mcp?.wikipediaUrl, 'https://en.wikipedia.org/wiki/Special:Search?search=MCP')
 	assert.deepEqual(
 		mcp?.contexts.slice(0, 1).map((context) => context.postId),
 		['graphiti-mcp-memory']
@@ -121,6 +123,16 @@ test('creates Wikipedia API URLs for external glossary context', () => {
 		createWikipediaSummaryApiUrl('Model Context Protocol', 'en'),
 		'https://en.wikipedia.org/api/rest_v1/page/summary/Model%20Context%20Protocol?redirect=true'
 	)
+})
+
+test('selects English Wikipedia for English glossary labels', () => {
+	assert.equal(getWikipediaLocaleForLabel('Ontology'), 'en')
+	assert.equal(getWikipediaLocaleForLabel('MCP'), 'en')
+	assert.equal(getWikipediaLocaleForLabel('Knowledge Graph'), 'en')
+	assert.equal(getWikipediaLocaleForLabel('OAuth 2.1'), 'en')
+	assert.equal(getWikipediaLocaleForLabel('MCP サーバー'), 'ja')
+	assert.equal(getWikipediaLocaleForLabel('オントロジー'), 'ja')
+	assert.equal(getWikipediaLocaleForLabel('オントロジー', 'en'), 'en')
 })
 
 test('builds context-aware Wikipedia search queries and validation keywords', () => {

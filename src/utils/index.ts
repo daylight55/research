@@ -24,6 +24,7 @@ export {
 	createWikipediaUrl,
 	createWikipediaValidationKeywords,
 	extractGlossaryTermsFromMarkdown,
+	getWikipediaLocaleForLabel,
 	groupGlossaryTermsByCategory,
 	linkFirstGlossaryMentions
 } from './glossary'

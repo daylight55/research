@@ -38,6 +38,7 @@ export type GlossaryIndexTerm = {
 	postCount: number
 	explanation: string
 	wikipediaUrl: string
+	wikipediaLocale: WikipediaLocale
 	wikipediaSearchQuery: string
 	wikipediaValidationKeywords: string[]
 	contexts: GlossaryTermContext[]
@@ -56,10 +57,12 @@ export type GlossaryCategoryGroup = {
 }
 
 type GlossaryLocale = 'ja' | 'en'
+export type WikipediaLocale = 'ja' | 'en'
 
 const MAX_TERMS_PER_ARTICLE = 6
 const MAX_RELATED_TERMS = 12
 const MAX_WIKIPEDIA_CONTEXT_KEYWORDS = 8
+const ENGLISH_WIKIPEDIA_LABEL_PATTERN = /^[A-Za-z0-9][A-Za-z0-9 .+#&'():-]*$/
 
 const CATEGORY_WIKIPEDIA_CONTEXT_EN: Record<string, string[]> = {
 	'ai-systems': [
@@ -509,6 +512,17 @@ const getWikipediaCategoryKeywords = (categories: string[], locale: GlossaryLoca
 	return uniqueValues(categories.flatMap((category) => contextMap[category] ?? [category]))
 }
 
+const isEnglishWikipediaLabel = (label: string) =>
+	ENGLISH_WIKIPEDIA_LABEL_PATTERN.test(normalizeWhitespace(label))
+
+export const getWikipediaLocaleForLabel = (
+	label: string,
+	locale: GlossaryLocale = 'ja'
+): WikipediaLocale => {
+	if (locale === 'en') return 'en'
+	return isEnglishWikipediaLabel(label) ? 'en' : 'ja'
+}
+
 const getTermTitleKeywords = (term: Pick<GlossaryIndexTerm, 'posts'>) =>
 	uniqueValues(
 		term.posts
@@ -520,7 +534,7 @@ const getTermTitleKeywords = (term: Pick<GlossaryIndexTerm, 'posts'>) =>
 
 export const createWikipediaValidationKeywords = (
 	term: Pick<GlossaryIndexTerm, 'label' | 'posts' | 'relatedTerms'>,
-	locale: GlossaryLocale = 'ja'
+	locale: WikipediaLocale = 'ja'
 ) => {
 	const categories = getTermCategories(term)
 	const categoryKeywords = getWikipediaCategoryKeywords(categories, locale)
@@ -537,20 +551,20 @@ export const createWikipediaValidationKeywords = (
 
 export const createWikipediaSearchQuery = (
 	term: Pick<GlossaryIndexTerm, 'label' | 'posts' | 'relatedTerms'>,
-	locale: GlossaryLocale = 'ja'
+	locale: WikipediaLocale = 'ja'
 ) => {
 	void locale
 	return term.label
 }
 
-export const createWikipediaUrl = (label: string, locale: GlossaryLocale = 'ja') => {
+export const createWikipediaUrl = (label: string, locale: WikipediaLocale = 'ja') => {
 	const wikipediaLocale = locale === 'en' ? 'en' : 'ja'
 	return `https://${wikipediaLocale}.wikipedia.org/wiki/Special:Search?search=${encodeURIComponent(label)}`
 }
 
 export const createWikipediaSearchApiUrl = (
 	label: string,
-	locale: GlossaryLocale = 'ja',
+	locale: WikipediaLocale = 'ja',
 	limit = 5
 ) => {
 	const wikipediaLocale = locale === 'en' ? 'en' : 'ja'
@@ -565,7 +579,7 @@ export const createWikipediaSearchApiUrl = (
 	return `https://${wikipediaLocale}.wikipedia.org/w/api.php?${params.toString()}`
 }
 
-export const createWikipediaSummaryApiUrl = (title: string, locale: GlossaryLocale = 'ja') => {
+export const createWikipediaSummaryApiUrl = (title: string, locale: WikipediaLocale = 'ja') => {
 	const wikipediaLocale = locale === 'en' ? 'en' : 'ja'
 	return `https://${wikipediaLocale}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}?redirect=true`
 }
@@ -643,13 +657,15 @@ export function buildGlossaryIndex(
 				}
 			} else {
 				termOrder.set(term.slug, termOrder.size)
+				const wikipediaLocale = getWikipediaLocaleForLabel(term.label, locale)
 				bySlug.set(term.slug, {
 					label: term.label,
 					slug: term.slug,
 					count: term.count,
 					postCount: 1,
 					explanation: '',
-					wikipediaUrl: createWikipediaUrl(term.label, locale),
+					wikipediaUrl: createWikipediaUrl(term.label, wikipediaLocale),
+					wikipediaLocale,
 					wikipediaSearchQuery: term.label,
 					wikipediaValidationKeywords: [],
 					contexts: context ? [context] : [],
@@ -687,9 +703,10 @@ export function buildGlossaryIndex(
 					a.label.localeCompare(b.label)
 			)
 			.slice(0, MAX_RELATED_TERMS)
-		term.wikipediaValidationKeywords = createWikipediaValidationKeywords(term, locale)
-		term.wikipediaSearchQuery = createWikipediaSearchQuery(term, locale)
-		term.wikipediaUrl = createWikipediaUrl(term.wikipediaSearchQuery, locale)
+		term.wikipediaLocale = getWikipediaLocaleForLabel(term.label, locale)
+		term.wikipediaValidationKeywords = createWikipediaValidationKeywords(term, term.wikipediaLocale)
+		term.wikipediaSearchQuery = createWikipediaSearchQuery(term, term.wikipediaLocale)
+		term.wikipediaUrl = createWikipediaUrl(term.wikipediaSearchQuery, term.wikipediaLocale)
 	}
 
 	const terms = Array.from(bySlug.values()).sort(

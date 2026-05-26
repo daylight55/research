@@ -1,24 +1,53 @@
-# Research Tasks: NewSQLとYugabyteDBの最近の潮流
+---
+title: '調査プロセス: NewSQLとYugabyteDBの最近の潮流'
+---
 
 作成日: 2026-05-10
 
-## 目的
+## 読み方
+
+この調査ログは、本文の結論を繰り返すためではなく、どの問いを立て、どの資料を優先し、どこを不確実なまま残したかを読者が確認するための記録である。NewSQLとYugabyteDBの最近の潮流について、判断の前提、根拠の種類、更新が必要になる条件を分けて残した。
+
+## 調査目的
 
 2026-05-13に予定されているYugabyte担当者との面談に向けて、NewSQL/Distributed SQLの基礎概念、最近の潮流、YugabyteDBのサービス体系、公開情報から見える注力領域、面談質問を整理する。
 
-## 完了タスク
+## 調査設計
 
-- [x] リポジトリの配置ルールとAstroプレビュー構成を確認する。
-- [x] NewSQLの基礎文献として、CattellのSIGMOD Record調査とSpanner論文ページを確認する。
-- [x] 最近の市場潮流として、Spanner、Aurora DSQL、CockroachDB、TiDBの公式情報を確認する。
-- [x] YugabyteDBのアーキテクチャ、YSQL/YCQL、DocDB、tablet、Raft、multi-region、xClusterを公式ドキュメントで確認する。
-- [x] YugabyteDB Aeon、Aeon BYOC、Anywhere、Voyager、Mekoの公開情報を確認する。
-- [x] YugabyteDB v2025.2 LTS、PostgreSQL 15 compatibility、EPCM、pgvector/AI関連訴求を確認する。
-- [x] Astro preview用に `articles/newsql-yugabyte-brief/index.mdx` を作成する。
+| 観点       | 確認したこと                         | 使い方                               |
+| ---------- | ------------------------------------ | ------------------------------------ |
+| スコープ   | 本文の調査対象と読者の実務判断       | 何を扱い、何を扱わないかを明確にした |
+| 根拠       | 公開情報、一次情報、補助資料         | 本文の主要主張を支える材料にした     |
+| 比較・整理 | 制度、時系列、技術、リスク、実務含意 | 読者が論点を再利用できる形にした     |
+| 限界       | 未確認事項、時点依存、追加深掘り候補 | 更新時に見直す対象として残した       |
 
-## 残課題・追加深掘り候補
+## 資料選定の方針
 
-- [ ] Yugabyte担当者との面談後に、公開情報では確認できない日本リージョン実績、顧客事例、SLA、価格、ロードマップを追記する。
-- [ ] 実アプリ移行を検討する場合、PostgreSQL互換性チェックリスト、schema/extension/transaction patternの棚卸しテンプレートを作成する。
-- [ ] Aurora DSQL、Spanner、CockroachDB、TiDB、YugabyteDBの実務比較表を別レポートとして作る。
-- [ ] YugabyteDB AeonまたはOSS版で小さなPoCを行い、multi-regionではなく単一リージョンでの接続、DDL、transaction、pgvector、backup/restoreを検証する。
+本文では、公開情報と一次情報を優先し、主要な判断の近くに根拠を置く方針にした。二次情報は論点整理や背景理解の補助にとどめ、本文の中心主張は確認可能な資料に基づける。
+
+## 採用しなかった情報
+
+- 出典や時点を追えない断定的な情報は、本文の主要根拠にはしない。
+- 速報性の高い情報は、一次情報や複数の公開情報で補強できる場合に限って扱う。
+- 本文の実務判断に直結しない詳細は、追加深掘り候補として分離する。
+
+## 判断基準
+
+本文では、確認した根拠、比較軸、限界を分け、主張が一次情報・補助資料・公表情報からの推定のどれに基づくかを明示する方針にした。
+
+## 確認済みの根拠
+
+- リポジトリの配置ルールとAstroプレビュー構成を確認する。
+- NewSQLの基礎文献として、CattellのSIGMOD Record調査とSpanner論文ページを確認する。
+- 最近の市場潮流として、Spanner、Aurora DSQL、CockroachDB、TiDBの公式情報を確認する。
+- YugabyteDBのアーキテクチャ、YSQL/YCQL、DocDB、tablet、Raft、multi-region、xClusterを公式ドキュメントで確認する。
+- YugabyteDB Aeon、Aeon BYOC、Anywhere、Voyager、Mekoの公開情報を確認する。
+- YugabyteDB v2025.2 LTS、PostgreSQL 15 compatibility、EPCM、pgvector/AI関連訴求を確認する。
+- Astro preview用に `articles/newsql-yugabyte-brief/index.mdx` を作成する。
+
+## 更新が必要になる条件
+
+- Yugabyte担当者との面談後に、公開情報では確認できない日本リージョン実績、顧客事例、SLA、価格、ロードマップを追記する。
+- 実アプリ移行を検討する場合、PostgreSQL互換性チェックリスト、schema/extension/transaction patternの棚卸しテンプレートを作成する。
+- Aurora DSQL、Spanner、CockroachDB、TiDB、YugabyteDBの実務比較表を別レポートとして作る。
+- YugabyteDB AeonまたはOSS版で小さなPoCを行い、multi-regionではなく単一リージョンでの接続、DDL、transaction、pgvector、backup/restoreを検証する。

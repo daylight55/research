@@ -16,7 +16,7 @@ import { getReferenceItems } from '@/data/references'
 import { siteConfig } from '@/site-config'
 import { Image } from 'astro:assets'
 
-const latestNewsPosts = await getNewsPosts(4)
+const latestNewsPosts = await getNewsPosts(12)
 const reportPosts = await getReportPosts()
 const referenceItems = getReferenceItems('ja')
 ---
@@ -60,21 +60,21 @@ const referenceItems = getReferenceItems('ja')
 		</div>
 		{
 			latestNewsPosts.length > 0 ? (
-				<div class='min-w-0 max-w-full'>
-					<div class='grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4'>
+				<div class='min-w-0 max-w-full overflow-x-auto overscroll-x-contain pb-2'>
+					<div class='flex snap-x snap-mandatory flex-nowrap gap-4'>
 						{latestNewsPosts.map((post) => (
 							<a
 								href={withBase(`/post/${getPostSlug(post)}/`)}
 								class={cn(
-									'group grid min-h-full grid-rows-[auto_1fr] overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30',
+									'group grid flex-[0_0_100%] snap-start grid-rows-[auto_1fr] overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 md:flex-[0_0_calc((100%_-_1rem)/2)] xl:flex-[0_0_calc((100%_-_2rem)/3)]',
 									getCategorySurfaceClass(post.data.category)
 								)}
 							>
 								<div class='aspect-[16/9] overflow-hidden'>
 									<Image
 										src={post.data.heroImage}
-										width={420}
-										height={236}
+										width={520}
+										height={292}
 										format='webp'
 										class='h-full w-full object-cover transition duration-200 group-hover:scale-[101%]'
 										alt={post.data.heroImageAlt ?? `img of ${post.data.title}`}
@@ -96,7 +96,7 @@ const referenceItems = getReferenceItems('ja')
 										<h3 class='line-clamp-2 text-base font-semibold leading-6 text-gray-900 dark:text-gray-100'>
 											{post.data.title}
 										</h3>
-										<p class='line-clamp-2 text-sm leading-6 text-gray-700 dark:text-gray-300'>
+										<p class='line-clamp-3 text-sm leading-6 text-gray-700 dark:text-gray-300'>
 											{post.data.rssSummary ?? post.data.description}
 										</p>
 									</div>

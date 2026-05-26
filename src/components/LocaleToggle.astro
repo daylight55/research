@@ -7,6 +7,9 @@ const { locale = DEFAULT_LOCALE, variant = 'header' } = Astro.props as {
 }
 
 const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
+const targetLocale = locale === 'ja' ? 'en' : 'ja'
+const targetHref = localizedPath(targetLocale, currentContentPath)
+const targetLabel = targetLocale === 'ja' ? 'Japanese' : 'English'
 const isFloating = variant === 'floating'
 const navClass = isFloating
 	? 'fixed bottom-4 left-1/2 z-40 -translate-x-1/2 sm:bottom-5'
@@ -28,21 +31,21 @@ const activeClass = 'text-white dark:text-black'
 	<div class={controlClass} role='radiogroup' aria-label='Language'>
 		<span class:list={indicatorClass} aria-hidden='true'></span>
 		<a
-			href={localizedPath('ja', currentContentPath)}
-			data-locale-switch='ja'
+			href={targetHref}
+			data-locale-switch={targetLocale}
 			role='radio'
 			aria-checked={locale === 'ja'}
-			aria-label='Switch to Japanese'
+			aria-label={`Switch to ${targetLabel}`}
 			class:list={[linkClass, locale === 'ja' ? activeClass : inactiveClass]}
 		>
 			JA
 		</a>
 		<a
-			href={localizedPath('en', currentContentPath)}
-			data-locale-switch='en'
+			href={targetHref}
+			data-locale-switch={targetLocale}
 			role='radio'
 			aria-checked={locale === 'en'}
-			aria-label='Switch to English'
+			aria-label={`Switch to ${targetLabel}`}
 			class:list={[linkClass, locale === 'en' ? activeClass : inactiveClass]}
 		>
 			EN

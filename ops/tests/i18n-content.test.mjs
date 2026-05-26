@@ -156,6 +156,10 @@ test('preferred locale provider defaults to Japanese and persists manual switche
 		join(repoRoot.pathname, 'src/components/FloatingLocaleSwitch.astro'),
 		'utf8'
 	)
+	const localeToggle = await readFile(
+		join(repoRoot.pathname, 'src/components/LocaleToggle.astro'),
+		'utf8'
+	)
 
 	assert.match(layout, /<ProviderLocale\s*\/>/)
 	assert.match(layout, /<FloatingLocaleSwitch\s+locale=\{locale\}\s*\/>/)
@@ -166,13 +170,13 @@ test('preferred locale provider defaults to Japanese and persists manual switche
 	assert.match(provider, /window\.location\.replace/)
 	assert.match(provider, /window\.location\.replace/)
 	assert.match(provider, /canRedirectToEnglish/)
-	assert.match(header, /data-locale-switch='ja'/)
-	assert.match(header, /data-locale-switch='en'/)
+	assert.match(header, /<LocaleToggle\s+locale=\{locale\}\s*\/>/)
 	assert.doesNotMatch(header, /transition:persist='navbar'/)
-	assert.match(floatingSwitch, /aria-label='Language'/)
-	assert.match(floatingSwitch, /fixed bottom-4 right-4/)
-	assert.match(floatingSwitch, /localizedPath\('ja', currentContentPath\)/)
-	assert.match(floatingSwitch, /localizedPath\('en', currentContentPath\)/)
-	assert.match(floatingSwitch, /data-locale-switch='ja'/)
-	assert.match(floatingSwitch, /data-locale-switch='en'/)
+	assert.match(floatingSwitch, /<LocaleToggle\s+locale=\{locale\}\s+variant='floating'\s*\/>/)
+	assert.match(localeToggle, /aria-label='Language'/)
+	assert.match(localeToggle, /data-locale-switch='ja'/)
+	assert.match(localeToggle, /data-locale-switch='en'/)
+	assert.match(localeToggle, /localizedPath\('ja', currentContentPath\)/)
+	assert.match(localeToggle, /localizedPath\('en', currentContentPath\)/)
+	assert.match(localeToggle, /fixed bottom-4 left-1\/2/)
 })

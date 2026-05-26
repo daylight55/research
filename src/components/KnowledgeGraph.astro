@@ -45,6 +45,55 @@ const graphData = JSON.stringify({ nodes, edges })
 		return cytoscapeLoader
 	}
 
+	const hashString = (value) => {
+		let hash = 0
+		for (let index = 0; index < value.length; index += 1) {
+			hash = (hash * 31 + value.charCodeAt(index)) >>> 0
+		}
+		return hash
+	}
+
+	const getStablePositions = (nodes) => {
+		const center = { x: 0, y: 0 }
+		if (nodes.length === 0) return new Map()
+		if (nodes.length === 1) return new Map([[nodes[0].id, center]])
+
+		const positions = new Map([[nodes[0].id, center]])
+		const relatedNodes = nodes.slice(1).filter((node) => (node.kind ?? 'term') !== 'post')
+		const postNodes = nodes.slice(1).filter((node) => (node.kind ?? 'term') === 'post')
+		const hasHub = relatedNodes.length + postNodes.length === nodes.length - 1
+
+		if (!hasHub || nodes.length > 18) {
+			const columns = Math.ceil(Math.sqrt(nodes.length))
+			const spacing = 132
+			const offsetX = ((columns - 1) * spacing) / 2
+			nodes
+				.slice()
+				.sort((a, b) => hashString(a.id) - hashString(b.id) || a.id.localeCompare(b.id))
+				.forEach((node, index) => {
+					positions.set(node.id, {
+						x: (index % columns) * spacing - offsetX,
+						y: Math.floor(index / columns) * spacing
+					})
+				})
+			return positions
+		}
+
+		const placeOnRing = (ringNodes, radius, startAngle) => {
+			ringNodes.forEach((node, index) => {
+				const angle = startAngle + (Math.PI * 2 * index) / Math.max(ringNodes.length, 1)
+				positions.set(node.id, {
+					x: Math.cos(angle) * radius,
+					y: Math.sin(angle) * radius
+				})
+			})
+		}
+
+		placeOnRing(relatedNodes, 150, -Math.PI / 2)
+		placeOnRing(postNodes, 270, -Math.PI / 2 + Math.PI / Math.max(postNodes.length, 2))
+		return positions
+	}
+
 	const initKnowledgeGraphs = async () => {
 		const cytoscape = await loadCytoscape()
 		document.querySelectorAll<HTMLElement>('[data-knowledge-graph]').forEach((container) => {
@@ -54,6 +103,7 @@ const graphData = JSON.stringify({ nodes, edges })
 
 			const graph = JSON.parse(dataScript.dataset.graph)
 			const isDark = document.documentElement.classList.contains('dark')
+			const positions = getStablePositions(graph.nodes)
 
 			const cy = cytoscape({
 				container,
@@ -65,7 +115,8 @@ const graphData = JSON.stringify({ nodes, edges })
 							description: node.description,
 							href: node.href,
 							kind: node.kind ?? 'term'
-						}
+						},
+						position: positions.get(node.id)
 					})),
 					...graph.edges.map((edge) => ({
 						data: {
@@ -124,15 +175,9 @@ const graphData = JSON.stringify({ nodes, edges })
 					}
 				],
 				layout: {
-					name: 'cose',
-					animate: !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-					animationDuration: 350,
-					componentSpacing: 72,
+					name: 'preset',
 					fit: true,
-					idealEdgeLength: 112,
-					nodeOverlap: 18,
-					padding: 42,
-					randomize: false
+					padding: 42
 				},
 				maxZoom: 2.5,
 				minZoom: 0.25

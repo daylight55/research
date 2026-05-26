@@ -40,6 +40,7 @@ const validationKeywordText = validationKeywords.join('|')
 	data-validation-keywords={validationKeywordText}
 	data-search-api-url={searchApiUrl}
 	data-summary-api-url-template={summaryApiUrlTemplate}
+	data-summary-language={isEnglish ? 'en' : 'ja'}
 	data-fallback-url={wikipediaUrl}
 	data-loading-text={isEnglish
 		? 'Loading external context from Wikipedia.'
@@ -165,7 +166,8 @@ const validationKeywordText = validationKeywords.join('|')
 		const options = {
 			type: 'key-points',
 			format: 'plain-text',
-			length: 'short'
+			length: 'short',
+			outputLanguage: root.dataset.summaryLanguage ?? 'en'
 		}
 
 		try {
@@ -174,7 +176,8 @@ const validationKeywordText = validationKeywords.join('|')
 
 			const summarizer = await self.Summarizer.create(options)
 			const text = await summarizer.summarize(extract, {
-				context: root.dataset.label
+				context: root.dataset.label,
+				outputLanguage: root.dataset.summaryLanguage ?? 'en'
 			})
 			await summarizer.destroy?.()
 

@@ -3,22 +3,13 @@
 @tailwind utilities;
 
 @media (prefers-reduced-motion: no-preference) {
-	@view-transition {
-		navigation: auto;
-	}
-
-	::view-transition-old(root) {
-		animation: locale-fade-out 180ms ease-out both;
-	}
-
-	::view-transition-new(root) {
-		animation: locale-fade-in 220ms ease-out both;
-	}
-}
-
-@keyframes locale-fade-out {
-	to {
+	html.locale-switching body {
 		opacity: 0;
+		transition: opacity 140ms ease-out;
+	}
+
+	html.locale-switch-reveal body {
+		animation: locale-fade-in 180ms ease-out both;
 	}
 }
 

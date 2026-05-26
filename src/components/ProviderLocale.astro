@@ -5,6 +5,7 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 <script define:vars={{ basePath }}>
 	const STORAGE_KEY = 'preferredLocale'
 	const SCROLL_KEY = 'localeSwitchScroll'
+	const TRANSITION_KEY = 'localeSwitchTransition'
 	const DEFAULT_LOCALE = 'ja'
 	const SUPPORTED_LOCALES = ['ja', 'en']
 
@@ -21,8 +22,6 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 		return pathname.startsWith(`${base}/`) ? pathname.slice(base.length) : pathname
 	}
 
-	const withBase = (pathname) => `${base}${pathname}` || '/'
-
 	const normalizePath = (pathname) => {
 		const normalized = pathname.startsWith('/') ? pathname : `/${pathname}`
 		return normalized.endsWith('/') ? normalized : `${normalized}/`
@@ -38,15 +37,6 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 		return normalized === '/en/' ? '/' : normalized.replace(/^\/en\//, '/')
 	}
 
-	const getStoredLocale = () => {
-		try {
-			const stored = window.localStorage.getItem(STORAGE_KEY)
-			return SUPPORTED_LOCALES.includes(stored) ? stored : undefined
-		} catch {
-			return undefined
-		}
-	}
-
 	const setStoredLocale = (locale) => {
 		if (!SUPPORTED_LOCALES.includes(locale)) return
 
@@ -55,6 +45,31 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 		} catch {
 			// Ignore unavailable storage and keep language selection URL-based.
 		}
+	}
+
+	const markTransitionForReveal = () => {
+		try {
+			window.sessionStorage.setItem(TRANSITION_KEY, 'true')
+		} catch {
+			// Ignore unavailable storage; the navigation still works.
+		}
+	}
+
+	const prepareTransitionReveal = () => {
+		try {
+			if (window.sessionStorage.getItem(TRANSITION_KEY) !== 'true') return
+			window.sessionStorage.removeItem(TRANSITION_KEY)
+			document.documentElement.classList.add('locale-switch-reveal')
+		} catch {
+			// Ignore unavailable storage and render normally.
+		}
+	}
+
+	const clearTransitionClasses = () => {
+		document.documentElement.classList.remove('locale-switching')
+		window.setTimeout(() => {
+			document.documentElement.classList.remove('locale-switch-reveal')
+		}, 260)
 	}
 
 	const getScrollableHeight = () =>
@@ -114,43 +129,15 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 		window.setTimeout(scrollWithoutSmooth, 80)
 	}
 
-	const canRedirectToEnglish = (contentPath) => {
-		if (contentPath === '/') return true
-		if (['/news/', '/reports/', '/reference/', '/tags/'].includes(contentPath)) return true
-		return (
-			contentPath.startsWith('/post/') ||
-			contentPath.startsWith('/category/') ||
-			contentPath.startsWith('/tags/')
-		)
-	}
-
-	const localizedPath = (locale, contentPath) => {
-		const normalized = normalizePath(contentPath)
-		return locale === DEFAULT_LOCALE ? normalized : `/en${normalized}`
-	}
-
-	const syncLocale = () => {
-		const currentLocale = getPathLocale(window.location.pathname)
-		const contentPath = stripLocale(window.location.pathname)
-
-		if (currentLocale === 'en') {
-			setStoredLocale('en')
-			return
-		}
-
-		const preferredLocale = getStoredLocale() ?? DEFAULT_LOCALE
-		if (preferredLocale !== 'en' || !canRedirectToEnglish(contentPath)) return
-
-		const targetPath = withBase(localizedPath('en', contentPath))
-		const target = `${targetPath}${window.location.search}${window.location.hash}`
-		window.location.replace(target)
-	}
-
 	document.addEventListener('click', (event) => {
 		if (!(event.target instanceof Element)) return
 
 		const switchLink = event.target.closest('a[data-locale-switch]')
 		if (!(switchLink instanceof HTMLAnchorElement)) return
+		if (event.defaultPrevented) return
+		if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+			return
+		if (switchLink.target && switchLink.target !== '_self') return
 
 		const targetLocale = switchLink.dataset.localeSwitch
 		setStoredLocale(targetLocale)
@@ -161,14 +148,29 @@ const basePath = import.meta.env.BASE_URL ?? '/'
 			return
 		}
 
+		event.preventDefault()
 		saveScrollPosition(targetLocale)
+		markTransitionForReveal()
+
+		const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+		if (!reduceMotion) {
+			document.documentElement.classList.add('locale-switching')
+		}
+
+		window.setTimeout(
+			() => {
+				window.location.assign(targetUrl.href)
+			},
+			reduceMotion ? 0 : 140
+		)
 	})
 
+	prepareTransitionReveal()
 	window.addEventListener('pagereveal', restoreScrollPosition)
 	document.addEventListener('DOMContentLoaded', restoreScrollPosition)
 	document.addEventListener('astro:page-load', () => {
 		restoreScrollPosition()
-		syncLocale()
 	})
-	syncLocale()
+	window.addEventListener('pageshow', clearTransitionClasses)
+	document.addEventListener('DOMContentLoaded', clearTransitionClasses)
 </script>

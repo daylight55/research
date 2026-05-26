@@ -9,35 +9,107 @@ type Props = {
 }
 
 const { term, href, meta } = Astro.props
+
+const LOGO_DOMAINS: Record<string, string> = {
+	aaai: 'aaai.org',
+	aip: 'palantir.com',
+	amnesty: 'amnesty.org',
+	'amnesty international': 'amnesty.org',
+	anthropic: 'anthropic.com',
+	apollo: 'palantir.com',
+	asml: 'asml.com',
+	claude: 'claude.ai',
+	csis: 'csis.org',
+	'european commission': 'commission.europa.eu',
+	google: 'google.com',
+	'google books': 'books.google.com',
+	graphiti: 'getzep.com',
+	hbr: 'hbr.org',
+	'human rights watch': 'hrw.org',
+	iaea: 'iaea.org',
+	imf: 'imf.org',
+	kioxia: 'kioxia.com',
+	nato: 'nato.int',
+	nvidia: 'nvidia.com',
+	oauth: 'oauth.net',
+	oecd: 'oecd.org',
+	ohchr: 'ohchr.org',
+	palantir: 'palantir.com',
+	postgresql: 'postgresql.org',
+	rdf: 'w3.org',
+	reuters: 'reuters.com',
+	rfc: 'ietf.org',
+	skos: 'w3.org',
+	tsmc: 'tsmc.com',
+	un: 'un.org',
+	unhcr: 'unhcr.org',
+	w3c: 'w3.org',
+	'world bank': 'worldbank.org',
+	yugabytedb: 'yugabyte.com',
+	zep: 'getzep.com'
+}
+
+const normalizedLabel = term.label.toLowerCase().replace(/\s+/g, ' ').trim()
+const logoDomain = LOGO_DOMAINS[normalizedLabel]
+const logoUrl = logoDomain
+	? `https://www.google.com/s2/favicons?domain=${logoDomain}&sz=96`
+	: undefined
+const initials = term.label
+	.replace(/[^\p{Letter}\p{Number}\s]/gu, '')
+	.trim()
+	.split(/\s+/)
+	.slice(0, 2)
+	.map((part) => part[0])
+	.join('')
+	.slice(0, 2)
+	.toUpperCase()
 ---
 
 <li
-	class='grid min-h-full overflow-hidden rounded-md border border-black/10 bg-white/70 dark:border-white/10 dark:bg-white/5'
+	class='grid min-h-full rounded-md border border-black/10 bg-white/70 p-4 dark:border-white/10 dark:bg-white/5'
 >
-	{
-		term.image && (
-			<a href={href} class='block aspect-[16/9] overflow-hidden bg-black/5 dark:bg-white/5'>
-				<Image
-					src={term.image}
-					width={640}
-					height={360}
-					format='webp'
-					loading='lazy'
-					decoding='async'
-					class='h-full w-full object-cover transition-transform duration-200 hover:scale-[1.015]'
-					alt={term.imageAlt ?? term.label}
-				/>
-			</a>
-		)
-	}
-	<div class='grid content-start gap-3 p-4'>
+	<div class='grid grid-cols-[3.5rem_minmax(0,1fr)] gap-3'>
 		<a
 			href={href}
-			class='font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
+			class='flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-black/10 bg-white shadow-sm dark:border-white/10 dark:bg-white/10'
+			aria-label={term.label}
 		>
-			{term.label}
+			{
+				logoUrl ? (
+					<img
+						src={logoUrl}
+						width='48'
+						height='48'
+						loading='lazy'
+						decoding='async'
+						class='h-10 w-10 object-contain'
+						alt={`${term.label} logo`}
+					/>
+				) : term.image ? (
+					<Image
+						src={term.image}
+						width={96}
+						height={96}
+						format='webp'
+						loading='lazy'
+						decoding='async'
+						class='h-full w-full object-cover'
+						alt={term.imageAlt ?? term.label}
+					/>
+				) : (
+					<span class='text-sm font-semibold text-gray-600 dark:text-gray-300'>{initials}</span>
+				)
+			}
 		</a>
-		<p class='text-sm text-gray-600 dark:text-gray-400'>{meta}</p>
-		<p class='text-sm leading-6 text-gray-700 dark:text-gray-300'>{term.explanation}</p>
+		<div class='grid min-w-0 content-start gap-2'>
+			<a
+				href={href}
+				class='font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
+			>
+				{term.label}
+			</a>
+			<p class='text-sm text-gray-600 dark:text-gray-400'>{meta}</p>
+			<p class='text-sm leading-6 text-gray-700 dark:text-gray-300'>{term.explanation}</p>
+		</div>
 	</div>
 </li>

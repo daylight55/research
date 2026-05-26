@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content'
-import { Image } from 'astro:assets'
 import BaseLayout from '@/layouts/BaseLayout'
 import KnowledgeGraph from '@/components/KnowledgeGraph'
 import WikipediaContext from '@/components/WikipediaContext'
@@ -118,29 +117,6 @@ const graphEdges = [
 				</div>
 			</dl>
 		</header>
-
-		{
-			term.image && (
-				<figure class='overflow-hidden rounded-md border border-black/10 bg-white/70 dark:border-white/10 dark:bg-white/5'>
-					<Image
-						src={term.image}
-						width={1200}
-						height={675}
-						format='webp'
-						loading='eager'
-						decoding='sync'
-						fetchpriority='high'
-						class='aspect-[16/9] max-h-72 w-full object-cover'
-						alt={term.imageAlt ?? term.label}
-					/>
-					{term.imageSourceTitle && (
-						<figcaption class='border-t border-black/10 px-4 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-gray-500 dark:border-white/10 dark:text-gray-400'>
-							Representative Article: {term.imageSourceTitle}
-						</figcaption>
-					)}
-				</figure>
-			)
-		}
 
 		<WikipediaContext
 			label={term.label}

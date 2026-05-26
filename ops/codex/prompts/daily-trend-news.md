@@ -43,7 +43,7 @@ policy / technical decisions.
   template.
 - Wrap the politics, economy, and technology blocks with `NewsDigestSection`.
 - For each individual topic, render source attribution with a `NewsSourceCard`
-  immediately after the `何が起きたか` / `なぜ重要か` / `実務への含意`
+  immediately after the `何が起きたか` / `なぜ重要か` / `今後の注視点`
   paragraphs. Do not leave a plain `出典メモ:` text line in News digests.
 - Do not create `report.md` or another second copy of the same article body.
 - If a public research trail is useful, put it in
@@ -136,7 +136,8 @@ For each of the fifteen topic items, include:
   `政治 1.`, `経済 2.`, or `技術 3.`
 - `何が起きたか`
 - `なぜ重要か`
-- `実務への含意`
+- `今後の注視点`: the reader-facing takeaway should explain what to monitor next
+  after this news, not a generic business action item.
 - one `NewsSourceCard` source memo card
 
 Use this component shape after each topic item:
@@ -147,7 +148,7 @@ Use this component shape after each topic item:
 	source='<SOURCE_NAME>'
 	title='<SOURCE_TITLE>'
 	description='<ONE_SENTENCE_SOURCE_MEMO>'
-	imageUrl='<SOURCE_ARTICLE_OR_PERSON_COMPANY_TOPIC_IMAGE_URL>'
+	imageUrl='<STABLE_SOURCE_ARTICLE_OR_IMAGES_UNSPLASH_PHOTO_URL>'
 	imageAlt='<SOURCE_CARD_IMAGE_ALT_TEXT>'
 />
 ```
@@ -163,6 +164,9 @@ Rules for source memo cards:
   search image that is specific to the topic's key person, organization,
   company, location, product, or event. Avoid generic newspaper, abstract data,
   newsroom, stock-market, or technology-background images.
+- Do not use `https://source.unsplash.com/...` dynamic or featured URLs. They
+  are deprecated and can return 503. Use stable direct image URLs such as
+  `https://images.unsplash.com/photo-...?...` or an official article image URL.
 - If no article-attached image is visible, do not leave the card image blank.
   Fall back in this order: official organization image, related source via web
   search, topic-specific Unsplash image.

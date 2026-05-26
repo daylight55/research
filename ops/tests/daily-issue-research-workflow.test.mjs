@@ -162,6 +162,12 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
+	/source\.unsplash\.com[\s\S]*?deprecated source\.unsplash\.com dynamic URLs/,
+	'trend news workflow should reject deprecated dynamic Unsplash image URLs',
+)
+
+assert.match(
+	trendWorkflow,
 	/- name: Save generated news article cache[\s\S]*?uses: actions\/cache\/save@v4[\s\S]*?key: \$\{\{ steps\.run_context\.outputs\.cache_key \}\}/,
 	'trend news workflow should save completed generated news artifacts in the run cache',
 )

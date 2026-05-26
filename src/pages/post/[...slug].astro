@@ -8,14 +8,21 @@ import Share from '@/components/Share'
 import TableOfContents from '@/components/TableOfContents'
 import MermaidRenderer from '@/components/MermaidRenderer'
 import ArrowUpRight from '@/components/icons/ArrowUpRight'
-import { DEFAULT_LOCALE, getPostSlug, getPostUrl, getPosts, localizedPath } from '@/utils'
+import {
+	DEFAULT_LOCALE,
+	getPostLocale,
+	getPostSlug,
+	getPostUrl,
+	getPosts,
+	localizedPath
+} from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import SourceNote from '@/components/mdx/SourceNote'
 import Disqus from '@/components/Disqus'
 import { disqusConfig } from '@/data/disqus.config'
 
 const locale = DEFAULT_LOCALE
-const posts = (await getCollection('blog')).filter((post) => post.id.split('/')[0] !== 'en')
+const posts = (await getCollection('blog')).filter((post) => getPostLocale(post) === locale)
 export async function getStaticPaths() {
 	const posts = await getPosts()
 

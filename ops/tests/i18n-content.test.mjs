@@ -78,6 +78,22 @@ test('localized post pages include the shared Mermaid renderer', async () => {
 	}
 })
 
+test('localized post pages build related posts from the active locale only', async () => {
+	const japanesePostPage = await readFile(
+		join(repoRoot.pathname, 'src/pages/post/[...slug].astro'),
+		'utf8'
+	)
+	const englishPostPage = await readFile(
+		join(repoRoot.pathname, 'src/pages/en/post/[...slug].astro'),
+		'utf8'
+	)
+
+	assert.match(japanesePostPage, /getPostLocale\(post\)\s*===\s*locale/)
+	assert.doesNotMatch(japanesePostPage, /post\.id\.split\('\/'\)\[0\]\s*!==\s*['"]en['"]/)
+	assert.match(englishPostPage, /getPostLocale\(post\)\s*===\s*locale/)
+	assert.doesNotMatch(englishPostPage, /post\.id\.startsWith\(`\$\{locale\}\/`\)/)
+})
+
 test('English reference pages mirror Japanese reference routes', async () => {
 	const japaneseReferencePages = (await readdir(referenceDir))
 		.filter((name) => name.endsWith('.astro') && name !== 'index.astro')
@@ -125,7 +141,7 @@ test('Codex translation workflow exists for missing English articles', async () 
 	assert.match(prompt, /Mermaid diagram labels/)
 	assert.match(prompt, /news digest articles/)
 	assert.match(prompt, /What happened:/)
-	assert.match(prompt, /Implications for practice:/)
+	assert.match(prompt, /What to watch:/)
 	assert.match(prompt, /Reference pages/)
 })
 

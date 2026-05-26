@@ -1,36 +1,8 @@
 ---
-import { DEFAULT_LOCALE, localizedPath, stripLocaleFromPath, type Locale } from '@/utils'
+import LocaleToggle from '@/components/LocaleToggle'
+import { DEFAULT_LOCALE, type Locale } from '@/utils'
 
 const { locale = DEFAULT_LOCALE } = Astro.props as { locale?: Locale }
-const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
 ---
 
-<nav
-	aria-label='Language'
-	class='fixed bottom-4 right-4 z-40 flex items-center rounded-md border border-black/10 bg-[#f8f7f2]/80 text-[11px] font-bold shadow-sm backdrop-blur transition-colors dark:border-white/10 dark:bg-[#11110f]/80 sm:bottom-5 sm:right-5'
->
-	<a
-		href={localizedPath('ja', currentContentPath)}
-		data-locale-switch='ja'
-		aria-label='Switch to Japanese'
-		aria-current={locale === 'ja' ? 'page' : undefined}
-		class:list={[
-			'px-2.5 py-1.5 transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black dark:hover:bg-white/10 dark:focus-visible:outline-white',
-			locale === 'ja' && 'bg-black text-white dark:bg-white dark:text-black'
-		]}
-	>
-		JA
-	</a>
-	<a
-		href={localizedPath('en', currentContentPath)}
-		data-locale-switch='en'
-		aria-label='Switch to English'
-		aria-current={locale === 'en' ? 'page' : undefined}
-		class:list={[
-			'px-2.5 py-1.5 transition hover:bg-black/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black dark:hover:bg-white/10 dark:focus-visible:outline-white',
-			locale === 'en' && 'bg-black text-white dark:bg-white dark:text-black'
-		]}
-	>
-		EN
-	</a>
-</nav>
+<LocaleToggle locale={locale} variant='floating' />

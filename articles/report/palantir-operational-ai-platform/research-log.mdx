@@ -1,29 +1,31 @@
-# Palantir Research Tasks
+---
+title: '調査プロセス: Palantir: Operational AI Platform の深層構造'
+---
 
 作成日: 2026-05-07
 
-## 目的
+## 読み方
+
+この調査ログは、本文の結論を繰り返すためではなく、どの問いを立て、どの資料を優先し、どこを不確実なまま残したかを読者が確認するための記録である。Palantir: Operational AI Platform の深層構造について、判断の前提、根拠の種類、更新が必要になる条件を分けて残した。
+
+## 調査目的
 
 Palantir Technologiesを、企業・政府向けAI/データ運用プラットフォームとして評価する。対象は製品アーキテクチャ、Ontology/AIP/Foundry/Apolloの技術的意味、事業成長、政府・防衛・医療での導入、倫理・プライバシー・ベンダーロックインのリスク、実務導入判断である。
 
-## 調査方式
+## 調査設計
+
+| 観点       | 確認したこと                         | 使い方                               |
+| ---------- | ------------------------------------ | ------------------------------------ |
+| スコープ   | 本文の調査対象と読者の実務判断       | 何を扱い、何を扱わないかを明確にした |
+| 根拠       | 公開情報、一次情報、補助資料         | 本文の主要主張を支える材料にした     |
+| 比較・整理 | 制度、時系列、技術、リスク、実務含意 | 読者が論点を再利用できる形にした     |
+| 限界       | 未確認事項、時点依存、追加深掘り候補 | 更新時に見直す対象として残した       |
 
 実務意思決定向けのナラティブレビュー。一次情報としてPalantir公式ドキュメント、SEC提出書類、NHS England説明、NIST/EUのAIガバナンス資料を優先し、批判的観点としてAmnesty International、Medact等の公表資料を補助的に確認した。株価予測や投資助言は対象外。
 
-## タスク
+## 資料選定の方針
 
-- [x] **1. スコープ定義**: Palantirを「AI企業」ではなく、業務オペレーティングシステム型のデータ/AIプラットフォームとして調査する。
-- [x] **2. 方法論選定**: 製品・事業・ガバナンスを横断するナラティブレビューとして設計する。
-- [x] **3. 一次情報確認**: Palantir AIP、Ontology、Apollo、Privacy and Governance Whitepaper、2025 Form 10-K、Q1 2026発表を確認する。
-- [x] **4. 公共部門事例確認**: NHS Federated Data Platform、Maven Smart System、DHS契約報道を確認し、一次情報と報道・批判資料を分ける。
-- [x] **5. 技術分析**: Foundry、Ontology、AIP、Apolloの関係を図解し、従来のBI/データレイク/LLMアプリとの差分を整理する。
-- [x] **6. 批判的評価**: 監視、軍事利用、医療データ、ベンダーロックイン、説明責任、AIガバナンスの論点を整理する。
-- [x] **7. レポート作成**: 日本語の実務向けレポートとして結論、根拠、限界、導入判断をまとめる。
-- [x] **8. 図解追加**: Mermaidでアーキテクチャ、導入プロセス、リスク評価を追加する。
-- [x] **9. 歴史・思想分析**: 創業、Gotham、Foundry、政府調達、S-1、The Technological Republic、イスラエル関連論点から、Palantirの深層構造と実務的含意を整理する。
-- [ ] **10. 追加深掘り候補**: Palantir Foundry代替アーキテクチャ、Graphiti/Knowledge Graphとの比較、公共部門調達リスク評価、AIP類似OSS構成のPoCを別テーマ化する。
-
-## 主要ソース
+本文では、公開情報と一次情報を優先し、主要な判断の近くに根拠を置く方針にした。出典や補助資料は、本文の主張を支える範囲で使い、単なるリンク集にしない。
 
 - Palantir公式ドキュメント: AIP、Foundry、Ontology、Apollo
 - Palantir Investor Relations / SEC: 2025 Form 10-K、Q1 2026 Business Update / press release
@@ -34,3 +36,29 @@ Palantir Technologiesを、企業・政府向けAI/データ運用プラット�
 - Amnesty International: Palantir and human rights due diligence report
 - Medact: NHS Palantir/FDP briefing
 - NIST AI RMF、EU AI Act、W3C OWL
+
+## 採用しなかった情報
+
+- 出典や時点を追えない断定的な情報は、本文の主要根拠にはしない。
+- 速報性の高い情報は、一次情報や複数の公開情報で補強できる場合に限って扱う。
+- 本文の実務判断に直結しない詳細は、追加深掘り候補として分離する。
+
+## 判断基準
+
+本文では、確認した根拠、比較軸、限界を分け、主張が一次情報・補助資料・公表情報からの推定のどれに基づくかを明示する方針にした。
+
+## 確認済みの根拠
+
+- スコープ定義: Palantirを「AI企業」ではなく、業務オペレーティングシステム型のデータ/AIプラットフォームとして調査する。
+- 方法論選定: 製品・事業・ガバナンスを横断するナラティブレビューとして設計する。
+- 一次情報確認: Palantir AIP、Ontology、Apollo、Privacy and Governance Whitepaper、2025 Form 10-K、Q1 2026発表を確認する。
+- 公共部門事例確認: NHS Federated Data Platform、Maven Smart System、DHS契約報道を確認し、一次情報と報道・批判資料を分ける。
+- 技術分析: Foundry、Ontology、AIP、Apolloの関係を図解し、従来のBI/データレイク/LLMアプリとの差分を整理する。
+- 批判的評価: 監視、軍事利用、医療データ、ベンダーロックイン、説明責任、AIガバナンスの論点を整理する。
+- レポート作成: 日本語の実務向けレポートとして結論、根拠、限界、導入判断をまとめる。
+- 図解追加: Mermaidでアーキテクチャ、導入プロセス、リスク評価を追加する。
+- 歴史・思想分析: 創業、Gotham、Foundry、政府調達、S-1、The Technological Republic、イスラエル関連論点から、Palantirの深層構造と実務的含意を整理する。
+
+## 更新が必要になる条件
+
+- 追加深掘り候補: Palantir Foundry代替アーキテクチャ、Graphiti/Knowledge Graphとの比較、公共部門調達リスク評価、AIP類似OSS構成のPoCを別テーマ化する。

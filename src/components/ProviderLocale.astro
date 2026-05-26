@@ -21,6 +21,8 @@
 		return pathname.startsWith(`${base}/`) ? pathname.slice(base.length) : pathname
 	}
 
+	const withBase = (pathname) => `${base}${pathname}` || '/'
+
 	const normalizePath = (pathname) => {
 		const normalized = pathname.startsWith('/') ? pathname : `/${pathname}`
 		return normalized.endsWith('/') ? normalized : `${normalized}/`
@@ -36,6 +38,15 @@
 		return normalized === '/en/' ? '/' : normalized.replace(/^\/en\//, '/')
 	}
 
+	const getStoredLocale = () => {
+		try {
+			const stored = window.localStorage.getItem(STORAGE_KEY)
+			return SUPPORTED_LOCALES.includes(stored) ? stored : undefined
+		} catch {
+			return undefined
+		}
+	}
+
 	const setStoredLocale = (locale) => {
 		if (!SUPPORTED_LOCALES.includes(locale)) return
 
@@ -44,6 +55,21 @@
 		} catch {
 			// Ignore unavailable storage and keep language selection URL-based.
 		}
+	}
+
+	const canRedirectToEnglish = (contentPath) => {
+		if (contentPath === '/') return true
+		if (['/news/', '/reports/', '/reference/', '/tags/'].includes(contentPath)) return true
+		return (
+			contentPath.startsWith('/post/') ||
+			contentPath.startsWith('/category/') ||
+			contentPath.startsWith('/tags/')
+		)
+	}
+
+	const localizedPath = (locale, contentPath) => {
+		const normalized = normalizePath(contentPath)
+		return locale === DEFAULT_LOCALE ? normalized : `/en${normalized}`
 	}
 
 	const getScrollableHeight = () =>
@@ -127,6 +153,23 @@
 		window.setTimeout(clearWhenRestored, 1200)
 	}
 
+	const syncLocale = () => {
+		const currentLocale = getPathLocale(window.location.pathname)
+		const contentPath = stripLocale(window.location.pathname)
+
+		if (currentLocale === 'en') {
+			setStoredLocale('en')
+			return
+		}
+
+		const preferredLocale = getStoredLocale() ?? DEFAULT_LOCALE
+		if (preferredLocale !== 'en' || !canRedirectToEnglish(contentPath)) return
+
+		const targetPath = withBase(localizedPath('en', contentPath))
+		const target = `${targetPath}${window.location.search}${window.location.hash}`
+		window.location.replace(target)
+	}
+
 	document.addEventListener(
 		'click',
 		(event) => {
@@ -161,6 +204,8 @@
 	window.addEventListener('pagereveal', restoreScrollPosition)
 	document.addEventListener('DOMContentLoaded', restoreScrollPosition)
 	document.addEventListener('astro:page-load', () => {
+		syncLocale()
 		restoreScrollPosition()
 	})
+	syncLocale()
 </script>

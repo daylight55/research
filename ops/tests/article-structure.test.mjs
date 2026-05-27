@@ -69,6 +69,8 @@ test('article frontmatter contentType matches its directory type', () => {
 
 test('article schema and templates support generation metadata', () => {
 	const contentConfig = readFileSync('src/content.config.ts', 'utf8')
+	const blogPostLayout = readFileSync('src/layouts/BlogPost.astro', 'utf8')
+	const generationMeta = readFileSync('src/components/ArticleGenerationMeta.astro', 'utf8')
 	const reportTemplate = readFileSync('ops/codex/templates/blog-entry.mdx', 'utf8')
 	const newsTemplate = readFileSync('ops/codex/templates/news-digest.mdx', 'utf8')
 
@@ -94,6 +96,23 @@ test('article schema and templates support generation metadata', () => {
 		)
 		assert.match(source, /promptSummary:/, `${file} should include generation.promptSummary`)
 	}
+
+	assert.match(
+		blogPostLayout,
+		/<ArticleGenerationMeta generation=\{data\.generation\} locale=\{locale\} \/>/,
+		'article layout should render generation metadata when present'
+	)
+	assert.match(generationMeta, /generation\?\./, 'generation metadata component should be optional')
+	assert.match(
+		generationMeta,
+		/使用モデル|Model used/,
+		'generation metadata should show the model label'
+	)
+	assert.match(
+		generationMeta,
+		/プロンプト要約|Prompt summary/,
+		'generation metadata should show prompt summaries'
+	)
 })
 
 test('article body does not import duplicate report bodies or unresolved placeholders', () => {

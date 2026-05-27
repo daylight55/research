@@ -49,6 +49,7 @@ export type GlossaryIndexTerm = {
 	imageAlt?: string
 	imageSourceTitle?: string
 	researchProfile: GlossaryResearchProfile
+	externalReference: GlossaryExternalReference | null
 	wikipediaUrl: string
 	wikipediaLocale: WikipediaLocale
 	wikipediaSearchQuery: string
@@ -71,6 +72,12 @@ export type GlossaryCategoryGroup = {
 type GlossaryLocale = 'ja' | 'en'
 export type WikipediaLocale = 'ja' | 'en'
 export type GlossaryResearchSourceKind = 'official' | 'standard' | 'paper' | 'reference' | 'wikipedia'
+export type GlossaryExternalReference = {
+	title: string
+	url: string
+	kind: GlossaryResearchSourceKind
+	reason?: string
+}
 export type GlossaryWikipediaVerification =
 	| {
 			status: 'verified'
@@ -95,6 +102,14 @@ export type GlossaryResearchProfile = {
 	wikipedia: GlossaryWikipediaVerification
 }
 
+const EXTERNAL_REFERENCE_PRIORITY: GlossaryResearchSourceKind[] = [
+	'official',
+	'standard',
+	'paper',
+	'reference',
+	'wikipedia'
+]
+
 const MAX_TERMS_PER_ARTICLE = 5
 const MAX_RELATED_TERMS = 12
 const MAX_WIKIPEDIA_CONTEXT_KEYWORDS = 8
@@ -102,6 +117,28 @@ const ENGLISH_WIKIPEDIA_LABEL_PATTERN = /^[A-Za-z0-9][A-Za-z0-9 .+#&'():-]*$/
 
 export const hasGlossaryResearchProfile = (slug: string, locale: GlossaryLocale = 'ja') =>
 	Boolean(getGlossaryResearchProfile(slug, locale))
+
+export const selectExternalReference = (
+	profile: GlossaryResearchProfile
+): GlossaryExternalReference | null => {
+	const source = [...profile.sources].sort(
+		(a, b) =>
+			EXTERNAL_REFERENCE_PRIORITY.indexOf(a.kind) - EXTERNAL_REFERENCE_PRIORITY.indexOf(b.kind)
+	)[0]
+
+	if (source) return source
+
+	if (profile.wikipedia.status === 'verified') {
+		return {
+			title: profile.wikipedia.title,
+			url: profile.wikipedia.url,
+			kind: 'wikipedia',
+			reason: profile.wikipedia.reason
+		}
+	}
+
+	return null
+}
 
 const CATEGORY_WIKIPEDIA_CONTEXT_EN: Record<string, string[]> = {
 	'ai-systems': [
@@ -991,6 +1028,7 @@ export function buildGlossaryIndex(
 					image: postRef.heroImage,
 					imageAlt: postRef.heroImageAlt,
 					imageSourceTitle: postRef.heroImage ? postRef.title : undefined,
+					externalReference: null,
 					wikipediaUrl: createWikipediaUrl(term.label, wikipediaLocale),
 					wikipediaLocale,
 					wikipediaSearchQuery: term.label,
@@ -1037,6 +1075,7 @@ export function buildGlossaryIndex(
 			)
 		}
 		term.researchProfile = researchProfile
+		term.externalReference = selectExternalReference(researchProfile)
 		term.wikipediaLocale = getWikipediaLocaleForLabel(term.label, locale)
 		term.wikipediaValidationKeywords = createWikipediaValidationKeywords(term, term.wikipediaLocale)
 		term.wikipediaSearchQuery = createWikipediaSearchQuery(term, term.wikipediaLocale)

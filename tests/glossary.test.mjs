@@ -10,7 +10,8 @@ import {
 	extractGlossaryTermsFromMarkdown,
 	getWikipediaLocaleForLabel,
 	groupGlossaryTermsByCategory,
-	linkFirstGlossaryMentions
+	linkFirstGlossaryMentions,
+	selectExternalReference
 } from '../src/utils/glossary.ts'
 import { GLOSSARY_RESEARCH_PROFILES } from '../src/data/glossaryResearch.ts'
 
@@ -62,6 +63,8 @@ test('builds a glossary index with post counts and related terms', () => {
 		mcp?.wikipediaUrl,
 		'https://en.wikipedia.org/wiki/Model_Context_Protocol'
 	)
+	assert.equal(mcp?.externalReference?.url, 'https://modelcontextprotocol.io/specification/')
+	assert.equal(mcp?.externalReference?.kind, 'official')
 	assert.equal(mcp?.researchProfile.wikipedia.status, 'verified')
 	assert.match(mcp?.researchProfile.definition ?? '', /MCP/)
 	assert.deepEqual(
@@ -241,6 +244,7 @@ test('builds English glossary explanations from English article context', () => 
 		mcp?.wikipediaUrl,
 		'https://en.wikipedia.org/wiki/Model_Context_Protocol'
 	)
+	assert.equal(mcp?.externalReference?.url, 'https://modelcontextprotocol.io/specification/')
 })
 
 test('does not publish glossary entries without source-backed external profiles', () => {
@@ -274,6 +278,35 @@ test('keeps standalone glossary definitions independent from site article usage'
 			assert.doesNotMatch(profile.position, /このサイト|On this site|Within this site/i)
 		}
 	}
+})
+
+test('prefers official or standard sources over Wikipedia for external references', () => {
+	const officialFirst = selectExternalReference({
+		definition: 'PKCE definition',
+		background: 'PKCE background',
+		position: 'PKCE position',
+		distinctions: [],
+		sources: [
+			{
+				title: 'Wikipedia fallback',
+				url: 'https://en.wikipedia.org/wiki/Proof_Key_for_Code_Exchange',
+				kind: 'wikipedia'
+			},
+			{
+				title: 'RFC 7636',
+				url: 'https://www.rfc-editor.org/rfc/rfc7636',
+				kind: 'standard'
+			}
+		],
+		wikipedia: {
+			status: 'verified',
+			title: 'Proof Key for Code Exchange',
+			url: 'https://en.wikipedia.org/wiki/Proof_Key_for_Code_Exchange',
+			reason: 'Fallback page.'
+		}
+	})
+	assert.equal(officialFirst?.url, 'https://www.rfc-editor.org/rfc/rfc7636')
+	assert.equal(officialFirst?.kind, 'standard')
 })
 
 test('does not keep placeholder definitions for unresearched terms', async () => {

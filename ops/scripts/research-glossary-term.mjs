@@ -103,7 +103,7 @@ export function buildGlossaryResearchQueries({ category = '', locale = 'ja', rel
 	return [
 		`${quoted} definition ${context} official documentation`.trim(),
 		`${quoted} ${context} overview ${languageHint}`.trim(),
-		`${quoted} Wikipedia ${context}`.trim()
+		`${quoted} official site standard paper reference Wikipedia ${context}`.trim()
 	]
 }
 
@@ -229,7 +229,8 @@ Use the web search evidence below to write:
 - conceptual position
 - distinctions from ambiguous meanings
 - sources
-- Wikipedia verification status. If the Wikipedia candidate is not a good conceptual match, set status to unverified.
+- primary external reference. Prefer official sites, standards, papers, or authoritative references over Wikipedia.
+- Wikipedia verification status. If the Wikipedia candidate is not a good conceptual match or a better official reference exists, set status to unverified or keep it secondary.
 
 Do not describe how the term is used inside this site.
 

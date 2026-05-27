@@ -8,6 +8,7 @@ type Props = {
 
 const { term, locale } = Astro.props
 const profile = term.researchProfile
+const externalReference = term.externalReference
 const isEnglish = locale === 'en'
 const sourceKindLabel = (kind: string) => {
 	const labels = {
@@ -19,6 +20,7 @@ const sourceKindLabel = (kind: string) => {
 	}
 	return labels[kind as keyof typeof labels] ?? kind
 }
+const externalReferenceLabel = isEnglish ? 'External Reference' : '外部参照'
 ---
 
 <section class='grid gap-5 rounded-md border border-black/10 bg-white/70 p-5 dark:border-white/10 dark:bg-white/5'>
@@ -62,17 +64,17 @@ const sourceKindLabel = (kind: string) => {
 	<div class='grid gap-3 border-t border-black/10 pt-4 dark:border-white/10'>
 		<div class='flex flex-wrap items-center gap-2'>
 			<span class='text-xs font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400'>
-				Wikipedia
+				{externalReferenceLabel}
 			</span>
 			{
-				profile.wikipedia.status === 'verified' ? (
+				externalReference ? (
 					<a
-						href={profile.wikipedia.url}
+						href={externalReference.url}
 						target='_blank'
 						rel='noopener noreferrer'
 						class='text-sm font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
 					>
-						{profile.wikipedia.title}
+						{externalReference.title}
 					</a>
 				) : (
 					<span class='rounded-md bg-black/[0.04] px-2 py-1 text-xs font-semibold text-gray-600 dark:bg-white/10 dark:text-gray-300'>
@@ -80,8 +82,22 @@ const sourceKindLabel = (kind: string) => {
 					</span>
 				)
 			}
+			{
+				externalReference && (
+					<span class='rounded-md bg-black/[0.04] px-2 py-1 text-xs font-semibold uppercase tracking-[0.08em] text-gray-600 dark:bg-white/10 dark:text-gray-300'>
+						{sourceKindLabel(externalReference.kind)}
+					</span>
+				)
+			}
 		</div>
-		<p class='text-xs leading-6 text-gray-500 dark:text-gray-400'>{profile.wikipedia.reason}</p>
+		<p class='text-xs leading-6 text-gray-500 dark:text-gray-400'>
+			{
+				externalReference?.reason ??
+					(isEnglish
+						? 'Primary source-backed reference selected for this concept.'
+						: 'この概念に対して、一次情報または外部出典を優先して参照先にしています。')
+			}
+		</p>
 	</div>
 
 	{

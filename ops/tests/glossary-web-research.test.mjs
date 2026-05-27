@@ -10,7 +10,7 @@ import {
 	searchWithTavily
 } from '../scripts/research-glossary-term.mjs'
 
-test('buildGlossaryResearchQueries includes term, context, and Wikipedia verification query', () => {
+test('buildGlossaryResearchQueries includes term, context, official sources, and Wikipedia check', () => {
 	const queries = buildGlossaryResearchQueries({
 		category: 'ai-systems',
 		locale: 'ja',
@@ -22,6 +22,7 @@ test('buildGlossaryResearchQueries includes term, context, and Wikipedia verific
 	assert.match(queries[0], /"MCP"/)
 	assert.match(queries[0], /official documentation/)
 	assert.match(queries[1], /Knowledge Graph/)
+	assert.match(queries[2], /official site standard paper reference/)
 	assert.match(queries[2], /Wikipedia/)
 })
 
@@ -134,6 +135,7 @@ test('profile draft prompt forbids site-internal usage definitions', () => {
 	})
 
 	assert.match(prompt, /source-backed glossary research profile/)
+	assert.match(prompt, /Prefer official sites, standards, papers, or authoritative references over Wikipedia/)
 	assert.match(prompt, /Do not describe how the term is used inside this site/)
 })
 

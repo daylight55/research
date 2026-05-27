@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import FormattedDate from '@/components/FormattedDate'
-import ArticleGenerationMeta from '@/components/ArticleGenerationMeta'
 import BaseLayout from '@/layouts/BaseLayout'
 import type { MarkdownHeading } from 'astro'
 import { Image } from 'astro:assets'
@@ -84,8 +83,6 @@ const articleDate = pubDate.toISOString()
 				)
 			}
 		</>
-
-		<ArticleGenerationMeta generation={data.generation} locale={locale} />
 
 		<hr />
 

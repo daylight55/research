@@ -34,17 +34,20 @@ drivers, risks, and practical implications.
   directories; summarize publishable material in `research-log.mdx`.
 - In `research-log.mdx`, include a short `## 利用環境` section with the automation
   model name from `Automation Metadata`, a link to the
-  `technical-research-report` skill, and a link to this prompt source. Summarize
-  the effective prompt in a few bullets instead of pasting the full prompt.
+  `technical-research-report` skill, and a link to this prompt source.
+- In `research-log.mdx`, include a `## 調査命令` section that summarizes the
+  selected GitHub issue as the research instruction: issue number, issue title,
+  issue URL when available, the publishable issue body / request summary, scope
+  constraints, and the inferred deliverable. Do not paste secrets, private
+  operational details, or repository credentials.
 - Add or update `src/data/categories.ts` category wiring as needed.
 - When creating `articles/report/<topic>/ja/index.mdx`, use
   `ops/codex/templates/blog-entry.mdx` as the site-entry shape.
   Include `rssSummary` in frontmatter as a concise RSS/share summary. Keep it
   understandable outside the site UI and distinct from long article prose.
-  Include the template's `generation` frontmatter block with `model` from
-  `Automation Metadata`, the `promptSource` value set to
-  `ops/codex/prompts/daily-issue-research.md`, and `promptSummary` as a short
-  list describing the effective prompt constraints that shaped the article.
+  Include the template's `generation` frontmatter block with only `model` from
+  `Automation Metadata`. Do not store prompt source, prompt summary, issue
+  body, or other prompt details in article frontmatter.
   Include `heroImageQuery` as a short English Unsplash search phrase for an
   informative landscape header image. Keep `heroImage` as the placeholder;
   automation will replace it with a downloaded local image when the query is
@@ -108,8 +111,9 @@ drivers, risks, and practical implications.
   - the model used by the automation
   - a link to `.codex/skills/technical-research-report/SKILL.md`
   - a link to `ops/codex/prompts/daily-issue-research.md`
-  - a `## 利用環境` section with a `プロンプト要約` bullet list that concisely
-    summarizes the prompt constraints that shaped the investigation
+  - a `## 利用環境` section for model / skill / prompt source links
+  - a `## 調査命令` section that summarizes the selected issue's title, body,
+    request, constraints, and inferred deliverable as the investigation input
 - Run focused verification before finishing. At minimum, check for unresolved
   placeholders and run `git diff --check`. If site content changed and
   dependencies are installed, run `pnpm build`.

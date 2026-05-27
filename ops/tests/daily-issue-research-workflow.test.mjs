@@ -41,8 +41,14 @@ assert.match(
 
 assert.match(
 	dailyIssuePrompt,
-	/generation[\s\S]*?model[\s\S]*?promptSource[\s\S]*?promptSummary/,
-	'Daily Issue Research prompt should require frontmatter generation metadata for generated reports'
+	/generation[\s\S]*?model/,
+	'Daily Issue Research prompt should require frontmatter generation model metadata for generated reports'
+)
+
+assert.doesNotMatch(
+	dailyIssuePrompt,
+	/frontmatter[\s\S]*?promptSource|frontmatter[\s\S]*?promptSummary/,
+	'Daily Issue Research prompt should not ask article frontmatter to store prompt details'
 )
 
 assert.match(
@@ -65,8 +71,20 @@ assert.match(
 
 assert.match(
 	dailyIssuePrompt,
-	/articles\/report\/<topic>\/ja\/research-log\.mdx[\s\S]*?## 利用環境[\s\S]*?プロンプト要約/,
-	'Daily Issue Research prompt should ask research logs to summarize the effective prompt'
+	/articles\/report\/<topic>\/ja\/research-log\.mdx[\s\S]*?## 調査命令[\s\S]*?issue[\s\S]*?title[\s\S]*?body/,
+	'Daily Issue Research prompt should ask research logs to summarize the issue-based research instruction'
+)
+
+assert.match(
+	dailyIssuePrompt,
+	/## 利用環境[\s\S]*?model[\s\S]*?technical-research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
+	'Daily Issue Research prompt should keep execution metadata in research logs separately from the research instruction'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/research-log\.mdx[\s\S]*?## 調査命令[\s\S]*?Run Context[\s\S]*?topic hint/,
+	'Daily Trend News prompt should ask optional research logs to summarize the run instruction context'
 )
 
 assert.match(

@@ -70,14 +70,27 @@ test('article frontmatter contentType matches its directory type', () => {
 test('article schema and templates support generation metadata', () => {
 	const contentConfig = readFileSync('src/content.config.ts', 'utf8')
 	const blogPostLayout = readFileSync('src/layouts/BlogPost.astro', 'utf8')
-	const generationMeta = readFileSync('src/components/ArticleGenerationMeta.astro', 'utf8')
+	const generationModel = readFileSync('src/components/ArticleGenerationModel.astro', 'utf8')
+	const articlePages = [
+		'src/pages/reports/[...slug].astro',
+		'src/pages/news/[...slug].astro',
+		'src/pages/en/reports/[...slug].astro',
+		'src/pages/en/news/[...slug].astro',
+		'src/pages/mix/reports/[...slug].astro',
+		'src/pages/mix/news/[...slug].astro'
+	]
 	const reportTemplate = readFileSync('ops/codex/templates/blog-entry.mdx', 'utf8')
 	const newsTemplate = readFileSync('ops/codex/templates/news-digest.mdx', 'utf8')
 
 	assert.match(
 		contentConfig,
-		/generation:\s*z[\s\S]*?\.object\(\{[\s\S]*?model:\s*z\.string\(\)[\s\S]*?promptSource:\s*z\.string\(\)\.optional\(\)[\s\S]*?promptSummary:\s*z\.array\(z\.string\(\)\)\.optional\(\)[\s\S]*?\}\)[\s\S]*?\.optional\(\)/,
-		'article frontmatter schema should allow optional generation model and prompt provenance'
+		/generation:\s*z[\s\S]*?\.object\(\{[\s\S]*?model:\s*z\.string\(\)[\s\S]*?\}\)[\s\S]*?\.optional\(\)/,
+		'article frontmatter schema should allow optional generation model metadata'
+	)
+	assert.doesNotMatch(
+		contentConfig,
+		/promptSource|promptSummary/,
+		'article frontmatter schema should not store prompt details'
 	)
 
 	for (const [file, source] of [
@@ -89,30 +102,39 @@ test('article schema and templates support generation metadata', () => {
 			/generation:\n\s+model: '<MODEL_USED_TO_CREATE_ARTICLE>'/,
 			`${file} should include generation.model`
 		)
-		assert.match(
+		assert.doesNotMatch(
 			source,
-			/promptSource: '<PROMPT_OR_WORKFLOW_SOURCE_PATH>'/,
-			`${file} should include generation.promptSource`
+			/promptSource|promptSummary/,
+			`${file} should not include prompt metadata`
 		)
-		assert.match(source, /promptSummary:/, `${file} should include generation.promptSummary`)
 	}
 
-	assert.match(
+	assert.doesNotMatch(
 		blogPostLayout,
-		/<ArticleGenerationMeta generation=\{data\.generation\} locale=\{locale\} \/>/,
-		'article layout should render generation metadata when present'
-	)
-	assert.match(generationMeta, /generation\?\./, 'generation metadata component should be optional')
-	assert.match(
-		generationMeta,
-		/使用モデル|Model used/,
-		'generation metadata should show the model label'
+		/ArticleGenerationMeta/,
+		'article body should not render prompt metadata'
 	)
 	assert.match(
-		generationMeta,
-		/プロンプト要約|Prompt summary/,
-		'generation metadata should show prompt summaries'
+		generationModel,
+		/generation\?\.model/,
+		'generation model component should be optional'
 	)
+	assert.match(generationModel, /Model/, 'generation model component should show a model label')
+	assert.doesNotMatch(generationModel, /promptSource|promptSummary|プロンプト要約|Prompt summary/)
+
+	for (const file of articlePages) {
+		const source = readFileSync(file, 'utf8')
+		assert.match(
+			source,
+			/ArticleGenerationModel/,
+			`${file} should import the sidebar model component`
+		)
+		assert.match(
+			source,
+			/<ArticleGenerationModel generation=\{post\.data\.generation\} \/>/,
+			`${file} should render the model in the article sidebar`
+		)
+	}
 })
 
 test('article body does not import duplicate report bodies or unresolved placeholders', () => {

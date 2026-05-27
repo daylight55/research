@@ -4,6 +4,7 @@ import BlogPost from '@/layouts/BlogPost'
 import Code from '@/components/mdx/Code'
 import ListRelatedPosts from '@/components/ListRelatedPosts'
 import FormattedDate from '@/components/FormattedDate'
+import ArticleGenerationModel from '@/components/ArticleGenerationModel'
 import Share from '@/components/Share'
 import TableOfContents from '@/components/TableOfContents'
 import MermaidRenderer from '@/components/MermaidRenderer'
@@ -81,6 +82,8 @@ const disqusEnabled = disqusConfig.enabled
 						<span>{remarkPluginFrontmatter.minutesRead}</span>
 					</div>
 				</section>
+
+				<ArticleGenerationModel generation={post.data.generation} />
 
 				<section class='flex flex-col gap-2'>
 					<p

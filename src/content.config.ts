@@ -22,9 +22,7 @@ const blog = defineCollection({
 			tags: z.array(z.string()),
 			generation: z
 				.object({
-					model: z.string(),
-					promptSource: z.string().optional(),
-					promptSummary: z.array(z.string()).optional()
+					model: z.string()
 				})
 				.optional(),
 			draft: z.boolean().default(false)

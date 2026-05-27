@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+type Generation = CollectionEntry<'blog'>['data']['generation']
+
+type Props = {
+	generation?: Generation
+}
+
+const { generation } = Astro.props
+---
+
+{
+	generation?.model && (
+		<section class='flex min-w-0 flex-col gap-1.5'>
+			<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+				Model
+			</p>
+			<span class='break-words font-mono text-xs leading-snug text-gray-700 dark:text-gray-300'>
+				{generation.model}
+			</span>
+		</section>
+	)
+}

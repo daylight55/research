@@ -10,9 +10,6 @@ category: '<CATEGORY_NAME>'
 tags: ['<TAG_1>', '<TAG_2>']
 generation:
   model: '<MODEL_USED_TO_CREATE_ARTICLE>'
-  promptSource: '<PROMPT_OR_WORKFLOW_SOURCE_PATH>'
-  promptSummary:
-    - '<PROMPT_CONSTRAINT_THAT_SHAPED_THE_ARTICLE>'
 draft: false
 ---
 
@@ -26,8 +23,8 @@ imported headings through `post.render().headings`, so the article
 table-of-contents sidebar becomes empty. If the investigation process should be
 public, summarize it in `research-log.mdx` next to this `index.mdx`.
 Keep the `generation` frontmatter block when the article is AI-generated so the
-reader-facing article records the model and prompt provenance. Put more detailed
-process notes, including a compact prompt summary, in `research-log.mdx`.
+reader-facing sidebar records the model. Put the public research instruction,
+such as the issue title and body summary, in `research-log.mdx`.
 
 Keep Mermaid fences in the article body. Use `<SourceNote>...</SourceNote>`
 near the claim it supports instead of plain `出典メモ:` paragraphs. `SourceNote`

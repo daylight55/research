@@ -24,6 +24,11 @@ public, summarize it in `research-log.mdx` next to this `index.mdx`.
 Keep Mermaid fences in the article body. Use `<SourceNote>...</SourceNote>`
 near the claim it supports instead of plain `出典メモ:` paragraphs. `SourceNote`
 is registered by the post renderer, so do not import it in ordinary report MDX.
+Write each `SourceNote` on one line, for example:
+`<SourceNote>[Source name](https://example.com) に基づく。</SourceNote>`.
+Do not put the opening/closing tags on separate lines, and do not write manual
+parentheses, `出典:`, `Source note:`, or `Source:` inside it; the component
+renders that wrapper.
 -->
 
 # <REPORT_TITLE>

@@ -10,7 +10,7 @@ Rules:
 - Keep relative `heroImage` paths aligned with the Japanese article because `ja` and `en` live at the same directory depth.
 - Translate the Markdown/MDX body into natural English while preserving headings, tables, lists, Mermaid blocks, MDX components, links, and source URLs.
 - Translate Mermaid diagram labels, axis labels, sequence participants, and messages into English. Do not leave Japanese text inside English Mermaid blocks.
-- Keep source-adjacent `出典メモ:` paragraphs as English `Source note:` paragraphs.
+- Preserve report `SourceNote` components as inline one-line MDX elements. Do not convert them into `Source note:` paragraphs, do not put the tags on separate lines, and do not add manual parentheses or source labels inside the component.
 - Do not use TeX-style backtick quotes such as ``example''. Use normal double quotes for quoted phrases.
 - For news digest articles, keep the topic labels as standalone paragraphs with blank lines between `What happened:`, `Why it matters:`, `What to watch:`, and the following `NewsSourceCard`, matching the Japanese layout. Translate `今後の注視点:` as `What to watch:` and keep the content focused on what readers should monitor next.
 - Do not translate code identifiers, URLs, file paths, product names, or proper nouns unless an established English name exists.

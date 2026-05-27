@@ -80,6 +80,7 @@ Also do all of the following:
 - Place citations near the claims they support, not only in a final bibliography.
 - Use `<SourceNote>...</SourceNote>` near important claims or paragraphs. It renders as a small, muted, parenthesized citation note in article prose.
 - Include source links inside the `SourceNote` itself.
+- Write `SourceNote` as a single inline MDX element on one line. Do not put the opening or closing tag on its own line, and do not wrap the note body across multiple lines. The component already renders the parenthesis and label, so do not put manual `（...）`, `( ... )`, `出典:`, `Source note:`, or `Source:` text inside it.
 - `SourceNote` is registered by the post renderer, so ordinary report MDX does not need an import. News digests are the exception: keep using `NewsSourceCard` there.
 - When quoting source wording, keep quotes short and specific.
 - For copyrighted sources, do not paste long passages. Prefer brief quoted phrases plus Japanese paraphrase.
@@ -156,6 +157,7 @@ Before finishing:
 - Japanese and English published routes are synchronized for articles and reference pages.
 - English article Mermaid diagrams and English reference pages contain no Japanese user-facing text.
 - Important claims have nearby links.
+- `SourceNote` elements are inline, one-line MDX, without manual parentheses or source labels inside.
 - Current product/spec claims were verified against current sources.
 - Diagrams render as Mermaid-compatible Markdown where possible.
 - The report distinguishes evidence from inference.

@@ -72,6 +72,12 @@
 		)
 	}
 
+	const canRedirectToMixedArticle = (contentPath) =>
+		/^\/(news|reports)\/[^/]+\/$/.test(normalizePath(contentPath))
+
+	const canRedirectToLocale = (locale, contentPath) =>
+		locale === 'mix' ? canRedirectToMixedArticle(contentPath) : canRedirectToEnglish(contentPath)
+
 	const localizedPath = (locale, contentPath) => {
 		const normalized = normalizePath(contentPath)
 		return locale === DEFAULT_LOCALE ? normalized : `/${locale}${normalized}`
@@ -214,7 +220,8 @@
 		}
 
 		const preferredLocale = getStoredLocale() ?? DEFAULT_LOCALE
-		if (preferredLocale === DEFAULT_LOCALE || !canRedirectToEnglish(contentPath)) return
+		if (preferredLocale === DEFAULT_LOCALE || !canRedirectToLocale(preferredLocale, contentPath))
+			return
 
 		const targetPath = withBase(localizedPath(preferredLocale, contentPath))
 		const target = `${targetPath}${window.location.search}${window.location.hash}`

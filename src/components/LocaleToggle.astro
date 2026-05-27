@@ -7,6 +7,8 @@ const { locale = DEFAULT_LOCALE, variant = 'header' } = Astro.props as {
 }
 
 const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
+const isArticleDetailPath = /^\/(news|reports)\/[^/]+\/?$/.test(currentContentPath)
+const showMixedToggle = locale === 'mix' || isArticleDetailPath
 const japaneseHref = localizedPath('ja', currentContentPath)
 const englishHref = localizedPath('en', currentContentPath)
 const mixedHref = localizedPath('mix', currentContentPath)
@@ -15,12 +17,19 @@ const navClass = isFloating
 	? 'fixed bottom-4 left-1/2 z-40 -translate-x-1/2 sm:bottom-5'
 	: 'shrink-0'
 const controlClass = isFloating
-	? 'relative grid h-10 w-40 grid-cols-3 items-center rounded-full border border-black/10 bg-[#f8f7f2]/85 p-1 text-[11px] font-bold shadow-sm backdrop-blur transition-colors dark:border-white/10 dark:bg-[#11110f]/85'
-	: 'relative grid h-9 w-36 grid-cols-3 items-center rounded-full border border-black/10 p-1 text-xs font-bold dark:border-white/10'
+	? [
+			'relative grid h-10 items-center rounded-full border border-black/10 bg-[#f8f7f2]/85 p-1 text-[11px] font-bold shadow-sm backdrop-blur transition-colors dark:border-white/10 dark:bg-[#11110f]/85',
+			showMixedToggle ? 'w-40 grid-cols-3' : 'w-28 grid-cols-2'
+		]
+	: [
+			'relative grid h-9 items-center rounded-full border border-black/10 p-1 text-xs font-bold dark:border-white/10',
+			showMixedToggle ? 'w-36 grid-cols-3' : 'w-24 grid-cols-2'
+		]
 const indicatorClass = [
-	'pointer-events-none absolute inset-y-1 left-1 w-[calc(33.333%-0.25rem)] rounded-full bg-black transition-transform duration-200 ease-out dark:bg-white',
+	'pointer-events-none absolute inset-y-1 left-1 rounded-full bg-black transition-transform duration-200 ease-out dark:bg-white',
+	showMixedToggle ? 'w-[calc(33.333%-0.25rem)]' : 'w-[calc(50%-0.25rem)]',
 	locale === 'en' && 'translate-x-full',
-	locale === 'mix' && 'translate-x-[200%]'
+	showMixedToggle && locale === 'mix' && 'translate-x-[200%]'
 ]
 const linkClass =
 	'relative z-10 inline-flex h-full items-center justify-center rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black dark:focus-visible:outline-white'
@@ -51,15 +60,19 @@ const activeClass = 'text-white dark:text-black'
 		>
 			EN
 		</a>
-		<a
-			href={mixedHref}
-			data-locale-switch='mix'
-			role='radio'
-			aria-checked={locale === 'mix'}
-			aria-label='Switch to Japanese-English mixed reading'
-			class:list={[linkClass, locale === 'mix' ? activeClass : inactiveClass]}
-		>
-			MIX
-		</a>
+		{
+			showMixedToggle && (
+				<a
+					href={mixedHref}
+					data-locale-switch='mix'
+					role='radio'
+					aria-checked={locale === 'mix'}
+					aria-label='Switch to Japanese-English mixed reading'
+					class:list={[linkClass, locale === 'mix' ? activeClass : inactiveClass]}
+				>
+					MIX
+				</a>
+			)
+		}
 	</div>
 </nav>

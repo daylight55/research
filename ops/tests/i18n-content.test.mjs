@@ -78,6 +78,22 @@ test('localized post pages include the shared Mermaid renderer', async () => {
 	}
 })
 
+test('localized post pages build related posts from the active locale only', async () => {
+	const japanesePostPage = await readFile(
+		join(repoRoot.pathname, 'src/pages/post/[...slug].astro'),
+		'utf8'
+	)
+	const englishPostPage = await readFile(
+		join(repoRoot.pathname, 'src/pages/en/post/[...slug].astro'),
+		'utf8'
+	)
+
+	assert.match(japanesePostPage, /getPostLocale\(post\)\s*===\s*locale/)
+	assert.doesNotMatch(japanesePostPage, /post\.id\.split\('\/'\)\[0\]\s*!==\s*['"]en['"]/)
+	assert.match(englishPostPage, /getPostLocale\(post\)\s*===\s*locale/)
+	assert.doesNotMatch(englishPostPage, /post\.id\.startsWith\(`\$\{locale\}\/`\)/)
+})
+
 test('English reference pages mirror Japanese reference routes', async () => {
 	const japaneseReferencePages = (await readdir(referenceDir))
 		.filter((name) => name.endsWith('.astro') && name !== 'index.astro')
@@ -119,13 +135,18 @@ test('Codex translation workflow exists for missing English articles', async () 
 
 	assert.match(workflow, /workflow_dispatch:/)
 	assert.match(workflow, /codex/i)
+	assert.match(workflow, /mkdir -p ops\/codex\/runtime/)
+	assert.match(workflow, /Restore Node for site build/)
+	assert.match(workflow, /grep -RInE/)
+	assert.match(workflow, /git status --porcelain -- articles\/report\/en articles\/news\/en/)
+	assert.doesNotMatch(workflow, /rg -n '\\b\(TBD\|TODO\|FIXME\|未定\|要確認\)\\b'/)
 	assert.match(workflow, /articles\/report\/en/)
 	assert.match(workflow, /articles\/news\/en/)
 	assert.match(prompt, /Do not use TeX-style backtick quotes/)
 	assert.match(prompt, /Mermaid diagram labels/)
 	assert.match(prompt, /news digest articles/)
 	assert.match(prompt, /What happened:/)
-	assert.match(prompt, /Implications for practice:/)
+	assert.match(prompt, /What to watch:/)
 	assert.match(prompt, /Reference pages/)
 })
 
@@ -140,6 +161,10 @@ test('preferred locale provider defaults to Japanese and persists manual switche
 		join(repoRoot.pathname, 'src/components/FloatingLocaleSwitch.astro'),
 		'utf8'
 	)
+	const localeToggle = await readFile(
+		join(repoRoot.pathname, 'src/components/LocaleToggle.astro'),
+		'utf8'
+	)
 
 	assert.match(layout, /<ProviderLocale\s*\/>/)
 	assert.match(layout, /<FloatingLocaleSwitch\s+locale=\{locale\}\s*\/>/)
@@ -150,13 +175,13 @@ test('preferred locale provider defaults to Japanese and persists manual switche
 	assert.match(provider, /window\.location\.replace/)
 	assert.match(provider, /window\.location\.replace/)
 	assert.match(provider, /canRedirectToEnglish/)
-	assert.match(header, /data-locale-switch='ja'/)
-	assert.match(header, /data-locale-switch='en'/)
+	assert.match(header, /<LocaleToggle\s+locale=\{locale\}\s*\/>/)
 	assert.doesNotMatch(header, /transition:persist='navbar'/)
-	assert.match(floatingSwitch, /aria-label='Language'/)
-	assert.match(floatingSwitch, /fixed bottom-4 right-4/)
-	assert.match(floatingSwitch, /localizedPath\('ja', currentContentPath\)/)
-	assert.match(floatingSwitch, /localizedPath\('en', currentContentPath\)/)
-	assert.match(floatingSwitch, /data-locale-switch='ja'/)
-	assert.match(floatingSwitch, /data-locale-switch='en'/)
+	assert.match(floatingSwitch, /<LocaleToggle\s+locale=\{locale\}\s+variant='floating'\s*\/>/)
+	assert.match(localeToggle, /aria-label='Language'/)
+	assert.match(localeToggle, /data-locale-switch='ja'/)
+	assert.match(localeToggle, /data-locale-switch='en'/)
+	assert.match(localeToggle, /localizedPath\('ja', currentContentPath\)/)
+	assert.match(localeToggle, /localizedPath\('en', currentContentPath\)/)
+	assert.match(localeToggle, /fixed bottom-4 left-1\/2/)
 })

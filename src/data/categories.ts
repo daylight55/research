@@ -5,6 +5,7 @@ export const CATEGORIES = [
 	'developer-tools',
 	'knowledge-systems',
 	'philosophy-knowledge',
+	'learning-science',
 	'data-infrastructure',
 	'tech-news',
 	'semiconductor-memory',

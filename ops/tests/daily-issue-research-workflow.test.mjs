@@ -9,6 +9,14 @@ const trendWorkflow = readFileSync(
 	'.github/workflows/daily-trend-news.yml',
 	'utf8',
 )
+const dailyIssuePrompt = readFileSync(
+	'ops/codex/prompts/daily-issue-research.md',
+	'utf8',
+)
+const cloudflarePreviewWorkflow = readFileSync(
+	'.github/workflows/cloudflare-pages-preview.yml',
+	'utf8',
+)
 
 assert.match(
 	workflow,
@@ -20,6 +28,24 @@ assert.match(
 	workflow,
 	/- name: Run Codex research[\s\S]*?if: steps\.select_issue\.outputs\.issue_found == 'true' && steps\.restore_generated_article\.outputs\.cache-hit != 'true'/,
 	'workflow should skip Codex generation when generated article artifacts were restored from cache',
+)
+
+assert.match(
+	workflow,
+	/OPENAI_MODEL: gpt-5\.4-mini[\s\S]*?model: \$\{\{ env\.OPENAI_MODEL \}\}[\s\S]*?OPENAI_USAGE_MODEL: \$\{\{ env\.OPENAI_MODEL \}\}/,
+	'Daily Issue Research should define the Codex model once and reuse it for generation and usage reporting',
+)
+
+assert.match(
+	workflow,
+	/## Automation Metadata[\s\S]*?- Model: \$\{OPENAI_MODEL\}[\s\S]*?technical-research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
+	'Daily Issue Research should pass model, skill, and prompt metadata into the generated research prompt',
+)
+
+assert.match(
+	dailyIssuePrompt,
+	/research-log\.mdx[\s\S]*?## 利用環境[\s\S]*?model[\s\S]*?technical-research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
+	'Daily Issue Research prompt should require model, skill, and prompt metadata in research logs',
 )
 
 assert.match(
@@ -80,6 +106,12 @@ assert.match(
 	trendWorkflow,
 	/- name: Merge completed trend news pull request[\s\S]*?if: steps\.create_pr\.outputs\.pr_url != ''[\s\S]*?--match-head-commit "\$\{head_ref_oid\}"/,
 	'Daily Trend News should merge created trend PRs in the same workflow run',
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Dispatch English translation workflow[\s\S]*?if: steps\.merge_pr\.outcome == 'success'[\s\S]*?gh workflow run translate-blog-en\.yml --ref main/,
+	'Daily Trend News should dispatch the English translation workflow after merging a generated news PR',
 )
 
 assert.match(
@@ -162,6 +194,18 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
+	/source\.unsplash\.com[\s\S]*?deprecated source\.unsplash\.com dynamic URLs/,
+	'trend news workflow should reject deprecated dynamic Unsplash image URLs',
+)
+
+assert.match(
+	trendWorkflow,
 	/- name: Save generated news article cache[\s\S]*?uses: actions\/cache\/save@v4[\s\S]*?key: \$\{\{ steps\.run_context\.outputs\.cache_key \}\}/,
 	'trend news workflow should save completed generated news artifacts in the run cache',
+)
+
+assert.match(
+	cloudflarePreviewWorkflow,
+	/concurrency:[\s\S]*?group: cloudflare-pages-preview-[\s\S]*?cancel-in-progress: false/,
+	'Cloudflare preview should not cancel the pull_request check when generated PR workflows dispatch a second preview for the same branch',
 )

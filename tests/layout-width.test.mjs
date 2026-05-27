@@ -18,6 +18,47 @@ test('post layout gives the article column more room on wide screens', () => {
 	assert.match(postPage, /2xl:grid-cols-\[12rem_minmax\(0,62rem\)_12rem\]/)
 })
 
+test('post sidebar keeps the research trail link immediately before share', () => {
+	const postPage = readFileSync('src/pages/post/[...slug].astro', 'utf8')
+	const englishPostPage = readFileSync('src/pages/en/post/[...slug].astro', 'utf8')
+
+	for (const source of [postPage, englishPostPage]) {
+		const researchIndex = source.lastIndexOf('Research trail')
+		const shareIndex = source.lastIndexOf('<Share title={post.data.title} />')
+
+		assert.ok(researchIndex > 0)
+		assert.ok(shareIndex > researchIndex)
+	}
+
+	assert.match(
+		englishPostPage,
+		/href=\{localizedPath\(locale, `\/post\/\$\{postSlug\}\/research\/`\)\}/
+	)
+	assert.doesNotMatch(
+		englishPostPage,
+		/href=\{localizedPath\('ja', `\/post\/\$\{postSlug\}\/research\/`\)\}/
+	)
+})
+
+test('research process page uses a wider reading surface', () => {
+	const researchPage = readFileSync('src/pages/post/[slug]/research.astro', 'utf8')
+	const englishResearchPage = readFileSync('src/pages/en/post/[slug]/research.astro', 'utf8')
+
+	for (const source of [researchPage, englishResearchPage]) {
+		assert.match(source, /max-w-6xl/)
+		assert.match(source, /max-w-4xl/)
+		assert.doesNotMatch(source, /max-w-3xl/)
+	}
+})
+
+test('English research process route links back to the English article', () => {
+	const englishResearchPage = readFileSync('src/pages/en/post/[slug]/research.astro', 'utf8')
+
+	assert.match(englishResearchPage, /const locale = 'en'/)
+	assert.match(englishResearchPage, /href=\{localizedPath\(locale, `\/post\/\$\{postSlug\}\/`\)\}/)
+	assert.match(englishResearchPage, /Back to article/)
+})
+
 test('post lists keep cards readable at intermediate viewport widths', () => {
 	const listPosts = readFileSync('src/components/ListPosts.astro', 'utf8')
 

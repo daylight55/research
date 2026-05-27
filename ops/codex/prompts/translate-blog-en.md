@@ -12,7 +12,7 @@ Rules:
 - Translate Mermaid diagram labels, axis labels, sequence participants, and messages into English. Do not leave Japanese text inside English Mermaid blocks.
 - Keep source-adjacent `出典メモ:` paragraphs as English `Source note:` paragraphs.
 - Do not use TeX-style backtick quotes such as ``example''. Use normal double quotes for quoted phrases.
-- For news digest articles, keep the topic labels as standalone paragraphs with blank lines between `What happened:`, `Why it matters:`, `Implications for practice:`, and the following `NewsSourceCard`, matching the Japanese layout.
+- For news digest articles, keep the topic labels as standalone paragraphs with blank lines between `What happened:`, `Why it matters:`, `What to watch:`, and the following `NewsSourceCard`, matching the Japanese layout. Translate `今後の注視点:` as `What to watch:` and keep the content focused on what readers should monitor next.
 - Do not translate code identifiers, URLs, file paths, product names, or proper nouns unless an established English name exists.
 - Do not add placeholders such as `TBD`, `TODO`, `FIXME`, `未定`, or `要確認`.
 - After writing files, run `pnpm build` and ensure the generated English article pages are present under `dist/en/post/`.

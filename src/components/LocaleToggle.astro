@@ -1,0 +1,53 @@
+---
+import { DEFAULT_LOCALE, localizedPath, stripLocaleFromPath, type Locale } from '@/utils'
+
+const { locale = DEFAULT_LOCALE, variant = 'header' } = Astro.props as {
+	locale?: Locale
+	variant?: 'header' | 'floating'
+}
+
+const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
+const japaneseHref = localizedPath('ja', currentContentPath)
+const englishHref = localizedPath('en', currentContentPath)
+const isFloating = variant === 'floating'
+const navClass = isFloating
+	? 'fixed bottom-4 left-1/2 z-40 -translate-x-1/2 sm:bottom-5'
+	: 'shrink-0'
+const controlClass = isFloating
+	? 'relative grid h-10 w-28 grid-cols-2 items-center rounded-full border border-black/10 bg-[#f8f7f2]/85 p-1 text-[11px] font-bold shadow-sm backdrop-blur transition-colors dark:border-white/10 dark:bg-[#11110f]/85'
+	: 'relative grid h-9 w-24 grid-cols-2 items-center rounded-full border border-black/10 p-1 text-xs font-bold dark:border-white/10'
+const indicatorClass = [
+	'pointer-events-none absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] rounded-full bg-black transition-transform duration-200 ease-out dark:bg-white',
+	locale === 'en' && 'translate-x-full'
+]
+const linkClass =
+	'relative z-10 inline-flex h-full items-center justify-center rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black dark:focus-visible:outline-white'
+const inactiveClass = 'text-[#181713] hover:bg-black/5 dark:text-[#f4efe4] dark:hover:bg-white/10'
+const activeClass = 'text-white dark:text-black'
+---
+
+<nav aria-label='Language' class={navClass}>
+	<div class={controlClass} role='radiogroup' aria-label='Language'>
+		<span class:list={indicatorClass} aria-hidden='true'></span>
+		<a
+			href={japaneseHref}
+			data-locale-switch='ja'
+			role='radio'
+			aria-checked={locale === 'ja'}
+			aria-label='Switch to Japanese'
+			class:list={[linkClass, locale === 'ja' ? activeClass : inactiveClass]}
+		>
+			JA
+		</a>
+		<a
+			href={englishHref}
+			data-locale-switch='en'
+			role='radio'
+			aria-checked={locale === 'en'}
+			aria-label='Switch to English'
+			class:list={[linkClass, locale === 'en' ? activeClass : inactiveClass]}
+		>
+			EN
+		</a>
+	</div>
+</nav>

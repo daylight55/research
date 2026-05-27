@@ -146,6 +146,14 @@
 
 	const clamp = (value, min, max) => Math.min(max, Math.max(min, value))
 
+	const normalizeScrollAnchorText = (text) =>
+		(text ?? '')
+			.replace(/[“”]/g, '"')
+			.replace(/[‘’]/g, "'")
+			.replace(/[`*]/g, '')
+			.replace(/\s+/g, ' ')
+			.trim()
+
 	const getArticleContentRoot = () =>
 		document.querySelector('article [data-mixed-english]') ??
 		document.querySelector('article .prose') ??
@@ -165,6 +173,51 @@
 			const rect = block.getBoundingClientRect()
 			return rect.height > 0 && (block.textContent ?? '').trim().length > 0
 		})
+	}
+
+	const getBlockTextAnchors = (block, locale = getPathLocale(window.location.pathname)) => {
+		const englishText = normalizeScrollAnchorText(block.dataset?.scrollAnchorEn)
+		const japaneseText = normalizeScrollAnchorText(block.dataset?.scrollAnchorJa)
+		const blockText = normalizeScrollAnchorText(block.textContent)
+
+		return {
+			en: englishText || (locale === 'en' ? blockText : ''),
+			ja: japaneseText || (locale === 'ja' ? blockText : '')
+		}
+	}
+
+	const textAnchorMatches = (left, right) => {
+		if (!left || !right) return false
+		if (left.length < 8 || right.length < 8) return false
+		return left === right || left.includes(right) || right.includes(left)
+	}
+
+	const findArticleBlockByTextAnchor = (anchor, blocks) => {
+		const targetLocale = getPathLocale(window.location.pathname)
+		const preferredLocales = targetLocale === 'mix' ? ['en', 'ja'] : [targetLocale]
+
+		for (const locale of preferredLocales) {
+			const savedText = anchor.textByLocale?.[locale]
+			if (!savedText) continue
+
+			const matchedBlock = blocks.find((block) => {
+				const blockText = getBlockTextAnchors(block, targetLocale)[locale]
+				return textAnchorMatches(blockText, savedText)
+			})
+			if (matchedBlock) return matchedBlock
+		}
+
+		for (const locale of ['en', 'ja']) {
+			const savedText = anchor.textByLocale?.[locale]
+			if (!savedText) continue
+
+			const matchedBlock = blocks.find((block) =>
+				textAnchorMatches(normalizeScrollAnchorText(block.textContent), savedText)
+			)
+			if (matchedBlock) return matchedBlock
+		}
+
+		return null
 	}
 
 	const getArticleScrollAnchor = () => {
@@ -188,6 +241,7 @@
 		return {
 			blockIndex,
 			blockOffsetRatio,
+			textByLocale: getBlockTextAnchors(visibleBlock),
 			viewportRatio: ARTICLE_VIEWPORT_ANCHOR_RATIO
 		}
 	}
@@ -198,7 +252,9 @@
 		const blocks = getArticleBlocks()
 		if (blocks.length === 0) return false
 
-		const block = blocks[clamp(anchor.blockIndex, 0, blocks.length - 1)]
+		const block =
+			findArticleBlockByTextAnchor(anchor, blocks) ??
+			blocks[clamp(anchor.blockIndex, 0, blocks.length - 1)]
 		if (!block) return false
 
 		const rect = block.getBoundingClientRect()
@@ -237,7 +293,8 @@
 
 		try {
 			const raw = window.sessionStorage.getItem(SCROLL_KEY)
-			return raw ? JSON.parse(raw) : null
+			pendingScrollRestore = raw ? JSON.parse(raw) : null
+			return pendingScrollRestore
 		} catch {
 			return null
 		}
@@ -289,28 +346,29 @@
 			return Math.abs(window.scrollY - targetY) < 4
 		}
 
-		const clearWhenRestored = () => {
+		const clearWhenRestored = (isFinalAttempt = false) => {
 			if (restoreRun !== scrollRestoreRun) return
 			if (readSavedScrollPosition() !== saved) return
-			if (scrollWithoutSmooth()) {
+			const restored = scrollWithoutSmooth()
+			if (restored && isFinalAttempt) {
 				clearSavedScrollPosition()
 				clearScheduledScrollRestores()
 			}
 		}
 
-		const scheduleRestore = (delay) => {
-			const timer = window.setTimeout(clearWhenRestored, delay)
+		const scheduleRestore = (delay, isFinalAttempt = false) => {
+			const timer = window.setTimeout(() => clearWhenRestored(isFinalAttempt), delay)
 			scrollRestoreTimers.push(timer)
 		}
 
 		clearWhenRestored()
 		if (readSavedScrollPosition() !== saved) return
-		window.requestAnimationFrame(clearWhenRestored)
+		window.requestAnimationFrame(() => clearWhenRestored())
 		scheduleRestore(80)
 		scheduleRestore(180)
 		scheduleRestore(400)
 		scheduleRestore(800)
-		scheduleRestore(1200)
+		scheduleRestore(1200, true)
 	}
 
 	const cancelScrollRestoreForUserInput = () => {

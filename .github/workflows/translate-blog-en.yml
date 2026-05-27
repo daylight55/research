@@ -95,7 +95,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          if git diff --quiet; then
+          if [[ -z "$(git status --porcelain -- articles/report/en articles/news/en)" ]]; then
             echo "No translation changes were produced."
             exit 0
           fi

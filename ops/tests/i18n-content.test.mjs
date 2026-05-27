@@ -309,7 +309,7 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /\.source-note/)
 	assert.match(mixedArticleComponent, /Source memo/)
 	assert.match(mixedArticleComponent, /__DECIMAL_/)
-	assert.match(mixedArticleComponent, /mixed-source-notes/)
+	assert.doesNotMatch(mixedArticleComponent, /mixed-source-notes/)
 	assert.match(mixedArticleComponent, /japaneseSentences\[sentenceIndex\] \?\? ''/)
 	assert.match(mixedArticleComponent, /block\.replaceChildren/)
 	assert.match(mixedArticleComponent, /mixed-sentence__text/)

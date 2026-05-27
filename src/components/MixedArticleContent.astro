@@ -32,7 +32,7 @@ const serializedAlignment = alignment
 			en: /[^.!?]+[.!?]["'”’)]*|[^.!?]+$/g,
 			ja: /[^。！？]+[。！？」』）]*|[^。！？]+$/g
 		}
-		const sourceNotePattern = /\s*(Source note|Source memo|出典)[:：]/i
+		const sourceNotePattern = /\s*(Source notes?|Source memos?|出典)[:：]/i
 
 		function protectSentenceBoundaries(text) {
 			const placeholders = []
@@ -167,25 +167,6 @@ const serializedAlignment = alignment
 			return clone.textContent ?? ''
 		}
 
-		function sourceNotes(block) {
-			const notes = [...block.querySelectorAll('.source-note')]
-			splitSourceNotes(pairableText(block)).notes.forEach((text) => {
-				const note = document.createElement('span')
-				note.textContent = text
-				notes.push(note)
-			})
-			return notes
-		}
-
-		function appendSourceNotes(block, notes) {
-			if (notes.length === 0) return
-
-			const wrapper = document.createElement('span')
-			wrapper.className = 'mixed-source-notes'
-			notes.forEach((note) => wrapper.appendChild(note))
-			block.appendChild(wrapper)
-		}
-
 		function shouldPairBlock(block) {
 			return (
 				!block.closest('pre, code, table, .not-prose, [data-mixed-translation]') &&
@@ -219,12 +200,24 @@ const serializedAlignment = alignment
 			return { content: content.join('\n'), notes }
 		}
 
+		function removeSourceNotes(root) {
+			root.querySelectorAll('.source-note, [role="note"]').forEach((note) => note.remove())
+			root.querySelectorAll('p, li, blockquote, tr').forEach((block) => {
+				const { content, notes } = splitSourceNotes(pairableText(block))
+				if (notes.length === 0) return
+				if (content.trim()) {
+					block.textContent = content.trim()
+					return
+				}
+				block.remove()
+			})
+		}
+
 		function contentSentences(text, locale) {
 			return splitSentences(splitSourceNotes(text).content, locale)
 		}
 
 		function pairBlocks(block, japaneseBlock, japaneseSentencesOverride, alignmentMap) {
-			const englishSourceNotes = sourceNotes(block)
 			const englishSentences = contentSentences(pairableText(block), 'en')
 			const japaneseSentences =
 				japaneseSentencesOverride ?? contentSentences(pairableText(japaneseBlock), 'ja')
@@ -240,7 +233,6 @@ const serializedAlignment = alignment
 			)
 
 			block.replaceChildren(...sentencePairs)
-			appendSourceNotes(block, englishSourceNotes)
 		}
 
 		function articleSections(root) {
@@ -318,7 +310,6 @@ const serializedAlignment = alignment
 		}
 
 		function pairBlockFromExplicitAlignment(block, alignmentPairs) {
-			const englishSourceNotes = sourceNotes(block)
 			const blockText = normalizeAlignmentText(splitSourceNotes(pairableText(block)).content)
 			const blockPairs = alignmentPairs
 				.filter((pair) => blockText.includes(pair.normalizedEn))
@@ -331,7 +322,6 @@ const serializedAlignment = alignment
 			if (blockPairs.length === 0) return false
 
 			block.replaceChildren(...blockPairs.map((pair) => createSentencePair(pair.en, pair.ja)))
-			appendSourceNotes(block, englishSourceNotes)
 			return true
 		}
 
@@ -361,7 +351,7 @@ const serializedAlignment = alignment
 
 			englishRoot
 				.querySelectorAll('p, li')
-				.forEach((block) => isSourceNoteBlock(block) && block.classList.add('mixed-source-notes'))
+				.forEach((block) => isSourceNoteBlock(block) && block.remove())
 
 			const englishSections = articleSections(englishRoot)
 			const japaneseSections = articleSections(japaneseRoot)
@@ -371,6 +361,7 @@ const serializedAlignment = alignment
 			)
 			if (alignmentPairs.length > 0) {
 				pairBlocksWithExplicitAlignment(englishRoot, alignmentPairs, alignmentMap)
+				removeSourceNotes(englishRoot)
 				root.dataset.mixedArticle = 'paired'
 				return
 			}
@@ -381,6 +372,7 @@ const serializedAlignment = alignment
 				pairSection(section, japaneseSection, alignmentMap)
 			})
 
+			removeSourceNotes(englishRoot)
 			root.dataset.mixedArticle = 'paired'
 		}
 
@@ -419,11 +411,6 @@ const serializedAlignment = alignment
 
 	:global(.mixed-sentence__text) {
 		display: block;
-	}
-
-	:global(.mixed-source-notes) {
-		display: block;
-		margin-block: 0.5rem 0.85rem;
 	}
 
 	:global(.mixed-sentence + .mixed-sentence) {

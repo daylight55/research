@@ -19,7 +19,9 @@ async function articleSlugs(type, locale = 'ja') {
 		if (!entry.isDirectory()) continue
 
 		const localeEntries = await readdir(join(dir, entry.name), { withFileTypes: true })
-		if (localeEntries.some((localeEntry) => localeEntry.isDirectory() && localeEntry.name === locale)) {
+		if (
+			localeEntries.some((localeEntry) => localeEntry.isDirectory() && localeEntry.name === locale)
+		) {
 			slugs.push(entry.name)
 		}
 	}
@@ -236,7 +238,51 @@ test('preferred locale provider defaults to Japanese and persists manual switche
 	assert.match(localeToggle, /aria-label='Language'/)
 	assert.match(localeToggle, /data-locale-switch='ja'/)
 	assert.match(localeToggle, /data-locale-switch='en'/)
+	assert.match(localeToggle, /data-locale-switch='mix'/)
 	assert.match(localeToggle, /localizedPath\('ja', currentContentPath\)/)
 	assert.match(localeToggle, /localizedPath\('en', currentContentPath\)/)
+	assert.match(localeToggle, /localizedPath\('mix', currentContentPath\)/)
 	assert.match(localeToggle, /fixed bottom-4 left-1\/2/)
+})
+
+test('mixed Japanese-English article pages are generated as a third reading mode', async () => {
+	const mixedArticleComponent = await readFile(
+		join(repoRoot.pathname, 'src/components/MixedArticleContent.astro'),
+		'utf8'
+	)
+	const mixedPages = await Promise.all(
+		['src/pages/mix/reports/[...slug].astro', 'src/pages/mix/news/[...slug].astro'].map((file) =>
+			readFile(join(repoRoot.pathname, file), 'utf8')
+		)
+	)
+	const localeUtils = await readFile(join(repoRoot.pathname, 'src/utils/i18n.ts'), 'utf8')
+	const provider = await readFile(
+		join(repoRoot.pathname, 'src/components/ProviderLocale.astro'),
+		'utf8'
+	)
+
+	assert.match(
+		localeUtils,
+		/SUPPORTED_LOCALES\s*=\s*\[\s*['"]ja['"]\s*,\s*['"]en['"]\s*,\s*['"]mix['"]\s*\]/
+	)
+	assert.match(
+		provider,
+		/SUPPORTED_LOCALES\s*=\s*\[\s*['"]ja['"]\s*,\s*['"]en['"]\s*,\s*['"]mix['"]\s*\]/
+	)
+	assert.match(provider, /\/mix\//)
+	assert.match(mixedArticleComponent, /data-mixed-article/)
+	assert.match(mixedArticleComponent, /data-mixed-english/)
+	assert.match(mixedArticleComponent, /data-mixed-japanese/)
+	assert.match(mixedArticleComponent, /data-mixed-translation/)
+	assert.match(mixedArticleComponent, /splitSentences/)
+
+	for (const source of mixedPages) {
+		assert.match(source, /const locale = 'mix'/)
+		assert.match(source, /findPostTranslation\(allPosts,\s*post,\s*DEFAULT_LOCALE\)/)
+		assert.match(source, /findPostTranslation\(allPosts,\s*post,\s*'en'\)/)
+		assert.match(source, /<MixedArticleContent>/)
+		assert.match(source, /slot='english'/)
+		assert.match(source, /slot='japanese'/)
+		assert.match(source, /<MermaidRenderer \/>/)
+	}
 })

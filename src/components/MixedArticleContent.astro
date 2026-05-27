@@ -1,0 +1,106 @@
+<div class='mixed-article' data-mixed-article>
+	<div class='mixed-article__english' data-mixed-english>
+		<slot name='english' />
+	</div>
+	<div class='mixed-article__japanese' data-mixed-japanese hidden>
+		<slot name='japanese' />
+	</div>
+</div>
+
+<script is:inline>
+	const splitSentences = (text, locale) => {
+		const normalized = text.replace(/\s+/g, ' ').trim()
+		if (!normalized) return []
+
+		const pattern = locale === 'ja' ? /(?<=[。！？])\s*/ : /(?<=[.!?])\s+(?=["'([{A-Z0-9])/
+		return normalized
+			.split(pattern)
+			.map((sentence) => sentence.trim())
+			.filter(Boolean)
+	}
+
+	const pairMixedArticle = (root) => {
+		const englishRoot = root.querySelector('[data-mixed-english]')
+		const japaneseRoot = root.querySelector('[data-mixed-japanese]')
+		if (!englishRoot || !japaneseRoot || root.dataset.mixedArticle === 'paired') return
+
+		const englishBlocks = [...englishRoot.querySelectorAll('p, li')].filter(
+			(block) => !block.closest('pre, code, table, [data-mixed-translation]')
+		)
+		const japaneseBlocks = [...japaneseRoot.querySelectorAll('p, li')].filter(
+			(block) => !block.closest('pre, code, table')
+		)
+
+		englishBlocks.forEach((block, index) => {
+			const japaneseBlock = japaneseBlocks[index]
+			if (!japaneseBlock) return
+
+			const englishSentences = splitSentences(block.textContent ?? '', 'en')
+			const japaneseSentences = splitSentences(japaneseBlock.textContent ?? '', 'ja')
+			if (block.children.length === 0 && englishSentences.length > 1) {
+				block.textContent = ''
+				englishSentences.forEach((sentence, sentenceIndex) => {
+					const englishSentence = document.createElement('span')
+					englishSentence.className = 'mixed-sentence'
+					englishSentence.textContent = sentence
+
+					const translation = document.createElement('span')
+					translation.dataset.mixedTranslation = ''
+					translation.setAttribute('lang', 'ja')
+					translation.setAttribute('aria-label', 'Japanese translation')
+					translation.className = 'mixed-translation'
+					translation.textContent = japaneseSentences[sentenceIndex] ?? ''
+
+					englishSentence.appendChild(translation)
+					block.appendChild(englishSentence)
+				})
+				return
+			}
+
+			const translation = document.createElement('span')
+			translation.dataset.mixedTranslation = ''
+			translation.setAttribute('lang', 'ja')
+			translation.setAttribute('aria-label', 'Japanese translation')
+			translation.className = 'mixed-translation'
+			translation.textContent = (japaneseBlock.textContent ?? '').trim()
+			if (translation.textContent.trim()) block.appendChild(translation)
+		})
+
+		root.dataset.mixedArticle = 'paired'
+	}
+
+	const pairAllMixedArticles = () => {
+		document.querySelectorAll('[data-mixed-article]').forEach(pairMixedArticle)
+	}
+
+	pairAllMixedArticles()
+	document.addEventListener('astro:page-load', pairAllMixedArticles)
+</script>
+
+<style>
+	.mixed-article__english :global(p),
+	.mixed-article__english :global(li) {
+		position: relative;
+	}
+
+	.mixed-translation {
+		display: block;
+		margin-top: 0.35rem;
+		font-size: 0.72em;
+		font-weight: 500;
+		line-height: 1.65;
+		color: rgb(90 96 110);
+	}
+
+	.mixed-sentence {
+		display: block;
+	}
+
+	.mixed-sentence + .mixed-sentence {
+		margin-top: 0.85rem;
+	}
+
+	:global(.dark) .mixed-translation {
+		color: rgb(188 194 206);
+	}
+</style>

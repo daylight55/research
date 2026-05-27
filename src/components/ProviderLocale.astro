@@ -5,7 +5,7 @@
 	const STORAGE_KEY = 'preferredLocale'
 	const SCROLL_KEY = 'localeSwitchScroll'
 	const DEFAULT_LOCALE = 'ja'
-	const SUPPORTED_LOCALES = ['ja', 'en']
+	const SUPPORTED_LOCALES = ['ja', 'en', 'mix']
 	let pendingScrollRestore = null
 	let scrollRestoreRun = 0
 	let scrollRestoreTimers = []
@@ -32,12 +32,13 @@
 
 	const getPathLocale = (pathname) => {
 		const normalized = normalizePath(withoutBase(pathname))
+		if (normalized === '/mix/' || normalized.startsWith('/mix/')) return 'mix'
 		return normalized === '/en/' || normalized.startsWith('/en/') ? 'en' : DEFAULT_LOCALE
 	}
 
 	const stripLocale = (pathname) => {
 		const normalized = normalizePath(withoutBase(pathname))
-		return normalized === '/en/' ? '/' : normalized.replace(/^\/en\//, '/')
+		return normalized === '/en/' ? '/' : normalized.replace(/^\/en\//, '/').replace(/^\/mix\//, '/')
 	}
 
 	const getStoredLocale = () => {
@@ -73,7 +74,7 @@
 
 	const localizedPath = (locale, contentPath) => {
 		const normalized = normalizePath(contentPath)
-		return locale === DEFAULT_LOCALE ? normalized : `/en${normalized}`
+		return locale === DEFAULT_LOCALE ? normalized : `/${locale}${normalized}`
 	}
 
 	const getScrollableHeight = () =>
@@ -213,9 +214,9 @@
 		}
 
 		const preferredLocale = getStoredLocale() ?? DEFAULT_LOCALE
-		if (preferredLocale !== 'en' || !canRedirectToEnglish(contentPath)) return
+		if (preferredLocale === DEFAULT_LOCALE || !canRedirectToEnglish(contentPath)) return
 
-		const targetPath = withBase(localizedPath('en', contentPath))
+		const targetPath = withBase(localizedPath(preferredLocale, contentPath))
 		const target = `${targetPath}${window.location.search}${window.location.hash}`
 		window.location.replace(target)
 	}

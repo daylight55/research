@@ -7,11 +7,11 @@
 - 新しい調査テーマは `articles/report/<slug>/` を作成して管理する。
 - ニュースダイジェストは `articles/news/<slug>/` を作成して管理する。
 - `<slug>` は記事URLにも使う短い kebab-case 名にする。例: `graphiti-mcp-memory`, `oauth21-pkce-mcp-auth`。
-- Webサイト上に表示する調査テーマでは、`articles/report/<slug>/index.mdx` を本文の正本として扱う。
-- Webサイト上に表示するニュースでは、`articles/news/<slug>/index.mdx` を本文の正本として扱う。
-- 公開可能な調査プロセス、根拠、判断ログがある場合は同じ記事ディレクトリの `research-log.mdx` にまとめる。
+- Webサイト上に表示する調査テーマでは、`articles/report/<slug>/ja/index.mdx` を日本語本文の正本として扱う。
+- Webサイト上に表示するニュースでは、`articles/news/<slug>/ja/index.mdx` を日本語本文の正本として扱う。
+- 公開可能な調査プロセス、根拠、判断ログがある場合は同じ記事ディレクトリの `ja/research-log.mdx` にまとめる。
 - `notes/`, `sources/`, `figures/`, `prototype/` などの非公開作業ディレクトリは原則作らない。公開価値のある情報は `research-log.mdx` に要約、リンク、図表として含める。
-- 記事本文から `research-log.mdx` へ辿れる導線を維持する。サイト側に調査ログが存在する場合は `/post/<slug>/research/` を公開する。
+- 記事本文から `research-log.mdx` へ辿れる導線を維持する。サイト側に調査ログが存在する場合は `/reports/<slug>/research/` を公開する。
 
 ## Required Skill
 
@@ -19,7 +19,7 @@
 
 ## Astro Site Publication Workflow
 
-- Webサイト上に表示する調査レポートは、最初から `articles/report/<slug>/index.mdx` に本文を書く。
+- Webサイト上に表示する調査レポートは、最初から `articles/report/<slug>/ja/index.mdx` に本文を書く。
 - `report.md` などの別本文を作ってから `index.mdx` へコピーする運用は禁止する。本文が二重化し、片方だけ浅い/古い状態になりやすいため。
 - 調査タスクや残課題を公開する場合は、単独のタスクリストではなく同じ記事ディレクトリの `research-log.mdx` に調査プロセスとしてまとめる。
 - 新しいカテゴリを使う場合は、`src/data/categories.ts` の `CATEGORIES` に追加する。既存カテゴリとのコンフリクト時は、main側のカテゴリを消さずに和集合で解消する。
@@ -27,17 +27,18 @@
 - トップページなどの件数表示は固定値にしない。カテゴリ数は `CATEGORIES.length` など、実データから算出する。
 - PRプレビューは既定では作成しない。プレビュー表示を明示的に求められた場合だけ、現在のデプロイ方式に合わせて一時的な確認手段を用意する。
 - 日英対応では、日本語を正本として扱い、公開される記事・reference・導線を更新する場合は同じPRで英語側も同期する。翻訳レビューなどテストで規定できない人手確認が残る場合は、自動マージせず残課題として明記する。
-- `articles/report/<slug>/index.mdx` または `articles/news/<slug>/index.mdx` を追加・更新した場合は、対応する `articles/report/en/<slug>/index.mdx` または `articles/news/en/<slug>/index.mdx` も追加・更新する。英語生成を別ジョブに回す場合も、PR内で同期状態をテストし、未生成のまま公開導線だけ増やさない。
+- `articles/report/<slug>/ja/index.mdx` または `articles/news/<slug>/ja/index.mdx` を追加・更新した場合は、対応する `articles/report/<slug>/en/index.mdx` または `articles/news/<slug>/en/index.mdx` も追加・更新する。英語生成を別ジョブに回す場合も、PR内で同期状態をテストし、未生成のまま公開導線だけ増やさない。
 - `src/pages/reference/<slug>.astro` を追加・更新した場合は `src/pages/en/reference/<slug>.astro` も追加・更新する。reference一覧やトップページのカードは、`getReferenceItems(locale)` のようなlocale-awareな共有データから引き、片方だけの手書き重複を避ける。
 - 英語ページ内のMermaid、reference本文、カード説明、出典周辺ラベルには日本語を残さない。日本語混入や日英route parityは `ops/tests/i18n-content.test.mjs` で検出できる形にする。
 - PRやプレビュー表示を求められた場合、または公開対象の本文を更新した場合は、`pnpm build` を実行し、生成ログに次が含まれることを確認する。
-  - `/post/<slug>/index.html`
-  - `research-log.mdx` がある場合は `/post/<slug>/research/index.html`
+  - ニュースの場合は `/news/<slug>/index.html`
+  - レポートの場合は `/reports/<slug>/index.html`
+  - `research-log.mdx` がある場合は `/reports/<slug>/research/index.html`
   - `/category/<category-name>/1/index.html`
   - `/index.html`
 - さらに、`dist/index.html` またはローカル preview への `curl` で、トップページに `<slug>`、記事タイトル、カテゴリリンクが含まれることを確認する。
 - PR作成後は `gh pr checks` でCI状態を確認する。プレビュー表示を明示的に求められた場合は、発行された一時URLに対して `<slug>`、記事タイトル、カテゴリリンクが含まれることを `curl` で確認する。
-- 「トップページに出ていない」「レンダリング対象に入っていない」と言われたら、まず `articles/report/<slug>/index.mdx` または `articles/news/<slug>/index.mdx` と `src/data/categories.ts` の登録漏れを疑う。
+- 「トップページに出ていない」「レンダリング対象に入っていない」と言われたら、まず `articles/report/<slug>/ja/index.mdx` または `articles/news/<slug>/ja/index.mdx` と `src/data/categories.ts` の登録漏れを疑う。
 
 ## GitHub Publication Workflow
 
@@ -67,7 +68,8 @@
 - 重要な主張には、近くに出典リンクを置く。
 - 引用元の記述を使う場合は、長い逐語引用を避け、短い原文句と日本語要約を組み合わせる。
 - 参考情報一覧だけで済ませず、本文中の該当段落近くに `<SourceNote>...</SourceNote>` を置く。表示は本文より小さく薄いカッコ付きの出典メモとして扱う。
-- `SourceNote` は `src/pages/post/[...slug].astro` でMDXコンポーネント登録済みなので、通常記事では個別importしない。ニュースダイジェストでは従来どおり `NewsSourceCard` を使う。
+- `SourceNote` は必ず同一行のインライン要素として書く。`<SourceNote>` と `</SourceNote>` を独立行に置いたり、内部を複数行に折り返したりしない。コンポーネント側が括弧とラベルを付けるため、内部に `（...）`、`( ... )`、`出典:`、`Source note:`、`Source:` を書かない。
+- `SourceNote` は `src/pages/reports/[...slug].astro` と `src/pages/news/[...slug].astro` でMDXコンポーネント登録済みなので、通常記事では個別importしない。ニュースダイジェストでは従来どおり `NewsSourceCard` を使う。
 - 一次情報を優先する。論文、公式ドキュメント、仕様書、企業公式発表、標準仕様を優先し、二次記事は補助に留める。
 - 公式ロードマップが存在しない場合は、必ず「公表情報からの推定」と明記する。
 

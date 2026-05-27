@@ -1,0 +1,493 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "As of May 2026, assistance to Ukraine is not supported by NATO alone; NATO provides a \"vessel for coordination, standardization, and training,\" while actual funding and equipment is shared by the EU, the United States, Britain, Germany, France, Northern Europe, and Eastern Europe.",
+					"ja": "2026年5月時点の対ウクライナ支援は、NATOという組織が単独で支える構図ではなく、NATOが「調整・標準化・訓練の器」を提供し、実際の資金と装備はEU・米国・英独仏・北欧・東欧の各国が分担する構図になっている。"
+				},
+				{
+					"en": "Even in NATO official documents, the majority of support comes from allies and partner countries, and NATO's own role is more of a facilitator through frameworks such as NSATU, CAP, JATEC, and PURL.",
+					"ja": "NATO公式資料でも、支援の大半は同盟国とパートナー国から来ており、NATO自体の役割は NSATU、CAP、JATEC、PURL などの枠組みを通じた束ね役に近い。"
+				},
+				{
+					"en": "The EU is the center of gravity for financial support and training.",
+					"ja": "EU は財政支援と訓練の重心を担っている。"
+				},
+				{
+					"en": "In April 2026, the EU Council finalized the design for a total of EUR 90 billion in support loans to Ukraine, and the European Commission is providing medium-term liquidity through the Ukraine Facility.",
+					"ja": "2026年4月には、EU理事会がウクライナ向け支援ローン総額900億ユーロ規模の設計を固め、欧州委員会は Ukraine Facility で中期の流動性を供給している。"
+				},
+				{
+					"en": "Furthermore, EUMAM Ukraine will carry out training for 90,000 personnel, and rather than directly intervene on the battlefield, its role will be to improve the endurance of the rear.",
+					"ja": "さらに EUMAM Ukraine は 9万人規模の訓練を実施し、戦場への直接介入ではなく、後方の持久力を底上げする役割を持つ。"
+				},
+				{
+					"en": "The United States remains one of the largest single donors, but the nature of its assistance is leaning more toward a combination of existing military support quotas, contributions from allies, arms sales, and strengthening the industrial base, rather than an \"additional large-scale supplementary budget.\"",
+					"ja": "米国は依然として最大級の単独支援国だが、支援の性格は「追加の大規模補正予算」よりも、既存の軍事支援枠、同盟国負担、武器販売、産業基盤強化を組み合わせる方向に寄っている。"
+				},
+				{
+					"en": "The latest announcement from the U.S. Department of Defense shows that by March 31, 2026, direct U.S. assistance to Ukraine will be worth $67.8 billion, and security assistance, including NATO allies and partner countries, will be worth about $130 billion.",
+					"ja": "米国防省系の最新公表では、2026年3月31日までに米国の対ウクライナ直接支援は 678億ドル規模、NATO同盟国とパートナー国を含む安全保障支援は約1300億ドル規模と整理されている。"
+				},
+				{
+					"en": "Additionally, the White House's Arms Transfer Strategy specifies a design that emphasizes military production capacity, supply chains, and the self-help efforts of allies.",
+					"ja": "また、ホワイトハウスの Arms Transfer Strategy は、軍需生産力・供給網・同盟国の自助努力を重視する設計を明示している。"
+				},
+				{
+					"en": "Britain, Germany, Scandinavia, the Baltics, and Poland stand out not only in terms of total size, but also in terms of training, artillery, air defense, drones, forward logistics, and joint production.",
+					"ja": "英国、ドイツ、北欧、バルト、ポーランドは、総額の大きさだけでなく、訓練、砲弾、防空、ドローン、前線ロジスティクス、共同生産の面で効いている。"
+				},
+				{
+					"en": "In particular, the UK has training and continuous annual support, Germany has scale and air defense, Scandinavia has quick decision-making and a large ratio to GDP, and Baltic Poland has strong readiness due to its geographical proximity.",
+					"ja": "特に英国は訓練と継続的な年次支援、ドイツは規模と防空、北欧は早い意思決定と大きな対GDP比、バルト・ポーランドは地理的近接性を生かした即応性が強い。"
+				},
+				{
+					"en": "France, on the other hand, has a strong presence in terms of security guarantees, coalition formation, and industrial cooperation, although the total amount disclosed is relatively thin.",
+					"ja": "逆にフランスは、公開総額の見え方は相対的に薄いが、安全保障保証、連立形成、産業協力の面で存在感がある。"
+				},
+				{
+					"en": "In practical terms, the central issue regarding aid to Ukraine has shifted from \"how much to spend?\" to \"which channels should we use for air defense, ammunition, drones, maintenance, training, and joint production.\"",
+					"ja": "実務的には、対ウクライナ支援の中心論点は「いくら出すか」よりも、「防空、弾薬、無人機、保守、訓練、共同生産をどのチャネルで回すか」に移っている。"
+				},
+				{
+					"en": "The key uncertainties going forward are the priorities of the US Congress and the executive branch, fiscal and political agreements within the EU, and production capacity for artillery shells and air defense missiles.",
+					"ja": "今後の主要な不確実性は、米国議会と行政府の優先順位、EU内の財政・政治合意、そして砲弾と防空ミサイルの生産能力である。"
+				}
+			]
+		},
+		{
+			"id": "nato-and-country-support",
+			"heading": {
+				"ja": "2. まず結論: NATOと各国支援は別物として見る",
+				"en": "2. First conclusion: NATO and support for each country are viewed as different things."
+			},
+			"pairs": [
+				{
+					"en": "NATO is not a \"fund wallet,\" but a place to design a system that bundles support from allied countries.",
+					"ja": "NATO は「資金の財布」ではなく、同盟国の支援を束ねる制度設計の場である。"
+				},
+				{
+					"en": "According to official NATO documents, NATO itself is responsible for coordinating support, training, and standardizing equipment through NSATU, CAP, JATEC, PURL, etc., with most of the actual supply being borne by member and partner countries.",
+					"ja": "NATO 公式資料では、NATO 自体は NSATU、CAP、JATEC、PURL などを通じて支援の調整、訓練、機材の標準化を担い、実際の供給の大半は加盟国とパートナー国が負担している。"
+				},
+				{
+					"en": "Therefore, if readers only look at \"how much NATO has contributed,\" they will only see half the truth.",
+					"ja": "したがって、読者が「NATO がどれだけ拠出したか」を見るだけでは、実態の半分しか見えない。"
+				},
+				{
+					"en": "The EU is important in another way.",
+					"ja": "EU は別の意味で重要である。"
+				},
+				{
+					"en": "The EU is stronger in budget, financing, training, and institutional maintenance than in providing equipment.",
+					"ja": "EU は装備の供与よりも、予算、融資、訓練、制度維持に強い。"
+				},
+				{
+					"en": "As of spring 2026, the Ukraine Facility, EUMAM, and new support loan designs are supporting the wartime nation's liquidity.",
+					"ja": "2026年春の時点では、Ukraine Facility、EUMAM、そして新たな支援ローン設計が、戦時国家の流動性を下支えしている。"
+				}
+			]
+		},
+		{
+			"id": "nato-engagement",
+			"heading": {
+				"ja": "4. NATO: 組織としての関与",
+				"en": "4. NATO: Engagement as an organization"
+			},
+			"pairs": [
+				{
+					"en": "NATO's involvement is not about direct participation in combat, but about standardizing and sustaining support.",
+					"ja": "NATO の関与は、戦闘への直接参加ではなく、支援の標準化と持続化である。"
+				},
+				{
+					"en": "The following four points are particularly important.",
+					"ja": "特に重要なのは次の4点である。"
+				},
+				{
+					"en": "Coordinate support operations with `NSATU`.",
+					"ja": "`NSATU` で支援の運用を調整する。"
+				},
+				{
+					"en": "Support training and capacity building in `CAP`.",
+					"ja": "`CAP` で訓練・能力構築を支える。"
+				},
+				{
+					"en": "Bringing lessons from the Ukrainian military back into alliance capacity development in `JATEC`.",
+					"ja": "`JATEC` でウクライナ軍の教訓を同盟の能力開発に戻す。"
+				},
+				{
+					"en": "`PURL` will consolidate each country's burden through joint procurement of US-made equipment.",
+					"ja": "`PURL` で米国製装備の共同調達を通し、各国の負担をまとめる。"
+				},
+				{
+					"en": "NATO official documents state that allies and partner countries are responsible for almost all of the support, and separate the political and logistics layers of support.",
+					"ja": "NATO 公式資料は、同盟国とパートナー国が支援のほぼ全てを担っていると整理し、支援の政治的レイヤーと兵站レイヤーを分けている。"
+				},
+				{
+					"en": "This means that viewing NATO as an \"amplifier of support\" rather than an \"aid agency\" is closer to reality.",
+					"ja": "これは、NATO を「援助機関」ではなく「支援の増幅器」と見るほうが実態に近いことを意味する。"
+				}
+			]
+		},
+		{
+			"id": "eu-finance-training",
+			"heading": {
+				"ja": "5. EU: 財政・訓練・制度維持",
+				"en": "5. EU: Finance, training and institutional maintenance"
+			},
+			"pairs": [
+				{
+					"en": "The EU's strengths lie not in equipment alone, but in \"money that supports national functions\" and \"training and procurement systems that operate within Europe.\"",
+					"ja": "EU の強みは、装備単体ではなく「国家機能を支えるお金」と「欧州内で回る訓練・調達制度」にある。"
+				},
+				{
+					"en": "EU support for Spring 2026 will be a combination of medium-term liquidity from the Ukraine Facility, training from EUMAM and new support loans.",
+					"ja": "2026年春の EU 支援は、Ukraine Facility による中期流動性、EUMAM による訓練、そして新たな支援ローンの組み合わせである。"
+				},
+				{
+					"en": "According to official EU documents, the Ukraine Facility is a framework worth 50 billion euros, and the EU further finalized the design of support loans in April 2026 with a total amount of 90 billion euros.",
+					"ja": "EU 公式資料では、Ukraine Facility は 500億ユーロ規模の枠組みで、EU はさらに 2026年4月に総額900億ユーロ規模の支援ローン設計を固めた。"
+				},
+				{
+					"en": "Additionally, the EU's military assistance training mission EUMAM trains more than 87,500 soldiers, according to NATO data.",
+					"ja": "また、NATO の資料によれば、EU の軍事支援訓練ミッション EUMAM は 8万7,500人超の兵士を訓練している。"
+				},
+				{
+					"en": "This is not an immediate force on the front lines, but rather a support layer for rebuilding units, updating training materials, and maintaining rotations.",
+					"ja": "これは前線での即時戦力というより、部隊再建、教範更新、ローテーション維持を支える層である。"
+				}
+			]
+		},
+		{
+			"id": "united-states",
+			"heading": {
+				"ja": "6. 米国: 最大の軍事供給国だが、支援のやり方が変わった",
+				"en": "6. The United States: the largest military supplier, but the way it provides support has changed"
+			},
+			"pairs": [
+				{
+					"en": "U.S. aid to Ukraine remains one of the largest in terms of overall size.",
+					"ja": "米国の対ウクライナ支援は、依然として全体規模では最大級である。"
+				},
+				{
+					"en": "However, looking at the latest published materials, the focus of support has shifted from \"large-scale additions free of charge\" to a combination of existing military support quotas, contributions from allies, arms sales, inventory replenishment, and strengthening of the industrial base.",
+					"ja": "ただし、最新の公表資料を見る限り、支援の中心は「無償の大規模追加」から、既存の軍事支援枠、同盟国負担、武器販売、在庫補充、産業基盤強化の組み合わせへ移っている。"
+				},
+				{
+					"en": "This is not a definitive statement, but an estimate based on publicly available information.",
+					"ja": "これは断定ではなく、公表情報からの推定である。"
+				},
+				{
+					"en": "The latest report from the Department of Defense estimates that by March 31, 2026, direct U.S. assistance will amount to $67.8 billion, and security assistance to NATO allies and partners will amount to approximately $130 billion.",
+					"ja": "国防省系の最新報告では、2026年3月31日までに、米国の直接支援は 678億ドル規模、NATO同盟国とパートナー国を含む安全保障支援は約1300億ドル規模とされる。"
+				},
+				{
+					"en": "In other words, what is important is not just the amount of aid provided by the United States alone, but also the contribution of the entire alliance system.",
+					"ja": "つまり、米国単独の支援額だけでなく、同盟システム全体の積み上げが重要である。"
+				}
+			]
+		},
+		{
+			"id": "united-kingdom",
+			"heading": {
+				"ja": "7. 英国: 継続的な軍事支援と訓練",
+				"en": "7. United Kingdom: continued military support and training"
+			},
+			"pairs": [
+				{
+					"en": "The UK has the most consistent combination of \"ongoing annual support + training + arms supplies\" in Europe.",
+					"ja": "英国は、欧州の中では最も一貫して「継続年次支援 + 訓練 + 兵器供与」を組み合わせている。"
+				},
+				{
+					"en": "The government's 2026 release notes that the UK has a long-term military support framework for Ukraine, including into the 2025/26 financial year, and continues its training program `Operation Interflex`.",
+					"ja": "政府の 2026年公開資料では、英国は 2025/26会計年度を含め、ウクライナ向けに長期の軍事支援枠を持ち、訓練プログラム `Operation Interflex` も継続している。"
+				},
+				{
+					"en": "Government documents make it clear that Britain's support for Ukraine is a major pillar of its military support.",
+					"ja": "政府資料は、英国の対ウクライナ支援が軍事支援の大きな柱であることを明示している。"
+				},
+				{
+					"en": "The UK's strength lies in the operational continuity of training and provision, rather than the annual amount itself.",
+					"ja": "英国の強みは、単年度の金額そのものより、訓練と供与の運用継続性にある。"
+				},
+				{
+					"en": "The reality is that it is not a country that issues flashy packages in a short period of time, but a country that can be effective through continuous deployment and human training.",
+					"ja": "短期で派手なパッケージを出す国ではなく、継続配備と人的訓練で効く国と見るのが実態に近い。"
+				}
+			]
+		},
+		{
+			"id": "germany",
+			"heading": {
+				"ja": "8. ドイツ: 規模と防空で中核",
+				"en": "8. Germany: core in size and air defense"
+			},
+			"pairs": [
+				{
+					"en": "Germany is one of continental Europe's largest suppliers, particularly in air defense, ammunition and training.",
+					"ja": "ドイツは、欧州大陸の中で最も大きな供給国の一つであり、特に防空、弾薬、訓練で重要である。"
+				},
+				{
+					"en": "According to documents released by the German federal government, as of spring 2026, Germany's aid to Ukraine totals more than 55 billion euros in military and civilian assistance, with the military focus mainly on air defense, armor, and artillery.",
+					"ja": "独連邦政府の公開資料では、2026年春時点でドイツの対ウクライナ支援は軍事・民間を合わせて 550億ユーロ超の規模で整理され、軍事面では防空や装甲、砲弾が中心になっている。"
+				},
+				{
+					"en": "Germany's position is not as a replacement for the United States, but as the \"pinnacle of Europe\" that absorbs changes in the United States.",
+					"ja": "ドイツの位置づけは、米国の代替ではないが、米国の変動を吸収する「欧州の基軸」である。"
+				},
+				{
+					"en": "In particular, if supplies of air defense missiles, artillery shells, vehicle maintenance, and training cease, Ukraine's entire defense plan is likely to collapse.",
+					"ja": "特に防空ミサイル、砲弾、車両整備、訓練の供給が止まると、ウクライナの防衛計画全体が崩れやすい。"
+				}
+			]
+		},
+		{
+			"id": "france",
+			"heading": {
+				"ja": "9. フランス: 公開総額より、連立形成と安全保障保証",
+				"en": "9. France: Coalition formation and security guarantees based on the total amount disclosed"
+			},
+			"pairs": [
+				{
+					"en": "Although France is not as \"visible in total terms\" as the UK or Germany, it is important in terms of diplomacy.",
+					"ja": "フランスは、英国やドイツほど「総額の見えやすさ」はないが、外交面では重要である。"
+				},
+				{
+					"en": "In Paris in early 2026, France put security guarantees for Ukraine and European unity at the fore.",
+					"ja": "2026年初頭のパリでは、フランスはウクライナへの安全保障保証と欧州の結束を前面に出した。"
+				},
+				{
+					"en": "In other words, France's role lies not only in the amount of equipment provided, but also in the formation of political coalitions and the design of postwar guarantees.",
+					"ja": "つまり、フランスの役割は、装備供与の量だけでなく、政治的連立形成と戦後保証の設計にある。"
+				},
+				{
+					"en": "This is an estimate based on publicly available information.",
+					"ja": "これは公表情報からの推定である。"
+				},
+				{
+					"en": "For this reason, when evaluating France, it is necessary to look not just at \"how many billions of euros it spent\" but also \"did it move forward in building a European consensus\" and \"did it create a nexus for joint production and the defense industry?\"",
+					"ja": "このため、フランスを評価するときは「何億ユーロ出したか」だけではなく、「欧州の合意形成を前に進めたか」「共同生産と防衛産業の結節点を作ったか」で見る必要がある。"
+				}
+			]
+		},
+		{
+			"id": "northern-eastern-europe",
+			"heading": {
+				"ja": "10. 北欧・東欧: 早い意思決定と高い対GDP比",
+				"en": "10. Northern and Eastern Europe: Fast decision-making and high GDP ratio"
+			},
+			"pairs": [
+				{
+					"en": "The characteristics of Northern and Eastern European countries are not so much the absolute amount, but rather their \"quickness\" and \"high ratio to GDP.\"",
+					"ja": "北欧・東欧諸国の特徴は、絶対額よりも「迅速さ」と「対GDP比の高さ」にある。"
+				},
+				{
+					"en": "This group has a smaller inventory than the UK or Germany, but can move politically faster.",
+					"ja": "このグループは、英国やドイツよりも在庫は小さいが、政治的に早く動ける。"
+				},
+				{
+					"en": "In particular, Northern Europe has a fast pace of defense industry and joint procurement, while Baltic Poland is geographically close to the front lines, making it effective in supplying, repairing, training, and accepting evacuations.",
+					"ja": "とくに北欧は国防産業と共同調達の回し方が速く、バルト・ポーランドは地理的に前線へ近いぶん、補給、修理、訓練、避難受け入れの実務で効く。"
+				}
+			]
+		},
+		{
+			"id": "reading-packages",
+			"heading": {
+				"ja": "11. 支援パッケージを読むときの注意点",
+				"en": "11. Points to note when reading support packages"
+			},
+			"pairs": [
+				{
+					"en": "Although it appears that each country is providing the same amount of aid to Ukraine, the actual content is quite different.",
+					"ja": "対ウクライナ支援は、各国が同じ「金額」を出しているように見えて、実際には中身がかなり違う。"
+				},
+				{
+					"en": "When making comparisons, it is necessary to distinguish the following four points.",
+					"ja": "比較する際は、次の4点を切り分ける必要がある。"
+				},
+				{
+					"en": "`承認額` and `実執行額` are different.",
+					"ja": "`承認額` と `実執行額` は違う。"
+				},
+				{
+					"en": "`軍事支援` and `財政支援` have different bottlenecks.",
+					"ja": "`軍事支援` と `財政支援` は別のボトルネックを持つ。"
+				},
+				{
+					"en": "`訓練` is not the same as immediate ammunition provision.",
+					"ja": "`訓練` は即時の弾薬供与と同じではない。"
+				},
+				{
+					"en": "`兵器供与` is constrained by production capacity, not inventory.",
+					"ja": "`兵器供与` は在庫ではなく生産能力に制約される。"
+				},
+				{
+					"en": "For example, EU aid loans support national finances, but they do not directly translate into shells that can be used tonight on the front lines.",
+					"ja": "例えば、EU の支援ローンは国家財政を下支えするが、前線で今夜使える砲弾には直結しない。"
+				},
+				{
+					"en": "Conversely, British and Scandinavian ammunition and air defense support, while tactically immediate, do not directly fill holes in national finances.",
+					"ja": "逆に、英国や北欧の弾薬・防空支援は戦術的には即効性があるが、国家財政の穴を直接埋めるわけではない。"
+				}
+			]
+		},
+		{
+			"id": "political-constraints",
+			"heading": {
+				"ja": "12. 政治的制約: いま支援を遅らせるもの",
+				"en": "12. Political constraints: what is delaying aid now"
+			},
+			"pairs": [
+				{
+					"en": "There are three main layers of political constraints.",
+					"ja": "政治的制約は、主に3層ある。"
+				},
+				{
+					"en": "US domestic politics",
+					"ja": "米国の国内政治"
+				},
+				{
+					"en": "Changes in the executive branch's foreign aid priorities change the speed and form of delivery.",
+					"ja": "行政府の対外支援優先順位が変わると、供与の速度と形式が変わる。"
+				},
+				{
+					"en": "The White House's Arms Transfer Strategy emphasizes allies' self-help, supply chains, and industrial bases.",
+					"ja": "White House の Arms Transfer Strategy は、同盟国の自助努力、供給網、産業基盤を重視する。"
+				},
+				{
+					"en": "EU finances and consensus building",
+					"ja": "EU の財政と合意形成"
+				},
+				{
+					"en": "Support loans and funds are large, but agreements among member countries, handling of frozen assets, and budgetary discipline are always a problem.",
+					"ja": "支援ローンや基金は大きいが、加盟国間の合意、凍結資産の扱い、予算規律が常につきまとう。"
+				},
+				{
+					"en": "Equipment production capacity",
+					"ja": "装備生産能力"
+				},
+				{
+					"en": "Air defense missiles, 155mm artillery shells, unmanned aerial vehicles, and repair parts will not increase immediately even if ordered.",
+					"ja": "防空ミサイル、155mm 砲弾、無人機、補修部品は、発注してもすぐに増えない。"
+				},
+				{
+					"en": "When these three points come together, donor countries will start thinking less about \"what to send\" and more about \"what to put on the production line first.\"",
+					"ja": "この3点が重なると、支援国は「何を送るか」よりも「何を先に生産ラインへ乗せるか」を考えるようになる。"
+				},
+				{
+					"en": "Therefore, support for 2026 will focus on joint production, long-term contracts, and ensuring interoperability, rather than the release of inventories.",
+					"ja": "したがって、2026年の支援は、在庫の放出よりも、共同生産、長期契約、相互運用性の確保が中心論点になっている。"
+				},
+				{
+					"en": "This is an estimate based on publicly available information.",
+					"ja": "これは公表情報からの推定である。"
+				}
+			]
+		},
+		{
+			"id": "short-term-outlook",
+			"heading": {
+				"ja": "13. 短期見通し",
+				"en": "13. Short-term outlook"
+			},
+			"pairs": [
+				{
+					"en": "Based on publicly available information, we estimate that three things are most likely to happen in the coming months:",
+					"ja": "公表情報からの推定として、今後数か月で最も起こりやすいのは次の3つである。"
+				},
+				{
+					"en": "NATO will use more \"allied joint purchase of U.S. equipment\" frameworks such as PURL and NSATU.",
+					"ja": "NATO では、PURL や NSATU のような「同盟国が米国装備を共同で買う」枠がさらに使われる。"
+				},
+				{
+					"en": "In the EU, financial support and training will continue, but production constraints for ammunition and air defense will be more acutely recognized.",
+					"ja": "EU では、財政支援と訓練は継続するが、弾薬・防空の生産制約がより強く意識される。"
+				},
+				{
+					"en": "In each country, multi-year contracts and industrial investments will increase rather than single-year large-scale announcements.",
+					"ja": "各国では、単年度の大型発表より、複数年の契約と産業投資が増える。"
+				},
+				{
+					"en": "Therefore, the evaluation of support should be shifted from \"how many dollars spent\" to \"which functions were continued without interruption.\"",
+					"ja": "したがって、支援の評価軸も「何ドル出したか」から「どの機能を止めずに回したか」へ移すべきである。"
+				},
+				{
+					"en": "In particular, what is important for Ukraine are frontline replenishment, air defense, maintenance, training, and energy and infrastructure restoration before the winter season, and countries with more concentrated resources in these areas are more effective.",
+					"ja": "特に、ウクライナにとって重要なのは、前線の補充、防空、保守、訓練、冬季前のエネルギー・インフラ復旧であり、ここに資源が偏る国ほど実効性が高い。"
+				}
+			]
+		},
+		{
+			"id": "practical-implications",
+			"heading": {
+				"ja": "14. 実務的な含意",
+				"en": "14. Practical implications"
+			},
+			"pairs": [
+				{
+					"en": "The implications for Japanese policymakers, export control officials, and supply chain officials are clear.",
+					"ja": "日本の政策担当者、輸出管理担当、サプライチェーン担当にとっての含意は明確である。"
+				},
+				{
+					"en": "Supply networks for air defense, ammunition, drones and maintenance components are both a security concern for Europe and a market opportunity.",
+					"ja": "防空・弾薬・無人機・保守部材の供給網は、欧州の安全保障と同時に市場機会でもある。"
+				},
+				{
+					"en": "Joint production and licensing are more likely to result in ongoing projects than one-off deliveries.",
+					"ja": "共同生産やライセンス供与は、単発納入よりも継続案件になりやすい。"
+				},
+				{
+					"en": "Since the EU and NATO systems are different, it is necessary to consider financial quotas and military procurement quotas separately when designing projects.",
+					"ja": "EU と NATO の制度は別なので、案件設計では財政枠と軍事調達枠を分けて考える必要がある。"
+				},
+				{
+					"en": "Changes in U.S. policy will affect not only the speed of delivery but also how allies buy.",
+					"ja": "米国の政策変更は、供与の速度だけでなく、同盟国の購入方式にも波及する。"
+				},
+				{
+					"en": "For this reason, in practice, it is not enough to just track the amount announced by each donor country; unless you look at which countries are supplying what and what systems are being used, it is difficult to predict the continuity of projects and delivery dates.",
+					"ja": "このため、実務では「支援国ごとの発表額」を追うだけでは不十分で、どの国が何を供給し、どの制度で回しているかを見ないと、案件の継続性と納期が読めない。"
+				}
+			]
+		},
+		{
+			"id": "risks-limitations",
+			"heading": {
+				"ja": "15. リスク・限界",
+				"en": "15. Risks/Limitations"
+			},
+			"pairs": [
+				{
+					"en": "There are four limitations to this paper.",
+					"ja": "本稿の限界は4つある。"
+				},
+				{
+					"en": "First, each country's aid amount tends to include a mix of \"cumulative totals,\" \"annual budgets,\" \"approved quotas,\" and \"actual deliveries.\"",
+					"ja": "第一に、各国の支援額は「累計」「年度予算」「承認済み枠」「実際の引渡し」が混在しやすい。"
+				},
+				{
+					"en": "Second, although the NATO and EU frameworks overlap politically, they are legally separate, and the same aid is accounted for separately.",
+					"ja": "第二に、NATO と EU の枠組みは政治的に重なるが法的には別であり、同じ支援でも別勘定である。"
+				},
+				{
+					"en": "Third, comparisons are difficult in countries such as France, where the total amount released is difficult to see.",
+					"ja": "第三に、フランスのように公開総額が見えにくい国は比較が難しい。"
+				},
+				{
+					"en": "Fourth, since the availability of equipment changes depending on daily inventory and production capacity, the evaluation here is limited to information published as of May 23, 2026.",
+					"ja": "第四に、装備供与の可否は日々の在庫と生産能力で変わるため、ここでの評価は 2026年5月23日時点の公表情報に限る。"
+				}
+			]
+		}
+	]
+}

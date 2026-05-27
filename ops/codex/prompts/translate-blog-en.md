@@ -4,18 +4,24 @@ Translate missing Japanese articles into English for the Astro research site.
 
 Rules:
 
-- Source articles are the canonical Japanese files under `articles/report/<slug>/index.mdx` and `articles/news/<slug>/index.mdx`.
-- Create one English article per missing source under `articles/report/en/<same-slug>/index.mdx` or `articles/news/en/<same-slug>/index.mdx`, matching the source article type.
+- Source articles are the canonical Japanese files under `articles/<type>/<slug>/ja/index.mdx`, where `<type>` is `report` or `news`.
+- Create one English article per missing source under `articles/<type>/<slug>/en/index.mdx`, matching the source article type.
 - Preserve all frontmatter keys and values unless the value is Japanese prose that should be translated, such as `title`, `description`, `rssSummary`, `heroImageAlt`, and `heroImageCredit`.
-- Adjust relative `heroImage` paths from `../../../src/...` to `../../../../src/...` because English articles live one directory deeper than the Japanese article directories.
+- Keep relative `heroImage` paths aligned with the Japanese article because `ja` and `en` live at the same directory depth.
 - Translate the Markdown/MDX body into natural English while preserving headings, tables, lists, Mermaid blocks, MDX components, links, and source URLs.
 - Translate Mermaid diagram labels, axis labels, sequence participants, and messages into English. Do not leave Japanese text inside English Mermaid blocks.
-- Keep source-adjacent `出典メモ:` paragraphs as English `Source note:` paragraphs.
+- Preserve report `SourceNote` components as inline one-line MDX elements. Do not convert them into `Source note:` paragraphs, do not put the tags on separate lines, and do not add manual parentheses or source labels inside the component.
 - Do not use TeX-style backtick quotes such as ``example''. Use normal double quotes for quoted phrases.
 - For news digest articles, keep the topic labels as standalone paragraphs with blank lines between `What happened:`, `Why it matters:`, `What to watch:`, and the following `NewsSourceCard`, matching the Japanese layout. Translate `今後の注視点:` as `What to watch:` and keep the content focused on what readers should monitor next.
 - Do not translate code identifiers, URLs, file paths, product names, or proper nouns unless an established English name exists.
 - Do not add placeholders such as `TBD`, `TODO`, `FIXME`, `未定`, or `要確認`.
-- After writing files, run `pnpm build` and ensure the generated English article pages are present under `dist/en/post/`.
+- Create or update `articles/<type>/<slug>/mix-alignment.json` together with the English article. This file is the semantic Japanese-English reading map for the MIX page.
+- Use this JSON shape:
+  `{ "version": 1, "sourceLocale": "ja", "targetLocale": "en", "sections": [{ "id": "short-section-id", "heading": { "ja": "日本語見出し", "en": "English heading" }, "pairs": [{ "ja": "日本語の1文", "en": "Matching English sentence" }] }] }`.
+- Keep `pairs[].en` exactly equal to the English sentence that appears in `en/index.mdx` after normal whitespace normalization. Keep `pairs[].ja` as the corresponding Japanese sentence from `ja/index.mdx`.
+- Prefer semantic sentence correspondence over paragraph position. When the English translation combines, splits, or reorders Japanese sentences, write the pair that best preserves meaning rather than relying on ordinal order.
+- Exclude source notes, citations, code blocks, Mermaid blocks, tables, and UI-only labels from `mix-alignment.json` unless they are part of the article prose that should appear as a Japanese translation under an English sentence.
+- After writing files, run `pnpm build` and ensure the generated English article pages are present under `dist/en/news/` or `dist/en/reports/`.
 
 Reference pages:
 

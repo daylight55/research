@@ -1,0 +1,669 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "When purchasing a detached house, it is easy to make mistakes because you only look at the price of the property and neglect the total payment amount, land restrictions, contract cancellation conditions, building deterioration, disaster risk, and post-purchase maintenance costs.",
+					"ja": "戸建て購入で失敗しやすいのは、物件価格の高低だけを見て、総支払額、土地の制約、契約解除条件、建物の劣化、災害リスク、購入後の維持費を後回しにすることにある。"
+				},
+				{
+					"en": "The first things you should look at are not the price, but \"Is the land worth buying?\" \"Are there any terms that allow you to return in the contract?\" and \"Can you afford the cost of continuing to live there?\"",
+					"ja": "最初に見るべき順番は、価格ではなく「買ってよい土地か」「契約で戻れる条件があるか」「住み続ける費用に耐えられるか」である。"
+				},
+				{
+					"en": "The conclusions are as follows.",
+					"ja": "結論は以下である。"
+				},
+				{
+					"en": "Miscellaneous expenses are incurred separately from the property price.",
+					"ja": "諸費用は物件価格とは別に発生する。"
+				},
+				{
+					"en": "See taxes, registration, brokerage fees, loan costs, insurance, moving, furniture and appliances, property tax settlement fees, and renovation/repair costs in the same table.",
+					"ja": "税金、登記、仲介手数料、ローン費用、保険、引越し、家具家電、固定資産税精算金、リフォーム・修繕費を同じ表で見る。"
+				},
+				{
+					"en": "Before signing a contract, check the important matters explanation and sales contract by breaking them down into \"terms of cancellation,\" \"deposit,\" \"special loan clause,\" \"liability for nonconformity,\" \"boundaries,\" \"crossing borders,\" \"private roads,\" and \"possibility of rebuilding.\"",
+					"ja": "契約前に、重要事項説明書と売買契約書を「解除条件」「手付金」「ローン特約」「契約不適合責任」「境界」「越境」「私道」「再建築可否」に分解して確認する。"
+				},
+				{
+					"en": "Regarding land, check whether it is owned or leased, rights on the register, mortgage/easement, road access obligation, building coverage ratio/floor area ratio, zoning, urbanization control area, setback, and presence or absence of fixed boundaries.",
+					"ja": "土地は、所有権か借地権か、登記簿上の権利、抵当権・地役権、接道義務、建ぺい率・容積率、用途地域、市街化調整区域、セットバック、境界確定の有無を見る。"
+				},
+				{
+					"en": "For used houses, leaks, exterior walls/roofs, foundations, sloped floors, termites, water supply and drainage, insulation, earthquake resistance, and illegal/unregistered additions are more important than appearance.",
+					"ja": "中古戸建ては、見た目よりも雨漏り、外壁・屋根、基礎、床傾き、シロアリ、給排水、断熱、耐震、違法増築・未登記増築が重要である。"
+				},
+				{
+					"en": "Even for new construction, check the scope of building performance, warranties, defect liability insurance, after-sales service, exterior construction, screens, curtains, lighting, air conditioning, and ground improvement costs.",
+					"ja": "新築でも、建物性能、保証、瑕疵担保責任保険、アフターサービス、外構・網戸・カーテン・照明・エアコン・地盤改良費の範囲を確認する。"
+				},
+				{
+					"en": "Look at the surrounding environment not only during weekday afternoons, but also at night, on rainy days, on holidays, and during commuting hours.",
+					"ja": "周辺環境は、平日昼だけでなく、夜、雨の日、休日、通勤時間帯に見る。"
+				},
+				{
+					"en": "Check disasters, noise, odors, traffic, schools, hospitals, supermarkets, garbage storage sites, neighboring areas, and future city plans.",
+					"ja": "災害、騒音、臭気、交通、学校、病院、スーパー、ゴミ置場、隣地、将来の都市計画を確認する。"
+				},
+				{
+					"en": "Detached houses do not have management fees or repair reserves, but instead you have to create your own repair reserves.",
+					"ja": "戸建ては管理費・修繕積立金がない代わりに、自分で修繕積立を作る必要がある。"
+				},
+				{
+					"en": "The cost of updating the roof, exterior walls, water heater, plumbing, termite control, planting, and exterior structure are factored in from the time of purchase.",
+					"ja": "屋根・外壁・給湯器・水回り・白蟻防除・植栽・外構の更新費を購入時から織り込む。"
+				}
+			]
+		},
+		{
+			"id": "required-expenses",
+			"heading": {
+				"ja": "2. 必要な費用の一覧",
+				"en": "2. List of required expenses"
+			},
+			"pairs": [
+				{
+					"en": "A financial plan for purchasing a house should be divided into at least \"at the time of acquisition,\" \"loan,\" \"taxes,\" \"moving/initial maintenance,\" \"post-purchase fixed costs,\" and \"savings for repairs.\"",
+					"ja": "戸建て購入の資金計画は、最低でも「取得時」「ローン」「税金」「引越し・初期整備」「購入後の固定費」「修繕積立」に分ける。"
+				},
+				{
+					"en": "The \"monthly repayment amount\" in sales materials often does not include property taxes, insurance, repairs, cars, education, commuting costs, and increases in utility costs.",
+					"ja": "営業資料の「月々返済額」は、固定資産税、保険、修繕、車、教育、通勤費、光熱費上昇を含まないことが多い。"
+				}
+			]
+		},
+		{
+			"id": "contracts",
+			"heading": {
+				"ja": "3. 契約面の注意点",
+				"en": "3. Points to note regarding contracts"
+			},
+			"pairs": [
+				{
+					"en": "In a contract, \"conditions for return\" and \"who will fix what after delivery\" are more important than \"intention to buy.\"",
+					"ja": "契約では「買う意思」よりも「戻れる条件」と「引渡し後に誰が何を直すか」が重要である。"
+				},
+				{
+					"en": "It is too late to read the important matters statement for the first time on the day of the contract.",
+					"ja": "契約日当日に初めて重要事項説明書を読むのでは遅い。"
+				},
+				{
+					"en": "Receive a draft in advance, make a list of questions, and then receive explanations.",
+					"ja": "事前にドラフトをもらい、疑問点をリスト化してから説明を受ける。"
+				}
+			]
+		},
+		{
+			"id": "important-matters",
+			"heading": {
+				"ja": "3.1 重要事項説明で見るべき項目",
+				"en": "3.1 Items to look at when explaining important matters"
+			},
+			"pairs": [
+				{
+					"en": "Important matters explanation is a system in which real estate agents explain to buyers important matters that they should know about the property.",
+					"ja": "重要事項説明は、宅建業者から買主に対して、物件に関して知っておくべき重要な事項を説明する制度である。"
+				},
+				{
+					"en": "Items to be checked include property display, rights, legal restrictions, roads, private roads, water, sewage, gas, electricity, maintenance of deposits, etc., contract cancellation, compensation for damages, liability for non-compliance with the contract, and whether or not there has been a building condition survey.",
+					"ja": "確認対象は、物件表示、権利関係、法令制限、道路、私道負担、上下水道・ガス・電気、手付金等の保全、契約解除、損害賠償、契約不適合責任、建物状況調査の有無などに広がる。"
+				}
+			]
+		},
+		{
+			"id": "land-rights-laws",
+			"heading": {
+				"ja": "4. 土地の権利・法規の注意点",
+				"en": "4. Notes on land rights and laws and regulations"
+			},
+			"pairs": [
+				{
+					"en": "The inherent risk of detached houses is more likely to remain on the land than on the building.",
+					"ja": "戸建ての本質的なリスクは建物より土地に残りやすい。"
+				},
+				{
+					"en": "Buildings can be repaired, but access roads, zoning, disasters, private roads, boundaries, land lease rights, easements, and the impossibility of rebuilding are difficult to repair later.",
+					"ja": "建物は直せるが、接道、用途地域、災害、私道、境界、借地権、地役権、再建築不可は後から直しにくい。"
+				}
+			]
+		},
+		{
+			"id": "registration",
+			"heading": {
+				"ja": "4.1 登記で見ること",
+				"en": "4.1 What to look for in registration"
+			},
+			"pairs": [
+				{
+					"en": "Check the title section and rights section of the registration certificate for each piece of land/building.",
+					"ja": "登記事項証明書は、土地・建物ごとに表題部と権利部を確認する。"
+				},
+				{
+					"en": "In the title section, you can see the location, lot number, land classification, land area, building type, structure, and floor area.",
+					"ja": "表題部では所在、地番、地目、地積、建物の種類・構造・床面積を見る。"
+				},
+				{
+					"en": "Section A of the Rights Department looks at matters such as ownership, transfer of ownership, seizure, and provisional registration.",
+					"ja": "権利部の甲区では所有者、所有権移転、差押え、仮登記などを見る。"
+				},
+				{
+					"en": "In Ward O, we look at rights other than ownership, such as mortgages, surface rights, and easements.",
+					"ja": "乙区では抵当権、地上権、地役権など所有権以外の権利を見る。"
+				}
+			]
+		},
+		{
+			"id": "ownership-leasehold-private-roads",
+			"heading": {
+				"ja": "4.2 所有権・借地権・私道",
+				"en": "4.2 Ownership, leasehold rights, and private roads"
+			},
+			"pairs": [
+				{
+					"en": "Land rights are not as simple as ownership rights.",
+					"ja": "土地の権利は、所有権なら単純というわけではない。"
+				},
+				{
+					"en": "If there is co-ownership, private road interest, easement, leasehold land, old mortgage, provisional registration, foreclosure, or incomplete inheritance registration, it will affect sales, loans, and rebuilding.",
+					"ja": "共有、私道持分、通行地役権、借地権、底地、古い抵当権、仮登記、差押え、相続登記未了があると、売買やローン、建替えに影響する。"
+				}
+			]
+		},
+		{
+			"id": "access-reconstruction",
+			"heading": {
+				"ja": "4.3 接道・再建築可否",
+				"en": "4.3 Possibility of access/reconstruction"
+			},
+			"pairs": [
+				{
+					"en": "In urban planning areas, building sites must, in principle, be adjacent to a road for at least 2 meters according to the Building Standards Act.",
+					"ja": "都市計画区域内では、建築物の敷地は原則として建築基準法上の道路に2m以上接する必要がある。"
+				},
+				{
+					"en": "If the front road is narrow, setbacks may reduce the effective area of ​​the site.",
+					"ja": "前面道路が狭い場合、セットバックで敷地の有効面積が減ることがある。"
+				},
+				{
+					"en": "Flagpole areas, private roads, Section 2 roads, location-designated roads, and passageways that are not designated as roads under the Building Standards Act are directly linked to the feasibility of rebuilding and the evaluation of mortgage loans.",
+					"ja": "旗竿地、私道、2項道路、位置指定道路、建築基準法上の道路でない通路は、再建築可否と住宅ローン評価に直結する。"
+				}
+			]
+		},
+		{
+			"id": "urban-planning-zoning",
+			"heading": {
+				"ja": "4.4 都市計画・用途地域・市街化調整区域",
+				"en": "4.4 Urban planning/zoning/urbanization control area"
+			},
+			"pairs": [
+				{
+					"en": "Zoning, building coverage ratio, floor area ratio, height restrictions, fire prevention zones, district planning, and landscape ordinances will affect future additions, renovations, and reconstruction.",
+					"ja": "用途地域、建ぺい率、容積率、高さ制限、防火地域、地区計画、景観条例は、将来の増改築や建替えに影響する。"
+				},
+				{
+					"en": "Urbanization control areas are areas where urbanization should be controlled, and development activities are, in principle, restricted.",
+					"ja": "市街化調整区域は、市街化を抑制すべき区域であり、原則として開発行為が制限される。"
+				},
+				{
+					"en": "The cheaper the land, the more restrictions there may be on rebuilding, expanding, changing uses, getting a mortgage, and selling.",
+					"ja": "安い土地ほど、建て替え・増築・用途変更・住宅ローン・売却時の制約が大きい可能性がある。"
+				}
+			]
+		},
+		{
+			"id": "new-custom-homes",
+			"heading": {
+				"ja": "5.1 新築建売・注文住宅",
+				"en": "5.1 Newly built/custom homes"
+			},
+			"pairs": [
+				{
+					"en": "When it comes to new construction, it's not just \"safe because it's new,\" but the scope of the contract and warranty that matters.",
+					"ja": "新築は「新しいから安心」ではなく、契約範囲と保証範囲が重要である。"
+				},
+				{
+					"en": "When buying a house, look to see if the price includes the exterior, screen doors, curtain rails, lighting, air conditioners, TV antennas, dishwashers, delivery boxes, ground warranties, and long-term quality housing/performance evaluation.",
+					"ja": "建売では、外構、網戸、カーテンレール、照明、エアコン、テレビアンテナ、食洗機、宅配ボックス、地盤保証、長期優良住宅・性能評価の有無が価格に含まれているかを見る。"
+				},
+				{
+					"en": "For custom-built homes, separate checks are made for ground improvement, water supply and drainage, construction, external structure, design changes, confirmation applications, water and sewage fees, temporary construction, disposal of surplus soil, curtains, lighting, and air conditioning.",
+					"ja": "注文住宅では、地盤改良、給排水引込、造成、外構、設計変更、確認申請、上下水道加入金、仮設工事、残土処分、カーテン・照明・空調を別枠で確認する。"
+				},
+				{
+					"en": "Builders and real estate companies that supply new housing are liable for 10 years against defects in areas that are important for structural strength and in areas that prevent rainwater infiltration.",
+					"ja": "新築住宅を供給する建設業者・宅建業者は、構造耐力上主要な部分と雨水の浸入を防止する部分について10年間の瑕疵担保責任を負う。"
+				},
+				{
+					"en": "In order to ensure that this responsibility is fulfilled, financial resources are required to be secured through deposits or insurance.",
+					"ja": "この責任を確実に履行するため、供託または保険加入による資力確保措置が義務付けられている。"
+				}
+			]
+		},
+		{
+			"id": "used-detached-house",
+			"heading": {
+				"ja": "5.2 中古戸建て",
+				"en": "5.2 Used detached house"
+			},
+			"pairs": [
+				{
+					"en": "When buying a used house, look at \"how much it will cost after buying\" before negotiating the price.",
+					"ja": "中古戸建ては、価格交渉よりも「買ってからいくらかかるか」を先に見る。"
+				},
+				{
+					"en": "Check the building age, structure, expansion/renovation history, inspection certificate, confirmation certificate, drawings, repair history, rain leak history, termite control history, seismic diagnosis, insulation performance, water supply and drainage pipes, exterior walls/roof, foundation, floor slope, retaining wall, septic tank/well/propane, etc.",
+					"ja": "築年数、構造、増改築履歴、検査済証、確認済証、図面、修繕履歴、雨漏り履歴、白蟻防除履歴、耐震診断、断熱性能、給排水管、外壁・屋根、基礎、床傾き、擁壁、浄化槽・井戸・プロパンなどを確認する。"
+				}
+			]
+		},
+		{
+			"id": "energy-saving-long-term-quality",
+			"heading": {
+				"ja": "5.3 省エネ・長期優良住宅",
+				"en": "5.3 Energy-saving and long-term quality housing"
+			},
+			"pairs": [
+				{
+					"en": "Houses that start construction after April 2025 are required to comply with energy conservation standards.",
+					"ja": "2025年4月以降に着工する住宅などは、省エネ基準への適合が義務化されている。"
+				},
+				{
+					"en": "In the future, it is planned to raise the standard to ZEH/ZEB by 2030, and insulation performance and equipment efficiency will affect not only comfort, but also future asset value, utility costs, and difficulty of renovation.",
+					"ja": "今後は2030年までにZEH/ZEB水準への引き上げが予定されており、断熱性能と設備効率は、快適性だけでなく、将来の資産価値、光熱費、リフォーム難易度にも影響する。"
+				},
+				{
+					"en": "Long-term quality housing has an obligation to maintain and maintain it appropriately based on a maintenance plan.",
+					"ja": "長期優良住宅は、維持保全計画に基づいて適切に維持保全する義務がある。"
+				}
+			]
+		},
+		{
+			"id": "maintenance-costs",
+			"heading": {
+				"ja": "6. 管理維持費・購入後コスト",
+				"en": "6. Management and maintenance costs/post-purchase costs"
+			},
+			"pairs": [
+				{
+					"en": "Unlike condominiums, detached houses do not have management fees or reserves for repairs, but owners must set aside funds, place orders, and keep records on their own.",
+					"ja": "戸建てはマンションのような管理費・修繕積立金がない代わりに、所有者が自分で積み立て、発注し、記録を残す必要がある。"
+				},
+				{
+					"en": "If repairs are postponed, the lack of paint on the exterior walls will lead to leaks and rotting structural materials, resulting in high costs.",
+					"ja": "修繕を先送りすると、外壁の塗装不足が雨漏りや構造材の腐朽に進み、結果的に高くつく。"
+				}
+			]
+		},
+		{
+			"id": "maintenance-rules",
+			"heading": {
+				"ja": "6.2 維持費の実務ルール",
+				"en": "6.2 Practical rules for maintenance costs"
+			},
+			"pairs": [
+				{
+					"en": "Make at least the following three things before purchasing.",
+					"ja": "購入前に、少なくとも次の3つを作る。"
+				},
+				{
+					"en": "**10-year repair list**: Parts that are likely to be replaced or repaired within 10 years of occupancy and estimated cost.",
+					"ja": "**10年修繕表**: 入居後10年間に交換・補修しそうな部位と概算費用。"
+				},
+				{
+					"en": "**30-year major repair list**: Includes roof, exterior walls, waterproofing, plumbing, piping, insulation, earthquake resistance, and exterior structure.",
+					"ja": "**30年大規模修繕表**: 屋根、外壁、防水、水回り、配管、断熱、耐震、外構を含む。"
+				},
+				{
+					"en": "**Housing history file**: Save drawings, confirmation certificates, inspection certificates, warranties, inspection records, construction photos, estimates, receipts, and insurance policies.",
+					"ja": "**住宅履歴ファイル**: 図面、確認済証、検査済証、保証書、点検記録、工事写真、見積書、領収書、保険証券を保存する。"
+				}
+			]
+		},
+		{
+			"id": "surrounding-environment",
+			"heading": {
+				"ja": "7. 周辺環境の注意点",
+				"en": "7. Precautions regarding the surrounding environment"
+			},
+			"pairs": [
+				{
+					"en": "Confirm the surrounding environment by changing the time of day, weather, and day of the week, rather than just looking at the impression you get when you look inside.",
+					"ja": "周辺環境は、内見時の印象ではなく、時間帯・天候・曜日を変えて確認する。"
+				},
+				{
+					"en": "In particular, single-family homes are strongly affected by neighborhoods, roads, garbage, noise, odors, drainage, sunlight, school districts, disasters, and future plans.",
+					"ja": "特に戸建ては、近隣、道路、ゴミ、騒音、臭気、排水、日当たり、学校区、災害、将来計画の影響を強く受ける。"
+				}
+			]
+		},
+		{
+			"id": "surrounding-information",
+			"heading": {
+				"ja": "7.2 確認すべき周辺情報",
+				"en": "7.2 Surrounding information to check"
+			},
+			"pairs": [
+				{
+					"en": "Hazard maps: floods, inland waters, landslides, tsunamis, storm surges, liquefaction, reservoirs, evacuation centers.",
+					"ja": "ハザードマップ: 洪水、内水、土砂災害、津波、高潮、液状化、ため池、避難所。"
+				},
+				{
+					"en": "Convenience for daily life: supermarkets, hospitals, pharmacies, schools, nursery schools, stations, buses, government offices, financial institutions.",
+					"ja": "生活利便: スーパー、病院、薬局、学校、保育園、駅、バス、役所、金融機関。"
+				},
+				{
+					"en": "Future plans: urban planning roads, redevelopment, rezoning, zone changes, nearby vacant lots and parking lots.",
+					"ja": "将来計画: 都市計画道路、再開発、区画整理、用途地域変更、近隣の空き地・駐車場。"
+				},
+				{
+					"en": "Noise and odor: Main roads, railways, factories, restaurants, schools, parks, temples and shrines, farmland, livestock barns, and aviation routes.",
+					"ja": "騒音・臭気: 幹線道路、鉄道、工場、飲食店、学校、公園、寺社、農地、畜舎、航空ルート。"
+				},
+				{
+					"en": "Traffic safety: Front road width, cut-offs, sidewalks, visibility, slopes, intersections, and school routes.",
+					"ja": "交通安全: 前面道路幅員、抜け道、歩道、見通し、坂、交差点、通学路。"
+				},
+				{
+					"en": "Garbage/Neighborhood Association: Garbage storage, collection rules, duty, neighborhood membership fees, local events.",
+					"ja": "ゴミ・自治会: ゴミ置場、収集ルール、当番、町内会費、地域行事。"
+				},
+				{
+					"en": "Adjacent land: window position, outdoor unit, water heater, trees crossing the border, retaining wall, drainage, vacant house.",
+					"ja": "隣地: 窓位置、室外機、給湯器、越境樹木、擁壁、排水、空き家。"
+				}
+			]
+		},
+		{
+			"id": "money-failures",
+			"heading": {
+				"ja": "8.1 お金のあるある",
+				"en": "8.1 Having money"
+			},
+			"pairs": [
+				{
+					"en": "Create a budget based only on the property price and forget about miscellaneous expenses, property taxes, insurance, repairs, furniture and appliances, moving, and exterior construction.",
+					"ja": "物件価格だけで予算を組み、諸費用、固定資産税、保険、修繕、家具家電、引越し、外構を忘れる。"
+				},
+				{
+					"en": "Only look at repayments that are similar to monthly rent, and don't look at bonus payments, increases in variable interest rates, repair costs, and car maintenance costs.",
+					"ja": "「月々家賃並み」の返済額だけ見て、ボーナス払い、変動金利上昇、修繕費、車維持費を見ない。"
+				},
+				{
+					"en": "I bought the property with the assumption of mortgage deduction and subsidies, but it does not meet the requirements for performance, floor area, income, period of residence, and application deadline.",
+					"ja": "住宅ローン控除や補助金を前提に買ったが、性能・床面積・所得・居住時期・申請期限の要件を満たさない。"
+				},
+				{
+					"en": "I thought I bought a used item at a low price, but it ended up being expensive due to renovations, leaks, water heaters, plumbing, and exterior walls and roof before I moved in.",
+					"ja": "中古を安く買ったつもりが、入居前リフォーム、雨漏り、給湯器、水回り、外壁屋根で高くなる。"
+				}
+			]
+		},
+		{
+			"id": "contract-failures",
+			"heading": {
+				"ja": "8.2 契約のあるある",
+				"en": "8.2 Is there a contract?"
+			},
+			"pairs": [
+				{
+					"en": "Read and seal the Important Matters Explanation and Contract without understanding it on the day.",
+					"ja": "重要事項説明書と契約書を当日に読み、理解しないまま押印する。"
+				},
+				{
+					"en": "If the deadline for the special loan agreement has passed, there is a risk that the deposit will not be returned even if the loan is rejected.",
+					"ja": "ローン特約の期限を過ぎ、ローン否認でも手付金が戻らないリスクが出る。"
+				},
+				{
+					"en": "If you get lost after the deadline for canceling your deposit has passed, you will incur a penalty fee.",
+					"ja": "手付解除期限を過ぎた後に迷い、違約金が発生する。"
+				},
+				{
+					"en": "No building inspection is carried out even though the contract non-conformity liability is short or the exemption is wide.",
+					"ja": "契約不適合責任が短い、または免責が広いのに、建物調査をしていない。"
+				},
+				{
+					"en": "Without looking at the list of incidental equipment, they had trouble with the air conditioner, lighting, water heater, dishwasher, etc. after handing over the equipment.",
+					"ja": "付帯設備表を見ず、引渡し後にエアコン、照明、給湯器、食洗機等の不具合で揉める。"
+				}
+			]
+		},
+		{
+			"id": "land-rights-failures",
+			"heading": {
+				"ja": "8.3 土地・権利のあるある",
+				"en": "8.3 Land/rights"
+			},
+			"pairs": [
+				{
+					"en": "The reasons for the low price were the inability to rebuild, lack of road access, private roads, land lease rights, urbanization control areas, hazards, and retaining walls.",
+					"ja": "安い理由が、再建築不可、接道不足、私道、借地権、市街化調整区域、ハザード、擁壁だった。"
+				},
+				{
+					"en": "No consent to excavate private road, resulting in blockage due to water/gas/drainage work.",
+					"ja": "私道の掘削承諾がなく、水道・ガス・排水工事で詰まる。"
+				},
+				{
+					"en": "Problems with neighbors after purchase due to undetermined boundaries, border crossings, retaining walls, and block walls.",
+					"ja": "境界未確定、越境、隣地擁壁、ブロック塀で、購入後に近隣トラブルになる。"
+				},
+				{
+					"en": "For land with an old house, overlooking demolition costs, asbestos, underground objects, border crossings, and lost registration.",
+					"ja": "古家付き土地で、解体費、アスベスト、地中埋設物、越境、滅失登記を見落とす。"
+				},
+				{
+					"en": "Although the land area is available, the desired building cannot be built due to setbacks and diagonal line restrictions.",
+					"ja": "土地面積はあるが、セットバックや斜線制限で希望の建物が建たない。"
+				}
+			]
+		},
+		{
+			"id": "building-failures",
+			"heading": {
+				"ja": "8.4 建物のあるある",
+				"en": "8.4 Buildings"
+			},
+			"pairs": [
+				{
+					"en": "I thought it would be okay because it was a new building, so I didn't see any damage to the underfloor, attic, exterior slope, drainage, fittings, etc. during the viewing.",
+					"ja": "新築だから大丈夫と思い、内覧会で床下、天井裏、外構勾配、排水、建具、傷を見ない。"
+				},
+				{
+					"en": "Since it was a used item, I didn't look at it on a rainy day and didn't notice any leaks, drainage, moisture, or mold.",
+					"ja": "中古で雨の日に見ず、雨漏り・排水・湿気・カビに気づかない。"
+				},
+				{
+					"en": "There are no inspection certificates or drawings, making it difficult to judge the legality and earthquake resistance of expansions and renovations.",
+					"ja": "検査済証や図面がなく、増改築の適法性や耐震性を判断しにくい。"
+				},
+				{
+					"en": "Take a quick look at sloping floors, foundation cracks, exterior wall sealing, balcony waterproofing, and termites.",
+					"ja": "床の傾き、基礎ひび、外壁シーリング、バルコニー防水、白蟻を軽く見る。"
+				},
+				{
+					"en": "Not looking at equipment warranties, removal costs, and renewal costs for solar power, storage batteries, EcoCute, floor heating, etc.",
+					"ja": "太陽光、蓄電池、エコキュート、床暖房などの設備保証・撤去費・更新費を見ていない。"
+				}
+			]
+		},
+		{
+			"id": "environment-failures",
+			"heading": {
+				"ja": "8.5 周辺環境のあるある",
+				"en": "8.5 Is there a surrounding environment?"
+			},
+			"pairs": [
+				{
+					"en": "It was quiet during the daytime inspection, but noise, odors, and traffic increase at night and on holidays.",
+					"ja": "昼の内見では静かだったが、夜や休日に騒音・臭気・交通量が増える。"
+				},
+				{
+					"en": "The actual commuting time is different from the station walking time.",
+					"ja": "駅徒歩表記と実際の通勤時間が違う。"
+				},
+				{
+					"en": "I don't see hills, traffic lights, railroad crossings, or bus delays.",
+					"ja": "坂、信号、踏切、バス遅延を見ていない。"
+				},
+				{
+					"en": "Garbage storage, neighborhood associations, festivals, cleaning duty, snow shoveling, and gutter cleaning have not been confirmed.",
+					"ja": "ゴミ置場、町内会、祭礼、清掃当番、雪かき、側溝清掃を確認していない。"
+				},
+				{
+					"en": "A building will be built on the vacant land next door, changing the sunlight, view, and noise.",
+					"ja": "隣地の空き地に後から建物が建ち、日当たり・眺望・騒音が変わる。"
+				},
+				{
+					"en": "Learn about the risks of flooding, sediment, storm surge, and liquefaction without looking at hazard maps.",
+					"ja": "ハザードマップを見ず、浸水・土砂・高潮・液状化のリスクを後から知る。"
+				}
+			]
+		},
+		{
+			"id": "before-viewing",
+			"heading": {
+				"ja": "9.1 内見前",
+				"en": "9.1 Before viewing"
+			},
+			"pairs": [
+				{
+					"en": "In addition to the property price, have you prepared a total budget that includes miscellaneous expenses, repair costs, moving costs, furniture and appliances, taxes, and insurance?",
+					"ja": "物件価格とは別に、諸費用、修繕予備費、引越し、家具家電、税金、保険を入れた総予算を作ったか。"
+				},
+				{
+					"en": "In addition to pre-screening for a loan, have you also done a stress test that takes into account increases in interest rates, decreases in income, education costs, and car maintenance costs?",
+					"ja": "ローン事前審査だけでなく、金利上昇・収入減・教育費・車維持費を入れたストレステストをしたか。"
+				},
+				{
+					"en": "Have you looked at the register, maps, official maps, land survey maps, city plans, and hazard maps in advance?",
+					"ja": "登記簿、地図、公図、地積測量図、都市計画、ハザードマップを事前に見たか。"
+				},
+				{
+					"en": "Have you broken down the reasons for the low price into roads, rights, age, disasters, surrounding environment, and seller circumstances?",
+					"ja": "価格が安い理由を、道路、権利、築年数、災害、周辺環境、売主事情に分解したか。"
+				}
+			]
+		},
+		{
+			"id": "before-contract",
+			"heading": {
+				"ja": "9.2 契約前",
+				"en": "9.2 Before contract"
+			},
+			"pairs": [
+				{
+					"en": "Did you receive an explanation of important matters and a draft of the sales contract in advance?",
+					"ja": "重要事項説明書と売買契約書のドラフトを事前にもらったか。"
+				},
+				{
+					"en": "Have you confirmed the applicable financial institutions, amount, deadline, and cancellation method for the special loan agreement?",
+					"ja": "ローン特約の対象金融機関、金額、期限、解除方法を確認したか。"
+				},
+				{
+					"en": "Have you confirmed the deposit amount, cancellation deadline, and security measures?",
+					"ja": "手付金の金額、解除期限、保全措置を確認したか。"
+				},
+				{
+					"en": "Have you checked the documents for boundary determination, border crossing, private road, excavation consent, and traffic consent?",
+					"ja": "境界確定、越境、私道、掘削承諾、通行承諾の書類を確認したか。"
+				},
+				{
+					"en": "If it's a used car, have you checked the inspection, termites, leaks, earthquake resistance, and repair history?",
+					"ja": "中古ならインスペクション、白蟻、雨漏り、耐震、修繕履歴を確認したか。"
+				},
+				{
+					"en": "If it is a new building, have you checked the defect liability insurance, housing performance, after-sales service, standard specifications, and additional costs?",
+					"ja": "新築なら瑕疵担保責任保険、住宅性能、アフターサービス、標準仕様、追加費用を確認したか。"
+				}
+			]
+		},
+		{
+			"id": "before-delivery",
+			"heading": {
+				"ja": "9.3 引渡し前",
+				"en": "9.3 Before delivery"
+			},
+			"pairs": [
+				{
+					"en": "Have you checked the remaining balance, registration, fire insurance, earthquake insurance, loan execution, keys, equipment list, and guarantee certificate?",
+					"ja": "残代金、登記、火災保険、地震保険、ローン実行、鍵、設備表、保証書の段取りを確認したか。"
+				},
+				{
+					"en": "Are the repair agreements in writing, with clear deadlines and personnel?",
+					"ja": "補修合意事項が書面化され、期限と担当者が明確か。"
+				},
+				{
+					"en": "Have you checked the meters, equipment, rainwater/drainage, fittings, under the floor, behind the ceiling, exterior structure, and boundary markers?",
+					"ja": "メーター、設備、雨水・排水、建具、床下、天井裏、外構、境界標を確認したか。"
+				},
+				{
+					"en": "Did you plan renovations, air conditioners, curtains, lighting, and internet access before moving?",
+					"ja": "引越し前にリフォーム・エアコン・カーテン・照明・ネット回線の工程を組んだか。"
+				}
+			]
+		},
+		{
+			"id": "after-moving-in",
+			"heading": {
+				"ja": "9.4 入居後",
+				"en": "9.4 After moving in"
+			},
+			"pairs": [
+				{
+					"en": "Have you created a housing history file?",
+					"ja": "住宅履歴ファイルを作ったか。"
+				},
+				{
+					"en": "Have you made a calendar of inspection schedules for the 1st, 2nd, 5th, and 10th years?",
+					"ja": "1年目、2年目、5年目、10年目の点検予定をカレンダー化したか。"
+				},
+				{
+					"en": "Have you checked the filing deadlines for fixed asset tax, real estate acquisition tax, mortgage deduction, and subsidies?",
+					"ja": "固定資産税、不動産取得税、住宅ローン控除、補助金の申告期限を確認したか。"
+				},
+				{
+					"en": "Did you create a separate account for repair savings?",
+					"ja": "修繕積立用の別口座を作ったか。"
+				}
+			]
+		},
+		{
+			"id": "recommended-policy",
+			"heading": {
+				"ja": "10. 推奨方針",
+				"en": "10. Recommended policy"
+			},
+			"pairs": [
+				{
+					"en": "The most practical way to proceed is to determine the \"conditions under which you should not buy\" before a candidate property comes up.",
+					"ja": "もっとも実務的な進め方は、候補物件が出る前に「買ってはいけない条件」を決めることである。"
+				},
+				{
+					"en": "For example, used houses that cannot be rebuilt, have undetermined boundaries and the seller does not respond, do not consent to excavate a private road, have high hazard risks but have no countermeasures, have weak loan clauses, are widely exempted from liability for non-compliance with the contract, and cannot provide estimates for repairs should be treated with caution even if the price is attractive.",
+					"ja": "たとえば、再建築不可、境界未確定で売主が対応しない、私道掘削承諾なし、ハザード高リスクなのに対策なし、ローン特約が弱い、契約不適合責任が広く免責、修繕見積が取れない中古戸建ては、価格が魅力的でも慎重に扱う。"
+				},
+				{
+					"en": "On the other hand, there are very few properties that perfectly meet all the requirements.",
+					"ja": "一方で、すべてを完璧に満たす物件は少ない。"
+				},
+				{
+					"en": "The main points of judgment are: \"Can the risk be reflected in the price after knowing it?\" \"Can it be defeated with expert confirmation?\" \"Can it be explained when selling in the future?\"",
+					"ja": "判断の軸は、「リスクを知ったうえで価格に反映できるか」「専門家確認で潰せるか」「将来売るときに説明可能か」である。"
+				},
+				{
+					"en": "When purchasing a detached house, ensuring contract conditions, boundaries/roads, building inspections, and repair budgets are more effective in avoiding long-term losses than discounts.",
+					"ja": "戸建て購入では、値引きよりも、契約条件、境界・道路、建物調査、修繕予算の確保のほうが長期的な損失回避に効く。"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,580 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "By combining Graphiti and MCP, AI agents can be provided with \"memory that persists across conversation sessions\" and \"a standard point of contact from external clients.\"",
+					"ja": "Graphiti と MCP を組み合わせると、AI エージェントに「会話セッションをまたいで残る記憶」と「外部クライアントから標準的に呼べる窓口」を同時に与えられる。"
+				},
+				{
+					"en": "However, the roles of both are different.",
+					"ja": "だが、両者は役割が違う。"
+				},
+				{
+					"en": "Graphiti is the internal representation of memory, and MCP is the interface for how to expose that memory.",
+					"ja": "Graphiti は記憶の内部表現であり、MCP はその記憶をどう公開するかのインターフェースである。"
+				},
+				{
+					"en": "If this is confused, it will directly lead to practical failures, such as being able to search but with ambiguous permissions, or being able to write but not be able to audit.",
+					"ja": "ここを混同すると、検索はできるが権限が曖昧、書き込みはできるが監査できない、という実務上の失敗に直結する。"
+				},
+				{
+					"en": "To conclude first, the practical judgment as of 2026 is as follows.",
+					"ja": "結論を先に言うと、2026 年時点での実務判断は次の通りである。"
+				},
+				{
+					"en": "Graphiti is suitable for long-term memory that needs to deal with history, relationships, state changes, and evidence.",
+					"ja": "Graphiti は、履歴、関係、状態変化、根拠を扱う必要がある長期記憶に向いている。"
+				},
+				{
+					"en": "It is especially valuable when you want to preserve information about \"who knew what, when, and why.\"",
+					"ja": "特に「誰が・いつ・何を・なぜ知っていたか」を残したい場合に価値が高い。"
+				},
+				{
+					"en": "MCP is effective as a standardization layer for distributing storage infrastructure to multiple clients such as Claude Desktop / Cursor / proprietary hosts.",
+					"ja": "MCP は、記憶基盤を Claude Desktop / Cursor / 独自ホストなど複数クライアントへ配るための標準化レイヤーとして有効である。"
+				},
+				{
+					"en": "However, MCP itself does not resolve memory correctness, authority, reputation, or data models.",
+					"ja": "ただし、MCP 自体は記憶の正しさ、権限、評価、データモデルを解決しない。"
+				},
+				{
+					"en": "Temporal knowledge graphs are effective for problems where relationships change, states transition, or where you want to track sources or points in time.",
+					"ja": "temporal knowledge graph は、関係が変わる、状態が遷移する、出典や時点を追いたい、という問題に効く。"
+				},
+				{
+					"en": "On the other hand, it is overkill for static FAQs, one-off document searches, and transaction original management.",
+					"ja": "一方で、静的な FAQ、単発の文書検索、トランザクションの正本管理には過剰である。"
+				},
+				{
+					"en": "For personal research, Graphiti or Mem0 are often sufficient.",
+					"ja": "個人研究では、Graphiti か Mem0 で十分なことが多い。"
+				},
+				{
+					"en": "Organizational knowledge should not be limited to Graphiti alone, but document search, structured data, permissions, and audit logs should be placed in separate layers.",
+					"ja": "組織ナレッジでは、Graphiti だけで完結させず、文書検索、構造化データ、権限、監査ログを別層に置くべきである。"
+				},
+				{
+					"en": "For business agents, it is safer not to combine storage and execution into the same MCP server.",
+					"ja": "業務エージェントでは、記憶と実行を同じ MCP サーバにまとめない方が安全である。"
+				},
+				{
+					"en": "The main candidates as of 2026 are Graphiti/Zep, Mem0, Letta, and GraphRAG.",
+					"ja": "2026 年時点の主要候補は、Graphiti / Zep、Mem0、Letta、GraphRAG である。"
+				},
+				{
+					"en": "The usage can be divided into \"dynamic relational memory,\" \"general-purpose memory layer,\" \"stateful agent,\" and \"graph RAG for static corpora.\"",
+					"ja": "用途の違いは「動的な関係記憶」「汎用メモリ層」「stateful agent」「静的コーパス向けグラフ RAG」に分かれる。"
+				}
+			]
+		},
+		{
+			"id": "problem-graphiti-solves",
+			"heading": {
+				"ja": "2. Graphiti が解こうとしている問題",
+				"en": "2. The problem Graphiti is trying to solve"
+			},
+			"pairs": [
+				{
+					"en": "Graphiti targets situations where LLM's \"short-term memory within the context window\" is not enough.",
+					"ja": "Graphiti が狙うのは、LLM の「コンテキストウィンドウ内の短期記憶」だけでは足りない場面である。"
+				},
+				{
+					"en": "Simply summarizing and packing conversation history cannot effectively handle changes in relationships, updates to attributes, contradictions between earlier and later statements, the point of origin, and multiple expressions of the same person or issue.",
+					"ja": "会話履歴を単純に要約して詰め込む方法では、関係の変化、属性の更新、以前の発言と後の発言の矛盾、出典の時点、同じ人物や案件の複数表現をうまく扱えない。"
+				},
+				{
+					"en": "In the context of Graphiti, this becomes a problem that should be treated as a temporal knowledge graph.",
+					"ja": "Graphiti の文脈では、これは temporal knowledge graph として扱うべき問題になる。"
+				},
+				{
+					"en": "Graphiti extracts entities and relationships from episodes and stores them as knowledge graphs with point-in-time information.",
+					"ja": "Graphiti は、エピソードからエンティティや関係を抽出し、時点情報を持つ知識グラフとして保存する。"
+				},
+				{
+					"en": "The official documentation shows that it provides custom entity/edge types, graph namespacing, hybrid search, and MCP server, and is used as Zep's context infrastructure.",
+					"ja": "公式ドキュメントは、custom entity / edge types、graph namespacing、hybrid search、MCP server を提供し、Zep の context infrastructure として使われていることを示している。"
+				},
+				{
+					"en": "Zep's public documentation explains that a Graphiti-based memory graph integrates dynamic unstructured and structured business data, and uses bi-temporal treatment to distinguish between past state and capture time.",
+					"ja": "Zep の公開資料では、Graphiti ベースの memory graph が dynamic unstructured and structured business data を統合すること、そして bi-temporal な扱いで過去の状態と取り込み時刻を区別することが説明されている。"
+				},
+				{
+					"en": "Graphiti's value goes beyond simply \"saving conversation logs.\"",
+					"ja": "Graphiti の価値は、単なる「会話ログの保存」ではない。"
+				},
+				{
+					"en": "The goal is to transform the relationships extracted from a conversation into a structure that can be reused in subsequent conversations and tool calls.",
+					"ja": "会話から抽出した関係を、後続の会話やツール呼び出しで再利用できる構造に変換する点にある。"
+				},
+				{
+					"en": "For example, differences such as \"This customer was considering implementation last week, but are now awaiting legal review,\" \"This person in charge has been transferred,\" and \"This case has a different scope from the previous one\" are difficult to reconstruct with just a vector search of documents.",
+					"ja": "たとえば「この顧客は先週は導入検討中だったが、今は法務レビュー待ち」「この担当者は異動済み」「この案件は前回とは別スコープ」という差分は、文書のベクトル検索だけでは再構成しにくい。"
+				},
+				{
+					"en": "By creating a graph that is related to time, agents can easily see what is true now and when it became true.",
+					"ja": "時間と関係を持つグラフに落とすことで、エージェントは「いま何が真で、いつそうなったか」を参照しやすくなる。"
+				}
+			]
+		},
+		{
+			"id": "differences-rag-vector-kg",
+			"heading": {
+				"ja": "3. 従来の RAG / ベクトル DB / Knowledge Graph との違い",
+				"en": "3. Differences from traditional RAG / Vector DB / Knowledge Graph"
+			},
+			"pairs": [
+				{
+					"en": "Vector DB is strong in extracting sentences and fragments that are semantically similar.",
+					"ja": "ベクトル DB は、意味的に近い文章や断片を取り出すのに強い。"
+				},
+				{
+					"en": "If the requirements are \"searching for similar stories,\" \"gathering related documents,\" or \"generating reusable candidates from natural sentences,\" it will be effective with minimal cost.",
+					"ja": "要件が「似た話を探す」「関連文書を集める」「自然文から再利用可能な候補を出す」であれば、最小コストで効く。"
+				},
+				{
+					"en": "However, vector DBs usually do not naturally preserve relationship lifetimes, state transitions, sources, negated information, who updated them and when.",
+					"ja": "しかし、ベクトル DB は通常、関係の有効期間、状態遷移、出典、否定された情報、誰がいつ更新したかを自然には保持しない。"
+				},
+				{
+					"en": "Therefore, the longer the conversation, the more likely sentences will be mixed up, such as \"sentences that are similar but now different\" and \"sentences that are old but very similar.\"",
+					"ja": "したがって、会話が長くなるほど「似ているが今は違う」「古いがよく似た文」が混ざりやすい。"
+				},
+				{
+					"en": "Traditional knowledge graphs have explicit entities/edges/properties, making them suitable for handling relationships.",
+					"ja": "従来の知識グラフは、明示的な entity / edge / property を持つため、関係を扱うのに向いている。"
+				},
+				{
+					"en": "However, in a field where updates are frequent, graphs tend to become static snapshots.",
+					"ja": "ただし、更新頻度が高い現場では、グラフが静的なスナップショットになりやすい。"
+				},
+				{
+					"en": "There are some operations where the history is stored in a separate table or property, but it is difficult to reuse the agent's memory if the API that asks \"when is the relationship?\" is weak.",
+					"ja": "履歴を別テーブルや別プロパティで持つ運用もあるが、エージェントの memory としては「いつの関係か」を問う API が弱いと再利用しにくい。"
+				},
+				{
+					"en": "Graphiti's temporality compensates for this.",
+					"ja": "Graphiti の temporal 性はここを補う。"
+				},
+				{
+					"en": "By adding point-in-time information to the knowledge graph, it is possible to handle not only the existence of a relationship, but also when the relationship was established, when it was incorporated, and whether it was later overwritten.",
+					"ja": "knowledge graph に時点情報を加えることで、「関係の存在」だけでなく「関係がいつ成立したか」「いつ取り込まれたか」「後で上書きされたか」を扱える。"
+				},
+				{
+					"en": "Research on temporal knowledge graphs also points out that static graphs miss dynamic evolution and time-dependent relationships.",
+					"ja": "Temporal knowledge graph の研究でも、静的グラフでは動的な進化や時間依存の関係を取りこぼすことが指摘されている。"
+				},
+				{
+					"en": "RAG is designed to search for documents outside the model and use them for answers, and is often the first choice.",
+					"ja": "RAG は、モデルの外にある文書を検索して回答に使う設計であり、まず第一選択肢になることが多い。"
+				},
+				{
+					"en": "RAG is the simplest and easiest to operate for document-centered Q&A, policy searches, knowledge bases, and legal, human resources, and internal FAQs.",
+					"ja": "文書中心の Q&A、ポリシー検索、ナレッジベース、法務・人事・社内 FAQ では、RAG が最も単純で運用しやすい。"
+				},
+				{
+					"en": "However, RAG is not good at making inferences across issues, customers, personnel, exceptions, approvals, and change history if the search target remains document-based.",
+					"ja": "だが RAG は、検索対象が文書単位のままだと、案件、顧客、担当者、例外、承認、変更履歴をまたぐ推論が苦手である。"
+				},
+				{
+					"en": "Graphiti does not replace RAG, but is similar to the idea of ​​adding \"related memories\" and \"chronological memories\" on top of RAG.",
+					"ja": "Graphiti は RAG を置き換えるのではなく、RAG の上に「関係のある記憶」と「時系列の記憶」を足す発想に近い。"
+				},
+				{
+					"en": "In practice, a two-step approach of embedding the evidence found in document searches in Graphiti, and drawing the status and history of each entity from Graphiti is likely to be stable in practice.",
+					"ja": "文書検索で拾った根拠を Graphiti に埋め、Graphiti からエンティティ単位の状況や履歴を引く、という二段構えが実務では安定しやすい。"
+				}
+			]
+		},
+		{
+			"id": "mcp-server-design",
+			"heading": {
+				"ja": "4. MCP サーバとして記憶基盤を公開する設計",
+				"en": "4. Design to expose the storage infrastructure as an MCP server"
+			},
+			"pairs": [
+				{
+					"en": "MCP is a standard protocol for models to handle external tools, resources, and prompts.",
+					"ja": "MCP は、モデルが外部ツール、リソース、プロンプトを扱うための標準プロトコルである。"
+				},
+				{
+					"en": "Therefore, by exposing Graphiti as an MCP server, MCP-enabled hosts like Claude Desktop and Cursor can reference the same storage infrastructure.",
+					"ja": "したがって、Graphiti を MCP サーバとして公開すると、Claude Desktop や Cursor のような MCP 対応ホストから、同じ記憶基盤を参照できる。"
+				},
+				{
+					"en": "While this makes the implementation highly reusable, it also means that the public aspect is expanded.",
+					"ja": "これは実装の再利用性が高い一方、公開面が広がるということでもある。"
+				},
+				{
+					"en": "MCP has three advantages.",
+					"ja": "MCP の利点は三つある。"
+				},
+				{
+					"en": "First, it simplifies client-side integration.",
+					"ja": "第一に、クライアント側の統合が簡単になる。"
+				},
+				{
+					"en": "Second, the memory server can be decomposed into tool / resource / prompt to separate reading, summarizing, and writing.",
+					"ja": "第二に、memory server を tool / resource / prompt に分解して、読み取り・要約・書き込みを分けられる。"
+				},
+				{
+					"en": "Third, it is possible to standardize the protocol layer rather than creating a unique API for each agent.",
+					"ja": "第三に、エージェントごとに独自 API を作るより、プロトコル層を共通化できる。"
+				},
+				{
+					"en": "The risks of becoming an MCP are also clear.",
+					"ja": "MCP 化のリスクもはっきりしている。"
+				},
+				{
+					"en": "**Diffusion of privileges**: If memory can be written and updated in addition to reading, malfunctions of clients and models directly become knowledge pollution.",
+					"ja": "**権限の拡散**: 記憶の読み取りだけでなく、書き込みや更新ができると、クライアントやモデルの誤動作がそのまま知識汚染になる。"
+				},
+				{
+					"en": "**Context Leak**: It is easy to mix one user's memories with another user's conversation.",
+					"ja": "**コンテキスト漏洩**: あるユーザーの記憶を別ユーザーの会話に混ぜる事故が起きやすい。"
+				},
+				{
+					"en": "It is necessary to separate namespace and tenant boundary from the beginning.",
+					"ja": "namespace や tenant boundary を最初から分ける必要がある。"
+				},
+				{
+					"en": "**Excessive writeback**: If the model records the fragments it comes up with, noise and hallucinations will remain in long-term memory.",
+					"ja": "**過剰な writeback**: モデルが思いついた断片をそのまま記録すると、ノイズと幻覚が長期記憶に残る。"
+				},
+				{
+					"en": "**Difficult to audit**: The more chained tool calls there are, the harder it is to follow the basis for the final decision.",
+					"ja": "**監査の難化**: tool call の連鎖が増えるほど、最終判断の根拠が追いにくい。"
+				},
+				{
+					"en": "**Protocol Dependency**: If you connect anything with MCP, it will seem like it's working while keeping the actual system of record ambiguous.",
+					"ja": "**プロトコル依存**: 何でも MCP でつなぐと、実際の system of record を曖昧にしたまま「動いた気になる」。"
+				},
+				{
+					"en": "The Graphiti MCP server's README is classified as experimental, so it is currently safer to treat it as a \"read-oriented memory façade\" than to use it as the \"sole production copy.\"",
+					"ja": "Graphiti MCP server の README は experimental と位置づけているため、現時点では「本番の唯一の正本」として使うより、「読み取り中心の memory façade」として扱う方が安全である。"
+				}
+			]
+		},
+		{
+			"id": "temporal-kg-fit",
+			"heading": {
+				"ja": "5. Temporal knowledge graph が memory に効く場面、効かない場面",
+				"en": "5. Situations where temporal knowledge graph is effective for memory and situations where it is not effective"
+			},
+			"pairs": [
+				{
+					"en": "Temporal knowledge graphs are effective when information changes and the change itself is important.",
+					"ja": "temporal knowledge graph が効くのは、情報が変化し、その変化自体が重要なときである。"
+				},
+				{
+					"en": "**Relationship changes**: Customer and person in charge, case and status, organization and role change.",
+					"ja": "**関係が変わる**: 顧客と担当者、案件と状態、組織と役割が変わる。"
+				},
+				{
+					"en": "**Time is important**: “When it happened” is important, and the latest value alone is not enough.",
+					"ja": "**時点が重要**: 「いつそうだったか」が重要で、最新値だけでは足りない。"
+				},
+				{
+					"en": "**I want to follow the source**: I want to keep the memories obtained from which conversation, which document, and which tool result.",
+					"ja": "**出典を追いたい**: どの会話、どの文書、どのツール結果から得た記憶かを残したい。"
+				},
+				{
+					"en": "**Case Management**: Has multiple-step state transitions, such as inquiry, issue, opportunity, recruitment, and legal review.",
+					"ja": "**ケース管理**: 問い合わせ、障害、営業案件、採用、法務レビューのように、複数ステップの状態遷移がある。"
+				},
+				{
+					"en": "**Organizational Learning**: Want to reuse past decisions and results to improve next decisions.",
+					"ja": "**組織学習**: 過去の意思決定と結果を再利用して、次の判断を改善したい。"
+				},
+				{
+					"en": "Graphiti's bi-temporal model is well suited for these applications.",
+					"ja": "Graphiti の bi-temporal モデルは、これらの用途と相性がよい。"
+				},
+				{
+					"en": "This is because it is possible to separate not simply \"information found\" but \"when it was observed and when it was effective.\"",
+					"ja": "単純に「見つかった情報」ではなく、「いつ観測し、いつ有効だったか」を分離できるためである。"
+				},
+				{
+					"en": "It is also important that temporal KG is not a panacea.",
+					"ja": "temporal KG が万能ではないことも重要である。"
+				},
+				{
+					"en": "**Static FAQ and regulations search**: Simple document searches are faster.",
+					"ja": "**静的な FAQ や規程検索**: 単純な文書検索の方が早い。"
+				},
+				{
+					"en": "**Ephemeral Conversation Context**: Long-term memory is not necessary if only a few turns are enough.",
+					"ja": "**短命な会話コンテキスト**: その場の数ターンだけで十分なら、長期記憶は不要である。"
+				},
+				{
+					"en": "**Situation where the original is in another system**: The original of inventory, invoices, contracts, and authorizations should remain at the source of truth and should not be copied to the storage infrastructure.",
+					"ja": "**正本が別システムにある状態**: 在庫、請求、契約、権限の正本は source of truth に残すべきで、記憶基盤に複製すべきではない。"
+				},
+				{
+					"en": "**High-risk decisions**: Final medical, legal, credit, and hiring decisions should not be automated through memory retrieval alone.",
+					"ja": "**高リスクの意思決定**: 医療、法務、与信、採用の最終判断は、記憶検索だけで自動化しない方がよい。"
+				},
+				{
+					"en": "**Full-text search of large corpora**: If the set of documents is huge and comprehensiveness is more important than relationships, then full-text search and RAG come first.",
+					"ja": "**大規模コーパスの全文検索**: ドキュメント群が巨大で、関係より網羅性が重要なら、全文検索と RAG が先である。"
+				},
+				{
+					"en": "In short, temporal KG is effective in areas that require a \"semantic network with history.\"",
+					"ja": "要するに、temporal KG は「履歴を伴う意味ネットワーク」を必要とする領域で効く。"
+				},
+				{
+					"en": "On the other hand, the cost of graphing is often not worth it for simple inquiries about the latest values ​​or wide-area searches of large amounts of documents.",
+					"ja": "逆に、単なる最新値照会や大量文書の広域検索には、グラフ化のコストが見合わないことが多い。"
+				}
+			]
+		},
+		{
+			"id": "implementation-patterns",
+			"heading": {
+				"ja": "6. 実装パターン",
+				"en": "6. Implementation pattern"
+			},
+			"pairs": [
+				{
+					"en": "In individual studies, the minimal configuration is the most followed.",
+					"ja": "個人研究では、最小構成が最も続く。"
+				},
+				{
+					"en": "The recommended method is to input journals, paper notes, conversation logs, and important URLs into Graphiti, and search and reuse them via MCP.",
+					"ja": "おすすめは、日誌、論文メモ、会話ログ、重要 URL を Graphiti に流し込み、検索と再利用を MCP 経由で行う形である。"
+				},
+				{
+					"en": "Here, memory is viewed as \"an index for later reuse of one's thoughts.\"",
+					"ja": "ここでは、記憶を「自分の思考を後で再利用する索引」と見なす。"
+				},
+				{
+					"en": "It is suitable for use in keeping track of \"what was decided with whom\" and \"which hypothesis was rejected,\" which would be lost in document searches alone.",
+					"ja": "文書検索だけでは埋もれる「誰と何を決めたか」「どの仮説を棄却したか」を残す用途に向く。"
+				},
+				{
+					"en": "The reason for choosing Graphiti is its ability to handle relationships and time series.",
+					"ja": "Graphiti を選ぶ理由は、関係と時系列を扱えることにある。"
+				},
+				{
+					"en": "Mem0 and Letta are fine, but Graphiti brings the temporal changes of entities and edges to the fore, so it is suitable for research memos and exploration logs.",
+					"ja": "Mem0 や Letta でもよいが、Graphiti はエンティティと edge の時間的変化を前面に出しているため、研究メモや探索ログに向いている。"
+				},
+				{
+					"en": "Organizational knowledge is more difficult to design than personal memory.",
+					"ja": "組織ナレッジでは、個人記憶より設計が難しい。"
+				},
+				{
+					"en": "This is because of authority, departmental boundaries, retention periods, deletion requests, auditing, and distribution of source systems.",
+					"ja": "理由は、権限、部門境界、保管期間、削除要求、監査、ソースシステムの分散があるからである。"
+				},
+				{
+					"en": "Therefore, Graphiti should not be used as a standalone knowledge hub, but as part of the following four layers:",
+					"ja": "したがって、Graphiti は単独の知識ハブではなく、次の 4 層の一部として使うべきである。"
+				},
+				{
+					"en": "Document search layer",
+					"ja": "文書検索層"
+				},
+				{
+					"en": "Structured data layer",
+					"ja": "構造化データ層"
+				},
+				{
+					"en": "3.temporal KG layer",
+					"ja": "temporal KG 層"
+				},
+				{
+					"en": "Policy/audit/authority layer",
+					"ja": "政策・監査・権限層"
+				},
+				{
+					"en": "In practice, it is appropriate to enter conversations, email summaries, meeting notes, and case histories in Graphiti, while leaving the original contracts, sales, authority, and inventory in the existing DB.",
+					"ja": "実務上は、Graphiti に会話、メール要約、会議メモ、案件履歴を入れ、正本の契約、売上、権限、在庫は既存 DB に残すのが妥当である。"
+				},
+				{
+					"en": "The purpose of organizational knowledge is not to centralize knowledge, but to securely distribute reusable relationships.",
+					"ja": "組織ナレッジの目的は「知識を一元化すること」ではなく、「再利用可能な関係を安全に配ること」である。"
+				},
+				{
+					"en": "In business agents, it is important to separate memory and action.",
+					"ja": "業務エージェントでは、memory と action を分けることが重要である。"
+				},
+				{
+					"en": "The memory MCP server should be read-heavy, and write should be limited with an authorization flow.",
+					"ja": "memory MCP サーバは read-heavy にし、write は承認フロー付きで限定する。"
+				},
+				{
+					"en": "Apart from the running MCP server, it is responsible for operations such as CRM, tickets, workflow, and code changes.",
+					"ja": "実行系の MCP サーバは別にして、CRM、チケット、ワークフロー、コード変更などの操作を担わせる。"
+				},
+				{
+					"en": "In this way, you can distinguish between memory contamination and business manipulation.",
+					"ja": "こうすると、記憶の汚染と業務操作の暴発を切り分けられる。"
+				},
+				{
+					"en": "In this pattern, Graphiti is the \"layer for remembering\" and the business system is the \"layer for finalizing.\"",
+					"ja": "このパターンでは、Graphiti は「思い出すための層」であり、業務システムは「確定するための層」である。"
+				},
+				{
+					"en": "By separating the two, it is difficult for incorrect memories to corrupt business data.",
+					"ja": "両者を分けると、間違った記憶が業務データを汚しにくい。"
+				}
+			]
+		},
+		{
+			"id": "major-services-2026",
+			"heading": {
+				"ja": "7. 2026 年時点の主要 OSS / 商用サービス",
+				"en": "7. Major OSS/Commercial Services in 2026"
+			},
+			"pairs": [
+				{
+					"en": "Mem0 has the advantage of abstracting memory as a single library/platform and allowing you to choose between self-hosting and cloud storage.",
+					"ja": "Mem0 は、記憶を一つのライブラリ/プラットフォームとして抽象化し、自己ホストやクラウドを選べる点が強い。"
+				},
+				{
+					"en": "Letta treats the agent itself as stateful and has a strong idea of ​​separating memory blocks and archival memory.",
+					"ja": "Letta は、エージェント自体を stateful に扱い、memory blocks と archival memory を分ける発想が強い。"
+				},
+				{
+					"en": "Graphiti leans toward temporal graphs, with a strong awareness of relationships and time.",
+					"ja": "Graphiti は、関係と時間を強く意識した temporal graph に寄っている。"
+				},
+				{
+					"en": "GraphRAG makes sense primarily for searching static document corpora.",
+					"ja": "GraphRAG は、主に静的な文書コーパスの探索で使う方が筋がよい。"
+				},
+				{
+					"en": "Rather than competing, these are different hierarchies of memory.",
+					"ja": "これらは競合というより、記憶の階層が違う。"
+				},
+				{
+					"en": "Graphiti records \"relationships and changes.\"",
+					"ja": "Graphiti は「関係と変化」を記録する。"
+				},
+				{
+					"en": "Mem0 provides general purpose memory.",
+					"ja": "Mem0 は「汎用メモリ」を広く提供する。"
+				},
+				{
+					"en": "Letta continues the \"agent state.\"",
+					"ja": "Letta は「エージェント状態」を継続させる。"
+				},
+				{
+					"en": "GraphRAG \"makes corpora understandable.\"",
+					"ja": "GraphRAG は「コーパスを理解可能にする」。"
+				}
+			]
+		},
+		{
+			"id": "introduce-or-avoid",
+			"heading": {
+				"ja": "8. 導入すべきケース / まだ避けるべきケース",
+				"en": "8. Cases to introduce / cases to avoid yet"
+			},
+			"pairs": [
+				{
+					"en": "People, projects, relationships, and situations change across conversations.",
+					"ja": "会話をまたいで、人物、案件、関係、状態が変化する。"
+				},
+				{
+					"en": "The timing of past statements and observations is important.",
+					"ja": "過去の発言や観測の時点が重要である。"
+				},
+				{
+					"en": "I want to trace the basis from which that memory was born.",
+					"ja": "どの根拠からその記憶が生まれたかを追いたい。"
+				},
+				{
+					"en": "I want to reuse the knowledge of teams and organizations rather than individuals.",
+					"ja": "個人ではなく、チームや組織のナレッジを再利用したい。"
+				},
+				{
+					"en": "I want to distribute memory to multiple clients, but I want to standardize the API.",
+					"ja": "memory を複数クライアントに配りたいが、API は標準化したい。"
+				},
+				{
+					"en": "All you need is a simple FAQ or document search.",
+					"ja": "単純な FAQ や文書検索だけで済む。"
+				},
+				{
+					"en": "The original copy is in the existing business system and you do not want to copy it to the storage infrastructure.",
+					"ja": "正本が既存業務システムにあり、記憶基盤に複製したくない。"
+				},
+				{
+					"en": "Operations regarding authority, auditing, deletion requests, and storage period are not well established.",
+					"ja": "権限、監査、削除要求、保管期間の運用が未整備である。"
+				},
+				{
+					"en": "There is no mechanism to evaluate hallucinations and incorrect extraction.",
+					"ja": "幻覚や誤抽出を評価する仕組みがない。"
+				},
+				{
+					"en": "You are suddenly trying to place a writable MCP server at the core of business automation.",
+					"ja": "書き込み可能な MCP サーバを、いきなり業務自動化の中核に置こうとしている。"
+				},
+				{
+					"en": "The shortest practical route is to first introduce it as a read-only memory server and then open limited writebacks later.",
+					"ja": "実務上の最短ルートは、まず read-only の memory server として導入し、後から writeback を限定的に開くことである。"
+				},
+				{
+					"en": "If we summarize everything from the beginning as \"memory and execution are all MCP,\" design responsibilities become mixed.",
+					"ja": "最初から「記憶も実行も全部 MCP」でまとめると、設計責務が混ざる。"
+				}
+			]
+		},
+		{
+			"id": "recommended-policy",
+			"heading": {
+				"ja": "9. 推奨方針",
+				"en": "9. Recommended policy"
+			},
+			"pairs": [
+				{
+					"en": "If you want to combine Graphiti and MCP, it is best to proceed in the following order.",
+					"ja": "Graphiti と MCP を組み合わせるなら、次の順で進めるのがよい。"
+				},
+				{
+					"en": "Prepare document RAG first.",
+					"ja": "文書 RAG を先に整える。"
+				},
+				{
+					"en": "Put only changing relationships into Graphiti.",
+					"ja": "変化する関係だけを Graphiti に入れる。"
+				},
+				{
+					"en": "MCP starts as read-only.",
+					"ja": "MCP は read-only から始める。"
+				},
+				{
+					"en": "Writeback should include approval.",
+					"ja": "writeback は approval 付きにする。"
+				},
+				{
+					"en": "Separate storage and execution MCP servers.",
+					"ja": "記憶と実行の MCP サーバを分ける。"
+				},
+				{
+					"en": "Create the audit log, evaluation set, and deletion flow first.",
+					"ja": "監査ログ、評価セット、削除フローを先に作る。"
+				},
+				{
+					"en": "With this order, you can safely use Graphiti as a \"temporal relational index\" rather than a \"long-term memory body.\"",
+					"ja": "この順序にすると、Graphiti を「長期記憶の本体」ではなく、「時間を持つ関係インデックス」として安全に使える。"
+				},
+				{
+					"en": "MCP is just a window, so ease of publication should not be used as an excuse for poor design.",
+					"ja": "MCP はその窓口にすぎないので、公開のしやすさを、設計の甘さの言い訳にしてはいけない。"
+				}
+			]
+		}
+	]
+}

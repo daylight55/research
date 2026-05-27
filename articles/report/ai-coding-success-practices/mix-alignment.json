@@ -1,0 +1,604 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "LLM-based AI coding is more useful when it is treated as a development system for increasing the probability that a software change finishes correctly, rather than as a technology that simply replaces a human developer.",
+					"ja": "LLMを用いたAI Codingは、「人間の代わりに全部作る」技術として見るより、「ソフトウェア変更が正しく終わる確率を上げる」ための開発システムとして整備する方が実務に合う。"
+				},
+				{
+					"en": "The success probability is not determined by model capability alone.",
+					"ja": "成功確率はモデル性能だけで決まらない。"
+				},
+				{
+					"en": "Task design, repository context, the agent-computer interface, verification, permission boundaries, and review workflow all compound.",
+					"ja": "タスク分割、リポジトリ内の文脈、Agentが使う操作面、検証手段、権限境界、レビューの入れ方が掛け算で効く。"
+				},
+				{
+					"en": "The report's core conclusions are:",
+					"ja": "本レポートの結論は次の通りである。"
+				},
+				{
+					"en": "The objective of AI coding is not one-shot generation accuracy.",
+					"ja": "AI Codingの目的は、単発の生成精度ではなく、変更が意図通りに完了し、検証され、レビュー可能な差分として残る確率を上げることである。"
+				},
+				{
+					"en": "It is the probability that a requested change is completed, verified, and left as a reviewable diff.",
+					"ja": "AI Codingの目的は、単発の生成精度ではなく、変更が意図通りに完了し、検証され、レビュー可能な差分として残る確率を上げることである。"
+				},
+				{
+					"en": "Success depends heavily on environment, context design, tool design, tests, CI, PR workflow, and rollback mechanisms.",
+					"ja": "成功確率は「モデル能力」よりも、実行環境、文脈設計、ツール設計、テスト、CI、PR運用、失敗時の巻き戻しによって大きく変わる。"
+				},
+				{
+					"en": "Good practice does not mean giving the agent unlimited freedom.",
+					"ja": "良いプラクティスは、Agentを自由にすることではなく、Agentが探索し、編集し、検証し、証拠を残せる範囲を明確にすることである。"
+				},
+				{
+					"en": "It means defining where the agent can explore, edit, verify, and leave evidence.",
+					"ja": "良いプラクティスは、Agentを自由にすることではなく、Agentが探索し、編集し、検証し、証拠を残せる範囲を明確にすることである。"
+				},
+				{
+					"en": "The longer the task, the more important it becomes to treat repository state, task lists, tests, commits, and logs as the source of truth instead of the chat transcript.",
+					"ja": "長い作業ほど、セッション内の会話より、リポジトリ内の状態ファイル、タスクリスト、テスト、コミット、ログを正本にする必要がある。"
+				},
+				{
+					"en": "Public benchmarks are useful, but local success probability should be measured with evaluation sets and operational logs that reflect your own codebase.",
+					"ja": "ベンチマークの点数は参考になるが、自分のコードベースでの成功確率は、ローカルの評価セットと運用ログで測るべきである。"
+				},
+				{
+					"en": "The point of the diagram is that one strong layer is not enough.",
+					"ja": "この図で重要なのは、どこか1つを強くしても全体は安定しない点である。"
+				},
+				{
+					"en": "A stronger model will still produce plausible but wrong diffs if tests are missing.",
+					"ja": "高性能モデルを使っても、テストがなければ「うまく見える差分」が通る。"
+				},
+				{
+					"en": "A detailed instruction file will not help if the task itself is ambiguous.",
+					"ja": "詳細なAGENTS.mdを書いても、タスクが曖昧なら探索が散る。"
+				},
+				{
+					"en": "Broad permissions may increase speed, but without rollback and auditability the cost of failure increases as well.",
+					"ja": "Agentに広い権限を渡しても、巻き戻しと監査がなければ失敗時の損失が大きくなる。"
+				}
+			]
+		},
+		{
+			"id": "probability-engineering",
+			"heading": {
+				"ja": "2. 背景: AI Codingはなぜ確率の工学になるのか",
+				"en": "2. Why AI Coding Becomes Probability Engineering"
+			},
+			"pairs": [
+				{
+					"en": "In AI coding, an AI agent observes an environment, uses tools, changes state, and pursues an objective across multiple turns.",
+					"ja": "AI Codingで使うAI Agentは、LLMが複数ターンにわたって環境を観察し、ツールを使い、状態を変えながら目的を達成しようとする仕組みである。"
+				},
+				{
+					"en": "In software development, this can include repository exploration, planning, implementation, test execution, reading failure logs, revising the patch, and writing a PR description.",
+					"ja": "ソフトウェア開発では、リポジトリ探索、変更方針の立案、実装、テスト実行、失敗ログの読解、修正、PR説明の作成までが対象になる。"
+				},
+				{
+					"en": "This is broader than traditional code completion.",
+					"ja": "これは従来のコード補完より広い。"
+				},
+				{
+					"en": "That breadth creates more failure modes.",
+					"ja": "しかし、広いということは失敗面も広い。"
+				},
+				{
+					"en": "An agent may inspect the wrong file, trust stale assumptions, skip tests, misunderstand what a passing test proves, over-abstract the solution, or lose context midway through a task.",
+					"ja": "Agentは、間違ったファイルを読む、古い前提を信じる、テストを実行しない、通ったテストの意味を誤解する、過剰に抽象化する、作業途中で文脈を失う、といった失敗を起こす。"
+				},
+				{
+					"en": "Therefore, the engineering target is not just the prompt.",
+					"ja": "したがって、開発者が整備すべき対象は「プロンプト」だけではない。"
+				},
+				{
+					"en": "It is the development environment in which the agent is likely to succeed.",
+					"ja": "Agentが成功しやすい環境そのものを設計する必要がある。"
+				},
+				{
+					"en": "In this framing, AI coding maturity is not measured by how autonomous the system is.",
+					"ja": "この見方では、AI Codingの成熟度は「どれだけ自律させたか」ではなく、「失敗を小さくし、成功を再現可能にしたか」で測る。"
+				},
+				{
+					"en": "It is measured by how small failures become and how reproducible successes become.",
+					"ja": "この見方では、AI Codingの成熟度は「どれだけ自律させたか」ではなく、「失敗を小さくし、成功を再現可能にしたか」で測る。"
+				}
+			]
+		},
+		{
+			"id": "research-background",
+			"heading": {
+				"ja": "3. 研究史と現在地",
+				"en": "3. Research Background and Current Direction"
+			},
+			"pairs": [
+				{
+					"en": "Software engineering agents have moved from single-shot code generation toward repository-level issue resolution.",
+					"ja": "ソフトウェア開発Agentの研究は、単発のコード生成から、リポジトリ全体を対象にした課題解決へ移った。"
+				},
+				{
+					"en": "SWE-bench evaluates whether a model can solve tasks derived from real GitHub issues and pull requests.",
+					"ja": "SWE-benchは、実際のGitHub issueと対応するPRから構成される課題を使い、LLMがコードベースを変更して問題を解けるかを評価した。"
+				},
+				{
+					"en": "SWE-agent showed that, even with a fixed language model, designing the agent-computer interface can improve the agent's ability to navigate repositories, edit files, and run tests.",
+					"ja": "SWE-agentは、モデル自体を変えずに、Agentがコンピュータとやり取りするインターフェースを設計することで性能を上げられることを示した。"
+				},
+				{
+					"en": "At the same time, more agentic is not always better.",
+					"ja": "一方で、Agentが複雑であるほど良いとは限らない。"
+				},
+				{
+					"en": "Agentless showed that a relatively simple two-phase process, localization followed by repair, can be a strong baseline without giving the model a long autonomous tool-use loop.",
+					"ja": "Agentlessは、LLMに長い自律ループを任せるのではなく、問題箇所の特定と修正生成という単純な二段階に分けても強いベースラインになることを示した。"
+				},
+				{
+					"en": "The practical lesson is important: agentic autonomy is valuable only when it raises the probability of success.",
+					"ja": "これは実務にも重要である。Agenticであること自体に価値があるのではなく、成功確率が上がるなら、手続き的なworkflowの方が良い場合がある。"
+				},
+				{
+					"en": "For predictable tasks, a workflow may outperform a free-form agent.",
+					"ja": "Agenticであること自体に価値があるのではなく、成功確率が上がるなら、手続き的なworkflowの方が良い場合がある。"
+				},
+				{
+					"en": "Since 2025, practical guidance has shifted from model-only thinking toward harness design.",
+					"ja": "2025年以降の実務情報は、AI Codingの焦点が「モデル単体」から「harness」に移っていることを示す。"
+				},
+				{
+					"en": "OpenAI explains the Codex agent loop as the orchestration logic connecting user, model, and tools.",
+					"ja": "OpenAIはCodexのagent loopを、ユーザー、モデル、ツールを束ねる中核ロジックとして説明している。"
+				},
+				{
+					"en": "Anthropic describes long-running agent harnesses that use an initializer agent, feature lists, progress notes, basic tests, and commits to preserve progress across sessions.",
+					"ja": "Anthropicは、長時間作業ではinitializer agent、feature list、progress notes、基本テスト、コミットを使って、セッションをまたぐ進捗管理を行う設計を示している。"
+				}
+			]
+		},
+		{
+			"id": "five-layers",
+			"heading": {
+				"ja": "4. 基本原理: 成功確率を上げる5層",
+				"en": "4. Five Layers for Raising Success Probability"
+			},
+			"pairs": []
+		},
+		{
+			"id": "success-conditions",
+			"heading": {
+				"ja": "4.1 タスクを「成功条件」に変換する",
+				"en": "4.1 Convert Tasks into Success Conditions"
+			},
+			"pairs": [
+				{
+					"en": "Agents should not receive vague instructions such as \"fix this nicely.\"",
+					"ja": "Agentに渡すべきなのは「いい感じに直して」ではなく、「どの状態になれば成功か」である。"
+				},
+				{
+					"en": "They need a target, constraints, acceptance criteria, verification steps, allowed scope, and forbidden scope.",
+					"ja": "良い依頼には、対象、制約、受け入れ条件、実行すべき検証、変更してよい範囲、変更してはいけない範囲が含まれる。"
+				},
+				{
+					"en": "This resembles good issue writing for humans, but it matters more for agents because they will try to fill ambiguity.",
+					"ja": "これは人間のエンジニアに対するissue設計と同じだが、Agentではさらに重要になる。Agentは曖昧さを埋めようとするため、曖昧な依頼は過剰実装や横道探索を誘発する。"
+				},
+				{
+					"en": "For long tasks, repository artifacts such as feature lists, acceptance criteria, progress notes, and verification commands are more reliable than a plan that exists only in the conversation.",
+					"ja": "長いタスクは、最初に計画Agentを使うよりも、feature list、acceptance criteria、progress notes、検証コマンドをリポジトリに置く方が安定する。セッション内会話は失われたり圧縮されたりするが、リポジトリ内の状態は次のAgentも読めるからである。"
+				}
+			]
+		},
+		{
+			"id": "context-splitting",
+			"heading": {
+				"ja": "4.2 文脈を「短い索引」と「深い正本」に分ける",
+				"en": "4.2 Split Context into a Short Index and Deep Sources of Truth"
+			},
+			"pairs": [
+				{
+					"en": "Putting everything into AGENTS.md or CLAUDE.md bloats context and buries the important instructions.",
+					"ja": "AGENTS.mdやCLAUDE.mdにすべてを書くと、文脈が膨らみ、かえって重要な指示が埋もれる。"
+				},
+				{
+					"en": "A better pattern is to make the top-level agent file a map, then store details in architecture docs, runbooks, ADRs, and testing guides.",
+					"ja": "実務では、トップレベルのAgent指示は目次に近い役割にし、詳細はdocs、architecture、runbook、ADR、testing guideに分ける方がよい。"
+				},
+				{
+					"en": "The agent should know what to read, not be forced to read everything at startup.",
+					"ja": "Agentには「何を読むべきか」を示し、必要に応じて深い文書へ進ませる。"
+				},
+				{
+					"en": "Context design is not about maximizing context volume.",
+					"ja": "文脈設計の要点は、量を増やすことではない。"
+				},
+				{
+					"en": "It is about helping the agent reach the information required for a decision, distinguish stale from current knowledge, and avoid irrelevant material.",
+					"ja": "Agentが判断に必要な情報へ早く到達できること、古い情報と新しい情報を区別できること、作業に関係ない情報を読まなくてよいことが重要である。"
+				}
+			]
+		},
+		{
+			"id": "agent-computer-interface",
+			"heading": {
+				"ja": "4.3 操作面をAgent向けに整える",
+				"en": "4.3 Design the Agent-Computer Interface"
+			},
+			"pairs": [
+				{
+					"en": "SWE-agent's key lesson is that agent capability depends on the interface the agent uses.",
+					"ja": "SWE-agentの示唆は、Agentの能力はモデルだけでなく、Agentが触るインターフェースに依存するという点にある。"
+				},
+				{
+					"en": "Human-oriented CLIs and huge logs are not always agent-friendly.",
+					"ja": "人間向けのCLIや巨大なログは、Agentにとって必ずしも扱いやすくない。"
+				},
+				{
+					"en": "Better interfaces provide short commands, structured output, clear errors, idempotent scripts, and targeted tests.",
+					"ja": "Agentが失敗しにくい操作面には、短いコマンド、構造化出力、明確なエラー、冪等なスクリプト、対象範囲を絞ったテストがある。"
+				},
+				{
+					"en": "Agent-friendly tools usually have five properties:",
+					"ja": "良いAgent向けツールは、次の性質を持つ。"
+				},
+				{
+					"en": "Inputs are short and choices are explicit.",
+					"ja": "入力が短く、取り得る選択肢が明確である。"
+				},
+				{
+					"en": "Output distinguishes success, failure, and warnings.",
+					"ja": "出力が構造化され、成功、失敗、警告を区別できる。"
+				},
+				{
+					"en": "Failure output points to the next log or command.",
+					"ja": "失敗時に次に読むべきログやコマンドを示す。"
+				},
+				{
+					"en": "Destructive operations have dry-run, confirmation, or sandboxing.",
+					"ja": "破壊的操作はdry-run、確認、sandboxを持つ。"
+				},
+				{
+					"en": "Re-running the command is unlikely to corrupt state.",
+					"ja": "同じコマンドを再実行しても状態が壊れにくい。"
+				}
+			]
+		},
+		{
+			"id": "verification-first",
+			"heading": {
+				"ja": "4.4 検証を最初から設計する",
+				"en": "4.4 Design Verification First"
+			},
+			"pairs": [
+				{
+					"en": "The highest-value feedback for an agent is executable verification.",
+					"ja": "Agentに最も効くフィードバックは、自然言語の評価ではなく実行可能な検証である。"
+				},
+				{
+					"en": "Unit tests, integration tests, type checks, lint, snapshots, browser screenshots, API smoke tests, and CI logs all provide signals the agent can use to repair its work.",
+					"ja": "単体テスト、統合テスト、type check、lint、snapshot、ブラウザスクリーンショット、API smoke test、CIログは、Agentが自分の作業を修正するための信号になる。"
+				},
+				{
+					"en": "Without verification, agents tend to stop when an answer looks plausible.",
+					"ja": "逆に、検証がないタスクでは、Agentは見た目やもっともらしさで終了を判断しやすい。"
+				},
+				{
+					"en": "No single evaluation layer is enough.",
+					"ja": "ここで注意すべきなのは、評価は1種類では足りないことである。"
+				},
+				{
+					"en": "Unit tests are fast but do not catch every UX problem.",
+					"ja": "Unit testは速いが、UI崩れや実運用の使い勝手は見ない。"
+				},
+				{
+					"en": "LLM judges are flexible but noisy and costly.",
+					"ja": "LLM judgeは柔軟だが、揺らぎとコストがある。"
+				},
+				{
+					"en": "Human review is strong but slow.",
+					"ja": "人間レビューは強いが遅い。"
+				},
+				{
+					"en": "The practical approach is to combine deterministic tests, logs, screenshots, and human review according to task risk.",
+					"ja": "成功確率を上げるには、タスクの性質に合わせて、決定的なテスト、ログ検査、スクリーンショット、人間レビューを組み合わせる。"
+				}
+			]
+		},
+		{
+			"id": "controls",
+			"heading": {
+				"ja": "4.5 統制は「止める」ではなく「安全に進める」ために置く",
+				"en": "4.5 Use Controls to Move Safely, Not to Block Work"
+			},
+			"pairs": [
+				{
+					"en": "Permission boundaries are not there to make the agent weak.",
+					"ja": "権限を絞る目的は、Agentを弱くすることではない。"
+				},
+				{
+					"en": "They reduce loss when the agent fails and ensure that only successful diffs are merged.",
+					"ja": "失敗時の損失を小さくし、成功した差分だけを取り込めるようにすることである。"
+				},
+				{
+					"en": "Sandboxing, network controls, secret isolation, PR review, approvals for privileged commands, and git-based diff management make agents more suitable for production development.",
+					"ja": "sandbox、ネットワーク制御、secretの非公開、PR単位のレビュー、権限付きコマンドの承認、gitによる差分管理は、Agentを本番開発に近づけるための安全装置である。"
+				}
+			]
+		},
+		{
+			"id": "practical-practices",
+			"heading": {
+				"ja": "5. 実務プラクティス",
+				"en": "5. Practical Practices"
+			},
+			"pairs": []
+		},
+		{
+			"id": "agents-working-map",
+			"heading": {
+				"ja": "5.1 AGENTS.mdは行動規範ではなく作業ナビにする",
+				"en": "5.1 Make AGENTS.md a Working Map"
+			},
+			"pairs": [
+				{
+					"en": "AGENTS.md should contain where the agent should start, common verification commands, forbidden operations, branch and PR rules, and failure-handling guidance.",
+					"ja": "AGENTS.mdには、長い設計思想より、Agentが最初に読むべき場所、よく使う検証コマンド、禁止事項、ブランチ/PRルール、失敗時の対処を置く。"
+				},
+				{
+					"en": "Detailed design rationale should live in docs.",
+					"ja": "詳細な設計判断はdocsに分ける。"
+				},
+				{
+					"en": "Information intended for agents should be discoverable through filenames and headings.",
+					"ja": "Agentに読ませたい情報は、ファイル名と見出しで発見可能にする。"
+				}
+			]
+		},
+		{
+			"id": "separate-work-types",
+			"heading": {
+				"ja": "5.2 Agentに渡すタスクは「探索」「実装」「検証」を分ける",
+				"en": "5.2 Separate Exploration, Implementation, and Verification"
+			},
+			"pairs": [
+				{
+					"en": "If one prompt asks the agent to investigate, design, implement, and fix everything, success criteria often drift.",
+					"ja": "1つの依頼で「調査して、設計して、実装して、全部直して」と渡すと、Agentは途中で成功条件を失いやすい。"
+				},
+				{
+					"en": "Separate exploration tasks, implementation tasks, and verification tasks.",
+					"ja": "実務では、探索タスク、実装タスク、検証タスクを分ける。"
+				},
+				{
+					"en": "In exploration, avoid creating diffs.",
+					"ja": "探索では差分を作らせず、実装では対象範囲を限定し、検証では実行コマンドと期待結果を明示する。"
+				},
+				{
+					"en": "In implementation, limit scope.",
+					"ja": "探索では差分を作らせず、実装では対象範囲を限定し、検証では実行コマンドと期待結果を明示する。"
+				},
+				{
+					"en": "In verification, state commands and expected results.",
+					"ja": "探索では差分を作らせず、実装では対象範囲を限定し、検証では実行コマンドと期待結果を明示する。"
+				}
+			]
+		},
+		{
+			"id": "test-failures",
+			"heading": {
+				"ja": "5.3 テストは「Agentが読むエラーメッセージ」まで設計する",
+				"en": "5.3 Treat Test Failures as Messages to the Agent"
+			},
+			"pairs": [
+				{
+					"en": "Agents repair code by reading failures, so test output is now both developer-facing and agent-facing.",
+					"ja": "Agentは失敗ログを読んで修正するため、テストの失敗メッセージは開発者向けであると同時にAgent向けでもある。"
+				},
+				{
+					"en": "A good failure states what was expected, what actually happened, and where to inspect next.",
+					"ja": "何が期待され、何が実際に起き、どのファイルを見ればよいかが分かる失敗は、Agentの自己修正を助ける。"
+				},
+				{
+					"en": "Huge snapshot diffs and flaky environment failures can mislead the agent.",
+					"ja": "逆に、巨大なsnapshot差分や環境依存のflakeは、Agentを誤誘導する。"
+				}
+			]
+		},
+		{
+			"id": "repository-state",
+			"heading": {
+				"ja": "5.4 長時間作業はリポジトリ内の状態でつなぐ",
+				"en": "5.4 Persist Long-Running Work in the Repository"
+			},
+			"pairs": [
+				{
+					"en": "Long work should not depend only on conversation history.",
+					"ja": "長時間作業では、会話履歴だけに依存しない。"
+				},
+				{
+					"en": "Keep progress notes, feature lists, completion criteria, unresolved failures, and recent commits in the repository.",
+					"ja": "Agentが次回読むべきprogress notes、feature list、完了条件、未解決の失敗、直近コミットをリポジトリに残す。"
+				},
+				{
+					"en": "Each session should begin by reading logs and running a basic test, then end with a commit and progress update.",
+					"ja": "作業単位ごとにコミットし、次のAgentは最初にログとテストを読む。"
+				}
+			]
+		},
+		{
+			"id": "pull-request-output",
+			"heading": {
+				"ja": "5.5 Agentの成果物はPRとして扱う",
+				"en": "5.5 Treat Agent Output as a Pull Request"
+			},
+			"pairs": [
+				{
+					"en": "Agent output should be handled as a PR, not as a chat answer.",
+					"ja": "Agentが作った差分は、チャット回答ではなくPRとして扱うべきである。"
+				},
+				{
+					"en": "A PR records the purpose, changes, verification, known limits, and review focus.",
+					"ja": "PRには、目的、変更点、検証、既知の限界、レビュー観点を残す。"
+				},
+				{
+					"en": "Completion should be judged by the diff, tests, CI, and reviewability rather than by the agent saying it is done.",
+					"ja": "Agentが「完了」と言ったかではなく、差分、テスト、CI、レビュー可能性で判断する。"
+				}
+			]
+		},
+		{
+			"id": "risks-and-limits",
+			"heading": {
+				"ja": "6. リスクと限界",
+				"en": "6. Risks and Limits"
+			},
+			"pairs": []
+		},
+		{
+			"id": "benchmarks",
+			"heading": {
+				"ja": "6.1 ベンチマークは自社成功率を保証しない",
+				"en": "6.1 Benchmarks Do Not Guarantee Local Success"
+			},
+			"pairs": [
+				{
+					"en": "Benchmarks such as SWE-bench Verified matter, but they do not directly measure success in your repository.",
+					"ja": "SWE-bench Verifiedのようなベンチマークは重要だが、実務の成功確率をそのまま表すものではない。"
+				},
+				{
+					"en": "In 2026, OpenAI argued that SWE-bench Verified was no longer suitable for measuring frontier coding capability because of contamination and test-quality issues.",
+					"ja": "OpenAIは2026年に、SWE-bench Verifiedがfrontier coding capabilityを測る指標としては限界に来ており、汚染やテスト品質の問題があると説明した。"
+				},
+				{
+					"en": "The lesson is not that benchmarks are useless.",
+					"ja": "これは、公開ベンチマークが不要という意味ではない。"
+				},
+				{
+					"en": "It is that teams need local evaluation sets that reflect their own failure modes.",
+					"ja": "むしろ、自分のコードベースに近い評価セットが必要だという意味である。"
+				}
+			]
+		},
+		{
+			"id": "unverifiable-work",
+			"heading": {
+				"ja": "6.2 検証できない仕事は成功確率を上げにくい",
+				"en": "6.2 Work That Cannot Be Verified Is Hard to Stabilize"
+			},
+			"pairs": [
+				{
+					"en": "When the specification is ambiguous, the correct answer depends strongly on taste, and no tests or observable checks exist, agents produce plausible outputs more easily than reliably correct ones.",
+					"ja": "仕様が曖昧で、正解が人間の感覚に強く依存し、テストや観測がない仕事では、Agentはもっともらしい成果を出しやすい。"
+				},
+				{
+					"en": "Agents can still help with design, writing, strategy, and research, but review criteria and claims to falsify must be explicit.",
+					"ja": "デザイン、文章、戦略、研究整理でもAgentは有用だが、評価軸、レビュー観点、反証すべき主張を明示しないと品質が安定しない。"
+				}
+			]
+		},
+		{
+			"id": "blast-radius",
+			"heading": {
+				"ja": "6.3 自律性を上げるほどblast radiusも上がる",
+				"en": "6.3 More Autonomy Increases Blast Radius"
+			},
+			"pairs": [
+				{
+					"en": "Giving an agent network access, secrets, production operations, paid APIs, or external writes may increase speed, but it also increases the cost of failure.",
+					"ja": "Agentにネットワーク、secret、production操作、課金API、外部書き込みを許すと、成功時の速度は上がるが失敗時の損失も大きくなる。"
+				},
+				{
+					"en": "Autonomy should be staged by task type.",
+					"ja": "したがって、自律性は一律に上げるのではなく、作業タイプごとに段階化する必要がある。"
+				}
+			]
+		},
+		{
+			"id": "recommended-direction",
+			"heading": {
+				"ja": "7. 推奨方針",
+				"en": "7. Recommended Direction"
+			},
+			"pairs": [
+				{
+					"en": "To treat AI coding as probability engineering, do not start by adding more tools.",
+					"ja": "AI Codingを成功確率の工学として整備するなら、最初にやるべきことはツールを増やすことではない。"
+				},
+				{
+					"en": "Start by reshaping the development workflow so agents can succeed.",
+					"ja": "現在の開発フローを、Agentが成功しやすい形に変えることである。"
+				},
+				{
+					"en": "In the short term:",
+					"ja": "短期的には、次の5つを優先する。"
+				},
+				{
+					"en": "Make `AGENTS.md` a short working map with verification commands and prohibitions.",
+					"ja": "`AGENTS.md`を短い作業ナビにし、検証コマンドと禁止事項を明記する。"
+				},
+				{
+					"en": "Convert recurring work into issue templates with acceptance criteria.",
+					"ja": "よく依頼する作業を、受け入れ条件付きのissueテンプレートにする。"
+				},
+				{
+					"en": "Provide fast tests and smoke tests that the agent can run by itself.",
+					"ja": "Agentが自分で実行できる高速テストとsmoke testを整える。"
+				},
+				{
+					"en": "Write runbooks for CI failures, local startup, and deployment checks.",
+					"ja": "CI失敗、ローカル起動、deploy確認のrunbookを作る。"
+				},
+				{
+					"en": "Treat agent work as PR work, with diffs, logs, verification, and residual risks.",
+					"ja": "Agent作業をPR単位で扱い、差分、ログ、検証、残課題を残す。"
+				},
+				{
+					"en": "In the medium term, maintain an agent evaluation set.",
+					"ja": "中期的には、Agent用の評価セットを持つべきである。"
+				},
+				{
+					"en": "Collect 20-50 tasks from past failures, common fixes, UI regressions, migrations, and CI failures.",
+					"ja": "過去の失敗、よくある修正、UI崩れ、migration、CI失敗を20〜50件集め、モデルやプロンプトやツールを変えたときに再実行する。"
+				},
+				{
+					"en": "Re-run them when changing models, prompts, or tools.",
+					"ja": "過去の失敗、よくある修正、UI崩れ、migration、CI失敗を20〜50件集め、モデルやプロンプトやツールを変えたときに再実行する。"
+				},
+				{
+					"en": "This does not need to be a large research benchmark.",
+					"ja": "これは大規模な研究評価である必要はない。"
+				},
+				{
+					"en": "The value is reproducing failures that matter to your own development organization.",
+					"ja": "自分の開発組織にとって重要な失敗を再現できることが価値である。"
+				},
+				{
+					"en": "Ultimately, AI coding maturity is not measured by how little code humans type.",
+					"ja": "最終的に、AI Codingの成熟度は「どれだけ人間が手を動かさなくなったか」ではなく、「どの種類の仕事なら、どの条件で、どの検証を通して、どの程度の確率で成功するか」を説明できるかで決まる。"
+				},
+				{
+					"en": "It is whether the team can explain which tasks succeed under which conditions, with which verification, and at what probability.",
+					"ja": "最終的に、AI Codingの成熟度は「どれだけ人間が手を動かさなくなったか」ではなく、「どの種類の仕事なら、どの条件で、どの検証を通して、どの程度の確率で成功するか」を説明できるかで決まる。"
+				},
+				{
+					"en": "Adding AI coding to a development workflow is not mainly about accumulating prompt tricks.",
+					"ja": "AI Codingを開発チームのワークフローに入れるとは、個人の勘に頼ったプロンプト術を増やすことではない。"
+				},
+				{
+					"en": "It is about embedding a system for raising success probability into the repository, tests, CI, documentation, and PR workflow.",
+					"ja": "成功確率を上げる開発システムを、リポジトリ、テスト、CI、ドキュメント、PR運用の中に埋め込むことである。"
+				}
+			]
+		}
+	]
+}

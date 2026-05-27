@@ -1,0 +1,347 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "Second language learning is not just a matter of exposure.",
+					"ja": "第二言語学習は、単に「たくさん触れれば身につく」過程ではない。"
+				},
+				{
+					"en": "Learners receive input, encounter unfamiliar words or structures, form a tentative explanation, test it in speech or writing, and revise it after feedback or more input.",
+					"ja": "学習者は入力を受け取り、未知の語や構文に遭遇し、いったんもっともらしい仮説を立て、発話や課題遂行で試し、フィードバックや再入力で更新する。"
+				},
+				{
+					"en": "Read through Peirce's notion of abduction, this loop makes learner reasoning visible.",
+					"ja": "この循環を、Peirce の意味でのアブダクションとして読むと、学習者がどの時点で何を推論しているかが見えやすくなる。"
+				},
+				{
+					"en": "The main claims of this report are:",
+					"ja": "本稿の要点は次の通りである。"
+				},
+				{
+					"en": "Peircean abduction is inference to a hypothesis that explains a surprising fact.",
+					"ja": "Peirce のアブダクションは、驚くべき事実を説明する仮説を立てる推論であり、演繹や帰納とは役割が異なる。"
+				},
+				{
+					"en": "In L2 learning, it is especially useful for guessing vocabulary meaning, hypothesizing grammar rules, and inferring pragmatic intent.",
+					"ja": "第二言語学習では、未知語の意味推測、文法規則の暫定化、語用論的意図の解釈に特に効く。"
+				},
+				{
+					"en": "Vocabulary learning is the clearest abductive case: learners infer meaning from context.",
+					"ja": "語彙学習では、アブダクションは「文脈から意味を当てる」推論として働く。"
+				},
+				{
+					"en": "Grammar learning uses abductive hypotheses about structure, then deductive checking and inductive consolidation.",
+					"ja": "文法学習では、少数の例と誤り訂正から規則を仮説化する。"
+				},
+				{
+					"en": "Pragmatics depends on abductive interpretation of speaker intent.",
+					"ja": "語用論では、発話の字義と話し手意図のずれを埋めるために働く。"
+				},
+				{
+					"en": "Deduction checks rules, induction generalizes from many examples, and abduction proposes the best explanation for limited evidence.",
+					"ja": "帰納は「多くの例から共通性を抜く」こと、演繹は「既知の規則を適用して整合性を確かめる」こと、アブダクションは「もっとも説明力の高い仮説を置く」ことである。"
+				},
+				{
+					"en": "Treating them separately helps diagnose where learners are overgeneralizing, undergeneralizing, or merely testing a rule.",
+					"ja": "学習実践では、この三つを切り分けると、どこで学習者が早合点しているか、どこで規則が定着していないかを診断しやすい。"
+				},
+				{
+					"en": "Meaning negotiation and corrective feedback are what turn abductive guesses into learning.",
+					"ja": "意味交渉と誤り修正は、アブダクションを学習として成立させる装置である。"
+				},
+				{
+					"en": "Clarification requests, reformulations, recasts, and explicit correction expose whether a hypothesis holds.",
+					"ja": "理解不能な入力を放置すると仮説は更新されないが、確認要求、言い換え、再発話、明示訂正があると仮説の当たり外れが検証される。"
+				},
+				{
+					"en": "For self-study, the useful unit is not \"getting the right answer\" but \"forming a revisable hypothesis.\"",
+					"ja": "実践では、1回の学習で扱う仮説を小さくし、仮説の根拠、検証方法、修正後のルールを明示的に残すのがよい。"
+				},
+				{
+					"en": "Write down the guess, the evidence, the test, and the revision.",
+					"ja": "アブダクションを「当てる力」ではなく「更新可能な仮説を作る力」として扱うと、独学でも再現性が上がる。"
+				}
+			]
+		},
+		{
+			"id": "peirce-abduction",
+			"heading": {
+				"ja": "2. パースのアブダクションとは何か",
+				"en": "2. What Peirce Meant by Abduction"
+			},
+			"pairs": [
+				{
+					"en": "For Peirce, abduction is the inference that introduces a possible explanation for a surprising fact.",
+					"ja": "Peirce にとってアブダクションは、驚くべき事実に対して説明仮説を立てる推論である。"
+				},
+				{
+					"en": "Deduction derives implications from a rule.",
+					"ja": "演繹は既知の規則から結論を導く。"
+				},
+				{
+					"en": "Induction tests a rule against examples.",
+					"ja": "帰納は観察された例から規則の妥当性を高める。"
+				},
+				{
+					"en": "Abduction proposes the rule in the first place.",
+					"ja": "アブダクションはそのどちらでもなく、「この現象を一番うまく説明する仮説は何か」を置く段階である。"
+				},
+				{
+					"en": "In language learning, that is the moment of tentative understanding when a learner says, in effect, \"This is probably what is going on.\"",
+					"ja": "学習の文脈では、これは新しい言語表現に出会った瞬間の「暫定理解」に相当する。"
+				},
+				{
+					"en": "The point is not to guess correctly on the first try.",
+					"ja": "重要なのは、アブダクションが「正しい答えを一発で当てること」ではない点である。"
+				},
+				{
+					"en": "The point is to form the most economical explanation available from limited evidence.",
+					"ja": "むしろ、手元の証拠に対して最小限の説明を与える仮説を作ることに価値がある。"
+				},
+				{
+					"en": "In L2 learning, the value lies in the quality of the hypothesis and the willingness to revise it.",
+					"ja": "第二言語学習では、まだ十分な知識がない段階ほど、正解そのものより「仮説の質」が学習の進み方を左右する。"
+				}
+			]
+		},
+		{
+			"id": "deduction-induction-abduction",
+			"heading": {
+				"ja": "3. 帰納・演繹・アブダクションの違い",
+				"en": "3. Deduction, Induction, and Abduction"
+			},
+			"pairs": [
+				{
+					"en": "Deduction is useful once a rule is known.",
+					"ja": "演繹は、学習済みの規則を使うときに便利である。"
+				},
+				{
+					"en": "Induction is useful when many examples are available.",
+					"ja": "帰納は、多数の例を見て共通性を抽出するときに向く。"
+				},
+				{
+					"en": "Abduction matters when evidence is partial and the learner must act before full certainty is available.",
+					"ja": "アブダクションは、例が少ない、あるいは情報が不完全な場面で、いったん説明仮説を置くときに働く。"
+				}
+			]
+		},
+		{
+			"id": "vocabulary-grammar-pragmatics",
+			"heading": {
+				"ja": "4. 語彙・文法・語用論で何が違うのか",
+				"en": "4. Vocabulary, Grammar, and Pragmatics"
+			},
+			"pairs": [
+				{
+					"en": "Vocabulary learning is the most obvious abductive case.",
+					"ja": "語彙学習では、アブダクションは最も分かりやすい。"
+				},
+				{
+					"en": "A learner sees an unknown word and uses surrounding words, the flow of the sentence, topic cues, and prior knowledge to propose a meaning.",
+					"ja": "知らない単語が出たとき、学習者は周辺の語、文の流れ、画像、話題から「おそらくこういう意味だろう」と仮説を立てる。"
+				},
+				{
+					"en": "Jovanovic's study supports this sort of inference in beginner learners.",
+					"ja": "Jovanovic の研究は、初心者学習者でも既有知識や母語の手がかりを使って意味推測を行うことを示している。"
+				},
+				{
+					"en": "Grammar learning is also abductive at the start.",
+					"ja": "文法学習では、アブダクションは「今見た誤りは、どの規則で説明できるか」という形で働く。"
+				},
+				{
+					"en": "Learners notice a mismatch, propose a rule, and then refine it with feedback or more examples.",
+					"ja": "学習者はたとえば動詞形や語順の違和感に気づき、仮説を立てる。 その後、明示的な説明や訂正で規則を修正する。"
+				},
+				{
+					"en": "Consolidation is inductive, and explicit checking is deductive.",
+					"ja": "文法の定着は帰納と演繹の両方が必要だが、最初の気づきはアブダクションに近い。"
+				},
+				{
+					"en": "Pragmatics matters because meaning often exceeds literal form.",
+					"ja": "語用論では、アブダクションはさらに重要になる。 話し手が直接言っていないこと、婉曲的に示したこと、場面依存の含意は、字義だけでは取れない。"
+				},
+				{
+					"en": "Learners have to infer whether an utterance is a request, a suggestion, irony, or something else.",
+					"ja": "学習者は、文法が合っているかだけでなく、「この発話は依頼なのか、提案なのか、皮肉なのか」を推測しなければならない。"
+				},
+				{
+					"en": "In that space, interaction and negotiation make the hypothesis testable.",
+					"ja": "ここでは、意味交渉が起きると仮説の更新が速くなる。"
+				}
+			]
+		},
+		{
+			"id": "input-revision-loop",
+			"heading": {
+				"ja": "5. 入力から仮説更新までの流れ",
+				"en": "5. The Input-to-Revision Loop"
+			},
+			"pairs": [
+				{
+					"en": "This is the smallest useful model of second language learning as hypothesis revision.",
+					"ja": "この循環は、第二言語学習を「入力の蓄積」ではなく「仮説の反復更新」として理解するための最小モデルである。"
+				},
+				{
+					"en": "Input does not become knowledge by itself.",
+					"ja": "入力はそのまま知識にならない。"
+				},
+				{
+					"en": "The learner has to notice something surprising, propose an explanation, try it out, and then revise it.",
+					"ja": "まず、学習者は違和感や不一致を見つける必要がある。 次に、何が起きているのかについて暫定仮説を立てる。 最後に、発話、作文、復唱、確認質問などで試し、反応によって修正する。"
+				},
+				{
+					"en": "Meaning negotiation makes the loop visible.",
+					"ja": "したがって、意味交渉は単なる会話上の妥協ではなく、アブダクションの検証装置として働く。"
+				},
+				{
+					"en": "A partner asks for clarification, rephrases, gives a recast, or corrects a form.",
+					"ja": "意味交渉の実例では、相手が聞き返す、言い換える、例を足す、発音や語形を訂正する、といった動きが入る。"
+				},
+				{
+					"en": "That reaction tells the learner whether the hypothesis was useful or mistaken.",
+					"ja": "この反応は、学習者の仮説が当たっていたか外れていたかを露出させる。"
+				}
+			]
+		},
+		{
+			"id": "practical-study-method",
+			"heading": {
+				"ja": "6. 実践に落とす手順",
+				"en": "6. Practical Study Method"
+			},
+			"pairs": [
+				{
+					"en": "Make one hypothesis per session.",
+					"ja": "1回の学習につき、仮説は1つだけ立てる。"
+				},
+				{
+					"en": "Separate vocabulary, grammar, and pragmatics instead of trying to guess everything at once.",
+					"ja": "未知語、文法、語用論のうち、どれを推測しているのかを分ける。"
+				},
+				{
+					"en": "Write down the evidence.",
+					"ja": "仮説の根拠をメモする。"
+				},
+				{
+					"en": "Note which words, which context, which prior knowledge, and which analogy led to the guess.",
+					"ja": "どの語、どの文脈、どの母語知識、どの類推が効いたかを残す。"
+				},
+				{
+					"en": "Test quickly.",
+					"ja": "すぐ検証する。"
+				},
+				{
+					"en": "Use a dictionary, a search for more examples, speaking, writing, or a partner check.",
+					"ja": "辞書、例文検索、音読、会話、書き換えのどれかで仮説を試す。"
+				},
+				{
+					"en": "Treat errors as data.",
+					"ja": "反証を歓迎する。"
+				},
+				{
+					"en": "Record why the wrong guess was still plausible.",
+					"ja": "間違いを見つけたら、正解よりも「なぜその仮説がもっともらしかったか」を書く。"
+				},
+				{
+					"en": "Write the revised rule in one sentence so that you can reuse it later.",
+					"ja": "修正後のルールを短文で書く。 「この表現は X ではなく Y で使う」のように、次回の参照点を残す。"
+				},
+				{
+					"en": "Revisit it after a delay.",
+					"ja": "反復する。 仮説・検証・修正を間隔をあけて再訪し、例外を減らす。"
+				},
+				{
+					"en": "The goal is to reduce recurring mistakes, not to win the first guess.",
+					"ja": "目的は、最初の推測で勝つことではなく、繰り返す誤りを減らすことである。"
+				},
+				{
+					"en": "The practical goal is not intuition for its own sake.",
+					"ja": "この手順の狙いは、当て勘を鍛えることではない。"
+				},
+				{
+					"en": "It is a habit of forming hypotheses that can be revised.",
+					"ja": "むしろ、学習者が自分の誤推測を可視化し、同じ誤りを再利用しないようにすることにある。 アブダクションは、当たるまで試す推測ゲームではなく、外れを学習資産に変えるための形式である。"
+				}
+			]
+		},
+		{
+			"id": "limits-risks",
+			"heading": {
+				"ja": "7. 限界と注意点",
+				"en": "7. Limits and Risks"
+			},
+			"pairs": [
+				{
+					"en": "First, abduction depends on prior knowledge.",
+					"ja": "第一に、アブダクションは背景知識を必要とする。"
+				},
+				{
+					"en": "If the learner has too little context, there is nothing useful to infer from.",
+					"ja": "知識が少なすぎると、仮説そのものが立たない。"
+				},
+				{
+					"en": "Jovanovic's study points in that direction: even beginner inference relies on what the learner already knows.",
+					"ja": "語彙の文脈推測が成立するのは、周辺の手がかりを読むための最低限の知識があるからである。"
+				},
+				{
+					"en": "Second, plausible wrong guesses can fossilize if they are never checked.",
+					"ja": "第二に、もっともらしい誤推測が固定化すると、いわゆる fossilization の入り口になる。"
+				},
+				{
+					"en": "That is why feedback matters.",
+					"ja": "誤り訂正が重要なのは、仮説の妥当性を外部からずらしてくれるからである。"
+				},
+				{
+					"en": "Correction is not just about marking something wrong; it is about forcing the learner's hypothesis to face evidence from outside the learner's head.",
+					"ja": "誤り訂正が重要なのは、仮説の妥当性を外部からずらしてくれるからである。"
+				},
+				{
+					"en": "Third, meaning negotiation is not always sufficient.",
+					"ja": "第三に、意味交渉は万能ではない。"
+				},
+				{
+					"en": "A learner may not yet have enough language to understand the correction, or may already know the answer and not need the cue.",
+					"ja": "学習者が未熟すぎると、修正の内容を理解できないことがあるし、逆に熟達しすぎると、相手の修正をすでに知っているため学習効率が下がることもある。"
+				},
+				{
+					"en": "Abduction works best when the input is slightly above current certainty but still close enough to test.",
+					"ja": "アブダクションは、常に最適というより、適切な情報量と適切なフィードバックがあるときに機能する。"
+				}
+			]
+		},
+		{
+			"id": "conclusion",
+			"heading": {
+				"ja": "8. まとめ",
+				"en": "8. Conclusion"
+			},
+			"pairs": [
+				{
+					"en": "Reading second language learning through abduction shifts the focus from passive exposure to active hypothesis work.",
+					"ja": "第二言語学習をアブダクションで見る利点は、学習者を「受け身の入力処理装置」ではなく、「仮説を作って更新する推論主体」として扱えることにある。"
+				},
+				{
+					"en": "Vocabulary, grammar, and pragmatics each involve different mixes of abduction, induction, and deduction, but the common pattern is the same: notice, guess, test, revise.",
+					"ja": "語彙では意味推測、文法では規則仮説、語用論では意図推定が前面に出る。 そこに意味交渉と誤り修正が入ると、仮説はより速く、より安全に更新される。 まず、学習者は違和感や不一致を見つける必要がある。 次に、何が起きているのかについて暫定仮説を立てる。 最後に、発話、作文、復唱、確認質問などで試し、反応によって修正する。"
+				},
+				{
+					"en": "That framing gives learners a practical habit: do not only track what you learned, track how you inferred it and how you corrected it.",
+					"ja": "実務的には、学習者は「何を覚えたか」だけでなく、「何をどう推測し、何で検証し、どう直したか」を記録するとよい。"
+				},
+				{
+					"en": "In that sense, language learning becomes a disciplined form of reasoning.",
+					"ja": "これができると、第二言語学習は単なる反復ではなく、検証可能な推論の訓練になる。"
+				}
+			]
+		}
+	]
+}

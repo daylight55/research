@@ -1,0 +1,198 @@
+---
+import { type CollectionEntry, getCollection, render } from 'astro:content'
+import BlogPost from '@/layouts/BlogPost'
+import Code from '@/components/mdx/Code'
+import ListRelatedPosts from '@/components/ListRelatedPosts'
+import FormattedDate from '@/components/FormattedDate'
+import Share from '@/components/Share'
+import TableOfContents from '@/components/TableOfContents'
+import MermaidRenderer from '@/components/MermaidRenderer'
+import MixedArticleContent from '@/components/MixedArticleContent'
+import ArrowUpRight from '@/components/icons/ArrowUpRight'
+import {
+	DEFAULT_LOCALE,
+	findPostTranslation,
+	getMixedArticleAlignment,
+	getNewsPosts,
+	getPostLocale,
+	getPostSlug,
+	getPostUrl,
+	localizedPath,
+	tagSlug
+} from '@/utils'
+import SButton from '@/components/mdx/SButton'
+import SourceNote from '@/components/mdx/SourceNote'
+import Disqus from '@/components/Disqus'
+import { disqusConfig } from '@/data/disqus.config'
+
+const locale = 'mix'
+const contentLocale = 'en'
+const posts = (await getCollection('blog')).filter((post) => getPostLocale(post) === contentLocale)
+
+export async function getStaticPaths() {
+	const allPosts = await getCollection('blog')
+	const posts = await getNewsPosts(undefined, 'en')
+
+	return posts.map((post) => ({
+		params: { slug: getPostSlug(post) },
+		props: {
+			post: findPostTranslation(allPosts, post, 'en') ?? post,
+			japanesePost: findPostTranslation(allPosts, post, DEFAULT_LOCALE)
+		}
+	}))
+}
+
+type Props = {
+	post: CollectionEntry<'blog'>
+	japanesePost?: CollectionEntry<'blog'>
+}
+
+const { post, japanesePost } = Astro.props as Props
+const postSlug = getPostSlug(post)
+const MAX_POSTS = 3
+const getRelatedPosts = (post: CollectionEntry<'blog'>) => {
+	const lowercaseTags = post.data.tags.map((tag) => tag.toLowerCase())
+	const relatedPosts = posts.filter(
+		(p) => p.id !== post.id && p.data.tags.some((t) => lowercaseTags.includes(t.toLowerCase()))
+	)
+	return relatedPosts.slice(0, MAX_POSTS)
+}
+
+const relatedPosts = getRelatedPosts(post)
+const researchEntries = await getCollection('articleResearch')
+const hasResearchLog = researchEntries.some((entry) => getPostSlug(entry) === postSlug)
+
+const { Content: EnglishContent, headings, remarkPluginFrontmatter } = await render(post)
+const { Content: JapaneseContent } = japanesePost
+	? await render(japanesePost)
+	: { Content: undefined }
+const mixedAlignment = await getMixedArticleAlignment('news', postSlug)
+
+const disqusEnabled = disqusConfig.enabled
+---
+
+<BlogPost
+	id={post.id}
+	data={post.data}
+	headings={headings}
+	readTime={remarkPluginFrontmatter.minutesRead}
+	locale={locale}
+>
+	<div
+		class='grid grid-cols-1 gap-8 mt-8 lg:grid-cols-[10rem_minmax(0,1fr)_9rem] lg:justify-center xl:grid-cols-[12rem_minmax(0,56rem)_10rem] 2xl:grid-cols-[14rem_minmax(0,62rem)_12rem]'
+	>
+		<aside class='hidden lg:flex flex-col gap-6 pr-5 text-sm text-gray-600 dark:text-gray-400'>
+			<div class='sticky top-24 flex flex-col gap-6 self-start'>
+				<section class='flex flex-col gap-2'>
+					<p
+						class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'
+					>
+						News
+					</p>
+					<div class='flex flex-col gap-1.5 leading-snug'>
+						<span>{post.data.category}</span>
+						<FormattedDate date={post.data.pubDate} />
+						<span>{remarkPluginFrontmatter.minutesRead}</span>
+					</div>
+				</section>
+
+				<section class='flex flex-col gap-2'>
+					<p
+						class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'
+					>
+						Tags
+					</p>
+					<ul class='flex flex-col gap-1.5'>
+						{
+							post.data.tags.map((tag) => (
+								<li>
+									<a
+										href={localizedPath(locale, `/tags/${tagSlug(tag)}/`)}
+										class='leading-snug text-gray-600 underline decoration-black/20 underline-offset-4 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:decoration-white/20 dark:hover:text-indigo-300'
+									>
+										#{tag}
+									</a>
+								</li>
+							))
+						}
+					</ul>
+				</section>
+
+				{
+					relatedPosts.length > 0 && (
+						<section class='flex min-w-0 flex-col gap-3'>
+							<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+								Related
+							</p>
+							<ul class='flex min-w-0 flex-col gap-5 pr-2'>
+								{relatedPosts.map((relatedPost) => (
+									<li class='min-w-0'>
+										<a
+											href={getPostUrl(relatedPost)}
+											class='block min-w-0 max-w-full py-1 [overflow-wrap:anywhere] leading-snug text-gray-600 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:hover:text-indigo-300'
+										>
+											{relatedPost.data.title}
+										</a>
+									</li>
+								))}
+							</ul>
+						</section>
+					)
+				}
+
+				{
+					hasResearchLog && (
+						<section class='flex flex-col gap-2'>
+							<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+								Research
+							</p>
+							<a
+								href={localizedPath(DEFAULT_LOCALE, `/news/${postSlug}/research/`)}
+								class='inline-flex items-center gap-1.5 rounded-md border border-black/10 bg-white/70 px-3 py-2 font-semibold leading-snug text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-300 [&_svg]:h-4 [&_svg]:w-4'
+							>
+								<ArrowUpRight />
+								Research trail
+							</a>
+						</section>
+					)
+				}
+
+				<Share title={post.data.title} />
+			</div>
+		</aside>
+
+		<article class='max-w-none w-full'>
+			<div
+				class='prose prose-base md:prose-lg dark:prose-invert mb-12 min-w-full max-w-none prose-p:leading-8 prose-li:leading-8'
+			>
+				<MixedArticleContent alignment={mixedAlignment}>
+					<EnglishContent slot='english' components={{ pre: Code, SButton, SourceNote }} />
+					{
+						JapaneseContent && (
+							<JapaneseContent slot='japanese' components={{ pre: Code, SButton, SourceNote }} />
+						)
+					}
+				</MixedArticleContent>
+			</div>
+
+			<footer class='lg:hidden'>
+				<h2 class='font-bold text-lg dark:text-white mb-6'>Related Posts</h2>
+				<ListRelatedPosts posts={relatedPosts} />
+			</footer>
+		</article>
+
+		<aside
+			class='hidden min-w-0 lg:flex flex-col gap-6 pl-2 text-sm text-gray-600 dark:text-gray-400'
+		>
+			<div
+				class='sticky top-24 self-start hidden w-full min-w-0 lg:block transition-all duration-200'
+			>
+				{headings && headings.length > 0 && <TableOfContents {headings} />}
+			</div>
+		</aside>
+	</div>
+
+	{disqusEnabled && <Disqus />}
+</BlogPost>
+
+<MermaidRenderer />

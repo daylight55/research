@@ -18,7 +18,11 @@ const basePath = (process.env.ASTRO_BASE ?? '/').replace(/\/$/, '')
 
 const getSourceLocale = (file: any) => {
 	const filePath = String(file.path ?? file.history?.[0] ?? '')
-	return /(?:^|[/\\])content[/\\]blog[/\\]en[/\\]/.test(filePath) ? 'en' : 'ja'
+	return /(?:^|[/\\])(?:content[/\\]blog[/\\]en|articles[/\\][^/\\]+[/\\][^/\\]+[/\\]en)[/\\]/.test(
+		filePath
+	)
+		? 'en'
+		: 'ja'
 }
 
 const glossaryHref = (slug: string, locale: 'ja' | 'en') =>

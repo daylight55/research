@@ -1,0 +1,530 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "Interest rate policy affects prices, wages, bond prices, debt burdens, and exchange rates through the \"cost of borrowing money.\"",
+					"ja": "金利政策は「お金を借りるコスト」を通じて、物価、賃金、債券価格、債務負担、為替レートに波及する。"
+				},
+				{
+					"en": "When the central bank raises interest rates, the burden of housing loans and corporate loans becomes heavier, which tends to curb consumption and investment.",
+					"ja": "中央銀行が金利を上げると、住宅ローンや企業融資の負担は重くなり、消費・投資は抑えられやすい。"
+				},
+				{
+					"en": "If demand subsides, price increases are likely to subside.",
+					"ja": "需要が落ち着けば、物価上昇も弱まりやすい。"
+				},
+				{
+					"en": "On the other hand, the prices of bonds that have already been issued tend to fall, making the burden of interest payments heavier on households, businesses, and governments with large debts.",
+					"ja": "一方で、既に発行済みの債券価格は下がりやすく、借金の多い家計・企業・政府には利払い負担が重くなる。"
+				},
+				{
+					"en": "This mechanism is not a simple straight line.",
+					"ja": "この仕組みは、単純な一本線ではない。"
+				},
+				{
+					"en": "When wages rise, households' purchasing power increases, but companies' labor costs also rise.",
+					"ja": "賃金が上がると家計の購買力は増えるが、企業の人件費も上がる。"
+				},
+				{
+					"en": "As the yen depreciates, import prices tend to rise, pushing up the cost of living.",
+					"ja": "円安が進むと輸入物価は上がりやすく、生活費を押し上げる。"
+				},
+				{
+					"en": "When governments and authorities intervene by selling dollars and buying yen, the aim is to suppress the yen's depreciation and cushion the rise in import prices.",
+					"ja": "政府・当局がドル売り・円買い介入を行う場合、円安を抑えて輸入物価の上昇を和らげようとする狙いがある。"
+				},
+				{
+					"en": "However, foreign exchange intervention alone cannot eliminate fundamental factors such as interest rate differentials and trade balances.",
+					"ja": "ただし、為替介入だけで金利差や貿易収支などの根本要因を消せるわけではない。"
+				}
+			]
+		},
+		{
+			"id": "terms",
+			"heading": {
+				"ja": "2. まず押さえる用語",
+				"en": "2. Terms to know first"
+			},
+			"pairs": [
+				{
+					"en": "The starting point for understanding interest rate policy is the perspective that \"one person's income is another person's expenditure.\"",
+					"ja": "金利政策を理解する入口は、「誰かの収入は、別の誰かの支出である」という見方である。"
+				},
+				{
+					"en": "Wages are income for households, but costs for businesses.",
+					"ja": "家計にとって賃金は収入だが、企業にとってはコストである。"
+				},
+				{
+					"en": "Loan interest is revenue for banks, but it is a burden for borrowers.",
+					"ja": "銀行にとって貸出金利は収益だが、借り手にとっては負担である。"
+				},
+				{
+					"en": "Government bonds are a means of raising funds for governments, but for investors they are investment products.",
+					"ja": "国債は政府の資金調達手段だが、投資家にとっては運用商品である。"
+				},
+				{
+					"en": "Interest rate policy moves this entire nexus of interests.",
+					"ja": "金利政策は、この利害のつながり全体を動かす。"
+				}
+			]
+		},
+		{
+			"id": "basic-operation",
+			"heading": {
+				"ja": "3. 金利政策の基本動作",
+				"en": "3. Basic operation of interest rate policy"
+			},
+			"pairs": [
+				{
+					"en": "The central bank adjusts the financial environment with a focus on short-term interest rates.",
+					"ja": "中央銀行は、短期金利を中心に金融環境を調整する。"
+				},
+				{
+					"en": "Raising interest rates increases the cost of borrowing money.",
+					"ja": "金利を上げると、お金を借りるコストが上がる。"
+				},
+				{
+					"en": "When mortgages, corporate loans, credit, and corporate bond issuance become more expensive, households and businesses become more cautious about spending.",
+					"ja": "住宅ローン、企業融資、クレジット、社債発行が高くなれば、家計と企業は支出を慎重にする。"
+				},
+				{
+					"en": "When demand weakens, companies find it difficult to raise prices, and the rate of inflation tends to fall.",
+					"ja": "需要が弱まると、企業は値上げしにくくなり、物価上昇率は下がりやすい。"
+				},
+				{
+					"en": "On the other hand, lowering interest rates makes it easier to borrow money.",
+					"ja": "反対に、金利を下げると借りやすくなる。"
+				},
+				{
+					"en": "It will be easier for households to buy housing and durable consumer goods, and it will be easier for companies to increase capital investment and hiring.",
+					"ja": "家計は住宅や耐久消費財を買いやすくなり、企業は設備投資や採用を増やしやすい。"
+				},
+				{
+					"en": "This effect is useful when the economy is weak.",
+					"ja": "景気が弱い局面ではこの効果が役に立つ。"
+				},
+				{
+					"en": "However, if demand is too strong, it will cause inflation and asset prices to rise.",
+					"ja": "ただし、需要が強すぎると物価上昇や資産価格の上昇を招く。"
+				},
+				{
+					"en": "What is important is that there is a time lag in interest rate policy.",
+					"ja": "重要なのは、金利政策には時間差があることだ。"
+				},
+				{
+					"en": "Raising interest rates today does not mean that all prices will fall tomorrow.",
+					"ja": "今日利上げしても、明日すべての物価が下がるわけではない。"
+				},
+				{
+					"en": "It works over months or years through variable rate loans, corporate refinancing, foreign exchange, wage negotiations, and corporate pricing changes.",
+					"ja": "変動金利ローン、企業の借り換え、為替、賃金交渉、企業の価格改定を通じて、数か月から数年かけて効いていく。"
+				}
+			]
+		},
+		{
+			"id": "bonds",
+			"heading": {
+				"ja": "4. 債券はなぜ金利で動くのか",
+				"en": "4. Why do bonds move with interest rates?"
+			},
+			"pairs": [
+				{
+					"en": "Bonds are securities that allow countries and companies to borrow money for a certain period of time, pay interest, and return the principal at maturity.",
+					"ja": "債券は、国や企業が「一定期間お金を借り、利息を払い、満期に元本を返す」ための証券である。"
+				},
+				{
+					"en": "Bond prices and yields move in opposite directions.",
+					"ja": "債券の価格と利回りは逆に動く。"
+				},
+				{
+					"en": "This is the most important point connecting interest rate policy and the bond market.",
+					"ja": "これが、金利政策と債券市場をつなぐ最重要ポイントである。"
+				},
+				{
+					"en": "For example, there is an existing bond that pays 1% interest per year.",
+					"ja": "たとえば、年1%の利息を払う既存債券がある。"
+				},
+				{
+					"en": "After that, when new bonds that pay 3% a year become available on the market, bonds that pay 1% a year become relatively less attractive.",
+					"ja": "その後、市場で年3%の新しい債券が買えるようになったら、年1%の債券は相対的に魅力が落ちる。"
+				},
+				{
+					"en": "To find a buyer, you need to lower the price.",
+					"ja": "買い手を見つけるには価格を下げる必要がある。"
+				},
+				{
+					"en": "When the price falls, the yield seen by buyers rises.",
+					"ja": "価格が下がると、買った人から見た利回りは上がる。"
+				},
+				{
+					"en": "This relationship also applies to financial institutions and pension funds.",
+					"ja": "この関係は、金融機関や年金基金にも効く。"
+				},
+				{
+					"en": "When interest rates rise, long-term bonds already held are likely to suffer valuation losses.",
+					"ja": "金利上昇局面では、既に保有している長期債の評価損が出やすい。"
+				},
+				{
+					"en": "On the other hand, some bonds return their face value if they are held to maturity, so it is necessary to separate losses from price fluctuations and losses from credit risk.",
+					"ja": "一方で、満期まで持てば額面が返ってくる債券もあるため、「価格変動の損」と「信用リスクによる損」を分けて考える必要がある。"
+				}
+			]
+		},
+		{
+			"id": "debt",
+			"heading": {
+				"ja": "5. 債務は誰に重くのしかかるか",
+				"en": "5. On whom does debt weigh?"
+			},
+			"pairs": [
+				{
+					"en": "Debt is debt.",
+					"ja": "債務は借金である。"
+				},
+				{
+					"en": "When interest rates rise, the burden increases for new borrowers, those with variable interest rates, and those who are due to refinance.",
+					"ja": "金利が上がると、新しく借りる人、変動金利で借りている人、借り換え時期を迎える人の負担が増える。"
+				},
+				{
+					"en": "In household finances, the burden of housing loans and credit card loans increases.",
+					"ja": "家計では、住宅ローンやカードローンの負担が増える。"
+				},
+				{
+					"en": "For companies, it affects the profitability of bank loans, corporate bonds, and capital investment.",
+					"ja": "企業では、銀行融資、社債、設備投資の採算に影響する。"
+				},
+				{
+					"en": "For the government, interest payments on national bonds are likely to increase.",
+					"ja": "政府では、国債の利払い費が増えやすくなる。"
+				},
+				{
+					"en": "However, not all debts will be affected at the same time.",
+					"ja": "ただし、すべての債務が同時に影響を受けるわけではない。"
+				},
+				{
+					"en": "For long-term fixed-rate debt, the impact is delayed until maturity or refinancing.",
+					"ja": "固定金利で長期に借りている債務は、満期や借り換えまで影響が遅れる。"
+				},
+				{
+					"en": "What is easy to misunderstand here is that \"interest rate hikes are not just an issue for people who are in debt.\"",
+					"ja": "ここで誤解しやすいのは、「利上げは借金をしている人だけの問題」ではないという点だ。"
+				},
+				{
+					"en": "If companies pass on increased borrowing costs to prices, it will affect consumers.",
+					"ja": "企業が借入コスト増を価格に転嫁すれば消費者に影響する。"
+				},
+				{
+					"en": "If the government's interest payments increase, it will affect future tax and spending discussions.",
+					"ja": "政府の利払い費が増えれば、将来の税・歳出の議論に影響する。"
+				},
+				{
+					"en": "If banks' lending stance becomes stricter, it will also affect the employment of people who are not in debt.",
+					"ja": "銀行の貸出姿勢が厳しくなれば、借金をしていない人の雇用にも波及する。"
+				}
+			]
+		},
+		{
+			"id": "wages-prices",
+			"heading": {
+				"ja": "6. 賃金と物価はどう結びつくか",
+				"en": "6. How are wages and prices linked?"
+			},
+			"pairs": [
+				{
+					"en": "Wages are connected to prices in two ways.",
+					"ja": "賃金は、物価と二つの経路でつながる。"
+				},
+				{
+					"en": "First, when wages rise, households' purchasing power increases, making consumption more likely to increase.",
+					"ja": "第一に、賃金が上がると家計の購買力が増え、消費が増えやすい。"
+				},
+				{
+					"en": "If demand increases, it becomes easier for companies to raise prices.",
+					"ja": "需要が増えれば、企業は値上げしやすくなる。"
+				},
+				{
+					"en": "Second, wages are a company's labor cost, and if companies pass on increases in labor costs to the prices of goods and services, prices will rise.",
+					"ja": "第二に、賃金は企業の人件費であり、企業が人件費増を商品・サービス価格に転嫁すれば、物価は上がる。"
+				},
+				{
+					"en": "However, rising wages do not always mean bad inflation.",
+					"ja": "ただし、賃金上昇は常に悪いインフレを意味しない。"
+				},
+				{
+					"en": "A virtuous cycle is a state in which companies' productivity and profits increase, wages rise, household consumption increases, and companies are able to invest further.",
+					"ja": "良い循環は、企業の生産性や収益が上がり、賃金が上がり、家計消費が増え、企業がさらに投資できる状態である。"
+				},
+				{
+					"en": "In a vicious cycle, living costs go up first due to increases in import prices and energy prices, but wages cannot keep up and real purchasing power declines.",
+					"ja": "悪い循環は、輸入物価やエネルギー価格の上昇で生活費だけが先に上がり、賃金が追いつかず、実質的な購買力が落ちる状態である。"
+				},
+				{
+					"en": "Even if your salary goes up by 3%, if prices go up by 5%, your lifestyle will be difficult.",
+					"ja": "給料が3%上がっても、物価が5%上がれば、生活感としては苦しくなる。"
+				},
+				{
+					"en": "What interest rate policy looks at is not simply whether wages have risen, but the combination of wages, prices, productivity, and corporate profits.",
+					"ja": "金利政策で見ているのは、単に賃金が上がったかではなく、賃金、物価、生産性、企業収益がどの組み合わせで動いているかである。"
+				}
+			]
+		},
+		{
+			"id": "fx-intervention",
+			"heading": {
+				"ja": "7. 為替とドル売り・円買い介入",
+				"en": "7. Foreign exchange and dollar selling/yen buying intervention"
+			},
+			"pairs": [
+				{
+					"en": "Exchange rates are influenced by interest rate differentials, trade balances, investment capital movements, risk aversion, policy expectations, and other factors.",
+					"ja": "為替レートは、金利差、貿易収支、投資資金の移動、リスク回避、政策期待などで動く。"
+				},
+				{
+					"en": "In the Japanese context, if the yen weakens and the dollar strengthens, the yen-denominated prices of imported goods, energy, food, and raw materials tend to rise.",
+					"ja": "日本の文脈で円安・ドル高が進むと、輸入品、エネルギー、食料、原材料の円建て価格が上がりやすい。"
+				},
+				{
+					"en": "This puts upward pressure on domestic prices.",
+					"ja": "これは国内物価に上昇圧力をかける。"
+				},
+				{
+					"en": "Dollar-selling/yen-buying intervention is an operation in which the government/authorities sell the dollars they hold and buy the yen.",
+					"ja": "ドル売り・円買い介入は、政府・当局が保有するドルを売って円を買う操作である。"
+				},
+				{
+					"en": "The number of orders to buy yen will increase in the market, which will help keep the yen from depreciating.",
+					"ja": "市場では円を買う注文が増えるため、円安を抑える方向に働く。"
+				},
+				{
+					"en": "In Japan, foreign exchange intervention is carried out under the authority of the Minister of Finance, with the Bank of Japan acting as the Minister's agent.",
+					"ja": "日本では、外国為替介入は財務大臣の権限で行われ、日本銀行は財務大臣の代理人として実務を担う。"
+				},
+				{
+					"en": "Foreign exchange intervention is not price policy itself.",
+					"ja": "為替介入は、物価政策そのものではない。"
+				},
+				{
+					"en": "The purpose is to suppress excessive fluctuations in the foreign exchange market.",
+					"ja": "目的は為替市場の過度な変動を抑えることにある。"
+				},
+				{
+					"en": "Although it affects prices through import prices, its role is different from that of the central bank's interest rate policy.",
+					"ja": "輸入物価を通じて物価に影響するが、中央銀行の金利政策とは役割が違う。"
+				},
+				{
+					"en": "In particular, when the difference in interest rates between Japan and the US is large, it becomes more attractive to invest in dollars, and pressure on the yen to depreciate remains.",
+					"ja": "特に、日米金利差が大きい局面では、ドルで運用する魅力が高まり、円安圧力が残りやすい。"
+				},
+				{
+					"en": "Although intervention can temporarily change the flow, it is not a means to completely eliminate interest rate differentials and market expectations.",
+					"ja": "介入は流れを一時的に変えることはできても、金利差や市場期待を完全に消す手段ではない。"
+				}
+			]
+		},
+		{
+			"id": "japan-chains",
+			"heading": {
+				"ja": "8. 日本で特に見えやすい連鎖",
+				"en": "8. Chains that are especially easy to see in Japan"
+			},
+			"pairs": [
+				{
+					"en": "In Japan, discussions on interest rate policy tend to become complicated due to the heavy use of imported energy and food, a long period of low interest rates, government debt, and a history of stagnant wages.",
+					"ja": "日本では、輸入エネルギーや食料の比重、長い低金利環境、政府債務、賃金停滞の歴史が重なり、金利政策の議論が複雑になりやすい。"
+				},
+				{
+					"en": "First, a weak yen tends to push up import prices.",
+					"ja": "第一に、円安は輸入物価を押し上げやすい。"
+				},
+				{
+					"en": "When energy and food prices rise, household living costs increase.",
+					"ja": "エネルギーや食料の価格が上がると、家計の生活費は増える。"
+				},
+				{
+					"en": "Domestic prices will also rise as companies are also affected by increases in raw material and distribution costs, so if prices are passed on to higher prices, domestic prices will also rise.",
+					"ja": "企業も原材料費や物流費の上昇を受けるため、価格転嫁が進めば国内物価も上がる。"
+				},
+				{
+					"en": "Second, whether wages catch up with prices will determine how people feel about their lives.",
+					"ja": "第二に、賃金が物価に追いつくかが生活実感を左右する。"
+				},
+				{
+					"en": "If prices rise and real wages fall, household finances will suffer.",
+					"ja": "物価だけが上がり、実質賃金が下がれば、家計は苦しくなる。"
+				},
+				{
+					"en": "From the central bank's perspective, policy decisions will depend on whether both wages and prices rise sustainably or whether the rise in import prices ends up being temporary.",
+					"ja": "中央銀行から見ると、賃金と物価がともに持続的に上がるか、一時的な輸入物価上昇に終わるかで政策判断が変わる。"
+				},
+				{
+					"en": "Third, the impact on the government bond market is significant.",
+					"ja": "第三に、国債市場への影響が大きい。"
+				},
+				{
+					"en": "In an economy with long periods of low interest rates, interest rate hikes have a wide impact on financial institutions' bond valuations, government interest payments, and corporate borrowing costs.",
+					"ja": "長く低金利が続いた経済では、利上げは金融機関の債券評価、政府の利払い費、企業の借入コストに広く影響する。"
+				},
+				{
+					"en": "Raising interest rates may be necessary to keep prices in check, but the side effects of raising interest rates are also significant.",
+					"ja": "物価を抑えるための利上げは必要になり得るが、利上げの副作用も大きい。"
+				}
+			]
+		},
+		{
+			"id": "misconceptions",
+			"heading": {
+				"ja": "9. よくある誤解",
+				"en": "9. Common misconceptions"
+			},
+			"pairs": [
+				{
+					"en": "Myth 1: If interest rates are raised, prices will immediately fall.",
+					"ja": "誤解1: 利上げすれば必ず物価はすぐ下がる"
+				},
+				{
+					"en": "Raising interest rates will cool demand, but there is a time lag in prices.",
+					"ja": "利上げは需要を冷やすが、物価には時間差がある。"
+				},
+				{
+					"en": "This is because energy prices, exchange rates, wage negotiations, corporate price revisions, and household spending behavior all move in sequence.",
+					"ja": "エネルギー価格、為替、賃金交渉、企業の価格改定、家計の支出行動が順番に動くためである。"
+				},
+				{
+					"en": "Prices may continue to rise immediately after an interest rate hike.",
+					"ja": "利上げ直後に物価が上がり続けることもある。"
+				},
+				{
+					"en": "Myth 2: Bonds are safe assets, so their prices will not fall.",
+					"ja": "誤解2: 債券は安全資産なので価格は下がらない"
+				},
+				{
+					"en": "Even if government bonds have high creditworthiness, their market prices can fall if interest rates rise.",
+					"ja": "信用力の高い国債でも、金利が上がれば市場価格は下がり得る。"
+				},
+				{
+					"en": "The risk looks different if you hold the stock until maturity and if you sell it midway through.",
+					"ja": "満期まで保有する場合と、途中で売却する場合ではリスクの見え方が違う。"
+				},
+				{
+					"en": "Myth 3: Higher wages are bad for inflation.",
+					"ja": "誤解3: 賃金上昇はインフレに悪い"
+				},
+				{
+					"en": "Wage increases themselves are not bad.",
+					"ja": "賃金上昇そのものが悪いわけではない。"
+				},
+				{
+					"en": "The problem arises when cost increases that are not associated with productivity or corporate profits continue to be passed on to prices.",
+					"ja": "問題は、生産性や企業収益を伴わないコスト上昇が価格転嫁だけで続く場合である。"
+				},
+				{
+					"en": "If wages, prices, and productivity increase in a balanced manner, it will lead to an improvement in living standards.",
+					"ja": "賃金、物価、生産性がバランスよく上がるなら、生活水準の改善につながる。"
+				},
+				{
+					"en": "Myth 4: Foreign exchange intervention can solve the problem of yen depreciation",
+					"ja": "誤解4: 為替介入で円安問題は解決できる"
+				},
+				{
+					"en": "Intervention is a powerful tool for directly influencing markets, but it does not eliminate interest rate differentials, trade balances, and investment capital flows.",
+					"ja": "介入は市場に直接働きかける強い手段だが、金利差、貿易収支、投資資金の流れを消すものではない。"
+				},
+				{
+					"en": "The sustainable direction of exchange rates is determined by a combination of policy interest rates, inflation expectations, growth rates, balance of payments, and market sentiment.",
+					"ja": "持続的な為替の方向は、政策金利、インフレ見通し、成長率、国際収支、市場心理が組み合わさって決まる。"
+				}
+			]
+		},
+		{
+			"id": "practical-reading",
+			"heading": {
+				"ja": "10. 実務・生活への読み替え",
+				"en": "10. Translation into practical and daily life"
+			},
+			"pairs": [
+				{
+					"en": "When individuals read the news, it is easier to understand if they are viewed in the following order.",
+					"ja": "個人がニュースを読むときは、次の順番で見ると理解しやすい。"
+				},
+				{
+					"en": "Why are prices rising?",
+					"ja": "物価は何で上がっているか。"
+				},
+				{
+					"en": "Is it overheating demand, import prices, wages, tax/system factors?",
+					"ja": "需要過熱か、輸入物価か、賃金か、税・制度要因か。"
+				},
+				{
+					"en": "Are wages keeping up with prices?",
+					"ja": "賃金は物価に追いついているか。"
+				},
+				{
+					"en": "Look at real wages rather than nominal wages.",
+					"ja": "名目賃金ではなく実質賃金を見る。"
+				},
+				{
+					"en": "Does the central bank view the rise in prices as temporary or persistent?",
+					"ja": "中央銀行は、物価上昇を一時的と見ているか、持続的と見ているか。"
+				},
+				{
+					"en": "Who does rising interest rates affect?",
+					"ja": "金利上昇は誰に効くか。"
+				},
+				{
+					"en": "Where will the burden be placed on mortgages, corporate debt, government bonds, and financial institutions?",
+					"ja": "住宅ローン、企業債務、国債、金融機関のどこに負担が出るか。"
+				},
+				{
+					"en": "Are foreign exchange rates moving due to interest rate differences, or are they moving due to risk aversion and trade factors?",
+					"ja": "為替は金利差で動いているか、リスク回避や貿易要因で動いているか。"
+				},
+				{
+					"en": "Is foreign exchange intervention a temporary stabilization measure, or is it being talked about as an alternative to interest rate policy?",
+					"ja": "為替介入は一時的な安定化策か、金利政策の代わりのように語られていないか。"
+				},
+				{
+					"en": "If you read them in this order, you can break down arguments such as \"Should interest rates be raised?\", \"Is a weak yen bad?\" and \"Is a wage increase a cause of inflation?\" not just pros and cons, but also which route is being emphasized.",
+					"ja": "この順番で読むと、「利上げすべきか」「円安は悪いか」「賃上げはインフレ要因か」といった議論を、単純な賛否ではなく、どの経路を重視している議論なのかに分解できる。"
+				}
+			]
+		},
+		{
+			"id": "limitations",
+			"heading": {
+				"ja": "11. 限界と注意点",
+				"en": "11. Limitations and precautions"
+			},
+			"pairs": [
+				{
+					"en": "This report is an introductory material that explains the basic transmission channels of interest rate policy, and is not intended to predict policy decisions or exchange rate levels at a specific point in time.",
+					"ja": "本レポートは、金利政策の基本的な波及経路を説明する入門資料であり、特定時点の政策判断や為替水準を予測するものではない。"
+				},
+				{
+					"en": "In actual policy decisions, it is necessary to take a comprehensive look at factors such as the consumer price index, expected inflation, wage statistics, GDP, unemployment rate, corporate goods prices, government bond markets, bank lending, and the international financial environment.",
+					"ja": "実際の政策判断では、消費者物価指数、期待インフレ、賃金統計、GDP、失業率、企業物価、国債市場、銀行貸出、国際金融環境などを総合的に見る必要がある。"
+				},
+				{
+					"en": "Furthermore, even the same rate hike has different effects depending on the country and period.",
+					"ja": "また、同じ利上げでも、国や時期によって効果は異なる。"
+				},
+				{
+					"en": "This is because the fixed interest rate ratio of housing loans, corporate borrowing structure, average maturity of government debt, import dependence, and strength of the labor market are different.",
+					"ja": "住宅ローンの固定金利比率、企業の借入構造、政府債務の平均年限、輸入依存度、労働市場の強さが違うからである。"
+				},
+				{
+					"en": "Therefore, just because something works in the US doesn't necessarily mean it will work in Japan as well.",
+					"ja": "したがって、「米国で効いたから日本でも同じように効く」とは限らない。"
+				}
+			]
+		}
+	]
+}

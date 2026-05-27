@@ -1,0 +1,557 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "1-executive-summary",
+			"heading": {
+				"en": "1. Executive Summary",
+				"ja": "1. エグゼクティブサマリー"
+			},
+			"pairs": [
+				{
+					"en": "Both Polanyi and the early Wittgenstein showed that knowledge cannot be exhausted by explicit propositions alone.",
+					"ja": "ポランニーと初期ウィトゲンシュタインは、どちらも「知識は明示命題だけでは尽くせない」と示した。"
+				},
+				{
+					"en": "However, even if the conclusions seem to be the same, the points reached are different.",
+					"ja": "ただし、同じ結論に見えても到達点は違う。"
+				},
+				{
+					"en": "Polanyi actively depicts the implicit support within knowing.",
+					"ja": "ポランニーは、知ることの内部にある暗黙的な支えを積極的に描く。"
+				},
+				{
+					"en": "The Logical-Philosophical Tractatus logically sets the limits of what can be said and calls for silence about anything outside those limits.",
+					"ja": "『論理哲学論考』は、言えることの限界を論理的に引き、限界の外側については沈黙を要請する。"
+				},
+				{
+					"en": "The conclusions of this paper are as follows.",
+					"ja": "本稿の結論は次の通りである。"
+				},
+				{
+					"en": "Polanyi's tacit knowledge is the function of subsidiary awareness that supports a focused object, and the act of knowing should be understood as \"from-to\" integration.",
+					"ja": "ポランニーの tacit knowledge は、焦点化された対象を支える subsidiary awareness の働きであり、知る行為は「from-to」の統合として理解すべきである。"
+				},
+				{
+					"en": "Focal awareness is not just the center of attention, but awareness of a comprehensive entity created by integrating multiple cues.",
+					"ja": "focal awareness は単なる注意の中心ではなく、複数の手がかりが統合されて立ち上がる comprehensive entity への気づきである。"
+				},
+				{
+					"en": "\"What can be said\" and \"what can be shown\" in \"Tractises on Logical Philosophy\" are devices that separate the relationship between the describability of facts and the limits of logical forms, values, and the world.",
+					"ja": "『論理哲学論考』の「語り得るもの」と「示されるもの」は、事実の記述可能性と論理形式・価値・世界の限界の関係を分ける装置である。"
+				},
+				{
+					"en": "The commonalities between the two are resistance to reductionism, emphasis on background conditions, and awareness of the limits of language.",
+					"ja": "両者の共通点は、還元主義への抵抗、背景条件の重視、言語の限界意識にある。"
+				},
+				{
+					"en": "However, they cannot be equated.",
+					"ja": "しかし、同一視はできない。"
+				},
+				{
+					"en": "Polanyi is a theory of knowledge, Wittgenstein is a boundary setting of logic, and the meaning of silence is also different.",
+					"ja": "ポランニーは知識論、ウィトゲンシュタインは論理の境界設定であり、沈黙の意味も異なる。"
+				},
+				{
+					"en": "In practice, it is important not to over-summarize the narratives of experts, to preserve the original cases and original expressions, and to separate the parts that can be explained from the parts that should be preserved as practice.",
+					"ja": "実務上は、熟達者の語りを要約しすぎないこと、元ケースと元表現を残すこと、説明可能な部分と実践として保持すべき部分を分けることが重要である。"
+				}
+			]
+		},
+		{
+			"id": "2-research-history-and-primary-literature",
+			"heading": {
+				"en": "2. Research history and primary literature",
+				"ja": "2. 研究史と一次文献"
+			},
+			"pairs": [
+				{
+					"en": "When reading this topic, first understand the chronology of the literature to reduce confusion.",
+					"ja": "この論点を読むときは、まず文献の時系列を押さえると混乱が減る。"
+				},
+				{
+					"en": "Although Polanyi's argument is often reduced to \"unspeakable skills,\" it is actually much broader.",
+					"ja": "ポランニーの議論は、しばしば「言語化できない技能」だけに矮小化されるが、実際にはもっと広い。"
+				},
+				{
+					"en": "He believed that scientific cognition, skill, observation, judgment, and valuing had pre-propositional support.",
+					"ja": "彼は科学的認識、技能、観察、判断、価値づけが、命題化以前の支えを持つと考えた。"
+				},
+				{
+					"en": "Wittgenstein's Tractatus Logico-Philosophique, on the contrary, clarifies the logical form of propositions that reflect the facts of the world, leaving what lies outside of it as the realm of being \"shown.\"",
+					"ja": "ウィトゲンシュタインの『論理哲学論考』は、逆に、世界の事実を写す命題の論理形式を明確にし、その外側にあるものを「示される」領域として残す。"
+				}
+			]
+		},
+		{
+			"id": "3-1-tacit-knowledge-is-not-missing-knowledge",
+			"heading": {
+				"en": "3.1 Tacit knowledge is not “missing knowledge”",
+				"ja": "3.1 tacit knowledge は「足りない知識」ではない"
+			},
+			"pairs": [
+				{
+					"en": "Polanyi's tacit knowledge does not simply mean \"knowledge that has not yet been documented.\"",
+					"ja": "ポランニーの tacit knowledge は、単に「まだ文書化されていない知識」を意味しない。"
+				},
+				{
+					"en": "Rather, it is the claim that the very act of knowing requires support that is not explicitly grasped.",
+					"ja": "むしろ、知る行為そのものが、明示的に把握されていない支えを必要とするという主張である。"
+				},
+				{
+					"en": "We don't look at an object by arranging individual clues separately.",
+					"ja": "私たちは、個々の手がかりをばらばらに並べてから対象を見ているのではない。"
+				},
+				{
+					"en": "While using clues as subsidiary awareness, grasp one target in focus.",
+					"ja": "手がかりを subsidiary awareness として用いながら、焦点的には一つの対象を把握する。"
+				},
+				{
+					"en": "For example, in facial recognition, the eyes, nose, mouth, and contours are not confirmed as separate propositions, but are used as support to understand that it is this person.",
+					"ja": "たとえば顔認識では、目・鼻・口・輪郭を別々の命題として逐一確認しているのではなく、それらを支えとして「この人だ」と把握する。"
+				},
+				{
+					"en": "The same goes for skilled observation, diagnosis, design, research, and craftsmanship.",
+					"ja": "熟達した観察、診断、設計、研究、職人技能でも同様である。"
+				},
+				{
+					"en": "Tacit knowledge here is not a lack, but a structure that enables knowing.",
+					"ja": "ここでの暗黙知は、欠如ではなく、知ることを成立させる構造である。"
+				}
+			]
+		},
+		{
+			"id": "3-2-subsidiary-awareness-focal-awareness-comprehensive-entity",
+			"heading": {
+				"en": "3.2 subsidiary awareness / focal awareness / comprehensive entity",
+				"ja": "3.2 subsidiary awareness / focal awareness / comprehensive entity"
+			},
+			"pairs": [
+				{
+					"en": "These three are central to understanding Polanyi.",
+					"ja": "この三つは、ポランニー理解の中核である。"
+				},
+				{
+					"en": "The important point is that subtracting subsidiary awareness alone does not lead to knowledge.",
+					"ja": "重要なのは、subsidiary awareness を単独に取り出しても、知ることにはならない点である。"
+				},
+				{
+					"en": "In Polanyi's \"from-to\" structure, we move from the clue to the object; we do not continue to view the clue as an object.",
+					"ja": "ポランニーの「from-to」構造では、私たちは手がかりから対象へと移るのであって、手がかりを対象として眺め続けるわけではない。"
+				},
+				{
+					"en": "Therefore, mastery is not about \"being able to say everything,\" but is closer to reaching the target using the support that cannot be said.",
+					"ja": "したがって、熟達とは「全部を言えること」ではなく、言えない支えを使って対象へ到達することに近い。"
+				}
+			]
+		},
+		{
+			"id": "3-3-what-polanyi-emphasized",
+			"heading": {
+				"en": "3.3 What Polanyi emphasized",
+				"ja": "3.3 ポランニーが強調したもの"
+			},
+			"pairs": [
+				{
+					"en": "Polanyi was keenly aware that science and professional practice are not purely operations of explicit rules.",
+					"ja": "ポランニーは、科学や専門実践が純粋に明示的な規則運用ではないことを強く意識していた。"
+				},
+				{
+					"en": "What we consider to be a problem, what we perceive to be abnormal, which observations to consider important, and where to stop making decisions are often learned before we can write rules.",
+					"ja": "何を問題とみなすか、何を異常と感じるか、どの観察を重要視するか、どこで判断を止めるかは、記述できるルール以前に身についていることが多い。"
+				},
+				{
+					"en": "In this sense, Polanyi's theory is not a pessimistic theory that \"tacit knowledge cannot be spoken of correctly.\"",
+					"ja": "この意味で、ポランニーの理論は「暗黙知は正しく語れない」という悲観ではない。"
+				},
+				{
+					"en": "Rather, it is a theory that positively states that the act of knowing involves responsibility, trust, commitment, training, and the relationship between master and student.",
+					"ja": "むしろ、知る行為に責任、信頼、コミットメント、訓練、師弟関係が含まれることを肯定的に記述する理論である。"
+				}
+			]
+		},
+		{
+			"id": "4-1-boundaries-of-what-can-be-said",
+			"heading": {
+				"en": "4.1 Boundaries of what can be said",
+				"ja": "4.1 語れることの境界"
+			},
+			"pairs": [
+				{
+					"en": "In the Treatise on Logical Philosophy, propositions are said to reflect the facts of the world.",
+					"ja": "『論理哲学論考』では、命題は世界の事実を写し取るとされる。"
+				},
+				{
+					"en": "Therefore, a meaningful statement must have content that can be established as fact.",
+					"ja": "したがって、意味のある言明は、事実として成立しうる内容を持たなければならない。"
+				},
+				{
+					"en": "Some aspects of ethics, beauty, metaphysics, and logical forms cannot be described as factual statements.",
+					"ja": "倫理、美、形而上学、論理形式の一部は、事実の記述として語り尽くせない。"
+				},
+				{
+					"en": "In this framework, the task of philosophy is not to add new theories but to clarify the boundaries of narrative.",
+					"ja": "この枠組みでは、哲学の仕事は新しい理論を足すことではなく、語りの境界を明らかにすることにある。"
+				},
+				{
+					"en": "Be clear about what you can say and don't confuse what you can't say.",
+					"ja": "言えることを明確にし、言えないことを混同しない。"
+				},
+				{
+					"en": "That is the basic stance of Tractatus.",
+					"ja": "それが Tractatus の基本姿勢である。"
+				}
+			]
+		},
+		{
+			"id": "4-2-what-is-shown",
+			"heading": {
+				"en": "4.2 What is shown",
+				"ja": "4.2 示されるもの"
+			},
+			"pairs": [
+				{
+					"en": "Tractatus 6.522 states that the ineffable is \"shown.\"",
+					"ja": "Tractatus 6.522 は、言い表せないものが「示される」と述べる。"
+				},
+				{
+					"en": "6.53 shows the philosophical method of saying only what can be said, and 6.54 says to discard the proposition as a ladder.",
+					"ja": "6.53 は、語りうることだけを言えという哲学の方法を示し、6.54 はその命題をはしごとして捨てよと言う。"
+				},
+				{
+					"en": "The last number 7 concludes by telling us to be silent about what we cannot talk about.",
+					"ja": "最後の 7 は、語りえないことについては沈黙せよと結ぶ。"
+				},
+				{
+					"en": "\"Silence\" here is not just reticence.",
+					"ja": "ここでの「沈黙」は、単なる無口さではない。"
+				},
+				{
+					"en": "Rather, it is a methodological silence that separates what can be stated logically from what cannot be treated as a statement, but which appears in the dimensions of the world and values.",
+					"ja": "むしろ、論理的に言明できることと、言明としては扱えないが、世界のあり方や価値の次元で現れるものを分ける、方法論的な沈黙である。"
+				}
+			]
+		},
+		{
+			"id": "4-3-a-request-for-silence-is-not-a-denial-of-knowledge",
+			"heading": {
+				"en": "4.3 A request for silence is not a denial of knowledge",
+				"ja": "4.3 沈黙の要請は、知識の否定ではない"
+			},
+			"pairs": [
+				{
+					"en": "Tractatus' silence does not deny knowledge itself.",
+					"ja": "Tractatus の沈黙は、知識そのものを否定するものではない。"
+				},
+				{
+					"en": "Rather, it is an attitude that does not easily include what remains outside of language as the subject of theory, as a result of being strict about how language can represent facts.",
+					"ja": "むしろ、言語が事実をどう写せるかを厳密にした結果、言語の外側に残るものを、理論の対象として安易に取り込まない態度である。"
+				},
+				{
+					"en": "There is a different tension here than Polanyi's positive tacit knowledge theory.",
+					"ja": "ここには、ポランニーの肯定的な tacit knowledge 理論とは異なる緊張がある。"
+				}
+			]
+		},
+		{
+			"id": "5-point-of-contact-between-the-two",
+			"heading": {
+				"en": "5. Point of contact between the two",
+				"ja": "5. 両者の接点"
+			},
+			"pairs": [
+				{
+					"en": "On the surface, the point of contact between Polanyi and Tractatus appears to be that \"there are things that cannot be said.\"",
+					"ja": "ポランニーと Tractatus の接点は、表面的には「言えないものがある」という一点に見える。"
+				},
+				{
+					"en": "However, in reality, we need to be a little more precise.",
+					"ja": "だが、実際にはもう少し精密に言う必要がある。"
+				},
+				{
+					"en": "Resists reduction to explicit knowledge: Neither reduces knowing or meaning to the sum of explicit propositions.",
+					"ja": "明示知への還元に抵抗する: どちらも、知ることや意味を、明示命題の総和に還元しない。"
+				},
+				{
+					"en": "Emphasis on background conditions: Polanyi emphasizes subsidiary awareness, and Wittgenstein emphasizes logical forms and limit conditions.",
+					"ja": "背景条件を重視する: ポランニーは subsidiary awareness を、Wittgenstein は論理形式や限界条件を重視する。"
+				},
+				{
+					"en": "The appearance of the object precedes: Polanyi indicates integration into a focused object, and Tractatus indicates the mappability of facts and their outside.",
+					"ja": "対象の見え方が先行する: ポランニーは焦点化された対象への統合を、Tractatus は事実の写像可能性とその外側を示す。"
+				},
+				{
+					"en": "There are limits to how language works: Neither believes that language can directly objectify everything.",
+					"ja": "言語の働きに限界がある: どちらも、言語がすべてを直接対象化できるとは考えない。"
+				},
+				{
+					"en": "The point of contact here is not the romance of \"something that cannot be put into words.\"",
+					"ja": "ここでの接点は、「言語化できない何か」へのロマンではない。"
+				},
+				{
+					"en": "Rather, the point is that knowing and meaning depend not on an absolute mystery outside of words, but on the conditions under which words come into existence and the supports that operate within practice.",
+					"ja": "むしろ、知ることや意味が、言葉の外にある絶対的な神秘ではなく、言葉が成立する条件や、実践の内部で作動する支えに依存しているという点にある。"
+				}
+			]
+		},
+		{
+			"id": "6-1-polanyi-is-a-theory-of-knowledge-tractatus-is-a-logic-therapy",
+			"heading": {
+				"en": "6.1 Polanyi is a theory of knowledge, Tractatus is a logic therapy",
+				"ja": "6.1 ポランニーは知識論、Tractatus は論理療法"
+			},
+			"pairs": [
+				{
+					"en": "Polanyi depicts how the knowing subject commits to the world.",
+					"ja": "ポランニーは、知る主体がどう世界にコミットするかを描く。"
+				},
+				{
+					"en": "Mastery, attention, embodiment, communication, and trust become active themes.",
+					"ja": "そこでは、熟達、注意、身体化、伝達、信頼が積極的なテーマになる。"
+				},
+				{
+					"en": "On the other hand, Tractatus's main interest lies in the logic of correctly describing the world and in setting limits to avoid pushing beyond it.",
+					"ja": "一方、Tractatus の主要関心は、世界を正しく記述する論理と、その外側に無理に踏み込まないための限界設定にある。"
+				},
+				{
+					"en": "Therefore, it is inaccurate both to reduce Polanyi to a commentary on the Tractatus and to reduce the Tractatus to a theory of tacit knowledge.",
+					"ja": "したがって、ポランニーを Tractatus の注解にしてしまうのも、Tractatus を暗黙知の理論にしてしまうのも、どちらも不正確である。"
+				}
+			]
+		},
+		{
+			"id": "6-2-tacit-knowledge-and-showable-sayable-are-not-synonymous",
+			"heading": {
+				"en": "6.2 Tacit knowledge and showable/sayable are not synonymous",
+				"ja": "6.2 tacit knowledge と showable / sayable は同義ではない"
+			},
+			"pairs": [
+				{
+					"en": "Polanyi's tacit knowledge is a broad concept that includes skill, observation, judgment, valuation, and communal transmission.",
+					"ja": "ポランニーの tacit knowledge は、技能、観察、判断、価値づけ、共同体的伝承を含む広い概念である。"
+				},
+				{
+					"en": "In contrast, shown/unsaid in Tractatus is a boundary concept related to logical form and value.",
+					"ja": "これに対して Tractatus の shown / unsaid は、論理形式や価値の側に関わる境界概念である。"
+				},
+				{
+					"en": "Although there is some overlap between the two, the scope is not the same.",
+					"ja": "両者は重なる部分があるが、範囲が同じではない。"
+				},
+				{
+					"en": "What I would like to be particularly careful about is that the \"what is shown\" in Tractatus can be read as \"tacit knowledge.\"",
+					"ja": "とくに注意したいのは、Tractatus の「示されるもの」をそのまま「暗黙知」と読み替えることだ。"
+				},
+				{
+					"en": "This is understandable as a later comparative interpretation, but the text itself does not say the same thing.",
+					"ja": "これは後代の比較解釈としては理解できるが、テキストそのものが同じことを言っているわけではない。"
+				}
+			]
+		},
+		{
+			"id": "6-3-silence-has-different-meanings",
+			"heading": {
+				"en": "6.3 Silence has different meanings",
+				"ja": "6.3 沈黙の意味が違う"
+			},
+			"pairs": [
+				{
+					"en": "Silence in Tractatus is a methodology of not forcing theorization of the unstateable.",
+					"ja": "Tractatus での沈黙は、言明不可能なものを無理に理論化しないという方法論である。"
+				},
+				{
+					"en": "Rather, Polanyi's \"inability to say\" is affirmed as a support that lies within practice.",
+					"ja": "ポランニーでの「言い切れなさ」は、むしろ実践の内部にある支えとして肯定される。"
+				},
+				{
+					"en": "Silence is closer to respecting boundaries in the former and acknowledging background support in the latter.",
+					"ja": "沈黙は、前者では境界の尊重、後者では背景的支えの承認に近い。"
+				}
+			]
+		},
+		{
+			"id": "7-1-polanyi-reading",
+			"heading": {
+				"en": "7.1 Polanyi reading",
+				"ja": "7.1 ポランニーの読み"
+			},
+			"pairs": [
+				{
+					"en": "In Polanyi research, tacit knowledge is fundamentally read as trained attention and responsible commitment, rather than vague intuition in an individual's head.",
+					"ja": "ポランニー研究では、暗黙知は個人の頭の中の曖昧な勘ではなく、訓練された注意と責任的コミットメントとして読むのが基本である。"
+				},
+				{
+					"en": "The arrangement of the Polanyi Society clearly supports this direction.",
+					"ja": "Polanyi Society の整理は、この方向を明確に支えている。"
+				},
+				{
+					"en": "In this reading, subsidiary awareness, as opposed to focal awareness, is not a defect in awareness, but a condition for its establishment.",
+					"ja": "この読みでは、focal awareness に対する subsidiary awareness は、認識の欠陥ではなく、認識の成立条件である。"
+				},
+				{
+					"en": "Therefore, tacit knowledge is not \"unfinished knowledge that will eventually become fully explicit.\"",
+					"ja": "したがって、暗黙知は「いずれ完全に明示化される未完成の知識」ではない。"
+				}
+			]
+		},
+		{
+			"id": "7-2-reading-of-tractatus",
+			"heading": {
+				"en": "7.2 Reading of Tractatus",
+				"ja": "7.2 Tractatus の読み"
+			},
+			"pairs": [
+				{
+					"en": "The main interpretation of Tractatus is not naive mysticism, but a presentation of the logical limits of representation.",
+					"ja": "Tractatus の主要解釈は、素朴な神秘主義ではなく、論理的な表象限界の提示である。"
+				},
+				{
+					"en": "We can say what we can say, but we cannot grasp what we cannot say in the form of theories.",
+					"ja": "言えることは言い切るが、言えないものは理論の形で捕まえない。"
+				},
+				{
+					"en": "This is an attitude that approaches philosophy as \"resolving confusion\" rather than \"adding explanations.\"",
+					"ja": "これは、哲学を「説明の追加」ではなく「混同の解消」として行う姿勢である。"
+				}
+			]
+		},
+		{
+			"id": "7-3-genealogy-of-secondary-literature-that-connects-the-two",
+			"heading": {
+				"en": "7.3 Genealogy of secondary literature that connects the two",
+				"ja": "7.3 両者をつなぐ二次文献の系譜"
+			},
+			"pairs": [
+				{
+					"en": "In secondary literature, there is a lineage that reads Polanyi in a Wittgensteinian way.",
+					"ja": "二次文献には、Polanyi を Wittgenstein 的に読む系譜がある。"
+				},
+				{
+					"en": "However, most of them emphasize \"practices that precede language,\" \"ability to use rules,\" and \"community judgment,\" and do not completely overlap with Tractatus' theory of silence.",
+					"ja": "ただし、その多くは「言語に先行する実践」「規則を使う能力」「共同体的な判定」を重視する方向であり、Tractatus の沈黙論と完全に重なるわけではない。"
+				},
+				{
+					"en": "Rather than roughly equating the two, it is useful to use this genealogy as a bridge to consider how \"things that cannot be put into words, but are in operation in practice\" come into being.",
+					"ja": "この系譜は、両者を雑に同一視するのではなく、「言語化しきれないが、実践では作動しているもの」がどう成立するかを考えるための橋として使うと有益である。"
+				}
+			]
+		},
+		{
+			"id": "8-practical-implications",
+			"heading": {
+				"en": "8. Practical implications",
+				"ja": "8. 実務的含意"
+			},
+			"pairs": [
+				{
+					"en": "This argument is effective in practice because it provides judgments that are not \"over-summarized\" when extracting tacit knowledge and transferring knowledge.",
+					"ja": "この論点が実務に効くのは、暗黙知の抽出や知識移転で「要約しすぎない」判断を与えるからである。"
+				},
+				{
+					"en": "Leave the original case: In addition to the general theory of experts, leave specific examples, failures, and exceptions.",
+					"ja": "元ケースを残す: 熟達者の一般論だけでなく、具体例、失敗例、例外例を残す。"
+				},
+				{
+					"en": "Keep the original narrative: Do not replace with standard terminology first.",
+					"ja": "元の語りを残す: 先に標準用語へ置換しない。"
+				},
+				{
+					"en": "Habits of phrasing and metaphors are often clues for judgment.",
+					"ja": "言い回しの癖や比喩が、判断の手がかりであることが多い。"
+				},
+				{
+					"en": "Separate clues and conclusions: Record what you saw and what led you to that conclusion separately from your conclusion.",
+					"ja": "手がかりと結論を分ける: 何を見てそう判断したかを、結論と別に記録する。"
+				},
+				{
+					"en": "Don't force people to say what they can't say: Forcible formalization actually lowers the quality of judgment.",
+					"ja": "言えない部分を無理に言わせない: 無理な形式化は、かえって判断の質を下げる。"
+				},
+				{
+					"en": "Verify in practice: Documented rules have meaning only when they are used in the field.",
+					"ja": "実践で検証する: 文書化したルールは、現場で使って初めて意味を持つ。"
+				},
+				{
+					"en": "The important lesson here is that increasing explainability and flattening practical knowledge are not the same thing.",
+					"ja": "ここでの重要な教訓は、説明可能性を上げることと、実践知を平板化することは同じではない、という点である。"
+				},
+				{
+					"en": "In Polanyi's terms, when knowledge loses its support, it also loses its object.",
+					"ja": "ポランニー的に言えば、知識は支えを失うと対象そのものも失う。"
+				},
+				{
+					"en": "In Tractatus terms, philosophical confusion begins the moment you feel like explaining beyond the limits of what can be said.",
+					"ja": "Tractatus 的に言えば、言えるものの限界を越えて説明した気になった瞬間に、哲学的混乱が始まる。"
+				}
+			]
+		},
+		{
+			"id": "9-risks-limitations",
+			"heading": {
+				"en": "9. Risks/Limitations",
+				"ja": "9. リスク・限界"
+			},
+			"pairs": [
+				{
+					"en": "There are three pitfalls to this comparison.",
+					"ja": "この比較には三つの落とし穴がある。"
+				},
+				{
+					"en": "First, Polanyi is reduced to a story of \"knowledge that cannot be expressed in some way.\"",
+					"ja": "第一に、ポランニーを「なんとなく言えない知識」の話に縮めること。"
+				},
+				{
+					"en": "Second, the \"shown\" of Tractatus is short-circuited with tacit knowledge.",
+					"ja": "第二に、Tractatus の「示されるもの」を暗黙知と短絡させること。"
+				},
+				{
+					"en": "Thirdly, by including Wittgenstein's theory of language games in his later years, he obscures the points discussed in his earlier period.",
+					"ja": "第三に、後期ウィトゲンシュタインの言語ゲーム論まで混ぜて、前期の論点を曖昧にすることである。"
+				},
+				{
+					"en": "This paper is an attempt to separate the commonalities and differences between primary literature and major interpretive literature.",
+					"ja": "本稿は、一次文献と主要な解釈文献から、両者の共通点と差異を分けて読もうとする試みである。"
+				},
+				{
+					"en": "Therefore, it does not cover detailed literary history or rigorous comparison of translation differences.",
+					"ja": "したがって、詳細な文献史や翻訳差の厳密比較まではカバーしていない。"
+				}
+			]
+		},
+		{
+			"id": "10-recommended-policy",
+			"heading": {
+				"en": "10. Recommended policy",
+				"ja": "10. 推奨方針"
+			},
+			"pairs": [
+				{
+					"en": "When using these two in practice or research, it is best to handle them in the following order.",
+					"ja": "実務や研究でこの二つを使うなら、次の順で扱うのがよい。"
+				},
+				{
+					"en": "First, check with Polanyi the internal structure of the act of knowing.",
+					"ja": "まずポランニーで、知る行為の内部構造を確認する。"
+				},
+				{
+					"en": "Next, use the Tractatus to check the limits of what can be said.",
+					"ja": "次に Tractatus で、語り得ることの限界を確認する。"
+				},
+				{
+					"en": "On top of that, we should not easily equate the two, but instead place the common point in \"sensitivity to background conditions\" and the difference in \"the purpose of the theory.\"",
+					"ja": "そのうえで、両者を安易に同一視せず、共通点は「背景条件への感度」、差異は「理論の目的」に置く。"
+				},
+				{
+					"en": "Finally, in knowledge transfer and documentation, leave cases, clues, scenes, and exceptions rather than summaries.",
+					"ja": "最後に、知識移転や文書化では、要約よりもケース、手がかり、場面、例外を残す。"
+				},
+				{
+					"en": "By following this order, it is easy to avoid revering tacit knowledge as a \"mystery that cannot be explained\" or misunderstanding that \"everything can be written into a manual.\"",
+					"ja": "この順序にすると、暗黙知を「言えない神秘」として崇めることも、「全部マニュアル化できる」と誤解することも避けやすい。"
+				}
+			]
+		}
+	]
+}

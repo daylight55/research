@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout'
 import TitlePage from '@/components/TitlePage'
-import { getTags, localizedPath } from '@/utils'
+import { getTags, localizedPath, tagSlug } from '@/utils'
 
 const locale = 'en'
 const tags = await getTags(locale)
@@ -13,7 +13,7 @@ const tags = await getTags(locale)
 		{
 			tags.map((tag) => (
 				<a
-					href={localizedPath(locale, `/tags/${tag}`)}
+					href={localizedPath(locale, `/tags/${tagSlug(tag)}/`)}
 					class='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'
 				>
 					#{tag}

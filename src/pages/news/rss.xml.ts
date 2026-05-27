@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss'
 import type { APIRoute } from 'astro'
 import { siteConfig } from '@/site-config'
-import { getNewsPosts, getPostSlug, renderNewsRssContent, withBase } from '@/utils'
+import { getNewsPosts, getPostUrl, renderNewsRssContent } from '@/utils'
 
 export const GET: APIRoute = async (context) => {
 	const posts = await getNewsPosts()
@@ -16,7 +16,7 @@ export const GET: APIRoute = async (context) => {
 			description: post.data.rssSummary ?? post.data.description,
 			content: renderNewsRssContent(post.body),
 			pubDate: post.data.pubDate,
-			link: withBase(`/post/${getPostSlug(post)}/`),
+			link: getPostUrl(post),
 			categories: [post.data.category, ...post.data.tags]
 		}))
 	})

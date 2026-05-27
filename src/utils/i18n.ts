@@ -3,25 +3,31 @@ import type { CollectionEntry } from 'astro:content'
 import { withBase } from './basePath'
 
 export const DEFAULT_LOCALE = 'ja'
-export const SUPPORTED_LOCALES = ['ja', 'en'] as const
+export const SUPPORTED_LOCALES = ['ja', 'en', 'mix'] as const
 export type Locale = (typeof SUPPORTED_LOCALES)[number]
+const CONTENT_LOCALES = ['ja', 'en'] as const
+type ContentLocale = (typeof CONTENT_LOCALES)[number]
 
 type BlogPost = CollectionEntry<'blog'>
 type PostLike = Pick<BlogPost, 'id'>
+type RoutablePost = Pick<BlogPost, 'id'> & Partial<Pick<BlogPost, 'data'>>
 
 const ARTICLE_TYPES = new Set(['report', 'news'])
+const ARTICLE_SECTIONS = {
+	report: 'reports',
+	news: 'news'
+} as const
 
 export function isLocale(value: string | undefined): value is Locale {
 	return SUPPORTED_LOCALES.includes(value as Locale)
 }
 
+function isContentLocale(value: string | undefined): value is ContentLocale {
+	return CONTENT_LOCALES.includes(value as ContentLocale)
+}
+
 export function getPostLocale(post: PostLike): Locale {
-	const [firstSegment, secondSegment] = post.id.split('/')
-	if (isLocale(firstSegment) && firstSegment !== DEFAULT_LOCALE) return firstSegment
-	if (ARTICLE_TYPES.has(firstSegment) && isLocale(secondSegment) && secondSegment !== DEFAULT_LOCALE) {
-		return secondSegment
-	}
-	return DEFAULT_LOCALE
+	return post.id.split('/').find(isContentLocale) ?? DEFAULT_LOCALE
 }
 
 export function articleSlugFromId(id: string): string {
@@ -39,6 +45,14 @@ export function getPostSlug(post: PostLike): string {
 	return articleSlugFromId(post.id)
 }
 
+export function getPostSection(
+	post: RoutablePost
+): (typeof ARTICLE_SECTIONS)[keyof typeof ARTICLE_SECTIONS] {
+	const contentType =
+		post.data?.contentType ?? post.id.split('/').find((segment) => ARTICLE_TYPES.has(segment))
+	return ARTICLE_SECTIONS[contentType as keyof typeof ARTICLE_SECTIONS] ?? ARTICLE_SECTIONS.report
+}
+
 export function stripLocaleFromPath(pathname: string): string {
 	const normalized = pathname.startsWith('/') ? pathname : `/${pathname}`
 	const [maybeLocale, ...rest] = normalized.replace(/^\/+/, '').split('/')
@@ -47,13 +61,18 @@ export function stripLocaleFromPath(pathname: string): string {
 
 export function localizedPath(locale: Locale, path = '/'): string {
 	const normalized = path.replace(/^\/+/, '').replace(/\/$/, '')
+	if (locale === 'mix') {
+		const href = `/mix/${normalized}`.replace(/\/+$/, '')
+		return withBase(`${href || '/mix'}/`)
+	}
+
 	const localized = getRelativeLocaleUrl(locale, normalized)
 	const href = localized.endsWith('/') ? localized : `${localized}/`
 	return withBase(href)
 }
 
-export function getPostUrl(post: PostLike): string {
-	return localizedPath(getPostLocale(post), `/post/${getPostSlug(post)}/`)
+export function getPostUrl(post: RoutablePost): string {
+	return localizedPath(getPostLocale(post), `/${getPostSection(post)}/${getPostSlug(post)}/`)
 }
 
 export function findPostTranslation(

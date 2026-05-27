@@ -82,7 +82,7 @@ jobs:
         run: |
           set -euo pipefail
           git diff --check
-          ! grep -RInE '\b(TBD|TODO|FIXME|未定|要確認)\b' articles/report/en articles/news/en
+          ! grep -RInE '\b(TBD|TODO|FIXME|未定|要確認)\b' articles/report articles/news
           pnpm build
 
       - name: Create translation pull request
@@ -95,7 +95,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          if [[ -z "$(git status --porcelain -- articles/report/en articles/news/en)" ]]; then
+          if [[ -z "$(git status --porcelain -- articles/report articles/news)" ]]; then
             echo "No translation changes were produced."
             exit 0
           fi
@@ -104,7 +104,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "${branch}"
-          git add articles/report/en articles/news/en
+          git add articles/report articles/news
           git commit -m "Add English blog translations"
           git push origin "${branch}"
 
@@ -114,7 +114,7 @@ jobs:
             echo "- Codex translation job により不足していた英語版記事を追加します。"
             echo
             echo "## 背景・目的"
-            echo "- 日本語記事を正本としつつ、英語版を \`articles/report/en/\` と \`articles/news/en/\` に生成して ja/en 切り替え対象にします。"
+            echo "- 日本語記事を正本としつつ、英語版を \`articles/report/\${slug}/en/\` と \`articles/news/\${slug}/en/\` に生成して ja/en 切り替え対象にします。"
             echo
             echo "## 主な変更点"
             echo "- Missing English articles: ${MISSING_COUNT}"

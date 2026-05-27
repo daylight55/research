@@ -2,13 +2,13 @@
 import BaseLayout from '@/layouts/BaseLayout'
 import ListPosts from '@/components/ListPosts'
 import TitlePage from '@/components/TitlePage'
-import { getTags, getPostByTag } from '@/utils'
+import { getTags, getPostByTag, tagSlug } from '@/utils'
 
 export async function getStaticPaths() {
-	const tags = await getTags()
+	const tags = [...new Set([...(await getTags()), ...(await getTags('en'))])]
 
 	return tags.map((tag) => ({
-		params: { tag },
+		params: { tag: tagSlug(tag) },
 		props: { tag }
 	}))
 }

@@ -1,77 +1,35 @@
 ---
-import { type CollectionEntry, getCollection, render } from 'astro:content'
-import BaseLayout from '@/layouts/BaseLayout'
-import Code from '@/components/mdx/Code'
-import ArrowUpRight from '@/components/icons/ArrowUpRight'
-import { getPostLocale, getPostSlug, localizedPath } from '@/utils'
+import { getPostSlug, localizedPath, getReportPosts } from '@/utils'
 
 type Props = {
-	post: CollectionEntry<'blog'>
-	research: CollectionEntry<'articleResearch'>
+	target: string
 }
 
 export async function getStaticPaths() {
-	const posts = (await getCollection('blog')).filter((post) => getPostLocale(post) === 'en')
-	const researchEntries = await getCollection('articleResearch')
-	const researchBySlug = new Map(researchEntries.map((entry) => [getPostSlug(entry), entry]))
+	const posts = await getReportPosts(undefined, 'en')
 
-	return posts
-		.map((post) => {
-			const slug = getPostSlug(post)
-			const research = researchBySlug.get(slug)
-			if (!research || post.data.draft) return null
-			return {
-				params: { slug },
-				props: { post, research }
-			}
-		})
-		.filter((path): path is { params: { slug: string }; props: Props } => path !== null)
+	return posts.map((post) => {
+		const slug = getPostSlug(post)
+		return {
+			params: { slug },
+			props: { target: localizedPath('en', `/reports/${slug}/research/`) }
+		}
+	})
 }
 
-const locale = 'en'
-const { post, research } = Astro.props
-const postSlug = getPostSlug(post)
-const { Content } = await render(research)
-const title = research.data.title ?? `${post.data.title} research trail`
+const { target } = Astro.props as Props
 ---
 
-<BaseLayout
-	title={title}
-	description={post.data.description}
-	image={post.data.heroImage?.src}
-	locale={locale}
->
-	<article class='mx-auto grid max-w-6xl gap-8 py-4'>
-		<header class='research-hero grid gap-6 rounded-lg px-5 py-6 shadow-sm sm:px-8 sm:py-8'>
-			<a
-				href={localizedPath(locale, `/post/${postSlug}/`)}
-				class='inline-flex w-fit items-center gap-2 rounded-full border border-black/10 bg-white/75 px-3 py-1.5 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-200 [&_svg]:h-4 [&_svg]:w-4'
-			>
-				<ArrowUpRight />
-				Back to article
-			</a>
-			<div class='grid gap-2'>
-				<p
-					class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'
-				>
-					Research Trail
-				</p>
-				<h1
-					class='text-3xl font-semibold leading-tight text-gray-950 dark:text-gray-50 md:text-5xl'
-				>
-					{title}
-				</h1>
-				<p class='max-w-4xl leading-7 text-gray-700 dark:text-gray-300'>
-					A public record of the questions, source selection, rejected evidence, decision criteria,
-					and update conditions behind this article.
-				</p>
-			</div>
-		</header>
-
-		<div
-			class='prose prose-base max-w-none rounded-lg border border-black/10 bg-white/85 px-5 py-6 dark:border-white/10 dark:bg-white/5 dark:prose-invert sm:px-8 md:prose-lg prose-h2:border-t prose-h2:border-black/10 prose-h2:pt-7 prose-h2:first:border-t-0 prose-h2:first:pt-0 prose-p:leading-8 prose-li:leading-8 prose-table:text-sm dark:prose-h2:border-white/10'
-		>
-			<Content components={{ pre: Code }} />
-		</div>
-	</article>
-</BaseLayout>
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<meta http-equiv='refresh' content={`0; url=${target}`} />
+		<meta name='robots' content='noindex' />
+		<link rel='canonical' href={target} />
+		<title>Redirecting...</title>
+	</head>
+	<body>
+		<a href={target}>Redirecting...</a>
+	</body>
+</html>

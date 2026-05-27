@@ -1,0 +1,563 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"en": "1. Executive Summary",
+				"ja": "1. エグゼクティブサマリー"
+			},
+			"pairs": [
+				{
+					"en": "As of May 14, 2026, Japan is in a phase where \"inflation appears to be temporarily slowing, but underlying inflation, wages, and long-term interest rates have already moved away from the era of zero interest rates.\"",
+					"ja": "2026年5月14日時点の日本は、「インフレは一時的に鈍化して見えるが、基調インフレ・賃金・長期金利はすでにゼロ金利時代から離れている」局面にある。"
+				},
+				{
+					"en": "At its meeting on April 28, 2026, the Bank of Japan kept the overnight uncollateralized call rate, which corresponds to the policy interest rate, unchanged at around 0.75%.",
+					"ja": "日銀は2026年4月28日の会合で、政策金利に相当する無担保コール翌日物を0.75%程度に据え置いた。"
+				},
+				{
+					"en": "However, the vote was 6-3, with three voting for a rate hike to 1.0%.",
+					"ja": "ただし採決は6対3で、3人は1.0%への利上げを主張した。"
+				},
+				{
+					"en": "This indicates that the decision to leave the rate unchanged was not a statement of intent to continue easing, but rather a decision to adjust the pace of interest rate hikes while taking into consideration the uncertainty surrounding the situation in the Middle East, crude oil prices, and supply constraints.",
+					"ja": "これは、据え置きが緩和継続の意思表示というより、中東情勢・原油価格・供給制約の不確実性を見ながら利上げペースを調整する判断だったことを示す。"
+				},
+				{
+					"en": "The conclusions of this report are as follows.",
+					"ja": "本レポートの結論は次の通りである。"
+				},
+				{
+					"en": "Policy interest rates have a ripple effect on savings deposits, short-term prime rates, variable housing loans, and corporate loans through banks' short-term funding costs.",
+					"ja": "政策金利は銀行の短期調達コストを通じて、普通預金、短期プライムレート、変動型住宅ローン、企業向け貸出へ波及する。"
+				},
+				{
+					"en": "Long-term fixed mortgages are more strongly influenced by 10-year, 20-year, and 30-year government bond yields and the issuance conditions of MBS/organizational bonds than by the policy interest rate itself.",
+					"ja": "長期固定住宅ローンは、政策金利そのものより、10年・20年・30年国債利回りやMBS/機構債の発行条件を強く反映する。"
+				},
+				{
+					"en": "As of May 2026, the impact on variable mortgages will be gradual, but fixed mortgages and long-term interest rates have already risen significantly.",
+					"ja": "2026年5月時点では、変動型住宅ローンへの波及は段階的だが、固定型住宅ローンと長期金利はすでに大きく上がっている。"
+				},
+				{
+					"en": "The most common interest rate for Flat 35 in May 2026 is 2.71%, and the 10-year government bond yield has been hovering around 2.6% as of May 14th.",
+					"ja": "フラット35の2026年5月最頻金利は2.71%で、10年国債利回りは5月14日におおむね2.6%近辺で推移している。"
+				},
+				{
+					"en": "The Bank of Japan's current policy is to continue raising interest rates if underlying inflation approaches 2%, with a temporary pause at 0.75%.",
+					"ja": "日銀の現在方針は「0.75%で一時停止しつつ、基調インフレが2%に近づくなら利上げを続ける」である。"
+				},
+				{
+					"en": "The April Outlook Report projects the median CPI excluding fresh food in 2026 to be 2.8% and the median real GDP to be 0.5%.",
+					"ja": "4月展望レポートは、2026年度の生鮮食品除くCPI中央値を2.8%、実質GDP中央値を0.5%と見込む。"
+				},
+				{
+					"en": "The long-term policy that Japan should adopt is to return to a normal inflation targeting policy using short-term policy interest rates as the main instrument, and not to reintroduce a permanent YCC.",
+					"ja": "長期的に日本が採るべき政策は、短期政策金利を主手段にした通常のインフレ目標政策へ戻し、恒常的なYCCを再導入しないことである。"
+				},
+				{
+					"en": "YCC is likely to damage market functioning, fiscal discipline, and the credibility of the yen.",
+					"ja": "YCCは市場機能、財政規律、円の信認を傷つけやすい。"
+				},
+				{
+					"en": "Even if they are used, they should be limited to emergency tools that specify deadlines, conditions, and exits in the event of financial market malfunction.",
+					"ja": "使うとしても、金融市場の機能不全時に期限・条件・出口を明示した非常時ツールに限るべきである。"
+				},
+				{
+					"en": "Raising interest rates too quickly or too slowly is dangerous.",
+					"ja": "利上げは急ぎすぎても遅すぎても危険である。"
+				},
+				{
+					"en": "The most realistic policy is a data-based normalization based on gradual interest rate hikes in 0.25% increments and simultaneous monitoring of wages, service prices, expected inflation, yen depreciation and import prices, mortgage delinquencies, and unrealized losses of regional financial institutions.",
+					"ja": "最も現実的な方針は、0.25%刻みの漸進的な利上げを基調にし、賃金、サービス価格、期待インフレ、円安・輸入物価、住宅ローン延滞、地域金融機関の含み損を同時に監視するデータ依存型の正常化である。"
+				}
+			]
+		},
+		{
+			"id": "rate-relationship",
+			"heading": {
+				"en": "2. Interest rate relationship: from policy interest rates to banks and housing loans",
+				"ja": "2. 金利の関係: 政策金利から銀行・住宅ローンへ"
+			},
+			"pairs": [
+				{
+					"en": "The policy rate is the shortest interest rate that the central bank induces in the money market.",
+					"ja": "政策金利は、中央銀行が短期金融市場で誘導する最も短い金利である。"
+				},
+				{
+					"en": "In Japan, the Bank of Japan currently guides the uncollateralized overnight call rate, which affects the interest rate on funds held by financial institutions in their current accounts at the Bank, the transaction rate on short-term funds, and banks' funding costs.",
+					"ja": "日本では現在、日銀が無担保コール翌日物金利を誘導し、金融機関が日銀当座預金に置く資金の付利金利、短期資金の取引金利、銀行の調達コストに影響を与える。"
+				},
+				{
+					"en": "Banks adjust savings deposit interest rates, fixed deposit interest rates, short-term prime rates, and home loan over-the-counter interest rates while looking at their funding costs and competitive environment.",
+					"ja": "銀行はその調達コストと競争環境を見ながら、普通預金金利、定期預金金利、短期プライムレート、住宅ローン店頭金利を調整する。"
+				},
+				{
+					"en": "For variable housing loans, the applicable interest rate is often determined based on the short-term prime rate or the bank's over-the-counter standard interest rate, minus individual preferential treatment ranges.",
+					"ja": "変動型住宅ローンは、短期プライムレートや銀行の店頭基準金利を起点に、個別の優遇幅を差し引いて適用金利が決まることが多い。"
+				},
+				{
+					"en": "Therefore, when the policy interest rate rises, it affects banks' short-term funding costs, short-term prime rates, and over-the-counter home loan interest rates, in that order.",
+					"ja": "このため、政策金利が上がると、銀行の短期調達コスト、短期プライムレート、住宅ローン店頭金利の順に波及する。"
+				},
+				{
+					"en": "However, the actual applicable interest rate will lag depending on competition among banks, the range of preferential treatment, rules for reviewing existing contracts, and the presence or absence of the 5-year rule and 125% rule.",
+					"ja": "ただし実際の適用金利は、銀行間競争、優遇幅、既存契約の見直しルール、5年ルール・125%ルールの有無で遅れて動く。"
+				},
+				{
+					"en": "Fixed mortgages are closer to long-term interest rates than short-term policy rates.",
+					"ja": "固定型住宅ローンは、短期政策金利より長期金利に近い。"
+				},
+				{
+					"en": "Long-term fixed loans like Flat 35 depend on securitization of loans, Japan Housing Finance Agency bonds, government bond yields, and spreads demanded by investors.",
+					"ja": "フラット35のような長期固定ローンは、貸出債権の証券化、住宅金融支援機構債、国債利回り、投資家が求めるスプレッドに左右される。"
+				},
+				{
+					"en": "Therefore, the understanding that \"the 35-year fixed rate will be around 0.75% because the Bank of Japan is 0.75%\" is incorrect.",
+					"ja": "したがって「日銀が0.75%だから35年固定も0.75%近辺になる」という理解は誤りである。"
+				},
+				{
+					"en": "The most common interest rate for Flat 35 in May 2026 is 2.71% with a loan rate of 90% or less and a new institutional credit, which is considerably higher than the policy rate.",
+					"ja": "2026年5月のフラット35最頻金利は、融資率9割以下・新機構団信付きで2.71%であり、政策金利よりかなり高い。"
+				}
+			]
+		},
+		{
+			"id": "latest-indicators",
+			"heading": {
+				"en": "3. Latest indicators: as of May 14, 2026",
+				"ja": "3. 最新指標: 2026年5月14日時点"
+			},
+			"pairs": [
+				{
+					"en": "The latest national CPI is for March 2026.",
+					"ja": "最新の全国CPIは2026年3月分である。"
+				},
+				{
+					"en": "The total CPI was 1.5% compared to the previous year, the total excluding fresh food was 1.8%, and the total excluding fresh food and energy was 2.4%.",
+					"ja": "総合CPIは前年比1.5%、生鮮食品を除く総合は1.8%、生鮮食品及びエネルギーを除く総合は2.4%だった。"
+				},
+				{
+					"en": "On the surface, core CPI was below 2%, but because it is a reaction to energy subsidies and food price increases from the previous year, it is necessary to look at service prices, wages, expected inflation, and core-core together to determine underlying inflation.",
+					"ja": "表面上のコアCPIは2%を下回ったが、エネルギー補助や前年の食品価格上昇の反動を受けるため、基調インフレを判断するにはサービス価格、賃金、期待インフレ、コアコアを合わせて見る必要がある。"
+				},
+				{
+					"en": "The labor market is still tight.",
+					"ja": "労働市場はまだ引き締まっている。"
+				},
+				{
+					"en": "The unemployment rate in March 2026 was 2.7% on a seasonally adjusted basis.",
+					"ja": "2026年3月の完全失業率は季節調整値で2.7%だった。"
+				},
+				{
+					"en": "Although the unemployment rate is low, it is necessary to look at real wages, labor participation, regular/non-regular workers, and wage differences by company size.",
+					"ja": "失業率は低位だが、実質賃金、労働参加、正規・非正規、企業規模別の賃上げ格差を見る必要がある。"
+				},
+				{
+					"en": "If the Bank of Japan raises interest rates too quickly, there is a risk of dampening demand before the rise in nominal wages leads to a recovery in real incomes.",
+					"ja": "日銀が利上げを急ぎすぎると、名目賃金の上昇が実質所得の回復へつながる前に需要を冷やすリスクがある。"
+				},
+				{
+					"en": "GDP requires attention.",
+					"ja": "GDPは注意が必要である。"
+				},
+				{
+					"en": "As of May 14, 2026, the first preliminary report on GDP for the January-March period of 2026 has not yet been published.",
+					"ja": "2026年5月14日時点では、2026年1-3月期GDPの1次速報はまだ公表されていない。"
+				},
+				{
+					"en": "According to the Cabinet Office ESRI's publication schedule, the first preliminary report for the January-March period of 2026 will be released at 8:50 on May 19, 2026.",
+					"ja": "内閣府ESRIの公表予定では、2026年1-3月期の1次速報は2026年5月19日8時50分である。"
+				},
+				{
+					"en": "Therefore, the latest official quarterly GDP figure available in this report is the second preliminary report for the October-December period of 2025, in which real GDP was 0.6% compared to the previous quarter, or 2.6% annually.",
+					"ja": "したがって、本レポートで利用できる最新の四半期GDP公式値は2025年10-12月期の2次速報で、実質GDPは前期比0.6%、年率2.6%だった。"
+				},
+				{
+					"en": "Long-term interest rates have already moved to a different level from the YCC era.",
+					"ja": "長期金利は、すでにYCC時代とは別の水準に移った。"
+				},
+				{
+					"en": "In the domestic bond market on May 14, 2026, the yield on 10-year government bonds generally hovered around 2.6%.",
+					"ja": "2026年5月14日の国内債券市場では、10年国債利回りがおおむね2.6%近辺で推移した。"
+				},
+				{
+					"en": "This has a direct effect on fixed home loans, interest payments on government bonds, securities valuations for banks and insurance companies, and long-term financing for companies.",
+					"ja": "これは、固定住宅ローン、国債利払い、銀行・保険会社の有価証券評価、企業の長期資金調達に直接効く。"
+				}
+			]
+		},
+		{
+			"id": "boj-policy",
+			"heading": {
+				"en": "4. Current and future policies of the Bank of Japan",
+				"ja": "4. 日銀の現在方針と今後の方針"
+			},
+			"pairs": [
+				{
+					"en": "The Bank of Japan's current policy is not a simple \"wait and see\" approach.",
+					"ja": "日銀の現在方針は、単純な「様子見」ではない。"
+				},
+				{
+					"en": "The April 2026 Outlook Report set the median real GDP growth rate for FY2026 as 0.5%, the median CPI excluding fresh food as 2.8%, and the median CPI excluding fresh food and energy as 2.6%.",
+					"ja": "2026年4月展望レポートは、2026年度の実質GDP成長率中央値を0.5%、生鮮食品除くCPI中央値を2.8%、生鮮食品・エネルギー除くCPI中央値を2.6%とした。"
+				},
+				{
+					"en": "In FY2027, the median CPI excluding fresh food is 2.3% and core-core is 2.6%.",
+					"ja": "2027年度も、生鮮食品除くCPI中央値2.3%、コアコア2.6%である。"
+				},
+				{
+					"en": "This means that the Bank of Japan believes that \"growth will slow in 2026, but prices will likely exceed the target.\"",
+					"ja": "これは、日銀が「2026年は成長が鈍るが、物価は目標を上回りやすい」と見ていることを意味する。"
+				},
+				{
+					"en": "The main opinions from the April meeting indicate that the committee's center of gravity is in the direction of rate hikes.",
+					"ja": "4月会合の主な意見は、委員会内部の重心が利上げ方向にあることを示す。"
+				},
+				{
+					"en": "Several opinions said that with underlying inflation approaching 2% and real policy rates extremely low, it would be appropriate to raise policy rates and adjust the degree of easing.",
+					"ja": "複数の意見が、基調インフレが2%に近づき、実質政策金利が著しく低い以上、政策金利を引き上げて緩和度合いを調整することが適切だと述べている。"
+				},
+				{
+					"en": "On the other hand, due to the great uncertainty surrounding the situation in the Middle East and supply constraints, it was decided to leave prices unchanged as of April.",
+					"ja": "一方で、中東情勢と供給制約の不確実性が大きいため、4月時点では据え置きが選ばれた。"
+				},
+				{
+					"en": "Based on publicly available information, the Bank of Japan's future policy is likely to resume interest rate hikes under the following three conditions.",
+					"ja": "今後の日銀方針は、公表情報からの推定では、次の三条件で利上げ再開に傾く。"
+				},
+				{
+					"en": "Service prices, wages, and expected inflation will settle at around 2%.",
+					"ja": "サービス価格・賃金・期待インフレが2%近辺に定着する。"
+				},
+				{
+					"en": "High crude oil prices will not end up being a temporary supply shock, but will spread to a wide range of price pass-throughs through the weaker yen, import prices, and logistics costs.",
+					"ja": "原油高が一時的な供給ショックで終わらず、円安・輸入物価・物流費を通じて広範な価格転嫁に波及する。"
+				},
+				{
+					"en": "GDP and household consumption in January-March 2026 will be strong enough to withstand interest rate hikes.",
+					"ja": "2026年1-3月GDPや家計消費が、利上げに耐えられる程度に底堅い。"
+				},
+				{
+					"en": "Conversely, if supply constraints are strongly manifested in stagnation in production, deterioration in employment, and a slowdown in consumption, the Bank of Japan should delay raising interest rates.",
+					"ja": "逆に、供給制約が生産停滞、雇用悪化、消費失速として強く出る場合、日銀は利上げを遅らせるべきである。"
+				},
+				{
+					"en": "Monetary policy during supply shocks is difficult.",
+					"ja": "供給ショック時の金融政策は難しい。"
+				},
+				{
+					"en": "If you only look at prices, it will raise interest rates, but if real income and production are hurt at the same time, raising interest rates will further dampen demand.",
+					"ja": "物価だけを見れば利上げだが、実質所得と生産が同時に傷む場合、利上げは需要をさらに冷やす。"
+				},
+				{
+					"en": "Therefore, the correct reaction function for the Bank of Japan is not to \"mechanically raise interest rates because the inflation rate is high,\" but \"to raise interest rates if underlying inflation and expected inflation exceed the target and the economy remains close to its potential growth rate.\"",
+					"ja": "したがって、日銀の正しい反応関数は「インフレ率が高いから機械的に利上げ」ではなく、「基調インフレと期待インフレが目標を上回り、景気が潜在成長率近辺で持ちこたえるなら利上げ」である。"
+				},
+				{
+					"en": "The IMF supports broadly the same direction.",
+					"ja": "IMFも、おおむね同じ方向を支持している。"
+				},
+				{
+					"en": "Article IV 2026 stated that the Bank of Japan's withdrawal of easing was appropriate and that it should continue to gradually raise interest rates toward a neutral rate as underlying inflation approaches its target.",
+					"ja": "2026年Article IVでは、日銀の緩和撤回は適切で、基調インフレが目標に近づくにつれて中立金利へ向けた漸進的利上げを続けるべきだとした。"
+				},
+				{
+					"en": "At the same time, there is uncertainty in the external environment, neutral interest rates, and the impact of monetary policy, so flexible and data-dependent operations are necessary.",
+					"ja": "同時に、外部環境、中立金利、金融政策の波及には不確実性があるため、柔軟でデータ依存的な運営が必要だとしている。"
+				}
+			]
+		},
+		{
+			"id": "what-was-ycc",
+			"heading": {
+				"en": "5. What was YCC?",
+				"ja": "5. YCCとは何だったか"
+			},
+			"pairs": [
+				{
+					"en": "Yield curve control is a policy in which the central bank purchases government bonds targeting not only short-term interest rates but also long-term interest rates.",
+					"ja": "イールドカーブコントロールは、中央銀行が短期金利だけでなく長期金利も目標にして国債を買う政策である。"
+				},
+				{
+					"en": "In Japan, it was introduced in September 2016 as \"Quantitative and Qualitative Monetary Easing with Long-term and Short-term Interest Rate Control\", and was a framework that led to negative short-term interest rates and 10-year government bond yields to around 0%.",
+					"ja": "日本では2016年9月に「長短金利操作付き量的・質的金融緩和」として導入され、短期金利をマイナス、10年国債利回りをゼロ%程度に誘導する枠組みだった。"
+				},
+				{
+					"en": "The objective was to continue the relaxation necessary to overcome deflation, while also suppressing the side effects of lower interest rates that lasted too long, hurting financial institutions' profits and pension and insurance investments.",
+					"ja": "目的は、デフレ脱却に必要な緩和を続けながら、長すぎる金利低下で金融機関収益や年金・保険運用を傷める副作用を抑えることにあった。"
+				},
+				{
+					"en": "YCC was rational during the deflationary period.",
+					"ja": "YCCはデフレ期には合理性があった。"
+				},
+				{
+					"en": "At a time when expected inflation was low, nominal interest rates were stuck at the zero lower bound, and the government, businesses, and households had become accustomed to low interest rates, it was possible to strongly ease financial conditions by suppressing long-term interest rates.",
+					"ja": "期待インフレが低く、名目金利がゼロ下限に張りつき、政府・企業・家計が低金利に慣れきっていた局面では、長期金利を抑えることで金融環境を強く緩和できた。"
+				},
+				{
+					"en": "However, in a situation where the inflation rate approaches 2% and the Bank of Japan itself expects to maintain a \"mechanism in which wages and prices gradually increase relative to each other\", the side effects of artificially suppressing government bond yields become significant.",
+					"ja": "しかし、インフレ率が2%近辺に近づき、日銀自身が「賃金と物価が相互に緩やかに上昇するメカニズム」の維持を見込む局面では、国債利回りを人為的に抑え続ける副作用が大きくなる。"
+				},
+				{
+					"en": "In March 2024, the Bank of Japan determined that QQE with YCC and the negative interest rate policy had played their role, and shifted to a framework in which short-term interest rates are the main policy tool.",
+					"ja": "2024年3月、日銀はQQE with YCCとマイナス金利政策が役割を果たしたと判断し、短期金利を主な政策手段にする枠組みへ移行した。"
+				},
+				{
+					"en": "This is an important institutional change.",
+					"ja": "これは重要な制度変更である。"
+				},
+				{
+					"en": "The Bank of Japan has not completely ignored long-term interest rates, and has said that it can respond to sudden increases in long-term interest rates by increasing its purchases of government bonds and limit-market operations, but its permanent 10-year interest rate target has ended.",
+					"ja": "日銀は長期金利を完全に放置しているわけではなく、急激な長期金利上昇には国債買入増額や指値オペで対応できるとしたが、恒常的な10年金利目標は終了した。"
+				}
+			]
+		},
+		{
+			"id": "long-term-policy",
+			"heading": {
+				"en": "6. Long-term desirable policies for Japan",
+				"ja": "6. 日本にとって長期的に望ましい政策"
+			},
+			"pairs": [
+				{
+					"en": "The desirable long-term monetary policy is a flexible inflation targeting policy that uses short-term interest rates as the main instrument.",
+					"ja": "長期的に望ましい金融政策は、短期金利を主手段にした柔軟なインフレ目標政策である。"
+				},
+				{
+					"en": "The Bank of Japan will move its policy interest rate closer to the neutral rate while maintaining its 2% inflation target.",
+					"ja": "日銀は2%物価目標を維持しつつ、政策金利を中立金利へ近づける。"
+				},
+				{
+					"en": "However, Japan's neutral interest rate has a large estimation error.",
+					"ja": "ただし、日本の中立金利は推定誤差が大きい。"
+				},
+				{
+					"en": "A specific number should not be a fixed target, as it will change depending on demographic trends, potential growth rate, fiscal premium, global interest rates, and yen risk premium.",
+					"ja": "人口動態、潜在成長率、財政プレミアム、グローバル金利、円のリスクプレミアムで変わるため、特定の数字を固定目標にするべきではない。"
+				},
+				{
+					"en": "In this framework, the Bank of Japan should conduct policy in the following order.",
+					"ja": "この枠組みでは、日銀は次の順序で政策を運営するのがよい。"
+				},
+				{
+					"en": "The main indicators are underlying inflation, service prices, wages, and expected inflation.",
+					"ja": "基調インフレ、サービス価格、賃金、期待インフレを主指標にする。"
+				},
+				{
+					"en": "Decisions on whether to raise or keep interest rates unchanged will be made at each meeting based on 0.25% increments.",
+					"ja": "0.25%刻みを基本に、会合ごとに利上げ・据え置きを判断する。"
+				},
+				{
+					"en": "While the real policy interest rate is significantly negative, the degree of easing will be reduced unless the economy collapses.",
+					"ja": "実質政策金利が大きくマイナスの間は、景気が崩れない限り緩和度合いを減らす。"
+				},
+				{
+					"en": "Long-term interest rates allow the market to discover prices.",
+					"ja": "長期金利は市場に価格発見させる。"
+				},
+				{
+					"en": "Use liquidity provision, increased purchases, and limit operations only when the government bond market becomes dysfunctional.",
+					"ja": "国債市場が機能不全になったときだけ、流動性供給・買入増額・指値オペを使う。"
+				},
+				{
+					"en": "YCC should not be reinstated as a permanent policy.",
+					"ja": "YCCを恒常政策として復活させるべきではない。"
+				},
+				{
+					"en": "There are three reasons.",
+					"ja": "理由は三つある。"
+				},
+				{
+					"en": "First, YCC during an inflationary phase worsens the yen's depreciation and import prices.",
+					"ja": "第一に、インフレ局面のYCCは円安と輸入物価を悪化させる。"
+				},
+				{
+					"en": "If long-term interest rates are artificially suppressed, the interest rate differential with other countries will widen, and pressure on the yen to depreciate will likely increase.",
+					"ja": "長期金利を人為的に抑えると、海外との金利差が広がり、円安圧力が高まりやすい。"
+				},
+				{
+					"en": "Inflation in Japan is strongly influenced by energy, food, and imported goods, so a weak yen hurts real household income.",
+					"ja": "日本のインフレはエネルギー・食料・輸入財の影響を強く受けるため、円安は家計の実質所得を傷める。"
+				},
+				{
+					"en": "Second, YCC blurs the line with fiscal finance.",
+					"ja": "第二に、YCCは財政ファイナンスとの境界を曖昧にする。"
+				},
+				{
+					"en": "If the Bank of Japan continues to suppress long-term government bond yields, it will be easier for the government to assume low interest payments even with high debt.",
+					"ja": "日銀が長期国債利回りを抑え続けると、政府は高債務でも低利払いを前提にしやすくなる。"
+				},
+				{
+					"en": "This weakens monetary policy independence and fiscal discipline.",
+					"ja": "これは金融政策の独立性と財政規律を弱める。"
+				},
+				{
+					"en": "The fiscal burden caused by rising interest rates is a real problem, but hiding it through monetary policy will make the exit cost even greater.",
+					"ja": "金利上昇による財政負担は現実の問題だが、それを金融政策で隠すと、出口のコストがより大きくなる。"
+				},
+				{
+					"en": "Third, YCC destroys market function.",
+					"ja": "第三に、YCCは市場機能を壊す。"
+				},
+				{
+					"en": "Government bond yields are important prices that reflect prices, growth, fiscal conditions, and risk premiums.",
+					"ja": "国債利回りは、物価、成長、財政、リスクプレミアムを反映する重要な価格である。"
+				},
+				{
+					"en": "If the central bank fixes it for a long period of time, it will distort price discovery, hedging, collateral valuation, and ALM for banks and insurance companies.",
+					"ja": "中央銀行が長期間それを固定すると、価格発見、ヘッジ、担保評価、銀行・保険会社のALMが歪む。"
+				},
+				{
+					"en": "Upon exit, interest rates that had been suppressed will move suddenly, increasing financial stability risks.",
+					"ja": "出口では、抑え込まれていた金利が一気に動き、むしろ金融安定リスクを高める。"
+				},
+				{
+					"en": "However, YCC-like methods should not be completely rejected.",
+					"ja": "ただし、YCC的な手段を完全に否定すべきではない。"
+				},
+				{
+					"en": "When the government bond market loses liquidity, leading to fire sales, collateral concerns, and settlement concerns instead of price discovery, the central bank needs to intervene as the last market stabilizing agent.",
+					"ja": "国債市場が流動性を失い、価格発見ではなく投げ売り・担保不安・決済不安が起きる場合、中央銀行は最後の市場安定化主体として介入する必要がある。"
+				},
+				{
+					"en": "In that case, instead of permanently adhering to the target interest rate, the deadline, size of purchases, target year, and termination conditions should be clearly stated, and it should be made clear that the purpose of monetary policy is not \"fiscal support\" but \"recovery of market functioning.\"",
+					"ja": "その場合も、目標金利を恒久的に守るのではなく、期限、買入規模、対象年限、終了条件を明示し、金融政策の目的が「財政支援」ではなく「市場機能の回復」であることをはっきりさせるべきである。"
+				}
+			]
+		},
+		{
+			"id": "practical-implications",
+			"heading": {
+				"en": "7. Implications for mortgage users, banks and governments",
+				"ja": "7. 住宅ローン利用者・銀行・政府への含意"
+			},
+			"pairs": [
+				{
+					"en": "For home loan users, what is more important is what interest rate their loan is linked to, rather than what the policy interest rate is.",
+					"ja": "住宅ローン利用者にとって、重要なのは「政策金利が何%か」より、自分のローンがどの金利に連動しているかである。"
+				},
+				{
+					"en": "Floating types must look at the short-term prime rate and banks' standard interest rates, while fixed types must look at long-term government bond yields and market funding costs.",
+					"ja": "変動型は短期プライムレートと銀行の基準金利、固定型は長期国債利回りと市場調達コストを見なければならない。"
+				},
+				{
+					"en": "As of May 2026, the rise in fixed interest rates is already clear, and the effect on variable interest rates is likely to be delayed by further hikes in the future.",
+					"ja": "2026年5月時点では、固定型の上昇はすでに明確で、変動型は今後の追加利上げで遅れて効く可能性が高い。"
+				},
+				{
+					"en": "For banks, raising interest rates both improves interest margins and increases valuation losses.",
+					"ja": "銀行にとっては、利上げは利ざや改善と評価損拡大の両面を持つ。"
+				},
+				{
+					"en": "If deposit rates are slow to rise, interest margins will improve, but this will put pressure on valuation losses on government bond holdings, the profitability of fixed-rate loans, mortgage arrears, and regional banks' securities portfolios.",
+					"ja": "預金金利の上げ方が遅ければ利ざやは改善するが、保有国債の評価損、固定金利貸出の収益性、住宅ローン延滞、地域銀行の有価証券ポートフォリオには圧力がかかる。"
+				},
+				{
+					"en": "If the Bank of Japan completely suppresses long-term interest rates, the valuation losses will be temporarily hidden, but the recovery of market functioning will be delayed.",
+					"ja": "日銀が長期金利を完全に抑え込むと評価損は一時的に隠れるが、市場機能の回復は遅れる。"
+				},
+				{
+					"en": "For the government, normalizing interest rates is a process of restoring reality to fiscal management.",
+					"ja": "政府にとっては、金利正常化は財政運営の現実を取り戻す過程である。"
+				},
+				{
+					"en": "Gone are the days when spending was planned on the assumption that low interest rates would persist forever.",
+					"ja": "低金利が永続する前提で歳出を組む時代は終わった。"
+				},
+				{
+					"en": "Fiscal policy should focus on targeted support for low-income groups, small businesses, and energy security, rather than blanket transfers and broad subsidies that stimulate inflation.",
+					"ja": "財政政策は、インフレを刺激する一律給付や広範な補助金より、低所得層・中小企業・エネルギー供給安定への的を絞った支援に寄せるべきである。"
+				},
+				{
+					"en": "While monetary policy moves to curb inflation, if fiscal policy stimulates demand too much, the Bank of Japan will be forced to respond with higher interest rates.",
+					"ja": "金融政策がインフレ抑制へ動く一方で、財政が需要を過度に刺激すれば、日銀はより高い金利で対応せざるを得なくなる。"
+				}
+			]
+		},
+		{
+			"id": "recommended-policy",
+			"heading": {
+				"en": "8. Recommended policy",
+				"ja": "8. 推奨方針"
+			},
+			"pairs": [
+				{
+					"en": "The report's recommendations are as follows:",
+					"ja": "本レポートの推奨は、次の通りである。"
+				},
+				{
+					"en": "The Bank of Japan should not stay at 0.75% for too long.",
+					"ja": "日銀は0.75%で長く止まりすぎるべきではない。"
+				},
+				{
+					"en": "If GDP in January-March 2026, the spread of spring labor wage hikes, service prices, and expected inflation are stable, additional interest rate hikes should be continued.",
+					"ja": "2026年1-3月GDP、春闘賃上げの波及、サービス価格、期待インフレが底堅ければ、追加利上げを続けるべきである。"
+				},
+				{
+					"en": "There is no rush to raise interest rates.",
+					"ja": "利上げペースは急がない。"
+				},
+				{
+					"en": "If the crude oil/Middle East situation simultaneously hurts production and income as a supply constraint, there is flexibility to leave it unchanged across meetings.",
+					"ja": "原油・中東情勢が供給制約として生産と所得を同時に傷める場合、会合をまたいで据え置く柔軟性を残す。"
+				},
+				{
+					"en": "YCC will not be revived.",
+					"ja": "YCCは復活させない。"
+				},
+				{
+					"en": "The government will leave long-term interest rates to the market, and adjust government bond purchases based on the balance between quantitative tightening and market functions.",
+					"ja": "長期金利は市場に任せ、国債買入は量的引き締めと市場機能のバランスを見て調整する。"
+				},
+				{
+					"en": "Clarify rules for intervention in the event of market dysfunction.",
+					"ja": "市場機能不全時の介入ルールを明文化する。"
+				},
+				{
+					"en": "The purpose is not to protect the level of long-term interest rates, but to stabilize liquidity and payments.",
+					"ja": "長期金利の水準防衛ではなく、流動性と決済の安定化を目的にする。"
+				},
+				{
+					"en": "The government will not hinder the Bank of Japan with fiscal policy.",
+					"ja": "政府は財政政策で日銀の足を引っ張らない。"
+				},
+				{
+					"en": "Inflation subsidies will be targeted at low-income groups, supply constraints, and structural investments, and will not create expectations in the government bond market that \"monetary policy will protect public finances.\"",
+					"ja": "インフレ補助は低所得層・供給制約・構造投資に絞り、国債市場に「金融政策で財政を守る」という期待を作らない。"
+				},
+				{
+					"en": "Standardize variable rate stress tests for mortgage customers.",
+					"ja": "住宅ローン利用者向けには、変動金利のストレステストを標準化する。"
+				},
+				{
+					"en": "The repayment amount for policy interest rates of 1.0%, 1.5%, and 2.0% will be indicated before the contract is signed, and the presence or absence of the 5-year rule and 125% rule will be clearly stated.",
+					"ja": "政策金利1.0%、1.5%、2.0%の返済額を契約前に示し、5年ルール・125%ルールの有無を明記する。"
+				},
+				{
+					"en": "As a final judgment, Japan should move from \"ultra-low interest rates as a measure against deflation\" to \"normal policies that balance price stability and financial stability.\"",
+					"ja": "最終判断として、日本は「デフレ対策としての超低金利」から「物価安定と金融安定を両立する通常政策」へ移るべきである。"
+				},
+				{
+					"en": "YCC becomes the strongest temptation during that transition period.",
+					"ja": "YCCはその移行期に最も強い誘惑になる。"
+				},
+				{
+					"en": "This is because they want to limit the pain in government bond yields, mortgages, and fiscal interest payments.",
+					"ja": "国債利回り、住宅ローン、財政利払いへの痛みを抑えたくなるからである。"
+				},
+				{
+					"en": "However, if the central bank hides the pain by fixing long-term interest rates, it will return as a weaker yen, imported inflation, a decline in market function, and a deterioration in fiscal discipline.",
+					"ja": "しかし、その痛みを中央銀行が長期金利固定で隠すと、円安、輸入インフレ、市場機能低下、財政規律の劣化として戻ってくる。"
+				},
+				{
+					"en": "What Japan needs is not a return to YCC, but adjustments to its fiscal, housing, and financial systems that can withstand an economy with interest rates.",
+					"ja": "日本に必要なのは、YCCへの回帰ではなく、金利のある経済に耐える財政・住宅・金融システムへの調整である。"
+				}
+			]
+		}
+	]
+}

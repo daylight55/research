@@ -1,0 +1,361 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "In conclusion, it is appropriate to use generative AI as a \"device that compresses and reorganizes explicit material,\" rather than \"a device that understands tacit knowledge as it is.\"",
+					"ja": "結論から言うと、生成AIは「暗黙知をそのまま理解する装置」ではなく、「明示された材料を圧縮・再編する装置」として使うのが妥当である。"
+				},
+				{
+					"en": "Among the SECI models, AI is strong against `外化` and `連結`, while `共同化` and `内面化` remain as supplements.",
+					"ja": "SECIモデルのうち、AIは `外化` と `連結` に強く、`共同化` と `内面化` は補助にとどまる。"
+				},
+				{
+					"en": "This is because tacit knowledge itself is embedded in the context of embodiment, mastery, value judgment, and place even before it is documented.",
+					"ja": "暗黙知そのものは、文書化される前から、身体化・熟達・価値判断・場の文脈に埋め込まれているためである。"
+				},
+				{
+					"en": "The practical arguments of this paper are the following four points.",
+					"ja": "本稿の実務上の主張は次の4点である。"
+				},
+				{
+					"en": "Tacit knowledge is not \"knowledge that has not yet been written down,\" but is the background structure that supports the act of knowing.",
+					"ja": "暗黙知は「まだ書けていない知識」ではなく、知る行為を支える背景構造である。"
+				},
+				{
+					"en": "LLM is useful for summarizing, translating, retrieving, and classifying explicit text, but it is not a substitute for physical knowledge and responsible judgment.",
+					"ja": "LLM は明示テキストの要約、翻訳、検索、分類には有効だが、身体知や責任を伴う判断の代替にはならない。"
+				},
+				{
+					"en": "Summaries create distortions not only by reducing the amount of information, but also by omitting exceptions, priorities, clues for judgment, and responsibilities.",
+					"ja": "要約は情報量だけでなく、例外、優先順位、判断の手がかり、責任の所在を削ることで歪みを生む。"
+				},
+				{
+					"en": "In practice, the safest two-step approach is to have AI do the \"primary sorting\" and humans take on \"meaning-giving, verification, and assumption of responsibility.\"",
+					"ja": "実務では、AI に「一次整理」をさせ、人間が「意味づけ・検証・責任引き受け」を担う二段構えが最も安全である。"
+				}
+			]
+		},
+		{
+			"id": "background-research-history",
+			"heading": {
+				"ja": "2. 背景と研究史",
+				"en": "2. Background and research history"
+			},
+			"pairs": [
+				{
+					"en": "This theme is easier to understand if you connect at least three genealogies.",
+					"ja": "このテーマは、少なくとも3つの系譜をつなぐと理解しやすい。"
+				},
+				{
+					"en": "Polanyi's point is not just that \"we know more than we can put into words.\"",
+					"ja": "Polanyi の重要点は、「私たちは言葉にできる以上のことを知っている」というだけではない。"
+				},
+				{
+					"en": "What is more important is the structure in which knowing is the integration of `from-to`, with peripheral awareness supporting the focal object.",
+					"ja": "より重要なのは、知ることが `from-to` の統合であり、焦点化された対象を支える周辺的な気づきがある、という構造である。"
+				},
+				{
+					"en": "Therefore, the inability to convert tacit knowledge into complete sentences is not a failure, but belongs to the structure of knowledge itself.",
+					"ja": "したがって、暗黙知を完全な文章に変換できないことは失敗ではなく、知識の構造そのものに属する。"
+				},
+				{
+					"en": "Nonaka & Takeuchi's SECI is a model of organizational knowledge creation in which tacit knowledge and explicit knowledge circulate in a spiral through `社会化` `外化` `連結` `内面化`.",
+					"ja": "Nonaka & Takeuchi の SECI は、暗黙知と形式知が `社会化` `外化` `連結` `内面化` を通じて螺旋的に循環する、という組織知識創造のモデルである。"
+				},
+				{
+					"en": "It should be noted here that SECI is not a promise that \"everything can be documented,\" but rather a blueprint for knowledge transfer.",
+					"ja": "ここで注意すべきなのは、SECI は「全部を文書化できる」という約束ではなく、知識移転の設計図であることだ。"
+				},
+				{
+					"en": "AI can speed up some parts of this blueprint, but it won't replace the physical learning itself.",
+					"ja": "AI はこの設計図の一部を高速化できるが、現場の身体的学習そのものを置き換えるわけではない。"
+				}
+			]
+		},
+		{
+			"id": "cognitive-perspective",
+			"heading": {
+				"ja": "3.1 認知の観点",
+				"en": "3.1 Cognitive perspective"
+			},
+			"pairs": [
+				{
+					"en": "LLM has a strong ability to handle patterns that already appear in sentences.",
+					"ja": "LLM は、文章の中に既に表れているパターンを強く扱える。"
+				},
+				{
+					"en": "If you have explicit text such as meeting notes, case studies, FAQs, minutes, emails, and procedure manuals, you are good at summarizing, formatting, comparing, and cross-searching.",
+					"ja": "会議メモ、事例集、FAQ、議事録、メール、手順書のような明示テキストがあるなら、要約・整形・比較・横断検索は得意である。"
+				},
+				{
+					"en": "Brown et al.'s few-shot ability is a typical example, allowing the model to make fairly broad generalizations from the specified context.",
+					"ja": "Brown et al. の few-shot 能力はその典型で、モデルは明示された文脈からかなり広い一般化を行える。"
+				},
+				{
+					"en": "However, this ability does not mean \"experienced\".",
+					"ja": "ただし、この能力は「経験した」ことを意味しない。"
+				},
+				{
+					"en": "Bender & Koller argued that even if a language model learns text distribution, this alone does not provide world-grounded semantic understanding.",
+					"ja": "Bender & Koller は、言語モデルがテキスト分布を学んでも、それだけで世界に接地した意味理解が得られるわけではないと論じた。"
+				},
+				{
+					"en": "In other words, you can learn `何がよく一緒に書かれるか` in LLM, but `現場でそれが本当に起きたか` and `その判断に責任を負えるか` are a different matter.",
+					"ja": "つまり、LLM は `何がよく一緒に書かれるか` は学べても、`現場でそれが本当に起きたか` や `その判断に責任を負えるか` は別問題である。"
+				}
+			]
+		},
+		{
+			"id": "linguistic-perspective",
+			"heading": {
+				"ja": "3.2 言語の観点",
+				"en": "3.2 Linguistic perspective"
+			},
+			"pairs": [
+				{
+					"en": "Translation and summarization are effective ways to make tacit knowledge explicit, but they are also dangerous.",
+					"ja": "翻訳と要約は、暗黙知を明示化する入口として有効だが、同時に危険でもある。"
+				},
+				{
+					"en": "This is because the summary is always `選択`.",
+					"ja": "なぜなら、要約は必ず `選択` だからである。"
+				},
+				{
+					"en": "The model leaves words that stand out from the context and tends to drop infrequent but important notes.",
+					"ja": "モデルは文脈の中から目立つ語を残し、低頻度だが重要な注記を落としやすい。"
+				},
+				{
+					"en": "In particular, exceptional conditions, reservations, doubts, failure cases, and field-specific metaphors are the first to be flattened out in the summary.",
+					"ja": "特に、例外条件、保留、迷い、失敗事例、現場特有の比喩は、要約で真っ先に平板化される。"
+				},
+				{
+					"en": "This is an estimate based on published research and practical observations.",
+					"ja": "これは公表研究と実務観察からの推定である。"
+				}
+			]
+		},
+		{
+			"id": "practical-process-perspective",
+			"heading": {
+				"ja": "3.3 実務プロセスの観点",
+				"en": "3.3 Practical process perspective"
+			},
+			"pairs": [
+				{
+					"en": "Knowledge transfer does not end with handing out texts.",
+					"ja": "知識移転は、文章を配るだけでは終わらない。"
+				},
+				{
+					"en": "In practice, it involves teacher-student relationships, review, repetition, sharing failures, and adapting to differences in environment.",
+					"ja": "実際には、師弟関係、レビュー、反復、失敗の共有、環境の違いへの適応が含まれる。"
+				},
+				{
+					"en": "LLM is strong in the collection, formatting, search, translation, and classification parts of this process.",
+					"ja": "LLM はこの流れのうち、収集・整形・検索・翻訳・分類の部分に強い。"
+				},
+				{
+					"en": "On the other hand, `見て覚える` `やってみて修正する` `文脈に応じて止める` in the field requires human feedback.",
+					"ja": "一方、現場での `見て覚える` `やってみて修正する` `文脈に応じて止める` は、人間のフィードバックが必要である。"
+				},
+				{
+					"en": "This is another way of saying that SECI's `社会化` and `内面化` cannot be completed with just text processing.",
+					"ja": "これはSECIの `社会化` と `内面化` が、テキスト処理だけでは完結しないことの言い換えでもある。"
+				}
+			]
+		},
+		{
+			"id": "lost-in-summary",
+			"heading": {
+				"ja": "4. 要約で何が失われるか",
+				"en": "4. What gets lost in a summary?"
+			},
+			"pairs": [
+				{
+					"en": "There are at least four mechanisms by which summaries create distortions.",
+					"ja": "要約が歪みを生むメカニズムは、少なくとも4つに分けられる。"
+				},
+				{
+					"en": "The more useful knowledge is, the more exceptions there will be.",
+					"ja": "役に立つ知識ほど例外を含む。"
+				},
+				{
+					"en": "But summaries are easy to average, and exceptions are treated as noise.",
+					"ja": "だが要約は平均化しやすく、例外をノイズとして扱う。"
+				},
+				{
+					"en": "\"What to prioritize\" and \"where to stop\" are determined more by empirical rules than by text.",
+					"ja": "「何を優先するか」「どこで止めるか」は文面よりも経験則に宿る。"
+				},
+				{
+					"en": "It is easy to leave only the conclusion in the summary and lose the basis for prioritization.",
+					"ja": "要約は結論だけ残し、優先順位の根拠を落としやすい。"
+				},
+				{
+					"en": "Mastery includes preverbal discomfort, touch, and a sense of timing.",
+					"ja": "熟達には、言語化前の違和感、手触り、タイミング感覚が含まれる。"
+				},
+				{
+					"en": "Text summary does not arrive here.",
+					"ja": "テキスト要約はここに届かない。"
+				},
+				{
+					"en": "If the information about who made the decision and under what conditions disappears, it is likely to be misused in subsequent processes.",
+					"ja": "誰が、どの条件で、その判断を下したかが消えると、後工程で誤用されやすい。"
+				},
+				{
+					"en": "What's important about this diagram is that it's not just the \"details\" that are lost.",
+					"ja": "この図で重要なのは、失われるのが「詳細」だけではないことだ。"
+				},
+				{
+					"en": "Details include exception conditions, decision thresholds, and lines of responsibility.",
+					"ja": "詳細の中には、例外条件、判断のしきい値、責任の線引きが含まれる。"
+				},
+				{
+					"en": "Therefore, the failure of AI summarization appears not as a lack of information but as a lack of practical control.",
+					"ja": "したがって、AI要約の失敗は情報欠落ではなく、実務制御の欠落として現れる。"
+				},
+				{
+					"en": "This is an estimate from published literature.",
+					"ja": "これは公表文献からの推定である。"
+				}
+			]
+		},
+		{
+			"id": "seci-ai-compatibility",
+			"heading": {
+				"ja": "5. SECI と AI の相性",
+				"en": "5. Compatibility between SECI and AI"
+			},
+			"pairs": [
+				{
+					"en": "This table does not directly apply SECI theory to AI.",
+					"ja": "この表は、SECI の理論をそのまま AI に当てはめたものではない。"
+				},
+				{
+					"en": "Rather, it is a practical estimate of a safe division of roles when using AI.",
+					"ja": "むしろ、AI を使うときの安全な役割分担を示した実務上の推定である。"
+				},
+				{
+					"en": "It makes more sense to view AI as an editing aid that speeds up `外化` and `連結` rather than an extractor of tacit knowledge.",
+					"ja": "AI は暗黙知の抽出器というより、`外化` と `連結` を高速化する編集補助と見る方が筋がよい。"
+				}
+			]
+		},
+		{
+			"id": "practical-guidelines",
+			"heading": {
+				"ja": "6. 実務指針",
+				"en": "6. Practical guidelines"
+			},
+			"pairs": [
+				{
+					"en": "If generative AI is to be included in knowledge management, the following order is realistic.",
+					"ja": "生成AIをナレッジ管理に入れるなら、次の順序が現実的である。"
+				},
+				{
+					"en": "Keep conversation logs, interview notes, failure cases, and real customer testimonials.",
+					"ja": "会話ログ、面談メモ、失敗事例、顧客の生声を残す。"
+				},
+				{
+					"en": "Don't just use the summary as the original.",
+					"ja": "要約だけを正本にしない。"
+				},
+				{
+					"en": "Clarify how much is machine-generated and where is human judgment.",
+					"ja": "どこまでが機械生成で、どこからが人間の判断かを明示する。"
+				},
+				{
+					"en": "The better the knowledge, the more conditions for its applicability and inapplicability.",
+					"ja": "良い知識ほど、適用条件と適用不能条件が必要である。"
+				},
+				{
+					"en": "Leave \"what did you see to make that decision\" before the conclusion.",
+					"ja": "「何を見てそう判断したか」を、結論より先に残す。"
+				},
+				{
+					"en": "The evaluation is not based on the readability of the summary, but on whether it can be reproduced in practice.",
+					"ja": "要約の読みやすさではなく、実務で再現できるかで評価する。"
+				},
+				{
+					"en": "For multilingual development, a set includes the original text, translated text, glossary, and intention memo.",
+					"ja": "多言語展開では、原文・訳文・用語集・意図メモをセットで持つ。"
+				},
+				{
+					"en": "Recommended recording items are as follows.",
+					"ja": "おすすめの記録項目は次の通りである。"
+				}
+			]
+		},
+		{
+			"id": "risks-limitations",
+			"heading": {
+				"ja": "7. リスク・限界",
+				"en": "7. Risks/Limitations"
+			},
+			"pairs": [
+				{
+					"en": "There are three misconceptions to avoid on this topic.",
+					"ja": "このテーマには、避けるべき誤解が3つある。"
+				},
+				{
+					"en": "Tacit knowledge is not an unfinished product that can be fully transcribed someday.",
+					"ja": "暗黙知は「いつか完全に文章化できる未完成品」ではない。"
+				},
+				{
+					"en": "LLM is not just a tool for pretending to understand.",
+					"ja": "LLM は「理解したふりをするだけの道具」でもない。"
+				},
+				{
+					"en": "There is great value in compressing and reorganizing explicit knowledge.",
+					"ja": "明示知の圧縮・再編には大きな価値がある。"
+				},
+				{
+					"en": "However, summarization through LLM does not automatically preserve local context, exceptions, responsibilities, and embodiment.",
+					"ja": "しかし、LLM を通した要約は、現場の文脈、例外、責任、身体化を自動的には保持しない。"
+				},
+				{
+					"en": "Therefore, the success or failure of AI utilization should be measured not by `要約の長さ` but by `例外を残せたか`, `判断の根拠を残せたか`, and `現場で再現できたか`.",
+					"ja": "したがって、AI 活用の成否は `要約の長さ` ではなく、`例外を残せたか` `判断の根拠を残せたか` `現場で再現できたか` で測るべきである。"
+				}
+			]
+		},
+		{
+			"id": "recommended-policy",
+			"heading": {
+				"ja": "8. 推奨方針",
+				"en": "8. Recommended policy"
+			},
+			"pairs": [
+				{
+					"en": "The practical application of this can be summarized in the following sentence.",
+					"ja": "実務への落とし込みは、次の一文に集約できる。"
+				},
+				{
+					"en": "AI does not \"extract\" tacit knowledge, but increases the initial speed of making it explicit.",
+					"ja": "AI は暗黙知を「抽出する」のではなく、明示化の初速を上げる。"
+				},
+				{
+					"en": "The final meaning and responsibility lies with humans.",
+					"ja": "最後の意味づけと責任は人間が持つ。"
+				},
+				{
+					"en": "This approach allows AI to act as training wheels for knowledge management, but avoids forcing mastery and judgment into automation.",
+					"ja": "この方針なら、AI はナレッジ管理の補助輪として働くが、熟達や判断を無理に機械化することは避けられる。"
+				},
+				{
+					"en": "If you want to preserve tacit knowledge, it is better to use the summary as a \"gateway to return to the primary source\" rather than throwing it away.",
+					"ja": "暗黙知を守りたいなら、要約を捨てるのではなく、要約を「一次資料に戻れる入口」にするのがよい。"
+				}
+			]
+		}
+	]
+}

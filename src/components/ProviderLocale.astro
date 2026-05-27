@@ -5,8 +5,16 @@
 	const STORAGE_KEY = 'preferredLocale'
 	const SCROLL_KEY = 'localeSwitchScroll'
 	const DEFAULT_LOCALE = 'ja'
-	const SUPPORTED_LOCALES = ['ja', 'en']
+	const SUPPORTED_LOCALES = ['ja', 'en', 'mix']
+	const SWIPE_MAX_WIDTH = 768
+	const SWIPE_MIN_DISTANCE = 72
+	const SWIPE_MAX_VERTICAL_DISTANCE = 70
+	const ARTICLE_BLOCK_SELECTOR = 'h1, h2, h3, h4, p, li, blockquote, table'
+	const ARTICLE_VIEWPORT_ANCHOR_RATIO = 0.42
 	let pendingScrollRestore = null
+	let scrollRestoreRun = 0
+	let scrollRestoreTimers = []
+	let swipeStart = null
 
 	const normalizeBase = (value) => {
 		if (!value || value === '/') return ''
@@ -30,12 +38,13 @@
 
 	const getPathLocale = (pathname) => {
 		const normalized = normalizePath(withoutBase(pathname))
+		if (normalized === '/mix/' || normalized.startsWith('/mix/')) return 'mix'
 		return normalized === '/en/' || normalized.startsWith('/en/') ? 'en' : DEFAULT_LOCALE
 	}
 
 	const stripLocale = (pathname) => {
 		const normalized = normalizePath(withoutBase(pathname))
-		return normalized === '/en/' ? '/' : normalized.replace(/^\/en\//, '/')
+		return normalized === '/en/' ? '/' : normalized.replace(/^\/en\//, '/').replace(/^\/mix\//, '/')
 	}
 
 	const getStoredLocale = () => {
@@ -62,14 +71,70 @@
 		if (['/news/', '/reports/', '/reference/', '/tags/'].includes(contentPath)) return true
 		return (
 			contentPath.startsWith('/post/') ||
+			contentPath.startsWith('/news/') ||
+			contentPath.startsWith('/reports/') ||
 			contentPath.startsWith('/category/') ||
 			contentPath.startsWith('/tags/')
 		)
 	}
 
+	const canRedirectToMixedArticle = (contentPath) =>
+		/^\/(news|reports)\/[^/]+\/$/.test(normalizePath(contentPath))
+
+	const canRedirectToLocale = (locale, contentPath) =>
+		locale === 'mix' ? canRedirectToMixedArticle(contentPath) : canRedirectToEnglish(contentPath)
+
 	const localizedPath = (locale, contentPath) => {
 		const normalized = normalizePath(contentPath)
-		return locale === DEFAULT_LOCALE ? normalized : `/en${normalized}`
+		return locale === DEFAULT_LOCALE ? normalized : `/${locale}${normalized}`
+	}
+
+	const availableLocalesForPath = (contentPath) =>
+		canRedirectToMixedArticle(contentPath) ? SUPPORTED_LOCALES : ['ja', 'en']
+
+	const isMobileSwipeWidth = () =>
+		window.matchMedia?.(`(max-width: ${SWIPE_MAX_WIDTH}px)`).matches ??
+		window.innerWidth <= SWIPE_MAX_WIDTH
+
+	const isSwipeIgnoredTarget = (target) =>
+		target instanceof Element &&
+		Boolean(
+			target.closest(
+				'a, button, input, textarea, select, summary, [role="button"], [data-locale-switch], pre, code'
+			)
+		)
+
+	const buildLocaleTarget = (locale, contentPath) => {
+		const targetPath = withBase(localizedPath(locale, contentPath))
+		return `${targetPath}${window.location.search}${window.location.hash}`
+	}
+
+	const switchLocale = (targetLocale, targetHref) => {
+		setStoredLocale(targetLocale)
+
+		const targetUrl = new URL(targetHref, window.location.href)
+		if (targetUrl.href === window.location.href) return
+
+		saveScrollPosition(targetLocale)
+		return Promise.resolve(navigate(targetUrl.href)).then(() => {
+			restoreScrollPosition()
+			window.setTimeout(restoreScrollPosition, 0)
+		})
+	}
+
+	const switchLocaleBySwipe = (direction) => {
+		const contentPath = stripLocale(window.location.pathname)
+		const availableLocales = availableLocalesForPath(contentPath)
+		const currentLocale = getPathLocale(window.location.pathname)
+		const currentIndex = availableLocales.indexOf(currentLocale)
+		if (currentIndex === -1) return
+
+		const targetIndex = currentIndex + direction
+		const targetLocale = availableLocales[targetIndex]
+		if (!targetLocale || !canRedirectToLocale(targetLocale, contentPath)) return
+
+		const targetHref = buildLocaleTarget(targetLocale, contentPath)
+		switchLocale(targetLocale, targetHref)
 	}
 
 	const getScrollableHeight = () =>
@@ -79,6 +144,73 @@
 			document.documentElement.clientHeight
 		)
 
+	const clamp = (value, min, max) => Math.min(max, Math.max(min, value))
+
+	const getArticleContentRoot = () =>
+		document.querySelector('article [data-mixed-english]') ??
+		document.querySelector('article .prose') ??
+		document.querySelector('article')
+
+	const getArticleBlocks = () => {
+		const root = getArticleContentRoot()
+		if (!root) return []
+
+		return [...root.querySelectorAll(ARTICLE_BLOCK_SELECTOR)].filter((block) => {
+			if (
+				block.closest('.not-prose, [hidden], [data-mixed-japanese], .source-note, [role="note"]')
+			) {
+				return false
+			}
+
+			const rect = block.getBoundingClientRect()
+			return rect.height > 0 && (block.textContent ?? '').trim().length > 0
+		})
+	}
+
+	const getArticleScrollAnchor = () => {
+		const blocks = getArticleBlocks()
+		if (blocks.length === 0) return null
+
+		const referenceY = window.innerHeight * ARTICLE_VIEWPORT_ANCHOR_RATIO
+		const visibleBlock =
+			blocks.find((block) => {
+				const rect = block.getBoundingClientRect()
+				return rect.bottom >= referenceY && rect.top <= window.innerHeight
+			}) ??
+			blocks.find((block) => block.getBoundingClientRect().bottom >= 0) ??
+			blocks[0]
+
+		const rect = visibleBlock.getBoundingClientRect()
+		const blockIndex = blocks.indexOf(visibleBlock)
+		const blockOffsetRatio =
+			rect.height > 0 ? clamp((referenceY - rect.top) / rect.height, 0, 1) : 0
+
+		return {
+			blockIndex,
+			blockOffsetRatio,
+			viewportRatio: ARTICLE_VIEWPORT_ANCHOR_RATIO
+		}
+	}
+
+	const scrollToArticleAnchor = (anchor) => {
+		if (!anchor || typeof anchor.blockIndex !== 'number') return false
+
+		const blocks = getArticleBlocks()
+		if (blocks.length === 0) return false
+
+		const block = blocks[clamp(anchor.blockIndex, 0, blocks.length - 1)]
+		if (!block) return false
+
+		const rect = block.getBoundingClientRect()
+		const maxScroll = Math.max(0, getScrollableHeight() - window.innerHeight)
+		const viewportY = window.innerHeight * (anchor.viewportRatio ?? ARTICLE_VIEWPORT_ANCHOR_RATIO)
+		const blockY = window.scrollY + rect.top + rect.height * (anchor.blockOffsetRatio ?? 0)
+		const targetY = clamp(blockY - viewportY, 0, maxScroll)
+
+		window.scrollTo({ top: targetY, left: 0, behavior: 'instant' })
+		return Math.abs(window.scrollY - targetY) < 4
+	}
+
 	const saveScrollPosition = (targetLocale) => {
 		const maxScroll = Math.max(1, getScrollableHeight() - window.innerHeight)
 		const saved = {
@@ -86,6 +218,7 @@
 			path: stripLocale(window.location.pathname),
 			y: window.scrollY,
 			ratio: window.scrollY / maxScroll,
+			anchor: getArticleScrollAnchor(),
 			time: Date.now()
 		}
 
@@ -110,6 +243,14 @@
 		}
 	}
 
+	const clearScheduledScrollRestores = () => {
+		scrollRestoreRun += 1
+		for (const timer of scrollRestoreTimers) {
+			window.clearTimeout(timer)
+		}
+		scrollRestoreTimers = []
+	}
+
 	const clearSavedScrollPosition = () => {
 		pendingScrollRestore = null
 		try {
@@ -126,47 +267,97 @@
 		if (saved.locale !== getPathLocale(window.location.pathname)) return
 		if (saved.path !== stripLocale(window.location.pathname)) return
 
+		clearScheduledScrollRestores()
+		const restoreRun = scrollRestoreRun
+
 		const scrollWithoutSmooth = () => {
 			const maxScroll = Math.max(0, getScrollableHeight() - window.innerHeight)
 			if (maxScroll <= 0 && saved.y > 0) return false
 
-			const targetY = Math.min(saved.y ?? maxScroll * (saved.ratio ?? 0), maxScroll)
 			const root = document.documentElement
 			const previousBehavior = root.style.scrollBehavior
 
 			root.style.scrollBehavior = 'auto'
+			if (scrollToArticleAnchor(saved.anchor)) {
+				root.style.scrollBehavior = previousBehavior
+				return true
+			}
+
+			const targetY = Math.min(saved.y ?? maxScroll * (saved.ratio ?? 0), maxScroll)
 			window.scrollTo({ top: targetY, left: 0, behavior: 'instant' })
 			root.style.scrollBehavior = previousBehavior
 			return Math.abs(window.scrollY - targetY) < 4
 		}
 
 		const clearWhenRestored = () => {
-			if (scrollWithoutSmooth()) clearSavedScrollPosition()
+			if (restoreRun !== scrollRestoreRun) return
+			if (readSavedScrollPosition() !== saved) return
+			if (scrollWithoutSmooth()) {
+				clearSavedScrollPosition()
+				clearScheduledScrollRestores()
+			}
+		}
+
+		const scheduleRestore = (delay) => {
+			const timer = window.setTimeout(clearWhenRestored, delay)
+			scrollRestoreTimers.push(timer)
 		}
 
 		clearWhenRestored()
+		if (readSavedScrollPosition() !== saved) return
 		window.requestAnimationFrame(clearWhenRestored)
-		window.setTimeout(clearWhenRestored, 80)
-		window.setTimeout(clearWhenRestored, 180)
-		window.setTimeout(clearWhenRestored, 400)
-		window.setTimeout(clearWhenRestored, 800)
-		window.setTimeout(clearWhenRestored, 1200)
+		scheduleRestore(80)
+		scheduleRestore(180)
+		scheduleRestore(400)
+		scheduleRestore(800)
+		scheduleRestore(1200)
+	}
+
+	const cancelScrollRestoreForUserInput = () => {
+		if (!readSavedScrollPosition()) return
+		clearSavedScrollPosition()
+		clearScheduledScrollRestores()
+	}
+
+	const cancelScrollRestoreForScrollKey = (event) => {
+		if (
+			[
+				'ArrowDown',
+				'ArrowLeft',
+				'ArrowRight',
+				'ArrowUp',
+				'End',
+				'Home',
+				'PageDown',
+				'PageUp',
+				' '
+			].includes(event.key)
+		) {
+			cancelScrollRestoreForUserInput()
+		}
 	}
 
 	const syncLocale = () => {
 		const currentLocale = getPathLocale(window.location.pathname)
 		const contentPath = stripLocale(window.location.pathname)
 
-		if (currentLocale === 'en') {
-			setStoredLocale('en')
+		if (currentLocale !== DEFAULT_LOCALE) {
+			setStoredLocale(currentLocale)
 			return
 		}
 
 		const preferredLocale = getStoredLocale() ?? DEFAULT_LOCALE
-		if (preferredLocale !== 'en' || !canRedirectToEnglish(contentPath)) return
+		if (
+			currentLocale === preferredLocale ||
+			preferredLocale === DEFAULT_LOCALE ||
+			!canRedirectToLocale(preferredLocale, contentPath)
+		) {
+			return
+		}
 
-		const targetPath = withBase(localizedPath('en', contentPath))
-		const target = `${targetPath}${window.location.search}${window.location.hash}`
+		const target = buildLocaleTarget(preferredLocale, contentPath)
+		if (target === window.location.href || target === window.location.pathname) return
+
 		window.location.replace(target)
 	}
 
@@ -183,25 +374,58 @@
 			if (switchLink.target && switchLink.target !== '_self') return
 
 			const targetLocale = switchLink.dataset.localeSwitch
-			setStoredLocale(targetLocale)
-
-			const targetUrl = new URL(switchLink.href, window.location.href)
-			if (targetUrl.href === window.location.href) {
+			if (new URL(switchLink.href, window.location.href).href === window.location.href) {
 				event.preventDefault()
 				return
 			}
 
 			event.preventDefault()
-			saveScrollPosition(targetLocale)
-			Promise.resolve(navigate(targetUrl.href)).then(() => {
-				restoreScrollPosition()
-				window.setTimeout(restoreScrollPosition, 0)
-			})
+			switchLocale(targetLocale, switchLink.href)
 		},
 		{ capture: true }
 	)
 
+	window.addEventListener(
+		'touchstart',
+		(event) => {
+			if (!isMobileSwipeWidth() || event.touches.length !== 1) {
+				swipeStart = null
+				return
+			}
+			if (isSwipeIgnoredTarget(event.target)) {
+				swipeStart = null
+				return
+			}
+
+			const touch = event.touches[0]
+			swipeStart = { x: touch.clientX, y: touch.clientY }
+		},
+		{ passive: true }
+	)
+
+	window.addEventListener(
+		'touchend',
+		(event) => {
+			if (!swipeStart || event.changedTouches.length !== 1) return
+
+			const touch = event.changedTouches[0]
+			const deltaX = touch.clientX - swipeStart.x
+			const deltaY = touch.clientY - swipeStart.y
+			swipeStart = null
+
+			if (Math.abs(deltaX) < SWIPE_MIN_DISTANCE) return
+			if (Math.abs(deltaY) > SWIPE_MAX_VERTICAL_DISTANCE) return
+			if (Math.abs(deltaY) > Math.abs(deltaX) * 0.75) return
+
+			switchLocaleBySwipe(deltaX < 0 ? 1 : -1)
+		},
+		{ passive: true }
+	)
+
 	window.addEventListener('pagereveal', restoreScrollPosition)
+	window.addEventListener('wheel', cancelScrollRestoreForUserInput, { passive: true })
+	window.addEventListener('touchmove', cancelScrollRestoreForUserInput, { passive: true })
+	window.addEventListener('keydown', cancelScrollRestoreForScrollKey)
 	document.addEventListener('DOMContentLoaded', restoreScrollPosition)
 	document.addEventListener('astro:page-load', () => {
 		syncLocale()

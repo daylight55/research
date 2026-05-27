@@ -6,7 +6,7 @@ import {
 	getCategoryAccentClass,
 	getCategorySurfaceClass,
 	getNewsPosts,
-	getPostSlug,
+	getPostUrl,
 	withBase
 } from '@/utils'
 import { Image } from 'astro:assets'
@@ -33,7 +33,7 @@ const newsPosts = await getNewsPosts()
 				<div class='flex snap-x snap-mandatory flex-nowrap gap-4'>
 					{newsPosts.map((post) => (
 						<a
-							href={withBase(`/post/${getPostSlug(post)}/`)}
+							href={getPostUrl(post)}
 							class={cn(
 								'group grid flex-[0_0_100%] snap-start overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 sm:grid-cols-[10rem_1fr] md:flex-[0_0_calc((100%_-_1rem)/2)] xl:flex-[0_0_calc((100%_-_2rem)/3)]',
 								getCategorySurfaceClass(post.data.category)

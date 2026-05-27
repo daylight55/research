@@ -11,16 +11,20 @@ test('site shell uses a wider desktop container', () => {
 	assert.doesNotMatch(baseLayout, /lg:px-0/)
 })
 
-test('post layout gives the article column more room on wide screens', () => {
-	const postPage = readFileSync('src/pages/post/[...slug].astro', 'utf8')
+test('post layout keeps readable spacing around sidebars on wide screens', () => {
+	const postPage = readFileSync('src/pages/reports/[...slug].astro', 'utf8')
+	const newsPage = readFileSync('src/pages/news/[...slug].astro', 'utf8')
 
-	assert.match(postPage, /xl:grid-cols-\[10rem_minmax\(0,56rem\)_10rem\]/)
-	assert.match(postPage, /2xl:grid-cols-\[12rem_minmax\(0,62rem\)_12rem\]/)
+	for (const source of [postPage, newsPage]) {
+		assert.match(source, /lg:grid-cols-\[10rem_minmax\(0,1fr\)_9rem\]/)
+		assert.match(source, /xl:grid-cols-\[12rem_minmax\(0,56rem\)_10rem\]/)
+		assert.match(source, /2xl:grid-cols-\[14rem_minmax\(0,62rem\)_12rem\]/)
+	}
 })
 
 test('post sidebar keeps the research trail link immediately before share', () => {
-	const postPage = readFileSync('src/pages/post/[...slug].astro', 'utf8')
-	const englishPostPage = readFileSync('src/pages/en/post/[...slug].astro', 'utf8')
+	const postPage = readFileSync('src/pages/reports/[...slug].astro', 'utf8')
+	const englishPostPage = readFileSync('src/pages/en/reports/[...slug].astro', 'utf8')
 
 	for (const source of [postPage, englishPostPage]) {
 		const researchIndex = source.lastIndexOf('Research trail')
@@ -32,17 +36,17 @@ test('post sidebar keeps the research trail link immediately before share', () =
 
 	assert.match(
 		englishPostPage,
-		/href=\{localizedPath\(locale, `\/post\/\$\{postSlug\}\/research\/`\)\}/
+		/href=\{localizedPath\(locale, `\/reports\/\$\{postSlug\}\/research\/`\)\}/
 	)
 	assert.doesNotMatch(
 		englishPostPage,
-		/href=\{localizedPath\('ja', `\/post\/\$\{postSlug\}\/research\/`\)\}/
+		/href=\{localizedPath\('ja', `\/reports\/\$\{postSlug\}\/research\/`\)\}/
 	)
 })
 
 test('research process page uses a wider reading surface', () => {
-	const researchPage = readFileSync('src/pages/post/[slug]/research.astro', 'utf8')
-	const englishResearchPage = readFileSync('src/pages/en/post/[slug]/research.astro', 'utf8')
+	const researchPage = readFileSync('src/pages/reports/[slug]/research.astro', 'utf8')
+	const englishResearchPage = readFileSync('src/pages/en/reports/[slug]/research.astro', 'utf8')
 
 	for (const source of [researchPage, englishResearchPage]) {
 		assert.match(source, /max-w-6xl/)
@@ -52,10 +56,10 @@ test('research process page uses a wider reading surface', () => {
 })
 
 test('English research process route links back to the English article', () => {
-	const englishResearchPage = readFileSync('src/pages/en/post/[slug]/research.astro', 'utf8')
+	const englishResearchPage = readFileSync('src/pages/en/reports/[slug]/research.astro', 'utf8')
 
 	assert.match(englishResearchPage, /const locale = 'en'/)
-	assert.match(englishResearchPage, /href=\{localizedPath\(locale, `\/post\/\$\{postSlug\}\/`\)\}/)
+	assert.match(englishResearchPage, /href=\{localizedPath\(locale, `\/reports\/\$\{postSlug\}\/`\)\}/)
 	assert.match(englishResearchPage, /Back to article/)
 })
 

@@ -6,6 +6,7 @@ export {
 	SUPPORTED_LOCALES,
 	isLocale,
 	getPostLocale,
+	getPostSection,
 	getPostSlug,
 	getPostUrl,
 	findPostTranslation,
@@ -15,6 +16,7 @@ export {
 export type { Locale } from './i18n'
 export { getCategoryAccentClass, getCategorySurfaceClass } from './categoryStyles'
 export { renderNewsRssContent, renderReportRssContent } from './rssContent'
+export { tagSlug } from './tagSlug'
 export {
 	buildGlossaryIndex,
 	createGlossarySlug,
@@ -39,3 +41,5 @@ export {
 } from './post'
 export { remarkReadingTime } from './readTime'
 export { remarkGlossary } from './remarkGlossary'
+export { getMixedArticleAlignment } from './mixedAlignment'
+export type { MixedArticleAlignment } from './mixedAlignment'

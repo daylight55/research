@@ -1,0 +1,776 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "Palantir is not just an analytics tools company or an LLM app company.",
+					"ja": "Palantirは、単なる分析ツール企業でも、LLMアプリ企業でもない。"
+				},
+				{
+					"en": "The core is an \"operational AI platform\" that bundles corporate and government data, business objects, decisions, permissions, audits, applications, and AI agents into a single operational layer.",
+					"ja": "中核は、企業や政府機関のデータ、業務オブジェクト、意思決定、権限、監査、アプリケーション、AIエージェントを一つの運用層に束ねる「operational AI platform」である。"
+				},
+				{
+					"en": "In terms of product names, Foundry is the data operation platform, Ontology is the organizational object/relationship/action layer, AIP is the generation AI and agent execution layer, and Apollo is the continuous deployment platform to multiple environments.",
+					"ja": "製品名で言えば、Foundryがデータ運用基盤、Ontologyが組織のオブジェクト/関係/アクション層、AIPが生成AIとエージェントの実行層、Apolloが複数環境への継続デプロイ基盤である。"
+				},
+				{
+					"en": "The conclusions of this report are as follows.",
+					"ja": "本レポートの結論は次の通りである。"
+				},
+				{
+					"en": "Palantir's differentiation lies not in its model performance, but in its design that uses Ontology to make \"real business conditions into a form that AI can read, change, and audit.\"",
+					"ja": "Palantirの差別化はモデル性能ではなく、Ontologyを中心に「現実の業務状態をAIが読め、変更でき、監査できる形」にする設計にある。"
+				},
+				{
+					"en": "Growth as of May 2026 is very strong.",
+					"ja": "2026年5月時点の成長は非常に強い。"
+				},
+				{
+					"en": "Palantir announced Q1 2026 sales of $1.633 billion, 85% year-over-year growth, and 104% U.S. sales growth, and raised its full-year 2026 sales guidance to $7.650 billion-$7.662 billion.",
+					"ja": "Palantirは2026年Q1に売上16.33億ドル、前年比85%成長、米国売上104%成長を発表し、2026年通期売上ガイダンスを76.50億-76.62億ドルへ引き上げた。"
+				},
+				{
+					"en": "AIP's commercial growth is accelerating not only due to the AI ​​boom, but also due to Bootcamp-style short-term introductions, business application development on Ontology, and implementation support including governance.",
+					"ja": "AIPの商用成長は、AIブームだけでなく、Bootcamp型の短期導入、Ontology上の業務アプリ化、ガバナンス込みの実装支援によって加速している。"
+				},
+				{
+					"en": "On the other hand, Palantir's strengths also pose risks.",
+					"ja": "一方で、Palantirの強みはそのままリスクにもなる。"
+				},
+				{
+					"en": "Cross-organizational data integration, activity logging, privilege management, and deep embedding in field operations provide organizations with strong execution power, but also increase issues of surveillance, military/security use, medical data, vendor lock-in, and accountability.",
+					"ja": "組織横断データ統合、行為ログ、権限管理、現場業務への深い埋め込みは、導入組織に強い実行力を与えるが、監視、軍事・治安利用、医療データ、ベンダーロックイン、説明責任の問題を大きくする。"
+				},
+				{
+					"en": "The question that should be asked when introducing it into practice is not \"Is Palantir useful?\" but \"Can I put my own organization's decision-making, authority, accountability, and exit strategy on Palantir?\"",
+					"ja": "実務導入で見るべき問いは「Palantirは便利か」ではなく、「自組織の意思決定・権限・説明責任・出口戦略までPalantir上に載せてよいか」である。"
+				}
+			]
+		},
+		{
+			"id": "what-is-palantir",
+			"heading": {
+				"ja": "2. Palantirとは何か",
+				"en": "2. What is Palantir?"
+			},
+			"pairs": [
+				{
+					"en": "Palantir is an American software company founded in 2003 that develops Gotham for government, defense, and intelligence agencies, Foundry for commercial and public institutions, AIP for generative AI/agent-based, and Apollo for deployment platform.",
+					"ja": "Palantirは2003年創業の米国ソフトウェア企業で、政府・防衛・情報機関向けのGotham、商用・公共機関向けのFoundry、生成AI/エージェント基盤のAIP、デプロイ基盤のApolloを展開している。"
+				},
+				{
+					"en": "The company's self-definition is \"software that integrates data, decision-making, and operations on a large scale,\" and rather than replacing a single task like typical SaaS, it has evolved in the direction of creating a cross-sectional operational layer on top of existing systems.",
+					"ja": "会社の自己定義は「データ、意思決定、オペレーションを大規模に統合するソフトウェア」であり、一般的なSaaSのように単一業務を置き換えるより、既存システムの上に横断的な運用層を作る方向で発展してきた。"
+				},
+				{
+					"en": "Palantir's product structure is different from the traditional \"data lake + BI + individual apps\".",
+					"ja": "Palantirの製品体系は、従来の「データレイク + BI + 個別アプリ」とは異なる。"
+				},
+				{
+					"en": "It not only collects data, but also defines business objects as objects, and integrates actions, approvals, history, and authority for those objects.",
+					"ja": "データを集めるだけではなく、業務上の対象物をオブジェクトとして定義し、そのオブジェクトに対する行為、承認、履歴、権限を一体化する。"
+				},
+				{
+					"en": "For this reason, it functions not only as an analytical platform for viewing reports, but also as an operational layer for changing behavior on the ground.",
+					"ja": "このため、レポートを見るだけの分析基盤ではなく、現場が行動を変えるための operational layer として機能する。"
+				}
+			]
+		},
+		{
+			"id": "history-deep-structure",
+			"heading": {
+				"ja": "2.1 歴史から読むPalantirの深層構造",
+				"en": "2.1 Palantir's deep structure read from history"
+			},
+			"pairs": [
+				{
+					"en": "Palantir's history should not be read as the growth history of a typical SaaS company, but as a continuous story of national security in the post-9/11 era, fraud detection philosophy derived from PayPal, rebellion against government procurement, commercial data OS, and dual-use platform in the era of generative AI.",
+					"ja": "Palantirの歴史は、通常のSaaS企業の成長史ではなく、ポスト9.11の国家安全保障、PayPal由来の不正検知思想、政府調達への反抗、商用データOS化、生成AI時代の軍民両用プラットフォーム化が連続した物語として読むべきである。"
+				},
+				{
+					"en": "In S-1, Palantir explains that it was founded in 2003 to create software for counterterrorism operations, and in 2008 released Gotham as its first platform for intelligence agencies.",
+					"ja": "S-1でPalantirは、2003年に counterterrorism operations 向けソフトウェアを作るために創業し、2008年に情報機関向けのGothamを最初のプラットフォームとして出したと説明している。"
+				},
+				{
+					"en": "Gotham was positioned to find patterns deep within massive data sets and help them hand it off from analysts to field operators to plan and execute real-world responses to threats.",
+					"ja": "Gothamは、膨大なデータセットの奥にあるパターンを見つけ、分析者から現場オペレーターへの引き渡し、脅威への実世界の対応計画・実行を支援するものとして位置づけられた。"
+				},
+				{
+					"en": "Here is the prototype of Palantir.",
+					"ja": "ここに、Palantirの原型がある。"
+				},
+				{
+					"en": "In other words, it started out as a company that connects analysis to action, rather than a company that analyzes data.",
+					"ja": "つまり「データを分析する会社」ではなく、「分析を行為へ接続する会社」として始まった。"
+				},
+				{
+					"en": "This origin remains consistent up to the present AIP.",
+					"ja": "この起源は、現在のAIPまで一貫している。"
+				},
+				{
+					"en": "Gotham's theme was \"finding threats and taking them to action.\"",
+					"ja": "Gothamでは「脅威を見つけ、現場行動に渡す」ことが主題だった。"
+				},
+				{
+					"en": "At Foundry, it has been generalized to commercial and public institutions to \"integrate business data and change organizational behavior.\"",
+					"ja": "Foundryでは、それが商用・公共機関向けに「業務データを統合し、組織の行動を変える」方向へ一般化された。"
+				},
+				{
+					"en": "In AIP, LLM and agents are connected to this, moving from a \"human-readable dashboard\" to \"AI reading the business status and proposing and executing constrained actions.\"",
+					"ja": "AIPでは、そこにLLMとエージェントが接続され、「人間が読むダッシュボード」から「AIが業務状態を読み、制約付きActionを提案・実行する」方向へ進んでいる。"
+				},
+				{
+					"en": "Palantir is unique in that it views governments and large corporations as \"institutional behemoths\" rather than \"customers.\"",
+					"ja": "Palantirが特殊なのは、政府と大企業を「顧客」ではなく「制度的な巨大生物」として見ている点である。"
+				},
+				{
+					"en": "In his 2022 CEO annual letter, Karp wrote that when the company started, it made software for defense and intelligence agencies, and while they had the budget and staff, they didn't have the software they needed.",
+					"ja": "2022年のCEO年次書簡でKarpは、創業時は防衛・情報機関のためのソフトウェアを作る会社であり、彼らには予算と人員があったが必要なソフトウェアがなかったと書いた。"
+				},
+				{
+					"en": "He also argued that while the moat of the 20th century was industrial structure, the only moat of this century is software.",
+					"ja": "また、二十世紀の堀は産業構造にあったが、今世紀の唯一の堀はソフトウェアだと主張した。"
+				},
+				{
+					"en": "In this view, Palantir's competitors are not just BI vendors.",
+					"ja": "この見方では、Palantirの競争相手は単なるBIベンダーではない。"
+				},
+				{
+					"en": "Bureaucracy, traditional SI, departmental SaaS, Excel, procurement systems, and organizational data insufficiency themselves become competitors.",
+					"ja": "官僚制、旧来SI、部門別SaaS、Excel、調達制度、組織のデータ不全そのものが競争相手になる。"
+				},
+				{
+					"en": "The first insight that can be gleaned from this history is that Palantir's products are premised on \"reshaping an organization\" rather than \"implementing\" it.",
+					"ja": "この歴史から得られる第一の洞察は、Palantirの製品は「導入される」のではなく「組織を作り替える」ことを前提にしている、という点である。"
+				},
+				{
+					"en": "Calling Foundry a \"central operating system for data\" and describing Foundry's Workshop as an app builder that reads and writes ontological data indicates a design that intentionally breaks the boundaries between data infrastructure and business apps.",
+					"ja": "Foundryを「central operating system for data」と呼び、FoundryのWorkshopを ontological data に読み書きするアプリビルダーとして説明していることは、データ基盤と業務アプリの境界を意図的に壊す設計を示している。"
+				},
+				{
+					"en": "Companies that adopt it may think they are purchasing a data infrastructure, but in reality they will be redesigning decision-making practices, authority, auditing, and even the flow of on-site actions.",
+					"ja": "導入企業は、データ基盤を買っているつもりでも、実際には意思決定の作法、権限、監査、現場Actionの流れまで再設計することになる。"
+				},
+				{
+					"en": "The second insight is that Palantir's \"Choose the West\" attitude is not marketing, but a business principle that influences customer selection, sourcing strategy, product design, and adopted brands.",
+					"ja": "第二の洞察は、Palantirの「西側を選ぶ」という姿勢はマーケティングではなく、顧客選別、調達戦略、製品設計、採用ブランドに影響する経営原理だという点である。"
+				},
+				{
+					"en": "S-1 wrote that Palantir generally does not do business with customers or governments that are inconsistent with its mission of supporting \"Western liberal democracy and its strategic allies,\" and specified that it does not work with the Chinese Communist Party or host its platform in China.",
+					"ja": "S-1は、Palantirが「Western liberal democracy and its strategic allies」を支援する使命と矛盾する顧客・政府とは一般に取引しないと書き、中国共産党とは仕事をせず、中国にプラットフォームをホストしないと明記した。"
+				},
+				{
+					"en": "This attitude defines itself as a geopolitical software company rather than an ethically neutral cloud company.",
+					"ja": "この姿勢は、倫理的に中立なクラウド企業ではなく、地政学的に陣営を選ぶソフトウェア企業という自己定義である。"
+				},
+				{
+					"en": "The third insight is that Palantir's politics and commerce are not contradictory.",
+					"ja": "第三の洞察は、Palantirの政治性と商業性は矛盾していない、という点である。"
+				},
+				{
+					"en": "Rather, by layering software for national security and large organizations, it has created high unit prices, long-term contracts, deep organizational penetration, and barriers to entry into regulated industries.",
+					"ja": "むしろ、国家安全保障と巨大組織向けソフトウェアを重ねることで、高単価、長期契約、深い組織浸透、規制産業への参入障壁を作ってきた。"
+				},
+				{
+					"en": "S-1 states that the average length of service for the top 20 customers in 2019 was 6.6 years, that the 2016 lawsuit against the U.S. Army affected the adoption of commercial software for government procurement, and that the company's growth strategy is to expand beyond government into the commercial field.",
+					"ja": "S-1では、2019年の上位20顧客の平均継続年数が6.6年であること、U.S. Armyに対する2016年訴訟が政府調達の商用ソフト採用に影響したこと、政府だけでなく商用領域へ拡大することが成長戦略として語られている。"
+				},
+				{
+					"en": "It would be more accurate to view Palantir as a company that exported operational software developed in the government to large commercial organizations, rather than a company that expanded horizontally from government to commercial operations.",
+					"ja": "Palantirは「政府から商用へ横展開した会社」ではなく、「政府で鍛えた運用ソフトウェアの型を商用巨大組織へ輸出した会社」と見る方が正確である。"
+				},
+				{
+					"en": "The fourth insight is that `The Technological Republic` is not a thought book that suddenly appeared, but an externalization of Palantir's self-understanding from the S-1 and the CEO letter as a political philosophy for the age of AI.",
+					"ja": "第四の洞察は、`The Technological Republic` は突然出てきた思想書ではなく、S-1やCEO書簡にあったPalantirの自己理解を、AI時代の政治哲学として外部化したものだという点である。"
+				},
+				{
+					"en": "The book criticizes Silicon Valley for moving away from national security and industrial issues toward narrower consumer issues.",
+					"ja": "同書は、Silicon Valleyが国家安全保障や産業的課題から離れ、消費者向けの狭い問題へ向かったことを批判する。"
+				},
+				{
+					"en": "The fact that Palantir posted a 22-point manifesto-like summary of the book in April 2026, drawing criticism over AI weapons, national service, and Western supremacy, means that Palantir is no longer a \"politically misunderstood company\" but a political company in its own right.",
+					"ja": "2026年4月にPalantirが同書を22項目のmanifesto風に要約して投稿し、AI兵器、国家奉仕、西側優位をめぐる批判を呼んだことは、Palantirがもはや「政治的に誤解されている企業」ではなく、自ら政治的な企業であることを前面に出していることを意味する。"
+				},
+				{
+					"en": "The fifth insight is that Palantir's greatest value and greatest danger lie in the same place.",
+					"ja": "第五の洞察は、Palantirの最大の価値と最大の危険は同じ場所にある、という点である。"
+				},
+				{
+					"en": "Ontology, Action, AIP, and Apollo transform disparate organizations into a single actionable system.",
+					"ja": "Ontology、Action、AIP、Apolloは、ばらばらの組織を一つの行為可能なシステムにする。"
+				},
+				{
+					"en": "This is powerful for hospital waiting lists, factory constraints, military situational awareness, and financial crime fighting.",
+					"ja": "これは、病院の待機リスト、工場の制約、軍の状況認識、金融犯罪対策では強力である。"
+				},
+				{
+					"en": "But the same mechanisms can be used for surveillance, immigration enforcement, targeting, and the use of public data for other purposes.",
+					"ja": "しかし同じ仕組みは、監視、移民執行、標的選定、公共データの目的外利用にも転用できる。"
+				},
+				{
+					"en": "Technology is not neutral, but rather it amplifies the \"will of nations and large organizations.\"",
+					"ja": "技術が中立なのではなく、技術が「国家や巨大組織の意思」を増幅する。"
+				},
+				{
+					"en": "Therefore, when evaluating Palantir, it is necessary to ask which system it will be connected to before considering the product's features.",
+					"ja": "このため、Palantirを評価するには、製品機能より先に、どの制度に接続されるかを問う必要がある。"
+				},
+				{
+					"en": "In short, the most profound lesson from Palantir's history is that competitive advantage in the age of AI lies not in having a model, but in translating an organization's reality into a structure that software can read, change, and audit.",
+					"ja": "要するに、Palantirの歴史から得られる最も深い教訓は、AI時代の競争優位は「モデルを持つこと」ではなく、「組織の現実を、ソフトウェアが読めて、変えられて、監査できる構造に変換すること」にある、ということだ。"
+				},
+				{
+					"en": "Palantir is leading the way in this regard.",
+					"ja": "Palantirはこの点で先行している。"
+				},
+				{
+					"en": "However, that ability has a public nature.",
+					"ja": "ただし、その能力は公共性を帯びる。"
+				},
+				{
+					"en": "So when implementing, investing in, and evaluating Palantir, the central question is not \"What can this company do with AI?\" but rather, \"What systems is this company amplifying?\"",
+					"ja": "だからPalantirを導入・投資・評価する際の中心質問は、「この会社はAIで何ができるか」ではなく、「この会社はどの制度の力を増幅しているのか」である。"
+				}
+			]
+		},
+		{
+			"id": "ontology-core",
+			"heading": {
+				"ja": "3. 技術原理: Ontologyが中核である理由",
+				"en": "3. Technological Principle: Why Ontology is Core"
+			},
+			"pairs": [
+				{
+					"en": "The key to understanding Palantir is Ontology.",
+					"ja": "Palantirを理解する鍵はOntologyである。"
+				},
+				{
+					"en": "A typical RDF/OWL type ontology is a knowledge representation framework that represents concepts, relationships, and constraints in a machine-readable manner.",
+					"ja": "一般的なRDF/OWL型のオントロジーは、概念、関係、制約を機械可読に表す知識表現の枠組みである。"
+				},
+				{
+					"en": "Palantir's Ontology is not just a similar \"semantics,\" but also includes a \"kinetic theory\" for implementing business changes.",
+					"ja": "PalantirのOntologyはそれに近い「意味論」だけでは足りず、業務上の変更を実行する「運動論」を含む。"
+				},
+				{
+					"en": "In addition to objects, attributes, links, and interfaces, there are action types, functions, dynamic security, and action logs.",
+					"ja": "オブジェクト、属性、リンク、インターフェースに加えて、Action types、Functions、dynamic security、action logが存在する。"
+				},
+				{
+					"en": "This difference is significant in practice.",
+					"ja": "この違いは実務上大きい。"
+				},
+				{
+					"en": "While traditional BI can display the status of opportunities, inventory, patients, parts, alarms, units, and transportation plans, field changes often remain in a separate system.",
+					"ja": "従来のBIでは、営業案件、在庫、患者、部品、警報、部隊、輸送計画の状態を表示できても、現場の変更行為は別システムに残ることが多い。"
+				},
+				{
+					"en": "Palantir treats the change itself as an action, and returns information about who made the change, when, what target, and why as Ontology data.",
+					"ja": "Palantirは、変更そのものをActionとして扱い、誰が、いつ、どの対象を、どの理由で変更したかをOntologyのデータとして戻す。"
+				},
+				{
+					"en": "This puts business decisions, audits, and improvement cycles on the same foundation.",
+					"ja": "これにより、業務判断、監査、改善サイクルが同じ基盤に乗る。"
+				}
+			]
+		},
+		{
+			"id": "aip-business-layer",
+			"heading": {
+				"ja": "4. AIP: LLMを業務に接続する層",
+				"en": "4. AIP: The layer that connects LLM to business operations"
+			},
+			"pairs": [
+				{
+					"en": "AIP is not just a product that connects chatbots to internal data.",
+					"ja": "AIPは、単にチャットボットを社内データにつなぐ製品ではない。"
+				},
+				{
+					"en": "Palantir explains that AIP brings together Ontology, development tools, assessments, agents, automation, and LLM connectivity, allowing LLMs to access business data, business logic, and business actions.",
+					"ja": "Palantirの説明では、AIPはOntology、開発ツール、評価、エージェント、オートメーション、LLM接続をまとめ、LLMが業務データ・業務ロジック・業務アクションにアクセスできるようにする。"
+				},
+				{
+					"en": "What is important is that LLM does not access all data on its own, but operates based on existing Foundry/Ontology authority, auditing, and lineage.",
+					"ja": "重要なのは、LLMが勝手に全データへアクセスするのではなく、既存のFoundry/Ontologyの権限、監査、系譜の上で動く点である。"
+				},
+				{
+					"en": "Palantir's AIP aims to transform LLMs from \"answer generation engines\" to \"agents that read business conditions, make recommendations, and initiate controlled actions.\"",
+					"ja": "PalantirのAIPは、LLMを「回答生成エンジン」から「業務状態を読み、提案し、制御されたActionを起動するエージェント」に変える方向を狙う。"
+				},
+				{
+					"en": "This design directly addresses three issues that companies face when implementing LLM: data connectivity, permissions, and business execution.",
+					"ja": "この設計は、企業がLLM導入で直面する三つの問題、すなわちデータ接続、権限、業務実行に直接対応している。"
+				}
+			]
+		},
+		{
+			"id": "apollo-hidden-strength",
+			"heading": {
+				"ja": "5. Apollo: Palantirの隠れた強み",
+				"en": "5. Apollo: Palantir's hidden strengths"
+			},
+			"pairs": [
+				{
+					"en": "Another key element of Palantir is Apollo.",
+					"ja": "Palantirのもう一つの重要要素はApolloである。"
+				},
+				{
+					"en": "Apollo is a deployment platform that manages and updates software across cloud, on-premises, closed, air-gapped, and edge environments.",
+					"ja": "Apolloは、クラウド、オンプレミス、閉域、エアギャップ、エッジ環境にまたがってソフトウェアを管理・更新するデプロイ基盤である。"
+				},
+				{
+					"en": "For government, defense, and critical infrastructure, it is not enough to simply update to a single cloud like regular SaaS.",
+					"ja": "政府・防衛・重要インフラ向けでは、通常のSaaSのように単一クラウドへ更新するだけでは済まない。"
+				},
+				{
+					"en": "The ability to continually update across certifications, regulations, connectivity, and environmental differences gives Palantir a competitive edge in government and defense projects.",
+					"ja": "認証、規制、接続性、環境差分をまたいで継続更新できることが、Palantirの政府・防衛案件での競争力につながっている。"
+				}
+			]
+		},
+		{
+			"id": "business-growth",
+			"heading": {
+				"ja": "6. 事業状況: AIP後の成長加速",
+				"en": "6. Business situation: Accelerated growth after AIP"
+			},
+			"pairs": [
+				{
+					"en": "Palantir's financials are accelerating significantly from 2024 to 2026.",
+					"ja": "Palantirの財務は、2024年から2026年にかけて大きく加速している。"
+				},
+				{
+					"en": "Full-year 2025 sales were $4.475 billion, gross margin was 82%, operating cash flow was $2.134 billion, and cash, cash equivalents, and short-term U.S. debt at the end of 2025 were $7.2 billion.",
+					"ja": "2025年通期の売上は44.75億ドル、粗利率は82%、営業キャッシュフローは21.34億ドル、2025年末の現金・現金同等物・短期米国債は72億ドルだった。"
+				},
+				{
+					"en": "In Q1 2026, the company announced sales of $1.633 billion, an 85% growth from the previous year, and US commercial sales of $595 million, a growth of 133% from the previous year.",
+					"ja": "2026年Q1には売上16.33億ドル、前年比85%成長、米国商用売上5.95億ドル、前年比133%成長を発表した。"
+				},
+				{
+					"en": "Care must be taken when reading growth.",
+					"ja": "成長の読み方には注意がいる。"
+				},
+				{
+					"en": "Palantir himself emphasizes the acceleration of AIP and the US market, but government deals, defense demand, the AI ​​investment cycle, sales methods, and expansion of existing customers are all at play.",
+					"ja": "Palantir自身はAIPと米国市場の加速を強調するが、政府案件、防衛需要、AI投資サイクル、営業手法、既存顧客拡大が同時に効いている。"
+				},
+				{
+					"en": "It would be excessive to conclude that AIP is the only cause.",
+					"ja": "AIPだけが原因だと断定するのは過剰である。"
+				},
+				{
+					"en": "However, looking at the growth in U.S. commercial sales, the number of customers, and the number of deals over $1 million, AIP is at least strengthening its sales mechanism for commercial expansion.",
+					"ja": "ただし、米国商用売上の伸び、顧客数、100万ドル以上の案件数を見る限り、少なくともAIPは商用拡大の販売メカニズムを強めている。"
+				}
+			]
+		},
+		{
+			"id": "public-sector",
+			"heading": {
+				"ja": "7. 導入事例と公共部門での論点",
+				"en": "7. Case studies and issues in the public sector"
+			},
+			"pairs": [
+				{
+					"en": "Palantir's commercial footprint spans manufacturing, supply chain, energy, finance, medical operations, and defense industries.",
+					"ja": "Palantirは、商用では製造、サプライチェーン、エネルギー、金融、医療運用、防衛産業などに広がる。"
+				},
+				{
+					"en": "In the public sector, issues include the US government, defence, homeland security, the UK NHS, and police and regulators.",
+					"ja": "公共部門では、米国政府、防衛、国土安全保障、英国NHS、警察・規制当局などが論点になる。"
+				},
+				{
+					"en": "The important point here is that because Palantir's value lies in \"unifying siled data and speeding up decision-making,\" the benefits and risks are both greater in the public sector.",
+					"ja": "ここで重要なのは、Palantirの価値が「分断されたデータを統合し、意思決定を高速化する」ことにあるため、公共部門ほど効果と危険が同時に大きくなる点である。"
+				},
+				{
+					"en": "NHS England's Federated Data Platform was awarded to a consortium including Palantir in November 2023 and officially launched in March 2024.",
+					"ja": "NHS EnglandのFederated Data Platformは、Palantirを含むコンソーシアムが2023年11月に受注し、2024年3月に正式開始した。"
+				},
+				{
+					"en": "The contract is for a maximum of seven years, but NHS England says it will commit to an initial three years, with the initial term coming in March 2027.",
+					"ja": "契約は最大7年だが、NHS Englandの説明では初期3年がコミットされ、2027年3月に初期期間が来る。"
+				},
+				{
+					"en": "While NHS England says the FDP will help improve patient care and efficiency, there are continuing concerns from political, civil society and healthcare professionals about patient data, transparency, public procurement and Palantir's links to defense and security.",
+					"ja": "NHS Englandは、FDPが患者ケアや効率化に役立つと説明している一方、政治・市民社会・医療従事者側からは、患者データ、透明性、公共調達、Palantirの防衛・治安領域との関係に対する懸念が継続している。"
+				},
+				{
+					"en": "In the defense domain, the Maven Smart System is emblematic.",
+					"ja": "防衛領域では、Maven Smart Systemが象徴的である。"
+				},
+				{
+					"en": "Palantir will receive a contract from the U.S. Army for the Maven Smart System in 2024, and it was reported that the contract ceiling will be significantly expanded in 2025.",
+					"ja": "Palantirは2024年に米陸軍からMaven Smart Systemの契約を受け、2025年には契約上限の大幅拡大が報じられた。"
+				},
+				{
+					"en": "Maven is talked about in the context of connecting AI/ML to military situational awareness, analysis, and decision-making.",
+					"ja": "Mavenは、AI/MLを軍事的な状況認識・分析・意思決定に接続する文脈で語られる。"
+				},
+				{
+					"en": "While this demonstrates Palantir's technological capabilities, it also raises the ethical risks of AI involvement in target selection, surveillance, and the war effort.",
+					"ja": "これはPalantirの技術力を示す一方、標的選定、監視、戦争遂行へのAI関与という倫理的リスクを高める。"
+				}
+			]
+		},
+		{
+			"id": "strengths",
+			"heading": {
+				"ja": "8. Palantirの強み",
+				"en": "8. Strengths of Palantir"
+			},
+			"pairs": [
+				{
+					"en": "Palantir's strength lies not in its AI model, but in its \"foundation for turning business into AI.\"",
+					"ja": "Palantirの強みは、AIモデルではなく「業務をAI化するための土台」にある。"
+				},
+				{
+					"en": "First, Ontology allows you to handle organizational data as business objects.",
+					"ja": "第一に、Ontologyにより、組織のデータを業務オブジェクトとして扱える。"
+				},
+				{
+					"en": "Rather than just a table, it can represent objects, relationships, states, operations, authorities, and history all at once, allowing AI agents to reason and execute in meaningful units for business purposes.",
+					"ja": "単なるテーブルではなく、対象物、関係、状態、操作、権限、履歴をまとめて表現できるため、AIエージェントが業務上意味のある単位で推論・実行できる。"
+				},
+				{
+					"en": "Second, implementation support is now part of the product.",
+					"ja": "第二に、導入支援が製品の一部になっている。"
+				},
+				{
+					"en": "A short-term intensive implementation like AIP Bootcamp prototypes the customer's business issues in a short time and integrates sales, implementation, and value verification.",
+					"ja": "AIP Bootcampのような短期集中導入は、顧客の業務課題を短時間でプロトタイプ化し、営業・導入・価値検証を一体化する。"
+				},
+				{
+					"en": "This is difficult to reproduce using a general-purpose LLM API or BI tool alone.",
+					"ja": "これは、汎用LLM APIやBIツール単体では再現しにくい。"
+				},
+				{
+					"en": "Third, it has the deployment capabilities needed in government, defense, and regulated industries.",
+					"ja": "第三に、政府・防衛・規制産業で必要なデプロイ能力を持つ。"
+				},
+				{
+					"en": "Apollo allows you to handle continuous updates across closed, air-gapped, multiple cloud, and regulated environments.",
+					"ja": "Apolloにより、閉域・エアギャップ・複数クラウド・規制環境にまたがる継続更新を扱える。"
+				},
+				{
+					"en": "This becomes a barrier to entry for general cloud SaaS and LLM app companies.",
+					"ja": "これは一般的なクラウドSaaSやLLMアプリ企業にとって参入障壁になる。"
+				},
+				{
+					"en": "Fourth, governance functions are brought to the fore as a product value.",
+					"ja": "第四に、ガバナンス機能を製品価値として前面に出している。"
+				},
+				{
+					"en": "Palantir explains in its Privacy and Governance Whitepaper that its product features include transparency, purpose restriction, data minimization, retention/deletion, and accountability.",
+					"ja": "PalantirはPrivacy and Governance Whitepaperで、透明性、目的制限、データ最小化、保持・削除、説明責任などを製品機能に落とすと説明している。"
+				},
+				{
+					"en": "However, this claim is Palantir's own explanation, and the actual quality of the controls depends on the installation site's settings, contracts, audits, and operations.",
+					"ja": "ただし、この主張はPalantir自身の説明であり、実際の統制品質は導入先の設定、契約、監査、運用に依存する。"
+				}
+			]
+		},
+		{
+			"id": "risks-limitations",
+			"heading": {
+				"ja": "9. リスク・限界",
+				"en": "9. Risks/Limitations"
+			},
+			"pairs": [
+				{
+					"en": "Palantir's risk lies in \"too much integration\" rather than a lack of functionality.",
+					"ja": "Palantirのリスクは、機能不足よりも「強すぎる統合」にある。"
+				},
+				{
+					"en": "Integrating siled data, decisions, authority, and field actions into a single operational layer increases operational efficiency.",
+					"ja": "分断されたデータ、意思決定、権限、現場行為を一つの運用層に統合すると、業務効率は上がる。"
+				},
+				{
+					"en": "However, accountability and democratic control become difficult when the integration layer is opaque, dependent on external vendors, and in politically contested areas.",
+					"ja": "しかし、その統合層が不透明、外部ベンダー依存、政治的に争点化しやすい領域に置かれると、説明責任と民主的統制が難しくなる。"
+				}
+			]
+		},
+		{
+			"id": "surveillance-security",
+			"heading": {
+				"ja": "9.1 監視・軍事・治安利用",
+				"en": "9.1 Surveillance/Military/Security Use"
+			},
+			"pairs": [
+				{
+					"en": "Palantir has been deeply tied to defense, intelligence, border control, police and immigration enforcement.",
+					"ja": "Palantirは、防衛、情報、国境管理、警察、移民執行と深く結びついてきた。"
+				},
+				{
+					"en": "In 2020, Amnesty International pointed out the risk of involvement in human rights violations and lack of human rights due diligence regarding Palantir's ICE-related contracts.",
+					"ja": "Amnesty Internationalは2020年、PalantirのICE関連契約について、人権侵害への関与リスクと人権デューデリジェンス不足を指摘した。"
+				},
+				{
+					"en": "This rating does not prove that all Palantir products are inappropriate, but it does indicate that the vendor's use in other areas will be a trust, procurement, and ethical issue when adopting Palantir in the public sector or healthcare organization.",
+					"ja": "この評価はPalantirの全製品が不適切だという証明ではないが、公共部門や医療機関がPalantirを採用する際、ベンダーの他領域での利用実態が信頼・調達・倫理の問題になることを示している。"
+				}
+			]
+		},
+		{
+			"id": "health-data-trust",
+			"heading": {
+				"ja": "9.2 医療データと公共信頼",
+				"en": "9.2 Health data and public trust"
+			},
+			"pairs": [
+				{
+					"en": "The NHS FDP is the most obvious example of Palantir risk.",
+					"ja": "NHS FDPは、Palantirリスクが最も分かりやすく表れた事例である。"
+				},
+				{
+					"en": "NHS England says the purpose of FDP is to bring together disparate health data and use it to improve care, efficiency and waiting lists.",
+					"ja": "NHS EnglandはFDPの目的を、分断された医療データを統合し、ケア・効率・待機リスト改善に使うことと説明する。"
+				},
+				{
+					"en": "Opponents are concerned about the reuse of patient data, the limits of pseudonymization, future cross-government use, vendor lock-in, and Palantir's ties to military and security domains.",
+					"ja": "反対側は、患者データの再利用、擬名化の限界、将来の政府横断利用、ベンダーロックイン、Palantirの軍事・治安領域との関係を懸念する。"
+				},
+				{
+					"en": "Both arguments cannot be summed up in the abstract \"pro-or-opposite\" of data utilization.",
+					"ja": "どちらの主張も、抽象的な「データ活用賛成/反対」では片づかない。"
+				},
+				{
+					"en": "Medical data infrastructure requires documentation to confirm the actual data items, who accesses them, purpose restrictions, deletion, independent audits, and portability upon contract termination.",
+					"ja": "医療データ基盤では、実際のデータ項目、アクセス主体、目的制限、削除、独立監査、契約終了時の移行可能性を文書で確認する必要がある。"
+				}
+			]
+		},
+		{
+			"id": "vendor-lock-in",
+			"heading": {
+				"ja": "9.3 ベンダーロックイン",
+				"en": "9.3 Vendor Lock-in"
+			},
+			"pairs": [
+				{
+					"en": "Palantir deeply integrates your business model, data transformation, apps, actions, permissions, and auditing.",
+					"ja": "Palantirは、導入先の業務モデル、データ変換、アプリ、Action、権限、監査を深く統合する。"
+				},
+				{
+					"en": "This is a source of value, but it also creates transition difficulties.",
+					"ja": "これは価値の源泉だが、同時に移行困難性を生む。"
+				},
+				{
+					"en": "In particular, if Ontology design, Functions, Workshop apps, Action Logs, access control, and field operation procedures depend on Palantir-specific implementation, it is easy to end up in a situation where \"data can be provided, but business capabilities cannot be provided\" at the end of the contract.",
+					"ja": "特に、Ontology設計、Functions、Workshopアプリ、Action Log、アクセス制御、現場運用手順がPalantir固有の実装に依存すると、契約終了時に「データは出せるが業務能力は出せない」状態になりやすい。"
+				},
+				{
+					"en": "In practice, the following should be fixed in the contract and design before implementation.",
+					"ja": "実務的には、導入前に次を契約・設計で固定すべきである。"
+				},
+				{
+					"en": "Data and metadata export formats",
+					"ja": "データとメタデータのエクスポート形式"
+				},
+				{
+					"en": "Portability of Ontology definitions, Action definitions, and authority definitions",
+					"ja": "Ontology定義、Action定義、権限定義の可搬性"
+				},
+				{
+					"en": "Right to save and migrate audit logs and action logs",
+					"ja": "監査ログとAction Logの保存・移行権"
+				},
+				{
+					"en": "Scope that customer engineers can independently operate and modify",
+					"ja": "顧客側エンジニアが独自に運用・改修できる範囲"
+				},
+				{
+					"en": "Costs, period, and cooperation obligations when moving to an alternative platform",
+					"ja": "代替基盤へ移る場合の費用・期間・協力義務"
+				}
+			]
+		},
+		{
+			"id": "ai-governance",
+			"heading": {
+				"ja": "9.4 AIガバナンス",
+				"en": "9.4 AI Governance"
+			},
+			"pairs": [
+				{
+					"en": "AIP connects LLM to business actions, so it requires more control than regular chatbots.",
+					"ja": "AIPは、LLMを業務Actionに接続するため、通常のチャットボットよりも高い統制が必要になる。"
+				},
+				{
+					"en": "The NIST AI RMF treats AI risk management as a continuous process of Govern, Map, Measure, and Manage.",
+					"ja": "NIST AI RMFはAIリスク管理を、Govern、Map、Measure、Manageの継続プロセスとして扱う。"
+				},
+				{
+					"en": "The EU AI Act adopts a framework that treats AI systems that affect health, safety and fundamental rights as high risk.",
+					"ja": "EU AI Actは、健康、安全、基本権に影響するAIシステムを高リスクとして扱う枠組みを採る。"
+				},
+				{
+					"en": "When Palantir implementation involves healthcare, employment, law enforcement, border control, or defense, a technical evaluation alone is not enough; an operational design that includes legal, ethical, audit, and field personnel is required.",
+					"ja": "Palantir導入が医療、雇用、法執行、国境管理、防衛に関わる場合、技術評価だけでは不十分で、法務、倫理、監査、現場責任者を含む運用設計が必要である。"
+				}
+			]
+		},
+		{
+			"id": "approach-comparison",
+			"heading": {
+				"ja": "10. 主要アプローチ比較",
+				"en": "10. Comparison of major approaches"
+			},
+			"pairs": []
+		},
+		{
+			"id": "implementation-decision",
+			"heading": {
+				"ja": "11. 実務導入判断",
+				"en": "11. Practical implementation decision"
+			},
+			"pairs": [
+				{
+					"en": "Palantir is suitable for large organizations that want to change not only data integration but also decision-making and on-site actions.",
+					"ja": "Palantirが向くのは、データ統合だけでなく、意思決定と現場Actionまで変えたい大規模組織である。"
+				},
+				{
+					"en": "It is worth considering in areas where data fragmentation is large, delays in decision-making are costly, and on-site action is important, such as manufacturing constraint optimization, supply chains, aviation and defense, resources and energy, financial crime prevention, and hospital management.",
+					"ja": "製造の制約最適化、サプライチェーン、航空・防衛、資源・エネルギー、金融犯罪対策、病院運営のように、データ分断が大きく、意思決定の遅れが高コストで、現場のActionが重要な領域では検討価値がある。"
+				},
+				{
+					"en": "On the other hand, it can easily become excessive for simple internal searches, document summaries, BI dashboards, and light LLM use within departments.",
+					"ja": "逆に、単なる社内検索、文書要約、BIダッシュボード、部門内の軽いLLM活用には過剰になりやすい。"
+				},
+				{
+					"en": "When Palantir is installed, a change similar to installing a business OS occurs rather than installing a tool.",
+					"ja": "Palantirを入れると、ツール導入ではなく業務OS導入に近い変化が起きる。"
+				},
+				{
+					"en": "If an organization is not prepared to take on Ontology design, permissions, auditing, field processes, and contract controls, a strong foundation becomes a black box.",
+					"ja": "組織がOntology設計、権限、監査、現場プロセス、契約統制を引き受ける準備がない場合、強力な基盤がブラックボックス化する。"
+				},
+				{
+					"en": "The checklist for making an introduction decision is as follows.",
+					"ja": "導入判断のチェックリストは次の通りである。"
+				},
+				{
+					"en": "**Business value**: Is there room for improvement of hundreds of millions of yen or more per year, or is it related to human life, security, or critical infrastructure?",
+					"ja": "**業務価値**: 年間で数億円以上の改善余地がある、または人命・安全保障・重要インフラに関わるか。"
+				},
+				{
+					"en": "**Data maturity**: Have primary data sources, quality officers, master controls, and access rights been identified?",
+					"ja": "**データ成熟度**: 主要データ源、品質責任者、マスタ管理、アクセス権が特定されているか。"
+				},
+				{
+					"en": "**Action Responsibility**: Is it clear who is responsible for changes proposed and executed by AI or apps, who approves them, and the conditions for suspension?",
+					"ja": "**Action責任**: AIやアプリが提案・実行する変更の責任者、承認者、停止条件が明確か。"
+				},
+				{
+					"en": "**Auditability**: Can an external audit explain who saw what and what changed?",
+					"ja": "**監査可能性**: 誰が何を見て何を変えたか、外部監査で説明できるか。"
+				},
+				{
+					"en": "**Exit Strategy**: Can data, ontology, logs, apps, and operational knowledge be migrated at the end of the contract?",
+					"ja": "**出口戦略**: 契約終了時にデータ、Ontology、ログ、アプリ、運用知識を移行できるか。"
+				},
+				{
+					"en": "**Public trust**: In healthcare, security, borders, and defense, do they hold up to explanations to residents, patients, staff, parliament, and regulatory agencies?",
+					"ja": "**公共信頼**: 医療・治安・国境・防衛では、住民、患者、職員、議会、監督機関への説明に耐えるか。"
+				}
+			]
+		},
+		{
+			"id": "future-extrapolation",
+			"heading": {
+				"ja": "12. 公表情報からの推定: Palantirの今後",
+				"en": "12. Extrapolation from public information: Palantir's future"
+			},
+			"pairs": [
+				{
+					"en": "Future features are not systematically released as part of the official roadmap.",
+					"ja": "公式ロードマップとして将来機能が体系的に公開されているわけではない。"
+				},
+				{
+					"en": "Judging from publicly available information, Palantir is likely to move in the following direction:",
+					"ja": "公表情報からの推定として、Palantirは次の方向へ進む可能性が高い。"
+				},
+				{
+					"en": "Expand AIP as a business agent OS rather than an LLM app.",
+					"ja": "AIPを、LLMアプリではなく業務エージェントOSとして拡張する。"
+				},
+				{
+					"en": "Sell Ontology as a standard connection layer for enterprise AI context, authority, and action.",
+					"ja": "Ontologyを、企業AIの文脈・権限・Actionの標準接続層として売る。"
+				},
+				{
+					"en": "Strengthen Apollo as a deployment platform for sovereign AI, closed AI, edge AI, and defense AI.",
+					"ja": "Apolloを、ソブリンAI、閉域AI、エッジAI、防衛AIのデプロイ基盤として強化する。"
+				},
+				{
+					"en": "Expand to allied governments, defense, medical care, and regulatory areas while keeping the U.S. commercial and U.S. government in tandem.",
+					"ja": "米国商用と米国政府を両輪にしつつ、同盟国政府・防衛・医療・規制領域へ広げる。"
+				},
+				{
+					"en": "In the highly contested public sphere, political and legal pressures around transparency, data sovereignty, auditing and contract end-of-life transition will increase.",
+					"ja": "反発が強い公共領域では、透明性、データ主権、監査、契約終了時移行をめぐる政治的・法的圧力が増す。"
+				}
+			]
+		},
+		{
+			"id": "recommended-policy",
+			"heading": {
+				"ja": "13. 推奨方針",
+				"en": "13. Recommended policy"
+			},
+			"pairs": [
+				{
+					"en": "From a technology and business perspective, Palantir is one of the most powerful enterprise AI operating platforms as of 2026.",
+					"ja": "技術・事業の観点では、Palantirは2026年時点で最も強力な enterprise AI operating platform の一つである。"
+				},
+				{
+					"en": "In particular, a design that links data, business logic, action, AI, and auditing, centered on Ontology, will be a realistic breakthrough for organizations that tend to stop at PoC when utilizing LLM.",
+					"ja": "特にOntologyを中心に、データ、業務ロジック、アクション、AI、監査を結びつける設計は、LLM活用がPoCで止まりがちな組織にとって現実的な突破口になる。"
+				},
+				{
+					"en": "However, the hiring decision should be treated as \"outsourcing the organizational operational infrastructure\" rather than \"introducing AI.\"",
+					"ja": "ただし、採用判断は「AI導入」ではなく「組織運用基盤の外部委託」として扱うべきである。"
+				},
+				{
+					"en": "For private companies, value assumptions, lock-in, data sovereignty, and in-house operational capabilities are worked out before the contract is signed.",
+					"ja": "民間企業なら、価値仮説、ロックイン、データ主権、社内運用能力を契約前に詰める。"
+				},
+				{
+					"en": "For public institutions, additional conditions include democratic control, explanations to residents, patients, and staff, third-party audits, procurement transparency, and prevention of unintended use.",
+					"ja": "公共機関なら、それに加えて、民主的統制、住民・患者・職員への説明、第三者監査、調達透明性、目的外利用防止を導入条件にする。"
+				},
+				{
+					"en": "The practical recommendations are as follows.",
+					"ja": "実務上の推奨は次である。"
+				},
+				{
+					"en": "**When you should consider hiring**: High-value, high-complexity, highly regulated business that needs to change from data integration to action in a short period of time.",
+					"ja": "**採用を検討すべき場合**: 高価値・高複雑度・高規制の業務で、データ統合からActionまで短期間で変える必要がある。"
+				},
+				{
+					"en": "**Case where you should be careful**: Cases that have a large impact on individual rights and public trust, such as medical care, security, immigration, military, education, and welfare.",
+					"ja": "**慎重にすべき場合**: 医療、治安、移民、軍事、教育、福祉のように、個人の権利や公共信頼への影響が大きい。"
+				},
+				{
+					"en": "**When to avoid**: If your issue is just a search, summary, or dashboard and you don't need Palantir-specific Ontology/Action/Apollo.",
+					"ja": "**避けるべき場合**: 課題が単なる検索、要約、ダッシュボードであり、Palantir固有のOntology/Action/Apolloが不要な場合。"
+				},
+				{
+					"en": "**Minimum Requirements**: Document purpose, data scope, permissions, auditing, model evaluation, action approval, logging, and exit strategies before deployment.",
+					"ja": "**最低条件**: 導入前に、目的、データ範囲、権限、監査、モデル評価、Action承認、ログ保存、出口戦略を文書化する。"
+				}
+			]
+		}
+	]
+}

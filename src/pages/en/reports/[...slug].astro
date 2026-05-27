@@ -65,7 +65,7 @@ const disqusEnabled = disqusConfig.enabled
 		class='grid grid-cols-1 gap-8 mt-8 lg:grid-cols-[10rem_minmax(0,1fr)_9rem] lg:justify-center xl:grid-cols-[12rem_minmax(0,56rem)_10rem] 2xl:grid-cols-[14rem_minmax(0,62rem)_12rem]'
 	>
 		<aside
-			class='hidden min-w-0 lg:flex flex-col gap-6 pr-3 text-sm text-gray-600 dark:text-gray-400'
+			class='hidden min-w-0 lg:flex flex-col gap-6 pr-5 text-sm text-gray-600 dark:text-gray-400'
 		>
 			<div class='sticky top-24 flex w-full min-w-0 flex-col gap-6 self-start'>
 				<section class='flex flex-col gap-2'>
@@ -159,8 +159,12 @@ const disqusEnabled = disqusConfig.enabled
 			</footer>
 		</article>
 
-		<aside class='hidden lg:flex flex-col gap-6 pl-2 text-sm text-gray-600 dark:text-gray-400'>
-			<div class='sticky top-24 self-start hidden lg:block transition-all duration-200'>
+		<aside
+			class='hidden min-w-0 lg:flex flex-col gap-6 pl-2 text-sm text-gray-600 dark:text-gray-400'
+		>
+			<div
+				class='sticky top-24 self-start hidden w-full min-w-0 lg:block transition-all duration-200'
+			>
 				{headings && headings.length > 0 && <TableOfContents {headings} />}
 			</div>
 		</aside>

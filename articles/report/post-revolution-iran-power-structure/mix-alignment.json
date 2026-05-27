@@ -1,0 +1,331 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "After the 1979 revolution, Iran is neither a simple \"religious state\" nor a normal parliamentary government system.",
+					"ja": "1979年革命後のイランは、単純な「宗教国家」でも、通常の議院内閣制でもない。"
+				},
+				{
+					"en": "The constitution institutionalizes `velayat-e faqih`, or \"jurist rule,\" placing the supreme leader at the top of the state, and intertwining the Assembly of Experts, the Guardian Council, the judiciary, the Revolutionary Guards, and the electoral system.",
+					"ja": "憲法は `velayat-e faqih` すなわち「法学者の統治」を制度化し、最高指導者を国家の頂点に置いたうえで、専門家会議、護憲評議会、司法、革命防衛隊、選挙制度を相互に絡ませている。"
+				},
+				{
+					"en": "Although there is an elected president and parliament, the selection of candidates, legal compliance checks, and final control over the military and public security rely heavily on non-elected bodies.",
+					"ja": "選挙で選ばれる大統領と議会は存在するが、候補者のふるい分け、法律の適合審査、軍事・治安の最終統制は非選挙機関に強く寄っている。"
+				},
+				{
+					"en": "The core of this structure is that the supreme leader is not simply a religious authority, but is designed as a constitutional unification point that straddles the military, judiciary, Guardian Council, broadcasting, and religious foundations.",
+					"ja": "この構造の核心は、最高指導者を単なる宗教的権威ではなく、軍・司法・護憲評議会・放送・宗教財団をまたぐ憲法上の統合点として設計したことにある。"
+				},
+				{
+					"en": "On the other hand, since the Expert Council is responsible for selecting and dismissing the supreme leader, there remains a mechanism that, at least formally, constrains the top.",
+					"ja": "他方で、専門家会議は最高指導者の選出と解任を担当するため、少なくとも形式上はトップを拘束する仕組みが残る。"
+				},
+				{
+					"en": "However, candidates for that conference also go through screening by the Guardian Council, making it a closed structure in which the body that supervises supervisors is once again supervised.",
+					"ja": "ただし、その会議の候補者も護憲評議会の審査を通るため、監督者を監督する機関が再び監督されるという閉じた構造になっている。"
+				},
+				{
+					"en": "In short, Iran's post-revolutionary system is a system in which \"there is a president and a parliament, but the final allocation of sovereignty lies with the supreme leader.\"",
+					"ja": "要するに、イラン革命後体制は「大統領と議会があるが、主権の最終配分は最高指導者側にある」制度である。"
+				},
+				{
+					"en": "In practical terms, the issues at stake are not who makes the laws, but who passes the candidates, who stops the laws, and who controls the military and security apparatus.",
+					"ja": "実務上の争点は、誰が法を作るかではなく、誰が候補者を通し、誰が法律を止め、誰が軍事・治安機構を統べるかにある。"
+				}
+			]
+		},
+		{
+			"id": "constitutional-design",
+			"heading": {
+				"ja": "2. 憲法上の設計",
+				"en": "2. Constitutional Design"
+			},
+			"pairs": [
+				{
+					"en": "The 1979 constitution did not limit the ideals of the Iranian revolution to an abstract declaration, but fixed it in the distribution of power.",
+					"ja": "1979年憲法は、イラン革命の理念を抽象的な宣言にとどめず、権力配分として固定した。"
+				},
+				{
+					"en": "Article 5 states that the Twelve Imams will be ruled by \"just and pious jurists\" during their period of seclusion, and Article 107 stipulates that a council of experts will select the leaders.",
+					"ja": "第5条は、十二イマームの隠遁期における「正義で敬虔な法学者」の統治を掲げ、第107条は専門家会議が指導者を選ぶと定める。"
+				},
+				{
+					"en": "Article 110 enumerated the powers of the supreme leader, including the supreme command of the military, the appointment of the head of the judiciary, and the appointment of jurist members of the Guardian Council.",
+					"ja": "第110条は最高指導者の権限を列挙し、軍の最高指揮、司法の長の任命、護憲評議会の法学者メンバーの任命などを含めた。"
+				},
+				{
+					"en": "The 1989 revision has great institutional significance.",
+					"ja": "1989年改正の制度的意味は大きい。"
+				},
+				{
+					"en": "Leadership authority was concentrated in a single supreme leader, and the relationship with the expert council was made clearer.",
+					"ja": "指導者権限が単独の最高指導者へ集中し、専門家会議との関係がより明確化された。"
+				},
+				{
+					"en": "This also means that post-revolutionary religious orthodoxy was fixed as a \"delegation to a single jurist,\" rather than a \"council of multiple religious authorities.\"",
+					"ja": "これは、革命後の宗教的正統性を「複数の宗教権威の合議」ではなく、「ひとりの法学者への委任」として固定した、ということでもある。"
+				},
+				{
+					"en": "Article 6 provides that the principal institutions of the Republic shall be governed by elections and referendums.",
+					"ja": "第6条は、共和国の主要機関が選挙と国民投票によって運営されると定める。"
+				},
+				{
+					"en": "On the other hand, Articles 91 and 94 require parliamentary bills to be examined by the Guardian Council, and Article 99 gives the Council the power to supervise elections and referendums.",
+					"ja": "他方、第91条と第94条は、議会法案が護憲評議会の審査を受けることを義務づけ、第99条は同評議会に選挙・国民投票の監督権限を与える。"
+				},
+				{
+					"en": "In other words, Iran's system is designed in such a way that \"there are elections, but the constitutional organs control the entry and exit points of the elections.\"",
+					"ja": "つまり、イランの制度は「選挙はあるが、選挙の入口と出口を憲法機関が握る」形で設計されている。"
+				}
+			]
+		},
+		{
+			"id": "major-institutions",
+			"heading": {
+				"ja": "3. 主要機関の関係",
+				"en": "3. Relationship with major institutions"
+			},
+			"pairs": [
+				{
+					"en": "The following is a correspondence table of the minimum number of institutions that should be known in order to understand this system.",
+					"ja": "以下は、この体制を理解するうえで最低限押さえるべき機関の対応表である。"
+				},
+				{
+					"en": "There are three points in the diagram.",
+					"ja": "図のポイントは三つある。"
+				},
+				{
+					"en": "First, the supreme leader is placed at a higher level across military, judicial, and supervisory institutions.",
+					"ja": "第一に、最高指導者は軍事・司法・監督機構をまたいで上位に置かれる。"
+				},
+				{
+					"en": "Second, the Constitutional Guardian Council controls not only legal review but also the entry point for elections.",
+					"ja": "第二に、護憲評議会は法律審査だけでなく、選挙の入口も管理する。"
+				},
+				{
+					"en": "Third, although the Expert Council can choose the supreme leader, candidate members are also examined by the Constitutional Guardian Council.",
+					"ja": "第三に、専門家会議は最高指導者を選べるが、その構成員候補は同じく護憲評議会に審査される。"
+				}
+			]
+		},
+		{
+			"id": "supreme-leader",
+			"heading": {
+				"ja": "4. 最高指導者と専門家会議",
+				"en": "4. Supreme Leader and Expert Meeting"
+			},
+			"pairs": [
+				{
+					"en": "The Supreme Leader is the center of the Iranian system.",
+					"ja": "最高指導者は、イラン体制の中心である。"
+				},
+				{
+					"en": "According to Article 110 of the Constitution, it controls key points of the state, including the supreme command of the military, the authority to declare war and peace, the appointment of the chief justice, the appointment of the head of the broadcasting organization, and the appointment of the jurists of the Guardian Council.",
+					"ja": "憲法第110条により、軍の最高指揮、戦争と平和の宣言に関わる権限、司法長の任命、放送機構の長の任命、護憲評議会法学者の任命など、国家の要所を押さえる。"
+				},
+				{
+					"en": "Although the president is the constitutional head of government, he cannot override the institutional superiority of the supreme leader.",
+					"ja": "大統領は憲法上の行政責任者ではあるが、最高指導者の制度的上位性を超えることはできない。"
+				},
+				{
+					"en": "The Council of Experts is said to be able to select, supervise and, if necessary, dismiss the supreme leader.",
+					"ja": "専門家会議は、最高指導者を選び、監督し、必要なら解任できるとされる。"
+				},
+				{
+					"en": "This is the point where \"religious guidance is not unlimited\" and formally serves as an institutional brake on the highest authority.",
+					"ja": "ここが「宗教指導が無制限ではない」点であり、形式的には最高権力者に対する制度的ブレーキになっている。"
+				},
+				{
+					"en": "However, candidates are selected through the Guardian Council, so opponents cannot freely flow in.",
+					"ja": "ただし、候補者の選別は護憲評議会を通るため、反対派が自由に流入できるわけではない。"
+				},
+				{
+					"en": "The system is designed to facilitate self-reproduction.",
+					"ja": "体制は自己再生産しやすいように作られている。"
+				},
+				{
+					"en": "Article 111 also stipulates what to do if a vacancy occurs in the position of supreme leader.",
+					"ja": "第111条は、最高指導者に空席が生じた場合の対応も定める。"
+				},
+				{
+					"en": "In other words, the system has been constitutionalized not only for \"individual charisma\" but also for \"rules for succession in the event of a vacancy.\"",
+					"ja": "つまり、体制は「個人のカリスマ」だけでなく「空席時の継承ルール」まで憲法化している。"
+				},
+				{
+					"en": "This shows that post-revolutionary Iran is not an interim government, but an institutional state that envisions long-term rule.",
+					"ja": "ここに、革命後イランが臨時政権ではなく長期支配を想定した制度国家であることが表れる。"
+				}
+			]
+		},
+		{
+			"id": "guardian-council",
+			"heading": {
+				"ja": "5. 護憲評議会と選挙制度",
+				"en": "5. Guardian Council and electoral system"
+			},
+			"pairs": [
+				{
+					"en": "The Guardian Council is the most important gatekeeper of Iranian politics.",
+					"ja": "護憲評議会は、イラン政治の最重要ゲートキーパーである。"
+				},
+				{
+					"en": "According to Article 91, it is composed of 12 members, with six jurists appointed by the supreme leader and six jurists selected by the parliament with the recommendation of the attorney general.",
+					"ja": "第91条により12名で構成され、6名の法学者は最高指導者が任命し、6名の法曹は司法長官の推薦を受けて議会が選ぶ。"
+				},
+				{
+					"en": "Article 94 requires the review of bills passed by parliament, and Article 96 authorizes the review to check \"compatibility with Islamic law and the constitution.\"",
+					"ja": "第94条は議会可決法案の審査を要求し、第96条はその審査で「イスラム法と憲法との適合」をチェックする権限を認める。"
+				},
+				{
+					"en": "The important point in practice is the \"supervision of elections and referendums\" based on Article 99.",
+					"ja": "実務上の重要点は、第99条に基づく「選挙・国民投票の監督」である。"
+				},
+				{
+					"en": "Presidential, parliamentary, and expert council elections are formalities, but candidates are vetted in advance, so the scope of competition is institutionally controlled.",
+					"ja": "大統領選挙、議会選挙、専門家会議選挙は形式上あるが、候補者は事前に審査されるため、競争の範囲は制度的に制御される。"
+				},
+				{
+					"en": "Therefore, it is accurate to view Iranian elections not as a \"free market for power change,\" but as a \"device that periodically rearranges the options within the regime.\"",
+					"ja": "したがって、イランの選挙は「権力交代の自由市場」ではなく、「体制内の選択肢を定期的に再配列する装置」と見るのが正確である。"
+				},
+				{
+					"en": "Although the president is elected by the people, Article 113 of the Constitution only positions the president as the nation's highest executive branch after the supreme leader, leaving final adjustments to territorial sovereignty with the supreme leader.",
+					"ja": "大統領は国民選出だが、憲法第113条は大統領を最高指導者に次ぐ国家の上位行政府と位置づけるにとどまり、領域主権の最終調整は最高指導者側に残る。"
+				},
+				{
+					"en": "Although the parliament is also elected by the people, it does not have complete legislative power because legislation cannot be finalized unless it passes the examination under Article 94.",
+					"ja": "議会も国民選出だが、第94条の審査を通らなければ法律を完成できないため、立法権も完全ではない。"
+				}
+			]
+		},
+		{
+			"id": "judiciary-law",
+			"heading": {
+				"ja": "6. 司法と法の統制",
+				"en": "6. Judiciary and control of law"
+			},
+			"pairs": [
+				{
+					"en": "Iran's judiciary is designed to be an independent institution, with the head of the judiciary appointed by the Supreme Leader.",
+					"ja": "イランの司法は独立機関として設計されているが、その頂点である司法長は最高指導者が任命する。"
+				},
+				{
+					"en": "Article 157 stipulates that the Supreme Leader appoints the head of the judiciary, and Article 160 creates a system in which the president appoints the Minister of Justice, but the candidate must be proposed by the head of the judiciary.",
+					"ja": "第157条は、最高指導者が司法の長を任命することを定め、第160条は法務大臣を大統領が任命する一方で、その候補が司法長の提案を必要とする仕組みを作る。"
+				},
+				{
+					"en": "In other words, law enforcement is not the sole authority of the president, but is influenced by the supreme leader through the attorney general.",
+					"ja": "つまり、法の執行は大統領の単独権限ではなく、司法長を通じて最高指導者側の影響を受ける。"
+				},
+				{
+					"en": "This design allows the judiciary to operate as a \"central apparatus connected to the supreme leader,\" while formally retaining the separation of powers between the legislative, executive, and judicial branches.",
+					"ja": "この設計は、立法、行政、司法の三権分立を形式上は残しながら、司法を「最高指導者に連結された中央装置」として運用することを可能にしている。"
+				},
+				{
+					"en": "The core of the system is who chooses the top judiciary, rather than the finality of the verdict itself.",
+					"ja": "判決の最終性そのものよりも、誰が司法のトップを選ぶかが制度の核心になる。"
+				}
+			]
+		},
+		{
+			"id": "irgc-religion",
+			"heading": {
+				"ja": "7. 革命防衛隊と宗教権威の接続",
+				"en": "7. Connection between the Revolutionary Guards and religious authorities"
+			},
+			"pairs": [
+				{
+					"en": "The Revolutionary Guards Corps (IRGC) is separate from the regular army and is specified in Article 150 of the Constitution as a standing military organization to protect the revolution and the regime.",
+					"ja": "革命防衛隊（IRGC）は、通常軍とは別系統で、革命と体制を守るための常備軍事組織として憲法第150条に明記されている。"
+				},
+				{
+					"en": "Article 143 positions the conventional army in the defense of national independence and territorial integrity, and Article 150 leaves the Revolutionary Guards as guardians of the revolution and its achievements.",
+					"ja": "第143条は通常軍を国家の独立と領土保全の防衛に位置づけ、第150条は革命防衛隊を革命とその成果の守護者として残す。"
+				},
+				{
+					"en": "This shows that Iran's security is not separated into \"national defense\" and \"regime defense.\"",
+					"ja": "ここから、イランの安全保障は「国家防衛」と「体制防衛」が分離されていないことが分かる。"
+				},
+				{
+					"en": "The supreme leader holds the highest command of the military and stands above the IRGC chain of command, making it the nexus between religious authority and armed organizations.",
+					"ja": "最高指導者が軍の最高指揮を握り、IRGC指令系統の上に立つことが、宗教権威と武力組織の結節点になっている。"
+				},
+				{
+					"en": "USIP describes the IRGC as one of Iran's most powerful security and military organizations, noting its political and economic infiltration.",
+					"ja": "USIPはIRGCをイランで最も強力な安全保障・軍事組織の一つとして説明し、その政治的・経済的浸透を指摘している。"
+				},
+				{
+					"en": "In practice, the IRGC functions not only as an external force but also as a domestic stabilization and repression device.",
+					"ja": "実務上は、IRGCは外征能力だけでなく、国内の統治安定化と抑圧の装置としても機能する。"
+				},
+				{
+					"en": "For this reason, religious authority in Iran is not limited to the \"authority of a preacher,\" but emerges as a governing power that unifies the military, security, and judiciary.",
+					"ja": "このため、イランの宗教権威は「説教者の権威」にとどまらず、軍事・治安・司法を束ねる統治権力として現れる。"
+				},
+				{
+					"en": "The difficulty in post-revolutionary Iran is not that religion and state are not separate, but that their combination has become institutionally multi-layered, overlapping the electoral system.",
+					"ja": "革命後イランの難しさは、宗教と国家が分離していないこと自体ではなく、その結合が制度的に複層化し、しかも選挙制度の上から覆いかぶさっている点にある。"
+				}
+			]
+		},
+		{
+			"id": "practical-reading",
+			"heading": {
+				"ja": "8. 実務的な読み方",
+				"en": "8. Practical reading"
+			},
+			"pairs": [
+				{
+					"en": "There are three practical points to consider when looking at this system.",
+					"ja": "この体制を見るときの実務上の要点は三つある。"
+				},
+				{
+					"en": "First, it is a mistake to categorize Iranian politics into whether there will be an election or not.",
+					"ja": "第一に、イラン政治を「選挙があるかないか」で分類すると誤る。"
+				},
+				{
+					"en": "In reality, elections are held, but candidate selection and legal review are controlled by higher-ranking institutions.",
+					"ja": "実際には、選挙はあるが候補者選定と法審査が上位機関に押さえられている。"
+				},
+				{
+					"en": "Second, the supreme leader's authority is not conveyed through symbols, but through military, judicial, and supervisory institutions.",
+					"ja": "第二に、最高指導者の権限は象徴ではなく、軍事・司法・監督機構を通じて可動する。"
+				},
+				{
+					"en": "Third, the IRGC needs to be read not just as a military organization but as a core institution for maintaining the regime.",
+					"ja": "第三に、IRGC は単なる軍事組織ではなく、体制維持のコア機関として読む必要がある。"
+				},
+				{
+					"en": "From the perspective of policy analysis, looking at the presidential office alone is insufficient when it comes to diplomacy toward Iran, designing sanctions, evaluating political change scenarios, and considering military deterrence.",
+					"ja": "政策分析の観点では、対イラン外交や制裁設計、政変シナリオの評価、軍事抑止の検討において、「大統領府」だけを見ても不十分である。"
+				},
+				{
+					"en": "What actually influences decisions are the Supreme Leader, the Guardian Council, the judiciary, the IRGC, and the electoral controls that reproduce them.",
+					"ja": "実際に決定を左右するのは、最高指導者、護憲評議会、司法、IRGC、そしてそれらを再生産する選挙の入口管理である。"
+				},
+				{
+					"en": "There are limits.",
+					"ja": "限界もある。"
+				},
+				{
+					"en": "What I have shown here is the constitutional design and its institutional consequences, and I have not delved into the factional conflicts of individual authorities, economic interests, revolutionary history, or regional proxy forces.",
+					"ja": "ここで示したのは憲法上の設計とその制度的帰結であり、個々の権力者の派閥対立、経済利益、革命歴史、地域代理勢力までは掘り下げていない。"
+				},
+				{
+					"en": "Therefore, in order to read actual decision-making, it is necessary to separately track individual data on personnel, budget, sanctions avoidance, and military operations in addition to institutional analysis.",
+					"ja": "したがって、実際の意思決定を読むには、制度分析に加えて人事、予算、制裁回避、軍事作戦の個別データを別途追う必要がある。"
+				}
+			]
+		}
+	]
+}

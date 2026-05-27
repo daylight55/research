@@ -1,0 +1,345 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "NewSQL is a lineage that attempts to respond to the demands for horizontal scale and high availability spread by NoSQL without abandoning SQL, ACID transactions, and the relational model.",
+					"ja": "NewSQLは、NoSQLが広げた水平スケールと高可用性の要求に対して、SQL、ACIDトランザクション、リレーショナルモデルを捨てずに応答しようとした系譜である。"
+				},
+				{
+					"en": "Initially, the discussion was about \"decentralizing RDBMS,\" but the current main battleground has shifted to `Distributed SQL`, `Cloud-native Postgres compatibility`, `multi-region active-active`, `serverless managed database`, and `AI/agent workloads`.",
+					"ja": "初期は「RDBMSを分散化する」議論だったが、現在の主戦場は `Distributed SQL`、`Cloud-native Postgres compatibility`、`multi-region active-active`、`serverless managed database`、`AI/agent workloads` へ移っている。"
+				},
+				{
+					"en": "YugabyteDB is a distributed SQL database that is part of this trend and features a PostgreSQL compatible API.",
+					"ja": "YugabyteDBはこの潮流の中で、PostgreSQL互換APIを前面に出した分散SQLデータベースである。"
+				},
+				{
+					"en": "The core services consist of YugabyteDB OSS, YugabyteDB Aeon fully managed, YugabyteDB Anywhere self-managed DBaaS, and YugabyteDB Voyager migration tools/services.",
+					"ja": "中核サービスは、OSSのYugabyteDB、フルマネージドのYugabyteDB Aeon、セルフマネージドDBaaSのYugabyteDB Anywhere、移行ツール/サービスのYugabyteDB Voyagerで構成される。"
+				},
+				{
+					"en": "If you were to listen to the story in 2026, it would be better to look at it as a company that is expanding to include multi-region, cloud/on-premises/Kubernetes, legacy DB migration, and AI application infrastructure while maintaining PostgreSQL compatibility, rather than just a \"NewSQL product.\"",
+					"ja": "2026年時点で話を聞くなら、単なる「NewSQL製品」ではなく、「PostgreSQL互換のまま、マルチリージョン、クラウド/オンプレ/Kubernetes、レガシーDB移行、AIアプリ基盤まで広げようとしている会社」と見た方がよい。"
+				},
+				{
+					"en": "Judging from publicly available information, Yugabyte is currently pushing strongly into the following four areas.",
+					"ja": "Yugabyteが現在強く押し出している領域は、公開情報から見る限り次の4つである。"
+				},
+				{
+					"en": "Enhanced PostgreSQL compatibility: Starting with v2025.1, we move to PostgreSQL 15 base and expand the functionality of Enhanced PostgreSQL Compatibility Mode.",
+					"ja": "PostgreSQL互換性の強化: v2025.1以降でPostgreSQL 15ベースへ進み、Enhanced PostgreSQL Compatibility Modeの機能を広げている。"
+				},
+				{
+					"en": "Managed/hybrid provision: Aeon, Aeon BYOC, Anywhere allows you to choose \"Leave the operation to Yugabyte/Control in your own environment\".",
+					"ja": "マネージド/ハイブリッド提供: Aeon、Aeon BYOC、Anywhereで「運用をYugabyteに任せる/自社環境で統制する」を選ばせる。"
+				},
+				{
+					"en": "Database modernization: Voyager supports migration from PostgreSQL, MySQL, Oracle, etc. and promotes AI-powered assessment/modernization.",
+					"ja": "データベースモダナイゼーション: VoyagerでPostgreSQL、MySQL、Oracleなどからの移行を支援し、AI-powered assessment/modernizationを訴求している。"
+				},
+				{
+					"en": "AI/agent workload: Collaboration with pgvector, MCP Server, LangChain/LlamaIndex, etc., and agent-native data layer called Meko are starting to come to the fore.",
+					"ja": "AI/agentワークロード: pgvector、MCP Server、LangChain/LlamaIndex等の連携、Mekoというagent-native data layerを前面に出し始めている。"
+				}
+			]
+		},
+		{
+			"id": "key-concepts",
+			"heading": {
+				"ja": "2. NewSQLの重要概念",
+				"en": "2. Key concepts of NewSQL"
+			},
+			"pairs": [
+				{
+					"en": "To put NewSQL in one sentence, it is \"a group of OLTP databases that aim for NoSQL-level horizontal scaling, fault tolerance, and distributed operation while maintaining SQL and ACID.\"",
+					"ja": "NewSQLを一文で言えば、「SQLとACIDを維持したまま、NoSQL級の水平スケール、耐障害性、分散運用を狙うOLTPデータベース群」である。"
+				},
+				{
+					"en": "Traditionally, RDBMSs have had weaknesses in the operational complexity of single nodes, shared storage, vertical scaling, manual sharding, and replication/failover.",
+					"ja": "従来RDBMSは、単一ノード、共有ストレージ、垂直スケール、手動シャーディング、レプリケーション/フェイルオーバーの運用複雑性に弱点があった。"
+				},
+				{
+					"en": "NoSQL exploited this weakness and expanded sharding, replication, schema flexibility, and availability, but often limited SQL, JOINs, strong consistency, and multi-row transactions.",
+					"ja": "NoSQLはこの弱点を突いて、シャーディング、レプリケーション、スキーマ柔軟性、可用性を広げたが、多くの場合、SQL、JOIN、強い一貫性、複数行トランザクションを制限した。"
+				},
+				{
+					"en": "NewSQL emerged as a reaction.",
+					"ja": "NewSQLはその反動として現れた。"
+				},
+				{
+					"en": "Importantly, NewSQL is not a single architecture name.",
+					"ja": "重要なのは、NewSQLが単一のアーキテクチャ名ではない点である。"
+				},
+				{
+					"en": "There are multiple design lineages, including Spanner-based time APIs and consensus building, Calvin-based deterministic transaction ordering, SQL on distributed KVs replicated with Raft/Paxos, separation of storage and SQL layers, and implementations that emphasize compatibility with existing PostgreSQL/MySQL.",
+					"ja": "Spanner系の時刻APIと合意形成、Calvin系の決定的トランザクション順序、Raft/Paxosで複製される分散KV上のSQL、ストレージとSQL層の分離、既存PostgreSQL/MySQL互換を重視する実装など、複数の設計系譜がある。"
+				},
+				{
+					"en": "The key concepts are:",
+					"ja": "重要概念は次の通りである。"
+				}
+			]
+		},
+		{
+			"id": "postgres-compatible",
+			"heading": {
+				"ja": "3.1 「NewSQL」から「Postgres互換の分散DB」へ",
+				"en": "3.1 From \"NewSQL\" to \"Postgres compatible distributed DB\""
+			},
+			"pairs": [
+				{
+					"en": "The value of NewSQL in its early days was its ability to scale horizontally without abandoning SQL and ACID.",
+					"ja": "初期NewSQLの価値は、SQLとACIDを捨てずに水平スケールできることだった。"
+				},
+				{
+					"en": "The reasons for purchasing in 2026 are a little more specific, such as \"I want to take advantage of existing applications, ORM, operators, auditing, and SQL assets\" and \"However, a single PostgreSQL does not have enough multi-region or write scale.\"",
+					"ja": "2026年時点の購買理由はもう少し具体的で、「既存アプリ、ORM、運用者、監査、SQL資産を活かしたい」「ただし単一PostgreSQLではmulti-regionや書き込みスケールが足りない」という形になっている。"
+				},
+				{
+					"en": "YugabyteDB claims PostgreSQL runtime compatibility, CockroachDB claims PostgreSQL wire/protocol compatibility, Spanner claims PostgreSQL interface, and Aurora DSQL claims PostgreSQL-compatible.",
+					"ja": "YugabyteDBはPostgreSQL runtime compatibility、CockroachDBはPostgreSQL wire/protocol互換、SpannerはPostgreSQL interface、Aurora DSQLはPostgreSQL-compatibleを訴求する。"
+				}
+			]
+		},
+		{
+			"id": "managed-standard",
+			"heading": {
+				"ja": "3.2 Cloud / Serverless / Managedが標準化する",
+				"en": "3.2 Cloud/Serverless/Managed becomes standard"
+			},
+			"pairs": [
+				{
+					"en": "Reducing the operational load is a condition for adopting distributed SQL.",
+					"ja": "運用負荷を下げることが、分散SQLの採用条件になっている。"
+				},
+				{
+					"en": "Distributed DBs tend to be more operationally complex than traditional DBs because they include consensus building, leader placement, tablet/region placement, backup, upgrade, schema change, CDC, and disaster recovery.",
+					"ja": "分散DBは、合意形成、leader配置、tablet/region配置、backup、upgrade、schema change、CDC、障害復旧を含むため、従来DBより運用面が複雑になりやすい。"
+				},
+				{
+					"en": "Therefore, companies are focusing on fully managed, serverless, BYOC, Kubernetes operators, Terraform providers, observability, and performance advisors.",
+					"ja": "そこで各社は、フルマネージド、serverless、BYOC、Kubernetes operator、Terraform provider、observability、performance advisorを前面に出している。"
+				}
+			]
+		},
+		{
+			"id": "ai-agent-data",
+			"heading": {
+				"ja": "3.3 AI/agent向けデータ基盤への拡張",
+				"en": "3.3 Expansion to data infrastructure for AI/agent"
+			},
+			"pairs": [
+				{
+					"en": "From 2025 onwards, distributed SQL vendors will have a strong focus on AI applications.",
+					"ja": "2025年以降、分散SQLベンダーはAIアプリケーションを強く意識している。"
+				},
+				{
+					"en": "Even in AI apps, transaction data such as users, permissions, history, ratings, status updates, etc. remains.",
+					"ja": "AIアプリでもユーザー、権限、履歴、評価、状態更新などのトランザクションデータは残る。"
+				},
+				{
+					"en": "There is also a demand for handling vector searches, full text searches, JSON/documents, graph relationships, and audit logs on the same operational platform for RAG and agent memory.",
+					"ja": "RAGやagent memoryのために、ベクトル検索、全文検索、JSON/ドキュメント、グラフ的関係、監査ログを同じ運用基盤で扱いたい需要もある。"
+				},
+				{
+					"en": "YugabyteDB is promoting pgvector, HNSW indexing, MCP Server, LangChain/LlamaIndex/Bedrock/Vertex AI collaboration, and Meko.",
+					"ja": "YugabyteDBはpgvectorとHNSW indexing、MCP Server、LangChain/LlamaIndex/Bedrock/Vertex AI連携、Mekoを訴求している。"
+				},
+				{
+					"en": "Spanner also focuses on vector search, graph, search, and AI/ML collaboration.",
+					"ja": "Spannerもvector search、graph、search、AI/ML連携を前面に出している。"
+				},
+				{
+					"en": "TiDB also promotes AI agents, transactions, analytics, and vector search on the same page.",
+					"ja": "TiDBもAI agents、transactions、analytics、vector searchを同じページで訴求している。"
+				},
+				{
+					"en": "As far as we can see from publicly available information, this is a movement in which distributed SQL is spreading not only to \"global OLTP\" but also to \"AI-native operational data plane.\"",
+					"ja": "これは、公表情報から見る限り、分散SQLが「グローバルOLTP」だけでなく「AI-native operational data plane」へ広がる動きである。"
+				}
+			]
+		},
+		{
+			"id": "architecture",
+			"heading": {
+				"ja": "4. YugabyteDBのアーキテクチャ",
+				"en": "4. YugabyteDB architecture"
+			},
+			"pairs": [
+				{
+					"en": "YugabyteDB is broadly divided into `YSQL/YCQLのquery layer` and `DocDB storage layer`.",
+					"ja": "YugabyteDBは、大きく見ると `YSQL/YCQLのquery layer` と `DocDB storage layer` に分かれる。"
+				},
+				{
+					"en": "YSQL is a PostgreSQL-compatible SQL API, and YCQL is a Cassandra-inspired API.",
+					"ja": "YSQLはPostgreSQL互換のSQL API、YCQLはCassandra-inspired APIである。"
+				},
+				{
+					"en": "In the storage layer, data is divided into tablets, DocDB maintains the data on RocksDB, and Raft replicates the tablets.",
+					"ja": "ストレージ層では、データをtabletに分割し、DocDBがRocksDB上にデータを保持し、Raftでtabletを複製する。"
+				},
+				{
+					"en": "YB-Master is responsible for catalog management and cluster organization, and YB-TServer is responsible for holding tablets and processing queries.",
+					"ja": "YB-Masterはカタログ管理とクラスタ編成、YB-TServerはtabletの保持とクエリ処理を担う。"
+				},
+				{
+					"en": "What is important to understand about YugabyteDB is that it does not simply run PostgreSQL on multiple machines, but rather connects a PostgreSQL-compatible query layer to a distributed storage layer.",
+					"ja": "YugabyteDBを理解するうえで重要なのは、「PostgreSQLをそのまま複数台で動かしている」のではなく、PostgreSQL互換のquery layerを分散ストレージ層に接続している点である。"
+				},
+				{
+					"en": "Therefore, while PostgreSQL's ecosystem compatibility is a strong value, its performance characteristics are not the same as a single PostgreSQL.",
+					"ja": "このため、PostgreSQLのエコシステム互換性は強い価値だが、性能特性は単一PostgreSQLと同じではない。"
+				},
+				{
+					"en": "Distributed DB design targets include primary key design, tablet partitioning, region placement, connection pooling, long transactions, schema migration, and sequence usage.",
+					"ja": "分散DBでは、primary key設計、tablet分割、region配置、connection pooling、長いトランザクション、schema migration、sequence利用が設計対象になる。"
+				}
+			]
+		},
+		{
+			"id": "services",
+			"heading": {
+				"ja": "5. Yugabyteが提供しているサービス",
+				"en": "5. Services provided by Yugabyte"
+			},
+			"pairs": [
+				{
+					"en": "Meko is an agent-native data layer that comes out separately from YugabyteDB itself.",
+					"ja": "MekoはYugabyteDB本体とは別導線で出てきているagent-native data layerである。"
+				},
+				{
+					"en": "Meko's official page touts collective memory, shared knowledge, decision traces, single MCP endpoint, and unified data layer for multi-agent systems, and explains that it is built on YugabyteDB.",
+					"ja": "Mekoの公式ページは、multi-agent systems向けのcollective memory、shared knowledge、decision traces、single MCP endpoint、unified data layerを訴求しており、YugabyteDB上に構築されていると説明している。"
+				},
+				{
+					"en": "At this point, rather than a mature general-purpose DB service, it is appropriate to view it as a signal that Yugabyte is betting on the data infrastructure of the AI ​​agent era.",
+					"ja": "現時点では成熟した汎用DBサービスというより、YugabyteがAI agent時代のデータ基盤に賭けているシグナルとして見るのが妥当である。"
+				}
+			]
+		},
+		{
+			"id": "introduction-perspectives",
+			"heading": {
+				"ja": "7. 導入判断の観点",
+				"en": "7. Perspectives for deciding on introduction"
+			},
+			"pairs": [
+				{
+					"en": "YugabyteDB is suitable for cases where the operational limits of a single PostgreSQL are clear and where you want to maintain SQL/ACID/existing tools.",
+					"ja": "YugabyteDBが向いているのは、単一PostgreSQLの運用限界が明確で、かつSQL/ACID/既存ツールを維持したいケースである。"
+				},
+				{
+					"en": "Typically, organizations are simultaneously concerned with multi-region availability, near-nondisruptive operations, write scale, data residency, leveraging PostgreSQL assets, and modernizing from Oracle/MySQL.",
+					"ja": "典型的には、マルチリージョン可用性、無停止に近い運用、書き込みスケール、データレジデンシ、PostgreSQL資産の活用、Oracle/MySQLからのモダナイゼーションが同時に問題になっている組織である。"
+				},
+				{
+					"en": "Conversely, if PostgreSQL/Aurora, which scales vertically in a single region, is stable enough, YugabyteDB is likely to be an over-investment.",
+					"ja": "逆に、単一リージョンで垂直スケールしたPostgreSQL/Auroraが十分に安定している場合、YugabyteDBは過剰投資になりやすい。"
+				},
+				{
+					"en": "In exchange for fault tolerance and scale, distributed DBs introduce the costs of key design, transaction demarcation, region placement, operational visibility, and compatibility verification.",
+					"ja": "分散DBは、障害耐性とスケールを得る代わりに、キー設計、トランザクション境界、リージョン配置、運用可視化、互換性検証のコストを持ち込む。"
+				},
+				{
+					"en": "NewSQL is not \"complete upward compatibility with PostgreSQL,\" but \"an option that allows distributed system constraints to be handled in SQL form.\"",
+					"ja": "NewSQLは「PostgreSQLの完全上位互換」ではなく、「分散システムの制約をSQLの形で扱えるようにする選択肢」である。"
+				}
+			]
+		},
+		{
+			"id": "yugabyte-questions",
+			"heading": {
+				"ja": "8. Yugabyte担当者に聞くとよい質問",
+				"en": "8. Questions to ask a Yugabyte representative"
+			},
+			"pairs": [
+				{
+					"en": "At what granularity does YugabyteDB define \"PostgreSQL compatible\"?",
+					"ja": "YugabyteDBは「PostgreSQL互換」をどの粒度で定義していますか。"
+				},
+				{
+					"en": "How should I understand which parts of wire protocol, SQL dialect, extension, planner behavior, DDL, and transaction semantics are not supported or have limitations?",
+					"ja": "wire protocol、SQL dialect、extension、planner behavior、DDL、transaction semanticsで未対応・制約がある部分をどう把握すべきですか。"
+				},
+				{
+					"en": "After making PostgreSQL 15 based, what is the policy for following up on PG16/PG17?",
+					"ja": "PostgreSQL 15ベース化後、PG16/PG17への追随方針はどうなっていますか。"
+				},
+				{
+					"en": "Which priority for compatibility is determined by customer requirements, PostgreSQL original, or safety as a distributed DB?",
+					"ja": "互換性の優先順位は顧客要求、PostgreSQL本家、分散DBとしての安全性のどれで決まりますか。"
+				},
+				{
+					"en": "When migrating from Oracle/PostgreSQL/MySQL with Voyager, what schema patterns, sequences, stored procedures, triggers, and transaction patterns are most likely to cause blockages?",
+					"ja": "Oracle/PostgreSQL/MySQLからVoyagerで移行する場合、最も詰まりやすいschema pattern、sequence、stored procedure、trigger、transaction patternは何ですか。"
+				},
+				{
+					"en": "How do the boundaries of responsibility for Aeon, Aeon BYOC, and Anywhere compare in terms of failure response, backup restore, upgrade, KMS, audit logs, networking, and SLA?",
+					"ja": "Aeon、Aeon BYOC、Anywhereの責任分界を、障害対応、backup restore、upgrade、KMS、監査ログ、ネットワーク、SLAの観点で比較するとどうなりますか。"
+				},
+				{
+					"en": "Do you have any experience with multi-region configurations such as Tokyo/Osaka, Japan/US, and Japan/APAC in the Japan region or Japanese companies?",
+					"ja": "日本リージョンまたは日本企業で、Tokyo/Osaka、Japan/US、Japan/APACのmulti-region構成実績はありますか。"
+				},
+				{
+					"en": "What is the measured latency and recommended topology?",
+					"ja": "実測レイテンシと推奨トポロジは何ですか。"
+				},
+				{
+					"en": "Which of the following is recommended for xCluster as a primary use: DR, migration, active-active, or analytics collaboration?",
+					"ja": "xClusterはDR、移行、active-active、分析連携のどれを主用途として推奨していますか。"
+				},
+				{
+					"en": "What are the limitations of conflict handling and DDL operations for bidirectional replication?",
+					"ja": "双方向レプリケーションの衝突処理とDDL運用の制約は何ですか。"
+				},
+				{
+					"en": "What scale, update frequency, and search requirements are realistic for YugabyteDB's pgvector/HNSW?",
+					"ja": "YugabyteDBのpgvector/HNSWは、どの規模・更新頻度・検索要件まで現実的ですか。"
+				},
+				{
+					"en": "What are the conditions for winning and losing compared to dedicated vector DB?",
+					"ja": "専用vector DBと比較して勝てる条件、負ける条件は何ですか。"
+				},
+				{
+					"en": "At what stage is Meko a commercial service for YugabyteDB?",
+					"ja": "MekoはYugabyteDBの商用サービスとしてどの段階ですか。"
+				},
+				{
+					"en": "For existing YugabyteDB/Aeon customers, what will happen to data boundaries, MCPs, audits, and charges when using Meko?",
+					"ja": "既存のYugabyteDB/Aeon顧客がMekoを使う場合、データ境界、MCP、監査、料金はどうなりますか。"
+				},
+				{
+					"en": "When compared to Aurora DSQL, Spanner, CockroachDB, and TiDB, which use cases are Yugabyte most likely to win, and which use cases would you honestly not recommend?",
+					"ja": "Aurora DSQL、Spanner、CockroachDB、TiDBと比較されたとき、Yugabyteが最も勝ちやすいユースケースと、正直に勧めないユースケースは何ですか。"
+				},
+				{
+					"en": "If I'm doing a PoC, which app-specific workload should I bring in before which benchmark?",
+					"ja": "PoCをするなら、どのベンチマークより先に、どのアプリ固有ワークロードを持ち込むべきですか。"
+				}
+			]
+		},
+		{
+			"id": "reference-information",
+			"heading": {
+				"ja": "参考情報",
+				"en": "Reference information"
+			},
+			"pairs": [
+				{
+					"en": "This `articles/report/newsql-yugabyte-brief/index.mdx` is managed as the original text for the main text.",
+					"ja": "本文はこの `articles/newsql-yugabyte-brief/index.mdx` を正本として管理する。"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,733 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "The meaning of ontology changes depending on the context.",
+					"ja": "オントロジーは、文脈によって意味が変わる。"
+				},
+				{
+					"en": "In philosophy, it is a field that asks \"what exists?\"",
+					"ja": "哲学では「何が存在するのか」を問う分野であり、情報科学では「ある領域に存在する概念、関係、制約を明示的に定義したもの」を指す。"
+				},
+				{
+					"en": "In information science, it refers to \"the explicit definition of concepts, relationships, and constraints that exist in a certain area.\"",
+					"ja": "哲学では「何が存在するのか」を問う分野であり、情報科学では「ある領域に存在する概念、関係、制約を明示的に定義したもの」を指す。"
+				},
+				{
+					"en": "In the context of business AI, it goes one step further and is used as a design philosophy to bring customers, issues, contracts, obstacles, approvals, actions, permissions, and audit logs onto the same business world model.",
+					"ja": "業務AIの文脈では、さらに一歩進んで、顧客、案件、契約、障害、承認、アクション、権限、監査ログを同じ業務世界モデルに載せる設計思想として使われる。"
+				},
+				{
+					"en": "The conclusions of this report are as follows.",
+					"ja": "本レポートの結論は以下である。"
+				},
+				{
+					"en": "Ontology is not just a glossary of terms.",
+					"ja": "オントロジーは単なる用語集ではない。"
+				},
+				{
+					"en": "Includes conceptual classification, relationships, attributes, constraints, inferrability, identity, sources, and update rules.",
+					"ja": "概念の分類、関係、属性、制約、推論可能性、同一性、出典、更新ルールを含む。"
+				},
+				{
+					"en": "Taxonomy, controlled vocabulary, schema, data model, and knowledge graph overlap with ontology, but they are not the same.",
+					"ja": "taxonomy、controlled vocabulary、schema、data model、knowledge graph はオントロジーと重なるが同一ではない。"
+				},
+				{
+					"en": "Ontology is a semantic model that specifies \"what should be treated as what.\"",
+					"ja": "オントロジーは「何をどういうものとして扱うか」を明示する意味モデルである。"
+				},
+				{
+					"en": "RDF/OWL is a representative standard for representing ontologies in a machine-readable manner on the Web, but OWL is not required in all practices.",
+					"ja": "RDF/OWL はオントロジーをWeb上で機械可読に表す代表的な標準だが、すべての実務でOWLが必要になるわけではない。"
+				},
+				{
+					"en": "SKOS is required for classification systems, SHACL is required for verification, OWL is required for rigorous inference, and application-side authority/workflow design is required for business execution.",
+					"ja": "分類体系ならSKOS、検証ならSHACL、厳密な推論ならOWL、業務実行ならアプリケーション側の権限・ワークフロー設計が必要になる。"
+				},
+				{
+					"en": "Ontology in the LLM era is not \"magic that injects semantic understanding into LLM.\"",
+					"ja": "LLM時代のオントロジーは、「LLMに意味理解を注入する魔法」ではない。"
+				},
+				{
+					"en": "This is an information design that aligns vocabulary, targets, relationships, constraints, and trails when LLM references, searches, generates, and executes tools.",
+					"ja": "LLMが参照・検索・生成・ツール実行するときの語彙、対象、関係、制約、証跡を揃える情報設計である。"
+				},
+				{
+					"en": "In practice, you should not start with a huge company-wide ontology.",
+					"ja": "実務では巨大な全社オントロジーから始めるべきではない。"
+				},
+				{
+					"en": "It is practical to start with an ontology lite that defines competency questions, key objects, relationships, constraints, sources, and update responsibilities for a specific use case.",
+					"ja": "最初は特定ユースケースに対して、competency questions、主要オブジェクト、関係、制約、出典、更新責任を定義する ontology lite から始めるのが現実的である。"
+				}
+			]
+		},
+		{
+			"id": "confusing-terms",
+			"heading": {
+				"ja": "2. まず何が紛らわしいのか",
+				"en": "2. First of all, what is confusing?"
+			},
+			"pairs": [
+				{
+					"en": "The reason the word \"ontology\" is confusing is that at least three traditions use the same word.",
+					"ja": "「オントロジー」という言葉が分かりにくい理由は、少なくとも三つの伝統が同じ語を使っているからである。"
+				},
+				{
+					"en": "First, the ontology of philosophy is ontology.",
+					"ja": "第一に、哲学の ontology は存在論である。"
+				},
+				{
+					"en": "This asks questions like \"What exists?\" \"How can we classify existing beings?\" and \"What mode of existence do properties, relationships, events, time, whole parts, and possibilities have?\"",
+					"ja": "これは「何が存在するのか」「存在者をどのように分類できるのか」「性質、関係、出来事、時間、部分全体、可能性はどのような存在様式を持つのか」を問う。"
+				},
+				{
+					"en": "It is not a term for information system design, but a basic philosophy that deals with the categories of existence and reality.",
+					"ja": "情報システム設計のための用語ではなく、存在や実在のカテゴリーを扱う基礎哲学である。"
+				},
+				{
+					"en": "Second, ontology of AI/knowledge representation is an explicit specification of conceptualization in a certain domain.",
+					"ja": "第二に、AI・知識表現の ontology は、ある領域における概念化を明示的に仕様化したものである。"
+				},
+				{
+					"en": "Gruber's (1993) famous definition regards ontology as a \"specification of conceptualization.\"",
+					"ja": "Gruber (1993) の有名な定義は、オントロジーを「conceptualization の specification」と捉える。"
+				},
+				{
+					"en": "What is important here is not the target world itself, but how humans or systems conceptualize that realm.",
+					"ja": "ここで重要なのは、対象世界そのものではなく、人間またはシステムがその領域をどう概念化するかを明示する点である。"
+				},
+				{
+					"en": "Third, in recent business AI/data infrastructure, ontology is sometimes used in a meaning similar to semantic layer, canonical data model, business object layer, or digital twin.",
+					"ja": "第三に、近年の業務AI・データ基盤では、ontology が semantic layer、canonical data model、business object layer、digital twin に近い意味で使われることがある。"
+				},
+				{
+					"en": "Palantir Foundry's Ontology is not an RDF/OWL specification itself, but is described as an operational layer that integrates data, objects, relationships, actions, functions, and dynamic security.",
+					"ja": "Palantir Foundry の Ontology は、RDF/OWL仕様そのものではなく、データ、オブジェクト、関係、アクション、関数、動的セキュリティを統合する operational layer として説明されている。"
+				}
+			]
+		},
+		{
+			"id": "short-history",
+			"heading": {
+				"ja": "3. オントロジーの短い研究史",
+				"en": "3. Short research history of ontology"
+			},
+			"pairs": [
+				{
+					"en": "Ontology in information science evolved from borrowing terms from philosophy and transplanting them to the problem of knowledge sharing and reuse in AI.",
+					"ja": "情報科学におけるオントロジーは、哲学から借りた語を、AIの知識共有と再利用の問題へ移植したところから発展した。"
+				},
+				{
+					"en": "In the knowledge-based systems of the 1980s and 1990s, attempts were made to express expert knowledge in rules and frames, but knowledge that was confined to individual systems was difficult to reuse.",
+					"ja": "1980年代から1990年代の知識ベースシステムでは、専門家の知識をルールやフレームで表現する試みが進んだが、個別システムに閉じた知識は再利用しにくかった。"
+				},
+				{
+					"en": "Ontologies have become a means of defining domain knowledge as portable and shareable specifications.",
+					"ja": "オントロジーは、領域知識を移植可能で共有可能な仕様として定義するための手段になった。"
+				},
+				{
+					"en": "Gruber's (1993) definition treated ontologies as \"explicit specifications for knowledge sharing\" rather than \"internal implementations of specific systems.\"",
+					"ja": "Gruber (1993) の定義は、オントロジーを「特定システムの内部実装」ではなく「知識共有のための明示仕様」として扱った。"
+				},
+				{
+					"en": "Formal ontology since Guarino (1998) has emphasized that a list of concept names is not enough.",
+					"ja": "Guarino (1998) 以降の formal ontology は、概念名の一覧では足りないことを強調した。"
+				},
+				{
+					"en": "This is because when we get fundamental categories like identity, dependence, part-whole, property, role, and event wrong, the connections of meaning between systems break down.",
+					"ja": "同一性、依存性、部分全体、性質、役割、出来事のような基礎カテゴリーを誤ると、システム間の意味の接続が壊れるからである。"
+				},
+				{
+					"en": "In the 2000s, the Semantic Web connected this lineage to web standards.",
+					"ja": "2000年代には、Semantic Web がこの系譜をWeb標準へ接続した。"
+				},
+				{
+					"en": "RDF provided a data model that described Web resources using subject-predicate-object triples, and OWL provided richer representations for classes, properties, individuals, constraints, and inferences.",
+					"ja": "RDFはWeb上のリソースについて主語・述語・目的語のトリプルで記述するデータモデルを提供し、OWLはクラス、プロパティ、個体、制約、推論のためのより豊かな表現を提供した。"
+				},
+				{
+					"en": "SPARQL became a language for querying RDF graphs, and SKOS made it easier to share semi-formal knowledge organization systems such as classification systems and thesauri on the Web.",
+					"ja": "SPARQLはRDFグラフを問い合わせる言語になり、SKOSは分類体系やシソーラスのような半形式的知識組織システムをWeb上で共有しやすくした。"
+				},
+				{
+					"en": "Since the 2010s, the term knowledge graph has become widely used.",
+					"ja": "2010年代以降は、知識グラフという言葉が広く使われるようになった。"
+				},
+				{
+					"en": "A knowledge graph does not necessarily have a strict OWL ontology.",
+					"ja": "知識グラフは必ずしも厳密なOWLオントロジーを持つとは限らない。"
+				},
+				{
+					"en": "In practice, it is often operated as large-scale graph data that handles nodes, edges, identifiers, sources, contexts, and update histories.",
+					"ja": "実務では、ノード、エッジ、識別子、出典、文脈、更新履歴を扱う大規模グラフデータとして運用されることが多い。"
+				},
+				{
+					"en": "Hogan et al. (2021) comprehensively organize knowledge graphs as graph-based knowledge representations for handling dynamic and large-scale data sets.",
+					"ja": "Hogan et al. (2021) は、知識グラフを、動的で大規模なデータ集合を扱うためのグラフベースの知識表現として包括的に整理している。"
+				}
+			]
+		},
+		{
+			"id": "ontology-elements",
+			"heading": {
+				"ja": "4. オントロジーを構成する要素",
+				"en": "4. Elements that make up the ontology"
+			},
+			"pairs": [
+				{
+					"en": "In practice, an ontology consists of the following elements:",
+					"ja": "実務上、オントロジーは次の要素で構成される。"
+				},
+				{
+					"en": "As you can see from this list, ontology is not a \"dictionary that explains the meaning of words\".",
+					"ja": "この一覧から分かる通り、オントロジーは「単語の意味を説明する辞書」ではない。"
+				},
+				{
+					"en": "If you just want to define a vocabulary, a controlled vocabulary is sufficient.",
+					"ja": "語彙を定義するだけなら controlled vocabulary で足りる。"
+				},
+				{
+					"en": "If only hierarchical classification is required, taxonomy is sufficient.",
+					"ja": "階層分類だけなら taxonomy で足りる。"
+				},
+				{
+					"en": "If only the data item type and required conditions are required, schema is sufficient.",
+					"ja": "データ項目の型と必須条件だけなら schema で足りる。"
+				},
+				{
+					"en": "Ontologies include these and specify how to conceptualize the domain and which relationships and constraints are to be treated as legitimate.",
+					"ja": "オントロジーは、それらを含みつつ、領域をどう概念化し、どの関係と制約を正当なものとして扱うかを明示する。"
+				},
+				{
+					"en": "Noy and McGuinness describe ontology development as a process of defining a target area and purpose, listing important terms, and iteratively creating class hierarchies, properties, constraints, and instances, rather than a definition process that can be completed in one go.",
+					"ja": "Noy and McGuinness は、オントロジー開発を「一度で完成する定義作業」ではなく、対象領域と目的を定め、重要な用語を列挙し、クラス階層、プロパティ、制約、インスタンスを反復的に作る工程として説明している。"
+				},
+				{
+					"en": "The first question to ask is not \"How can I completely classify the world?\" but \"What questions do I want to answer with this ontology?\"",
+					"ja": "最初に問うべきなのは「世界を完全に分類するにはどうするか」ではなく、「このオントロジーで答えたい質問は何か」である。"
+				},
+				{
+					"en": "These questions are called competency questions.",
+					"ja": "この質問は competency questions と呼ばれる。"
+				}
+			]
+		},
+		{
+			"id": "similar-concepts",
+			"heading": {
+				"ja": "5. 近い概念との違い",
+				"en": "5. Differences from similar concepts"
+			},
+			"pairs": [
+				{
+					"en": "The quickest way to understand ontology is to line it up with similar concepts.",
+					"ja": "オントロジーを理解するには、近い概念と並べるのが最も早い。"
+				},
+				{
+					"en": "Classification systems and glossaries are useful as an entry point to ontology.",
+					"ja": "分類体系や用語集は、オントロジーの入口として有用である。"
+				},
+				{
+					"en": "However, just by defining the terms \"customer\", \"contract\", and \"claim\", it is not clear whether a contract is necessarily linked to one or more customers, whether there are different classes of customers (corporate or individual), or under what conditions a claim may be canceled.",
+					"ja": "しかし、たとえば「顧客」「契約」「請求」という言葉を定義しただけでは、契約が必ず一つ以上の顧客に紐づくのか、顧客が法人と個人で別クラスなのか、請求の取消はどの状態で許されるのかは分からない。"
+				},
+				{
+					"en": "When these relationships, constraints, state transitions, and authorities become necessary, we move from a simple glossary to ontology design.",
+					"ja": "こうした関係・制約・状態遷移・権限が必要になった時点で、単なる用語集からオントロジー設計へ進む。"
+				},
+				{
+					"en": "SKOS is a practical standard that deals with this boundary area.",
+					"ja": "SKOSは、この境界領域を扱う実務的な標準である。"
+				},
+				{
+					"en": "Semi-formal knowledge organization systems such as thesauri, classification systems, and subject headings can be expressed in RDF.",
+					"ja": "シソーラス、分類体系、件名標目のような semi-formal な知識組織システムをRDFで表現できる。"
+				},
+				{
+					"en": "It is lighter than OWL, which aims for strict logical reasoning, and is suitable for making existing classification and tag systems machine readable.",
+					"ja": "厳密な論理推論を狙うOWLより軽く、既存の分類・タグ体系を機械可読にする用途に向く。"
+				}
+			]
+		},
+		{
+			"id": "semantic-web",
+			"heading": {
+				"ja": "6. Semantic Web標準の役割",
+				"en": "6. Role of Semantic Web standards"
+			},
+			"pairs": [
+				{
+					"en": "W3C-based standards are still important when implementing ontologies.",
+					"ja": "オントロジーを実装するとき、W3C系の標準は今も重要である。"
+				},
+				{
+					"en": "However, each standard has a different role.",
+					"ja": "ただし、それぞれの標準は役割が違う。"
+				},
+				{
+					"en": "RDF is a data model, OWL is an ontology language, and SHACL is a verification language.",
+					"ja": "RDFはデータモデルであり、OWLはオントロジー言語であり、SHACLは検証言語である。"
+				},
+				{
+					"en": "This distinction is of considerable practical importance.",
+					"ja": "この区別は実務上かなり重要である。"
+				},
+				{
+					"en": "OWL treats \"what is not explicitly stated as not necessarily false\" under the open world assumption.",
+					"ja": "OWLは、open world assumption のもとで「明示されていないことは偽とは限らない」と扱う。"
+				},
+				{
+					"en": "Although this is suitable for distributed knowledge on the Web, it tends to create a sense of discomfort when verifying the input of business data.",
+					"ja": "これはWeb上の分散知識には適しているが、業務データの入力検証では違和感を生みやすい。"
+				},
+				{
+					"en": "In a business system, if you want to say \"It's an error if the contract doesn't have a customer ID,\" SHACL or application-side verification is required.",
+					"ja": "業務システムで「契約に顧客IDがないならエラー」と言いたい場合、SHACLやアプリケーション側の検証が必要になる。"
+				},
+				{
+					"en": "OWL 2 has multiple profiles.",
+					"ja": "OWL 2には複数のプロファイルがある。"
+				},
+				{
+					"en": "OWL 2 EL, QL, and RL make certain reasoning tasks more pragmatically tractable at the cost of limiting their expressive power.",
+					"ja": "OWL 2 EL、QL、RLは、表現力を制限する代わりに特定の推論タスクを実用的に扱いやすくする。"
+				},
+				{
+					"en": "This is a counterexample to the idea that a more rigorous ontology is always better.",
+					"ja": "これは「より厳密なオントロジーほど常に良い」という発想への反例である。"
+				},
+				{
+					"en": "When designing an ontology, it is necessary to choose the degree of formality according to the questions to be answered, the amount of data, the need for inference, the frequency of updates, and the skills of the operator.",
+					"ja": "オントロジー設計では、答えたい質問、データ量、推論の必要性、更新頻度、運用者のスキルに合わせて形式度を選ぶ必要がある。"
+				}
+			]
+		},
+		{
+			"id": "upper-domain",
+			"heading": {
+				"ja": "7. 上位オントロジーとドメインオントロジー",
+				"en": "7. Upper-level ontology and domain ontology"
+			},
+			"pairs": [
+				{
+					"en": "Ontologies have granularity.",
+					"ja": "オントロジーには粒度がある。"
+				},
+				{
+					"en": "BFO is a representative example of a higher-level ontology and has been standardized as ISO/IEC 21838-2:2021.",
+					"ja": "BFOは上位オントロジーの代表例で、ISO/IEC 21838-2:2021として標準化されている。"
+				},
+				{
+					"en": "Higher-level ontologies are useful when connecting different domain ontologies.",
+					"ja": "上位オントロジーは、異なるドメインオントロジーを接続するときに役立つ。"
+				},
+				{
+					"en": "However, in the practice of individuals or small teams, it is easier to achieve results by specifying the classes and relationships necessary for the target workflow than by introducing a higher-level ontology such as BFO from the beginning.",
+					"ja": "ただし、個人や小規模チームの実務では、最初からBFOのような上位オントロジーを導入するより、対象ワークフローに必要なクラスと関係を明示するほうが成果につながりやすい。"
+				}
+			]
+		},
+		{
+			"id": "llm-era",
+			"heading": {
+				"ja": "8. LLM時代にオントロジーが再び重要になる理由",
+				"en": "8. Why ontology is important again in the LLM era"
+			},
+			"pairs": [
+				{
+					"en": "Although LLM can generate flexible responses from a large number of language patterns, it does not automatically correctly identify business targets.",
+					"ja": "LLMは大量の言語パターンから柔軟な応答を生成できるが、業務上の対象を自動的に正しく識別するわけではない。"
+				},
+				{
+					"en": "The entities referred to by \"this customer,\" \"this contract,\" \"this failure,\" \"this claim,\" and \"this source\" are not stable unless they are connected to external data, identifiers, authorities, sources, and states.",
+					"ja": "「この顧客」「この契約」「この障害」「この主張」「この出典」がどの実体を指すかは、外部データ、識別子、権限、出典、状態と接続しなければ安定しない。"
+				},
+				{
+					"en": "Rather than directly erasing the weaknesses of LLM, ontology creates a scaffolding of the external world for LLM to use.",
+					"ja": "オントロジーは、LLMの弱点を直接消すのではなく、LLMが使う外部世界の足場を作る。"
+				},
+				{
+					"en": "**Make your vocabulary consistent**: Reduce the problem of calling the same meaning by another name, or calling different meanings by the same name.",
+					"ja": "**語彙を揃える**: 同じ意味を別名で呼ぶ、別の意味を同じ名で呼ぶ問題を減らす。"
+				},
+				{
+					"en": "**Identify the subject**: Connect the natural language \"Customer A\" to a unique object on the system.",
+					"ja": "**対象を識別する**: 自然言語の「顧客A」をシステム上の一意なオブジェクトに接続する。"
+				},
+				{
+					"en": "**State the relationship**: Define the relationship: the claim is supported by the source, the failure affects the service, and the contract belongs to the customer.",
+					"ja": "**関係を明示する**: 主張が出典に支えられる、障害がサービスに影響する、契約が顧客に属する、という関係を定義する。"
+				},
+				{
+					"en": "**Provide constraints**: Define allowed state transitions, required attributes, privileges, and approval conditions.",
+					"ja": "**制約を与える**: 許される状態遷移、必須属性、権限、承認条件を定義する。"
+				},
+				{
+					"en": "**Improve your search**: Use hierarchies, synonyms, relationships, time, and sources that are difficult to pick up using vector searches alone.",
+					"ja": "**検索を改善する**: ベクトル検索だけでは拾いにくい階層、同義語、関係、時間、出典を使える。"
+				},
+				{
+					"en": "**Enables evaluation**: LLM output can be verified against defined concepts, relationships, and constraints.",
+					"ja": "**評価を可能にする**: LLM出力が定義済みの概念・関係・制約に合っているか検証できる。"
+				},
+				{
+					"en": "Pan et al. (2023) organizes the integration of LLM and knowledge graphs into three directions: KG-enhanced LLMs, LLM-augmented KGs, and Synergized LLMs + KGs.",
+					"ja": "Pan et al. (2023) は、LLMと知識グラフの統合を、KG-enhanced LLMs、LLM-augmented KGs、Synergized LLMs + KGs の三方向で整理している。"
+				},
+				{
+					"en": "This arrangement also applies to the relationship between ontology and LLM.",
+					"ja": "この整理は、オントロジーとLLMの関係にも当てはまる。"
+				},
+				{
+					"en": "Ontologies can augment the input context of LLM, and LLM can support the construction, complementation, and validation of ontologies.",
+					"ja": "オントロジーはLLMの入力文脈を補強し、LLMはオントロジーの構築・補完・整合確認を支援できる。"
+				},
+				{
+					"en": "However, it is dangerous to directly adopt the classes and relationships generated by LLM as a correct ontology.",
+					"ja": "ただし、LLMが生成したクラスや関係をそのまま正しいオントロジーとして採用するのは危険である。"
+				}
+			]
+		},
+		{
+			"id": "operational-ontology",
+			"heading": {
+				"ja": "9. 業務AIでの operational ontology",
+				"en": "9. Operational ontology in business AI"
+			},
+			"pairs": [
+				{
+					"en": "In business AI, ontology is not enough to simply represent static knowledge.",
+					"ja": "業務AIでは、オントロジーは静的な知識表現だけでは足りない。"
+				},
+				{
+					"en": "If an AI agent is involved in a business, it is necessary to define which objects it can refer to, what it can do in what state, whose approval is required, and where the execution results are recorded.",
+					"ja": "AIエージェントが業務に関わるなら、どの対象を参照できるか、どの状態なら何を実行できるか、誰の承認が必要か、実行結果がどこに記録されるかを定義する必要がある。"
+				},
+				{
+					"en": "It is easier to understand if this layer is called operational ontology.",
+					"ja": "この層を operational ontology と呼ぶと分かりやすい。"
+				},
+				{
+					"en": "Palantir Foundry Ontology brings this idea to the fore.",
+					"ja": "Palantir Foundry Ontology はこの発想を前面に出している。"
+				},
+				{
+					"en": "It includes not only semantic elements such as objects, properties, and links, but also kinetic elements such as actions, functions, and dynamic security.",
+					"ja": "Objects、properties、links という semantic elements だけでなく、actions、functions、dynamic security という kinetic elements を含む。"
+				},
+				{
+					"en": "In other words, it does not simply define \"what is an order?\" but also \"who can do what with an order, and in which system the results will be reflected.\"",
+					"ja": "つまり、単に「注文とは何か」を定義するのではなく、「注文に対して誰が何を実行でき、その結果がどのシステムに反映されるか」まで扱う。"
+				},
+				{
+					"en": "This idea is not unique to Palantir.",
+					"ja": "この考え方はPalantir固有ではない。"
+				},
+				{
+					"en": "All platforms face the same issues when it comes to safely running business AI.",
+					"ja": "業務AIを安全に動かすには、どのプラットフォームでも同じ問題に直面する。"
+				},
+				{
+					"en": "Even if you can search for documents using RAG, whether the search results are currently valid, who can see them, and what operations they can be used for are other issues.",
+					"ja": "RAGで文書を検索できても、検索結果が現在有効か、誰に見せてよいか、どの操作に使ってよいかは別問題である。"
+				},
+				{
+					"en": "Ontology makes these \"meaning,\" \"state,\" \"possibility of action,\" and \"responsibility\" into one design target.",
+					"ja": "オントロジーは、この「意味」「状態」「行為可能性」「責任」を一つの設計対象にする。"
+				}
+			]
+		},
+		{
+			"id": "practical-steps",
+			"heading": {
+				"ja": "10. オントロジーを作る実務手順",
+				"en": "10. Practical steps to create an ontology"
+			},
+			"pairs": [
+				{
+					"en": "If you try to create a complete ontology from the beginning, you are likely to fail.",
+					"ja": "最初から完全なオントロジーを作ろうとすると失敗しやすい。"
+				},
+				{
+					"en": "In practice, make smaller pieces in the following order.",
+					"ja": "実務では、次の順で小さく作る。"
+				},
+				{
+					"en": "Example: \"This ontology is for managing themes, sources, claims, evidence, judgments, and risks in technical research reports.\"",
+					"ja": "例: 「このオントロジーは、技術調査レポートにおけるテーマ、出典、主張、証拠、判断、リスクを管理するためのものである。」"
+				},
+				{
+					"en": "Also clearly indicate what is outside the scope.",
+					"ja": "スコープ外も明示する。"
+				},
+				{
+					"en": "For example, paper submission management, budget management, and personal learning history should be excluded from the initial scope.",
+					"ja": "たとえば、論文投稿管理、予算管理、個人学習履歴は初期スコープ外にする。"
+				},
+				{
+					"en": "Decide first which questions you want to answer using ontology.",
+					"ja": "オントロジーで答えたい質問を先に決める。"
+				},
+				{
+					"en": "Which claims are supported by which sources.",
+					"ja": "どの主張が、どの出典に支えられているか。"
+				},
+				{
+					"en": "Which sources are primary information and which are secondary information?",
+					"ja": "どの出典は一次情報で、どれは二次情報か。"
+				},
+				{
+					"en": "Which decisions depend on which risks and assumptions?",
+					"ja": "どの判断は、どのリスクと前提に依存しているか。"
+				},
+				{
+					"en": "Which research topic belongs to which category?",
+					"ja": "どの調査テーマは、どのカテゴリに属するか。"
+				},
+				{
+					"en": "Which information is likely to become outdated?",
+					"ja": "古くなりやすい情報はどれか。"
+				},
+				{
+					"en": "At first, 5 to 10 pieces is enough.",
+					"ja": "最初は5から10個程度でよい。"
+				},
+				{
+					"en": "The initial constraints may be fewer.",
+					"ja": "最初の制約は少なくてよい。"
+				},
+				{
+					"en": "A Claim has at least one Source or Evidence.",
+					"ja": "Claim は最低1つの Source または Evidence を持つ。"
+				},
+				{
+					"en": "Source has types of `primary` / `secondary` / `official` / `paper` / `spec`.",
+					"ja": "Source は `primary` / `secondary` / `official` / `paper` / `spec` の種別を持つ。"
+				},
+				{
+					"en": "Decisions have premises, reasons, and risks.",
+					"ja": "Decision は前提、理由、リスクを持つ。"
+				},
+				{
+					"en": "Claims that are highly time-dependent have a confirmation date.",
+					"ja": "時間依存の強い Claim は確認日を持つ。"
+				},
+				{
+					"en": "Future forecasts that are not official roadmaps should be clearly marked as \"estimated from published information.\"",
+					"ja": "公式ロードマップでない将来予測は「公表情報からの推定」と明記する。"
+				},
+				{
+					"en": "These constraints can be written in RDF/SHACL, or implemented using Markdown templates, JSON Schema, TypeScript types, or CI checks.",
+					"ja": "こうした制約は、RDF/SHACLで書いてもよいし、Markdownテンプレート、JSON Schema、TypeScript型、CIチェックで実装してもよい。"
+				},
+				{
+					"en": "What is important is not the use of a formal language itself, but what semantic constraints to follow.",
+					"ja": "重要なのは、形式言語を使うこと自体ではなく、何を守るべき意味制約として扱うかである。"
+				}
+			]
+		},
+		{
+			"id": "formality-level",
+			"heading": {
+				"ja": "11. どの程度形式化すべきか",
+				"en": "11. How formal should it be?"
+			},
+			"pairs": [
+				{
+					"en": "Failures in ontology design arise from both under-formalization and over-formalization.",
+					"ja": "オントロジー設計の失敗は、形式化不足と形式化過剰の両方から起きる。"
+				},
+				{
+					"en": "The criterion is \"what do you want to achieve?\"",
+					"ja": "判断基準は「何を達成したいか」である。"
+				},
+				{
+					"en": "For knowledge management by individuals or small teams, it is better to create an ontology lite in Markdown/JSON/YAML and graph only the necessary relationships, rather than suddenly defining all concepts in OWL.",
+					"ja": "個人や小規模チームの知識管理では、いきなりOWLで全概念を定義するより、Markdown/JSON/YAMLで ontology lite を作り、必要になった関係だけをグラフ化するほうがよい。"
+				},
+				{
+					"en": "Consider RDF/OWL/SHACL when you need large-scale interoperability, external exposure, connectivity with standard vocabularies, and logical reasoning.",
+					"ja": "大規模な相互運用、外部公開、標準語彙との接続、論理推論が必要になった段階で、RDF/OWL/SHACLを検討する。"
+				}
+			]
+		},
+		{
+			"id": "risks-limitations",
+			"heading": {
+				"ja": "12. リスクと限界",
+				"en": "12. Risks and limitations"
+			},
+			"pairs": [
+				{
+					"en": "It's easy to feel like you've expressed the world accurately just by naming a concept as a class.",
+					"ja": "概念名をクラスにしただけで、世界を正確に表現できた気になりやすい。"
+				},
+				{
+					"en": "In reality, definition boundaries, exceptions, synonyms, usage by organization, and responsibility for updating remain vague.",
+					"ja": "実際には、定義の境界、例外、同義語、組織ごとの用法、更新責任が曖昧なまま残る。"
+				},
+				{
+					"en": "An ontology is not a copy of reality, but a model for a purpose.",
+					"ja": "オントロジーは現実のコピーではなく、目的に応じたモデルである。"
+				},
+				{
+					"en": "Ontology development is both technical work and consensus building.",
+					"ja": "オントロジー開発は、技術作業であると同時に合意形成である。"
+				},
+				{
+					"en": "The meanings of \"customer,\" \"contract,\" \"completion,\" and \"major failure\" vary depending on the department and system.",
+					"ja": "「顧客」「契約」「完了」「重大障害」の意味は、部署やシステムによって異なる。"
+				},
+				{
+					"en": "If vocabulary extracted through LLM is adopted without consensus, a model will be created that deviates from the practical meaning in the field.",
+					"ja": "合意なしにLLMで抽出した語彙を採用すると、現場の実務意味とずれたモデルができる。"
+				},
+				{
+					"en": "If you try to define everything strictly, the operational load will increase and you will end up with an ontology that is not updated.",
+					"ja": "すべてを厳密に定義しようとすると、運用負荷が増え、更新されないオントロジーになる。"
+				},
+				{
+					"en": "Updateability is often more important than completeness, especially when it comes to rapidly changing AI products, business rules, and organizational structures.",
+					"ja": "特に変化の速いAI製品、業務ルール、組織体制では、完全性より更新可能性のほうが重要になる場合が多い。"
+				},
+				{
+					"en": "Web logic such as OWL does not consider anything that is not explicitly stated to be false.",
+					"ja": "OWLのようなWeb向け論理は、明示されていないことを偽とみなさない。"
+				},
+				{
+					"en": "On the other hand, when verifying a business system, if a required item is missing, you want to set it as an error.",
+					"ja": "一方、業務システムの検証では、必須項目がないならエラーにしたい。"
+				},
+				{
+					"en": "Mixing the roles of ontology languages, verification languages, and application constraints results in different behavior than expected.",
+					"ja": "オントロジー言語、検証言語、アプリケーション制約の役割を混ぜると、期待した振る舞いと違う結果になる。"
+				},
+				{
+					"en": "LLM is useful as an aid for generating lexical candidates, relationship candidates, definition sentences, and exceptional patterns.",
+					"ja": "LLMは語彙候補、関係候補、定義文、例外パターンを出す補助として有用である。"
+				},
+				{
+					"en": "However, LLMs are not automatically aware of the formal definitions, authority, responsibilities, and unspoken rules within the organization.",
+					"ja": "しかし、LLMは組織内の正式定義、権限、責任、現場の暗黙ルールを自動的には知らない。"
+				},
+				{
+					"en": "Ontologies created by LLMs must be verified with sources, examples, counterexamples, domain expert reviews, and test data.",
+					"ja": "LLMが作ったオントロジーは、必ず出典、例、反例、ドメイン専門家レビュー、テストデータで検証する必要がある。"
+				}
+			]
+		},
+		{
+			"id": "recommended-policy",
+			"heading": {
+				"ja": "13. 実務での推奨方針",
+				"en": "13. Recommended policies in practice"
+			},
+			"pairs": [
+				{
+					"en": "When used in this repository or in personal research workflows, the first goal should not be a \"formally beautiful ontology,\" but a \"semantic model in which reusable knowledge assets can be placed without hesitation.\"",
+					"ja": "このリポジトリや個人の研究ワークフローで使うなら、最初の目標は「形式的に美しいオントロジー」ではなく、「再利用できる知識資産を迷わず置ける意味モデル」にするべきである。"
+				},
+				{
+					"en": "The recommendations are as follows.",
+					"ja": "推奨は以下である。"
+				},
+				{
+					"en": "First, define ontology lite for `Topic`, `Report`, `Source`, `Claim`, `Evidence`, `Decision`, `Risk`, `Concept` in Markdown.",
+					"ja": "まず `Topic`、`Report`、`Source`、`Claim`、`Evidence`、`Decision`、`Risk`、`Concept` の ontology lite をMarkdownで定義する。"
+				},
+				{
+					"en": "Place the main Claim and Source close to each other in each report.",
+					"ja": "各レポートに、主要な Claim と Source を近接配置する。"
+				},
+				{
+					"en": "This works well with the existing source-note rule.",
+					"ja": "これは既存の出典メモルールと相性がよい。"
+				},
+				{
+					"en": "Have `確認日` for time-dependent claims.",
+					"ja": "時間依存の主張には `確認日` を持たせる。"
+				},
+				{
+					"en": "Be sure to double-check AI products, specifications, prices, and roadmaps.",
+					"ja": "AI製品、仕様、価格、ロードマップは必ず再確認対象にする。"
+				},
+				{
+					"en": "Areas where classification alone is sufficient are treated in the SKOS manner.",
+					"ja": "分類だけで足りる領域はSKOS的に扱う。"
+				},
+				{
+					"en": "For example, `category/ai-systems` and `category/knowledge-systems` can be lightweight classifications.",
+					"ja": "たとえば `category/ai-systems`、`category/knowledge-systems` は軽量分類でよい。"
+				},
+				{
+					"en": "If you want to strengthen search/visualization/MCP integration in the future, design it in a format that can be converted to Markdown frontmatter, JSON-LD, or a small property graph.",
+					"ja": "将来的に検索・可視化・MCP連携を強めるなら、Markdownのfrontmatter、JSON-LD、または小さなproperty graphへ変換できる形で設計する。"
+				},
+				{
+					"en": "Consider OWL only when logical reasoning and rigorous interoperability with external vocabularies are needed.",
+					"ja": "OWLは、論理推論や外部語彙との厳密な相互運用が必要になってから検討する。"
+				},
+				{
+					"en": "As a minimal implementation, a frontmatter like the one below is quite valuable.",
+					"ja": "最小実装としては、以下のようなfrontmatterでも十分に価値がある。"
+				}
+			]
+		},
+		{
+			"id": "summary",
+			"heading": {
+				"ja": "14. まとめ",
+				"en": "14. Summary"
+			},
+			"pairs": [
+				{
+					"en": "Ontology is not a \"complete classification table of the world.\"",
+					"ja": "オントロジーは「世界の完全な分類表」ではない。"
+				},
+				{
+					"en": "It is a semantic model that specifies what concepts, relationships, constraints, sources, and update responsibilities are used to treat a target domain for a certain purpose.",
+					"ja": "ある目的のために、対象領域をどのような概念、関係、制約、出典、更新責任で扱うかを明示した意味モデルである。"
+				},
+				{
+					"en": "Philosophically, it questions the categories of existence.",
+					"ja": "哲学的には存在のカテゴリーを問う。"
+				},
+				{
+					"en": "Knowledge representation involves creating sharable conceptual specifications.",
+					"ja": "知識表現では共有可能な概念仕様を作る。"
+				},
+				{
+					"en": "Semantic Web makes it machine readable on the web through RDF/OWL/SKOS/SPARQL/SHACL.",
+					"ja": "Semantic WebではRDF/OWL/SKOS/SPARQL/SHACLを通じてWeb上で機械可読にする。"
+				},
+				{
+					"en": "In operational AI, it is expanded to operational ontology, which connects data, operational targets, states, actions, authorities, and audits.",
+					"ja": "業務AIでは、データ、業務対象、状態、行為、権限、監査をつなぐ operational ontology へ拡張される。"
+				},
+				{
+					"en": "What is important in the LLM era is not to mystify ontology.",
+					"ja": "LLM時代に重要なのは、オントロジーを神秘化しないことである。"
+				},
+				{
+					"en": "It is not a decoration to improve the quality of LLM's answers, but a design asset to prevent AI from incorrectly referencing or manipulating the reality of the organization.",
+					"ja": "LLMの回答品質を上げるための飾りではなく、AIが組織の現実を誤って参照・操作しないようにするための設計資産である。"
+				},
+				{
+					"en": "Start with small, specific questions and keep updating with real data and reviews.",
+					"ja": "最初は小さく、具体的な問いから始め、実際のデータとレビューで更新し続けるのがよい。"
+				}
+			]
+		}
+	]
+}

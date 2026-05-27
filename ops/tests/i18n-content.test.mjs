@@ -329,6 +329,19 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.equal(parsedSampleAlignment.targetLocale, 'en')
 	assert.ok(parsedSampleAlignment.sections.some((section) => section.pairs.length > 0))
 
+	for (const type of articleTypes) {
+		for (const slug of await articleSlugs(type, 'ja')) {
+			const alignment = JSON.parse(
+				await readFile(join(articlesDir, type, slug, 'mix-alignment.json'), 'utf8')
+			)
+			assert.equal(alignment.version, 1)
+			assert.equal(alignment.sourceLocale, 'ja')
+			assert.equal(alignment.targetLocale, 'en')
+			assert.ok(alignment.sections.some((section) => section.pairs.length > 0))
+			assert.doesNotMatch(JSON.stringify(alignment), /Source note|Source memo|^import\s/m)
+		}
+	}
+
 	for (const source of mixedPages) {
 		assert.match(source, /const locale = 'mix'/)
 		assert.match(source, /findPostTranslation\(allPosts,\s*post,\s*DEFAULT_LOCALE\)/)

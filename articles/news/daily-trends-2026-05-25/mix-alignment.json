@@ -1,0 +1,561 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "daily-trends-overview",
+			"heading": {
+				"ja": "2026-05-25 制御可能性をめぐり外交・物価・AI基盤が再編される",
+				"en": "2026-05-25 Diplomacy, prices, and AI control"
+			},
+			"pairs": [
+				{
+					"en": "What has been noticeable in the past day or two is that diplomatic and security tensions have returned to the center of policy, that the United States has become increasingly wary of inflation indicators and financial stability, and that technology has shifted from a race to model AI to a race to deploy, connect, and test.",
+					"ja": "直近1〜2日で目立ったのは、外交と安全保障の緊張が再び政策の中心に戻り、米国ではインフレ指標と金融安定性の警戒が強まり、技術分野ではAIのモデル競争から配備・接続・検証の競争へ軸足が移っている点です。"
+				},
+				{
+					"en": "Today's signal is that policy, macroeconomics, and AI infrastructure are being reshuffled at the same time, rather than one-off materials.",
+					"ja": "単発の材料よりも、政策・マクロ・AIインフラが同時に組み替わっていることが今日のシグナルです。"
+				}
+			]
+		},
+		{
+			"id": "us-china-trade",
+			"heading": {
+				"ja": "米中の通商合意が再交渉フェーズに入った",
+				"en": "US-China trade deal enters renegotiation phase"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The White House announced an agreement between the United States and China that includes trade, investment, agricultural products, and maritime security.",
+					"ja": "何が起きたか: ホワイトハウスは、米中間で通商・投資・農産物・海上安全保障を含む合意がまとまったと発表しました。"
+				},
+				{
+					"en": "Although frictions over tariffs and supply chains remain, a framework for dialogue between the two countries is emerging.",
+					"ja": "関税や供給網の扱いをめぐる摩擦は残るものの、両国の対話を切らさない枠組みが前面に出ています。"
+				},
+				{
+					"en": "Why it matters: The U.S.-China relationship is more than just bilateral diplomacy; it's a global policy variable with implications for semiconductors, agricultural products, shipping, and resource prices.",
+					"ja": "なぜ重要か: 米中関係は単なる二国間外交ではなく、半導体、農産物、海運、資源価格に波及する世界的な政策変数です。"
+				},
+				{
+					"en": "The agreement can be read as a signal to move toward manageable tensions for the time being, rather than a complete resolution of the conflict.",
+					"ja": "今回の合意は、対立の完全解消ではなく、当面の管理可能な緊張に移る合図として読めます。"
+				},
+				{
+					"en": "What to watch: The question is whether tariffs and inspections remain bargaining tools or become durable costs that force sourcing changes.",
+					"ja": "今後の注視点: 注目すべきは、関税・検査強化が一時的な交渉材料で終わるか、対中輸出や調達先変更を迫る恒常的なコストになるかです。"
+				},
+				{
+					"en": "Shipping, agricultural products, and industrial materials will show the pressure early.",
+					"ja": "海運、農産物、工業素材の価格も合わせて見たい局面です。"
+				}
+			]
+		},
+		{
+			"id": "iran-war-powers",
+			"heading": {
+				"ja": "イラン情勢をめぐる戦争権限の綱引きが続く",
+				"en": "Tug-of-war over war powers over Iran situation continues"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Congress continues to fight over a resolution that would restrict military actions related to Iran.",
+					"ja": "何が起きたか: 連邦議会では、イラン関連の軍事行動を制約する決議案をめぐる攻防が続いています。"
+				},
+				{
+					"en": "The White House has taken the opposite view, with its tough stance on Iran colliding with calls for congressional control.",
+					"ja": "ホワイトハウスは反対の意見を示しており、対イラン強硬姿勢と議会の統制要求がぶつかっています。"
+				},
+				{
+					"en": "Why it matters: Military escalation in the Middle East goes beyond diplomatic issues and changes the pricing of oil, transportation insurance, and risk assets across the board.",
+					"ja": "なぜ重要か: 中東での軍事エスカレーションは、外交問題にとどまらず、原油、輸送保険、リスク資産全体の値付けを変えます。"
+				},
+				{
+					"en": "When the issue of war powers comes to the fore, uncertainty about policy continuity becomes more of an issue than short-term market reactions.",
+					"ja": "戦争権限の争点が前面に出ると、短期の市場反応よりも政策継続性の不確実性が問題になります。"
+				},
+				{
+					"en": "What to watch: Watch whether energy prices, route changes, transport insurance, and outage clauses start moving into actual freight contracts.",
+					"ja": "今後の注視点: 次に見るべきは、エネルギー価格だけでなく、航路変更、輸送保険、サプライチェーン停止条件が実際の契約や運賃に反映されるかです。"
+				},
+				{
+					"en": "Inventory days and raw-material lead times will show where the chain is fragile.",
+					"ja": "原料調達や在庫日数の余裕が市場の脆弱性を左右します。"
+				}
+			]
+		},
+		{
+			"id": "ukraine-aid-talks",
+			"heading": {
+				"ja": "英仏独とウクライナの協議が支援継続の土台を固める",
+				"en": "Talks between Britain, France, Germany and Ukraine solidify foundation for continued aid"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The UK government announced talks with President Zelenskiy, French President Emmanuel Macron and German Chancellor Merz, confirming support for Ukraine and continued pressure on Russia.",
+					"ja": "何が起きたか: 英国政府は、ゼレンスキー大統領、マクロン仏大統領、メルツ独首相との協議を公表し、ウクライナ支援と対ロシア圧力の継続を確認しました。"
+				},
+				{
+					"en": "European security is finely tuned through cooperation between leaders.",
+					"ja": "欧州の安全保障は、首脳間の連携を通じて細かく調整されています。"
+				},
+				{
+					"en": "Why it matters: The sustainability of support for Ukraine depends on a combination of energy, military, logistics, and financial support, not just diplomacy.",
+					"ja": "なぜ重要か: ウクライナ支援は外交だけでなく、エネルギー、軍需、物流、財政支援の組み合わせで持続性が決まります。"
+				},
+				{
+					"en": "The fact that the leaders of major countries remain unbroken is a source of stability for the market.",
+					"ja": "主要国首脳の連携が崩れないこと自体が、市場にとっての安定材料です。"
+				},
+				{
+					"en": "What to watch: Europe’s support posture should be judged by sanctions, public procurement, energy-contract changes, and whether defense, communications, satellite, and surveillance budgets keep rising.",
+					"ja": "今後の注視点: 欧州支援の持続性を見るには、制裁、公共調達、エネルギー契約の具体策に加え、防衛・通信・衛星・監視分野への予算配分が続くかを追いたいところです。"
+				}
+			]
+		},
+		{
+			"id": "uk-eu-food-rules",
+			"heading": {
+				"ja": "UK-EUの食品・衛生ルール調整が通関摩擦の焦点に",
+				"en": "UK-EU food and hygiene rule coordination becomes focus of customs friction"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The UK government is discussing reducing food and phytosanitary and customs burdens as part of the UK-EU reset negotiations, which include Northern Ireland.",
+					"ja": "何が起きたか: 英国政府は、北アイルランドを含むUK-EUリセット交渉の一環として、食品・植物検疫や通関負担の軽減を協議しています。"
+				},
+				{
+					"en": "In practical terms, the focus is on how much trade friction can be reduced.",
+					"ja": "実務上は、貿易の摩擦をどこまで減らせるかが焦点です。"
+				},
+				{
+					"en": "Why it matters: This is both a political issue and an economic issue with direct links to distribution and food prices.",
+					"ja": "なぜ重要か: これは政治案件であると同時に、流通と食料価格に直結する経済案件です。"
+				},
+				{
+					"en": "Closing regulatory gaps would lower costs for businesses, but harmonizing standards requires political compromise.",
+					"ja": "規制の差を縮められれば企業コストは下がりますが、基準の整合は政治的な妥協を伴います。"
+				},
+				{
+					"en": "What to watch: In UK-EU trade, the cost signal will come from quarantine, labeling, and certification details rather than the headline agreement.",
+					"ja": "今後の注視点: UK-EU関係では、合意文書の大枠より、検疫、ラベル、証明書の細部が小売、食品、冷蔵物流のコスト差として出るかを見たいところです。"
+				}
+			]
+		},
+		{
+			"id": "black-sea-aircraft",
+			"heading": {
+				"ja": "黒海上空で英軍機への危険接近が起きた",
+				"en": "Dangerous approach to British military aircraft over Black Sea"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The British Ministry of Defense announced that a Russian military aircraft had made a dangerous approach to a British military aircraft over the Black Sea.",
+					"ja": "何が起きたか: 英国防省は、黒海上空でロシア軍機が英軍の航空機に危険な接近をしたと発表しました。"
+				},
+				{
+					"en": "Even if the contact appears to be incidental, it shows that military tensions are becoming commonplace.",
+					"ja": "偶発的な接触に見えても、軍事的な緊張が日常化していることを示します。"
+				},
+				{
+					"en": "Why it matters: The Black Sea is the intersection of the Ukraine war and NATO alertness.",
+					"ja": "なぜ重要か: 黒海はウクライナ戦争とNATOの警戒態勢が交差する場所です。"
+				},
+				{
+					"en": "Close airspace incidents increase the risk of accidental escalation and reduce the scope for diplomatic negotiations.",
+					"ja": "空域の接近事案は、偶発的なエスカレーションのリスクを高め、外交交渉の余地を狭めます。"
+				},
+				{
+					"en": "What to watch: Tension around the theater should be visible in airlift, insurance, satellite surveillance, and maritime alert levels.",
+					"ja": "今後の注視点: 戦域周辺の緊張は、空輸、保険、サテライト監視、海運の警戒レベルに表れます。"
+				},
+				{
+					"en": "Sustained demand for aircraft operations and monitoring assets is the follow-through to watch.",
+					"ja": "防衛・航空関連では、機体運用と監視資産の需要が継続するかを見たい局面です。"
+				}
+			]
+		},
+		{
+			"id": "cpi-acceleration",
+			"heading": {
+				"ja": "物価は再び上向き、CPIが加速した",
+				"en": "Prices picked up again and CPI accelerated"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The U.S. Bureau of Labor Statistics showed that the consumer price index rose 0.6% in April from the previous month, continuing to grow at a high annual rate.",
+					"ja": "何が起きたか: 米労働統計局は、4月の消費者物価指数が前月比0.6%上昇し、年率でも高めの伸びが続いていると示しました。"
+				},
+				{
+					"en": "The impact of energy and some services has made people think that prices will stop falling.",
+					"ja": "エネルギーや一部サービスの影響が、物価の下げ止まりを意識させています。"
+				},
+				{
+					"en": "Why it matters: If inflation does not slow down, expectations for interest rate cuts will likely be postponed, and assumptions about stocks, bonds, and foreign exchange will change.",
+					"ja": "なぜ重要か: インフレ鈍化が素直に進まないと、利下げ期待は後ろ倒しになりやすく、株式・債券・為替の前提が変わります。"
+				},
+				{
+					"en": "It affects not only policy interest rates but also real wages and personal consumption.",
+					"ja": "政策金利だけでなく、実質賃金や個人消費の見方にも影響します。"
+				},
+				{
+					"en": "What to watch: For consumer sectors, margin pressure may arrive before visible demand weakness.",
+					"ja": "今後の注視点: 消費関連で見るべきは、需要減速そのものより先に、値上げの転嫁余地、契約改定のタイミング、為替ヘッジの再設定が利益率にどう出るかです。"
+				},
+				{
+					"en": "Price pass-through, contract revisions, and FX hedging will show the pressure first.",
+					"ja": "今後の注視点: 消費関連で見るべきは、需要減速そのものより先に、値上げの転嫁余地、契約改定のタイミング、為替ヘッジの再設定が利益率にどう出るかです。"
+				}
+			]
+		},
+		{
+			"id": "ppi-spillovers",
+			"heading": {
+				"ja": "生産者物価も強く、下流への波及が警戒される",
+				"en": "Producer prices are also strong, and there is concern about downstream spillovers."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The producer price index rose sharply month-on-month in April, continuing to push upstream costs higher.",
+					"ja": "何が起きたか: 4月の生産者物価指数は前月比で大きく上昇し、川上コストの押し上げが続きました。"
+				},
+				{
+					"en": "If an indicator one step upstream from the CPI is strong, there will remain pressure to pass on prices going forward.",
+					"ja": "CPIより一段上流の指標が強いと、今後の価格転嫁圧力が残ります。"
+				},
+				{
+					"en": "Why it matters: PPI increases tend to trickle down to retail prices and service charges with a lag of several months.",
+					"ja": "なぜ重要か: PPIの上昇は、数か月遅れて小売価格やサービス料金に波及しやすいです。"
+				},
+				{
+					"en": "In other words, current inflation is not a \"relic of the past\" and there is still room for it to flare up again.",
+					"ja": "つまり、今のインフレは「過去の遺物」ではなく、まだ再燃余地があるということです。"
+				},
+				{
+					"en": "What to watch: When raw-material and transport costs rise together, delivery dates and inventory levels become earlier indicators than unit prices.",
+					"ja": "今後の注視点: 原材料と輸送費が同時に上がる局面では、単価より納期と在庫水準が早いシグナルになります。"
+				},
+				{
+					"en": "Watch whether decentralized sourcing stabilizes costs.",
+					"ja": "分散調達が価格安定に効いているかも見たいところです。"
+				}
+			]
+		},
+		{
+			"id": "state-employment",
+			"heading": {
+				"ja": "州別雇用統計は地域差の大きさを改めて示した",
+				"en": "State employment statistics once again show the magnitude of regional differences"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Employment and unemployment statistics by state in the US confirm that regional differences in economic conditions continue to be large.",
+					"ja": "何が起きたか: 米国の州別雇用・失業統計では、地域ごとの景気温度差が引き続き大きいことが確認されました。"
+				},
+				{
+					"en": "This highlights the strength and weakness of employment on a state-by-state basis, which cannot be seen by looking only at the national average.",
+					"ja": "全国平均だけでは見えない、州単位の雇用の強弱が目立ちます。"
+				},
+				{
+					"en": "Why it matters: Regional differences in employment lead to differences in housing, commercial real estate, consumer spending, and tax revenues.",
+					"ja": "なぜ重要か: 雇用の地域差は、住宅、商業不動産、消費支出、税収の差につながります。"
+				},
+				{
+					"en": "For companies, this is more effective in selecting locations for opening stores and hiring locations than for national demand.",
+					"ja": "企業にとっては、全国需要よりも出店地域や採用地域の選定に効いてきます。"
+				},
+				{
+					"en": "What to watch: Regional sales, hiring, and warehouse utilization will matter more than national averages if the slowdown remains uneven.",
+					"ja": "今後の注視点: 景気後退が一律で来ないなら、全国平均より地域別の売上、採用、倉庫稼働率が重要です。 強い地域と弱い地域の差が広がるかを追いたいところです。"
+				}
+			]
+		},
+		{
+			"id": "fed-financial-stability",
+			"heading": {
+				"ja": "Fedは金融安定性のリスクをなお警戒している",
+				"en": "Fed remains wary of financial stability risks"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The Federal Reserve continued to highlight overvalued assets and credit market fragility in its Financial Stability Report.",
+					"ja": "何が起きたか: 連邦準備制度理事会は、金融安定性報告で資産価格の割高感や信用市場の脆さを引き続き論点に挙げました。"
+				},
+				{
+					"en": "In addition to inflation, valuations and leverage are other concerns.",
+					"ja": "インフレだけでなく、バリュエーションとレバレッジが別の不安材料です。"
+				},
+				{
+					"en": "Why it matters: When interest rates remain high, funding costs and liquidity risks become more apparent than simply cyclical.",
+					"ja": "なぜ重要か: 金利が高止まりすると、単純な景気循環よりも資金調達コストと流動性リスクが表面化します。"
+				},
+				{
+					"en": "Credit markets and commercial real estate in particular are sensitive to both interest rates and economic conditions.",
+					"ja": "特に信用市場と商業不動産は、金利と景気の両方に左右されやすいです。"
+				},
+				{
+					"en": "What to watch: Higher rates will show up in borrowing terms, revolving facilities, and bond maturities.",
+					"ja": "今後の注視点: 金利上昇の影響は、借入条件、リボルビング枠、社債満期の再交渉に出ます。"
+				},
+				{
+					"en": "In equities, watch whether high-P/E names can absorb higher discount rates.",
+					"ja": "投資サイドでは、ディスカウント率上昇時の高PER銘柄の耐性が焦点です。"
+				}
+			]
+		},
+		{
+			"id": "g7-imbalances",
+			"heading": {
+				"ja": "G7は経済の不均衡是正を協調課題として再確認した",
+				"en": "G7 reaffirms redressing economic imbalances as a cooperative issue"
+			},
+			"pairs": [
+				{
+					"en": "What happened: G7 finance ministers and central bank governors reaffirmed economic imbalances, supply chain vulnerabilities, and the security of critical minerals as collaborative issues.",
+					"ja": "何が起きたか: G7の財務相・中央銀行総裁は、経済の不均衡や供給網の脆弱性、重要鉱物の確保を協調課題として再確認しました。"
+				},
+				{
+					"en": "Despite political differences, trade and supply chain development are common themes.",
+					"ja": "政治的な対立があっても、通商と供給網の整備は共通テーマです。"
+				},
+				{
+					"en": "Why it matters: The G7 agreement is more of a market message than a legally binding one.",
+					"ja": "なぜ重要か: G7の合意は法的拘束力よりも市場へのメッセージが大きいです。"
+				},
+				{
+					"en": "When countries talk about correcting imbalances, in reality they are reinforcing policies such as dependence on China, uneven distribution of resources, and procurement from friendly countries.",
+					"ja": "各国が不均衡是正を語るとき、実際には中国依存、資源偏在、友好国調達の政策が強まります。"
+				},
+				{
+					"en": "What to watch: Manufacturing and materials markets should be read through supply guarantees, not only price.",
+					"ja": "今後の注視点: 製造業と素材産業では、価格競争より供給保障が評価軸になるかを見たいところです。"
+				},
+				{
+					"en": "Diversification of critical minerals, battery materials, and semiconductor components is the key follow-up.",
+					"ja": "重要鉱物、電池材料、半導体部材の調達先がどれだけ複線化するかが焦点です。"
+				}
+			]
+		},
+		{
+			"id": "google-io-ai",
+			"heading": {
+				"ja": "Google I/O 2026はAIを製品群の中心に据え直した",
+				"en": "Google I/O 2026 puts AI at the center of its product portfolio"
+			},
+			"pairs": [
+				{
+					"en": "What happened: With I/O 2026, Google brought its Gemini model and agent capabilities to the forefront, increasing their integration into search, development, and creative work.",
+					"ja": "何が起きたか: GoogleはI/O 2026で、Gemini系モデルとエージェント機能を前面に出し、検索、開発、クリエイティブ作業への統合を強めました。"
+				},
+				{
+					"en": "The main focus is not on one-off model announcements, but on embedding them into multiple products.",
+					"ja": "単発のモデル発表ではなく、複数製品への埋め込みが主役です。"
+				},
+				{
+					"en": "Why it matters: In the generative AI race, it is becoming increasingly difficult to differentiate based on model performance alone.",
+					"ja": "なぜ重要か: 生成AIの競争は、モデル性能だけでは差別化しにくくなっています。"
+				},
+				{
+					"en": "Nowadays, the power of a product is determined by how deeply it can be integrated into existing workflows.",
+					"ja": "今は「どこまで既存ワークフローに深く入り込めるか」が製品力を左右します。"
+				},
+				{
+					"en": "What to watch: AI adoption should be measured by whether search, internal knowledge, permissions, and audit logs become part of deployed systems.",
+					"ja": "今後の注視点: AI導入の進度は、モデル性能より、検索、社内ナレッジ、権限、監査ログまで接続した事例が増えるかで判断したいところです。"
+				},
+				{
+					"en": "The shift from standalone chat to connected agents is the real signal.",
+					"ja": "単体チャットから業務接続へ移るかが価値を決めます。"
+				}
+			]
+		},
+		{
+			"id": "openai-dell-on-prem",
+			"heading": {
+				"ja": "OpenAIとDellの組み合わせはオンプレ配備志向を強める",
+				"en": "Combination of OpenAI and Dell strengthens on-premises deployment orientation"
+			},
+			"pairs": [
+				{
+					"en": "What happened: OpenAI partnered with Dell Technologies to bring Codex and related workloads to enterprise hybrid environments and on-premises.",
+					"ja": "何が起きたか: OpenAIはDell Technologiesと組み、Codexや関連ワークロードを企業のハイブリッド環境やオンプレミスに持ち込む方向を打ち出しました。"
+				},
+				{
+					"en": "We are capturing demand for use not only in the cloud, but also within the administrative boundary.",
+					"ja": "クラウドだけでなく、管理境界の内側で使う需要を取りに行っています。"
+				},
+				{
+					"en": "Why it matters: Enterprise deployments are not just about performance, but about data residency, privilege management, auditing, and cost estimation.",
+					"ja": "なぜ重要か: 企業導入では、性能だけでなくデータ所在、権限管理、監査、コスト予測が重要です。"
+				},
+				{
+					"en": "Support for on-premises and dedicated environments is a sign that AI is moving from \"experiment\" to \"core support\".",
+					"ja": "オンプレや専用環境への対応は、AIが「実験」から「基幹補助」に移るサインです。"
+				},
+				{
+					"en": "What to watch: For sensitive data, watch whether closed networks, dedicated infrastructure, and log controls become standard AI procurement requirements.",
+					"ja": "今後の注視点: 機密データ向けAIでは、SaaSか専用基盤かではなく、閉域、ログ統制、監査要件を満たす構成がどれだけ実装されるかを見たいところです。"
+				}
+			]
+		},
+		{
+			"id": "anthropic-stainless",
+			"heading": {
+				"ja": "AnthropicはStainless買収でSDK基盤を固めた",
+				"en": "Anthropic solidifies its SDK foundation with acquisition of Stainless"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Anthropic acquired Stainless, the foundation for API SDK generation and developer experience.",
+					"ja": "何が起きたか: Anthropicは、API SDK生成と開発者体験の基盤を担うStainlessを買収しました。"
+				},
+				{
+					"en": "The competition is not just for the performance of individual models, but also for tools that developers can easily connect.",
+					"ja": "モデル単体の性能競争だけでなく、開発者がつなぎやすい道具立てを押さえに来ています。"
+				},
+				{
+					"en": "Why it matters: In the real world of agent and tool connectivity, SDKs, type definitions, error handling, and authentication are key to adoption rates.",
+					"ja": "なぜ重要か: エージェントやツール接続の実運用では、SDKや型定義、エラー処理、認証の整備が採用率を左右します。"
+				},
+				{
+					"en": "The connectivity aspect of MCP and various APIs is now at the core of product strategy.",
+					"ja": "MCPや各種APIの接続面は、今や製品戦略の中核です。"
+				},
+				{
+					"en": "What to watch: AI infrastructure will differentiate on SDK quality, maintainability, authentication, and schema stability.",
+					"ja": "今後の注視点: AI基盤の差は、導入の簡単さよりSDK品質、保守性、認証方式、スキーマ安定性に出ます。"
+				},
+				{
+					"en": "Ease of starting matters less than resistance to breakage in long-term operation.",
+					"ja": "次の焦点は、長期運用で壊れにくい基盤が選ばれるかです。"
+				}
+			]
+		},
+		{
+			"id": "nvidia-vera-cpu",
+			"heading": {
+				"ja": "NVIDIAのVera CPUはAIインフラ競争の次の部品になった",
+				"en": "NVIDIA's Vera CPUs have become the next piece in the AI ​​infrastructure race"
+			},
+			"pairs": [
+				{
+					"en": "What happened: NVIDIA announced it would supply Vera CPUs to Anthropic, OpenAI, Oracle, SpaceX, and more.",
+					"ja": "何が起きたか: NVIDIAは、Vera CPUをAnthropic、OpenAI、Oracle、SpaceXなどに供給すると発表しました。"
+				},
+				{
+					"en": "System design that includes not only the GPU but also the CPU and network is becoming increasingly important.",
+					"ja": "GPUだけではなく、CPUとネットワークを含むシステム設計の重要性が増しています。"
+				},
+				{
+					"en": "Why it matters: Performance differences in large-scale AI are determined not only by the model but also by the combination of CPU, GPU, memory, network, and power.",
+					"ja": "なぜ重要か: 大規模AIの性能差は、モデルだけでなく、CPU、GPU、メモリ、ネットワーク、電力の組み合わせで決まります。"
+				},
+				{
+					"en": "Both cloud providers and AI labs are competing to select hardware to eliminate bottlenecks.",
+					"ja": "クラウド事業者とAIラボの両方が、ボトルネック解消のためにハードウェア選定を競っています。"
+				},
+				{
+					"en": "What to watch: Inference speed and cost are only part of the signal.",
+					"ja": "今後の注視点: 推論速度やコストだけでなく、基盤の世代更新と供給安定性がSLAにどう効くかを見たいところです。"
+				},
+				{
+					"en": "Platform generation updates and supply stability will determine SLA risk for high-load and always-on systems.",
+					"ja": "高負荷処理や常時稼働システムでは、CPU世代差が運用品質に直結します。"
+				}
+			]
+		},
+		{
+			"id": "ai-provenance",
+			"heading": {
+				"ja": "AIの信頼性は内容生成より出所確認へ軸足を移している",
+				"en": "AI reliability is shifting from content generation to source verification"
+			},
+			"pairs": [
+				{
+					"en": "What happened: OpenAI is bringing forward trust and verification efforts to make it easier to confirm the origin and authenticity of products.",
+					"ja": "何が起きたか: OpenAIは、生成物の出所や真正性を確認しやすくするための信頼性・検証の取り組みを前に出しています。"
+				},
+				{
+					"en": "In addition to the generation speed, the mechanism for identifying what is AI-generated is attracting attention.",
+					"ja": "生成速度だけでなく、何がAI生成かを見分ける仕組みが注目されています。"
+				},
+				{
+					"en": "Why it matters: A serious risk is that plausible misinformation or doctored images mix with business and political decisions.",
+					"ja": "なぜ重要か: 深刻なリスクは、もっともらしい誤情報や改ざん画像が業務や政治の判断に混ざることです。"
+				},
+				{
+					"en": "Provenance verification mechanisms will be needed as quickly as AI spreads.",
+					"ja": "出所確認の仕組みは、AIの普及と同じ速度で必要になります。"
+				},
+				{
+					"en": "What to watch: As AI-generated output spreads, authenticity verification may become more important than generation itself.",
+					"ja": "今後の注視点: AI生成物の普及で重要になるのは、作成機能より真正性を証明する仕組みです。"
+				},
+				{
+					"en": "PR, legal, recruiting, credit, and audit workflows are the places to watch.",
+					"ja": "広報、法務、採用、与信、監査で検証ワークフローが標準化するかを見たいところです。"
+				}
+			]
+		},
+		{
+			"id": "cross-sectional-view",
+			"heading": {
+				"ja": "横断的な見立て",
+				"en": "Cross-sectional view"
+			},
+			"pairs": [
+				{
+					"en": "With US-China, Iran, Black Sea, and Europe reconnection moving simultaneously, companies need to treat geopolitics as a sourcing condition rather than \"news.\"",
+					"ja": "米中・イラン・黒海・欧州再接続が同時に動いており、企業は地政学を「ニュース」ではなく調達条件として扱う必要があります。"
+				},
+				{
+					"en": "The combination of the reacceleration of inflation and the Fed's stability concerns makes it difficult to assume that interest rates will fall soon.",
+					"ja": "物価再加速とFedの安定性警戒が重なり、金利がすぐに下がる前提は置きにくくなっています。"
+				},
+				{
+					"en": "G7 discussions on correcting imbalances and critical minerals will strengthen the trend toward redundant supply chains rather than cost reductions.",
+					"ja": "G7の不均衡是正や重要鉱物の議論は、サプライチェーンを低コスト化よりも冗長化へ寄せる流れを強めます。"
+				},
+				{
+					"en": "In terms of technology, the competitive axis is deployment in a corporate environment, SDK, auditing, and authenticity confirmation rather than differences in model performance.",
+					"ja": "技術面では、モデル性能の差よりも、企業環境への配備、SDK、監査、真正性確認が競争軸になっています。"
+				},
+				{
+					"en": "So the common language of markets and policy today is not \"velocity\" but \"controllability.\"",
+					"ja": "つまり、今日の市場と政策の共通語は「速度」ではなく「制御可能性」です。"
+				}
+			]
+		},
+		{
+			"id": "uncertainty-to-track",
+			"heading": {
+				"ja": "追跡すべき未確定事項",
+				"en": "Uncertainty to track"
+			},
+			"pairs": [
+				{
+					"en": "How far will the US-China agreement go in terms of tariff relief and new trade frameworks?",
+					"ja": "米中合意が、関税緩和や新たな取引枠にどこまで落ちるか。"
+				},
+				{
+					"en": "Whether Congress' control of war powers would halt actual military action in the Iranian situation.",
+					"ja": "イラン情勢で、議会の戦争権限統制が実際の軍事行動を止めるかどうか。"
+				},
+				{
+					"en": "Whether the re-acceleration of CPI and PPI will continue until the June policy meeting.",
+					"ja": "CPIとPPIの再加速が、6月の政策会合まで続くかどうか。"
+				},
+				{
+					"en": "How quickly announcements from Google, OpenAI, Anthropic, and NVIDIA will lead to real-world deployments.",
+					"ja": "Google、OpenAI、Anthropic、NVIDIAの発表が、実運用の導入事例にどれだけ早くつながるか。"
+				},
+				{
+					"en": "To what extent will the UK-EU reset negotiations reduce the practical burden of food, hygiene, and customs clearance?",
+					"ja": "UK-EUのリセット交渉が、食品・衛生・通関の実務負担をどこまで下げるか。"
+				}
+			]
+		}
+	]
+}

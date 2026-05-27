@@ -1,0 +1,340 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "In Iran after the 1979 revolution, repression of citizens was not a temporary repression, but became a fixed system that combined the judiciary, the Revolutionary Guards Corps (IRGC), intelligence agencies, election management, moral police, censorship, and executions.",
+					"ja": "1979年革命後のイランでは、市民抑圧は一過性の弾圧ではなく、司法、革命防衛隊（IRGC）、情報機関、選挙管理、道徳警察、検閲、処刑を組み合わせた制度として固定化した。"
+				},
+				{
+					"en": "Protest movements have repeated themselves, starting with the purges in the 1980s, the student movements in 1999, the Green Movement in 2009, the protests in 2019, and the Women, Life, Freedom movement in 2022 and beyond, and each time the number of participants and demands expanded, but the state also adapted to a more detailed combination of surveillance, detention, internet shutdowns, forced confessions, and candidate exclusion.",
+					"ja": "抗議運動は1980年代の粛清、1999年学生運動、2009年緑の運動、2019年抗議、2022年以降の「Women, Life, Freedom」へと反復し、そのたびに参加層と要求は拡大したが、国家側も監視、拘束、インターネット遮断、強制自白、候補者排除をより細かく組み合わせる方向へ適応した。"
+				},
+				{
+					"en": "The important point is that it is a mistake to view Iran's oppression only as \"abstract oppression that occurs because it is a religious country.\"",
+					"ja": "重要なのは、イランの抑圧を「宗教国家だから起きる抽象的な抑圧」とだけ見ると見誤ることだ。"
+				},
+				{
+					"en": "In reality, discipline that reaches down to the details of daily life is implemented through the legal system and security apparatus.",
+					"ja": "実際には、日常生活の細部にまで届く規律化が、法制度と治安機構を通じて実装されている。"
+				},
+				{
+					"en": "Restrictions on women's clothing, exclusion from schools and workplaces, restrictions on speech, publishing, and the internet, focused repression of minority communities, and frequent use of executions have all been linked together to push protests back to the margins of society.",
+					"ja": "女性の服装規制、学校や職場からの排除、言論・出版・ネット規制、少数派地域への重点弾圧、処刑の多用が互いに連結し、抗議を社会の周縁へ押し戻してきた。"
+				},
+				{
+					"en": "However, materials from exile media, citizen testimonies, UN reports, and human rights organizations each have their limitations.",
+					"ja": "ただし、亡命メディア、市民証言、国連報告、人権団体の資料にはそれぞれ限界がある。"
+				},
+				{
+					"en": "In particular, the UN's Independent Fact-Finding Mission collects much of its evidence from the testimonies of victims and witnesses, public footage, open source materials, and foreign stakeholders, so while it has a high degree of verifiability, it tends to miss out on the experiences of the majority who have been forced into silence domestically.",
+					"ja": "とくに国連の独立事実調査団自身が、証拠の多くを被害者・証人の証言、公開映像、オープンソース資料、国外の関係者から集めているため、検証性は高い一方で、国内で沈黙を強いられた多数派の経験は取りこぼしやすい。"
+				},
+				{
+					"en": "Therefore, this article compares various materials to depict \"what happened over and over again,\" and reads with the premise that the individual numbers of deaths and detainees will vary depending on the scope of the investigation.",
+					"ja": "したがって、本稿は各種資料を突き合わせて「何が繰り返されたか」を描き、個別の死者数や拘束者数は調査範囲に応じて差が出る前提で読む。"
+				}
+			]
+		},
+		{
+			"id": "institutionalized-oppression",
+			"heading": {
+				"ja": "2. 抑圧が制度化した理由",
+				"en": "2. Why oppression became institutionalized"
+			},
+			"pairs": [
+				{
+					"en": "A feature of the post-revolutionary system is that while elections remain in place, non-electoral bodies control entry and exit points.",
+					"ja": "革命後体制の特徴は、選挙を残しながら、その入口と出口を非選挙機関が押さえる点にある。"
+				},
+				{
+					"en": "When candidate screening, bill screening, integration of security agencies, appointment of top judicial officers, and management of broadcasting and information space are all integrated, protests will no longer be a \"street problem\" but will be incorporated into the system.",
+					"ja": "候補者審査、法案審査、治安機関の統合、司法トップの任命、放送・情報空間の管理が一体で運用されると、抗議は「街頭の問題」ではなく、制度の中に取り込まれる。"
+				},
+				{
+					"en": "As a result, the state detains leaders when the scale of protests is small, and moves to communication blackouts and mass detentions when protests grow large.",
+					"ja": "結果として、国家は抗議の規模が小さいうちに指導者を拘束し、規模が大きくなると通信遮断や大量拘束へ移る。"
+				},
+				{
+					"en": "Within this structure, women, students, workers, ethnic minorities, and religious minorities are all subject to pressure for different reasons, but are connected to the same apparatus of oppression during protests.",
+					"ja": "この構造の中では、女性、学生、労働者、少数民族、宗教少数派が、それぞれ別の理由で圧力を受けながら、抗議局面では同じ抑圧装置に接続される。"
+				},
+				{
+					"en": "Restrictions on women's clothing appear to be a \"cultural\" issue, but they are actually political techniques for controlling the conditions for participation in public spaces, and repression of minority areas appears to be a \"public security\" issue, but in reality, it is an operation to proactively crush potential disobedience to central authority.",
+					"ja": "女性への服装規制は「文化」の問題に見えるが、実際には公共空間への参加条件を管理する政治技術であり、少数派地域の弾圧は「治安」の問題に見えるが、実際には中心権力に対する潜在的不服従を先回りして潰す運用である。"
+				}
+			]
+		},
+		{
+			"id": "1980s-purges",
+			"heading": {
+				"ja": "4. 1980年代の粛清と政治犯処刑",
+				"en": "4. Purges and executions of political prisoners in the 1980s"
+			},
+			"pairs": [
+				{
+					"en": "The repression in the early 1980s began with the elimination of enemies of the revolution.",
+					"ja": "1980年代前半の弾圧は、革命の敵を排除する段階から始まった。"
+				},
+				{
+					"en": "Leftists, Islamic leftists, supporters of the monarchy, the Kurdish movement, and religious dissidents were treated as \"threats to the revolution\" and were punished outside of court or executed after short trials.",
+					"ja": "左派、イスラム左派、君主制支持者、クルド運動、反体制宗教派などが「革命への脅威」として処理され、法廷外の処罰や短い審理ののちに処刑された。"
+				},
+				{
+					"en": "The mass execution of political prisoners in 1988 was the culmination of this.",
+					"ja": "1988年の政治犯大量処刑は、その極点である。"
+				},
+				{
+					"en": "The OHCHR Special Rapporteur points out that the executions and disappearances of the 1980s were systematic and that the mass executions of 1988 may constitute extremely serious human rights violations under international law.",
+					"ja": "OHCHRの特別報告者は、1980年代の処刑と失踪が体系的であり、1988年の大量処刑が国際法上きわめて深刻な人権侵害に当たる可能性を指摘している。"
+				},
+				{
+					"en": "The important point in this phase is that the executions were not just a \"past mistake,\" but rather created the basis for fear of future repression.",
+					"ja": "この局面の重要点は、処刑が単なる「過去の過ち」ではなく、以後の抑圧に対する恐怖の基底を作ったことだ。"
+				},
+				{
+					"en": "As families were buried without knowing the truth, and mourning and public memory were suppressed, state violence settled into society in a way that was difficult to record.",
+					"ja": "家族が真相を知らされないまま埋葬され、追悼や公開記憶も抑えられたため、国家暴力は記録されにくい形で社会に沈殿した。"
+				},
+				{
+					"en": "In subsequent protests, a structure in which families of detainees are forced into silence has repeatedly emerged.",
+					"ja": "以後の抗議運動では、拘束者の家族が沈黙を強いられる構造が繰り返し現れる。"
+				}
+			]
+		},
+		{
+			"id": "student-movement",
+			"heading": {
+				"ja": "5. 1999年学生運動",
+				"en": "5. 1999 Student Movement"
+			},
+			"pairs": [
+				{
+					"en": "The student movement of 1999 occurred at a time when there was still hope for reform.",
+					"ja": "1999年の学生運動は、改革期待が残る時期に起きた。"
+				},
+				{
+					"en": "The closure of the reformist newspaper Salam sparked protests around Tehran University, where security forces and pro-regime militias attacked students.",
+					"ja": "改革派新聞『サラーム』の閉鎖をきっかけに、テヘラン大学周辺で抗議が広がり、治安部隊と政権支持の民兵が学生を攻撃した。"
+				},
+				{
+					"en": "Human rights groups have documented at least one student death, detention, torture, increased surveillance of universities, and control of speech.",
+					"ja": "人権団体は、少なくとも1人の学生死亡、拘束、拷問、大学への監視強化、言論統制を記録している。"
+				},
+				{
+					"en": "This phase shows that the Iranian regime has been particularly wary of the \"space of intellectuals and students.\"",
+					"ja": "この局面は、イラン体制が「知識人と学生の空間」を特に警戒してきたことを示す。"
+				},
+				{
+					"en": "Universities gather the future generations of society, and newspapers make political discourse visible, so suppressing this is tantamount to cutting off the circuit of criticism of the government.",
+					"ja": "大学は社会の将来層が集まり、新聞は政治言説を可視化するため、ここを抑えることは政権批判の回路を切ることに等しい。"
+				},
+				{
+					"en": "Since 1999, university campuses have come to be treated not just as educational spaces, but as objects of political surveillance.",
+					"ja": "1999年以降、大学キャンパスは単なる教育空間ではなく、政治的な監視対象として扱われるようになった。"
+				}
+			]
+		},
+		{
+			"id": "green-movement",
+			"heading": {
+				"ja": "6. 2009年緑の運動",
+				"en": "6. 2009 Green Movement"
+			},
+			"pairs": [
+				{
+					"en": "The 2009 Green Movement began with allegations of election fraud, but quickly turned into distrust of the system itself.",
+					"ja": "2009年の緑の運動は、選挙不正疑惑から始まり、すぐに制度そのものへの不信へ変わった。"
+				},
+				{
+					"en": "HRW reports on violence against demonstrators, torture, detention, unfairness in courts, and control of the media, and official government figures say at least 30 people have died and thousands have been detained.",
+					"ja": "HRWは、デモ参加者への暴力、拷問、拘束、裁判所での不公正、メディア統制を報告し、政府公式発表ベースでも少なくとも30人が死亡、数千人が拘束されたと整理している。"
+				},
+				{
+					"en": "The protests spread mainly among the urban middle class, but the regime did not absorb the reformers' expectations within the system and pushed back with surveillance and detention.",
+					"ja": "抗議は都市中間層を中心に広がったが、体制側は改革派の期待を制度内で吸収せず、監視と拘束で押し返した。"
+				},
+				{
+					"en": "A turning point in 2009 was when international media and citizens' smartphone testimonies partially bypassed domestic censorship.",
+					"ja": "2009年の転換点は、国際メディアと市民のスマートフォン証言が、国内検閲を部分的に迂回したことだ。"
+				},
+				{
+					"en": "However, the spread of the video did not stop the oppression itself.",
+					"ja": "もっとも、映像の拡散は弾圧そのものを止めなかった。"
+				},
+				{
+					"en": "Instead, the state used a combination of detentions, forced confessions, arrests of journalists, and communications controls to ensure that information only arrived late.",
+					"ja": "むしろ国家は、拘束、強制自白、記者逮捕、通信統制を組み合わせて、情報を遅れてしか届かないものに変えた。"
+				}
+			]
+		},
+		{
+			"id": "internet-shutdowns",
+			"heading": {
+				"ja": "7. 2019年抗議とインターネット遮断",
+				"en": "7. 2019 Protests and Internet Shutdowns"
+			},
+			"pairs": [
+				{
+					"en": "Fuel price hikes in November 2019 triggered a sudden eruption of cost of living and distrust of governance.",
+					"ja": "2019年11月の燃料価格引き上げは、生活費と統治不信が一気に噴き出す引き金になった。"
+				},
+				{
+					"en": "Amnesty reported that at least 304 people were killed, and HRW noted that a nationwide internet shutdown in mid-November cut off the flow of protest information and made it difficult to track the killings.",
+					"ja": "Amnestyは、少なくとも304人が死亡したと報告し、HRWは、11月中旬の全国規模のインターネット遮断が抗議情報の流通を断ち、殺傷の把握を難しくしたと記録した。"
+				},
+				{
+					"en": "Protests spread to more than 100 cities and towns, occurring simultaneously in urban centers as well as rural areas.",
+					"ja": "抗議は100以上の都市・町に広がり、都市中心部だけでなく地方でも同時多発した。"
+				},
+				{
+					"en": "The significance of 2019 lies in the fact that the state openly declared that \"blocking communications is part of public security measures.\"",
+					"ja": "2019年の意味は、国家が「通信遮断も治安対策の一部」と公然と運用した点にある。"
+				},
+				{
+					"en": "Since then, internet shutdowns have come to be seen not simply as a byproduct of information control, but as a core technique for suppressing protests.",
+					"ja": "以後、ネット遮断は単に情報統制の副産物ではなく、抗議鎮圧の中核技術として読まれるようになった。"
+				},
+				{
+					"en": "The same context of censorship, speed reductions, app restrictions, and increased surveillance will be repeated in demonstrations in 2022 and beyond.",
+					"ja": "2022年以降のデモでも、検閲、速度低下、アプリ制限、監視強化が同じ文脈で繰り返される。"
+				}
+			]
+		},
+		{
+			"id": "women-life-freedom",
+			"heading": {
+				"ja": "8. 2022年以降の「Women, Life, Freedom」",
+				"en": "8. “Women, Life, Freedom” after 2022"
+			},
+			"pairs": [
+				{
+					"en": "The protests triggered by the death of Mahsa Amini in 2022 have made the control of women's bodies itself visible as a political issue more clearly than past demands for reform.",
+					"ja": "2022年のマフサ・アミニ死亡を契機にした抗議は、過去の改革要求よりも明確に、女性の身体管理そのものを政治問題として可視化した。"
+				},
+				{
+					"en": "OHCHR's independent fact-finding mission examined systemic discrimination, forced dress codes, restraints, violence and killings against women and girls, and found that 551 people had been murdered in 2024.",
+					"ja": "OHCHRの独立事実調査団は、女性と少女に対する組織的差別、強制的な服装規制、拘束、暴力、殺害を検証し、2024年時点で551人が殺害されたとまとめた。"
+				},
+				{
+					"en": "In addition, the investigation team indicated that these acts may amount to crimes against humanity.",
+					"ja": "加えて、調査団はこれらの行為が人道に対する罪に当たる可能性を示した。"
+				},
+				{
+					"en": "What is important in this phase is that oppression has extended not only to the streets, but also to commuting to school, commuting, shopping, transportation, and social media use.",
+					"ja": "この局面で重要なのは、抑圧が街頭だけでなく、通学、通勤、買い物、移動、SNS利用にまで伸びたことだ。"
+				},
+				{
+					"en": "OHCHR's updated report lists mandatory hijab regulations, surveillance cameras, movement restrictions, exclusion from schools and workplaces, pressure on pharmacies and shops, and restrictions on social media and travel.",
+					"ja": "OHCHRの更新報告は、義務的ヒジャブ規制、監視カメラ、移動制限、学校・職場からの排除、薬局や商店への圧力、SNSや旅行への制約を列挙している。"
+				},
+				{
+					"en": "In other words, the control of women is not a matter of religious symbols, but rather works as a mechanism to control the very conditions of participation in public space.",
+					"ja": "つまり、女性統制は宗教的象徴の問題ではなく、公共空間への参加条件そのものを管理する仕組みとして働いている。"
+				},
+				{
+					"en": "In 2026, Human Rights Watch reports that compulsory hijab, arbitrary detention, increased executions, and repression of religious and ethnic minorities will continue.",
+					"ja": "2026年時点でも、Human Rights Watchは、義務的ヒジャブ、恣意的拘束、処刑増加、宗教少数派や少数民族への弾圧が継続していると報告している。"
+				},
+				{
+					"en": "This means that the 2022 protests were not a \"temporary women's movement,\" but rather penetrated deep into the system, causing the state to strengthen its governance techniques.",
+					"ja": "これは、2022年の抗議が「一時的な女性運動」ではなく、制度の深部を突いたために、国家側が逆に統治技術を強化したことを意味する。"
+				},
+				{
+					"en": "Publicly available information suggests that authorities are prioritizing fragmented surveillance and punishment over symbolic concessions.",
+					"ja": "公表情報からの推定として、当局は象徴的譲歩よりも、監視と処罰の細分化を優先している。"
+				}
+			]
+		},
+		{
+			"id": "reporting-limits",
+			"heading": {
+				"ja": "9. 市民側の語り、亡命メディア、国連報告の限界",
+				"en": "9. Citizen narratives, exile media, and the limits of UN reporting"
+			},
+			"pairs": [
+				{
+					"en": "Citizen testimony, exile media, international NGOs, and UN reports have different roles.",
+					"ja": "市民証言、亡命メディア、国際NGO、国連報告は、役割が違う。"
+				},
+				{
+					"en": "Exile media has a high rate of breaking news and can quickly pick up on the stories of those involved, but they tend to focus on urban areas, those with connections outside the country, and political activists.",
+					"ja": "亡命メディアは速報性が高く、当事者の語りを早く拾えるが、都市部・国外接続層・政治活動家に寄りやすい。"
+				},
+				{
+					"en": "International NGOs are good at showing the systematicity of damage, but detailed geographic information and estimates of the number of people affected vary from report to report.",
+					"ja": "国際NGOは被害の体系性を示すのに強いが、細かな地理情報や人数推計は報告ごとにばらつく。"
+				},
+				{
+					"en": "UN reports are the most methodological and are good at cross-checking evidence, but they are subject to government non-cooperation and limited access to the field.",
+					"ja": "国連報告は方法論が最も重く、証拠の相互照合に長けるが、政府の非協力と現地アクセスの制約を受ける。"
+				},
+				{
+					"en": "For this reason, it is better not to judge superiority or inferiority only by the size of the numbers.",
+					"ja": "このため、数字の大小だけで優劣を決めない方がよい。"
+				},
+				{
+					"en": "For example, the number of deaths in 2019 varies depending on the data, and the number of victims in 2022 also varies depending on the time of the investigation and the coverage area.",
+					"ja": "たとえば2019年の死亡者数は資料により異なり、2022年の犠牲者数も調査時点や捕捉範囲で動く。"
+				},
+				{
+					"en": "What is important is to read what each document counts, what period it covers, and to what extent it has been verified.",
+					"ja": "重要なのは、各資料が何を数え、どの期間を対象にし、どこまで検証したかを読むことだ。"
+				},
+				{
+					"en": "What should be compared is the method and range rather than the numbers themselves.",
+					"ja": "比較すべきなのは数字そのものより、方法と射程である。"
+				}
+			]
+		},
+		{
+			"id": "practical-reading",
+			"heading": {
+				"ja": "10. 実務的な読み方",
+				"en": "10. Practical reading"
+			},
+			"pairs": [
+				{
+					"en": "From a policy analysis perspective, Iran's repression of civilians should not be seen as a \"single incident\" but as a bundle of multiple devices.",
+					"ja": "政策分析の観点では、イランの市民抑圧は「一つの事件」ではなく、複数の装置の束として見るべきだ。"
+				},
+				{
+					"en": "Surveillance cameras, the judiciary, moral police, election control, communications cutoffs, executions, and focused security efforts in minority areas may seem separate, but they work together the moment a protest occurs.",
+					"ja": "監視カメラ、司法、道徳警察、選挙の入口管理、通信遮断、処刑、少数派地域の重点治安化は別々に見えても、抗議が起きた瞬間に連携する。"
+				},
+				{
+					"en": "Therefore, when looking at future trends, it is necessary to simultaneously track not only the number of street demonstrations, but also candidate screening, pressure on schools and universities, internet restrictions, the number of executions, and the deployment of security forces in minority areas.",
+					"ja": "したがって、将来の動向を見るときは、街頭デモの人数だけでなく、候補者審査、学校・大学への圧力、ネット規制、処刑件数、少数派地域の治安部隊配置を同時に追う必要がある。"
+				},
+				{
+					"en": "The practical implications are threefold.",
+					"ja": "実務上の含意は三つある。"
+				},
+				{
+					"en": "First, the relaxation of governance cannot be determined solely by the presence or absence of a reformist government.",
+					"ja": "第一に、改革派政権の有無だけでは統治の緩和は判断できない。"
+				},
+				{
+					"en": "Second, women's rights are not a fringe issue, but a key indicator of regime legitimacy.",
+					"ja": "第二に、女性権利は周辺論点ではなく、体制の正当性を測る主要指標である。"
+				},
+				{
+					"en": "Third, evaluations of protest movements should treat asylum and UN materials as complementary rather than in opposition.",
+					"ja": "第三に、抗議運動の評価では、亡命資料と国連資料を対立させるのでなく、相互補完として扱うべきである。"
+				},
+				{
+					"en": "The conclusion here is not that Iranian resistance is weak, but that the costs of visible resistance are high because repression is institutionalized.",
+					"ja": "ここでの結論は、イランの抵抗が弱いということではなく、抑圧が制度化されているため、可視化される反抗のコストが高いという点にある。"
+				}
+			]
+		}
+	]
+}

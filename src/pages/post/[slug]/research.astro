@@ -37,7 +37,7 @@ const title = research.data.title ?? `${post.data.title}の調査プロセス`
 ---
 
 <BaseLayout title={title} description={post.data.description} image={post.data.heroImage?.src}>
-	<article class='mx-auto grid max-w-4xl gap-8 py-4'>
+	<article class='mx-auto grid max-w-6xl gap-8 py-4'>
 		<header class='research-hero grid gap-6 rounded-lg px-5 py-6 shadow-sm sm:px-8 sm:py-8'>
 			<a
 				href={withBase(`/post/${postSlug}/`)}
@@ -57,7 +57,7 @@ const title = research.data.title ?? `${post.data.title}の調査プロセス`
 				>
 					{title}
 				</h1>
-				<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>
+				<p class='max-w-4xl leading-7 text-gray-700 dark:text-gray-300'>
 					この記事を作るために立てた問い、資料選定、採用しなかった情報、判断基準、更新条件を公開可能な範囲でまとめた記録です。
 				</p>
 			</div>

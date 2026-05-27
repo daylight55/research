@@ -18,6 +18,27 @@ test('post layout gives the article column more room on wide screens', () => {
 	assert.match(postPage, /2xl:grid-cols-\[12rem_minmax\(0,62rem\)_12rem\]/)
 })
 
+test('post sidebar keeps the research trail link immediately before share', () => {
+	const postPage = readFileSync('src/pages/post/[...slug].astro', 'utf8')
+	const englishPostPage = readFileSync('src/pages/en/post/[...slug].astro', 'utf8')
+
+	for (const source of [postPage, englishPostPage]) {
+		const researchIndex = source.lastIndexOf('Research trail')
+		const shareIndex = source.lastIndexOf('<Share title={post.data.title} />')
+
+		assert.ok(researchIndex > 0)
+		assert.ok(shareIndex > researchIndex)
+	}
+})
+
+test('research process page uses a wider reading surface', () => {
+	const researchPage = readFileSync('src/pages/post/[slug]/research.astro', 'utf8')
+
+	assert.match(researchPage, /max-w-6xl/)
+	assert.match(researchPage, /max-w-4xl/)
+	assert.doesNotMatch(researchPage, /max-w-3xl/)
+})
+
 test('post lists keep cards readable at intermediate viewport widths', () => {
 	const listPosts = readFileSync('src/components/ListPosts.astro', 'utf8')
 

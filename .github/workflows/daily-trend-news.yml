@@ -561,3 +561,13 @@ jobs:
             --match-head-commit "${head_ref_oid}" \
             --subject "Daily trend news: ${REPORT_DATE}" \
             --body "Generated, built, and merged by the Daily Trend News workflow."
+
+      - name: Dispatch English translation workflow
+        if: steps.merge_pr.outcome == 'success'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
+        run: |
+          set -euo pipefail
+
+          gh workflow run translate-blog-en.yml --ref main

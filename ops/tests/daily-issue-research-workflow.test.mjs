@@ -84,6 +84,12 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
+	/- name: Dispatch English translation workflow[\s\S]*?if: steps\.merge_pr\.outcome == 'success'[\s\S]*?gh workflow run translate-blog-en\.yml --ref main/,
+	'Daily Trend News should dispatch the English translation workflow after merging a generated news PR',
+)
+
+assert.match(
+	trendWorkflow,
 	/cache_key="daily-trend-news-\$\{report_date\}"[\s\S]*?cache_key="\$\{cache_key\}-\$\{topic_hint_hash\}"/,
 	'trend news workflow should derive a date cache key and include topic hint when present',
 )

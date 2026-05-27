@@ -27,6 +27,7 @@ env:
   RESEARCH_READY_LABEL: daily-research
   RESEARCH_QUEUE_APP_ID: ${{ secrets.RESEARCH_QUEUE_APP_ID }}
   RESEARCH_QUEUE_APP_PRIVATE_KEY: ${{ secrets.RESEARCH_QUEUE_APP_PRIVATE_KEY }}
+  OPENAI_MODEL: gpt-5.4-mini
 
 jobs:
   research:
@@ -143,6 +144,12 @@ jobs:
             echo "### Issue Body"
             echo
             jq -r '.body // "(no body)"' ops/codex/runtime/selected-issue.json
+            echo
+            echo "## Automation Metadata"
+            echo
+            echo "- Model: ${OPENAI_MODEL}"
+            echo "- Required skill: [technical-research-report](../../.codex/skills/technical-research-report/SKILL.md)"
+            echo "- Prompt source: [ops/codex/prompts/daily-issue-research.md](../../ops/codex/prompts/daily-issue-research.md)"
           } >> ops/codex/runtime/daily-research-prompt.md
 
       - name: Record Daily CI start time
@@ -205,7 +212,7 @@ jobs:
           output-file: codex-output.md
           safety-strategy: drop-sudo
           sandbox: workspace-write
-          model: gpt-5.4-mini
+          model: ${{ env.OPENAI_MODEL }}
           effort: medium
           allow-bots: true
 
@@ -224,7 +231,7 @@ jobs:
         env:
           OPENAI_ADMIN_KEY: ${{ secrets.OPENAI_ADMIN_KEY }}
           OPENAI_USAGE_START_TIME: ${{ steps.openai_usage_window.outputs.start_time }}
-          OPENAI_USAGE_MODEL: gpt-5.4-mini
+          OPENAI_USAGE_MODEL: ${{ env.OPENAI_MODEL }}
           OPENAI_USAGE_OUTPUT_FILE: ${{ runner.temp }}/openai-usage-comment.md
         run: |
           set -euo pipefail

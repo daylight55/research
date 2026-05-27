@@ -214,17 +214,24 @@
 		const currentLocale = getPathLocale(window.location.pathname)
 		const contentPath = stripLocale(window.location.pathname)
 
-		if (currentLocale === 'en') {
-			setStoredLocale('en')
+		if (currentLocale !== DEFAULT_LOCALE) {
+			setStoredLocale(currentLocale)
 			return
 		}
 
 		const preferredLocale = getStoredLocale() ?? DEFAULT_LOCALE
-		if (preferredLocale === DEFAULT_LOCALE || !canRedirectToLocale(preferredLocale, contentPath))
+		if (
+			currentLocale === preferredLocale ||
+			preferredLocale === DEFAULT_LOCALE ||
+			!canRedirectToLocale(preferredLocale, contentPath)
+		) {
 			return
+		}
 
 		const targetPath = withBase(localizedPath(preferredLocale, contentPath))
 		const target = `${targetPath}${window.location.search}${window.location.hash}`
+		if (target === window.location.href || target === window.location.pathname) return
+
 		window.location.replace(target)
 	}
 

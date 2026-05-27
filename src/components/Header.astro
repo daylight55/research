@@ -46,7 +46,9 @@ const drawerLinkClass =
 	</div>
 
 	<div class='flex items-center gap-2 md:pl-2'>
-		<LocaleToggle locale={locale} />
+		<div class='hidden sm:block'>
+			<LocaleToggle locale={locale} />
+		</div>
 		{
 			SOCIALNETWORKS.map((network) => (
 				<HeaderLink

@@ -7,6 +7,8 @@
 	const DEFAULT_LOCALE = 'ja'
 	const SUPPORTED_LOCALES = ['ja', 'en']
 	let pendingScrollRestore = null
+	let scrollRestoreRun = 0
+	let scrollRestoreTimers = []
 
 	const normalizeBase = (value) => {
 		if (!value || value === '/') return ''
@@ -112,6 +114,14 @@
 		}
 	}
 
+	const clearScheduledScrollRestores = () => {
+		scrollRestoreRun += 1
+		for (const timer of scrollRestoreTimers) {
+			window.clearTimeout(timer)
+		}
+		scrollRestoreTimers = []
+	}
+
 	const clearSavedScrollPosition = () => {
 		pendingScrollRestore = null
 		try {
@@ -128,6 +138,9 @@
 		if (saved.locale !== getPathLocale(window.location.pathname)) return
 		if (saved.path !== stripLocale(window.location.pathname)) return
 
+		clearScheduledScrollRestores()
+		const restoreRun = scrollRestoreRun
+
 		const scrollWithoutSmooth = () => {
 			const maxScroll = Math.max(0, getScrollableHeight() - window.innerHeight)
 			if (maxScroll <= 0 && saved.y > 0) return false
@@ -143,16 +156,51 @@
 		}
 
 		const clearWhenRestored = () => {
-			if (scrollWithoutSmooth()) clearSavedScrollPosition()
+			if (restoreRun !== scrollRestoreRun) return
+			if (readSavedScrollPosition() !== saved) return
+			if (scrollWithoutSmooth()) {
+				clearSavedScrollPosition()
+				clearScheduledScrollRestores()
+			}
+		}
+
+		const scheduleRestore = (delay) => {
+			const timer = window.setTimeout(clearWhenRestored, delay)
+			scrollRestoreTimers.push(timer)
 		}
 
 		clearWhenRestored()
+		if (readSavedScrollPosition() !== saved) return
 		window.requestAnimationFrame(clearWhenRestored)
-		window.setTimeout(clearWhenRestored, 80)
-		window.setTimeout(clearWhenRestored, 180)
-		window.setTimeout(clearWhenRestored, 400)
-		window.setTimeout(clearWhenRestored, 800)
-		window.setTimeout(clearWhenRestored, 1200)
+		scheduleRestore(80)
+		scheduleRestore(180)
+		scheduleRestore(400)
+		scheduleRestore(800)
+		scheduleRestore(1200)
+	}
+
+	const cancelScrollRestoreForUserInput = () => {
+		if (!readSavedScrollPosition()) return
+		clearSavedScrollPosition()
+		clearScheduledScrollRestores()
+	}
+
+	const cancelScrollRestoreForScrollKey = (event) => {
+		if (
+			[
+				'ArrowDown',
+				'ArrowLeft',
+				'ArrowRight',
+				'ArrowUp',
+				'End',
+				'Home',
+				'PageDown',
+				'PageUp',
+				' '
+			].includes(event.key)
+		) {
+			cancelScrollRestoreForUserInput()
+		}
 	}
 
 	const syncLocale = () => {
@@ -204,6 +252,9 @@
 	)
 
 	window.addEventListener('pagereveal', restoreScrollPosition)
+	window.addEventListener('wheel', cancelScrollRestoreForUserInput, { passive: true })
+	window.addEventListener('touchmove', cancelScrollRestoreForUserInput, { passive: true })
+	window.addEventListener('keydown', cancelScrollRestoreForScrollKey)
 	document.addEventListener('DOMContentLoaded', restoreScrollPosition)
 	document.addEventListener('astro:page-load', () => {
 		syncLocale()

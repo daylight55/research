@@ -70,12 +70,19 @@ jobs:
           effort: medium
           allow-bots: true
 
+      - name: Restore Node for site build
+        if: steps.prepare_prompt.outputs.missing_count != '0'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
       - name: Validate translated site
         if: steps.prepare_prompt.outputs.missing_count != '0'
         run: |
           set -euo pipefail
           git diff --check
-          ! rg -n '\b(TBD|TODO|FIXME|未定|要確認)\b' articles/report/en articles/news/en
+          ! grep -RInE '\b(TBD|TODO|FIXME|未定|要確認)\b' articles/report/en articles/news/en
           pnpm build
 
       - name: Create translation pull request

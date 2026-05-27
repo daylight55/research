@@ -1,0 +1,36 @@
+---
+title: 'AI Codingプラクティス調査ログ'
+description: 'AI Codingを成功確率の工学として整理するための調査プロセス、採用した情報源、判断、残課題。'
+pubDate: '2026-05-27'
+---
+
+## 調査目的
+
+LLMを用いたAI Codingを「成功確率を上げるための開発システム」として捉え直し、実務で整備すべきプラクティスを整理した。
+
+## 調査範囲
+
+- Agentic codingとsoftware engineering agentの実務プラクティス。
+- Agent harness、context engineering、tool design、evaluation、長時間作業の進捗管理。
+- SWE-bench、SWE-agent、Agentlessなど、公開研究に基づく示唆。
+- OpenAI CodexとAnthropic Claude Code/Agent関連の一次情報。
+
+## 採用した主要情報源
+
+- Anthropic Engineering: Building effective agents、Claude Code best practices、tool design、context engineering、long-running agents、agent evals。
+- OpenAI: Introducing Codex、Codex system card addendum、Codex agent loop、harness engineering、SWE-bench Verifiedの限界。
+- 学術論文: SWE-bench、SWE-agent、Agentless。
+
+## 判断ログ
+
+1. レポートの中心概念は「Agentに任せる」ではなく「成功確率を上げる」に置いた。これは、モデル能力だけではなく、文脈、操作面、検証、統制が成果を左右するため。
+2. AI Codingのベストプラクティスは、単なるプロンプト術ではなく、リポジトリ構造、テスト、CI、PR、runbookまで含む開発システムとして扱った。
+3. Agentic loopを万能視しないため、AgentlessとAnthropicのworkflow/agent区別を入れた。
+4. ベンチマークの扱いでは、SWE-bench Verifiedの価値と限界を両方書いた。公開ベンチマークの点数を、自社コードベースでの成功確率と混同しないため。
+5. 図解は、成功確率の構成要素、検証ループ、研究史の3つに絞った。本文を置き換える巨大図ではなく、読む補助として使った。
+
+## 残課題
+
+- 本レポートは公開情報に基づく実務整理であり、特定組織での定量的な成功率測定は行っていない。
+- 実運用では、対象リポジトリごとにAgent評価セット、権限レベル、runbook、CI品質が異なるため、導入時にはローカル検証が必要である。
+- 2026年以降のCodex/Claude Code/他Agent製品の機能、価格、提供範囲は変わる可能性があるため、導入判断時には最新ドキュメントを再確認する。

@@ -26,7 +26,7 @@ function readScalar(frontmatter, key) {
 }
 
 function articleKey(file) {
-	const match = file.match(/^articles\/(report|news)\/(?:en\/)?([^/]+)\/index\.mdx$/)
+	const match = file.match(/^articles\/(report|news)\/([^/]+)\/(?:ja|en)\/index\.mdx$/)
 	assert.ok(match, `${file} should be an article index file`)
 	return { type: match[1], slug: match[2] }
 }
@@ -51,8 +51,8 @@ test('published articles live in canonical shallow article directories', () => {
 	for (const file of files) {
 		assert.match(
 			file,
-			/^articles\/(?:report|news)\/(?:en\/)?[^/]+\/(?:index|research-log)\.mdx$/,
-			`${file} should use the shallow article directory contract`
+			/^articles\/(?:report|news)\/[^/]+\/(?:ja|en)\/(?:index|research-log)\.mdx$/,
+			`${file} should use the article slug before locale directory contract`
 		)
 	}
 })
@@ -81,14 +81,19 @@ test('article body does not import duplicate report bodies or unresolved placeho
 })
 
 test('articles with research logs have sibling indexes and public route support', () => {
-	const logs = gitFiles(['articles/report/*/research-log.mdx', 'articles/news/*/research-log.mdx'])
-	const postPage = readFileSync('src/pages/post/[...slug].astro', 'utf8')
-	const englishPostPage = readFileSync('src/pages/en/post/[...slug].astro', 'utf8')
+	const logs = gitFiles([
+		'articles/report/*/ja/research-log.mdx',
+		'articles/report/*/en/research-log.mdx',
+		'articles/news/*/ja/research-log.mdx',
+		'articles/news/*/en/research-log.mdx'
+	])
+	const reportPage = readFileSync('src/pages/reports/[...slug].astro', 'utf8')
+	const englishReportPage = readFileSync('src/pages/en/reports/[...slug].astro', 'utf8')
 
-	for (const source of [postPage, englishPostPage]) {
+	for (const source of [reportPage, englishReportPage]) {
 		assert.match(source, /getCollection\('articleResearch'\)/)
 		assert.match(source, /hasResearchLog/)
-		assert.match(source, /\/post\/\$\{postSlug\}\/research\//)
+		assert.match(source, /\/reports\/\$\{postSlug\}\/research\//)
 	}
 
 	for (const log of logs) {

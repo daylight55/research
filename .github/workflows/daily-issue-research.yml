@@ -263,10 +263,10 @@ jobs:
           git add --intent-to-add .
           git diff --check
 
-          mapfile -t changed_blog_entries < <(git ls-files --modified --others --exclude-standard -- 'articles/report/*/index.mdx' || true)
+          mapfile -t changed_blog_entries < <(git ls-files --modified --others --exclude-standard -- 'articles/report/*/ja/index.mdx' || true)
           if (( ${#changed_blog_entries[@]} > 0 )) \
             && grep -nE "import[[:space:]]+.*report\\.md|<Report[[:space:]]*/>" -- "${changed_blog_entries[@]}"; then
-            echo "::error::Site entries must copy the report body directly into articles/report/*/index.mdx. Do not import a separate report body, because imported Markdown headings are not available to the article sidebar."
+            echo "::error::Site entries must copy the report body directly into articles/report/*/ja/index.mdx. Do not import a separate report body, because imported Markdown headings are not available to the article sidebar."
             exit 1
           fi
 

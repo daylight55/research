@@ -6,6 +6,7 @@ export {
 	SUPPORTED_LOCALES,
 	isLocale,
 	getPostLocale,
+	getPostSection,
 	getPostSlug,
 	getPostUrl,
 	findPostTranslation,
@@ -15,6 +16,7 @@ export {
 export type { Locale } from './i18n'
 export { getCategoryAccentClass, getCategorySurfaceClass } from './categoryStyles'
 export { renderNewsRssContent, renderReportRssContent } from './rssContent'
+export { tagSlug } from './tagSlug'
 export {
 	getCategories,
 	getPosts,

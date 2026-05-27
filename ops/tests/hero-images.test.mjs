@@ -25,11 +25,13 @@ function canonicalPostKey(file) {
 	const postId = file
 		.replace(/^articles\/(?:report|news)\//, '')
 		.replace(/\/index\.mdx$/, '')
-	return postId.startsWith('en/') ? postId.slice('en/'.length) : postId
+	return postId.replace(/\/(?:ja|en)$/, '')
 }
 
 test('published blog entries use concrete non-duplicated hero images', () => {
-	const files = execFileSync('git', ['ls-files', 'articles/*/*/index.mdx'], { encoding: 'utf8' })
+	const files = execFileSync('find', ['articles', '-path', 'articles/*/*/*/index.mdx', '-type', 'f'], {
+		encoding: 'utf8'
+	})
 		.split('\n')
 		.map((line) => line.trim())
 		.filter(Boolean)

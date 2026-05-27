@@ -29,7 +29,9 @@ function readProp(block, prop) {
 }
 
 test('published news articles provide images for every NewsSourceCard', () => {
-	const files = execFileSync('git', ['ls-files', 'articles/news/*/index.mdx'], { encoding: 'utf8' })
+	const files = execFileSync('find', ['articles/news', '-path', 'articles/news/*/ja/index.mdx', '-type', 'f'], {
+		encoding: 'utf8'
+	})
 		.split('\n')
 		.map((line) => line.trim())
 		.filter(Boolean)

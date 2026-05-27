@@ -1,5 +1,5 @@
 ---
-import { withBase } from '@/utils'
+import { tagSlug, withBase } from '@/utils'
 
 export interface Props {
 	tag: string
@@ -7,7 +7,7 @@ export interface Props {
 const { tag } = Astro.props
 ---
 
-<a href={withBase(`/tags/${encodeURIComponent(tag.toLowerCase())}`)} aria-label={tag}>
+<a href={withBase(`/tags/${tagSlug(tag)}/`)} aria-label={tag}>
 	<span
 		class='bg-indigo-600 font-semibold text-white dark:bg-indigo-900 dark:text-white shadow text-sm w-fit px-2 py-1 md:px-5 md:py-2 rounded-full'
 	>

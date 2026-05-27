@@ -25,7 +25,7 @@ policy / technical decisions.
 
 - Follow `AGENTS.md`.
 - Write the reader-facing article body directly in
-  `articles/news/daily-trends-<YYYY-MM-DD>/index.mdx`.
+  `articles/news/daily-trends-<YYYY-MM-DD>/ja/index.mdx`.
 - Use `ops/codex/templates/news-digest.mdx` as the required article shape.
 - Keep the frontmatter fields from the News template, including
   `contentType: news`, `category: tech-news`, `rssSummary`, and
@@ -47,12 +47,12 @@ policy / technical decisions.
   paragraphs. Do not leave a plain `出典メモ:` text line in News digests.
 - Do not create `report.md` or another second copy of the same article body.
 - If a public research trail is useful, put it in
-  `articles/news/daily-trends-<YYYY-MM-DD>/research-log.mdx`; otherwise keep only the
+  `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx`; otherwise keep only the
   article body in `index.mdx`.
 
 ## Context Budget Rules
 
-- Do not scan or read existing `articles/*/*/index.mdx` articles for style,
+- Do not scan or read existing `articles/*/*/*/index.mdx` articles for style,
   structure, or examples.
 - Do not read `ops/codex/templates/blog-entry.mdx`; it is for long-form
   research reports, not News digests.
@@ -202,7 +202,7 @@ Run focused verification before finishing:
 - The workflow will confirm generated output includes:
   - `/news/index.html`
   - `/news/rss.xml`
-  - `/post/daily-trends-<YYYY-MM-DD>/index.html`
+  - `/news/daily-trends-<YYYY-MM-DD>/index.html`
 
 ## Final Message
 

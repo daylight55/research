@@ -11,19 +11,27 @@ const articleTypes = ['report', 'news']
 const japaneseText = /[\u3040-\u30ff\u3400-\u9fff]/
 
 async function articleSlugs(type, locale = 'ja') {
-	const dir = locale === 'en' ? join(articlesDir, type, 'en') : join(articlesDir, type)
+	const dir = join(articlesDir, type)
 	const entries = await readdir(dir, { withFileTypes: true })
-	return entries
-		.filter((entry) => entry.isDirectory() && entry.name !== 'en')
-		.map((entry) => entry.name)
-		.sort()
+	const slugs = []
+
+	for (const entry of entries) {
+		if (!entry.isDirectory()) continue
+
+		const localeEntries = await readdir(join(dir, entry.name), { withFileTypes: true })
+		if (localeEntries.some((localeEntry) => localeEntry.isDirectory() && localeEntry.name === locale)) {
+			slugs.push(entry.name)
+		}
+	}
+
+	return slugs.sort()
 }
 
 async function englishArticleFiles() {
 	const files = []
 	for (const type of articleTypes) {
 		for (const slug of await articleSlugs(type, 'en')) {
-			files.push({ type, slug, path: join(articlesDir, type, 'en', slug, 'index.mdx') })
+			files.push({ type, slug, path: join(articlesDir, type, slug, 'en', 'index.mdx') })
 		}
 	}
 	return files
@@ -47,6 +55,26 @@ test('English articles mirror every Japanese article slug by article type', asyn
 	}
 })
 
+test('articles are grouped by slug before locale', async () => {
+	for (const type of articleTypes) {
+		const legacyEntries = await readdir(join(articlesDir, type), { withFileTypes: true })
+		assert.ok(
+			!legacyEntries.some((entry) => entry.isDirectory() && entry.name === 'en'),
+			`articles/${type}/en should not be used; use articles/${type}/<slug>/en instead`
+		)
+
+		for (const slug of await articleSlugs(type)) {
+			const localeEntries = await readdir(join(articlesDir, type, slug), { withFileTypes: true })
+			const locales = localeEntries
+				.filter((entry) => entry.isDirectory())
+				.map((entry) => entry.name)
+				.sort()
+
+			assert.deepEqual(locales, ['en', 'ja'], `${type}/${slug} should contain ja and en`)
+		}
+	}
+})
+
 test('English Mermaid diagrams do not contain Japanese labels', async () => {
 	for (const file of await englishArticleFiles()) {
 		const source = await readFile(file.path, 'utf8')
@@ -63,35 +91,61 @@ test('English Mermaid diagrams do not contain Japanese labels', async () => {
 })
 
 test('localized post pages include the shared Mermaid renderer', async () => {
-	const japanesePostPage = await readFile(
-		join(repoRoot.pathname, 'src/pages/post/[...slug].astro'),
-		'utf8'
-	)
-	const englishPostPage = await readFile(
-		join(repoRoot.pathname, 'src/pages/en/post/[...slug].astro'),
-		'utf8'
+	const localizedPostPages = await Promise.all(
+		[
+			'src/pages/reports/[...slug].astro',
+			'src/pages/en/reports/[...slug].astro',
+			'src/pages/news/[...slug].astro',
+			'src/pages/en/news/[...slug].astro'
+		].map((file) => readFile(join(repoRoot.pathname, file), 'utf8'))
 	)
 
-	for (const source of [japanesePostPage, englishPostPage]) {
+	for (const source of localizedPostPages) {
 		assert.match(source, /import MermaidRenderer from '@\/components\/MermaidRenderer'/)
 		assert.match(source, /<MermaidRenderer \/>/)
 	}
 })
 
 test('localized post pages build related posts from the active locale only', async () => {
-	const japanesePostPage = await readFile(
-		join(repoRoot.pathname, 'src/pages/post/[...slug].astro'),
-		'utf8'
-	)
-	const englishPostPage = await readFile(
-		join(repoRoot.pathname, 'src/pages/en/post/[...slug].astro'),
-		'utf8'
+	const localizedPostPages = await Promise.all(
+		[
+			'src/pages/reports/[...slug].astro',
+			'src/pages/en/reports/[...slug].astro',
+			'src/pages/news/[...slug].astro',
+			'src/pages/en/news/[...slug].astro'
+		].map((file) => readFile(join(repoRoot.pathname, file), 'utf8'))
 	)
 
-	assert.match(japanesePostPage, /getPostLocale\(post\)\s*===\s*locale/)
-	assert.doesNotMatch(japanesePostPage, /post\.id\.split\('\/'\)\[0\]\s*!==\s*['"]en['"]/)
-	assert.match(englishPostPage, /getPostLocale\(post\)\s*===\s*locale/)
-	assert.doesNotMatch(englishPostPage, /post\.id\.startsWith\(`\$\{locale\}\/`\)/)
+	for (const source of localizedPostPages) {
+		assert.match(source, /getPostLocale\(post\)\s*===\s*locale/)
+		assert.doesNotMatch(source, /post\.id\.split\('\/'\)\[0\]\s*!==\s*['"]en['"]/)
+		assert.doesNotMatch(source, /post\.id\.startsWith\(`\$\{locale\}\/`\)/)
+	}
+})
+
+test('tag routes use URL-safe slugs for generated pages and links', async () => {
+	const tagSlug = await readFile(join(repoRoot.pathname, 'src/utils/tagSlug.ts'), 'utf8')
+	const tagPages = await Promise.all(
+		[
+			'src/pages/tags/index.astro',
+			'src/pages/en/tags/index.astro',
+			'src/pages/tags/[...tag]/index.astro',
+			'src/pages/en/tags/[...tag]/index.astro',
+			'src/pages/reports/[...slug].astro',
+			'src/pages/en/reports/[...slug].astro',
+			'src/pages/news/[...slug].astro',
+			'src/pages/en/news/[...slug].astro',
+			'src/components/Tag.astro'
+		].map((file) => readFile(join(repoRoot.pathname, file), 'utf8'))
+	)
+
+	assert.match(tagSlug, /replace\(\/\[\^a-z0-9\]\+\/g,\s*'-'\)/)
+	assert.match(tagSlug, /TextEncoder/)
+
+	for (const source of tagPages) {
+		assert.match(source, /tagSlug\(tag\)/)
+		assert.doesNotMatch(source, /encodeURIComponent\(tag/)
+	}
 })
 
 test('English reference pages mirror Japanese reference routes', async () => {
@@ -138,15 +192,16 @@ test('Codex translation workflow exists for missing English articles', async () 
 	assert.match(workflow, /mkdir -p ops\/codex\/runtime/)
 	assert.match(workflow, /Restore Node for site build/)
 	assert.match(workflow, /grep -RInE/)
-	assert.match(workflow, /git status --porcelain -- articles\/report\/en articles\/news\/en/)
+	assert.match(workflow, /git status --porcelain -- articles\/report articles\/news/)
 	assert.doesNotMatch(workflow, /rg -n '\\b\(TBD\|TODO\|FIXME\|未定\|要確認\)\\b'/)
-	assert.match(workflow, /articles\/report\/en/)
-	assert.match(workflow, /articles\/news\/en/)
+	assert.match(workflow, /articles\/report\/\\\$\{slug\}\/en/)
+	assert.match(workflow, /articles\/news\/\\\$\{slug\}\/en/)
 	assert.match(prompt, /Do not use TeX-style backtick quotes/)
 	assert.match(prompt, /Mermaid diagram labels/)
 	assert.match(prompt, /news digest articles/)
 	assert.match(prompt, /What happened:/)
 	assert.match(prompt, /What to watch:/)
+	assert.match(prompt, /articles\/<type>\/<slug>\/en\/index\.mdx/)
 	assert.match(prompt, /Reference pages/)
 })
 

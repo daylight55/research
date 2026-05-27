@@ -1,0 +1,75 @@
+---
+title: 'ブラウザE2E向けMCPとAgent Skillsの調査ログ'
+---
+
+# ブラウザE2E向けMCPとAgent Skillsの調査ログ
+
+## 調査目的
+
+ブラウザを利用したE2Eテストや検証をAIエージェントに任せるためのMCPサーバー、CLI、Agent Skillsを比較し、特に「ユーザーがログインしているブラウザセッションを活かせるか」を実務判断軸として整理した。
+
+## 調査対象
+
+- Microsoft Playwright MCP
+- Microsoft Playwright CLI
+- Microsoft Webwright
+- Google Chrome DevTools MCP
+- Browserbase MCP Server
+- Stagehand
+- browser-use
+- OpenAI Agent Skills
+
+## 確認した一次情報
+
+- [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)
+- [Playwright MCP docs](https://playwright.dev/docs/getting-started-mcp)
+- [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli)
+- [microsoft/Webwright](https://github.com/microsoft/Webwright)
+- [Chrome DevTools MCP announcement](https://developer.chrome.com/blog/chrome-devtools-mcp)
+- [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)
+- [Browserbase MCP Server docs](https://docs.browserbase.com/integrations/mcp/introduction)
+- [Stagehand introduction](https://docs.stagehand.dev/v3/first-steps/introduction)
+- [browser-use/browser-use](https://github.com/browser-use/browser-use)
+- [OpenAI Agent Skills](https://developers.openai.com/codex/skills)
+
+## バージョン確認
+
+`npm view` で次を確認した。
+
+- `@playwright/mcp`: `0.0.75`, modified `2026-05-26T09:14:06.956Z`
+- `chrome-devtools-mcp`: `1.1.0`, modified `2026-05-26T15:44:15.340Z`
+- `@playwright/cli`: `0.1.13`, modified `2026-05-07T23:01:54.476Z`
+- `@browserbasehq/mcp`: `3.0.0`, modified `2026-03-31T01:51:53.343Z`
+
+## 判断ログ
+
+### Webwrightの位置づけ
+
+WebwrightはMCPサーバーではなく、Codex/Claude Codeなどのcoding agent向けplugin/skillとして扱うべきだと判断した。理由は、READMEが「terminal, browser, model」と「workspace-as-state」を中心に説明し、出力も `final_script.py`、ログ、スクリーンショットであるため。
+
+### ログイン済みセッション
+
+ログイン済みセッションの重要性がユーザーから明示されたため、比較軸を次に変更した。
+
+- 既存Chrome/Edgeへ接続できるか
+- 専用profileにcookie/localStorageを保持できるか
+- CI用の再現可能な認証状態へ落とせるか
+- ブラウザprofile露出リスクを制御できるか
+
+Webwrightについては、`local_browser.yaml` に `local_cdp` があり、manual Google login 推奨のコメントがあることを確認した。一方、同梱Skill説明には fresh Firefox 前提の箇所もあるため、記事では「可能な構成を持つが、導入時は設定確認が必要」とした。
+
+### 推奨方針
+
+最終判断は、ローカル探索とCI回帰を分けること。
+
+1. ローカル探索: Chrome DevTools MCP、Playwright MCP、Webwright `local_cdp`
+2. 証跡化: WebwrightまたはPlaywright CLI
+3. 回帰テスト: Playwright Test
+
+人間のログイン済みセッションをCIへ直接持ち込むのは避け、テスト専用アカウント、`storageState`、テストIdP、環境側の認証補助に移すのが安全と判断した。
+
+## 残る確認事項
+
+- WebwrightのCodex pluginとしての実インストールと、`local_cdp` がCodex Skill経由でどの程度自然に使えるかの実機検証。
+- Chrome DevTools MCP `autoConnect` と Playwright MCP `--extension` の権限ダイアログ、profile分離、ログ保存の運用検証。
+- 社内SSOやMFA付きアプリで、ローカル探索からPlaywright Test `storageState` へ移行する標準手順の作成。

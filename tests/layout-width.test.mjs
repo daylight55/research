@@ -29,14 +29,34 @@ test('post sidebar keeps the research trail link immediately before share', () =
 		assert.ok(researchIndex > 0)
 		assert.ok(shareIndex > researchIndex)
 	}
+
+	assert.match(
+		englishPostPage,
+		/href=\{localizedPath\(locale, `\/post\/\$\{postSlug\}\/research\/`\)\}/
+	)
+	assert.doesNotMatch(
+		englishPostPage,
+		/href=\{localizedPath\('ja', `\/post\/\$\{postSlug\}\/research\/`\)\}/
+	)
 })
 
 test('research process page uses a wider reading surface', () => {
 	const researchPage = readFileSync('src/pages/post/[slug]/research.astro', 'utf8')
+	const englishResearchPage = readFileSync('src/pages/en/post/[slug]/research.astro', 'utf8')
 
-	assert.match(researchPage, /max-w-6xl/)
-	assert.match(researchPage, /max-w-4xl/)
-	assert.doesNotMatch(researchPage, /max-w-3xl/)
+	for (const source of [researchPage, englishResearchPage]) {
+		assert.match(source, /max-w-6xl/)
+		assert.match(source, /max-w-4xl/)
+		assert.doesNotMatch(source, /max-w-3xl/)
+	}
+})
+
+test('English research process route links back to the English article', () => {
+	const englishResearchPage = readFileSync('src/pages/en/post/[slug]/research.astro', 'utf8')
+
+	assert.match(englishResearchPage, /const locale = 'en'/)
+	assert.match(englishResearchPage, /href=\{localizedPath\(locale, `\/post\/\$\{postSlug\}\/`\)\}/)
+	assert.match(englishResearchPage, /Back to article/)
 })
 
 test('post lists keep cards readable at intermediate viewport widths', () => {

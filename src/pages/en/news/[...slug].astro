@@ -8,7 +8,14 @@ import Share from '@/components/Share'
 import TableOfContents from '@/components/TableOfContents'
 import MermaidRenderer from '@/components/MermaidRenderer'
 import ArrowUpRight from '@/components/icons/ArrowUpRight'
-import { getPostLocale, getPostSlug, getPostUrl, getNewsPosts, localizedPath, tagSlug } from '@/utils'
+import {
+	getPostLocale,
+	getPostSlug,
+	getPostUrl,
+	getNewsPosts,
+	localizedPath,
+	tagSlug
+} from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import SourceNote from '@/components/mdx/SourceNote'
 import Disqus from '@/components/Disqus'
@@ -57,8 +64,10 @@ const disqusEnabled = disqusConfig.enabled
 	<div
 		class='grid grid-cols-1 gap-8 mt-8 lg:grid-cols-[9rem_minmax(0,1fr)_9rem] lg:justify-center lg:gap-4 xl:grid-cols-[10rem_minmax(0,56rem)_10rem] 2xl:grid-cols-[12rem_minmax(0,62rem)_12rem]'
 	>
-		<aside class='hidden lg:flex flex-col gap-6 pr-3 text-sm text-gray-600 dark:text-gray-400'>
-			<div class='sticky top-24 flex flex-col gap-6 self-start'>
+		<aside
+			class='hidden min-w-0 lg:flex flex-col gap-6 pr-3 text-sm text-gray-600 dark:text-gray-400'
+		>
+			<div class='sticky top-24 flex w-full min-w-0 flex-col gap-6 self-start'>
 				<section class='flex flex-col gap-2'>
 					<p
 						class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'
@@ -96,16 +105,16 @@ const disqusEnabled = disqusConfig.enabled
 
 				{
 					relatedPosts.length > 0 && (
-						<section class='flex flex-col gap-2'>
+						<section class='flex min-w-0 flex-col gap-2'>
 							<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
 								Related
 							</p>
-							<ul class='flex flex-col gap-2.5'>
+							<ul class='flex min-w-0 flex-col gap-2.5'>
 								{relatedPosts.map((relatedPost) => (
-									<li>
+									<li class='min-w-0'>
 										<a
 											href={getPostUrl(relatedPost)}
-											class='block leading-snug text-gray-600 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:hover:text-indigo-300'
+											class='block min-w-0 max-w-full [overflow-wrap:anywhere] leading-snug text-gray-600 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:hover:text-indigo-300'
 										>
 											{relatedPost.data.title}
 										</a>

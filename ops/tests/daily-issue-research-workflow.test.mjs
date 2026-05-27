@@ -9,6 +9,10 @@ const trendWorkflow = readFileSync(
 	'.github/workflows/daily-trend-news.yml',
 	'utf8',
 )
+const dailyIssuePrompt = readFileSync(
+	'ops/codex/prompts/daily-issue-research.md',
+	'utf8',
+)
 
 assert.match(
 	workflow,
@@ -20,6 +24,24 @@ assert.match(
 	workflow,
 	/- name: Run Codex research[\s\S]*?if: steps\.select_issue\.outputs\.issue_found == 'true' && steps\.restore_generated_article\.outputs\.cache-hit != 'true'/,
 	'workflow should skip Codex generation when generated article artifacts were restored from cache',
+)
+
+assert.match(
+	workflow,
+	/OPENAI_MODEL: gpt-5\.4-mini[\s\S]*?model: \$\{\{ env\.OPENAI_MODEL \}\}[\s\S]*?OPENAI_USAGE_MODEL: \$\{\{ env\.OPENAI_MODEL \}\}/,
+	'Daily Issue Research should define the Codex model once and reuse it for generation and usage reporting',
+)
+
+assert.match(
+	workflow,
+	/## Automation Metadata[\s\S]*?- Model: \$\{OPENAI_MODEL\}[\s\S]*?technical-research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
+	'Daily Issue Research should pass model, skill, and prompt metadata into the generated research prompt',
+)
+
+assert.match(
+	dailyIssuePrompt,
+	/research-log\.mdx[\s\S]*?## 利用環境[\s\S]*?model[\s\S]*?technical-research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
+	'Daily Issue Research prompt should require model, skill, and prompt metadata in research logs',
 )
 
 assert.match(

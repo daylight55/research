@@ -156,7 +156,7 @@ Ontology は Knowledge Graph の概念設計に関わる。
 	)
 	assert.deepEqual(
 		groups.find((group) => group.category === 'ai-systems')?.terms.map((term) => term.label),
-		['Knowledge Graph', 'Graphiti', 'MCP', 'MCPサーバー']
+		['Knowledge Graph', 'Graphiti', 'MCP']
 	)
 })
 
@@ -243,7 +243,7 @@ test('builds English glossary explanations from English article context', () => 
 	)
 })
 
-test('does not expose Wikipedia links for terms without verified external profiles', () => {
+test('does not publish glossary entries without source-backed external profiles', () => {
 	const index = buildGlossaryIndex([
 		{
 			id: 'report/ja/temporary-concept',
@@ -264,9 +264,7 @@ Ephemeral Agent Layer はこの記事内でだけ使う概念である。
 	])
 
 	const term = index.terms.find((candidate) => candidate.slug === 'ephemeral-agent-layer')
-	assert.equal(term?.wikipediaUrl, '')
-	assert.equal(term?.researchProfile.wikipedia.status, 'unverified')
-	assert.match(term?.researchProfile.background ?? '', /外部出典/)
+	assert.equal(term, undefined)
 })
 
 test('keeps standalone glossary definitions independent from site article usage', () => {
@@ -276,6 +274,15 @@ test('keeps standalone glossary definitions independent from site article usage'
 			assert.doesNotMatch(profile.position, /このサイト|On this site|Within this site/i)
 		}
 	}
+})
+
+test('does not keep placeholder definitions for unresearched terms', async () => {
+	const source = await import('node:fs/promises').then((fs) =>
+		fs.readFile(new URL('../src/utils/glossary.ts', import.meta.url), 'utf8')
+	)
+
+	assert.doesNotMatch(source, /まだ外部出典にもとづく独立した定義/)
+	assert.doesNotMatch(source, /does not yet have a source-backed standalone definition/)
 })
 
 test('links only the first plain-text mention for each article term', () => {

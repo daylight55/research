@@ -1,4 +1,8 @@
-import { extractGlossaryTermsFromMarkdown, type GlossaryTerm } from './glossary'
+import {
+	extractGlossaryTermsFromMarkdown,
+	hasGlossaryResearchProfile,
+	type GlossaryTerm
+} from './glossary'
 
 const SKIP_TYPES = new Set([
 	'code',
@@ -123,8 +127,10 @@ const transformChildren = (
 export function remarkGlossary() {
 	return function (tree: any, file: any) {
 		const source = String(file.value ?? '')
-		const terms = extractGlossaryTermsFromMarkdown(source)
 		const locale = getSourceLocale(file)
+		const terms = extractGlossaryTermsFromMarkdown(source).filter((term) =>
+			hasGlossaryResearchProfile(term.slug, locale)
+		)
 		file.data.astro.frontmatter.glossaryTerms = terms
 		transformChildren(
 			tree,

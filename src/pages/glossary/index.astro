@@ -19,7 +19,7 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 
 <BaseLayout
 	title='用語辞典'
-	description='記事から抽出した専門用語と重要名詞をカテゴリ別に整理した用語一覧。'
+	description='記事から抽出した専門用語のうち、外部出典にもとづく調査プロファイルを持つ語をカテゴリ別に整理した用語一覧。'
 	locale={locale}
 >
 	<section class='grid gap-8'>
@@ -29,7 +29,7 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 			</p>
 			<h1 class='text-4xl font-semibold md:text-5xl'>用語辞典</h1>
 			<p class='max-w-3xl leading-8 text-gray-700 dark:text-gray-300'>
-				各記事のタグ、見出し、本文に現れる専門用語と重要な名詞句を抽出し、記事間で共有される概念のつながりとして整理しています。
+				各記事のタグ、見出し、本文に現れる専門用語のうち、外部出典にもとづく定義と出典確認が済んだ語を、記事間で共有される概念のつながりとして整理しています。
 			</p>
 		</header>
 
@@ -37,7 +37,7 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 			<div class='grid gap-2'>
 				<h2 class='text-2xl font-semibold'>カテゴリ別の用語一覧</h2>
 				<p class='max-w-3xl text-sm leading-7 text-gray-600 dark:text-gray-400'>
-					用語が登場する記事カテゴリごとに分類しています。複数カテゴリで使われる用語は、それぞれのカテゴリに表示されます。
+					調査プロファイルを持つ用語を、登場する記事カテゴリごとに分類しています。複数カテゴリで使われる用語は、それぞれのカテゴリに表示されます。
 				</p>
 			</div>
 			<div class='grid gap-8'>

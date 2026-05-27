@@ -18,7 +18,7 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 
 <BaseLayout
 	title='Glossary'
-	description='A categorized glossary of technical terms and important nouns extracted from articles.'
+	description='A categorized glossary of extracted terms that already have source-backed research profiles.'
 	locale={locale}
 >
 	<section class='grid gap-8'>
@@ -28,8 +28,8 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 			</p>
 			<h1 class='text-4xl font-semibold md:text-5xl'>Glossary</h1>
 			<p class='max-w-3xl leading-8 text-gray-700 dark:text-gray-300'>
-				Technical terms and important noun phrases are extracted from article tags, headings, and
-				body text, then organized as shared concepts across articles.
+				Technical terms are selected from article tags, headings, and body text only after they
+				have source-backed definitions and checked references.
 			</p>
 		</header>
 
@@ -37,8 +37,8 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 			<div class='grid gap-2'>
 				<h2 class='text-2xl font-semibold'>Terms by Category</h2>
 				<p class='max-w-3xl text-sm leading-7 text-gray-600 dark:text-gray-400'>
-					Terms are grouped by the article categories where they appear. Terms used across multiple
-					categories appear in each relevant category.
+					Profiled terms are grouped by the article categories where they appear. Terms used
+					across multiple categories appear in each relevant category.
 				</p>
 			</div>
 			<div class='grid gap-8'>

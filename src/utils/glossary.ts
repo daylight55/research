@@ -100,6 +100,9 @@ const MAX_RELATED_TERMS = 12
 const MAX_WIKIPEDIA_CONTEXT_KEYWORDS = 8
 const ENGLISH_WIKIPEDIA_LABEL_PATTERN = /^[A-Za-z0-9][A-Za-z0-9 .+#&'():-]*$/
 
+export const hasGlossaryResearchProfile = (slug: string, locale: GlossaryLocale = 'ja') =>
+	Boolean(getGlossaryResearchProfile(slug, locale))
+
 const CATEGORY_WIKIPEDIA_CONTEXT_EN: Record<string, string[]> = {
 	'ai-systems': [
 		'artificial intelligence',
@@ -766,48 +769,6 @@ const createTermExplanation = (term: GlossaryIndexTerm, locale: GlossaryLocale) 
 	return `${term.label} は、${primaryPost.category} カテゴリの記事「${primaryPost.title}」で扱われている用語です。`
 }
 
-const createDefaultResearchProfile = (
-	term: Pick<GlossaryIndexTerm, 'label' | 'posts' | 'relatedTerms'>,
-	locale: GlossaryLocale
-): GlossaryResearchProfile => {
-	const related = term.relatedTerms
-		.slice(0, 4)
-		.map((relatedTerm) => relatedTerm.label)
-		.join(locale === 'en' ? ', ' : '、')
-
-	if (locale === 'en') {
-		return {
-			definition: `${term.label} does not yet have a source-backed standalone definition in this glossary.`,
-			background: 'A source-backed research profile has not yet been created for this term.',
-			position: related
-				? `The term should be checked against adjacent concepts such as ${related} before assigning a stable definition.`
-				: 'The term needs external sources before its conceptual position can be stated confidently.',
-			distinctions: [
-				'The Wikipedia target has not been verified against the category and article context yet.'
-			],
-			sources: [],
-			wikipedia: {
-				status: 'unverified',
-				reason: 'No source-backed profile has verified a specific Wikipedia article for this concept.'
-			}
-		}
-	}
-
-	return {
-		definition: `${term.label} は、まだ外部出典にもとづく独立した定義が作成されていない用語です。`,
-		background: 'この用語は、まだ外部出典にもとづく調査プロファイルが作成されていません。',
-		position: related
-			? `安定した定義を置く前に、${related} などの隣接概念との差分を外部出典で確認する必要があります。`
-			: '概念上の位置づけは、外部出典を確認したうえで補う必要があります。',
-		distinctions: ['カテゴリと記事文脈に照らした Wikipedia 記事の照合はまだ完了していません。'],
-		sources: [],
-		wikipedia: {
-			status: 'unverified',
-			reason: 'この概念に対応する Wikipedia 記事は、外部出典にもとづく調査プロファイルで未検証です。'
-		}
-	}
-}
-
 const uniqueValues = (values: string[]) => {
 	const seen = new Set<string>()
 	const unique: string[] = []
@@ -975,7 +936,9 @@ export function buildGlossaryIndex(
 				? frontmatterTerms.length
 				: MAX_TERMS_PER_ARTICLE
 		const extractionMarkdown = createExtractionMarkdownForPost(post)
-		const terms = extractGlossaryTermsFromMarkdown(extractionMarkdown, maxTerms)
+		const terms = extractGlossaryTermsFromMarkdown(extractionMarkdown, maxTerms).filter((term) =>
+			hasGlossaryResearchProfile(term.slug, locale)
+		)
 		const postRef = {
 			id: post.id,
 			title: post.data.title,
@@ -1067,8 +1030,13 @@ export function buildGlossaryIndex(
 					a.label.localeCompare(b.label)
 			)
 			.slice(0, MAX_RELATED_TERMS)
-		term.researchProfile =
-			getGlossaryResearchProfile(term.slug, locale) ?? createDefaultResearchProfile(term, locale)
+		const researchProfile = getGlossaryResearchProfile(term.slug, locale)
+		if (!researchProfile) {
+			throw new Error(
+				`Glossary term "${term.label}" requires a source-backed research profile before publication.`
+			)
+		}
+		term.researchProfile = researchProfile
 		term.wikipediaLocale = getWikipediaLocaleForLabel(term.label, locale)
 		term.wikipediaValidationKeywords = createWikipediaValidationKeywords(term, term.wikipediaLocale)
 		term.wikipediaSearchQuery = createWikipediaSearchQuery(term, term.wikipediaLocale)

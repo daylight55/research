@@ -1,6 +1,6 @@
 ---
 title: 'MCP and Agent Skills for Browser E2E Testing'
-description: 'A comparison of Playwright MCP, Chrome DevTools MCP, Webwright, Browserbase/Stagehand, and browser-use for browser E2E verification with logged-in sessions.'
+description: 'A comparison of Playwright MCP, Chrome DevTools MCP, Webwright, AgentBrowser, Browserbase/Stagehand, and browser-use for browser E2E verification with logged-in sessions.'
 rssSummary: 'A practical comparison of browser E2E automation options for agents, focused on logged-in browser sessions, reproducibility, CI fit, and adoption strategy.'
 pubDate: '2026-05-27'
 heroImage: '../../../../src/assets/images/hero/browser-e2e-mcp-agent-skills.jpg'
@@ -10,7 +10,7 @@ heroImageCreditUrl: 'https://unsplash.com/@bayusyaits?utm_source=daylight_resear
 heroImageSourceId: 'unsplash:to0PB3F7xN8'
 heroImageQuery: 'programmer laptop code screen'
 category: 'developer-tools'
-tags: ['MCP', 'Agent Skills', 'Playwright', 'E2E', 'Browser Automation']
+tags: ['MCP', 'Agent Skills', 'Playwright', 'E2E', 'Browser Automation', 'AgentBrowser']
 draft: false
 ---
 
@@ -18,20 +18,21 @@ draft: false
 
 ## 1. Executive Summary
 
-As of May 2026, the right way to let an AI agent run browser E2E checks is not simply "add a browser MCP server." The current landscape has several layers: Microsoft offers `@playwright/mcp`, `@playwright/cli`, and the newer `microsoft/Webwright`; Google offers `chrome-devtools-mcp`; Browserbase/Stagehand and browser-use focus on cloud browsers and natural-language browser automation.
+As of May 2026, the right way to let an AI agent run browser E2E checks is not simply "add a browser MCP server." The current landscape has several layers: Microsoft offers `@playwright/mcp`, `@playwright/cli`, and the newer `microsoft/Webwright`; Google offers `chrome-devtools-mcp`; Vercel Labs `agent-browser`, Browserbase/Stagehand, and browser-use focus on CLIs, skills, cloud browsers, and natural-language browser automation.
 
-<SourceNote>Sources checked include Microsoft [Playwright MCP](https://github.com/microsoft/playwright-mcp), [Playwright CLI](https://github.com/microsoft/playwright-cli), [Webwright](https://github.com/microsoft/Webwright), Google's [Chrome DevTools MCP announcement](https://developer.chrome.com/blog/chrome-devtools-mcp) and [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp), Browserbase [MCP Server docs](https://docs.browserbase.com/integrations/mcp/introduction), Stagehand [Introduction](https://docs.stagehand.dev/v3/first-steps/introduction), and [browser-use](https://github.com/browser-use/browser-use).</SourceNote>
+<SourceNote>Sources checked include Microsoft [Playwright MCP](https://github.com/microsoft/playwright-mcp), [Playwright CLI](https://github.com/microsoft/playwright-cli), [Webwright](https://github.com/microsoft/Webwright), Google's [Chrome DevTools MCP announcement](https://developer.chrome.com/blog/chrome-devtools-mcp) and [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp), Vercel Labs [agent-browser](https://github.com/vercel-labs/agent-browser), Browserbase [MCP Server docs](https://docs.browserbase.com/integrations/mcp/introduction), Stagehand [Introduction](https://docs.stagehand.dev/v3/first-steps/introduction), and [browser-use](https://github.com/browser-use/browser-use).</SourceNote>
 
 The practical conclusion is:
 
-1. If reusing a logged-in local browser session is important, prioritize Chrome DevTools MCP `autoConnect`, Playwright MCP `--extension`, and Webwright `local_cdp`. These are powerful but expose sensitive browser state.
+1. If reusing a logged-in local browser session is important, prioritize Chrome DevTools MCP `autoConnect`, Playwright MCP `--extension`, Webwright `local_cdp`, and AgentBrowser `--profile` / `--auto-connect` / `--state`. These are powerful but expose sensitive browser state.
 2. If the goal is repeatable CI E2E, keep Playwright Test as the source of truth. Let agents help reproduce failures, inspect screenshots, and draft tests.
 3. If the goal is exploratory agent browsing, Playwright MCP is the easiest default. It uses accessibility snapshots, but long tasks can become expensive in model context.
 4. If the goal is live debugging with console, network, traces, and LCP, Chrome DevTools MCP is the strongest fit.
 5. Webwright is not a browser MCP server. It is an Agent Skill / plugin approach that turns browser work into rerunnable Playwright scripts with screenshots and logs.
-6. Browserbase/Stagehand and browser-use are stronger for external web tasks, cloud execution, scraping, workflow automation, proxies, recording, and scaling than for deterministic in-repo regression E2E.
+6. Vercel Labs `agent-browser` is not MCP. It is a Rust CLI plus bundled Skill with accessibility snapshots, `@eN` refs, state persistence, diffing, network tools, React/Web Vitals, and a dashboard. It is especially relevant when an agent needs a copy of an existing Chrome profile.
+7. Browserbase/Stagehand and browser-use are stronger for external web tasks, cloud execution, scraping, workflow automation, proxies, recording, and scaling than for deterministic in-repo regression E2E.
 
-<SourceNote>NPM versions checked during this research: `@playwright/mcp` `0.0.75` on May 26, 2026, `chrome-devtools-mcp` `1.1.0` on May 26, 2026, `@playwright/cli` `0.1.13` on May 7, 2026, and `@browserbasehq/mcp` `3.0.0` on March 31, 2026. See [@playwright/mcp](https://www.npmjs.com/package/@playwright/mcp), [chrome-devtools-mcp](https://www.npmjs.com/package/chrome-devtools-mcp), [@playwright/cli](https://www.npmjs.com/package/@playwright/cli), and [@browserbasehq/mcp](https://www.npmjs.com/package/@browserbasehq/mcp).</SourceNote>
+<SourceNote>NPM versions checked during this research: `@playwright/mcp` `0.0.75` on May 26, 2026, `chrome-devtools-mcp` `1.1.0` on May 26, 2026, `@playwright/cli` `0.1.13` on May 7, 2026, `agent-browser` `0.27.0` on May 18, 2026, and `@browserbasehq/mcp` `3.0.0` on March 31, 2026. See [@playwright/mcp](https://www.npmjs.com/package/@playwright/mcp), [chrome-devtools-mcp](https://www.npmjs.com/package/chrome-devtools-mcp), [@playwright/cli](https://www.npmjs.com/package/@playwright/cli), [agent-browser](https://www.npmjs.com/package/agent-browser), and [@browserbasehq/mcp](https://www.npmjs.com/package/@browserbasehq/mcp).</SourceNote>
 
 ```mermaid
 flowchart TD
@@ -52,7 +53,7 @@ The confusion comes from mixing layers. MCP is a protocol for exposing tools to 
 | Type             | Examples                                 | Main state                      | Strong fit                          | Weak fit                                            |
 | ---------------- | ---------------------------------------- | ------------------------------- | ----------------------------------- | --------------------------------------------------- |
 | Browser MCP      | Playwright MCP, Chrome DevTools MCP      | Browser session                 | Exploration, live checks, debugging | Source of truth for large CI suites                 |
-| CLI + Skill      | Playwright CLI, Webwright                | Workspace, logs, scripts        | Token efficiency, reruns, evidence  | Deep DevTools inspection                            |
+| CLI + Skill      | Playwright CLI, Webwright, AgentBrowser  | Workspace, logs, scripts        | Token efficiency, reruns, evidence  | Integration through MCP alone                       |
 | Conventional E2E | Playwright Test                          | Test code, trace, storage state | CI regression checks                | Unknown UI exploration                              |
 | Cloud browser    | Browserbase/Stagehand, browser-use Cloud | Cloud sessions                  | External web tasks and scaling      | Immediate reuse of a local logged-in Chrome session |
 
@@ -104,7 +105,21 @@ Logged-in session support needs nuance. Webwright has `local_browser.yaml`, wher
 
 <SourceNote>Webwright's `src/webwright/config/local_browser.yaml` describes `local_cdp` as "real Chrome/Edge over CDP, recommended for manual Google login." The bundled skill instructions also include fresh-Firefox local execution paths. See [microsoft/Webwright](https://github.com/microsoft/Webwright).</SourceNote>
 
-### 3.5 Browserbase / Stagehand MCP
+### 3.5 AgentBrowser
+
+`vercel-labs/agent-browser` is Vercel Labs' "Browser automation CLI for AI agents." It is not an MCP server. It is a Rust CLI, persistent daemon, Chrome/Chromium CDP layer, accessibility-tree snapshot workflow, `@eN` element refs, and bundled Skill package. One notable design choice is that `agent-browser skills get core` serves Skill content that matches the installed CLI version.
+
+<SourceNote>[vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) documents the native Rust CLI, Chrome/Chromium via CDP, accessibility snapshots, `@eN` refs, bundled skill content, and `npx skills add vercel-labs/agent-browser`. The npm package `agent-browser` was `0.27.0` as of May 18, 2026.</SourceNote>
+
+For logged-in session reuse, AgentBrowser is one of the stronger options in this set. Its README says that `--profile Default` or `--profile "Work"` copies an existing Chrome profile to a temporary directory, preserving cookies and sessions without mutating the original profile. It also supports persistent profile directories, `--session-name` cookie/localStorage persistence, `--auto-connect state save` from an already logged-in Chrome, `--state`, and an encrypted auth vault.
+
+<SourceNote>The [Authentication section of the agent-browser README](https://github.com/vercel-labs/agent-browser) compares Chrome profile reuse, persistent profiles, session persistence, `--auto-connect` + `state save`, state files, and an auth vault. It warns that state files contain session tokens and should be ignored by git or encrypted with `AGENT_BROWSER_ENCRYPTION_KEY`.</SourceNote>
+
+Its practical value is less "replace Playwright Test" and more "give agents a dense, safety-aware browser CLI." The same CLI includes network / HAR, trace, profiler, console, visual diff, snapshot diff, React introspection, Web Vitals, annotated screenshots, a dashboard, domain allowlists, action policies, confirmations, and output length limits. That makes it attractive for local QA, logged-in reproduction, and evidence collection.
+
+<SourceNote>[agent-browser README](https://github.com/vercel-labs/agent-browser) documents network/HAR, trace/profiler/console/errors, diff, React/Web Vitals, dashboard, domain allowlists, action policies, confirmations, and content boundaries. This report treats those features as the agent-operation and safety layer, not as a replacement for deterministic test code.</SourceNote>
+
+### 3.6 Browserbase / Stagehand MCP
 
 Browserbase MCP provides a browser to MCP clients through Browserbase infrastructure and Stagehand. Stagehand offers `act`, `extract`, `observe`, and `agent` primitives for mixing natural language and code.
 
@@ -112,7 +127,7 @@ Browserbase MCP provides a browser to MCP clients through Browserbase infrastruc
 
 This is a strong fit for external websites, cloud scaling, and workflow automation. It is not the most direct answer when the requirement is "use the Chrome session I already logged into locally."
 
-### 3.6 browser-use
+### 3.7 browser-use
 
 browser-use is an AI browser-agent framework with a Python library, CLI, cloud product, and Claude Code Skill. It emphasizes form filling, shopping, research, cloud browsers, stealth, proxy rotation, CAPTCHA handling, and persistent cloud state.
 
@@ -134,6 +149,8 @@ The same capability creates risk. A tool connected to a logged-in browser can ac
 | Playwright MCP `--extension`      | Connects to existing browser tabs | Agent exploration                         | Extension permissions             |
 | Playwright MCP persistent profile | Saves auth in a dedicated profile | Iterative checks                          | Separate from daily Chrome        |
 | Webwright `local_cdp`             | Chrome/Edge over CDP              | Long task scripting                       | Confirm the selected skill config |
+| AgentBrowser `--profile`          | Copies an existing Chrome profile | Local QA and logged-in reproduction       | Snapshot, not original profile; protect tokens |
+| AgentBrowser `--auto-connect`     | Saves state from running Chrome   | Importing an existing login               | Remote debugging port exposure    |
 | Playwright Test `storageState`    | Saved test auth state             | CI regression                             | Expiry and secret handling        |
 | Browserbase/Stagehand             | Cloud session state               | External web tasks at scale               | Not local Chrome reuse            |
 
@@ -150,8 +167,8 @@ flowchart LR
 
 The cleanest architecture is three-layered:
 
-1. Investigation: use Chrome DevTools MCP, Playwright MCP, or Webwright `local_cdp` with a dedicated logged-in profile.
-2. Evidence and scripting: use Webwright or Playwright CLI to leave screenshots, logs, and a final script.
+1. Investigation: use Chrome DevTools MCP, Playwright MCP, Webwright `local_cdp`, or AgentBrowser profile/state reuse with a dedicated logged-in profile.
+2. Evidence and scripting: use Webwright, AgentBrowser, or Playwright CLI to leave screenshots, logs, state, traces, and final scripts.
 3. Regression: convert the result to Playwright Test and run it in CI with test accounts and managed `storageState`.
 
 Do not treat a human's logged-in browser profile as a CI credential. For CI, use test accounts, generated storage state, a test IdP tenant, or an explicit auth bypass designed for non-production environments.
@@ -165,7 +182,8 @@ For small teams, start with:
 1. Playwright Test for regression E2E.
 2. Chrome DevTools MCP for local visual, console, network, and performance debugging.
 3. Playwright MCP for exploratory agent browsing.
-4. Webwright when a long web task should become a rerunnable script with evidence.
+4. AgentBrowser for local QA, logged-in profile reuse, and evidence collection.
+5. Webwright when a long web task should become a rerunnable script with evidence.
 
 For enterprise use, add these controls:
 
@@ -177,11 +195,13 @@ For enterprise use, add these controls:
 
 ## 7. Bottom Line
 
-The tool you pointed to, `microsoft/Webwright`, is indeed the new Microsoft project to include in this comparison. It is not a replacement for Playwright MCP. It is a different layer: MCP opens browser state to the agent, while Webwright turns browser exploration into code and evidence. If logged-in sessions matter, compare Webwright `local_cdp`, Chrome DevTools MCP `autoConnect`, and Playwright MCP `--extension`, then promote stable flows into Playwright Test.
+The tool you pointed to, `microsoft/Webwright`, is indeed the new Microsoft project to include in this comparison. It is not a replacement for Playwright MCP. It is a different layer: MCP opens browser state to the agent, while Webwright turns browser exploration into code and evidence. `vercel-labs/agent-browser` is also not MCP; it is an agent-oriented CLI and Skill layer that bundles logged-in profiles, refs, debugging, diffing, and safety controls. If logged-in sessions matter, compare Webwright `local_cdp`, AgentBrowser `--profile` / `--auto-connect`, Chrome DevTools MCP `autoConnect`, and Playwright MCP `--extension`, then promote stable flows into Playwright Test.
 
 ## References
 
 - [microsoft/Webwright](https://github.com/microsoft/Webwright)
+- [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
+- [agent-browser npm](https://www.npmjs.com/package/agent-browser)
 - [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)
 - [Playwright MCP docs](https://playwright.dev/docs/getting-started-mcp)
 - [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli)

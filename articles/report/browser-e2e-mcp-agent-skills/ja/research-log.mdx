@@ -13,6 +13,7 @@ title: 'ブラウザE2E向けMCPとAgent Skillsの調査ログ'
 - Microsoft Playwright MCP
 - Microsoft Playwright CLI
 - Microsoft Webwright
+- Vercel Labs AgentBrowser
 - Google Chrome DevTools MCP
 - Browserbase MCP Server
 - Stagehand
@@ -25,6 +26,8 @@ title: 'ブラウザE2E向けMCPとAgent Skillsの調査ログ'
 - [Playwright MCP docs](https://playwright.dev/docs/getting-started-mcp)
 - [microsoft/playwright-cli](https://github.com/microsoft/playwright-cli)
 - [microsoft/Webwright](https://github.com/microsoft/Webwright)
+- [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
+- [agent-browser npm](https://www.npmjs.com/package/agent-browser)
 - [Chrome DevTools MCP announcement](https://developer.chrome.com/blog/chrome-devtools-mcp)
 - [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)
 - [Browserbase MCP Server docs](https://docs.browserbase.com/integrations/mcp/introduction)
@@ -58,12 +61,18 @@ WebwrightはMCPサーバーではなく、Codex/Claude Codeなどのcoding agent
 
 Webwrightについては、`local_browser.yaml` に `local_cdp` があり、manual Google login 推奨のコメントがあることを確認した。一方、同梱Skill説明には fresh Firefox 前提の箇所もあるため、記事では「可能な構成を持つが、導入時は設定確認が必要」とした。
 
+### AgentBrowserの追加確認
+
+ユーザーから `vercel-labs/agent-browser` も知りたいと追加依頼があったため、GitHub README、npm metadata、同梱Skill stubを確認した。npm `agent-browser` は 2026年5月18日時点で `0.27.0`。READMEは、Rust製CLI、常駐daemon、Chrome/Chromium via CDP、accessibility snapshot、`@eN` refs、dashboard、network/HAR、trace、diff、React/Web Vitals、安全策を説明している。
+
+ログイン済みセッションについては、AgentBrowserが比較対象の中でも強い。`--profile Default` や `--profile "Work"` で既存Chrome profileを一時コピーして使う、persistent profile pathを使う、`--session-name` でcookie/localStorageを保存する、`--auto-connect state save` で実行中Chromeからstateを取り込む、`--state` を読む、auth vaultを使う、という複数経路が明記されていた。一方、state fileにはsession tokenが含まれるため、gitignore、削除、`AGENT_BROWSER_ENCRYPTION_KEY` による暗号化が必要である。
+
 ### 推奨方針
 
 最終判断は、ローカル探索とCI回帰を分けること。
 
-1. ローカル探索: Chrome DevTools MCP、Playwright MCP、Webwright `local_cdp`
-2. 証跡化: WebwrightまたはPlaywright CLI
+1. ローカル探索: Chrome DevTools MCP、Playwright MCP、Webwright `local_cdp`、AgentBrowser profile/state
+2. 証跡化: Webwright、AgentBrowser、またはPlaywright CLI
 3. 回帰テスト: Playwright Test
 
 人間のログイン済みセッションをCIへ直接持ち込むのは避け、テスト専用アカウント、`storageState`、テストIdP、環境側の認証補助に移すのが安全と判断した。

@@ -1,0 +1,28 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"en": "1. Executive Summary",
+				"ja": "1. エグゼクティブサマリー"
+			},
+			"pairs": [
+				{
+					"en": "The Iranian regime after Khomeini's death was not simply \"naturally inherited by the next religious leader.\"",
+					"ja": "ホメイニ死去後のイラン体制は、単に「次の宗教指導者が自然に継いだ」のではない。"
+				},
+				{
+					"en": "In reality, a combination of constitutional amendments in 1989, selection by the Assembly of Experts, a political coalition centered on Rafsanjani, a security apparatus including the Revolutionary Guards Corps (IRGC), and control by the Guardian Council created a new center of gravity for governance centered on Khamenei.",
+					"ja": "実際には、1989年の憲法改正、専門家会議による選出、ラフサンジャニを中心とする政治連合、革命防衛隊（IRGC）を含む治安機構、護憲評議会による入口管理が重なって、ハメネイを中心とする新しい統治の重心が作られた。"
+				},
+				{
+					"en": "What is important here is that religious orthodoxy was not determined solely by pure theological authority, but was reconstituted through institutional reforms and political coalitions.",
+					"ja": "ここで重要なのは、宗教的正統性が純粋な神学的権威だけで決まったのではなく、制度改正と政治連合によって再構成された点である。"
+				}
+			]
+		}
+	]
+}

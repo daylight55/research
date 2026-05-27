@@ -15,6 +15,12 @@ Rules:
 - For news digest articles, keep the topic labels as standalone paragraphs with blank lines between `What happened:`, `Why it matters:`, `What to watch:`, and the following `NewsSourceCard`, matching the Japanese layout. Translate `今後の注視点:` as `What to watch:` and keep the content focused on what readers should monitor next.
 - Do not translate code identifiers, URLs, file paths, product names, or proper nouns unless an established English name exists.
 - Do not add placeholders such as `TBD`, `TODO`, `FIXME`, `未定`, or `要確認`.
+- Create or update `articles/<type>/<slug>/mix-alignment.json` together with the English article. This file is the semantic Japanese-English reading map for the MIX page.
+- Use this JSON shape:
+  `{ "version": 1, "sourceLocale": "ja", "targetLocale": "en", "sections": [{ "id": "short-section-id", "heading": { "ja": "日本語見出し", "en": "English heading" }, "pairs": [{ "ja": "日本語の1文", "en": "Matching English sentence" }] }] }`.
+- Keep `pairs[].en` exactly equal to the English sentence that appears in `en/index.mdx` after normal whitespace normalization. Keep `pairs[].ja` as the corresponding Japanese sentence from `ja/index.mdx`.
+- Prefer semantic sentence correspondence over paragraph position. When the English translation combines, splits, or reorders Japanese sentences, write the pair that best preserves meaning rather than relying on ordinal order.
+- Exclude source notes, citations, code blocks, Mermaid blocks, tables, and UI-only labels from `mix-alignment.json` unless they are part of the article prose that should appear as a Japanese translation under an English sentence.
 - After writing files, run `pnpm build` and ensure the generated English article pages are present under `dist/en/news/` or `dist/en/reports/`.
 
 Reference pages:

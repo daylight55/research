@@ -262,6 +262,18 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 			readFile(join(repoRoot.pathname, file), 'utf8')
 		)
 	)
+	const mixedAlignmentUtils = await readFile(
+		join(repoRoot.pathname, 'src/utils/mixedAlignment.ts'),
+		'utf8'
+	)
+	const translationPrompt = await readFile(
+		join(repoRoot.pathname, 'ops/codex/prompts/translate-blog-en.md'),
+		'utf8'
+	)
+	const sampleAlignment = await readFile(
+		join(repoRoot.pathname, 'articles/report/khomeini-to-khamenei-transition/mix-alignment.json'),
+		'utf8'
+	)
 	const localeUtils = await readFile(join(repoRoot.pathname, 'src/utils/i18n.ts'), 'utf8')
 	const provider = await readFile(
 		join(repoRoot.pathname, 'src/components/ProviderLocale.astro'),
@@ -280,10 +292,16 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /data-mixed-article/)
 	assert.match(mixedArticleComponent, /data-mixed-english/)
 	assert.match(mixedArticleComponent, /data-mixed-japanese/)
+	assert.match(mixedArticleComponent, /data-mixed-alignment/)
 	assert.match(mixedArticleComponent, /data-mixed-translation/)
 	assert.match(mixedArticleComponent, /from 'sentence-splitter'/)
 	assert.match(mixedArticleComponent, /fallbackSplitSentences/)
 	assert.match(mixedArticleComponent, /splitSentences/)
+	assert.match(mixedArticleComponent, /explicitAlignmentMap/)
+	assert.match(mixedArticleComponent, /alignmentPairsFromData/)
+	assert.match(mixedArticleComponent, /normalizeAlignmentText/)
+	assert.match(mixedArticleComponent, /\[“”\]/)
+	assert.match(mixedArticleComponent, /\[‘’\]/)
 	assert.match(mixedArticleComponent, /\(\(\) =>/)
 	assert.match(mixedArticleComponent, /createSentencePair/)
 	assert.match(mixedArticleComponent, /mapTranslation/)
@@ -299,12 +317,24 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 
 	const packageJson = await readFile(join(repoRoot.pathname, 'package.json'), 'utf8')
 	assert.match(packageJson, /"sentence-splitter":/)
+	assert.match(mixedAlignmentUtils, /mix-alignment\.json/)
+	assert.match(mixedAlignmentUtils, /getMixedArticleAlignment/)
+	assert.match(mixedAlignmentUtils, /version: 1/)
+	assert.match(translationPrompt, /mix-alignment\.json/)
+	assert.match(translationPrompt, /semantic Japanese-English reading map/)
+
+	const parsedSampleAlignment = JSON.parse(sampleAlignment)
+	assert.equal(parsedSampleAlignment.version, 1)
+	assert.equal(parsedSampleAlignment.sourceLocale, 'ja')
+	assert.equal(parsedSampleAlignment.targetLocale, 'en')
+	assert.ok(parsedSampleAlignment.sections.some((section) => section.pairs.length > 0))
 
 	for (const source of mixedPages) {
 		assert.match(source, /const locale = 'mix'/)
 		assert.match(source, /findPostTranslation\(allPosts,\s*post,\s*DEFAULT_LOCALE\)/)
 		assert.match(source, /findPostTranslation\(allPosts,\s*post,\s*'en'\)/)
-		assert.match(source, /<MixedArticleContent>/)
+		assert.match(source, /getMixedArticleAlignment/)
+		assert.match(source, /<MixedArticleContent alignment=\{mixedAlignment\}>/)
 		assert.match(source, /slot='english'/)
 		assert.match(source, /slot='japanese'/)
 		assert.match(source, /<MermaidRenderer \/>/)

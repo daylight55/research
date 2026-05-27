@@ -12,6 +12,7 @@ import ArrowUpRight from '@/components/icons/ArrowUpRight'
 import {
 	DEFAULT_LOCALE,
 	findPostTranslation,
+	getMixedArticleAlignment,
 	getNewsPosts,
 	getPostLocale,
 	getPostSlug,
@@ -65,6 +66,7 @@ const { Content: EnglishContent, headings, remarkPluginFrontmatter } = await ren
 const { Content: JapaneseContent } = japanesePost
 	? await render(japanesePost)
 	: { Content: undefined }
+const mixedAlignment = await getMixedArticleAlignment('news', postSlug)
 
 const disqusEnabled = disqusConfig.enabled
 ---
@@ -163,7 +165,7 @@ const disqusEnabled = disqusConfig.enabled
 			<div
 				class='prose prose-base md:prose-lg dark:prose-invert mb-12 min-w-full max-w-none prose-p:leading-8 prose-li:leading-8'
 			>
-				<MixedArticleContent>
+				<MixedArticleContent alignment={mixedAlignment}>
 					<EnglishContent slot='english' components={{ pre: Code, SButton, SourceNote }} />
 					{
 						JapaneseContent && (

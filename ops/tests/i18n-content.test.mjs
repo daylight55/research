@@ -277,6 +277,8 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /data-mixed-english/)
 	assert.match(mixedArticleComponent, /data-mixed-japanese/)
 	assert.match(mixedArticleComponent, /data-mixed-translation/)
+	assert.match(mixedArticleComponent, /from 'sentence-splitter'/)
+	assert.match(mixedArticleComponent, /fallbackSplitSentences/)
 	assert.match(mixedArticleComponent, /splitSentences/)
 	assert.match(mixedArticleComponent, /\(\(\) =>/)
 	assert.match(mixedArticleComponent, /createSentencePair/)
@@ -284,6 +286,9 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /block\.replaceChildren/)
 	assert.match(mixedArticleComponent, /mixed-sentence__text/)
 	assert.doesNotMatch(mixedArticleComponent, /const splitSentences/)
+
+	const packageJson = await readFile(join(repoRoot.pathname, 'package.json'), 'utf8')
+	assert.match(packageJson, /"sentence-splitter":/)
 
 	for (const source of mixedPages) {
 		assert.match(source, /const locale = 'mix'/)

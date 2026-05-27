@@ -7,20 +7,39 @@
 	</div>
 </div>
 
-<script is:inline>
+<script>
+	import { SentenceSplitterSyntax, split } from 'sentence-splitter'
+
 	;(() => {
-		const sentencePatterns = {
+		const fallbackSentencePatterns = {
 			en: /[^.!?]+[.!?]["'”’)]*|[^.!?]+$/g,
 			ja: /[^。！？]+[。！？」』）]*|[^。！？]+$/g
+		}
+
+		function fallbackSplitSentences(text, locale) {
+			return (text.match(fallbackSentencePatterns[locale]) ?? [text])
+				.map((sentence) => sentence.trim())
+				.filter(Boolean)
 		}
 
 		function splitSentences(text, locale) {
 			const normalized = text.replace(/\s+/g, ' ').trim()
 			if (!normalized) return []
 
-			return (normalized.match(sentencePatterns[locale]) ?? [normalized])
-				.map((sentence) => sentence.trim())
-				.filter(Boolean)
+			try {
+				const sentences = split(normalized)
+					.filter((node) => node.type === SentenceSplitterSyntax.Sentence)
+					.flatMap((sentence) => {
+						const rawSentence = sentence.raw.trim()
+						const fallbackSentences = fallbackSplitSentences(rawSentence, locale)
+						return fallbackSentences.length > 1 ? fallbackSentences : rawSentence
+					})
+					.filter(Boolean)
+
+				return sentences.length > 0 ? sentences : fallbackSplitSentences(normalized, locale)
+			} catch {
+				return fallbackSplitSentences(normalized, locale)
+			}
 		}
 
 		function mapTranslation(japaneseSentences, sentenceIndex, sentenceCount) {

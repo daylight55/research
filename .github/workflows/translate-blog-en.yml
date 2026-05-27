@@ -52,6 +52,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          mkdir -p ops/codex/runtime
           node ops/scripts/translate-blog-en.mjs | tee ops/codex/runtime/translate-blog-en-output.txt
           missing_count="$(sed -n 's/^missing=//p' ops/codex/runtime/translate-blog-en-output.txt)"
           echo "missing_count=${missing_count}" >> "${GITHUB_OUTPUT}"

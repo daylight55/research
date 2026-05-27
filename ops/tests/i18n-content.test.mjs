@@ -135,6 +135,7 @@ test('Codex translation workflow exists for missing English articles', async () 
 
 	assert.match(workflow, /workflow_dispatch:/)
 	assert.match(workflow, /codex/i)
+	assert.match(workflow, /mkdir -p ops\/codex\/runtime/)
 	assert.match(workflow, /articles\/report\/en/)
 	assert.match(workflow, /articles\/news\/en/)
 	assert.match(prompt, /Do not use TeX-style backtick quotes/)

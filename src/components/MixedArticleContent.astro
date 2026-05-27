@@ -9,7 +9,6 @@
 
 <script>
 	import { SentenceSplitterSyntax, split } from 'sentence-splitter'
-
 	;(() => {
 		const fallbackSentencePatterns = {
 			en: /[^.!?]+[.!?]["'”’)]*|[^.!?]+$/g,
@@ -46,6 +45,7 @@
 			if (japaneseSentences.length === 0) return ''
 			if (sentenceCount <= 1) return japaneseSentences.join(' ')
 			if (sentenceCount === japaneseSentences.length) return japaneseSentences[sentenceIndex] ?? ''
+			if (japaneseSentences.length < sentenceCount) return japaneseSentences[sentenceIndex] ?? ''
 
 			const mappedIndex = Math.round(
 				(sentenceIndex * (japaneseSentences.length - 1)) / (sentenceCount - 1)
@@ -75,8 +75,156 @@
 			return pair
 		}
 
+		function pairableText(block) {
+			const clone = block.cloneNode(true)
+			clone.querySelectorAll('.source-note, [role="note"]').forEach((note) => note.remove())
+			return clone.textContent ?? ''
+		}
+
+		function sourceNotes(block) {
+			const notes = [...block.querySelectorAll('.source-note')]
+			splitSourceNotes(pairableText(block)).notes.forEach((text) => {
+				const note = document.createElement('span')
+				note.textContent = text
+				notes.push(note)
+			})
+			return notes
+		}
+
+		function appendSourceNotes(block, notes) {
+			if (notes.length === 0) return
+
+			const wrapper = document.createElement('span')
+			wrapper.className = 'mixed-source-notes'
+			notes.forEach((note) => wrapper.appendChild(note))
+			block.appendChild(wrapper)
+		}
+
 		function shouldPairBlock(block) {
-			return !block.closest('pre, code, table, [data-mixed-translation]')
+			return (
+				!block.closest('pre, code, table, [data-mixed-translation]') && !isSourceNoteBlock(block)
+			)
+		}
+
+		function isSourceNoteBlock(block) {
+			const { content, notes } = splitSourceNotes(pairableText(block))
+			return notes.length > 0 && content.trim().length === 0
+		}
+
+		function splitSourceNotes(text) {
+			const content = []
+			const notes = []
+
+			text.split('\n').forEach((line) => {
+				const match = line.match(/\s*(Source note|出典)[:：]/i)
+				if (!match || match.index === undefined) {
+					content.push(line)
+					return
+				}
+
+				const beforeNote = line.slice(0, match.index).trim()
+				if (beforeNote) content.push(beforeNote)
+
+				const note = line.slice(match.index).trim()
+				if (note) notes.push(note)
+			})
+
+			return { content: content.join('\n'), notes }
+		}
+
+		function contentSentences(text, locale) {
+			return splitSentences(splitSourceNotes(text).content, locale)
+		}
+
+		function pairBlocks(block, japaneseBlock, japaneseSentencesOverride) {
+			const englishSourceNotes = sourceNotes(block)
+			const englishSentences = contentSentences(pairableText(block), 'en')
+			const japaneseSentences =
+				japaneseSentencesOverride ?? contentSentences(pairableText(japaneseBlock), 'ja')
+			if (englishSentences.length === 0 || japaneseSentences.length === 0) return
+
+			const sentencePairs = englishSentences.map((sentence, sentenceIndex) =>
+				createSentencePair(
+					sentence,
+					mapTranslation(japaneseSentences, sentenceIndex, englishSentences.length)
+				)
+			)
+
+			block.replaceChildren(...sentencePairs)
+			appendSourceNotes(block, englishSourceNotes)
+		}
+
+		function articleSections(root) {
+			const sections = [[]]
+
+			;[...root.children].forEach((child) => {
+				if (/^H[12]$/.test(child.tagName) && sections.at(-1).length > 0) {
+					sections.push([])
+				}
+				sections.at(-1).push(child)
+			})
+
+			return sections
+		}
+
+		function pairableSectionChildren(section) {
+			return section.filter((child) => child.matches?.('p, ol, ul'))
+		}
+
+		function alignByTag(englishElements, japaneseElements) {
+			const pairs = []
+			let japaneseIndex = 0
+
+			englishElements.forEach((englishElement) => {
+				while (
+					japaneseIndex < japaneseElements.length &&
+					japaneseElements[japaneseIndex].tagName !== englishElement.tagName
+				) {
+					japaneseIndex += 1
+				}
+
+				const japaneseElement = japaneseElements[japaneseIndex]
+				if (!japaneseElement) return
+
+				pairs.push([englishElement, japaneseElement])
+				japaneseIndex += 1
+			})
+
+			return pairs
+		}
+
+		function directListItems(list) {
+			return [...list.children].filter((child) => child.tagName === 'LI' && shouldPairBlock(child))
+		}
+
+		function pairSection(englishSection, japaneseSection) {
+			const englishParagraphs = pairableSectionChildren(englishSection).filter(
+				(child) => child.tagName === 'P' && shouldPairBlock(child)
+			)
+			const japaneseParagraphSentences = pairableSectionChildren(japaneseSection)
+				.filter((child) => child.tagName === 'P' && shouldPairBlock(child))
+				.flatMap((child) => contentSentences(pairableText(child), 'ja'))
+			let japaneseSentenceIndex = 0
+
+			englishParagraphs.forEach((englishBlock) => {
+				const englishSentenceCount = contentSentences(pairableText(englishBlock), 'en').length
+				const japaneseSentences = japaneseParagraphSentences.slice(
+					japaneseSentenceIndex,
+					japaneseSentenceIndex + englishSentenceCount
+				)
+				japaneseSentenceIndex += englishSentenceCount
+				pairBlocks(englishBlock, undefined, japaneseSentences)
+			})
+
+			alignByTag(
+				pairableSectionChildren(englishSection).filter((child) => child.matches?.('ol, ul')),
+				pairableSectionChildren(japaneseSection).filter((child) => child.matches?.('ol, ul'))
+			).forEach(([englishBlock, japaneseBlock]) => {
+				if (!shouldPairBlock(englishBlock) || !shouldPairBlock(japaneseBlock)) return
+				alignByTag(directListItems(englishBlock), directListItems(japaneseBlock)).forEach(
+					([englishItem, japaneseItem]) => pairBlocks(englishItem, japaneseItem)
+				)
+			})
 		}
 
 		function pairMixedArticle(root) {
@@ -84,25 +232,16 @@
 			const japaneseRoot = root.querySelector('[data-mixed-japanese]')
 			if (!englishRoot || !japaneseRoot || root.dataset.mixedArticle === 'paired') return
 
-			const englishBlocks = [...englishRoot.querySelectorAll('p, li')].filter(shouldPairBlock)
-			const japaneseBlocks = [...japaneseRoot.querySelectorAll('p, li')].filter(shouldPairBlock)
+			englishRoot
+				.querySelectorAll('p, li')
+				.forEach((block) => isSourceNoteBlock(block) && block.classList.add('mixed-source-notes'))
 
-			englishBlocks.forEach((block, index) => {
-				const japaneseBlock = japaneseBlocks[index]
-				if (!japaneseBlock) return
-
-				const englishSentences = splitSentences(block.textContent ?? '', 'en')
-				const japaneseSentences = splitSentences(japaneseBlock.textContent ?? '', 'ja')
-				if (englishSentences.length === 0 || japaneseSentences.length === 0) return
-
-				const sentencePairs = englishSentences.map((sentence, sentenceIndex) =>
-					createSentencePair(
-						sentence,
-						mapTranslation(japaneseSentences, sentenceIndex, englishSentences.length)
-					)
-				)
-
-				block.replaceChildren(...sentencePairs)
+			const englishSections = articleSections(englishRoot)
+			const japaneseSections = articleSections(japaneseRoot)
+			englishSections.forEach((section, index) => {
+				const japaneseSection = japaneseSections[index]
+				if (!japaneseSection) return
+				pairSection(section, japaneseSection)
 			})
 
 			root.dataset.mixedArticle = 'paired'
@@ -142,6 +281,11 @@
 
 	:global(.mixed-sentence__text) {
 		display: block;
+	}
+
+	:global(.mixed-source-notes) {
+		display: block;
+		margin-block: 0.5rem 0.85rem;
 	}
 
 	:global(.mixed-sentence + .mixed-sentence) {

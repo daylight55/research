@@ -34,21 +34,34 @@ const serializedAlignment = alignment
 		}
 		const sourceNotePattern = /\s*(Source note|Source memo|出典)[:：]/i
 
-		function fallbackSplitSentences(text, locale) {
+		function protectSentenceBoundaries(text) {
 			const placeholders = []
-			const protectedText = text.replace(/\d+\.\d+/g, (match) => {
-				const token = `__DECIMAL_${placeholders.length}__`
-				placeholders.push(match)
+			const protect = (prefix) => (value) => {
+				const token =
+					prefix === 'DECIMAL'
+						? `__DECIMAL_${placeholders.length}__`
+						: `__ABBREVIATION_${placeholders.length}__`
+				placeholders.push({ token, value })
 				return token
-			})
+			}
+			const protectedText = text
+				.replace(/\d+\.\d+/g, protect('DECIMAL'))
+				.replace(/(?:[A-Z]\.){2,}/g, protect('ABBREVIATION'))
+			const restore = (value) =>
+				placeholders.reduce(
+					(restored, placeholder) =>
+						restored.replace(new RegExp(placeholder.token, 'g'), placeholder.value),
+					value
+				)
+
+			return { protectedText, restore }
+		}
+
+		function fallbackSplitSentences(text, locale) {
+			const { protectedText, restore } = protectSentenceBoundaries(text)
 
 			return (protectedText.match(fallbackSentencePatterns[locale]) ?? [protectedText])
-				.map((sentence) =>
-					placeholders.reduce(
-						(restored, value, index) => restored.replace(`__DECIMAL_${index}__`, value),
-						sentence
-					)
-				)
+				.map((sentence) => restore(sentence))
 				.map((sentence) => sentence.trim())
 				.filter(Boolean)
 		}
@@ -58,10 +71,11 @@ const serializedAlignment = alignment
 			if (!normalized) return []
 
 			try {
-				const sentences = split(normalized)
+				const { protectedText, restore } = protectSentenceBoundaries(normalized)
+				const sentences = split(protectedText)
 					.filter((node) => node.type === SentenceSplitterSyntax.Sentence)
 					.flatMap((sentence) => {
-						const rawSentence = sentence.raw.trim()
+						const rawSentence = restore(sentence.raw.trim())
 						const fallbackSentences = fallbackSplitSentences(rawSentence, locale)
 						return fallbackSentences.length > 1 ? fallbackSentences : rawSentence
 					})
@@ -164,7 +178,8 @@ const serializedAlignment = alignment
 
 		function shouldPairBlock(block) {
 			return (
-				!block.closest('pre, code, table, [data-mixed-translation]') && !isSourceNoteBlock(block)
+				!block.closest('pre, code, table, .not-prose, [data-mixed-translation]') &&
+				!isSourceNoteBlock(block)
 			)
 		}
 
@@ -292,6 +307,16 @@ const serializedAlignment = alignment
 			})
 		}
 
+		function pairBlocksWithExplicitAlignment(englishRoot, alignmentMap) {
+			;[...englishRoot.querySelectorAll('p, li')]
+				.filter((block) => {
+					if (!shouldPairBlock(block)) return false
+					if (block.tagName === 'P' && block.closest('li')) return false
+					return true
+				})
+				.forEach((block) => pairBlocks(block, undefined, [], alignmentMap))
+		}
+
 		function pairMixedArticle(root) {
 			const englishRoot = root.querySelector('[data-mixed-english]')
 			const japaneseRoot = root.querySelector('[data-mixed-japanese]')
@@ -304,6 +329,12 @@ const serializedAlignment = alignment
 			const englishSections = articleSections(englishRoot)
 			const japaneseSections = articleSections(japaneseRoot)
 			const alignmentMap = explicitAlignmentMap(root)
+			if (alignmentMap.size > 0) {
+				pairBlocksWithExplicitAlignment(englishRoot, alignmentMap)
+				root.dataset.mixedArticle = 'paired'
+				return
+			}
+
 			englishSections.forEach((section, index) => {
 				const japaneseSection = japaneseSections[index]
 				if (!japaneseSection) return

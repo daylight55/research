@@ -1,0 +1,459 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "daily-trends-overview",
+			"heading": {
+				"ja": "2026-05-27 移民・司法強化とAI投資加速が金利と市場を揺らす",
+				"en": "2026-05-27 Immigration pressure, courts, and AI investment rattle markets"
+			},
+			"pairs": [
+				{
+					"en": "Over the past 48 hours, political pressure in the United States around immigration, elections, and the judiciary has intensified at the same time as bond-market rate worries and broader capital spending on AI semiconductors.",
+					"ja": "直近48時間は、米国の移民・選挙・司法をめぐる政治圧力、債券市場の金利不安、そしてAI半導体への設備投資拡大が同時に進んだ。"
+				},
+				{
+					"en": "Policy risk is spilling into both the real economy and the AI supply chain, and the strength of the cross-effects stands out more than any single headline.",
+					"ja": "政策リスクが実体経済とAIサプライチェーンの双方に波及しており、単独のニュースよりも「連動の強さ」が目立つ。"
+				}
+			]
+		},
+		{
+			"id": "pressure-on-airports",
+			"heading": {
+				"ja": "空港への締め付けを示唆",
+				"en": "Pressure on airports"
+			},
+			"pairs": [
+				{
+					"en": "What happened: DHS again suggested it could halt the processing of international travelers and cargo at airports in sanctuary cities.",
+					"ja": "何が起きたか: DHSは、サンクチュアリ・シティの空港で国際旅行者や貨物の処理を止める可能性を再び示した。"
+				},
+				{
+					"en": "The pressure on municipalities that do not cooperate with immigration enforcement is now clearly reaching airport operations.",
+					"ja": "移民執行に協力しない自治体への圧力を、空港運用にまで広げる姿勢が鮮明になった。"
+				},
+				{
+					"en": "Why it matters: Federal immigration policy is moving into direct contact with travel, logistics, and local authority.",
+					"ja": "なぜ重要か: 連邦の移民政策が、旅行・物流・自治体権限に直接触れる局面に入っている。"
+				},
+				{
+					"en": "If action is taken, it could lead not only to tourism and freight delays but also to legal fights with states and cities.",
+					"ja": "実際に動けば、観光や貨物の遅延だけでなく、州・市との法廷闘争にも発展しやすい。"
+				},
+				{
+					"en": "What to watch: Watch which airports are included, whether any formal procedure is issued, and whether local governments respond with injunctions or operational changes.",
+					"ja": "今後の注視点: どの空港が対象に含まれるか、正式な手続きが出るか、自治体側が差し止めや運用変更で対抗するかを見たい。"
+				}
+			]
+		},
+		{
+			"id": "immigration-enforcement-expansion",
+			"heading": {
+				"ja": "720億ドル規模の移民執行拡大",
+				"en": "$72 billion immigration enforcement expansion"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Senate Republicans advanced most of a $72 billion immigration enforcement package.",
+					"ja": "何が起きたか: 米上院共和党は、720億ドル規模の移民執行パッケージの大部分を前進させた。"
+				},
+				{
+					"en": "The push to fund border security and deportation efforts is continuing.",
+					"ja": "国境警備や強制送還を支える財源を厚くする流れが続いている。"
+				},
+				{
+					"en": "Why it matters: Enforcement is no longer just a political slogan; it is being turned into a budget.",
+					"ja": "なぜ重要か: 法執行の強化が、単なる政治スローガンではなく予算化の段階に入っている。"
+				},
+				{
+					"en": "If funding is provided for both border control and domestic enforcement, the administrative cost of immigration policy will rise further.",
+					"ja": "国境管理と国内摘発の双方に予算が付けば、移民関連の行政コストはさらに拡大する。"
+				},
+				{
+					"en": "What to watch: The key questions are how the details are settled, how the House and Senate reconcile them, and how the package is paired with spending legislation.",
+					"ja": "今後の注視点: 条項の細部、上下院の調整、歳出法案との抱き合わせがどう進むかが焦点になる。"
+				}
+			]
+		},
+		{
+			"id": "voting-machine-plan",
+			"heading": {
+				"ja": "投票機器の締め出し構想",
+				"en": "Plan to shut out voting machines"
+			},
+			"pairs": [
+				{
+					"en": "What happened: People linked to the Trump administration reportedly tried to ban about half of U.S. voting machines on the basis of conspiracy theories.",
+					"ja": "何が起きたか: トランプ政権の関係者が、陰謀論を根拠に米国の投票機器の約半数を禁止しようとしたと報じられた。"
+				},
+				{
+					"en": "The fight over election infrastructure itself is heating up again.",
+					"ja": "選挙インフラそのものをめぐる攻防が再燃している。"
+				},
+				{
+					"en": "Why it matters: Voting machines are foundational to election legitimacy, and rule changes can create major state-by-state disruption.",
+					"ja": "なぜ重要か: 投票機器は選挙の正当性を支える基盤で、規制変更は州ごとの運用に大きな混乱を招きやすい。"
+				},
+				{
+					"en": "The problem of institutional design is directly tied to political distrust.",
+					"ja": "制度設計の問題が、政治的な不信と直結している。"
+				},
+				{
+					"en": "What to watch: Watch for any formal federal proposal, state pushback, and the spread of legal pressure on election administrators.",
+					"ja": "今後の注視点: 連邦当局の正式提案の有無、州の反発、選挙管理当局への法的な圧力の広がりを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "supreme-court-sides-with-trump",
+			"heading": {
+				"ja": "最高裁がトランプ側を支持",
+				"en": "Supreme Court sides with Trump"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The Supreme Court ruled in favor of the Trump administration in a dispute over limits on immigration judges' speech.",
+					"ja": "何が起きたか: 最高裁は、移民判事の発言制限をめぐる争いでトランプ政権側に立つ判断を下した。"
+				},
+				{
+					"en": "The judiciary has again signaled its posture toward the administration's style of governance.",
+					"ja": "政権の統治手法に対する司法の姿勢が、また一つ示された。"
+				},
+				{
+					"en": "Why it matters: The ruling has implications not only for immigration administration but also for the breadth of executive power.",
+					"ja": "なぜ重要か: 司法判断は、移民行政だけでなく行政権限の広さにも波及する。"
+				},
+				{
+					"en": "In the post-election administration, it is a useful gauge of how much room judges, agencies, and frontline staff will retain.",
+					"ja": "選挙後の政権運営で、判事・省庁・現場職員の裁量がどこまで残るかを測る材料になる。"
+				},
+				{
+					"en": "What to watch: Watch the impact on lower courts, spillover into other Trump-related cases, and whether the administration extends the same logic to other policy areas.",
+					"ja": "今後の注視点: 下級審への影響、他のトランプ関連訴訟への波及、政権側が同様の論理を他分野にも広げるかを見たい。"
+				}
+			]
+		},
+		{
+			"id": "ukraine-aid-forced-vote",
+			"heading": {
+				"ja": "ウクライナ支援を強行採決へ",
+				"en": "Ukraine aid heads for a forced vote"
+			},
+			"pairs": [
+				{
+					"en": "What happened: In the House, lawmakers opposed to party leadership are trying to force a vote on Ukraine aid.",
+					"ja": "何が起きたか: 下院では、党指導部に反発する議員がウクライナ支援の採決を強行しようとしている。"
+				},
+				{
+					"en": "Republican divisions over foreign assistance are becoming visible.",
+					"ja": "対外支援をめぐる共和党内の温度差が表面化した。"
+				},
+				{
+					"en": "Why it matters: Ukraine aid is both a foreign-policy issue and a political test of attitudes toward Russia and budget allocation.",
+					"ja": "なぜ重要か: ウクライナ支援は外交政策であると同時に、対ロ姿勢や予算配分の政治テストでもある。"
+				},
+				{
+					"en": "Visible fractures inside the party could affect future aid bills.",
+					"ja": "党内の分裂が見えれば、今後の支援法案にも影響する。"
+				},
+				{
+					"en": "What to watch: Watch whether the measure reaches the floor, whether compromises emerge through amendments, and how far the White House can push the issue.",
+					"ja": "今後の注視点: 本会議にかけられるか、修正案で妥協できるか、ホワイトハウスがどこまで押し切るかを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "global-bonds-selloff",
+			"heading": {
+				"ja": "世界債券が売られ続ける",
+				"en": "Global bonds keep selling off"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Selling continued across global bond markets as inflation worries pushed yields higher.",
+					"ja": "何が起きたか: 世界の債券市場では売りが続き、インフレ懸念が金利上昇を促している。"
+				},
+				{
+					"en": "Longer-duration bonds became more volatile, and investors turned sensitive to rate risk again.",
+					"ja": "長期債ほど値動きが荒くなり、投資家は再び金利リスクに敏感になっている。"
+				},
+				{
+					"en": "Why it matters: Weak bonds feed through to mortgage rates, corporate borrowing costs, and equity valuations.",
+					"ja": "なぜ重要か: 債券安は、住宅ローン、企業の借入コスト、株式のバリュエーションに波及する。"
+				},
+				{
+					"en": "Even with a strong AI rally, higher rates can quickly compress multiples.",
+					"ja": "AI関連の強気相場があっても、金利が上がれば評価は簡単にしぼむ。"
+				},
+				{
+					"en": "What to watch: Track U.S. Treasury yields, Japanese government bond yields, inflation data, and central-bank tone.",
+					"ja": "今後の注視点: 米国債と日本国債の利回り、インフレ指標、中央銀行のトーンを追いたい。"
+				}
+			]
+		},
+		{
+			"id": "rate-cut-hopes-fade",
+			"heading": {
+				"ja": "雇用統計待ちで利下げ期待後退",
+				"en": "Rate-cut hopes fade ahead of jobs data"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Markets are entering a phase of assessing labor-market strength, and expectations for Fed rate cuts have softened somewhat.",
+					"ja": "何が起きたか: 市場では、雇用情勢の強さを見極める局面に入り、FRBの利下げ期待がやや後退している。"
+				},
+				{
+					"en": "If jobs data proves stronger than expected, policy rates are likely to stay elevated.",
+					"ja": "雇用データが想定より堅ければ、政策金利は高止まりしやすい。"
+				},
+				{
+					"en": "Why it matters: The direction of rates affects stocks, bonds, housing, and foreign exchange.",
+					"ja": "なぜ重要か: 金利の方向感は、株・債券・住宅・為替のすべてに影響する。"
+				},
+				{
+					"en": "If labor is too strong, fear of renewed inflation can outweigh concern about a slowdown.",
+					"ja": "雇用が強すぎると、景気悪化への懸念よりもインフレ再燃への警戒が勝つ。"
+				},
+				{
+					"en": "What to watch: Watch weekly jobless claims, the employment report, and Fed officials' remarks for signs of whether rate-cut timing shifts further out.",
+					"ja": "今後の注視点: 週次失業保険申請、雇用統計、FRB高官の発言が利下げ時期をどうずらすかを見たい。"
+				}
+			]
+		},
+		{
+			"id": "walmart-annual-outlook",
+			"heading": {
+				"ja": "ウォルマートが年間見通し維持",
+				"en": "Walmart keeps its annual outlook"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Walmart kept its full-year outlook even as a fuel shock weighed on U.S. households.",
+					"ja": "何が起きたか: ウォルマートは、燃料ショックが米国家計を圧迫するなかでも年間見通しを維持した。"
+				},
+				{
+					"en": "Consumer behavior is still reflecting higher prices.",
+					"ja": "価格上昇を織り込んだ消費者行動が続いている。"
+				},
+				{
+					"en": "Why it matters: Essential-goods sales are an early read on whether the economy is resilient or sliding toward recession.",
+					"ja": "なぜ重要か: 生活必需品の販売動向は、景気後退か底堅さかを早く映す。"
+				},
+				{
+					"en": "Walmart's comments suggest that household budgets, especially for lower-income consumers, are still under strain.",
+					"ja": "ウォルマートのコメントは、低所得層を中心に家計がまだ楽ではないことを示す。"
+				},
+				{
+					"en": "What to watch: Average basket size, markdowns, and the gap between grocery and non-grocery demand will help gauge how deep the consumption slowdown is.",
+					"ja": "今後の注視点: 客単価、値引き、食料品と非食料品の売れ方の差が、消費減速の深さを測る手がかりになる。"
+				}
+			]
+		},
+		{
+			"id": "micron-trillion-club",
+			"heading": {
+				"ja": "Micronが時価総額1兆ドル",
+				"en": "Micron joins the $1 trillion club"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Micron's market cap climbed above $1 trillion as demand for AI memory lifted the stock.",
+					"ja": "何が起きたか: Micronの時価総額が1兆ドルに乗り、AI向けメモリ需要が相場を押し上げた。"
+				},
+				{
+					"en": "HBM and DRAM supply are becoming part of the contest that determines who wins the AI race.",
+					"ja": "HBMやDRAMの供給力が、AI競争の勝敗を左右する局面になっている。"
+				},
+				{
+					"en": "Why it matters: The AI boom is expanding beyond GPUs to memory and packaging.",
+					"ja": "なぜ重要か: AIブームはGPUだけでなく、メモリやパッケージングまで投資を拡張している。"
+				},
+				{
+					"en": "Higher valuations for memory makers are also evidence that the semiconductor cycle is re-accelerating through generative AI.",
+					"ja": "メモリ企業の評価は、半導体サイクルが生成AIで再加速している証拠でもある。"
+				},
+				{
+					"en": "What to watch: The next valuation questions are whether demand outlooks, expansion plans, and pricing power can last.",
+					"ja": "今後の注視点: 需要見通し、増産計画、価格交渉力が持続するかどうかが、次のバリュエーションの焦点になる。"
+				}
+			]
+		},
+		{
+			"id": "markets-cautious-after-nvidia",
+			"heading": {
+				"ja": "Nvidia決算後も市場は慎重",
+				"en": "Markets stay cautious after Nvidia results"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Even after Nvidia's earnings, U.S. stock futures barely moved, and investors kept waiting for retail sales and sentiment data.",
+					"ja": "何が起きたか: Nvidia決算を受けても、米株先物は大きく振れず、投資家は小売売上や景況感データを待つ構えを続けた。"
+				},
+				{
+					"en": "Good news from AI alone has not restored confidence across the market.",
+					"ja": "AI関連の好材料だけでは、相場全体の安心感は戻っていない。"
+				},
+				{
+					"en": "Why it matters: Even when semiconductors are strong, broad indexes struggle if consumption and rates are weak.",
+					"ja": "なぜ重要か: 半導体が強くても、消費と金利が弱ければ指数全体は伸びにくい。"
+				},
+				{
+					"en": "The market is now trying to confirm the AI-led rally with evidence from the real economy.",
+					"ja": "市場は今、AI主導の上昇を実体経済の裏付けで確認しようとしている。"
+				},
+				{
+					"en": "What to watch: Retail earnings, inflation data, and the behavior of long-term yields will determine how far the AI trade can broaden.",
+					"ja": "今後の注視点: 小売企業の決算、インフレ指標、長期金利の戻り方が、AI相場の広がりを決める。"
+				}
+			]
+		},
+		{
+			"id": "nvidia-guidance-buyback",
+			"heading": {
+				"ja": "Nvidiaが上振れ見通しと大型自社株買い",
+				"en": "Nvidia raises guidance and launches a large buyback"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Nvidia raised its quarterly revenue outlook above market expectations and also announced an $80 billion share buyback.",
+					"ja": "何が起きたか: Nvidiaは四半期売上高見通しを市場予想以上に引き上げ、800億ドル規模の自社株買いも発表した。"
+				},
+				{
+					"en": "Demand for AI GPUs is still driving earnings higher.",
+					"ja": "AI向けGPU需要の強さが、依然として業績を押し上げている。"
+				},
+				{
+					"en": "Why it matters: Whether the leading company in AI investment can stay bullish directly affects investment decisions across the supply chain.",
+					"ja": "なぜ重要か: AI投資の主役企業が強気姿勢を保てるかは、サプライチェーン全体の投資判断に直結する。"
+				},
+				{
+					"en": "The question is whether demand stays concentrated in one company or expands into a broader capital-spending wave.",
+					"ja": "需要が一社の好調で終わるのか、設備投資の波として広がるのかが問われる。"
+				},
+				{
+					"en": "What to watch: The next-quarter outlook, GPU supply, and the pace of competitors catching up will shape the durability of the AI rally.",
+					"ja": "今後の注視点: 次四半期のガイダンス、GPU供給、競合の追い上げが、AI相場の持続性を左右する。"
+				}
+			]
+		},
+		{
+			"id": "amd-taiwan-investment",
+			"heading": {
+				"ja": "AMDが台湾で10億ドル超の投資を拡大",
+				"en": "AMD expands investment in Taiwan by more than $10 billion"
+			},
+			"pairs": [
+				{
+					"en": "What happened: AMD said it will invest more than $10 billion in Taiwan's ecosystem, supporting the expansion of AI infrastructure.",
+					"ja": "何が起きたか: AMDは台湾のエコシステム向けに100億ドル超の投資を表明し、AIインフラの拡張を後押しした。"
+				},
+				{
+					"en": "The company is aiming to strengthen the supply chain across design, manufacturing, and adjacent components.",
+					"ja": "設計・製造・周辺部材を含む供給網の強化を狙っている。"
+				},
+				{
+					"en": "Why it matters: AI servers depend not only on GPUs but also on CPUs, memory, packaging, and manufacturing capacity working together.",
+					"ja": "なぜ重要か: AIサーバーはGPUだけでなく、CPU、メモリ、パッケージング、製造設備の連携で成立する。"
+				},
+				{
+					"en": "Investment in Taiwan reflects both semiconductor geopolitics and manufacturing capacity.",
+					"ja": "台湾への投資は、半導体地政学と製造能力の両方を映す。"
+				},
+				{
+					"en": "What to watch: The key question is which partners and which process stages receive funding, and how much actual production capacity is added.",
+					"ja": "今後の注視点: どのパートナーとどの工程に資金が入るか、実際の生産能力がどれだけ積み上がるかを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "venice-tsmc-2nm",
+			"heading": {
+				"ja": "VeniceがTSMC 2nmで量産へ",
+				"en": "Venice moves to mass production on TSMC 2nm"
+			},
+			"pairs": [
+				{
+					"en": "What happened: AMD said it will ramp production of next-generation EPYC \"Venice\" on TSMC's 2nm process.",
+					"ja": "何が起きたか: AMDは次世代EPYC「Venice」の量産立ち上げをTSMCの2nmプロセスで進めると公表した。"
+				},
+				{
+					"en": "The server CPU roadmap is taking another step forward with advanced manufacturing.",
+					"ja": "サーバー向けCPUのロードマップが、先端製造で一段前進している。"
+				},
+				{
+					"en": "Why it matters: A move to 2nm affects not just performance but also power efficiency and data-center operating costs.",
+					"ja": "なぜ重要か: 2nm採用は、性能だけでなく電力効率とデータセンター運用コストにも効く。"
+				},
+				{
+					"en": "In the current AI data-center buildout, the pace of CPU generational upgrades is itself a competitive factor.",
+					"ja": "AIデータセンターの増設局面では、CPU世代交代のスピードも競争力になる。"
+				},
+				{
+					"en": "What to watch: Watch yield, production timing, and how widely major cloud providers adopt it.",
+					"ja": "今後の注視点: 歩留まり、量産時期、主要クラウドでの採用がどこまで広がるかを追いたい。"
+				}
+			]
+		},
+		{
+			"id": "cross-cutting-view",
+			"heading": {
+				"ja": "横断的な見立て",
+				"en": "Cross-cutting view"
+			},
+			"pairs": [
+				{
+					"en": "In politics, immigration, voting, and the judiciary are moving together, and the expansion of executive power is beginning to reach election systems and airport operations.",
+					"ja": "政治では移民・投票・司法が一体で動いており、行政権限の拡大が選挙制度や空港運用にまで及び始めている。"
+				},
+				{
+					"en": "In the economy, bond selling and higher-for-longer rates are the main force, and the strength of the AI rally alone is not enough to support the broader market.",
+					"ja": "経済では債券売りと金利の高止まりが効いていて、AI相場の強さだけでは市場全体を支え切れない。"
+				},
+				{
+					"en": "In technology, Nvidia, AMD, Micron, and ASML are all pointing in the same direction, showing that AI demand is reaching more deeply from chip design to manufacturing equipment.",
+					"ja": "技術ではNvidia、AMD、Micron、ASMLが同じ方向を向き、AI需要が設計から製造装置まで一段深く波及している。"
+				},
+				{
+					"en": "That said, because government AI security testing and supply constraints remain, AI investment may accelerate without doing so in a straight line.",
+					"ja": "ただし、政府のAI安全保障テストや供給制約が残るため、AI投資は加速しても立ち上がり速度は直線的ではない。"
+				},
+				{
+					"en": "The next question is whether political friction will spill into rates and consumption, and whether AI investment will be backed by both actual demand and profit margins.",
+					"ja": "次の焦点は、政治の摩擦が金利と消費に波及するか、そしてAI投資が実需と利益率の両方で裏付けられるかにある。"
+				}
+			]
+		},
+		{
+			"id": "unresolved-items",
+			"heading": {
+				"ja": "追跡すべき未確定事項",
+				"en": "Unresolved items to track"
+			},
+			"pairs": [
+				{
+					"en": "Whether immigration enforcement pressure on airports turns into formal orders or real-world operations.",
+					"ja": "空港への移民執行圧力が、正式な命令や実地運用に進むか。"
+				},
+				{
+					"en": "Whether the Supreme Court's Trump-related rulings spill into other administrative cases.",
+					"ja": "最高裁のトランプ関連判断が、他の行政案件にも波及するか。"
+				},
+				{
+					"en": "Whether the combination of weaker bonds and labor data pushes rate-cut expectations further back.",
+					"ja": "債券安と雇用指標の組み合わせが、利下げ観測をさらに後ずらしするか。"
+				},
+				{
+					"en": "Whether the expansion of AI semiconductor investment really extends beyond GPUs into memory, manufacturing equipment, and CPUs.",
+					"ja": "AI半導体の投資拡大が、GPU以外のメモリ・製造装置・CPUにも本当に広がるか。"
+				},
+				{
+					"en": "Whether CAISI-style AI safety reviews cascade into other companies' and other countries' regulatory frameworks.",
+					"ja": "CAISI型のAI安全審査が、他社・他国の規制枠組みに連鎖するか。"
+				}
+			]
+		}
+	]
+}

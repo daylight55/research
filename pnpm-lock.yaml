@@ -20,6 +20,9 @@ importers:
       mermaid:
         specifier: ^11.15.0
         version: 11.15.0
+      sentence-splitter:
+        specifier: ^5.0.1
+        version: 5.0.1
     devDependencies:
       '@astrojs/mdx':
         specifier: 5.0.6
@@ -797,6 +800,9 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
+  '@textlint/ast-node-types@13.4.1':
+    resolution: {integrity: sha512-qrZyhCh8Ekk6nwArx3BROybm9BnX6vF7VcZbijetV/OM3yfS4rTYhoMWISmhVEP2H2re0CtWEyMl/XF+WdvVLQ==}
+
   '@types/d3-array@3.2.2':
     resolution: {integrity: sha512-hOLWVbm7uRza0BYXpIIW5pxfrKe0W+D5lrFiAEYR+pb6w3N2SwSMaJbXdUfSEv+dT4MfHBLtn5js0LAWaO6otw==}
 
@@ -1117,6 +1123,9 @@ packages:
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
+
+  boundary@2.0.0:
+    resolution: {integrity: sha512-rJKn5ooC9u8q13IMCrW0RSp31pxBCHE3y9V/tp3TdWSLf8Em3p6Di4NBpfzbJge9YjjFEsD0RtFEjtvHL5VyEA==}
 
   brace-expansion@1.1.14:
     resolution: {integrity: sha512-MWPGfDxnyzKU7rNOW9SP/c50vi3xrmrua/+6hfPbCS2ABNWfx24vPidzvC7krjU/RTo235sV776ymlsMtGKj8g==}
@@ -2845,6 +2854,9 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  sentence-splitter@5.0.1:
+    resolution: {integrity: sha512-Eu9l95hQfI0WdhXTznuBzqsFjTuL6UnPq341Ro1s2bjE3DMoBuhE0wk4z+rwbwVXfOAeuOQM0UF30HR2+66VuQ==}
+
   set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
     engines: {node: '>= 0.4'}
@@ -2944,6 +2956,9 @@ packages:
 
   strnum@2.3.0:
     resolution: {integrity: sha512-ums3KNd42PGyx5xaoVTO1mjU1bH3NpY4vsrVlnv9PNGqQj8wd7rJ6nEypLrJ7z5vxK5RP0yMLo6J/Gsm62DI5Q==}
+
+  structured-source@4.0.0:
+    resolution: {integrity: sha512-qGzRFNJDjFieQkl/sVOI2dUjHKRyL9dAJi2gCPGJLbJHBIkyOHxjuocpIEfbLioX+qSJpvbYdT49/YCdMznKxA==}
 
   style-to-js@1.1.21:
     resolution: {integrity: sha512-RjQetxJrrUJLQPHbLku6U/ocGtzyjbJMP9lCNK7Ag0CNh690nSH8woqWH9u16nMjYBAok+i7JO1NP2pOy8IsPQ==}
@@ -3924,6 +3939,8 @@ snapshots:
       postcss-selector-parser: 6.0.10
       tailwindcss: 3.3.5
 
+  '@textlint/ast-node-types@13.4.1': {}
+
   '@types/d3-array@3.2.2': {}
 
   '@types/d3-axis@3.0.6':
@@ -4379,6 +4396,8 @@ snapshots:
   binary-extensions@2.3.0: {}
 
   boolbase@1.0.0: {}
+
+  boundary@2.0.0: {}
 
   brace-expansion@1.1.14:
     dependencies:
@@ -6736,6 +6755,11 @@ snapshots:
 
   semver@7.8.1: {}
 
+  sentence-splitter@5.0.1:
+    dependencies:
+      '@textlint/ast-node-types': 13.4.1
+      structured-source: 4.0.0
+
   set-function-length@1.2.2:
     dependencies:
       define-data-property: 1.1.4
@@ -6893,6 +6917,10 @@ snapshots:
   strip-json-comments@3.1.1: {}
 
   strnum@2.3.0: {}
+
+  structured-source@4.0.0:
+    dependencies:
+      boundary: 2.0.0
 
   style-to-js@1.1.21:
     dependencies:

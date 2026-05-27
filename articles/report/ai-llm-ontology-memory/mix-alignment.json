@@ -1,0 +1,1309 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "Rather than being a \"knowledgeable entity,\" modern LLMs are probabilistic pattern generators that learn from large volumes of language, code, images, and behavior logs, and become operational systems only by connecting external tools, business data, memory, authority, auditing, and feedback loops.",
+					"ja": "現代のLLMは「知識を持つ主体」というより、巨大な言語・コード・画像・行動ログから学習した確率的なパターン生成器であり、外部ツール、業務データ、記憶、権限、監査、フィードバックループを接続して初めて実務システムになる。"
+				},
+				{
+					"en": "Therefore, the essence of using AI lies not only in \"selecting smart models,\" but also in information design that converts organizational reality into a form that can be manipulated by models.",
+					"ja": "したがって、AI活用の本質は「賢いモデルを選ぶこと」だけではなく、組織の現実をモデルが操作可能な形に変換する情報設計にある。"
+				},
+				{
+					"en": "The conclusions of this report are as follows.",
+					"ja": "本レポートの結論は以下である。"
+				},
+				{
+					"en": "The history of AI can be understood in terms of symbolic processing, statistical machine learning, deep learning, Transformer/LLM, and agentization.",
+					"ja": "AIの歴史は、記号処理、統計的機械学習、深層学習、Transformer/LLM、エージェント化という流れで理解できる。"
+				},
+				{
+					"en": "The current turning point is that models are moving away from the intelligence of a standalone model to an operational system where models read and write the external environment.",
+					"ja": "現在の転換点は、モデル単体の知能ではなく、モデルが外部環境を読み書きする運用系へ進んでいる点にある。"
+				},
+				{
+					"en": "The essence of LLM is to reconstruct the relationships between elements in a context in a high-dimensional vector space, centering on the self-attention mechanism, and generate the next possible output.",
+					"ja": "LLMの本質は、自己注意機構を中心に、文脈中の要素間関係を高次元ベクトル空間で再構成し、次にあり得る出力を生成することにある。"
+				},
+				{
+					"en": "This allows language, code, and reasoning-like processing to be combined into one interface.",
+					"ja": "これにより言語、コード、推論風の処理を一つのインターフェースにまとめられる。"
+				},
+				{
+					"en": "Differences from humans should be found not only in the abstract theory of the presence or absence of consciousness, but also in physicality, purpose formation, continuous experience, responsibility, value judgment, grounding in field constraints, and social trust.",
+					"ja": "人間との差分は、意識の有無という抽象論だけでなく、身体性、目的形成、継続的経験、責任、価値判断、現場制約への接地、社会的信用の所在に見出すべきである。"
+				},
+				{
+					"en": "Mere documentation is insufficient for information that can be put into practical use by AI.",
+					"ja": "AIに実務投入可能な情報は、単なる文書では不十分である。"
+				},
+				{
+					"en": "Business objects, attributes, relationships, states, history, decisions, permissions, exceptions, and implicit criteria need to be structured.",
+					"ja": "業務オブジェクト、属性、関係、状態、履歴、意思決定、権限、例外、暗黙の判断基準を構造化する必要がある。"
+				},
+				{
+					"en": "Symbol grounding is not a matter of “making sense to the LLM” but a design problem that connects symbols within an organization to observations, actions, results, responsibilities, and verifiable data.",
+					"ja": "記号接地は「LLMに意味を理解させる」ことではなく、組織内の記号を観測、行為、結果、責任、検証可能なデータに結びつける設計問題である。"
+				},
+				{
+					"en": "Palantir's ontology should be viewed as an operational ontology that integrates data, logic, action, and security, as well as traditional RDF/OWL semantics.",
+					"ja": "PalantirのOntologyは、従来のRDF/OWL的な意味論だけでなく、データ、ロジック、アクション、セキュリティを統合する operational ontology として捉えるべきである。"
+				},
+				{
+					"en": "Graphiti's time-aware knowledge graph is a highly relevant direction for dealing with dynamic memory, history, relationships, and evidence.",
+					"ja": "Graphitiの時間認識型ナレッジグラフは、動的な記憶、履歴、関係、根拠を扱う方向性として妥当性が高い。"
+				},
+				{
+					"en": "However, weak extraction quality, schema design, operational load, authority, and evaluation design result in plausible but dangerous organizational memory.",
+					"ja": "ただし、抽出品質、スキーマ設計、運用負荷、権限、評価設計が弱いと、もっともらしいが危険な組織記憶になる。"
+				},
+				{
+					"en": "The direction that Anthropic's public information appears to be is towards long context, advanced agents, business application integration, MCP, skills, sub-agents, audit/authorization/corporate implementation.",
+					"ja": "Anthropicの公表情報から見える方向性は、長文脈、高度なエージェント、業務アプリ統合、MCP、スキル、サブエージェント、監査・権限・企業導入に向かっている。"
+				},
+				{
+					"en": "This is an estimate based on official announcements, as a detailed future roadmap has not been made public.",
+					"ja": "詳細な将来ロードマップは公開されていないため、これは公式発表からの推定である。"
+				},
+				{
+					"en": "MCP is useful as a standardization layer to connect external data, tools, prompts, and resources to AI.",
+					"ja": "MCPは、AIに外部データ、ツール、プロンプト、リソースを接続する標準化レイヤーとして有効である。"
+				},
+				{
+					"en": "However, it does not automatically solve business semantics, authority design, data quality, and normalization of organizational knowledge.",
+					"ja": "ただし、業務意味論、権限設計、データ品質、組織ナレッジの正規化を自動で解決するものではない。"
+				},
+				{
+					"en": "This report crosses the literature on AI research history, LLM research, knowledge representation, cognitive science, organizational knowledge theory, and agent-based literature.",
+					"ja": "本レポートは、AI研究史、LLM研究、知識表現、認知科学、組織知識論、エージェント基盤の文献を横断する。"
+				},
+				{
+					"en": "Although not an exhaustive systematic review, we will read the Dartmouth Proposal, Newell and Simon, Rumelhart et al., Vaswani et al., Brown et al., Ouyang et al., Bai et al., Harnad, Gruber, Berners-Lee et al., Nonaka, Graphiti/Zep, Palantir, Anthropic, and MCP specifications in a way that connects them to design decisions for practical implementation.",
+					"ja": "網羅的なシステマティックレビューではないが、Dartmouth Proposal、Newell and Simon、Rumelhart et al.、Vaswani et al.、Brown et al.、Ouyang et al.、Bai et al.、Harnad、Gruber、Berners-Lee et al.、Nonaka、Graphiti/Zep、Palantir、Anthropic、MCP仕様を、実務導入の設計判断に接続する形で読む。"
+				}
+			]
+		},
+		{
+			"id": "how-should-we-understand-the-history-of-ai",
+			"heading": {
+				"ja": "2. AIの歴史をどう捉えるべきか",
+				"en": "2. How should we understand the history of AI?"
+			},
+			"pairs": [
+				{
+					"en": "The history of AI is not simply a matter of technological progress that approaches humans, but rather a shift in paradigms regarding how to implement intelligence into machines.",
+					"ja": "AIの歴史は、単純な「人間に近づく技術の進歩」ではなく、知能をどのように機械へ実装するかを巡る複数のパラダイムの交代である。"
+				},
+				{
+					"en": "Early AI developed around inference, exploration, rules, and symbolic manipulation.",
+					"ja": "初期AIは、推論、探索、ルール、記号操作を中心に発展した。"
+				},
+				{
+					"en": "The view that human intelligence can be broken down into explicit symbols and rules became the basis for expert systems and classical reasoning systems.",
+					"ja": "人間の知的行為を明示的な記号と規則に分解できるという見方は、エキスパートシステムや古典的推論システムの基盤になった。"
+				},
+				{
+					"en": "However, they were vulnerable to real-world ambiguity, exceptions, knowledge acquisition costs, and environmental changes.",
+					"ja": "しかし、現実世界の曖昧さ、例外、知識獲得コスト、環境変化に弱かった。"
+				},
+				{
+					"en": "The starting point for this period was the 1955 Dartmouth Proposal by McCarthy, Minsky, Rochester, and Shannon.",
+					"ja": "この時期の出発点は、McCarthy、Minsky、Rochester、Shannonによる1955年のDartmouth Proposalである。"
+				},
+				{
+					"en": "The proposal posited the research hypothesis that if various aspects of learning and intelligence could be precisely described, they could be simulated by machines.",
+					"ja": "同提案は、学習や知能の諸側面を精密に記述できれば機械でシミュレートできるという研究仮説を掲げた。"
+				},
+				{
+					"en": "Newell and Simon (1976) presented the physical symbol system hypothesis, viewing intelligence as a computational process of symbols and exploration.",
+					"ja": "Newell and Simon (1976) は physical symbol system hypothesis を提示し、知能を記号と探索の計算過程として捉えた。"
+				},
+				{
+					"en": "This view gave strong theoretical support to systems that have knowledge as explicit rules.",
+					"ja": "この見方は、知識を明示ルールとして持つシステムに強い理論的支柱を与えた。"
+				},
+				{
+					"en": "After that, statistical machine learning moved toward learning regularities from data instead of writing rules by hand.",
+					"ja": "その後、統計的機械学習は、手で規則を書く代わりに、データから規則性を学ぶ方向へ移行した。"
+				},
+				{
+					"en": "Furthermore, deep learning incorporates the feature design itself into learning, making great progress in image recognition, speech recognition, and natural language processing.",
+					"ja": "さらに深層学習は、特徴量設計そのものを学習に取り込み、画像認識、音声認識、自然言語処理を大きく進展させた。"
+				},
+				{
+					"en": "The error backpropagation method of Rumelhart, Hinton, and Williams (1986) was decisive for the reconstruction of neural networks.",
+					"ja": "ニューラルネットワークの復興には、Rumelhart, Hinton, and Williams (1986) の誤差逆伝播法が決定的だった。"
+				},
+				{
+					"en": "LeCun, Bengio, and Hinton (2015) organized deep learning as a method for learning representations themselves in a hierarchical manner.",
+					"ja": "LeCun, Bengio, and Hinton (2015) は、深層学習を、表現そのものを階層的に学ぶ方法として整理した。"
+				},
+				{
+					"en": "The progress made in the 2010s is not simply due to an increase in computational resources, but the simultaneous maturation of data, GPUs, optimization, regularization, network structures, and benchmarks.",
+					"ja": "2010年代の進展は、単に計算資源が増えたからではなく、データ、GPU、最適化、正則化、ネットワーク構造、ベンチマークが同時に成熟した結果である。"
+				},
+				{
+					"en": "The 2017 Transformer demonstrated a design that does not rely on recursion or convolution to process sequence data, but instead uses an attention mechanism to directly handle relationships between elements in context.",
+					"ja": "2017年のTransformerは、系列データを処理するうえで再帰や畳み込みに依存せず、注意機構によって文脈中の要素間関係を直接扱う設計を示した。"
+				},
+				{
+					"en": "This became the central foundation of the modern LLM.",
+					"ja": "これが現代LLMの中心的基盤になった。"
+				},
+				{
+					"en": "After GPT-3, large-scale pre-training and few-shot/zero-shot use of prompts became widespread, and the focus shifted from \"creating an individual model for each task\" to \"giving context to a general-purpose model and letting it solve.\"",
+					"ja": "GPT-3以降は、大規模事前学習とプロンプトによる few-shot / zero-shot 的な利用が広まり、「タスクごとに個別モデルを作る」から「汎用モデルに文脈を与えて解かせる」へ重心が移った。"
+				},
+				{
+					"en": "The focus in practice after 2024 will shift from a single model to agents, tool usage, long context, external storage, permissions, auditing, and business application integration.",
+					"ja": "2024年以降の実務上の焦点は、モデル単体から、エージェント、ツール利用、長文脈、外部記憶、権限、監査、業務アプリ統合へ移っている。"
+				},
+				{
+					"en": "This means that AI is moving from \"software that answers\" to \"software that acts within a work environment.\"",
+					"ja": "これはAIが「回答するソフトウェア」から「業務環境内で行為するソフトウェア」へ移行していることを意味する。"
+				}
+			]
+		},
+		{
+			"id": "essence-of-llm-principle-and-structure",
+			"heading": {
+				"ja": "3. LLMの原理と構造の本質",
+				"en": "3. Essence of LLM principle and structure"
+			},
+			"pairs": [
+				{
+					"en": "There are five key points to understand when understanding LLM:",
+					"ja": "LLMを理解する際の要点は、次の五つである。"
+				},
+				{
+					"en": "In the context of LLM research, it is necessary to read not only the 2017 Transformer, but also the discussions of BERT, GPT-3, InstructGPT, Constitutional AI, and Foundation Models.",
+					"ja": "LLMの研究文脈では、2017年のTransformerだけでなく、BERT、GPT-3、InstructGPT、Constitutional AI、Foundation Modelsの議論を合わせて読む必要がある。"
+				},
+				{
+					"en": "BERT (Devlin et al., 2018) acquires bidirectional context through pre-training, and GPT-3 (Brown et al., 2020) demonstrated that large-scale autoregressive models exhibit few-shot performance.",
+					"ja": "BERT (Devlin et al., 2018) は双方向文脈を事前学習で獲得し、GPT-3 (Brown et al., 2020) は大規模自己回帰モデルが few-shot 性能を示すことを実証した。"
+				},
+				{
+					"en": "Bommasani et al. (2021) called these foundation models and organized them as fundamental technologies that include not only capabilities but also bias, evaluation, and legal and social risks.",
+					"ja": "Bommasani et al. (2021) は、これらを foundation models と呼び、能力だけでなく、バイアス、評価、法的・社会的リスクを含む基盤技術として整理した。"
+				}
+			]
+		},
+		{
+			"id": "tokenization",
+			"heading": {
+				"ja": "3.1 トークン化",
+				"en": "3.1 Tokenization"
+			},
+			"pairs": [
+				{
+					"en": "Rather than understanding strings literally, LLM splits text into tokens and treats each token as a vector of numbers.",
+					"ja": "LLMは文字列をそのまま理解するのではなく、テキストをトークンに分割し、各トークンを数値ベクトルとして扱う。"
+				},
+				{
+					"en": "The meaning here is not an empirical meaning that humans have, but a distributed expression that reflects co-occurrence, context, syntax, usage, and inference patterns within the learning data.",
+					"ja": "ここでの意味は、人間が持つ経験的意味ではなく、学習データ内での共起、文脈、構文、用法、推論パターンを反映した分布的な表現である。"
+				}
+			]
+		},
+		{
+			"id": "self-care",
+			"heading": {
+				"ja": "3.2 自己注意",
+				"en": "3.2 Self-care"
+			},
+			"pairs": [
+				{
+					"en": "At the heart of Transformer is self-attention.",
+					"ja": "Transformerの中心は自己注意である。"
+				},
+				{
+					"en": "Self-attention is a mechanism by which each element in the input learns which and how many other elements it should refer to.",
+					"ja": "自己注意は、入力中の各要素が他のどの要素をどれだけ参照すべきかを学習する仕組みである。"
+				},
+				{
+					"en": "This makes it easier to handle long-range dependencies, instructions, references, code structure, and contextual constraints.",
+					"ja": "これにより、長距離依存、指示、参照、コード構造、文脈上の制約を扱いやすくなる。"
+				},
+				{
+					"en": "The contribution of Vaswani et al. (2017) is that they showed that sequence transformation can be constructed using only the attention mechanism without using RNN or CNN.",
+					"ja": "Vaswani et al. (2017) の貢献は、RNNやCNNを使わずに注意機構だけで系列変換を構成できることを示した点にある。"
+				},
+				{
+					"en": "In LLM, the multi-headed attention in each layer captures different relationships, and the feedforward layer transforms the representation.",
+					"ja": "LLMでは、各層の多頭注意が異なる関係を捕捉し、フィードフォワード層がその表現を変換する。"
+				},
+				{
+					"en": "This is the technical basis for behavior that appears to be \"semantic understanding\".",
+					"ja": "これが「意味理解」に見える振る舞いの技術的基盤である。"
+				},
+				{
+					"en": "However, it is dangerous to treat attention weights as a human-readable explanation, and the relationship between attention and explanation is treated with caution in interpretability research.",
+					"ja": "ただし、注意重みをそのまま人間可読な説明とみなすのは危険で、解釈可能性研究でも注意と説明の関係は慎重に扱われている。"
+				}
+			]
+		},
+		{
+			"id": "pretraining-and-scaling",
+			"heading": {
+				"ja": "3.3 事前学習とスケーリング",
+				"en": "3.3 Pretraining and scaling"
+			},
+			"pairs": [
+				{
+					"en": "LLM uses large amounts of text and code to learn to predict the next or hidden token.",
+					"ja": "LLMは大量のテキストやコードを用いて、次のトークン、または隠されたトークンを予測するように学習する。"
+				},
+				{
+					"en": "The GPT-3 paper showed that increasing model size boosts task-independent few-shot performance.",
+					"ja": "GPT-3の論文は、モデル規模の拡大がタスク非依存の few-shot 性能を押し上げることを示した。"
+				},
+				{
+					"en": "On the other hand, it also suffers from biases derived from the learning corpus, outdated knowledge, misinformation, evaluation contamination, and instability of inferences.",
+					"ja": "一方で、学習コーパス由来のバイアス、古い知識、誤情報、評価汚染、推論の不安定性も同時に抱える。"
+				}
+			]
+		},
+		{
+			"id": "direction-following-and-alignment",
+			"heading": {
+				"ja": "3.4 指示追従とアライメント",
+				"en": "3.4 Direction following and alignment"
+			},
+			"pairs": [
+				{
+					"en": "The basic model is difficult to use for business as it is.",
+					"ja": "基盤モデルはそのままでは業務に使いにくい。"
+				},
+				{
+					"en": "Additional training, including supervised fine-tuning, RLHF/RLAIF, and constitutional AI, will be used to follow human instructions, suppress dangerous output, and provide conversational and useful responses.",
+					"ja": "人間の指示に従い、危険な出力を抑制し、会話形式で有用な応答を返すように、教師ありファインチューニング、RLHF/RLAIF、constitutional AI などの追加訓練が行われる。"
+				},
+				{
+					"en": "Ouyang et al. (2022) demonstrated InstructGPT, which allows GPT-3 to follow instructions using human feedback.",
+					"ja": "Ouyang et al. (2022) は、GPT-3を人間フィードバックで指示追従させる InstructGPT を示した。"
+				},
+				{
+					"en": "Bai et al.'s (2022) Constitutional AI does not rely solely on human labels, but instead shows a direction toward reducing harm through AI feedback based on clearly stated principles.",
+					"ja": "Bai et al. (2022) の Constitutional AI は、人間ラベルだけに頼らず、明示された原則に基づくAIフィードバックで有害性を下げる方向を示した。"
+				},
+				{
+					"en": "In practice, these methods do not mean that the model has ethics built into it.",
+					"ja": "実務上は、これらの手法は「モデルに倫理を内蔵した」ことを意味しない。"
+				},
+				{
+					"en": "It merely improves the output trends; permissions, audits, approvals, logs, and evaluations remain on the system side.",
+					"ja": "出力傾向を改善したにすぎず、権限、監査、承認、ログ、評価はシステム側に残る。"
+				}
+			]
+		},
+		{
+			"id": "inferable-compression-instead-of-inference",
+			"heading": {
+				"ja": "3.5 推論ではなく「推論可能な圧縮」",
+				"en": "3.5 “Inferable compression” instead of inference"
+			},
+			"pairs": [
+				{
+					"en": "The output of an LLM is not a proof of the logic engine.",
+					"ja": "LLMの出力は論理エンジンの証明ではない。"
+				},
+				{
+					"en": "In many cases, the result of compressing large numbers of language patterns is to produce behavior that looks like inference.",
+					"ja": "多くの場合、膨大な言語パターンを圧縮した結果として、推論に見える振る舞いを生成する。"
+				},
+				{
+					"en": "Therefore, in practice, rather than relying on LLM reasoning as is, it is necessary to make it verifiable by combining it with external data, calculations, rules, audit logs, and approval flows.",
+					"ja": "したがって実務では、LLMの推論をそのまま信じるのではなく、外部データ、計算、ルール、監査ログ、承認フローと組み合わせて検証可能にする必要がある。"
+				},
+				{
+					"en": "Bender et al. (2021) criticized the environmental burden of large-scale language models, data-derived bias, and the danger of imitating only the form.",
+					"ja": "Bender et al. (2021) は、大規模言語モデルの環境負荷、データ由来のバイアス、形式だけを模倣する危険を批判した。"
+				},
+				{
+					"en": "On the other hand, the results after Brown et al. (2020) showed the versatility of statistical prediction alone, which cannot be underestimated.",
+					"ja": "一方で、Brown et al. (2020) 以降の結果は、統計的予測だけでは軽視できない汎用性を示した。"
+				},
+				{
+					"en": "The two are not contradictory.",
+					"ja": "両者は矛盾しない。"
+				},
+				{
+					"en": "Although it cannot be concluded that LLM has the same semantic understanding as humans, it has high practical value when combined with the external environment.",
+					"ja": "LLMは人間と同じ意味理解を持つと断定できないが、外部環境と組み合わせれば高い実務価値を持つ。"
+				}
+			]
+		},
+		{
+			"id": "where-should-we-find-the-difference-with-humans",
+			"heading": {
+				"ja": "4. 人間との違いをどこに見出すべきか",
+				"en": "4. Where should we find the difference with humans?"
+			},
+			"pairs": [
+				{
+					"en": "If we limit the difference between LLMs and humans to \"humans have minds, and AIs do not,\" it will not be of much use in practical design.",
+					"ja": "LLMと人間の違いを「人間には心がある、AIにはない」という形で止めると、実務設計にはあまり役に立たない。"
+				},
+				{
+					"en": "The important differences in practice are as follows.",
+					"ja": "実務で重要な差分は以下である。"
+				},
+				{
+					"en": "There is a long debate in philosophy and cognitive science about this issue.",
+					"ja": "この論点には哲学と認知科学の長い議論がある。"
+				},
+				{
+					"en": "Searle's (1980) Chinese room argued that symbolic manipulation alone does not lead to semantic understanding.",
+					"ja": "Searle (1980) の中国語の部屋は、記号操作だけでは意味理解にならないと主張した。"
+				},
+				{
+					"en": "Dreyfus criticized classical AI for underestimating physicality, situationality, mastery, and being-in-the-world.",
+					"ja": "Dreyfusは、古典的AIが身体性、状況性、熟練、世界内存在を過小評価していると批判した。"
+				},
+				{
+					"en": "Clark and Chalmers (1998) discussed the possibility that cognition extends beyond the brain to the external environment.",
+					"ja": "Clark and Chalmers (1998) は、認知が脳内だけでなく外部環境に拡張される可能性を論じた。"
+				},
+				{
+					"en": "Lake et al. (2017) summarized that human-like learning requires generalization from a small number of cases, causal models, constructivity, and intuitive psychology and physics.",
+					"ja": "Lake et al. (2017) は、人間らしい学習には、少数事例からの一般化、因果モデル、構成性、直感心理学・物理学が必要だと整理した。"
+				},
+				{
+					"en": "Rather than viewing AI as a replacement for humans, it is important to design it as a device that augments human judgment, turns it into explicit knowledge, and speeds up execution and verification.",
+					"ja": "重要なのは、AIを人間の代替として捉えるより、人間の判断を補強し、形式知化し、実行と検証を速める装置として設計することである。"
+				}
+			]
+		},
+		{
+			"id": "information-that-can-be-input-to-ai-in-practice",
+			"heading": {
+				"ja": "5. 実務でAIにインプット可能な情報",
+				"en": "5. Information that can be input to AI in practice"
+			},
+			"pairs": [
+				{
+					"en": "The success or failure of AI utilization depends more on \"what to make available for input\" than \"which model to use.\"",
+					"ja": "AI活用の成否は「どのモデルを使うか」よりも「何を入力可能な状態にするか」に大きく依存する。"
+				},
+				{
+					"en": "Information useful for practical input can be organized in the following hierarchy.",
+					"ja": "実務投入に有効な情報は以下の階層で整理できる。"
+				},
+				{
+					"en": "This chapter is at the intersection of RAGs, knowledge graphs, operational data modeling, and workflow management.",
+					"ja": "この章は、RAG、知識グラフ、業務データモデリング、ワークフロー管理の交差点にある。"
+				},
+				{
+					"en": "Lewis et al. (2020)'s RAG and Guu et al. (2020)'s REALM pointed toward connecting searched external knowledge to generation, rather than keeping all knowledge within the model.",
+					"ja": "Lewis et al. (2020) のRAGやGuu et al. (2020) のREALMは、モデル内部に全知識を持たせるのではなく、検索された外部知識を生成に接続する方向を示した。"
+				},
+				{
+					"en": "In practice, if the search target remains a mere document corpus, handling of business status, authority, history, and exceptions becomes weak.",
+					"ja": "実務では、この検索対象が単なる文書コーパスに留まると、業務状態、権限、履歴、例外の扱いが弱くなる。"
+				}
+			]
+		},
+		{
+			"id": "layer-1-documents",
+			"heading": {
+				"ja": "5.1 第1層: 文書",
+				"en": "5.1 Layer 1: Documents"
+			},
+			"pairs": [
+				{
+					"en": "Regulations, manuals, minutes, design documents, customer correspondence history, codes, FAQs, etc.",
+					"ja": "規程、マニュアル、議事録、設計書、顧客対応履歴、コード、FAQなど。"
+				},
+				{
+					"en": "This is the easiest to implement, but documents alone tend to make it unclear what is currently valid, who approved it, what are the exceptions, and what the actual business status is.",
+					"ja": "これは最も導入しやすいが、文書だけでは「今どれが有効か」「誰が承認したか」「例外は何か」「実際の業務状態はどうか」が曖昧になりやすい。"
+				}
+			]
+		},
+		{
+			"id": "layer-2-structured-data",
+			"heading": {
+				"ja": "5.2 第2層: 構造化データ",
+				"en": "5.2 Layer 2: Structured Data"
+			},
+			"pairs": [
+				{
+					"en": "Table data such as customers, opportunities, contracts, inventory, employees, projects, sales, obstacles, inquiries, etc.",
+					"ja": "顧客、案件、契約、在庫、従業員、プロジェクト、売上、障害、問い合わせなどのテーブルデータ。"
+				},
+				{
+					"en": "LLM should not be used alone, but in combination with SQL, API, BI, and data quality management.",
+					"ja": "LLM単体ではなく、SQL、API、BI、データ品質管理と組み合わせる必要がある。"
+				}
+			]
+		},
+		{
+			"id": "third-layer-business-objects",
+			"heading": {
+				"ja": "5.3 第3層: 業務オブジェクト",
+				"en": "5.3 Third layer: Business objects"
+			},
+			"pairs": [
+				{
+					"en": "Clarify business nouns such as \"customer,\" \"project,\" \"billing,\" \"product,\" \"failure,\" and \"measure,\" and give them attributes, relationships, status, life cycle, and authority.",
+					"ja": "「顧客」「案件」「請求」「プロダクト」「障害」「施策」など、業務上の名詞を明示し、属性、関係、状態、ライフサイクル、権限を持たせる。"
+				},
+				{
+					"en": "This is the entrance to ontology.",
+					"ja": "ここがオントロジー化の入り口である。"
+				}
+			]
+		},
+		{
+			"id": "layer-4-actions-and-decisions",
+			"heading": {
+				"ja": "5.4 第4層: 行為と意思決定",
+				"en": "5.4 Layer 4: Actions and Decisions"
+			},
+			"pairs": [
+				{
+					"en": "Business actions such as approval, rejection, order placement, price change, customer contact, deployment, and troubleshooting.",
+					"ja": "承認、差戻し、発注、価格変更、顧客連絡、デプロイ、障害対応などの業務アクション。"
+				},
+				{
+					"en": "For AI to enter into practice, it is necessary not only to read, but also to define what it can do and under what conditions.",
+					"ja": "AIが実務に入るには、読むだけでなく、どの条件で何を実行できるかを定義する必要がある。"
+				}
+			]
+		},
+		{
+			"id": "layer-5-feedback-and-results",
+			"heading": {
+				"ja": "5.5 第5層: フィードバックと結果",
+				"en": "5.5 Layer 5: Feedback and Results"
+			},
+			"pairs": [
+				{
+					"en": "Record which results were produced by AI or human decisions.",
+					"ja": "AIまたは人間の判断が、どの結果を生んだかを記録する。"
+				},
+				{
+					"en": "Without this, AI utilization will remain as a one-off efficiency improvement and will not lead to organizational learning.",
+					"ja": "これがないと、AI活用は単発の効率化に留まり、組織学習にならない。"
+				}
+			]
+		},
+		{
+			"id": "symbol-grounding-method",
+			"heading": {
+				"ja": "6. 記号接地の方法",
+				"en": "6. Symbol grounding method"
+			},
+			"pairs": [
+				{
+					"en": "The symbol grounding problem is a problem in which if symbols are closed only by the relationships between them, what they mean cannot be determined within the system.",
+					"ja": "記号接地問題は、記号が記号同士の関係だけで閉じていると、何を意味しているのかがシステム内では決まらないという問題である。"
+				},
+				{
+					"en": "Harnad argued that mere linguistic input and output is insufficient for grounding, and sensorimotor connections are needed.",
+					"ja": "Harnadは、単なる言語的入出力だけでは接地が不十分であり、感覚運動的な接続が必要だと論じた。"
+				},
+				{
+					"en": "Symbolic grounding in the LLM era is not a retelling of the classic \"symbolic AI versus connectionism\".",
+					"ja": "LLM時代の記号接地は、古典的な「記号AI対コネクショニズム」の再演ではない。"
+				},
+				{
+					"en": "LLM can powerfully handle relationships within the language through distributed expressions, but the problem in business is connecting to individual objects such as \"this customer,\" \"this contract,\" \"this failure,\" and \"this approval.\"",
+					"ja": "LLMは分布的表現により言語内の関係を強力に扱えるが、業務で問題になるのは「この顧客」「この契約」「この障害」「この承認」のような個別対象への接続である。"
+				},
+				{
+					"en": "Therefore, grounding is not a complete solution to philosophical meaning understanding, but is designed as an information architecture that closes reference, action, result, and responsibility.",
+					"ja": "したがって、接地は哲学的意味理解の完全解決ではなく、参照、行為、結果、責任を閉じる情報アーキテクチャとして設計する。"
+				},
+				{
+					"en": "Symbolic grounding in practical AI does not necessarily mean having a robot body.",
+					"ja": "実務AIにおける記号接地は、必ずしもロボット身体を持たせることではない。"
+				},
+				{
+					"en": "Within an organization, making connections is a practical grounding.",
+					"ja": "組織内では、次の接続を作ることが現実的な接地になる。"
+				},
+				{
+					"en": "Connection of symbols and objects: \"Customer A\", \"Project B\", and \"Risk C\" refer to unique objects in the actual data.",
+					"ja": "記号と対象の接続: 「顧客A」「案件B」「リスクC」が、実データ上の一意なオブジェクトを指す。"
+				},
+				{
+					"en": "Connection of symbols and states: Statuses such as \"Not supported\", \"Approved\", \"Difficult\", and \"Important customer\" have judgment rules and trails.",
+					"ja": "記号と状態の接続: 「未対応」「承認済み」「障害中」「重要顧客」などの状態が、判定ルールと証跡を持つ。"
+				},
+				{
+					"en": "Connection of symbols and actions: \"Approve,\" \"Send,\" and \"Place an order\" are connected to actual system operations.",
+					"ja": "記号と行為の接続: 「承認する」「送信する」「発注する」が、実際のシステム操作と結びつく。"
+				},
+				{
+					"en": "Connection of symbols and results: Post-action sales, quality, delays, customer satisfaction, and risk reduction are recorded.",
+					"ja": "記号と結果の接続: 行為後の売上、品質、遅延、顧客満足、リスク低減が記録される。"
+				},
+				{
+					"en": "Connection of symbol and responsibility: Who made the decision, who approved it, and with what authority it was carried out remains.",
+					"ja": "記号と責任の接続: 誰が判断し、誰が承認し、どの権限で実行されたかが残る。"
+				},
+				{
+					"en": "In this perspective, ontology is not a dictionary but a grounding layer that operationalizes organizational reality.",
+					"ja": "この観点では、オントロジーは辞書ではなく、組織の現実を操作可能にする接地レイヤーである。"
+				}
+			]
+		},
+		{
+			"id": "how-to-understand-ontology",
+			"heading": {
+				"ja": "7. オントロジーの捉え方",
+				"en": "7. How to understand ontology"
+			},
+			"pairs": [
+				{
+					"en": "Ontology has at least three meanings.",
+					"ja": "オントロジーには少なくとも三つの意味がある。"
+				},
+				{
+					"en": "Gruber (1993) defined ontology as an explicit specification of conceptualization.",
+					"ja": "Gruber (1993) は、オントロジーを概念化の明示的仕様として定義した。"
+				},
+				{
+					"en": "Formal ontology after Guarino (1998) emphasized not only the classification of concepts but also basic distinctions such as identity, dependence, part-whole relationships, roles, and events.",
+					"ja": "Guarino (1998) 以降の formal ontology は、概念の分類だけでなく、同一性、依存性、部分全体関係、役割、イベントといった基礎的区別を重視した。"
+				},
+				{
+					"en": "Berners-Lee, Hendler, and Lassila's (2001) Semantic Web was a vision for connecting information on the Web into semantic structures that can be processed by machines.",
+					"ja": "Berners-Lee, Hendler, and Lassila (2001) のSemantic Webは、Web上の情報を機械が処理可能な意味構造へ接続する構想だった。"
+				},
+				{
+					"en": "These lineages come back to the question of \"how to define what LLM touches\" in modern business AI.",
+					"ja": "これらの系譜は、現代の業務AIにおいて「LLMが触る対象をどう定義するか」という問題に戻ってくる。"
+				},
+				{
+					"en": "Philosophical Ontology: Asking what exists.",
+					"ja": "哲学的オントロジー: 何が存在するのかを問う。"
+				},
+				{
+					"en": "Ontology as knowledge representation: Define concepts, relationships, and constraints in a machine-readable manner.",
+					"ja": "知識表現としてのオントロジー: 概念、関係、制約を機械可読に定義する。"
+				},
+				{
+					"en": "Ontology as business operations: Integrates business objects, states, actions, authorities, and decisions.",
+					"ja": "業務運用としてのオントロジー: 業務上の対象、状態、行為、権限、意思決定を統合する。"
+				},
+				{
+					"en": "What is needed for AI utilization is an ontology that includes the third one.",
+					"ja": "AI活用に必要なのは、3番目を含むオントロジーである。"
+				},
+				{
+					"en": "Simply defining a vocabulary in RDF/OWL will not move the business unless there are practical actions, authorities, audits, and feedback.",
+					"ja": "単にRDF/OWLで語彙を定義しても、実務アクション、権限、監査、フィードバックがなければ業務は動かない。"
+				},
+				{
+					"en": "Palantir Foundry's Ontology strongly emphasizes this point.",
+					"ja": "Palantir FoundryのOntologyはこの点を強く押し出している。"
+				},
+				{
+					"en": "Palantir describes Ontology as an operational layer that sits on top of datasets, virtual tables, and models and connects to real-world objects such as equipment, products, orders, and financial transactions.",
+					"ja": "PalantirはOntologyを、データセット、仮想テーブル、モデルの上に位置し、設備、製品、注文、金融取引などの現実世界の対象に接続する operational layer と説明している。"
+				},
+				{
+					"en": "It also states that it includes not only semantic elements but also kinetic elements such as actions, functions, and dynamic security.",
+					"ja": "また、意味要素だけでなく、アクション、関数、動的セキュリティといった kinetic elements を含むと述べている。"
+				},
+				{
+					"en": "This idea is very important in the LLM era.",
+					"ja": "この考え方は、LLM時代に非常に重要である。"
+				},
+				{
+					"en": "LLM can receive a variety of requests using natural language, but in order to safely reflect those requests in practice, it is necessary to clarify \"which object, in what state, with whose authority, and which actions are permitted.\"",
+					"ja": "LLMは自然言語で多様な要求を受けられるが、その要求を安全に実務へ反映するには、「どのオブジェクトに対して、どの状態で、誰の権限で、どの行為を許すか」を明確にする必要がある。"
+				}
+			]
+		},
+		{
+			"id": "pros-and-cons-of-graphitis-approach",
+			"heading": {
+				"ja": "8. Graphitiのアプローチの是非",
+				"en": "8. Pros and cons of Graphiti's approach"
+			},
+			"pairs": [
+				{
+					"en": "Graphiti is a time-aware context graph engine at the core of Zep's context infrastructure.",
+					"ja": "Graphitiは、Zepの文脈基盤の中核にある時間認識型のコンテキストグラフエンジンである。"
+				},
+				{
+					"en": "The official README describes it as handling changes in facts over time, provenance, episodes, custom types, and hybrid search, rather than a static knowledge graph.",
+					"ja": "公式READMEでは、静的な知識グラフではなく、事実の時間的変化、出所、エピソード、カスタム型、ハイブリッド検索を扱うものとして説明されている。"
+				},
+				{
+					"en": "The Zep paper presents an approach to dynamically integrate conversational and business data through Graphiti and maintain historical relationships.",
+					"ja": "Zep論文では、Graphitiを通じて会話データと業務データを動的に統合し、履歴関係を維持するアプローチが示されている。"
+				},
+				{
+					"en": "An easy way to evaluate Graphiti is to compare it with the limits of RAG.",
+					"ja": "Graphitiを評価するには、RAGの限界と比較するのが分かりやすい。"
+				},
+				{
+					"en": "RAG is a powerful pattern that searches for related documents and passes them on to generation, but the chronology of document fragments, fact updates, relationships between people, cases, and decisions, and the handling of contradictory trails tend to be implementation-dependent.",
+					"ja": "RAGは、関連文書を検索して生成に渡す強力なパターンだが、文書断片の時系列、事実の更新、人物・案件・意思決定の関係、矛盾する証跡の扱いは実装依存になりやすい。"
+				},
+				{
+					"en": "Zep/Graphiti (Rasmussen et al., 2025) presents a design that compensates for this weakness by treating agent memory as a timed knowledge graph.",
+					"ja": "Zep / Graphiti (Rasmussen et al., 2025) は、エージェント記憶を時間つき知識グラフとして扱うことで、この弱点を補う設計を示している。"
+				}
+			]
+		},
+		{
+			"id": "points-that-can-be-evaluated",
+			"heading": {
+				"ja": "8.1 評価できる点",
+				"en": "8.1 Points that can be evaluated"
+			},
+			"pairs": [
+				{
+					"en": "Graphiti's direction is highly relevant for the following reasons.",
+					"ja": "Graphitiの方向性は、以下の理由で妥当性が高い。"
+				},
+				{
+					"en": "Managing time: Organizational knowledge is not only about what is currently correct, but also about when it was correct and when it was overwritten.",
+					"ja": "時間を扱う: 組織知識は「現在正しいこと」だけでなく、「いつ正しかったか」「いつ上書きされたか」が重要である。"
+				},
+				{
+					"en": "Leave provenance: Agent memory cannot withstand audits without being able to go back to the underlying conversation, document, JSON, or event.",
+					"ja": "出所を残す: エージェント記憶は、根拠となる会話、文書、JSON、イベントに戻れなければ監査に耐えない。"
+				},
+				{
+					"en": "Handling relationships: Flat vector searches have difficulty handling structures of people, issues, decisions, exceptions, and dependencies.",
+					"ja": "関係を扱う: フラットなベクトル検索では、人物、案件、意思決定、例外、依存関係の構造を扱いにくい。"
+				},
+				{
+					"en": "Assuming dynamic updates: In business, customer conditions, specifications, and decision criteria change, so batch rebuilding alone is slow.",
+					"ja": "動的更新を想定する: 業務では顧客状態、仕様、判断基準が変化するため、バッチ再構築だけでは遅い。"
+				},
+				{
+					"en": "Compatibility with MCP: Graphiti MCP Server allows it to be used as a storage tool from MCP clients such as Claude Desktop and Cursor.",
+					"ja": "MCPとの親和性: Graphiti MCP Serverにより、Claude DesktopやCursorなどのMCPクライアントから記憶ツールとして利用できる。"
+				}
+			]
+		},
+		{
+			"id": "points-to-note",
+			"heading": {
+				"ja": "8.2 注意すべき点",
+				"en": "8.2 Points to note"
+			},
+			"pairs": [
+				{
+					"en": "However, implementing Graphiti does not automatically improve organizational memory.",
+					"ja": "ただし、Graphitiを導入すれば組織記憶が自動的に良くなるわけではない。"
+				},
+				{
+					"en": "Extraction quality issue: LLM extracts incorrect entities and relationships from conversations.",
+					"ja": "抽出品質の問題: LLMが会話から抽出したエンティティや関係は誤る。"
+				},
+				{
+					"en": "If incorrect relationships are memorized, they contaminate subsequent judgments.",
+					"ja": "誤った関係が記憶されると、後続の判断を汚染する。"
+				},
+				{
+					"en": "Ontology design issues: If the balance between prescribed ontology and learned ontology is incorrect, the graph will become chaotic.",
+					"ja": "オントロジー設計の問題: prescribed ontology と learned ontology のバランスを誤ると、グラフが混沌化する。"
+				},
+				{
+					"en": "Authority issues: You must control who can see the knowledge gained from whose conversations.",
+					"ja": "権限の問題: 誰の会話から得た知識を、誰に見せてよいかを制御しなければならない。"
+				},
+				{
+					"en": "The problem of forgetting: Designing historical information rather than deleting old information is effective, but there is a risk that old information will be mixed in when searching.",
+					"ja": "忘却の問題: 古い情報を削除するのではなく履歴化する設計は有効だが、検索時に古い情報が混入するリスクがある。"
+				},
+				{
+					"en": "Evaluation issue: Your company needs to design a benchmark to measure whether memory really contributes to work results.",
+					"ja": "評価の問題: 記憶が本当に業務成果に寄与したかを測るベンチマークを自社で設計する必要がある。"
+				}
+			]
+		},
+		{
+			"id": "conclusion",
+			"heading": {
+				"ja": "8.3 結論",
+				"en": "8.3 Conclusion"
+			},
+			"pairs": [
+				{
+					"en": "Graphiti is promising as an external memory for LLM.",
+					"ja": "Graphitiは、LLMの外部記憶として有望である。"
+				},
+				{
+					"en": "However, rather than creating a company-wide knowledge base from the beginning, it is preferable to have a PoC with a limited scope.",
+					"ja": "ただし、最初から全社知識基盤にするのではなく、対象を限定したPoCが望ましい。"
+				},
+				{
+					"en": "For example, you should start with areas where time change and relationships are important, such as customer service history, troubleshooting, technical research, design decisions, and sales proposals.",
+					"ja": "たとえば、顧客対応履歴、障害対応、技術調査、設計判断、営業提案など、時間変化と関係性が重要な領域から始めるべきである。"
+				}
+			]
+		},
+		{
+			"id": "strategies-for-utilizing-tacit-knowledge-in-organizations",
+			"heading": {
+				"ja": "9. 暗黙知を組織活用する方策",
+				"en": "9. Strategies for utilizing tacit knowledge in organizations"
+			},
+			"pairs": [
+				{
+					"en": "Tacit knowledge is not undocumented knowledge, but includes experience, embodied skills, situational judgment, relationships, and context-dependent intuition.",
+					"ja": "暗黙知は、文書化されていない知識ではなく、経験、身体化された技能、状況判断、関係性、文脈依存の勘を含む。"
+				},
+				{
+					"en": "Nonaka's SECI model places the mutual transformation of tacit and explicit knowledge at the center of organizational knowledge creation.",
+					"ja": "NonakaのSECIモデルでは、暗黙知と形式知の相互変換が組織知識創造の中心に置かれる。"
+				},
+				{
+					"en": "Polanyi's (1966) theory of tacit knowledge posed the problem that \"people know more than they can say.\"",
+					"ja": "Polanyi (1966) の暗黙知論は、「人は語れる以上のことを知っている」という問題を提示した。"
+				},
+				{
+					"en": "Nonaka (1994) and Nonaka and Takeuchi (1995) organized the conversion of tacit and explicit knowledge as a cycle of communalization, externalization, connection, and internalization.",
+					"ja": "Nonaka (1994) とNonaka and Takeuchi (1995) は、暗黙知と形式知の変換を、共同化、表出化、連結化、内面化の循環として整理した。"
+				},
+				{
+					"en": "Brown and Duguid (1991) showed that learning and innovation occur within communities of practice, not just formal manuals.",
+					"ja": "Brown and Duguid (1991) は、学習とイノベーションが公式マニュアルだけでなく、実践共同体の中で起こることを示した。"
+				},
+				{
+					"en": "When introducing AI, this lineage should not be reduced to a matter of \"transforming all tacit knowledge into text\".",
+					"ja": "AI導入では、この系譜を「暗黙知を全部テキスト化する」話に矮小化してはいけない。"
+				},
+				{
+					"en": "Utilizing tacit knowledge in the AI ​​era does not mean completely converting tacit knowledge into explicit knowledge.",
+					"ja": "AI時代の暗黙知活用は、暗黙知を完全に形式知化することではない。"
+				},
+				{
+					"en": "Rather, it is about capturing situations where tacit knowledge is demonstrated and connecting it to surrounding information in a reusable form.",
+					"ja": "むしろ、暗黙知が発揮された場面を捕捉し、再利用可能な形で周辺情報と接続することである。"
+				},
+				{
+					"en": "The practical measures are as follows.",
+					"ja": "実務方策は以下である。"
+				},
+				{
+					"en": "Leave a decision log: Record not only \"what was decided,\" but also \"why,\" \"what were the alternatives,\" and \"which constraints were effective.\"",
+					"ja": "判断ログを残す: 「何を決めたか」だけでなく、「なぜそうしたか」「代替案は何だったか」「どの制約が効いたか」を残す。"
+				},
+				{
+					"en": "Collect the thought process of experts: Record review comments, troubleshooting, negotiation preparation, and design decisions as short audio/memo/conversation logs.",
+					"ja": "熟練者の思考過程を収集する: レビューコメント、障害対応、商談準備、設計判断を、短い音声・メモ・会話ログとして残す。"
+				},
+				{
+					"en": "Make it case-based: Instead of an abstract manual, accumulate examples, exceptions, failures, recoveries, and customer responses.",
+					"ja": "ケースベース化する: 抽象マニュアルではなく、実例、例外、失敗、復旧、顧客反応を蓄積する。"
+				},
+				{
+					"en": "Connect to ontology: Link tacit knowledge to business objects such as \"customers,\" \"projects,\" \"systems,\" \"risks,\" and \"judgment criteria.\"",
+					"ja": "オントロジーに接続する: 暗黙知を「顧客」「案件」「システム」「リスク」「判断基準」などの業務オブジェクトに紐づける。"
+				},
+				{
+					"en": "Support externalization with AI: Have LLM extract points of contention, decision criteria, unconfirmed matters, and reusable procedures from conversations.",
+					"ja": "AIで外化を支援する: LLMに、会話から論点、判断基準、未確認事項、再利用可能な手順を抽出させる。"
+				},
+				{
+					"en": "Human Approval: Externalization of tacit knowledge is easily misinterpreted.",
+					"ja": "人間が承認する: 暗黙知の外化は誤読されやすい。"
+				},
+				{
+					"en": "A review by an expert or a responsible person is required.",
+					"ja": "熟練者や責任者によるレビューが必要である。"
+				},
+				{
+					"en": "Create a space for re-internalization: Humans will re-embodi themselves not only through reading documents created by AI, but also through pair work, reviews, role-plays, and reflections.",
+					"ja": "再内面化の場を作る: AIが作った文書を読むだけでなく、ペア作業、レビュー、ロールプレイ、振り返りで人間が再び身体化する。"
+				}
+			]
+		},
+		{
+			"id": "connection-with-the-concept-of-palantir",
+			"heading": {
+				"ja": "10. Palantirの概念との関連",
+				"en": "10. Connection with the concept of Palantir"
+			},
+			"pairs": [
+				{
+					"en": "Palantir Foundry Ontology is an important reference point for business system design in the AI ​​era.",
+					"ja": "Palantir Foundry Ontologyは、AI時代の業務システム設計における重要な参照点である。"
+				},
+				{
+					"en": "Palantir's documentation describes Ontology as an organization's operational layer, connecting data to real-world objects and integrating decision-making, action, and security.",
+					"ja": "Palantirのドキュメントでは、Ontologyは組織の operational layer であり、データを現実世界の対象へ接続し、意思決定、アクション、セキュリティを統合すると説明されている。"
+				},
+				{
+					"en": "Palantir's feature is that it does not limit ontology to a static knowledge representation, but treats it as an operational layer that integrates business objects, authorities, actions, and decision-making.",
+					"ja": "Palantirの特徴は、オントロジーを静的な知識表現に閉じず、業務対象、権限、アクション、意思決定を統合する運用層として扱う点にある。"
+				},
+				{
+					"en": "This is consistent with the Semantic Web and OWL traditions, but the emphasis is different.",
+					"ja": "これはSemantic WebやOWLの伝統と矛盾しないが、重点が異なる。"
+				},
+				{
+					"en": "While RDF/OWL-based ontologies emphasize \"expression of concepts and relationships,\" Foundry Ontology is presented as \"a layer for safely manipulating real business objects.\"",
+					"ja": "RDF/OWL系のオントロジーが「概念と関係の表現」を重視するのに対し、Foundry Ontologyは「現実の業務対象を安全に操作するための層」として提示されている。"
+				},
+				{
+					"en": "This idea is connected to LLM utilization as follows.",
+					"ja": "この思想は、次のようにLLM活用と接続する。"
+				},
+				{
+					"en": "The strength of Palantir-type thinking is that it connects AI to changes in the state of the business world, rather than confining it to a simple chat UI.",
+					"ja": "Palantir型の発想の強みは、AIを単なるチャットUIに閉じ込めず、業務世界の状態変化に接続する点である。"
+				},
+				{
+					"en": "On the other hand, implementation requires large design and integration costs.",
+					"ja": "一方で、導入には大きな設計・統合コストがかかる。"
+				},
+				{
+					"en": "If your company adopts a similar philosophy, you should start with a \"small operational ontology\" for specific workflows, rather than creating a huge company-wide ontology from the beginning.",
+					"ja": "自社で同様の思想を採用する場合は、最初から巨大な全社オントロジーを作るのではなく、特定ワークフローの「小さな operational ontology」から始めるべきである。"
+				}
+			]
+		},
+		{
+			"id": "how-do-you-read-anthropics-future-roadmap",
+			"heading": {
+				"ja": "11. Anthropicの今後のロードマップをどう読むか",
+				"en": "11. How do you read Anthropic's future roadmap?"
+			},
+			"pairs": [
+				{
+					"en": "Anthropic has not comprehensively released a detailed future roadmap.",
+					"ja": "Anthropicは詳細な将来ロードマップを包括的には公開していない。"
+				},
+				{
+					"en": "Therefore, we will summarize the direction that can be seen from the official announcement as of May 6, 2026.",
+					"ja": "したがって、ここでは2026年5月6日時点の公式発表から読み取れる方向性として整理する。"
+				},
+				{
+					"en": "This chapter is not a quotation from the official roadmap, but rather an extrapolation from Anthropic's published products, specifications, and announcements.",
+					"ja": "この章は、公式ロードマップの引用ではなく、Anthropicの公開済み製品・仕様・発表からの推定である。"
+				},
+				{
+					"en": "The November 2024 MCP announcement, Claude Code's MCP integration, Subagents, Skills, Opus 4.6's 1M context beta and agent teams, Labs, and agent templates for finance are pointing in the same direction.",
+					"ja": "2024年11月のMCP発表、Claude CodeのMCP連携、Subagents、Skills、Opus 4.6の1M context betaとagent teams、Labs、金融向けagent templatesは、同じ方向を示している。"
+				},
+				{
+					"en": "In other words, Anthropic is shifting its focus from \"one-shot LLM\" to \"an agent platform that breaks down long-running tasks, uses external tools, and executes them under the authority of the organization.\"",
+					"ja": "つまり、Anthropicは「単発応答のLLM」から「長時間タスクを分解し、外部ツールを使い、組織の権限下で実行するエージェント基盤」へ重心を移している。"
+				}
+			]
+		},
+		{
+			"id": "direction-seen-from-published-information",
+			"heading": {
+				"ja": "11.1 公表情報から見える方向性",
+				"en": "11.1 Direction seen from published information"
+			},
+			"pairs": [
+				{
+					"en": "Agentization: Claude Code, Cowork, Managed Agents, financial agent templates, etc. are moving towards doing work rather than answers.",
+					"ja": "エージェント化: Claude Code、Cowork、Managed Agents、金融向け agent templates など、回答ではなく作業を実行する方向へ進んでいる。"
+				},
+				{
+					"en": "Business application integration: Increasing connectivity with Excel, PowerPoint, Word, Outlook, financial data providers, and corporate systems.",
+					"ja": "業務アプリ統合: Excel、PowerPoint、Word、Outlook、金融データプロバイダ、企業システムとの接続を強めている。"
+				},
+				{
+					"en": "MCP-centric connectivity strategy: Positioning MCP as the standard for connecting AI and external data tools, making it available through APIs, Claude Code, and Claude.ai.",
+					"ja": "MCP中心の接続戦略: MCPをAIと外部データ・ツールを接続する標準として位置づけ、APIやClaude Code、Claude.aiで利用可能にしている。"
+				},
+				{
+					"en": "Long-term/long-context work: Opus 4.6 shows 1M token context beta, compaction, long-running tasks, and agent teams.",
+					"ja": "長時間・長文脈作業: Opus 4.6では1M token context beta、compaction、長時間タスク、agent teamsが示されている。"
+				},
+				{
+					"en": "Corporate Controls: Strengthening permissions, authentication, audit logs, compliance, cloud infrastructure, and partner ecosystem.",
+					"ja": "企業統制: 権限、認証、監査ログ、コンプライアンス、クラウド基盤、パートナーエコシステムを強化している。"
+				},
+				{
+					"en": "Expansion of computing resources: We are expanding our learning and inference capabilities through additional collaboration with AWS.",
+					"ja": "計算資源拡大: AWSとの追加提携により、学習・推論能力の拡張を進めている。"
+				},
+				{
+					"en": "Separation of experimentation and commercialization: This shows a system in which research previews, experimental functions, and productization are promoted separately through Labs.",
+					"ja": "実験と製品化の分離: Labsを通じて、研究プレビュー、実験的機能、プロダクト化を分けて進める体制を示している。"
+				}
+			]
+		},
+		{
+			"id": "practical-reading",
+			"heading": {
+				"ja": "11.2 実務上の読み",
+				"en": "11.2 Practical reading"
+			},
+			"pairs": [
+				{
+					"en": "Anthropic's direction has shifted from competition in the performance of individual models to a business agent platform, tool connectivity, organizational implementation, and auditable autonomous work.",
+					"ja": "Anthropicの方向性は、モデル単体の性能競争から、業務エージェント基盤、ツール接続、組織導入、監査可能な自律作業へ移っている。"
+				},
+				{
+					"en": "MCP, Skills, Subagents, long context, office collaboration, and Claude Code/Cowork are heading in the same direction.",
+					"ja": "MCP、Skills、Subagents、長文脈、office連携、Claude Code/Coworkは同じ方向を向いている。"
+				},
+				{
+					"en": "However, you should avoid making a definitive statement that \"Anthropic will definitely do this in the future.\"",
+					"ja": "ただし、「Anthropicが今後必ずこうする」という断定は避けるべきである。"
+				},
+				{
+					"en": "If used as a roadmap, it would be appropriate to treat it as a \"hypothesis for practical implementation based on published functions\".",
+					"ja": "ロードマップとして使うなら、「公表済み機能から見た実務導入上の仮説」として扱うのが妥当である。"
+				}
+			]
+		},
+		{
+			"id": "to-what-extent-can-mcp-be-used",
+			"heading": {
+				"ja": "12. MCPでどこまで対応可能か",
+				"en": "12. To what extent can MCP be used?"
+			},
+			"pairs": [
+				{
+					"en": "MCP is a standard protocol for connecting AI applications and external systems.",
+					"ja": "MCPは、AIアプリケーションと外部システムを接続する標準プロトコルである。"
+				},
+				{
+					"en": "Anthropic describes MCP as a standard for connecting data sources and tools to AI.",
+					"ja": "AnthropicはMCPを、データソースやツールをAIに接続するための標準として説明している。"
+				},
+				{
+					"en": "The official specifications cover Tools, Resources, Prompts, Sampling, Roots, Elicitation, Authorization, etc.",
+					"ja": "公式仕様では、Tools、Resources、Prompts、Sampling、Roots、Elicitation、Authorization などが扱われる。"
+				},
+				{
+					"en": "MCP is positioned as a common interface for connections, rather than having universal semantics like HTTP or SQL.",
+					"ja": "MCPの位置づけは、HTTPやSQLのように万能な意味論ではなく、接続の共通インターフェースである。"
+				},
+				{
+					"en": "In the official specifications, server features such as Resources, Prompts, and Tools, and client features such as Sampling and Roots are defined.",
+					"ja": "公式仕様では、server features として Resources、Prompts、Tools、client features として Sampling、Roots などが定義される。"
+				},
+				{
+					"en": "The specifications for 2025 and beyond also include authorization and security considerations.",
+					"ja": "2025年以降の仕様では、認可やセキュリティ考慮も整備されている。"
+				},
+				{
+					"en": "In practice, rather than creating an MCP server, the essence is deciding which operations to make public, what privileges to execute them, and which logs to leave.",
+					"ja": "実務では、MCP serverを作ること自体より、どの操作を公開し、どの権限で実行し、どのログを残すかが本質になる。"
+				}
+			]
+		},
+		{
+			"id": "what-you-can-do-with-mcp",
+			"heading": {
+				"ja": "12.1 MCPでできること",
+				"en": "12.1 What you can do with MCP"
+			},
+			"pairs": [
+				{
+					"en": "Tool execution: Expose API calls, DB searches, calculations, file operations, and business system operations to AI.",
+					"ja": "ツール実行: API呼び出し、DB検索、計算、ファイル操作、業務システム操作をAIに公開する。"
+				},
+				{
+					"en": "Resource provision: Expose files, DBs, APIs, documents, etc. as contexts with URIs.",
+					"ja": "リソース提供: ファイル、DB、API、文書などをURI付きの文脈として公開する。"
+				},
+				{
+					"en": "Prompt templates: Provide reusable instruction templates that follow business workflows.",
+					"ja": "プロンプトテンプレート: 業務ワークフローに沿った再利用可能な指示テンプレートを提供する。"
+				},
+				{
+					"en": "User confirmation: Depending on implementation, confirmation UI or approval for dangerous operations can be included.",
+					"ja": "ユーザー確認: 実装次第で、危険操作に対する確認UIや承認を挟める。"
+				},
+				{
+					"en": "Existing system integration: Easy to standardize connections such as Slack, GitHub, Google Drive, DB, internal API, etc.",
+					"ja": "既存システム統合: Slack、GitHub、Google Drive、DB、社内APIなどの接続を標準化しやすい。"
+				},
+				{
+					"en": "Coordination with memory tools like Graphiti: Memory/knowledge graphs hosted on the MCP server can be used by multiple AI clients.",
+					"ja": "Graphitiのような記憶ツール連携: MCP server化された記憶・ナレッジグラフを、複数のAIクライアントから利用できる。"
+				}
+			]
+		},
+		{
+			"id": "what-mcp-alone-cannot-do",
+			"heading": {
+				"ja": "12.2 MCPだけではできないこと",
+				"en": "12.2 What MCP alone cannot do"
+			},
+			"pairs": [
+				{
+					"en": "Automation of semantic design: MCP is a protocol and does not automatically create business ontology.",
+					"ja": "意味設計の自動化: MCPはプロトコルであり、業務オントロジーを自動で作らない。"
+				},
+				{
+					"en": "Data Quality Assurance: Old data, inconsistencies, duplication, and incorrect entries require separate management.",
+					"ja": "データ品質保証: 古いデータ、矛盾、重複、誤入力は別途管理が必要である。"
+				},
+				{
+					"en": "Responsibility design: Who gives approval and who is responsible is determined by business design outside the MCP.",
+					"ja": "責任設計: 誰が承認し、誰が責任を負うかはMCPの外側の業務設計で決める。"
+				},
+				{
+					"en": "Complete resolution of authority/auditing: Security considerations are included in the specifications, but implementation and operation are important.",
+					"ja": "権限・監査の完全解決: 仕様にセキュリティ考慮はあるが、実装と運用が重要である。"
+				},
+				{
+					"en": "Symbol grounding itself: MCP provides a connection path, but a separate design is required to associate symbols with real objects, actions, and results.",
+					"ja": "記号接地そのもの: MCPは接続経路を提供するが、記号と現実対象・行為・結果を対応づける設計は別に必要である。"
+				}
+			]
+		},
+		{
+			"id": "recommended-architecture",
+			"heading": {
+				"ja": "12.3 推奨アーキテクチャ",
+				"en": "12.3 Recommended architecture"
+			},
+			"pairs": [
+				{
+					"en": "In practice, it is best to position MCP as follows.",
+					"ja": "実務では、MCPを以下のように位置づけるのがよい。"
+				},
+				{
+					"en": "MCP is a \"standard for connectivity\" and Operational Ontology is \"a layer that defines the meaning and actionability of connected things.\"",
+					"ja": "MCPは「接続の標準」であり、Operational Ontologyは「接続されたものの意味と行為可能性を定義する層」である。"
+				},
+				{
+					"en": "It is important to design these two separately.",
+					"ja": "この二つを分けて設計することが重要である。"
+				}
+			]
+		},
+		{
+			"id": "recommended-policy-for-practical-implementation",
+			"heading": {
+				"ja": "13. 実務導入の推奨方針",
+				"en": "13. Recommended policy for practical implementation"
+			},
+			"pairs": []
+		},
+		{
+			"id": "what-to-make-first",
+			"heading": {
+				"ja": "13.1 最初に作るべきもの",
+				"en": "13.1 What to make first"
+			},
+			"pairs": [
+				{
+					"en": "The first thing that should be created is not a company-wide AI infrastructure, but a limited area \"business memory project.\"",
+					"ja": "最初に作るべきものは、全社AI基盤ではなく、限定領域の「業務記憶プロジェクト」である。"
+				},
+				{
+					"en": "Introductory research should not compare RAG alone, knowledge graph alone, or agent alone, but should be evaluated based on their contribution to business results.",
+					"ja": "導入研究としては、RAG単体、知識グラフ単体、エージェント単体を比較するのではなく、業務成果に対する寄与で評価するべきである。"
+				},
+				{
+					"en": "For example, in the case of technical research, we measure the \"rediscovery rate of past judgments,\" \"response rate with citations,\" \"review revision rate,\" and \"contamination rate of old information.\"",
+					"ja": "たとえば、技術調査なら「過去判断の再発見率」「出典付き回答率」「レビュー修正率」「古い情報の混入率」を測る。"
+				},
+				{
+					"en": "When dealing with customers, measure \"response preparation time,\" \"misdirection rate,\" and \"approval rejection rate.\"",
+					"ja": "顧客対応なら「応答準備時間」「誤案内率」「承認差戻し率」を測る。"
+				},
+				{
+					"en": "When dealing with failures, measure the \"success rate of searching for similar failures,\" \"rate of providing evidence for recovery decisions,\" and \"reuse rate of post-mortem reviews.\"",
+					"ja": "障害対応なら「類似障害検索成功率」「復旧判断の根拠提示率」「事後レビューの再利用率」を測る。"
+				},
+				{
+					"en": "The candidates are as follows.",
+					"ja": "候補は以下である。"
+				},
+				{
+					"en": "Memorization of technical research and design decisions",
+					"ja": "技術調査・設計判断の記憶"
+				},
+				{
+					"en": "Memorization of customer service and preparation for business negotiations",
+					"ja": "顧客対応・商談準備の記憶"
+				},
+				{
+					"en": "Memorization of failure response/operation decisions",
+					"ja": "障害対応・運用判断の記憶"
+				},
+				{
+					"en": "Search internal knowledge, FAQs, and regulations",
+					"ja": "社内ナレッジ・FAQ・規程の検索"
+				},
+				{
+					"en": "Project decision log",
+					"ja": "プロジェクト意思決定ログ"
+				},
+				{
+					"en": "Of these, technical research and design judgment are the easiest to start with.",
+					"ja": "この中では、技術調査・設計判断が最も始めやすい。"
+				},
+				{
+					"en": "It is easy to control personal information and confidentiality risks, and it is easy to record deliverables as documents, ADR, tasks, and reviews.",
+					"ja": "個人情報や機密リスクを制御しやすく、成果物も文書、ADR、タスク、レビューとして残しやすい。"
+				}
+			]
+		},
+		{
+			"id": "minimum-configuration",
+			"heading": {
+				"ja": "13.2 最小構成",
+				"en": "13.2 Minimum configuration"
+			},
+			"pairs": [
+				{
+					"en": "The minimum configuration is as follows.",
+					"ja": "最小構成は以下でよい。"
+				},
+				{
+					"en": "Research Log: Record the research theme, questions, hypotheses, sources, and judgments.",
+					"ja": "Research Log: 調査テーマ、問い、仮説、ソース、判断を残す。"
+				},
+				{
+					"en": "Decision Log / ADR: Leave the reason for adoption/rejection.",
+					"ja": "Decision Log / ADR: 採用・不採用の理由を残す。"
+				},
+				{
+					"en": "Ontology Lite: Define objects, relationships, states, constraints, and actions in a small way.",
+					"ja": "Ontology Lite: 対象、関係、状態、制約、アクションを小さく定義する。"
+				},
+				{
+					"en": "Memory Layer: PoC Graphiti or equivalent temporal knowledge graph.",
+					"ja": "Memory Layer: Graphitiまたは同等の temporal knowledge graph をPoCする。"
+				},
+				{
+					"en": "MCP Layer: Connect document search, GitHub, tickets, DB, and storage tools via MCP.",
+					"ja": "MCP Layer: 文書検索、GitHub、チケット、DB、記憶ツールをMCP経由で接続する。"
+				},
+				{
+					"en": "Human Review: Important decisions are always approved by humans.",
+					"ja": "Human Review: 重要判断は必ず人間が承認する。"
+				}
+			]
+		},
+		{
+			"id": "evaluation-metrics",
+			"heading": {
+				"ja": "13.3 評価指標",
+				"en": "13.3 Evaluation metrics"
+			},
+			"pairs": [
+				{
+					"en": "The effectiveness of the introduction will be measured not only by the quality of responses but also by the following:",
+					"ja": "導入効果は、単なる回答品質ではなく以下で測る。"
+				},
+				{
+					"en": "Reducing investigation time",
+					"ja": "調査時間の短縮"
+				},
+				{
+					"en": "Reuse rate of decision bases",
+					"ja": "判断根拠の再利用率"
+				},
+				{
+					"en": "Search success rate for past decisions",
+					"ja": "過去の意思決定の検索成功率"
+				},
+				{
+					"en": "New member onboarding time",
+					"ja": "新メンバーのオンボーディング時間"
+				},
+				{
+					"en": "Contamination rate of false memories and old memories",
+					"ja": "誤った記憶・古い記憶の混入率"
+				},
+				{
+					"en": "Revision rate by human review",
+					"ja": "人間レビューでの修正率"
+				},
+				{
+					"en": "Auditability",
+					"ja": "監査可能性"
+				},
+				{
+					"en": "Zero security incidents",
+					"ja": "セキュリティインシデントゼロ"
+				}
+			]
+		},
+		{
+			"id": "final-recommendation",
+			"heading": {
+				"ja": "14. 最終提言",
+				"en": "14. Final recommendation"
+			},
+			"pairs": [
+				{
+					"en": "The essence of utilizing AI is not to treat LLM as a \"substitute for intelligent humans.\"",
+					"ja": "AI活用の本質は、LLMを「知能ある人間の代用品」として扱うことではない。"
+				},
+				{
+					"en": "It is about transforming organizational reality into a form that models can reference, reason about, act on, and test.",
+					"ja": "組織の現実を、モデルが参照し、推論し、行為し、検証できる形に変換することである。"
+				},
+				{
+					"en": "The three core concepts for this purpose are:",
+					"ja": "そのための中核概念は、次の三つである。"
+				},
+				{
+					"en": "Operational Ontology: Defines objects, states, relationships, actions, and authorities in the business world.",
+					"ja": "Operational Ontology: 業務世界の対象、状態、関係、行為、権限を定義する。"
+				},
+				{
+					"en": "Temporal Memory: Retains what is correct, when it was obtained, from what source, and when it was overwritten.",
+					"ja": "Temporal Memory: 何がいつ正しく、どの根拠から得られ、いつ上書きされたかを保持する。"
+				},
+				{
+					"en": "Governed Tooling: Connect tools to AI using things like MCP while ensuring permissions, approvals, and audits.",
+					"ja": "Governed Tooling: MCPなどを使ってAIにツールを接続しつつ、権限、承認、監査を徹底する。"
+				},
+				{
+					"en": "Graphiti is a promising candidate for Temporal Memory, and Palantir's ontology idea becomes a reference model for Operational Ontology.",
+					"ja": "GraphitiはTemporal Memoryの候補として有望であり、PalantirのOntology思想はOperational Ontologyの参照モデルになる。"
+				},
+				{
+					"en": "MCP can be used as a standardization layer for Governed Tooling.",
+					"ja": "MCPはGoverned Toolingの標準化レイヤーとして使える。"
+				},
+				{
+					"en": "Anthropic is also moving towards a business agent that integrates these three.",
+					"ja": "Anthropicの方向性も、この三つを統合した業務エージェントへ向かっている。"
+				},
+				{
+					"en": "In the short term, it is realistic to implement MCP + document search + small ontology + Graphiti PoC for technical research, design decisions, and ADR.",
+					"ja": "短期的には、技術調査・設計判断・ADRを対象に、MCP + 文書検索 + 小さなオントロジー + Graphiti PoCを実施するのが現実的である。"
+				},
+				{
+					"en": "In the medium to long term, we should aim for a state where AI can refer to the same business world model as humans by connecting customers, projects, systems, decisions, and business actions.",
+					"ja": "中長期的には、顧客、案件、システム、意思決定、業務アクションを接続し、AIが人間と同じ業務世界モデルを参照できる状態を目指すべきである。"
+				},
+				{
+					"en": "This recommendation is both to avoid underestimating LLM and to avoid overestimating it.",
+					"ja": "この提言は、LLMを過小評価しないためのものでもあり、過大評価しないためのものでもある。"
+				},
+				{
+					"en": "LLM is a powerful compressor that traverses languages, codes, and knowledge fragments, making it fully practical as an instruction-following model.",
+					"ja": "LLMは、言語・コード・知識断片を横断する強力な圧縮器であり、指示追従モデルとしては十分に実用的である。"
+				},
+				{
+					"en": "However, organizational facts, authorities, responsibilities, history, and results do not exist within the model.",
+					"ja": "しかし、組織の事実、権限、責任、履歴、結果はモデル内部には存在しない。"
+				},
+				{
+					"en": "The design of practical AI is determined by how the outside is structured.",
+					"ja": "実務AIの設計は、その外側をどう構造化するかで決まる。"
+				}
+			]
+		}
+	]
+}

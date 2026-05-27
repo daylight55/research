@@ -1,0 +1,561 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "1-executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "As of May 2026, the right way to let an AI agent run browser E2E checks is not simply \"add a browser MCP server.\"",
+					"ja": "2026年5月時点で、ブラウザを使ったE2E検証をAIエージェントに任せる選択肢は「MCPサーバーを足す」だけでは整理できない。"
+				},
+				{
+					"en": "The current landscape has several layers: Microsoft offers @playwright/mcp, @playwright/cli, and the newer microsoft/Webwright; Google offers chrome-devtools-mcp; Vercel Labs agent-browser, Browserbase/Stagehand, and browser-use focus on CLIs, skills, cloud browsers, and natural-language browser automation.",
+					"ja": "Microsoft系では、@playwright/mcp と @playwright/cli に加えて、microsoft/Webwright が出てきた。 Google側は chrome-devtools-mcp を公開し、Vercel Labsの agent-browser、Browserbase/Stagehand、browser-use はCLI、Skill、クラウドブラウザ、自然言語操作を前面に出している。"
+				},
+				{
+					"en": "The practical conclusion is:",
+					"ja": "結論は次の通りである。"
+				},
+				{
+					"en": "If reusing a logged-in local browser session is important, prioritize Chrome DevTools MCP autoConnect, Playwright MCP --extension, Webwright local_cdp, and AgentBrowser --profile / --auto-connect / --state.",
+					"ja": "既存のログイン済みブラウザセッションを活かしたいなら、最優先で見るべきは Chrome DevTools MCP の autoConnect 系、Playwright MCP の --extension、Webwright の local_cdp、AgentBrowser の --profile / --auto-connect / --state である。"
+				},
+				{
+					"en": "These are powerful but expose sensitive browser state.",
+					"ja": "いずれも権限と秘密情報の扱いが重くなる。"
+				},
+				{
+					"en": "If the goal is repeatable CI E2E, keep Playwright Test as the source of truth.",
+					"ja": "通常のアプリE2EをCIで再現したいなら、MCPより Playwright Test を正本にし、エージェントは失敗再現、スクリーンショット確認、テスト生成の補助に置くべきである。"
+				},
+				{
+					"en": "Let agents help reproduce failures, inspect screenshots, and draft tests.",
+					"ja": "通常のアプリE2EをCIで再現したいなら、MCPより Playwright Test を正本にし、エージェントは失敗再現、スクリーンショット確認、テスト生成の補助に置くべきである。"
+				},
+				{
+					"en": "If the goal is exploratory agent browsing, Playwright MCP is the easiest default.",
+					"ja": "エージェントに探索させたいなら Playwright MCP は導入が簡単で、アクセシビリティツリー中心に操作できる。"
+				},
+				{
+					"en": "It uses accessibility snapshots, but long tasks can become expensive in model context.",
+					"ja": "ただしページ状態やツールスキーマをモデル文脈へ流しやすく、長い作業ではトークン効率が悪くなる。"
+				},
+				{
+					"en": "If the goal is live debugging with console, network, traces, and LCP, Chrome DevTools MCP is the strongest fit.",
+					"ja": "ライブデバッグ、console/network/performance/LCP まで見たいなら Chrome DevTools MCP が強い。 Chrome実体への接続とDevTools機能に寄っており、UI操作だけでなく原因調査向きである。"
+				},
+				{
+					"en": "Webwright is not a browser MCP server.",
+					"ja": "Microsoftの Webwright はMCPサーバーではなく、Agent Skills / plugin として「ブラウザ操作を再実行可能なPlaywrightコードにする」設計である。"
+				},
+				{
+					"en": "It is an Agent Skill / plugin approach that turns browser work into rerunnable Playwright scripts with screenshots and logs.",
+					"ja": "長いWebタスク、探索、証跡付き自動化には有望だが、通常の回帰E2Eの代替ではない。"
+				},
+				{
+					"en": "Vercel Labs agent-browser is not MCP.",
+					"ja": "Vercel Labsの agent-browser は、MCPではなくRust製CLIとbundled Skillで、accessibility snapshot、@eN refs、状態保存、diff、network、React/Web Vitals、dashboardをまとめる。"
+				},
+				{
+					"en": "It is a Rust CLI plus bundled Skill with accessibility snapshots, @eN refs, state persistence, diffing, network tools, React/Web Vitals, and a dashboard.",
+					"ja": "Vercel Labsの agent-browser は、MCPではなくRust製CLIとbundled Skillで、accessibility snapshot、@eN refs、状態保存、diff、network、React/Web Vitals、dashboardをまとめる。"
+				},
+				{
+					"en": "It is especially relevant when an agent needs a copy of an existing Chrome profile.",
+					"ja": "既存Chrome profileの読み取りコピーを使える点がログイン済み検証では強い。"
+				},
+				{
+					"en": "Browserbase/Stagehand and browser-use are stronger for external web tasks, cloud execution, scraping, workflow automation, proxies, recording, and scaling than for deterministic in-repo regression E2E.",
+					"ja": "Browserbase/Stagehand や browser-use は、社外サイト、スクレイピング、業務Web操作、クラウド実行、スケール、プロキシ、セッション録画に強い。 自社アプリの決定的E2Eでは過剰になることがある。"
+				}
+			]
+		},
+		{
+			"id": "2-the-core-difference",
+			"heading": {
+				"ja": "2. 何が違うのか",
+				"en": "2. The Core Difference"
+			},
+			"pairs": [
+				{
+					"en": "The confusion comes from mixing layers.",
+					"ja": "この領域の混乱は、名前が似ていても抽象レイヤーが違うところから来る。"
+				},
+				{
+					"en": "MCP is a protocol for exposing tools to agents.",
+					"ja": "MCPはエージェントが外部ツールを呼ぶプロトコルであり、E2Eテストフレームワークではない。"
+				},
+				{
+					"en": "Agent Skills package repeatable workflows, instructions, scripts, and references.",
+					"ja": "Agent Skillsは、特定のワークフローをエージェントに安定して実行させるための手順、スクリプト、参照資料のパッケージである。"
+				},
+				{
+					"en": "Playwright Test is an E2E test framework whose artifacts can be reviewed by humans and CI.",
+					"ja": "Playwright Testは人間とCIが実行するテストコードの正本である。"
+				}
+			]
+		},
+		{
+			"id": "3-major-options",
+			"heading": {
+				"ja": "3. 主要候補",
+				"en": "3. Major Options"
+			},
+			"pairs": []
+		},
+		{
+			"id": "3-1-playwright-mcp",
+			"heading": {
+				"ja": "3.1 Playwright MCP",
+				"en": "3.1 Playwright MCP"
+			},
+			"pairs": [
+				{
+					"en": "@playwright/mcp exposes Playwright browser automation through MCP.",
+					"ja": "@playwright/mcp は、MCP経由でPlaywrightのブラウザ操作をエージェントに公開する。"
+				},
+				{
+					"en": "The official docs describe an accessibility-snapshot-centered workflow: the agent sees roles and text rather than only pixels, then clicks, fills, selects, navigates, takes screenshots, and can inspect network or storage.",
+					"ja": "公式ドキュメントでは、スクリーンショットではなくアクセシビリティスナップショットを中心に、ページ要素のroleやtextを参照して操作する設計と説明されている。 導入は npx @playwright/mcp@latest をMCPクライアントへ登録する形で、Codex、Claude Desktop、Cursor、VS Code、Windsurfなどに広く対応する。"
+				},
+				{
+					"en": "For logged-in sessions, Playwright MCP has three important modes: a default persistent profile, isolated sessions with --isolated, and connection to existing browser tabs through the Playwright Extension with --extension.",
+					"ja": "ログイン済みセッションについては、3つの見方がある。 既定はプロジェクトごとのpersistent profileで、cookieやlocalStorageを保存できる。 完全に新しいセッションにしたい場合は --isolated を使う。 さらに既存ブラウザタブに接続したい場合は Playwright Extension を使う --extension が案内されている。"
+				},
+				{
+					"en": "The limitation is context cost.",
+					"ja": "注意点は2つある。"
+				},
+				{
+					"en": "MCP tools and page snapshots can occupy model context during long tasks.",
+					"ja": "第一に、MCPはエージェントの文脈へツール定義やページ状態を流すため、長い探索では文脈消費が増える。"
+				},
+				{
+					"en": "The Playwright MCP README itself points coding agents toward CLI + Skills when that is a better fit.",
+					"ja": "第二に、Playwright MCPのREADME自体が、coding agentには CLI + Skills の方が合う場合があると明記している。 これはMCPが不要という意味ではなく、ブラウザの連続状態を重視するか、コードとログを正本にするかの違いである。"
+				}
+			]
+		},
+		{
+			"id": "3-2-chrome-devtools-mcp",
+			"heading": {
+				"ja": "3.2 Chrome DevTools MCP",
+				"en": "3.2 Chrome DevTools MCP"
+			},
+			"pairs": [
+				{
+					"en": "chrome-devtools-mcp is a Google Chrome DevTools MCP server.",
+					"ja": "chrome-devtools-mcp はGoogle Chrome DevToolsチームによるMCPサーバーで、Chrome実体をDevTools ProtocolとPuppeteerで操作する。"
+				},
+				{
+					"en": "It is strongest when the agent needs DevTools-grade evidence: console messages, network requests, screenshots, source-mapped stack traces, performance traces, and LCP-related investigation.",
+					"ja": "強みは、クリックやフォーム入力だけでなく、console、network、performance trace、LCP、source-mapped stack trace といったDevTools寄りの情報をエージェントが扱える点にある。"
+				},
+				{
+					"en": "For logged-in browser work, its autoConnect path matters.",
+					"ja": "ログイン済みセッション活用では、autoConnect によって実行中のChromeへ接続する構成が重要である。"
+				},
+				{
+					"en": "The README describes connecting to a running Chrome instance and asking the user for permission.",
+					"ja": "READMEは、ユーザーがChromeを起動し、MCPサーバーが実行中Chromeへ接続し、許可ダイアログを出す流れを説明している。"
+				},
+				{
+					"en": "This is useful for local reproduction but risky because the MCP client can inspect and modify browser contents.",
+					"ja": "これは「自分が普段使っているブラウザ状態に近いものを見せる」用途に向くが、その分、MCPクライアントにブラウザ内容を見せるリスクも大きい。"
+				}
+			]
+		},
+		{
+			"id": "3-3-playwright-cli-skills",
+			"heading": {
+				"ja": "3.3 Playwright CLI + Skills",
+				"en": "3.3 Playwright CLI + Skills"
+			},
+			"pairs": [
+				{
+					"en": "@playwright/cli exposes browser operations as shell commands.",
+					"ja": "@playwright/cli は、エージェントがシェルコマンドでブラウザを開き、スナップショットをファイルへ保存し、クリック、入力、trace、network、console、screenshotなどを行うCLIである。"
+				},
+				{
+					"en": "It saves snapshots and screenshots to files instead of pushing all page state into the model context.",
+					"ja": "MicrosoftのREADMEは、coding agentにはMCPよりCLI + Skillsがトークン効率で有利になる場面があると説明している。"
+				},
+				{
+					"en": "Microsoft positions this as a better fit for many coding-agent workflows.",
+					"ja": "状態をMCP応答として毎回大きく返すのではなく、スナップショットやスクリーンショットをファイルに残すためである。"
+				},
+				{
+					"en": "For logged-in work, the important features are sessions, persistent profiles, CDP attach, and extension attach.",
+					"ja": "ログイン済み状態では、CLIはセッション、persistent profile、CDP attach、extension attach を使える。"
+				},
+				{
+					"en": "It is useful as a bridge: explore with a logged-in browser, then turn the result into a script or Playwright Test.",
+					"ja": "つまり「探索はログイン済みの実ブラウザへattachし、最後はPlaywright Testや再実行可能スクリプトへ落とす」という橋渡しに向く。"
+				}
+			]
+		},
+		{
+			"id": "3-4-webwright",
+			"heading": {
+				"ja": "3.4 Webwright",
+				"en": "3.4 Webwright"
+			},
+			"pairs": [
+				{
+					"en": "microsoft/Webwright is the Microsoft tool that prompted this report.",
+					"ja": "microsoft/Webwright は、ユーザーが挙げた通り、この調査で必ず見るべき新しいMicrosoft系ツールである。"
+				},
+				{
+					"en": "It is not an MCP server.",
+					"ja": "ただし、位置づけはMCPサーバーではない。"
+				},
+				{
+					"en": "It is a Codex/Claude Code style plugin and Agent Skill that asks the coding agent to solve a web task by writing Playwright scripts, running them, saving screenshots, and producing a rerunnable final_script.",
+					"ja": "Webwrightは、CodexやClaude Codeなどのcoding agentに、ブラウザタスクを「Python + Playwrightの再実行可能スクリプト」として解かせるAgent Skill / pluginである。"
+				},
+				{
+					"en": "py.",
+					"ja": "READMEは、ブラウザセッション自体ではなく、コード、ログ、スクリーンショットがあるローカルワークスペースを状態として扱う、と説明している。"
+				},
+				{
+					"en": "That design is valuable for long tasks.",
+					"ja": "Webwrightの価値は、長いWebタスクを、エージェントの一連のクリック履歴ではなく、証跡付きの final_script.py として残す点にある。"
+				},
+				{
+					"en": "The artifact is code and evidence, not a hidden interaction history.",
+					"ja": "WebwrightはREADMEで Online-Mind2Web と Odysseys のベンチマーク成績を主張しているが、これは公式リポジトリ側の自己報告であり、現時点では外部査読済み評価ではない。"
+				},
+				{
+					"en": "Webwright reports strong benchmark results on Online-Mind2Web and Odysseys, but these should be treated as project claims until independently reproduced.",
+					"ja": "実務では「未知の外部Webサイトを探索し、最後にスクリプト化する」用途で試す価値が高い。"
+				},
+				{
+					"en": "Logged-in session support needs nuance.",
+					"ja": "ログイン済みセッションに関しては注意が必要である。"
+				},
+				{
+					"en": "Webwright has local_browser.",
+					"ja": "ログイン済みセッションに関しては注意が必要である。"
+				},
+				{
+					"en": "yaml, where browser_mode: local_cdp is described as real Chrome/Edge over CDP and recommended for manual Google login.",
+					"ja": "Webwrightリポジトリには local_browser.yaml があり、browser_mode: local_cdp を「manual Google login」に推奨するコメントがある。"
+				},
+				{
+					"en": "Some bundled skill instructions, however, describe fresh Firefox runs with no persistent state.",
+					"ja": "一方、同梱Skillの一部説明では、fresh Firefoxを起動し persistent state はないというローカル実行契約も見える。"
+				},
+				{
+					"en": "In practice, teams must verify that the installed Webwright skill and configuration actually use local_cdp when login reuse is the requirement.",
+					"ja": "つまりWebwrightは「ログイン済み利用が可能な構成を持つ」が、導入時には使うSkill/設定が local_cdp になっているかを確認する必要がある。"
+				}
+			]
+		},
+		{
+			"id": "3-5-agentbrowser",
+			"heading": {
+				"ja": "3.5 AgentBrowser",
+				"en": "3.5 AgentBrowser"
+			},
+			"pairs": [
+				{
+					"en": "vercel-labs/agent-browser is Vercel Labs' \"Browser automation CLI for AI agents.\"",
+					"ja": "vercel-labs/agent-browser は、Vercel Labsの「Browser automation CLI for AI agents」である。"
+				},
+				{
+					"en": "It is not an MCP server.",
+					"ja": "vercel-labs/agent-browser は、Vercel Labsの「Browser automation CLI for AI agents」である。"
+				},
+				{
+					"en": "It is a Rust CLI, persistent daemon, Chrome/Chromium CDP layer, accessibility-tree snapshot workflow, @eN element refs, and bundled Skill package.",
+					"ja": "位置づけはMCPサーバーではなく、Rust製CLI、常駐daemon、Chrome/Chromium CDP、accessibility-tree snapshot、@eN element refs、bundled Skillを組み合わせるAgent向けブラウザ実行層である。"
+				},
+				{
+					"en": "One notable design choice is that agent-browser skills get core serves Skill content that matches the installed CLI version.",
+					"ja": "agent-browser skills get core で、インストール済みCLIのバージョンに合ったSkill本文を取り出す設計も特徴である。"
+				},
+				{
+					"en": "For logged-in session reuse, AgentBrowser is one of the stronger options in this set.",
+					"ja": "ログイン済みセッション活用では、この候補はかなり強い。"
+				},
+				{
+					"en": "Its README says that --profile Default or --profile \"Work\" copies an existing Chrome profile to a temporary directory, preserving cookies and sessions without mutating the original profile.",
+					"ja": "READMEは、既存Chrome profile名を --profile Default や --profile \"Work\" で指定すると、元profileを変更せず一時ディレクトリへコピーしてcookieやsessionを再利用できると説明している。"
+				},
+				{
+					"en": "It also supports persistent profile directories, --session-name cookie/localStorage persistence, --auto-connect state save from an already logged-in Chrome, --state, and an encrypted auth vault.",
+					"ja": "さらに、専用profileディレクトリ、--session-name によるcookie/localStorage自動保存、--auto-connect state save による既存Chromeからのstate取り込み、--state、暗号化されたauth vaultを持つ。"
+				},
+				{
+					"en": "Its practical value is less \"replace Playwright Test\" and more \"give agents a dense, safety-aware browser CLI.\"",
+					"ja": "AgentBrowserの実務上の強みは、回帰E2Eそのものよりも「エージェントが安全にブラウザを触るためのCLI面」を厚くしている点にある。"
+				},
+				{
+					"en": "The same CLI includes network / HAR, trace, profiler, console, visual diff, snapshot diff, React introspection, Web Vitals, annotated screenshots, a dashboard, domain allowlists, action policies, confirmations, and output length limits.",
+					"ja": "network / HAR、trace、profiler、console、visual diff、snapshot diff、React introspection、Web Vitals、annotated screenshot、dashboard、domain allowlist、action policy、confirmation、output length limitまで同じCLIに入っている。"
+				},
+				{
+					"en": "That makes it attractive for local QA, logged-in reproduction, and evidence collection.",
+					"ja": "Playwright Testの代替というより、ローカルQA、探索、証跡作成、ログイン済み再現を1つのCLIで扱う選択肢である。"
+				}
+			]
+		},
+		{
+			"id": "3-6-browserbase-stagehand-mcp",
+			"heading": {
+				"ja": "3.6 Browserbase / Stagehand MCP",
+				"en": "3.6 Browserbase / Stagehand MCP"
+			},
+			"pairs": [
+				{
+					"en": "Browserbase MCP provides a browser to MCP clients through Browserbase infrastructure and Stagehand.",
+					"ja": "Browserbase MCPは、Stagehandを土台に、MCP clientへクラウドブラウザを提供する。"
+				},
+				{
+					"en": "Stagehand offers act, extract, observe, and agent primitives for mixing natural language and code.",
+					"ja": "自然言語でクリックやフォーム入力を指示でき、セッション作成、再利用、終了、録画、ログ、プロキシ、ブラウザIDなどのクラウド運用面が強い。 Stagehand自体は act、extract、observe、agent というプリミティブで、自然言語とコードを混ぜてWeb自動化する設計である。"
+				},
+				{
+					"en": "This is a strong fit for external websites, cloud scaling, and workflow automation.",
+					"ja": "自社アプリのローカルE2Eというより、外部Webタスク、データ抽出、業務サイト操作、クラウド実行のための選択肢である。"
+				},
+				{
+					"en": "It is not the most direct answer when the requirement is \"use the Chrome session I already logged into locally.\"",
+					"ja": "ログイン済み状態はクラウド側のセッションやprofile同期の設計になるため、普段使いのローカルChromeセッションをそのまま見せる用途ではない。"
+				}
+			]
+		},
+		{
+			"id": "3-7-browser-use",
+			"heading": {
+				"ja": "3.7 browser-use",
+				"en": "3.7 browser-use"
+			},
+			"pairs": [
+				{
+					"en": "browser-use is an AI browser-agent framework with a Python library, CLI, cloud product, and Claude Code Skill.",
+					"ja": "browser-useは、PythonベースのAIブラウザエージェントで、CLI、Cloud、Claude Code Skillを持つ。"
+				},
+				{
+					"en": "It emphasizes form filling, shopping, research, cloud browsers, stealth, proxy rotation, CAPTCHA handling, and persistent cloud state.",
+					"ja": "READMEは、フォーム入力、買い物、調査、Cloudによるstealth、proxy rotation、captcha対応、persistent filesystem and memory を強調している。 E2Eテストフレームワークというより、Web操作エージェント基盤である。"
+				},
+				{
+					"en": "It is better understood as a web-agent platform than as a deterministic E2E testing framework.",
+					"ja": "browser-useは、PythonベースのAIブラウザエージェントで、CLI、Cloud、Claude Code Skillを持つ。 READMEは、フォーム入力、買い物、調査、Cloudによるstealth、proxy rotation、captcha対応、persistent filesystem and memory を強調している。 E2Eテストフレームワークというより、Web操作エージェント基盤である。"
+				}
+			]
+		},
+		{
+			"id": "4-reusing-logged-in-sessions",
+			"heading": {
+				"ja": "4. ログイン済みセッションを活かす観点",
+				"en": "4. Reusing Logged-In Sessions"
+			},
+			"pairs": [
+				{
+					"en": "Logged-in session reuse is often the decisive requirement.",
+					"ja": "ログイン済みセッションを活かせることは、実務では決定的に重要である。"
+				},
+				{
+					"en": "SSO, MFA, corporate IdPs, IP restrictions, device posture checks, CAPTCHA, and bot mitigation can make it unrealistic to run all browser checks from a clean CI account.",
+					"ja": "SSO、MFA、社内IdP、IP制限、デバイス認証、captcha、bot対策があると、CI用の認証情報だけでE2Eを完結できないことが多い。 その場合、エージェントが「人間がログイン済みのブラウザ」を観察・操作できるかが、検証可能性を左右する。"
+				},
+				{
+					"en": "The same capability creates risk.",
+					"ja": "ただし、これは便利さと危険性が同じ根を持つ。"
+				},
+				{
+					"en": "A tool connected to a logged-in browser can access emails, internal admin pages, customer data, cookies, localStorage, CSRF tokens, and sensitive network traffic.",
+					"ja": "ログイン済みブラウザに接続するツールは、メール、社内管理画面、決済、顧客情報、cookie、localStorage、CSRF token、console/network上の機密情報へアクセスしうる。"
+				},
+				{
+					"en": "Use a dedicated browser profile and keep the agent's target surface narrow.",
+					"ja": "MCPやAgent Skillを有効化する前に、使うブラウザprofile、接続先、ツール許可、記録ログ、スクリーンショット保存先を分離するべきである。"
+				}
+			]
+		},
+		{
+			"id": "5-adoption-strategy",
+			"heading": {
+				"ja": "5. 実務導入方針",
+				"en": "5. Adoption Strategy"
+			},
+			"pairs": [
+				{
+					"en": "The cleanest architecture is three-layered:",
+					"ja": "最も堅い構成は、次の三層に分けることだ。"
+				},
+				{
+					"en": "Investigation: use Chrome DevTools MCP, Playwright MCP, Webwright local_cdp, or AgentBrowser profile/state reuse with a dedicated logged-in profile.",
+					"ja": "調査・再現層: Chrome DevTools MCP、Playwright MCP、Webwright local_cdp、AgentBrowser profile/state を使い、ログイン済み専用profileで現象を再現する。"
+				},
+				{
+					"en": "Evidence and scripting: use Webwright, AgentBrowser, or Playwright CLI to leave screenshots, logs, state, traces, and final scripts.",
+					"ja": "証跡・スクリプト化層: Webwright、AgentBrowser、またはPlaywright CLIで、スクリーンショット、ログ、state、trace、最終スクリプトを残す。"
+				},
+				{
+					"en": "Regression: convert the result to Playwright Test and run it in CI with test accounts and managed storageState.",
+					"ja": "回帰テスト層: Playwright Testへ落とし込み、CIでは storageState、テスト用アカウント、専用IdP bypass、またはOIDC test tenantで再現する。"
+				},
+				{
+					"en": "Do not treat a human's logged-in browser profile as a CI credential.",
+					"ja": "ログイン済みブラウザをそのままCIへ持ち込もうとすると、cookie期限、MFA、端末紐付け、secret漏洩、監査ログの問題が出る。"
+				},
+				{
+					"en": "For CI, use test accounts, generated storage state, a test IdP tenant, or an explicit auth bypass designed for non-production environments.",
+					"ja": "CIでは「人間の本物セッション」ではなく、「テスト専用アカウントのstorage state」か「APIで準備した認証状態」を使う方がよい。 人間ログイン済みセッションは、あくまでローカル再現と探索に限定するのが安全である。"
+				}
+			]
+		},
+		{
+			"id": "6-recommendation",
+			"heading": {
+				"ja": "6. 推奨構成",
+				"en": "6. Recommendation"
+			},
+			"pairs": [
+				{
+					"en": "For small teams, start with:",
+					"ja": "個人開発や小規模プロダクトでは、まず次を試すのがよい。"
+				},
+				{
+					"en": "Playwright Test for regression E2E.",
+					"ja": "通常の回帰E2E: Playwright Test。"
+				},
+				{
+					"en": "Chrome DevTools MCP for local visual, console, network, and performance debugging.",
+					"ja": "ローカルでの見た目・console・network確認: Chrome DevTools MCP。"
+				},
+				{
+					"en": "Playwright MCP for exploratory agent browsing.",
+					"ja": "エージェントに未知フローを探索させる: Playwright MCP。"
+				},
+				{
+					"en": "AgentBrowser for local QA, logged-in profile reuse, and evidence collection.",
+					"ja": "ログイン済みprofileを使ったローカルQAと証跡収集: AgentBrowser。"
+				},
+				{
+					"en": "Webwright when a long web task should become a rerunnable script with evidence.",
+					"ja": "長いWeb操作を再利用可能スクリプトにする: Webwright。"
+				},
+				{
+					"en": "For enterprise use, add these controls:",
+					"ja": "企業利用では、ログイン済みセッションを扱うために次の制約を追加する。"
+				},
+				{
+					"en": "Use a dedicated Chrome or Edge profile, not a daily personal profile.",
+					"ja": "普段使いprofileではなく、検証専用Chrome/Edge profileを作る。"
+				},
+				{
+					"en": "Keep only the target app logged into that profile.",
+					"ja": "MCP/Skillに渡すprofileには、対象アプリ以外のログインを入れない。"
+				},
+				{
+					"en": "Store screenshots and logs outside committed paths or under ignored folders.",
+					"ja": "スクリーンショットとログの保存先をリポジトリ外またはgitignore配下にする。"
+				},
+				{
+					"en": "Limit destructive operations through environment and account permissions.",
+					"ja": "エージェントが実行できる破壊的操作を、テスト環境と権限で制限する。"
+				},
+				{
+					"en": "Convert local logged-in exploration to Playwright Test storage state for CI.",
+					"ja": "CIへは人間セッションを持ち込まず、テスト用storage stateへ移行する。"
+				}
+			]
+		},
+		{
+			"id": "7-bottom-line",
+			"heading": {
+				"ja": "7. まとめ",
+				"en": "7. Bottom Line"
+			},
+			"pairs": [
+				{
+					"en": "The tool you pointed to, microsoft/Webwright, is indeed the new Microsoft project to include in this comparison.",
+					"ja": "ユーザーが指摘した microsoft/Webwright は「Microsoftから出た新しいツール」として正しい。"
+				},
+				{
+					"en": "It is not a replacement for Playwright MCP.",
+					"ja": "ただし、Playwright MCP の後継ではなく、MCPとは別のAgent Skill / plugin路線である。"
+				},
+				{
+					"en": "It is a different layer: MCP opens browser state to the agent, while Webwright turns browser exploration into code and evidence.",
+					"ja": "vercel-labs/agent-browser も同じくMCPではなく、Agent向けCLI + Skillの実行層である。"
+				},
+				{
+					"en": "vercel-labs/agent-browser is also not MCP; it is an agent-oriented CLI and Skill layer that bundles logged-in profiles, refs, debugging, diffing, and safety controls.",
+					"ja": "MCPが「ブラウザ状態をエージェントの道具として開く」のに対し、Webwrightは「ブラウザ探索をコードとログへ変換する」、AgentBrowserは「ログイン済みprofile、refs、debug、diff、安全策をCLIとしてまとめる」。"
+				},
+				{
+					"en": "If logged-in sessions matter, compare Webwright local_cdp, AgentBrowser --profile / --auto-connect, Chrome DevTools MCP autoConnect, and Playwright MCP --extension, then promote stable flows into Playwright Test.",
+					"ja": "ログイン済みセッションを重視するなら、Webwrightの local_cdp、AgentBrowserの --profile / --auto-connect、Chrome DevTools MCPの autoConnect、Playwright MCPの --extension を比較し、最終的な回帰テストはPlaywright Testへ落とすのが現時点の実務解である。"
+				}
+			]
+		},
+		{
+			"id": "references",
+			"heading": {
+				"ja": "参考情報",
+				"en": "References"
+			},
+			"pairs": [
+				{
+					"en": "microsoft/Webwright",
+					"ja": "microsoft/Webwright"
+				},
+				{
+					"en": "vercel-labs/agent-browser",
+					"ja": "vercel-labs/agent-browser"
+				},
+				{
+					"en": "agent-browser npm",
+					"ja": "agent-browser npm"
+				},
+				{
+					"en": "microsoft/playwright-mcp",
+					"ja": "microsoft/playwright-mcp"
+				},
+				{
+					"en": "Playwright MCP docs",
+					"ja": "Playwright MCP docs"
+				},
+				{
+					"en": "microsoft/playwright-cli",
+					"ja": "microsoft/playwright-cli"
+				},
+				{
+					"en": "Chrome DevTools MCP announcement",
+					"ja": "Chrome DevTools MCP announcement"
+				},
+				{
+					"en": "ChromeDevTools/chrome-devtools-mcp",
+					"ja": "ChromeDevTools/chrome-devtools-mcp"
+				},
+				{
+					"en": "Browserbase MCP Server docs",
+					"ja": "Browserbase MCP Server docs"
+				},
+				{
+					"en": "Stagehand introduction",
+					"ja": "Stagehand introduction"
+				},
+				{
+					"en": "browser-use/browser-use",
+					"ja": "browser-use/browser-use"
+				},
+				{
+					"en": "OpenAI Agent Skills",
+					"ja": "OpenAI Agent Skills"
+				}
+			]
+		}
+	]
+}

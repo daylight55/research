@@ -1,0 +1,401 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "As of May 2026, the Ukraine-Russia war is at a stage where a \"war of attrition on the front lines\" and \"long-range attacks on the rear\" are progressing simultaneously, even though there is talk of a short-term ceasefire.",
+					"ja": "2026年5月時点のウクライナ・ロシア戦争は、短期停戦の話が出ても、実態としては「前線の消耗戦」と「後方への長距離攻撃」が同時進行する段階にある。"
+				},
+				{
+					"en": "The main theaters of war that are easy to mutually confirm with public information are the Pokrovsk-Kostiantynivka axis in Donetsk Oblast, the Kupiansk direction in the northeast, the Sumy border area in the north, and drone and missile attacks targeting cities and infrastructure.",
+					"ja": "公開情報で相互確認しやすい中心戦域は、ドネツク州の Pokrovsk-Kostiantynivka 軸、北東部の Kupiansk 方向、北部の Sumy 国境地帯、そして都市・インフラを狙う無人機・ミサイル攻撃である。"
+				},
+				{
+					"en": "No decisive breakthrough has been confirmed, and localized advances and high attrition continue.",
+					"ja": "決定的な戦線突破は確認されておらず、局地的な前進と高い損耗が続いている。"
+				},
+				{
+					"en": "Civilian casualties remain serious, with OHCHR confirming 238 civilian deaths and 1,404 injuries in April 2026.",
+					"ja": "民間被害は依然として深刻で、OHCHR は 2026年4月に民間人238人死亡、1,404人負傷を確認した。"
+				},
+				{
+					"en": "This is the worst month since July 2025, with not only long-range attacks but also drone, artillery and infrastructure attacks near the front lines eroding livelihoods.",
+					"ja": "これは 2025年7月以来の最悪月であり、長距離攻撃だけでなく、前線近傍のドローン・砲撃・インフラ攻撃が生活基盤を削っている。"
+				},
+				{
+					"en": "The number of displaced persons is still large, with the latest figures released by UNHCR putting the number of refugees outside Ukraine at approximately 5.3 million and the number of internally displaced persons at approximately 3.7 million.",
+					"ja": "避難民もなお大規模で、UNHCR の最新公開値では、ウクライナ国外の難民は約530万人、国内避難民は約370万人である。"
+				},
+				{
+					"en": "Ceasefire negotiations remain a limited humanitarian measure rather than a comprehensive peace.",
+					"ja": "停戦交渉は、包括和平よりも限定的な人道措置に留まっている。"
+				},
+				{
+					"en": "The UN welcomed a short-term ceasefire between May 9 and 11, but fighting on the front has continued since then, with Reuters reporting that rifts over territorial disputes are at the heart of stalled negotiations.",
+					"ja": "UN は 5月9日から11日の短期停戦を歓迎したが、その後も前線の戦闘は続き、Reuters は領土問題をめぐる溝が交渉停滞の中心だと報じている。"
+				},
+				{
+					"en": "International support is still large, with the EU's multi-year support, the IMF's extended credit provision, and the World Bank/European Commission/UN's reconstruction estimates indicating financial and reconstruction support based on the assumption that the war will be prolonged.",
+					"ja": "国際支援はなお大きく、EU の多年度支援、IMF の拡張信用供与、World Bank/欧州委員会/UN の再建見積もりが、戦争長期化を前提にした財政・復興支援を示している。"
+				}
+			]
+		},
+		{
+			"id": "current-war-situation",
+			"heading": {
+				"ja": "2. いまの戦況をどう読むか",
+				"en": "2. How to read the current war situation"
+			},
+			"pairs": [
+				{
+					"en": "This war is not a simple \"advancement of the occupation line,\" but is driven by front-line pressure, long-range attacks on cities, damage to economic and power infrastructure, and a cycle of support and negotiation.",
+					"ja": "この戦争は、単純な「占領線の前進」ではなく、前線の圧力、都市への長距離攻撃、経済・電力インフラへの打撃、そして支援と交渉の循環で動いている。"
+				},
+				{
+					"en": "Therefore, rather than looking only at advances and retreats on a single day, it is more practical to understand in which theaters losses are accumulating, which attacks are spilling over into civilian life, and over what period of time support.",
+					"ja": "したがって、1日の前進・後退だけを見るより、どの戦域で損耗が積み上がっているか、どの攻撃が民間生活に波及しているか、そして支援がどの期間をつなぐのかで理解したほうが実務的である。"
+				}
+			]
+		},
+		{
+			"id": "main-front-areas",
+			"heading": {
+				"ja": "3. 前線の主要地域",
+				"en": "3. Main areas of the front line"
+			},
+			"pairs": [
+				{
+					"en": "The most consistently strong axis in public information is the Pokrovsk-Kostiantynivka axis in Donetsk Oblast.",
+					"ja": "公開情報で最も一貫して強いのは、ドネツク州の Pokrovsk-Kostiantynivka 軸である。"
+				},
+				{
+					"en": "Reuters reported that the area around Pokrovsk was one of the toughest theaters of war, with Russian forces closing in on Kostiantynivka.",
+					"ja": "Reuters は、ロシア軍が Kostiantynivka に迫り、Pokrovsk 周辺が最も厳しい戦域の一つだと報じた。"
+				},
+				{
+					"en": "This shows that Russia will continue to apply pressure on a wide front, while Ukraine will protect key cities and supply lines.",
+					"ja": "これは、ロシア側が広い前線で継続的に圧力をかけ、ウクライナ側が要衝都市と補給線を守る構図を示す。"
+				},
+				{
+					"en": "What is important here is not a \"major breakthrough,\" but rather the gradual movement of the front line due to the accumulation of localized pressure and attrition.",
+					"ja": "ここで重要なのは、「大突破」ではなく、局地的な圧迫と消耗の累積で前線がじわじわ動く点である。"
+				},
+				{
+					"en": "In the northeast, the Kupiansk direction in Kharkiv Oblast continues to be a near-front theater.",
+					"ja": "北東部では、ハルキウ州の Kupiansk 方向が引き続き前線近傍の戦域である。"
+				},
+				{
+					"en": "Public reports state that the front line extends not only to Donetsk Oblast but also to a wide swath of the northeast, and that the Russian military's offensive extends to \"almost the entire front.\"",
+					"ja": "公開報道では、前線はドネツク州だけでなく、北東部の広い帯状地帯にまたがっており、ロシア軍の攻勢も「ほぼ全前線」に及ぶと整理されている。"
+				},
+				{
+					"en": "Although it is difficult to cross-verify individual military claims regarding Kupiansk, it is reasonable to assume that the theater of war remains close to the front lines, and pressure continues to undermine the defense line in the northeast.",
+					"ja": "Kupiansk をめぐる個別の戦果主張は相互検証が難しいが、戦域としては依然として前線近傍にあり、北東部の防衛線を削る圧力が続いているとみるのが妥当である。"
+				},
+				{
+					"en": "The Sumy border area in the north has also been subject to localized cross-border pressure and drone attacks.",
+					"ja": "北部の Sumy 国境地帯も、局地的な越境圧力と無人機攻撃の対象になっている。"
+				},
+				{
+					"en": "Reuters continues to report on fighting and attacks around Sumy, and it appears that there is an attempt to use the border itself to create a buffer zone.",
+					"ja": "Reuters は、Sumy 周辺での戦闘や攻撃を継続的に報じており、国境線そのものを使った緩衝地帯化の試みが見える。"
+				},
+				{
+					"en": "Rather than a fixed line of occupation, this area is more realistically viewed as a \"zone of friction\" where attacks, infiltration, and small-scale battles with quick reactions accumulate.",
+					"ja": "ここは、占領の固定線というより、襲撃・浸透・反応の速い小規模戦闘が積み重なる「摩擦の帯」として見るほうが現実に近い。"
+				}
+			]
+		},
+		{
+			"id": "military-attrition",
+			"heading": {
+				"ja": "4. 軍事的消耗",
+				"en": "4. Military attrition"
+			},
+			"pairs": [
+				{
+					"en": "The essence of this war is that each side does not try to destroy the other's military strength with a single blow, but rather uses replenishment, air superiority, artillery, drones, and production capacity to reduce each other's endurance.",
+					"ja": "この戦争の本質は、双方が相手の戦力を一撃で崩すのではなく、補給、航空優勢、砲兵、無人機、生産能力を通じて持久力を削り合う点にある。"
+				},
+				{
+					"en": "Public reports in the spring of 2026 indicate that while Russia maintains front-line pressure, Ukraine is increasingly using long-range drones to attack military and logistics bases in Russia's rear.",
+					"ja": "2026年春の公開報道では、ロシアは前線圧力を維持しつつ、ウクライナは長距離無人機でロシア後方の軍需・物流拠点を叩く傾向が強まっている。"
+				},
+				{
+					"en": "In other words, the battlefield has a two-layer structure: the front and the rear.",
+					"ja": "つまり、戦場は前線と後方の二層構造になっている。"
+				},
+				{
+					"en": "Ukraine's long-range attacks have a greater purpose of destabilizing Russia's fuel, maintenance, accumulation, and air defenses than achieving tactical results on the front lines.",
+					"ja": "ウクライナ側の長距離攻撃は、前線の戦術的成果よりも、ロシアの燃料・整備・集積・防空を不安定化させる目的が大きい。"
+				},
+				{
+					"en": "Reuters reported that Ukraine increased its medium-range drone attacks on Russian critical infrastructure in April.",
+					"ja": "Reuters は、ウクライナが4月にロシアの重要インフラへの中距離無人機攻撃を増やしたと報じた。"
+				},
+				{
+					"en": "This should be seen as part of asymmetric warfare, which shakes up the rear and slows down the operational tempo, since there is no perfect symmetry in ground combat.",
+					"ja": "これは、地上戦での完全な対称性がないため、後方を揺さぶって作戦テンポを落とす非対称戦の一部とみるべきである。"
+				},
+				{
+					"en": "The Russian side, on the other hand, is combining missile and drone attacks on cities with sustained artillery shelling near the front lines.",
+					"ja": "一方、ロシア側は都市へのミサイル・ドローン攻撃と、前線近傍での持続的な砲撃を組み合わせている。"
+				},
+				{
+					"en": "Militarily, the aim is to simultaneously \"push\" the front lines and \"deplete\" Ukrainian society's air defense, power, transportation, and repair capabilities.",
+					"ja": "軍事的には、前線を「押す」ことと、ウクライナ社会の防空・電力・輸送・補修能力を「疲弊させる」ことが同時に狙われている。"
+				},
+				{
+					"en": "This is a war of attrition that cannot be measured by tactical advances alone.",
+					"ja": "これは、戦術上の前進だけでは測れない消耗戦である。"
+				}
+			]
+		},
+		{
+			"id": "civilian-damage-displacement-infrastructure",
+			"heading": {
+				"ja": "5. 民間被害・避難民・インフラ攻撃",
+				"en": "5. Civilian damage/displacement/infrastructure attacks"
+			},
+			"pairs": [
+				{
+					"en": "Civilian casualties remain the central cost of war.",
+					"ja": "民間被害は、いまも戦争の中心的コストである。"
+				},
+				{
+					"en": "OHCHR confirmed the number of civilian casualties in April 2026: 238 dead and 1,404 injured.",
+					"ja": "OHCHR は 2026年4月の民間人被害を、死亡238人・負傷1,404人と確認した。"
+				},
+				{
+					"en": "This is the worst month since July 2025 and shows that long-range weapons and near-frontline attacks are simultaneously spilling over into civilian areas.",
+					"ja": "これは 2025年7月以来の最悪月で、長距離兵器と前線近傍の攻撃が同時に民間地域へ波及していることを示す。"
+				},
+				{
+					"en": "Even in the cumulative period from January to April 2026, damage remains at a higher level than the same period last year.",
+					"ja": "2026年の1〜4月累計でも、被害は前年同期より高い水準で推移している。"
+				},
+				{
+					"en": "What is important about the damage breakdown is that the attack was not just a single urban bombardment.",
+					"ja": "被害の内訳で重要なのは、攻撃が単発の都市砲撃だけではないことだ。"
+				},
+				{
+					"en": "OHCHR explains that infrastructure such as energy, railways and ports have been repeatedly attacked.",
+					"ja": "OHCHR は、エネルギー、鉄道、港湾などのインフラが繰り返し攻撃されていると説明している。"
+				},
+				{
+					"en": "This means that the premise that \"the rear, away from the front lines, is safe\" no longer holds true, and the ability to restore power, logistics, transportation, and medical care has itself become a military goal.",
+					"ja": "これは「前線から離れた後方は安全」という前提が成り立たないことを意味し、電力、物流、輸送、医療の復旧能力そのものが軍事目標になっている。"
+				},
+				{
+					"en": "The scale of the evacuation is also large.",
+					"ja": "避難の規模も大きい。"
+				},
+				{
+					"en": "According to the latest figures published by UNHCR, there are approximately 5.3 million refugees outside Ukraine and approximately 3.7 million internally displaced persons.",
+					"ja": "UNHCR の最新公開値では、ウクライナ国外の難民は約530万人、国内避難民は約370万人である。"
+				},
+				{
+					"en": "In other words, wars have become long-term crises that involve not only territorial disputes but also population outflows and the reorganization of livelihoods.",
+					"ja": "つまり、戦争は領土争奪だけでなく、人口流出と生活基盤の再編を伴う長期危機になっている。"
+				},
+				{
+					"en": "Recovery in education, housing, the labor market, and local finances will take a long time, regardless of whether there is a ceasefire or not.",
+					"ja": "教育、住宅、労働市場、地方財政の回復は、停戦の有無にかかわらず長い時間がかかる。"
+				}
+			]
+		},
+		{
+			"id": "ceasefire-negotiations",
+			"heading": {
+				"ja": "6. 停戦交渉の現状",
+				"en": "6. Current status of ceasefire negotiations"
+			},
+			"pairs": [
+				{
+					"en": "The ceasefire talks are moving more like a limited ceasefire or prisoner exchange than full-scale peace negotiations.",
+					"ja": "停戦交渉は、全面的な和平交渉というより、限定停戦や捕虜交換に近い形で動いている。"
+				},
+				{
+					"en": "The UN welcomed the short-term ceasefire of May 9-11 and called for a broader ceasefire, but fighting continued thereafter.",
+					"ja": "UN は 5月9日から11日の短期停戦を歓迎し、より広い停戦を求めたが、その後も戦闘は続いた。"
+				},
+				{
+					"en": "Reuters reports that substantive negotiations have stalled as disagreements over territorial conditions remain significant.",
+					"ja": "Reuters は、領土条件をめぐる不一致が依然として大きく、実質交渉は停滞していると伝えている。"
+				},
+				{
+					"en": "What is important is that the issues in the negotiations have shifted from \"whether there is a ceasefire\" to \"at what line should it stop?\" and \"Who will guarantee security?\"",
+					"ja": "重要なのは、交渉の論点が「停戦の有無」から「どの線で止めるか」「誰が安全保障を担保するか」に移っていることだ。"
+				},
+				{
+					"en": "Territory, the status of occupied territories, sanctions relief, reconstruction funds, prisoner exchanges, and security guarantees are interconnected, and even if one is resolved, the whole does not necessarily move forward.",
+					"ja": "領土、占領地の地位、制裁解除、復興資金、捕虜交換、安全の保証は互いに結びついており、どれか1つが解けても全体が前進するとは限らない。"
+				},
+				{
+					"en": "Therefore, in the short term, it is more realistic to build up piecemeal agreements than to pursue a comprehensive peace.",
+					"ja": "したがって、短期的には、包括和平よりも断片的な合意の積み上げを前提にしたほうが現実的である。"
+				}
+			]
+		},
+		{
+			"id": "international-support",
+			"heading": {
+				"ja": "7. 国際支援の現状",
+				"en": "7. Current status of international support"
+			},
+			"pairs": [
+				{
+					"en": "International aid continues at three levels: not only military aid, but also filling gaps in finances and preparing for reconstruction.",
+					"ja": "国際支援は、軍事支援だけでなく、財政の穴埋めと復興準備の三層で続いている。"
+				},
+				{
+					"en": "The EU will provide liquidity and long-term support in 2026 within the framework of the Ukraine Facility, and the Council is proceeding with the design of support totaling 90 billion euros.",
+					"ja": "EU は Ukraine Facility の枠組みで 2026年の流動性と長期支援を供給し、Council は総額 900億ユーロ規模の支援設計を進めている。"
+				},
+				{
+					"en": "This is support to maintain national functions on the assumption that the war will be prolonged.",
+					"ja": "これは、戦争が長引く前提で国家機能を維持させる支援である。"
+				},
+				{
+					"en": "The IMF also approved an Extended Credit Facility (EFF) of approximately $8.1 billion in February 2026.",
+					"ja": "IMF も、2026年2月に約81億ドルの拡張信用供与（EFF）を承認した。"
+				},
+				{
+					"en": "This directly leads to the stabilization of wartime finances, currency, and revenue.",
+					"ja": "これは、戦時財政・通貨・歳入の安定化に直結する。"
+				},
+				{
+					"en": "In addition, the World Bank, European Commission, UN, and Government of Ukraine's Fifth Rapid Damage and Needs Assessment (RDNA5) estimates recovery and reconstruction costs over the next 10 years at approximately $588 billion, indicating that the scale of post-war reconstruction is already difficult for a country to absorb on its own.",
+					"ja": "加えて、World Bank と欧州委員会、UN、ウクライナ政府の第5次迅速損害・ニーズ評価（RDNA5）は、今後10年の復旧・再建費用を約5,880億ドルと見積もっており、戦後復興の規模がすでに国家単独では吸収しにくいことを示している。"
+				},
+				{
+					"en": "The practical meaning of support is twofold.",
+					"ja": "支援の実務的な意味は二つある。"
+				},
+				{
+					"en": "First, Ukraine maintains its wartime economy while relying on international organizations and the EU for short-term funding.",
+					"ja": "第一に、ウクライナは短期の資金繰りを国際機関と EU で持ちこたえつつ、戦時経済を維持する。"
+				},
+				{
+					"en": "Second, donor countries are designing funding, air defense, and infrastructure restoration based on the \"premise that the ceasefire will be delayed,\" rather than \"post-ceasefire reconstruction.\"",
+					"ja": "第二に、支援国側は「停戦後の復興」ではなく「停戦が遅れる前提」で資金・防空・インフラ復旧を設計している。"
+				},
+				{
+					"en": "In other words, aid is not a gamble to end the war, but rather functions as an insurance policy against prolonging the war.",
+					"ja": "つまり、支援は戦争終結の賭けではなく、戦争長期化への保険として機能している。"
+				}
+			]
+		},
+		{
+			"id": "short-term-outlook",
+			"heading": {
+				"ja": "8. 短期見通し",
+				"en": "8. Short-term outlook"
+			},
+			"pairs": [
+				{
+					"en": "Based on publicly available information, there are three base scenarios for the coming months:",
+					"ja": "公表情報からの推定として、今後数か月のベースシナリオは次の3点である。"
+				},
+				{
+					"en": "Pressure continues on the Eastern Front, especially on the Pokrovsk-Kostiantynivka axis.",
+					"ja": "東部戦線、とくに Pokrovsk-Kostiantynivka 軸で圧力が続く。"
+				},
+				{
+					"en": "Drone and missile attacks continue in the rear, leaving a burden on power, transportation, and maintenance bases.",
+					"ja": "後方では無人機・ミサイル攻撃が継続し、電力・交通・整備拠点への負荷が残る。"
+				},
+				{
+					"en": "Even if ceasefire negotiations continue, a limited ceasefire and humanitarian measures will take precedence over a comprehensive agreement.",
+					"ja": "停戦交渉は続いても、包括合意より限定停戦や人道措置が先行する。"
+				},
+				{
+					"en": "The premise of this assumption is not that Russia has military superiority, but that \"both sides do not yet have the conditions to settle the issue in the short term.\"",
+					"ja": "この見立ての前提は、ロシアが軍事的に優位という意味ではなく、「双方とも短期で決着できる条件をまだ持っていない」ことである。"
+				},
+				{
+					"en": "Although Russia maintains the ability to continue its offensive, it has not achieved a decisive breakthrough.",
+					"ja": "ロシアは攻勢継続能力を維持しているが、決定的突破には至っていない。"
+				},
+				{
+					"en": "Ukraine is holding out through defense and asymmetric attacks, but the cumulative damage is significant.",
+					"ja": "ウクライナは防衛と非対称攻撃で持ちこたえているが、被害の累積は大きい。"
+				},
+				{
+					"en": "Therefore, what is most likely to occur is a development in which civilian damage and diplomatic pressure increase while minor adjustments on the front line continue.",
+					"ja": "したがって、最も起こりやすいのは、前線の微修正が続く一方で、民間被害と外交圧力が増幅する展開である。"
+				}
+			]
+		},
+		{
+			"id": "practical-implications",
+			"heading": {
+				"ja": "9. 実務的な含意",
+				"en": "9. Practical implications"
+			},
+			"pairs": [
+				{
+					"en": "For Japanese policymakers and businesses, this war is not a \"distant war in Europe.\"",
+					"ja": "日本の政策担当者と企業にとって、この戦争は「欧州の遠い戦争」ではない。"
+				},
+				{
+					"en": "At least the following four are direct practical issues.",
+					"ja": "少なくとも次の4つは直接の実務論点になる。"
+				},
+				{
+					"en": "Long-range attacks and peripheral risks will increase volatility in energy prices and logistics insurance.",
+					"ja": "長距離攻撃と周辺リスクで、エネルギー価格と物流保険のボラティリティが上がる。"
+				},
+				{
+					"en": "Confirmation of bypass exports to Russia, dual-use parts, and transactions via third countries will be required.",
+					"ja": "ロシア向け迂回輸出、デュアルユース部材、第三国経由取引の確認が必要になる。"
+				},
+				{
+					"en": "Power equipment, railways, ports, construction machinery, and drone countermeasures will be affected by constraints as well as restoration demands.",
+					"ja": "電力設備、鉄道、港湾、建設機械、ドローン対策は、復旧需要と同時に制約の影響を受ける。"
+				},
+				{
+					"en": "Recovery plans begin before the ceasefire, so construction, power, communications, air defense, medical, and financial projects are prepared in advance.",
+					"ja": "停戦前から復旧計画が走るため、建設、電力、通信、防空、医療、金融の案件は先行して準備される。"
+				}
+			]
+		},
+		{
+			"id": "risks-limitations",
+			"heading": {
+				"ja": "10. リスク・限界",
+				"en": "10. Risks/Limitations"
+			},
+			"pairs": [
+				{
+					"en": "The limitations of this paper are clear.",
+					"ja": "本稿の限界は明確である。"
+				},
+				{
+					"en": "First, the detailed position of the front changes daily and cannot be completely tracked even with public OSINT.",
+					"ja": "第一に、前線の細かな位置は日々変動し、公開OSINTでも完全には追えない。"
+				},
+				{
+					"en": "Second, since announcements by the parties concerned are laced with propaganda, it is necessary to avoid making conclusions based on a single source.",
+					"ja": "第二に、当事国の発表にはプロパガンダが混じるため、単独ソースでの断定は避ける必要がある。"
+				},
+				{
+					"en": "Third, the total amount of support and damages differ in the \"approval amount,\" \"required amount,\" and \"actual execution amount,\" so even the same numbers have different meanings.",
+					"ja": "第三に、支援総額や損害額は「承認額」「必要額」「実執行額」が異なるため、同じ数字でも意味が違う。"
+				},
+				{
+					"en": "Fourth, ceasefire negotiations involve significant political discontinuity, and the premises may change in a matter of weeks.",
+					"ja": "第四に、停戦交渉は政治的な不連続性が大きく、数週間で前提が変わる可能性がある。"
+				}
+			]
+		}
+	]
+}

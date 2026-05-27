@@ -1,0 +1,547 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "In conclusion, paraphrasing is useful, but it is not equivalent to comprehensive understanding.",
+					"ja": "結論から言えば、言い換えは有用だが、包括的理解と等価ではない。"
+				},
+				{
+					"en": "Polanyi's tacit knowing is understood not as the sum of its elements, but as a synthesis of `from-to` that moves into the whole through peripheral cues.",
+					"ja": "ポランニーの tacit knowing は、要素の総和ではなく、周辺的な手がかりを通じて全体へ移る `from-to` の統合として理解される。"
+				},
+				{
+					"en": "Therefore, if only the clues are broken down and made into propositions, the knots that support the object itself may come undone.",
+					"ja": "したがって、手がかりだけを分解して命題化すると、対象そのものを支えていた結び目がほどけることがある。"
+				},
+				{
+					"en": "This is the essence of the phenomenon of \"dilution.\"",
+					"ja": "これが「薄まる」という現象の中身である。"
+				},
+				{
+					"en": "This loss is not just a reduction in the amount of information.",
+					"ja": "この損失は、単なる情報量の減少ではない。"
+				},
+				{
+					"en": "At least the following four are likely to fail.",
+					"ja": "少なくとも次の 4 つが落ちやすい。"
+				},
+				{
+					"en": "These are: 1) relationships between cues, 2) embodied attention and mastery, 3) value orientations of what counts as good judgment, and 4) contexts in which exceptions and boundary conditions emerge.",
+					"ja": "1) 手がかり同士の関係、2) 身体化された注意と熟達、3) 何を良い判断とみなすかという価値の向き、4) 例外や境界条件が立ち上がる文脈である。"
+				},
+				{
+					"en": "Conversely, the benefit of paraphrasing is that it creates a starting point for sharing, searching, educating, auditing, and discussion.",
+					"ja": "逆に、言い換えの利点は、共有、検索、教育、監査、議論の開始点を作ることにある。"
+				},
+				{
+					"en": "In other words, the question is not \"should we make it explicit?\"",
+					"ja": "つまり、問題は「明示化すべきか」ではなく、「何を残したまま明示化するか」である。"
+				},
+				{
+					"en": "but \"what should we make explicit while keeping it?\"",
+					"ja": "つまり、問題は「明示化すべきか」ではなく、「何を残したまま明示化するか」である。"
+				},
+				{
+					"en": "In education, we leave the original case and the original utterance.",
+					"ja": "教育では元ケースと元発話を残す。"
+				},
+				{
+					"en": "Organizational knowledge leaves behind the basis for judgment and counterexamples.",
+					"ja": "組織ナレッジでは判断の根拠と反例を残す。"
+				},
+				{
+					"en": "In the AI \u200b\u200bsummary, the source and evaluation memo are included, rather than the original summary.",
+					"ja": "AI要約では、要約を正本にせず、ソースと評価メモを併記する。"
+				}
+			]
+		},
+		{
+			"id": "problem-setting",
+			"heading": {
+				"ja": "2. 問題設定",
+				"en": "2. Problem setting"
+			},
+			"pairs": [
+				{
+					"en": "This question is not simply asking, \"Should I give a longer explanation?\"",
+					"ja": "この問いは、単に「長く説明すればよいか」を聞いているのではない。"
+				},
+				{
+					"en": "Rather, I am asking to what extent the knowledge that supports a certain practice remains the same knowledge the moment it is replaced by a series of propositions.",
+					"ja": "むしろ、ある実践を支えている知が、命題の列へ置換された瞬間に、どこまで同じ知として残るのかを問うている。"
+				},
+				{
+					"en": "In Polanyi's vocabulary, the focal whole is established by indwelling peripheral cues into the background.",
+					"ja": "ポランニーの語彙で言えば、焦点的に捉えられた全体は、周辺的な手がかりを背景として indwell することで成立する。"
+				},
+				{
+					"en": "Therefore, leaving the background as the background is not the same as changing the background to an explanatory item.",
+					"ja": "したがって、背景を背景のまま残すことと、背景を説明項目へ変えることは同じではない。"
+				},
+				{
+					"en": "\"Comprehensive understanding\" does not mean listing all the parts.",
+					"ja": "「包括的理解」は、部品を全部列挙することではない。"
+				},
+				{
+					"en": "Rather, it is closer to understanding how parts are connected and what differences and resistances they include to create a whole.",
+					"ja": "むしろ、部品がどのように結びつき、どのような差異や抵抗を含みながら全体を立ち上げるかを捉えることに近い。"
+				},
+				{
+					"en": "The problem with reductionism here is not that the explanation is coarse, but that the form of the explanation destroys the structure of understanding.",
+					"ja": "ここでの還元主義の問題は、説明が粗いことではなく、説明の形式が理解の構造を壊してしまう点にある。"
+				}
+			]
+		},
+		{
+			"id": "conceptual-organization",
+			"heading": {
+				"ja": "3. 概念整理",
+				"en": "3. Conceptual organization"
+			},
+			"pairs": [
+				{
+					"en": "What is important in this arrangement is to recognize that paraphrasing is not always \"degradation,\" but to still view it as not equivalent.",
+					"ja": "この整理で重要なのは、言い換えが常に「劣化」ではないことを認めつつ、それでも等価ではないと見る点である。"
+				},
+				{
+					"en": "While the possibility of transfer increases, the structure of the object of knowledge itself may be lost.",
+					"ja": "伝達可能性が上がる一方で、知の対象そのものが持っていた構造が失われることがある。"
+				}
+			]
+		},
+		{
+			"id": "polanyi-understanding",
+			"heading": {
+				"ja": "4. ポランニーの包括的理解",
+				"en": "4. Comprehensive understanding of Polanyi"
+			},
+			"pairs": [
+				{
+					"en": "Polanyi's core lies in the fact that knowing is not explained solely by \"symbolic processing that can be seen from the outside.\"",
+					"ja": "ポランニーの核心は、知ることを「外から見える記号処理」だけで説明しないところにある。"
+				},
+				{
+					"en": "Rather than arriving at a conclusion by looking at clues one by one, we indwell in the background of peripheral awareness and shift our focus to a whole.",
+					"ja": "私たちは、手がかりを一つずつ眺めながら結論に到達しているのではなく、周辺的な気づきを背景として indwell し、焦点的に一つの全体へ移っている。"
+				},
+				{
+					"en": "What the `from-to` arrow indicates is not the operation of adding parts together, but the production of meaning.",
+					"ja": "`from-to` の矢印が示しているのは、部分を合算する演算ではなく、意味の生成である。"
+				},
+				{
+					"en": "In this case, comprehensive understanding is not just \"synthesis.\"",
+					"ja": "このとき、包括的理解とは単なる「総合」ではない。"
+				},
+				{
+					"en": "It includes the relationship between cues, the allocation of attention, boundaries that are susceptible to failure, and the integration of the whole as `comprehensive entity`.",
+					"ja": "手がかり同士の関係、注意の配分、失敗しやすい境界、そしてその全体を `comprehensive entity` として捉える統合が含まれる。"
+				},
+				{
+					"en": "Therefore, when paraphrasing extracts clues and breaks them down into separate propositions, the connections before being synthesized become invisible.",
+					"ja": "したがって、言い換えが手がかりを抜き出して別々の命題へ分解すると、総合される前の結びつきが見えなくなる。"
+				}
+			]
+		},
+		{
+			"id": "paraphrase-losses",
+			"heading": {
+				"ja": "5. 言い換えで何が失われるか",
+				"en": "5. What is lost in paraphrasing?"
+			},
+			"pairs": [
+				{
+					"en": "The first thing that tends to be lost is the relationship between the clues.",
+					"ja": "最初に失われやすいのは、手がかり同士の関係である。"
+				},
+				{
+					"en": "Summarization usually eliminates duplication and selects representative expressions.",
+					"ja": "要約は通常、重複を削り、代表的な表現を選ぶ。"
+				},
+				{
+					"en": "In the process, the relational structure of which cues support which cues and where exceptions begin becomes thinner.",
+					"ja": "その過程で、どの手がかりがどの手がかりを支え、どこで例外が始まるのかという関係構造は薄くなる。"
+				},
+				{
+					"en": "However, in reality, it is this relationship that supports the judgment of experts.",
+					"ja": "だが実際には、その関係こそが熟達者の判断を支えている。"
+				},
+				{
+					"en": "The second thing that is often lost is embodied attention.",
+					"ja": "第二に失われやすいのは、身体化された注意である。"
+				},
+				{
+					"en": "Mastery is often associated with eye movements, hand movements, pauses, sequence, and the elimination of hesitation that precede words.",
+					"ja": "熟達はしばしば、言葉に先立つ視線移動、手の動き、間合い、順序、ためらいの除去と結びついている。"
+				},
+				{
+					"en": "If you only use explanatory text, \"what you were looking at\" may remain, but \"how you were looking at it\" will be lost.",
+					"ja": "説明文だけにすると、「何を見ていたか」は残っても、「どう見ていたか」が落ちる。"
+				},
+				{
+					"en": "The third thing that is often lost is the direction of value judgments.",
+					"ja": "第三に失われやすいのは、価値判断の向きである。"
+				},
+				{
+					"en": "Polanyi treated science not as a value-neutral algorithm, but as a practice that involves a commitment to truth, integrity, judgment, and the selection of criteria.",
+					"ja": "ポランニーは科学を価値中立のアルゴリズムとは見ず、真理へのコミットメント、誠実さ、判断、判断基準の選択を含む実践として扱った。"
+				},
+				{
+					"en": "When paraphrasing leaves only factual propositions, \"what was important\" disappears.",
+					"ja": "言い換えが事実命題だけを残すと、「何を重視していたのか」が消える。"
+				},
+				{
+					"en": "The fourth thing that is often lost is context and counterexamples.",
+					"ja": "第四に失われやすいのは、文脈と反例である。"
+				},
+				{
+					"en": "Generalizations are useful, but in practice, it is important to have boundary information such as \"this will not work under these conditions\", \"the opposite will happen for this customer\", and \"normal rules do not apply in this case\".",
+					"ja": "一般論は役立つが、実務では「この条件では外れる」「この顧客では逆になる」「この症例では通常のルールが通らない」といった境界情報が重要である。"
+				},
+				{
+					"en": "Summarization creates a mean picture, but the mean picture often hides the entry point for exception handling.",
+					"ja": "要約は平均像を作るが、平均像はしばしば例外処理の入口を隠す。"
+				},
+				{
+					"en": "The fifth thing that tends to be lost is community norms.",
+					"ja": "第五に失われやすいのは、共同体の規範である。"
+				},
+				{
+					"en": "The content of propositions alone does not determine what is considered a good review, what suggestions are considered unreasonable, and what silence is considered a reservation.",
+					"ja": "何をよいレビューとみなすか、どの提案を筋が悪いとみなすか、どの沈黙を保留とみなすかは、命題の内容だけでは決まらない。"
+				},
+				{
+					"en": "This is not just a question of data, but of the style of evaluation.",
+					"ja": "これは、単なるデータではなく、評価の様式の問題である。"
+				}
+			]
+		},
+		{
+			"id": "cognitive-science",
+			"heading": {
+				"ja": "6. 認知科学から見た補助線",
+				"en": "6. Auxiliary lines from the perspective of cognitive science"
+			},
+			"pairs": [
+				{
+					"en": "Cognitive science can explain the loss of paraphrase in terms other than \"mystery.\"",
+					"ja": "認知科学は、言い換えの損失を「神秘」とは別の言葉で説明できる。"
+				},
+				{
+					"en": "First, there is a distinction between explicit knowledge, tacit knowledge, and tacit knowledge.",
+					"ja": "まず、明示知、暗黙知、黙示的知の区別がある。"
+				},
+				{
+					"en": "As Davies explains, `explicit knowledge` cannot be fully expressed in words, and `implicit` and `tacit` have different degrees of explainability.",
+					"ja": "Davies が整理するように、`explicit knowledge` は言葉で完全に表せるわけではなく、`implicit` と `tacit` は説明可能性の程度が違う。"
+				},
+				{
+					"en": "In other words, what remains after paraphrasing is often only part of the knowledge.",
+					"ja": "つまり、言い換えで残るのは、しばしば知の一部にすぎない。"
+				},
+				{
+					"en": "Furthermore, classical studies of implicit learning have shown that learners can behave correctly based on regularities in the environment even if the rules are not explicitly stated.",
+					"ja": "さらに、古典的な implicit learning の研究は、学習者がルールを明示的に述べられなくても、環境の規則性に基づいて正しく振る舞えることを示してきた。"
+				},
+				{
+					"en": "What is lost here is not truth or falsity, but the visibility of the internal structures that support learning.",
+					"ja": "ここで失われるのは真偽ではなく、学習を支えている内的構造の可視性である。"
+				},
+				{
+					"en": "Furthermore, recent research has reaffirmed the importance of physical involvement in acquiring tacit knowledge.",
+					"ja": "また、最近の研究では、 tacit knowledge の獲得に身体的関与が重要だと再確認されている。"
+				},
+				{
+					"en": "In other words, part of our knowledge lies not in \"propositions in our heads\" but in \"the way we connect to the world through our bodies.\"",
+					"ja": "つまり、知識の一部は「頭の中の命題」ではなく、「身体を通じて世界に結びつく仕方」にある。"
+				}
+			]
+		},
+		{
+			"id": "value-judgments",
+			"heading": {
+				"ja": "7. 価値判断はなぜ抜け落ちやすいのか",
+				"en": "7. Why are value judgments so easily overlooked?"
+			},
+			"pairs": [
+				{
+					"en": "The reason why value judgments are easily overlooked is that paraphrasing often relies on descriptive sentences.",
+					"ja": "価値判断が抜け落ちやすいのは、言い換えがしばしば記述文に寄るからである。"
+				},
+				{
+					"en": "But value judgments are not descriptions.",
+					"ja": "しかし、価値判断は記述ではない。"
+				},
+				{
+					"en": "What to prioritize, what to tolerate, and what to consider dangerous cannot simply be a list of facts.",
+					"ja": "何を優先し、何を許容し、何を危険とみなすかは、単なる事実の列挙にはならない。"
+				},
+				{
+					"en": "What we need to be careful about here is not to treat value judgments as \"unnecessary because they are subjective.\"",
+					"ja": "ここで注意すべきなのは、価値判断を「主観だから不要」と扱わないことだ。"
+				},
+				{
+					"en": "Rather, in practice, value judgments are what make the difference in decision-making.",
+					"ja": "むしろ、実務では価値判断こそが意思決定を分ける。"
+				},
+				{
+					"en": "Priorities, risk tolerance, quality standards, customer response speed, and training rigor may seem easy to explain on the surface, but they actually determine an organization's behavior.",
+					"ja": "優先順位、リスク許容度、品質基準、顧客への応答速度、教育の厳しさなどは、表面上は説明しやすいが、実際には組織の行動を決める。"
+				},
+				{
+					"en": "Polanyi's importance is that while he does not reduce knowledge to individual preferences, he also does not reduce value to external appendages.",
+					"ja": "ポランニーの重要性は、知識を個人の好みへ還元しない一方で、価値を外部の付属物にも還元しない点にある。"
+				},
+				{
+					"en": "What scientists find problematic, promising, and inappropriate lies within knowing.",
+					"ja": "科学者が何を問題と感じ、何を有望とみなし、何を不適切とみなすかは、知ることの内部にある。"
+				}
+			]
+		},
+		{
+			"id": "ineffability",
+			"heading": {
+				"ja": "8. Ineffability は一枚岩ではない",
+				"en": "8. Ineffability is not monolithic"
+			},
+			"pairs": [
+				{
+					"en": "If we understand `ineffability` to mean \"it cannot be said completely,\" the discussion quickly becomes mysterious.",
+					"ja": "`ineffability` を「完全に語れない」と理解すると、議論がすぐ神秘化する。"
+				},
+				{
+					"en": "In reality, there are stages of difficulty in talking about things.",
+					"ja": "実際には、語りにくさには段階がある。"
+				},
+				{
+					"en": "At the very least, it is necessary to separate the following layers: 1) one language is insufficient but another medium can make up for it, 2) it can be said but the ability to reproduce it is poor, 3) the subject would be destroyed if everything is said theoretically, and 4) it cannot be accommodated in any representation.",
+					"ja": "少なくとも、1) ある言語では不十分だが別の媒体なら補える、2) 語れるが再現力が落ちる、3) 理論的に全部を言い切ると対象が壊れる、4) いかなる表象にも収まりきらない、という層を分ける必要がある。"
+				},
+				{
+					"en": "In Polanyi's case, 1) and 2) are typical.",
+					"ja": "ポランニーのケースでは、典型的なのは 1) と 2) である。"
+				},
+				{
+					"en": "In other words, rather than being unable to verbalize it, when it is verbalized, the connection between cues and the unity of action become weaker.",
+					"ja": "つまり、言語化不能というより、言語化すると手がかりの結びつきと行為の一体性が弱くなる。"
+				},
+				{
+					"en": "Therefore, there is no need to easily adopt strong ineffability.",
+					"ja": "したがって、強い ineffability を安易に採る必要はない。"
+				},
+				{
+					"en": "Rather, it is more practical to determine what can be preserved through a medium and what changes when the medium is changed.",
+					"ja": "むしろ、何が媒介で保存でき、何が媒介を変えると変質するのかを見極める方が実務的である。"
+				},
+				{
+					"en": "In this respect, paraphrasing is a \"translation,\" but it is not an equivalence transformation in the strict sense of the word.",
+					"ja": "この点で、言い換えは「翻訳」だが、厳密な意味での同値変換ではない。"
+				},
+				{
+					"en": "Translation always involves selection, deletion, and redistribution of emphasis.",
+					"ja": "翻訳は必ず、選択、削除、強調の再配分を伴う。"
+				},
+				{
+					"en": "That's why paraphrasing, while useful as an explanation, is not a perfect substitute.",
+					"ja": "だからこそ、言い換えは説明として有用でも、完全な代替物ではない。"
+				}
+			]
+		},
+		{
+			"id": "practice-implications",
+			"heading": {
+				"ja": "9. 教育・組織ナレッジ・AI要約への含意",
+				"en": "9. Implications for education, organizational knowledge, and AI summarization"
+			},
+			"pairs": [
+				{
+					"en": "In education, it is easier to feel like the child understands if only more explanations are provided.",
+					"ja": "教育では、説明だけを増やすと理解した気になりやすい。"
+				},
+				{
+					"en": "To foster comprehensive understanding, rather than explaining the correct answer, it is necessary to have a design that lists good examples, bad examples, failure examples, and counterexamples to confirm what the learner has overlooked.",
+					"ja": "包括的理解を育てるには、正解の説明よりも、良い例・悪い例・失敗例・反例を並べ、学習者が何を見落としたかを確認する設計が必要である。"
+				},
+				{
+					"en": "In organizations, it is important not to over-reform the veteran's narrative.",
+					"ja": "組織では、ベテランの語りを整形しすぎないことが重要である。"
+				},
+				{
+					"en": "If only standardized documents are used, there will be no sense of incongruity during reviews, and it will be difficult to pay attention to customers, make judgments in case of exceptions, and accept responsibility.",
+					"ja": "標準化されたドキュメントだけでは、レビューでの違和感、顧客への気配り、例外時の判断、責任の引き受け方が落ちる。"
+				},
+				{
+					"en": "Therefore, it is better to keep records of the original utterances, notes made during judgments, counterexamples, and failures.",
+					"ja": "そこで、原文の発話、判断時のメモ、反例、失敗の記録を残す方がよい。"
+				},
+				{
+					"en": "AI summaries improve searchability and distribution efficiency, but cannot be used as authentic copies.",
+					"ja": "AI 要約は、検索性と配布効率を上げるが、正本にはできない。"
+				},
+				{
+					"en": "In particular, research on long text summarization explicitly addresses the problem of the loss of context information in the process of summarizing long inputs.",
+					"ja": "とくに長文要約研究では、長い入力から要約する過程で文脈情報が失われることが明示的に問題化されている。"
+				},
+				{
+					"en": "Therefore, while it may be possible to entrust AI with \"compressed explanations,\" it should not be left to the final judgment of \"what was important.\"",
+					"ja": "したがって、AI には「圧縮された解説」を任せてもよいが、「何が重要だったか」の最終判断まで委ねてはいけない。"
+				}
+			]
+		},
+		{
+			"id": "practical-handling",
+			"heading": {
+				"ja": "10. 実務での扱い方",
+				"en": "10. How to handle it in practice"
+			},
+			"pairs": [
+				{
+					"en": "In practice, it is easier to reduce losses by observing the following five points.",
+					"ja": "実務では、次の 5 点を守ると損失を減らしやすい。"
+				},
+				{
+					"en": "Leave the original text.",
+					"ja": "原文を残す。"
+				},
+				{
+					"en": "Don't just save the summary.",
+					"ja": "要約だけを保存しない。"
+				},
+				{
+					"en": "Leave the case.",
+					"ja": "ケースを残す。"
+				},
+				{
+					"en": "In addition to principles, leave examples of success, failure, and counterexamples.",
+					"ja": "原理だけでなく、成功例・失敗例・反例を残す。"
+				},
+				{
+					"en": "Separate judgment criteria.",
+					"ja": "判断基準を分ける。"
+				},
+				{
+					"en": "Write separately what you saw and how you evaluated it.",
+					"ja": "何を見たかと、どう評価したかを別に書く。"
+				},
+				{
+					"en": "Leave exceptions.",
+					"ja": "例外を残す。"
+				},
+				{
+					"en": "Manage general rules and boundary conditions separately.",
+					"ja": "一般則と境界条件を別に管理する。"
+				},
+				{
+					"en": "Double-layer your summary.",
+					"ja": "要約を二層化する。"
+				},
+				{
+					"en": "A set of short sentences for humans and references to the source material.",
+					"ja": "人間向けの短文と、元資料への参照をセットにする。"
+				},
+				{
+					"en": "The point of this design is not to resist paraphrasing.",
+					"ja": "この設計の要点は、言い換えを拒むことではない。"
+				},
+				{
+					"en": "Rather, it is about clarifying to what extent paraphrasing is valid and from where a return to the original practice is necessary.",
+					"ja": "むしろ、言い換えがどこまで有効で、どこからは元の実践に戻る必要があるかを明確にすることである。"
+				}
+			]
+		},
+		{
+			"id": "risks-limitations",
+			"heading": {
+				"ja": "11. リスク・限界",
+				"en": "11. Risks/Limitations"
+			},
+			"pairs": [
+				{
+					"en": "There are three common misconceptions about this topic.",
+					"ja": "このテーマには、よくある誤解が 3 つある。"
+				},
+				{
+					"en": "First, equate tacit knowledge with \"some kind of feeling.\"",
+					"ja": "第一に、暗黙知を「なんとなくの感覚」と同一視すること。"
+				},
+				{
+					"en": "Second, blame all paraphrase failures on indiscursivity.",
+					"ja": "第二に、言い換えの失敗をすべて不可言説性のせいにすること。"
+				},
+				{
+					"en": "Third, comprehensive understanding is viewed as an \"unexplainable mystery.\"",
+					"ja": "第三に、包括的理解を「説明不能な神秘」と持ち上げること。"
+				},
+				{
+					"en": "Although this paper focuses on Polanyi, it does not deal with the entire history of philosophy surrounding tacit knowledge.",
+					"ja": "本稿は、ポランニーを中心に据えつつも、暗黙知をめぐる全哲学史を扱ったわけではない。"
+				},
+				{
+					"en": "Further literature reviews are needed to traverse Wittgenstein, phenomenology, practice theory, semantics, cognitive science, and organization theory.",
+					"ja": "ウィトゲンシュタイン、現象学、実践理論、意味論、認知科学、組織論を横断するには、さらに別の文献レビューが必要である。"
+				},
+				{
+					"en": "Nevertheless, the conclusions of this paper are of sufficient practical use.",
+					"ja": "それでも、本稿の結論は実務に十分使える。"
+				},
+				{
+					"en": "Paraphrasing is a tool for sharing, but it is not a substitute for understanding.",
+					"ja": "言い換えは、共有のための道具ではあるが、理解の代替物ではない。"
+				},
+				{
+					"en": "To protect our understanding, we need to put the original case and original judgment back behind the summary.",
+					"ja": "理解を守るには、要約の後ろに元ケースと元判断を戻す必要がある。"
+				}
+			]
+		},
+		{
+			"id": "recommended-policy",
+			"heading": {
+				"ja": "12. 推奨方針",
+				"en": "12. Recommended policy"
+			},
+			"pairs": [
+				{
+					"en": "The practical recommendations are clear.",
+					"ja": "実務上の推奨は明確である。"
+				},
+				{
+					"en": "Use paraphrases for sharing and searching.",
+					"ja": "言い換えは、共有と検索のために使う。"
+				},
+				{
+					"en": "Comprehensive understanding is maintained using original texts, original cases, criteria, and counterexamples.",
+					"ja": "包括的理解は、原文・原ケース・判断基準・反例で守る。"
+				},
+				{
+					"en": "Place value judgments in a separate column from factual statements.",
+					"ja": "価値判断は、事実記述と別欄に置く。"
+				},
+				{
+					"en": "Treat AI summaries as an aid to indexing.",
+					"ja": "AI 要約は、索引用の補助物として扱う。"
+				},
+				{
+					"en": "In education, emphasize observation, imitation, and feedback rather than explanation.",
+					"ja": "教育では、説明よりも観察・模倣・フィードバックを厚くする。"
+				},
+				{
+					"en": "To put it in Polanyi's terms, knowledge cannot be established by erasing clues.",
+					"ja": "ポランニー的に言えば、知は手がかりを消して成立しない。"
+				},
+				{
+					"en": "Good rephrasing, therefore, is not about erasing clues, but rearranging them so that they work again.",
+					"ja": "したがって、よい言い換えとは、手がかりを消すことではなく、手がかりが再び働けるように配置し直すことである。"
+				}
+			]
+		}
+	]
+}

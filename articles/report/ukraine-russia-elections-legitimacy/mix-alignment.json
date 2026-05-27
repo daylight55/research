@@ -1,0 +1,303 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "As of May 2026, Ukraine and Russia are both wartime states, but they handle elections in opposite ways.",
+					"ja": "2026年5月時点で、ウクライナとロシアはどちらも戦争当事国だが、選挙の扱いは正反対である。"
+				},
+				{
+					"en": "Ukraine has stopped nationwide elections under martial law and continued the incumbent's authority according to its constitution.",
+					"ja": "ウクライナは戒厳令のもとで全国選挙を止め、現職の権限を憲法どおり継続させている。"
+				},
+				{
+					"en": "Russia has kept elections going, but the 2024 presidential election could not be monitored by the OSCE/ODIHR, and competition was heavily constrained by pressure on opposition figures and independent media.",
+					"ja": "一方ロシアは選挙を続けているが、2024年大統領選はOSCE/ODIHR が監視できず、独立メディアや反対派への圧力の中で競争条件が大きく損なわれている。"
+				},
+				{
+					"en": "The key distinction is between `legal continuity` and `electoral legitimacy`.",
+					"ja": "ここで分けて考えるべきなのは、`法的正統性` と `選挙正統性` である。"
+				},
+				{
+					"en": "Ukraine prioritizes the first by suspending voting, while Russia preserves the appearance of the second without preserving competitive conditions.",
+					"ja": "ウクライナは前者を優先して制度を止め、ロシアは後者の見かけを維持しながら競争条件を狭めている。"
+				},
+				{
+					"en": "The two countries therefore diverge even though both are under wartime constraints.",
+					"ja": "したがって、両国は同じ「戦時下」でも、正統性の作り方が違う。"
+				}
+			]
+		},
+		{
+			"id": "bottom-line",
+			"heading": {
+				"ja": "2. まず結論",
+				"en": "2. Bottom line"
+			},
+			"pairs": [
+				{
+					"en": "The same word \"election\" means different things in the two systems.",
+					"ja": "同じ「選挙」でも、ウクライナは「戦争が終わるまで投票を止める」モデルで、ロシアは「戦争中でも予定どおり投票を実施する」モデルだ。"
+				},
+				{
+					"en": "Ukraine postpones voting until war conditions change.",
+					"ja": "同じ「選挙」でも、ウクライナは「戦争が終わるまで投票を止める」モデルで、ロシアは「戦争中でも予定どおり投票を実施する」モデルだ。"
+				},
+				{
+					"en": "Russia keeps voting on schedule, but holding a vote does not by itself create democratic legitimacy.",
+					"ja": "同じ「選挙」でも、ウクライナは「戦争が終わるまで投票を止める」モデルで、ロシアは「戦争中でも予定どおり投票を実施する」モデルだ。 ただし、後者は投票の実施そのものが民主的正統性を意味しない。"
+				},
+				{
+					"en": "International institutions focus less on whether an election happened and more on whether free competition, monitoring, media access, and opposition activity were actually possible.",
+					"ja": "国際機関が見る焦点は、投票が行われたかではなく、自由な競争、監視、メディア環境、反対派の活動が確保されていたかにある。"
+				}
+			]
+		},
+		{
+			"id": "why-ukraine-postpones",
+			"heading": {
+				"ja": "3. ウクライナ: なぜ延期されるのか",
+				"en": "3. Why Ukraine postpones elections"
+			},
+			"pairs": [
+				{
+					"en": "Ukraine's election postponement is not just a political choice; it is embedded in the martial-law legal framework.",
+					"ja": "ウクライナの選挙延期は、単なる政治判断ではなく、戒厳令の法体系に乗っている。"
+				},
+				{
+					"en": "The president's powers continue until a newly elected president takes office, and elections are not held under martial law.",
+					"ja": "大統領の権限は新大統領が就任するまで継続し、戒厳令下では選挙が実施されない。"
+				},
+				{
+					"en": "The 2026 martial-law extension was also adopted formally, so there is still no basis for nationwide elections in the near term.",
+					"ja": "2026年の戒厳令延長も公式に行われており、少なくとも 2026 年夏までは全国選挙を行う前提がない。"
+				},
+				{
+					"en": "The Ukrainian CEC has explicitly said that presidential, parliamentary, and local elections are not organized under martial law.",
+					"ja": "CEC は、戒厳令下では大統領選、議会選、地方選はいずれも実施されないと明言している。"
+				},
+				{
+					"en": "It has also published a roadmap for post-war elections.",
+					"ja": "さらに、ポスト戦の選挙を想定したロードマップも公表されており、問題は「いつでも選べるか」ではなく、「安全・避難・投票所・有権者名簿・占領地域の扱いをどう再構成するか」に移っている。"
+				},
+				{
+					"en": "So the issue is no longer \"can voting happen at any time?\" but \"how do you rebuild the conditions for safe registration, voting, displaced voters, and occupied territories?\"",
+					"ja": "さらに、ポスト戦の選挙を想定したロードマップも公表されており、問題は「いつでも選べるか」ではなく、「安全・避難・投票所・有権者名簿・占領地域の扱いをどう再構成するか」に移っている。"
+				},
+				{
+					"en": "PACE also treats the suspension of nationwide elections under war and martial law as consistent with constitutional order.",
+					"ja": "PACE も、戦時・戒厳令のもとでは全国選挙を停止することは憲法秩序に沿うと整理している。"
+				},
+				{
+					"en": "The important point is that the postponement is framed as wartime institutional continuity, not as private ownership of power.",
+					"ja": "重要なのは、停止が「権力の私物化」ではなく、戦時の制度維持として説明されている点である。"
+				}
+			]
+		},
+		{
+			"id": "why-russia-keeps-running",
+			"heading": {
+				"ja": "4. ロシア: なぜ実施できるのか",
+				"en": "4. Why Russia keeps elections running"
+			},
+			"pairs": [
+				{
+					"en": "Russia does not stop elections in wartime.",
+					"ja": "ロシアは戦時下でも選挙を止めない。"
+				},
+				{
+					"en": "The March 2024 presidential election was held, and a State Duma election is planned for September 2026.",
+					"ja": "2024年3月の大統領選は実施され、2026年には国家院選挙が予定されている。"
+				},
+				{
+					"en": "Formally, this looks like business as usual.",
+					"ja": "形式上は「通常運転」だが、観察者の有無や競争条件を見ると、戦時下の選挙が民主的正統性をどこまで持つかは別問題になる。"
+				},
+				{
+					"en": "But when you look at observers and competition conditions, it becomes clear that whether a wartime election carries democratic legitimacy is a separate question.",
+					"ja": "形式上は「通常運転」だが、観察者の有無や競争条件を見ると、戦時下の選挙が民主的正統性をどこまで持つかは別問題になる。"
+				},
+				{
+					"en": "The OSCE/ODIHR said Russia did not invite observers for the 2024 presidential election, so independent monitoring was impossible.",
+					"ja": "OSCE/ODIHR は、2024年大統領選についてロシア当局からの招待がなく、独立した監視ができなかった。"
+				},
+				{
+					"en": "The OSCE assessment also emphasized deteriorating competition conditions and the absence of a fair basis for outside evaluation.",
+					"ja": "OSCE 側の評価では、競争環境の悪化、圧力、制約のため、公平な外部評価の前提が崩れていた。"
+				},
+				{
+					"en": "The UN Special Rapporteur on the situation of human rights in the Russian Federation reported severe deterioration of political rights, pressure on opposition actors, and restrictions on independent media.",
+					"ja": "国連の特別報告者は、ロシア連邦における人権状況の報告で、政治的権利の著しい悪化、反対派の抑圧、独立メディアへの制約を指摘している。"
+				},
+				{
+					"en": "A separate UN report said 50 media professionals were imprisoned.",
+					"ja": "別の報告では、50人のメディア関係者が収監されているとされる。"
+				},
+				{
+					"en": "In other words, the vote exists, but the competitive field is thin.",
+					"ja": "つまり、投票は存在しても、競争の土台が薄い。"
+				}
+			]
+		},
+		{
+			"id": "international-community",
+			"heading": {
+				"ja": "5. 国際社会はどう評価しているか",
+				"en": "5. How the international community reads legitimacy"
+			},
+			"pairs": [
+				{
+					"en": "The international reading is not one-dimensional.",
+					"ja": "国際社会の評価は、1本の尺度ではない。"
+				},
+				{
+					"en": "Ukraine's suspension of elections under martial law is generally seen as a continuation of constitutional order.",
+					"ja": "ウクライナについては、戒厳令下の選挙停止を憲法秩序の延長として見る傾向が強い。"
+				},
+				{
+					"en": "Russia's elections, by contrast, are easier to describe as votes that took place without the competitive conditions that make them democratically meaningful.",
+					"ja": "ロシアについては、選挙が行われても、監視の欠如と競争条件の歪みのために、民主的正統性は低く評価されやすい。"
+				},
+				{
+					"en": "The easier way to understand this is to separate `legal continuity` from `democratic continuity`.",
+					"ja": "この読み方は、`法的な継続` と `民主的な継続` を切り分けるとわかりやすい。"
+				},
+				{
+					"en": "Ukraine protects the former by postponing voting.",
+					"ja": "ウクライナは前者を守るために後者を延期している。"
+				},
+				{
+					"en": "Russia preserves the appearance of the latter while using the election process as a tool of regime control.",
+					"ja": "ロシアは後者の見かけを保ちながら、前者を自国の権力維持のために使っている、というのが公表情報からの推定である。"
+				},
+				{
+					"en": "That is an inference from the public record, not a single official doctrine.",
+					"ja": "ロシアは後者の見かけを保ちながら、前者を自国の権力維持のために使っている、というのが公表情報からの推定である。"
+				}
+			]
+		},
+		{
+			"id": "actual-differences",
+			"heading": {
+				"ja": "6. 何が違うのか",
+				"en": "6. What is actually different"
+			},
+			"pairs": [
+				{
+					"en": "If you compare wartime elections by the same standard, four questions matter.",
+					"ja": "戦時下の選挙を同じ基準で比べるなら、見るべき論点は 4 つに絞れる。"
+				},
+				{
+					"en": "Is voting legally suspended, or is it still being held?",
+					"ja": "選挙が法的に止まっているか、形式上は続いているか。"
+				},
+				{
+					"en": "Can independent monitoring enter?",
+					"ja": "監視が入っているか、外部評価が可能か。"
+				},
+				{
+					"en": "Can opposition figures and media genuinely compete?",
+					"ja": "反対派とメディアが実際に競争できるか。"
+				},
+				{
+					"en": "Does the result carry replaceable-mandate legitimacy?",
+					"ja": "その結果として、政権交代可能性を伴う正統性があるか。"
+				},
+				{
+					"en": "Under that standard, Ukraine preserves legal legitimacy by stopping elections in wartime, while Russia preserves procedure by continuing elections, but weakens the quality of democratic competition.",
+					"ja": "この基準で見ると、ウクライナは「戦時のため投票を止める」ことで法的正統性を維持し、ロシアは「投票を続ける」ことで形式を維持するが、競争正統性は大きく損なわれている。"
+				}
+			]
+		},
+		{
+			"id": "practical-implications",
+			"heading": {
+				"ja": "7. 実務的な含意",
+				"en": "7. Practical implications"
+			},
+			"pairs": [
+				{
+					"en": "For Japanese policy makers, exporters, shipping, insurance, energy, and investment teams, the safe assumption is that \"there is an election\" does not mean \"normalization is underway.\"",
+					"ja": "日本の政策担当者、輸出管理、海運・保険、エネルギー、投資の実務では、「選挙があるから正常化する」とは読まないほうがよい。"
+				},
+				{
+					"en": "In Ukraine, martial-law extension and post-war election preparation remain the key variables.",
+					"ja": "ウクライナでは戒厳令解除と選挙制度の再起動が必要であり、ロシアでは投票があっても競争条件が改善したとは限らない。 特に注視すべきは次の 3 点である。 ウクライナの戒厳令延長と CEC のポスト戦選挙準備。"
+				},
+				{
+					"en": "In Russia, voting may continue, but that does not mean competition conditions improve.",
+					"ja": "ウクライナでは戒厳令解除と選挙制度の再起動が必要であり、ロシアでは投票があっても競争条件が改善したとは限らない。"
+				},
+				{
+					"en": "Three items are worth watching:",
+					"ja": "特に注視すべきは次の 3 点である。"
+				},
+				{
+					"en": "Ukraine's martial-law extensions and the CEC's post-war election work.",
+					"ja": "ウクライナの戒厳令延長と CEC のポスト戦選挙準備。"
+				},
+				{
+					"en": "Russia's 2026 election calendar and whether monitoring missions are accepted.",
+					"ja": "ロシアの 2026 年選挙日程と、監視団の受け入れ有無。"
+				},
+				{
+					"en": "Any new international reporting on opposition pressure, independent media, and political prisoners.",
+					"ja": "反対派・独立メディア・政治犯に関する追加の国際報告。"
+				},
+				{
+					"en": "Here, the point is not whether the war ends soon, but whether the institutions can hold up over time.",
+					"ja": "ここでの判断は、戦争終結の見込みではなく、制度の持久力を見るためのものだ。"
+				}
+			]
+		},
+		{
+			"id": "risks-limitations",
+			"heading": {
+				"ja": "8. リスク・限界",
+				"en": "8. Risks and limitations"
+			},
+			"pairs": [
+				{
+					"en": "There are three limits to this report.",
+					"ja": "本稿の限界は三つある。"
+				},
+				{
+					"en": "First, state statements are self-serving, so they are not automatically neutral facts.",
+					"ja": "第一に、国家の公式発表は自己正当化を含むため、そのまま中立的事実とは限らない。"
+				},
+				{
+					"en": "Second, election legitimacy is not decided by statutes alone; it also depends on monitoring, media, and opposition activity.",
+					"ja": "第二に、選挙の正統性は法文だけでは決まらず、監視、メディア、反対派の活動条件を総合して判断する必要がある。"
+				},
+				{
+					"en": "Third, Ukraine's election design can still change if martial law is extended, the battlefield changes, or occupied territories are reclassified.",
+					"ja": "第三に、将来の戒厳令延長、戦況、占領地域の扱いによって、ウクライナの選挙設計は変わりうる。"
+				},
+				{
+					"en": "So the conclusion is not \"which side is fully legitimate?\" but \"which kind of legitimacy is each side trying to preserve?\"",
+					"ja": "したがって、結論は「どちらが完全に正統か」ではなく、「どの種類の正統性を守ろうとしているか」で読むのが妥当である。"
+				},
+				{
+					"en": "Ukraine preserves legal continuity by suspending elections.",
+					"ja": "ウクライナは制度停止を通じて法的継続を守り、ロシアは選挙実施を通じて手続の継続を守るが、民主的競争の質は別の基準で評価される。"
+				},
+				{
+					"en": "Russia preserves procedural continuity by holding them.",
+					"ja": "ウクライナは制度停止を通じて法的継続を守り、ロシアは選挙実施を通じて手続の継続を守るが、民主的競争の質は別の基準で評価される。"
+				},
+				{
+					"en": "Democratic quality is judged on a different scale.",
+					"ja": "ウクライナは制度停止を通じて法的継続を守り、ロシアは選挙実施を通じて手続の継続を守るが、民主的競争の質は別の基準で評価される。"
+				}
+			]
+		}
+	]
+}

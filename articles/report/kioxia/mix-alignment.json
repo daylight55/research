@@ -1,0 +1,530 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "1-executive-summary",
+			"heading": {
+				"en": "1. Executive Summary",
+				"ja": "1. エグゼクティブサマリー"
+			},
+			"pairs": [
+				{
+					"en": "Kioxia is a semiconductor memory company that has its roots in Toshiba Memory and almost exclusively specializes in NAND flash.",
+					"ja": "キオクシアは、東芝メモリを源流とするNANDフラッシュ専業に近い半導体メモリ企業である。"
+				},
+				{
+					"en": "This is a continuation of Toshiba's invention of NAND flash in 1987 and the release of 3D flash memory technology BiCS FLASH in 2007.",
+					"ja": "1987年に東芝がNANDフラッシュを発明し、2007年に3Dフラッシュメモリ技術BiCS FLASHを発表した流れを継承している。"
+				},
+				{
+					"en": "The current business is centered on flash for smartphones/PCs, SSDs for businesses/clouds, and high-capacity SSDs for data centers/AI.",
+					"ja": "現在の事業は、スマートフォン/PC向けフラッシュ、企業・クラウド向けSSD、データセンター/AI向け高容量SSDを中心に構成される。"
+				},
+				{
+					"en": "The conclusions of this report are as follows.",
+					"ja": "本レポートの結論は次の通りである。"
+				},
+				{
+					"en": "KIOXIA's strengths lie in its accumulated technology as a NAND inventor, large-scale production in Yokkaichi/Kitakami, long-term JV with Western Digital/SanDisk, and BiCS FLASH/CBA/QLC high-capacity SSDs.",
+					"ja": "キオクシアの強みは、NANDの発明企業としての技術蓄積、四日市/北上の大規模生産、Western Digital/SanDiskとの長期JV、BiCS FLASH/CBA/QLC高容量SSDにある。"
+				},
+				{
+					"en": "The consolidated financial results for the fiscal year ending March 2026 were revenue of 2,337.7 billion yen, operating profit of 870.4 billion yen, and profit attributable to owners of the parent company of 554.5 billion yen.",
+					"ja": "2026年3月期の連結決算は、売上収益2兆3377億円、営業利益8704億円、親会社の所有者に帰属する利益5545億円だった。"
+				},
+				{
+					"en": "This is a significant increase compared to the previous year, but on a consolidated basis it is not 48 times, but approximately 2 times.",
+					"ja": "前年から見れば大幅増だが、連結ベースでは「48倍」ではなく約2倍である。"
+				},
+				{
+					"en": "The biggest reason why it looks abnormal is that KIOXIA Holdings' standalone net profit jumped to 90.75 billion yen, but this is mainly due to holding company factors due to dividends received from affiliates and capital returns, and must be read separately from the profit of the manufacturing business itself.",
+					"ja": "「異常に見える」最大の理由は、キオクシアホールディングス単体の当期利益が907.5億円まで跳ねたことだが、これは主に関係会社受取配当金と資本返還による持株会社要因で、製造事業そのものの利益とは切り分けて読む必要がある。"
+				},
+				{
+					"en": "Technology strategy is expanding from \"state-of-the-art NAND alone\" to \"storage tiers in the AI ​​era.\"",
+					"ja": "技術戦略は「最先端NAND単体」から「AI時代のストレージ階層」へ広がっている。"
+				},
+				{
+					"en": "The 245.76TB NVMe SSD, 8th generation BiCS FLASH, and 5TB/64GB/s high-bandwidth flash module prototype is a move that takes into account the data supply around the GPU, RAG/vector DB, learning data lake, and edge AI.",
+					"ja": "245.76TB NVMe SSD、8th generation BiCS FLASH、5TB/64GB/s高帯域フラッシュモジュール試作は、GPU周辺のデータ供給、RAG/ベクトルDB、学習データ湖、エッジAIを意識した動きである。"
+				},
+				{
+					"en": "The company's business consists mostly of a single memory segment, with sales divided into SSD & Storage, Smart Devices, and Other.",
+					"ja": "事業の中身はほぼMemory単一セグメントで、売上はSSD & Storage、Smart Devices、Otherに分かれる。"
+				},
+				{
+					"en": "Public information indicates Apple Group, Sandisk Group, and Dell Group as major customers, but the number of data centers and sales by data center are not disclosed.",
+					"ja": "公開情報で主要顧客としてApple Group、Sandisk Group、Dell Groupが示される一方、データセンター数やデータセンター別売上は非開示である。"
+				},
+				{
+					"en": "In terms of Japan's semiconductor policy, Kioxia has a different meaning from a logic revival like Rapidus.",
+					"ja": "日本の半導体政策上、キオクシアはRapidusのようなロジック復興とは別の意味を持つ。"
+				},
+				{
+					"en": "It is a company that maintains reliable domestic memory supply capacity, and has high economic security value.",
+					"ja": "信頼できる国内メモリ供給能力を維持する企業であり、経済安全保障上の価値は高い。"
+				},
+				{
+					"en": "However, NAND is a separate market from DRAM/HBM, and will not be affected by the AI ​​semiconductor boom at the same rate.",
+					"ja": "ただし、NANDはDRAM/HBMとは別市場であり、AI半導体ブームをそのまま同じ倍率で受けるわけではない。"
+				}
+			]
+		},
+		{
+			"id": "1-1-validation-matrix",
+			"heading": {
+				"en": "1.1 Validation Matrix",
+				"ja": "1.1 検証マトリクス"
+			},
+			"pairs": [
+				{
+					"en": "This table is important because there are three types of numbers that can be easily confused when evaluating Kioxia.",
+					"ja": "この表が重要なのは、キオクシアの評価で混同しやすい数字が三種類あるためである。"
+				},
+				{
+					"en": "The first is the profitability of the consolidated manufacturing business, the second is the holding company's profit from dividends and capital returns, and the third is the NAND market share and vendor sales estimated by an external market research company.",
+					"ja": "第一は連結製造事業の収益力、第二は持株会社単体の配当・資本返還による利益、第三は外部市場調査会社が推定するNAND市場シェアやベンダー売上である。"
+				},
+				{
+					"en": "If we combine these into a single phrase, \"how many times the net income is,\" we confuse the actual performance of the business with the way it looks in accounting terms.",
+					"ja": "これらを一つの「純利益が何倍」という言葉にまとめると、事業の実力と会計上の見え方を取り違える。"
+				}
+			]
+		},
+		{
+			"id": "2-company-positioning",
+			"heading": {
+				"en": "2. Company positioning",
+				"ja": "2. 会社の位置付け"
+			},
+			"pairs": [
+				{
+					"en": "Kioxia's company name is a combination of the Japanese word for \"memory\" and the Greek word for \"value\", Axia.",
+					"ja": "キオクシアの社名は、日本語の「記憶」とギリシャ語の「価値」を意味するAxiaを組み合わせたものだ。"
+				},
+				{
+					"en": "The former Toshiba Memory became independent from Toshiba Group in 2018 and transitioned to the Kioxia brand in October 2019.",
+					"ja": "旧東芝メモリは2018年に東芝グループから独立し、2019年10月にKioxiaブランドへ移行した。"
+				},
+				{
+					"en": "The company will be listed on the Tokyo Stock Exchange Prime Market on December 18, 2024, with the stock code 285A.",
+					"ja": "2024年12月18日には東京証券取引所プライム市場へ上場し、証券コードは285Aである。"
+				},
+				{
+					"en": "The core of the business is the single Memory segment.",
+					"ja": "事業の中核はMemory単一セグメントである。"
+				},
+				{
+					"en": "Revenue in FY2024 was 1,706.4 billion yen, and by application, SSD & Storage was 991.1 billion yen, Smart Devices was 501.1 billion yen, and Other was 214.2 billion yen.",
+					"ja": "FY2024の売上収益は1兆7064億円で、用途別にはSSD & Storageが9911億円、Smart Devicesが5011億円、Otherが2142億円だった。"
+				},
+				{
+					"en": "By external customer, Apple Group, Sandisk Group, and Dell Group are disclosed as major customers.",
+					"ja": "外部顧客別ではApple Group、Sandisk Group、Dell Groupが主要顧客として開示されている。"
+				},
+				{
+					"en": "This shows that Kioxia is not a \"general purpose semiconductor maker\" but a company deeply focused on NAND and SSD.",
+					"ja": "これはキオクシアが「汎用半導体メーカー」ではなく、NANDとSSDに深く集中した企業であることを示す。"
+				},
+				{
+					"en": "The structure remained the same for the full year ending March 2026, with sales by application of 1,362.6 billion yen for SSD & Storage, 760 billion yen for Smart Devices, and 215 billion yen for Other.",
+					"ja": "2026年3月期通期でも構造は同じで、用途別売上はSSD & Storageが1兆3626億円、Smart Devicesが7600億円、Otherが2150億円だった。"
+				},
+				{
+					"en": "The majority of sales come from SSD & Storage, and we can see that the company's performance is driven by a portfolio that includes SSDs for enterprises and memory products for mobile devices, rather than pure NAND chips alone.",
+					"ja": "売上の過半がSSD & Storageであり、純粋なNANDチップ単体ではなく、企業向けSSDとモバイル向けメモリ製品を含むポートフォリオで業績が動いていることが分かる。"
+				},
+				{
+					"en": "After going public, Toshiba, the former parent company, and Pangea, which is affiliated with Bain Capital, will largely remain in the shareholder structure.",
+					"ja": "上場後の株主構成には、旧親会社の東芝とBain Capital系のPangeaが大きく残る。"
+				},
+				{
+					"en": "Major shareholders as of September 30, 2025 are disclosed as Toshiba Corporation 27.25%, BCPE Pangea Cayman, L.P. 22.00%, and BCPE Pangea Cayman2, Ltd. 14.34%.",
+					"ja": "2025年9月30日時点の主要株主として、Toshiba Corporation 27.25%、BCPE Pangea Cayman, L.P. 22.00%、BCPE Pangea Cayman2, Ltd. 14.34%などが開示されている。"
+				},
+				{
+					"en": "This means that even after Kioxia becomes a public company, it will have a capital structure that retains the effects of Toshiba's restructuring and Bain-led acquisition.",
+					"ja": "これは、キオクシアが公開会社になった後も、東芝再編とBain主導買収の影響を残す資本構造を持つことを意味する。"
+				}
+			]
+		},
+		{
+			"id": "3-technology-from-nand-to-ai-storage",
+			"heading": {
+				"en": "3. Technology: From NAND to AI storage",
+				"ja": "3. 技術: NANDからAIストレージへ"
+			},
+			"pairs": [
+				{
+					"en": "Kioxia's technological focus has shifted from the era of miniaturizing NAND flash only in the plane direction to 3D stacking, multi-bit per cell, CBA, controller/firmware, and SSD system design.",
+					"ja": "キオクシアの技術軸は、NANDフラッシュを平面方向だけで微細化する時代から、3D積層、セルあたり多ビット化、CBA、コントローラ/ファームウェア、SSDシステム設計へ移ってきた。"
+				},
+				{
+					"en": "8th generation BiCS FLASH adopts 218 world-lines, CBA, OPS and claims a memory density of 18.3Gb/mm2 in 1Tb TLC products.",
+					"ja": "8th generation BiCS FLASHは218 world-lines、CBA、OPSを採用し、1Tb TLC製品で18.3Gb/mm2のメモリ密度を主張している。"
+				},
+				{
+					"en": "CBA is an idea in which the CMOS control circuit and memory array are optimized on separate wafers and then bonded together, with the aim of simultaneously boosting performance, density, and power efficiency.",
+					"ja": "CBAはCMOS制御回路とメモリアレイを別ウェハで最適化し、後で接合する発想であり、性能、密度、電力効率を同時に押し上げる狙いがある。"
+				},
+				{
+					"en": "I see two product directions for AI data centers.",
+					"ja": "AIデータセンター向けには、二つの製品方向が見える。"
+				},
+				{
+					"en": "The first is to improve the performance of enterprise SSDs.",
+					"ja": "第一はenterprise SSDの高性能化である。"
+				},
+				{
+					"en": "The CM9 Series is a PCIe 5.0 NVMe SSD that uses 8th generation BiCS FLASH TLC and CBA, and claims performance improvements of up to 65% for random writes, 55% for random reads, and 95% for sequential writes compared to the previous generation CM7.",
+					"ja": "CM9 Seriesは8th generation BiCS FLASH TLCとCBAを使ったPCIe 5.0 NVMe SSDで、前世代CM7比でランダム書込最大約65%、ランダム読込約55%、シーケンシャル書込約95%の性能改善をうたう。"
+				},
+				{
+					"en": "The second is higher capacity.",
+					"ja": "第二は高容量化である。"
+				},
+				{
+					"en": "The LC9 Series expands from 122.88TB to 245.76TB and uses a 2Tb QLC die and 32-die stack to appeal to datasets, RAGs, vector DBs, and data lakes in generative AI environments.",
+					"ja": "LC9 Seriesは122.88TBから245.76TBへ広がり、2Tb QLC dieと32-die stackを使って、生成AI環境のデータセット、RAG、ベクトルDB、データレイク向けに訴求している。"
+				},
+				{
+					"en": "Furthermore, as part of our research and development efforts, we are prototyping a high-bandwidth flash memory module with a capacity of 5TB, a bandwidth of 64GB/s, and less than 40W.",
+					"ja": "さらに研究開発として、5TB容量、64GB/s帯域、40W未満の高帯域フラッシュメモリモジュールを試作している。"
+				},
+				{
+					"en": "Although this is not a direct replacement for DRAM/HBM, it is an attempt to reduce the trade-off between capacity and bandwidth from the flash side.",
+					"ja": "これはDRAM/HBMを直接置き換えるものではないが、容量と帯域のトレードオフをフラッシュ側から詰める試みである。"
+				},
+				{
+					"en": "It is also connected to the concept of handling large-scale AI models on the edge/MEC side.",
+					"ja": "大規模AIモデルをエッジ/MEC側で扱う構想とも接続している。"
+				}
+			]
+		},
+		{
+			"id": "4-supply-and-demand-and-performance",
+			"heading": {
+				"en": "4. Supply and demand and performance",
+				"ja": "4. 需給と業績"
+			},
+			"pairs": [
+				{
+					"en": "The NAND market is more susceptible to price cycles than DRAM and HBM.",
+					"ja": "NAND市場は、DRAMやHBM以上に価格循環の影響を受けやすい。"
+				},
+				{
+					"en": "During the downturn in 2022-2023, the entire industry was forced to adjust inventories and reduce production.",
+					"ja": "2022-2023年の下落局面では、業界全体が在庫調整と減産に追い込まれた。"
+				},
+				{
+					"en": "In the fiscal year ending March 2026, Kioxia's business performance returned significantly due to recovery in data centers/enterprise SSDs, demand for data storage due to AI generation, and improvement in demand for smart devices.",
+					"ja": "2026年3月期には、データセンター/enterprise SSDの回復、生成AIによるデータ保存需要、スマートデバイス需要の改善で、キオクシアは大きく業績を戻した。"
+				},
+				{
+					"en": "For the full year ending March 2026, sales revenue was 2,337.7 billion yen, operating profit was 870.4 billion yen, and profit attributable to owners of the parent company was 554.5 billion yen.",
+					"ja": "2026年3月期通期では、売上収益は2兆3377億円、営業利益は8704億円、親会社の所有者に帰属する利益は5545億円だった。"
+				},
+				{
+					"en": "Compared to the previous year, sales increased by 37.0%, operating income increased by 92.7%, and net income increased by 103.6%.",
+					"ja": "前年から見れば売上は37.0%増、営業利益は92.7%増、純利益は103.6%増である。"
+				},
+				{
+					"en": "In Q4, sales revenue grew to 1.029 trillion yen, operating profit was 596.8 billion yen, and quarterly profit was 407.7 billion yen, strongly reflecting the recent improvement in supply and demand and price increases.",
+					"ja": "Q4単体では売上収益1兆29億円、営業利益5968億円、四半期利益4077億円まで伸びており、足元の需給改善と価格上昇が強く反映されている。"
+				},
+				{
+					"en": "The company cites a rise in average selling prices and an increase in sales volume as factors contributing to the increase in operating income.",
+					"ja": "営業利益の増加要因として会社が挙げているのは、平均販売価格の上昇と販売数量の増加である。"
+				},
+				{
+					"en": "This can be interpreted as a result of the simultaneous normalization of demand for AI servers, data centers, and smart devices.",
+					"ja": "これはAIサーバー向け需要、データセンター向け需要、スマートデバイス需要の正常化が同時に効いた結果と読める。"
+				},
+				{
+					"en": "External market data also confirms that NAND will recover in the second half of 2025.",
+					"ja": "外部市場データでも、2025年後半のNAND回復は確認できる。"
+				},
+				{
+					"en": "TrendForce reported that the total sales of the top five NAND companies in the second quarter of 2025 increased by 22% from the previous quarter to $14.67 billion, and Kioxia ranked third at $2.14 billion, an increase of 11.4% from the previous quarter.",
+					"ja": "TrendForceは2025年2QにNAND上位5社の合計売上が前四半期比22%増の146.7億ドルになったとし、Kioxiaは21.4億ドル、前四半期比11.4%増、3位と報じた。"
+				},
+				{
+					"en": "While Samsung and SK Group are seeing notable growth in enterprise SSD/AI server demand, Kioxia is also benefiting from AI server demand and normalization of inventories among PC/smartphone customers.",
+					"ja": "SamsungとSK Groupのenterprise SSD/AI server向け伸長が目立つ一方で、KioxiaもAI server需要とPC/スマホ顧客の在庫正常化の恩恵を受けている。"
+				}
+			]
+		},
+		{
+			"id": "4-1-why-it-looks-48-times-bigger",
+			"heading": {
+				"en": "4.1 Why it looks 48 times bigger",
+				"ja": "4.1 48倍に見える理由"
+			},
+			"pairs": [
+				{
+					"en": "If you get the impression that \"48 times net income\", the first thing to check is the distinction between consolidated and non-consolidated.",
+					"ja": "「48倍の純利益」という印象が出る場合、まず確認すべきなのは連結と単体の区別である。"
+				},
+				{
+					"en": "Although the consolidated profit increased to 554.5 billion yen, KIOXIA Holdings' standalone net profit for the year was 90.75 billion yen, a significant increase from 500 million yen the previous year.",
+					"ja": "連結では 5545億円まで増えたが、キオクシアホールディングス単体の当期利益は 907.5億円で、前年の 5.0億円から大きく伸びた。"
+				},
+				{
+					"en": "As specified by the company, this increase in non-consolidated profit was mainly due to holding company factors due to the receipt of dividends received from affiliates and capital return.",
+					"ja": "この単体増益は、会社が明記している通り、主に関係会社受取配当金の受領と資本返還による持株会社要因である。"
+				},
+				{
+					"en": "In other words, the \"surprising\" part about KIOXIA is that, in addition to its large operating income as a manufacturing company, when the financial income of the holding company alone is mixed in, the apparent multiple increases even further.",
+					"ja": "つまり、キオクシアの「ぶっ飛んでいる」部分は、製造業としての営業利益の大きさに加えて、持株会社単体の財務収益が混ざると、見かけの倍率がさらに跳ね上がることにある。"
+				},
+				{
+					"en": "In a report, consolidated operating income, consolidated net income, and non-consolidated net income should be read separately.",
+					"ja": "レポート上は、連結営業利益、連結純利益、単体純利益を必ず分けて読むべきである。"
+				}
+			]
+		},
+		{
+			"id": "4-2-read-consolidated-non-consolidated-and-market-data-separately",
+			"heading": {
+				"en": "4.2 Read consolidated, non-consolidated, and market data separately",
+				"ja": "4.2 連結・単体・市場データを分けて読む"
+			},
+			"pairs": [
+				{
+					"en": "Therefore, in this report, we use the expression \"KIOXIA grew due to AI demand\" to limit the scope of operating income, average selling price, sales volume, and enterprise SSD demand.",
+					"ja": "したがって、このレポートでは「AI需要でキオクシアが伸びた」という表現を、営業利益・平均販売価格・販売数量・enterprise SSD需要の範囲に限定して使う。"
+				},
+				{
+					"en": "Sales by data center, sales by cloud customer, and gross profit only for AI applications are not disclosed, so making a definitive statement would be a guess beyond the publicly available materials.",
+					"ja": "データセンター別の売上、クラウド顧客別の売上、AI用途だけの粗利は開示されていないため、そこを断定すると公開資料を超えた推測になる。"
+				}
+			]
+		},
+		{
+			"id": "5-production-base-and-partnerships",
+			"heading": {
+				"en": "5. Production base and partnerships",
+				"ja": "5. 生産基盤とパートナーシップ"
+			},
+			"pairs": [
+				{
+					"en": "KIOXIA's manufacturing base will be consolidated at the Yokkaichi Plant in Mie Prefecture and the Kitakami Plant in Iwate Prefecture.",
+					"ja": "キオクシアの製造基盤は、三重県四日市工場と岩手県北上工場に集約される。"
+				},
+				{
+					"en": "The Yokkaichi factory is one of the world's largest flash memory manufacturing bases, and at the Kitakami factory, Fab 1 began operations in 2020 and Fab 2 in September 2025.",
+					"ja": "四日市工場は世界最大級のフラッシュメモリ製造拠点の一つであり、北上工場はFab1が2020年、Fab2が2025年9月に稼働した。"
+				},
+				{
+					"en": "Both locations are closely tied to a joint venture with Western Digital/SanDisk.",
+					"ja": "両拠点はWestern Digital/SanDiskとのJVに深く結びついている。"
+				},
+				{
+					"en": "While this JV provides Kioxia with scale and diversification of its capital investment burden, it also limits its strategic freedom.",
+					"ja": "このJVは、キオクシアにとって規模と設備投資負担の分散をもたらす一方、戦略自由度を制約する。"
+				},
+				{
+					"en": "Western Digital's flash business has been spun off as SanDisk, and its JV with Kioxia continues to be a focus of NAND industry restructuring.",
+					"ja": "Western Digital側のフラッシュ事業はSanDiskとして分離されており、キオクシアとのJVはNAND業界再編の焦点になり続ける。"
+				},
+				{
+					"en": "Previous integration negotiations with Western Digital did not materialize, but the manufacturing and development relationship continues.",
+					"ja": "過去のWestern Digitalとの統合交渉は実現しなかったが、製造・開発面での関係は続いている。"
+				},
+				{
+					"en": "The Japanese government's subsidies are not just a form of corporate support, but a policy to maintain a reliable supply of memory domestically.",
+					"ja": "日本政府の補助金は、単なる企業支援ではなく、信頼できるメモリ供給を国内に維持する政策である。"
+				},
+				{
+					"en": "Being able to mass-produce the storage necessary for AI/Cloud/Autonomous Driving/5G domestically will become a pillar of economic security different from logic semiconductors and HBM.",
+					"ja": "AI/クラウド/自動運転/5Gに必要なストレージを国内で量産できることは、ロジック半導体やHBMとは異なる経済安全保障の柱になる。"
+				},
+				{
+					"en": "However, policy support cannot eliminate market cycles.",
+					"ja": "ただし、政策支援は市場循環を消せない。"
+				},
+				{
+					"en": "If demand is misjudged, prices fall, and utilization rates decline, profitability will deteriorate even with subsidized equipment.",
+					"ja": "需要の読み違い、価格下落、稼働率低下が起きれば、補助金付き設備でも収益性は悪化する。"
+				}
+			]
+		},
+		{
+			"id": "6-risks-and-limitations",
+			"heading": {
+				"en": "6. Risks and limitations",
+				"ja": "6. リスクと限界"
+			},
+			"pairs": [
+				{
+					"en": "The first risk is market cycles.",
+					"ja": "第一のリスクは市況循環である。"
+				},
+				{
+					"en": "NAND is highly commodity-like, and when there is an oversupply, the price will plummet.",
+					"ja": "NANDはコモディティ性が強く、供給過剰になると価格が急落する。"
+				},
+				{
+					"en": "Even if Kioxia focuses on high-capacity SSDs and AI applications, margins will shrink if bit supply becomes excessive.",
+					"ja": "キオクシアが高容量SSDやAI用途へ寄せても、ビット供給が過剰になればマージンは縮む。"
+				},
+				{
+					"en": "This cyclical nature is well illustrated by the strong performance in Q4 of the fiscal year ending March 31, 2026, as well as the simultaneous decline in profits in the first half.",
+					"ja": "2026年3月期Q4単体の強さと、前半の減益局面が同時に存在する点が、この循環性をよく示している。"
+				},
+				{
+					"en": "The second risk is competition.",
+					"ja": "第二のリスクは競争である。"
+				},
+				{
+					"en": "Samsung, SK hynix/Solidigm, Micron, SanDisk, and YMTC compete on tiers, QLC, enterprise SSDs, controllers, and customer contracts.",
+					"ja": "Samsung、SK hynix/Solidigm、Micron、SanDisk、YMTCが、層数、QLC、enterprise SSD、コントローラ、顧客契約で競う。"
+				},
+				{
+					"en": "TrendForce placed Samsung in first place, SK Group in second place, and Kioxia in third place in the second quarter of 2025.",
+					"ja": "TrendForceは2025年2QにSamsungを首位、SK Groupを2位、Kioxiaを3位とした。"
+				},
+				{
+					"en": "In particular, SK Group is said to have grown due to Solidigm's enterprise SSD and 321L NAND mass production, and competition for AI servers/data centers is fierce.",
+					"ja": "特にSK GroupはSolidigmのenterprise SSDと321L NAND量産で伸びたとされ、AI server/data center向けの競争は激しい。"
+				},
+				{
+					"en": "The third risk is financial leverage and financing constraints.",
+					"ja": "第三のリスクは財務レバレッジと資金調達制約である。"
+				},
+				{
+					"en": "As of the end of December 2025, total assets are 3,194.8 billion yen, total liabilities are 2,216.2 billion yen, and total capital is 978.6 billion yen.",
+					"ja": "2025年12月末時点で資産合計は3兆1948億円、負債合計は2兆2162億円、資本合計は9786億円である。"
+				},
+				{
+					"en": "The Q3 financial results report discloses financial covenants such as senior facility, revolving credit facility, consolidated leverage ratio, and consolidated debt-equity ratio.",
+					"ja": "Q3決算短信は、シニア・ファシリティ、リボルビング・クレジット・ファシリティ、連結レバレッジ・レシオ、連結デット・エクイティ・レシオ等の財務制限条項を開示している。"
+				},
+				{
+					"en": "The memory business requires heavy capital investment, and competitiveness is directly linked to access to capital markets and bank loans.",
+					"ja": "メモリ事業は設備投資が重く、資本市場と銀行借入へのアクセスが競争力に直結する。"
+				},
+				{
+					"en": "The fourth risk is customer concentration and product mix.",
+					"ja": "第四のリスクは顧客集中と製品ミックスである。"
+				},
+				{
+					"en": "Apple, Sandisk, and Dell are disclosed as major customers in FY2024.",
+					"ja": "FY2024ではApple、Sandisk、Dellが主要顧客として開示されている。"
+				},
+				{
+					"en": "The more you move toward high-capacity enterprise SSDs, the more important long-term contracts with large cloud, server OEM, and storage platform providers become.",
+					"ja": "高容量enterprise SSDへ移るほど、大口クラウド、サーバーOEM、ストレージプラットフォーム事業者との長期契約が重要になる。"
+				},
+				{
+					"en": "When demand is strong, this leads to stable sales, but price negotiation power and specification requirements become stricter.",
+					"ja": "需要が強い局面では安定販売につながるが、価格交渉力や仕様要求は厳しくなる。"
+				},
+				{
+					"en": "The fifth limit is the distance from the AI ​​boom.",
+					"ja": "第五の限界は、AIブームとの距離である。"
+				},
+				{
+					"en": "Kioxia will benefit from AI data centers, but it won't dominate AI compute demands as directly as NVIDIA GPUs or HBM.",
+					"ja": "キオクシアはAIデータセンターの恩恵を受けるが、NVIDIA GPUやHBMほど直接的にAI計算需要を独占するわけではない。"
+				},
+				{
+					"en": "NAND receives demand for training data, checkpoints, RAGs, logs, vector DBs, inference peripheral data, and HDD replacement.",
+					"ja": "NANDは、学習データ、チェックポイント、RAG、ログ、ベクトルDB、推論周辺データ、HDD置換の需要を受ける。"
+				},
+				{
+					"en": "Even if demand for AI grows, the profit effect will vary depending on price increases, customer inventory adjustments, and selection of HDD/SSD/Tape/CXL/DRAM tiers.",
+					"ja": "AI需要が伸びても、価格上昇、顧客の在庫調整、HDD/SSD/Tape/CXL/DRAM階層の選択によって収益効果は変わる。"
+				}
+			]
+		},
+		{
+			"id": "7-practical-perspective",
+			"heading": {
+				"en": "7. Practical perspective",
+				"ja": "7. 実務的な見方"
+			},
+			"pairs": [
+				{
+					"en": "When evaluating KIOXIA, rather than looking at whether it is an AI stock as a semiconductor stock, you should look at where it is in the NAND supply and demand cycle, how much progress it will make in improving its mix of enterprise SSDs, and how flexible its JV and capital structure will be.",
+					"ja": "キオクシアを評価する時は、半導体株として「AI銘柄かどうか」を見るより、NAND需給サイクルのどの地点にいるか、企業向けSSDへのミックス改善がどれだけ進むか、JVと資本構造がどれだけ柔軟になるかを見るべきである。"
+				},
+				{
+					"en": "The viewpoints of practical judgment can be narrowed down to the following five points.",
+					"ja": "実務判断の観点は次の五つに絞れる。"
+				},
+				{
+					"en": "Inferring from publicly available information, Kioxia's future focus will shift from simply competing in the number of NAND layers to \"which workloads will be handled by its own SSD/flash module\" in the storage tier of AI infrastructure.",
+					"ja": "公表情報からの推定として、キオクシアの今後の焦点は、単なるNAND層数競争ではなく、AIインフラのストレージ階層で「どのワークロードを自社SSD/フラッシュモジュールで取るか」に移る。"
+				},
+				{
+					"en": "Ultra-high capacity QLC SSDs like LC9 are suitable for HDD replacement, data lakes, RAGs, checkpoints, and AI logs.",
+					"ja": "LC9のような超高容量QLC SSDは、HDD置換、データレイク、RAG、チェックポイント、AIログに向く。"
+				},
+				{
+					"en": "High-performance TLC SSDs like the CM9 are suitable for enterprise/cloud applications that require low latency and high IOPS.",
+					"ja": "CM9のような高性能TLC SSDは、低遅延・高IOPSが必要な企業/クラウド用途に向く。"
+				},
+				{
+					"en": "Although the HBF prototype is still in the research and development stage, it is an important move to fill the gap in capacity/bandwidth between DRAM and SSD.",
+					"ja": "HBF試作は、まだ研究開発段階だが、DRAMとSSDの間にある容量/帯域の空白を狙う動きとして重要である。"
+				}
+			]
+		},
+		{
+			"id": "8-recommended-policy",
+			"heading": {
+				"en": "8. Recommended policy",
+				"ja": "8. 推奨方針"
+			},
+			"pairs": [
+				{
+					"en": "To understand technology and business, Kioxia should not be read only as a big story of \"Japan's semiconductor revival.\"",
+					"ja": "技術・事業理解のためには、キオクシアを「日本の半導体復活」という大きな物語だけで読むべきではない。"
+				},
+				{
+					"en": "More precisely, Kioxia is a company that combines the pedigree of NAND flash invention, Toshiba's reorganization, the Bain-led acquisition, the Western Digital/SanDisk JV, the Japanese government's economic security policy, and the storage needs of AI data centers.",
+					"ja": "より正確には、キオクシアはNANDフラッシュの発明系譜、東芝再編、Bain主導買収、Western Digital/SanDisk JV、日本政府の経済安全保障政策、AIデータセンターのストレージ需要が重なった会社である。"
+				},
+				{
+					"en": "Whether in the context of investment, partnership, recruitment, or policy evaluation, it is best to check the following in the following order.",
+					"ja": "投資・提携・採用・政策評価のどの文脈でも、次の順に確認するのがよい。"
+				},
+				{
+					"en": "Check whether the strength in Q4 alone is temporary or continuous based on the full-year results for the fiscal year ending March 2026 and the next outlook.",
+					"ja": "2026年3月期通期決算と次期見通しで、Q4単体の強さが一過性か継続的かを確認する。"
+				},
+				{
+					"en": "Track the direction of enterprise/data center SSD ratio, long-term supply contracts, average selling price, and bit shipments.",
+					"ja": "enterprise/data center SSD比率、長期供給契約、平均販売価格、bit出荷の方向を追う。"
+				},
+				{
+					"en": "Confirm the utilization rate of Kitakami Fab2 and Yokkaichi/Kitakami, and the contribution of mass production of subsidized equipment.",
+					"ja": "Kitakami Fab2と四日市/北上の稼働率、補助金対象設備の量産寄与を確認する。"
+				},
+				{
+					"en": "Compare generational roadmaps with Samsung/SK hynix/Micron/SanDisk/YMTC.",
+					"ja": "Samsung/SK hynix/Micron/SanDisk/YMTCとの世代別ロードマップを比較する。"
+				},
+				{
+					"en": "Do not confuse AI storage demand with GPU/HBM demand, but break it down into demand for data storage, search, reasoning, and HDD replacement.",
+					"ja": "AIストレージ需要を、GPU/HBM需要と混同せず、データ保存・検索・推論周辺・HDD置換の需要として分解する。"
+				},
+				{
+					"en": "The current overall evaluation is that it is \"an important NAND company in Japan that is meeting the demand for data storage in the AI ​​era.",
+					"ja": "現時点の総合評価は、「AI時代のデータ保存需要を受ける日本の重要NAND企業。"
+				},
+				{
+					"en": "However, rather than a growing company, it is a company that competes in technology, capital, and production scale in the midst of an intense memory cycle.\"",
+					"ja": "ただし、成長企業というより強烈なメモリサイクルの中で技術・資本・生産規模を競う企業」"
+				},
+				{
+					"en": "This is the closest to reality.",
+					"ja": "とするのが最も現実に近い。"
+				}
+			]
+		}
+	]
+}

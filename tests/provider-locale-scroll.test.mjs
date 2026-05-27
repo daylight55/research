@@ -37,3 +37,26 @@ test('locale switch scroll restoration is aborted by user scroll input', async (
 	assert.match(source, /'PageDown'/)
 	assert.match(source, /'PageUp'/)
 })
+
+test('mobile horizontal swipes switch locale without replacing vertical scroll', async () => {
+	const source = await readFile(providerLocalePath, 'utf8')
+
+	assert.match(source, /const SWIPE_MAX_WIDTH = 768/)
+	assert.match(source, /const SWIPE_MIN_DISTANCE = 72/)
+	assert.match(source, /const SWIPE_MAX_VERTICAL_DISTANCE = 70/)
+	assert.match(source, /let swipeStart = null/)
+	assert.match(source, /const availableLocalesForPath = \(contentPath\) =>/)
+	assert.match(
+		source,
+		/canRedirectToMixedArticle\(contentPath\) \? SUPPORTED_LOCALES : \['ja', 'en'\]/
+	)
+	assert.match(source, /const switchLocaleBySwipe = \(direction\) =>/)
+	assert.match(source, /window\.addEventListener\(\s*'touchstart'/)
+	assert.match(source, /window\.addEventListener\(\s*'touchend'/)
+	assert.match(source, /event\.touches\.length !== 1/)
+	assert.match(source, /isSwipeIgnoredTarget\(event\.target\)/)
+	assert.match(source, /Math\.abs\(deltaX\) < SWIPE_MIN_DISTANCE/)
+	assert.match(source, /Math\.abs\(deltaY\) > SWIPE_MAX_VERTICAL_DISTANCE/)
+	assert.match(source, /switchLocaleBySwipe\(deltaX < 0 \? 1 : -1\)/)
+	assert.match(source, /switchLocale\(targetLocale, targetHref\)/)
+})

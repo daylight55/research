@@ -5,8 +5,10 @@ import test from 'node:test'
 const articleTemplates = [
 	'src/pages/reports/[...slug].astro',
 	'src/pages/en/reports/[...slug].astro',
+	'src/pages/mix/reports/[...slug].astro',
 	'src/pages/news/[...slug].astro',
-	'src/pages/en/news/[...slug].astro'
+	'src/pages/en/news/[...slug].astro',
+	'src/pages/mix/news/[...slug].astro'
 ]
 
 test('article sidebar related links allow narrow English titles to wrap', () => {

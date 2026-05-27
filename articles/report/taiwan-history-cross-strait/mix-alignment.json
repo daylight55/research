@@ -1,0 +1,306 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "Taiwan is not just an \"island in conflict with China.\"",
+					"ja": "台湾は、単なる「中国と対立する島」ではない。"
+				},
+				{
+					"en": "It has multiple historical layers: the Dutch and Spanish powers since the 17th century, the Zheng family government, Qing Dynasty rule, Japanese rule, postwar rule by the Republic of China, separation from the People's Republic of China since 1949, and democratization since 1987.",
+					"ja": "17世紀以降のオランダ・スペイン勢力、鄭氏政権、清朝統治、日本統治、戦後の中華民国統治、1949年以降の中華人民共和国との分断、1987年以降の民主化という複数の歴史層を持つ。"
+				},
+				{
+					"en": "Currently, Taiwan is a democratic government with a de facto independent government, military, currency, and electoral system, and is not widely recognized as a member state of the United Nations.",
+					"ja": "現在の台湾は、事実上の独自政府、軍、通貨、選挙制度を持つ民主政体であり、同時に国連加盟国として広く承認されているわけではない。"
+				},
+				{
+					"en": "Taiwan's international importance can be summarized into three things.",
+					"ja": "台湾の国際的重要度は三つに集約できる。"
+				},
+				{
+					"en": "First, it is the core of semiconductors, especially advanced logic foundries.",
+					"ja": "第一に、半導体、特に先端ロジック・ファウンドリの中核であること。"
+				},
+				{
+					"en": "Second, the Taiwan Strait is a major route for global maritime trade.",
+					"ja": "第二に、台湾海峡が世界の海上貿易の主要ルートであること。"
+				},
+				{
+					"en": "Third, it is the focus of military, technological, and alliance politics in the US-China competition.",
+					"ja": "第三に、米中競争における軍事、技術、同盟政治の焦点であること。"
+				},
+				{
+					"en": "The Taiwan emergency is not just a regional conflict, but simultaneously shakes supply chains, financial markets, alliance credibility, and international order.",
+					"ja": "台湾有事は地域紛争にとどまらず、サプライチェーン、金融市場、同盟信頼性、国際秩序を同時に揺らす。"
+				}
+			]
+		},
+		{
+			"id": "history-flow",
+			"heading": {
+				"ja": "2. 歴史の流れ",
+				"en": "2. The flow of history"
+			},
+			"pairs": [
+				{
+					"en": "It would be misleading to view Taiwan's history only as \"a part of Chinese history\" or as \"an island completely unrelated to China.\"",
+					"ja": "台湾史は「中国史の一部」とだけ見ても、「完全に中国と無関係な島」とだけ見ても理解を誤る。"
+				},
+				{
+					"en": "Based on an indigenous society, from the 17th century onwards, outside forces and Han people immigrated to the country, and in 1885 it became a province of the Qing Dynasty, and it experienced Japanese rule from 1895 to 1945.",
+					"ja": "先住民社会を基層に、17世紀以降に外部勢力と漢人移住が重なり、1885年に清朝の省となり、1895年から1945年まで日本統治を経験した。"
+				},
+				{
+					"en": "After 1945, Taiwan was ruled by the Republic of China, and as a result of the Communist Civil War in 1949, the Republic of China government moved to Taiwan.",
+					"ja": "1945年以降は中華民国が統治し、1949年の国共内戦の結果、中華民国政府が台湾へ移った。"
+				},
+				{
+					"en": "This is where the prototype for the current issue was born.",
+					"ja": "ここで現在の争点の原型ができた。"
+				},
+				{
+					"en": "After the war, Taiwan's political system shifted from a long period of authoritarianism to democracy.",
+					"ja": "戦後台湾の政治体制は、長期の権威主義から民主主義へ移った。"
+				},
+				{
+					"en": "After the February 28 Incident in 1947, martial law from 1949 to 1987, and the White Terror, it led to the lifting of martial law in 1987, the abolition of temporary provisions in 1991, the direct election of the president in 1996, and the change of government in 2000.",
+					"ja": "1947年の二・二八事件、1949年から1987年までの戒厳令、白色テロを経て、1987年の戒厳令解除、1991年の臨時条項廃止、1996年の総統直接選挙、2000年の政権交代に至る。"
+				},
+				{
+					"en": "Taiwan's current political legitimacy rests not only on the continuation of the Republic of China's constitution, but also on repeated elections by Taiwanese residents.",
+					"ja": "現在の台湾の政治的正統性は、単に中華民国憲法の継続だけでなく、台湾住民による反復的な選挙にも依拠している。"
+				}
+			]
+		},
+		{
+			"id": "china-relationship",
+			"heading": {
+				"ja": "3. 中国との関係",
+				"en": "3. Relationship with China"
+			},
+			"pairs": [
+				{
+					"en": "The core of China-Taiwan relations lies in the mismatch between the \"claims of sovereignty\" and the \"facts of governance\" over Taiwan.",
+					"ja": "中台関係の核心は、台湾をめぐる「主権の主張」と「統治の事実」が一致していない点にある。"
+				},
+				{
+					"en": "The Chinese government regards Taiwan as part of China and regards national unification as its historical mission.",
+					"ja": "中国政府は、台湾を中国の一部とし、国家統一を歴史的任務と位置づける。"
+				},
+				{
+					"en": "Taiwan explains that the Republic of China government effectively rules Taiwan and the surrounding islands, and that the PRC has never ruled Taiwan.",
+					"ja": "台湾側は、中華民国政府が台湾と周辺島嶼を実効統治しており、PRCは台湾を統治したことがないと説明する。"
+				},
+				{
+					"en": "These two terms are not just a difference in language; they affect participation in international organizations, military operations, diplomatic recognition, and economic exchanges.",
+					"ja": "この二つは単なる言葉の違いではなく、国際機関参加、軍事行動、外交承認、経済交流のすべてに影響する。"
+				},
+				{
+					"en": "Practical stability has been achieved through a combination of ambiguity and deterrence rather than complete agreement.",
+					"ja": "実務上の安定は、完全な合意ではなく、曖昧さと抑止の組み合わせで成立してきた。"
+				},
+				{
+					"en": "Taiwan will strengthen its own democratic politics and defense capabilities.",
+					"ja": "台湾は独自の民主政治と防衛能力を強める。"
+				},
+				{
+					"en": "China will pursue unification goals and maintain military, diplomatic, and economic pressure.",
+					"ja": "中国は統一目標を掲げ、軍事・外交・経済的圧力を維持する。"
+				},
+				{
+					"en": "While the United States does not officially recognize Taiwan as a nation, it provides defense equipment based on the Taiwan Relations Act and opposes changes to the status quo through force or coercion.",
+					"ja": "米国は台湾を国家として正式承認しない一方、台湾関係法に基づいて防衛装備を提供し、武力・威圧による現状変更に反対する。"
+				}
+			]
+		},
+		{
+			"id": "major-industries",
+			"heading": {
+				"ja": "4. 主要産業",
+				"en": "4. Major industries"
+			},
+			"pairs": [
+				{
+					"en": "The core of Taiwan's economy is the ICT manufacturing industry, with semiconductors at the top.",
+					"ja": "台湾経済の中核は、半導体を頂点とするICT製造業である。"
+				},
+				{
+					"en": "In 2025, exports and manufacturing will grow significantly due to the demand for AI, and DGBAS estimates the real GDP growth rate for the whole of 2025 to be 8.68%.",
+					"ja": "2025年はAI需要により輸出と製造業が大きく伸び、DGBASは2025年通年の実質GDP成長率を8.68%とした。"
+				},
+				{
+					"en": "Growth in the manufacturing industry is supported by increased production of semiconductors, computers, and electronic and optical products.",
+					"ja": "製造業の伸びは半導体、コンピュータ、電子・光学製品の生産拡大に支えられている。"
+				},
+				{
+					"en": "The main industries can be classified as follows.",
+					"ja": "主要産業を実務的に分けると、次のようになる。"
+				},
+				{
+					"en": "The importance of TSMC is not simply that there is a large company in Taiwan.",
+					"ja": "TSMCの重要性は、単に「台湾に大企業がある」という話ではない。"
+				},
+				{
+					"en": "TSMC is a central company that has established a division of labor model in which fabless companies design and specialized foundries manufacture, and is also linked to the competitiveness of US companies such as NVIDIA, Apple, and AMD.",
+					"ja": "TSMCはファブレス企業が設計し、専業ファウンドリが製造する分業モデルを成立させた中心企業であり、米国のNVIDIA、Apple、AMDなどの競争力とも結びついている。"
+				},
+				{
+					"en": "This interdependence embeds Taiwan in both U.S. industrial and security policy.",
+					"ja": "この相互依存が、台湾を米国の産業政策と安全保障政策の両方に組み込んでいる。"
+				}
+			]
+		},
+		{
+			"id": "international-importance",
+			"heading": {
+				"ja": "5. 国際政治における重要度",
+				"en": "5. Importance in international politics"
+			},
+			"pairs": [
+				{
+					"en": "Taiwan's importance can be better understood by understanding it on three levels: geopolitics, technology, and institutions.",
+					"ja": "台湾の重要度は、地政学、技術、制度の三層で理解すると見通しがよい。"
+				},
+				{
+					"en": "First, the Taiwan Strait is a maritime traffic route in East Asia.",
+					"ja": "第一に、台湾海峡は東アジアの海上交通路である。"
+				},
+				{
+					"en": "The Taiwan emergency affects not only Taiwan and China, but also the logistics of companies in Japan, South Korea, Southeast Asia, the United States, and Europe.",
+					"ja": "台湾有事は台湾と中国だけでなく、日本、韓国、東南アジア、米国、欧州企業の物流に波及する。"
+				},
+				{
+					"en": "CSIS estimates that approximately $2.45 trillion in cargo will pass through the Taiwan Strait in 2022, representing more than one-fifth of global maritime trade.",
+					"ja": "CSISの推計では、2022年に台湾海峡を通過した貨物は約2.45兆ドルで、世界海上貿易の5分の1超に相当する。"
+				},
+				{
+					"en": "Since China's own imports and exports are heavily dependent on the Taiwan Strait, a blockade or quarantine-type crisis would also cause significant damage to the Chinese economy.",
+					"ja": "中国自身の輸出入も台湾海峡に大きく依存しているため、封鎖や検疫型の危機は中国経済にも大きな損害を与える。"
+				},
+				{
+					"en": "Second, Taiwan is the core of the advanced semiconductor supply chain.",
+					"ja": "第二に、台湾は先端半導体供給網の中核である。"
+				},
+				{
+					"en": "AI, cloud, smartphones, automobiles, and defense equipment are built on a huge international division of labor across design, manufacturing equipment, materials, EDA, foundries, and advanced packaging.",
+					"ja": "AI、クラウド、スマートフォン、自動車、防衛装備は、設計、製造装置、材料、EDA、ファウンドリ、先端パッケージングをまたぐ巨大な国際分業で成立している。"
+				},
+				{
+					"en": "Among these, Taiwan occupies a position close to the bottleneck for manufacturing and mass production.",
+					"ja": "台湾はその中でも製造・量産のボトルネックに近い位置を占める。"
+				},
+				{
+					"en": "For this reason, Taiwan's stability is not just \"support for democracy\" but also the economic security of the United States and its allies.",
+					"ja": "このため、台湾の安定は「民主主義支援」だけでなく、米国と同盟国の経済安全保障そのものになっている。"
+				},
+				{
+					"en": "Third, Taiwan is a test case for the international order.",
+					"ja": "第三に、台湾は国際秩序のテストケースである。"
+				},
+				{
+					"en": "From the United States' perspective, peace and stability in the Taiwan Strait is an issue of international concern related to \"regional and global security and prosperity.\"",
+					"ja": "米国の立場では、台湾海峡の平和と安定は「地域・世界の安全と繁栄」に関わる国際的関心事項である。"
+				},
+				{
+					"en": "On the other hand, China views the Taiwan issue as an internal affairs and sovereignty issue.",
+					"ja": "一方、中国は台湾問題を内政・主権問題と位置づける。"
+				},
+				{
+					"en": "This difference in perception makes military deterrence and diplomatic crisis management difficult.",
+					"ja": "この認識差が、軍事抑止と外交危機管理を難しくしている。"
+				}
+			]
+		},
+		{
+			"id": "us-recognition-statements",
+			"heading": {
+				"ja": "6. 米国の認識と過去発言",
+				"en": "6. US recognition and past statements"
+			},
+			"pairs": [
+				{
+					"en": "Although the United States' understanding of Taiwan has changed over time, the framework of practice since 1979 has remained fairly consistent.",
+					"ja": "米国の台湾認識は、時代ごとに変化したが、1979年以降の実務枠組みはかなり一貫している。"
+				},
+				{
+					"en": "Officially, it recognizes the PRC as China's sole legitimate government and maintains unofficial relations with Taiwan.",
+					"ja": "正式にはPRCを中国の唯一の合法政府として承認し、台湾とは非公式関係を維持する。"
+				},
+				{
+					"en": "At the same time, the Taiwan Relations Act, three U.S.-China joint communiqués, and six guarantees will be combined to emphasize Taiwan's self-defense capabilities and peace in the Taiwan Strait.",
+					"ja": "同時に、台湾関係法、三つの米中共同コミュニケ、六つの保証を組み合わせ、台湾の自衛能力と台湾海峡の平和を重視する。"
+				},
+				{
+					"en": "What is important about this trend is that the United States' \"One China Policy\" and China's \"One China Principle\" are not the same.",
+					"ja": "この流れで重要なのは、米国の「一つの中国政策」と中国の「一つの中国原則」は同じではない点である。"
+				},
+				{
+					"en": "The United States recognizes the PRC as China's sole legitimate government, but with respect to Taiwan, it \"recognized\" the position of cross-strait Chinese people in the Shanghai Communiqué, and institutionalized working relations and defense assistance with Taiwan in the Taiwan Relations Act and the Six Guarantees.",
+					"ja": "米国はPRCを中国の唯一の合法政府として承認するが、台湾に関しては、上海コミュニケで両岸中国人の立場を「認識」し、台湾関係法と六つの保証で台湾との実務関係と防衛支援を制度化した。"
+				},
+				{
+					"en": "Therefore, US policy simultaneously includes \"not recognizing Taiwan as a state\" and \"viewing military force and coercion against Taiwan as a problem.\"",
+					"ja": "したがって、米国政策は「台湾を国家承認しない」ことと「台湾への武力・威圧を問題視する」ことを同時に含む。"
+				}
+			]
+		},
+		{
+			"id": "practical-reading",
+			"heading": {
+				"ja": "7. 実務的な読み方",
+				"en": "7. Practical reading"
+			},
+			"pairs": [
+				{
+					"en": "There are three simplifications that should be avoided when understanding Taiwan.",
+					"ja": "台湾を理解する上で避けるべき単純化は三つある。"
+				},
+				{
+					"en": "First, look at Taiwan only in terms of two options: \"Is Taiwan part of China or an independent country?\"",
+					"ja": "第一に、「台湾は中国の一部か独立国か」という二択だけで見ること。"
+				},
+				{
+					"en": "In reality, Taiwan has a high degree of effective governance and democratic legitimacy, but international recognition is limited.",
+					"ja": "現実には、台湾は高度な実効統治と民主的正統性を持つが、国際承認は限定される。"
+				},
+				{
+					"en": "Unless we understand this, we will not be able to figure out the system design for international organizations, trade, and military support.",
+					"ja": "ここを押さえないと、国際機関、通商、軍事支援の制度設計が見えない。"
+				},
+				{
+					"en": "Second, decide that \"because we have semiconductors, we will definitely protect the United States.\"",
+					"ja": "第二に、「半導体があるから米国は必ず守る」と決めつけること。"
+				},
+				{
+					"en": "Semiconductors increase Taiwan's strategic importance, but they also provide a reason for the United States and Japan to diversify their production.",
+					"ja": "半導体は台湾の戦略的重要性を高めるが、同時に米国や日本が生産分散を進める理由にもなる。"
+				},
+				{
+					"en": "The silicon shield is both a deterrent factor and a concept that visualizes the risk of concentration in Taiwan.",
+					"ja": "シリコン・シールドは抑止要因であると同時に、台湾集中リスクを可視化する概念でもある。"
+				},
+				{
+					"en": "Third, see Taiwan as an economic problem for China.",
+					"ja": "第三に、「中国にとって台湾は経済問題」と見ること。"
+				},
+				{
+					"en": "In Chinese government documents, Taiwan is talked about as an issue of national reunification, sovereignty, and national rejuvenation.",
+					"ja": "中国政府文書では、台湾は国家統一、主権、民族復興の問題として語られる。"
+				},
+				{
+					"en": "The gains and losses of semiconductors and trade alone cannot sufficiently predict China's actions.",
+					"ja": "半導体や貿易の損得だけでは、中国側の行動を十分に予測できない。"
+				}
+			]
+		}
+	]
+}

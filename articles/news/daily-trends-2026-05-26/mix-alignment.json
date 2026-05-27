@@ -1,0 +1,513 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "daily-trends-overview",
+			"heading": {
+				"ja": "2026-05-26 イラン交渉とAI統治が政策・市場・技術を同時に動かす",
+				"en": "2026-05-26 Iran talks and AI governance move markets"
+			},
+			"pairs": [
+				{
+					"en": "The latest 24-48 hours show Iran risk lifting oil, rates, and consumer anxiety, while the U.S. administration keeps pressure on Cuba, immigration, and financial rules.",
+					"ja": "直近48時間は、イラン情勢が原油・金利・消費者心理を押し上げる一方、米政権は対キューバ・移民・金融規制で強硬姿勢を続け、技術面ではAIモデルの安全審査とNvidia周辺の投資期待が市場の軸になっています。"
+				},
+				{
+					"en": "In technology, AI model safety reviews and Nvidia-linked investment demand remain central market signals.",
+					"ja": "直近48時間は、イラン情勢が原油・金利・消費者心理を押し上げる一方、米政権は対キューバ・移民・金融規制で強硬姿勢を続け、技術面ではAIモデルの安全審査とNvidia周辺の投資期待が市場の軸になっています。"
+				}
+			]
+		},
+		{
+			"id": "iran-talks-continue-without-urgency",
+			"heading": {
+				"ja": "イラン交渉、急がず継続",
+				"en": "Iran talks continue without urgency"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Trump said there is no rush to reach a deal with Iran, signaling continued pressure diplomacy.",
+					"ja": "何が起きたか: トランプ氏はイランとの合意を急がない姿勢を示し、対立の継続を前提にした圧力外交をにおわせました。"
+				},
+				{
+					"en": "Tension in the Middle East is feeding directly into market risk assessment.",
+					"ja": "中東情勢の緊張は、停戦や制裁の文言よりも市場のリスク評価に直結しています。"
+				},
+				{
+					"en": "Why it matters: Oil, shipping, and allied security decisions can swing with the pace and terms of talks.",
+					"ja": "なぜ重要か: 原油、輸送、同盟国の安全保障判断が、交渉の進み方ひとつで振れやすい状態です。"
+				},
+				{
+					"en": "The practical question is whether maritime transport becomes more stable, not only what the diplomatic message says.",
+					"ja": "政策のメッセージよりも、実際に海上輸送が安定するかどうかが注目点になります。"
+				},
+				{
+					"en": "What to watch: The next signal is not the diplomatic language itself but whether blockades, sanctions, or maritime transport risk actually ease or worsen.",
+					"ja": "今後の注視点: 次に見るべきは、交渉姿勢の発言ではなく、封鎖、制裁、海上輸送リスクに実際の緩和や悪化が出るかです。"
+				}
+			]
+		},
+		{
+			"id": "cuba-sanctions-expand-pressure",
+			"heading": {
+				"ja": "キューバ制裁、対外圧力を拡大",
+				"en": "Cuba sanctions expand external pressure"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The U.S. government added Cuban political and military leaders to sanctions lists, increasing pressure on the Castro regime.",
+					"ja": "何が起きたか: 米政府はキューバの政治・軍事指導層を新たに制裁対象に加え、対カストロ政権への圧力を強めました。"
+				},
+				{
+					"en": "The focus is shifting from symbolic diplomacy to blocking money and travel channels.",
+					"ja": "制裁の焦点は、象徴的な外交姿勢よりも実際の資金・人流の遮断に移っています。"
+				},
+				{
+					"en": "Why it matters: Cuba policy connects to U.S. immigration, security, and Latin America diplomacy, and it can become a domestic political issue.",
+					"ja": "なぜ重要か: キューバ政策は米国内の移民、治安、対ラテンアメリカ外交とつながりやすく、国内政治の争点にもなります。"
+				},
+				{
+					"en": "Expanded sanctions also signal stronger U.S. engagement in the region.",
+					"ja": "制裁の拡大は、近隣地域への米国の関与強化として読まれます。"
+				},
+				{
+					"en": "What to watch: Watch whether Cuba sanctions expand beyond new listings into second-order effects on remittances, travel, and local partner transactions.",
+					"ja": "今後の注視点: キューバ制裁の影響は、追加指定の有無だけでなく、送金、渡航、現地パートナー取引に二次的な萎縮が出るかで見たいところです。"
+				}
+			]
+		},
+		{
+			"id": "citizenship-revocation-reviews",
+			"heading": {
+				"ja": "帰化市民への剥奪調査を加速",
+				"en": "Citizenship revocation reviews accelerate"
+			},
+			"pairs": [
+				{
+					"en": "What happened: A report said immigration lawyers are being temporarily moved to the Justice Department to speed citizenship-related crackdowns.",
+					"ja": "何が起きたか: 移民弁護士を司法省へ一時移管して、帰化に関する取り組みを速める動きが報じられました。"
+				},
+				{
+					"en": "The target set may be narrow, but the move signals faster and broader enforcement capacity.",
+					"ja": "対象は限られるものの、法執行の速度と範囲を広げる意図が見えます。"
+				},
+				{
+					"en": "Why it matters: Stronger procedures affect immigration law, hiring, compliance, and community trust.",
+					"ja": "なぜ重要か: こうした手続き強化は、移民法務だけでなく、企業の採用、コンプライアンス、コミュニティの不安にも波及します。"
+				},
+				{
+					"en": "Politically, they can reopen debates over nationality, loyalty, and screening.",
+					"ja": "政治的には「国籍・忠誠・審査」を巡る議論を再燃させやすいテーマです。"
+				},
+				{
+					"en": "What to watch: The impact will depend on target scope, DOJ operating guidance, and whether companies change international hiring or immigration-support practices.",
+					"ja": "今後の注視点: 市民権剥奪の動きでは、対象範囲、司法省の運用指針、企業の国際採用や移民支援への波及が次の確認点になります。"
+				}
+			]
+		},
+		{
+			"id": "financial-system-enforcement",
+			"heading": {
+				"ja": "金融システムで不法滞在対策を強化",
+				"en": "Financial system enforcement targets illegal presence"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The White House framed financial-system integrity as a lever against unlawful presence and illicit use.",
+					"ja": "何が起きたか: ホワイトハウスは金融システムの「整合性」を掲げ、不法滞在や不正利用への対処を強める方針を打ち出しました。"
+				},
+				{
+					"en": "Banks and payment companies are being pushed toward stricter identity checks and fraud detection.",
+					"ja": "銀行や決済事業者に対する期待値を、本人確認と不正検知の厳格化へ振っています。"
+				},
+				{
+					"en": "Why it matters: Financial regulation is importing immigration, security, and political priorities into financial infrastructure.",
+					"ja": "なぜ重要か: 金融規制は、実質的には移民・治安・政治の論点を金融インフラに持ち込むものです。"
+				},
+				{
+					"en": "Policy changes can quickly alter account opening, transfers, and customer review operations.",
+					"ja": "政策変更が、口座開設や送金、顧客審査の運用にすぐ反映されます。"
+				},
+				{
+					"en": "What to watch: Financial-system enforcement should be tracked through AML/KYC expectations, customer-attribute checks, and suspicious-transaction monitoring rules.",
+					"ja": "今後の注視点: 金融システム対策は、AML/KYC、顧客属性確認、疑わしい取引監視のどこに新しい監督期待が置かれるかを見たいところです。"
+				}
+			]
+		},
+		{
+			"id": "digital-finance-deregulation",
+			"heading": {
+				"ja": "デジタル金融の規制緩和を加速",
+				"en": "Digital finance deregulation gains speed"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The White House outlined a push to integrate fintech innovation into regulatory frameworks.",
+					"ja": "何が起きたか: ホワイトハウスは、フィンテックを規制枠組みに組み込み直す方針を示し、イノベーション促進を前面に出しました。"
+				},
+				{
+					"en": "Crypto assets and new payments are being reframed through clearer rules and supervision.",
+					"ja": "暗号資産や新決済の扱いを、明確なルールと監督の枠で整理し直そうとしています。"
+				},
+				{
+					"en": "Why it matters: In the United States, financial innovation can move sharply with regulatory discretion.",
+					"ja": "なぜ重要か: 米国では、金融イノベーションの方向性が規制当局の裁量で大きく変わります。"
+				},
+				{
+					"en": "Rule design affects startup growth and incumbent financial institutions’ entry decisions.",
+					"ja": "ここでのルール設計は、スタートアップの成長速度と大手金融の参入判断を左右します。"
+				},
+				{
+					"en": "What to watch: In digital finance, watch which areas actually gain room to enter or expand: payments, money movement, crypto assets, or identity verification.",
+					"ja": "今後の注視点: デジタル金融では、規制緩和が決済、資金移動、暗号資産、本人確認のどの領域で実際の参入余地を広げるかが焦点です。"
+				}
+			]
+		},
+		{
+			"id": "consumer-sentiment-record-lows",
+			"heading": {
+				"ja": "消費者マインド、過去最低へ",
+				"en": "Consumer sentiment falls to record lows"
+			},
+			"pairs": [
+				{
+					"en": "What happened: U.S. consumer sentiment fell to record-low levels in May, while inflation expectations increased.",
+					"ja": "何が起きたか: 米消費者信頼感は5月に記録的な低さまで落ち込み、インフレ期待の上昇も確認されました。"
+				},
+				{
+					"en": "Households are pricing in higher prices and uncertainty at the same time.",
+					"ja": "家計は、価格上昇と先行き不透明感を同時に織り込んでいます。"
+				},
+				{
+					"en": "Why it matters: Weaker sentiment can hit discretionary spending and durable-goods demand before hard activity data turns.",
+					"ja": "なぜ重要か: 消費マインドの悪化は、裁量支出や耐久財の需要に先に効きます。"
+				},
+				{
+					"en": "It is an early signal for judging whether the economy is entering a downturn.",
+					"ja": "景気後退の入口かどうかを判断するうえで、実体消費の前触れとして無視できません。"
+				},
+				{
+					"en": "What to watch: The consumer signal is whether weak sentiment turns into lower real demand for restaurants, travel, durable goods, and discretionary retail.",
+					"ja": "今後の注視点: 消費者マインドの悪化が、外食、旅行、耐久財の数量減に波及するかを見たいところです。名目売上より実質需要の変化が焦点になります。"
+				}
+			]
+		},
+		{
+			"id": "treasury-yields-rate-cut-hopes",
+			"heading": {
+				"ja": "国債利回り上昇で利下げ観測が後退",
+				"en": "Rising Treasury yields weaken rate-cut hopes"
+			},
+			"pairs": [
+				{
+					"en": "What happened: U.S. Treasury yields moved higher, and investors pulled back somewhat from early rate-cut expectations.",
+					"ja": "何が起きたか: 米国債市場では利回りが上向き、投資家は早期の利下げシナリオをやや後退させています。"
+				},
+				{
+					"en": "Inflation concern is appearing first in bonds rather than equities.",
+					"ja": "物価再燃への警戒が、株式よりも債券に先に表れています。"
+				},
+				{
+					"en": "Why it matters: Rate repricing directly affects mortgages, corporate issuance, and growth-stock valuations.",
+					"ja": "なぜ重要か: 金利の再評価は、住宅ローン、社債発行、成長株バリュエーションに直結します。"
+				},
+				{
+					"en": "If markets assume rates stay higher for longer, financing conditions tighten broadly.",
+					"ja": "市場が「長く高い金利」を想定し始めると、資金調達全般が重くなります。"
+				},
+				{
+					"en": "What to watch: Rate repricing should be followed through mortgages, corporate issuance, and growth-stock valuations, where higher-for-longer expectations show up quickly.",
+					"ja": "今後の注視点: 金利再評価では、早期利下げ期待がどこまで後退し、住宅ローン、社債発行、成長株バリュエーションに残るかを追う必要があります。"
+				}
+			]
+		},
+		{
+			"id": "retail-sales-prices",
+			"heading": {
+				"ja": "小売売上は堅調も物価押し上げ",
+				"en": "Retail sales stay firm but prices lift revenue"
+			},
+			"pairs": [
+				{
+					"en": "What happened: U.S. retail sales increased, but higher prices contributed to the reported gain.",
+					"ja": "何が起きたか: 米小売売上高は伸びましたが、価格上昇が売上の押し上げ要因になっている面があります。"
+				},
+				{
+					"en": "The pattern points more to higher unit prices than clear volume strength.",
+					"ja": "数量の強さより、単価の上昇が目立つ構図です。"
+				},
+				{
+					"en": "Why it matters: Nominal sales can look solid while real demand weakens, changing inventory and margin forecasts.",
+					"ja": "なぜ重要か: 名目売上が堅調でも、実質需要が弱ければ在庫と利益率の見通しは変わります。"
+				},
+				{
+					"en": "Businesses need to separate price-driven sales from actual purchase volume.",
+					"ja": "消費が「量」でなく「値上げ」に支えられているかを見極める必要があります。"
+				},
+				{
+					"en": "What to watch: Retail strength should be separated into nominal sales and unit volume.",
+					"ja": "今後の注視点: 小売売上は、名目額の強さと実際の購入数量を分けて見たいところです。"
+				},
+				{
+					"en": "If price increases carry the number, inventory and margin assumptions change.",
+					"ja": "価格上昇だけで売上が支えられているなら、在庫と利益率の見方は変わります。"
+				}
+			]
+		},
+		{
+			"id": "oil-iran-uncertainty",
+			"heading": {
+				"ja": "原油相場、イラン交渉で乱高下",
+				"en": "Oil swings on Iran negotiation uncertainty"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Oil prices moved sharply as markets weighed uncertainty around U.S.-Iran talks and geopolitical risk.",
+					"ja": "何が起きたか: 原油は、米イラン交渉の不透明さと地政学リスクで大きく振れました。"
+				},
+				{
+					"en": "Traders continue to price both supply risk and possible relief.",
+					"ja": "市場は供給不安と緩和期待の両方を織り込み続けています。"
+				},
+				{
+					"en": "Why it matters: Oil moves inflation expectations, transport costs, and corporate margins at the same time.",
+					"ja": "なぜ重要か: 原油はインフレ期待、輸送コスト、企業マージンを同時に動かします。"
+				},
+				{
+					"en": "Even short-term price swings can influence growth views and central-bank expectations.",
+					"ja": "短期の値動きでも、景気見通しと中央銀行の判断に影響します。"
+				},
+				{
+					"en": "What to watch: For oil, separate the impact of U.S.-Iran talks, inventories, and shipping risk to see what is actually driving price swings.",
+					"ja": "今後の注視点: 原油相場では、米イラン交渉、在庫統計、輸送リスクのどれが値動きの主因になっているかを分けて見る必要があります。"
+				}
+			]
+		},
+		{
+			"id": "opec-output-expectations",
+			"heading": {
+				"ja": "OPEC+、7月増産観測が浮上",
+				"en": "OPEC+ July output-increase expectations emerge"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Markets again focused on the possibility of an OPEC+ output increase in July, putting supply-side expectations on oil prices.",
+					"ja": "何が起きたか: OPEC+の7月増産観測が再び意識され、供給サイドの見通しが相場の重しになっています。"
+				},
+				{
+					"en": "Even with geopolitical risk, added supply expectations can cap price gains.",
+					"ja": "地政学リスクがあっても、増産観測があると価格上昇は抑えられやすくなります。"
+				},
+				{
+					"en": "Why it matters: Supply growth can weaken the durability of higher oil prices and soften inflation-reacceleration scenarios.",
+					"ja": "なぜ重要か: 供給増加の話は、原油高の持続性を弱め、インフレ再燃シナリオを和らげることがあります。"
+				},
+				{
+					"en": "If the increase is limited, upside price risk remains.",
+					"ja": "逆に増産が限定的なら、価格の上振れ余地は残ります。"
+				},
+				{
+					"en": "What to watch: The price question is whether possible OPEC+ output increases can offset geopolitical risk from Iran-related uncertainty.",
+					"ja": "今後の注視点: OPEC+の増産観測が価格上昇を抑えるか、地政学リスクがそれを上回るかが焦点です。供給方針と交渉ニュースを同時に追いたいところです。"
+				}
+			]
+		},
+		{
+			"id": "government-ai-model-reviews",
+			"heading": {
+				"ja": "AIモデルの政府事前検査が始動",
+				"en": "Government pre-release reviews of AI models begin"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Microsoft, Google, xAI, and others are giving the U.S. government early access to AI models for safety and security checks.",
+					"ja": "何が起きたか: Microsoft、Google、xAIなどが、米政府向けにAIモデルを早期提供し、安全性やリスクを事前に確認する流れが進みました。"
+				},
+				{
+					"en": "For large models, the review process is becoming as important as pre-release performance competition.",
+					"ja": "巨大モデルは、公開前の性能競争だけでなく、審査プロセスそのものが重要になっています。"
+				},
+				{
+					"en": "Why it matters: AI governance is moving beyond model capability into coordinated design with government.",
+					"ja": "なぜ重要か: AIの統治は、性能向上だけでは片づかず、政府との協調設計に移っています。"
+				},
+				{
+					"en": "If safety reviews become standardized, release speed and transparency expectations will rise.",
+					"ja": "安全審査が標準化されると、モデル公開の速度と透明性の要求が一段上がります。"
+				},
+				{
+					"en": "What to watch: Government AI model reviews matter if evaluation criteria, audit logs, and pre-release safety checks become standard expectations across the industry.",
+					"ja": "今後の注視点: AIモデルの政府事前検査では、評価基準、監査ログ、公開前レビューの透明性が業界標準になるかを見たいところです。"
+				}
+			]
+		},
+		{
+			"id": "nvidia-demand-strong",
+			"heading": {
+				"ja": "Nvidia、AI需要なお強い",
+				"en": "Nvidia demand remains strong"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Nvidia’s quarterly results again showed strong AI demand and sustained data-center investment momentum.",
+					"ja": "何が起きたか: Nvidiaは四半期決算でAI需要の強さを改めて示し、データセンター投資の勢いが続いていることを印象づけました。"
+				},
+				{
+					"en": "Markets are sensitive not only to revenue but also to the next-quarter outlook.",
+					"ja": "市場は売上だけでなく、次四半期の見通しにも敏感に反応しています。"
+				},
+				{
+					"en": "Why it matters: Nvidia’s numbers serve as a temperature gauge for AI infrastructure spending.",
+					"ja": "なぜ重要か: Nvidiaの数字は、AIインフラ投資の温度計として読まれます。"
+				},
+				{
+					"en": "The signal affects semiconductors, cloud, power, and data-center industries.",
+					"ja": "半導体、クラウド、電力、データセンターの各産業に波及が広いからです。"
+				},
+				{
+					"en": "What to watch: Nvidia demand should be read through sustained data-center spending on GPUs, power, cooling, and networking, not only chip revenue.",
+					"ja": "今後の注視点: Nvidiaの強さが続くかは、GPU需要だけでなく、電力、冷却、ネットワーク投資まで含むデータセンター支出が維持されるかで判断したいところです。"
+				}
+			]
+		},
+		{
+			"id": "nvidia-china-cpu-market",
+			"heading": {
+				"ja": "Nvidia、対中需要も2000億ドル市場",
+				"en": "Nvidia includes China in a $200 billion CPU market view"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Nvidia said its $200 billion CPU market forecast includes China demand.",
+					"ja": "何が起きたか: Nvidiaは、2000億ドル規模のCPU市場見通しに中国需要を含める考えを示しました。"
+				},
+				{
+					"en": "Even under continuing export controls, the company is signaling that China remains too important to ignore.",
+					"ja": "対中輸出規制が続く中でも、中国市場の存在感を無視できないという見立てです。"
+				},
+				{
+					"en": "Why it matters: Semiconductor companies face revenue opportunity and regulatory risk at the same time under U.S.-China technology friction.",
+					"ja": "なぜ重要か: 米中技術摩擦の下で、半導体企業は売上機会と規制リスクを同時に抱えています。"
+				},
+				{
+					"en": "How China is included changes supply and pricing strategy.",
+					"ja": "中国をどう織り込むかで、供給戦略と価格戦略が変わります。"
+				},
+				{
+					"en": "What to watch: The key question is whether export controls or China demand have the stronger pull on Nvidia’s supply and pricing strategy.",
+					"ja": "今後の注視点: 中国需要を含む市場見通しでは、輸出規制の厳格化と売上機会のどちらがNvidiaの供給戦略を強く動かすかが焦点になります。"
+				}
+			]
+		},
+		{
+			"id": "microsoft-beyond-openai",
+			"heading": {
+				"ja": "Microsoft、OpenAI後を見据え買収模索",
+				"en": "Microsoft looks for acquisitions beyond OpenAI"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Microsoft is exploring startup acquisitions and partnerships to reduce dependence on OpenAI.",
+					"ja": "何が起きたか: Microsoftは、OpenAI依存を相対化するために、新興企業の買収や提携の余地を探っています。"
+				},
+				{
+					"en": "The generative AI race is shifting from model performance alone toward surrounding technology and distribution control.",
+					"ja": "生成AIの本命争いは、モデル単体よりも、周辺技術と販売網の囲い込みに移っています。"
+				},
+				{
+					"en": "Why it matters: The more a company depends on one partner, the higher its bargaining and continuity risk.",
+					"ja": "なぜ重要か: パートナー依存が大きいほど、交渉力と事業継続性のリスクが高まります。"
+				},
+				{
+					"en": "Large cloud companies want more of the AI supply chain under their own control.",
+					"ja": "大手クラウド事業者は、AI時代の供給網を自前でも持ちたがっています。"
+				},
+				{
+					"en": "What to watch: Microsoft’s startup search matters if it turns into a more diversified AI supply chain and reduces dependence on OpenAI.",
+					"ja": "今後の注視点: Microsoftの動きでは、OpenAI依存を下げる買収や提携が、モデル供給網の多線化として実際に進むかを見たいところです。"
+				}
+			]
+		},
+		{
+			"id": "ai-vulnerabilities-credentials",
+			"heading": {
+				"ja": "AI脆弱性、盗まれた認証情報を逆転",
+				"en": "AI vulnerabilities overtake stolen credentials"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Verizon research found AI-related vulnerabilities emerging as a more visible breach factor than stolen credentials.",
+					"ja": "何が起きたか: Verizonの調査では、AI関連の脆弱性が、盗まれた認証情報よりも目立つ侵入要因として浮上しました。"
+				},
+				{
+					"en": "Attacks are expanding from straightforward password theft into AI-enabled discovery and exploitation.",
+					"ja": "攻撃はパスワード窃取の単純型から、AIを使った発見・悪用へ広がっています。"
+				},
+				{
+					"en": "Why it matters: Cyber risk is moving beyond credential leakage toward the behavior of AI systems themselves.",
+					"ja": "なぜ重要か: サイバー攻撃の重心が、資格情報の漏えいだけでなく、AIの振る舞いそのものに移っています。"
+				},
+				{
+					"en": "Defenders need to manage model and workflow exposure in addition to identity controls.",
+					"ja": "防御側は、ID管理だけでなくモデルとワークフローの露出面を管理する必要があります。"
+				},
+				{
+					"en": "What to watch: AI breach risk should be tracked through models, inputs, permissions, and tool integrations, not only stolen credentials.",
+					"ja": "今後の注視点: AI関連の侵入リスクでは、盗まれた認証情報だけでなく、モデル、入力、権限、ツール連携のどこが攻撃面になるかを追う必要があります。"
+				}
+			]
+		},
+		{
+			"id": "cross-category-view",
+			"heading": {
+				"ja": "横断的な見立て",
+				"en": "Cross-Category View"
+			},
+			"pairs": [
+				{
+					"en": "Uncertainty around Iran talks is moving oil, yields, and consumer sentiment at the same time.",
+					"ja": "イラン交渉の不透明さが、原油・利回り・消費者心理を同時に動かしています。"
+				},
+				{
+					"en": "U.S. policy on finance, immigration, and Cuba sanctions is linked by a broader domestic-governance posture.",
+					"ja": "米政権の金融・移民・対外制裁は、外交よりも国内統治の強化として連動しています。"
+				},
+				{
+					"en": "AI is moving from an adoption phase into a governance phase across regulation, safety review, and corporate earnings.",
+					"ja": "AIは、規制・安全審査・企業決算の3面で「導入」から「統治」フェーズへ移っています。"
+				},
+				{
+					"en": "Nvidia and Microsoft show that AI investment is pushing both hardware demand and M&A strategy.",
+					"ja": "NvidiaとMicrosoftの動きは、AI投資がハードウェア需要とM&A戦略の両方を押し上げていることを示しています。"
+				},
+				{
+					"en": "The next focal point is how progress in Iran talks feeds into energy prices and the Federal Reserve outlook.",
+					"ja": "次の焦点は、イラン交渉の進展がエネルギー価格とFRBの見通しにどう波及するかです。"
+				}
+			]
+		},
+		{
+			"id": "open-items-to-track",
+			"heading": {
+				"ja": "追跡すべき未確定事項",
+				"en": "Open Items To Track"
+			},
+			"pairs": [
+				{
+					"en": "How far Iran-related blockades, sanctions, and maritime transport restrictions are concretely eased.",
+					"ja": "イラン交渉が、封鎖・制裁・海上輸送のどこまで具体的に緩和されるか。"
+				},
+				{
+					"en": "How Cuba sanctions and citizenship-revocation efforts affect immigration and financial operations.",
+					"ja": "対キューバ制裁と帰化剥奪の動きが、今後の移民・金融実務にどの程度波及するか。"
+				},
+				{
+					"en": "Whether the Fed leans further toward higher-for-longer rates rather than cuts.",
+					"ja": "Fedが利下げよりも長期の高金利を維持する方向へ傾くかどうか。"
+				}
+			]
+		}
+	]
+}

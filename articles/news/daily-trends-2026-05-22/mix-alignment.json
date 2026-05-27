@@ -1,0 +1,437 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "lead",
+			"heading": {
+				"ja": "2026-05-22 AI規制延期と原油高が政策・市場・開発を揺らす",
+				"en": "2026-05-22 AI regulation delay and high crude prices"
+			},
+			"pairs": [
+				{
+					"en": "Over the past 24 to 48 hours, in politics, AI and financial regulations in the United States and tensions with China and Taiwan have progressed simultaneously, in the economy, the resurgent inflation and worsening interest rate outlook have shaken the market, and in technology, with Google I/O at the center, the trend of AI moving from \"conversation\" to \"action\" has further strengthened.",
+					"ja": "この24〜48時間は、政治では米国のAI・金融規制と対中・対台の緊張が同時進行し、経済ではインフレ再燃と金利見通しの悪化が市場を揺らし、技術ではGoogle I/Oを軸にAIが「会話」から「実行」へ移る流れが一段と強まりました。"
+				},
+				{
+					"en": "Overall, this is a phase in which policy, market, and product announcements are interconnected.",
+					"ja": "全体としては、政策・市場・製品発表が相互に連動する局面です。"
+				}
+			]
+		},
+		{
+			"id": "trump-ai-oversight",
+			"heading": {
+				"ja": "トランプ政権、AI監督強化は延期",
+				"en": "Trump administration postpones strengthening AI oversight"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Axios reports that President Trump has delayed signing an executive order that would increase oversight of AI and cybersecurity.",
+					"ja": "何が起きたか: Axios報道では、トランプ大統領がAIとサイバーセキュリティの監督を強める大統領令の署名を延期しました。"
+				},
+				{
+					"en": "There is a growing sense of wariness about AI among some of the government's supporters, and adjustments within the government continue.",
+					"ja": "支持層の一部でAIへの警戒感が高まり、政権内の調整が続いています。"
+				},
+				{
+					"en": "Why it matters: AI is being treated not only as a matter of \"promoting growth\" but also as an issue of \"security, elections, and employment,\" which will determine the strength of future regulations.",
+					"ja": "なぜ重要か: AIは「成長促進」だけでなく「安全保障・選挙・雇用」の論点として扱われつつあり、今後の規制の強度を左右します。"
+				},
+				{
+					"en": "What to watch: The next signal is whether AI procurement requirements become concrete rules for model use, log retention, cyber controls, and post-deployment monitoring.",
+					"ja": "今後の注視点: 次に見るべきは、AIモデルの政府調達要件がログ保存、サイバー統制、利用制限のどこまで具体化されるかです。"
+				}
+			]
+		},
+		{
+			"id": "financial-crime",
+			"heading": {
+				"ja": "米政権、金融犯罪対策を強化",
+				"en": "US administration strengthens measures against financial crime"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The White House announced an executive order to strengthen efforts to combat illicit fund transfers and money laundering within the U.S. financial system.",
+					"ja": "何が起きたか: ホワイトハウスは、米金融システム内の不正資金移動やマネロン対策を強める大統領令の方針を示しました。"
+				},
+				{
+					"en": "The focus is on information sharing between banks and non-banks and strengthening of monitoring.",
+					"ja": "銀行と非銀行の情報共有、監視強化が焦点です。"
+				},
+				{
+					"en": "Why it matters: Tackling sanctions evasion, money laundering and illegal transfers is back on the political agenda, potentially leading to further tightening of financial infrastructure.",
+					"ja": "なぜ重要か: 制裁回避、マネロン、違法送金への対応が政治課題として再び前面に出ており、金融インフラの締め付けが進む可能性があります。"
+				},
+				{
+					"en": "What to watch: Watch whether the stricter identity and AML posture extends beyond banks into payments, crypto assets, and cross-border remittances.",
+					"ja": "今後の注視点: 注目点は、本人確認・AML・取引監視の運用基準が、銀行だけでなく決済、暗号資産、越境送金へどの範囲で広がるかです。"
+				}
+			]
+		},
+		{
+			"id": "starmer-party",
+			"heading": {
+				"ja": "スターマー首相、党内求心力低下",
+				"en": "Prime Minister Starmer loses centripetal force within his party"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The Associated Press reported that British Prime Minister Keir Starmer is losing unifying power within his party after a crushing defeat in local elections.",
+					"ja": "何が起きたか: APは、英国のキア・スターマー首相が地方選での大敗後、党内での求心力を失いつつあると報じました。"
+				},
+				{
+					"en": "He has emphasized that he will continue to work.",
+					"ja": "本人は「仕事を続ける」と強調しています。"
+				},
+				{
+					"en": "Why it matters: In the UK, a combination of dissatisfaction over fiscal discipline, immigration and public service reform risks destabilizing the government's policy direction.",
+					"ja": "なぜ重要か: 英国では財政規律、移民、公共サービス改革をめぐる不満が重なり、政権の政策運営が不安定化するリスクがあります。"
+				},
+				{
+					"en": "What to watch: The key question is whether cabinet changes and party pressure alter concrete policy on immigration, taxation, and EU relations rather than only the political tone.",
+					"ja": "今後の注視点: 英国政策の継続性を見るには、内閣人事だけでなく、党内圧力が移民、税制、対EU関係の具体策に反映されるかを追う必要があります。"
+				}
+			]
+		},
+		{
+			"id": "taiwan-defense",
+			"heading": {
+				"ja": "台湾、防衛装備売却に慎重な期待",
+				"en": "Taiwan cautiously expects defense equipment sales"
+			},
+			"pairs": [
+				{
+					"en": "What happened: According to Reuters, Taiwan's Ministry of Defense expressed cautious hope for arms sales from the United States.",
+					"ja": "何が起きたか: Reutersによると、台湾国防部は米国からの武器売却に慎重ながら期待を示しました。"
+				},
+				{
+					"en": "Defense cooperation with the United States is an ongoing issue that affects deterrence across the Taiwan Strait.",
+					"ja": "対米防衛協力は、台湾海峡の抑止を左右する継続論点です。"
+				},
+				{
+					"en": "Why it matters: The deterrence balance in the Taiwan Strait has implications not only for U.S.-China relations but also for semiconductors, shipping, and defense procurement.",
+					"ja": "なぜ重要か: 台湾海峡の抑止バランスは、米中関係だけでなく半導体・海運・防衛調達にも波及します。"
+				},
+				{
+					"en": "What to watch: Track sanctions and export-control changes separately from actual procurement delays, because semiconductors, logistics, and defense will feel the impact on different timelines.",
+					"ja": "今後の注視点: 半導体、物流、防衛への波及を見るには、制裁・輸出管理の追加発表と、部材調達や納期に実際の遅延が出るかを分けて確認したいところです。"
+				}
+			]
+		},
+		{
+			"id": "china-taiwan",
+			"heading": {
+				"ja": "中国、台湾問題を「最重要課題」と再主張",
+				"en": "China reasserts Taiwan issue as “top priority issue”"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Reuters reported that China has positioned Taiwan as the most important issue in U.S.-China relations and has maintained that position even after the meeting with Trump.",
+					"ja": "何が起きたか: Reutersは、中国側が台湾を米中関係で最重要の論点と位置づけ、トランプ氏との接触後もその立場を崩していないと伝えました。"
+				},
+				{
+					"en": "No major breakthrough has been seen in discussions between the leaders.",
+					"ja": "首脳間の議論でも大きな突破口は見えていません。"
+				},
+				{
+					"en": "Why it matters: As the focus of China policy expands from trade to security, diplomatic events become leading market and regulatory indicators.",
+					"ja": "なぜ重要か: 対中政策の焦点が貿易から安全保障へ広がり、外交イベントが市場や規制の先行指標になっています。"
+				},
+				{
+					"en": "What to watch: U.S.-China tension should be judged by whether export controls, cloud access, and communications-equipment supply chains begin moving together.",
+					"ja": "今後の注視点: 米中間の緊張が一過性かを判断するには、輸出規制の対象品目、クラウド利用制限、通信機器の調達先変更が連動するかを見る必要があります。"
+				}
+			]
+		},
+		{
+			"id": "nomura-fed",
+			"heading": {
+				"ja": "ノムラ、2026年のFRB利下げなしを予想",
+				"en": "Nomura predicts no Fed rate cut in 2026"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Reuters reports that Nomura believes the US Federal Reserve is unlikely to cut interest rates in 2026.",
+					"ja": "何が起きたか: Reuters報道では、野村が米連邦準備理事会は2026年に利下げを実施しない可能性が高いとみています。"
+				},
+				{
+					"en": "This is because inflation is picking up again and policy makers are taking a cautious stance.",
+					"ja": "インフレが再び強まり、政策当局のスタンスが慎重になっているためです。"
+				},
+				{
+					"en": "Why it matters: Remaining high interest rates have a direct impact on stock valuations, mortgages, corporate bond issuance, and startup financing.",
+					"ja": "なぜ重要か: 金利の高止まりは、株式バリュエーション、住宅ローン、社債発行、スタートアップ調達に直接効きます。"
+				},
+				{
+					"en": "What to watch: The issue is whether higher long-term yields are a temporary market move or a level that starts changing financing and capital-investment assumptions.",
+					"ja": "今後の注視点: 焦点は、長期金利の上昇が一時的な需給要因で終わるか、企業の資金調達や設備投資計画に反映される水準で定着するかです。"
+				}
+			]
+		},
+		{
+			"id": "fed-payment",
+			"heading": {
+				"ja": "FRB、決済口座の新枠組みを提案",
+				"en": "Fed proposes new framework for payment accounts"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The US Federal Reserve has proposed a new framework for opening payment accounts for non-bank businesses that meet certain criteria.",
+					"ja": "何が起きたか: 米連邦準備制度は、一定条件を満たす非銀行事業者向けに決済口座を開く新たな枠組みを提案しました。"
+				},
+				{
+					"en": "The issue is improving access for fintech and payment providers.",
+					"ja": "フィンテックや決済事業者のアクセス改善が論点です。"
+				},
+				{
+					"en": "Why it matters: Enabling non-bank players to enter payment infrastructures changes both competition and oversight.",
+					"ja": "なぜ重要か: 銀行以外のプレイヤーが決済基盤へ入りやすくなれば、競争と監督の両方が変わります。"
+				},
+				{
+					"en": "What to watch: The practical signal is whether lower entry barriers for payments, remittances, BaaS, and crypto assets arrive with supervisory requirements that offset the benefit.",
+					"ja": "今後の注視点: 規制緩和の実効性は、参入コストが下がる一方で、決済、送金、BaaS、暗号資産への監督要件がどれほど残るかで決まります。"
+				}
+			]
+		},
+		{
+			"id": "oil-iran",
+			"heading": {
+				"ja": "原油高、米イラン交渉の停滞で続く",
+				"en": "Oil prices continue to rise due to stalled US-Iran negotiations"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Reuters reported that US-Iran peace and nuclear negotiations have failed to make progress, and oil prices are on the rise.",
+					"ja": "何が起きたか: Reutersは、米イランの和平・核交渉が進まず、原油価格が上昇基調にあると報じました。"
+				},
+				{
+					"en": "Middle East risks are once again being recognized as a supply concern.",
+					"ja": "中東リスクが再び供給懸念として意識されています。"
+				},
+				{
+					"en": "Why it matters: Crude oil has cascading effects on transportation costs, chemicals, electricity, aviation, and household price expectations.",
+					"ja": "なぜ重要か: 原油は輸送費、化学、電力、航空、家計の物価期待に連鎖します。"
+				},
+				{
+					"en": "What to watch: Oil risk should be tracked through inventories, OPEC+ supply posture, and shipping-insurance costs, not only the headline crude price.",
+					"ja": "今後の注視点: 原油高が続くかを見るには、中東情勢だけでなく、在庫統計、OPEC+の供給姿勢、輸送保険料の変化を合わせて追う必要があります。"
+				}
+			]
+		},
+		{
+			"id": "us-stocks",
+			"heading": {
+				"ja": "米株、インフレ懸念で反落",
+				"en": "US stocks fall on inflation concerns"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Reuters reported that stock markets fell on fears of a resurgence in inflation.",
+					"ja": "何が起きたか: Reutersは、株式市場がインフレ再燃への懸念から下落したと伝えました。"
+				},
+				{
+					"en": "High oil prices are reinforcing the \"long-term high interest rate\" scenario.",
+					"ja": "原油高が「長期高金利」のシナリオを補強しています。"
+				},
+				{
+					"en": "Why it matters: Stock markets are more likely to move based on interest rates and inflation than on the economy itself.",
+					"ja": "なぜ重要か: 株式市場は、景気そのものよりも金利・インフレの織り込みで動きやすくなっています。"
+				},
+				{
+					"en": "What to watch: For growth stocks, the test is whether AI demand can offset the valuation pressure from higher discount rates.",
+					"ja": "今後の注視点: 成長株の耐性を見るには、AI需要の強さだけでなく、金利上昇時にPERや資金調達環境がどこまで圧縮されるかを確認したいところです。"
+				}
+			]
+		},
+		{
+			"id": "japan-pmi",
+			"heading": {
+				"ja": "日本のPMI、景気減速と価格上昇圧力",
+				"en": "Japan's PMI, economic slowdown and upward price pressure"
+			},
+			"pairs": [
+				{
+					"en": "What happened: S&P Global's preliminary PMIs showed Japan's economic expansion slowing and services activity flattening.",
+					"ja": "何が起きたか: S&P Globalの速報PMIでは、日本の景気拡大は鈍化し、サービス活動は横ばい気味でした。"
+				},
+				{
+					"en": "On the other hand, upward pressure on sales prices remains strong.",
+					"ja": "一方で販売価格の上昇圧力は強いままです。"
+				},
+				{
+					"en": "Why it matters: A situation in which prices rise despite weak growth makes policy decisions and corporate pricing strategies difficult.",
+					"ja": "なぜ重要か: 「成長が弱いのに物価が上がる」局面は、政策判断も企業の価格戦略も難しくします。"
+				},
+				{
+					"en": "What to watch: In Japan, watch whether weak PMI data remains an inventory adjustment or spreads into pricing, hiring, and capital-spending decisions.",
+					"ja": "今後の注視点: 日本市場では、PMIの弱さが一時的な在庫調整なのか、価格改定、採用、設備投資の抑制へ広がるのかが次の焦点です。"
+				}
+			]
+		},
+		{
+			"id": "gemini-flash",
+			"heading": {
+				"ja": "Gemini 3.5 Flashを投入",
+				"en": "Introducing Gemini 3.5 Flash"
+			},
+			"pairs": [
+				{
+					"en": "What happened: At Google I/O, Google announced updates to its Gemini 3.5 Flash series that emphasize fast response times.",
+					"ja": "何が起きたか: Google I/Oで、Googleは高速応答を重視したGemini 3.5 Flash系の更新を打ち出しました。"
+				},
+				{
+					"en": "This is a model enhancement that emphasizes low latency and practicality.",
+					"ja": "低遅延と実用性を前面に出したモデル強化です。"
+				},
+				{
+					"en": "Why it matters: The competitive axis of model performance has shifted from mere benchmarking to \"cheap, fast, and practical use.\"",
+					"ja": "なぜ重要か: モデル性能の競争軸が、単なるベンチマークから「安く速く、実運用に載るか」へ移っています。"
+				},
+				{
+					"en": "What to watch: Gemini updates matter if they improve response speed, inference cost, and tool invocation inside existing workflows, not only in benchmark tables.",
+					"ja": "今後の注視点: Gemini更新の意味は、ベンチマーク値よりも、応答速度、推論コスト、ツール呼び出しが既存ワークフローで改善するかで測るべきです。"
+				}
+			]
+		},
+		{
+			"id": "gemini-app",
+			"heading": {
+				"ja": "Geminiアプリ、エージェント化を加速",
+				"en": "Gemini app accelerates agentization"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Google expanded the Gemini app from a passive chat to an agent-like experience that returns daily briefs and advance suggestions.",
+					"ja": "何が起きたか: GoogleはGeminiアプリを、受け身のチャットではなく、日次ブリーフや事前提案を返すエージェント型の体験へ広げました。"
+				},
+				{
+					"en": "Why it matters: Users are starting to expect AI to be proactive and get things done, not just ask questions.",
+					"ja": "なぜ重要か: ユーザーは質問するだけでなく、AIに「先回りして仕事を進める」ことを期待し始めています。"
+				},
+				{
+					"en": "What to watch: The shift to watch is from one-shot prompt interfaces toward assistants that retain user state, history, and workflow context.",
+					"ja": "今後の注視点: 次に注目したいのは、アシスタント機能が単発の応答から、ユーザー状態や履歴を保持する設計へどの程度移るかです。"
+				}
+			]
+		},
+		{
+			"id": "ai-search",
+			"heading": {
+				"ja": "SearchにAIエージェントと新検索ボックス",
+				"en": "AI agent and new search box in Search"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Google built more AI agent features into the search experience and updated the very way you use the search box.",
+					"ja": "何が起きたか: Googleは検索体験にAIエージェント機能をさらに組み込み、検索ボックスの使い方そのものを更新しました。"
+				},
+				{
+					"en": "It is a flow that not only searches, but also integrates summarization, comparison, and execution.",
+					"ja": "探すだけでなく、要約・比較・実行までを一体化する流れです。"
+				},
+				{
+					"en": "Why it matters: Keyword optimization alone is not enough to increase search traffic; structured information that can be read by AI is becoming increasingly important.",
+					"ja": "なぜ重要か: 検索流入は、キーワード最適化だけでは足りず、AIが読める構造化情報の重要性が増します。"
+				},
+				{
+					"en": "What to watch: AI search impact should be measured by citation and answer-generation frequency, not only by traffic changes from conventional search.",
+					"ja": "今後の注視点: AI検索への影響は、流入数だけでなく、商品説明、FAQ、ナレッジベースが回答生成に引用される頻度で見ていく必要があります。"
+				}
+			]
+		},
+		{
+			"id": "antigravity-agents",
+			"heading": {
+				"ja": "AntigravityとManaged Agentsで開発導線を再設計",
+				"en": "Redesign your development path with Antigravity and Managed Agents"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Google brought to the fore an Antigravity agent experience for developers, Managed Agents in the Gemini API, and workflows for Android in AI Studio.",
+					"ja": "何が起きたか: Googleは、開発者向けにAntigravity系のエージェント体験、Gemini APIのManaged Agents、AI StudioのAndroid向けワークフローを前面に出しました。"
+				},
+				{
+					"en": "Why it matters: In AI, the focus of competition has shifted from \"model selection\" to \"how to operate agents.\"",
+					"ja": "なぜ重要か: AIは「モデル選定」から「エージェントをどう運用するか」に競争の中心が移っています。"
+				},
+				{
+					"en": "What to watch: Developer agents should be judged by whether they connect specification work, prototyping, tests, and monitoring into one durable process.",
+					"ja": "今後の注視点: 開発エージェントの進展は、デモの完成度より、仕様検討、試作、テスト、運用監視まで継続的に接続できるかで評価したいところです。"
+				}
+			]
+		},
+		{
+			"id": "openai-dell",
+			"heading": {
+				"ja": "OpenAI、Dellと組みCodexをハイブリッド/オンプレへ",
+				"en": "OpenAI teams up with Dell to bring Codex to hybrid/on-prem"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Through our partnership with OpenAI, Dell is moving towards bringing AI workloads, including Codex, into enterprises' existing environments and where their data resides.",
+					"ja": "何が起きたか: DellはOpenAIとの提携を通じ、Codexを含むAIワークロードを企業の既存環境やデータのある場所へ持ち込む方向を示しました。"
+				},
+				{
+					"en": "The theme is optimal implementation for companies.",
+					"ja": "企業導入の現場最適がテーマです。"
+				},
+				{
+					"en": "Why it matters: Generative AI is being deployed not only in SaaS but also in environments with strict security requirements.",
+					"ja": "なぜ重要か: 生成AIはSaaSだけでなく、セキュリティ要件が厳しい環境への展開が勝負になっています。"
+				},
+				{
+					"en": "What to watch: Enterprise adoption will turn on four checkpoints: data location, auditability, permission management, and inference cost.",
+					"ja": "今後の注視点: エンタープライズAI導入では、データ所在、監査、権限管理、推論コストの4点が、採用可否を分ける実質的なチェック項目になります。"
+				}
+			]
+		},
+		{
+			"id": "cross-view",
+			"heading": {
+				"ja": "横断的な見立て",
+				"en": "Cross-sectional view"
+			},
+			"pairs": [
+				{
+					"en": "U.S. AI and financial policy is simultaneously strengthening regulations and opening up infrastructure, forcing both AI businesses and fintechs to redesign their compliance.",
+					"ja": "米国のAI・金融政策は、規制強化とインフラ開放を同時に進める形になっており、AI事業者とフィンテックの両方にコンプライアンス再設計を迫ります。"
+				},
+				{
+					"en": "Due to the combination of high crude oil prices and persistently high interest rates, economic news should be read as a resurgence in inflation expectations rather than a one-off economic judgment.",
+					"ja": "原油高と金利高止まりが重なるため、経済ニュースは単発の景気判断ではなく、インフレ期待の再上昇として読む必要があります。"
+				},
+				{
+					"en": "The Google I/O series of announcements marks a milestone in AI's transition from \"products that answer\" to \"products that act,\" changing the assumptions of search, development, and business flows.",
+					"ja": "Google I/Oの一連の発表は、AIが「回答する製品」から「行動する製品」へ移る節目を示しており、検索・開発・業務フローの前提を変えます。"
+				},
+				{
+					"en": "Movements in Taiwan, China, and the United States are directly linked to semiconductor and logistics supply networks, so they should be followed not only as geopolitical news but also as business continuity risks.",
+					"ja": "台湾・中国・米国の動きは、半導体と物流の供給網に直結するため、地政学ニュースとしてだけでなく事業継続リスクとして追うべきです。"
+				}
+			]
+		},
+		{
+			"id": "uncertainty",
+			"heading": {
+				"ja": "追跡すべき未確定事項",
+				"en": "Uncertainty to track"
+			},
+			"pairs": [
+				{
+					"en": "To what extent will the Trump administration's plan to strengthen AI oversight actually extend to model use and procurement?",
+					"ja": "トランプ政権のAI監督強化案が、実際にどの範囲までモデル利用や調達に踏み込むか。"
+				},
+				{
+					"en": "Will the US-Iran negotiations and oil prices settle down within the next few days, or will the scenario of a resurgence of inflation become more likely?",
+					"ja": "米イラン交渉と原油価格が、数日内に落ち着くのか、それともインフレ再燃シナリオを強めるのか。"
+				},
+				{
+					"en": "Among the Google I/O announcements, prices, regions, and official release dates for Gemini 3.5 Flash and various agent functions.",
+					"ja": "Google I/O発表のうち、Gemini 3.5 Flashや各種エージェント機能の価格、提供地域、正式リリース時期。"
+				}
+			]
+		}
+	]
+}

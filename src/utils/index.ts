@@ -27,3 +27,5 @@ export {
 	filterPostsByCategory
 } from './post'
 export { remarkReadingTime } from './readTime'
+export { getMixedArticleAlignment } from './mixedAlignment'
+export type { MixedArticleAlignment } from './mixedAlignment'

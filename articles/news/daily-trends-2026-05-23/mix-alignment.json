@@ -1,0 +1,461 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "chips-ai-geopolitics",
+			"heading": {
+				"ja": "2026-05-23 半導体政策とAIインフラ投資が地政学リスクに重なる",
+				"en": "2026-05-23 Chips, AI infrastructure, and geopolitics"
+			},
+			"pairs": [
+				{
+					"en": "The situation in the Middle East and uncertainties regarding policies toward China and semiconductors are simultaneously shaking decisions on oil, stocks, and AI investments.",
+					"ja": "中東情勢と対中・対半導体政策の不確実性が、原油、株式、AI投資の判断を同時に揺らしている。"
+				},
+				{
+					"en": "On the other hand, announcements from Google, OpenAI, NVIDIA, and ASML showed that the AI ​​competition is expanding from \"model performance\" to \"deployment mode, power, and supply network.\"",
+					"ja": "一方で、Google、OpenAI、NVIDIA、ASML の発表は、AI競争が「モデル性能」から「配備形態・電力・供給網」へさらに広がっていることを示した。"
+				}
+			]
+		},
+		{
+			"id": "chip-tariffs",
+			"heading": {
+				"ja": "半導体関税はまだ先",
+				"en": "Semiconductor tariffs still a long way off"
+			},
+			"pairs": [
+				{
+					"en": "What happened: USTR's Jamison Greer said while it's not time to immediately impose semiconductor tariffs, he emphasized that supply chain protection is important.",
+					"ja": "何が起きたか: USTRのジェイミソン・グリア氏は、半導体関税をすぐに発動する段階ではない一方、サプライチェーン保護は重要だと強調した。"
+				},
+				{
+					"en": "The main battlefields of friction with China span both trade and manufacturing infrastructure.",
+					"ja": "対中摩擦の主戦場が、通商と製造基盤の双方にまたがっている。"
+				},
+				{
+					"en": "Why it matters: Semiconductors are a wide range of inputs, including those used in AI servers, data centers, and automobiles, so the presence or absence of tariffs can greatly affect capital investment and procurement costs.",
+					"ja": "なぜ重要か: AIサーバー、データセンター、車載向けまで含めて半導体は広範な投入財なので、関税の有無だけで設備投資と調達コストが大きく変わる。"
+				},
+				{
+					"en": "What to watch: The tariff story should be read through sourcing shifts, reshoring signals, and rules-of-origin changes, not only short-term price moves.",
+					"ja": "今後の注視点: 関税の影響を見るには、短期の価格変動だけでなく、米国内回帰の動きや原産地規則の変更が調達先に波及するかを追う必要がある。"
+				}
+			]
+		},
+		{
+			"id": "ai-guardrails",
+			"heading": {
+				"ja": "米中AIガードレール",
+				"en": "US-China AI guardrails"
+			},
+			"pairs": [
+				{
+					"en": "What happened: U.S. and Chinese officials are reportedly discussing AI safeguards and operational guardrails through talks in Beijing.",
+					"ja": "何が起きたか: 米中当局が北京での協議を通じて、AIの安全策や運用上のガードレールを話し合っていると報じられた。"
+				},
+				{
+					"en": "While there is full-scale confrontation, AI risk management is the only area where dialogue remains.",
+					"ja": "全面対立の一方で、AIリスク管理だけは対話を残す形だ。"
+				},
+				{
+					"en": "Why it matters: Delineating model exports, evaluation standards, and restrictions on use will likely be the focus of future regulatory negotiations.",
+					"ja": "なぜ重要か: モデル輸出、評価基準、利用制限の線引きが、今後の規制交渉の焦点になりやすい。"
+				},
+				{
+					"en": "What to watch: For China-related AI, watch whether export controls, data-transfer rules, model-use terms, and cloud access are tightened as one package.",
+					"ja": "今後の注視点: 中国関連のAI案件では、輸出管理だけでなく、データ移転、モデル利用条件、クラウド提供範囲が同時に制限されるかが焦点になる。"
+				}
+			]
+		},
+		{
+			"id": "immigration-justice",
+			"heading": {
+				"ja": "移民司法とNYC摘発",
+				"en": "Immigration justice and NYC raids"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The U.S. Department of Justice appointed 77 new immigration judges and five temporary judges, at the same time New York City reported a significant increase in federal immigration enforcement.",
+					"ja": "何が起きたか: 米司法省は移民裁判官77人と臨時裁判官5人を新たに任命し、同時にニューヨーク市では連邦の移民摘発が大きく増えたと報じられた。"
+				},
+				{
+					"en": "Strengthening of judicial processing and strengthening of enforcement are progressing at the same time.",
+					"ja": "司法処理の増強と執行の強化が同時進行している。"
+				},
+				{
+					"en": "Why it matters: Increasing both procedural throughput and enforcement pressure on the ground will increase employment, training, and municipal administration costs.",
+					"ja": "なぜ重要か: 手続きの処理能力と現場の執行圧力が両方上がると、雇用・教育・自治体運営のコストが増える。"
+				},
+				{
+					"en": "What to watch: Immigration enforcement will matter most if it changes employment verification, status-review procedures, or DOJ operating guidance.",
+					"ja": "今後の注視点: 移民政策の実務影響は、摘発件数よりも、雇用確認、在留資格審査、司法省の運用指針がどの程度厳格化されるかで見たい。"
+				}
+			]
+		},
+		{
+			"id": "ukraine-peace",
+			"heading": {
+				"ja": "ウクライナ和平の再始動",
+				"en": "Restarting peace in Ukraine"
+			},
+			"pairs": [
+				{
+					"en": "What happened: President Zelenskiy mentioned the possibility of a new peace plan from the United States, reinforcing speculation that ceasefire negotiations would be restarted.",
+					"ja": "何が起きたか: ゼレンスキー大統領は、米国から新たな和平案が出る可能性に言及し、停戦交渉の再始動観測が再び強まった。"
+				},
+				{
+					"en": "While the war situation has become fixed, the window for diplomacy has not yet closed.",
+					"ja": "戦況が固定化する一方で、外交の窓はまだ閉じていない。"
+				},
+				{
+					"en": "Why it matters: Progress in negotiations has direct implications for sanctions, reconstruction funding and European defense spending.",
+					"ja": "なぜ重要か: 交渉の進展は、制裁、再建資金、欧州の防衛支出に直結する。"
+				},
+				{
+					"en": "What to watch: Energy, logistics, and defense exposure should be read through both battlefield developments and whether talks create credible paths to sanctions relief or escalation.",
+					"ja": "今後の注視点: エネルギー、物流、防衛への影響は、戦況そのものに加えて、停戦協議や制裁緩和の有無がヘッドラインを動かすかで判断したい。"
+				}
+			]
+		},
+		{
+			"id": "iran-nuclear",
+			"heading": {
+				"ja": "イラン核物資の返還",
+				"en": "Return of Iranian nuclear materials"
+			},
+			"pairs": [
+				{
+					"en": "What happened: President Trump has said that the United States will ultimately recover Iran's highly enriched uranium, which Iran has refused to hand over.",
+					"ja": "何が起きたか: トランプ大統領は、イランが保有する高濃縮ウランを最終的には米国側が回収すると述べ、イラン側は引き渡しを拒否している。"
+				},
+				{
+					"en": "The exchange over the handling of nuclear materials has once again become a source of tension.",
+					"ja": "核物質の扱いをめぐる応酬が、再び緊張材料になった。"
+				},
+				{
+					"en": "Why it matters: An impasse in nuclear negotiations is likely to lead to regional conflict and sudden changes in oil prices.",
+					"ja": "なぜ重要か: 核交渉の行き詰まりは、地域衝突と原油価格の急変を招きやすい。"
+				},
+				{
+					"en": "What to watch: Track crude prices together with Strait of Hormuz shipping risk, maritime insurance, and tanker rates to separate market noise from real escalation.",
+					"ja": "今後の注視点: 原油だけでなく、ホルムズ海峡周辺の航行リスク、海上保険料、タンカー運賃が同時に動くかを見れば緊張度を測りやすい。"
+				}
+			]
+		},
+		{
+			"id": "oil-prices",
+			"heading": {
+				"ja": "原油高が再燃",
+				"en": "Crude oil prices flare up again"
+			},
+			"pairs": [
+				{
+					"en": "What happened: Oil prices rose again and stock markets became nervous as concerns remained about the situation in Iran.",
+					"ja": "何が起きたか: イラン情勢への警戒が残るなか、原油は再び上振れし、株式市場も神経質な動きになった。"
+				},
+				{
+					"en": "Every time hopes for a ceasefire weaken, the outlook for energy and inflation wavers.",
+					"ja": "停戦期待が弱まるたびに、エネルギーとインフレの見通しが揺れる。"
+				},
+				{
+					"en": "Why it matters: Even short-term news moves both CPI and corporate profits because oil spills over into transportation, power, and manufacturing costs.",
+					"ja": "なぜ重要か: 原油は輸送費、電力費、製造コストに波及するため、短期のニュースでもCPIと企業利益の両方を動かす。"
+				},
+				{
+					"en": "What to watch: The key distinction is whether higher prices reflect demand strength or a geopolitical premium embedded in logistics, insurance, and currency costs.",
+					"ja": "今後の注視点: 価格上昇が需要主導か地政学プレミアムかを分けるには、在庫、物流費、保険料、為替の動きを並べて確認する必要がある。"
+				}
+			]
+		},
+		{
+			"id": "fed-rates",
+			"heading": {
+				"ja": "FRBは据え置き維持",
+				"en": "Fed remains unchanged"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The most recent Fed message has been to keep interest rates where they are and remain on the lookout for shocks.",
+					"ja": "何が起きたか: 直近のFRBメッセージは、政策金利を現状で維持しつつ、ショックに応じて様子を見る姿勢を保っている。"
+				},
+				{
+					"en": "There is no strong feeling that there will be a rush to cut interest rates.",
+					"ja": "急いで利下げに動く雰囲気は強くない。"
+				},
+				{
+					"en": "Why it matters: Remaining high interest rates have a broad impact on housing, capital investment, and startup financing.",
+					"ja": "なぜ重要か: 金利の高止まりは、住宅、設備投資、スタートアップ資金調達に広く効く。"
+				},
+				{
+					"en": "What to watch: Rate expectations should be tested against loan renewals and long-cycle project economics, where higher-for-longer costs show up first.",
+					"ja": "今後の注視点: 金利見通しでは、利下げ時期の予想だけでなく、長期金利が借入更新や長期プロジェクトの採算に影響する水準で残るかが重要になる。"
+				}
+			]
+		},
+		{
+			"id": "imf-headwinds",
+			"heading": {
+				"ja": "IMFは逆風継続",
+				"en": "IMF continues to face headwinds"
+			},
+			"pairs": [
+				{
+					"en": "What happened: The IMF says that U.S.-China dialogue and easing of tensions are good news for the global economy, but that wars in the Middle East and high energy prices remain a downside risk.",
+					"ja": "何が起きたか: IMFは、米中対話や緊張緩和は世界経済に好材料だとしつつ、中東の戦火とエネルギー高が下振れリスクを残すとみている。"
+				},
+				{
+					"en": "There are both reasons for optimism and reasons for caution.",
+					"ja": "楽観材料と警戒材料が同居したままだ。"
+				},
+				{
+					"en": "Why it matters: The global economy is entering a phase where it is more sensitive to changes in energy and financial conditions than to tariffs.",
+					"ja": "なぜ重要か: 世界景気は、関税よりもエネルギーと金融条件の変化に敏感な局面へ入っている。"
+				},
+				{
+					"en": "What to watch: Trade data should be read through volume, logistics cost, insurance premiums, and currency moves, because each can change margin even when demand holds.",
+					"ja": "今後の注視点: 貿易指標は数量だけでなく、物流費、保険料、通貨変動が輸出入の採算をどれほど削るかまで見る必要がある。"
+				}
+			]
+		},
+		{
+			"id": "softcat-ai-demand",
+			"heading": {
+				"ja": "Softcat、AI需要で上方修正",
+				"en": "Softcat makes upward revision due to AI demand"
+			},
+			"pairs": [
+				{
+					"en": "What happened: British IT agency Softcat raised its full-year profit forecast due to strong demand for AI infrastructure.",
+					"ja": "何が起きたか: 英IT代理店のSoftcatは、AIインフラ需要の強さを受けて通期利益見通しを引き上げた。"
+				},
+				{
+					"en": "Companies' demand for introduction is primarily expressed in infrastructure and deployment rather than software.",
+					"ja": "企業の導入需要は、ソフトよりもまずインフラと配備で表れている。"
+				},
+				{
+					"en": "Why it matters: The \"real demand\" for AI deployments tends to be in servers, networks, maintenance, and memory before SaaS contracts.",
+					"ja": "なぜ重要か: AI導入の「実需」は、SaaS契約よりも先にサーバー、ネットワーク、保守、メモリに出やすい。"
+				},
+				{
+					"en": "What to watch: Vendor differentiation will come less from license price than from delivery lead times, maintenance capacity, and long-term support.",
+					"ja": "今後の注視点: ベンダー競争は価格差よりも、供給納期、保守体制、長期サポートがどの程度差別化要因になるかを見たい。"
+				}
+			]
+		},
+		{
+			"id": "nvidia-iren",
+			"heading": {
+				"ja": "NVIDIAとIREN、5GW提携",
+				"en": "NVIDIA and IREN partner for 5GW"
+			},
+			"pairs": [
+				{
+					"en": "What happened: NVIDIA announced a strategic partnership with IREN to deploy up to 5GW of AI infrastructure and up to $2.1 billion in investment capacity.",
+					"ja": "何が起きたか: NVIDIAはIRENとの戦略提携を発表し、最大5GWのAIインフラ展開と最大21億ドルの投資枠を示した。"
+				},
+				{
+					"en": "AI is not only a model competition, but also a power and data center competition.",
+					"ja": "AIはモデル競争だけでなく、電力とデータセンター競争でもある。"
+				},
+				{
+					"en": "Why it matters: Securing GPUs alone is not enough; power generation, power transmission, cooling, and land constraints will influence investment decisions.",
+					"ja": "なぜ重要か: GPU確保だけでは足りず、発電、送電、冷却、土地の制約が投資判断を左右する。"
+				},
+				{
+					"en": "What to watch: AI infrastructure spending will be capped by power contracts, cooling, and facility constraints as much as by GPU pricing.",
+					"ja": "今後の注視点: AIインフラ投資では、GPU単価よりも、電源契約、冷却、施設制約が投資ペースの上限になるかが次の確認点になる。"
+				}
+			]
+		},
+		{
+			"id": "google-io-agents",
+			"heading": {
+				"ja": "Google I/Oはエージェント化へ",
+				"en": "Google I/O will become an agent"
+			},
+			"pairs": [
+				{
+					"en": "What happened: At Google I/O, Gemini 3.5 Flash, Antigravity, and AI development capabilities for Android came to the fore.",
+					"ja": "何が起きたか: Google I/Oでは、Gemini 3.5 Flash や Antigravity、Android向けのAI開発機能が前面に出た。"
+				},
+				{
+					"en": "The competition is moving from competition in the performance of standalone models to competition in the design of applications and agents that actually work.",
+					"ja": "単体モデルの性能競争から、実際に動くアプリやエージェントの設計競争へ移っている。"
+				},
+				{
+					"en": "Why it matters: Developers need to redesign not only model selection, but also tool invocation, evaluation, and UI integration.",
+					"ja": "なぜ重要か: 開発者は、モデル選定だけでなく、ツール呼び出し、評価、UI統合まで含めて再設計する必要がある。"
+				},
+				{
+					"en": "What to watch: AI product maturity should be judged by task decomposition, recovery from failure, and tool stability rather than the presence of a chat interface.",
+					"ja": "今後の注視点: AIプロダクトの成熟度は、会話UIの有無ではなく、タスク分解、失敗時の復旧、外部ツール連携の安定性で見たい。"
+				}
+			]
+		},
+		{
+			"id": "gpt-5-5-api",
+			"heading": {
+				"ja": "GPT-5.5がAPIへ",
+				"en": "GPT-5.5 to API"
+			},
+			"pairs": [
+				{
+					"en": "What happened: OpenAI rolled out GPT-5.5 to its API and ChatGPT to boost performance in coding, research, and tool usage.",
+					"ja": "何が起きたか: OpenAIはGPT-5.5をAPIとChatGPTに展開し、コーディング、調査、ツール利用の性能を押し上げた。"
+				},
+				{
+					"en": "The update speed of the Frontier model is once again forcing the application side to follow suit.",
+					"ja": "フロンティアモデルの更新速度が、再びアプリ側の追随を迫っている。"
+				},
+				{
+					"en": "Why it matters: Evaluations, guardrails, and prompts created based on old model assumptions can quickly deviate in performance and behavior.",
+					"ja": "なぜ重要か: 旧モデル前提で作った評価・ガードレール・プロンプトは、すぐに性能と挙動がずれる。"
+				},
+				{
+					"en": "What to watch: Claude 5.5 matters if production workflows show better cost, latency, and failure-mode behavior, not only stronger public benchmarks.",
+					"ja": "今後の注視点: Claude 5.5 の評価では、公開ベンチマークに加えて、本番ワークフローのコスト、遅延、失敗モードがどう変わるかを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "codex-on-prem",
+			"heading": {
+				"ja": "Codexがオンプレへ",
+				"en": "Codex goes on-prem"
+			},
+			"pairs": [
+				{
+					"en": "What happened: OpenAI is partnering with Dell to connect Codex with Dell's AI Data Platform and AI Factory to expand into hybrid and on-premises environments.",
+					"ja": "何が起きたか: OpenAIはDellと組み、CodexをDellのAI Data PlatformやAI Factoryとつなぐ形で、ハイブリッドやオンプレ環境への展開を進めている。"
+				},
+				{
+					"en": "Generative AI is no longer exclusive to the cloud.",
+					"ja": "生成AIは、クラウド専用ではなくなりつつある。"
+				},
+				{
+					"en": "Why it matters: Companies are not just concerned with performance, but with data location, auditing, and privilege management.",
+					"ja": "なぜ重要か: 企業の本音は、性能だけでなく、データ所在、監査、権限管理にある。"
+				},
+				{
+					"en": "What to watch: For sensitive code and internal data, the market signal is whether more options satisfy audit, permission, and data-boundary requirements.",
+					"ja": "今後の注視点: 機密コードや社内データを扱う領域では、SaaSか自社環境かより、監査、権限、データ境界の要件を満たす選択肢が増えるかを見るべきだ。"
+				}
+			]
+		},
+		{
+			"id": "nvidia-record",
+			"heading": {
+				"ja": "NVIDIAが記録更新",
+				"en": "NVIDIA breaks record"
+			},
+			"pairs": [
+				{
+					"en": "What happened: NVIDIA posted $81.6 billion in revenue in Q1 FY2027, and data center revenue also hit a record high.",
+					"ja": "何が起きたか: NVIDIAはQ1 FY2027で売上816億ドルを計上し、データセンター売上も過去最高を更新した。"
+				},
+				{
+					"en": "Demand for AI factories is still being read as a story of expansion rather than slowdown.",
+					"ja": "AIファクトリー需要は、まだ鈍化より拡大の物語として読まれている。"
+				},
+				{
+					"en": "Why it matters: As long as the chain of semiconductors, power, cloud, and capital investment continues, the AI ​​market will be a tug-of-war between supply constraints and demand growth.",
+					"ja": "なぜ重要か: 半導体、電力、クラウド、設備投資の連鎖が続く限り、AI市場は供給制約と需要拡大の綱引きになる。"
+				},
+				{
+					"en": "What to watch: AI-stack rollout speed will depend on supply delays, power constraints, and data-center readiness as much as on hardware price.",
+					"ja": "今後の注視点: AIスタックの導入ペースは、GPU価格だけでなく、供給遅延、電力制約、データセンター立ち上げ時期に左右される。"
+				}
+			]
+		},
+		{
+			"id": "asml-supply",
+			"heading": {
+				"ja": "ASMLの供給逼迫",
+				"en": "ASML supply tight"
+			},
+			"pairs": [
+				{
+					"en": "What happened: ASML expressed the view that the supply of advanced semiconductor equipment will be tight for the time being due to demand for AI.",
+					"ja": "何が起きたか: ASMLは、AI需要を背景に先端半導体装置の供給が当面タイトだとの見方を示した。"
+				},
+				{
+					"en": "From the perspective of equipment manufacturers, the AI ​​boom is still running into equipment constraints.",
+					"ja": "装置メーカー側から見ても、AIブームはまだ設備の制約に突き当たっている。"
+				},
+				{
+					"en": "Why it matters: Lithography equipment is the core bottleneck for supply capacity at advanced nodes.",
+					"ja": "なぜ重要か: リソグラフィー装置は、先端ノードの供給能力を左右する中核ボトルネックだ。"
+				},
+				{
+					"en": "What to watch: Semiconductor investment should be tracked through equipment backlogs, delivery timing, and ramp schedules, not only demand forecasts.",
+					"ja": "今後の注視点: 半導体投資の強さは、需要予測だけでなく、製造装置の受注残、納入時期、量産立ち上がりの遅れで確認したい。"
+				}
+			]
+		},
+		{
+			"id": "cross-view",
+			"heading": {
+				"ja": "横断的な見立て",
+				"en": "Cross-sectional view"
+			},
+			"pairs": [
+				{
+					"en": "Political uncertainties are concentrated on semiconductor tariffs, US-China AI guardrails, and the situation in Iran, and are directly affecting crude oil, procurement costs, and AI investment decisions.",
+					"ja": "政治の不確実性は、半導体関税、米中AIガードレール、イラン情勢に集中しており、そのまま原油、調達コスト、AI投資判断に波及している。"
+				},
+				{
+					"en": "The primary battleground for AI investment is shifting from model performance to power, data centers, and manufacturing equipment.",
+					"ja": "AI投資の主戦場は、モデル性能から電力、データセンター、製造装置へ移っている。"
+				},
+				{
+					"en": "NVIDIA, IREN, and ASML materials point in the same direction.",
+					"ja": "NVIDIA、IREN、ASMLの材料は同じ方向を指す。"
+				},
+				{
+					"en": "Corporate usage is no longer focused exclusively on the cloud, but is leaning toward on-premises, hybrid, and auditable operations.",
+					"ja": "企業利用は、クラウド一辺倒ではなく、オンプレやハイブリッド、監査可能な運用へ寄っている。"
+				},
+				{
+					"en": "The development of Codex is a symbol of this.",
+					"ja": "Codexの展開はその象徴だ。"
+				},
+				{
+					"en": "Immigration, trade, and security are all moving at the same time, so it is more practical to look at them through a common stress test rather than dividing legal, procurement, and finance vertically.",
+					"ja": "移民、通商、安全保障が同時進行で動いているため、法務・調達・財務を縦割りで切るより、共通のストレステストで見る方が実務に近い。"
+				}
+			]
+		},
+		{
+			"id": "uncertainties",
+			"heading": {
+				"ja": "追跡すべき未確定事項",
+				"en": "Uncertainty to track"
+			},
+			"pairs": [
+				{
+					"en": "Will the actual timing and scope of semiconductor tariffs be clarified?",
+					"ja": "半導体関税は、実際の発動時期と対象範囲が明確になるか。"
+				},
+				{
+					"en": "Will the U.S.-China AI guardrail end up being an abstraction or will it fall into concrete operational rules?",
+					"ja": "米中AIガードレールは、抽象論で終わるか、具体的な運用ルールに落ちるか。"
+				},
+				{
+					"en": "How far will the conflict over Iranian nuclear materials affect crude oil and shipping insurance?",
+					"ja": "イラン核物資をめぐる対立が、原油と海運保険にどこまで波及するか。"
+				},
+				{
+					"en": "Will the Fed maintain its stance until the next meeting, given the high oil prices and geopolitical shocks?",
+					"ja": "FRBは、原油高と地政学ショックを見て、次の会合まで据え置き姿勢を維持するか。"
+				},
+				{
+					"en": "Will the acceleration of AI infrastructure investment cause power and facility constraints to become apparent before GPU prices?",
+					"ja": "AIインフラ投資の加速が、GPU価格より先に電力・施設制約を顕在化させるか。"
+				}
+			]
+		}
+	]
+}

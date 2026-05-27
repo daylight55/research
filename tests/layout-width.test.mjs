@@ -11,13 +11,14 @@ test('site shell uses a wider desktop container', () => {
 	assert.doesNotMatch(baseLayout, /lg:px-0/)
 })
 
-test('post layout gives the article column more room on wide screens', () => {
+test('post layout keeps readable spacing around sidebars on wide screens', () => {
 	const postPage = readFileSync('src/pages/reports/[...slug].astro', 'utf8')
 	const newsPage = readFileSync('src/pages/news/[...slug].astro', 'utf8')
 
 	for (const source of [postPage, newsPage]) {
-		assert.match(source, /xl:grid-cols-\[10rem_minmax\(0,56rem\)_10rem\]/)
-		assert.match(source, /2xl:grid-cols-\[12rem_minmax\(0,62rem\)_12rem\]/)
+		assert.match(source, /lg:grid-cols-\[10rem_minmax\(0,1fr\)_9rem\]/)
+		assert.match(source, /xl:grid-cols-\[12rem_minmax\(0,56rem\)_10rem\]/)
+		assert.match(source, /2xl:grid-cols-\[14rem_minmax\(0,62rem\)_12rem\]/)
 	}
 })
 

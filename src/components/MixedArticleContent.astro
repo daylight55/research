@@ -14,9 +14,23 @@
 			en: /[^.!?]+[.!?]["'”’)]*|[^.!?]+$/g,
 			ja: /[^。！？]+[。！？」』）]*|[^。！？]+$/g
 		}
+		const sourceNotePattern = /\s*(Source note|Source memo|出典)[:：]/i
 
 		function fallbackSplitSentences(text, locale) {
-			return (text.match(fallbackSentencePatterns[locale]) ?? [text])
+			const placeholders = []
+			const protectedText = text.replace(/\d+\.\d+/g, (match) => {
+				const token = `__DECIMAL_${placeholders.length}__`
+				placeholders.push(match)
+				return token
+			})
+
+			return (protectedText.match(fallbackSentencePatterns[locale]) ?? [protectedText])
+				.map((sentence) =>
+					placeholders.reduce(
+						(restored, value, index) => restored.replace(`__DECIMAL_${index}__`, value),
+						sentence
+					)
+				)
 				.map((sentence) => sentence.trim())
 				.filter(Boolean)
 		}
@@ -116,7 +130,7 @@
 			const notes = []
 
 			text.split('\n').forEach((line) => {
-				const match = line.match(/\s*(Source note|出典)[:：]/i)
+				const match = line.match(sourceNotePattern)
 				if (!match || match.index === undefined) {
 					content.push(line)
 					return

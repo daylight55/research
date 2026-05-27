@@ -79,6 +79,11 @@ drivers, risks, and practical implications.
 - Place source links near the supported claims using `<SourceNote>...</SourceNote>`.
   The post renderer registers `SourceNote`, so do not import it in ordinary
   report MDX. It should read as a short, muted, parenthesized citation note.
+- Write each `SourceNote` inline on a single MDX line, with the opening tag,
+  note body, and closing tag on the same line. Do not put `SourceNote` tags on
+  separate lines, do not wrap the note body across multiple lines, and do not
+  add manual parentheses or labels such as `出典:`, `Source note:`, or `Source:`
+  inside the component; the component renders that wrapper.
 - Clearly separate established facts, product/vendor claims, public-information
   inference, open questions, limitations, and practical implications.
 - If no official roadmap exists, write `公表情報からの推定`.

@@ -11,6 +11,13 @@ heroImageCreditUrl: 'https://unsplash.com/@aaronburden?utm_source=daylight_resea
 heroImageSourceId: 'unsplash:QJDzYT_K8Xg'
 category: 'learning-science'
 tags: ['Abduction', 'Second Language Acquisition', 'Learning Science', 'Peirce']
+generation:
+  model: 'gpt-5.4-mini'
+  promptSource: 'ops/codex/prompts/daily-issue-research.md'
+  promptSummary:
+    - 'Treat the GitHub Issue as the research request and create the canonical Japanese report under AGENTS.md and technical-research-report rules.'
+    - 'Verify time-sensitive information against primary or authoritative sources and place SourceNote citations near important claims.'
+    - 'Keep the Japanese article, English article, public research log, and site frontmatter synchronized in the same change.'
 draft: false
 ---
 
@@ -36,21 +43,21 @@ The point is not to guess correctly on the first try. The point is to form the m
 
 ## 3. Deduction, Induction, and Abduction
 
-| Reasoning | Core question | Strong use case in L2 learning | Main weakness |
-| --- | --- | --- | --- |
-| Deduction | If the rule is true, what follows? | Checking grammar against a known rule | It does not create new meaning |
-| Induction | What pattern appears across many examples? | Generalizing collocations, morphology, or word order | It can overfit when examples are few |
-| Abduction | What best explains this surprise? | Guessing vocabulary, diagnosing errors, inferring intent | It can produce plausible but wrong guesses |
+| Reasoning | Core question                              | Strong use case in L2 learning                           | Main weakness                              |
+| --------- | ------------------------------------------ | -------------------------------------------------------- | ------------------------------------------ |
+| Deduction | If the rule is true, what follows?         | Checking grammar against a known rule                    | It does not create new meaning             |
+| Induction | What pattern appears across many examples? | Generalizing collocations, morphology, or word order     | It can overfit when examples are few       |
+| Abduction | What best explains this surprise?          | Guessing vocabulary, diagnosing errors, inferring intent | It can produce plausible but wrong guesses |
 
 Deduction is useful once a rule is known. Induction is useful when many examples are available. Abduction matters when evidence is partial and the learner must act before full certainty is available.
 
 ## 4. Vocabulary, Grammar, and Pragmatics
 
-| Domain | Role of abduction | Role of induction | Role of deduction |
-| --- | --- | --- | --- |
-| Vocabulary | Infer meaning from context, images, and known words | Narrow meaning from repeated usage | Apply a dictionary definition or explicit gloss |
-| Grammar | Form a rule hypothesis from one or a few examples | Generalize a structure across many examples | Check a sentence against a taught rule |
-| Pragmatics | Infer speaker intent, implicature, or politeness | Learn recurrent interaction patterns | Follow explicit conversation conventions |
+| Domain     | Role of abduction                                   | Role of induction                           | Role of deduction                               |
+| ---------- | --------------------------------------------------- | ------------------------------------------- | ----------------------------------------------- |
+| Vocabulary | Infer meaning from context, images, and known words | Narrow meaning from repeated usage          | Apply a dictionary definition or explicit gloss |
+| Grammar    | Form a rule hypothesis from one or a few examples   | Generalize a structure across many examples | Check a sentence against a taught rule          |
+| Pragmatics | Infer speaker intent, implicature, or politeness    | Learn recurrent interaction patterns        | Follow explicit conversation conventions        |
 
 Vocabulary learning is the most obvious abductive case. A learner sees an unknown word and uses surrounding words, the flow of the sentence, topic cues, and prior knowledge to propose a meaning. Jovanovic's study supports this sort of inference in beginner learners. <SourceNote>Jovanovic, [Abduction and Second Language Learning](https://www.academypublication.com/issues/past/jltr/vol03/02/jltr0302.pdf), discusses vocabulary meaning inference and the role of cross-linguistic knowledge in beginners.</SourceNote>
 

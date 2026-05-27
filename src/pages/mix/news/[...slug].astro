@@ -120,16 +120,16 @@ const disqusEnabled = disqusConfig.enabled
 
 				{
 					relatedPosts.length > 0 && (
-						<section class='flex flex-col gap-3'>
+						<section class='flex min-w-0 flex-col gap-3'>
 							<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
 								Related
 							</p>
-							<ul class='flex flex-col gap-5 pr-2'>
+							<ul class='flex min-w-0 flex-col gap-5 pr-2'>
 								{relatedPosts.map((relatedPost) => (
-									<li>
+									<li class='min-w-0'>
 										<a
 											href={getPostUrl(relatedPost)}
-											class='block py-1 leading-snug text-gray-600 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:hover:text-indigo-300'
+											class='block min-w-0 max-w-full py-1 [overflow-wrap:anywhere] leading-snug text-gray-600 transition-colors hover:text-indigo-700 dark:text-gray-400 dark:hover:text-indigo-300'
 										>
 											{relatedPost.data.title}
 										</a>

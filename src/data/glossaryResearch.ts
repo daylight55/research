@@ -15,7 +15,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'Anthropic が 2024 年に公開した Model Context Protocol は、AI アプリケーションごとに個別連携を作るのではなく、クライアント、サーバー、ツール呼び出し、リソース参照を共通の接続面として扱う発想から広がりました。',
 			position:
-				'このサイトでは、AI エージェント、ツール接続、認証、メモリ基盤をつなぐインターフェース層として登場します。Knowledge Graph や Graphiti は接続先の知識基盤、OAuth/OIDC/PKCE は接続時の認可文脈に近い概念です。',
+				'AI エージェント、ツール接続、認証、メモリ基盤をつなぐインターフェース層に位置づきます。Knowledge Graph や Graphiti は接続先の知識基盤、OAuth/OIDC/PKCE は接続時の認可文脈に近い概念です。',
 			distinctions: [
 				'Microsoft Certified Professional など同じ MCP 略称の別概念とは区別します。',
 				'MCP はモデルそのものではなく、モデルを含むアプリケーションが外部文脈へアクセスするための接続プロトコルです。'
@@ -45,7 +45,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'Introduced by Anthropic in 2024, Model Context Protocol reframes integrations around a common client-server interface instead of bespoke tool connectors for each AI application.',
 			position:
-				'On this site it sits between AI agents, tool access, authentication, and memory systems. Knowledge Graph and Graphiti are adjacent knowledge backends; OAuth, OIDC, and PKCE are adjacent authorization concepts.',
+				'It sits between AI agents, tool access, authentication, and memory systems. Knowledge Graph and Graphiti are adjacent knowledge backends; OAuth, OIDC, and PKCE are adjacent authorization concepts.',
 			distinctions: [
 				'It is distinct from other MCP expansions such as Microsoft Certified Professional.',
 				'MCP is not a model; it is a connection protocol used by model-based applications.'
@@ -66,7 +66,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 				status: 'verified',
 				title: 'Model Context Protocol',
 				url: 'https://en.wikipedia.org/wiki/Model_Context_Protocol',
-				reason: 'The article matches the AI integration protocol meant by this site context.'
+				reason: 'The article matches the AI integration protocol meant here.'
 			}
 		}
 	},
@@ -77,7 +77,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'哲学では存在論を意味しますが、情報科学では Gruber や Noy/McGuinness 以降、知識表現や Semantic Web のための明示的な概念仕様として使われてきました。',
 			position:
-				'このサイトでは、Knowledge Graph、RDF、OWL、企業データの意味づけを支える上位概念です。単なる用語集ではなく、関係、制約、推論可能性を含む点が中心です。',
+				'Knowledge Graph、RDF、OWL、企業データの意味づけを支える上位概念です。単なる用語集ではなく、関係、制約、推論可能性を含む点が中心です。',
 			distinctions: [
 				'哲学の ontology は存在一般を問う領域であり、情報科学の ontology とは目的が異なります。',
 				'Glossary は用語説明に寄りますが、Ontology は概念間の関係や制約まで扱います。'
@@ -103,7 +103,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 				status: 'verified',
 				title: 'Ontology (information science)',
 				url: 'https://en.wikipedia.org/wiki/Ontology_(information_science)',
-				reason: 'このサイトの知識表現・Semantic Web 文脈では、哲学一般の Ontology ではなく information science の記事が対応します。'
+				reason: '知識表現・Semantic Web 文脈では、哲学一般の Ontology ではなく information science の記事が対応します。'
 			}
 		},
 		en: {
@@ -112,7 +112,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'In philosophy, ontology belongs to metaphysics. In information science, it became a knowledge-representation practice for shared domain models, Semantic Web vocabularies, and machine-readable semantics.',
 			position:
-				'On this site it is the organizing concept behind Knowledge Graphs, RDF, OWL, and enterprise semantic models. The important move is from isolated terms to relationships, constraints, and inferable structure.',
+				'It is the organizing concept behind Knowledge Graphs, RDF, OWL, and enterprise semantic models. The important move is from isolated terms to relationships, constraints, and inferable structure.',
 			distinctions: [
 				'Philosophical ontology asks what exists; information-science ontology models a domain for representation and reasoning.',
 				'A glossary explains terms, while an ontology also specifies relationships, constraints, and identity rules.'
@@ -149,7 +149,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'Semantic Web の RDF/OWL 系譜と、検索・推薦・企業データ統合で使われるグラフ型知識表現の流れが重なっています。',
 			position:
-				'このサイトでは、Ontology が意味の設計図、RDF/OWL が標準表現、Graphiti が時間変化を含む実装例、RAG が検索・生成側の隣接概念として並びます。',
+				'Ontology が意味の設計図、RDF/OWL が標準表現、Graphiti が時間変化を含む実装例、RAG が検索・生成側の隣接概念として並びます。',
 			distinctions: [
 				'Graph database は保存・問い合わせの技術であり、Knowledge Graph は意味づけされた知識構造を指します。',
 				'単なるネットワーク図ではなく、ノードと関係の意味が重要です。'
@@ -170,7 +170,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 				status: 'verified',
 				title: 'Knowledge graph',
 				url: 'https://en.wikipedia.org/wiki/Knowledge_graph',
-				reason: '意味づけされた実体・関係のグラフ表現を指す記事で、このサイトの文脈と一致します。'
+				reason: '意味づけされた実体・関係のグラフ表現を指す記事です。'
 			}
 		},
 		en: {
@@ -179,7 +179,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'The term overlaps the Semantic Web lineage of RDF/OWL and the applied graph representations used in search, recommendation, and enterprise data integration.',
 			position:
-				'On this site, ontology supplies the semantic design, RDF/OWL provide standards, Graphiti is a temporal implementation example, and RAG is an adjacent retrieval-generation pattern.',
+				'Ontology supplies the semantic design, RDF/OWL provide standards, Graphiti is a temporal implementation example, and RAG is an adjacent retrieval-generation pattern.',
 			distinctions: [
 				'A graph database is storage and query infrastructure; a Knowledge Graph is a semantically interpreted knowledge structure.',
 				'The meaning of nodes and edges matters more than the visual graph shape.'
@@ -211,7 +211,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'RDF 1.1 は、リソース、IRI、リテラル、グラフ、データセットなどの抽象構文を定義し、Semantic Web の基礎的なデータモデルとして位置づけられています。',
 			position:
-				'このサイトでは、Ontology や OWL を機械可読な知識表現へ落とす基盤として登場します。',
+				'Ontology や OWL を機械可読な知識表現へ落とす基盤として位置づきます。',
 			distinctions: [
 				'RDF はデータモデルであり、OWL はより強い語彙・推論表現を加える ontology language です。',
 				'RDF/XML は RDF の構文の一つであり、RDF そのものではありません。'
@@ -236,7 +236,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'RDF 1.1 defines resources, IRIs, literals, graphs, and datasets as a foundation for linked data and Semantic Web representations.',
 			position:
-				'On this site it is the representation layer beneath ontology and OWL-based knowledge modeling.',
+				'It is the representation layer beneath ontology and OWL-based knowledge modeling.',
 			distinctions: [
 				'RDF is a data model; OWL adds a richer ontology language and reasoning layer.',
 				'RDF/XML is one serialization of RDF, not RDF itself.'
@@ -263,7 +263,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'W3C の OWL 2 は RDF と組み合わせて使える知識表現言語で、形式意味論とプロファイルを備えています。',
 			position:
-				'このサイトでは、Ontology を標準化された機械可読表現へ落とす言語として RDF と並んで登場します。',
+				'Ontology を標準化された機械可読表現へ落とす言語として RDF と並ぶ位置にあります。',
 			distinctions: [
 				'OWL は鳥の owl ではなく Web Ontology Language の略称です。',
 				'RDF が基礎データモデル、OWL がより表現力の高い ontology language です。'
@@ -293,7 +293,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'W3C OWL 2 works with RDF and provides formal semantics and profiles for different reasoning and implementation needs.',
 			position:
-				'On this site it appears as the standardized machine-readable language layer for ontology work, next to RDF.',
+				'It is the standardized machine-readable language layer for ontology work, next to RDF.',
 			distinctions: [
 				'OWL means Web Ontology Language here, not the animal.',
 				'RDF is the underlying data model; OWL is the more expressive ontology language.'
@@ -325,7 +325,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'Michael Polanyi は、知識には個人的・身体的・文脈依存の要素があり、すべてを明示化できるわけではないと論じました。',
 			position:
-				'このサイトでは、AI 要約、言い換え、ナレッジマネジメントが落としやすい判断の背景として扱われます。',
+				'AI 要約、言い換え、ナレッジマネジメントが落としやすい判断の背景を説明する概念です。',
 			distinctions: [
 				'単に「まだ文書化されていない知識」ではなく、文書化しても残り続ける身体化・文脈化された理解を含みます。',
 				'形式知との対比だけでなく、両者が相互に支え合う点が重要です。'
@@ -346,7 +346,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 				status: 'verified',
 				title: 'Tacit knowledge',
 				url: 'https://en.wikipedia.org/wiki/Tacit_knowledge',
-				reason: 'Polanyi の tacit knowledge を扱う記事で、このサイトの文脈と一致します。'
+				reason: 'Polanyi の tacit knowledge を扱う記事です。'
 			}
 		},
 		en: {
@@ -355,7 +355,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'Michael Polanyi argued that knowing has personal, embodied, and contextual dimensions that cannot be exhaustively made explicit.',
 			position:
-				'On this site it explains what AI summarization, paraphrase, and knowledge management can lose when they flatten expert judgment into explicit text.',
+				'It explains what AI summarization, paraphrase, and knowledge management can lose when they flatten expert judgment into explicit text.',
 			distinctions: [
 				'It is not merely undocumented knowledge; some tacit structure remains even after documentation.',
 				'The contrast with explicit knowledge matters, but the two also depend on each other.'
@@ -376,7 +376,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 				status: 'verified',
 				title: 'Tacit knowledge',
 				url: 'https://en.wikipedia.org/wiki/Tacit_knowledge',
-				reason: 'The article matches the Polanyi-derived concept used in this site context.'
+				reason: 'The article matches the Polanyi-derived concept.'
 			}
 		}
 	},
@@ -387,7 +387,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'同社の近年の説明では、Ontology を業務上の対象・関係・アクションを統合する層として置き、AIP を生成 AI と運用領域を接続するプラットフォームとして位置づけています。',
 			position:
-				'このサイトでは、Operational AI、Ontology-grounded AI、企業データ統合の代表例として扱われます。',
+				'Operational AI、Ontology-grounded AI、企業データ統合を説明する代表的な企業・製品群として位置づきます。',
 			distinctions: [
 				'Palantir は企業名であり、AIP は同社の AI Platform、Ontology は同社製品内の意味モデル層です。',
 				'一般概念としての ontology と、Palantir 製品上の Ontology は重なりますが同一ではありません。'
@@ -417,7 +417,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'In Palantir materials, the Ontology functions as a layer for operational objects, relationships, logic, and action, while AIP connects generative AI to operational domains.',
 			position:
-				'On this site it is treated as a major example of operational AI, ontology-grounded AI, and enterprise data integration.',
+				'It is a major example of operational AI, ontology-grounded AI, and enterprise data integration.',
 			distinctions: [
 				'Palantir is the company; AIP is its AI platform; Ontology is the semantic operational layer in its product model.',
 				'Palantir Ontology overlaps with the general ontology idea but is also a product-specific architecture.'
@@ -449,7 +449,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'Zep の Graphiti は、AI エージェントやアプリケーションが会話・イベント・更新履歴を長期記憶として扱う文脈で使われます。',
 			position:
-				'このサイトでは、MCP と接続できるメモリ基盤、Knowledge Graph の実装例、LLM エージェントの文脈管理技術として登場します。',
+				'MCP と接続できるメモリ基盤、Knowledge Graph の実装例、LLM エージェントの文脈管理技術として位置づきます。',
 			distinctions: [
 				'Graphiti は漫画の graffiti 風表記や一般名詞ではなく、Zep が公開している temporal Knowledge Graph 実装を指します。',
 				'Neo4j のような汎用グラフ DB そのものではなく、エージェント記憶向けのモデル化レイヤーを含みます。'
@@ -476,7 +476,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'Zep positions Graphiti in the context of long-term memory for AI agents and applications that need to retain conversation, event, and update history.',
 			position:
-				'On this site it appears as a memory backend that can connect with MCP, an implementation example of Knowledge Graphs, and a context-management layer for LLM agents.',
+				'It is a memory backend that can connect with MCP, an implementation example of Knowledge Graphs, and a context-management layer for LLM agents.',
 			distinctions: [
 				'Graphiti here means the Zep temporal Knowledge Graph project, not a generic spelling variant of graffiti.',
 				'It is not merely a graph database; it includes modeling patterns for agent memory.'
@@ -505,7 +505,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'IETF OAuth Working Group のドラフトとして、OAuth 2.0、OAuth 2.0 Security Best Current Practice、PKCE などで積み上がった変更を統合する位置づけです。',
 			position:
-				'このサイトでは、MCP や外部 API 接続における認可の前提知識として、PKCE、OIDC と並んで登場します。',
+				'MCP や外部 API 接続における認可の前提知識として、PKCE、OIDC と並ぶ位置にあります。',
 			distinctions: [
 				'OAuth は認可の枠組みであり、OIDC は OAuth 2.0 上に認証情報を載せる identity layer です。',
 				'OAuth 2.1 は OAuth 2.0 と別系統の新発明ではなく、既存ベストプラクティスを整理する仕様です。'
@@ -532,7 +532,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'The IETF OAuth Working Group draft integrates lessons from OAuth 2.0, OAuth Security Best Current Practice, and PKCE.',
 			position:
-				'On this site it is background for authorization when MCP clients, servers, and external APIs need delegated access.',
+				'It is background for authorization when MCP clients, servers, and external APIs need delegated access.',
 			distinctions: [
 				'OAuth is about authorization; OIDC adds an identity layer on top of OAuth 2.0.',
 				'OAuth 2.1 is not a wholly separate invention from OAuth 2.0; it consolidates current best practices.'
@@ -561,7 +561,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'RFC 7636 で定義され、モバイルアプリや SPA などクライアントシークレットを安全に保持しにくい環境で重要になりました。',
 			position:
-				'このサイトでは、OAuth 2.1 や MCP 認可の安全性を支える具体的な仕組みとして登場します。',
+				'OAuth 2.1 や MCP 認可の安全性を支える具体的な仕組みとして位置づきます。',
 			distinctions: [
 				'PKCE は認証方式ではなく、Authorization Code Flow を補強する OAuth 拡張です。',
 				'OIDC と併用されることはありますが、OIDC そのものではありません。'
@@ -583,7 +583,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'Defined in RFC 7636, it became especially important for mobile apps and browser-based clients that cannot safely hold a client secret.',
 			position:
-				'On this site it appears as the concrete mechanism that strengthens OAuth 2.1 and MCP authorization flows.',
+				'It is the concrete mechanism that strengthens OAuth 2.1 and MCP authorization flows.',
 			distinctions: [
 				'PKCE is not an authentication protocol; it strengthens OAuth Authorization Code Flow.',
 				'It can be used with OIDC, but it is not OIDC itself.'
@@ -607,7 +607,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'OpenID Foundation が策定する OpenID Connect Core は、OAuth 2.0 フローを使ってエンドユーザーの identity をクライアントへ伝える仕様です。',
 			position:
-				'このサイトでは、OAuth/PKCE と隣接し、外部サービス接続時に「認可」と「認証」を分けるための概念として登場します。',
+				'OAuth/PKCE と隣接し、外部サービス接続時に「認可」と「認証」を分けるための概念です。',
 			distinctions: [
 				'OAuth はアクセス委譲の認可、OIDC はログイン主体を確認する認証を扱います。',
 				'OpenID 2.0 と OpenID Connect は別世代の仕様です。'
@@ -632,7 +632,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'OpenID Connect Core, maintained by the OpenID Foundation, uses OAuth 2.0 flows to communicate end-user identity to clients.',
 			position:
-				'On this site it sits next to OAuth and PKCE as the concept that separates authentication from authorization in external service connections.',
+				'It sits next to OAuth and PKCE as the concept that separates authentication from authorization in external service connections.',
 			distinctions: [
 				'OAuth delegates access; OIDC communicates authenticated identity.',
 				'OpenID Connect is distinct from the older OpenID 2.0 protocol.'
@@ -659,7 +659,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'2020 年の Lewis らの研究以降、LLM が外部文書や知識ベースを参照して回答する代表的な設計として広まりました。',
 			position:
-				'このサイトでは、Knowledge Graph やメモリ基盤と並ぶ、外部知識を LLM に渡す方法として登場します。',
+				'Knowledge Graph やメモリ基盤と並ぶ、外部知識を LLM に渡す方法として位置づきます。',
 			distinctions: [
 				'RAG は知識そのものの構造ではなく、検索と生成を組み合わせるアーキテクチャです。',
 				'Knowledge Graph は知識表現、RAG は参照された情報を生成に使う処理方式です。'
@@ -684,7 +684,7 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			background:
 				'After the 2020 work by Lewis et al., RAG became a common design for grounding LLM answers in documents or knowledge bases.',
 			position:
-				'On this site it appears next to Knowledge Graphs and memory systems as a way to feed external knowledge into LLM workflows.',
+				'It sits next to Knowledge Graphs and memory systems as a way to feed external knowledge into LLM workflows.',
 			distinctions: [
 				'RAG is an architecture for retrieval plus generation, not a knowledge representation by itself.',
 				'A Knowledge Graph structures knowledge; RAG retrieves information and uses it during generation.'

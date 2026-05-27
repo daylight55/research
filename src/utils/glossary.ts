@@ -767,25 +767,21 @@ const createTermExplanation = (term: GlossaryIndexTerm, locale: GlossaryLocale) 
 }
 
 const createDefaultResearchProfile = (
-	term: Pick<GlossaryIndexTerm, 'label' | 'explanation' | 'posts' | 'relatedTerms'>,
+	term: Pick<GlossaryIndexTerm, 'label' | 'posts' | 'relatedTerms'>,
 	locale: GlossaryLocale
 ): GlossaryResearchProfile => {
-	const primaryPost = term.posts[0]
 	const related = term.relatedTerms
 		.slice(0, 4)
 		.map((relatedTerm) => relatedTerm.label)
 		.join(locale === 'en' ? ', ' : '、')
-	const categories = getTermCategories(term).join(locale === 'en' ? ', ' : '、')
 
 	if (locale === 'en') {
 		return {
-			definition: term.explanation,
-			background: primaryPost
-				? `This term is awaiting a source-backed research profile. It is currently shown from the article cluster around ${primaryPost.title}.`
-				: 'This term is awaiting a source-backed research profile.',
+			definition: `${term.label} does not yet have a source-backed standalone definition in this glossary.`,
+			background: 'A source-backed research profile has not yet been created for this term.',
 			position: related
-				? `Within this site it is connected to ${related} in the ${categories} category.`
-				: `Within this site it appears in the ${categories} category.`,
+				? `The term should be checked against adjacent concepts such as ${related} before assigning a stable definition.`
+				: 'The term needs external sources before its conceptual position can be stated confidently.',
 			distinctions: [
 				'The Wikipedia target has not been verified against the category and article context yet.'
 			],
@@ -798,13 +794,11 @@ const createDefaultResearchProfile = (
 	}
 
 	return {
-		definition: term.explanation,
-		background: primaryPost
-			? `この用語は、まだ外部出典にもとづく調査プロファイルが作成されていません。現在は「${primaryPost.title}」を中心とする記事群から位置づけています。`
-			: 'この用語は、まだ外部出典にもとづく調査プロファイルが作成されていません。',
+		definition: `${term.label} は、まだ外部出典にもとづく独立した定義が作成されていない用語です。`,
+		background: 'この用語は、まだ外部出典にもとづく調査プロファイルが作成されていません。',
 		position: related
-			? `このサイトでは、${categories} カテゴリの中で ${related} と結びつく概念として扱われています。`
-			: `このサイトでは、${categories} カテゴリの用語として扱われています。`,
+			? `安定した定義を置く前に、${related} などの隣接概念との差分を外部出典で確認する必要があります。`
+			: '概念上の位置づけは、外部出典を確認したうえで補う必要があります。',
 		distinctions: ['カテゴリと記事文脈に照らした Wikipedia 記事の照合はまだ完了していません。'],
 		sources: [],
 		wikipedia: {

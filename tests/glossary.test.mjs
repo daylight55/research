@@ -12,6 +12,7 @@ import {
 	groupGlossaryTermsByCategory,
 	linkFirstGlossaryMentions
 } from '../src/utils/glossary.ts'
+import { GLOSSARY_RESEARCH_PROFILES } from '../src/data/glossaryResearch.ts'
 
 const sampleBody = `---
 title: Graphiti MCP Memory
@@ -266,6 +267,15 @@ Ephemeral Agent Layer はこの記事内でだけ使う概念である。
 	assert.equal(term?.wikipediaUrl, '')
 	assert.equal(term?.researchProfile.wikipedia.status, 'unverified')
 	assert.match(term?.researchProfile.background ?? '', /外部出典/)
+})
+
+test('keeps standalone glossary definitions independent from site article usage', () => {
+	for (const profiles of Object.values(GLOSSARY_RESEARCH_PROFILES)) {
+		for (const profile of Object.values(profiles)) {
+			assert.doesNotMatch(profile.definition, /このサイト|記事|On this site|article/i)
+			assert.doesNotMatch(profile.position, /このサイト|On this site|Within this site/i)
+		}
+	}
 })
 
 test('links only the first plain-text mention for each article term', () => {

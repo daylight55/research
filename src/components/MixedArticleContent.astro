@@ -96,6 +96,14 @@ const serializedAlignment = alignment
 				.trim()
 		}
 
+		function setBlockScrollAnchors(block, englishSentences, japaneseSentences) {
+			const englishText = normalizeAlignmentText(englishSentences.join(' '))
+			const japaneseText = normalizeAlignmentText(japaneseSentences.filter(Boolean).join(' '))
+
+			if (englishText) block.dataset.scrollAnchorEn = englishText
+			if (japaneseText) block.dataset.scrollAnchorJa = japaneseText
+		}
+
 		function alignmentPairsFromData(alignment) {
 			if (!alignment || typeof alignment !== 'object') return []
 			const topLevelPairs = Array.isArray(alignment.pairs) ? alignment.pairs : []
@@ -231,7 +239,11 @@ const serializedAlignment = alignment
 						mapTranslation(japaneseSentences, sentenceIndex, englishSentences.length)
 				)
 			)
+			const pairedJapaneseSentences = sentencePairs.map(
+				(pair) => pair.querySelector('[data-mixed-translation]')?.textContent ?? ''
+			)
 
+			setBlockScrollAnchors(block, englishSentences, pairedJapaneseSentences)
 			block.replaceChildren(...sentencePairs)
 		}
 
@@ -321,6 +333,11 @@ const serializedAlignment = alignment
 
 			if (blockPairs.length === 0) return false
 
+			setBlockScrollAnchors(
+				block,
+				blockPairs.map((pair) => pair.en),
+				blockPairs.map((pair) => pair.ja)
+			)
 			block.replaceChildren(...blockPairs.map((pair) => createSentencePair(pair.en, pair.ja)))
 			return true
 		}

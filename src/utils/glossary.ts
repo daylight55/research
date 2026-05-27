@@ -1,4 +1,5 @@
 import type { ImageMetadata } from 'astro'
+import { getGlossaryResearchProfile } from '../data/glossaryResearch.ts'
 
 type PostLike = {
 	id: string
@@ -47,6 +48,7 @@ export type GlossaryIndexTerm = {
 	image?: ImageMetadata
 	imageAlt?: string
 	imageSourceTitle?: string
+	researchProfile: GlossaryResearchProfile
 	wikipediaUrl: string
 	wikipediaLocale: WikipediaLocale
 	wikipediaSearchQuery: string
@@ -68,6 +70,30 @@ export type GlossaryCategoryGroup = {
 
 type GlossaryLocale = 'ja' | 'en'
 export type WikipediaLocale = 'ja' | 'en'
+export type GlossaryResearchSourceKind = 'official' | 'standard' | 'paper' | 'reference' | 'wikipedia'
+export type GlossaryWikipediaVerification =
+	| {
+			status: 'verified'
+			title: string
+			url: string
+			reason: string
+	  }
+	| {
+			status: 'unverified'
+			reason: string
+	  }
+export type GlossaryResearchProfile = {
+	definition: string
+	background: string
+	position: string
+	distinctions: string[]
+	sources: {
+		title: string
+		url: string
+		kind: GlossaryResearchSourceKind
+	}[]
+	wikipedia: GlossaryWikipediaVerification
+}
 
 const MAX_TERMS_PER_ARTICLE = 5
 const MAX_RELATED_TERMS = 12
@@ -740,6 +766,54 @@ const createTermExplanation = (term: GlossaryIndexTerm, locale: GlossaryLocale) 
 	return `${term.label} は、${primaryPost.category} カテゴリの記事「${primaryPost.title}」で扱われている用語です。`
 }
 
+const createDefaultResearchProfile = (
+	term: Pick<GlossaryIndexTerm, 'label' | 'explanation' | 'posts' | 'relatedTerms'>,
+	locale: GlossaryLocale
+): GlossaryResearchProfile => {
+	const primaryPost = term.posts[0]
+	const related = term.relatedTerms
+		.slice(0, 4)
+		.map((relatedTerm) => relatedTerm.label)
+		.join(locale === 'en' ? ', ' : '、')
+	const categories = getTermCategories(term).join(locale === 'en' ? ', ' : '、')
+
+	if (locale === 'en') {
+		return {
+			definition: term.explanation,
+			background: primaryPost
+				? `This term is awaiting a source-backed research profile. It is currently shown from the article cluster around ${primaryPost.title}.`
+				: 'This term is awaiting a source-backed research profile.',
+			position: related
+				? `Within this site it is connected to ${related} in the ${categories} category.`
+				: `Within this site it appears in the ${categories} category.`,
+			distinctions: [
+				'The Wikipedia target has not been verified against the category and article context yet.'
+			],
+			sources: [],
+			wikipedia: {
+				status: 'unverified',
+				reason: 'No source-backed profile has verified a specific Wikipedia article for this concept.'
+			}
+		}
+	}
+
+	return {
+		definition: term.explanation,
+		background: primaryPost
+			? `この用語は、まだ外部出典にもとづく調査プロファイルが作成されていません。現在は「${primaryPost.title}」を中心とする記事群から位置づけています。`
+			: 'この用語は、まだ外部出典にもとづく調査プロファイルが作成されていません。',
+		position: related
+			? `このサイトでは、${categories} カテゴリの中で ${related} と結びつく概念として扱われています。`
+			: `このサイトでは、${categories} カテゴリの用語として扱われています。`,
+		distinctions: ['カテゴリと記事文脈に照らした Wikipedia 記事の照合はまだ完了していません。'],
+		sources: [],
+		wikipedia: {
+			status: 'unverified',
+			reason: 'この概念に対応する Wikipedia 記事は、外部出典にもとづく調査プロファイルで未検証です。'
+		}
+	}
+}
+
 const uniqueValues = (values: string[]) => {
 	const seen = new Set<string>()
 	const unique: string[] = []
@@ -999,10 +1073,15 @@ export function buildGlossaryIndex(
 					a.label.localeCompare(b.label)
 			)
 			.slice(0, MAX_RELATED_TERMS)
+		term.researchProfile =
+			getGlossaryResearchProfile(term.slug, locale) ?? createDefaultResearchProfile(term, locale)
 		term.wikipediaLocale = getWikipediaLocaleForLabel(term.label, locale)
 		term.wikipediaValidationKeywords = createWikipediaValidationKeywords(term, term.wikipediaLocale)
 		term.wikipediaSearchQuery = createWikipediaSearchQuery(term, term.wikipediaLocale)
-		term.wikipediaUrl = createWikipediaUrl(term.wikipediaSearchQuery, term.wikipediaLocale)
+		term.wikipediaUrl =
+			term.researchProfile.wikipedia.status === 'verified'
+				? term.researchProfile.wikipedia.url
+				: ''
 	}
 
 	const terms = Array.from(bySlug.values()).sort(

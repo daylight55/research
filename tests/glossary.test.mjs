@@ -59,8 +59,10 @@ test('builds a glossary index with post counts and related terms', () => {
 	assert.equal(mcp?.wikipediaSearchQuery, 'Model Context Protocol')
 	assert.equal(
 		mcp?.wikipediaUrl,
-		'https://en.wikipedia.org/wiki/Special:Search?search=Model%20Context%20Protocol'
+		'https://en.wikipedia.org/wiki/Model_Context_Protocol'
 	)
+	assert.equal(mcp?.researchProfile.wikipedia.status, 'verified')
+	assert.match(mcp?.researchProfile.definition ?? '', /MCP/)
 	assert.deepEqual(
 		mcp?.contexts.slice(0, 1).map((context) => context.postId),
 		['graphiti-mcp-memory']
@@ -236,8 +238,34 @@ test('builds English glossary explanations from English article context', () => 
 	assert.match(mcp?.explanation ?? '', /A practical report/)
 	assert.equal(
 		mcp?.wikipediaUrl,
-		'https://en.wikipedia.org/wiki/Special:Search?search=Model%20Context%20Protocol'
+		'https://en.wikipedia.org/wiki/Model_Context_Protocol'
 	)
+})
+
+test('does not expose Wikipedia links for terms without verified external profiles', () => {
+	const index = buildGlossaryIndex([
+		{
+			id: 'report/ja/temporary-concept',
+			data: {
+				title: 'Temporary Concept',
+				description: 'A local article concept.',
+				category: 'ai-systems',
+				tags: ['Ephemeral Agent Layer']
+			},
+			body: `---
+title: Temporary Concept
+tags: [Ephemeral Agent Layer]
+---
+
+Ephemeral Agent Layer はこの記事内でだけ使う概念である。
+`
+		}
+	])
+
+	const term = index.terms.find((candidate) => candidate.slug === 'ephemeral-agent-layer')
+	assert.equal(term?.wikipediaUrl, '')
+	assert.equal(term?.researchProfile.wikipedia.status, 'unverified')
+	assert.match(term?.researchProfile.background ?? '', /外部出典/)
 })
 
 test('links only the first plain-text mention for each article term', () => {

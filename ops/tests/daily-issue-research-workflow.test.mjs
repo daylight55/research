@@ -13,6 +13,10 @@ const dailyIssuePrompt = readFileSync(
 	'ops/codex/prompts/daily-issue-research.md',
 	'utf8',
 )
+const cloudflarePreviewWorkflow = readFileSync(
+	'.github/workflows/cloudflare-pages-preview.yml',
+	'utf8',
+)
 
 assert.match(
 	workflow,
@@ -198,4 +202,10 @@ assert.match(
 	trendWorkflow,
 	/- name: Save generated news article cache[\s\S]*?uses: actions\/cache\/save@v4[\s\S]*?key: \$\{\{ steps\.run_context\.outputs\.cache_key \}\}/,
 	'trend news workflow should save completed generated news artifacts in the run cache',
+)
+
+assert.match(
+	cloudflarePreviewWorkflow,
+	/concurrency:[\s\S]*?group: cloudflare-pages-preview-[\s\S]*?cancel-in-progress: false/,
+	'Cloudflare preview should not cancel the pull_request check when generated PR workflows dispatch a second preview for the same branch',
 )

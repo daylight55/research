@@ -30,7 +30,7 @@ permissions:
 
 concurrency:
   group: cloudflare-pages-preview-${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || inputs.preview_branch || github.ref_name }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   ASTRO_SITE: https://research.daylight55.dev

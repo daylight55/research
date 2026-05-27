@@ -278,6 +278,12 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /data-mixed-japanese/)
 	assert.match(mixedArticleComponent, /data-mixed-translation/)
 	assert.match(mixedArticleComponent, /splitSentences/)
+	assert.match(mixedArticleComponent, /\(\(\) =>/)
+	assert.match(mixedArticleComponent, /createSentencePair/)
+	assert.match(mixedArticleComponent, /mapTranslation/)
+	assert.match(mixedArticleComponent, /block\.replaceChildren/)
+	assert.match(mixedArticleComponent, /mixed-sentence__text/)
+	assert.doesNotMatch(mixedArticleComponent, /const splitSentences/)
 
 	for (const source of mixedPages) {
 		assert.match(source, /const locale = 'mix'/)

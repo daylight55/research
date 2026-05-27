@@ -8,73 +8,97 @@
 </div>
 
 <script is:inline>
-	const splitSentences = (text, locale) => {
-		const normalized = text.replace(/\s+/g, ' ').trim()
-		if (!normalized) return []
+	;(() => {
+		const sentencePatterns = {
+			en: /[^.!?]+[.!?]["'”’)]*|[^.!?]+$/g,
+			ja: /[^。！？]+[。！？」』）]*|[^。！？]+$/g
+		}
 
-		const pattern = locale === 'ja' ? /(?<=[。！？])\s*/ : /(?<=[.!?])\s+(?=["'([{A-Z0-9])/
-		return normalized
-			.split(pattern)
-			.map((sentence) => sentence.trim())
-			.filter(Boolean)
-	}
+		function splitSentences(text, locale) {
+			const normalized = text.replace(/\s+/g, ' ').trim()
+			if (!normalized) return []
 
-	const pairMixedArticle = (root) => {
-		const englishRoot = root.querySelector('[data-mixed-english]')
-		const japaneseRoot = root.querySelector('[data-mixed-japanese]')
-		if (!englishRoot || !japaneseRoot || root.dataset.mixedArticle === 'paired') return
+			return (normalized.match(sentencePatterns[locale]) ?? [normalized])
+				.map((sentence) => sentence.trim())
+				.filter(Boolean)
+		}
 
-		const englishBlocks = [...englishRoot.querySelectorAll('p, li')].filter(
-			(block) => !block.closest('pre, code, table, [data-mixed-translation]')
-		)
-		const japaneseBlocks = [...japaneseRoot.querySelectorAll('p, li')].filter(
-			(block) => !block.closest('pre, code, table')
-		)
+		function mapTranslation(japaneseSentences, sentenceIndex, sentenceCount) {
+			if (japaneseSentences.length === 0) return ''
+			if (sentenceCount <= 1) return japaneseSentences.join(' ')
+			if (sentenceCount === japaneseSentences.length) return japaneseSentences[sentenceIndex] ?? ''
 
-		englishBlocks.forEach((block, index) => {
-			const japaneseBlock = japaneseBlocks[index]
-			if (!japaneseBlock) return
+			const mappedIndex = Math.round(
+				(sentenceIndex * (japaneseSentences.length - 1)) / (sentenceCount - 1)
+			)
+			return japaneseSentences[mappedIndex] ?? ''
+		}
 
-			const englishSentences = splitSentences(block.textContent ?? '', 'en')
-			const japaneseSentences = splitSentences(japaneseBlock.textContent ?? '', 'ja')
-			if (block.children.length === 0 && englishSentences.length > 1) {
-				block.textContent = ''
-				englishSentences.forEach((sentence, sentenceIndex) => {
-					const englishSentence = document.createElement('span')
-					englishSentence.className = 'mixed-sentence'
-					englishSentence.textContent = sentence
+		function createSentencePair(englishSentence, japaneseSentence) {
+			const pair = document.createElement('span')
+			pair.className = 'mixed-sentence'
 
-					const translation = document.createElement('span')
-					translation.dataset.mixedTranslation = ''
-					translation.setAttribute('lang', 'ja')
-					translation.setAttribute('aria-label', 'Japanese translation')
-					translation.className = 'mixed-translation'
-					translation.textContent = japaneseSentences[sentenceIndex] ?? ''
+			const text = document.createElement('span')
+			text.className = 'mixed-sentence__text'
+			text.textContent = englishSentence
+			pair.appendChild(text)
 
-					englishSentence.appendChild(translation)
-					block.appendChild(englishSentence)
-				})
-				return
+			if (japaneseSentence) {
+				const translation = document.createElement('span')
+				translation.dataset.mixedTranslation = ''
+				translation.setAttribute('lang', 'ja')
+				translation.setAttribute('aria-label', 'Japanese translation')
+				translation.className = 'mixed-translation'
+				translation.textContent = japaneseSentence
+				pair.appendChild(translation)
 			}
 
-			const translation = document.createElement('span')
-			translation.dataset.mixedTranslation = ''
-			translation.setAttribute('lang', 'ja')
-			translation.setAttribute('aria-label', 'Japanese translation')
-			translation.className = 'mixed-translation'
-			translation.textContent = (japaneseBlock.textContent ?? '').trim()
-			if (translation.textContent.trim()) block.appendChild(translation)
-		})
+			return pair
+		}
 
-		root.dataset.mixedArticle = 'paired'
-	}
+		function shouldPairBlock(block) {
+			return !block.closest('pre, code, table, [data-mixed-translation]')
+		}
 
-	const pairAllMixedArticles = () => {
-		document.querySelectorAll('[data-mixed-article]').forEach(pairMixedArticle)
-	}
+		function pairMixedArticle(root) {
+			const englishRoot = root.querySelector('[data-mixed-english]')
+			const japaneseRoot = root.querySelector('[data-mixed-japanese]')
+			if (!englishRoot || !japaneseRoot || root.dataset.mixedArticle === 'paired') return
 
-	pairAllMixedArticles()
-	document.addEventListener('astro:page-load', pairAllMixedArticles)
+			const englishBlocks = [...englishRoot.querySelectorAll('p, li')].filter(shouldPairBlock)
+			const japaneseBlocks = [...japaneseRoot.querySelectorAll('p, li')].filter(shouldPairBlock)
+
+			englishBlocks.forEach((block, index) => {
+				const japaneseBlock = japaneseBlocks[index]
+				if (!japaneseBlock) return
+
+				const englishSentences = splitSentences(block.textContent ?? '', 'en')
+				const japaneseSentences = splitSentences(japaneseBlock.textContent ?? '', 'ja')
+				if (englishSentences.length === 0 || japaneseSentences.length === 0) return
+
+				const sentencePairs = englishSentences.map((sentence, sentenceIndex) =>
+					createSentencePair(
+						sentence,
+						mapTranslation(japaneseSentences, sentenceIndex, englishSentences.length)
+					)
+				)
+
+				block.replaceChildren(...sentencePairs)
+			})
+
+			root.dataset.mixedArticle = 'paired'
+		}
+
+		function pairAllMixedArticles() {
+			document.querySelectorAll('[data-mixed-article]').forEach(pairMixedArticle)
+		}
+
+		pairAllMixedArticles()
+		if (!window.__mixedArticlePairerReady) {
+			window.__mixedArticlePairerReady = true
+			document.addEventListener('astro:page-load', pairAllMixedArticles)
+		}
+	})()
 </script>
 
 <style>
@@ -83,24 +107,29 @@
 		position: relative;
 	}
 
-	.mixed-translation {
+	:global(.mixed-translation) {
 		display: block;
-		margin-top: 0.35rem;
-		font-size: 0.72em;
-		font-weight: 500;
-		line-height: 1.65;
-		color: rgb(90 96 110);
+		margin-top: 0.2rem;
+		font-size: 0.68em !important;
+		font-weight: 400 !important;
+		line-height: 1.65 !important;
+		color: rgb(112 118 132) !important;
 	}
 
-	.mixed-sentence {
+	:global(.mixed-sentence) {
+		display: block;
+		margin-block: 0.85rem;
+	}
+
+	:global(.mixed-sentence__text) {
 		display: block;
 	}
 
-	.mixed-sentence + .mixed-sentence {
-		margin-top: 0.85rem;
+	:global(.mixed-sentence + .mixed-sentence) {
+		margin-top: 1rem;
 	}
 
 	:global(.dark) .mixed-translation {
-		color: rgb(188 194 206);
+		color: rgb(165 172 187) !important;
 	}
 </style>

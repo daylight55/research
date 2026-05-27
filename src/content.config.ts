@@ -20,6 +20,13 @@ const blog = defineCollection({
 			contentType: z.enum(['report', 'news']).default('report'),
 			category: z.enum(CATEGORIES),
 			tags: z.array(z.string()),
+			generation: z
+				.object({
+					model: z.string(),
+					promptSource: z.string().optional(),
+					promptSummary: z.array(z.string()).optional()
+				})
+				.optional(),
 			draft: z.boolean().default(false)
 		})
 })

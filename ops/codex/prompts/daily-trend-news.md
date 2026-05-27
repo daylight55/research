@@ -30,6 +30,10 @@ policy / technical decisions.
 - Keep the frontmatter fields from the News template, including
   `contentType: news`, `category: tech-news`, `rssSummary`, and
   `heroImageQuery`.
+- Keep the template's `generation` frontmatter block. Set `model` from
+  `Automation Metadata`, set `promptSource` to
+  `ops/codex/prompts/daily-trend-news.md`, and use `promptSummary` to summarize
+  the effective prompt constraints in a few bullets.
 - Set the article `title` and H1 to `YYYY-MM-DD <SUMMARY_PHRASE>`, where the
   phrase after the date summarizes all fifteen topics or describes the most
   important situation of the day. Do not use generic category-list titles such
@@ -48,7 +52,9 @@ policy / technical decisions.
 - Do not create `report.md` or another second copy of the same article body.
 - If a public research trail is useful, put it in
   `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx`; otherwise keep only the
-  article body in `index.mdx`.
+  article body in `index.mdx`. If `research-log.mdx` is created, include a
+  `## 利用環境` section with the automation model, prompt source, and a concise
+  prompt summary instead of pasting the full prompt.
 
 ## Context Budget Rules
 

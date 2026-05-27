@@ -41,6 +41,10 @@ drivers, risks, and practical implications.
   `ops/codex/templates/blog-entry.mdx` as the site-entry shape.
   Include `rssSummary` in frontmatter as a concise RSS/share summary. Keep it
   understandable outside the site UI and distinct from long article prose.
+  Include the template's `generation` frontmatter block with `model` from
+  `Automation Metadata`, the `promptSource` value set to
+  `ops/codex/prompts/daily-issue-research.md`, and `promptSummary` as a short
+  list describing the effective prompt constraints that shaped the article.
   Include `heroImageQuery` as a short English Unsplash search phrase for an
   informative landscape header image. Keep `heroImage` as the placeholder;
   automation will replace it with a downloaded local image when the query is
@@ -104,7 +108,8 @@ drivers, risks, and practical implications.
   - the model used by the automation
   - a link to `.codex/skills/technical-research-report/SKILL.md`
   - a link to `ops/codex/prompts/daily-issue-research.md`
-  - a concise summary of the prompt constraints that shaped the investigation
+  - a `## 利用環境` section with a `プロンプト要約` bullet list that concisely
+    summarizes the prompt constraints that shaped the investigation
 - Run focused verification before finishing. At minimum, check for unresolved
   placeholders and run `git diff --check`. If site content changed and
   dependencies are installed, run `pnpm build`.

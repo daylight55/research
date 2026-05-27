@@ -122,6 +122,11 @@ jobs:
             if [[ -n "${TOPIC_HINT}" ]]; then
               echo "- Extra focus: ${TOPIC_HINT}"
             fi
+            echo
+            echo "## Automation Metadata"
+            echo
+            echo "- Model: ${OPENAI_MODEL}"
+            echo "- Prompt source: [ops/codex/prompts/daily-trend-news.md](../../ops/codex/prompts/daily-trend-news.md)"
           } >> ops/codex/runtime/daily-trend-news-prompt.md
 
       - name: Setup pnpm

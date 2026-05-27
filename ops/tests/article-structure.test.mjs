@@ -67,6 +67,35 @@ test('article frontmatter contentType matches its directory type', () => {
 	}
 })
 
+test('article schema and templates support generation metadata', () => {
+	const contentConfig = readFileSync('src/content.config.ts', 'utf8')
+	const reportTemplate = readFileSync('ops/codex/templates/blog-entry.mdx', 'utf8')
+	const newsTemplate = readFileSync('ops/codex/templates/news-digest.mdx', 'utf8')
+
+	assert.match(
+		contentConfig,
+		/generation:\s*z[\s\S]*?\.object\(\{[\s\S]*?model:\s*z\.string\(\)[\s\S]*?promptSource:\s*z\.string\(\)\.optional\(\)[\s\S]*?promptSummary:\s*z\.array\(z\.string\(\)\)\.optional\(\)[\s\S]*?\}\)[\s\S]*?\.optional\(\)/,
+		'article frontmatter schema should allow optional generation model and prompt provenance'
+	)
+
+	for (const [file, source] of [
+		['ops/codex/templates/blog-entry.mdx', reportTemplate],
+		['ops/codex/templates/news-digest.mdx', newsTemplate]
+	]) {
+		assert.match(
+			source,
+			/generation:\n\s+model: '<MODEL_USED_TO_CREATE_ARTICLE>'/,
+			`${file} should include generation.model`
+		)
+		assert.match(
+			source,
+			/promptSource: '<PROMPT_OR_WORKFLOW_SOURCE_PATH>'/,
+			`${file} should include generation.promptSource`
+		)
+		assert.match(source, /promptSummary:/, `${file} should include generation.promptSummary`)
+	}
+})
+
 test('article body does not import duplicate report bodies or unresolved placeholders', () => {
 	for (const file of gitFiles(['articles/*/**/index.mdx', 'articles/*/**/research-log.mdx'])) {
 		const source = readFileSync(file, 'utf8')

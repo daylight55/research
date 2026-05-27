@@ -11,19 +11,35 @@ async function listSourceArticles(type) {
 	const dir = join(repoRoot, 'articles', type)
 	const entries = await readdir(dir, { withFileTypes: true })
 	return entries
-		.filter((entry) => entry.isDirectory() && entry.name !== 'en')
+		.filter((entry) => entry.isDirectory())
 		.map((entry) => ({
 			type,
 			slug: entry.name,
-			sourcePath: `articles/${type}/${entry.name}/index.mdx`,
-			outputPath: `articles/${type}/en/${entry.name}/index.mdx`
+			sourcePath: `articles/${type}/${entry.name}/ja/index.mdx`,
+			outputPath: `articles/${type}/${entry.name}/en/index.mdx`
 		}))
 }
 
 async function listExistingEnglishSlugs(type) {
+	const dir = join(repoRoot, 'articles', type)
 	try {
-		const entries = await readdir(join(repoRoot, 'articles', type, 'en'), { withFileTypes: true })
-		return new Set(entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name))
+		const entries = await readdir(dir, { withFileTypes: true })
+		const slugs = []
+
+		for (const entry of entries) {
+			if (!entry.isDirectory()) continue
+
+			try {
+				const localeEntries = await readdir(join(dir, entry.name), { withFileTypes: true })
+				if (localeEntries.some((localeEntry) => localeEntry.isDirectory() && localeEntry.name === 'en')) {
+					slugs.push(entry.name)
+				}
+			} catch (error) {
+				if (error.code !== 'ENOENT') throw error
+			}
+		}
+
+		return new Set(slugs)
 	} catch (error) {
 		if (error.code === 'ENOENT') return new Set()
 		throw error

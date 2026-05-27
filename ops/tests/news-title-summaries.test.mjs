@@ -18,11 +18,21 @@ function readScalar(frontmatter, key) {
 	return match[1].trim().replace(/^['"]|['"]$/g, '')
 }
 
+function findFiles(...patterns) {
+	return patterns
+		.flatMap((pattern) =>
+			execFileSync('find', ['articles/news', '-path', pattern, '-type', 'f'], {
+				encoding: 'utf8'
+			})
+				.split('\n')
+				.map((line) => line.trim())
+				.filter(Boolean)
+		)
+		.sort()
+}
+
 test('news article titles summarize the day after the date', () => {
-	const files = execFileSync('git', ['ls-files', 'articles/news/*/index.mdx'], { encoding: 'utf8' })
-		.split('\n')
-		.map((line) => line.trim())
-		.filter(Boolean)
+	const files = findFiles('articles/news/*/ja/index.mdx')
 
 	for (const file of files) {
 		const source = readFileSync(file, 'utf8')
@@ -48,12 +58,7 @@ test('news article titles summarize the day after the date', () => {
 })
 
 test('translated news digest labels stay paragraph-separated', () => {
-	const files = execFileSync('git', ['ls-files', 'articles/news/en/*/index.mdx'], {
-		encoding: 'utf8'
-	})
-		.split('\n')
-		.map((line) => line.trim())
-		.filter(Boolean)
+	const files = findFiles('articles/news/*/en/index.mdx')
 
 	const digestLabelRe = /^(What happened|Why it matters|What to watch):/
 	const staleLabelRe =
@@ -86,12 +91,7 @@ test('translated news digest labels stay paragraph-separated', () => {
 })
 
 test('news digests use forward-looking watch labels instead of practice implication labels', () => {
-	const files = execFileSync('git', ['ls-files', 'articles/news/*/index.mdx', 'articles/news/en/*/index.mdx'], {
-		encoding: 'utf8'
-	})
-		.split('\n')
-		.map((line) => line.trim())
-		.filter(Boolean)
+	const files = findFiles('articles/news/*/ja/index.mdx', 'articles/news/*/en/index.mdx')
 
 	for (const file of files) {
 		const source = readFileSync(file, 'utf8')

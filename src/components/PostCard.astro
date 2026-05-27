@@ -6,13 +6,13 @@ import { DEFAULT_LOCALE, cn, getCategorySurfaceClass, localizedPath } from '@/ut
 
 const {
 	id,
-	data: { title, description, pubDate, heroImage, category },
+	data: { title, description, pubDate, heroImage, category, contentType },
 	readTime,
 	slug,
 	locale = DEFAULT_LOCALE,
 	isPriority = false
 } = Astro.props
-const postUrl = localizedPath(locale, `/post/${slug}/`)
+const postUrl = localizedPath(locale, `/${contentType === 'news' ? 'news' : 'reports'}/${slug}/`)
 ---
 
 <article

@@ -4,7 +4,7 @@ import { execFileSync } from 'node:child_process'
 import { test } from 'node:test'
 
 test('published report articles use SourceNote instead of plain source memo labels', () => {
-	const files = execFileSync('git', ['ls-files', 'articles/report/*/index.mdx'], {
+	const files = execFileSync('find', ['articles/report', '-path', 'articles/report/*/ja/index.mdx', '-type', 'f'], {
 		encoding: 'utf8'
 	})
 		.split('\n')

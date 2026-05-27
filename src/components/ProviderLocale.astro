@@ -62,6 +62,8 @@
 		if (['/news/', '/reports/', '/reference/', '/tags/'].includes(contentPath)) return true
 		return (
 			contentPath.startsWith('/post/') ||
+			contentPath.startsWith('/news/') ||
+			contentPath.startsWith('/reports/') ||
 			contentPath.startsWith('/category/') ||
 			contentPath.startsWith('/tags/')
 		)

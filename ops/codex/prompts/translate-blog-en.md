@@ -4,10 +4,10 @@ Translate missing Japanese articles into English for the Astro research site.
 
 Rules:
 
-- Source articles are the canonical Japanese files under `articles/report/<slug>/index.mdx` and `articles/news/<slug>/index.mdx`.
-- Create one English article per missing source under `articles/report/en/<same-slug>/index.mdx` or `articles/news/en/<same-slug>/index.mdx`, matching the source article type.
+- Source articles are the canonical Japanese files under `articles/<type>/<slug>/ja/index.mdx`, where `<type>` is `report` or `news`.
+- Create one English article per missing source under `articles/<type>/<slug>/en/index.mdx`, matching the source article type.
 - Preserve all frontmatter keys and values unless the value is Japanese prose that should be translated, such as `title`, `description`, `rssSummary`, `heroImageAlt`, and `heroImageCredit`.
-- Adjust relative `heroImage` paths from `../../../src/...` to `../../../../src/...` because English articles live one directory deeper than the Japanese article directories.
+- Keep relative `heroImage` paths aligned with the Japanese article because `ja` and `en` live at the same directory depth.
 - Translate the Markdown/MDX body into natural English while preserving headings, tables, lists, Mermaid blocks, MDX components, links, and source URLs.
 - Translate Mermaid diagram labels, axis labels, sequence participants, and messages into English. Do not leave Japanese text inside English Mermaid blocks.
 - Keep source-adjacent `出典メモ:` paragraphs as English `Source note:` paragraphs.
@@ -15,7 +15,7 @@ Rules:
 - For news digest articles, keep the topic labels as standalone paragraphs with blank lines between `What happened:`, `Why it matters:`, `What to watch:`, and the following `NewsSourceCard`, matching the Japanese layout. Translate `今後の注視点:` as `What to watch:` and keep the content focused on what readers should monitor next.
 - Do not translate code identifiers, URLs, file paths, product names, or proper nouns unless an established English name exists.
 - Do not add placeholders such as `TBD`, `TODO`, `FIXME`, `未定`, or `要確認`.
-- After writing files, run `pnpm build` and ensure the generated English article pages are present under `dist/en/post/`.
+- After writing files, run `pnpm build` and ensure the generated English article pages are present under `dist/en/news/` or `dist/en/reports/`.
 
 Reference pages:
 

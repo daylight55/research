@@ -31,9 +31,9 @@ reading flow.
 
 ## What This Repository Does
 
-- Publishes reports from `articles/report/<slug>/index.mdx`.
-- Publishes news digests from `articles/news/<slug>/index.mdx`.
-- Publishes research trails from `articles/<type>/<slug>/research-log.mdx` when present.
+- Publishes reports from `articles/report/<slug>/<locale>/index.mdx`.
+- Publishes news digests from `articles/news/<slug>/<locale>/index.mdx`.
+- Publishes research trails from `articles/<type>/<slug>/<locale>/research-log.mdx` when present.
 - Builds the site with Astro.
 - Keeps category metadata in `src/data/categories.ts`.
 - Keeps generation prompts, templates, scripts, and workflow tests under `ops/`.
@@ -44,17 +44,23 @@ reading flow.
 articles/
   report/
     <slug>/
-      index.mdx
-      research-log.mdx
+      ja/
+        index.mdx
+        research-log.mdx
+      en/
+        index.mdx
   news/
     <slug>/
-      index.mdx
-      research-log.mdx
+      ja/
+        index.mdx
+      en/
+        index.mdx
 src/
 public/
 ops/
 infra/
 ```
 
-`index.mdx` is the canonical article body. `research-log.mdx` is optional and
-should contain only information that is appropriate to publish.
+`ja/index.mdx` is the canonical Japanese article body. `en/index.mdx` mirrors
+the same slug for English readers. `research-log.mdx` is optional and should
+contain only information that is appropriate to publish.

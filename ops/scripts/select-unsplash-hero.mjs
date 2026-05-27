@@ -27,7 +27,7 @@ loadDotEnv()
 const ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY
 const IMAGE_DIR = path.join('src', 'assets', 'images', 'hero')
 const PLACEHOLDER_RE = /placeholder|banner\.jpg|book\.jpg|placeholder-social/i
-const BLOG_GLOB = 'articles/*/*/index.mdx'
+const BLOG_GLOB = 'articles/*/*/*/index.mdx'
 const NEWS_GENERIC_QUERY_RE = /\b(news|daily|trend|trends|hot|collage|headline|headlines)\b/gi
 const GENERIC_FOCUS_TERMS = new Set([
 	'Reuters',

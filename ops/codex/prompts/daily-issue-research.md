@@ -23,12 +23,12 @@ drivers, risks, and practical implications.
 - Follow `AGENTS.md`.
 - Use the repo-local `technical-research-report` skill if available.
 - Write the reader-facing report body directly in
-  `articles/report/<topic>/index.mdx`. Treat this MDX file as the canonical article
+  `articles/report/<topic>/ja/index.mdx`. Treat this MDX file as the canonical article
   body for website-visible reports.
 - Do not create `report.md` or another second copy of the same article body.
   Duplicate report bodies drift and make the workflow slower.
 - If the investigation process is useful to readers, write it in
-  `articles/report/<topic>/research-log.mdx` as a public research trail: questions checked,
+  `articles/report/<topic>/ja/research-log.mdx` as a public research trail: questions checked,
   key sources, rejected evidence, limits, and how those findings affected the
   article. Do not create private `notes/`, `sources/`, or `figures/`
   directories; summarize publishable material in `research-log.mdx`.
@@ -37,7 +37,7 @@ drivers, risks, and practical implications.
   `technical-research-report` skill, and a link to this prompt source. Summarize
   the effective prompt in a few bullets instead of pasting the full prompt.
 - Add or update `src/data/categories.ts` category wiring as needed.
-- When creating `articles/report/<topic>/index.mdx`, use
+- When creating `articles/report/<topic>/ja/index.mdx`, use
   `ops/codex/templates/blog-entry.mdx` as the site-entry shape.
   Include `rssSummary` in frontmatter as a concise RSS/share summary. Keep it
   understandable outside the site UI and distinct from long article prose.
@@ -93,7 +93,7 @@ drivers, risks, and practical implications.
   who need a high-level but decision-useful overview, not only a news recap.
   Summarize what happened, why it matters, what structural forces are behind it,
   what may change next, and what remains uncertain.
-- Keep public investigation notes in `articles/report/<topic>/research-log.mdx` when a
+- Keep public investigation notes in `articles/report/<topic>/ja/research-log.mdx` when a
   separate research trail is useful.
 - If `research-log.mdx` is created or updated, include:
   - the model used by the automation

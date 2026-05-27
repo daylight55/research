@@ -87,7 +87,7 @@ jobs:
           fi
 
           slug="daily-trends-${report_date}"
-          article_path="articles/news/${slug}/index.mdx"
+          article_path="articles/news/${slug}/ja/index.mdx"
           topic_hint_hash=""
           cache_key="daily-trend-news-${report_date}"
           if [[ -n "${TOPIC_HINT}" ]]; then
@@ -378,12 +378,12 @@ jobs:
 
           test -f "dist/news/index.html"
           test -f "dist/news/rss.xml"
-          test -f "dist/post/${SLUG}/index.html"
+          test -f "dist/news/${SLUG}/index.html"
 
           grep -nE "${SLUG}|ホットトレンド|政治|経済|技術" \
             "dist/news/index.html" \
             "dist/news/rss.xml" \
-            "dist/post/${SLUG}/index.html"
+            "dist/news/${SLUG}/index.html"
 
       - name: Create generated news article cache archive
         if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_news_article.outputs.cache-hit != 'true'
@@ -447,7 +447,7 @@ jobs:
             echo
             echo "## 主な変更点"
             echo
-            echo "- \`articles/news/${SLUG}/index.mdx\` を追加。"
+            echo "- \`articles/news/${SLUG}/ja/index.mdx\` を追加。"
             echo "- 必要に応じてUnsplash由来のヒーロー画像を追加。"
             echo
             echo "## 確認したこと"
@@ -459,7 +459,7 @@ jobs:
             echo "- [x] Mermaidなどの図解がMarkdownとして読めること"
             echo "- [x] 追加・更新した \`research-log.mdx\` に調査プロセスと残課題が反映されていること、またはNews単体のため該当なし"
             echo "- [x] \`pnpm build\`"
-            echo "- [x] \`dist/news/index.html\`, \`dist/news/rss.xml\`, \`dist/post/${SLUG}/index.html\` の生成確認"
+            echo "- [x] \`dist/news/index.html\`, \`dist/news/rss.xml\`, \`dist/news/${SLUG}/index.html\` の生成確認"
             echo
             echo "## レビュー観点"
             echo

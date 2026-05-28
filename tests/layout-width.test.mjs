@@ -59,7 +59,10 @@ test('English research process route links back to the English article', () => {
 	const englishResearchPage = readFileSync('src/pages/en/reports/[slug]/research.astro', 'utf8')
 
 	assert.match(englishResearchPage, /const locale = 'en'/)
-	assert.match(englishResearchPage, /href=\{localizedPath\(locale, `\/reports\/\$\{postSlug\}\/`\)\}/)
+	assert.match(
+		englishResearchPage,
+		/href=\{localizedPath\(locale, `\/reports\/\$\{postSlug\}\/`\)\}/
+	)
 	assert.match(englishResearchPage, /Back to article/)
 })
 
@@ -69,4 +72,17 @@ test('post lists keep cards readable at intermediate viewport widths', () => {
 	assert.match(listPosts, /repeat\(auto-fit,minmax\(min\(100%,17rem\),1fr\)\)/)
 	assert.match(listPosts, /lg:grid-cols-3/)
 	assert.doesNotMatch(listPosts, /md:grid-cols-3/)
+})
+
+test('mobile theme toggle has a visible light-mode fallback', () => {
+	const header = readFileSync('src/components/Header.astro', 'utf8')
+	const toggleTheme = readFileSync('src/components/ToggleTheme.astro', 'utf8')
+
+	assert.match(header, /class='flex shrink-0 items-center gap-2 md:pl-2'/)
+	assert.match(toggleTheme, /<theme-toggle class='relative block h-9 w-9 shrink-0'>/)
+	assert.match(toggleTheme, /type='button'/)
+	assert.match(toggleTheme, /aria-pressed='false'/)
+	assert.match(toggleTheme, /theme-toggle__moon/)
+	assert.match(toggleTheme, /button\[aria-pressed='false'\] \.theme-toggle__moon/)
+	assert.doesNotMatch(toggleTheme, /group-aria-\[/)
 })

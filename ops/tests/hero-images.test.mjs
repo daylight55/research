@@ -61,3 +61,49 @@ test('published blog entries use concrete non-duplicated hero images', () => {
 		seen.set(hash, { file, postKey: canonicalPostKey(file) })
 	}
 })
+
+test('localized versions of the same entry use the same hero image source', () => {
+	const files = execFileSync('find', ['articles', '-path', 'articles/*/*/*/index.mdx', '-type', 'f'], {
+		encoding: 'utf8'
+	})
+		.split('\n')
+		.map((line) => line.trim())
+		.filter(Boolean)
+	const posts = new Map()
+	const sharedHeroFields = [
+		'heroImage',
+		'heroImageCredit',
+		'heroImageCreditUrl',
+		'heroImageSourceId'
+	]
+
+	for (const file of files) {
+		const localeMatch = file.match(/\/(ja|en)\/index\.mdx$/)
+		if (!localeMatch) continue
+
+		const frontmatter = frontmatterOf(readFileSync(file, 'utf8'), file)
+		const draft = readScalar(frontmatter, 'draft')
+		if (draft === 'true') continue
+
+		const postKey = canonicalPostKey(file)
+		const locale = localeMatch[1]
+		const entry = Object.fromEntries(
+			sharedHeroFields.map((field) => [field, readScalar(frontmatter, field)])
+		)
+		const localized = posts.get(postKey) ?? {}
+		localized[locale] = { file, entry }
+		posts.set(postKey, localized)
+	}
+
+	for (const [postKey, localized] of posts) {
+		if (!localized.ja || !localized.en) continue
+
+		for (const field of sharedHeroFields) {
+			assert.equal(
+				localized.ja.entry[field],
+				localized.en.entry[field],
+				`${postKey} should share ${field} across ja/en (${localized.ja.file} vs ${localized.en.file})`
+			)
+		}
+	}
+})

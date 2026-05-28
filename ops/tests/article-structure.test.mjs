@@ -67,6 +67,18 @@ test('article frontmatter contentType matches its directory type', () => {
 	}
 })
 
+test('published article frontmatter records the generation model', () => {
+	for (const file of gitFiles(['articles/*/**/index.mdx'])) {
+		const frontmatter = frontmatterOf(readFileSync(file, 'utf8'), file)
+
+		assert.match(
+			frontmatter,
+			/^generation:\n\s+model: 'gpt-5\.4-mini'$/m,
+			`${file} should record the article generation model`
+		)
+	}
+})
+
 test('article schema and templates support generation metadata', () => {
 	const contentConfig = readFileSync('src/content.config.ts', 'utf8')
 	const blogPostLayout = readFileSync('src/layouts/BlogPost.astro', 'utf8')

@@ -5,6 +5,7 @@ import test from 'node:test'
 
 const repoRoot = new URL('..', import.meta.url)
 const providerLocalePath = join(repoRoot.pathname, 'src/components/ProviderLocale.astro')
+const mixedArticleContentPath = join(repoRoot.pathname, 'src/components/MixedArticleContent.astro')
 
 test('locale switch scroll restoration cancels stale restore attempts', async () => {
 	const source = await readFile(providerLocalePath, 'utf8')
@@ -16,6 +17,9 @@ test('locale switch scroll restoration cancels stale restore attempts', async ()
 	assert.match(source, /const getArticleScrollAnchor = \(\) =>/)
 	assert.match(source, /blockIndex/)
 	assert.match(source, /blockOffsetRatio/)
+	assert.match(source, /textByLocale: getBlockTextAnchors\(visibleBlock\)/)
+	assert.match(source, /const findArticleBlockByTextAnchor = \(anchor, blocks\) =>/)
+	assert.match(source, /findArticleBlockByTextAnchor\(anchor, blocks\) \?\?/)
 	assert.match(source, /viewportRatio: ARTICLE_VIEWPORT_ANCHOR_RATIO/)
 	assert.match(source, /const scrollToArticleAnchor = \(anchor\) =>/)
 	assert.match(source, /anchor: getArticleScrollAnchor\(\)/)
@@ -24,12 +28,16 @@ test('locale switch scroll restoration cancels stale restore attempts', async ()
 	assert.match(source, /const clearScheduledScrollRestores = \(\) =>/)
 	assert.match(source, /if \(restoreRun !== scrollRestoreRun\) return/)
 	assert.match(source, /if \(readSavedScrollPosition\(\) !== saved\) return/)
+	assert.match(source, /pendingScrollRestore = raw \? JSON\.parse\(raw\) : null/)
 	assert.match(source, /clearSavedScrollPosition\(\)\s+clearScheduledScrollRestores\(\)/)
 	assert.match(
 		source,
 		/clearWhenRestored\(\)\s+if \(readSavedScrollPosition\(\) !== saved\) return/
 	)
+	assert.match(source, /scheduleRestore\(1200, true\)/)
+	assert.match(source, /window\.requestAnimationFrame\(\(\) => clearWhenRestored\(\)\)/)
 	assert.doesNotMatch(source, /window\.setTimeout\(clearWhenRestored,\s*\d+/)
+	assert.doesNotMatch(source, /window\.requestAnimationFrame\(clearWhenRestored\)/)
 })
 
 test('locale switch scroll restoration is aborted by user scroll input', async () => {
@@ -47,6 +55,22 @@ test('locale switch scroll restoration is aborted by user scroll input', async (
 	assert.match(source, /window\.addEventListener\('keydown', cancelScrollRestoreForScrollKey\)/)
 	assert.match(source, /'PageDown'/)
 	assert.match(source, /'PageUp'/)
+})
+
+test('mixed article blocks expose bilingual scroll anchors', async () => {
+	const source = await readFile(mixedArticleContentPath, 'utf8')
+
+	assert.match(
+		source,
+		/function setBlockScrollAnchors\(block, englishSentences, japaneseSentences\)/
+	)
+	assert.match(source, /block\.dataset\.scrollAnchorEn = englishText/)
+	assert.match(source, /block\.dataset\.scrollAnchorJa = japaneseText/)
+	assert.match(source, /setBlockScrollAnchors\(block, englishSentences, pairedJapaneseSentences\)/)
+	assert.match(
+		source,
+		/setBlockScrollAnchors\(\s*block,\s*blockPairs\.map\(\(pair\) => pair\.en\),\s*blockPairs\.map\(\(pair\) => pair\.ja\)\s*\)/
+	)
 })
 
 test('mobile horizontal swipes switch locale without replacing vertical scroll', async () => {

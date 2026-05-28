@@ -8,6 +8,7 @@ const cloudflarePreviewWorkflow = readFileSync(
 	'.github/workflows/cloudflare-pages-preview.yml',
 	'utf8'
 )
+const translateBlogWorkflow = readFileSync('.github/workflows/translate-blog-en.yml', 'utf8')
 
 assert.match(
 	workflow,
@@ -166,6 +167,12 @@ assert.match(
 )
 
 assert.match(
+	translateBlogWorkflow,
+	/allow-bot-users: daylight55-research-queue\[bot\]/,
+	'Translate Blog English should allow the research queue GitHub App bot that dispatches the workflow'
+)
+
+assert.match(
 	trendWorkflow,
 	/cache_key="daily-trend-news-\$\{report_date\}"[\s\S]*?cache_key="\$\{cache_key\}-\$\{topic_hint_hash\}"/,
 	'trend news workflow should derive a date cache key and include topic hint when present'
@@ -177,15 +184,33 @@ assert.match(
 	'trend news workflow should restore generated news artifacts from the run cache before running Codex'
 )
 
-assert.match(
+assert.doesNotMatch(
 	trendWorkflow,
-	/- name: Run Codex trend news research[\s\S]*?if: steps\.restore_generated_news_article\.outputs\.cache-hit != 'true'/,
-	'trend news workflow should skip Codex generation when generated news artifacts were restored from cache'
+	/echo "::error::News article already exists for \$\{report_date\}/,
+	'trend news workflow should not fail before cache restore when the dated article already exists'
 )
 
 assert.match(
 	trendWorkflow,
-	/import NewsSourceCard from '\.\.\/\.\.\/\.\.\/src\/components\/mdx\/NewsSourceCard\.astro'/,
+	/echo "article_exists=\$\{article_exists\}"[\s\S]*?steps\.run_context\.outputs\.article_exists != 'true' && steps\.restore_generated_news_article\.outputs\.cache-hit != 'true'/,
+	'trend news workflow should record existing articles and skip Codex when the dated article already exists'
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Apply cached generated news article[\s\S]*?if: steps\.run_context\.outputs\.article_exists != 'true' && steps\.restore_generated_news_article\.outputs\.cache-hit == 'true'/,
+	'trend news workflow should apply cached generated artifacts only when the dated article is not already committed'
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Run Codex trend news research[\s\S]*?if: steps\.run_context\.outputs\.article_exists != 'true' && steps\.restore_generated_news_article\.outputs\.cache-hit != 'true'/,
+	'trend news workflow should skip Codex generation when generated news artifacts were restored from cache or the article already exists'
+)
+
+assert.match(
+	trendWorkflow,
+	/import NewsSourceCard from '\.\.\/\.\.\/\.\.\/\.\.\/src\/components\/mdx\/NewsSourceCard\.astro'/,
 	'trend news workflow should require generated articles to import NewsSourceCard'
 )
 

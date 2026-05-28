@@ -34,6 +34,12 @@ assert.match(
 	'Daily Issue Research should pass model, skill, and prompt metadata into the generated research prompt'
 )
 
+assert.doesNotMatch(
+	workflow,
+	/Selected Issue Context[\s\S]*?- URL: \\\(\.url\\\)/,
+	'Daily Issue Research should not pass private research queue issue URLs into the generated prompt'
+)
+
 assert.match(
 	workflow,
 	/Required skill: \[technical-research-report\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/\.codex\/skills\/technical-research-report\/SKILL\.md\)[\s\S]*?Prompt source: \[ops\/codex\/prompts\/daily-issue-research\.md\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/ops\/codex\/prompts\/daily-issue-research\.md\)/,
@@ -86,6 +92,12 @@ assert.match(
 	dailyIssuePrompt,
 	/articles\/report\/<topic>\/ja\/research-log\.mdx[\s\S]*?## 調査命令[\s\S]*?issue[\s\S]*?title[\s\S]*?body/,
 	'Daily Issue Research prompt should ask research logs to summarize the issue-based research instruction'
+)
+
+assert.match(
+	dailyIssuePrompt,
+	/Do not include an issue URL because the research queue[\s\S]*?may be private/,
+	'Daily Issue Research prompt should keep private issue URLs out of research logs'
 )
 
 assert.match(

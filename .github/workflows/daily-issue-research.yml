@@ -139,7 +139,7 @@ jobs:
             echo
             echo "## Selected Issue Context"
             echo
-            jq -r '"- Issue: #\(.number) \(.title)\n- URL: \(.url)\n- Labels: \([.labels[].name] | join(", "))"' ops/codex/runtime/selected-issue.json
+            jq -r '"- Issue: #\(.number) \(.title)\n- Labels: \([.labels[].name] | join(", "))"' ops/codex/runtime/selected-issue.json
             echo
             echo "### Issue Body"
             echo

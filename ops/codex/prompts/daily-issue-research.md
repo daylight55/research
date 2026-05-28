@@ -37,9 +37,10 @@ drivers, risks, and practical implications.
   `technical-research-report` skill, and a link to this prompt source.
 - In `research-log.mdx`, include a `## 調査命令` section that summarizes the
   selected GitHub issue as the research instruction: issue number, issue title,
-  issue URL when available, the publishable issue body / request summary, scope
-  constraints, and the inferred deliverable. Do not paste secrets, private
-  operational details, or repository credentials.
+  the publishable issue body / request summary, scope constraints, and the
+  inferred deliverable. Do not include an issue URL because the research queue
+  issue may be private. Do not paste secrets, private operational details, or
+  repository credentials.
 - Add or update `src/data/categories.ts` category wiring as needed.
 - When creating `articles/report/<topic>/ja/index.mdx`, use
   `ops/codex/templates/blog-entry.mdx` as the site-entry shape.

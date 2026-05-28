@@ -310,7 +310,6 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /from 'sentence-splitter'/)
 	assert.match(mixedArticleComponent, /fallbackSplitSentences/)
 	assert.match(mixedArticleComponent, /splitSentences/)
-	assert.match(mixedArticleComponent, /explicitAlignmentMap/)
 	assert.match(mixedArticleComponent, /alignmentPairsFromData/)
 	assert.match(mixedArticleComponent, /normalizeAlignmentText/)
 	assert.match(mixedArticleComponent, /\[“”\]/)
@@ -347,7 +346,9 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 		assert.equal(alignment.version, 1)
 		assert.equal(alignment.sourceLocale, 'ja')
 		assert.equal(alignment.targetLocale, 'en')
-		assert.ok(alignment.sections.some((section) => section.pairs.length > 0))
+		assert.ok(
+			alignment.pairs?.length > 0 || alignment.sections?.some((section) => section.pairs.length > 0)
+		)
 		assert.doesNotMatch(JSON.stringify(alignment), /Source note|Source memo|^import\s/m)
 	}
 

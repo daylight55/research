@@ -129,12 +129,6 @@ const serializedAlignment = alignment
 			}
 		}
 
-		function explicitAlignmentMap(root) {
-			return new Map(
-				explicitAlignmentPairs(root).map((pair) => [normalizeAlignmentText(pair.en), pair.ja])
-			)
-		}
-
 		function mapTranslation(japaneseSentences, sentenceIndex, sentenceCount) {
 			if (japaneseSentences.length === 0) return ''
 			if (sentenceCount <= 1) return japaneseSentences.join(' ')
@@ -178,7 +172,6 @@ const serializedAlignment = alignment
 		function shouldPairBlock(block) {
 			return (
 				!block.closest('pre, code, table, .not-prose, [data-mixed-translation]') &&
-				!block.dataset.mixedExplicit &&
 				!isSourceNoteBlock(block)
 			)
 		}
@@ -322,47 +315,6 @@ const serializedAlignment = alignment
 			})
 		}
 
-		function pairBlockFromExplicitAlignment(block, alignmentPairs) {
-			const blockText = normalizeAlignmentText(splitSourceNotes(pairableText(block)).content)
-			const blockPairs = alignmentPairs
-				.filter((pair) => blockText.includes(pair.normalizedEn))
-				.sort((left, right) => {
-					const leftIndex = blockText.indexOf(left.normalizedEn)
-					const rightIndex = blockText.indexOf(right.normalizedEn)
-					return leftIndex === rightIndex ? left.index - right.index : leftIndex - rightIndex
-				})
-
-			if (blockPairs.length === 0) return false
-
-			setBlockScrollAnchors(
-				block,
-				blockPairs.map((pair) => pair.en),
-				blockPairs.map((pair) => pair.ja)
-			)
-			block.dataset.mixedExplicit = 'true'
-			block.replaceChildren(...blockPairs.map((pair) => createSentencePair(pair.en, pair.ja)))
-			return true
-		}
-
-		function pairBlocksWithExplicitAlignment(englishRoot, alignmentPairs, alignmentMap) {
-			const explicitPairs = alignmentPairs.map((pair, index) => ({
-				...pair,
-				index,
-				normalizedEn: normalizeAlignmentText(pair.en)
-			}))
-
-			;[...englishRoot.querySelectorAll('p, li')]
-				.filter((block) => {
-					if (!shouldPairBlock(block)) return false
-					if (block.tagName === 'P' && block.closest('li')) return false
-					return true
-				})
-				.forEach((block) => {
-					if (pairBlockFromExplicitAlignment(block, explicitPairs)) return
-					if (alignmentMap.size === 0) pairBlocks(block, undefined, [], alignmentMap)
-				})
-		}
-
 		function pairMixedArticle(root) {
 			const englishRoot = root.querySelector('[data-mixed-english]')
 			const japaneseRoot = root.querySelector('[data-mixed-japanese]')
@@ -378,10 +330,6 @@ const serializedAlignment = alignment
 			const alignmentMap = new Map(
 				alignmentPairs.map((pair) => [normalizeAlignmentText(pair.en), pair.ja])
 			)
-			if (alignmentPairs.length > 0) {
-				pairBlocksWithExplicitAlignment(englishRoot, alignmentPairs, alignmentMap)
-				removeSourceNotes(englishRoot)
-			}
 
 			englishSections.forEach((section, index) => {
 				const japaneseSection = japaneseSections[index]

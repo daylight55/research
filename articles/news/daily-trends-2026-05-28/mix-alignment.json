@@ -1,0 +1,401 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "daily-trends-2026-05-28-1",
+			"pairs": [
+				{
+					"ja": "中東の軍事・外交リスクが続く一方、AI関連の設備投資と半導体株高が相場を支えた。",
+					"en": "Military and diplomatic risk in the Middle East remained elevated, while AI capital spending and semiconductor gains supported markets."
+				},
+				{
+					"ja": "政策では強硬姿勢が続き、企業側ではAIを前提にした提携、供給網、セキュリティ整備が一段と前に進んでいる。",
+					"en": "Policy pressure stayed hard-line, and companies moved further toward partnerships, supply chains, and security controls built around AI."
+				}
+			]
+		},
+		{
+			"id": "daily-trends-2026-05-28-2",
+			"pairs": [
+				{
+					"ja": "何が起きたか: 米軍がイラン国内の軍事関連施設に追加攻撃を行ったと報じられた。",
+					"en": "What happened: US forces reportedly carried out an additional strike on a military-related site inside Iran."
+				},
+				{
+					"ja": "中東では対立が一段落するどころか、報復と抑止の応酬が続いている。",
+					"en": "Rather than settling down, the Middle East remains caught in a cycle of retaliation and deterrence."
+				},
+				{
+					"ja": "なぜ重要か: これが限定的な示威で終わるのか、より広い軍事衝突へ広がるのかで、原油・海運・同盟国の対応が大きく変わる。",
+					"en": "Why it matters: Whether this remains a limited signal or widens into a broader military conflict will shape oil, shipping, and allied responses."
+				},
+				{
+					"ja": "市場の変動要因としても最優先で見るべき局面だ。",
+					"en": "It is also a top market volatility driver."
+				},
+				{
+					"ja": "今後の注視点: イラン側の報復の有無、米国の追加攻撃の可否、そしてホルムズ海峡周辺の航行リスクがどう推移するかを追う。",
+					"en": "What to watch: Watch for Iranian retaliation, possible additional US strikes, and how navigation risk around the Strait of Hormuz evolves."
+				},
+				{
+					"ja": "何が起きたか: ホワイトハウスが、イラン側メディアの「覚書」報道を否定した。",
+					"en": "What happened: The White House denied Iranian media reports about a memorandum of understanding."
+				},
+				{
+					"ja": "交渉の中身や合意の有無をめぐって、情報戦が続いている。",
+					"en": "Information conflict continues around the substance of negotiations and whether any agreement exists."
+				},
+				{
+					"ja": "なぜ重要か: 交渉の不確実性が高いほど、軍事だけでなく市場のリスクプレミアムも膨らむ。",
+					"en": "Why it matters: The more uncertain negotiations are, the larger the risk premium becomes for markets as well as military policy."
+				},
+				{
+					"ja": "外交文書の一報が、原油と株式の値動きに直結しやすい状況だ。",
+					"en": "A single report about a diplomatic document can quickly move oil and equities."
+				},
+				{
+					"ja": "今後の注視点: 米・イラン双方から正式な文書や説明が出るか、そして市場が「一時的な否定」と受け止めるかを確認したい。",
+					"en": "What to watch: Watch whether either the United States or Iran releases an official document or explanation, and whether markets read the denial as temporary."
+				},
+				{
+					"ja": "何が起きたか: イラン国営テレビが、条件次第でホルムズ海峡の航行を1か月以内に再開できる可能性に触れた。",
+					"en": "What happened: Iranian state television said the Strait of Hormuz could reopen within a month if terms are agreed."
+				},
+				{
+					"ja": "海上輸送のボトルネックが、交渉カードとして改めて前面に出た。",
+					"en": "A maritime bottleneck has again moved to the front as a negotiating card."
+				},
+				{
+					"ja": "なぜ重要か: ホルムズは原油・LNGの大動脈で、発言だけでも保険料や先物市場を動かす。",
+					"en": "Why it matters: Hormuz is a major artery for oil and LNG, and even remarks about access can move insurance costs and futures markets."
+				},
+				{
+					"ja": "実際に航路が安定するかどうかで、エネルギー価格の前提が変わる。",
+					"en": "Whether the route actually stabilizes will change energy price assumptions."
+				},
+				{
+					"ja": "今後の注視点: 航行安全の確保、海運会社の運航判断、そして原油・LNG先物の反応を見たい。",
+					"en": "What to watch: Track navigation safety, shipping company operating decisions, and reactions in oil and LNG futures."
+				},
+				{
+					"ja": "何が起きたか: イスラエルが、ガザでハマス軍事部門の新しい指導者を殺害したと発表した。",
+					"en": "What happened: Israel said it killed the new head of Hamas' armed wing in Gaza."
+				},
+				{
+					"ja": "指導部の空白を狙った精密攻撃が続き、局地的な停戦圧力はなお弱い。",
+					"en": "Precision strikes aimed at leadership gaps continue, while pressure for a local ceasefire remains weak."
+				},
+				{
+					"ja": "なぜ重要か: 指導者の交代や空白は、交渉の相手方や停戦条件を不透明にする。",
+					"en": "Why it matters: Leadership turnover or vacuum can make negotiating counterparts and ceasefire terms less clear."
+				},
+				{
+					"ja": "人質・停戦・占領統治の議論にも波及しやすい。",
+					"en": "It can also spill into discussions over hostages, ceasefire terms, and governance of occupied areas."
+				},
+				{
+					"ja": "今後の注視点: ハマス側の報復、ガザでの軍事作戦の拡大、停戦交渉への影響を確認する。",
+					"en": "What to watch: Watch Hamas' response, the possible expansion of operations in Gaza, and effects on ceasefire talks."
+				},
+				{
+					"ja": "何が起きたか: 英国の諜報トップが、敵対勢力への警戒と技術競争の時間切れ感を強調した。",
+					"en": "What happened: Britain's intelligence chief emphasized threats from adversaries and the limited time left in the technology race."
+				},
+				{
+					"ja": "安全保障と先端技術の境界がさらに曖昧になっている。",
+					"en": "The boundary between national security and advanced technology is becoming even less distinct."
+				},
+				{
+					"ja": "なぜ重要か: サイバー、AI、情報収集、輸出規制は一本の線でつながっている。",
+					"en": "Why it matters: Cybersecurity, AI, intelligence gathering, and export controls now form one connected policy field."
+				},
+				{
+					"ja": "国家安全保障の話が、そのまま民間テック投資や規制判断に跳ね返る。",
+					"en": "National security signals can quickly affect private technology investment and regulation."
+				},
+				{
+					"ja": "今後の注視点: 英国と同盟国がどの分野を優先的に強化するか、輸出規制や対中・対露政策にどう反映されるかを見たい。",
+					"en": "What to watch: Watch which areas the UK and allies prioritize, and how those choices appear in export controls and policies toward China and Russia."
+				}
+			]
+		},
+		{
+			"id": "daily-trends-2026-05-28-3",
+			"pairs": [
+				{
+					"ja": "何が起きたか: 米株はAI期待を追い風にS&P 500が終値ベースで最高値を更新し、Micronは時価総額1兆ドルの節目に近づいた。",
+					"en": "What happened: US equities rose on AI optimism, the S&P 500 closed at a record, and Micron moved near the trillion-dollar market value mark."
+				},
+				{
+					"ja": "大型テックと半導体が相場を引っ張っている。",
+					"en": "Large technology companies and semiconductors are pulling the market higher."
+				},
+				{
+					"ja": "なぜ重要か: 金利や地政学リスクがあっても、AI設備投資への期待が株価の下支えになっている。",
+					"en": "Why it matters: Even with rates and geopolitical risk in the background, expectations for AI capital spending are supporting equity prices."
+				},
+				{
+					"ja": "企業業績ではなく設備投資テーマが相場の主導権を握っている構図だ。",
+					"en": "The market is being led by an investment theme rather than only near-term corporate earnings."
+				},
+				{
+					"ja": "今後の注視点: 半導体の受注見通し、AI関連CapExの持続性、そして高値圏で利益確定売りが出るかを見たい。",
+					"en": "What to watch: Watch semiconductor order outlooks, the durability of AI-related CapEx, and whether profit-taking appears at elevated prices."
+				},
+				{
+					"ja": "何が起きたか: SK hynixがAIメモリ需要を背景に1兆ドル級の評価に到達し、韓国株式市場も強含んだ。",
+					"en": "What happened: SK hynix reached trillion-dollar territory on AI memory demand, and the South Korean stock market strengthened."
+				},
+				{
+					"ja": "NVIDIAだけでなく、メモリやパッケージングまでAI相場の裾野が広がっている。",
+					"en": "The AI market is spreading beyond NVIDIA into memory and packaging."
+				},
+				{
+					"ja": "なぜ重要か: AI投資は米国の大手クラウドに留まらず、アジアの部材・メモリ供給網にも資金を流している。",
+					"en": "Why it matters: AI investment is sending capital not only to US cloud giants but also to Asian components and memory supply chains."
+				},
+				{
+					"ja": "サプライチェーン全体のバリュエーション再評価が進んでいる。",
+					"en": "The whole supply chain is being revalued."
+				},
+				{
+					"ja": "今後の注視点: DRAMとHBMの需給、SamsungやMicronの追随、韓国市場全体への波及を追う。",
+					"en": "What to watch: Track DRAM and HBM supply-demand, responses from Samsung and Micron, and spillover across the Korean market."
+				},
+				{
+					"ja": "何が起きたか: 原油先物は、米・イラン協議の進展を見込んで売りが優勢になった。",
+					"en": "What happened: Oil futures fell as traders looked for progress in US-Iran talks."
+				},
+				{
+					"ja": "中東の軍事緊張が続く一方で、市場は外交進展の可能性も同時に織り込んでいる。",
+					"en": "The market is pricing possible diplomatic progress even as military tension in the Middle East continues."
+				},
+				{
+					"ja": "なぜ重要か: 原油は政治イベントへの感応度が高く、見通しが1日で反転しやすい。",
+					"en": "Why it matters: Oil is highly sensitive to political events, and the outlook can reverse within a day."
+				},
+				{
+					"ja": "中東の見出しがそのままインフレ期待と輸送コストに跳ね返る。",
+					"en": "Middle East headlines quickly affect inflation expectations and transport costs."
+				},
+				{
+					"ja": "今後の注視点: 協議の正式発表、海運保険料、OPECのコメントを見れば、次の値動きの方向が読みやすい。",
+					"en": "What to watch: Formal negotiation announcements, shipping insurance premiums, and OPEC comments will help indicate the next price direction."
+				},
+				{
+					"ja": "何が起きたか: フェドのLisa Cook理事が、インフレが沈静化しない場合は利上げも辞さない姿勢を示した。",
+					"en": "What happened: Fed Governor Lisa Cook said she is prepared to raise rates if inflation does not ease."
+				},
+				{
+					"ja": "市場が「利下げ開始」を急ぐ局面ではないことを改めて突きつけた形だ。",
+					"en": "The remarks pushed back against a market rush to assume rate cuts are imminent."
+				},
+				{
+					"ja": "なぜ重要か: 関税やエネルギー価格の波が続くなか、利下げ期待は簡単には固まらない。",
+					"en": "Why it matters: With tariffs and energy prices still moving, rate-cut expectations cannot settle easily."
+				},
+				{
+					"ja": "金利見通しが揺れると、株・債券・ドルの三市場が同時に反応する。",
+					"en": "When the rate outlook shifts, equities, bonds, and the dollar can all react at once."
+				},
+				{
+					"ja": "今後の注視点: 物価指標、他のFOMCメンバーの発言、そして長期金利が再び上向くかを監視する。",
+					"en": "What to watch: Watch inflation data, comments from other FOMC members, and whether long-term yields move up again."
+				},
+				{
+					"ja": "何が起きたか: ダウ平均は終値で最高値を更新した一方、S&P 500とNasdaqはAIラリーの一服感がにじんだ。",
+					"en": "What happened: The Dow closed at a record, while the S&P 500 and Nasdaq showed signs that the AI rally was pausing."
+				},
+				{
+					"ja": "市場では、短期の過熱感と中期の強気見通しが同時に語られている。",
+					"en": "Markets are discussing both short-term overheating and medium-term bullish forecasts."
+				},
+				{
+					"ja": "なぜ重要か: 強い相場でも、どのセクターが先に息切れするかで次の循環が変わる。",
+					"en": "Why it matters: Even in a strong market, the next rotation depends on which sectors tire first."
+				},
+				{
+					"ja": "AIの主役が株価指数全体を押し上げるのか、個別銘柄に選別が進むのかが焦点だ。",
+					"en": "The focus is whether AI leaders continue lifting indexes or whether selection shifts to individual names."
+				},
+				{
+					"ja": "今後の注視点: 金利、半導体、メガキャップの買い戻しが続くか、そして機関投資家の年末ターゲット修正が増えるかを見る。",
+					"en": "What to watch: Watch rates, semiconductors, megacap buying, and whether institutional investors raise year-end targets."
+				}
+			]
+		},
+		{
+			"id": "daily-trends-2026-05-28-4",
+			"pairs": [
+				{
+					"ja": "何が起きたか: QualcommがByteDance向けにAIデータセンター向けチップを供給する契約を結んだと報じられた。",
+					"en": "What happened: Qualcomm reportedly struck a deal to supply AI data center chips to ByteDance."
+				},
+				{
+					"ja": "スマホ中心の企業から、AIインフラの供給網を握る企業へと役割が広がっている。",
+					"en": "Its role is expanding from a smartphone-centered company to a supplier in the AI infrastructure chain."
+				},
+				{
+					"ja": "なぜ重要か: AIの競争はモデル開発だけでなく、推論用チップと電力効率の競争になっている。",
+					"en": "Why it matters: AI competition is becoming a race over inference chips and power efficiency, not only model development."
+				},
+				{
+					"ja": "TikTokを抱えるByteDanceへの供給は、米中テックの接点としても注目度が高い。",
+					"en": "Supply to ByteDance, owner of TikTok, is also a notable US-China technology contact point."
+				},
+				{
+					"ja": "今後の注視点: 契約の正式発表、供給量の規模、そして他社への波及があるかを確認したい。",
+					"en": "What to watch: Watch for a formal announcement, supply volume, and whether the arrangement spreads to other customers."
+				},
+				{
+					"ja": "何が起きたか: GoogleとBlackstoneが、AI向けクラウド需要を取り込む新会社の立ち上げを進めている。",
+					"en": "What happened: Google and Blackstone are moving to launch a new company aimed at AI cloud demand."
+				},
+				{
+					"ja": "大規模データセンターとクラウド需要を、金融資本とハイパースケーラーが共同で取りに行く構図だ。",
+					"en": "Large data centers and cloud demand are being pursued jointly by financial capital and a hyperscaler."
+				},
+				{
+					"ja": "なぜ重要か: AI相場はモデル競争だけでなく、電力・土地・冷却・資金調達の勝負になっている。",
+					"en": "Why it matters: The AI market is no longer only model competition; it is also a contest over power, land, cooling, and financing."
+				},
+				{
+					"ja": "インフラ投資が巨大化するほど、クラウドと金融の結び付きが強くなる。",
+					"en": "As infrastructure investment grows, the link between cloud and finance becomes stronger."
+				},
+				{
+					"ja": "今後の注視点: 出資規模、顧客獲得、データセンター建設の進捗が、次のAI投資テーマを左右する。",
+					"en": "What to watch: Funding scale, customer acquisition, and data center construction progress will shape the next AI investment theme."
+				},
+				{
+					"ja": "何が起きたか: AnthropicがAPI基盤ツールのStainlessを買収した。",
+					"en": "What happened: Anthropic acquired Stainless, an API infrastructure tool company."
+				},
+				{
+					"ja": "モデル本体だけでなく、開発者が使う接続層やSDK生成までも内製化する動きだ。",
+					"en": "The move brings developer connection layers and SDK generation closer to the model provider."
+				},
+				{
+					"ja": "なぜ重要か: 企業導入では、モデル性能よりも接続性と実装速度が採用を左右する。",
+					"en": "Why it matters: In enterprise adoption, connectivity and implementation speed can matter as much as model quality."
+				},
+				{
+					"ja": "なぜ重要か: 企業導入では、モデル性能よりも接続性と実装速度が採用を左右する。",
+					"en": "Controlling surrounding tools directly strengthens the Claude ecosystem."
+				},
+				{
+					"ja": "周辺ツールを押さえることは、Claudeのエコシステム強化に直結する。",
+					"en": "What to watch: Watch how Stainless is integrated into Claude developer workflows and how existing customers are handled."
+				},
+				{
+					"ja": "今後の注視点: Stainlessの製品がClaude開発環境にどう組み込まれるか、既存顧客への提供範囲がどう変わるかを追う。",
+					"en": "What happened: Anthropic and PwC expanded their partnership, broadening Claude usage inside PwC."
+				},
+				{
+					"ja": "何が起きたか: AnthropicとPwCが提携を拡大し、PwC内でのClaude活用を広げる。",
+					"en": "This moves generative AI from proof-of-concept use toward embedded business workflows."
+				},
+				{
+					"ja": "生成AIをPoCではなく、業務フローに組み込む段階へ進める動きだ。",
+					"en": "Why it matters: When a major consulting firm embeds models into internal workflows, the standard for enterprise adoption rises."
+				},
+				{
+					"ja": "なぜ重要か: コンサル大手が自社のワークフローにモデルを埋め込むと、企業導入の標準が一段上がる。",
+					"en": "Vendors then compete not only on performance but also on implementation, governance, and education."
+				},
+				{
+					"ja": "ベンダー側にとっては、性能競争だけでなく実装・統制・教育までが勝負になる。",
+					"en": "What to watch: Watch which workflows take hold and how audit and confidential-data controls are disclosed."
+				},
+				{
+					"ja": "今後の注視点: どの業務で定着するか、監査や機密管理の設計がどう公開されるかに注目したい。",
+					"en": "What happened: OpenAI moved forward with a limited preview of GPT-5."
+				},
+				{
+					"ja": "何が起きたか: OpenAIが、Cyber向けのTrusted AccessとしてGPT-5.5とGPT-5.5-Cyberの限定プレビューを進めた。",
+					"en": "5-Cyber through Trusted Access for cyber use."
+				},
+				{
+					"ja": "モデルの性能向上だけでなく、誰にどう使わせるかの制御が前面に出ている。",
+					"en": "Control over who can use the models and how is moving to the foreground alongside model performance."
+				},
+				{
+					"ja": "なぜ重要か: AIの安全性議論は、禁止か解禁かではなく、権限管理と監査の実装へ移っている。",
+					"en": "Why it matters: AI safety debate is shifting from ban-or-release choices toward permissioning and audit implementation."
+				},
+				{
+					"ja": "防御用途での先行公開は、攻撃用途への濫用をどう抑えるかの試金石でもある。",
+					"en": "Early defensive access is also a test of how misuse for offensive purposes can be constrained."
+				},
+				{
+					"ja": "今後の注視点: 利用条件の拡大範囲、レッドチームの結果、そして他社のサイバー向け公開政策への波及を見る。",
+					"en": "What to watch: Watch the scope of eligibility, red-team results, and spillover into other companies' cyber release policies."
+				}
+			]
+		},
+		{
+			"id": "daily-trends-2026-05-28-5",
+			"pairs": [
+				{
+					"ja": "中東の軍事・外交リスクは、原油だけでなく株式のリスクプレミアムにも波及している。",
+					"en": "Military and diplomatic risk in the Middle East is spilling into equity risk premiums as well as oil."
+				},
+				{
+					"ja": "市場は「戦闘の拡大」と「外交での沈静化」を同時に織り込んでいる。",
+					"en": "Markets are pricing both a broader conflict and possible diplomatic calming at the same time."
+				},
+				{
+					"ja": "AI相場は一部のメガキャップだけでなく、メモリ、クラウド、データセンター、チップ供給網まで裾野が広がった。",
+					"en": "The AI market has broadened beyond a few megacaps into memory, cloud, data centers, and chip supply chains."
+				},
+				{
+					"ja": "投資テーマはモデル性能からインフラ支配へ移っている。",
+					"en": "The investment theme is shifting from model performance toward infrastructure control."
+				},
+				{
+					"ja": "企業導入の焦点は、生成AIを「使うかどうか」から「どの業務に、どの権限で、どう監査して使うか」に移った。",
+					"en": "Enterprise adoption is moving from whether to use generative AI to which workflow uses it, under which permissions, and with what audit model."
+				},
+				{
+					"ja": "AnthropicとOpenAIの動きはその変化をよく示している。",
+					"en": "Anthropic and OpenAI's moves show that shift clearly."
+				},
+				{
+					"ja": "中央銀行は、エネルギー価格と関税、そしてAI投資による需要押し上げが物価を再び刺激する可能性を警戒している。",
+					"en": "Central banks remain alert to the possibility that energy prices, tariffs, and AI-driven demand could re-stimulate inflation."
+				},
+				{
+					"ja": "利下げ期待はまだ安定していない。",
+					"en": "Rate-cut expectations are not yet stable."
+				}
+			]
+		},
+		{
+			"id": "daily-trends-2026-05-28-6",
+			"pairs": [
+				{
+					"ja": "米・イラン協議が本当に航路安全や原油供給の安定につながるのか、あるいは追加の軍事衝突に傾くのか。",
+					"en": "Whether US-Iran talks actually lead to safer shipping routes and more stable oil supply, or tilt toward further military conflict."
+				},
+				{
+					"ja": "イスラエルとガザ周辺での軍事作戦が、停戦交渉や人質・統治問題にどこまで影響するか。",
+					"en": "How far Israeli operations around Gaza affect ceasefire talks, hostage issues, and governance questions."
+				},
+				{
+					"ja": "半導体とクラウドの設備投資が減速しないか。",
+					"en": "Whether AI-related equity gains are backed by real demand and revenue growth, and whether semiconductor and cloud CapEx avoids slowing."
+				},
+				{
+					"ja": "Fedのタカ派発言が、次の物価指標と金利見通しにどう反映されるか。",
+					"en": "How the Fed's hawkish comments feed into the next inflation data and rate outlook."
+				},
+				{
+					"ja": "Qualcomm-ByteDance、Google-Blackstone、OpenAIの各案件が、正式発表と実装段階まで進むか。",
+					"en": "Whether the Qualcomm-ByteDance, Google-Blackstone, and OpenAI initiatives move from reporting or preview status into formal deployment."
+				}
+			]
+		}
+	]
+}

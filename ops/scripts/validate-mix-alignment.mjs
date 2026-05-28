@@ -16,6 +16,19 @@ function stripNonProse(source) {
 		.replace(/```[\s\S]*?```/g, ' ')
 		.replace(/<SourceNote[\s\S]*?<\/SourceNote>/g, ' ')
 		.replace(/<NewsSourceCard[\s\S]*?\/>/g, ' ')
+		.replace(/^\s*(Source notes?|Source memos?|出典(?:メモ)?)[:：].*$/gim, ' ')
+		.replace(/<[^>]+>/g, ' ')
+		.replace(/^\s*import\s+.*$/gm, ' ')
+		.replace(/^\s*#{1,6}\s+.*$/gm, ' ')
+		.replace(/^\s*\|.*\|\s*$/gm, ' ')
+}
+
+function stripComparableText(source) {
+	return stripFrontmatter(source)
+		.replace(/```[\s\S]*?```/g, ' ')
+		.replace(/<SourceNote[\s\S]*?<\/SourceNote>/g, ' ')
+		.replace(/<NewsSourceCard[\s\S]*?\/>/g, ' ')
+		.replace(/^\s*(Source notes?|Source memos?|出典(?:メモ)?)[:：].*$/gim, ' ')
 		.replace(/<[^>]+>/g, ' ')
 		.replace(/^\s*import\s+.*$/gm, ' ')
 		.replace(/^\s*#{1,6}\s+/gm, '')
@@ -119,7 +132,7 @@ export function validateArticleMixAlignment({
 	const pairs = flattenPairs(alignment)
 	if (pairs.length === 0) errors.push(`${label}: mix-alignment.json must contain sentence pairs`)
 
-	const normalizedEnglishArticle = normalizeAlignmentText(stripNonProse(englishArticle))
+	const normalizedEnglishArticle = normalizeAlignmentText(stripComparableText(englishArticle))
 	const sentenceCount = englishSentences(englishArticle).length
 	const matchedPairs = new Set()
 

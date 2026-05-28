@@ -286,6 +286,10 @@ jobs:
         if: steps.diff_check.outputs.has_changes == 'true'
         run: pnpm test:hero-images
 
+      - name: Verify generated mixed article alignment
+        if: steps.diff_check.outputs.has_changes == 'true'
+        run: node ops/scripts/validate-mix-alignment.mjs --changed
+
       - name: Build generated site
         if: steps.diff_check.outputs.has_changes == 'true'
         run: pnpm build

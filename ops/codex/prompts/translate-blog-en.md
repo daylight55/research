@@ -21,6 +21,8 @@ Rules:
 - Keep `pairs[].en` exactly equal to the English sentence that appears in `en/index.mdx` after normal whitespace normalization. Keep `pairs[].ja` as the corresponding Japanese sentence from `ja/index.mdx`.
 - Prefer semantic sentence correspondence over paragraph position. When the English translation combines, splits, or reorders Japanese sentences, write the pair that best preserves meaning rather than relying on ordinal order.
 - Exclude source notes, citations, code blocks, Mermaid blocks, tables, and UI-only labels from `mix-alignment.json` unless they are part of the article prose that should appear as a Japanese translation under an English sentence.
+- Include enough pairs to cover at least 35% of English prose sentences, prioritizing summaries, major claims, recommendations, limits, and all news item summaries. Sparse files with only a few sample pairs are not acceptable.
+- After writing files, run `node ops/scripts/validate-mix-alignment.mjs --changed`; fix every reported coverage or exact-text error before finishing.
 - After writing files, run `pnpm build` and ensure the generated English article pages are present under `dist/en/news/` or `dist/en/reports/`.
 
 Reference pages:

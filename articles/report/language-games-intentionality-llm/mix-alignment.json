@@ -4,11 +4,7 @@
 	"targetLocale": "en",
 	"sections": [
 		{
-			"id": "executive-summary",
-			"heading": {
-				"ja": "1. エグゼクティブサマリー",
-				"en": "1. Executive Summary"
-			},
+			"id": "language-games-intentionality-llm-1",
 			"pairs": [
 				{
 					"ja": "LLMをめぐる哲学的な争点は、「LLMは本当に理解しているか」という内面の有無だけでは捉えにくい。",
@@ -19,25 +15,376 @@
 					"en": "A more useful question is how their outputs enter human practices, become accepted or rejected, gain authority, and create responsibilities."
 				},
 				{
-					"ja": "実務上の推奨は、LLMを「意図を持つ同僚」とも「無意味な道具」とも固定せず、非対称な言語ゲームの構成要素として扱うことである。",
-					"en": "The practical recommendation is to treat LLMs neither as intentional colleagues nor as meaningless tools, but as asymmetric components of language games."
+					"ja": "本稿の結論は次の通りである。",
+					"en": "This report reaches seven conclusions."
+				},
+				{
+					"ja": "言語ゲームの観点は、LLMを「単なる文字列生成器」か「人間同等の話者」かという二分法から外す助けになる。",
+					"en": "The language-game frame helps avoid the binary of \"mere string generator\" versus \"human-equivalent speaker.\""
+				},
+				{
+					"ja": "志向性の観点は、LLMの内部状態が世界についての内容を持つかという問題と、LLMの語が人間の言語実践に由来する意味を帯びるかという問題を分ける。",
+					"en": "Intentionality should be divided into mental intentionality, linguistic intentionality, and normative standing."
+				},
+				{
+					"ja": "Marie Theresa O'Connor は、LLMがプロンプトに応じて言語の手を打ち、人間の後続発話を変えることから、LLMを言語ゲームの参加者として扱うべきだと論じる。",
+					"en": "Marie Theresa O'Connor argues that LLMs should be treated as participants in language games because they make linguistic moves in response to prompts and reshape subsequent human moves."
+				},
+				{
+					"ja": "Enzo Fenoglio は、LLMの出力は言語ゲーム内の手として取り込まれうるが、その正しさ、権威、責任は人間側の uptake と accountability に依存するため、人間-LLM関係は非対称なコミュニケーションだと整理する。",
+					"en": "Jumbly Grindrod argues that LLMs need not possess human-like mental intentionality to count as using words meaningfully in a linguistic sense."
+				},
+				{
+					"ja": "Bender and Koller、Shanahan、Harnad らの懐疑的議論は、テキスト形式、擬人化、記号接地、身体性、責任の欠如を強調し、LLMへの安易な「理解」「信念」「意図」の帰属を戒める。",
+					"en": "Enzo Fenoglio treats human-LLM interaction as asymmetric communication: LLM outputs can be taken up as moves, but their correctness, authority, and force depend on human uptake and accountability."
+				},
+				{
+					"ja": "実務上の推奨は、LLMを「意図を持つ同僚」とも「無意味な道具」とも固定せず、非対称な言語ゲームの構成要素 として扱うことである。",
+					"en": "Bender and Koller, Shanahan, and Harnad provide the skeptical counterweight: form is not meaning, anthropomorphic vocabulary is risky, and grounding remains a serious problem."
+				},
+				{
+					"ja": "つまり、出力は言語実践の中で意味を持ちうるが、責任と規範的判断は人間と制度に残る。",
+					"en": "The practical recommendation is to treat LLMs as asymmetric components of language games: their outputs can function as meaningful moves, but responsibility and normative assessment remain with humans and institutions."
+				},
+				{
+					"ja": "この図の要点は、LLMの出力が単独で意味や責任を完結させるわけではないことだ。",
+					"en": "The key point is that an LLM output does not complete meaning or responsibility by itself."
+				},
+				{
+					"ja": "意味は、出力が人間の実践に入り、訂正・引用・採用・拒否される過程で制度的な効力を持つ。",
+					"en": "It gains practical force when humans cite it, correct it, rely on it, reject it, or embed it in institutional workflows."
 				}
 			]
 		},
 		{
-			"id": "recommendation",
-			"heading": {
-				"ja": "9. 推奨方針",
-				"en": "9. Recommendation"
-			},
+			"id": "language-games-intentionality-llm-2",
 			"pairs": [
 				{
-					"ja": "LLMは、人間の言語ゲームに出力を差し込む非対称な構成要素である。",
-					"en": "An LLM is an asymmetric component that inserts outputs into human language games."
+					"ja": "ユーザーの問いは、「言語ゲームを志向性から論じて、LLMと重ねて論じている論文はあるか」だった。",
+					"en": "The initial question asks whether there are papers that discuss language games through intentionality and connect the discussion to LLMs."
+				},
+				{
+					"ja": "ここには少なくとも三つの問いが含まれる。",
+					"en": "That question contains three subquestions."
+				},
+				{
+					"ja": "ウィトゲンシュタイン的な言語ゲーム論は、LLMの言語使用をどう扱えるか。",
+					"en": "How can a Wittgensteinian account of language games treat LLM language use?"
+				},
+				{
+					"ja": "志向性、つまり「何かについてであること」は、LLMの内部状態や出力に帰属できるか。",
+					"en": "Can intentionality, the directedness of thought or representation toward something, be attributed to LLM states or outputs?"
+				},
+				{
+					"ja": "人間とLLMの対話は、会話、道具使用、シミュレーション、または別種の社会的実践のどれか。",
+					"en": "Is human-LLM interaction conversation, tool use, simulation, or a different kind of social practice?"
+				},
+				{
+					"ja": "この三つを混ぜると、「LLMは心を持つのか」という大きすぎる問いに吸い込まれる。",
+					"en": "Conflating these questions turns the discussion into the oversized question \"do LLMs have minds?\""
+				},
+				{
+					"ja": "そこで本稿では、心的志向性、言語的志向性、社会的・規範的地位を分ける。",
+					"en": "This report instead separates mental intentionality, linguistic intentionality, and normative standing."
+				}
+			]
+		},
+		{
+			"id": "language-games-intentionality-llm-3",
+			"pairs": [
+				{
+					"ja": "ウィトゲンシュタインの後期哲学では、意味は単独の対応関係ではなく、生活形式に埋め込まれた使用の中で成立する。",
+					"en": "In later Wittgenstein, meaning is not a simple correspondence relation."
+				},
+				{
+					"ja": "言語ゲームという比喩は、命令、報告、質問、冗談、約束、計算、説明などが、それぞれ異なる規則と実践の中で働くことを示す。",
+					"en": "It is constituted through use in forms of life."
+				},
+				{
+					"ja": "LLMにこの枠組みを重ねると、論点は「内部に意味表象があるか」だけではなく、「その出力がどの実践の中でどんな手として扱われるか」に移る。",
+					"en": "The language-game metaphor shows that commands, reports, jokes, promises, calculations, and explanations work within different practical settings."
+				},
+				{
+					"ja": "LLMにこの枠組みを重ねると、論点は「内部に意味表象があるか」だけではなく、「その出力がどの実践の中でどんな手として扱われるか」に移る。",
+					"en": "Applied to LLMs, the question shifts from \"is there an inner semantic representation?\""
+				},
+				{
+					"ja": "たとえば、同じ「大丈夫です」という出力でも、医療判断、友人への返答、テストデータの生成、物語中の台詞では規範的地位が異なる。",
+					"en": "to \"what kind of move does this output become within a human practice?\""
+				},
+				{
+					"ja": "O'Connor の議論は、この点を最も強く押し出す。",
+					"en": "The same sentence can have different normative statuses in medical advice, fiction, code review, customer support, or a private joke."
+				},
+				{
+					"ja": "彼女は、LLMがプロンプトに応答し、その応答が人間の記述、感情、自己理解、社会的やり取りを変える以上、LLMを言語ゲームの参加者として扱うべきだとする。",
+					"en": "O'Connor pushes this point strongly."
+				},
+				{
+					"ja": "彼女は、LLMがプロンプトに応答し、その応答が人間の記述、感情、自己理解、社会的やり取りを変える以上、LLMを言語ゲームの参加者として扱うべきだとする。",
+					"en": "LLMs respond to prompts, produce linguistic moves, and change how humans continue to describe the world, themselves, and one another."
+				},
+				{
+					"ja": "これは、LLMの内面を証明する議論ではなく、言語実践で何が起きているかを観察する議論である。",
+					"en": "Her argument is not an internal proof of machine mentality."
+				},
+				{
+					"ja": "ただし、この参加者説には強い前提がある。",
+					"en": "It is an observational argument about what happens in language."
+				},
+				{
+					"ja": "言語ゲームの「参加」を、責任や相互承認まで含む厚い意味で捉えるなら、LLMはまだ人間と同じ参加者ではない。",
+					"en": "The participant view depends on how thickly \"participation\" is defined."
+				},
+				{
+					"ja": "言語ゲームの「参加」を、責任や相互承認まで含む厚い意味で捉えるなら、LLMはまだ人間と同じ参加者ではない。",
+					"en": "If participation includes responsibility and mutual recognition, current LLMs are not human-like participants."
+				},
+				{
+					"ja": "逆に、出力が実践内の手として機能するという薄い意味で捉えるなら、参加者説はかなり説得力を持つ。",
+					"en": "If participation means that outputs function as moves inside an ongoing practice, the participant view becomes much more plausible."
+				}
+			]
+		},
+		{
+			"id": "language-games-intentionality-llm-4",
+			"pairs": [
+				{
+					"ja": "志向性とは、意識や表象が「何かについてである」性質を指す。",
+					"en": "Intentionality is the \"aboutness\" of thought or representation."
+				},
+				{
+					"ja": "LLMの場合、ここで二つの議論が分かれる。",
+					"en": "For LLMs, two questions should be kept apart."
+				},
+				{
+					"ja": "第一に、LLMの内部状態が世界についての内容を持つかという問題がある。",
+					"en": "First, do LLM internal states have world-directed content?"
+				},
+				{
+					"ja": "懐疑側は、LLMがテキスト分布から形式的パターンを学ぶだけなら、世界との因果的・実践的接続を欠くと主張する。",
+					"en": "Skeptics argue that a system trained on textual form lacks causal, practical, and embodied contact with the world."
+				},
+				{
+					"ja": "Bender and Koller は、形式だけから意味は学べないと論じ、Harnad の記号接地問題もこの線上にある。",
+					"en": "Bender and Koller argue that form alone is not meaning, and Harnad's symbol grounding problem remains a crucial background issue."
+				},
+				{
+					"ja": "第二に、LLMが使う語が、人間の言語実践に由来する意味を帯びるかという問題がある。",
+					"en": "Second, do the words produced by LLMs inherit meaningful roles from human linguistic practices?"
+				},
+				{
+					"ja": "Grindrod はこの第二の問題に注目する。",
+					"en": "Grindrod focuses on this second question."
+				},
+				{
+					"ja": "彼の議論では、LLMは単純な n-gram 生成器とは異なり、大規模な使用履歴の統計的分析を通じて、語が再生産される要因を高次元表現として捉える。",
+					"en": "His view is that LLMs differ from simple n-gram systems because large-scale pretraining analyzes historical patterns of word use in ways that can encode meaning-relevant latent structure."
+				},
+				{
+					"ja": "したがって、人間的な心的志向性とは異なるが、語の意味ある使用を完全に否定するのも早すぎる。",
+					"en": "This does not make LLM intentionality human-like, but it makes total semantic dismissal too quick."
+				},
+				{
+					"ja": "ここで重要なのは、志向性を一枚岩にしないことだ。",
+					"en": "The important move is not to treat intentionality as all-or-nothing."
+				},
+				{
+					"ja": "LLMに人間と同じ世界経験や目的形成を認めないことと、LLM出力が人間の言語実践の中で意味ある働きをすることは両立する。",
+					"en": "Denying human-like experience and world-grounded goals is compatible with acknowledging that LLM outputs can function meaningfully inside human linguistic practices."
+				}
+			]
+		},
+		{
+			"id": "language-games-intentionality-llm-5",
+			"pairs": [
+				{
+					"ja": "Fenoglio の 2026年ワーキングペーパーは、O'Connor の参加者説と懐疑側の警戒をつなぐ中間案として読める。",
+					"en": "Fenoglio's 2026 working paper can be read as a middle position between the participant view and grounding skepticism."
+				},
+				{
+					"ja": "彼は、LLMの出力が人間に解釈され、言語ゲームの手として取り込まれることを認める一方で、その手の正しさ、権威、実務上の効力は人間側の uptake と accountability に依存すると論じる。",
+					"en": "It accepts that LLM outputs may be interpreted and taken up as moves in language games."
+				},
+				{
+					"ja": "この整理では、LLMは単なる無意味なノイズではない。",
+					"en": "But the correctness, authority, and force of those moves depend on human uptake and accountability."
+				},
+				{
+					"ja": "この整理では、LLMは単なる無意味なノイズではない。",
+					"en": "On this view, LLMs are not meaningless noise."
+				},
+				{
+					"ja": "しかし、人間と同じ意味で責任を負う話者でもない。",
+					"en": "They are also not responsible speakers in the human sense."
+				},
+				{
+					"ja": "LLMは、社会技術システムの中でコミュニケーションを発生させる構成要素であり、規範的な最終責任は人間、組織、制度側に残る。",
+					"en": "They are components in sociotechnical systems that generate communicative events while normative responsibility remains with people, organizations, and institutions."
+				},
+				{
+					"ja": "この見方は実務上も強い。",
+					"en": "This position is especially useful in practice."
+				},
+				{
+					"ja": "LLMに文章作成、要約、調査、コード生成、相談を任せる現場では、出力は明らかに人間の意思決定を動かす。",
+					"en": "LLM outputs clearly shape decisions in writing, research, coding, education, and advice."
+				},
+				{
+					"ja": "LLMに文章作成、要約、調査、コード生成、相談を任せる現場では、出力は明らかに人間の意思決定を動かす。",
+					"en": "Yet misinformation, discrimination, security incidents, or high-stakes legal and medical decisions cannot be made the responsibility of the model itself."
+				},
+				{
+					"ja": "しかし、誤情報、差別、権利侵害、セキュリティ事故、医療・法律・金融判断の責任をLLMに負わせることはできない。",
+					"en": "Guardrails, review, logging, source checks, and permissions are therefore not external additions."
+				},
+				{
+					"ja": "したがって、ガードレール、レビュー、監査ログ、出典確認、権限管理は、外付けの安全策ではなく、非対称な言語ゲームを成立させる構造条件である。",
+					"en": "They are structural conditions for asymmetric language games."
+				}
+			]
+		},
+		{
+			"id": "language-games-intentionality-llm-6",
+			"pairs": [
+				{
+					"ja": "懐疑論は、LLMの能力を過小評価するためだけの議論ではない。",
+					"en": "Skepticism is not only a way to downplay LLM capabilities."
+				},
+				{
+					"ja": "むしろ、どこまでをLLMの能力として認め、どこからを人間側の解釈、制度、責任として残すべきかを明確にする。",
+					"en": "It clarifies which capacities belong to the model and which belong to human interpretation, social institutions, and accountable practice."
+				},
+				{
+					"ja": "Shanahan は、LLMについて語るときに「知っている」「信じている」「考えている」といった哲学的に重い語を安易に使うと、擬人化を強めると警告する。",
+					"en": "Shanahan warns that words such as \"knows,\" \"believes,\" and \"thinks\" can intensify anthropomorphism when applied uncritically to LLMs."
+				},
+				{
+					"ja": "Bender and Koller の議論も、LLMが便利であることを否定するものではない。",
+					"en": "His later clarification frames the project as Wittgensteinian attention to language use rather than simple reductionism."
+				},
+				{
+					"ja": "彼らの論点は、タスク性能を「意味理解」と同一視してよいかである。",
+					"en": "Bender and Koller's argument does not imply that LLMs are useless."
+				},
+				{
+					"ja": "形式と意味を区別しないと、ベンチマークや実務評価が、何を測っているのか分からなくなる。",
+					"en": "The issue is whether task performance should be equated with understanding."
+				},
+				{
+					"ja": "懐疑論を通すと、次のような実務上の線引きが見える。",
+					"en": "Without separating form from meaning, benchmarks and deployments become unclear about what they are measuring."
+				}
+			]
+		},
+		{
+			"id": "language-games-intentionality-llm-7",
+			"pairs": [
+				{
+					"ja": "ここまでの文献は、単純な賛否ではなく、参加、意味、志向性、責任をどこに置くかで分かれる。",
+					"en": "The literature is better mapped by where it locates participation, meaning, intentionality, and responsibility than by a simple pro/con division."
+				},
+				{
+					"ja": "理由は、LLMの出力がすでに人間の言語ゲームを変えていることと、LLMが人間と同じ責任主体ではないことの両方を同時に扱えるからである。",
+					"en": "This report adopts asymmetric communication as the most practical interim frame because it can hold two facts together: LLM outputs already reshape human language games, and current LLMs are not human-like responsible agents."
+				}
+			]
+		},
+		{
+			"id": "language-games-intentionality-llm-8",
+			"pairs": [
+				{
+					"ja": "AI導入の現場では、「LLMに意図があるか」を抽象的に問うだけでは足りない。",
+					"en": "In AI deployment, asking whether the LLM \"has an intention\" is too abstract."
+				},
+				{
+					"ja": "重要なのは、どの場面でどの種類の志向性を仮に帰属し、どの時点で人間が引き取るかである。",
+					"en": "The practical question is what kind of intentionality users will attribute, in which setting, and where the human handoff occurs."
+				},
+				{
+					"ja": "たとえば、社内ナレッジ検索でLLMが「この顧客は解約リスクが高い」と出力した場合、その文は業務上の手として機能する。",
+					"en": "If an internal knowledge assistant says \"this customer has a high churn risk,\" the output functions as a business move."
+				},
+				{
+					"ja": "営業担当者は対応を変えるかもしれない。",
+					"en": "A sales team may change behavior."
+				},
+				{
+					"ja": "しかし、その出力がどのデータに基づくか、差別的な代理変数を含むか、顧客に不利益を与えるか、誰が説明責任を負うかは、LLMの内部ではなく組織の制度で決める必要がある。",
+					"en": "But the evidence, proxy variables, fairness concerns, customer impact, and accountability must be determined by the organization, not by the model."
+				},
+				{
+					"ja": "この意味で、LLM利用設計は、モデル性能だけでなく、言語ゲームの設計である。",
+					"en": "In this sense, LLM deployment is a design problem for language games, not only a model-performance problem."
+				},
+				{
+					"ja": "出力がどの実践の中の手なのかを明確にする。",
+					"en": "Define which practice the output belongs to."
+				},
+				{
+					"ja": "LLMの語りを、決定ではなく候補として扱う。",
+					"en": "Treat model language as candidate moves, not decisions."
+				},
+				{
+					"ja": "出典、根拠、反証、適用条件を近くに置く。",
+					"en": "Keep sources, evidence, counterevidence, and applicability conditions close to the output."
+				},
+				{
+					"ja": "人間の承認、拒否、訂正をログとして残す。",
+					"en": "Log human acceptance, rejection, and correction."
+				},
+				{
+					"ja": "ユーザーが意図や感情を過剰帰属しやすい場面では、UIとポリシーで距離を作る。",
+					"en": "Use UI and policy to create distance in settings where users easily over-attribute intention or emotion."
+				}
+			]
+		},
+		{
+			"id": "language-games-intentionality-llm-9",
+			"pairs": [
+				{
+					"ja": "研究としては、O'Connor、Grindrod、Fenoglio を並べるとよい。",
+					"en": "For research, the most useful triangle is O'Connor, Grindrod, and Fenoglio."
+				},
+				{
+					"ja": "O'Connor は、LLMを言語ゲームの参加者として強く読む。",
+					"en": "O'Connor offers the strongest participant reading."
+				},
+				{
+					"ja": "Grindrod は、志向性を心的なものと言語的なものに分け、LLMに一定の意味ある使用を認める。",
+					"en": "Grindrod separates human-like mentality from linguistic intentionality."
+				},
+				{
+					"ja": "Fenoglio は、言語ゲームへの取り込みを認めつつ、責任と規範性を人間側に残す。",
+					"en": "Fenoglio accepts language-game uptake while keeping responsibility and normative authority on the human side."
+				},
+				{
+					"ja": "実務としては、次の定式が最も扱いやすい。",
+					"en": "For practice, the following formulation is the most usable:"
+				},
+				{
+					"ja": "> LLMは、人間の言語ゲームに出力を差し込む非対称な構成要素である。",
+					"en": "> An LLM is an asymmetric component that inserts outputs into human language games."
 				},
 				{
 					"ja": "出力は意味ある手として機能しうるが、その正しさ、権威、責任は人間側の uptake と制度設計に依存する。",
 					"en": "Its outputs can function as meaningful moves, but their correctness, authority, and responsibility depend on human uptake and institutional design."
+				},
+				{
+					"ja": "この定式なら、LLMを過小評価せず、同時に過剰な擬人化も避けられる。",
+					"en": "This avoids both underestimation and anthropomorphic overreach."
+				},
+				{
+					"ja": "LLMは「意図を持つ同僚」ではない。",
+					"en": "LLMs are not intentional colleagues in the ordinary human sense."
+				},
+				{
+					"ja": "しかし、もはや「無意味な文字列を出すだけの道具」とも言いにくい。",
+					"en": "But they are no longer well described as tools that merely emit meaningless strings."
+				},
+				{
+					"ja": "人間の実践がLLM出力を意味あるものとして扱う以上、設計すべき対象はモデルだけではなく、言語ゲームそのものになる。",
+					"en": "Once human practices treat their outputs as meaningful, the design target becomes the language game itself."
 				}
 			]
 		}

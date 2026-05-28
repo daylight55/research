@@ -1,0 +1,318 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "cognitive-schema-update-language-learning-1",
+			"pairs": [
+				{
+					"ja": "英語学習を「語彙や文法を足す作業」としてだけ見ると、学習が進んでも直訳依存が残りやすい。",
+					"en": "If English learning is treated only as adding vocabulary and grammar, literal translation often remains in place even after substantial study."
+				},
+				{
+					"ja": "より実務的には、英語学習は 母語の枠組みをそのまま当てはめる状態 から 状況・意図・コロケーションに基づいて英語のまま組み立てる状態 へ、認知スキーマを更新するプロセスと捉えた方が説明力が高い。",
+					"en": "A more useful model is to treat English learning as a process that updates cognitive schemas: moving from mapping Japanese frames onto English to building meaning directly from situation, intention, and collocation."
+				},
+				{
+					"ja": "この見方に立つと、学習の中心は「単語を覚えること」ではなく、次の3点になる。",
+					"en": "Under this view, the core of learning is not memorizing isolated words."
+				},
+				{
+					"ja": "どの状況で、どの意図を、どの英語の型で言うかを結びつける。",
+					"en": "linking situations, intentions, and English patterns."
+				},
+				{
+					"ja": "直訳では不自然になる場所を、コロケーションと構文単位で覚える。",
+					"en": "learning chunks and collocations that do not translate well word by word."
+				},
+				{
+					"ja": "入力だけで終わらせず、出力とフィードバックで仮説を更新する。",
+					"en": "using output and feedback to update the learner's hypothesis."
+				}
+			]
+		},
+		{
+			"id": "cognitive-schema-update-language-learning-2",
+			"pairs": [
+				{
+					"ja": "このテーマは、少なくとも4つの理論をつなぐと見通しがよい。",
+					"en": "Four theories are especially helpful here."
+				},
+				{
+					"ja": "Bartlett のスキーマ理論は、理解が「入力の受け取り」ではなく、既有の枠組みによる再構成だと示した。",
+					"en": "Bartlett's schema theory shows that comprehension is not passive reception."
+				},
+				{
+					"ja": "英語学習に引きつけると、学習者は日本語の語順、主語省略、曖昧な関係づけを前提に読んでしまい、そのままでは英語の構文やコロケーションが見えにくい。",
+					"en": "It is reconstruction through an existing frame."
+				},
+				{
+					"ja": "つまり、学習とは 知識の追加 というより 解釈の枠組みの入れ替え に近い。",
+					"en": "In language learning, that means Japanese sentence habits, omission patterns, and discourse expectations can remain active while the learner reads or listens in English."
+				},
+				{
+					"ja": "概念メタファーの観点では、抽象概念はしばしば身体経験や空間経験から組み立てられる。",
+					"en": "The practical problem is not lack of vocabulary alone; it is the persistence of the old interpretive frame."
+				},
+				{
+					"ja": "英語では up が増加や改善に結びつきやすく、look forward to のような時間・期待の表現も日本語と同じ発想ではない。",
+					"en": "Conceptual metaphor adds another layer."
+				},
+				{
+					"ja": "英語では up が増加や改善に結びつきやすく、look forward to のような時間・期待の表現も日本語と同じ発想ではない。",
+					"en": "English often organizes abstract meaning through embodied and spatial mappings."
+				},
+				{
+					"ja": "ここで重要なのは、単語を置き換えることではなく、どの概念がどの比喩で支えられているかを見抜くことだ。",
+					"en": "The key issue is not translating one word for another, but recognizing what kind of conceptual mapping is encoded in the phrase."
+				},
+				{
+					"ja": "構文文法と用法基盤モデルは、英語が単語の足し算ではなく、頻出する 構文・コロケーション・定型表現 の束として習得されることを説明しやすい。",
+					"en": "Construction grammar and usage-based learning explain why English is often acquired in bundles of construction, collocation, and formulaic sequences rather than as isolated words."
+				},
+				{
+					"ja": "学習者が word by word で組み立てる限り、自然な速度や自然な選択肢に届きにくい。",
+					"en": "As long as the learner assembles language word by word, natural timing and natural choices remain hard to reach."
+				},
+				{
+					"ja": "逆に、型ごと覚えるほど、発話の負荷は下がる。",
+					"en": "Learning the pattern as a unit reduces production load."
+				}
+			]
+		},
+		{
+			"id": "cognitive-schema-update-language-learning-3",
+			"pairs": [
+				{
+					"ja": "直訳依存が残る理由は、母語の意味対応表で英語を読んでしまうからである。",
+					"en": "Literal translation remains sticky because learners keep mapping English onto Japanese meaning tables."
+				},
+				{
+					"ja": "だが実際の英語は、語の意味よりも どの状況で、その意図を、どの型で言うか に強く依存する。",
+					"en": "But English communication depends heavily on what situation is happening, what intention is being expressed, and which construction is used."
+				},
+				{
+					"ja": "たとえば、謝罪、依頼、提案、断り、確認は、辞書語義よりも定型の構文と語法で区別されることが多い。",
+					"en": "Apologies, requests, suggestions, refusals, and checks are often distinguished more by pattern than by dictionary meaning."
+				},
+				{
+					"ja": "このとき必要なのは、単語帳よりも 状況カード である。",
+					"en": "A useful learning artifact is a situation card rather than a word list."
+				},
+				{
+					"ja": "たとえば次のように記録すると、翻訳依存を減らしやすい。",
+					"en": "The practical move away from translation is simple: do not start from What would I say in Japanese?"
+				},
+				{
+					"ja": "たとえば次のように記録すると、翻訳依存を減らしやすい。",
+					"en": "Start from What do I want the other person to do?"
+				},
+				{
+					"ja": "直訳からの脱出で重要なのは、「日本語で何と言うか」を先に考えないことだ。",
+					"en": ", How polite should it be?"
+				},
+				{
+					"ja": "先に考えるべきなのは、相手に何をしてほしいのか どの程度丁寧か どのトーンか 会話か文章か である。",
+					"en": ", and Is this speech or writing?"
+				},
+				{
+					"ja": "すると、英語の選択は語彙選択ではなく、意図に合う構文選択になる。",
+					"en": "Then the English choice becomes a construction choice, not a word-for-word replacement."
+				}
+			]
+		},
+		{
+			"id": "cognitive-schema-update-language-learning-4",
+			"pairs": [
+				{
+					"ja": "### 4.1 入力",
+					"en": "More input helps, but only if it is comprehensible, slightly challenging, and repeated enough times for a pattern to stick."
+				},
+				{
+					"ja": "重要なのは、理解可能で、少しだけ背伸びが必要で、しかも同じ型に繰り返し触れられることだ。",
+					"en": "In reading, several short texts on the same topic are usually more effective for schema updating than a single pass through a long text with constant dictionary lookup."
+				},
+				{
+					"ja": "### 4.2 アウトプット",
+					"en": "Output makes the gap visible between \"I understand it\" and \"I can use it.\""
+				},
+				{
+					"ja": "話す・書く・要約する・言い換える行為は、曖昧な部分をあぶり出し、何が足りないかを学習者に突きつける。",
+					"en": "Speaking, writing, summarizing, and paraphrasing expose what is missing and make the next input easier to direct."
+				},
+				{
+					"ja": "言えない ところが見えると、次の入力で注意すべき点も明確になる。",
+					"en": "Feedback is not about correcting everything."
+				},
+				{
+					"ja": "フィードバックは、間違いを全部直すことではない。",
+					"en": "It is about selecting which errors are worth fixing, how much correction is useful, and which repairs will actually change the next attempt."
+				},
+				{
+					"ja": "一般に、形式だけを機械的に直すより、意図が伝わったか、どの型なら自然か、どこが不自然かを示す方が、次の出力に結びつきやすい。",
+					"en": "In practice, feedback that shows natural alternatives and clarifies why something sounds odd is more useful than a mechanical correction of form alone."
+				}
+			]
+		},
+		{
+			"id": "cognitive-schema-update-language-learning-5",
+			"pairs": [
+				{
+					"ja": "### 5.1 英語日記",
+					"en": "The point of an English journal is not to write more journal entries."
+				},
+				{
+					"ja": "英語日記の目的は、日記を増やすことではない。",
+					"en": "The point is to convert what happened today into a form of English you want to use tomorrow."
+				},
+				{
+					"ja": "おすすめの記録項目は次の5つである。",
+					"en": "A useful journal entry can include five items:"
+				},
+				{
+					"ja": "自分が最初に書いた文",
+					"en": "Do not stop at I was very impressed by the meeting."
+				},
+				{
+					"ja": "どこが不自然だったか",
+					"en": "Record what made it impressive and why."
+				},
+				{
+					"ja": "たとえば、I was very impressed by the meeting だけで終わらせず、何に、なぜ impressed したのか まで残す。",
+					"en": "That way, the next time, you are updating not only one phrase but also the evaluation frame behind it."
+				},
+				{
+					"ja": "### 5.2 会話",
+					"en": "In conversation, being able to repair yourself matters more than being perfect on the first try."
+				},
+				{
+					"ja": "会話では、正しく言う より その場で直せる ことが大切である。",
+					"en": "A short sentence used with a clear intention is better than a long sentence assembled through translation."
+				},
+				{
+					"ja": "最初は短くてもよいので、意図を持って言い、相手の反応で修正する。",
+					"en": "Three habits are especially useful:"
+				},
+				{
+					"ja": "会話学習のポイントは、文法の正誤判定ではなく、意図を保ったまま英語の型に載せ替えられるか である。",
+					"en": "The key question is not whether the sentence is grammatically perfect."
+				},
+				{
+					"ja": "これができると、会話は翻訳ではなく運用になる。",
+					"en": "It is whether the intended meaning can be carried by an English construction without forcing a Japanese frame onto it."
+				},
+				{
+					"ja": "### 5.3 読解",
+					"en": "In reading, it is often better not to translate everything."
+				},
+				{
+					"ja": "読解では、全部を和訳しない方がよい場面が多い。",
+					"en": "First capture the main point in English, then extract the constructions, collocations, and linking phrases that hold the paragraph together."
+				},
+				{
+					"ja": "特に、頻出の動詞句、前置詞句、評価表現、転換表現は、文章の流れを作る骨格なので、丸ごと集める価値が高い。",
+					"en": "Frequent verb phrases, prepositional phrases, evaluation words, and transitions are especially worth collecting because they are reusable scaffolding."
+				},
+				{
+					"ja": "読解ノートは次の形式が使いやすい。",
+					"en": "A practical reading note can use this format:"
+				}
+			]
+		},
+		{
+			"id": "cognitive-schema-update-language-learning-6",
+			"pairs": [
+				{
+					"ja": "この考え方には、実務上の落とし穴がある。",
+					"en": "This model has practical traps."
+				},
+				{
+					"ja": "直訳を全部悪者にすると、理解の入口を失う。",
+					"en": "Treating literal translation as always wrong removes a useful entry point."
+				},
+				{
+					"ja": "逆に、翻訳に頼り切ると、英語の型が育たない。",
+					"en": "Depending on translation for everything prevents English schemas from forming."
+				},
+				{
+					"ja": "フィードバックを増やしすぎると、発話が萎縮する。",
+					"en": "Too much correction can suppress speaking."
+				},
+				{
+					"ja": "単語暗記に偏ると、状況と意図の更新が起きない。",
+					"en": "Memorizing isolated words does not update the situation-and-intention layer."
+				},
+				{
+					"ja": "すべての学習者に同じ処方箋は通用しない。",
+					"en": "No single recipe fits every learner or every proficiency level."
+				},
+				{
+					"ja": "とくに注意したいのは、たくさん直されれば伸びる とは限らないことだ。",
+					"en": "One important limitation is that \"more correction\" does not automatically mean \"more progress.\""
+				},
+				{
+					"ja": "学習者が今どの段階にいるか、何を言いたいのか、どの程度の精度を必要としているのかで、最適な入力・出力・フィードバックの比率は変わる。",
+					"en": "The best balance of input, output, and feedback changes with learner level, task, and purpose."
+				}
+			]
+		},
+		{
+			"id": "cognitive-schema-update-language-learning-7",
+			"pairs": [
+				{
+					"ja": "実務に落とすなら、次の一文に集約できる。",
+					"en": "The practical summary is:"
+				},
+				{
+					"ja": "> 英語学習は、訳語を増やすことではなく、状況・意図・構文の既定値を書き換えることだ。",
+					"en": "> English learning is not about adding more translations."
+				},
+				{
+					"ja": "そのうえで、学習設計は次の3層で回すのがよい。",
+					"en": "It is about rewriting the default settings for situation, intention, and construction."
+				},
+				{
+					"ja": "同じテーマの英文を繰り返し読む",
+					"en": "The learning loop can be organized in three layers:"
+				},
+				{
+					"ja": "同じテーマの英文を繰り返し読む",
+					"en": "Read the same topic repeatedly."
+				},
+				{
+					"ja": "コロケーションと構文を抜き出す",
+					"en": "Extract collocations and constructions."
+				},
+				{
+					"ja": "英語日記、要約、口頭説明で自力出力する",
+					"en": "Use English journals, summaries, and oral explanations."
+				},
+				{
+					"ja": "言えなかった箇所を残す",
+					"en": "Keep the parts you could not express."
+				},
+				{
+					"ja": "自然な言い換えを受ける",
+					"en": "Receive a more natural version."
+				},
+				{
+					"ja": "1週間後に同じテーマで再出力する",
+					"en": "Reproduce the same topic again a few days later."
+				},
+				{
+					"ja": "1週間後に同じテーマで再出力する",
+					"en": "This loop is not an extension of school grammar drills."
+				},
+				{
+					"ja": "このループは、学校英語の延長ではなく、英語の中に 考え方のテンプレート を増やす方法である。",
+					"en": "It is a way to add thinking templates inside English."
+				},
+				{
+					"ja": "学習の評価も、テストの点数だけではなく、前回より自然に言えたか 翻訳を介さずに言えたか 状況に応じて型を選べたか で見る方がよい。",
+					"en": "Evaluation should therefore include not only scores, but also whether the learner can now say something more naturally, without translation, and with the right pattern for the situation."
+				}
+			]
+		}
+	]
+}

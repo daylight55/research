@@ -4,343 +4,331 @@
 	"targetLocale": "en",
 	"sections": [
 		{
-			"id": "executive-summary",
-			"heading": {
-				"ja": "1. エグゼクティブサマリー",
-				"en": "1. Executive Summary"
-			},
+			"id": "iran-nuclear-sanctions-proxies-1",
 			"pairs": [
 				{
-					"en": "The Iranian issue needs to be viewed as an issue that integrates nuclear development, sanctions, regional proxy forces, and domestic governance.",
-					"ja": "イラン問題は、核開発、制裁、地域代理勢力、国内統治が一体化した案件として見る必要がある。"
+					"ja": "イラン問題は、核開発、制裁、地域代理勢力、国内統治が一体化した案件として見る必要がある。",
+					"en": "The Iranian issue needs to be viewed as an issue that integrates nuclear development, sanctions, regional proxy forces, and domestic governance."
 				},
 				{
-					"en": "The 2015 JCPOA was a framework to curb nuclear development for a certain period of time, but it lost its effectiveness after the US withdrew from the agreement in 2018, and monitoring has weakened due to Iran's suspension of compliance from 2021 onwards.",
-					"ja": "2015年のJCPOAは核開発を一定期間抑える枠組みだったが、米国の2018年離脱で実効性が失われ、2021年以降のイラン側の履行停止で監視も弱体化した。"
+					"ja": "2015年のJCPOAは核開発を一定期間抑える枠組みだったが、米国の2018年離脱で実効性が失われ、2021年以降のイラン側の履行停止で監視も弱体化した。",
+					"en": "The 2015 JCPOA was a framework to curb nuclear development for a certain period of time, but it lost its effectiveness after the US withdrew from the agreement in 2018, and monitoring has weakened due to Iran's suspension of compliance from 2021 onwards."
 				},
 				{
-					"en": "According to the IAEA report as of May 2025, the stock of enriched uranium was 9,247.6 kg, of which 408.6 kg was 60% enriched.",
-					"ja": "2025年5月時点のIAEA報告では、濃縮ウラン在庫は9,247.6 kg、うち60%濃縮は408.6 kgに達していた。"
+					"ja": "2025年5月時点のIAEA報告では、濃縮ウラン在庫は9,247.6 kg、うち60%濃縮は408.6 kgに達していた。",
+					"en": "According to the IAEA report as of May 2025, the stock of enriched uranium was 9,247."
 				},
 				{
-					"en": "In September 2025, a snapback of United Nations sanctions was implemented, and the EU also reintroduced sanctions, so the focus as of 2026 is on \"pressure management and limited negotiations\" rather than \"restoring an agreement.\"",
-					"ja": "2025年9月には国連制裁のスナップバックが発動し、EUも制裁を再導入したため、2026年時点の中心軸は「合意回復」よりも「圧力管理と限定交渉」にある。"
+					"ja": "2025年9月には国連制裁のスナップバックが発動し、EUも制裁を再導入したため、2026年時点の中心軸は「合意回復」よりも「圧力管理と限定交渉」にある。",
+					"en": "In September 2025, a snapback of United Nations sanctions was implemented, and the EU also reintroduced sanctions, so the focus as of 2026 is on \"pressure management and limited negotiations\" rather than \"restoring an agreement.\""
 				},
 				{
-					"en": "Sanctions not only address the nuclear issue, but also target Iran's foreign currency acquisition, maritime transportation, insurance, payments, and support for proxy forces.",
-					"ja": "制裁は核問題だけでなく、イランの外貨獲得、海上輸送、保険、決済、代理勢力支援を同時に絞る。"
+					"ja": "2025年9月には国連制裁のスナップバックが発動し、EUも制裁を再導入したため、2026年時点の中心軸は「合意回復」よりも「圧力管理と限定交渉」にある。",
+					"en": "Sanctions not only address the nuclear issue, but also target Iran's foreign currency acquisition, maritime transportation, insurance, payments, and support for proxy forces."
 				},
 				{
-					"en": "In an April 2025 shipping advisory, the U.S. Treasury Department warned that Iran's crude oil and oil product exports depend on a maritime \"shadow fleet,\" and in April 2026 added sanctions on related vessels and corporate networks.",
-					"ja": "米財務省は2025年4月の航運勧告で、イランの原油・石油製品輸出が海上の「shadow fleet」に依存していると警告し、2026年4月には関連する船舶・企業ネットワークへの制裁を追加した。"
+					"ja": "制裁は核問題だけでなく、イランの外貨獲得、海上輸送、保険、決済、代理勢力支援を同時に絞る。",
+					"en": "In an April 2025 shipping advisory, the U."
 				},
 				{
-					"en": "The damage to the domestic economy will also be significant.",
-					"ja": "国内経済への打撃も大きい。"
+					"ja": "米財務省は2025年4月の航運勧告で、イランの原油・石油製品輸出が海上の「shadow fleet」に依存していると警告し、2026年4月には関連する船舶・企業ネットワークへの制裁を追加した。",
+					"en": "Treasury Department warned that Iran's crude oil and oil product exports depend on a maritime \"shadow fleet,\" and in April 2026 added sanctions on related vessels and corporate networks."
 				},
 				{
-					"en": "The World Bank predicts that Iran's economy will shrink by 2.7% in real GDP in 2025/26 as sanctions, conflict, social unrest, and water and energy shortages will weigh on activities.",
-					"ja": "世界銀行は2026年時点のイラン経済について、制裁、紛争、社会不安、水・エネルギー不足が活動を圧迫し、2025/26年の実質GDPが2.7%縮小すると見込む。"
+					"ja": "国内経済への打撃も大きい。",
+					"en": "The damage to the domestic economy will also be significant."
 				},
 				{
-					"en": "High inflation and falling real incomes will further weaken household purchasing power and import procurement.",
-					"ja": "高インフレと実質所得の低下は、家計の購買力と輸入調達をさらに弱める。"
+					"ja": "世界銀行は2026年時点のイラン経済について、制裁、紛争、社会不安、水・エネルギー不足が活動を圧迫し、2025/26年の実質GDPが2.7%縮小すると見込む。",
+					"en": "The World Bank predicts that Iran's economy will shrink by 2."
 				},
 				{
-					"en": "Regional proxy forces are not simply \"extensive influence.\"",
-					"ja": "地域代理勢力は、単なる「外延的な影響力」ではない。"
+					"ja": "高インフレと実質所得の低下は、家計の購買力と輸入調達をさらに弱める。",
+					"en": "7% in real GDP in 2025/26 as sanctions, conflict, social unrest, and water and energy shortages will weigh on activities."
 				},
 				{
-					"en": "For Iran, it functions as a circuit for deterrence, retaliation, negotiation cards, information warfare, and financial circulation.",
-					"ja": "イランにとっては、抑止、報復、交渉カード、情報戦、資金循環の回路として機能する。"
+					"ja": "高インフレと実質所得の低下は、家計の購買力と輸入調達をさらに弱める。",
+					"en": "High inflation and falling real incomes will further weaken household purchasing power and import procurement."
 				},
 				{
-					"en": "Meanwhile, Hezbollah, the Houthis, and pro-Iranian militias in Iraq expand the regional theater of war and generate feedback that increases military pressure on mainland Iran.",
-					"ja": "一方で、ヒズボラ、フーシ派、イラクの親イラン武装組織は、地域の戦域を広げ、イラン本土への軍事圧力を高めるフィードバックも生む。"
+					"ja": "地域代理勢力は、単なる「外延的な影響力」ではない。",
+					"en": "Regional proxy forces are not simply \"extensive influence.\""
+				},
+				{
+					"ja": "イランにとっては、抑止、報復、交渉カード、情報戦、資金循環の回路として機能する。",
+					"en": "For Iran, it functions as a circuit for deterrence, retaliation, negotiation cards, information warfare, and financial circulation."
+				},
+				{
+					"ja": "一方で、ヒズボラ、フーシ派、イラクの親イラン武装組織は、地域の戦域を広げ、イラン本土への軍事圧力を高めるフィードバックも生む。",
+					"en": "Meanwhile, Hezbollah, the Houthis, and pro-Iranian militias in Iraq expand the regional theater of war and generate feedback that increases military pressure on mainland Iran."
 				}
 			]
 		},
 		{
-			"id": "background-chronology",
-			"heading": {
-				"ja": "2. 背景と年表",
-				"en": "2. Background and chronology"
-			},
+			"id": "iran-nuclear-sanctions-proxies-2",
 			"pairs": [
 				{
-					"en": "The JCPOA was a \"trade-off\" that granted sanctions relief in exchange for restricting Iran's enrichment, centrifuges, inventories, and verification for a period of time.",
-					"ja": "JCPOAは、イランの濃縮、遠心分離機、在庫、検証を一定期間にわたり制約する代わりに、制裁緩和を与える「交換条件」だった。"
+					"ja": "JCPOAは、イランの濃縮、遠心分離機、在庫、検証を一定期間にわたり制約する代わりに、制裁緩和を与える「交換条件」だった。",
+					"en": "The JCPOA was a \"trade-off\" that granted sanctions relief in exchange for restricting Iran's enrichment, centrifuges, inventories, and verification for a period of time."
 				},
 				{
-					"en": "In other words, it is not a treaty that will finally resolve nuclear weapons, but a political deal to buy time.",
-					"ja": "つまり、核兵器化を最終的に解決する条約ではなく、時間を買うための政治的取引である。"
+					"ja": "つまり、核兵器化を最終的に解決する条約ではなく、時間を買うための政治的取引である。",
+					"en": "In other words, it is not a treaty that will finally resolve nuclear weapons, but a political deal to buy time."
 				},
 				{
-					"en": "The deal collapsed when the US withdrew in 2018, and Iran gradually removed the cap.",
-					"ja": "米国の2018年離脱でこの取引は崩れ、イランは段階的に上限を外していった。"
+					"ja": "米国の2018年離脱でこの取引は崩れ、イランは段階的に上限を外していった。",
+					"en": "The deal collapsed when the US withdrew in 2018, and Iran gradually removed the cap."
 				},
 				{
-					"en": "Since 2021, the IAEA has repeatedly indicated that Iran has ceased to comply with the JCPOA, resulting in the removal of surveillance equipment and the provisional suspension of the Additional Protocol.",
-					"ja": "2021年以降、IAEAはイランがJCPOA上の履行を止め、監視機器の撤去や追加議定書の暫定適用停止が発生したと繰り返し示している。"
+					"ja": "2021年以降、IAEAはイランがJCPOA上の履行を止め、監視機器の撤去や追加議定書の暫定適用停止が発生したと繰り返し示している。",
+					"en": "Since 2021, the IAEA has repeatedly indicated that Iran has ceased to comply with the JCPOA, resulting in the removal of surveillance equipment and the provisional suspension of the Additional Protocol."
 				},
 				{
-					"en": "In a May 2025 board document, the IAEA stated that its nuclear material inventory as of the 17th was 9,247.6 kg, of which 408.6 kg was 60% enriched uranium, approximately 275 kg 20% ​​enriched, and approximately 5.5 t 5% enriched.",
-					"ja": "2025年5月の理事会文書では、IAEAは17日時点の核物質在庫を9,247.6 kgとし、そのうち60%濃縮ウランは408.6 kg、20%濃縮は約275 kg、5%濃縮は約5.5 tとした。"
+					"ja": "2025年5月の理事会文書では、IAEAは17日時点の核物質在庫を9,247.6 kgとし、そのうち60%濃縮ウランは408.6 kg、20%濃縮は約275 kg、5%濃縮は約5.5 tとした。",
+					"en": "In a May 2025 board document, the IAEA stated that its nuclear material inventory as of the 17th was 9,247."
 				},
 				{
-					"en": "The September 2025 snapback meant \"re-sanctions outside the deal\" rather than a reconstruction of the deal.",
-					"ja": "2025年9月のスナップバックは、合意の再建ではなく「合意外での再制裁」を意味した。"
+					"ja": "2025年5月の理事会文書では、IAEAは17日時点の核物質在庫を9,247.6 kgとし、そのうち60%濃縮ウランは408.6 kg、20%濃縮は約275 kg、5%濃縮は約5.5 tとした。",
+					"en": "6 kg was 60% enriched uranium, approximately 275 kg 20% ​​enriched, and approximately 5."
 				},
 				{
-					"en": "The United Nations acknowledges that political conflict continues over the reimposition of sanctions, but explains that the old sanctions were reinstated in response to the E3 notification.",
-					"ja": "国連側は、制裁再適用をめぐって政治的対立が続いていることを認めつつ、E3の通知を受けて旧制裁が復活したと説明している。"
+					"ja": "2025年9月のスナップバックは、合意の再建ではなく「合意外での再制裁」を意味した。",
+					"en": "The September 2025 snapback meant \"re-sanctions outside the deal\" rather than a reconstruction of the deal."
 				},
 				{
-					"en": "On the same day, the EU reintroduced nuclear, missile, and military-related sanctions.",
-					"ja": "EUも同日、核・ミサイル・軍需関連の制裁を再導入した。"
+					"ja": "国連側は、制裁再適用をめぐって政治的対立が続いていることを認めつつ、E3の通知を受けて旧制裁が復活したと説明している。",
+					"en": "The United Nations acknowledges that political conflict continues over the reimposition of sanctions, but explains that the old sanctions were reinstated in response to the E3 notification."
+				},
+				{
+					"ja": "EUも同日、核・ミサイル・軍需関連の制裁を再導入した。",
+					"en": "On the same day, the EU reintroduced nuclear, missile, and military-related sanctions."
 				}
 			]
 		},
 		{
-			"id": "current-nuclear-development",
-			"heading": {
-				"ja": "3. 核開発の現在地",
-				"en": "3. Current status of nuclear development"
-			},
+			"id": "iran-nuclear-sanctions-proxies-3",
 			"pairs": [
 				{
-					"en": "In the IAEA's latest public assessment, the issue is less about Iran's enrichment capabilities than about its \"reduced verifiability.\"",
-					"ja": "IAEAの最新の公開評価では、イランの濃縮能力そのものよりも、「検証可能性の低下」が問題である。"
+					"ja": "IAEAの最新の公開評価では、イランの濃縮能力そのものよりも、「検証可能性の低下」が問題である。",
+					"en": "In the IAEA's latest public assessment, the issue is less about Iran's enrichment capabilities than about its \"reduced verifiability.\""
 				},
 				{
-					"en": "Under the JCPOA, strict inventory control, caps on centrifuges, online monitoring, and surprise inspections were important, but after the suspension of implementation, these assumptions have collapsed.",
-					"ja": "JCPOA下では、在庫の厳密管理、遠心分離機の上限、オンライン監視、抜き打ち査察が重要だったが、履行停止後はこの前提が崩れた。"
+					"ja": "JCPOA下では、在庫の厳密管理、遠心分離機の上限、オンライン監視、抜き打ち査察が重要だったが、履行停止後はこの前提が崩れた。",
+					"en": "Under the JCPOA, strict inventory control, caps on centrifuges, online monitoring, and surprise inspections were important, but after the suspension of implementation, these assumptions have collapsed."
 				},
 				{
-					"en": "The 2025 report shows that while the amount of nuclear material in declared facilities has grown enormously, continuity of monitoring has been lost and the IAEA is unable to fully track past and present conditions.",
-					"ja": "2025年の報告は、申告済み施設での核物質量が巨大化している一方、監視の継続性が失われ、IAEAが過去と現在の一貫した状態を完全には追えないことを示している。"
+					"ja": "2025年の報告は、申告済み施設での核物質量が巨大化している一方、監視の継続性が失われ、IAEAが過去と現在の一貫した状態を完全には追えないことを示している。",
+					"en": "The 2025 report shows that while the amount of nuclear material in declared facilities has grown enormously, continuity of monitoring has been lost and the IAEA is unable to fully track past and present conditions."
 				},
 				{
-					"en": "The IAEA also stated in a separate safeguards document that Iran had not provided sufficient explanation regarding the traces originating from undeclared sites including Lavisan-Shian, Varamin, and Turquzabad near Tehran.",
-					"ja": "また、IAEAは別の保障措置文書で、テヘラン近郊のLavisan-Shian、Varamin、Turquzabadを含む未申告サイト由来の痕跡をめぐり、イランが十分な説明を与えていないと整理している。"
+					"ja": "また、IAEAは別の保障措置文書で、テヘラン近郊のLavisan-Shian、Varamin、Turquzabadを含む未申告サイト由来の痕跡をめぐり、イランが十分な説明を与えていないと整理している。",
+					"en": "The IAEA also stated in a separate safeguards document that Iran had not provided sufficient explanation regarding the traces originating from undeclared sites including Lavisan-Shian, Varamin, and Turquzabad near Tehran."
 				},
 				{
-					"en": "This does not mean that Iran already possesses nuclear weapons, but it does indicate that undeclared past activities and current safeguards remain unresolved.",
-					"ja": "これは「イランがすでに核兵器を保有している」という意味ではないが、過去の未申告活動と現在の保障措置上の未解決点が残っていることを示す。"
+					"ja": "これは「イランがすでに核兵器を保有している」という意味ではないが、過去の未申告活動と現在の保障措置上の未解決点が残っていることを示す。",
+					"en": "This does not mean that Iran already possesses nuclear weapons, but it does indicate that undeclared past activities and current safeguards remain unresolved."
 				},
 				{
-					"en": "In June 2025, Iran's nuclear facilities came under military attack.",
-					"ja": "2025年6月には、イランの核施設が軍事攻撃を受けた。"
+					"ja": "2025年6月には、イランの核施設が軍事攻撃を受けた。",
+					"en": "In June 2025, Iran's nuclear facilities came under military attack."
 				},
 				{
-					"en": "Although the IAEA reported damage to facilities at Natanz, Esfahan, and Fordow, and no elevated radiation levels outside the facilities were reported at the time, the very fact that nuclear facilities were targeted for use of force significantly changed the landscape of deterrence and negotiations.",
-					"ja": "IAEAはNatanz、Esfahan、Fordowの施設への損傷を報告し、当時の範囲では施設外の放射線レベル上昇は報告されなかったが、核施設が武力行使の対象になること自体が、抑止と交渉の構図を大きく変えた。"
+					"ja": "IAEAはNatanz、Esfahan、Fordowの施設への損傷を報告し、当時の範囲では施設外の放射線レベル上昇は報告されなかったが、核施設が武力行使の対象になること自体が、抑止と交渉の構図を大きく変えた。",
+					"en": "Although the IAEA reported damage to facilities at Natanz, Esfahan, and Fordow, and no elevated radiation levels outside the facilities were reported at the time, the very fact that nuclear facilities were targeted for use of force significantly changed the landscape of deterrence and negotiations."
 				}
 			]
 		},
 		{
-			"id": "sanction-structure",
-			"heading": {
-				"ja": "4. 制裁の構造",
-				"en": "4. Sanction structure"
-			},
+			"id": "iran-nuclear-sanctions-proxies-4",
 			"pairs": [
 				{
-					"en": "Sanctions are easier to understand if they are understood in terms of three layers: the United Nations, the EU, and the United States.",
-					"ja": "制裁は、国連、EU、米国の三層で理解すると整理しやすい。"
+					"ja": "制裁は、国連、EU、米国の三層で理解すると整理しやすい。",
+					"en": "Sanctions are easier to understand if they are understood in terms of three layers: the United Nations, the EU, and the United States."
 				},
 				{
-					"en": "Although legally separate, they work in a mutually reinforcing manner for financial institutions, shipping companies, insurance companies, and business partners.",
-					"ja": "法的には別建てだが、金融機関、海運会社、保険会社、取引先にとっては相互補強的に働く。"
+					"ja": "法的には別建てだが、金融機関、海運会社、保険会社、取引先にとっては相互補強的に働く。",
+					"en": "Although legally separate, they work in a mutually reinforcing manner for financial institutions, shipping companies, insurance companies, and business partners."
 				},
 				{
-					"en": "Particularly in economies like Iran, which are highly dependent on dollar payments and maritime transport, sanctions manifest not only as an \"embargo\" but also as an \"increase in the cost of credit.\"",
-					"ja": "特にイランのようにドル決済と海上輸送への依存が高い経済では、制裁は「禁輸」だけでなく「信用コストの上昇」として現れる。"
+					"ja": "特にイランのようにドル決済と海上輸送への依存が高い経済では、制裁は「禁輸」だけでなく「信用コストの上昇」として現れる。",
+					"en": "Particularly in economies like Iran, which are highly dependent on dollar payments and maritime transport, sanctions manifest not only as an \"embargo\" but also as an \"increase in the cost of credit.\""
 				},
 				{
-					"en": "An April 2025 OFAC advisory warned that Iran's exports of crude oil and refined products depend on shadow fleets that use AIS operations and ship-to-ship transfers.",
-					"ja": "2025年4月のOFAC勧告は、イランの原油と精製品の輸出が、AIS操作や船舶間移送を使う影の船団に依存していると警告した。"
+					"ja": "2025年4月のOFAC勧告は、イランの原油と精製品の輸出が、AIS操作や船舶間移送を使う影の船団に依存していると警告した。",
+					"en": "An April 2025 OFAC advisory warned that Iran's exports of crude oil and refined products depend on shadow fleets that use AIS operations and ship-to-ship transfers."
 				},
 				{
-					"en": "This shows that sanctions are working by increasing diversion costs and visibility, rather than achieving \"zero exports.\"",
-					"ja": "これは、制裁が「輸出ゼロ」を実現するのではなく、迂回コストと可視性を引き上げる形で効いていることを示す。"
+					"ja": "これは、制裁が「輸出ゼロ」を実現するのではなく、迂回コストと可視性を引き上げる形で効いていることを示す。",
+					"en": "This shows that sanctions are working by increasing diversion costs and visibility, rather than achieving \"zero exports.\""
 				}
 			]
 		},
 		{
-			"id": "domestic-economy-citizens",
-			"heading": {
-				"ja": "5. 国内経済と市民生活への影響",
-				"en": "5. Impact on the domestic economy and citizens' lives"
-			},
+			"id": "iran-nuclear-sanctions-proxies-5",
 			"pairs": [
 				{
-					"en": "Sanctions have an impact on the domestic economy not only by reducing government revenue.",
-					"ja": "制裁が国内経済に与える影響は、政府歳入の減少だけではない。"
+					"ja": "制裁が国内経済に与える影響は、政府歳入の減少だけではない。",
+					"en": "Sanctions have an impact on the domestic economy not only by reducing government revenue."
 				},
 				{
-					"en": "Instability in obtaining foreign currency leads to currency depreciation, which increases import prices and the cost of food, medicine, parts, and energy equipment.",
-					"ja": "外貨獲得の不安定化は通貨下落を招き、輸入価格、食料、医薬品、部品、エネルギー機材のコストを押し上げる。"
+					"ja": "外貨獲得の不安定化は通貨下落を招き、輸入価格、食料、医薬品、部品、エネルギー機材のコストを押し上げる。",
+					"en": "Instability in obtaining foreign currency leads to currency depreciation, which increases import prices and the cost of food, medicine, parts, and energy equipment."
 				},
 				{
-					"en": "When this is combined with domestic water shortages, electricity shortages, and logistics constraints, the supply shock directly impacts household finances.",
-					"ja": "そこに国内の水不足、電力不足、物流制約が重なると、供給ショックは家計に直接波及する。"
+					"ja": "外貨獲得の不安定化は通貨下落を招き、輸入価格、食料、医薬品、部品、エネルギー機材のコストを押し上げる。",
+					"en": "When this is combined with domestic water shortages, electricity shortages, and logistics constraints, the supply shock directly impacts household finances."
 				},
 				{
-					"en": "In its 2026 briefing, the World Bank expects real GDP to contract by 2.7% in 2025/26, as sanctions, conflict, social unrest, and water and energy shortages weigh on activity.",
-					"ja": "世界銀行は2026年時点の説明で、制裁、紛争、社会不安、水・エネルギー不足が活動を圧迫し、2025/26年の実質GDPが2.7%縮小すると見込んでいる。"
+					"ja": "そこに国内の水不足、電力不足、物流制約が重なると、供給ショックは家計に直接波及する。",
+					"en": "In its 2026 briefing, the World Bank expects real GDP to contract by 2."
 				},
 				{
-					"en": "This shows that Iran's economy is not simply \"sustainable because it has resources,\" but is constrained by vulnerabilities in export channels, payments, and domestic supplies.",
-					"ja": "これは、イラン経済が「資源があるから耐えられる」という単純な話ではなく、輸出の通路、決済、国内供給の脆弱性で制約されていることを示す。"
+					"ja": "世界銀行は2026年時点の説明で、制裁、紛争、社会不安、水・エネルギー不足が活動を圧迫し、2025/26年の実質GDPが2.7%縮小すると見込んでいる。",
+					"en": "7% in 2025/26, as sanctions, conflict, social unrest, and water and energy shortages weigh on activity."
 				},
 				{
-					"en": "Iran's oil revenues have not completely stopped.",
-					"ja": "イランの石油収入は完全には止まっていない。"
+					"ja": "これは、イラン経済が「資源があるから耐えられる」という単純な話ではなく、輸出の通路、決済、国内供給の脆弱性で制約されていることを示す。",
+					"en": "This shows that Iran's economy is not simply \"sustainable because it has resources,\" but is constrained by vulnerabilities in export channels, payments, and domestic supplies."
 				},
 				{
-					"en": "In its April 2025 shipping advisory, the U.S. Treasury Department explained that Iran's seaborne crude oil exports remain at approximately 1.6 million barrels per day, or approximately 2 million barrels per day if petroleum products and condensate are included.",
-					"ja": "米財務省は、2025年4月の海運勧告で、イランの海上原油輸出は依然として約160万バレル/日、石油製品・コンデンセートを含めると約200万バレル/日前後の規模があると説明した。"
+					"ja": "これは、イラン経済が「資源があるから耐えられる」という単純な話ではなく、輸出の通路、決済、国内供給の脆弱性で制約されていることを示す。",
+					"en": "Iran's oil revenues have not completely stopped."
 				},
 				{
-					"en": "In other words, sanctions do not result in an \"export cutoff,\" but rather create \"invisible selling methods and high transaction costs,\" which distort the flow of funds between states and subnational organizations.",
-					"ja": "つまり、制裁は「輸出遮断」ではなく、「見えにくい売り方と高い取引コスト」を生み、それが国家と準国家組織の資金循環を歪めている。"
+					"ja": "イランの石油収入は完全には止まっていない。",
+					"en": "In its April 2025 shipping advisory, the U."
+				},
+				{
+					"ja": "米財務省は、2025年4月の海運勧告で、イランの海上原油輸出は依然として約160万バレル/日、石油製品・コンデンセートを含めると約200万バレル/日前後の規模があると説明した。",
+					"en": "Treasury Department explained that Iran's seaborne crude oil exports remain at approximately 1."
+				},
+				{
+					"ja": "米財務省は、2025年4月の海運勧告で、イランの海上原油輸出は依然として約160万バレル/日、石油製品・コンデンセートを含めると約200万バレル/日前後の規模があると説明した。",
+					"en": "6 million barrels per day, or approximately 2 million barrels per day if petroleum products and condensate are included."
+				},
+				{
+					"ja": "つまり、制裁は「輸出遮断」ではなく、「見えにくい売り方と高い取引コスト」を生み、それが国家と準国家組織の資金循環を歪めている。",
+					"en": "In other words, sanctions do not result in an \"export cutoff,\" but rather create \"invisible selling methods and high transaction costs,\" which distort the flow of funds between states and subnational organizations."
 				}
 			]
 		},
 		{
-			"id": "regional-proxy-forces",
-			"heading": {
-				"ja": "6. 地域代理勢力の機能",
-				"en": "6. Functions of regional proxy forces"
-			},
+			"id": "iran-nuclear-sanctions-proxies-6",
 			"pairs": [
 				{
-					"en": "Iran's regional policy is close to a design that creates distributed pressure across multiple theaters through the IRGC and its outer networks.",
-					"ja": "イランの地域政策は、IRGCとその外郭ネットワークを通じて、複数戦域へ分散した圧力を作る設計に近い。"
+					"ja": "イランの地域政策は、IRGCとその外郭ネットワークを通じて、複数戦域へ分散した圧力を作る設計に近い。",
+					"en": "Iran's regional policy is close to a design that creates distributed pressure across multiple theaters through the IRGC and its outer networks."
 				},
 				{
-					"en": "Hezbollah, the Houthis, and Iraq's pro-Iranian armed groups each have different local objectives, but for Iran they are connected as a layer of deterrence against Israel, Saudi Arabia, the UAE, and the United States.",
-					"ja": "ヒズボラ、フーシ派、イラクの親イラン武装組織は、それぞれ別のローカル目的を持つが、イランにとっては対イスラエル、対サウジ・対UAE、対米国の抑止レイヤーとして接続される。"
+					"ja": "ヒズボラ、フーシ派、イラクの親イラン武装組織は、それぞれ別のローカル目的を持つが、イランにとっては対イスラエル、対サウジ・対UAE、対米国の抑止レイヤーとして接続される。",
+					"en": "Hezbollah, the Houthis, and Iraq's pro-Iranian armed groups each have different local objectives, but for Iran they are connected as a layer of deterrence against Israel, Saudi Arabia, the UAE, and the United States."
 				},
 				{
-					"en": "Publicly available information suggests that proxy forces will be used for both \"frontline expansion\" and \"defense of the homeland,\" but conversely, triggering an attack is likely to lead to retaliation or additional sanctions against the homeland.",
-					"ja": "公表情報からの推定として、代理勢力は「前線の拡大」と「本土防衛」の両方に使われるが、逆に言えば、攻撃の引き金が本土への報復や追加制裁を招きやすい。"
+					"ja": "公表情報からの推定として、代理勢力は「前線の拡大」と「本土防衛」の両方に使われるが、逆に言えば、攻撃の引き金が本土への報復や追加制裁を招きやすい。",
+					"en": "Publicly available information suggests that proxy forces will be used for both \"frontline expansion\" and \"defense of the homeland,\" but conversely, triggering an attack is likely to lead to retaliation or additional sanctions against the homeland."
 				},
 				{
-					"en": "For the Iranian regime, proxies provide negotiating power, but they are also an escalation device that cannot be controlled.",
-					"ja": "イラン政権にとっては、代理勢力は交渉力でもあるが、制御しきれないエスカレーション装置でもある。"
+					"ja": "イラン政権にとっては、代理勢力は交渉力でもあるが、制御しきれないエスカレーション装置でもある。",
+					"en": "For the Iranian regime, proxies provide negotiating power, but they are also an escalation device that cannot be controlled."
 				}
 			]
 		},
 		{
-			"id": "israel-gulf-conflict",
-			"heading": {
-				"ja": "7. イスラエル・湾岸諸国との対立",
-				"en": "7. Conflict between Israel and the Gulf States"
-			},
+			"id": "iran-nuclear-sanctions-proxies-7",
 			"pairs": [
 				{
-					"en": "Conflict with Israel is likely to be the most direct military risk, as nuclear development, missiles, proxy forces, and information warfare overlap.",
-					"ja": "イスラエルとの対立は、核開発、ミサイル、代理勢力、情報戦が重なるため、最も直接的な軍事リスクになりやすい。"
+					"ja": "イスラエルとの対立は、核開発、ミサイル、代理勢力、情報戦が重なるため、最も直接的な軍事リスクになりやすい。",
+					"en": "Conflict with Israel is likely to be the most direct military risk, as nuclear development, missiles, proxy forces, and information warfare overlap."
 				},
 				{
-					"en": "In the June 2025 attack, the IAEA confirmed damage to Natanz, Esfahan, and Fordow, once again demonstrating the reality that nuclear facilities can be targeted.",
-					"ja": "2025年6月の攻撃では、IAEAがNatanz、Esfahan、Fordowの損傷を確認し、核施設は攻撃対象になりうるという現実が再び示された。"
+					"ja": "2025年6月の攻撃では、IAEAがNatanz、Esfahan、Fordowの損傷を確認し、核施設は攻撃対象になりうるという現実が再び示された。",
+					"en": "In the June 2025 attack, the IAEA confirmed damage to Natanz, Esfahan, and Fordow, once again demonstrating the reality that nuclear facilities can be targeted."
 				},
 				{
-					"en": "What is important here is that the nuclear issue goes beyond diplomatic negotiations to a chain of events involving the use of force and retaliation.",
-					"ja": "ここで重要なのは、核問題が外交交渉だけでなく、実力行使とその報復の連鎖に移りうることだ。"
+					"ja": "ここで重要なのは、核問題が外交交渉だけでなく、実力行使とその報復の連鎖に移りうることだ。",
+					"en": "What is important here is that the nuclear issue goes beyond diplomatic negotiations to a chain of events involving the use of force and retaliation."
 				},
 				{
-					"en": "The conflict with the Gulf states is better understood as an \"risk of entrapment\" through the Strait of Hormuz, the Red Sea, aviation and shipping insurance, and remittance and re-export channels, rather than a direct targeting of Iran's capital.",
-					"ja": "湾岸諸国との対立は、イランが直接的に首都を標的にするという意味より、ホルムズ海峡、紅海、航空・海運保険、送金・再輸出の回路を通じた「巻き込みリスク」として理解したほうがよい。"
+					"ja": "湾岸諸国との対立は、イランが直接的に首都を標的にするという意味より、ホルムズ海峡、紅海、航空・海運保険、送金・再輸出の回路を通じた「巻き込みリスク」として理解したほうがよい。",
+					"en": "The conflict with the Gulf states is better understood as an \"risk of entrapment\" through the Strait of Hormuz, the Red Sea, aviation and shipping insurance, and remittance and re-export channels, rather than a direct targeting of Iran's capital."
 				},
 				{
-					"en": "The Gulf's economies are highly dependent on oil exports, ports, finance, re-exports and international logistics, and tensions with Iran affect not only energy prices but also the risk tolerance of trading partners.",
-					"ja": "湾岸の経済は、原油輸出、港湾、金融、再輸出、国際物流に強く依存しており、イランとの緊張はエネルギー価格だけでなく、取引相手のリスク許容度を左右する。"
+					"ja": "湾岸の経済は、原油輸出、港湾、金融、再輸出、国際物流に強く依存しており、イランとの緊張はエネルギー価格だけでなく、取引相手のリスク許容度を左右する。",
+					"en": "The Gulf's economies are highly dependent on oil exports, ports, finance, re-exports and international logistics, and tensions with Iran affect not only energy prices but also the risk tolerance of trading partners."
 				},
 				{
-					"en": "Since the reintroduction of sanctions in September 2025, Iran has pursued a dual strategy of seeking to resume nuclear negotiations on the one hand, while maintaining deterrence through proxy forces on the other.",
-					"ja": "2025年9月の制裁再導入以後、イランは一方で核交渉再開を模索しつつ、他方で代理勢力を通じた抑止を維持するという二重戦略を続けている。"
+					"ja": "2025年9月の制裁再導入以後、イランは一方で核交渉再開を模索しつつ、他方で代理勢力を通じた抑止を維持するという二重戦略を続けている。",
+					"en": "Since the reintroduction of sanctions in September 2025, Iran has pursued a dual strategy of seeking to resume nuclear negotiations on the one hand, while maintaining deterrence through proxy forces on the other."
 				},
 				{
-					"en": "For the Gulf states, attacks on shipping lanes, missiles and drones, port insurance, and spillovers to energy facilities are more of a practical threat than direct war with Iran.",
-					"ja": "湾岸諸国にとっては、イランとの直接戦争よりも、航路攻撃、ミサイル・ドローン、港湾保険、エネルギー設備への波及が実務上の脅威である。"
+					"ja": "湾岸諸国にとっては、イランとの直接戦争よりも、航路攻撃、ミサイル・ドローン、港湾保険、エネルギー設備への波及が実務上の脅威である。",
+					"en": "For the Gulf states, attacks on shipping lanes, missiles and drones, port insurance, and spillovers to energy facilities are more of a practical threat than direct war with Iran."
 				}
 			]
 		},
 		{
-			"id": "practical-implications",
-			"heading": {
-				"ja": "8. 実務的な含意",
-				"en": "8. Practical implications"
-			},
+			"id": "iran-nuclear-sanctions-proxies-8",
 			"pairs": [
 				{
-					"en": "For Japanese policymakers and businesses, Iran is not only a matter of \"success or failure of the nuclear deal,\" but also a simultaneous management issue of energy, shipping, insurance, sanctions compliance, and regional conflicts.",
-					"ja": "日本の政策担当者と企業にとって、イランは「核合意の成否」だけでなく、エネルギー・海運・保険・制裁順守・地域紛争の同時管理問題である。"
+					"ja": "日本の政策担当者と企業にとって、イランは「核合意の成否」だけでなく、エネルギー・海運・保険・制裁順守・地域紛争の同時管理問題である。",
+					"en": "For Japanese policymakers and businesses, Iran is not only a matter of \"success or failure of the nuclear deal,\" but also a simultaneous management issue of energy, shipping, insurance, sanctions compliance, and regional conflicts."
 				},
 				{
-					"en": "In particular, it is necessary to look at the following four points as a whole, rather than separately.",
-					"ja": "とくに次の4点を別々にではなく一体で見る必要がある。"
+					"ja": "とくに次の4点を別々にではなく一体で見る必要がある。",
+					"en": "In particular, it is necessary to look at the following four points as a whole, rather than separately."
 				},
 				{
-					"en": "Do not design transactions based on the premise of sanctions relief.",
-					"ja": "制裁緩和を前提にした取引設計を置かない。"
+					"ja": "制裁緩和を前提にした取引設計を置かない。",
+					"en": "Do not design transactions based on the premise of sanctions relief."
 				},
 				{
-					"en": "Reflect shipping risks in the Strait of Hormuz, Red Sea, and Persian Gulf in insurance and contract terms.",
-					"ja": "ホルムズ海峡、紅海、ペルシャ湾の航路リスクを保険・契約条件に反映する。"
+					"ja": "ホルムズ海峡、紅海、ペルシャ湾の航路リスクを保険・契約条件に反映する。",
+					"en": "Reflect shipping risks in the Strait of Hormuz, Red Sea, and Persian Gulf in insurance and contract terms."
 				},
 				{
-					"en": "Stricter secondary sanctions, re-exports, ship-to-ship transfers, and confirmation of actual control.",
-					"ja": "二次制裁、再輸出、船舶間移送、実質支配者の確認を厳格にする。"
+					"ja": "二次制裁、再輸出、船舶間移送、実質支配者の確認を厳格にする。",
+					"en": "Stricter secondary sanctions, re-exports, ship-to-ship transfers, and confirmation of actual control."
 				},
 				{
-					"en": "Treat both mainland Iran and its proxies as part of the same bundle of geopolitical risks.",
-					"ja": "イラン本土と代理勢力の両方を、同じ地政学リスクの束として扱う。"
+					"ja": "イラン本土と代理勢力の両方を、同じ地政学リスクの束として扱う。",
+					"en": "Treat both mainland Iran and its proxies as part of the same bundle of geopolitical risks."
 				},
 				{
-					"en": "As estimated from publicly available information, the current base scenario is \"Limited negotiations will continue, but it will be difficult to fully restore nuclear restrictions for the time being,\" \"Pressure on proxy forces will continue, but it will be difficult to cut them off completely,\" and \"Economic deterioration will create pressure to lift sanctions in the short term, but at the same time it will increase toughness overseas.\"",
-					"ja": "公表情報からの推定として、現時点のベースシナリオは「限定交渉は続くが、核制限の全面復元は当面難しい」「代理勢力への圧力は続くが、完全遮断は難しい」「経済悪化は短期的に制裁解除圧力を生むが、対外強硬を同時に強める」になる。"
+					"ja": "公表情報からの推定として、現時点のベースシナリオは「限定交渉は続くが、核制限の全面復元は当面難しい」「代理勢力への圧力は続くが、完全遮断は難しい」「経済悪化は短期的に制裁解除圧力を生むが、対外強硬を同時に強める」になる。",
+					"en": "As estimated from publicly available information, the current base scenario is \"Limited negotiations will continue, but it will be difficult to fully restore nuclear restrictions for the time being,\" \"Pressure on proxy forces will continue, but it will be difficult to cut them off completely,\" and \"Economic deterioration will create pressure to lift sanctions in the short term, but at the same time it will increase toughness overseas.\""
 				},
 				{
-					"en": "Therefore, in practice, priority should be given to designs that withstand simultaneous deterioration of sanctions, routes, and retaliation over optimistic scenarios.",
-					"ja": "したがって、実務では楽観シナリオより、制裁・航路・報復の同時悪化に耐える設計を優先すべきである。"
+					"ja": "したがって、実務では楽観シナリオより、制裁・航路・報復の同時悪化に耐える設計を優先すべきである。",
+					"en": "Therefore, in practice, priority should be given to designs that withstand simultaneous deterioration of sanctions, routes, and retaliation over optimistic scenarios."
 				}
 			]
 		},
 		{
-			"id": "risks-limitations",
-			"heading": {
-				"ja": "9. リスク・限界",
-				"en": "9. Risks/Limitations"
-			},
+			"id": "iran-nuclear-sanctions-proxies-9",
 			"pairs": [
 				{
-					"en": "There are three limitations to this paper.",
-					"ja": "本稿の限界は三つある。"
+					"ja": "本稿の限界は三つある。",
+					"en": "There are three limitations to this paper."
 				},
 				{
-					"en": "First, the IAEA can only grasp the scope of declarations and inspections, and cannot see the complete picture of undeclared activities.",
-					"ja": "第一に、IAEAが把握できるのは申告と査察の範囲であり、未申告活動の全体像は完全には見えない。"
+					"ja": "第一に、IAEAが把握できるのは申告と査察の範囲であり、未申告活動の全体像は完全には見えない。",
+					"en": "First, the IAEA can only grasp the scope of declarations and inspections, and cannot see the complete picture of undeclared activities."
 				},
 				{
-					"en": "Second, the effectiveness of sanctions varies depending on each country's enforcement and evasion actions by the private sector, so even the same sanctions have varying effects on the economy.",
-					"ja": "第二に、制裁の実効性は国ごとの執行と民間セクターの回避行動で変わるため、同じ制裁でも経済への効き方は一定ではない。"
+					"ja": "第二に、制裁の実効性は国ごとの執行と民間セクターの回避行動で変わるため、同じ制裁でも経済への効き方は一定ではない。",
+					"en": "Second, the effectiveness of sanctions varies depending on each country's enforcement and evasion actions by the private sector, so even the same sanctions have varying effects on the economy."
 				},
 				{
-					"en": "Third, the funding and chain of command of proxy forces can only be reconstructed piecemeal from public information alone.",
-					"ja": "第三に、代理勢力の資金や命令系統は公開情報だけでは断片的にしか復元できない。"
+					"ja": "第三に、代理勢力の資金や命令系統は公開情報だけでは断片的にしか復元できない。",
+					"en": "Third, the funding and chain of command of proxy forces can only be reconstructed piecemeal from public information alone."
 				},
 				{
-					"en": "Therefore, while numbers are important, it is best not to jump to conclusions based on numbers alone.",
-					"ja": "そのため、数字は重要だが、数字だけで結論に飛びつかないほうがよい。"
+					"ja": "そのため、数字は重要だが、数字だけで結論に飛びつかないほうがよい。",
+					"en": "Therefore, while numbers are important, it is best not to jump to conclusions based on numbers alone."
 				},
 				{
-					"en": "In practice, it would be more accurate to monitor \"increases and decreases in nuclear stockpiles,\" \"new designations of sanctions,\" \"attacks on maritime routes,\" \"inflows of funds to proxy forces,\" and \"domestic inflation\" on the same dashboard.",
-					"ja": "実務上は、「核在庫の増減」「制裁の新規指定」「航路攻撃」「代理勢力への資金流入」「国内インフレ」を同じダッシュボードで監視するほうが判断精度は高い。"
+					"ja": "実務上は、「核在庫の増減」「制裁の新規指定」「航路攻撃」「代理勢力への資金流入」「国内インフレ」を同じダッシュボードで監視するほうが判断精度は高い。",
+					"en": "In practice, it would be more accurate to monitor \"increases and decreases in nuclear stockpiles,\" \"new designations of sanctions,\" \"attacks on maritime routes,\" \"inflows of funds to proxy forces,\" and \"domestic inflation\" on the same dashboard."
 				}
 			]
 		}

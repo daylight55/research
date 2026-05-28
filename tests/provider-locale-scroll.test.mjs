@@ -67,20 +67,16 @@ test('mixed article blocks expose bilingual scroll anchors', async () => {
 	assert.match(source, /block\.dataset\.scrollAnchorEn = englishText/)
 	assert.match(source, /block\.dataset\.scrollAnchorJa = japaneseText/)
 	assert.match(source, /setBlockScrollAnchors\(block, englishSentences, pairedJapaneseSentences\)/)
-	assert.match(
-		source,
-		/setBlockScrollAnchors\(\s*block,\s*blockPairs\.map\(\(pair\) => pair\.en\),\s*blockPairs\.map\(\(pair\) => pair\.ja\)\s*\)/
-	)
 })
 
 test('sparse explicit mixed alignment falls back to section pairing for the remaining article', async () => {
 	const source = await readFile(mixedArticleContentPath, 'utf8')
 
-	assert.match(source, /block\.dataset\.mixedExplicit = 'true'/)
-	assert.match(source, /!block\.dataset\.mixedExplicit/)
+	assert.doesNotMatch(source, /block\.dataset\.mixedExplicit = 'true'/)
+	assert.doesNotMatch(source, /!block\.dataset\.mixedExplicit/)
 	assert.doesNotMatch(
 		source,
-		/pairBlocksWithExplicitAlignment\(englishRoot, alignmentPairs, alignmentMap\)[\s\S]{0,160}return/
+		/function pairBlocksWithExplicitAlignment|pairBlocksWithExplicitAlignment\(/
 	)
 })
 

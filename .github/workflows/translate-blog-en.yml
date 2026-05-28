@@ -87,6 +87,9 @@ jobs:
           node ops/scripts/validate-mix-alignment.mjs --changed
           pnpm build
 
+      - name: Validate existing mixed article alignment
+        run: node ops/scripts/validate-mix-alignment.mjs
+
       - name: Create translation pull request
         if: steps.prepare_prompt.outputs.missing_count != '0'
         id: create_pr

@@ -201,6 +201,12 @@ function resolveHeroPath(file, heroImage) {
 	return path.normalize(path.join(path.dirname(file), heroImage))
 }
 
+export function articleSlugFromFile(file) {
+	const localeDir = path.dirname(file)
+	const articleDir = path.dirname(localeDir)
+	return path.basename(articleDir)
+}
+
 export function existingHeroState({ currentFile = '' } = {}) {
 	const files = execFileSync('git', ['ls-files', BLOG_GLOB], { encoding: 'utf8' })
 		.split('\n')
@@ -357,7 +363,7 @@ async function selectHero(file) {
 		return false
 	}
 
-	const slug = path.basename(path.dirname(file))
+	const slug = articleSlugFromFile(file)
 	const outputPath = path.join(IMAGE_DIR, `${slug}.jpg`)
 	await downloadImage(selected.photo, outputPath, selected.bytes)
 

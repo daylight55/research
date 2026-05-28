@@ -28,6 +28,15 @@ function readProp(block, prop) {
 	return match?.[2] ?? ''
 }
 
+function canonicalImageUrl(value) {
+	try {
+		const url = new URL(value)
+		return `${url.origin}${url.pathname}`
+	} catch {
+		return value
+	}
+}
+
 test('published news articles provide images for every NewsSourceCard', () => {
 	const files = execFileSync('find', ['articles/news', '-path', 'articles/news/*/ja/index.mdx', '-type', 'f'], {
 		encoding: 'utf8'
@@ -62,6 +71,34 @@ test('published news articles provide images for every NewsSourceCard', () => {
 				!/^https:\/\/source\.unsplash\.com\//.test(readProp(card, 'imageUrl')),
 				`${file} NewsSourceCard ${index + 1} should not use deprecated source.unsplash.com dynamic image URLs`
 			)
+		})
+	}
+})
+
+test('published news articles do not reuse NewsSourceCard images within one article', () => {
+	const files = execFileSync('find', ['articles/news', '-path', 'articles/news/*/*/index.mdx', '-type', 'f'], {
+		encoding: 'utf8'
+	})
+		.split('\n')
+		.map((line) => line.trim())
+		.filter(Boolean)
+
+	for (const file of files) {
+		const source = readFileSync(file, 'utf8')
+		const frontmatter = frontmatterOf(source, file)
+		if (readScalar(frontmatter, 'contentType') !== 'news') continue
+		if (readScalar(frontmatter, 'draft') === 'true') continue
+
+		const seen = new Map()
+		newsSourceCards(source).forEach((card, index) => {
+			const imageUrl = canonicalImageUrl(readProp(card, 'imageUrl'))
+			const firstIndex = seen.get(imageUrl)
+			assert.equal(
+				firstIndex,
+				undefined,
+				`${file} NewsSourceCard ${index + 1} reuses imageUrl from card ${firstIndex}`
+			)
+			seen.set(imageUrl, index + 1)
 		})
 	}
 })

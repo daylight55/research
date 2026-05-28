@@ -1,8 +1,13 @@
 import { strict as assert } from 'node:assert'
+import { execFileSync } from 'node:child_process'
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
 import { test } from 'node:test'
 
 import {
 	buildRetryQueries,
+	existingHeroState,
 	imageHash,
 	selectUniqueUnsplashPhoto
 } from '../scripts/select-unsplash-hero.mjs'
@@ -92,4 +97,48 @@ test('selectUniqueUnsplashPhoto rejects previously used Unsplash photo ids witho
 
 	assert.equal(selected.photo.id, 'new-photo')
 	assert.equal(downloads, 1)
+})
+
+test('existingHeroState treats an untracked current article as duplicate when it reuses a tracked hero', () => {
+	const previousCwd = process.cwd()
+	const tempDir = mkdtempSync(join(tmpdir(), 'hero-state-'))
+
+	try {
+		process.chdir(tempDir)
+		execFileSync('git', ['init', '--quiet'])
+		mkdirSync('src/assets/images/hero', { recursive: true })
+		mkdirSync('articles/report/existing/en', { recursive: true })
+		mkdirSync('articles/news/generated/en', { recursive: true })
+		writeFileSync('src/assets/images/hero/en.jpg', 'same-image')
+		writeFileSync(
+			'articles/report/existing/en/index.mdx',
+			`---
+title: Existing
+contentType: report
+heroImage: '../../../../src/assets/images/hero/en.jpg'
+draft: false
+---
+`
+		)
+		writeFileSync(
+			'articles/news/generated/en/index.mdx',
+			`---
+title: Generated
+contentType: news
+heroImage: '../../../../src/assets/images/hero/en.jpg'
+heroImageQuery: generated news
+draft: false
+---
+`
+		)
+		execFileSync('git', ['add', 'articles/report/existing/en/index.mdx', 'src/assets/images/hero/en.jpg'])
+
+		assert.equal(
+			existingHeroState({ currentFile: 'articles/news/generated/en/index.mdx' }).duplicateCurrentHero,
+			true
+		)
+	} finally {
+		process.chdir(previousCwd)
+		rmSync(tempDir, { recursive: true, force: true })
+	}
 })

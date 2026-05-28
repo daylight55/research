@@ -4,7 +4,7 @@ import test from 'node:test'
 
 test('publication workflow defines test-gated auto-merge policy', async () => {
 	const agents = await readFile('AGENTS.md', 'utf8')
-	const skill = await readFile('.codex/skills/technical-research-report/SKILL.md', 'utf8')
+	const skill = await readFile('.codex/skills/research-report/SKILL.md', 'utf8')
 	const template = await readFile('.github/PULL_REQUEST_TEMPLATE.md', 'utf8')
 
 	assert.match(agents, /命令内容を規定するテスト/)
@@ -15,7 +15,10 @@ test('publication workflow defines test-gated auto-merge policy', async () => {
 	assert.match(skill, /requested change is covered by explicit tests or verification steps/)
 	assert.match(skill, /enable or perform auto-merge/)
 	assert.match(skill, /--match-head-commit <HEAD_SHA>/)
-	assert.match(skill, /Do not auto-merge when factual review, translation review, external approval/)
+	assert.match(
+		skill,
+		/Do not auto-merge when factual review, translation review, external approval/
+	)
 
 	assert.match(template, /命令内容を規定するテストまたは検証手順/)
 	assert.match(template, /## 自動マージ判定/)

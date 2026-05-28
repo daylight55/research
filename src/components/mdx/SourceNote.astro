@@ -1,13 +1,24 @@
 ---
+import { DEFAULT_LOCALE, type Locale } from '@/utils'
+
 type Props = {
 	label?: string
+	locale?: Locale
 }
 
-const { label = '出典' } = Astro.props
+const sourceNoteLabels: Record<Locale, string> = {
+	ja: '出典',
+	en: 'Source',
+	mix: 'Source'
+}
+const pathLocale =
+	Astro.url.pathname === '/en' || Astro.url.pathname.startsWith('/en/') ? 'en' : DEFAULT_LOCALE
+const { label, locale = pathLocale } = Astro.props
+const localizedLabel = label ?? sourceNoteLabels[locale]
 ---
 
 <span class='source-note' role='note'>
-	<span aria-hidden='true'>（</span><span class='source-note-label'>{label}:</span>
+	<span aria-hidden='true'>（</span><span class='source-note-label'>{localizedLabel}:</span>
 	<slot /><span aria-hidden='true'>）</span>
 </span>
 

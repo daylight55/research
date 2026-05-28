@@ -31,7 +31,7 @@ assert.match(
 
 assert.match(
 	workflow,
-	/## Automation Metadata[\s\S]*?- Model: \$\{OPENAI_MODEL\}[\s\S]*?technical-research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
+	/## Automation Metadata[\s\S]*?- Model: \$\{OPENAI_MODEL\}[\s\S]*?research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
 	'Daily Issue Research should pass model, skill, and prompt metadata into the generated research prompt'
 )
 
@@ -43,13 +43,13 @@ assert.doesNotMatch(
 
 assert.match(
 	workflow,
-	/Required skill: \[technical-research-report\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/\.codex\/skills\/technical-research-report\/SKILL\.md\)[\s\S]*?Prompt source: \[ops\/codex\/prompts\/daily-issue-research\.md\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/ops\/codex\/prompts\/daily-issue-research\.md\)/,
+	/Required skill: \[research-report\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/\.codex\/skills\/research-report\/SKILL\.md\)[\s\S]*?Prompt source: \[ops\/codex\/prompts\/daily-issue-research\.md\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/ops\/codex\/prompts\/daily-issue-research\.md\)/,
 	'Daily Issue Research should pass public GitHub URLs for skill and prompt source metadata'
 )
 
 assert.match(
 	dailyIssuePrompt,
-	/research-log\.mdx[\s\S]*?## 利用環境[\s\S]*?model[\s\S]*?technical-research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
+	/research-log\.mdx[\s\S]*?## 利用環境[\s\S]*?model[\s\S]*?research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
 	'Daily Issue Research prompt should require model, skill, and prompt metadata in research logs'
 )
 
@@ -103,7 +103,7 @@ assert.match(
 
 assert.match(
 	dailyIssuePrompt,
-	/## 利用環境[\s\S]*?model[\s\S]*?technical-research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
+	/## 利用環境[\s\S]*?model[\s\S]*?research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
 	'Daily Issue Research prompt should keep execution metadata in research logs separately from the research instruction'
 )
 

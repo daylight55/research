@@ -6,6 +6,7 @@ import { join } from 'node:path'
 import { test } from 'node:test'
 
 import {
+	articleSlugFromFile,
 	buildRetryQueries,
 	existingHeroState,
 	imageHash,
@@ -26,6 +27,17 @@ test('buildRetryQueries prioritizes news-specific people and organizations befor
 			'politics economy technology',
 			'global newsroom editorial'
 		]
+	)
+})
+
+test('articleSlugFromFile derives the article slug rather than the locale directory', () => {
+	assert.equal(
+		articleSlugFromFile('articles/news/daily-trends-2026-05-28/en/index.mdx'),
+		'daily-trends-2026-05-28'
+	)
+	assert.equal(
+		articleSlugFromFile('articles/report/cognitive-schema-update-language-learning/ja/index.mdx'),
+		'cognitive-schema-update-language-learning'
 	)
 })
 

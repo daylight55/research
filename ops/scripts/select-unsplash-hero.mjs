@@ -201,17 +201,19 @@ function resolveHeroPath(file, heroImage) {
 	return path.normalize(path.join(path.dirname(file), heroImage))
 }
 
-function existingHeroState({ currentFile = '' } = {}) {
+export function existingHeroState({ currentFile = '' } = {}) {
 	const files = execFileSync('git', ['ls-files', BLOG_GLOB], { encoding: 'utf8' })
 		.split('\n')
 		.map((line) => line.trim())
 		.filter(Boolean)
+	if (currentFile && !files.includes(currentFile)) files.push(currentFile)
 	const imageHashes = new Map()
 	const imageHashFiles = new Map()
 	const photoKeys = new Set()
 	const creditUrls = new Set()
 
 	for (const file of files) {
+		if (!existsSync(file)) continue
 		const source = readFileSync(file, 'utf8')
 		const { raw } = frontmatterOf(source, file)
 		const heroImage = readScalar(raw, 'heroImage')

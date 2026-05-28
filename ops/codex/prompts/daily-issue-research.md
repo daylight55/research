@@ -25,6 +25,13 @@ drivers, risks, and practical implications.
 - Write the reader-facing report body directly in
   `articles/report/<topic>/ja/index.mdx`. Treat this MDX file as the canonical article
   body for website-visible reports.
+- Also create or update `articles/report/<topic>/en/index.mdx` and
+  `articles/report/<topic>/mix-alignment.json` in the same change. The English
+  file is the public English article, and `mix-alignment.json` is the semantic
+  Japanese-English reading map used by the `/mix/reports/<topic>/` page. Do not
+  leave the MIX page to positional fallback only. Include enough sentence pairs
+  to cover at least 35% of the English prose sentences, with emphasis on the
+  executive summary, major claims, recommendations, and limitations.
 - Do not create `report.md` or another second copy of the same article body.
   Duplicate report bodies drift and make the workflow slower.
 - If the investigation process is useful to readers, write it in
@@ -106,8 +113,9 @@ drivers, risks, and practical implications.
   - a link to `ops/codex/prompts/daily-issue-research.md`
   - a concise summary of the prompt constraints that shaped the investigation
 - Run focused verification before finishing. At minimum, check for unresolved
-  placeholders and run `git diff --check`. If site content changed and
-  dependencies are installed, run `pnpm build`.
+  placeholders, run `git diff --check`, and run
+  `node ops/scripts/validate-mix-alignment.mjs --changed`. If site content
+  changed and dependencies are installed, run `pnpm build`.
 
 ## Final Message
 

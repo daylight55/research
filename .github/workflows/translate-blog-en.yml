@@ -84,6 +84,7 @@ jobs:
           set -euo pipefail
           git diff --check
           ! grep -RInE '\b(TBD|TODO|FIXME|未定|要確認)\b' articles/report articles/news
+          node ops/scripts/validate-mix-alignment.mjs --changed
           pnpm build
 
       - name: Create translation pull request

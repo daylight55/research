@@ -73,6 +73,17 @@ test('mixed article blocks expose bilingual scroll anchors', async () => {
 	)
 })
 
+test('sparse explicit mixed alignment falls back to section pairing for the remaining article', async () => {
+	const source = await readFile(mixedArticleContentPath, 'utf8')
+
+	assert.match(source, /block\.dataset\.mixedExplicit = 'true'/)
+	assert.match(source, /!block\.dataset\.mixedExplicit/)
+	assert.doesNotMatch(
+		source,
+		/pairBlocksWithExplicitAlignment\(englishRoot, alignmentPairs, alignmentMap\)[\s\S]{0,160}return/
+	)
+})
+
 test('mobile horizontal swipes switch locale without replacing vertical scroll', async () => {
 	const source = await readFile(providerLocalePath, 'utf8')
 

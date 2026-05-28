@@ -178,6 +178,7 @@ const serializedAlignment = alignment
 		function shouldPairBlock(block) {
 			return (
 				!block.closest('pre, code, table, .not-prose, [data-mixed-translation]') &&
+				!block.dataset.mixedExplicit &&
 				!isSourceNoteBlock(block)
 			)
 		}
@@ -338,6 +339,7 @@ const serializedAlignment = alignment
 				blockPairs.map((pair) => pair.en),
 				blockPairs.map((pair) => pair.ja)
 			)
+			block.dataset.mixedExplicit = 'true'
 			block.replaceChildren(...blockPairs.map((pair) => createSentencePair(pair.en, pair.ja)))
 			return true
 		}
@@ -379,8 +381,6 @@ const serializedAlignment = alignment
 			if (alignmentPairs.length > 0) {
 				pairBlocksWithExplicitAlignment(englishRoot, alignmentPairs, alignmentMap)
 				removeSourceNotes(englishRoot)
-				root.dataset.mixedArticle = 'paired'
-				return
 			}
 
 			englishSections.forEach((section, index) => {

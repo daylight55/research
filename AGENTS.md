@@ -1,6 +1,6 @@
-# Technical Research Repository Instructions
+# Research Repository Instructions
 
-このリポジトリは、広範な技術調査とニュース整理を記事種別ごとの浅いディレクトリで継続管理するためのものです。
+このリポジトリは、広範な調査レポートとニュース整理を記事種別ごとの浅いディレクトリで継続管理するためのものです。
 
 ## Repository Structure
 
@@ -15,7 +15,7 @@
 
 ## Required Skill
 
-調査レポート、技術選定、研究整理、論文比較、実務導入方針を作るときは、repo-local skill `technical-research-report` を使う。
+調査レポート、研究整理、論文比較、技術・政策・経済・地政学などの実務導入方針や判断材料を作るときは、repo-local skill `research-report` を使う。
 
 ## Astro Site Publication Workflow
 
@@ -103,7 +103,7 @@ Mermaidは、本文を置き換える巨大な図ではなく、本文理解を�
 ## Writing Style
 
 - 既定の言語は日本語。
-- 読者は実務でAI・データ・組織ナレッジ活用を検討する技術者・意思決定者とする。
+- 読者は実務でAI・データ・組織ナレッジ・経済・政策・地政学などの判断材料を必要とする実務者・研究者・意思決定者とする。
 - 学術的厳密さと実務判断の両方を重視する。
 - 主張、根拠、限界、実務含意を分けて書く。
 - 「できること」と「できないこと」を明確にする。

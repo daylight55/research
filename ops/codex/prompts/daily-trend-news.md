@@ -19,7 +19,7 @@ trend topics for the configured research date. Cover three categories:
 Select exactly five topics in each category, for a total of fifteen topics.
 Prioritize events and shifts from the most recent 24-48 hours, but include a
 slightly older item only when it is still driving current discussion or market /
-policy / technical decisions.
+policy, business, and practical decisions.
 
 ## Repository Rules
 

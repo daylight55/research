@@ -136,10 +136,28 @@ assert.match(
 	'trend news workflow should restore generated news artifacts from the run cache before running Codex',
 )
 
+assert.doesNotMatch(
+	trendWorkflow,
+	/echo "::error::News article already exists for \$\{report_date\}/,
+	'trend news workflow should not fail before cache restore when the dated article already exists',
+)
+
 assert.match(
 	trendWorkflow,
-	/- name: Run Codex trend news research[\s\S]*?if: steps\.restore_generated_news_article\.outputs\.cache-hit != 'true'/,
-	'trend news workflow should skip Codex generation when generated news artifacts were restored from cache',
+	/echo "article_exists=\$\{article_exists\}"[\s\S]*?steps\.run_context\.outputs\.article_exists != 'true' && steps\.restore_generated_news_article\.outputs\.cache-hit != 'true'/,
+	'trend news workflow should record existing articles and skip Codex when the dated article already exists',
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Apply cached generated news article[\s\S]*?if: steps\.run_context\.outputs\.article_exists != 'true' && steps\.restore_generated_news_article\.outputs\.cache-hit == 'true'/,
+	'trend news workflow should apply cached generated artifacts only when the dated article is not already committed',
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Run Codex trend news research[\s\S]*?if: steps\.run_context\.outputs\.article_exists != 'true' && steps\.restore_generated_news_article\.outputs\.cache-hit != 'true'/,
+	'trend news workflow should skip Codex generation when generated news artifacts were restored from cache or the article already exists',
 )
 
 assert.match(

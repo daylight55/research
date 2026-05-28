@@ -9,6 +9,7 @@ const cloudflarePreviewWorkflow = readFileSync(
 	'utf8'
 )
 const translateBlogWorkflow = readFileSync('.github/workflows/translate-blog-en.yml', 'utf8')
+const testWorkflow = readFileSync('.github/workflows/test.yml', 'utf8')
 
 assert.match(
 	workflow,
@@ -185,6 +186,24 @@ assert.match(
 )
 
 assert.match(
+	translateBlogWorkflow,
+	/- name: Validate translated site[\s\S]*?node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
+	'Translate Blog English should validate mix-alignment coverage for newly translated articles'
+)
+
+assert.match(
+	testWorkflow,
+	/fetch-depth: 0[\s\S]*?node ops\/scripts\/validate-mix-alignment\.mjs --changed origin\/\$\{\{ github\.base_ref \}\}\.\.\.HEAD/,
+	'Pull request tests should validate mix-alignment coverage for changed article files against the base branch'
+)
+
+assert.match(
+	dailyIssuePrompt,
+	/articles\/report\/<topic>\/mix-alignment\.json[\s\S]*?semantic[\s\S]*?Japanese-English reading map[\s\S]*?at least 35%/,
+	'Daily Issue Research prompt should require a sufficiently covered mix-alignment file for generated bilingual reports'
+)
+
+assert.match(
 	trendWorkflow,
 	/cache_key="daily-trend-news-\$\{report_date\}"[\s\S]*?cache_key="\$\{cache_key\}-\$\{topic_hint_hash\}"/,
 	'trend news workflow should derive a date cache key and include topic hint when present'
@@ -254,6 +273,12 @@ assert.match(
 	workflow,
 	/- name: Verify unique hero images[\s\S]*?pnpm test:hero-images/,
 	'Daily Issue Research should verify all published hero images are concrete and unique after selecting Unsplash heroes'
+)
+
+assert.match(
+	workflow,
+	/- name: Verify generated mixed article alignment[\s\S]*?node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
+	'Daily Issue Research should reject generated bilingual articles without enough mix-alignment coverage'
 )
 
 assert.match(

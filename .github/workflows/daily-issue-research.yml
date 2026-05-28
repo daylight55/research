@@ -148,7 +148,7 @@ jobs:
             echo "## Automation Metadata"
             echo
             echo "- Model: ${OPENAI_MODEL}"
-            echo "- Required skill: [technical-research-report](../../.codex/skills/technical-research-report/SKILL.md)"
+            echo "- Required skill: [research-report](../../.codex/skills/research-report/SKILL.md)"
             echo "- Prompt source: [ops/codex/prompts/daily-issue-research.md](../../ops/codex/prompts/daily-issue-research.md)"
           } >> ops/codex/runtime/daily-research-prompt.md
 

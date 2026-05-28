@@ -1,0 +1,45 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "LLMをめぐる哲学的な争点は、「LLMは本当に理解しているか」という内面の有無だけでは捉えにくい。",
+					"en": "The philosophical question raised by LLMs is not only whether they possess inner understanding."
+				},
+				{
+					"ja": "むしろ、LLMの出力が人間の実践の中でどのように受け取られ、訂正され、権威づけられ、責任づけられるかを見た方が、実務にも研究にも役に立つ。",
+					"en": "A more useful question is how their outputs enter human practices, become accepted or rejected, gain authority, and create responsibilities."
+				},
+				{
+					"ja": "実務上の推奨は、LLMを「意図を持つ同僚」とも「無意味な道具」とも固定せず、非対称な言語ゲームの構成要素として扱うことである。",
+					"en": "The practical recommendation is to treat LLMs neither as intentional colleagues nor as meaningless tools, but as asymmetric components of language games."
+				}
+			]
+		},
+		{
+			"id": "recommendation",
+			"heading": {
+				"ja": "9. 推奨方針",
+				"en": "9. Recommendation"
+			},
+			"pairs": [
+				{
+					"ja": "LLMは、人間の言語ゲームに出力を差し込む非対称な構成要素である。",
+					"en": "An LLM is an asymmetric component that inserts outputs into human language games."
+				},
+				{
+					"ja": "出力は意味ある手として機能しうるが、その正しさ、権威、責任は人間側の uptake と制度設計に依存する。",
+					"en": "Its outputs can function as meaningful moves, but their correctness, authority, and responsibility depend on human uptake and institutional design."
+				}
+			]
+		}
+	]
+}

@@ -1,9 +1,9 @@
 ---
-name: technical-research-report
-description: Use when creating or updating source-grounded research reports, news digests, technical investigations, AI/LLM/MCP/ontology/memory research, literature-backed surveys, diagram-rich explanations, or practical adoption recommendations in this repository.
+name: research-report
+description: Use when creating or updating source-grounded research reports, news digests, broad investigations, literature-backed surveys, policy/economic/geopolitical/technology analyses, diagram-rich explanations, or practical adoption recommendations in this repository.
 ---
 
-# Technical Research Report
+# Research Report
 
 Use this skill for durable research artifacts in this repository. Follow `AGENTS.md` first when it is present; this skill exists to keep the report workflow aligned with the current site shape.
 
@@ -48,7 +48,7 @@ If the report or digest must appear on the website, top page, category pages, or
 4. Use secondary sources only for orientation, market context, or competing interpretations.
 5. Verify current product, AI model, pricing, roadmap, library, specification, politics, sanctions, conflict, election, and diplomacy claims against current sources.
 6. Distinguish established facts, emerging evidence, product/vendor claims, inference from public information, open questions, limitations, and practical implications.
-7. Write in Japanese for engineers and technical or business decision makers.
+7. Write in Japanese for practitioners, researchers, and decision makers who need source-grounded judgment.
 8. Keep the article standalone; future readers should not need the GitHub issue or chat context.
 9. Use `research-log.mdx` for publishable questions checked, sources used, assumptions, rejected leads, limits, and follow-up items.
 10. Verify links, placeholders, SourceNote formatting, diagrams, and Japanese-English parity before publication.
@@ -119,7 +119,7 @@ Use this shape unless the topic needs something else:
 
 ## 2. 背景と研究史
 
-## 3. 技術原理または構造
+## 3. 構造・原理
 
 ## 4. 主要アプローチ比較
 

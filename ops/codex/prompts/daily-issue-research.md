@@ -21,7 +21,7 @@ drivers, risks, and practical implications.
 ## Repository Rules
 
 - Follow `AGENTS.md`.
-- Use the repo-local `technical-research-report` skill if available.
+- Use the repo-local `research-report` skill if available.
 - Write the reader-facing report body directly in
   `articles/report/<topic>/ja/index.mdx`. Treat this MDX file as the canonical article
   body for website-visible reports.
@@ -41,7 +41,7 @@ drivers, risks, and practical implications.
   directories; summarize publishable material in `research-log.mdx`.
 - In `research-log.mdx`, include a short `## 利用環境` section with the automation
   model name from `Automation Metadata`, a link to the
-  `technical-research-report` skill, and a link to this prompt source. Summarize
+  `research-report` skill, and a link to this prompt source. Summarize
   the effective prompt in a few bullets instead of pasting the full prompt.
 - Add or update `src/data/categories.ts` category wiring as needed.
 - When creating `articles/report/<topic>/ja/index.mdx`, use
@@ -98,7 +98,7 @@ drivers, risks, and practical implications.
 
 ## Deliverable Shape
 
-- Write in Japanese for engineers and technical decision makers.
+- Write in Japanese for practitioners, researchers, and decision makers.
 - Make the report standalone: a future reader should not need the GitHub issue
   to understand the topic.
 - When the topic is Japan politics or international politics, write for readers
@@ -109,7 +109,7 @@ drivers, risks, and practical implications.
   separate research trail is useful.
 - If `research-log.mdx` is created or updated, include:
   - the model used by the automation
-  - a link to `.codex/skills/technical-research-report/SKILL.md`
+  - a link to `.codex/skills/research-report/SKILL.md`
   - a link to `ops/codex/prompts/daily-issue-research.md`
   - a concise summary of the prompt constraints that shaped the investigation
 - Run focused verification before finishing. At minimum, check for unresolved

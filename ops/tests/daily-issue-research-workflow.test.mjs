@@ -253,6 +253,12 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
+	/duplicate_image_urls="\$\([\s\S]*?count\[url\] == 2[\s\S]*?NewsSourceCard imageUrl values must be unique within one article/,
+	'trend news workflow should reject duplicate NewsSourceCard imageUrl values within one article'
+)
+
+assert.match(
+	trendWorkflow,
 	/- name: Save generated news article cache[\s\S]*?uses: actions\/cache\/save@v4[\s\S]*?key: \$\{\{ steps\.run_context\.outputs\.cache_key \}\}/,
 	'trend news workflow should save completed generated news artifacts in the run cache'
 )

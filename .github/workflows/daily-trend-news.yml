@@ -300,6 +300,27 @@ jobs:
             exit 1
           fi
 
+          duplicate_image_urls="$(
+            awk '
+              match($0, /imageUrl=(["'\''"])/) {
+                quote = substr($0, RSTART + 9, 1)
+                rest = substr($0, RSTART + 10)
+                end = index(rest, quote)
+                if (end > 0) {
+                  url = substr(rest, 1, end - 1)
+                  sub(/[?#].*$/, "", url)
+                  count[url]++
+                  if (count[url] == 2) print url
+                }
+              }
+            ' "${ARTICLE_PATH}"
+          )"
+          if [[ -n "${duplicate_image_urls}" ]]; then
+            echo "::error::NewsSourceCard imageUrl values must be unique within one article after removing query strings. Duplicates:"
+            echo "${duplicate_image_urls}"
+            exit 1
+          fi
+
           if grep -nE "^出典メモ:" "${ARTICLE_PATH}"; then
             echo "::error::News articles must use NewsSourceCard for source memos instead of plain 出典メモ: lines."
             exit 1

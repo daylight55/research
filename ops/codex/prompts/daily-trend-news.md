@@ -165,6 +165,10 @@ Rules for source memo cards:
   search image that is specific to the topic's key person, organization,
   company, location, product, or event. Avoid generic newspaper, abstract data,
   newsroom, stock-market, or technology-background images.
+- Do not reuse the same `imageUrl` for multiple `NewsSourceCard` blocks within
+  one article. If several sources expose the same shared image, keep it only for
+  the first matching topic and choose a different topic-specific official, web,
+  or Unsplash image for the later cards.
 - Do not use `https://source.unsplash.com/...` dynamic or featured URLs. They
   are deprecated and can return 503. Use stable direct image URLs such as
   `https://images.unsplash.com/photo-...?...` or an official article image URL.
@@ -194,6 +198,8 @@ Run focused verification before finishing:
 - Confirm the article imports `NewsSourceCard` and contains at least fifteen
   `<NewsSourceCard ... />` blocks.
 - Confirm every `NewsSourceCard` has `imageUrl` and `imageAlt`.
+- Confirm `NewsSourceCard` `imageUrl` values are unique within the article after
+  ignoring query strings.
 - Confirm `heroImageQuery` is specific to people, organizations, companies,
   locations, or events from the selected topics and is not a generic news
   collage query.

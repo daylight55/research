@@ -8,6 +8,22 @@ title: '調査プロセス: OAuth 2.1 PKCEフローとMCP認証認可の実務�
 
 この調査ログは、本文の結論を繰り返すためではなく、どの問いを立て、どの資料を優先し、どこを不確実なまま残したかを読者が確認するための記録である。OAuth 2.1 PKCEフローとMCP認証認可の実務ガイドについて、判断の前提、根拠の種類、更新が必要になる条件を分けて残した。
 
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- 調査対象: OAuth 2.1 PKCEフローとMCP認証認可の実務ガイド
+- 依頼内容: MCPサーバー、OIDCプロバイダー、OAuthクライアント、Claude系クライアント、OpenAPI-only APIの関係を、初学者向けに通信フローと設定観点で整理する。
+- 指定カテゴリ・slug: `developer-tools` / `oauth21-pkce-mcp-auth`
+- 関連タグ: MCP, OAuth 2.1, PKCE, OIDC, Claude
+- 主要な制約: 一次情報または信頼できる公開情報を優先し、主張、根拠、限界、実務含意を分けて書く。
+- 参照した記事ファイル: `articles/report/oauth21-pkce-mcp-auth/ja/index.mdx`
+- 完了条件: 日本語本文を公開記事として表示し、調査ログで資料選定、採用しなかった情報、判断基準、更新条件を確認できるようにする。
+
 ## 調査目的
 
 MCPサーバー、OIDCプロバイダー、OAuthクライアント、Claude系クライアント、OpenAPI-onlyな既存APIの関係を整理し、初学者でも実装順に追える説明を作る。

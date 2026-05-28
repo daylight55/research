@@ -8,6 +8,22 @@ title: '調査プロセス: 政策金利・銀行金利・住宅ローンと日�
 
 この調査ログは、本文の結論を繰り返すためではなく、どの問いを立て、どの資料を優先し、どこを不確実なまま残したかを読者が確認するための記録である。政策金利・銀行金利・住宅ローンと日本の長期金利政策について、判断の前提、根拠の種類、更新が必要になる条件を分けて残した。
 
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- 調査対象: 政策金利・銀行金利・住宅ローンと日本の長期金利政策
+- 依頼内容: 日銀の2026年5月時点の方針、政策金利から住宅ローンへの波及、YCCの長期的な扱いを整理する調査レポート。
+- 指定カテゴリ・slug: `macro-finance` / `japan-interest-rate-policy`
+- 関連タグ: Monetary Policy, BOJ, Mortgage, YCC
+- 主要な制約: 一次情報または信頼できる公開情報を優先し、主張、根拠、限界、実務含意を分けて書く。
+- 参照した記事ファイル: `articles/report/japan-interest-rate-policy/ja/index.mdx`
+- 完了条件: 日本語本文を公開記事として表示し、調査ログで資料選定、採用しなかった情報、判断基準、更新条件を確認できるようにする。
+
 ## 調査目的
 
 政策金利、銀行預金・貸出金利、住宅ローン金利、長期金利、イールドカーブコントロールの関係を整理し、2026年5月14日時点の日本の物価・賃金・景気・金利指標と照らして、現在の日銀方針、今後の方針、長期的に望ましい金利政策の方向を評価する。

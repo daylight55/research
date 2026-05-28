@@ -34,20 +34,28 @@ drivers, risks, and practical implications.
   executive summary, major claims, recommendations, and limitations.
 - Do not create `report.md` or another second copy of the same article body.
   Duplicate report bodies drift and make the workflow slower.
-- If the investigation process is useful to readers, write it in
-  `articles/report/<topic>/ja/research-log.mdx` as a public research trail: questions checked,
-  key sources, rejected evidence, limits, and how those findings affected the
-  article. Do not create private `notes/`, `sources/`, or `figures/`
+- Write the investigation process in
+  `articles/report/<topic>/ja/research-log.mdx` as a public research trail:
+  questions checked, key sources, rejected evidence, limits, and how those
+  findings affected the article. Do not create private `notes/`, `sources/`, or `figures/`
   directories; summarize publishable material in `research-log.mdx`.
 - In `research-log.mdx`, include a short `## 利用環境` section with the automation
   model name from `Automation Metadata`, a link to the
-  `research-report` skill, and a link to this prompt source. Summarize
-  the effective prompt in a few bullets instead of pasting the full prompt.
+  `research-report` skill, and a link to this prompt source.
+- In `research-log.mdx`, include a `## 調査命令` section that summarizes the
+  selected GitHub issue as the research instruction: issue number, issue title,
+  the publishable issue body / request summary, scope constraints, and the
+  inferred deliverable. Do not include an issue URL because the research queue
+  issue may be private. Do not paste secrets, private operational details, or
+  repository credentials.
 - Add or update `src/data/categories.ts` category wiring as needed.
 - When creating `articles/report/<topic>/ja/index.mdx`, use
   `ops/codex/templates/blog-entry.mdx` as the site-entry shape.
   Include `rssSummary` in frontmatter as a concise RSS/share summary. Keep it
   understandable outside the site UI and distinct from long article prose.
+  Include the template's `generation` frontmatter block with only `model` from
+  `Automation Metadata`. Do not store prompt source, prompt summary, issue
+  body, or other prompt details in article frontmatter.
   Include `heroImageQuery` as a short English Unsplash search phrase for an
   informative landscape header image. Keep `heroImage` as the placeholder;
   automation will replace it with a downloaded local image when the query is
@@ -105,13 +113,14 @@ drivers, risks, and practical implications.
   who need a high-level but decision-useful overview, not only a news recap.
   Summarize what happened, why it matters, what structural forces are behind it,
   what may change next, and what remains uncertain.
-- Keep public investigation notes in `articles/report/<topic>/ja/research-log.mdx` when a
-  separate research trail is useful.
-- If `research-log.mdx` is created or updated, include:
+- Keep public investigation notes in `articles/report/<topic>/ja/research-log.mdx`.
+- In `research-log.mdx`, include:
   - the model used by the automation
-  - a link to `.codex/skills/research-report/SKILL.md`
-  - a link to `ops/codex/prompts/daily-issue-research.md`
-  - a concise summary of the prompt constraints that shaped the investigation
+  - a GitHub URL link to `.codex/skills/research-report/SKILL.md`
+  - a GitHub URL link to `ops/codex/prompts/daily-issue-research.md`
+  - a `## 利用環境` section for model / skill / prompt source links
+  - a `## 調査命令` section that summarizes the selected issue's title, body,
+    request, constraints, and inferred deliverable as the investigation input
 - Run focused verification before finishing. At minimum, check for unresolved
   placeholders, run `git diff --check`, and run
   `node ops/scripts/validate-mix-alignment.mjs --changed`. If site content

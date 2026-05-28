@@ -139,7 +139,7 @@ jobs:
             echo
             echo "## Selected Issue Context"
             echo
-            jq -r '"- Issue: #\(.number) \(.title)\n- URL: \(.url)\n- Labels: \([.labels[].name] | join(", "))"' ops/codex/runtime/selected-issue.json
+            jq -r '"- Issue: #\(.number) \(.title)\n- Labels: \([.labels[].name] | join(", "))"' ops/codex/runtime/selected-issue.json
             echo
             echo "### Issue Body"
             echo
@@ -148,8 +148,8 @@ jobs:
             echo "## Automation Metadata"
             echo
             echo "- Model: ${OPENAI_MODEL}"
-            echo "- Required skill: [research-report](../../.codex/skills/research-report/SKILL.md)"
-            echo "- Prompt source: [ops/codex/prompts/daily-issue-research.md](../../ops/codex/prompts/daily-issue-research.md)"
+            echo "- Required skill: [research-report](https://github.com/${GITHUB_REPOSITORY}/blob/main/.codex/skills/research-report/SKILL.md)"
+            echo "- Prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/${GITHUB_REPOSITORY}/blob/main/ops/codex/prompts/daily-issue-research.md)"
           } >> ops/codex/runtime/daily-research-prompt.md
 
       - name: Record Daily CI start time

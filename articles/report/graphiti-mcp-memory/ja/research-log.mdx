@@ -8,6 +8,22 @@ title: '調査プロセス: Graphiti と MCP で作る AI エージェント記�
 
 この調査ログは、本文の結論を繰り返すためではなく、どの問いを立て、どの資料を優先し、どこを不確実なまま残したかを読者が確認するための記録である。Graphiti と MCP で作る AI エージェント記憶基盤について、判断の前提、根拠の種類、更新が必要になる条件を分けて残した。
 
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- 調査対象: Graphiti と MCP で作る AI エージェント記憶基盤
+- 依頼内容: Graphiti の temporal knowledge graph と MCP を組み合わせた長期記憶の設計論、導入判断、主要代替サービスを整理する実務レポート。
+- 指定カテゴリ・slug: `ai-systems` / `graphiti-mcp-memory`
+- 関連タグ: Graphiti, MCP, Memory, Knowledge Graph, Agents
+- 主要な制約: 一次情報または信頼できる公開情報を優先し、主張、根拠、限界、実務含意を分けて書く。
+- 参照した記事ファイル: `articles/report/graphiti-mcp-memory/ja/index.mdx`
+- 完了条件: 日本語本文を公開記事として表示し、調査ログで資料選定、採用しなかった情報、判断基準、更新条件を確認できるようにする。
+
 ## 調査目的
 
 Graphiti と MCP を中心に、AI エージェントの長期記憶、時系列ナレッジグラフ、組織ナレッジ活用を実務導入する際の設計判断をまとめる。個人研究、組織ナレッジ、業務エージェントの 3 つの導入パターンを切り分け、採用すべきケースと避けるべきケースを明確にする。

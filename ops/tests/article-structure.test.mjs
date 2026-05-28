@@ -67,6 +67,88 @@ test('article frontmatter contentType matches its directory type', () => {
 	}
 })
 
+test('published article frontmatter records the generation model', () => {
+	for (const file of gitFiles(['articles/*/**/index.mdx'])) {
+		const frontmatter = frontmatterOf(readFileSync(file, 'utf8'), file)
+
+		assert.match(
+			frontmatter,
+			/^generation:\n\s+model: 'gpt-5\.4-mini'$/m,
+			`${file} should record the article generation model`
+		)
+	}
+})
+
+test('article schema and templates support generation metadata', () => {
+	const contentConfig = readFileSync('src/content.config.ts', 'utf8')
+	const blogPostLayout = readFileSync('src/layouts/BlogPost.astro', 'utf8')
+	const generationModel = readFileSync('src/components/ArticleGenerationModel.astro', 'utf8')
+	const articlePages = [
+		'src/pages/reports/[...slug].astro',
+		'src/pages/news/[...slug].astro',
+		'src/pages/en/reports/[...slug].astro',
+		'src/pages/en/news/[...slug].astro',
+		'src/pages/mix/reports/[...slug].astro',
+		'src/pages/mix/news/[...slug].astro'
+	]
+	const reportTemplate = readFileSync('ops/codex/templates/blog-entry.mdx', 'utf8')
+	const newsTemplate = readFileSync('ops/codex/templates/news-digest.mdx', 'utf8')
+
+	assert.match(
+		contentConfig,
+		/generation:\s*z[\s\S]*?\.object\(\{[\s\S]*?model:\s*z\.string\(\)[\s\S]*?\}\)[\s\S]*?\.optional\(\)/,
+		'article frontmatter schema should allow optional generation model metadata'
+	)
+	assert.doesNotMatch(
+		contentConfig,
+		/promptSource|promptSummary/,
+		'article frontmatter schema should not store prompt details'
+	)
+
+	for (const [file, source] of [
+		['ops/codex/templates/blog-entry.mdx', reportTemplate],
+		['ops/codex/templates/news-digest.mdx', newsTemplate]
+	]) {
+		assert.match(
+			source,
+			/generation:\n\s+model: '<MODEL_USED_TO_CREATE_ARTICLE>'/,
+			`${file} should include generation.model`
+		)
+		assert.doesNotMatch(
+			source,
+			/promptSource|promptSummary/,
+			`${file} should not include prompt metadata`
+		)
+	}
+
+	assert.doesNotMatch(
+		blogPostLayout,
+		/ArticleGenerationMeta/,
+		'article body should not render prompt metadata'
+	)
+	assert.match(
+		generationModel,
+		/generation\?\.model/,
+		'generation model component should be optional'
+	)
+	assert.match(generationModel, /Model/, 'generation model component should show a model label')
+	assert.doesNotMatch(generationModel, /promptSource|promptSummary|プロンプト要約|Prompt summary/)
+
+	for (const file of articlePages) {
+		const source = readFileSync(file, 'utf8')
+		assert.match(
+			source,
+			/ArticleGenerationModel/,
+			`${file} should import the sidebar model component`
+		)
+		assert.match(
+			source,
+			/<ArticleGenerationModel generation=\{post\.data\.generation\} \/>/,
+			`${file} should render the model in the article sidebar`
+		)
+	}
+})
+
 test('article body does not import duplicate report bodies or unresolved placeholders', () => {
 	for (const file of gitFiles(['articles/*/**/index.mdx', 'articles/*/**/research-log.mdx'])) {
 		const source = readFileSync(file, 'utf8')
@@ -80,6 +162,49 @@ test('article body does not import duplicate report bodies or unresolved placeho
 	}
 })
 
+test('published Japanese articles have public research logs', () => {
+	for (const file of gitFiles(['articles/*/*/ja/index.mdx'])) {
+		const logFile = path.join(path.dirname(file), 'research-log.mdx')
+
+		assert.ok(existsSync(logFile), `${file} should have a public research-log.mdx`)
+	}
+})
+
+test('research logs record public generation context and investigation input', () => {
+	for (const file of gitFiles(['articles/*/**/research-log.mdx'])) {
+		const { type } = articleKey(file.replace(/research-log\.mdx$/, 'index.mdx'))
+		const source = readFileSync(file, 'utf8')
+
+		assert.match(source, /^## 利用環境$/m, `${file} should include generation context`)
+		assert.match(source, /model: `gpt-5\.4-mini`/, `${file} should record the model`)
+		assert.match(source, /^## 調査命令$/m, `${file} should include the investigation input`)
+		assert.doesNotMatch(
+			source,
+			/research-queue\/issues|github\.com\/daylight55\/research-queue\/issues/,
+			`${file} should not expose private issue URLs`
+		)
+
+		if (type === 'news') {
+			assert.match(
+				source,
+				/https:\/\/github\.com\/daylight55\/research\/blob\/main\/ops\/codex\/prompts\/daily-trend-news\.md/,
+				`${file} should link to the public news prompt source`
+			)
+		} else {
+			assert.match(
+				source,
+				/https:\/\/github\.com\/daylight55\/research\/blob\/main\/\.codex\/skills\/research-report\/SKILL\.md/,
+				`${file} should link to the public report skill source`
+			)
+			assert.match(
+				source,
+				/https:\/\/github\.com\/daylight55\/research\/blob\/main\/ops\/codex\/prompts\/daily-issue-research\.md/,
+				`${file} should link to the public report prompt source`
+			)
+		}
+	}
+})
+
 test('articles with research logs have sibling indexes and public route support', () => {
 	const logs = gitFiles([
 		'articles/report/*/ja/research-log.mdx',
@@ -87,13 +212,30 @@ test('articles with research logs have sibling indexes and public route support'
 		'articles/news/*/ja/research-log.mdx',
 		'articles/news/*/en/research-log.mdx'
 	])
-	const reportPage = readFileSync('src/pages/reports/[...slug].astro', 'utf8')
-	const englishReportPage = readFileSync('src/pages/en/reports/[...slug].astro', 'utf8')
+	const articleRouteChecks = [
+		['src/pages/reports/[...slug].astro', /\/reports\/\$\{postSlug\}\/research\//],
+		['src/pages/en/reports/[...slug].astro', /\/reports\/\$\{postSlug\}\/research\//],
+		['src/pages/news/[...slug].astro', /\/news\/\$\{postSlug\}\/research\//],
+		['src/pages/en/news/[...slug].astro', /\/news\/\$\{postSlug\}\/research\//]
+	]
+	const researchRouteChecks = [
+		['src/pages/reports/[slug]/research.astro', /post\.data\.contentType === 'report'/],
+		['src/pages/en/reports/[slug]/research.astro', /post\.data\.contentType === 'report'/],
+		['src/pages/news/[slug]/research.astro', /post\.data\.contentType === 'news'/],
+		['src/pages/en/news/[slug]/research.astro', /post\.data\.contentType === 'news'/]
+	]
 
-	for (const source of [reportPage, englishReportPage]) {
+	for (const [file, researchHref] of articleRouteChecks) {
+		const source = readFileSync(file, 'utf8')
 		assert.match(source, /getCollection\('articleResearch'\)/)
 		assert.match(source, /hasResearchLog/)
-		assert.match(source, /\/reports\/\$\{postSlug\}\/research\//)
+		assert.match(source, researchHref)
+	}
+
+	for (const [file, contentTypeFilter] of researchRouteChecks) {
+		const source = readFileSync(file, 'utf8')
+		assert.match(source, /getCollection\('articleResearch'\)/)
+		assert.match(source, contentTypeFilter, `${file} should publish only its article type`)
 	}
 
 	for (const log of logs) {

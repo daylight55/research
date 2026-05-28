@@ -35,10 +35,82 @@ assert.match(
 	'Daily Issue Research should pass model, skill, and prompt metadata into the generated research prompt'
 )
 
+assert.doesNotMatch(
+	workflow,
+	/Selected Issue Context[\s\S]*?- URL: \\\(\.url\\\)/,
+	'Daily Issue Research should not pass private research queue issue URLs into the generated prompt'
+)
+
+assert.match(
+	workflow,
+	/Required skill: \[research-report\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/\.codex\/skills\/research-report\/SKILL\.md\)[\s\S]*?Prompt source: \[ops\/codex\/prompts\/daily-issue-research\.md\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/ops\/codex\/prompts\/daily-issue-research\.md\)/,
+	'Daily Issue Research should pass public GitHub URLs for skill and prompt source metadata'
+)
+
 assert.match(
 	dailyIssuePrompt,
 	/research-log\.mdx[\s\S]*?## 利用環境[\s\S]*?model[\s\S]*?research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
 	'Daily Issue Research prompt should require model, skill, and prompt metadata in research logs'
+)
+
+assert.match(
+	dailyIssuePrompt,
+	/generation[\s\S]*?model/,
+	'Daily Issue Research prompt should require frontmatter generation model metadata for generated reports'
+)
+
+assert.doesNotMatch(
+	dailyIssuePrompt,
+	/frontmatter[\s\S]*?promptSource|frontmatter[\s\S]*?promptSummary/,
+	'Daily Issue Research prompt should not ask article frontmatter to store prompt details'
+)
+
+assert.match(
+	trendWorkflow,
+	/OPENAI_MODEL: gpt-5\.4-mini[\s\S]*?model: \$\{\{ env\.OPENAI_MODEL \}\}/,
+	'Daily Trend News should define the Codex model once and reuse it for generation'
+)
+
+assert.match(
+	trendWorkflow,
+	/## Automation Metadata[\s\S]*?- Model: \$\{OPENAI_MODEL\}[\s\S]*?ops\/codex\/prompts\/daily-trend-news\.md/,
+	'Daily Trend News should pass model and prompt metadata into the generated news prompt'
+)
+
+assert.match(
+	trendWorkflow,
+	/Prompt source: \[ops\/codex\/prompts\/daily-trend-news\.md\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/ops\/codex\/prompts\/daily-trend-news\.md\)/,
+	'Daily Trend News should pass a public GitHub URL for prompt source metadata'
+)
+
+assert.match(
+	trendWorkflow,
+	/OPENAI_USAGE_MODEL: \$\{\{ env\.OPENAI_MODEL \}\}/,
+	'Daily Trend News should reuse the configured model for usage reporting'
+)
+
+assert.match(
+	dailyIssuePrompt,
+	/articles\/report\/<topic>\/ja\/research-log\.mdx[\s\S]*?## 調査命令[\s\S]*?issue[\s\S]*?title[\s\S]*?body/,
+	'Daily Issue Research prompt should ask research logs to summarize the issue-based research instruction'
+)
+
+assert.match(
+	dailyIssuePrompt,
+	/Do not include an issue URL because the research queue[\s\S]*?may be private/,
+	'Daily Issue Research prompt should keep private issue URLs out of research logs'
+)
+
+assert.match(
+	dailyIssuePrompt,
+	/## 利用環境[\s\S]*?model[\s\S]*?research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
+	'Daily Issue Research prompt should keep execution metadata in research logs separately from the research instruction'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/research-log\.mdx[\s\S]*?## 調査命令[\s\S]*?Run Context[\s\S]*?topic hint/,
+	'Daily Trend News prompt should ask optional research logs to summarize the run instruction context'
 )
 
 assert.match(

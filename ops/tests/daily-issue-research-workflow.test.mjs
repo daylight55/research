@@ -17,6 +17,10 @@ const cloudflarePreviewWorkflow = readFileSync(
 	'.github/workflows/cloudflare-pages-preview.yml',
 	'utf8',
 )
+const translateBlogWorkflow = readFileSync(
+	'.github/workflows/translate-blog-en.yml',
+	'utf8',
+)
 
 assert.match(
 	workflow,
@@ -112,6 +116,12 @@ assert.match(
 	trendWorkflow,
 	/- name: Dispatch English translation workflow[\s\S]*?if: steps\.merge_pr\.outcome == 'success'[\s\S]*?gh workflow run translate-blog-en\.yml --ref main/,
 	'Daily Trend News should dispatch the English translation workflow after merging a generated news PR',
+)
+
+assert.match(
+	translateBlogWorkflow,
+	/allow-bot-users: daylight55-research-queue\[bot\]/,
+	'Translate Blog English should allow the research queue GitHub App bot that dispatches the workflow',
 )
 
 assert.match(

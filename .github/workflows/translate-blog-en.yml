@@ -69,6 +69,7 @@ jobs:
           model: gpt-5.4-mini
           effort: medium
           allow-bots: true
+          allow-bot-users: daylight55-research-queue[bot]
 
       - name: Restore Node for site build
         if: steps.prepare_prompt.outputs.missing_count != '0'

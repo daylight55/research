@@ -52,10 +52,13 @@ policy / technical decisions.
 - If a public research trail is useful, put it in
   `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx`; otherwise keep only the
   article body in `index.mdx`. If `research-log.mdx` is created, include a
-  `## 利用環境` section with the automation model and prompt source, plus a
+  `## 利用環境` section with the automation model and the GitHub URL for the
+  prompt source, plus a
   `## 調査命令` section that summarizes the Run Context as the research
   instruction: research date, topic hint if present, category/count constraints,
   recency window, and the intended deliverable.
+- When `research-log.mdx` is created, confirm the public trail is reachable from
+  `/news/daily-trends-<YYYY-MM-DD>/research/`.
 
 ## Context Budget Rules
 
@@ -210,6 +213,8 @@ Run focused verification before finishing:
   - `/news/index.html`
   - `/news/rss.xml`
   - `/news/daily-trends-<YYYY-MM-DD>/index.html`
+  - `/news/daily-trends-<YYYY-MM-DD>/research/index.html` when a public
+    `research-log.mdx` exists
 
 ## Final Message
 

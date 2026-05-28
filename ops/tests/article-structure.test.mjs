@@ -157,13 +157,30 @@ test('articles with research logs have sibling indexes and public route support'
 		'articles/news/*/ja/research-log.mdx',
 		'articles/news/*/en/research-log.mdx'
 	])
-	const reportPage = readFileSync('src/pages/reports/[...slug].astro', 'utf8')
-	const englishReportPage = readFileSync('src/pages/en/reports/[...slug].astro', 'utf8')
+	const articleRouteChecks = [
+		['src/pages/reports/[...slug].astro', /\/reports\/\$\{postSlug\}\/research\//],
+		['src/pages/en/reports/[...slug].astro', /\/reports\/\$\{postSlug\}\/research\//],
+		['src/pages/news/[...slug].astro', /\/news\/\$\{postSlug\}\/research\//],
+		['src/pages/en/news/[...slug].astro', /\/news\/\$\{postSlug\}\/research\//]
+	]
+	const researchRouteChecks = [
+		['src/pages/reports/[slug]/research.astro', /post\.data\.contentType === 'report'/],
+		['src/pages/en/reports/[slug]/research.astro', /post\.data\.contentType === 'report'/],
+		['src/pages/news/[slug]/research.astro', /post\.data\.contentType === 'news'/],
+		['src/pages/en/news/[slug]/research.astro', /post\.data\.contentType === 'news'/]
+	]
 
-	for (const source of [reportPage, englishReportPage]) {
+	for (const [file, researchHref] of articleRouteChecks) {
+		const source = readFileSync(file, 'utf8')
 		assert.match(source, /getCollection\('articleResearch'\)/)
 		assert.match(source, /hasResearchLog/)
-		assert.match(source, /\/reports\/\$\{postSlug\}\/research\//)
+		assert.match(source, researchHref)
+	}
+
+	for (const [file, contentTypeFilter] of researchRouteChecks) {
+		const source = readFileSync(file, 'utf8')
+		assert.match(source, /getCollection\('articleResearch'\)/)
+		assert.match(source, contentTypeFilter, `${file} should publish only its article type`)
 	}
 
 	for (const log of logs) {

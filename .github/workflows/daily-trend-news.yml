@@ -386,6 +386,11 @@ jobs:
           test -f "dist/news/index.html"
           test -f "dist/news/rss.xml"
           test -f "dist/news/${SLUG}/index.html"
+          if [[ -f "articles/news/${SLUG}/ja/research-log.mdx" ]]; then
+            test -f "dist/news/${SLUG}/research/index.html"
+            grep -nE "利用環境|調査命令|Model|model" \
+              "dist/news/${SLUG}/research/index.html"
+          fi
 
           grep -nE "${SLUG}|ホットトレンド|政治|経済|技術" \
             "dist/news/index.html" \

@@ -109,8 +109,8 @@ drivers, risks, and practical implications.
   separate research trail is useful.
 - If `research-log.mdx` is created or updated, include:
   - the model used by the automation
-  - a link to `.codex/skills/technical-research-report/SKILL.md`
-  - a link to `ops/codex/prompts/daily-issue-research.md`
+  - a GitHub URL link to `.codex/skills/technical-research-report/SKILL.md`
+  - a GitHub URL link to `ops/codex/prompts/daily-issue-research.md`
   - a `## 利用環境` section for model / skill / prompt source links
   - a `## 調査命令` section that summarizes the selected issue's title, body,
     request, constraints, and inferred deliverable as the investigation input

@@ -34,6 +34,12 @@ assert.match(
 )
 
 assert.match(
+	workflow,
+	/Required skill: \[technical-research-report\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/\.codex\/skills\/technical-research-report\/SKILL\.md\)[\s\S]*?Prompt source: \[ops\/codex\/prompts\/daily-issue-research\.md\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/ops\/codex\/prompts\/daily-issue-research\.md\)/,
+	'Daily Issue Research should pass public GitHub URLs for skill and prompt source metadata'
+)
+
+assert.match(
 	dailyIssuePrompt,
 	/research-log\.mdx[\s\S]*?## 利用環境[\s\S]*?model[\s\S]*?technical-research-report[\s\S]*?ops\/codex\/prompts\/daily-issue-research\.md/,
 	'Daily Issue Research prompt should require model, skill, and prompt metadata in research logs'
@@ -61,6 +67,12 @@ assert.match(
 	trendWorkflow,
 	/## Automation Metadata[\s\S]*?- Model: \$\{OPENAI_MODEL\}[\s\S]*?ops\/codex\/prompts\/daily-trend-news\.md/,
 	'Daily Trend News should pass model and prompt metadata into the generated news prompt'
+)
+
+assert.match(
+	trendWorkflow,
+	/Prompt source: \[ops\/codex\/prompts\/daily-trend-news\.md\]\(https:\/\/github\.com\/\$\{GITHUB_REPOSITORY\}\/blob\/main\/ops\/codex\/prompts\/daily-trend-news\.md\)/,
+	'Daily Trend News should pass a public GitHub URL for prompt source metadata'
 )
 
 assert.match(

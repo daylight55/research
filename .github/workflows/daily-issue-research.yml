@@ -148,8 +148,8 @@ jobs:
             echo "## Automation Metadata"
             echo
             echo "- Model: ${OPENAI_MODEL}"
-            echo "- Required skill: [technical-research-report](../../.codex/skills/technical-research-report/SKILL.md)"
-            echo "- Prompt source: [ops/codex/prompts/daily-issue-research.md](../../ops/codex/prompts/daily-issue-research.md)"
+            echo "- Required skill: [technical-research-report](https://github.com/${GITHUB_REPOSITORY}/blob/main/.codex/skills/technical-research-report/SKILL.md)"
+            echo "- Prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/${GITHUB_REPOSITORY}/blob/main/ops/codex/prompts/daily-issue-research.md)"
           } >> ops/codex/runtime/daily-research-prompt.md
 
       - name: Record Daily CI start time

@@ -126,7 +126,7 @@ jobs:
             echo "## Automation Metadata"
             echo
             echo "- Model: ${OPENAI_MODEL}"
-            echo "- Prompt source: [ops/codex/prompts/daily-trend-news.md](../../ops/codex/prompts/daily-trend-news.md)"
+            echo "- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/${GITHUB_REPOSITORY}/blob/main/ops/codex/prompts/daily-trend-news.md)"
           } >> ops/codex/runtime/daily-trend-news-prompt.md
 
       - name: Setup pnpm

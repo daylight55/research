@@ -50,15 +50,14 @@ policy, business, and practical decisions.
   `何が起きたか` / `なぜ重要か` / `今後の注視点` paragraphs. Do not leave a
   plain `出典メモ:` text line in News digests.
 - Do not create `report.md` or another second copy of the same article body.
-- If a public research trail is useful, put it in
-  `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx`; otherwise keep only the
-  article body in `index.mdx`. If `research-log.mdx` is created, include a
-  `## 利用環境` section with the automation model and the GitHub URL for the
-  prompt source, plus a
+- Create a public research trail in
+  `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx` alongside the
+  article body. Include a `## 利用環境` section with the automation model and
+  the GitHub URL for the prompt source, plus a
   `## 調査命令` section that summarizes the Run Context as the research
   instruction: research date, topic hint if present, category/count constraints,
   recency window, and the intended deliverable.
-- When `research-log.mdx` is created, confirm the public trail is reachable from
+- Confirm the public trail is reachable from
   `/news/daily-trends-<YYYY-MM-DD>/research/`.
 
 ## Context Budget Rules
@@ -214,8 +213,7 @@ Run focused verification before finishing:
   - `/news/index.html`
   - `/news/rss.xml`
   - `/news/daily-trends-<YYYY-MM-DD>/index.html`
-  - `/news/daily-trends-<YYYY-MM-DD>/research/index.html` when a public
-    `research-log.mdx` exists
+  - `/news/daily-trends-<YYYY-MM-DD>/research/index.html`
 
 ## Final Message
 

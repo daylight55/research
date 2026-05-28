@@ -34,10 +34,10 @@ drivers, risks, and practical implications.
   executive summary, major claims, recommendations, and limitations.
 - Do not create `report.md` or another second copy of the same article body.
   Duplicate report bodies drift and make the workflow slower.
-- If the investigation process is useful to readers, write it in
-  `articles/report/<topic>/ja/research-log.mdx` as a public research trail: questions checked,
-  key sources, rejected evidence, limits, and how those findings affected the
-  article. Do not create private `notes/`, `sources/`, or `figures/`
+- Write the investigation process in
+  `articles/report/<topic>/ja/research-log.mdx` as a public research trail:
+  questions checked, key sources, rejected evidence, limits, and how those
+  findings affected the article. Do not create private `notes/`, `sources/`, or `figures/`
   directories; summarize publishable material in `research-log.mdx`.
 - In `research-log.mdx`, include a short `## 利用環境` section with the automation
   model name from `Automation Metadata`, a link to the
@@ -113,9 +113,8 @@ drivers, risks, and practical implications.
   who need a high-level but decision-useful overview, not only a news recap.
   Summarize what happened, why it matters, what structural forces are behind it,
   what may change next, and what remains uncertain.
-- Keep public investigation notes in `articles/report/<topic>/ja/research-log.mdx` when a
-  separate research trail is useful.
-- If `research-log.mdx` is created or updated, include:
+- Keep public investigation notes in `articles/report/<topic>/ja/research-log.mdx`.
+- In `research-log.mdx`, include:
   - the model used by the automation
   - a GitHub URL link to `.codex/skills/research-report/SKILL.md`
   - a GitHub URL link to `ops/codex/prompts/daily-issue-research.md`

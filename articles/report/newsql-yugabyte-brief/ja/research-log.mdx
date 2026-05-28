@@ -8,6 +8,22 @@ title: '調査プロセス: NewSQLとYugabyteDBの最近の潮流'
 
 この調査ログは、本文の結論を繰り返すためではなく、どの問いを立て、どの資料を優先し、どこを不確実なまま残したかを読者が確認するための記録である。NewSQLとYugabyteDBの最近の潮流について、判断の前提、根拠の種類、更新が必要になる条件を分けて残した。
 
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- 調査対象: NewSQLとYugabyteDBの最近の潮流
+- 依頼内容: NewSQL/Distributed SQLの重要概念、2026年時点の潮流、YugabyteDBのサービス体系と面談質問を整理する実務ブリーフ。
+- 指定カテゴリ・slug: `data-infrastructure` / `newsql-yugabyte-brief`
+- 関連タグ: NewSQL, YugabyteDB, Distributed SQL, PostgreSQL
+- 主要な制約: 一次情報または信頼できる公開情報を優先し、主張、根拠、限界、実務含意を分けて書く。
+- 参照した記事ファイル: `articles/report/newsql-yugabyte-brief/ja/index.mdx`
+- 完了条件: 日本語本文を公開記事として表示し、調査ログで資料選定、採用しなかった情報、判断基準、更新条件を確認できるようにする。
+
 ## 調査目的
 
 2026-05-13に予定されているYugabyte担当者との面談に向けて、NewSQL/Distributed SQLの基礎概念、最近の潮流、YugabyteDBのサービス体系、公開情報から見える注力領域、面談質問を整理する。

@@ -8,6 +8,22 @@ title: '調査プロセス: 金利政策と物価・賃金・債券・債務・�
 
 この調査ログは、本文の結論を繰り返すためではなく、どの問いを立て、どの資料を優先し、どこを不確実なまま残したかを読者が確認するための記録である。金利政策と物価・賃金・債券・債務・為替介入の入門について、判断の前提、根拠の種類、更新が必要になる条件を分けて残した。
 
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- 調査対象: 金利政策と物価・賃金・債券・債務・為替介入の入門
+- 依頼内容: 金利政策を中心に、物価、賃金、債券、債務、為替、ドル売り・円買い介入がどうつながるかを初学者向けに図解するレポート。
+- 指定カテゴリ・slug: `macro-finance` / `interest-rate-policy-primer`
+- 関連タグ: 金利政策, 物価, 賃金, 債券, 為替
+- 主要な制約: 一次情報または信頼できる公開情報を優先し、主張、根拠、限界、実務含意を分けて書く。
+- 参照した記事ファイル: `articles/report/interest-rate-policy-primer/ja/index.mdx`
+- 完了条件: 日本語本文を公開記事として表示し、調査ログで資料選定、採用しなかった情報、判断基準、更新条件を確認できるようにする。
+
 ## 調査目的
 
 金利政策に関連する基礎用語である金利、債券、債務、ドル売り・円買い介入、賃金、物価を、初学者にも流れが追える形で説明する。単なる用語集ではなく、政策金利が家計・企業・政府・為替・物価へどう波及するかを図解する。

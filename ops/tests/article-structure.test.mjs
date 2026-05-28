@@ -162,6 +162,49 @@ test('article body does not import duplicate report bodies or unresolved placeho
 	}
 })
 
+test('published Japanese articles have public research logs', () => {
+	for (const file of gitFiles(['articles/*/*/ja/index.mdx'])) {
+		const logFile = path.join(path.dirname(file), 'research-log.mdx')
+
+		assert.ok(existsSync(logFile), `${file} should have a public research-log.mdx`)
+	}
+})
+
+test('research logs record public generation context and investigation input', () => {
+	for (const file of gitFiles(['articles/*/**/research-log.mdx'])) {
+		const { type } = articleKey(file.replace(/research-log\.mdx$/, 'index.mdx'))
+		const source = readFileSync(file, 'utf8')
+
+		assert.match(source, /^## 利用環境$/m, `${file} should include generation context`)
+		assert.match(source, /model: `gpt-5\.4-mini`/, `${file} should record the model`)
+		assert.match(source, /^## 調査命令$/m, `${file} should include the investigation input`)
+		assert.doesNotMatch(
+			source,
+			/research-queue\/issues|github\.com\/daylight55\/research-queue\/issues/,
+			`${file} should not expose private issue URLs`
+		)
+
+		if (type === 'news') {
+			assert.match(
+				source,
+				/https:\/\/github\.com\/daylight55\/research\/blob\/main\/ops\/codex\/prompts\/daily-trend-news\.md/,
+				`${file} should link to the public news prompt source`
+			)
+		} else {
+			assert.match(
+				source,
+				/https:\/\/github\.com\/daylight55\/research\/blob\/main\/\.codex\/skills\/research-report\/SKILL\.md/,
+				`${file} should link to the public report skill source`
+			)
+			assert.match(
+				source,
+				/https:\/\/github\.com\/daylight55\/research\/blob\/main\/ops\/codex\/prompts\/daily-issue-research\.md/,
+				`${file} should link to the public report prompt source`
+			)
+		}
+	}
+})
+
 test('articles with research logs have sibling indexes and public route support', () => {
 	const logs = gitFiles([
 		'articles/report/*/ja/research-log.mdx',

@@ -17,6 +17,10 @@ const cloudflarePreviewWorkflow = readFileSync(
 	'.github/workflows/cloudflare-pages-preview.yml',
 	'utf8',
 )
+const translateBlogWorkflow = readFileSync(
+	'.github/workflows/translate-blog-en.yml',
+	'utf8',
+)
 
 assert.match(
 	workflow,
@@ -115,6 +119,12 @@ assert.match(
 )
 
 assert.match(
+	translateBlogWorkflow,
+	/allow-bot-users: daylight55-research-queue\[bot\]/,
+	'Translate Blog English should allow the research queue GitHub App bot that dispatches the workflow',
+)
+
+assert.match(
 	trendWorkflow,
 	/cache_key="daily-trend-news-\$\{report_date\}"[\s\S]*?cache_key="\$\{cache_key\}-\$\{topic_hint_hash\}"/,
 	'trend news workflow should derive a date cache key and include topic hint when present',
@@ -134,7 +144,7 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
-	/import NewsSourceCard from '\.\.\/\.\.\/\.\.\/src\/components\/mdx\/NewsSourceCard\.astro'/,
+	/import NewsSourceCard from '\.\.\/\.\.\/\.\.\/\.\.\/src\/components\/mdx\/NewsSourceCard\.astro'/,
 	'trend news workflow should require generated articles to import NewsSourceCard',
 )
 

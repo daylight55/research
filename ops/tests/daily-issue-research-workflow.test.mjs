@@ -134,7 +134,7 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
-	/import NewsSourceCard from '\.\.\/\.\.\/\.\.\/src\/components\/mdx\/NewsSourceCard\.astro'/,
+	/import NewsSourceCard from '\.\.\/\.\.\/\.\.\/\.\.\/src\/components\/mdx\/NewsSourceCard\.astro'/,
 	'trend news workflow should require generated articles to import NewsSourceCard',
 )
 

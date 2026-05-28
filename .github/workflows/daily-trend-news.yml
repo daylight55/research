@@ -270,7 +270,7 @@ jobs:
             fi
           done
 
-          if ! grep -qF "import NewsSourceCard from '../../../src/components/mdx/NewsSourceCard.astro'" "${ARTICLE_PATH}"; then
+          if ! grep -qF "import NewsSourceCard from '../../../../src/components/mdx/NewsSourceCard.astro'" "${ARTICLE_PATH}"; then
             echo "::error::Generated article must import NewsSourceCard for embedded source memo cards."
             exit 1
           fi

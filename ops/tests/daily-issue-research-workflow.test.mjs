@@ -8,6 +8,10 @@ const cloudflarePreviewWorkflow = readFileSync(
 	'.github/workflows/cloudflare-pages-preview.yml',
 	'utf8'
 )
+const cloudflareDeployWorkflow = readFileSync(
+	'.github/workflows/cloudflare-pages-deploy.yml',
+	'utf8'
+)
 const translateBlogWorkflow = readFileSync('.github/workflows/translate-blog-en.yml', 'utf8')
 const testWorkflow = readFileSync('.github/workflows/test.yml', 'utf8')
 
@@ -339,4 +343,10 @@ assert.match(
 	cloudflarePreviewWorkflow,
 	/concurrency:[\s\S]*?group: cloudflare-pages-preview-[\s\S]*?cancel-in-progress: false/,
 	'Cloudflare preview should not cancel the pull_request check when generated PR workflows dispatch a second preview for the same branch'
+)
+
+assert.match(
+	cloudflareDeployWorkflow,
+	/command: pages deploy dist --project-name=daylight-research --branch=main --commit-message="Cloudflare Pages production deploy \$\{\{ github\.sha \}\}" --commit-dirty=true/,
+	'Cloudflare production deploy should pass an ASCII commit message to Wrangler'
 )

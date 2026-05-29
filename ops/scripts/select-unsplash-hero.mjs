@@ -29,6 +29,18 @@ const IMAGE_DIR = path.join('src', 'assets', 'images', 'hero')
 const PLACEHOLDER_RE = /placeholder|banner\.jpg|book\.jpg|placeholder-social/i
 const BLOG_GLOB = 'articles/*/*/*/index.mdx'
 const NEWS_GENERIC_QUERY_RE = /\b(news|daily|trend|trends|hot|collage|headline|headlines)\b/gi
+const SHARED_HERO_FIELDS = [
+	'heroImage',
+	'heroImageCredit',
+	'heroImageCreditUrl',
+	'heroImageSourceId'
+]
+const SHARED_HERO_AFTER_KEYS = {
+	heroImage: 'pubDate',
+	heroImageCredit: 'heroImageAlt',
+	heroImageCreditUrl: 'heroImageCredit',
+	heroImageSourceId: 'heroImageCreditUrl'
+}
 const GENERIC_FOCUS_TERMS = new Set([
 	'Reuters',
 	'Associated Press',
@@ -102,6 +114,56 @@ function upsertScalar(frontmatter, key, value, afterKey) {
 	}
 
 	return `${frontmatter}\n${line}`
+}
+
+function sharedHeroFields(frontmatter) {
+	return Object.fromEntries(
+		SHARED_HERO_FIELDS.map((field) => [field, readScalar(frontmatter, field)]).filter(
+			([, value]) => value
+		)
+	)
+}
+
+function articleDirFromFile(file) {
+	return path.dirname(path.dirname(file))
+}
+
+function localizedArticleFiles(file, candidates = []) {
+	const articleDir = articleDirFromFile(file)
+	const files = new Set(
+		candidates.filter((candidate) => articleDirFromFile(candidate) === articleDir)
+	)
+
+	for (const locale of ['ja', 'en']) {
+		const localeFile = path.join(articleDir, locale, 'index.mdx')
+		if (existsSync(localeFile)) files.add(localeFile)
+	}
+
+	return [...files].sort()
+}
+
+export async function syncLocalizedHeroFields(
+	sourceFile,
+	files = localizedArticleFiles(sourceFile)
+) {
+	const source = await readFile(sourceFile, 'utf8')
+	const { raw } = frontmatterOf(source, sourceFile)
+	const fields = sharedHeroFields(raw)
+
+	for (const file of files) {
+		if (file === sourceFile || !existsSync(file)) continue
+
+		const targetSource = await readFile(file, 'utf8')
+		const { raw: targetRaw, full: targetFull } = frontmatterOf(targetSource, file)
+		let nextFrontmatter = targetRaw
+
+		for (const [field, value] of Object.entries(fields)) {
+			nextFrontmatter = upsertScalar(nextFrontmatter, field, value, SHARED_HERO_AFTER_KEYS[field])
+		}
+
+		await writeFile(file, targetSource.replace(targetFull, `---\n${nextFrontmatter}\n---`))
+		console.log(`Synced Unsplash hero metadata from ${sourceFile} to ${file}`)
+	}
 }
 
 function imageUrl(rawUrl) {
@@ -397,20 +459,35 @@ async function selectHero(file) {
 
 	await writeFile(file, source.replace(full, `---\n${nextFrontmatter}\n---`))
 	console.log(`Selected Unsplash hero for ${file}: ${selected.query}`)
-	return true
+	return { file }
 }
 
 async function main() {
 	const files = changedBlogEntries()
 	let changed = false
+	const groups = new Map()
 
 	for (const file of files) {
-		try {
-			changed = (await selectHero(file)) || changed
-		} catch (error) {
-			console.error(`Failed to select Unsplash hero for ${file}: ${error.message}`)
-			if (!process.argv.includes('--all')) {
-				throw error
+		const articleDir = articleDirFromFile(file)
+		const group = groups.get(articleDir) ?? []
+		group.push(file)
+		groups.set(articleDir, group)
+	}
+
+	for (const group of groups.values()) {
+		for (const file of group) {
+			try {
+				const result = await selectHero(file)
+				if (!result) continue
+
+				await syncLocalizedHeroFields(result.file, localizedArticleFiles(result.file, group))
+				changed = true
+				break
+			} catch (error) {
+				console.error(`Failed to select Unsplash hero for ${file}: ${error.message}`)
+				if (!process.argv.includes('--all')) {
+					throw error
+				}
 			}
 		}
 	}

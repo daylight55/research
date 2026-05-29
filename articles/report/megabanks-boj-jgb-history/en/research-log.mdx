@@ -1,0 +1,53 @@
+---
+title: 'Japan megabank consolidation and BOJ JGB holdings: research log'
+description: 'Research process for separating Japan’s banking crisis, megabank consolidation, public capital injections, BOJ JGB purchases, and current BOJ holdings.'
+pubDate: '2026-05-29'
+category: 'macro-finance'
+tags: ['megabanks', 'Bank of Japan', 'JGBs', 'financial crisis', 'fiscal policy']
+generation:
+  model: 'gpt-5.4-mini'
+draft: false
+---
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- Research target: Japan's megabank consolidation, public capital injections, BOJ JGB purchases, and the fiscal interpretation of BOJ-held JGBs.
+- Requested output: Explain the banking-crisis history and megabank consolidation, separate bank rescue measures from BOJ JGB purchases, and assess what current BOJ JGB holdings imply for Japan's fiscal and economic-risk debate.
+- Category and slug: `macro-finance` / `megabanks-boj-jgb-history`
+- Related tags: megabanks, Bank of Japan, JGBs, financial crisis, fiscal policy
+- Main constraints: Do not expose private request context in the article; prioritize primary sources and separate institutional facts, chronology, limits, and implications.
+- Article file reviewed: `articles/report/megabanks-boj-jgb-history/en/index.mdx`
+- Completion condition: Keep Japanese, English, research-log, and mixed-reading alignment synchronized and verify publication through build and CI.
+
+## Research Purpose
+
+This log documents the verification process behind the report on Japan's megabank consolidation in the late 1990s and early 2000s. The goal was to separate bank rescue measures, public capital, and BOJ JGB purchases, then assess how current BOJ JGB holdings should affect fiscal-risk analysis.
+
+## Questions Checked
+
+| Question                                                     | Finding                                                                                                                                                                                                             |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| What caused megabank consolidation?                          | Post-bubble non-performing loans, the 1997-1998 financial crisis, redesigned inspections and supervision, accounting pressure, and public capital injections were key drivers.                                      |
+| Was the bank rescue funded by BOJ JGB purchases?             | The main framework was fiscal action through the government and Deposit Insurance Corporation. BOJ JGB purchases expanded in the same era as monetary easing, but they were not the direct bank-rescue transaction. |
+| How many JGBs does the BOJ currently hold?                   | 531.8 trillion yen as of the BOJ accounts for May 20, 2026.                                                                                                                                                         |
+| Does BOJ ownership make Japan's fiscal-risk debate baseless? | No. BOJ-held JGBs differ from privately held JGBs, but constraints around interest rates, interest on reserves, market functioning, inflation, exchange rates, and fiscal space remain.                             |
+
+## Main Primary Sources
+
+- Financial Services Agency: 1998 financial reconstruction legislation, major-bank inspections, public capital injections, and creation of the FSA.
+- Bank of Japan: March 2001 quantitative easing, long-term JGB purchases, the May 20, 2026 BOJ accounts, and BOJ explanations of outright JGB purchases.
+- Ministry of Finance: Article 5 of the Fiscal Act and outstanding government bonds and borrowings as of end-March 2026.
+- Mizuho, SMBC, and MUFG: official histories of the three megabank groups.
+- IMF: 2026 Article IV mission statement on fiscal policy, BOJ balance-sheet reduction, and JGB market functioning.
+
+## Judgment Notes
+
+The report treats bank-crisis policy and BOJ monetary easing as related but distinct. BOJ JGB purchases are money-market operations that supply funds to financial markets; the BOJ states they are not conducted to finance fiscal deficits. Article 5 of the Fiscal Act is central to that distinction.
+
+For current BOJ JGB holdings, the analysis acknowledges that interest flows can look different inside the consolidated public sector, while also considering BOJ liabilities, especially current account balances and interest paid on them. This avoids both extremes: "the debt completely disappears" and "BOJ-held debt carries exactly the same risk as privately held debt."

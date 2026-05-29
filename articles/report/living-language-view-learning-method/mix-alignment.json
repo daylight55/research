@@ -1,0 +1,278 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "living-language-view-learning-method-1",
+      "pairs": [
+        {
+          "ja": "第二言語学習の難しさは、語彙や文法の量が足りないことだけではない。",
+          "en": "The difficulty of second-language learning is not only a lack of vocabulary or grammar."
+        },
+        {
+          "ja": "多くの場合、学習者は「日本語でどう言うか」を先に考え、その後で英語に置き換えるため、言葉が生活の場面の中で直接立ち上がらない。",
+          "en": "In many cases, learners first think in their first language and then translate, so language does not emerge directly inside lived situations."
+        },
+        {
+          "ja": "生きた言語観を作る学習とは、この順序を逆にし、状況・意図・相手・成果 から言語を組み立てる習慣を育てることだ。",
+          "en": "A living-language view treats learning as a habit of building language from situation, intention, interlocutor, and outcome rather than from word-for-word substitution."
+        },
+        {
+          "ja": "実務的な結論はシンプルである。",
+          "en": "The practical conclusion is straightforward."
+        },
+        {
+          "ja": "コミュニカティブ・アプローチは、言語を「使う理由」を作る。",
+          "en": "The communicative approach creates a reason to use language."
+        },
+        {
+          "ja": "タスク中心学習は、その理由を「終わりのある活動」に落とす。",
+          "en": "Task-based language teaching turns that reason into a bounded activity."
+        },
+        {
+          "ja": "noticing は、気づかなかった形式差を見える化する。",
+          "en": "Noticing makes form differences visible."
+        },
+        {
+          "ja": "output hypothesis は、自分で言う・書くことで穴を発見させる。",
+          "en": "The output hypothesis makes gaps visible through speaking and writing."
+        },
+        {
+          "ja": "生活文脈からの獲得は、学習を教室の外に接続する。",
+          "en": "Life-context learning connects study to the outside classroom."
+        },
+        {
+          "ja": "AI 添削や会話 AI は補助になるが、誤答、標準化、依存の危険も増やす。",
+          "en": "AI feedback and conversational AI can help, but they also raise risks of hallucination, standardization, and dependence."
+        }
+      ]
+    },
+    {
+      "id": "living-language-view-learning-method-2",
+      "pairs": [
+        {
+          "ja": "コミュニカティブ・アプローチは、文法の説明を増やすよりも、意味のあるやり取りを増やす発想として発展してきた。",
+          "en": "The communicative approach developed as a response to methods that treated grammar explanation as the center of learning."
+        },
+        {
+          "ja": "ただし、単に「話す活動」を増やすだけでは不十分で、学習者が何かを達成し、相手に働きかけ、結果を持ち帰る構造が必要になる。",
+          "en": "But simply adding speaking activities is not enough."
+        },
+        {
+          "ja": "そこで task-based language teaching が、意味中心・目的志向・成果物あり という条件を明確にした。",
+          "en": "Learners need a structure in which they accomplish something, influence another person, and carry a result forward."
+        },
+        {
+          "ja": "この流れは、教室内学習だけで完結しない。",
+          "en": "Task-based language teaching made those requirements explicit by emphasizing meaning-focused, goal-oriented activity with an outcome beyond language practice itself."
+        },
+        {
+          "ja": "近年の第二言語研究では、教室外の informal learning や IDLE が、語彙、表現、流暢さの差を説明する重要な変数として扱われている。",
+          "en": "This line of work does not stop at classroom study."
+        },
+        {
+          "ja": "しかも、単に触れる量ではなく、なぜその活動をするのか という目的が成果に関係する。",
+          "en": "Recent second-language research treats informal learning and informal digital learning of English as important variables for vocabulary, expression, and fluency."
+        },
+        {
+          "ja": "背景史として重要なのは、入力を増やせば自然に身につく という単純化が、すでに十分ではないと分かっている点だ。",
+          "en": "In that literature, purpose matters: the reason the learner engages in the activity affects the outcome."
+        },
+        {
+          "ja": "現在の主流は、入力に加えて、気づき、出力、修正、再利用を組み込んだ設計である。",
+          "en": "The key historical point is that more input automatically leads to acquisition is too simple."
+        }
+      ]
+    },
+    {
+      "id": "living-language-view-learning-method-3",
+      "pairs": [
+        {
+          "ja": "Noticing は、学習者が入力の中の形式差や意味差に注意を向けることを指す。",
+          "en": "Noticing is the learner's attention to form and form differences inside input."
+        },
+        {
+          "ja": "第二言語では、見えていない差は習得されにくい。",
+          "en": "In second-language learning, differences that are not noticed are hard to acquire."
+        },
+        {
+          "ja": "逆に言えば、少しでも「なぜここはこうなるのか」と立ち止まれた瞬間に、学習は進みやすくなる。",
+          "en": "The practical implication is simple: when a learner pauses at Why does this work here?, learning becomes more likely."
+        },
+        {
+          "ja": "Output hypothesis は、話す・書く・要約する・言い換えるといった出力が、分かっているつもり と 実際に使える の差を可視化すると考える。",
+          "en": "The output hypothesis argues that speaking, writing, summarizing, and paraphrasing reveal the distance between I think I understand this and I can actually use it."
+        },
+        {
+          "ja": "自分で文を作ると、語順、語法、足りない接続、曖昧な表現が露出する。",
+          "en": "Once a learner has to build a sentence, word order, collocations, missing links, and vague phrasing become visible."
+        },
+        {
+          "ja": "そこで初めて、次に何を学ぶべきかが分かる。",
+          "en": "That is when the learner can see what needs to be learned next."
+        },
+        {
+          "ja": "出力だけでは、誤りが固定化することがある。",
+          "en": "Output alone can stabilize errors."
+        },
+        {
+          "ja": "そこで意味交渉とフィードバックが必要になる。",
+          "en": "That is why interaction and feedback matter."
+        }
+      ]
+    },
+    {
+      "id": "living-language-view-learning-method-4",
+      "pairs": [
+        {
+          "ja": "良いフィードバックは、すべてを赤で直すことではない。",
+          "en": "Good feedback does not correct everything in red."
+        },
+        {
+          "ja": "何が不自然か どこまで直すべきか 別の自然な言い方は何か を示し、次の出力に接続することだ。",
+          "en": "It shows what sounds odd, how far the repair should go, and what a more natural alternative would be so that the next output is easier."
+        },
+        {
+          "ja": "生活文脈からの獲得とは、教科書の単元を追うことではなく、自分が本当に言いたいこと から語彙と構文を取り出すことだ。",
+          "en": "Life-context acquisition means collecting vocabulary and constructions from things the learner actually wants to say, rather than following textbook units in isolation."
+        },
+        {
+          "ja": "会議、旅行、趣味、家族、仕事、学習の悩みなど、自分の生活に紐づくテーマは、反復しやすく、感情も乗るので、記憶の手がかりが増える。",
+          "en": "Meetings, trips, hobbies, family, work, learning problems, and other recurring situations create better memory cues because they are emotionally and socially meaningful."
+        },
+        {
+          "ja": "しかも、同じ表現が何度も必要になるため、1回きりの暗記より定着しやすい。",
+          "en": "They also recur, which gives the learner multiple chances to reuse the same pattern."
+        },
+        {
+          "ja": "AI は、第二言語学習を加速できる。",
+          "en": "AI can accelerate second-language learning."
+        },
+        {
+          "ja": "たとえば、会話相手として何度も付き合ってくれること、同じ文を別の言い方に変えること、文法の修正候補をすぐ出せること、学習テーマに合わせて練習文を作れることは明確な利点だ。",
+          "en": "It can serve as a conversation partner that never gets tired, rewrite a sentence in multiple ways, suggest grammar repairs instantly, and generate practice material aligned with the learner's topic."
+        },
+        {
+          "ja": "ただし、危険も大きい。",
+          "en": "The risks are also real."
+        }
+      ]
+    },
+    {
+      "id": "living-language-view-learning-method-5",
+      "pairs": [
+        {
+          "ja": "第一に、AI はもっともらしい誤答や根拠のない引用を返しうる。",
+          "en": "First, AI can produce plausible but wrong answers or unsupported citations."
+        },
+        {
+          "ja": "第二に、AI が返す文は、個人の文脈を平らにして、無難で均質な英語に寄りがちだ。",
+          "en": "Second, the output tends to flatten context and drift toward safe, standardized English."
+        },
+        {
+          "ja": "第三に、入力した内容が外部サービスに残る場合、プライバシーや機密の問題が出る。",
+          "en": "Third, if the learner uploads sensitive material to an external service, privacy and confidentiality become issues."
+        },
+        {
+          "ja": "第四に、AI だけで完結すると、学習者自身の出力と修正の筋肉が弱る。",
+          "en": "Fourth, if AI replaces the learner's own production and repair process, the learner's language muscles weaken."
+        },
+        {
+          "ja": "したがって、AI の使い方は 答えをもらう ではなく 仮説を出してもらう に寄せるべきだ。",
+          "en": "The safest use of AI is to ask it for hypotheses, not final answers."
+        },
+        {
+          "ja": "つまり、AI は最終判定者ではない。",
+          "en": "In other words, AI should widen the set of candidates, paraphrases, counterexamples, and check points."
+        },
+        {
+          "ja": "候補、言い換え、反例、確認事項を増やす装置として使う方が安全である。",
+          "en": "It should not be the final judge."
+        },
+        {
+          "ja": "現場で回しやすい週次プロトコルは、次の5ステップで十分である。",
+          "en": "A practical weekly protocol can be kept small."
+        }
+      ]
+    },
+    {
+      "id": "living-language-view-learning-method-6",
+      "pairs": [
+        {
+          "ja": "月曜: 生活の中で言いたかったことを 3 つ集める。",
+          "en": "Monday: Collect three things you wanted to say in daily life."
+        },
+        {
+          "ja": "火曜: そのうち 1 つをタスク化し、短い英文か口頭文にする。",
+          "en": "Tuesday: Turn one of them into a short spoken or written task."
+        },
+        {
+          "ja": "水曜: 1 回だけ AI または人間に直してもらい、違和感を 1 行メモする。",
+          "en": "Wednesday: Ask AI or a human to repair it once, then note one awkward point."
+        },
+        {
+          "ja": "木曜: 同じ内容を、修正版を見ずにもう一度言う・書く。",
+          "en": "Thursday: Say or write the same content again without looking at the repair."
+        },
+        {
+          "ja": "金曜: 類似場面に転用できる表現を 3 つ抜き出す。",
+          "en": "Friday: Extract three phrases you can reuse in similar situations."
+        },
+        {
+          "ja": "このプロトコルの狙いは、学習を大きくしないことにある。",
+          "en": "The point of this protocol is not to make study bigger."
+        },
+        {
+          "ja": "毎日長く勉強するより、生活で拾う → 1つ出す → 1つ直す → もう1回使う を小さく回した方が、言語が生きたまま残る。",
+          "en": "It is to keep language alive by running a small loop of find it in life -> say it once -> repair it once -> use it again."
+        }
+      ]
+    },
+    {
+      "id": "living-language-view-learning-method-7",
+      "pairs": [
+        {
+          "ja": "第一に、入力が少なすぎると、気づきも出力も空回りする。",
+          "en": "If input is too thin, both noticing and output stall."
+        },
+        {
+          "ja": "第二に、出力が多すぎるだけでは、誤りが固まる。",
+          "en": "If output is unlimited, errors can fossilize."
+        },
+        {
+          "ja": "第三に、AI で直しすぎると、自分の言葉で言う 感覚が弱くなる。",
+          "en": "If AI correction is overused, the feeling of speaking in one's own words weakens."
+        },
+        {
+          "ja": "第四に、学習者の目的が違えば、最適な比率も違う。",
+          "en": "And if learner goals differ, the ideal balance also differs."
+        },
+        {
+          "ja": "仕事で必要な表現と、旅行で必要な表現は同じではない。",
+          "en": "Work-related English and travel English do not need the same ratio of input and output."
+        },
+        {
+          "ja": "最も実務的な方針は、第二言語学習を 生活文脈から始めるタスク中心の往復運動 として設計することだ。",
+          "en": "The most practical policy is to design second-language learning as a task-based round trip that starts from lived context."
+        },
+        {
+          "ja": "教室内の説明、教室外の活動、AI の補助を対立させず、役割分担させる。",
+          "en": "Classroom explanation, out-of-class activity, and AI support should not compete with one another."
+        },
+        {
+          "ja": "教室は原理を整理する場所、生活は表現を増やす場所、AI は候補を増やす場所、最終判断は人間が担う場所である。",
+          "en": "The classroom organizes principles, life expands expressions, AI widens candidates, and humans make the final judgment."
+        },
+        {
+          "ja": "要するに、第二言語学習の目標は、文法問題を解けるようになることではなく、自分の経験・感情・判断を、第二言語でそのまま運べる ようになることだ。",
+          "en": "The goal of second-language learning is not to solve grammar problems."
+        },
+        {
+          "ja": "そのためには、暗記よりも、使う、直す、もう一度使う、という循環を習慣化した方がよい。",
+          "en": "It is to be able to carry your own experiences, emotions, and judgments in the second language."
+        }
+      ]
+    }
+  ]
+}

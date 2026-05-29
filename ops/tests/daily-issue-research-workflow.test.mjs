@@ -311,6 +311,18 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
+	/for localized_article_path in "articles\/news\/\$\{SLUG\}"\/\{ja,en\}\/index\.mdx[\s\S]*?section_open_count="\$\(grep -cF "<NewsDigestSection tone="[\s\S]*?section_close_count="\$\(grep -cF "<\/NewsDigestSection>"[\s\S]*?exactly three balanced NewsDigestSection blocks/,
+	'Daily Trend News should reject localized MDX with unbalanced NewsDigestSection tags before building'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/exactly three balanced[\s\S]*?NewsDigestSection[\s\S]*?one politics[\s\S]*?one economy[\s\S]*?one technology/,
+	'Daily Trend News prompt should require balanced localized NewsDigestSection blocks'
+)
+
+assert.match(
+	trendWorkflow,
 	/source_card_count="\$\(grep -cF "<NewsSourceCard" "\$\{ARTICLE_PATH\}" \|\| true\)"[\s\S]*?source_card_count < 15/,
 	'trend news workflow should require at least one NewsSourceCard source memo card per topic'
 )

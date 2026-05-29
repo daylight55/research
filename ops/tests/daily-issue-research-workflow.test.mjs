@@ -118,6 +118,12 @@ assert.match(
 )
 
 assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/title[\s\S]*?80 characters or fewer/,
+	'Daily Trend News prompt should keep generated titles within the Astro schema limit'
+)
+
+assert.match(
 	workflow,
 	/- name: Restore Node for site build[\s\S]*?uses: actions\/setup-node@v4[\s\S]*?node-version-file: \.nvmrc/,
 	'workflow should restore the repository Node.js version after Codex before running Node-based checks and builds'
@@ -271,6 +277,12 @@ assert.match(
 	trendWorkflow,
 	/News article title and H1 must match/,
 	'trend news workflow should require News title and H1 to match'
+)
+
+assert.match(
+	trendWorkflow,
+	/for localized_article_path in "articles\/news\/\$\{SLUG\}"\/\{ja,en\}\/index\.mdx[\s\S]*?News article titles must be 80 characters or fewer/,
+	'Daily Trend News should reject localized titles that exceed the Astro schema limit before building'
 )
 
 assert.match(

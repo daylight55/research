@@ -216,6 +216,7 @@ jobs:
         shell: bash
         env:
           ARTICLE_PATH: ${{ steps.run_context.outputs.article_path }}
+          SLUG: ${{ steps.run_context.outputs.slug }}
         run: |
           set -euo pipefail
 
@@ -258,6 +259,25 @@ jobs:
             echo "::error::News article title must be a date followed by a substantive summary phrase."
             exit 1
           fi
+          for localized_article_path in "articles/news/${SLUG}"/{ja,en}/index.mdx; do
+            if [[ ! -f "${localized_article_path}" ]]; then
+              continue
+            fi
+            localized_title="$(
+              awk '
+                /^title:/ {
+                  sub(/^title:[[:space:]]*/, "")
+                  gsub(/^['\''"]|['\''"]$/, "")
+                  print
+                  exit
+                }
+              ' "${localized_article_path}"
+            )"
+            if (( ${#localized_title} > 80 )); then
+              echo "::error file=${localized_article_path}::News article titles must be 80 characters or fewer."
+              exit 1
+            fi
+          done
           if [[ "${article_title}" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]]+ホットトレンド[:：][[:space:]]*政治・経済・技術$ ]]; then
             echo "::error::News article title must summarize the day's overall situation instead of listing generic categories."
             exit 1

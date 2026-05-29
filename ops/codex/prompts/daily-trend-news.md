@@ -36,7 +36,8 @@ policy, business, and practical decisions.
 - Set the article `title` and H1 to `YYYY-MM-DD <SUMMARY_PHRASE>`, where the
   phrase after the date summarizes all fifteen topics or describes the most
   important situation of the day. Do not use generic category-list titles such
-  as `YYYY-MM-DD ホットトレンド: 政治・経済・技術`.
+  as `YYYY-MM-DD ホットトレンド: 政治・経済・技術`. Keep each localized
+  `title` and H1 at 80 characters or fewer, including the date.
 - Treat the News catch image as high priority. Set `heroImageQuery` to
   person-, organization-, company-, location-, or event-specific English search
   terms from the selected topics. Do not use generic phrases such as
@@ -203,7 +204,8 @@ Run focused verification before finishing:
 
 - Check generated Markdown / MDX for unresolved placeholders.
 - Confirm `title` and the H1 are identical and use a date plus a substantive
-  summary phrase, not a generic category-list title.
+  summary phrase, not a generic category-list title. Confirm every localized
+  `title` is 80 characters or fewer.
 - Confirm the article imports `NewsSourceCard` and contains at least fifteen
   `<NewsSourceCard ... />` blocks.
 - Confirm every `NewsSourceCard` has `imageUrl` and `imageAlt`.

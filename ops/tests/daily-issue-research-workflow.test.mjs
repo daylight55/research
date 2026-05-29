@@ -153,6 +153,18 @@ assert.match(
 	'Daily Issue Research should merge created research PRs without requiring an opt-in label'
 )
 
+assert.match(
+	workflow,
+	/- name: Create research pull request[\s\S]*?head_ref_oid="\$\(git rev-parse HEAD\)"[\s\S]*?echo "head_ref_oid=\$\{head_ref_oid\}"/,
+	'Daily Issue Research should expose the generated PR head SHA for preview checkout'
+)
+
+assert.match(
+	workflow,
+	/- name: Dispatch Cloudflare preview deploy[\s\S]*?PREVIEW_CHECKOUT_REF: \$\{\{ steps\.create_pr\.outputs\.head_ref_oid \}\}[\s\S]*?-f checkout_ref="\$\{PREVIEW_CHECKOUT_REF\}"/,
+	'Daily Issue Research should dispatch previews with an immutable checkout SHA instead of a branch that can be deleted after merge'
+)
+
 assert.doesNotMatch(
 	workflow,
 	/auto_merge_allowed|daily-research-auto-merge|AUTO_MERGE_LABEL/,
@@ -175,6 +187,18 @@ assert.match(
 	trendWorkflow,
 	/- name: Create trend news pull request[\s\S]*?echo "base_ref_oid=\$\{base_ref_oid\}"/,
 	'Daily Trend News should record the base ref used before generating the merge PR'
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Create trend news pull request[\s\S]*?head_ref_oid="\$\(git rev-parse HEAD\)"[\s\S]*?echo "head_ref_oid=\$\{head_ref_oid\}"/,
+	'Daily Trend News should expose the generated PR head SHA for preview checkout'
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Dispatch Cloudflare preview deploy[\s\S]*?PREVIEW_CHECKOUT_REF: \$\{\{ steps\.create_pr\.outputs\.head_ref_oid \}\}[\s\S]*?-f checkout_ref="\$\{PREVIEW_CHECKOUT_REF\}"/,
+	'Daily Trend News should dispatch previews with an immutable checkout SHA instead of a branch that can be deleted after merge'
 )
 
 assert.match(

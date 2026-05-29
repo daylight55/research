@@ -478,6 +478,7 @@ jobs:
           git switch -c "${branch}"
           git add -A
           git commit -m "Add daily trend news for ${REPORT_DATE}"
+          head_ref_oid="$(git rev-parse HEAD)"
           gh api \
             --method POST \
             "repos/${GITHUB_REPOSITORY}/git/refs" \
@@ -543,6 +544,7 @@ jobs:
             echo "pr_number=${pr_number}"
             echo "branch=${branch}"
             echo "base_ref_oid=${base_ref_oid}"
+            echo "head_ref_oid=${head_ref_oid}"
           } >> "${GITHUB_OUTPUT}"
 
       - name: Dispatch Cloudflare preview deploy
@@ -552,6 +554,7 @@ jobs:
           GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
           PREVIEW_BRANCH: ${{ steps.create_pr.outputs.branch }}
+          PREVIEW_CHECKOUT_REF: ${{ steps.create_pr.outputs.head_ref_oid }}
         run: |
           set -euo pipefail
 
@@ -559,7 +562,7 @@ jobs:
             --ref main \
             -f pr_number="${PR_NUMBER}" \
             -f preview_branch="${PREVIEW_BRANCH}" \
-            -f checkout_ref="${PREVIEW_BRANCH}"
+            -f checkout_ref="${PREVIEW_CHECKOUT_REF}"
 
       - name: Comment OpenAI usage on PR
         if: steps.create_pr.outputs.pr_url != ''

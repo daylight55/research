@@ -45,7 +45,10 @@ policy, business, and practical decisions.
   `data streams`.
 - Keep the `NewsDigestSection` and `NewsSourceCard` imports from the News
   template.
-- Wrap the politics, economy, and technology blocks with `NewsDigestSection`.
+- Wrap the politics, economy, and technology blocks with exactly three balanced
+  `NewsDigestSection` blocks: one `politics`, one `economy`, and one
+  `technology`. Do not add a closing `</NewsDigestSection>` without the matching
+  opening tag.
 - For each individual topic, render source attribution with a `NewsSourceCard`
   immediately after the `### <TOPIC_TITLE>` heading and before the
   `何が起きたか` / `なぜ重要か` / `今後の注視点` paragraphs. Do not leave a
@@ -209,6 +212,8 @@ Run focused verification before finishing:
 - Confirm the article imports `NewsSourceCard` and contains at least fifteen
   `<NewsSourceCard ... />` blocks.
 - Confirm every `NewsSourceCard` has `imageUrl` and `imageAlt`.
+- Confirm every localized MDX article has exactly three balanced
+  `NewsDigestSection` blocks: one politics, one economy, and one technology.
 - Confirm `NewsSourceCard` `imageUrl` values are unique within the article after
   ignoring query strings.
 - Confirm `heroImageQuery` is specific to people, organizations, companies,

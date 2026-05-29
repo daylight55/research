@@ -277,6 +277,26 @@ jobs:
               echo "::error file=${localized_article_path}::News article titles must be 80 characters or fewer."
               exit 1
             fi
+
+            if ! grep -qF "import NewsDigestSection from '../../../../src/components/mdx/NewsDigestSection.astro'" "${localized_article_path}"; then
+              echo "::error file=${localized_article_path}::Generated localized news article must import NewsDigestSection."
+              exit 1
+            fi
+
+            section_open_count="$(grep -cF "<NewsDigestSection tone=" "${localized_article_path}" || true)"
+            section_close_count="$(grep -cF "</NewsDigestSection>" "${localized_article_path}" || true)"
+            if (( section_open_count != 3 || section_close_count != 3 )); then
+              echo "::error file=${localized_article_path}::Generated localized news article must contain exactly three balanced NewsDigestSection blocks. Found ${section_open_count} opening tags and ${section_close_count} closing tags."
+              exit 1
+            fi
+
+            for localized_tone in politics economy technology; do
+              localized_tone_count="$(grep -cF "<NewsDigestSection tone='${localized_tone}'>" "${localized_article_path}" || true)"
+              if (( localized_tone_count != 1 )); then
+                echo "::error file=${localized_article_path}::Generated localized news article must contain exactly one NewsDigestSection wrapper for ${localized_tone}."
+                exit 1
+              fi
+            done
           done
           if [[ "${article_title}" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]]+ホットトレンド[:：][[:space:]]*政治・経済・技術$ ]]; then
             echo "::error::News article title must summarize the day's overall situation instead of listing generic categories."

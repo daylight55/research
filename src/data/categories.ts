@@ -1,6 +1,7 @@
 // Research report categories
 export const CATEGORIES = [
 	'ai-systems',
+	'ai-market',
 	'enterprise-ai-platforms',
 	'developer-tools',
 	'knowledge-systems',

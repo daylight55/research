@@ -1,0 +1,317 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "Generative AI is no longer just a GPU story.",
+          "ja": "生成AIの投資テーマは、GPUやHBMだけを見ていれば十分ではない。"
+        },
+        {
+          "en": "Capital is spreading into cloud infrastructure, data centers, transmission, cooling, security, enterprise software, and industrial applications.",
+          "ja": "実際には、モデル学習と推論を支えるクラウド、データセンター、送配電、冷却、セキュリティ、企業ソフトウェア、産業用途へと資金が広がっている。"
+        },
+        {
+          "en": "UNCTAD warns that the AI market could reach $4.8 trillion by 2033 while value remains concentrated in a small number of firms, Gartner forecasts about $1.5 trillion in global AI spending in 2025, and the IEA says data center electricity demand could reach 945 TWh by 2030.",
+          "ja": "UNCTADはAI市場が2033年に4.8兆ドルへ拡大しうる一方で利益は少数企業に集中すると警告し、Gartnerは2025年の世界AI支出を約1.5兆ドルと予測している。IEAはデータセンターの電力需要が2030年までに945TWhへ達しうるとみている。"
+        },
+        {
+          "en": "The real bottleneck is therefore not only compute, but also power and deployment capacity.",
+          "ja": "生成AIの本当のボトルネックは計算資源だけでなく電力と設置能力にもある。"
+        },
+        {
+          "en": "The conclusion is straightforward.",
+          "ja": "本稿の結論は単純である。"
+        },
+        {
+          "en": "In the short run, the market usually rewards semiconductors and AI-server suppliers first.",
+          "ja": "短期の相場は半導体とAIサーバー周辺に集まりやすいが、"
+        },
+        {
+          "en": "Over time, however, actual demand tends to migrate toward cloud infrastructure, power equipment, security, software, and industrial AI.",
+          "ja": "中長期の実需はクラウド、電力・冷却、ソフトウェア、セキュリティ、産業応用へ分散しやすい。"
+        },
+        {
+          "en": "The useful lens is to separate upstream supply constraints from downstream monetization.",
+          "ja": "したがって、生成AIの投資地図は「上流の供給制約」と「下流の収益化」を分けて読む必要がある。"
+        }
+      ]
+    },
+    {
+      "id": "market-size",
+      "heading": {
+        "ja": "2. 市場規模と成長ドライバー",
+        "en": "2. Market Size and Growth Drivers"
+      },
+      "pairs": [
+        {
+          "en": "It helps to distinguish market value, spending, and capital expenditure.",
+          "ja": "市場規模の議論では、「市場価値」「支出」「設備投資」を分ける必要がある。"
+        },
+        {
+          "en": "UNCTAD's $4.8 trillion figure refers to the long-term value of the broader AI market by 2033.",
+          "ja": "UNCTADの4.8兆ドルは2033年時点の広義のAI市場価値の見立てである。"
+        },
+        {
+          "en": "Gartner's $1.5 trillion figure refers to global AI spending in 2025.",
+          "ja": "Gartnerの1.5兆ドルは2025年の世界AI支出予測である。"
+        },
+        {
+          "en": "The IEA's 945 TWh figure is a power-system outlook for data centers and AI.",
+          "ja": "IEAの945TWhは、AIとデータセンターが電力システムに与える負荷の見通しである。"
+        },
+        {
+          "en": "The numbers are not interchangeable, but together they show that generative AI is an infrastructure-heavy investment theme rather than a passing software fad.",
+          "ja": "三つは同じ数字ではないが、いずれも生成AIが一過性の話題ではなく、インフラ需要を伴う投資テーマであることを示している。"
+        },
+        {
+          "en": "Three drivers matter most.",
+          "ja": "成長ドライバーは三つある。"
+        },
+        {
+          "en": "First, demand is shifting from training to inference, which keeps utilization high.",
+          "ja": "第一に、学習から推論へ需要の中心が移り、処理量が継続的に増えること。"
+        },
+        {
+          "en": "Second, once companies move from pilots to production, spending rises on connectivity, identity, monitoring, and data plumbing.",
+          "ja": "第二に、企業が実験から本番運用へ移るほど、クラウド、監視、権限管理、データ接続のコストが増えること。"
+        },
+        {
+          "en": "Third, electricity, cooling, and grid connection become binding constraints.",
+          "ja": "第三に、消費電力と冷却が実質的な供給制約になることだ。"
+        },
+        {
+          "en": "Corporate disclosures confirm the same direction.",
+          "ja": "企業側の公表情報も、この流れを裏づける。"
+        },
+        {
+          "en": "Alphabet raised 2026 capex guidance to $180-190 billion, Meta guided 2026 capex to $125-145 billion, Microsoft said roughly two thirds of capex was tied to short-lived assets such as GPUs and CPUs, Amazon said it secured more than 2.1 million AI chips over the past 12 months and will deploy more than 1 million NVIDIA GPUs starting in 2026, and Oracle said RPO reached $553 billion.",
+          "ja": "Alphabetは2026年capexガイダンスを1800億〜1900億ドルに引き上げ、Metaは2026年capexを1250億〜1450億ドルと見込んでいる。Microsoftはcapexの約3分の2がGPUとCPUを中心とする短寿命資産だったと説明し、Amazonは過去12か月で210万台超のAIチップを確保し、2026年から100万台超のNVIDIA GPUを展開するとした。OracleはRPOが5530億ドルに達した。"
+        },
+        {
+          "en": "The money is not flowing only into models; it is flowing into the physical and software stack that makes models usable.",
+          "ja": "生成AIの資金がモデル単体ではなく、データセンター、サーバー、ネットワーク、電力系統に向かっていることを示す。"
+        }
+      ]
+    },
+    {
+      "id": "investment-stack",
+      "heading": {
+        "ja": "3. 生成AI投資の地図",
+        "en": "3. A Practical Investment Stack"
+      },
+      "pairs": [
+        {
+          "en": "The market is easier to read when you split it into five layers.",
+          "ja": "投資テーマは、概ね五層で整理すると見通しやすい。"
+        },
+        {
+          "en": "This is a synthesis from public disclosures, not an official industry taxonomy.",
+          "ja": "ここでの分類は公式ロードマップではなく、公表情報からの推定である。"
+        },
+        {
+          "en": "The useful reading rule is to stop assuming that better models make every stock go up together.",
+          "ja": "この地図の読み方は、モデル性能が上がればすべての銘柄が同じように上がる、という発想を捨てることにある。"
+        },
+        {
+          "en": "In practice, the first beneficiaries are usually the most constrained supply layers.",
+          "ja": "実際には、最初に利益を取りやすいのは供給制約の強い層である。"
+        },
+        {
+          "en": "The next wave tends to be infrastructure.",
+          "ja": "次に投資が向かうのはクラウドと電力である。"
+        },
+        {
+          "en": "The slowest but stickiest compounding often comes from software and industrial adoption.",
+          "ja": "最後に時間をかけて伸びるのが業務ソフトと産業用途である。"
+        },
+        {
+          "en": "The most obvious short-term theme remains semiconductors.",
+          "ja": "短期の相場テーマとして最も分かりやすいのは半導体である。"
+        },
+        {
+          "en": "NVIDIA reported a record $75.2 billion in data center revenue for its first quarter of fiscal 2027.",
+          "ja": "NVIDIAは2026年5月期第1四半期にデータセンター売上が752億ドルと過去最高を更新し、"
+        },
+        {
+          "en": "TSMC continues to describe AI demand as a key growth driver, and Samsung has started shipping HBM4E samples while guiding for strong HBM growth in 2026.",
+          "ja": "TSMCはAI需要を主要な成長ドライバーとして維持している。SamsungはHBM4Eサンプルの出荷を開始し、HBM売上が2026年に大きく伸びる見通しを示した。"
+        },
+        {
+          "en": "The message is that compute and memory constraints are still at the center of the trade.",
+          "ja": "これは、生成AIの中心が今なお「計算とメモリの供給制約」にあることを示す。"
+        },
+        {
+          "en": "The next large pool of capital is cloud and data-center infrastructure.",
+          "ja": "資金の受け皿として、次に大きいのはクラウドとデータセンターである。"
+        },
+        {
+          "en": "Alphabet, Amazon, Meta, Oracle, and Microsoft are all still spending heavily on AI data centers, servers, networking, and power.",
+          "ja": "Alphabet、Amazon、Meta、Oracle、MicrosoftはいずれもAI向けのデータセンター、ネットワーク、サーバー、電力に巨額の投資を続けている。"
+        },
+        {
+          "en": "Oracle's backlog continues to build, while Microsoft says it keeps expanding AI infrastructure.",
+          "ja": "Oracleはクラウド受注残の積み上がりを示し、MicrosoftはAIインフラを拡張し続けると明言している。"
+        },
+        {
+          "en": "In this layer, money tends to move to the companies that transport and host models, not only to the companies that train them.",
+          "ja": "ここでは「モデルを持つ会社」より「モデルを運ぶ会社」に資金が集まりやすい。"
+        },
+        {
+          "en": "As data centers scale, power, cooling, and transmission become more valuable themes.",
+          "ja": "データセンターの増設が進むほど、電力・冷却・送配電のテーマは強くなる。"
+        },
+        {
+          "en": "The IEA expects data-center and AI electricity demand to rise sharply by 2030, and GE Vernova has pointed to stronger demand linked to data centers.",
+          "ja": "IEAはAIとデータセンターが2030年までに電力需要を大きく押し上げるとみており、GE Vernovaはデータセンター向け受注の増加を示している。"
+        },
+        {
+          "en": "Generative AI expands the attack surface, so security becomes a stand-alone investment theme.",
+          "ja": "生成AIは攻撃面も広げるため、セキュリティは独立した投資テーマになる。"
+        },
+        {
+          "en": "Google completed its acquisition of Wiz to strengthen cross-cloud security, and companies such as CrowdStrike are extending beyond endpoint protection into identity, workload, and cloud controls for the AI era.",
+          "ja": "GoogleはWizの買収を完了し、クラウド横断のセキュリティを強化した。CrowdStrikeのような会社は、エンドポイントだけでなくAI時代のID、ワークロード、クラウド保護へ領域を広げている。"
+        },
+        {
+          "en": "The medium- to long-term prize is less about the model itself and more about enterprise software and industrial use cases.",
+          "ja": "中長期の本命は、モデルそのものより業務ソフトと産業応用である。"
+        },
+        {
+          "en": "Oracle says AI accelerates code generation and application expansion, while Siemens continues to expand industrial generative AI and digital twin use cases.",
+          "ja": "OracleはAIがコード生成やアプリ拡張を速めると述べ、Siemensは産業向け生成AIやデジタルツインを拡張している。"
+        },
+        {
+          "en": "Here, recurring usage, workflow embedding, and auditability matter more than one-off inference cost.",
+          "ja": "ここでは、1回の推論コストよりも、継続利用、ワークフロー組み込み、データ接続、監査可能性が収益化の鍵になる。"
+        }
+      ]
+    },
+    {
+      "id": "short-vs-long",
+      "heading": {
+        "ja": "4. 短期の相場テーマと中長期の実需",
+        "en": "4. Short-Term Trades vs. Long-Term Demand"
+      },
+      "pairs": [
+        {
+          "en": "In the short term, money tends to chase constrained supply.",
+          "ja": "短期は、供給制約の強いところに資金が集まりやすい。"
+        },
+        {
+          "en": "GPUs, HBM, leading-edge foundries, AI-server components, power gear, cooling, and networking are easy to price because orders and shipments are visible.",
+          "ja": "GPU、HBM、先端ファウンドリ、AIサーバー部材、電源、冷却、ネットワークは、受注や出荷が見えやすいため、相場が先行しやすい。"
+        },
+        {
+          "en": "That also makes them easy to overprice.",
+          "ja": "一方で、ここは期待も早く織り込まれるため、売上成長が鈍ると株価は先に剥落しやすい。"
+        },
+        {
+          "en": "In the medium term, the theme shifts toward cloud and data-center buildout.",
+          "ja": "中期は、クラウドとデータセンターの建設・稼働がテーマになる。"
+        },
+        {
+          "en": "Capex, RPO, backlog, utilization, and grid connection are the key indicators.",
+          "ja": "capex、RPO、バックログ、稼働率、接続待ちが重要な観測点になる。"
+        },
+        {
+          "en": "The real question is not whether a headline was good this quarter, but whether capacity additions are visible over several quarters.",
+          "ja": "短期のニュースではなく、複数四半期にわたる容量追加が見えるかどうかが本質である。"
+        },
+        {
+          "en": "In the long term, software, security, and industrial AI matter more.",
+          "ja": "長期は、ソフトウェア、セキュリティ、産業AIが効く。"
+        },
+        {
+          "en": "The relevant question is not the model name.",
+          "ja": "ここではモデル名よりも、"
+        },
+        {
+          "en": "It is whether the product is embedded in a workflow, what KPI it improves, and whether it converts into recurring revenue.",
+          "ja": "どの業務に組み込まれ、どのKPIを改善し、どれだけ継続課金につながるかを見るべきだ。"
+        }
+      ]
+    },
+    {
+      "id": "risks",
+      "heading": {
+        "ja": "5. リスク・限界",
+        "en": "5. Risks and Limits"
+      },
+      "pairs": [
+        {
+          "en": "The biggest risk is to treat the whole AI boom as one trade.",
+          "ja": "最大のリスクは、AIブーム全体を一つのテーマとして見すぎることだ。"
+        },
+        {
+          "en": "UNCTAD's warning is that gains are concentrated, so the AI benefit does not spread evenly across the market.",
+          "ja": "UNCTADが指摘するように、利益は少数企業に集中しやすく、AIの恩恵は必ずしも広く分散しない。"
+        },
+        {
+          "en": "Power bottlenecks, grid connection, export controls, model competition, price competition, and tighter regulation can create very different winners and losers inside the same \"AI\" label.",
+          "ja": "さらに、電力制約、系統接続、輸出規制、モデル競争、価格競争、規制強化が重なると、同じ「AI関連」でも勝ち負けが分かれる。"
+        },
+        {
+          "en": "This report is not investment advice.",
+          "ja": "また、このレポートは投資助言ではない。"
+        },
+        {
+          "en": "The \"where capital moves\" framing is an inference from public information, not an official roadmap from the industry.",
+          "ja": "ここで示した「どこに資金が向かうか」は、公開情報からの推定であり、企業の公式ロードマップではない。"
+        },
+        {
+          "en": "Any actual portfolio decision still needs valuation, payback period, regulation, customer concentration, and power-supply risk checks.",
+          "ja": "投資判断では、バリュエーション、資本回収期間、規制リスク、顧客集中、電力供給の制約を別途確認する必要がある。"
+        }
+      ]
+    },
+    {
+      "id": "practical-reading",
+      "heading": {
+        "ja": "6. 実務上の見方",
+        "en": "6. Practical Reading Rules"
+      },
+      "pairs": [
+        {
+          "en": "When you track generative AI as a market theme, the following sequence is usually more useful:",
+          "ja": "生成AIテーマを追うときは、次の順で見ると整理しやすい。"
+        },
+        {
+          "en": "Is the company at the demand entry point, the supply bottleneck, or the monetization layer?",
+          "ja": "その会社は需要の入口にいるのか、供給制約を握っているのか、収益化の末端にいるのか。"
+        },
+        {
+          "en": "Is the growth temporary cycle demand or multi-quarter capex demand?",
+          "ja": "売上成長は一時的なサイクルか、複数四半期にまたがる設備投資か。"
+        },
+        {
+          "en": "Are capex and backlog converting into real utilization and revenue?",
+          "ja": "capexや受注残は、実際の稼働と収益に変わっているか。"
+        },
+        {
+          "en": "Are power, cooling, and networking constraints limiting the next wave?",
+          "ja": "電力・冷却・ネットワークの制約が、次の成長を止めていないか。"
+        },
+        {
+          "en": "Is the theme a trading story, or a recurring-revenue story?",
+          "ja": "そのテーマは、相場の物語なのか、それとも継続課金の実需なのか。"
+        },
+        {
+          "en": "Using that lens makes it easier to see how capital moves from semiconductors to cloud, power, software, security, and industrial AI.",
+          "ja": "この見方を取ると、半導体だけを追うより、クラウド、電力、ソフトウェア、セキュリティ、産業AIへとテーマがどの順で移るかを追いやすい。"
+        },
+        {
+          "en": "The generative AI investment map is best read as a reallocation of capital across the stack, not as a single-stock narrative.",
+          "ja": "生成AIの投資地図は、単一銘柄の物語ではなく、インフラからアプリケーションまでの資金配分の変化として読むのが実務的である。"
+        }
+      ]
+    }
+  ]
+}

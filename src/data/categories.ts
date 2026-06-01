@@ -2,6 +2,7 @@
 export const CATEGORIES = [
 	'ai-market',
 	'ai-systems',
+	'ai-market',
 	'enterprise-ai-platforms',
 	'developer-tools',
 	'knowledge-systems',

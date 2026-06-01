@@ -118,14 +118,24 @@ const serializedAlignment = alignment
 			)
 		}
 
-		function explicitAlignmentPairs(root) {
+		function alignmentHeadingsFromData(alignment) {
+			if (!alignment || typeof alignment !== 'object' || !Array.isArray(alignment.sections)) {
+				return []
+			}
+
+			return alignment.sections
+				.map((section) => section?.heading)
+				.filter((heading) => typeof heading?.en === 'string' && typeof heading?.ja === 'string')
+		}
+
+		function explicitAlignmentData(root) {
 			const script = root.querySelector('[data-mixed-alignment]')
-			if (!script?.textContent) return []
+			if (!script?.textContent) return undefined
 
 			try {
-				return alignmentPairsFromData(JSON.parse(script.textContent))
+				return JSON.parse(script.textContent)
 			} catch {
-				return []
+				return undefined
 			}
 		}
 
@@ -161,6 +171,26 @@ const serializedAlignment = alignment
 			}
 
 			return pair
+		}
+
+		function createTranslation(text) {
+			const translation = document.createElement('span')
+			translation.dataset.mixedTranslation = ''
+			translation.setAttribute('lang', 'ja')
+			translation.setAttribute('aria-label', 'Japanese translation')
+			translation.className = 'mixed-translation'
+			translation.textContent = text
+			return translation
+		}
+
+		function addMixedTranslation(block, japaneseText) {
+			const normalizedJapaneseText = normalizeAlignmentText(japaneseText)
+			if (!normalizedJapaneseText || block.querySelector(':scope > [data-mixed-translation]')) {
+				return
+			}
+
+			if (normalizeAlignmentText(block.textContent ?? '') === normalizedJapaneseText) return
+			block.appendChild(createTranslation(japaneseText))
 		}
 
 		function pairableText(block) {
@@ -241,23 +271,6 @@ const serializedAlignment = alignment
 			block.replaceChildren(...sentencePairs)
 		}
 
-		function articleSections(root) {
-			const sections = [[]]
-
-			;[...root.children].forEach((child) => {
-				if (/^H[12]$/.test(child.tagName) && sections.at(-1).length > 0) {
-					sections.push([])
-				}
-				sections.at(-1).push(child)
-			})
-
-			return sections
-		}
-
-		function pairableSectionChildren(section) {
-			return section.filter((child) => child.matches?.('p, ol, ul'))
-		}
-
 		function alignByTag(englishElements, japaneseElements) {
 			const pairs = []
 			let japaneseIndex = 0
@@ -280,38 +293,92 @@ const serializedAlignment = alignment
 			return pairs
 		}
 
-		function directListItems(list) {
-			return [...list.children].filter((child) => child.tagName === 'LI' && shouldPairBlock(child))
+		function isPairedBlock(block) {
+			return Boolean(
+				block.querySelector(':scope > .mixed-sentence, :scope > [data-mixed-translation]')
+			)
 		}
 
-		function pairSection(englishSection, japaneseSection, alignmentMap) {
-			const englishParagraphs = pairableSectionChildren(englishSection).filter(
-				(child) => child.tagName === 'P' && shouldPairBlock(child)
+		function remainingPairableBlocks(root) {
+			return [...root.querySelectorAll('p, li')].filter(
+				(block) => shouldPairBlock(block) && !isPairedBlock(block)
 			)
-			const japaneseParagraphSentences = pairableSectionChildren(japaneseSection)
-				.filter((child) => child.tagName === 'P' && shouldPairBlock(child))
-				.flatMap((child) => contentSentences(pairableText(child), 'ja'))
-			let japaneseSentenceIndex = 0
+		}
 
-			englishParagraphs.forEach((englishBlock) => {
-				const englishSentenceCount = contentSentences(pairableText(englishBlock), 'en').length
-				const japaneseSentences = japaneseParagraphSentences.slice(
-					japaneseSentenceIndex,
-					japaneseSentenceIndex + englishSentenceCount
-				)
-				japaneseSentenceIndex += englishSentenceCount
-				pairBlocks(englishBlock, undefined, japaneseSentences, alignmentMap)
-			})
-
+		function pairRemainingBlocksByOrder(englishRoot, japaneseRoot, alignmentMap) {
 			alignByTag(
-				pairableSectionChildren(englishSection).filter((child) => child.matches?.('ol, ul')),
-				pairableSectionChildren(japaneseSection).filter((child) => child.matches?.('ol, ul'))
+				remainingPairableBlocks(englishRoot),
+				remainingPairableBlocks(japaneseRoot)
 			).forEach(([englishBlock, japaneseBlock]) => {
 				if (!shouldPairBlock(englishBlock) || !shouldPairBlock(japaneseBlock)) return
-				alignByTag(directListItems(englishBlock), directListItems(japaneseBlock)).forEach(
-					([englishItem, japaneseItem]) =>
-						pairBlocks(englishItem, japaneseItem, undefined, alignmentMap)
-				)
+				pairBlocks(englishBlock, japaneseBlock, undefined, alignmentMap)
+			})
+		}
+
+		function pairHeadings(englishRoot, japaneseRoot, headingMap) {
+			const englishHeadings = [...englishRoot.querySelectorAll('h1, h2, h3, h4, h5, h6')].filter(
+				shouldPairBlock
+			)
+			const japaneseHeadings = [...japaneseRoot.querySelectorAll('h1, h2, h3, h4, h5, h6')].filter(
+				shouldPairBlock
+			)
+			const headingPairs = alignByTag(englishHeadings, japaneseHeadings)
+			const japaneseHeadingByElement = new Map(
+				headingPairs.map(([englishHeading, japaneseHeading]) => [englishHeading, japaneseHeading])
+			)
+
+			englishHeadings.forEach((heading) => {
+				const englishText = normalizeAlignmentText(pairableText(heading))
+				const japaneseHeading = japaneseHeadingByElement.get(heading)
+				const japaneseText =
+					headingMap.get(englishText) ??
+					(japaneseHeading ? normalizeAlignmentText(pairableText(japaneseHeading)) : '')
+				if (!japaneseText) return
+
+				addMixedTranslation(heading, japaneseText)
+				setBlockScrollAnchors(heading, [englishText], [japaneseText])
+			})
+		}
+
+		function cardsByHref(cards) {
+			return cards.reduce((grouped, card) => {
+				const href = card.getAttribute('data-news-source-href') ?? card.getAttribute('href') ?? ''
+				if (!href) return grouped
+				const cardGroup = grouped.get(href) ?? []
+				cardGroup.push(card)
+				grouped.set(href, cardGroup)
+				return grouped
+			}, new Map())
+		}
+
+		function pairNewsSourceCards(englishRoot, japaneseRoot) {
+			const englishCards = [...englishRoot.querySelectorAll('[data-news-source-card]')]
+			if (englishCards.length === 0) return
+
+			const japaneseCards = cardsByHref([
+				...japaneseRoot.querySelectorAll('[data-news-source-card]')
+			])
+
+			englishCards.forEach((englishCard) => {
+				const href =
+					englishCard.getAttribute('data-news-source-href') ??
+					englishCard.getAttribute('href') ??
+					''
+				const japaneseCard = japaneseCards.get(href)?.shift()
+				if (!japaneseCard) return
+				;[
+					['[data-news-source-title]', '[data-news-source-title]'],
+					['[data-news-source-description]', '[data-news-source-description]']
+				].forEach(([englishSelector, japaneseSelector]) => {
+					const englishBlock = englishCard.querySelector(englishSelector)
+					const japaneseBlock = japaneseCard.querySelector(japaneseSelector)
+					if (!englishBlock || !japaneseBlock) return
+
+					const englishText = normalizeAlignmentText(pairableText(englishBlock))
+					const japaneseText = normalizeAlignmentText(pairableText(japaneseBlock))
+					addMixedTranslation(englishBlock, japaneseText)
+					setBlockScrollAnchors(englishBlock, [englishText], [japaneseText])
+				})
 			})
 		}
 
@@ -324,18 +391,21 @@ const serializedAlignment = alignment
 				.querySelectorAll('p, li')
 				.forEach((block) => isSourceNoteBlock(block) && block.remove())
 
-			const englishSections = articleSections(englishRoot)
-			const japaneseSections = articleSections(japaneseRoot)
-			const alignmentPairs = explicitAlignmentPairs(root)
+			const alignmentData = explicitAlignmentData(root)
+			const alignmentPairs = alignmentPairsFromData(alignmentData)
 			const alignmentMap = new Map(
 				alignmentPairs.map((pair) => [normalizeAlignmentText(pair.en), pair.ja])
 			)
+			const headingMap = new Map(
+				alignmentHeadingsFromData(alignmentData).map((heading) => [
+					normalizeAlignmentText(heading.en),
+					heading.ja
+				])
+			)
 
-			englishSections.forEach((section, index) => {
-				const japaneseSection = japaneseSections[index]
-				if (!japaneseSection) return
-				pairSection(section, japaneseSection, alignmentMap)
-			})
+			pairHeadings(englishRoot, japaneseRoot, headingMap)
+			pairNewsSourceCards(englishRoot, japaneseRoot)
+			pairRemainingBlocksByOrder(englishRoot, japaneseRoot, alignmentMap)
 
 			removeSourceNotes(englishRoot)
 			root.dataset.mixedArticle = 'paired'

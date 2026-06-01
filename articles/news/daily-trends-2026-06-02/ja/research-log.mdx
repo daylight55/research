@@ -1,0 +1,42 @@
+---
+title: '2026-06-02 日次トレンド調査ログ'
+description: '2026-06-02のニュースダイジェスト作成に使った公開調査ログ。'
+contentType: news
+pubDate: '2026-06-02'
+category: 'tech-news'
+draft: false
+---
+
+# 2026-06-02 日次トレンド調査ログ
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: `2026-06-02`
+- Intended deliverable: Japanese News digest for the public site
+- Required categories: `政治`, `経済`, `技術`
+- Required topic counts: `5 / 5 / 5`
+- Recency window: most recent `24-48 hours`, with a slightly older item only when it still drives current discussion or decisions
+- Output path: `articles/news/daily-trends-2026-06-02/ja/index.mdx`
+- Public trail route: `/news/daily-trends-2026-06-02/research/`
+
+## 選定方針
+
+- 政治は、米イラン協議、米中軍事対話、対中抑止、台湾周辺の海域圧力を中心に、地政学リスクが市場に波及する題材を優先した。
+- 経済は、原油、ドル、米原油輸出、株式市場、米印通商協議の順で、価格変動と政策変更が同時に起きている論点を選んだ。
+- 技術は、AI半導体、輸出規制、IPO、クラウド規制、半導体工場事故を組み合わせ、投資拡大と統制強化が同時進行している構図を示した。
+
+## 参照メモ
+
+- Reuters系の記事を中心に、各トピックごとに1件以上の近接ソースを確保した。
+- 画像は記事添付または近い関連画像を優先し、取得できない場合は同テーマの安定した画像URLを採用した。
+- 公開本文では、各トピックの直下に `NewsSourceCard` を置き、出典と読者向け要点を同時に示す構成にした。
+
+## 未確定事項
+
+- 一部の政治・経済・技術テーマは、見出しの粒度に対して原記事の公開URLが分散しており、将来の再編集時はリンク先の安定性を再確認したい。
+- 研究日時点では未来日付の公開記事であるため、次回実行時は同スラグの内容を上書きせず、日付ごとに分けて管理する。

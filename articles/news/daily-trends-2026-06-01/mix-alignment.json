@@ -1,0 +1,953 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "2026-06-01-inflation-tariffs-and-ai-policy-tighten-at-once",
+			"heading": {
+				"ja": "2026-06-01 物価高とAI規制、関税・移民政策が同時進行",
+				"en": "2026-06-01 Inflation, tariffs and AI policy tighten at once"
+			},
+			"pairs": [
+				{
+					"en": "2026-06-01 Inflation, tariffs and AI policy tighten at once",
+					"ja": "2026-06-01 物価高とAI規制、関税・移民政策が同時進行"
+				}
+			]
+		},
+		{
+			"id": "u-s-politics-markets-and-ai-policy-all-moved-together-inflation-re-accelerated-household-purchasing-power-weakened-and-tariff-refunds-immigration-funding-and-ukraine-support-stayed-on-the-political-agenda-in-technology-export-controls-model-updates-government-reviews-and-defense-adoption-pushed-ai-further-into-a-security-and-governance-frame",
+			"heading": {
+				"ja": "米国では、インフレ再加速と家計の所得目減りが続く一方で、関税還付や移民予算、対露支援を巡る政治判断が同時に動いた。技術面では、対中輸出規制、AIモデルの更新、政府による事前審査、国防分野への導入が重なり、AIは製品競争から安全保障政策へ重心を移している。",
+				"en": "U.S. politics, markets, and AI policy all moved together. Inflation re-accelerated, household purchasing power weakened, and tariff refunds, immigration funding, and Ukraine support stayed on the political agenda. In technology, export controls, model updates, government reviews, and defense adoption pushed AI further into a security-and-governance frame."
+			},
+			"pairs": [
+				{
+					"en": "politics, markets, and AI policy all moved together.",
+					"ja": "米国では、インフレ再加速と家計の所得目減りが続く一方で、関税還付や移民予算、対露支援を巡る政治判断が同時に動いた。技術面では、対中輸出規制、AIモデルの更新、政府による事前審査、国防分野への導入が重なり、AIは製品競争から安全保障政策へ重心を移している。"
+				},
+				{
+					"en": "Inflation re-accelerated, household purchasing power weakened, and tariff refunds, immigration funding, and Ukraine support stayed on the political agenda.",
+					"ja": "米国では、インフレ再加速と家計の所得目減りが続く一方で、関税還付や移民予算、対露支援を巡る政治判断が同時に動いた。技術面では、対中輸出規制、AIモデルの更新、政府による事前審査、国防分野への導入が重なり、AIは製品競争から安全保障政策へ重心を移している。"
+				},
+				{
+					"en": "In technology, export controls, model updates, government reviews, and defense adoption pushed AI further into a security-and-governance frame.",
+					"ja": "米国では、インフレ再加速と家計の所得目減りが続く一方で、関税還付や移民予算、対露支援を巡る政治判断が同時に動いた。技術面では、対中輸出規制、AIモデルの更新、政府による事前審査、国防分野への導入が重なり、AIは製品競争から安全保障政策へ重心を移している。"
+				}
+			]
+		},
+		{
+			"id": "zelenskyy-asks-for-more-u-s-air-defense-help",
+			"heading": {
+				"ja": "ゼレンスキー氏、米国に追加防空支援を要請",
+				"en": "Zelenskyy asks for more U.S. air defense help"
+			},
+			"pairs": [
+				{
+					"en": "Zelenskyy asks for more U.",
+					"ja": "ゼレンスキー氏、米国に追加防空支援を要請"
+				}
+			]
+		},
+		{
+			"id": "what-happened-zelenskyy-asked-trump-and-congress-for-more-air-defense-support-as-russian-missile-attacks-continued-the-battlefield-need-has-returned-to-the-center-of-diplomacy",
+			"heading": {
+				"ja": "何が起きたか: ゼレンスキー氏は、ロシアのミサイル攻撃が続くなかで、米国製防空兵器の追加供与を求めた。戦場の防空不足が、再び外交の最優先議題に戻っている。",
+				"en": "What happened: Zelenskyy asked Trump and Congress for more air defense support as Russian missile attacks continued. The battlefield need has returned to the center of diplomacy."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Zelenskyy asked Trump and Congress for more air defense support as Russian missile attacks continued.",
+					"ja": "何が起きたか: ゼレンスキー氏は、ロシアのミサイル攻撃が続くなかで、米国製防空兵器の追加供与を求めた。戦場の防空不足が、再び外交の最優先議題に戻っている。"
+				},
+				{
+					"en": "The battlefield need has returned to the center of diplomacy.",
+					"ja": "何が起きたか: ゼレンスキー氏は、ロシアのミサイル攻撃が続くなかで、米国製防空兵器の追加供与を求めた。戦場の防空不足が、再び外交の最優先議題に戻っている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-the-scale-of-u-s-support-affects-battlefield-conditions-european-burden-sharing-and-domestic-u-s-politics-around-foreign-aid",
+			"heading": {
+				"ja": "なぜ重要か: 対露支援の強弱は、戦局だけでなく欧州の防衛負担や米国内の対外政策論争にも波及する。防空支援の継続可否は、今後の停戦交渉の材料にもなる。",
+				"en": "Why it matters: The scale of U.S. support affects battlefield conditions, European burden-sharing, and domestic U.S. politics around foreign aid."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: The scale of U.",
+					"ja": "なぜ重要か: 対露支援の強弱は、戦局だけでなく欧州の防衛負担や米国内の対外政策論争にも波及する。防空支援の継続可否は、今後の停戦交渉の材料にもなる。"
+				},
+				{
+					"en": "support affects battlefield conditions, European burden-sharing, and domestic U.",
+					"ja": "なぜ重要か: 対露支援の強弱は、戦局だけでなく欧州の防衛負担や米国内の対外政策論争にも波及する。防空支援の継続可否は、今後の停戦交渉の材料にもなる。"
+				},
+				{
+					"en": "politics around foreign aid.",
+					"ja": "なぜ重要か: 対露支援の強弱は、戦局だけでなく欧州の防衛負担や米国内の対外政策論争にも波及する。防空支援の継続可否は、今後の停戦交渉の材料にもなる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-look-for-any-new-aid-package-language-and-whether-the-white-house-expands-missile-and-interceptor-deliveries",
+			"heading": {
+				"ja": "今後の注視点: 米議会の追加支援審議と、ホワイトハウスが弾薬・迎撃ミサイルの供与をどこまで認めるかを見る。ロシア側の攻撃強度が続くかどうかも重要だ。",
+				"en": "What to watch next: Look for any new aid package language and whether the White House expands missile and interceptor deliveries."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Look for any new aid package language and whether the White House expands missile and interceptor deliveries.",
+					"ja": "今後の注視点: 米議会の追加支援審議と、ホワイトハウスが弾薬・迎撃ミサイルの供与をどこまで認めるかを見る。ロシア側の攻撃強度が続くかどうかも重要だ。"
+				}
+			]
+		},
+		{
+			"id": "supreme-court-sides-with-trump-on-immigration-judges",
+			"heading": {
+				"ja": "移民判事の発言規制で最高裁がトランプ氏側",
+				"en": "Supreme Court sides with Trump on immigration judges"
+			},
+			"pairs": [
+				{
+					"en": "Supreme Court sides with Trump on immigration judges",
+					"ja": "移民判事の発言規制で最高裁がトランプ氏側"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-court-did-not-overturn-the-administration-s-approach-to-restricting-immigration-judges-speech-and-outside-communications",
+			"heading": {
+				"ja": "何が起きたか: 最高裁は、移民判事の発言や外部コミュニケーションを巡る政権側の規制を覆さなかった。司法が移民行政の運用にどこまで介入するかが再び争点になっている。",
+				"en": "What happened: The Court did not overturn the administration’s approach to restricting immigration judges’ speech and outside communications."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The Court did not overturn the administration's approach to restricting immigration judges' speech and outside communications.",
+					"ja": "何が起きたか: 最高裁は、移民判事の発言や外部コミュニケーションを巡る政権側の規制を覆さなかった。司法が移民行政の運用にどこまで介入するかが再び争点になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-the-ruling-reinforces-executive-control-over-the-immigration-system-and-keeps-the-legal-fight-alive",
+			"heading": {
+				"ja": "なぜ重要か: 移民審査の現場で発言制約が強まれば、判事の裁量や制度の透明性に影響する。政権の統制力が増す一方で、法的争いは長期化しやすい。",
+				"en": "Why it matters: The ruling reinforces executive control over the immigration system and keeps the legal fight alive."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: The ruling reinforces executive control over the immigration system and keeps the legal fight alive.",
+					"ja": "なぜ重要か: 移民審査の現場で発言制約が強まれば、判事の裁量や制度の透明性に影響する。政権の統制力が増す一方で、法的争いは長期化しやすい。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-track-whether-lower-courts-narrow-or-broaden-the-practical-impact-on-immigration-adjudication",
+			"heading": {
+				"ja": "今後の注視点: 下級審での追加判断と、移民行政の現場で実際にどの程度運用が変わるかを確認したい。政権が同種の規律を他部局に広げるかも焦点だ。",
+				"en": "What to watch next: Track whether lower courts narrow or broaden the practical impact on immigration adjudication."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Track whether lower courts narrow or broaden the practical impact on immigration adjudication.",
+					"ja": "今後の注視点: 下級審での追加判断と、移民行政の現場で実際にどの程度運用が変わるかを確認したい。政権が同種の規律を他部局に広げるかも焦点だ。"
+				}
+			]
+		},
+		{
+			"id": "senate-republicans-advance-a-migrant-enforcement-bill",
+			"heading": {
+				"ja": "72億ドルの移民強制送還予算が与党内で前進",
+				"en": "Senate Republicans advance a migrant enforcement bill"
+			},
+			"pairs": [
+				{
+					"en": "Senate Republicans advance a migrant enforcement bill",
+					"ja": "72億ドルの移民強制送還予算が与党内で前進"
+				}
+			]
+		},
+		{
+			"id": "what-happened-senate-republicans-advanced-the-main-pieces-of-a-large-migration-enforcement-package",
+			"heading": {
+				"ja": "何が起きたか: 上院共和党は、移民取締り強化に向けた大規模予算案の主要部分を通過させた。だが、財源や優先順位を巡る党内調整はなお残る。",
+				"en": "What happened: Senate Republicans advanced the main pieces of a large migration enforcement package."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Senate Republicans advanced the main pieces of a large migration enforcement package.",
+					"ja": "何が起きたか: 上院共和党は、移民取締り強化に向けた大規模予算案の主要部分を通過させた。だが、財源や優先順位を巡る党内調整はなお残る。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-immigration-policy-now-sits-at-the-intersection-of-enforcement-budgeting-and-intraparty-bargaining",
+			"heading": {
+				"ja": "なぜ重要か: 移民政策は治安だけでなく、予算配分や州政府との関係にも直結する。法案が通れば、連邦政府の執行能力は強まるが、政治的反発も広がりやすい。",
+				"en": "Why it matters: Immigration policy now sits at the intersection of enforcement, budgeting, and intraparty bargaining."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Immigration policy now sits at the intersection of enforcement, budgeting, and intraparty bargaining.",
+					"ja": "なぜ重要か: 移民政策は治安だけでなく、予算配分や州政府との関係にも直結する。法案が通れば、連邦政府の執行能力は強まるが、政治的反発も広がりやすい。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-see-how-much-funding-survives-final-negotiations-and-what-gets-stripped-in-house-senate-talks",
+			"heading": {
+				"ja": "今後の注視点: 最終案にどこまで資金が残るか、そして下院とのすり合わせで何が削られるかを見たい。移民関連の追加規制が他の予算交渉に波及する可能性もある。",
+				"en": "What to watch next: See how much funding survives final negotiations and what gets stripped in House-Senate talks."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: See how much funding survives final negotiations and what gets stripped in House-Senate talks.",
+					"ja": "今後の注視点: 最終案にどこまで資金が残るか、そして下院とのすり合わせで何が削られるかを見たい。移民関連の追加規制が他の予算交渉に波及する可能性もある。"
+				}
+			]
+		},
+		{
+			"id": "white-house-ballroom-security-funding-runs-into-trouble",
+			"heading": {
+				"ja": "ホワイトハウス宴会場の警備費案が難航",
+				"en": "White House ballroom security funding runs into trouble"
+			},
+			"pairs": [
+				{
+					"en": "White House ballroom security funding runs into trouble",
+					"ja": "ホワイトハウス宴会場の警備費案が難航"
+				}
+			]
+		},
+		{
+			"id": "what-happened-republican-spending-strategy-stumbled-around-white-house-security-and-ballroom-related-funding",
+			"heading": {
+				"ja": "何が起きたか: 共和党の歳出戦略は、ホワイトハウスの警備費や宴会場関連の資金を巡って足元をすくわれた。予算の細部が、政権の優先順位を象徴する争点になっている。",
+				"en": "What happened: Republican spending strategy stumbled around White House security and ballroom-related funding."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Republican spending strategy stumbled around White House security and ballroom-related funding.",
+					"ja": "何が起きたか: 共和党の歳出戦略は、ホワイトハウスの警備費や宴会場関連の資金を巡って足元をすくわれた。予算の細部が、政権の優先順位を象徴する争点になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-seemingly-small-items-can-reveal-broader-power-priorities-and-stall-larger-budget-deals",
+			"heading": {
+				"ja": "なぜ重要か: 一見すると周辺論点でも、こうした支出は政権の権力運用や象徴的な優先順位を示す。予算交渉が難航すると、他の政策も巻き込んで遅れる。",
+				"en": "Why it matters: Seemingly small items can reveal broader power priorities and stall larger budget deals."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Seemingly small items can reveal broader power priorities and stall larger budget deals.",
+					"ja": "なぜ重要か: 一見すると周辺論点でも、こうした支出は政権の権力運用や象徴的な優先順位を示す。予算交渉が難航すると、他の政策も巻き込んで遅れる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-for-a-revised-compromise-and-whether-the-white-house-keeps-pushing-the-item",
+			"heading": {
+				"ja": "今後の注視点: 予算案の修正版がどこで妥協するか、そして民主党がどこまで対案を押し通すかを見る。ホワイトハウス関連支出が再び争点化するかも追いたい。",
+				"en": "What to watch next: Watch for a revised compromise and whether the White House keeps pushing the item."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch for a revised compromise and whether the White House keeps pushing the item.",
+					"ja": "今後の注視点: 予算案の修正版がどこで妥協するか、そして民主党がどこまで対案を押し通すかを見る。ホワイトハウス関連支出が再び争点化するかも追いたい。"
+				}
+			]
+		},
+		{
+			"id": "the-administration-plans-to-appeal-the-tariff-refund-order",
+			"heading": {
+				"ja": "関税還付の全面適用を巡り政権が控訴へ",
+				"en": "The administration plans to appeal the tariff refund order"
+			},
+			"pairs": [
+				{
+					"en": "The administration plans to appeal the tariff refund order",
+					"ja": "関税還付の全面適用を巡り政権が控訴へ"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-administration-moved-to-appeal-an-order-that-would-let-all-importers-seek-refunds-on-struck-down-tariffs",
+			"heading": {
+				"ja": "何が起きたか: 政権は、違法と判断された関税を支払った輸入業者への一律還付を認める判断に異議を唱えた。控訴の行方次第で、還付の対象や時期が変わる。",
+				"en": "What happened: The administration moved to appeal an order that would let all importers seek refunds on struck-down tariffs."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The administration moved to appeal an order that would let all importers seek refunds on struck-down tariffs.",
+					"ja": "何が起きたか: 政権は、違法と判断された関税を支払った輸入業者への一律還付を認める判断に異議を唱えた。控訴の行方次第で、還付の対象や時期が変わる。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-refund-scope-affects-cash-flow-pricing-and-the-administration-s-tariff-strategy",
+			"heading": {
+				"ja": "なぜ重要か: 関税は単なる貿易政策ではなく、企業の資金繰りと価格転嫁に直結する。還付の範囲が広がれば、輸入業者の資金繰りには追い風だが、政権の関税戦略には逆風になる。",
+				"en": "Why it matters: Refund scope affects cash flow, pricing, and the administration’s tariff strategy."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Refund scope affects cash flow, pricing, and the administration's tariff strategy.",
+					"ja": "なぜ重要か: 関税は単なる貿易政策ではなく、企業の資金繰りと価格転嫁に直結する。還付の範囲が広がれば、輸入業者の資金繰りには追い風だが、政権の関税戦略には逆風になる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-monitor-how-fast-the-appeal-moves-and-how-broad-the-refund-eligibility-becomes",
+			"heading": {
+				"ja": "今後の注視点: 控訴審のスピードと、還付対象がどこまで広がるかを確認したい。企業側は、返金時期がキャッシュフローにどう効くかを見極める必要がある。",
+				"en": "What to watch next: Monitor how fast the appeal moves and how broad the refund eligibility becomes."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Monitor how fast the appeal moves and how broad the refund eligibility becomes.",
+					"ja": "今後の注視点: 控訴審のスピードと、還付対象がどこまで広がるかを確認したい。企業側は、返金時期がキャッシュフローにどう効くかを見極める必要がある。"
+				}
+			]
+		},
+		{
+			"id": "the-pce-inflation-gauge-re-accelerated",
+			"heading": {
+				"ja": "PCE物価が再加速し家計の余裕を圧迫",
+				"en": "The PCE inflation gauge re-accelerated"
+			},
+			"pairs": [
+				{
+					"en": "The PCE inflation gauge re-accelerated",
+					"ja": "PCE物価が再加速し家計の余裕を圧迫"
+				}
+			]
+		},
+		{
+			"id": "what-happened-april-pce-inflation-came-in-hotter-again-pushing-back-hopes-for-a-clean-disinflation-path",
+			"heading": {
+				"ja": "何が起きたか: 4月の個人消費支出物価指数は再び強く、インフレ沈静化の期待を後退させた。名目の支出が続いても、実質の余裕は削られている。",
+				"en": "What happened: April PCE inflation came in hotter again, pushing back hopes for a clean disinflation path."
+			},
+			"pairs": [
+				{
+					"en": "What happened: April PCE inflation came in hotter again, pushing back hopes for a clean disinflation path.",
+					"ja": "何が起きたか: 4月の個人消費支出物価指数は再び強く、インフレ沈静化の期待を後退させた。名目の支出が続いても、実質の余裕は削られている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-higher-for-longer-inflation-narrows-the-fed-s-room-to-cut-and-squeezes-discretionary-spending",
+			"heading": {
+				"ja": "なぜ重要か: FRBの利下げ余地を狭めるだけでなく、家計が裁量支出を絞るきっかけになる。物価が高止まりすると、消費主導の景気下支えも弱くなる。",
+				"en": "Why it matters: Higher-for-longer inflation narrows the Fed’s room to cut and squeezes discretionary spending."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Higher-for-longer inflation narrows the Fed's room to cut and squeezes discretionary spending.",
+					"ja": "なぜ重要か: FRBの利下げ余地を狭めるだけでなく、家計が裁量支出を絞るきっかけになる。物価が高止まりすると、消費主導の景気下支えも弱くなる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-next-pce-and-cpi-prints-will-show-whether-the-rebound-is-temporary-or-persistent",
+			"heading": {
+				"ja": "今後の注視点: 5月以降のPCEやCPIで、再加速が一時的かどうかを見る。賃上げが物価に追いつくかも、消費の持続性を左右する。",
+				"en": "What to watch next: The next PCE and CPI prints will show whether the rebound is temporary or persistent."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The next PCE and CPI prints will show whether the rebound is temporary or persistent.",
+					"ja": "今後の注視点: 5月以降のPCEやCPIで、再加速が一時的かどうかを見る。賃上げが物価に追いつくかも、消費の持続性を左右する。"
+				}
+			]
+		},
+		{
+			"id": "real-incomes-are-losing-ground",
+			"heading": {
+				"ja": "実質所得の目減りで消費の勢いに陰り",
+				"en": "Real incomes are losing ground"
+			},
+			"pairs": [
+				{
+					"en": "Real incomes are losing ground",
+					"ja": "実質所得の目減りで消費の勢いに陰り"
+				}
+			]
+		},
+		{
+			"id": "what-happened-real-income-growth-has-been-lagging-so-nominal-spending-looks-firmer-than-household-balance-sheets-actually-feel",
+			"heading": {
+				"ja": "何が起きたか: 実質所得が伸びず、支出の増加も物価上昇に吸収されている。消費データの見た目は底堅くても、家計の体感はむしろ厳しい。",
+				"en": "What happened: Real income growth has been lagging, so nominal spending looks firmer than household balance sheets actually feel."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Real income growth has been lagging, so nominal spending looks firmer than household balance sheets actually feel.",
+					"ja": "何が起きたか: 実質所得が伸びず、支出の増加も物価上昇に吸収されている。消費データの見た目は底堅くても、家計の体感はむしろ厳しい。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-when-prices-rise-faster-than-wages-consumers-eventually-cut-back-on-travel-dining-and-durable-goods",
+			"heading": {
+				"ja": "なぜ重要か: 物価高が所得増を上回る局面では、景気の耐久力が削られる。外食、旅行、耐久財のような裁量支出に遅れて影響が出やすい。",
+				"en": "Why it matters: When prices rise faster than wages, consumers eventually cut back on travel, dining, and durable goods."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: When prices rise faster than wages, consumers eventually cut back on travel, dining, and durable goods.",
+					"ja": "なぜ重要か: 物価高が所得増を上回る局面では、景気の耐久力が削られる。外食、旅行、耐久財のような裁量支出に遅れて影響が出やすい。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-wage-data-retail-sales-and-delinquency-trends-will-show-whether-the-squeeze-is-deepening",
+			"heading": {
+				"ja": "今後の注視点: 雇用統計と小売売上高が、所得減速をどこまで補えるかを見る。家計の借入増や延滞率の上昇が出てくるかも注目点だ。",
+				"en": "What to watch next: Wage data, retail sales, and delinquency trends will show whether the squeeze is deepening."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Wage data, retail sales, and delinquency trends will show whether the squeeze is deepening.",
+					"ja": "今後の注視点: 雇用統計と小売売上高が、所得減速をどこまで補えるかを見る。家計の借入増や延滞率の上昇が出てくるかも注目点だ。"
+				}
+			]
+		},
+		{
+			"id": "fed-officials-keep-a-rate-hike-bias-alive",
+			"heading": {
+				"ja": "FRBは高インフレが続けば追加利上げも",
+				"en": "Fed officials keep a rate-hike bias alive"
+			},
+			"pairs": [
+				{
+					"en": "Fed officials keep a rate-hike bias alive",
+					"ja": "FRBは高インフレが続けば追加利上げも"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-latest-minutes-showed-that-rate-hikes-remain-on-the-table-if-inflation-does-not-cool",
+			"heading": {
+				"ja": "何が起きたか: 直近の議事要旨では、インフレが落ち着かない場合に再度の利上げを支持する見方が残っていた。市場が期待する早期利下げのハードルは高い。",
+				"en": "What happened: The latest minutes showed that rate hikes remain on the table if inflation does not cool."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The latest minutes showed that rate hikes remain on the table if inflation does not cool.",
+					"ja": "何が起きたか: 直近の議事要旨では、インフレが落ち着かない場合に再度の利上げを支持する見方が残っていた。市場が期待する早期利下げのハードルは高い。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-rate-expectations-drive-bonds-mortgages-auto-loans-and-equity-valuation",
+			"heading": {
+				"ja": "なぜ重要か: 金利見通しは、株式バリュエーション、住宅ローン、自動車ローン、企業の資金調達コストに直接効く。政策金利が高止まりすれば、景気減速の時間も長引く。",
+				"en": "Why it matters: Rate expectations drive bonds, mortgages, auto loans, and equity valuation."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Rate expectations drive bonds, mortgages, auto loans, and equity valuation.",
+					"ja": "なぜ重要か: 金利見通しは、株式バリュエーション、住宅ローン、自動車ローン、企業の資金調達コストに直接効く。政策金利が高止まりすれば、景気減速の時間も長引く。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-subsequent-inflation-and-labor-data-will-determine-whether-the-fed-can-soften-its-tone",
+			"heading": {
+				"ja": "今後の注視点: PCEや雇用の鈍化が、FRBのタカ派姿勢をどこまで和らげるかを見たい。次回会合前の当局者発言は市場の変動要因になる。",
+				"en": "What to watch next: Subsequent inflation and labor data will determine whether the Fed can soften its tone."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Subsequent inflation and labor data will determine whether the Fed can soften its tone.",
+					"ja": "今後の注視点: PCEや雇用の鈍化が、FRBのタカ派姿勢をどこまで和らげるかを見たい。次回会合前の当局者発言は市場の変動要因になる。"
+				}
+			]
+		},
+		{
+			"id": "tariff-refunds-could-improve-importer-cash-flow",
+			"heading": {
+				"ja": "関税還付が輸入業者の資金繰りを左右",
+				"en": "Tariff refunds could improve importer cash flow"
+			},
+			"pairs": [
+				{
+					"en": "Tariff refunds could improve importer cash flow",
+					"ja": "関税還付が輸入業者の資金繰りを左右"
+				}
+			]
+		},
+		{
+			"id": "what-happened-if-refund-eligibility-expands-importers-could-get-back-large-amounts-of-prepaid-tariff-money",
+			"heading": {
+				"ja": "何が起きたか: 違法関税の還付が広がれば、関税を前払いしていた業者にまとまった資金が戻る可能性がある。控訴で遅れれば、その資金は当面拘束されたままだ。",
+				"en": "What happened: If refund eligibility expands, importers could get back large amounts of prepaid tariff money."
+			},
+			"pairs": [
+				{
+					"en": "What happened: If refund eligibility expands, importers could get back large amounts of prepaid tariff money.",
+					"ja": "何が起きたか: 違法関税の還付が広がれば、関税を前払いしていた業者にまとまった資金が戻る可能性がある。控訴で遅れれば、その資金は当面拘束されたままだ。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-refund-timing-affects-working-capital-inventory-planning-and-pricing-decisions",
+			"heading": {
+				"ja": "なぜ重要か: 還付は企業業績だけでなく、在庫積み増しや価格設定にも影響する。関税政策が金融・流通の実務にまで波及している。",
+				"en": "Why it matters: Refund timing affects working capital, inventory planning, and pricing decisions."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Refund timing affects working capital, inventory planning, and pricing decisions.",
+					"ja": "なぜ重要か: 還付は企業業績だけでなく、在庫積み増しや価格設定にも影響する。関税政策が金融・流通の実務にまで波及している。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-track-the-appeal-timetable-and-how-quickly-companies-book-the-expected-refunds",
+			"heading": {
+				"ja": "今後の注視点: 控訴審の判断と、企業がどのタイミングで返金見込みを織り込むかを確認したい。小売・物流株の反応にも注目だ。",
+				"en": "What to watch next: Track the appeal timetable and how quickly companies book the expected refunds."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Track the appeal timetable and how quickly companies book the expected refunds.",
+					"ja": "今後の注視点: 控訴審の判断と、企業がどのタイミングで返金見込みを織り込むかを確認したい。小売・物流株の反応にも注目だ。"
+				}
+			]
+		},
+		{
+			"id": "oil-prices-fell-on-signs-of-a-u-s-iran-deal",
+			"heading": {
+				"ja": "イラン交渉観測で原油安、燃料コストに波及",
+				"en": "Oil prices fell on signs of a U.S.-Iran deal"
+			},
+			"pairs": [
+				{
+					"en": "Oil prices fell on signs of a U.",
+					"ja": "イラン交渉観測で原油安、燃料コストに波及"
+				}
+			]
+		},
+		{
+			"id": "what-happened-signs-of-progress-in-u-s-iran-talks-reduced-the-risk-premium-in-crude-markets",
+			"heading": {
+				"ja": "何が起きたか: 米イラン交渉の進展観測で、地政学リスクプレミアムが剥落し、原油価格が下落した。燃料コストは、物価統計より先に家計へ効いてくる。",
+				"en": "What happened: Signs of progress in U.S.-Iran talks reduced the risk premium in crude markets."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Signs of progress in U.",
+					"ja": "何が起きたか: 米イラン交渉の進展観測で、地政学リスクプレミアムが剥落し、原油価格が下落した。燃料コストは、物価統計より先に家計へ効いてくる。"
+				},
+				{
+					"en": "-Iran talks reduced the risk premium in crude markets.",
+					"ja": "何が起きたか: 米イラン交渉の進展観測で、地政学リスクプレミアムが剥落し、原油価格が下落した。燃料コストは、物価統計より先に家計へ効いてくる。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-oil-feeds-through-to-transport-power-and-food-inflation-so-lower-crude-can-ease-headline-cpi-later",
+			"heading": {
+				"ja": "なぜ重要か: 原油は輸送費、電力コスト、食品価格まで連鎖するため、下落はインフレ鈍化の助けになる。ただし、対立が再燃すれば反転も早い。",
+				"en": "Why it matters: Oil feeds through to transport, power, and food inflation, so lower crude can ease headline CPI later."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Oil feeds through to transport, power, and food inflation, so lower crude can ease headline CPI later.",
+					"ja": "なぜ重要か: 原油は輸送費、電力コスト、食品価格まで連鎖するため、下落はインフレ鈍化の助けになる。ただし、対立が再燃すれば反転も早い。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-for-renewed-tensions-in-the-gulf-and-whether-gasoline-prices-follow-crude-lower",
+			"heading": {
+				"ja": "今後の注視点: ホルムズ海峡を含む中東情勢と、原油先物の再上昇有無を見たい。ガソリン価格の遅行反応も来週以降の焦点になる。",
+				"en": "What to watch next: Watch for renewed tensions in the Gulf and whether gasoline prices follow crude lower."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch for renewed tensions in the Gulf and whether gasoline prices follow crude lower.",
+					"ja": "今後の注視点: ホルムズ海峡を含む中東情勢と、原油先物の再上昇有無を見たい。ガソリン価格の遅行反応も来週以降の焦点になる。"
+				}
+			]
+		},
+		{
+			"id": "the-u-s-is-moving-to-block-nvidia-china-workarounds",
+			"heading": {
+				"ja": "米政府がNvidiaの対中迂回出荷を封じる",
+				"en": "The U.S. is moving to block Nvidia China workarounds"
+			},
+			"pairs": [
+				{
+					"en": "is moving to block Nvidia China workarounds",
+					"ja": "米政府がNvidiaの対中迂回出荷を封じる"
+				}
+			]
+		},
+		{
+			"id": "what-happened-u-s-officials-moved-against-rerouted-chip-shipments-that-could-undermine-china-export-controls",
+			"heading": {
+				"ja": "何が起きたか: 米当局は、対中輸出規制の抜け穴になりうる迂回出荷を塞ぐ方向に動いた。半導体の供給網は、製品競争よりも規制対応が焦点になっている。",
+				"en": "What happened: U.S. officials moved against rerouted chip shipments that could undermine China export controls."
+			},
+			"pairs": [
+				{
+					"en": "officials moved against rerouted chip shipments that could undermine China export controls.",
+					"ja": "何が起きたか: 米当局は、対中輸出規制の抜け穴になりうる迂回出荷を塞ぐ方向に動いた。半導体の供給網は、製品競争よりも規制対応が焦点になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-nvidia-supply-affects-cloud-providers-data-center-buildouts-and-national-ai-strategies",
+			"heading": {
+				"ja": "なぜ重要か: NvidiaをはじめとするAIチップ供給は、クラウド事業者、データセンター投資、各国のAI戦略に直接効く。規制強化は、中国側の代替調達と価格にも影響する。",
+				"en": "Why it matters: Nvidia supply affects cloud providers, data center buildouts, and national AI strategies."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Nvidia supply affects cloud providers, data center buildouts, and national AI strategies.",
+					"ja": "なぜ重要か: NvidiaをはじめとするAIチップ供給は、クラウド事業者、データセンター投資、各国のAI戦略に直接効く。規制強化は、中国側の代替調達と価格にも影響する。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-any-broader-export-control-expansion-and-nvidia-s-guidance-for-china-linked-demand",
+			"heading": {
+				"ja": "今後の注視点: 追加の輸出規制が、どの国や流通経路まで広がるかを確認したい。Nvidiaの売上見通しと中国向け在庫の扱いも要注意だ。",
+				"en": "What to watch next: Any broader export-control expansion and Nvidia’s guidance for China-linked demand."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Any broader export-control expansion and Nvidia's guidance for China-linked demand.",
+					"ja": "今後の注視点: 追加の輸出規制が、どの国や流通経路まで広がるかを確認したい。Nvidiaの売上見通しと中国向け在庫の扱いも要注意だ。"
+				}
+			]
+		},
+		{
+			"id": "google-search-is-becoming-more-agentic",
+			"heading": {
+				"ja": "Google SearchがI/Oでエージェント化",
+				"en": "Google Search is becoming more agentic"
+			},
+			"pairs": [
+				{
+					"en": "Google Search is becoming more agentic",
+					"ja": "Google SearchがI/Oでエージェント化"
+				}
+			]
+		},
+		{
+			"id": "what-happened-google-highlighted-a-more-agentic-search-and-shopping-experience-at-i-o",
+			"heading": {
+				"ja": "何が起きたか: GoogleはI/Oで、検索、ショッピング、Gemini連携を前面に出した。検索は「答えを返す機能」から「行動を代行する機能」へ一段進んでいる。",
+				"en": "What happened: Google highlighted a more agentic search and shopping experience at I/O."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Google highlighted a more agentic search and shopping experience at I/O.",
+					"ja": "何が起きたか: GoogleはI/Oで、検索、ショッピング、Gemini連携を前面に出した。検索は「答えを返す機能」から「行動を代行する機能」へ一段進んでいる。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-search-traffic-e-commerce-funnels-and-ad-mechanics-may-all-change-if-the-assistant-does-more-of-the-work",
+			"heading": {
+				"ja": "なぜ重要か: 検索流入、ECの導線、広告のクリック構造が変わる可能性がある。AIアシスタント化は、既存の検索ビジネスを拡張する一方で収益設計も揺さぶる。",
+				"en": "Why it matters: Search traffic, e-commerce funnels, and ad mechanics may all change if the assistant does more of the work."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Search traffic, e-commerce funnels, and ad mechanics may all change if the assistant does more of the work.",
+					"ja": "なぜ重要か: 検索流入、ECの導線、広告のクリック構造が変わる可能性がある。AIアシスタント化は、既存の検索ビジネスを拡張する一方で収益設計も揺さぶる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-how-much-automation-reaches-real-users-and-how-ad-placement-changes",
+			"heading": {
+				"ja": "今後の注視点: 実利用でどこまで自動化されるか、そして広告や商品比較の表示がどう変わるかを見る。企業側は検索最適化の前提を見直す必要がある。",
+				"en": "What to watch next: Watch how much automation reaches real users and how ad placement changes."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch how much automation reaches real users and how ad placement changes.",
+					"ja": "今後の注視点: 実利用でどこまで自動化されるか、そして広告や商品比較の表示がどう変わるかを見る。企業側は検索最適化の前提を見直す必要がある。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-openai-released-an-update-for-gpt-5-5-instant-while-also-simplifying-the-model-lineup",
+			"heading": {
+				"ja": "何が起きたか: OpenAIはGPT-5.5 Instantの更新を公開し、既存モデルの整理も進めた。製品群の更新速度が速く、利用者側のモデル選択も複雑になっている。",
+				"en": "What happened: OpenAI released an update for GPT-5.5 Instant while also simplifying the model lineup."
+			},
+			"pairs": [
+				{
+					"en": "What happened: OpenAI released an update for GPT-5.",
+					"ja": "何が起きたか: OpenAIはGPT-5.5 Instantの更新を公開し、既存モデルの整理も進めた。製品群の更新速度が速く、利用者側のモデル選択も複雑になっている。"
+				},
+				{
+					"en": "5 Instant while also simplifying the model lineup.",
+					"ja": "何が起きたか: OpenAIはGPT-5.5 Instantの更新を公開し、既存モデルの整理も進めた。製品群の更新速度が速く、利用者側のモデル選択も複雑になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-model-updates-affect-quality-latency-tooling-and-enterprise-compatibility",
+			"heading": {
+				"ja": "なぜ重要か: モデル更新は、精度や速度だけでなく、運用コスト、ツール連携、ガバナンスにも影響する。旧モデル退役は、企業のプロンプトや評価基盤の再確認を迫る。",
+				"en": "Why it matters: Model updates affect quality, latency, tooling, and enterprise compatibility."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Model updates affect quality, latency, tooling, and enterprise compatibility.",
+					"ja": "なぜ重要か: モデル更新は、精度や速度だけでなく、運用コスト、ツール連携、ガバナンスにも影響する。旧モデル退役は、企業のプロンプトや評価基盤の再確認を迫る。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-keep-an-eye-on-benchmark-changes-and-which-model-becomes-the-default-in-production-workflows",
+			"heading": {
+				"ja": "今後の注視点: 5.5系の評価ベンチマークと、企業利用での互換性を確認したい。各社がどのモデルを標準採用にするかも追うべきだ。",
+				"en": "What to watch next: Keep an eye on benchmark changes and which model becomes the default in production workflows."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Keep an eye on benchmark changes and which model becomes the default in production workflows.",
+					"ja": "今後の注視点: 5.5系の評価ベンチマークと、企業利用での互換性を確認したい。各社がどのモデルを標準採用にするかも追うべきだ。"
+				}
+			]
+		},
+		{
+			"id": "government-ai-model-security-reviews-are-expanding",
+			"heading": {
+				"ja": "米政府が主要AIモデルの事前審査を拡大",
+				"en": "Government AI model security reviews are expanding"
+			},
+			"pairs": [
+				{
+					"en": "Government AI model security reviews are expanding",
+					"ja": "米政府が主要AIモデルの事前審査を拡大"
+				}
+			]
+		},
+		{
+			"id": "what-happened-major-ai-models-are-being-pulled-deeper-into-government-safety-and-security-review",
+			"heading": {
+				"ja": "何が起きたか: 主要AI企業のモデルが、米政府の安全性・セキュリティ審査により深く組み込まれている。AIの導入は、もはや性能競争だけでは済まない。",
+				"en": "What happened: Major AI models are being pulled deeper into government safety and security review."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Major AI models are being pulled deeper into government safety and security review.",
+					"ja": "何が起きたか: 主要AI企業のモデルが、米政府の安全性・セキュリティ審査により深く組み込まれている。AIの導入は、もはや性能競争だけでは済まない。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-public-review-can-slow-launches-but-it-also-sets-a-trust-bar-for-procurement-and-critical-infrastructure-use",
+			"heading": {
+				"ja": "なぜ重要か: 公的審査は、モデルの公開速度や機能追加にブレーキをかける一方で、採用の信頼性を高める。政府調達や防衛・インフラ向け利用では、審査通過が前提になる。",
+				"en": "Why it matters: Public review can slow launches, but it also sets a trust bar for procurement and critical infrastructure use."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Public review can slow launches, but it also sets a trust bar for procurement and critical infrastructure use.",
+					"ja": "なぜ重要か: 公的審査は、モデルの公開速度や機能追加にブレーキをかける一方で、採用の信頼性を高める。政府調達や防衛・インフラ向け利用では、審査通過が前提になる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-look-for-which-failure-modes-or-safety-gaps-regulators-flag-and-how-that-changes-release-schedules",
+			"heading": {
+				"ja": "今後の注視点: 審査でどのような失敗モードが問題視されたか、そしてその結果がモデル公開や販売条件に反映されるかを見る。各社の評価体制も強化が必要だ。",
+				"en": "What to watch next: Look for which failure modes or safety gaps regulators flag, and how that changes release schedules."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Look for which failure modes or safety gaps regulators flag, and how that changes release schedules.",
+					"ja": "今後の注視点: 審査でどのような失敗モードが問題視されたか、そしてその結果がモデル公開や販売条件に反映されるかを見る。各社の評価体制も強化が必要だ。"
+				}
+			]
+		},
+		{
+			"id": "the-pentagon-is-moving-ahead-with-ai-company-deals",
+			"heading": {
+				"ja": "米軍が主要AI企業と導入契約",
+				"en": "The Pentagon is moving ahead with AI company deals"
+			},
+			"pairs": [
+				{
+					"en": "The Pentagon is moving ahead with AI company deals",
+					"ja": "米軍が主要AI企業と導入契約"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-pentagon-moved-ahead-with-agreements-involving-leading-ai-vendors",
+			"heading": {
+				"ja": "何が起きたか: 米国防総省は、複数のAI企業との導入契約を進めた。生成AIは、研究開発の段階を越えて、運用現場に近づいている。",
+				"en": "What happened: The Pentagon moved ahead with agreements involving leading AI vendors."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The Pentagon moved ahead with agreements involving leading AI vendors.",
+					"ja": "何が起きたか: 米国防総省は、複数のAI企業との導入契約を進めた。生成AIは、研究開発の段階を越えて、運用現場に近づいている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-military-adoption-raises-the-bar-on-safety-explainability-and-data-handling-and-it-pushes-those-requirements-into-civilian-markets-too",
+			"heading": {
+				"ja": "なぜ重要か: 軍事分野の採用は、AIの安全性、説明可能性、データ管理の基準を一段引き上げる。防衛契約は、民間市場にも技術要件を波及させる。",
+				"en": "Why it matters: Military adoption raises the bar on safety, explainability, and data handling, and it pushes those requirements into civilian markets too."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Military adoption raises the bar on safety, explainability, and data handling, and it pushes those requirements into civilian markets too.",
+					"ja": "なぜ重要か: 軍事分野の採用は、AIの安全性、説明可能性、データ管理の基準を一段引き上げる。防衛契約は、民間市場にも技術要件を波及させる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-track-which-missions-are-automated-and-where-human-approval-remains-mandatory",
+			"heading": {
+				"ja": "今後の注視点: どのタスクにAIが使われ、どこで人間の承認が残るかを見たい。契約が競合他社の提携や政府向け販売に広がるかも注目だ。",
+				"en": "What to watch next: Track which missions are automated and where human approval remains mandatory."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Track which missions are automated and where human approval remains mandatory.",
+					"ja": "今後の注視点: どのタスクにAIが使われ、どこで人間の承認が残るかを見たい。契約が競合他社の提携や政府向け販売に広がるかも注目だ。"
+				}
+			]
+		},
+		{
+			"id": "inflation-lower-real-income-and-oil-price-volatility-all-feed-the-same-household-squeeze-even-if-tariff-refunds-or-lower-crude-help-at-the-margin-persistent-price-pressure-still-weakens-the-consumer-backdrop",
+			"heading": {
+				"ja": "物価高と実質所得の伸び悩みが、家計の消費余力をじわじわ削っている。関税還付や原油安があっても、インフレ再加速が続けば景気下支え効果は限定的だ。",
+				"en": "Inflation, lower real income, and oil-price volatility all feed the same household squeeze. Even if tariff refunds or lower crude help at the margin, persistent price pressure still weakens the consumer backdrop."
+			},
+			"pairs": [
+				{
+					"en": "Inflation, lower real income, and oil-price volatility all feed the same household squeeze.",
+					"ja": "物価高と実質所得の伸び悩みが、家計の消費余力をじわじわ削っている。関税還付や原油安があっても、インフレ再加速が続けば景気下支え効果は限定的だ。"
+				},
+				{
+					"en": "Even if tariff refunds or lower crude help at the margin, persistent price pressure still weakens the consumer backdrop.",
+					"ja": "物価高と実質所得の伸び悩みが、家計の消費余力をじわじわ削っている。関税還付や原油安があっても、インフレ再加速が続けば景気下支え効果は限定的だ。"
+				}
+			]
+		},
+		{
+			"id": "politics-remains-a-contest-over-executive-power-immigration-enforcement-tariff-appeals-and-white-house-spending-all-show-how-courts-and-congress-are-shaping-policy-in-real-time",
+			"heading": {
+				"ja": "政治では、移民・関税・ホワイトハウス予算が同じ日に動き、行政権と議会権限の綱引きが続いている。司法判断もその争いを止めず、むしろ長期化させている。",
+				"en": "Politics remains a contest over executive power: immigration enforcement, tariff appeals, and White House spending all show how courts and Congress are shaping policy in real time."
+			},
+			"pairs": [
+				{
+					"en": "Politics remains a contest over executive power: immigration enforcement, tariff appeals, and White House spending all show how courts and Congress are shaping policy in real time.",
+					"ja": "政治では、移民・関税・ホワイトハウス予算が同じ日に動き、行政権と議会権限の綱引きが続いている。司法判断もその争いを止めず、むしろ長期化させている。"
+				}
+			]
+		},
+		{
+			"id": "ai-is-moving-from-a-product-story-to-a-governance-story-export-controls-model-reviews-and-defense-adoption-now-matter-as-much-as-benchmark-scores",
+			"heading": {
+				"ja": "技術では、AIは「新機能」よりも「輸出管理」「事前審査」「軍事導入」の文脈で語られる比重が増えた。製品更新と安全保障の境界が急速に曖昧になっている。",
+				"en": "AI is moving from a product story to a governance story. Export controls, model reviews, and defense adoption now matter as much as benchmark scores."
+			},
+			"pairs": [
+				{
+					"en": "AI is moving from a product story to a governance story.",
+					"ja": "技術では、AIは「新機能」よりも「輸出管理」「事前審査」「軍事導入」の文脈で語られる比重が増えた。製品更新と安全保障の境界が急速に曖昧になっている。"
+				},
+				{
+					"en": "Export controls, model reviews, and defense adoption now matter as much as benchmark scores.",
+					"ja": "技術では、AIは「新機能」よりも「輸出管理」「事前審査」「軍事導入」の文脈で語られる比重が増えた。製品更新と安全保障の境界が急速に曖昧になっている。"
+				}
+			]
+		},
+		{
+			"id": "google-openai-microsoft-and-nvidia-are-all-facing-a-similar-constraint-set-product-velocity-is-no-longer-enough-without-regulatory-fit-supply-chain-control-and-security-approvals",
+			"heading": {
+				"ja": "Google、OpenAI、Microsoft、Nvidiaはいずれも、技術競争だけでなく制度対応を競う局面に入っている。今後は性能発表よりも、審査・規制・供給網の話が株価や導入判断を左右しやすい。",
+				"en": "Google, OpenAI, Microsoft, and Nvidia are all facing a similar constraint set: product velocity is no longer enough without regulatory fit, supply-chain control, and security approvals."
+			},
+			"pairs": [
+				{
+					"en": "Google, OpenAI, Microsoft, and Nvidia are all facing a similar constraint set: product velocity is no longer enough without regulatory fit, supply-chain control, and security approvals.",
+					"ja": "Google、OpenAI、Microsoft、Nvidiaはいずれも、技術競争だけでなく制度対応を競う局面に入っている。今後は性能発表よりも、審査・規制・供給網の話が株価や導入判断を左右しやすい。"
+				}
+			]
+		},
+		{
+			"id": "how-quickly-the-tariff-refund-appeal-moves-and-how-broad-the-refund-eligibility-becomes",
+			"heading": {
+				"ja": "関税還付の控訴審がどの速度で進み、輸入業者の返金見込みがどこまで広がるか。",
+				"en": "How quickly the tariff refund appeal moves, and how broad the refund eligibility becomes."
+			},
+			"pairs": [
+				{
+					"en": "How quickly the tariff refund appeal moves, and how broad the refund eligibility becomes.",
+					"ja": "関税還付の控訴審がどの速度で進み、輸入業者の返金見込みがどこまで広がるか。"
+				}
+			]
+		},
+		{
+			"id": "whether-immigration-funding-and-white-house-security-spending-settle-into-a-compromise-or-keep-stalling",
+			"heading": {
+				"ja": "72億ドルの移民強制送還予算とホワイトハウス警備費が、最終的にどう折り合うか。",
+				"en": "Whether immigration funding and White House security spending settle into a compromise or keep stalling."
+			},
+			"pairs": [
+				{
+					"en": "Whether immigration funding and White House security spending settle into a compromise or keep stalling.",
+					"ja": "72億ドルの移民強制送還予算とホワイトハウス警備費が、最終的にどう折り合うか。"
+				}
+			]
+		},
+		{
+			"id": "if-the-next-inflation-data-confirm-a-renewed-uptick-or-only-a-temporary-rebound",
+			"heading": {
+				"ja": "PCEとCPIが再加速のままなのか、それとも一時的な戻りなのか。",
+				"en": "If the next inflation data confirm a renewed uptick or only a temporary rebound."
+			},
+			"pairs": [
+				{
+					"en": "If the next inflation data confirm a renewed uptick or only a temporary rebound.",
+					"ja": "PCEとCPIが再加速のままなのか、それとも一時的な戻りなのか。"
+				}
+			]
+		},
+		{
+			"id": "whether-nvidia-export-controls-expand-beyond-the-current-workaround-channel",
+			"heading": {
+				"ja": "Nvidiaの対中迂回出荷規制が、第三国経由の供給網まで広がるか。",
+				"en": "Whether Nvidia export controls expand beyond the current workaround channel."
+			},
+			"pairs": [
+				{
+					"en": "Whether Nvidia export controls expand beyond the current workaround channel.",
+					"ja": "Nvidiaの対中迂回出荷規制が、第三国経由の供給網まで広がるか。"
+				}
+			]
+		},
+		{
+			"id": "which-ai-vendor-first-sees-a-major-product-or-procurement-decision-change-because-of-government-security-reviews-or-defense-contracts",
+			"heading": {
+				"ja": "Google I/O、OpenAI更新、政府審査、国防契約の流れが、どの企業の採用判断を先に変えるか。",
+				"en": "Which AI vendor first sees a major product or procurement decision change because of government security reviews or defense contracts."
+			},
+			"pairs": [
+				{
+					"en": "Which AI vendor first sees a major product or procurement decision change because of government security reviews or defense contracts.",
+					"ja": "Google I/O、OpenAI更新、政府審査、国防契約の流れが、どの企業の採用判断を先に変えるか。"
+				}
+			]
+		}
+	]
+}

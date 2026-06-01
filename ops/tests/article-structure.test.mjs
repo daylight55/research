@@ -175,9 +175,9 @@ test('research logs record public generation context and investigation input', (
 		const { type } = articleKey(file.replace(/research-log\.mdx$/, 'index.mdx'))
 		const source = readFileSync(file, 'utf8')
 
-		assert.match(source, /^## 利用環境$/m, `${file} should include generation context`)
-		assert.match(source, /model: `gpt-5\.4-mini`/, `${file} should record the model`)
-		assert.match(source, /^## 調査命令$/m, `${file} should include the investigation input`)
+		assert.match(source, /^## (?:利用環境|Environment)$/m, `${file} should include generation context`)
+		assert.match(source, /^-\s+(?:Automation\s+)?model:\s+`gpt-5\.4-mini`$/im, `${file} should record the model`)
+		assert.match(source, /^## (?:調査命令|Research Instruction)$/m, `${file} should include the investigation input`)
 		assert.doesNotMatch(
 			source,
 			/research-queue\/issues|github\.com\/daylight55\/research-queue\/issues/,

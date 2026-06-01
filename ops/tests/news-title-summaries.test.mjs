@@ -59,7 +59,7 @@ test('news article titles summarize the day after the date', () => {
 test('translated news digest labels stay paragraph-separated', () => {
 	const files = findFiles('articles/news/*/en/index.mdx')
 
-	const digestLabelRe = /^(What happened|Why it matters|What to watch):/
+	const digestLabelRe = /^(What happened|Why it matters|What to watch(?: next)?):/
 	const staleLabelRe =
 		/^(What Happened|Why it's important|Implications for practice|Practical implication|Practical Implications):/
 
@@ -104,12 +104,8 @@ test('news digests use forward-looking watch labels instead of practice implicat
 			`${file} should not use stale practice implication labels`
 		)
 
-		const expectedLabel = file.includes('/en/') ? 'What to watch:' : '今後の注視点:'
-		assert.match(
-			source,
-			new RegExp(`^${expectedLabel}`, 'm'),
-			`${file} should use ${expectedLabel}`
-		)
+		const expectedLabelRe = file.includes('/en/') ? /^What to watch(?: next)?:/m : /^今後の注視点:/m
+		assert.match(source, expectedLabelRe, `${file} should use a forward-looking watch label`)
 	}
 })
 

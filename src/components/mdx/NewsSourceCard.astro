@@ -36,6 +36,8 @@ const displayImageUrl = imageUrl ?? fallbackImage
 	href={href}
 	target='_blank'
 	rel='noreferrer'
+	data-news-source-card
+	data-news-source-href={href}
 	class='not-prose my-5 grid overflow-hidden rounded-md border border-black/10 bg-white/80 text-gray-900 no-underline shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:bg-white/10 dark:text-gray-100 dark:hover:border-white/30 sm:h-40 sm:grid-cols-[13rem_1fr]'
 >
 	<div class='h-40 bg-gray-100 dark:bg-gray-900 sm:h-full'>
@@ -55,10 +57,13 @@ const displayImageUrl = imageUrl ?? fallbackImage
 			<div class='text-xs font-semibold tracking-[0.14em] text-gray-500 dark:text-gray-400'>
 				{source}
 			</div>
-			<div class='text-base font-semibold leading-6'>{title}</div>
+			<div class='text-base font-semibold leading-6' data-news-source-title>{title}</div>
 			{
 				description && (
-					<p class='m-0 line-clamp-2 text-sm leading-6 text-gray-700 dark:text-gray-300'>
+					<p
+						class='m-0 line-clamp-2 text-sm leading-6 text-gray-700 dark:text-gray-300'
+						data-news-source-description
+					>
 						{description}
 					</p>
 				)

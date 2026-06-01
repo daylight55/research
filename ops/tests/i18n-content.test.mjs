@@ -318,6 +318,12 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /createSentencePair/)
 	assert.match(mixedArticleComponent, /mapTranslation/)
 	assert.match(mixedArticleComponent, /pairableText/)
+	assert.match(mixedArticleComponent, /pairHeadings/)
+	assert.match(mixedArticleComponent, /alignmentHeadingsFromData/)
+	assert.match(mixedArticleComponent, /pairNewsSourceCards/)
+	assert.match(mixedArticleComponent, /data-news-source-card/)
+	assert.match(mixedArticleComponent, /pairRemainingBlocksByOrder/)
+	assert.match(mixedArticleComponent, /remainingPairableBlocks/)
 	assert.match(mixedArticleComponent, /\.source-note/)
 	assert.match(mixedArticleComponent, /Source memo/)
 	assert.match(mixedArticleComponent, /__DECIMAL_/)
@@ -326,6 +332,15 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /block\.replaceChildren/)
 	assert.match(mixedArticleComponent, /mixed-sentence__text/)
 	assert.doesNotMatch(mixedArticleComponent, /const splitSentences/)
+
+	const newsSourceCard = await readFile(
+		join(repoRoot.pathname, 'src/components/mdx/NewsSourceCard.astro'),
+		'utf8'
+	)
+	assert.match(newsSourceCard, /data-news-source-card/)
+	assert.match(newsSourceCard, /data-news-source-href=\{href\}/)
+	assert.match(newsSourceCard, /data-news-source-title/)
+	assert.match(newsSourceCard, /data-news-source-description/)
 
 	const packageJson = await readFile(join(repoRoot.pathname, 'package.json'), 'utf8')
 	assert.match(packageJson, /"sentence-splitter":/)

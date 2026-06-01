@@ -52,6 +52,17 @@ async function mixedAlignmentFiles() {
 	return files
 }
 
+function newsSourceCards(source) {
+	return [...source.matchAll(/<NewsSourceCard\s+([\s\S]*?)\/>/g)].map((match, index) => {
+		const props = match[1]
+		return {
+			index: index + 1,
+			href: props.match(/href=(['"])([\s\S]*?)\1/)?.[2] ?? '',
+			hasDescription: /description=(['"])/.test(props)
+		}
+	})
+}
+
 test('Astro i18n is configured for Japanese and English', async () => {
 	const config = await readFile(join(repoRoot.pathname, 'astro.config.mjs'), 'utf8')
 
@@ -190,6 +201,30 @@ test('English reference pages and index data do not contain Japanese text', asyn
 	assert.match(referenceData, /title:\s*\{\s*ja:/)
 	assert.match(referenceData, /description:\s*\{\s*ja:/)
 	assert.match(referenceData, /export function getReferenceItems/)
+})
+
+test('localized news source cards stay aligned for mixed news pages', async () => {
+	for (const slug of await articleSlugs('news')) {
+		const japaneseSource = await readFile(join(articlesDir, 'news', slug, 'ja', 'index.mdx'), 'utf8')
+		const englishSource = await readFile(join(articlesDir, 'news', slug, 'en', 'index.mdx'), 'utf8')
+		const japaneseCards = newsSourceCards(japaneseSource)
+		const englishCards = newsSourceCards(englishSource)
+
+		assert.ok(japaneseCards.length > 0, `news/${slug} should include Japanese source cards`)
+		assert.deepEqual(
+			englishCards.map((card) => card.href),
+			japaneseCards.map((card) => card.href),
+			`news/${slug} source cards should stay in the same URL order across locales`
+		)
+
+		for (const card of [...japaneseCards, ...englishCards]) {
+			assert.ok(card.href, `news/${slug} card ${card.index} should include href`)
+			assert.ok(
+				card.hasDescription,
+				`news/${slug} card ${card.index} should include description for MIX card pairing`
+			)
+		}
+	}
 })
 
 test('Codex translation workflow exists for missing English articles', async () => {

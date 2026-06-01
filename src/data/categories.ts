@@ -6,6 +6,7 @@ export const CATEGORIES = [
 	'enterprise-ai-platforms',
 	'developer-tools',
 	'knowledge-systems',
+	'ai-market',
 	'philosophy-knowledge',
 	'learning-science',
 	'data-infrastructure',

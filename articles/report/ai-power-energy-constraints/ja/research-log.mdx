@@ -1,0 +1,81 @@
+---
+title: '調査プロセス: AIブームにおける電力・エネルギー制約はどこで詰まるか'
+---
+
+作成日: 2026-06-01
+
+## 読み方
+
+この調査ログは、本文の要約ではなく、何を問い、どの一次情報を優先し、どこを推定として残したかを示すための公開記録である。AI データセンターの電力問題は、発電量だけでなく送電網、変電、接続、冷却、契約、政策を同時に見る必要があるため、調査でもその順で資料を当たった。
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- issue number: #22
+- issue title: AIブームにおける電力・エネルギー制約を調査する
+- publishable request summary: AI データセンター需要が電力、送電網、再エネ、原子力、ガス火力、蓄電に与える影響を調査し、地域別の送電網制約、PPA、原子力再評価、クラウド企業や地域政策への含意、過熱テーマとしてのリスクを整理する。
+- scope constraints: 最新の公式資料と主要統計を確認し、複数資料で電力消費見通しを比較する。主張、根拠、限界、実務含意を分ける。可能な範囲で図解と比較表を入れる。
+- inferred deliverable: 日本語の公開レポート、英語版、研究ログ、MIX 整合を含む、AI インフラの電力制約を読むための実務向け記事一式。
+
+## 何を確認したか
+
+調査方式は narrative review と policy analysis を組み合わせた。中心の問いは、AI データセンター需要がどの順番で電力システムを圧迫し、どの供給手段がどの時間軸で効くかである。
+
+1. AI データセンターの電力需要はどの程度増えるのか。
+2. 送電網と系統接続はどこで最初に詰まるのか。
+3. PPA、原子力、ガス火力、蓄電はどの役割分担になるのか。
+4. 日本、米国、欧州で制約の出方はどう違うのか。
+5. このテーマはどこで過熱しやすいのか。
+
+## 利用した一次情報と準一次情報
+
+- IEA: `Energy and AI`
+- IEA: `Data centre electricity use surged in 2025 even with tightening bottlenecks`
+- IEA: `Electricity 2026`
+- IEA: `Powering Data Centres in the Age of AI`
+- IEA: `grids and secure energy transitions`
+- LBNL: `2024 United States Data Center Energy Usage Report`
+- U.S. EIA: 2026 electric power outlook / STEO
+- NERC: `Characteristics and Risks of Emerging Large Loads`
+- NERC: `2025 Long-Term Reliability Assessment`
+- METI: 英文プレスリリースと政策資料
+- ENECHO: データセンター電力需要の解説記事
+- Google: 再エネと advanced nuclear に関する公開情報
+
+## 採用しなかった情報
+
+- 速報性だけはあるが、公式資料で裏を取りにくい業界ブログや匿名市場予測は、本文の根拠には使わなかった。
+- 個別銘柄の株価予想や短期のテーマ売買アイデアは、今回の依頼の範囲外なので外した。
+- 地域別の細かな制度差は、本文の論点に影響する範囲へ絞り、それ以外は一般化した。
+
+## 判断基準
+
+本文では、確定情報と公表情報からの推定を分けた。特に「どの電源が勝つか」ではなく、「どの制約をどの時間軸で解くか」を主題にした。PPA は調達を、原子力は長期の firm power を、ガスは橋渡しを、蓄電は柔軟性を主に担う、という整理にした。
+
+## 確認済みの根拠
+
+- IEA は、2025 年のデータセンター電力使用の加速と、2030 年までのさらなる増加シナリオを示した。
+- LBNL は、米国のデータセンター電力使用が 2028 年までに大幅に増える可能性を示した。
+- EIA は、米国の電力需要増のかなりの部分がデータセンター由来になる見通しを示した。
+- NERC は、大規模負荷の接続を信頼度リスクとして扱うべきだと示した。
+- METI と ENECHO は、日本でワット・ビット連携とデータセンター効率化が政策論点になっていることを示した。
+- Google と IEA の公開情報は、再エネ PPA と原子力再評価が大手テック企業の調達戦略に入っていることを確認する材料になった。
+
+## 残した限界
+
+- 需要見通しは、AI 利用量、モデル効率、推論単価、規制で動く。
+- 企業の将来計画は、実際の売上化まで時間差がある。
+- 地域ごとの電源構成と許認可は大きく異なるため、本文は共通パターンと代表例を優先した。
+- したがって本文は投資助言ではなく、AI 需要を電力制約から読むための実務整理として読むべきである。
+
+## 更新条件
+
+- IEA の 2026 年以降の需要推計が更新されたとき。
+- EIA や NERC が新しい大規模負荷・系統制約の分析を出したとき。
+- 日本のデータセンター効率化やワット・ビット連携の政策が更新されたとき。
+- 主要クラウド企業が PPA、原子力、ガス火力、蓄電に関する調達方針を変更したとき。

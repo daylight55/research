@@ -1,5 +1,6 @@
 ---
 import { existsSync } from 'node:fs'
+import { join } from 'node:path'
 import { stripLocaleFromPath, type Locale } from '@/utils'
 
 const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
@@ -7,10 +8,10 @@ const articleMatch = currentContentPath.match(/^\/(news|reports)\/([^/]+)\/?$/)
 const articleType = articleMatch?.[1] === 'reports' ? 'report' : articleMatch?.[1]
 const articleSlug = articleMatch?.[2]
 const articleRoot =
-	articleType && articleSlug ? new URL(`../../articles/${articleType}/${articleSlug}/`, import.meta.url) : undefined
-const hasEnglishArticle = articleRoot ? existsSync(new URL('en/index.mdx', articleRoot)) : true
+	articleType && articleSlug ? join(process.cwd(), 'articles', articleType, articleSlug) : undefined
+const hasEnglishArticle = articleRoot ? existsSync(join(articleRoot, 'en', 'index.mdx')) : true
 const hasMixedArticle =
-	Boolean(articleRoot) && hasEnglishArticle && existsSync(new URL('mix-alignment.json', articleRoot))
+	Boolean(articleRoot) && hasEnglishArticle && existsSync(join(articleRoot, 'mix-alignment.json'))
 const availableLocalesForCurrentPath = [
 	'ja',
 	hasEnglishArticle && 'en',
@@ -22,7 +23,7 @@ const localeAvailabilityScript = `window.__localeAvailability=${JSON.stringify({
 })};`
 ---
 
-<script is:inline set:html={localeAvailabilityScript}></script>
+<script is:inline set:html={localeAvailabilityScript} />
 
 <script>
 	import { navigate } from 'astro:transitions/client'

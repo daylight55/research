@@ -127,7 +127,10 @@ test('English articles mirror every Japanese article slug by article type', asyn
 			[],
 			`articles/${type}/<slug>/en should not exist without a matching Japanese article`
 		)
-		assert.deepEqual(englishPosts, japanesePosts.filter((slug) => !allowedMissing.includes(slug)))
+		assert.deepEqual(
+			englishPosts,
+			japanesePosts.filter((slug) => !allowedMissing.includes(slug))
+		)
 	}
 })
 
@@ -258,7 +261,10 @@ test('English reference pages and index data do not contain Japanese text', asyn
 
 test('localized news source cards stay aligned for mixed news pages', async () => {
 	for (const slug of await articleSlugs('news', 'en')) {
-		const japaneseSource = await readFile(join(articlesDir, 'news', slug, 'ja', 'index.mdx'), 'utf8')
+		const japaneseSource = await readFile(
+			join(articlesDir, 'news', slug, 'ja', 'index.mdx'),
+			'utf8'
+		)
 		const englishSource = await readFile(join(articlesDir, 'news', slug, 'en', 'index.mdx'), 'utf8')
 		const japaneseCards = newsSourceCards(japaneseSource)
 		const englishCards = newsSourceCards(englishSource)
@@ -334,6 +340,7 @@ test('preferred locale provider defaults to Japanese and persists manual switche
 	assert.match(provider, /window\.location\.replace/)
 	assert.match(provider, /canRedirectToEnglish/)
 	assert.match(provider, /canRedirectToMixedArticle/)
+	assert.match(provider, /join\(process\.cwd\(\), 'articles'/)
 	assert.match(provider, /setStoredLocale\(currentLocale\)/)
 	assert.match(provider, /currentLocale === preferredLocale/)
 	assert.match(header, /<LocaleToggle\s+locale=\{locale\}\s*\/>/)
@@ -342,10 +349,15 @@ test('preferred locale provider defaults to Japanese and persists manual switche
 	assert.match(floatingSwitch, /<LocaleToggle\s+locale=\{locale\}\s+variant='floating'\s*\/>/)
 	assert.match(localeToggle, /aria-label='Language'/)
 	assert.match(localeToggle, /isArticleDetailPath/)
+	assert.match(localeToggle, /displayLocales/)
 	assert.match(localeToggle, /showMixedToggle/)
+	assert.match(localeToggle, /join\(process\.cwd\(\), 'articles'/)
 	assert.match(localeToggle, /data-locale-switch='ja'/)
 	assert.match(localeToggle, /data-locale-switch='en'/)
 	assert.match(localeToggle, /data-locale-switch='mix'/)
+	assert.match(localeToggle, /English version is not available yet/)
+	assert.match(localeToggle, /Mixed reading is not available yet/)
+	assert.doesNotMatch(localeToggle, /const shouldRender = availableLocales\.length > 1/)
 	assert.match(localeToggle, /class:list=\{controlClass\}/)
 	assert.match(localeToggle, /localizedPath\('ja', currentContentPath\)/)
 	assert.match(localeToggle, /localizedPath\('en', currentContentPath\)/)

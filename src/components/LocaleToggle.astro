@@ -34,11 +34,11 @@ const mixedHref = localizedPath('mix', currentContentPath)
 const activeIndex = Math.max(displayLocales.indexOf(locale), 0)
 const isFloating = variant === 'floating'
 const navClass = isFloating
-	? 'fixed bottom-4 left-1/2 z-40 -translate-x-1/2 sm:bottom-5'
+	? 'fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-1/2 z-50 -translate-x-1/2 sm:bottom-[max(1.25rem,env(safe-area-inset-bottom))]'
 	: 'shrink-0'
 const controlClass = isFloating
 	? [
-			'relative grid h-10 items-center rounded-full border border-black/10 bg-[#f8f7f2]/85 p-1 text-[11px] font-bold shadow-sm backdrop-blur transition-colors dark:border-white/10 dark:bg-[#11110f]/85',
+			'relative grid h-10 items-center rounded-full border border-black/20 bg-white/95 p-1 text-[11px] font-bold shadow-2xl shadow-black/20 ring-1 ring-black/10 backdrop-blur transition-colors dark:border-white/20 dark:bg-[#11110f]/95 dark:shadow-black/50 dark:ring-white/15',
 			showMixedToggle ? 'w-48 grid-cols-3' : 'w-32 grid-cols-2'
 		]
 	: [

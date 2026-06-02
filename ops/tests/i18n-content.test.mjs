@@ -362,7 +362,11 @@ test('preferred locale provider defaults to Japanese and persists manual switche
 	assert.match(localeToggle, /localizedPath\('ja', currentContentPath\)/)
 	assert.match(localeToggle, /localizedPath\('en', currentContentPath\)/)
 	assert.match(localeToggle, /localizedPath\('mix', currentContentPath\)/)
-	assert.match(localeToggle, /fixed bottom-4 left-1\/2/)
+	assert.match(localeToggle, /fixed bottom-\[max\(1rem,env\(safe-area-inset-bottom\)\)\] left-1\/2/)
+	assert.match(localeToggle, /z-50/)
+	assert.match(localeToggle, /bg-white\/95/)
+	assert.match(localeToggle, /shadow-2xl/)
+	assert.match(localeToggle, /ring-1 ring-black\/10/)
 })
 
 test('mixed Japanese-English article pages are generated as a third reading mode', async () => {

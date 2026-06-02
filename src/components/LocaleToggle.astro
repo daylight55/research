@@ -1,4 +1,5 @@
 ---
+import { existsSync } from 'node:fs'
 import { DEFAULT_LOCALE, localizedPath, stripLocaleFromPath, type Locale } from '@/utils'
 
 const { locale = DEFAULT_LOCALE, variant = 'header' } = Astro.props as {
@@ -6,12 +7,27 @@ const { locale = DEFAULT_LOCALE, variant = 'header' } = Astro.props as {
 	variant?: 'header' | 'floating'
 }
 
+const articleMatch = stripLocaleFromPath(Astro.url.pathname).match(/^\/(news|reports)\/([^/]+)\/?$/)
+const articleType = articleMatch?.[1] === 'reports' ? 'report' : articleMatch?.[1]
+const articleSlug = articleMatch?.[2]
+const articleRoot =
+	articleType && articleSlug ? new URL(`../../articles/${articleType}/${articleSlug}/`, import.meta.url) : undefined
+const hasEnglishArticle = articleRoot ? existsSync(new URL('en/index.mdx', articleRoot)) : true
+const hasMixedArticle =
+	Boolean(articleRoot) && hasEnglishArticle && existsSync(new URL('mix-alignment.json', articleRoot))
 const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
 const isArticleDetailPath = /^\/(news|reports)\/[^/]+\/?$/.test(currentContentPath)
-const showMixedToggle = locale === 'mix' || isArticleDetailPath
+const availableLocales = [
+	'ja',
+	hasEnglishArticle && 'en',
+	(locale === 'mix' || (isArticleDetailPath && hasMixedArticle)) && 'mix'
+].filter(Boolean) as Locale[]
+const showMixedToggle = availableLocales.includes('mix')
+const shouldRender = availableLocales.length > 1
 const japaneseHref = localizedPath('ja', currentContentPath)
 const englishHref = localizedPath('en', currentContentPath)
 const mixedHref = localizedPath('mix', currentContentPath)
+const activeIndex = Math.max(availableLocales.indexOf(locale), 0)
 const isFloating = variant === 'floating'
 const navClass = isFloating
 	? 'fixed bottom-4 left-1/2 z-40 -translate-x-1/2 sm:bottom-5'
@@ -28,8 +44,8 @@ const controlClass = isFloating
 const indicatorClass = [
 	'pointer-events-none absolute inset-y-1 left-1 rounded-full bg-black transition-transform duration-200 ease-out dark:bg-white',
 	showMixedToggle ? 'w-[calc((100%_-_0.5rem)/3)]' : 'w-[calc((100%_-_0.5rem)/2)]',
-	locale === 'en' && 'translate-x-full',
-	showMixedToggle && locale === 'mix' && 'translate-x-[200%]'
+	activeIndex === 1 && 'translate-x-full',
+	activeIndex === 2 && 'translate-x-[200%]'
 ]
 const linkClass =
 	'relative z-10 inline-flex h-full items-center justify-center rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black dark:focus-visible:outline-white'
@@ -37,42 +53,46 @@ const inactiveClass = 'text-[#181713] hover:bg-black/5 dark:text-[#f4efe4] dark:
 const activeClass = 'text-white dark:text-black'
 ---
 
-<nav aria-label='Language' class={navClass}>
-	<div class:list={controlClass} role='radiogroup' aria-label='Language'>
-		<span class:list={indicatorClass} aria-hidden='true'></span>
-		<a
-			href={japaneseHref}
-			data-locale-switch='ja'
-			role='radio'
-			aria-checked={locale === 'ja'}
-			aria-label='Switch to Japanese'
-			class:list={[linkClass, locale === 'ja' ? activeClass : inactiveClass]}
-		>
-			JA
-		</a>
-		<a
-			href={englishHref}
-			data-locale-switch='en'
-			role='radio'
-			aria-checked={locale === 'en'}
-			aria-label='Switch to English'
-			class:list={[linkClass, locale === 'en' ? activeClass : inactiveClass]}
-		>
-			EN
-		</a>
-		{
-			showMixedToggle && (
+{
+	shouldRender && (
+		<nav aria-label='Language' class={navClass}>
+			<div class:list={controlClass} role='radiogroup' aria-label='Language'>
+				<span class:list={indicatorClass} aria-hidden='true'></span>
 				<a
-					href={mixedHref}
-					data-locale-switch='mix'
+					href={japaneseHref}
+					data-locale-switch='ja'
 					role='radio'
-					aria-checked={locale === 'mix'}
-					aria-label='Switch to Japanese-English mixed reading'
-					class:list={[linkClass, locale === 'mix' ? activeClass : inactiveClass]}
+					aria-checked={locale === 'ja'}
+					aria-label='Switch to Japanese'
+					class:list={[linkClass, locale === 'ja' ? activeClass : inactiveClass]}
 				>
-					MIX
+					JA
 				</a>
-			)
-		}
-	</div>
-</nav>
+				{availableLocales.includes('en') && (
+					<a
+						href={englishHref}
+						data-locale-switch='en'
+						role='radio'
+						aria-checked={locale === 'en'}
+						aria-label='Switch to English'
+						class:list={[linkClass, locale === 'en' ? activeClass : inactiveClass]}
+					>
+						EN
+					</a>
+				)}
+				{showMixedToggle && (
+					<a
+						href={mixedHref}
+						data-locale-switch='mix'
+						role='radio'
+						aria-checked={locale === 'mix'}
+						aria-label='Switch to Japanese-English mixed reading'
+						class:list={[linkClass, locale === 'mix' ? activeClass : inactiveClass]}
+					>
+						MIX
+					</a>
+				)}
+			</div>
+		</nav>
+	)
+}

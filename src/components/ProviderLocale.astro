@@ -1,3 +1,29 @@
+---
+import { existsSync } from 'node:fs'
+import { stripLocaleFromPath, type Locale } from '@/utils'
+
+const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
+const articleMatch = currentContentPath.match(/^\/(news|reports)\/([^/]+)\/?$/)
+const articleType = articleMatch?.[1] === 'reports' ? 'report' : articleMatch?.[1]
+const articleSlug = articleMatch?.[2]
+const articleRoot =
+	articleType && articleSlug ? new URL(`../../articles/${articleType}/${articleSlug}/`, import.meta.url) : undefined
+const hasEnglishArticle = articleRoot ? existsSync(new URL('en/index.mdx', articleRoot)) : true
+const hasMixedArticle =
+	Boolean(articleRoot) && hasEnglishArticle && existsSync(new URL('mix-alignment.json', articleRoot))
+const availableLocalesForCurrentPath = [
+	'ja',
+	hasEnglishArticle && 'en',
+	hasMixedArticle && 'mix'
+].filter(Boolean) as Locale[]
+const localeAvailabilityScript = `window.__localeAvailability=${JSON.stringify({
+	contentPath: currentContentPath,
+	availableLocales: availableLocalesForCurrentPath
+})};`
+---
+
+<script is:inline set:html={localeAvailabilityScript}></script>
+
 <script>
 	import { navigate } from 'astro:transitions/client'
 
@@ -11,6 +37,9 @@
 	const SWIPE_MAX_VERTICAL_DISTANCE = 70
 	const ARTICLE_BLOCK_SELECTOR = 'h1, h2, h3, h4, p, li, blockquote, table'
 	const ARTICLE_VIEWPORT_ANCHOR_RATIO = 0.42
+	const CURRENT_CONTENT_PATH = window.__localeAvailability?.contentPath ?? '/'
+	const AVAILABLE_LOCALES_FOR_CURRENT_PATH =
+		window.__localeAvailability?.availableLocales ?? SUPPORTED_LOCALES
 	let pendingScrollRestore = null
 	let scrollRestoreRun = 0
 	let scrollRestoreTimers = []
@@ -67,6 +96,12 @@
 	}
 
 	const canRedirectToEnglish = (contentPath) => {
+		if (
+			normalizePath(contentPath) === normalizePath(CURRENT_CONTENT_PATH) &&
+			!AVAILABLE_LOCALES_FOR_CURRENT_PATH.includes('en')
+		) {
+			return false
+		}
 		if (contentPath === '/') return true
 		if (['/news/', '/reports/', '/reference/', '/tags/'].includes(contentPath)) return true
 		return (
@@ -78,8 +113,15 @@
 		)
 	}
 
-	const canRedirectToMixedArticle = (contentPath) =>
-		/^\/(news|reports)\/[^/]+\/$/.test(normalizePath(contentPath))
+	const canRedirectToMixedArticle = (contentPath) => {
+		if (
+			normalizePath(contentPath) === normalizePath(CURRENT_CONTENT_PATH) &&
+			!AVAILABLE_LOCALES_FOR_CURRENT_PATH.includes('mix')
+		) {
+			return false
+		}
+		return /^\/(news|reports)\/[^/]+\/$/.test(normalizePath(contentPath))
+	}
 
 	const canRedirectToLocale = (locale, contentPath) =>
 		locale === 'mix' ? canRedirectToMixedArticle(contentPath) : canRedirectToEnglish(contentPath)
@@ -90,7 +132,11 @@
 	}
 
 	const availableLocalesForPath = (contentPath) =>
-		canRedirectToMixedArticle(contentPath) ? SUPPORTED_LOCALES : ['ja', 'en']
+		normalizePath(contentPath) === normalizePath(CURRENT_CONTENT_PATH)
+			? AVAILABLE_LOCALES_FOR_CURRENT_PATH
+			: canRedirectToMixedArticle(contentPath)
+				? SUPPORTED_LOCALES
+				: ['ja', 'en']
 
 	const isMobileSwipeWidth = () =>
 		window.matchMedia?.(`(max-width: ${SWIPE_MAX_WIDTH}px)`).matches ??

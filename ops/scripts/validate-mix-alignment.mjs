@@ -62,6 +62,31 @@ function readOptional(file) {
 	return existsSync(file) ? readFileSync(file, 'utf8') : undefined
 }
 
+function articlePubDate(source) {
+	return source?.match(/pubDate:\s*['"]([^'"]+)['"]/)?.[1] ?? ''
+}
+
+function latestJapaneseNewsSlug() {
+	const dir = path.join('articles', 'news')
+	if (!existsSync(dir)) return undefined
+
+	return execFileSync('find', [dir, '-maxdepth', '1', '-mindepth', '1', '-type', 'd'], {
+		encoding: 'utf8'
+	})
+		.split('\n')
+		.map((entry) => entry.trim())
+		.filter(Boolean)
+		.map((entry) => {
+			const slug = path.basename(entry)
+			return {
+				slug,
+				pubDate: articlePubDate(readOptional(path.join(entry, 'ja', 'index.mdx')))
+			}
+		})
+		.filter((entry) => entry.pubDate)
+		.sort((a, b) => b.pubDate.localeCompare(a.pubDate) || b.slug.localeCompare(a.slug))[0]?.slug
+}
+
 function changedFilesFromGit(args) {
 	const range = args.find((arg) => !arg.startsWith('-'))
 	if (range) {
@@ -168,11 +193,17 @@ export function validateArticleMixAlignment({
 
 function validateArticleFromDisk({ type, slug }) {
 	const root = path.join('articles', type, slug)
+	const englishArticle = readOptional(path.join(root, 'en', 'index.mdx'))
+	const japaneseArticle = readOptional(path.join(root, 'ja', 'index.mdx'))
+	if (type === 'news' && japaneseArticle && !englishArticle && slug === latestJapaneseNewsSlug()) {
+		return { ok: true, errors: [] }
+	}
+
 	return validateArticleMixAlignment({
 		type,
 		slug,
-		englishArticle: readOptional(path.join(root, 'en', 'index.mdx')),
-		japaneseArticle: readOptional(path.join(root, 'ja', 'index.mdx')),
+		englishArticle,
+		japaneseArticle,
 		alignmentJson: readOptional(path.join(root, 'mix-alignment.json'))
 	})
 }

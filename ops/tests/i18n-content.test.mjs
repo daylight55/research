@@ -29,6 +29,49 @@ async function articleSlugs(type, locale = 'ja') {
 	return slugs.sort()
 }
 
+async function articleLocales(type, slug) {
+	const localeEntries = await readdir(join(articlesDir, type, slug), { withFileTypes: true })
+	return localeEntries
+		.filter((entry) => entry.isDirectory())
+		.map((entry) => entry.name)
+		.sort()
+}
+
+async function latestNewsSlug(newsSlugs) {
+	const datedSlugs = await Promise.all(
+		newsSlugs.map(async (slug) => {
+			const source = await readFile(join(articlesDir, 'news', slug, 'ja', 'index.mdx'), 'utf8')
+			const pubDate = source.match(/pubDate:\s*['"]([^'"]+)['"]/)?.[1] ?? ''
+			return { slug, pubDate }
+		})
+	)
+
+	datedSlugs.sort((a, b) => b.pubDate.localeCompare(a.pubDate) || b.slug.localeCompare(a.slug))
+	return datedSlugs[0]?.slug
+}
+
+async function allowedMissingEnglishSlugs(type, japanesePosts, englishPosts) {
+	const englishPostSet = new Set(englishPosts)
+	const missing = japanesePosts.filter((slug) => !englishPostSet.has(slug))
+
+	if (type !== 'news') return []
+
+	assert.ok(
+		missing.length <= 1,
+		`news should have at most one Japanese-only article waiting for translate-blog-en; found ${missing.join(', ')}`
+	)
+	if (missing.length === 0) return []
+
+	const latestSlug = await latestNewsSlug(japanesePosts)
+	assert.equal(
+		missing[0],
+		latestSlug,
+		`only the latest generated news article may temporarily wait for translate-blog-en`
+	)
+
+	return missing
+}
+
 async function englishArticleFiles() {
 	const files = []
 	for (const type of articleTypes) {
@@ -75,9 +118,16 @@ test('English articles mirror every Japanese article slug by article type', asyn
 	for (const type of articleTypes) {
 		const japanesePosts = await articleSlugs(type)
 		const englishPosts = await articleSlugs(type, 'en')
+		const japanesePostSet = new Set(japanesePosts)
+		const allowedMissing = await allowedMissingEnglishSlugs(type, japanesePosts, englishPosts)
 
 		assert.ok(japanesePosts.length > 0)
-		assert.deepEqual(englishPosts, japanesePosts)
+		assert.deepEqual(
+			englishPosts.filter((slug) => !japanesePostSet.has(slug)),
+			[],
+			`articles/${type}/<slug>/en should not exist without a matching Japanese article`
+		)
+		assert.deepEqual(englishPosts, japanesePosts.filter((slug) => !allowedMissing.includes(slug)))
 	}
 })
 
@@ -89,14 +139,17 @@ test('articles are grouped by slug before locale', async () => {
 			`articles/${type}/en should not be used; use articles/${type}/<slug>/en instead`
 		)
 
-		for (const slug of await articleSlugs(type)) {
-			const localeEntries = await readdir(join(articlesDir, type, slug), { withFileTypes: true })
-			const locales = localeEntries
-				.filter((entry) => entry.isDirectory())
-				.map((entry) => entry.name)
-				.sort()
+		const japanesePosts = await articleSlugs(type)
+		const englishPosts = await articleSlugs(type, 'en')
+		const allowedMissing = await allowedMissingEnglishSlugs(type, japanesePosts, englishPosts)
 
-			assert.deepEqual(locales, ['en', 'ja'], `${type}/${slug} should contain ja and en`)
+		for (const slug of japanesePosts) {
+			const expectedLocales = allowedMissing.includes(slug) ? ['ja'] : ['en', 'ja']
+			assert.deepEqual(
+				await articleLocales(type, slug),
+				expectedLocales,
+				`${type}/${slug} should contain ${expectedLocales.join(' and ')}`
+			)
 		}
 	}
 })
@@ -204,7 +257,7 @@ test('English reference pages and index data do not contain Japanese text', asyn
 })
 
 test('localized news source cards stay aligned for mixed news pages', async () => {
-	for (const slug of await articleSlugs('news')) {
+	for (const slug of await articleSlugs('news', 'en')) {
 		const japaneseSource = await readFile(join(articlesDir, 'news', slug, 'ja', 'index.mdx'), 'utf8')
 		const englishSource = await readFile(join(articlesDir, 'news', slug, 'en', 'index.mdx'), 'utf8')
 		const japaneseCards = newsSourceCards(japaneseSource)

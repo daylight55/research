@@ -87,11 +87,12 @@ test('mobile horizontal swipes switch locale without replacing vertical scroll',
 	assert.match(source, /const SWIPE_MIN_DISTANCE = 72/)
 	assert.match(source, /const SWIPE_MAX_VERTICAL_DISTANCE = 70/)
 	assert.match(source, /let swipeStart = null/)
+	assert.match(source, /window\.__localeAvailability/)
+	assert.match(source, /AVAILABLE_LOCALES_FOR_CURRENT_PATH/)
 	assert.match(source, /const availableLocalesForPath = \(contentPath\) =>/)
-	assert.match(
-		source,
-		/canRedirectToMixedArticle\(contentPath\) \? SUPPORTED_LOCALES : \['ja', 'en'\]/
-	)
+	assert.match(source, /normalizePath\(contentPath\) === normalizePath\(CURRENT_CONTENT_PATH\)/)
+	assert.match(source, /\? AVAILABLE_LOCALES_FOR_CURRENT_PATH/)
+	assert.match(source, /canRedirectToMixedArticle\(contentPath\)/)
 	assert.match(source, /const switchLocaleBySwipe = \(direction\) =>/)
 	assert.match(source, /window\.addEventListener\(\s*'touchstart'/)
 	assert.match(source, /window\.addEventListener\(\s*'touchend'/)

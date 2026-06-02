@@ -1,0 +1,306 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "The AI market is often discussed as if everyone were measuring the same thing, but the sources do not measure the same layer.",
+          "ja": "生成AIをめぐる市場レポートは、同じ「AI市場」を見ているようで、実は測っているものが違う。"
+        },
+        {
+          "en": "Gartner measures total AI spend, IDC measures AI infrastructure spend, Goldman Sachs frames the AI investment cycle, McKinsey measures adoption and value capture, and cloud-company IR tells us what is actually happening in capex and monetization.",
+          "ja": "Gartnerは世界全体のAI支出、IDCはAIインフラ支出、Goldman SachsはAI投資サイクル、McKinseyは導入と価値実現、主要クラウド企業のIRは実際のcapexと収益化を見ている。"
+        },
+        {
+          "en": "That means the first task is not comparing headline numbers, but normalizing scope, horizon, and denominator.",
+          "ja": "したがって、数字の大小だけを並べても比較にはならない。まず、対象範囲、期間、分母をそろえる必要がある。"
+        },
+        {
+          "en": "The core conclusion is threefold.",
+          "ja": "本稿の結論は三つある。"
+        },
+        {
+          "en": "First, AI spending is real and still rising.",
+          "ja": "第一に、AI支出そのものは実在し、しかも増えている。"
+        },
+        {
+          "en": "Second, the spending remains concentrated in a small number of supply-side and infrastructure layers rather than spreading evenly across the whole economy.",
+          "ja": "第二に、その支出は少数の供給側とインフラ側に濃く残りやすく、企業全体に均等には広がっていない。"
+        },
+        {
+          "en": "Third, it is risky to translate TAM or market-value estimates directly into profit opportunity.",
+          "ja": "第三に、TAMや市場価値の話をそのまま利益機会と読み替えるのは危険である。"
+        },
+        {
+          "en": "In practice, capex, RPO, backlog, AI revenue run rate, and retention are stronger signals than large market-size forecasts.",
+          "ja": "実務では、capex、RPO、バックログ、AI収益、利用継続率の方が、派手な市場規模予測よりも強いシグナルになる。"
+        }
+      ]
+    },
+    {
+      "id": "comparison",
+      "heading": {
+        "ja": "2. 何を比べるのか",
+        "en": "2. What Is Being Compared"
+      },
+      "pairs": [
+        {
+          "en": "Gartner, IDC, McKinsey, and Goldman Sachs are each looking at a different layer.",
+          "ja": "Gartner、IDC、McKinsey、Goldman Sachsは、それぞれ別のレイヤーを見ている。"
+        },
+        {
+          "en": "Gartner's 2026 forecast puts worldwide AI spending at $2.59 trillion, up 47% year over year.",
+          "ja": "Gartnerの2026年予測は世界AI支出が2.59兆ドルに達し、前年比47%増になるというものだ。"
+        },
+        {
+          "en": "IDC expects AI infrastructure spending to reach $487 billion in 2026 and to exceed $1 trillion by 2029, which is much closer to the physical stack of servers, storage, networking, and data centers.",
+          "ja": "IDCはAIインフラ支出が2026年に4,870億ドル、2029年に1兆ドル超になるとみており、こちらはサーバー、ストレージ、ネットワーク、データセンター系の物理層に近い。"
+        },
+        {
+          "en": "Goldman Sachs argues that AI company investment could exceed $500 billion in 2026 and that the next leg of the trade is more likely to be AI platform stocks and productivity beneficiaries than model names alone.",
+          "ja": "Goldman SachsはAI企業の投資が2026年に5000億ドル超に達しうると論じ、投資家が次に見るべき局面は、モデルそのものよりAIプラットフォーム株と生産性の受益者だと整理している。"
+        },
+        {
+          "en": "McKinsey is different again.",
+          "ja": "McKinseyはさらに違う。"
+        },
+        {
+          "en": "It is not a market-size forecast.",
+          "ja": "市場規模ではなく、導入率と価値実現を見ている。"
+        },
+        {
+          "en": "It measures adoption and value realization.",
+          "ja": "導入率と価値実現を見ている。"
+        },
+        {
+          "en": "In its 2025 survey, 88% of organizations said they use AI in at least one function, 71% said they use generative AI, and 94% said they are not yet seeing significant value from their AI investments.",
+          "ja": "2025年の調査では、組織の88%が少なくとも1つの機能でAIを使い、71%が生成AIを使っている一方、94%はAI投資から有意な価値をまだ感じていない。"
+        },
+        {
+          "en": "In other words, adoption is broad, but monetization is still thin.",
+          "ja": "別の言い方をすれば、導入は広がったが、利益化はまだ細い。"
+        },
+        {
+          "en": "That is the key fork in the narrative.",
+          "ja": "ここが、投資ナラティブの最重要な分岐点だ。"
+        }
+      ]
+    },
+    {
+      "id": "strong-vs-weak",
+      "heading": {
+        "ja": "3. 強い仮説と弱い仮説",
+        "en": "3. Strong Hypotheses and Weak Hypotheses"
+      },
+      "pairs": [
+        {
+          "en": "The strongest hypothesis is that AI is an infrastructure-and-adoption cycle with real spending behind it.",
+          "ja": "強い仮説は、AIが「支出を伴うインフラ・導入サイクル」だという見方である。"
+        },
+        {
+          "en": "Gartner's total-spend forecast, IDC's infrastructure outlook, and the capex growth disclosed by major cloud companies all point in the same direction: the supply side is still investing.",
+          "ja": "Gartnerのような総支出予測、IDCのようなインフラ予測、そして各社IRのcapex増加は、少なくとも供給側の投資が続いていることを示している。"
+        },
+        {
+          "en": "Microsoft said its AI business reached a $37 billion annualized revenue run rate in Q3 FY2026.",
+          "ja": "MicrosoftはQ3 FY2026時点でAI事業の年率換算売上が370億ドルに達したとし、"
+        },
+        {
+          "en": "Amazon said it secured more than 2.1 million AI chips over the past 12 months and plans to deploy more than 1 million NVIDIA GPUs starting in 2026.",
+          "ja": "Amazonは過去12か月で210万台超のAIチップを確保し、2026年から100万台超のNVIDIA GPU展開を計画している。"
+        },
+        {
+          "en": "Alphabet raised its 2026 capex outlook to $180-190 billion, and Meta guided 2026 capex to $125-145 billion.",
+          "ja": "Alphabetは2026年のcapex見通しを1800億〜1900億ドルに引き上げ、Metaも2026年capexを1250億〜1450億ドルと案内している。"
+        },
+        {
+          "en": "The weaker hypothesis is that large market-size figures can be read directly as profit opportunity.",
+          "ja": "弱い仮説は、広い市場規模の数字をそのまま利益機会とみなす読み方である。"
+        },
+        {
+          "en": "Gartner's $2.59 trillion and IDC's $1 trillion-plus outlook both matter, but they do not become public-company profits in a one-to-one way.",
+          "ja": "たとえばGartnerの2.59兆ドルやIDCの1兆ドル超は、いずれもAIの重要性を示すが、そのまま上場企業の利益総額にはならない。"
+        },
+        {
+          "en": "Spend can rise while the margin pool still concentrates in cloud, chips, power equipment, or software.",
+          "ja": "支出が増えても、利益はクラウド、半導体、電力設備、ソフトウェアのどこかに偏る。"
+        },
+        {
+          "en": "An even weaker hypothesis is that high adoption automatically means strong monetization.",
+          "ja": "さらに弱い仮説は、導入率の高さがそのまま収益化を意味するという読み方である。"
+        },
+        {
+          "en": "McKinsey's survey says many organizations have started using AI, but very few are seeing significant value yet.",
+          "ja": "McKinseyの調査は、組織の導入が進んでも、価値がまだ十分に取れていないことを示している。"
+        },
+        {
+          "en": "That means AI usage and AI profit are still different questions.",
+          "ja": "つまり、AIが使われることと、AIで稼げることは別問題である。"
+        }
+      ]
+    },
+    {
+      "id": "signals",
+      "heading": {
+        "ja": "4. 実需を示す指標と誇張されやすい指標",
+        "en": "4. Demand Signals vs. Overhyped Signals"
+      },
+      "pairs": [
+        {
+          "en": "For decision-making, it is better to prioritize indicators that show actual usage and payback than to focus on flashy TAM numbers.",
+          "ja": "投資判断では、派手なTAMよりも、実際の利用と回収が見える指標を優先した方がよい。"
+        },
+        {
+          "en": "In AI, benchmark scores and user counts are often highlighted, but they do not tell you whether revenue is durable.",
+          "ja": "特にAIでは、モデルのベンチマークやユーザー数が強調されがちだが、それだけでは売上化の強さは分からない。"
+        },
+        {
+          "en": "The metrics to watch are capex, RPO, backlog, AI revenue run rate, inference usage, and retention.",
+          "ja": "見るべきなのは、capex、RPO、バックログ、AI売上ランレート、推論利用、継続率である。"
+        },
+        {
+          "en": "The point is simple: a large market is not the same thing as a profitable market.",
+          "ja": "この表の要点は単純である。大きい市場があることと、そこで儲かることは別である。"
+        },
+        {
+          "en": "In AI market research, you should start with the indicators that connect directly to revenue and profit.",
+          "ja": "AI市場の研究では、売上や利益に直接つながる実需指標を先に置くべきだ。"
+        }
+      ]
+    },
+    {
+      "id": "scenario",
+      "heading": {
+        "ja": "5. 強気シナリオと弱気シナリオ",
+        "en": "5. Bull Case and Bear Case"
+      },
+      "pairs": [
+        {
+          "en": "In the bull case, AI spending continues to compound as capex.",
+          "ja": "強気シナリオでは、AI支出は引き続きcapexとして積み上がる。"
+        },
+        {
+          "en": "Cloud companies keep investing in data centers, GPUs, networking, and power, while rising inference usage turns into higher monetization.",
+          "ja": "クラウド企業はデータセンター、GPU、ネットワーク、電力に投資を続け、推論利用の増加が収益化を押し上げる。"
+        },
+        {
+          "en": "Microsoft's AI revenue run rate, Amazon's chip accumulation, and the capex expansion at Alphabet and Meta are all consistent with that path.",
+          "ja": "MicrosoftのAI事業ランレート、AmazonのAIチップ確保、AlphabetとMetaのcapex拡大は、このシナリオと整合的である。"
+        },
+        {
+          "en": "In the bear case, adoption broadens but monetization lags.",
+          "ja": "弱気シナリオでは、導入は広がっても利益化が遅れる。"
+        },
+        {
+          "en": "McKinsey's survey suggests that many organizations are already using AI, but not many are realizing significant value.",
+          "ja": "McKinseyの調査が示すように、多くの組織は使い始めていても、有意な価値はまだ取れていない。"
+        },
+        {
+          "en": "If that persists, the profits may remain concentrated in hardware suppliers and cloud operators while much of the application layer fails to generate the margins investors expect.",
+          "ja": "もしこの状態が長引けば、AI支出は大きくても、利益は一部のハードウェア供給者とクラウド事業者に集中し、アプリ層の多くは期待ほどの粗利を残せない。"
+        },
+        {
+          "en": "So the real bull-vs-bear divide is not whether AI will be used.",
+          "ja": "つまり、強気か弱気かは「AIが普及するか」ではなく、"
+        },
+        {
+          "en": "It is which layer captures the profit.",
+          "ja": "「どの層が利益を取るか」で分かれる。"
+        },
+        {
+          "en": "When you read market reports, the right question is not how large the forecast number is, but which layer of the stack the evidence actually supports.",
+          "ja": "市場レポートを読むときは、予測値の大きさではなく、どのレイヤーの仮説が実績で裏づくかを見るべきだ。"
+        }
+      ]
+    },
+    {
+      "id": "rules",
+      "heading": {
+        "ja": "6. 推奨方針",
+        "en": "6. Practical Reading Rules"
+      },
+      "pairs": [
+        {
+          "en": "The least misleading way to read this theme is to do it in order.",
+          "ja": "実務では、次の順で読むと誤読を減らせる。"
+        },
+        {
+          "en": "First, check the definition.",
+          "ja": "まず、数字の定義を確認する。"
+        },
+        {
+          "en": "Market value, spending, and capex are not interchangeable.",
+          "ja": "市場価値、支出、capexは同じではない。"
+        },
+        {
+          "en": "Second, align the horizon.",
+          "ja": "次に、期間をそろえる。"
+        },
+        {
+          "en": "Do not compare a one-year forecast with a three-year estimate as if they were the same thing.",
+          "ja": "1年予測と3年予測、あるいは長期の価値推定を同列に置かない。"
+        },
+        {
+          "en": "Third, look for evidence in company reporting.",
+          "ja": "その次に、IRで実需を確認する。"
+        },
+        {
+          "en": "Capex, RPO, backlog, AI revenue, and retention are stronger than narrative claims.",
+          "ja": "capex、RPO、バックログ、AI売上、利用継続を優先する。"
+        },
+        {
+          "en": "Finally, assume profit concentration.",
+          "ja": "最後に、利益の偏在を前提にする。"
+        },
+        {
+          "en": "The market can be large while profits remain concentrated in a small number of firms.",
+          "ja": "市場は大きくても、利益は少数の企業に集まりやすい。"
+        }
+      ]
+    },
+    {
+      "id": "risks",
+      "heading": {
+        "ja": "7. リスク・限界",
+        "en": "7. Risks and Limits"
+      },
+      "pairs": [
+        {
+          "en": "This report is not investment advice.",
+          "ja": "本稿は投資助言ではない。"
+        },
+        {
+          "en": "The classification here is a synthesis from public information, not an official roadmap.",
+          "ja": "ここでの分類は、公式ロードマップではなく、公表情報からの推定である。"
+        },
+        {
+          "en": "The AI market can change quickly because of falling model prices, overcapacity, power constraints, export controls, tighter regulation, or slower customer adoption.",
+          "ja": "AI市場は、モデル価格の低下、供給過剰、電力制約、輸出規制、規制強化、顧客の導入失速で簡単に姿を変える。"
+        },
+        {
+          "en": "Even large capex numbers do not guarantee profits if payback is delayed.",
+          "ja": "特に、capexが大きくても、回収が遅れれば利益は残らない。"
+        },
+        {
+          "en": "Company disclosures also use different definitions.",
+          "ja": "また、企業IRの数値も定義がばらつく。"
+        },
+        {
+          "en": "AI revenue run rate, capex, RPO, and backlog are useful, but they are not the same denominator.",
+          "ja": "AI売上ランレート、capex、RPO、バックログは便利だが、同じ土俵ではない。"
+        },
+        {
+          "en": "So the most important task is not ranking the companies' numbers, but understanding which layer of the economics each number is actually describing.",
+          "ja": "したがって、各社の数字を順位づけするより、どのレイヤーの経済性を見ているかを理解する方が重要である。"
+        }
+      ]
+    }
+  ]
+}

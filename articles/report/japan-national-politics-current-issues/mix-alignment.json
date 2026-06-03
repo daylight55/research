@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "en": "1. Executive Summary",
+        "ja": "1. エグゼクティブサマリー"
+      },
+      "pairs": [
+        {
+          "en": "As of June 3, 2026, the most important issues in Japanese national politics are household real income, the sustainability of social security, and fiscal constraints.",
+          "ja": "2026年6月3日時点の日本の国政で最優先なのは、家計の実質所得、社会保障の持続可能性、そして財政制約の三つである。"
+        },
+        {
+          "en": "The Takaichi cabinet is a coalition government of the Liberal Democratic Party and the Japan Innovation Party, and it puts strong growth, household relief, and stronger diplomacy, defense, and intelligence capacity at the center of its agenda.",
+          "ja": "高市内閣は自民党・日本維新の会の連立政権として、強い経済、生活防衛、外交・防衛・情報能力の強化を前面に置いている。"
+        },
+        {
+          "en": "This report ranks the issues by combining four criteria: immediate household impact, fiscal scale, urgency, and irreversibility.",
+          "ja": "本稿の順位づけは、次の四基準を合成したものである。家計への即時影響、財政規模、緊急性、不可逆性である。"
+        },
+        {
+          "en": "The ranking therefore favors issues that are costlier to postpone than issues that are merely visible in election campaigns.",
+          "ja": "したがって、選挙向けの話題性よりも、先送りしたときの損失が大きい論点を上に置く。"
+        },
+        {
+          "en": "This order is not absolute.",
+          "ja": "この順は絶対順位ではない。"
+        },
+        {
+          "en": "But as a practical guide to what will dominate Diet debate over time, it is reasonable to put households and social security first, then fiscal constraints, foreign affairs and security, demographic decline, and political reform.",
+          "ja": "だが、国会で実際に長く争われる順序としては、家計と社会保障が最上位に来て、その下に財政制約、外交安保、人口、政治改革が続くとみるのが妥当である。"
+        }
+      ]
+    },
+    {
+      "id": "ranking-method",
+      "heading": {
+        "en": "2. How the ranking is built",
+        "ja": "2. 順位の付け方"
+      },
+      "pairs": [
+        {
+          "en": "The report puts the issues with the clearest effect on daily life at the top.",
+          "ja": "このレポートは、国民生活に最も直接効くものを上に置く。"
+        },
+        {
+          "en": "It then adds points for the size of the spending commitment needed to sustain a system and for how hard it is to reverse the damage once it is done.",
+          "ja": "そのうえで、制度の維持に必要な歳出の大きさと、後戻りしにくさを加点する。"
+        },
+        {
+          "en": "Inflation hits households every month.",
+          "ja": "たとえば、物価高は毎月の家計に効く。"
+        },
+        {
+          "en": "Social security hits public finances every year.",
+          "ja": "社会保障は毎年の財政に効く。"
+        },
+        {
+          "en": "Demographic decline is hard to reverse once it advances.",
+          "ja": "人口減少は一度進むと戻しにくい。"
+        },
+        {
+          "en": "Political reform matters, but its immediate effect on household budgets is smaller.",
+          "ja": "政治改革は重要だが、家計への即時影響は相対的に小さい。"
+        },
+        {
+          "en": "Seen this way, Japan is simultaneously dealing with how to soften short-term pain and how to redesign long-term institutions without breaking them.",
+          "ja": "この見方を採ると、今の日本では「短期の痛みをどう和らげるか」と「中期の制度をどう壊さずに組み替えるか」が同時に問われていると分かる。"
+        },
+        {
+          "en": "That is also where the government's and the major parties' agendas are clustering.",
+          "ja": "政府と主要政党の争点も、実際にはその二層に集まっている。"
+        }
+      ]
+    },
+    {
+      "id": "ranked-issues",
+      "heading": {
+        "en": "3. Ranked issues",
+        "ja": "3. 論点別ランキング"
+      },
+      "pairs": [
+        {
+          "en": "The top issue remains inflation.",
+          "ja": "最重要論点は、依然として物価高である。"
+        },
+        {
+          "en": "The real conflict is not whether households need relief.",
+          "ja": "争点は、家計支援が必要かどうかではない。"
+        },
+        {
+          "en": "The real conflict is how relief should be delivered: through permanent tax cuts, temporary transfers, or a wage-and-tax package.",
+          "ja": "どの方式で支援するか、つまり恒久減税にするのか、時限的な給付にするのか、それとも賃上げと税制を組み合わせるのか、という設計の違いにある。"
+        },
+        {
+          "en": "Social security is a top-tier issue both in money terms and in institutional terms.",
+          "ja": "社会保障は金額でも構造でも最大級の争点だ。"
+        },
+        {
+          "en": "That means health care, long-term care, pensions, and child support are not a one-off policy item; they are a permanent state capacity issue.",
+          "ja": "これは、医療、介護、年金、子育て支援を同時にどう維持するかが、単発の政策ではなく国家の恒常課題であることを示している。"
+        },
+        {
+          "en": "Fiscal policy is the binding constraint on almost every other issue.",
+          "ja": "財政は、ほぼすべての国政論点の制約条件である。"
+        },
+        {
+          "en": "The core question is how to fund social security and security at the same time, and how much of that should be covered by taxes versus debt.",
+          "ja": "防衛関係費も8.8兆円に達しており、社会保障と安全保障を同時に拡張しながら、税収と国債でどう賄うかが焦点になっている。"
+        },
+        {
+          "en": "Foreign affairs and security rank lower than household issues in normal times, but they can jump to the top in a crisis.",
+          "ja": "外交安保は、平時には家計論点より順位が下がりやすいが、危機が起きると一気に上がる論点である。"
+        },
+        {
+          "en": "The current government wants to strengthen the Japan-U.S. alliance, deterrence, intelligence, cyber capacity, and economic security.",
+          "ja": "現在の政府は、日米同盟、抑止力、情報能力、サイバー、経済安全保障を強化する方向にある。"
+        },
+        {
+          "en": "Demographic decline is the most irreversible issue.",
+          "ja": "人口減少は最も不可逆な論点だ。"
+        },
+        {
+          "en": "Political reform has a smaller direct effect on household budgets, but it matters for public trust and for the government's ability to pass legislation.",
+          "ja": "政治改革は、家計への即時効果は小さいが、政権の信頼と法案成立能力に直接効く。"
+        }
+      ]
+    },
+    {
+      "id": "party-conflict-lines",
+      "heading": {
+        "en": "4. Party conflict lines",
+        "ja": "4. 党派別の対立軸"
+      },
+      "pairs": [
+        {
+          "en": "The main conflict lines are not left versus right.",
+          "ja": "主要な対立軸は、右左よりも、家計重視か制度重視か、減税か給付か、抑止強化か抑制か、公開か禁止か、に分かれる。"
+        },
+        {
+          "en": "The ruling LDP-JIP coalition combines growth, wage gains, responsible but expansionary fiscal policy, stronger security, and governance reform.",
+          "ja": "与党の自民・維新は、成長、賃上げ、責任ある積極財政、安保強化、統治機構改革を組み合わせる。"
+        },
+        {
+          "en": "The Constitutional Democratic Party puts food-tax cuts, transfers, stronger social security, realistic security, and political finance reform front and center.",
+          "ja": "立憲民主党は、食料品税率ゼロ、給付、社会保障の充実、現実的な安全保障、政治資金改革を前面に出す。"
+        },
+        {
+          "en": "Komeito balances household relief, social security, peace diplomacy, and political reform.",
+          "ja": "公明党は、家計負担の軽減、社会保障、平和外交、政治改革をバランスよく並べる。"
+        },
+        {
+          "en": "The Democratic Party for the People pushes higher take-home pay, lighter taxes, and support for working households.",
+          "ja": "国民民主党は、手取り増、税負担の軽減、働く世代の支援を強く押し出す。"
+        },
+        {
+          "en": "The Japanese Communist Party consistently calls for a lower consumption tax, higher minimum wages, stronger social security, and a ban on corporate and organizational donations.",
+          "ja": "日本共産党は、消費税減税、最低賃金引き上げ、社会保障の拡充、企業・団体献金禁止を一貫して訴える。"
+        }
+      ]
+    },
+    {
+      "id": "practical-implications",
+      "heading": {
+        "en": "5. Practical implications",
+        "ja": "5. 実務への含意"
+      },
+      "pairs": [
+        {
+          "en": "For households, the near-term watch items are not just food and energy prices.",
+          "ja": "家計にとっては、当面の注目点は、食料品やエネルギーの値下がりではなく、実質賃金、税額控除、社会保険料、医療・介護負担である。"
+        },
+        {
+          "en": "For firms, the most important items are wage growth, labor shortages, defense and cyber procurement, and only then tax changes.",
+          "ja": "企業にとっては、賃上げと人手不足が最重要で、次に防衛・サイバー・公共調達、最後に税制変更の順で影響が出やすい。"
+        },
+        {
+          "en": "For policy watchers, the key is to follow the initial budget, supplemental budgets, political finance bills, social security reform, and security-related amendments in parallel.",
+          "ja": "政策を読む側は、補正予算だけでなく、当初予算、政治資金改革法案、社会保障改革、外交安保関連の改正案を並行して追う必要がある。"
+        },
+        {
+          "en": "This ranking is based on public information as of June 3, 2026.",
+          "ja": "この順位は、2026年6月3日時点の公開情報に基づく。"
+        },
+        {
+          "en": "If energy prices surge because of an external shock, foreign affairs and security would move up quickly.",
+          "ja": "外部ショックでエネルギー価格が急騰すれば、外交安保とエネルギー政策の順位は上がる。"
+        },
+        {
+          "en": "If a major political finance scandal appears, political reform could jump to the top.",
+          "ja": "重大な政治資金スキャンダルが出れば、政治改革は一気に最上位へ上がる。"
+        },
+        {
+          "en": "If inflation cools materially and wage gains spread more broadly, the balance would shift further toward fiscal and social security reform.",
+          "ja": "逆に、物価が十分に落ち着き、賃上げが実感を伴って広がれば、財政と社会保障の比重がさらに上がる。"
+        },
+        {
+          "en": "In other words, this report is not a fixed declaration of what will matter forever.",
+          "ja": "つまり、このレポートは固定順位の宣言ではない。"
+        },
+        {
+          "en": "It is a public-information-based snapshot of which issues are constraining households, institutions, and governing capacity most strongly right now.",
+          "ja": "現在の日本で、どの論点が家計、制度、政権運営を最も強く縛っているかを、公開情報から暫定的に並べたものである。"
+        }
+      ]
+    }
+  ]
+}

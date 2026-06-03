@@ -14,5 +14,6 @@ export const CATEGORIES = [
 	'semiconductor-memory',
 	'macro-finance',
 	'geopolitics',
+	'japan-politics',
 	'real-estate'
 ] as const

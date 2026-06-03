@@ -1,0 +1,36 @@
+---
+title: '2026-06-04 daily-trends-2026-06-04 research log'
+description: 'daily-trends-2026-06-04 の公開用調査ログ。収集方針、判断基準、主要ソースを簡潔に残す。'
+contentType: news
+pubDate: '2026-06-04'
+draft: false
+---
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md
+
+## 調査命令
+
+- Research date: `2026-06-04`
+- Article slug: `daily-trends-2026-06-04`
+- Deliverable: Japanese news digest with one public research trail
+- Category constraints: `政治` 5本、`経済` 5本、`技術` 5本、合計15本
+- Recency window: most recent `24-48 hours`, with slightly older items only when they still drive policy, markets, or product decisions
+- Required publication path: `articles/news/daily-trends-2026-06-04/ja/index.mdx`
+- Supporting trail path: `articles/news/daily-trends-2026-06-04/ja/research-log.mdx`
+- Selection rule: official/primary sources first, then Reuters/AP for fast-moving context when a primary source was not enough on its own
+
+## 収集メモ
+
+- 政治は、ホワイトハウスのAI大統領令、通関監督強化、金属関税見直し、小児ワクチン勧告の再編、EUの技術主権パッケージを中心に構成した。
+- 経済は、ECBのAI監督、サービス業景況感、原油高、円安など、政策と市場の両方に波及する論点を選んだ。
+- 技術は、Microsoft Build 2026、OpenAI on AWS、Majorana 2 / Microsoft Discovery、Anthropic Project Glasswing、EU AI Act執行体制を採用した。
+- 画像は、記事ごとに `NewsSourceCard` を必須にしたうえで、公開ページに載せやすい安定URLを優先し、重複URLは避けるようにした。
+
+## 判断メモ
+
+- `news digest` なので、深掘りよりも「今日の意思決定に効く変化」を優先した。
+- 行政命令や規制のような一次情報は、本文の要約を短くし、何が変わるかと次の監視点に寄せた。
+- 市場系の話題は、単なる値動きよりもインフレ・金利・供給網への波及を重視した。

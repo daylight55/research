@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "As of June 4, 2026, Japan's fiscal, social security, and demographic problems are not separate agendas.",
+          "ja": "2026年6月4日時点で、日本の財政・社会保障・少子化は別々の政策ではなく、同じ制約条件の中にある。"
+        },
+        {
+          "en": "They are one constraint stack.",
+          "ja": "同じ制約条件の中にある。"
+        },
+        {
+          "en": "FY2026 general-account spending is 122.3 trillion yen, social security spending is 39.1 trillion yen, debt-service costs are 31.3 trillion yen, and new government-bond issuance is still large.",
+          "ja": "令和8年度一般会計予算は122.3兆円、社会保障関係費は39.1兆円、公債金は29.6兆円、国債費は31.3兆円である。"
+        },
+        {
+          "en": "Tax revenue is projected at 83.7 trillion yen, while the Ministry of Finance puts the FY2026 national burden rate at 45.7% and the potential burden rate at 48.4%.",
+          "ja": "税収は83.7兆円見込みだが、国民負担率は令和8年度に45.7%、潜在的国民負担率は48.4%とされ、負担余地は小さい。"
+        },
+        {
+          "en": "Low fertility is not a background issue.",
+          "ja": "少子化は改善待ちの長期課題ではない。"
+        },
+        {
+          "en": "In Japan's vital statistics for FY2024, births fell to 686,000 and the total fertility rate was 1.15.",
+          "ja": "令和6年の人口動態統計では出生数は68.6万人、合計特殊出生率は1.15だった。"
+        },
+        {
+          "en": "The Cabinet Office's aging white paper says the aging rate is 29.3% and is projected to reach 38.7% in 2070.",
+          "ja": "内閣府の高齢社会白書では、高齢化率は29.3%で、2070年には38.7%に達すると見込まれる。"
+        },
+        {
+          "en": "Japan therefore has to design child policy and elder-support policy at the same time, or labor supply, tax revenue, and care capacity will all tighten together.",
+          "ja": "つまり、日本は「子どもを増やす政策」と「高齢者を支える制度」を同時に設計しないと、労働供給、税収、医療・介護のすべてが細る。"
+        }
+      ]
+    },
+    {
+      "id": "current-constraints",
+      "heading": {
+        "ja": "2. 何が今の制約か",
+        "en": "2. What Is Constraining Policy Now?"
+      },
+      "pairs": [
+        {
+          "en": "The current issue is less about the existence of a fiscal deficit than about the composition of spending.",
+          "ja": "今の論点は、財政赤字そのものより「歳出構造をどう変えるか」にある。"
+        },
+        {
+          "en": "In FY2026, social security is the largest major expenditure item and debt service is also very large.",
+          "ja": "令和8年度予算では、社会保障関係費が最大級の支出項目で、国債費も大きい。"
+        },
+        {
+          "en": "At the same time, tax revenue cannot quickly outrun demographic pressure, even if wages and prices keep rising.",
+          "ja": "これに対して税収の伸びは、物価と賃上げが続いても、人口構造の逆風をすぐに打ち消せるほど大きくない。"
+        },
+        {
+          "en": "That is why the Finance Ministry publishes the national burden rate every year.",
+          "ja": "財務省が国民負担率を毎年示すのは、税と社会保険料の合計負担が政策余地を狭めるからである。"
+        },
+        {
+          "en": "The debt stock also matters.",
+          "ja": "財政の重みをもう少し長い目で見ると、国債・借入金等の残高は令和6年12月末で1,317.7兆円規模にある。"
+        },
+        {
+          "en": "As of December 2024, outstanding Japanese government bonds, borrowing, and treasury bills were about 1,317.7 trillion yen.",
+          "ja": "国債・借入金等の残高は令和6年12月末で1,317.7兆円規模にある。"
+        },
+        {
+          "en": "That does not mean Japan is on the verge of crisis.",
+          "ja": "これは、短期の景気対策や単発給付を積み増すだけでは、将来の利払いと財政運営の自由度を圧迫しやすいことを意味する。"
+        },
+        {
+          "en": "It does mean that extra spending on short-term political fixes is harder to finance without crowding out future policy flexibility.",
+          "ja": "将来の利払いと財政運営の自由度を圧迫しやすい。"
+        },
+        {
+          "en": "Child policy is being built as a package rather than a single subsidy.",
+          "ja": "少子化対策の中心は「出生数を一度に戻す」政策ではない。"
+        },
+        {
+          "en": "The government's \"Children's Future Strategy\" and related acceleration plan combine child allowances, child care, work-family support, and financing arrangements.",
+          "ja": "政府のこども未来戦略関連の支援は、子ども・子育て支援加速化プランや財源の仕組みまで含めて設計されており、保育、児童手当、両立支援、教育費の負担軽減を束ねている。"
+        },
+        {
+          "en": "The important policy point is that Japan is already moving beyond a one-off cash-transfer model.",
+          "ja": "単独の現金給付より、制度の束を組み替える政策になっている点が重要である。"
+        }
+      ]
+    },
+    {
+      "id": "policy-choices",
+      "heading": {
+        "ja": "3. 政策の選択肢は何か",
+        "en": "3. What Are the Policy Choices?"
+      },
+      "pairs": [
+        {
+          "en": "The options can be grouped into four buckets.",
+          "ja": "政策の選択肢は、大きく4つに整理できる。"
+        },
+        {
+          "en": "Expand child policy.",
+          "ja": "少子化対策の拡充"
+        },
+        {
+          "en": "Medical and long-term care reform.",
+          "ja": "医療・介護改革"
+        },
+        {
+          "en": "Reallocate taxes and social insurance.",
+          "ja": "税・社会保険料の再配分"
+        },
+        {
+          "en": "Expand labor participation.",
+          "ja": "労働参加の拡大"
+        },
+        {
+          "en": "In health insurance, the government is pursuing reforms that include a review of high-cost medical expense rules and OTC-like drug coverage.",
+          "ja": "医療・介護では、政府は高額療養費制度やOTC類似薬の保険給付の見直しを含む改革を進め、現役世代の負担増を抑えつつ制度の持続性を保とうとしている。"
+        },
+        {
+          "en": "The policy logic is to slow premium growth while preserving the system's legitimacy.",
+          "ja": "これは「給付を守るか、負担を抑えるか」の二択ではなく、支出と負担の配分をどこで再設計するかの問題である。"
+        },
+        {
+          "en": "On child policy, the public record points to a broad package implementation in 2026 and beyond.",
+          "ja": "こども・子育て分野では、2026年度からの制度実施に向けて、給付とサービスを組み合わせる政策が前面に出ている。"
+        },
+        {
+          "en": "As a public-information inference, cash support alone is unlikely to lift fertility enough unless Japan also lowers child-care scarcity, housing costs, long working hours, and career interruption risk.",
+          "ja": "公表情報からの推定として、出生率を押し上げるには現金給付だけでは不十分で、保育の利用可能性、住宅費、長時間労働、キャリア中断のリスクを同時に下げる必要がある。"
+        }
+      ]
+    },
+    {
+      "id": "intergenerational-fairness",
+      "heading": {
+        "ja": "4. 世代間公平の争点",
+        "en": "4. Intergenerational Fairness"
+      },
+      "pairs": [
+        {
+          "en": "Intergenerational fairness is ultimately about who pays, when, and for what.",
+          "ja": "世代間公平は、税と社会保険料の負担を誰がどの時点で持つかという問題である。"
+        },
+        {
+          "en": "Working-age households are asked to support medical care, long-term care, and pensions today, while also trusting that their own future benefits will still be there.",
+          "ja": "現役世代は、医療・介護・年金を支えながら、自分たちの老後給付の持続性も信じられる制度を求める。"
+        },
+        {
+          "en": "Older households want stable benefits from systems they have paid into.",
+          "ja": "他方で、高齢世代は、これまで拠出してきた保険制度の給付安定性を求める。"
+        },
+        {
+          "en": "The practical challenge is not to choose one side, but to avoid leaving an even larger bill to the next generation.",
+          "ja": "ここで重要なのは、どちらか一方を切ることではなく、将来世代に過大な先送りを残さないことだ。"
+        },
+        {
+          "en": "When the burden rate is high, a policy that raises take-home pay is attractive.",
+          "ja": "国民負担率が高止まりする局面では、現役世代の手取りを増やす政策は歓迎されやすいが、その財源をどこに置くかが必ず問われる。"
+        },
+        {
+          "en": "But tax cuts, lower social insurance premiums, and better benefits cannot all be maximized at the same time.",
+          "ja": "実務上は、税の引き下げ、社会保険料の軽減、給付の重点化を同時に満たすことはできない。"
+        },
+        {
+          "en": "Some tradeoff has to be made explicit.",
+          "ja": "どこかで優先順位をつける必要がある。"
+        }
+      ]
+    },
+    {
+      "id": "regional-gaps",
+      "heading": {
+        "ja": "5. 地域格差と労働参加",
+        "en": "5. Regional Gaps and Labor Participation"
+      },
+      "pairs": [
+        {
+          "en": "Population decline is not uniform.",
+          "ja": "人口減少は全国一律ではない。"
+        },
+        {
+          "en": "The aging white paper projects very large differences among prefectures, with Akita at 49.9% age 65 and over in 2045 and Tokyo at 29.6%.",
+          "ja": "内閣府の白書では、2045年時点で65歳以上比率が高い県と低い県の差が大きく、例えば秋田県は49.9%、東京都は29.6%と見込まれている。"
+        },
+        {
+          "en": "That means schools, clinics, transport, and care services can become much more expensive in some places even if the national averages still look manageable.",
+          "ja": "地域によっては学校、医療、交通、介護事業の維持費が急に上がる。"
+        },
+        {
+          "en": "Demographic policy is therefore also a regional infrastructure policy.",
+          "ja": "したがって、人口政策は首都圏だけの話ではなく、地域の生活基盤をどう残すかの話である。"
+        },
+        {
+          "en": "Labor participation is one of the few levers that helps both demographics and fiscal sustainability.",
+          "ja": "労働参加の拡大は、少子化対策と財政の両方に効く数少ない手段だ。"
+        },
+        {
+          "en": "More participation by women, older workers, foreign workers, and younger people who want stable employment expands the tax base and reduces pressure on the social security system.",
+          "ja": "女性、高齢者、外国人材、就労意欲のある若年層が、より働きやすい環境に移るほど、社会保障の担い手は増え、税と保険料の負担分散も進む。"
+        },
+        {
+          "en": "But this only works if childcare supply, regional transport, housing, and firm-level employment practices move together.",
+          "ja": "ただし、これは企業の雇用慣行、保育供給、地域交通、住居費と一体でないと進まない。"
+        }
+      ]
+    },
+    {
+      "id": "priority-order",
+      "heading": {
+        "ja": "6. 何を優先すべきか",
+        "en": "6. What Should Come First?"
+      },
+      "pairs": [
+        {
+          "en": "Taken together, the public evidence suggests the following priority order.",
+          "ja": "公表情報を総合すると、優先順位は次の順になる。"
+        },
+        {
+          "en": "Protect the long-term viability of health care, long-term care, and pensions.",
+          "ja": "医療・介護・年金の持続可能性を守ること。"
+        },
+        {
+          "en": "Support working households through lower premium growth and higher wages.",
+          "ja": "現役世代の手取りを、社会保険料の抑制と賃上げで支えること。"
+        },
+        {
+          "en": "Implement child policy as a package of child care, education, housing, and work-style reform rather than as cash alone.",
+          "ja": "少子化対策を、現金給付だけでなく保育・教育・住宅・働き方の束として実装すること。"
+        },
+        {
+          "en": "Adapt local service models to regional population decline.",
+          "ja": "地域ごとの人口減少に合わせて、交通、医療、学校の維持モデルを変えること。"
+        },
+        {
+          "en": "Keep fiscal management focused on future debt-service pressure and the burden rate, not on short-lived popularity.",
+          "ja": "財政運営では、短期の人気策より、将来の利払いと負担率の上昇を抑えること。"
+        },
+        {
+          "en": "This order is not a moral ranking.",
+          "ja": "この順番は、道徳的な優劣ではない。"
+        },
+        {
+          "en": "It is a practical ordering based on which constraints are most likely to break the system first.",
+          "ja": "限られた財源と人手をどう配ると、制度が先に壊れないかという実務上の順位である。"
+        }
+      ]
+    },
+    {
+      "id": "risks-and-limits",
+      "heading": {
+        "ja": "7. リスク・限界",
+        "en": "7. Risks and Limits"
+      },
+      "pairs": [
+        {
+          "en": "The biggest risk is treating child policy as a one-year stimulus program.",
+          "ja": "最大のリスクは、少子化対策を単年度の景気対策として扱うことだ。"
+        },
+        {
+          "en": "The second is postponing medical and long-term care reform until the bill is even larger.",
+          "ja": "もう一つのリスクは、医療・介護改革を先送りして、将来世代により重い負担を残すことだ。"
+        },
+        {
+          "en": "The third is assuming that a single national model can solve a problem that is becoming more different from prefecture to prefecture.",
+          "ja": "三つ目のリスクは、地域差を見ずに全国一律の制度だけで対応しようとして、実際の生活圏の維持に失敗することである。"
+        },
+        {
+          "en": "As a public-information inference, fertility will not rebound quickly.",
+          "ja": "公表情報からの推定として、少子化の改善は短期には起こりにくい。"
+        },
+        {
+          "en": "That means policy evaluation should focus not only on births, but also on labor participation, cost growth in health and long-term care, and the ability of local governments to keep basic services open.",
+          "ja": "したがって、政策評価は「出生率がすぐ上がるか」だけでなく、「労働参加が増えたか」「医療・介護の費用伸び率を抑えられたか」「地域サービスを維持できたか」で見るべきである。"
+        }
+      ]
+    }
+  ]
+}

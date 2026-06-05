@@ -1,0 +1,56 @@
+---
+title: '調査プロセス: 日本の外交安全保障と経済安全保障 2026年版'
+---
+
+作成日: 2026-06-05
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- Issue number: #26
+- Issue title: 日本の外交安全保障と経済安全保障の論点を調査する
+- Publishable request summary: 日本の外交安全保障を、米中対立、台湾有事、北朝鮮、ロシア、サプライチェーン、半導体、サイバーの観点から調査し、防衛費、反撃能力、同盟政策、周辺国関係の最新論点を確認する。経済安全保障推進法、重要物資、半導体政策も整理し、国民生活や企業活動への実務的影響を説明する。
+- Scope constraints: 政府資料、白書、国際機関、専門機関を優先する。最新性が重要な論点は作成時点で確認する。公開できる調査過程は同じ記事ディレクトリにまとめる。日本語を正本として、英語版と MIX 読書用の整合も同時に更新する。
+- Inferred deliverable: 日本語の公開レポート、英語版レポート、`mix-alignment.json`、公開 research-log。カテゴリは `japan-politics`、slug は `japan-security-economic-security` を使う前提で整理した。
+
+## 確認した問い
+
+1. 日本の現在の安全保障環境は、どの相手国・論点で最も厳しいか。
+2. 防衛費、反撃能力、日米同盟、サイバー、防空、情報管理は、どこまで制度化されているか。
+3. 経済安全保障推進法の四本柱は何か。
+4. 重要物資と半導体は、どのように供給確保の対象になっているか。
+5. 企業と家計は、どの経路で影響を受けるか。
+
+## 主な一次情報
+
+- 防衛省「令和7年版防衛白書」。
+- 外務省「外交青書2025」の中国・モンゴル編と朝鮮半島編。
+- 外務省のロシア制裁措置の公表資料。
+- 内閣府の経済安全保障推進法ポータルと特定重要物資の供給確保ページ。
+- 経済産業省の半導体安定供給ページと日米戦略的投資イニシアティブの公表資料。
+- 内閣官房のサイバー安全保障分野の取組ページとサイバー関連法制ページ。
+- 財務省の令和8年度一般会計予算。
+
+## 採用しなかった材料
+
+- 一部の二次報道は、台湾有事や米中対立を強く煽る一方で、政府文書との突き合わせが弱かったため、本文では採用しなかった。
+- 当事国の軍事広報や断片的なSNS投稿は、真偽確認が難しく、調査ログの根拠には使わなかった。
+- 2026年の外交青書のPDF本体は存在確認をしたが、今回の執筆では検索結果の公式案内と2025年のHTML版を主に使い、本文の事実認定は公式ページで相互確認できる範囲に絞った。
+
+## 反映への影響
+
+調査の結果、本文は「軍事安全保障」と「経済安全保障」を分けずに、同じ政策束として説明する構成にした。とくに、北朝鮮とロシアは制裁・輸出管理・迂回取引の実務に落ちるため、企業向けの含意を明示した。台湾海峡リスクは、抽象的な地政学ではなく、海上輸送、半導体、通信、電力のレジリエンス問題として記述した。
+
+## 限界
+
+公開情報だけでは、台湾海峡の危機管理や北朝鮮の実際の意思決定、ロシアの軍事計画を完全に追えない。経済安保法制とサイバー法制も、成立だけでは実効性が決まらず、運用細則と現場実装が必要になる。したがって、本文中の一部の表現は公表情報からの推定として扱い、断定ではなく政策上の読みとして書いた。
+
+## 参考リンク
+
+- [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)

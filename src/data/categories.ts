@@ -13,6 +13,7 @@ export const CATEGORIES = [
 	'tech-news',
 	'semiconductor-memory',
 	'macro-finance',
+	'middle-east',
 	'geopolitics',
 	'japan-politics',
 	'real-estate'

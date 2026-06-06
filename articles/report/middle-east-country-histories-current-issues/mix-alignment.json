@@ -1,0 +1,254 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "The present-day Middle East cannot be explained by sectarian conflict alone.",
+					"ja": "中東の現在を宗派対立だけで説明すると、ほぼ必ず見落としが出る。"
+				},
+				{
+					"en": "The collapse of the Ottoman Empire, the French and British mandates, wars of state formation, oil rents, revolutions, civil wars, refugees, and renewed authoritarianism have produced very different political orders from country to country.",
+					"ja": "実際には、オスマン帝国の崩壊、英仏委任統治、建国戦争、石油収入、革命、内戦、難民、権威主義の再強化が重なって、国ごとにまったく違う国家のかたちができた。"
+				},
+				{
+					"en": "The main questions today are not simply religious identity, but whether each state can monopolize force, distribute resources, and absorb demographic pressure and labor-market stress.",
+					"ja": "現在の争点も、単なる「イスラム世界の一枚岩」ではなく、国家が暴力を独占できるか、資源を配分できるか、人口動態と雇用を吸収できるか、という問題に分解できる。"
+				},
+				{
+					"en": "Across the region, Iran is a revolutionary republic, Iraq is a politics-of-distribution state with militia influence, Syria is in post-war transition, Lebanon is a confessional system with a weak state, Israel-Palestine is defined by asymmetrical sovereignty, Saudi Arabia and the Gulf states are resource monarchies, and Turkey and Egypt are authoritarian systems that still preserve elections.",
+					"ja": "同じ中東でも、イランは革命後体制、イラクは配分政治と民兵政治、シリアは内戦後の再編、レバノンは分権化しすぎた共同体政治、イスラエル・パレスチナは主権の非対称性、サウジアラビアと湾岸諸国は資源国家、トルコとエジプトは選挙を残した権威主義という具合に、制度の骨格が違う。"
+				},
+				{
+					"en": "The right comparison is therefore not \"sectarian versus secular,\" but state formation, coercive capacity, resource dependence, and the ability to absorb generational frustration.",
+					"ja": "したがって、比較の軸は「宗派か世俗か」だけではなく、国家形成の経路、暴力装置の分散度、資源の依存先、世代間の不満の吸収力で見るべきである。"
+				},
+				{
+					"en": "For Japan, the practical implication is straightforward.",
+					"ja": "日本にとっての実務的含意は明確である。"
+				},
+				{
+					"en": "The region is a single risk space for the Strait of Hormuz, the Red Sea, the Suez Canal, LNG, crude oil, marine insurance, sanctions compliance, refugees, and reconstruction deals.",
+					"ja": "ホルムズ海峡、紅海、スエズ運河、LNG、原油、海運保険、制裁遵守、難民、復興案件は相互に結びついている。"
+				},
+				{
+					"en": "If the country-level differences are ignored, decisions on energy, supply chains, security, and foreign investment are likely to be misread.",
+					"ja": "中東の国別差を理解せずに地域全体を一括りにすると、エネルギー、サプライチェーン、安全保障、対外投資の判断を誤りやすい。"
+				}
+			]
+		},
+		{
+			"id": "analytical-lens",
+			"heading": {
+				"ja": "2. 比較の見取り図",
+				"en": "2. Analytical Lens"
+			},
+			"pairs": [
+				{
+					"en": "Historically, the region sat on the margins of empires.",
+					"ja": "この地域は、歴史的には帝国の辺境だった。"
+				},
+				{
+					"en": "In the late Ottoman period, self-determination and great-power intervention overlapped, and after World War I the mandates of Britain and France fixed borders and institutions.",
+					"ja": "オスマン帝国の末期に民族自決と列強の干渉が重なり、第一次世界大戦後は英仏の委任統治と国境線の固定が進んだ。"
+				},
+				{
+					"en": "Many of the later states were not built first as liberal democracies; they were built around armies, royal houses, religious authorities, or security services.",
+					"ja": "その後の独立国家は、議会制民主主義として育ったものより、軍、王家、宗教権威、治安機構のいずれかを核にして立ち上がったものが多い。"
+				},
+				{
+					"en": "The key point is that sectarian conflict is only one layer.",
+					"ja": "ここで重要なのは、宗派対立は原因の一部にすぎないことだ。"
+				},
+				{
+					"en": "Urban-rural divides, center-periphery tensions, tribes versus the state, old elites versus new generations, citizens versus migrant labor, and domestic elites versus foreign patrons all sit beneath the sectarian label.",
+					"ja": "現実には、都市と地方、中心と周辺、部族と国家、旧支配層と新興世代、国民と移民労働者、国内エリートと外部スポンサーの関係が、宗派ラベルの下に重なっている。"
+				},
+				{
+					"en": "If Lebanon and Iraq are read only through sectarianism, corruption, unemployment, and the externalization of state functions disappear from view.",
+					"ja": "だから、レバノンやイラクを宗派だけで読むと、腐敗、雇用不足、国家機能の外部化を見失う。"
+				},
+				{
+					"en": "If the Gulf states are read only through wealth, the narrowness of citizenship and dependence on migrant labor disappear from view.",
+					"ja": "湾岸諸国を富だけで読むと、市民権の狭さと移民労働への依存を見失う。"
+				},
+				{
+					"en": "The region is easier to compare through four axes.",
+					"ja": "中東を理解するうえで有効なのは、次の4軸である。"
+				}
+			]
+		},
+		{
+			"id": "comparative-table",
+			"heading": {
+				"ja": "3. 国別比較表",
+				"en": "3. Comparative Table"
+			},
+			"pairs": [
+				{
+					"en": "Iran was transformed by the 1979 Revolution, which replaced monarchy and institutionalized clerical rule.",
+					"ja": "1979年革命で王制を倒し、法学者統治を制度化した。"
+				},
+				{
+					"en": "Iraq combines Ottoman rule, the British mandate, and post-2003 reconstruction into a politics of distribution.",
+					"ja": "オスマン帝国領と英委任統治を経て、2003年以降に再建された。"
+				},
+				{
+					"en": "Syria now combines mandate history, Ba'ath rule, civil war, and post-2024 transition.",
+					"ja": "フランス委任統治、バアス体制、内戦を経て再編段階にある。"
+				},
+				{
+					"en": "Lebanon's confessional independence created pluralism, but it also weakened the state.",
+					"ja": "宗派分有で独立したが、その仕組みは国家を弱くもした。"
+				},
+				{
+					"en": "Israel-Palestine is defined by the asymmetry of sovereignty rather than a symmetric state-to-state rivalry.",
+					"ja": "イスラエル・パレスチナは、主権の非対称性そのものが争点である。"
+				},
+				{
+					"en": "Saudi Arabia and the Gulf states became resource monarchies after unification or independence.",
+					"ja": "サウジアラビアと湾岸諸国は、統一や独立の後に資源国家化した。"
+				},
+				{
+					"en": "Turkey and Egypt are authoritarian systems that still keep elections, but their social pressures are different.",
+					"ja": "トルコとエジプトは選挙を残した権威主義だが、社会圧力の出方は異なる。"
+				}
+			]
+		},
+		{
+			"id": "country-reading",
+			"heading": {
+				"ja": "4. 国別の読み方",
+				"en": "4. Country-by-Country Reading"
+			},
+			"pairs": [
+				{
+					"en": "Iran is a case where the current order was shaped less by colonial rule than by the overthrow of monarchy and the creation of a revolutionary state.",
+					"ja": "イランは、植民地支配そのものより、王制の打倒と革命国家化が現在の制度を作った例である。"
+				},
+				{
+					"en": "The key issue is not a simple Sunni-Shia binary, but how oil revenue is allocated, how Baghdad relates to the provinces, and how militias become institutionalized.",
+					"ja": "ここでの問題は、シーア派対スンニ派という単純図式ではなく、国家予算の配分、石油収入の分け方、バグダッドと地方の関係、民兵の制度化である。"
+				},
+				{
+					"en": "Syria now combines the legacy of the French mandate, Ba'ath rule, a long civil war, mass displacement, and the post-2024 collapse of the old regime.",
+					"ja": "シリアは、フランス委任統治の遺産、バアス党体制、長期内戦、難民流出、そして2024年以降の政権崩壊が折り重なっている。"
+				},
+				{
+					"en": "Lebanon tried to protect pluralism by institutionalizing confessional power-sharing, but that arrangement also multiplied veto points and made the state weak.",
+					"ja": "レバノンは、宗派分有を制度化したことで多元性を守ろうとしたが、結果として拒否権が増え、国家が自前の能力を持ちにくくなった。"
+				},
+				{
+					"en": "Israel-Palestine is not a symmetric state-to-state rivalry.",
+					"ja": "イスラエル・パレスチナは、国家の対称戦ではない。"
+				},
+				{
+					"en": "Saudi Arabia was unified through tribal coalitions and religious authority, and then built its social contract on oil.",
+					"ja": "サウジアラビアは、部族連合と宗教権威を基盤に統一され、石油で国家と社会契約を作ってきた。"
+				},
+				{
+					"en": "Turkey is a successor state to the Ottoman Empire, but its republican legacy has been increasingly centralized.",
+					"ja": "トルコは、オスマン帝国の後継国家として共和国を作ったが、近年は権力集中が進んだ。"
+				},
+				{
+					"en": "Egypt became a military-led republic after the 1952 Revolution and remains a major regional state because of its population and geography.",
+					"ja": "エジプトは、1952年革命以後に軍が国家中枢を握り、人口規模と地政学的位置で地域大国になった。"
+				}
+			]
+		},
+		{
+			"id": "regional-map",
+			"heading": {
+				"ja": "5. 地域相互関係図",
+				"en": "5. Regional Relationship Map"
+			},
+			"pairs": [
+				{
+					"en": "This is not a military alliance chart.",
+					"ja": "この図は軍事同盟図ではない。"
+				},
+				{
+					"en": "It is a map of spillovers: conflict, money, displacement, shipping, mediation, and sanctions.",
+					"ja": "むしろ、衝突、資金、避難、海上輸送、仲介、制裁の流れを表した関係図である。"
+				},
+				{
+					"en": "Iran projects pressure through proxies into the Levant, Israel-Palestine remains the emotional center of the region, the Gulf supplies capital and energy, Egypt is the hinge between Gaza and the Suez route, and Turkey connects refugee flows with security and economic pressure.",
+					"ja": "イランは代理勢力と抑止を通じてレバント全体に圧力をかけ、イスラエル・パレスチナは地域の感情的中心であり続ける。"
+				}
+			]
+		},
+		{
+			"id": "practical-implications",
+			"heading": {
+				"ja": "6. 実務への含意",
+				"en": "6. Practical Implications"
+			},
+			"pairs": [
+				{
+					"en": "For Japanese policymakers and companies, the important variable is not sect or ideology, but which country exports which risk to the outside world.",
+					"ja": "日本の政策担当者と企業にとって重要なのは、宗派やイデオロギーではなく、どの国がどのリスクを外部に輸出するかである。"
+				},
+				{
+					"en": "Iran exports sanctions and shipping risk, Israel-Palestine exports humanitarian shock and regional mobilization, the Levant exports reconstruction and refugee pressure, the Gulf exports energy and investment, and Turkey and Egypt export currency and demographic stress.",
+					"ja": "イランは制裁と航路リスク、イスラエル・パレスチナは人道危機と地域動員、レバントは復興と難民、湾岸はエネルギーと投資、トルコとエジプトは通貨と人口圧力を周辺に波及させる。"
+				},
+				{
+					"en": "Contracts, insurance, logistics, and sanctions screening should therefore start from country-level institutional differences.",
+					"ja": "中東を扱う契約、保険、物流、制裁審査では、国ごとの制度差を前提にしないと、リスクを過小評価する。"
+				},
+				{
+					"en": "In practice, four separate signals should be monitored.",
+					"ja": "実務上は、次の4点を別々に追うべきである。"
+				},
+				{
+					"en": "These are not isolated national problems.",
+					"ja": "これらは、単一国の問題ではなく、地域の制度疲労が外部に漏れ出したものとして現れる。"
+				}
+			]
+		},
+		{
+			"id": "limits-outlook",
+			"heading": {
+				"ja": "7. 限界と見通し",
+				"en": "7. Limits and Outlook"
+			},
+			"pairs": [
+				{
+					"en": "This report has three limits.",
+					"ja": "本稿の限界は三つある。"
+				},
+				{
+					"en": "First, the Middle East varies so much by country that regional averages can mislead operational decisions.",
+					"ja": "第一に、中東は国ごとの差が大きく、地域平均で語ると政策実務を誤りやすい。"
+				},
+				{
+					"en": "Second, public information shows only the visible layer of institutions; internal security decisions, informal finance, proxy forces, and religious authority are only partly observable.",
+					"ja": "第二に、公開情報で見えるのは制度の表層であり、治安機構、非公式資金、代理勢力、宗教権威の内部意思決定は断片的にしか追えない。"
+				},
+				{
+					"en": "Third, high-volatility arenas such as Syria and Gaza can change their premises within months.",
+					"ja": "第三に、2026年時点のシリアやガザのような高変動領域では、数か月で前提が変わる。"
+				},
+				{
+					"en": "This is therefore not a fixed ranking table.",
+					"ja": "したがって、ここでの比較は固定順位表ではない。"
+				},
+				{
+					"en": "What matters is how each country loses legitimacy, reallocates resources, and exports crisis to its neighbors.",
+					"ja": "読むべきなのは、どの国がどの経路で統治の正統性を失い、どの経路で再び資源を配分し、どの経路で隣国へ危機を輸出するかである。"
+				},
+				{
+					"en": "Reading the Middle East through state formation and political economy, rather than sect alone, is the most practical way to use the comparison.",
+					"ja": "中東を宗派だけでなく国家形成と政治経済で読むことが、最も実務的な近道である。"
+				}
+			]
+		}
+	]
+}

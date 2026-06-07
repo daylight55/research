@@ -1,0 +1,898 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "over-the-last-24-48-hours-governments-markets-and-big-tech-all-moved-at-the-same-time-policy-shi",
+			"heading": {
+				"ja": "この24-48時間は、政府の制度変更、インフレと金利の再評価、そしてAIプラットフォーム競争の加速が同時に進んだ一日でした。政策面は通商・医療・AI規制が前進し、経済面は原油・為替・ECBの警戒が続き、技術面では大手各社の実装競争がさらに具体化しています。",
+				"en": "Over the last 24-48 hours, governments, markets, and big tech all moved at the same time. Policy shifted on AI, customs, vaccines, tariffs, and EU tech sovereignty, while oil, FX, and ECB messaging kept inflation risk in focus and platform competition accelerated again in AI."
+			},
+			"pairs": [
+				{
+					"en": "Over the last 24-48 hours, governments, markets, and big tech all moved at the same time.",
+					"ja": "この24-48時間は、政府の制度変更、インフレと金利の再評価、そしてAIプラットフォーム競争の加速が同時に進んだ一日でした。政策面は通商・医療・AI規制が前進し、経済面は原油・為替・ECBの警戒が続き、技術面では大手各社の実装競争がさらに具体化しています。"
+				},
+				{
+					"en": "Policy shifted on AI, customs, vaccines, tariffs, and EU tech sovereignty, while oil, FX, and ECB messaging kept inflation risk in focus and platform competition accelerated again in AI.",
+					"ja": "この24-48時間は、政府の制度変更、インフレと金利の再評価、そしてAIプラットフォーム競争の加速が同時に進んだ一日でした。政策面は通商・医療・AI規制が前進し、経済面は原油・為替・ECBの警戒が続き、技術面では大手各社の実装競争がさらに具体化しています。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-white-house-published-an-executive-order-aimed-at-advancing-ai-innovation-whil",
+			"heading": {
+				"ja": "何が起きたか: ホワイトハウスは、AIのイノベーション促進と安全保障を両立させる大統領令を公表しました。政府調達や重要インフラ向けの扱いを含め、連邦のAI方針を前に進める内容です。",
+				"en": "What happened: The White House published an executive order aimed at advancing AI innovation while tightening the security framing around it. The order reaches into procurement and critical infrastructure treatment."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The White House published an executive order aimed at advancing AI innovation while tightening the security framing around it.",
+					"ja": "何が起きたか: ホワイトハウスは、AIのイノベーション促進と安全保障を両立させる大統領令を公表しました。政府調達や重要インフラ向けの扱いを含め、連邦のAI方針を前に進める内容です。"
+				},
+				{
+					"en": "The order reaches into procurement and critical infrastructure treatment.",
+					"ja": "何が起きたか: ホワイトハウスは、AIのイノベーション促進と安全保障を両立させる大統領令を公表しました。政府調達や重要インフラ向けの扱いを含め、連邦のAI方針を前に進める内容です。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-u-s-ai-policy-now-affects-not-just-model-developers-but-also-government-buyers-an",
+			"heading": {
+				"ja": "なぜ重要か: 米国のAI規制は、民間の開発速度だけでなく、政府案件や安全保障用途の調達条件にも波及します。大手クラウド、モデル提供者、SI各社の案件設計に直接効いてきます。",
+				"en": "Why it matters: U.S. AI policy now affects not just model developers, but also government buyers and infrastructure vendors. That changes procurement, evaluation, and compliance assumptions for the market."
+			},
+			"pairs": [
+				{
+					"en": "AI policy now affects not just model developers, but also government buyers and infrastructure vendors.",
+					"ja": "なぜ重要か: 米国のAI規制は、民間の開発速度だけでなく、政府案件や安全保障用途の調達条件にも波及します。大手クラウド、モデル提供者、SI各社の案件設計に直接効いてきます。"
+				},
+				{
+					"en": "That changes procurement, evaluation, and compliance assumptions for the market.",
+					"ja": "なぜ重要か: 米国のAI規制は、民間の開発速度だけでなく、政府案件や安全保障用途の調達条件にも波及します。大手クラウド、モデル提供者、SI各社の案件設計に直接効いてきます。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-pace-of-agency-guidance-and-how-quickly-procurement-rules-become-concrete",
+			"heading": {
+				"ja": "今後の注視点: 省庁別ガイダンスと調達ルールがどの速度で具体化するかを見ます。特に、民間モデルの評価基準とインフラ向け例外運用が焦点です。",
+				"en": "What to watch next: The pace of agency guidance and how quickly procurement rules become concrete will matter most. Look for the evaluation bar on commercial models and any infrastructure-specific exceptions."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The pace of agency guidance and how quickly procurement rules become concrete will matter most.",
+					"ja": "今後の注視点: 省庁別ガイダンスと調達ルールがどの速度で具体化するかを見ます。特に、民間モデルの評価基準とインフラ向け例外運用が焦点です。"
+				},
+				{
+					"en": "Look for the evaluation bar on commercial models and any infrastructure-specific exceptions.",
+					"ja": "今後の注視点: 省庁別ガイダンスと調達ルールがどの速度で具体化するかを見ます。特に、民間モデルの評価基準とインフラ向け例外運用が焦点です。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-u-s-administration-moved-to-tighten-customs-oversight-the-order-points-toward-",
+			"heading": {
+				"ja": "何が起きたか: 米政権は、通関時の監督を強める方針を打ち出しました。外国の輸入者責任者や申告情報の扱いに関する締め付けが強まる形です。",
+				"en": "What happened: The U.S. administration moved to tighten customs oversight. The order points toward stricter importer responsibility and more information requirements at the border."
+			},
+			"pairs": [
+				{
+					"en": "administration moved to tighten customs oversight.",
+					"ja": "何が起きたか: 米政権は、通関時の監督を強める方針を打ち出しました。外国の輸入者責任者や申告情報の扱いに関する締め付けが強まる形です。"
+				},
+				{
+					"en": "The order points toward stricter importer responsibility and more information requirements at the border.",
+					"ja": "何が起きたか: 米政権は、通関時の監督を強める方針を打ち出しました。外国の輸入者責任者や申告情報の扱いに関する締め付けが強まる形です。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-customs-tightening-raises-compliance-costs-and-can-slow-supply-chains-which-in-tu",
+			"heading": {
+				"ja": "なぜ重要か: 通関の厳格化は、輸入コストやサプライチェーンの滞留だけでなく、最終価格と在庫戦略にも波及します。関税とコンプライアンスが一体で効いてくる局面です。",
+				"en": "Why it matters: Customs tightening raises compliance costs and can slow supply chains, which in turn affects pricing and inventory strategy. Trade policy and operational policy are becoming inseparable."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Customs tightening raises compliance costs and can slow supply chains, which in turn affects pricing and inventory strategy.",
+					"ja": "なぜ重要か: 通関の厳格化は、輸入コストやサプライチェーンの滞留だけでなく、最終価格と在庫戦略にも波及します。関税とコンプライアンスが一体で効いてくる局面です。"
+				},
+				{
+					"en": "Trade policy and operational policy are becoming inseparable.",
+					"ja": "なぜ重要か: 通関の厳格化は、輸入コストやサプライチェーンの滞留だけでなく、最終価格と在庫戦略にも波及します。関税とコンプライアンスが一体で効いてくる局面です。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-scope-of-targeted-goods-and-documentation-requirements-will-be-the-key-qu",
+			"heading": {
+				"ja": "今後の注視点: 実施通達で、対象品目や証明責任の範囲がどこまで広がるかを確認します。物流遅延が広がれば、製造業と小売の利益率に直結します。",
+				"en": "What to watch next: The scope of targeted goods and documentation requirements will be the key question. Any sign of port delays would quickly affect manufacturing and retail margins."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The scope of targeted goods and documentation requirements will be the key question.",
+					"ja": "今後の注視点: 実施通達で、対象品目や証明責任の範囲がどこまで広がるかを確認します。物流遅延が広がれば、製造業と小売の利益率に直結します。"
+				},
+				{
+					"en": "Any sign of port delays would quickly affect manufacturing and retail margins.",
+					"ja": "今後の注視点: 実施通達で、対象品目や証明責任の範囲がどこまで広がるかを確認します。物流遅延が広がれば、製造業と小売の利益率に直結します。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-tariff-treatment-on-metal-imports-was-adjusted-with-some-farm-and-industrial-equip",
+			"heading": {
+				"ja": "何が起きたか: 金属輸入に関する関税が見直され、一部の農機や産業機器は負担が下がる一方、10%関税の扱いが残る領域も示されました。",
+				"en": "What happened: Tariff treatment on metal imports was adjusted, with some farm and industrial equipment seeing lower burdens while other duties remain. The market is still working through the practical winners and losers."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Tariff treatment on metal imports was adjusted, with some farm and industrial equipment seeing lower burdens while other duties remain.",
+					"ja": "何が起きたか: 金属輸入に関する関税が見直され、一部の農機や産業機器は負担が下がる一方、10%関税の扱いが残る領域も示されました。"
+				},
+				{
+					"en": "The market is still working through the practical winners and losers.",
+					"ja": "何が起きたか: 金属輸入に関する関税が見直され、一部の農機や産業機器は負担が下がる一方、10%関税の扱いが残る領域も示されました。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-metals-are-a-base-cost-for-construction-manufacturing-and-farming-equipment-even-",
+			"heading": {
+				"ja": "なぜ重要か: 金属は建設、製造、農業機械のコスト基盤です。関税の微調整でも、部材調達と価格転嫁の見通しが変わります。",
+				"en": "Why it matters: Metals are a base cost for construction, manufacturing, and farming equipment. Even modest tariff changes can alter procurement and pricing plans."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Metals are a base cost for construction, manufacturing, and farming equipment.",
+					"ja": "なぜ重要か: 金属は建設、製造、農業機械のコスト基盤です。関税の微調整でも、部材調達と価格転嫁の見通しが変わります。"
+				},
+				{
+					"en": "Even modest tariff changes can alter procurement and pricing plans.",
+					"ja": "なぜ重要か: 金属は建設、製造、農業機械のコスト基盤です。関税の微調整でも、部材調達と価格転嫁の見通しが変わります。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-for-industry-requests-for-exemptions-or-grace-periods-pricing-and-inven",
+			"heading": {
+				"ja": "今後の注視点: 各業界団体がどこまで免除や猶予を勝ち取るかが焦点です。価格改定のタイミングと在庫積み増しの動きも見逃せません。",
+				"en": "What to watch next: Watch for industry requests for exemptions or grace periods. Pricing and inventory front-loading will show whether firms expect more disruption."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch for industry requests for exemptions or grace periods.",
+					"ja": "今後の注視点: 各業界団体がどこまで免除や猶予を勝ち取るかが焦点です。価格改定のタイミングと在庫積み増しの動きも見逃せません。"
+				},
+				{
+					"en": "Pricing and inventory front-loading will show whether firms expect more disruption.",
+					"ja": "今後の注視点: 各業界団体がどこまで免除や猶予を勝ち取るかが焦点です。価格改定のタイミングと在庫積み増しの動きも見逃せません。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-u-s-government-moved-toward-revisiting-childhood-vaccine-recommendations-that-",
+			"heading": {
+				"ja": "何が起きたか: 米政府は、小児ワクチン勧告の見直しを促す方向に動きました。公衆衛生当局と政治判断の距離が再び注目されています。",
+				"en": "What happened: The U.S. government moved toward revisiting childhood vaccine recommendations. That brings public health agencies and political decision-making back into the same frame."
+			},
+			"pairs": [
+				{
+					"en": "government moved toward revisiting childhood vaccine recommendations.",
+					"ja": "何が起きたか: 米政府は、小児ワクチン勧告の見直しを促す方向に動きました。公衆衛生当局と政治判断の距離が再び注目されています。"
+				},
+				{
+					"en": "That brings public health agencies and political decision-making back into the same frame.",
+					"ja": "何が起きたか: 米政府は、小児ワクチン勧告の見直しを促す方向に動きました。公衆衛生当局と政治判断の距離が再び注目されています。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-vaccine-policy-reaches-beyond-medicine-into-insurance-school-operations-and-state",
+			"heading": {
+				"ja": "なぜ重要か: ワクチン政策は医療機関だけでなく、保険設計、学校運営、州政府の実務にまで及びます。政策変更の余波は長く残ります。",
+				"en": "Why it matters: Vaccine policy reaches beyond medicine into insurance, school operations, and state-level implementation. Once the recommendation shifts, the operational impact lasts."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Vaccine policy reaches beyond medicine into insurance, school operations, and state-level implementation.",
+					"ja": "なぜ重要か: ワクチン政策は医療機関だけでなく、保険設計、学校運営、州政府の実務にまで及びます。政策変更の余波は長く残ります。"
+				},
+				{
+					"en": "Once the recommendation shifts, the operational impact lasts.",
+					"ja": "なぜ重要か: ワクチン政策は医療機関だけでなく、保険設計、学校運営、州政府の実務にまで及びます。政策変更の余波は長く残ります。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-track-cdc-and-committee-reactions-plus-whether-states-split-in-how-they-adopt",
+			"heading": {
+				"ja": "今後の注視点: CDCや関連委員会の実務反応と、州レベルの採用差が広がるかを見ます。医療現場の推奨がどう変わるかも重要です。",
+				"en": "What to watch next: Track CDC and committee reactions, plus whether states split in how they adopt the changes. Clinical guidance on the ground will matter as much as the formal announcement."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Track CDC and committee reactions, plus whether states split in how they adopt the changes.",
+					"ja": "今後の注視点: CDCや関連委員会の実務反応と、州レベルの採用差が広がるかを見ます。医療現場の推奨がどう変わるかも重要です。"
+				},
+				{
+					"en": "Clinical guidance on the ground will matter as much as the formal announcement.",
+					"ja": "今後の注視点: CDCや関連委員会の実務反応と、州レベルの採用差が広がるかを見ます。医療現場の推奨がどう変わるかも重要です。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-eu-pushed-further-toward-domestic-strength-in-cloud-ai-and-semiconductors-the-",
+			"heading": {
+				"ja": "何が起きたか: EUは、クラウド、AI、半導体を域内で強化する方向に一段踏み込みました。対米依存を和らげる政策テーマが再び前面に出ています。",
+				"en": "What happened: The EU pushed further toward domestic strength in cloud, AI, and semiconductors. The policy theme of reducing dependence on U.S. tech kept moving forward."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The EU pushed further toward domestic strength in cloud, AI, and semiconductors.",
+					"ja": "何が起きたか: EUは、クラウド、AI、半導体を域内で強化する方向に一段踏み込みました。対米依存を和らげる政策テーマが再び前面に出ています。"
+				},
+				{
+					"en": "The policy theme of reducing dependence on U.",
+					"ja": "何が起きたか: EUは、クラウド、AI、半導体を域内で強化する方向に一段踏み込みました。対米依存を和らげる政策テーマが再び前面に出ています。"
+				},
+				{
+					"en": "tech kept moving forward.",
+					"ja": "何が起きたか: EUは、クラウド、AI、半導体を域内で強化する方向に一段踏み込みました。対米依存を和らげる政策テーマが再び前面に出ています。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-european-tech-sovereignty-changes-procurement-regulation-subsidies-and-standards-",
+			"heading": {
+				"ja": "なぜ重要か: 欧州の技術主権は、調達、規制、補助金、標準化を同時に動かします。米国勢にとっても、販売条件と現地投資の前提が変わります。",
+				"en": "Why it matters: European tech sovereignty changes procurement, regulation, subsidies, and standards at the same time. It also changes the commercial assumptions for U.S. vendors."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: European tech sovereignty changes procurement, regulation, subsidies, and standards at the same time.",
+					"ja": "なぜ重要か: 欧州の技術主権は、調達、規制、補助金、標準化を同時に動かします。米国勢にとっても、販売条件と現地投資の前提が変わります。"
+				},
+				{
+					"en": "It also changes the commercial assumptions for U.",
+					"ja": "なぜ重要か: 欧州の技術主権は、調達、規制、補助金、標準化を同時に動かします。米国勢にとっても、販売条件と現地投資の前提が変わります。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-for-actual-funding-allocations-and-how-aligned-the-member-states-remain",
+			"heading": {
+				"ja": "今後の注視点: 実際の資金配分と、加盟国間の足並みがそろうかを見ます。クラウドとAI基盤の公的調達がどこまで内製寄りになるかが鍵です。",
+				"en": "What to watch next: Watch for actual funding allocations and how aligned the member states remain. Public procurement in cloud and AI infrastructure is the key lever."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch for actual funding allocations and how aligned the member states remain.",
+					"ja": "今後の注視点: 実際の資金配分と、加盟国間の足並みがそろうかを見ます。クラウドとAI基盤の公的調達がどこまで内製寄りになるかが鍵です。"
+				},
+				{
+					"en": "Public procurement in cloud and AI infrastructure is the key lever.",
+					"ja": "今後の注視点: 実際の資金配分と、加盟国間の足並みがそろうかを見ます。クラウドとAI基盤の公的調達がどこまで内製寄りになるかが鍵です。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-ecb-signaled-that-banks-should-prepare-targeted-measures-for-ai-risk-model-use",
+			"heading": {
+				"ja": "何が起きたか: ECBは、銀行に対してAIリスクに応じた個別対策を求める姿勢を強めました。モデル利用、データ管理、外部依存の監督が論点です。",
+				"en": "What happened: The ECB signaled that banks should prepare targeted measures for AI risk. Model use, data handling, and external dependence are all moving into supervisory focus."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The ECB signaled that banks should prepare targeted measures for AI risk.",
+					"ja": "何が起きたか: ECBは、銀行に対してAIリスクに応じた個別対策を求める姿勢を強めました。モデル利用、データ管理、外部依存の監督が論点です。"
+				},
+				{
+					"en": "Model use, data handling, and external dependence are all moving into supervisory focus.",
+					"ja": "何が起きたか: ECBは、銀行に対してAIリスクに応じた個別対策を求める姿勢を強めました。モデル利用、データ管理、外部依存の監督が論点です。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-ai-boosts-efficiency-but-it-also-adds-failure-modes-and-dependency-risk-once-regu",
+			"heading": {
+				"ja": "なぜ重要か: AIは金融機関の効率化を進める一方、誤判定やサプライチェーン障害のリスクも増やします。監督当局が具体策を求めると、導入速度より統制が優先されます。",
+				"en": "Why it matters: AI boosts efficiency, but it also adds failure modes and dependency risk. Once regulators ask for concrete controls, deployment speed is no longer the only KPI."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: AI boosts efficiency, but it also adds failure modes and dependency risk.",
+					"ja": "なぜ重要か: AIは金融機関の効率化を進める一方、誤判定やサプライチェーン障害のリスクも増やします。監督当局が具体策を求めると、導入速度より統制が優先されます。"
+				},
+				{
+					"en": "Once regulators ask for concrete controls, deployment speed is no longer the only KPI.",
+					"ja": "なぜ重要か: AIは金融機関の効率化を進める一方、誤判定やサプライチェーン障害のリスクも増やします。監督当局が具体策を求めると、導入速度より統制が優先されます。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-see-how-quickly-banks-move-from-pilots-to-production-and-whether-supervisors-",
+			"heading": {
+				"ja": "今後の注視点: 各銀行がAIをどこまで本番運用に置くか、そして監督上の追加要件がどこまで細かくなるかを見ます。",
+				"en": "What to watch next: See how quickly banks move from pilots to production and whether supervisors add more detailed requirements."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: See how quickly banks move from pilots to production and whether supervisors add more detailed requirements.",
+					"ja": "今後の注視点: 各銀行がAIをどこまで本番運用に置くか、そして監督上の追加要件がどこまで細かくなるかを見ます。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-ecb-stressed-that-ai-adoption-in-banking-must-be-matched-by-resilience-and-dep",
+			"heading": {
+				"ja": "何が起きたか: ECBは、AI導入を進める金融機関に対して、耐障害性と依存構造の見直しを求めました。単なるモデル性能ではなく、運用全体の強さが重視されています。",
+				"en": "What happened: The ECB stressed that AI adoption in banking must be matched by resilience and dependency checks. The focus is broader than model quality alone."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The ECB stressed that AI adoption in banking must be matched by resilience and dependency checks.",
+					"ja": "何が起きたか: ECBは、AI導入を進める金融機関に対して、耐障害性と依存構造の見直しを求めました。単なるモデル性能ではなく、運用全体の強さが重視されています。"
+				},
+				{
+					"en": "The focus is broader than model quality alone.",
+					"ja": "何が起きたか: ECBは、AI導入を進める金融機関に対して、耐障害性と依存構造の見直しを求めました。単なるモデル性能ではなく、運用全体の強さが重視されています。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-bank-ai-programs-need-auditability-recovery-planning-and-vendor-management-as-par",
+			"heading": {
+				"ja": "なぜ重要か: 銀行のAI活用は、監査、障害復旧、委託先管理まで含めた設計が必要です。監督側の関心が上がるほど、PoCから本番移行の条件は厳しくなります。",
+				"en": "Why it matters: Bank AI programs need auditability, recovery planning, and vendor management as part of the design. That raises the bar for moving from proof-of-concept to production."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Bank AI programs need auditability, recovery planning, and vendor management as part of the design.",
+					"ja": "なぜ重要か: 銀行のAI活用は、監査、障害復旧、委託先管理まで含めた設計が必要です。監督側の関心が上がるほど、PoCから本番移行の条件は厳しくなります。"
+				},
+				{
+					"en": "That raises the bar for moving from proof-of-concept to production.",
+					"ja": "なぜ重要か: 銀行のAI活用は、監査、障害復旧、委託先管理まで含めた設計が必要です。監督側の関心が上がるほど、PoCから本番移行の条件は厳しくなります。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-a-supervisory-minimum-standard-for-ai-governance-would-be-the-big-next-step-l",
+			"heading": {
+				"ja": "今後の注視点: 監督当局がAIガバナンスの最低基準を示すかどうかが焦点です。欧州の大手銀行が先行事例になる可能性があります。",
+				"en": "What to watch next: A supervisory minimum standard for AI governance would be the big next step. Large European banks may become the first reference cases."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: A supervisory minimum standard for AI governance would be the big next step.",
+					"ja": "今後の注視点: 監督当局がAIガバナンスの最低基準を示すかどうかが焦点です。欧州の大手銀行が先行事例になる可能性があります。"
+				},
+				{
+					"en": "Large European banks may become the first reference cases.",
+					"ja": "今後の注視点: 監督当局がAIガバナンスの最低基準を示すかどうかが焦点です。欧州の大手銀行が先行事例になる可能性があります。"
+				}
+			]
+		},
+		{
+			"id": "services-stay-in-expansion",
+			"heading": {
+				"ja": "サービス業は拡大継続",
+				"en": "Services stay in expansion"
+			},
+			"pairs": [
+				{
+					"en": "Services stay in expansion",
+					"ja": "サービス業は拡大継続"
+				}
+			]
+		},
+		{
+			"id": "what-happened-u-s-services-activity-stayed-in-expansion-territory-at-54-5-growth-has-not-fallen-",
+			"heading": {
+				"ja": "何が起きたか: 米サービス業の景況感は54.5と拡大圏を維持しました。成長の勢いが完全には崩れていない一方、価格や供給面の圧力は残っています。",
+				"en": "What happened: U.S. services activity stayed in expansion territory at 54.5. Growth has not fallen apart, but price and supply pressure remain visible."
+			},
+			"pairs": [
+				{
+					"en": "services activity stayed in expansion territory at 54.",
+					"ja": "何が起きたか: 米サービス業の景況感は54.5と拡大圏を維持しました。成長の勢いが完全には崩れていない一方、価格や供給面の圧力は残っています。"
+				},
+				{
+					"en": "Growth has not fallen apart, but price and supply pressure remain visible.",
+					"ja": "何が起きたか: 米サービス業の景況感は54.5と拡大圏を維持しました。成長の勢いが完全には崩れていない一方、価格や供給面の圧力は残っています。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-services-are-the-core-of-the-u-s-economy-so-a-solid-reading-eases-recession-fears",
+			"heading": {
+				"ja": "なぜ重要か: サービス業は米経済の大部分を占めるため、景況感の維持は景気後退懸念を和らげます。ただしインフレ圧力が残れば、金利の下げ余地は狭くなります。",
+				"en": "Why it matters: Services are the core of the U.S. economy, so a solid reading eases recession fears. If price pressure persists, the room for rate cuts stays limited."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Services are the core of the U.",
+					"ja": "なぜ重要か: サービス業は米経済の大部分を占めるため、景況感の維持は景気後退懸念を和らげます。ただしインフレ圧力が残れば、金利の下げ余地は狭くなります。"
+				},
+				{
+					"en": "economy, so a solid reading eases recession fears.",
+					"ja": "なぜ重要か: サービス業は米経済の大部分を占めるため、景況感の維持は景気後退懸念を和らげます。ただしインフレ圧力が残れば、金利の下げ余地は狭くなります。"
+				},
+				{
+					"en": "If price pressure persists, the room for rate cuts stays limited.",
+					"ja": "なぜ重要か: サービス業は米経済の大部分を占めるため、景況感の維持は景気後退懸念を和らげます。ただしインフレ圧力が残れば、金利の下げ余地は狭くなります。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-next-moves-in-employment-and-prices-paid-will-matter-most-firms-are-watch",
+			"heading": {
+				"ja": "今後の注視点: 雇用と支払価格の項目が次にどう変わるかを見ます。企業は需要の強さより、コスト上昇の持続性に注目しています。",
+				"en": "What to watch next: The next moves in employment and prices paid will matter most. Firms are watching cost persistence more closely than headline demand."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The next moves in employment and prices paid will matter most.",
+					"ja": "今後の注視点: 雇用と支払価格の項目が次にどう変わるかを見ます。企業は需要の強さより、コスト上昇の持続性に注目しています。"
+				},
+				{
+					"en": "Firms are watching cost persistence more closely than headline demand.",
+					"ja": "今後の注視点: 雇用と支払価格の項目が次にどう変わるかを見ます。企業は需要の強さより、コスト上昇の持続性に注目しています。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-oil-prices-rose-on-middle-east-tensions-ai-related-equity-strength-kept-stocks-sup",
+			"heading": {
+				"ja": "何が起きたか: 中東の緊張を受けて原油相場が上昇しました。AI関連株の強さが株式市場を支える一方で、エネルギー価格が上振れしています。",
+				"en": "What happened: Oil prices rose on Middle East tensions. AI-related equity strength kept stocks supported, but energy prices moved higher at the same time."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Oil prices rose on Middle East tensions.",
+					"ja": "何が起きたか: 中東の緊張を受けて原油相場が上昇しました。AI関連株の強さが株式市場を支える一方で、エネルギー価格が上振れしています。"
+				},
+				{
+					"en": "AI-related equity strength kept stocks supported, but energy prices moved higher at the same time.",
+					"ja": "何が起きたか: 中東の緊張を受けて原油相場が上昇しました。AI関連株の強さが株式市場を支える一方で、エネルギー価格が上振れしています。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-higher-crude-feeds-into-gasoline-logistics-and-inflation-expectations-that-makes-",
+			"heading": {
+				"ja": "なぜ重要か: 原油高はガソリン価格だけでなく、物流費とインフレ期待を通じて広く波及します。株高とインフレ再燃が同時進行すると、中央銀行の判断は難しくなります。",
+				"en": "Why it matters: Higher crude feeds into gasoline, logistics, and inflation expectations. That makes life harder for central banks trying to judge whether inflation pressure is fading."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Higher crude feeds into gasoline, logistics, and inflation expectations.",
+					"ja": "なぜ重要か: 原油高はガソリン価格だけでなく、物流費とインフレ期待を通じて広く波及します。株高とインフレ再燃が同時進行すると、中央銀行の判断は難しくなります。"
+				},
+				{
+					"en": "That makes life harder for central banks trying to judge whether inflation pressure is fading.",
+					"ja": "なぜ重要か: 原油高はガソリン価格だけでなく、物流費とインフレ期待を通じて広く波及します。株高とインフレ再燃が同時進行すると、中央銀行の判断は難しくなります。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-market-will-watch-whether-the-geopolitical-shock-expands-into-supply-disr",
+			"heading": {
+				"ja": "今後の注視点: 地政学リスクが供給不安に発展するか、OPECや主要国のコメントが出るかを見ます。市場は次に、米インフレ指標への波及を織り込み始めます。",
+				"en": "What to watch next: The market will watch whether the geopolitical shock expands into supply disruption. Any fresh inflation data will be read through that lens."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The market will watch whether the geopolitical shock expands into supply disruption.",
+					"ja": "今後の注視点: 地政学リスクが供給不安に発展するか、OPECや主要国のコメントが出るかを見ます。市場は次に、米インフレ指標への波及を織り込み始めます。"
+				},
+				{
+					"en": "Any fresh inflation data will be read through that lens.",
+					"ja": "今後の注視点: 地政学リスクが供給不安に発展するか、OPECや主要国のコメントが出るかを見ます。市場は次に、米インフレ指標への波及を織り込み始めます。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-yen-weakened-to-the-160-level-and-japanese-officials-stepped-up-verbal-warning",
+			"heading": {
+				"ja": "何が起きたか: 円相場は160円台まで下落し、日本当局のけん制が意識されました。金利差とリスクオフの両方が円売りを後押ししています。",
+				"en": "What happened: The yen weakened to the 160 level, and Japanese officials stepped up verbal warnings. Rate differentials and risk-off flows are both supporting the move."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The yen weakened to the 160 level, and Japanese officials stepped up verbal warnings.",
+					"ja": "何が起きたか: 円相場は160円台まで下落し、日本当局のけん制が意識されました。金利差とリスクオフの両方が円売りを後押ししています。"
+				},
+				{
+					"en": "Rate differentials and risk-off flows are both supporting the move.",
+					"ja": "何が起きたか: 円相場は160円台まで下落し、日本当局のけん制が意識されました。金利差とリスクオフの両方が円売りを後押ししています。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-a-weaker-yen-pushes-up-import-costs-especially-for-energy-and-food-that-helps-exp",
+			"heading": {
+				"ja": "なぜ重要か: 円安は輸入物価を押し上げ、エネルギーや食料コストを通じて家計に広がります。輸出企業には追い風でも、内需の重荷は強まります。",
+				"en": "Why it matters: A weaker yen pushes up import costs, especially for energy and food. That helps exporters but adds pressure to domestic consumers."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: A weaker yen pushes up import costs, especially for energy and food.",
+					"ja": "なぜ重要か: 円安は輸入物価を押し上げ、エネルギーや食料コストを通じて家計に広がります。輸出企業には追い風でも、内需の重荷は強まります。"
+				},
+				{
+					"en": "That helps exporters but adds pressure to domestic consumers.",
+					"ja": "なぜ重要か: 円安は輸入物価を押し上げ、エネルギーや食料コストを通じて家計に広がります。輸出企業には追い風でも、内需の重荷は強まります。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-the-ministry-of-finance-and-bank-of-japan-comments-for-clues-on-interve",
+			"heading": {
+				"ja": "今後の注視点: 財務省・日銀の発言が市場をどこまで動かすかが焦点です。実弾介入の警戒水準に近いかどうかも見られます。",
+				"en": "What to watch next: Watch the Ministry of Finance and Bank of Japan comments for clues on intervention tolerance. The market is close enough to a credible warning zone that rhetoric matters."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch the Ministry of Finance and Bank of Japan comments for clues on intervention tolerance.",
+					"ja": "今後の注視点: 財務省・日銀の発言が市場をどこまで動かすかが焦点です。実弾介入の警戒水準に近いかどうかも見られます。"
+				},
+				{
+					"en": "The market is close enough to a credible warning zone that rhetoric matters.",
+					"ja": "今後の注視点: 財務省・日銀の発言が市場をどこまで動かすかが焦点です。実弾介入の警戒水準に近いかどうかも見られます。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-microsoft-used-build-2026-to-push-agentic-ai-for-work-to-the-front-of-the-stage-co",
+			"heading": {
+				"ja": "何が起きたか: MicrosoftはBuild 2026で、仕事向けのエージェントAIを前面に出しました。Copilot、独自モデル、開発者向け統合を束ねる構図が明確です。",
+				"en": "What happened: Microsoft used Build 2026 to push agentic AI for work to the front of the stage. Copilot, proprietary models, and developer integrations are being bundled into one platform story."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Microsoft used Build 2026 to push agentic AI for work to the front of the stage.",
+					"ja": "何が起きたか: MicrosoftはBuild 2026で、仕事向けのエージェントAIを前面に出しました。Copilot、独自モデル、開発者向け統合を束ねる構図が明確です。"
+				},
+				{
+					"en": "Copilot, proprietary models, and developer integrations are being bundled into one platform story.",
+					"ja": "何が起きたか: MicrosoftはBuild 2026で、仕事向けのエージェントAIを前面に出しました。Copilot、独自モデル、開発者向け統合を束ねる構図が明確です。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-competition-is-moving-from-standalone-model-quality-to-how-deeply-ai-can-live-ins",
+			"heading": {
+				"ja": "なぜ重要か: 競争軸は単体モデルの性能から、業務フローにどれだけ深く入れるかへ移っています。MicrosoftはOS、クラウド、開発環境を一体で押さえています。",
+				"en": "Why it matters: Competition is moving from standalone model quality to how deeply AI can live inside work flows. Microsoft has the advantage of owning the OS, cloud, and developer surface."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Competition is moving from standalone model quality to how deeply AI can live inside work flows.",
+					"ja": "なぜ重要か: 競争軸は単体モデルの性能から、業務フローにどれだけ深く入れるかへ移っています。MicrosoftはOS、クラウド、開発環境を一体で押さえています。"
+				},
+				{
+					"en": "Microsoft has the advantage of owning the OS, cloud, and developer surface.",
+					"ja": "なぜ重要か: 競争軸は単体モデルの性能から、業務フローにどれだけ深く入れるかへ移っています。MicrosoftはOS、クラウド、開発環境を一体で押さえています。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-important-follow-up-is-how-concrete-the-enterprise-examples-and-pricing-b",
+			"heading": {
+				"ja": "今後の注視点: 企業向けの実装例と価格体系がどこまで具体化するかを見ます。エージェントの権限管理と監査機能も比較ポイントです。",
+				"en": "What to watch next: The important follow-up is how concrete the enterprise examples and pricing become. Permissions and audit controls for agents will also matter."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The important follow-up is how concrete the enterprise examples and pricing become.",
+					"ja": "今後の注視点: 企業向けの実装例と価格体系がどこまで具体化するかを見ます。エージェントの権限管理と監査機能も比較ポイントです。"
+				},
+				{
+					"en": "Permissions and audit controls for agents will also matter.",
+					"ja": "今後の注視点: 企業向けの実装例と価格体系がどこまで具体化するかを見ます。エージェントの権限管理と監査機能も比較ポイントです。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-openai-said-its-frontier-models-and-codex-can-now-run-on-aws-that-gives-enterprise",
+			"heading": {
+				"ja": "何が起きたか: OpenAIは、フロンティアモデルとCodexをAWS上で提供する方向を打ち出しました。利用企業にとっては、既存のAWS標準に寄せた導入経路が増えます。",
+				"en": "What happened: OpenAI said its frontier models and Codex can now run on AWS. That gives enterprises another path that fits existing AWS-first procurement and operations."
+			},
+			"pairs": [
+				{
+					"en": "What happened: OpenAI said its frontier models and Codex can now run on AWS.",
+					"ja": "何が起きたか: OpenAIは、フロンティアモデルとCodexをAWS上で提供する方向を打ち出しました。利用企業にとっては、既存のAWS標準に寄せた導入経路が増えます。"
+				},
+				{
+					"en": "That gives enterprises another path that fits existing AWS-first procurement and operations.",
+					"ja": "何が起きたか: OpenAIは、フロンティアモデルとCodexをAWS上で提供する方向を打ち出しました。利用企業にとっては、既存のAWS標準に寄せた導入経路が増えます。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-this-is-not-only-a-model-story-but-also-a-distribution-story-if-the-data-and-comp",
+			"heading": {
+				"ja": "なぜ重要か: これはモデル競争だけでなく、クラウド流通の競争でもあります。調達とデータ所在の条件が整えば、採用障壁はさらに下がります。",
+				"en": "Why it matters: This is not only a model story, but also a distribution story. If the data and compliance terms fit, adoption barriers drop further."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: This is not only a model story, but also a distribution story.",
+					"ja": "なぜ重要か: これはモデル競争だけでなく、クラウド流通の競争でもあります。調達とデータ所在の条件が整えば、採用障壁はさらに下がります。"
+				},
+				{
+					"en": "If the data and compliance terms fit, adoption barriers drop further.",
+					"ja": "なぜ重要か: これはモデル競争だけでなく、クラウド流通の競争でもあります。調達とデータ所在の条件が整えば、採用障壁はさらに下がります。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-the-aws-specific-usage-terms-model-refresh-cadence-and-how-clearly-secu",
+			"heading": {
+				"ja": "今後の注視点: AWS上の利用条件、モデルの更新速度、法務・セキュリティ要件がどこまで明示されるかを見ます。",
+				"en": "What to watch next: Watch the AWS-specific usage terms, model refresh cadence, and how clearly security and legal requirements are documented."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch the AWS-specific usage terms, model refresh cadence, and how clearly security and legal requirements are documented.",
+					"ja": "今後の注視点: AWS上の利用条件、モデルの更新速度、法務・セキュリティ要件がどこまで明示されるかを見ます。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-microsoft-spotlighted-majorana-2-and-the-general-availability-of-microsoft-discove",
+			"heading": {
+				"ja": "何が起きたか: Microsoftは、量子関連のMajorana 2と、研究支援系のMicrosoft Discoveryを前に出しました。先端計算とAI研究基盤を同時に押し上げる動きです。",
+				"en": "What happened: Microsoft spotlighted Majorana 2 and the general availability of Microsoft Discovery. The company is pushing both frontier computing and AI research infrastructure at the same time."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Microsoft spotlighted Majorana 2 and the general availability of Microsoft Discovery.",
+					"ja": "何が起きたか: Microsoftは、量子関連のMajorana 2と、研究支援系のMicrosoft Discoveryを前に出しました。先端計算とAI研究基盤を同時に押し上げる動きです。"
+				},
+				{
+					"en": "The company is pushing both frontier computing and AI research infrastructure at the same time.",
+					"ja": "何が起きたか: Microsoftは、量子関連のMajorana 2と、研究支援系のMicrosoft Discoveryを前に出しました。先端計算とAI研究基盤を同時に押し上げる動きです。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-quantum-is-not-an-immediate-revenue-story-but-it-is-a-strong-signal-for-research-",
+			"heading": {
+				"ja": "なぜ重要か: 量子は即座に売上を変えるわけではないものの、研究・国家案件・長期投資のシグナルとして重い意味を持ちます。DiscoveryはAIの実務導入を加速させます。",
+				"en": "Why it matters: Quantum is not an immediate revenue story, but it is a strong signal for research, government, and long-horizon capital. Discovery pushes AI into more practical R&D workflows."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Quantum is not an immediate revenue story, but it is a strong signal for research, government, and long-horizon capital.",
+					"ja": "なぜ重要か: 量子は即座に売上を変えるわけではないものの、研究・国家案件・長期投資のシグナルとして重い意味を持ちます。DiscoveryはAIの実務導入を加速させます。"
+				},
+				{
+					"en": "Discovery pushes AI into more practical R&D workflows.",
+					"ja": "なぜ重要か: 量子は即座に売上を変えるわけではないものの、研究・国家案件・長期投資のシグナルとして重い意味を持ちます。DiscoveryはAIの実務導入を加速させます。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-look-for-growth-in-research-usage-more-external-partners-and-sharper-detail-o",
+			"heading": {
+				"ja": "今後の注視点: 研究利用の拡大、外部パートナーの増加、そして量子ロードマップの具体化が見どころです。",
+				"en": "What to watch next: Look for growth in research usage, more external partners, and sharper detail on the quantum roadmap."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Look for growth in research usage, more external partners, and sharper detail on the quantum roadmap.",
+					"ja": "今後の注視点: 研究利用の拡大、外部パートナーの増加、そして量子ロードマップの具体化が見どころです。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-anthropic-expanded-project-glasswing-broadening-the-frame-for-safety-testing-and-c",
+			"heading": {
+				"ja": "何が起きたか: Anthropicは、Project Glasswingの拡大を通じて、安全性検証や共同研究の枠を広げました。産業界との接続を強める構図が見えます。",
+				"en": "What happened: Anthropic expanded Project Glasswing, broadening the frame for safety testing and collaborative research. The company is leaning harder into industry partnerships."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Anthropic expanded Project Glasswing, broadening the frame for safety testing and collaborative research.",
+					"ja": "何が起きたか: Anthropicは、Project Glasswingの拡大を通じて、安全性検証や共同研究の枠を広げました。産業界との接続を強める構図が見えます。"
+				},
+				{
+					"en": "The company is leaning harder into industry partnerships.",
+					"ja": "何が起きたか: Anthropicは、Project Glasswingの拡大を通じて、安全性検証や共同研究の枠を広げました。産業界との接続を強める構図が見えます。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-large-model-competition-is-being-fought-on-safety-transparency-and-operational-co",
+			"heading": {
+				"ja": "なぜ重要か: 大規模モデルの競争は、性能だけでなく安全性や運用透明性でも争われます。Anthropicは企業導入の安心感を差別化要因にしています。",
+				"en": "Why it matters: Large-model competition is being fought on safety, transparency, and operational confidence as much as raw capability. Anthropic is trying to make enterprise trust a differentiator."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Large-model competition is being fought on safety, transparency, and operational confidence as much as raw capability.",
+					"ja": "なぜ重要か: 大規模モデルの競争は、性能だけでなく安全性や運用透明性でも争われます。Anthropicは企業導入の安心感を差別化要因にしています。"
+				},
+				{
+					"en": "Anthropic is trying to make enterprise trust a differentiator.",
+					"ja": "なぜ重要か: 大規模モデルの競争は、性能だけでなく安全性や運用透明性でも争われます。Anthropicは企業導入の安心感を差別化要因にしています。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-interesting-questions-are-which-industry-partners-join-and-how-public-the",
+			"heading": {
+				"ja": "今後の注視点: どの業界パートナーが加わるか、そして安全性評価の公開度がどこまで上がるかを確認します。",
+				"en": "What to watch next: The interesting questions are which industry partners join and how public the safety evaluation process becomes."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The interesting questions are which industry partners join and how public the safety evaluation process becomes.",
+					"ja": "今後の注視点: どの業界パートナーが加わるか、そして安全性評価の公開度がどこまで上がるかを確認します。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-eu-added-independent-expert-support-to-the-enforcement-side-of-the-ai-act-regu",
+			"heading": {
+				"ja": "何が起きたか: EUは、AI Actの実施を支える独立専門家の体制を整えました。規制は条文だけでなく、執行の実務が勝負になります。",
+				"en": "What happened: The EU added independent expert support to the enforcement side of the AI Act. Regulation now matters not only on paper, but in the machinery of implementation."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The EU added independent expert support to the enforcement side of the AI Act.",
+					"ja": "何が起きたか: EUは、AI Actの実施を支える独立専門家の体制を整えました。規制は条文だけでなく、執行の実務が勝負になります。"
+				},
+				{
+					"en": "Regulation now matters not only on paper, but in the machinery of implementation.",
+					"ja": "何が起きたか: EUは、AI Actの実施を支える独立専門家の体制を整えました。規制は条文だけでなく、執行の実務が勝負になります。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-for-companies-the-real-issue-is-how-much-technical-review-and-documentation-will-",
+			"heading": {
+				"ja": "なぜ重要か: 企業にとっては、どの範囲まで技術監査や文書化が求められるかが重要です。EUの執行体制が固まるほど、遵守コストは見積もりやすくなります。",
+				"en": "Why it matters: For companies, the real issue is how much technical review and documentation will be required. As the enforcement structure hardens, compliance costs become more legible."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: For companies, the real issue is how much technical review and documentation will be required.",
+					"ja": "なぜ重要か: 企業にとっては、どの範囲まで技術監査や文書化が求められるかが重要です。EUの執行体制が固まるほど、遵守コストは見積もりやすくなります。"
+				},
+				{
+					"en": "As the enforcement structure hardens, compliance costs become more legible.",
+					"ja": "なぜ重要か: 企業にとっては、どの範囲まで技術監査や文書化が求められるかが重要です。EUの執行体制が固まるほど、遵守コストは見積もりやすくなります。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-next-key-signals-are-risk-class-specifics-evaluation-procedures-and-early",
+			"heading": {
+				"ja": "今後の注視点: リスク分類ごとの細則、評価手順、罰則運用の初期事例を追います。米国勢の対応速度にも差が出る可能性があります。",
+				"en": "What to watch next: The next key signals are risk-class specifics, evaluation procedures, and early penalty practice. U.S. vendors may diverge sharply in how fast they adapt."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The next key signals are risk-class specifics, evaluation procedures, and early penalty practice.",
+					"ja": "今後の注視点: リスク分類ごとの細則、評価手順、罰則運用の初期事例を追います。米国勢の対応速度にも差が出る可能性があります。"
+				},
+				{
+					"en": "vendors may diverge sharply in how fast they adapt.",
+					"ja": "今後の注視点: リスク分類ごとの細則、評価手順、罰則運用の初期事例を追います。米国勢の対応速度にも差が出る可能性があります。"
+				}
+			]
+		},
+		{
+			"id": "governments-are-adding-more-handrails-around-ai-trade-and-public-health-which-means-technical-sp",
+			"heading": {
+				"ja": "- 政治は「AI」「通商」「医療」で規制の手数を増やしており、技術企業は開発速度だけでなく政策対応力も競争力になっています。",
+				"en": "- Governments are adding more handrails around AI, trade, and public health, which means technical speed alone is no longer enough for vendors."
+			},
+			"pairs": [
+				{
+					"en": "- Governments are adding more handrails around AI, trade, and public health, which means technical speed alone is no longer enough for vendors.",
+					"ja": "- 政治は「AI」「通商」「医療」で規制の手数を増やしており、技術企業は開発速度だけでなく政策対応力も競争力になっています。"
+				}
+			]
+		},
+		{
+			"id": "oil-and-fx-are-reintroducing-inflation-pressure-just-as-ecb-messaging-becomes-more-cautious-abou",
+			"heading": {
+				"ja": "- 経済は、原油高と円安が再びインフレ圧力を作る一方、ECBはAI導入のリスク管理を前に出しており、金利見通しは簡単ではありません。",
+				"en": "- Oil and FX are reintroducing inflation pressure just as ECB messaging becomes more cautious about AI-related operational risk."
+			},
+			"pairs": [
+				{
+					"en": "- Oil and FX are reintroducing inflation pressure just as ECB messaging becomes more cautious about AI-related operational risk.",
+					"ja": "- 経済は、原油高と円安が再びインフレ圧力を作る一方、ECBはAI導入のリスク管理を前に出しており、金利見通しは簡単ではありません。"
+				}
+			]
+		},
+		{
+			"id": "microsoft-openai-and-anthropic-are-all-pushing-agentic-ai-from-different-angles-which-makes-clou",
+			"heading": {
+				"ja": "- 技術面では、Microsoft、OpenAI、Anthropicがそれぞれ異なる入り口からエージェント化を進めており、クラウドの流通網が勝負を左右します。",
+				"en": "- Microsoft, OpenAI, and Anthropic are all pushing agentic AI from different angles, which makes cloud distribution and enterprise controls central to the competition."
+			},
+			"pairs": [
+				{
+					"en": "- Microsoft, OpenAI, and Anthropic are all pushing agentic AI from different angles, which makes cloud distribution and enterprise controls central to the competition.",
+					"ja": "- 技術面では、Microsoft、OpenAI、Anthropicがそれぞれ異なる入り口からエージェント化を進めており、クラウドの流通網が勝負を左右します。"
+				}
+			]
+		},
+		{
+			"id": "the-eu-is-pairing-ai-enforcement-with-industrial-policy-tightening-the-market-for-outside-vendor",
+			"heading": {
+				"ja": "- EUは規制と産業政策を一体化し、AI Actの執行と技術主権の両輪で米国勢に対抗する構図を強めています。",
+				"en": "- The EU is pairing AI enforcement with industrial policy, tightening the market for outside vendors while trying to build more domestic capacity."
+			},
+			"pairs": [
+				{
+					"en": "- The EU is pairing AI enforcement with industrial policy, tightening the market for outside vendors while trying to build more domestic capacity.",
+					"ja": "- EUは規制と産業政策を一体化し、AI Actの執行と技術主権の両輪で米国勢に対抗する構図を強めています。"
+				}
+			]
+		},
+		{
+			"id": "how-heavy-will-the-ai-security-order-and-the-eu-ai-act-become-in-real-enterprise-deployment",
+			"heading": {
+				"ja": "- AI安全保障EOとEU AI Actの実務細則が、企業向け導入要件をどこまで重くするか。",
+				"en": "- How heavy will the AI security order and the EU AI Act become in real enterprise deployment?"
+			},
+			"pairs": [
+				{
+					"en": "- How heavy will the AI security order and the EU AI Act become in real enterprise deployment?",
+					"ja": "- AI安全保障EOとEU AI Actの実務細則が、企業向け導入要件をどこまで重くするか。"
+				}
+			]
+		},
+		{
+			"id": "how-far-will-customs-tightening-and-metal-tariffs-flow-through-to-manufacturing-costs-and-lead-t",
+			"heading": {
+				"ja": "- 金属関税と通関強化が、製造業の調達価格と納期にどこまで波及するか。",
+				"en": "- How far will customs tightening and metal tariffs flow through to manufacturing costs and lead times?"
+			},
+			"pairs": [
+				{
+					"en": "- How far will customs tightening and metal tariffs flow through to manufacturing costs and lead times?",
+					"ja": "- 金属関税と通関強化が、製造業の調達価格と納期にどこまで波及するか。"
+				}
+			]
+		},
+		{
+			"id": "how-will-oil-strength-and-yen-weakness-show-up-in-the-next-inflation-prints-and-in-comments-from",
+			"heading": {
+				"ja": "- 原油高と円安が、次の物価指標と日銀・財務省の発言にどう反映されるか。",
+				"en": "- How will oil strength and yen weakness show up in the next inflation prints and in comments from Japan’s authorities?"
+			},
+			"pairs": [
+				{
+					"en": "- How will oil strength and yen weakness show up in the next inflation prints and in comments from Japan's authorities?",
+					"ja": "- 原油高と円安が、次の物価指標と日銀・財務省の発言にどう反映されるか。"
+				}
+			]
+		},
+		{
+			"id": "how-quickly-will-build-2026-openai-on-aws-and-project-glasswing-turn-into-concrete-pricing-permi",
+			"heading": {
+				"ja": "- Microsoft Build、OpenAI on AWS、Anthropicの発表が、企業導入の価格・権限・監査機能にどこまで落ちるか。",
+				"en": "- How quickly will Build 2026, OpenAI on AWS, and Project Glasswing turn into concrete pricing, permissioning, and audit features?"
+			},
+			"pairs": [
+				{
+					"en": "- How quickly will Build 2026, OpenAI on AWS, and Project Glasswing turn into concrete pricing, permissioning, and audit features?",
+					"ja": "- Microsoft Build、OpenAI on AWS、Anthropicの発表が、企業導入の価格・権限・監査機能にどこまで落ちるか。"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,1036 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "over-the-last-24-48-hours-ai-investment-momentum-stayed-strong-while-middle-east-tensions-a-prop",
+			"heading": {
+				"ja": "直近24-48時間は、AI投資の加速が強い追い風になる一方で、中東情勢、対ブラジル関税、米国内の選挙制度と投票規制をめぐる政治的不確実性が重なった一日だった。経済では利上げ再観測とAI関連の設備投資が同時に意識され、技術では量子・AI PC・AIエージェント・半導体供給網の実装競争がさらに前に進んだ。",
+				"en": "Over the last 24-48 hours, AI investment momentum stayed strong while Middle East tensions, a proposed Brazil tariff, and fresh U.S. election-rule fights added political uncertainty. In the economy, rate-hike chatter returned even as AI capex kept markets elevated, and technology moved further into quantum, AI PCs, AI agents, and semiconductor supply-chain execution."
+			},
+			"pairs": [
+				{
+					"en": "Over the last 24-48 hours, AI investment momentum stayed strong while Middle East tensions, a proposed Brazil tariff, and fresh U.",
+					"ja": "直近24-48時間は、AI投資の加速が強い追い風になる一方で、中東情勢、対ブラジル関税、米国内の選挙制度と投票規制をめぐる政治的不確実性が重なった一日だった。経済では利上げ再観測とAI関連の設備投資が同時に意識され、技術では量子・AI PC・AIエージェント・半導体供給網の実装競争がさらに前に進んだ。"
+				},
+				{
+					"en": "election-rule fights added political uncertainty.",
+					"ja": "直近24-48時間は、AI投資の加速が強い追い風になる一方で、中東情勢、対ブラジル関税、米国内の選挙制度と投票規制をめぐる政治的不確実性が重なった一日だった。経済では利上げ再観測とAI関連の設備投資が同時に意識され、技術では量子・AI PC・AIエージェント・半導体供給網の実装競争がさらに前に進んだ。"
+				},
+				{
+					"en": "In the economy, rate-hike chatter returned even as AI capex kept markets elevated, and technology moved further into quantum, AI PCs, AI agents, and semiconductor supply-chain execution.",
+					"ja": "直近24-48時間は、AI投資の加速が強い追い風になる一方で、中東情勢、対ブラジル関税、米国内の選挙制度と投票規制をめぐる政治的不確実性が重なった一日だった。経済では利上げ再観測とAI関連の設備投資が同時に意識され、技術では量子・AI PC・AIエージェント・半導体供給網の実装競争がさらに前に進んだ。"
+				}
+			]
+		},
+		{
+			"id": "ai-rules-now-mix-innovation-and-safety",
+			"heading": {
+				"ja": "AI規制と安全を先に置く",
+				"en": "AI rules now mix innovation and safety"
+			},
+			"pairs": [
+				{
+					"en": "AI rules now mix innovation and safety",
+					"ja": "AI規制と安全を先に置く"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-white-house-rolled-out-an-executive-order-framing-ai-as-both-an-economic-accel",
+			"heading": {
+				"ja": "何が起きたか: ホワイトハウスは、AIの革新を促しつつ安全と統制も重視する大統領令を打ち出した。AI政策を産業振興と安全保障の両面から扱う姿勢が鮮明になった。",
+				"en": "What happened: The White House rolled out an executive order framing AI as both an economic accelerator and a governance issue. The message was clear: AI policy will now be treated as national strategy, not just tech policy."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The White House rolled out an executive order framing AI as both an economic accelerator and a governance issue.",
+					"ja": "何が起きたか: ホワイトハウスは、AIの革新を促しつつ安全と統制も重視する大統領令を打ち出した。AI政策を産業振興と安全保障の両面から扱う姿勢が鮮明になった。"
+				},
+				{
+					"en": "The message was clear: AI policy will now be treated as national strategy, not just tech policy.",
+					"ja": "何が起きたか: ホワイトハウスは、AIの革新を促しつつ安全と統制も重視する大統領令を打ち出した。AI政策を産業振興と安全保障の両面から扱う姿勢が鮮明になった。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-the-order-could-shape-procurement-audits-and-compliance-expectations-across-the-p",
+			"heading": {
+				"ja": "なぜ重要か: AIは技術政策ではなく、雇用、国家安全保障、規制の論点を同時に抱える政治課題になっている。政権がどの順番でルールを置くかで、企業の投資と開発速度が変わる。",
+				"en": "Why it matters: The order could shape procurement, audits, and compliance expectations across the private sector. The sequence of rules will influence how fast companies can ship and deploy AI."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: The order could shape procurement, audits, and compliance expectations across the private sector.",
+					"ja": "なぜ重要か: AIは技術政策ではなく、雇用、国家安全保障、規制の論点を同時に抱える政治課題になっている。政権がどの順番でルールを置くかで、企業の投資と開発速度が変わる。"
+				},
+				{
+					"en": "The sequence of rules will influence how fast companies can ship and deploy AI.",
+					"ja": "なぜ重要か: AIは技術政策ではなく、雇用、国家安全保障、規制の論点を同時に抱える政治課題になっている。政権がどの順番でルールを置くかで、企業の投資と開発速度が変わる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-how-agencies-translate-the-order-into-enforcement-and-procurement-langu",
+			"heading": {
+				"ja": "今後の注視点: 規制の実装が省庁横断でどう進むか、そして企業向けAIの調達や監査にどこまで波及するかを見る。",
+				"en": "What to watch next: Watch how agencies translate the order into enforcement and procurement language, and whether enterprise AI buyers change buying criteria."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch how agencies translate the order into enforcement and procurement language, and whether enterprise AI buyers change buying criteria.",
+					"ja": "今後の注視点: 規制の実装が省庁横断でどう進むか、そして企業向けAIの調達や監査にどこまで波及するかを見る。"
+				}
+			]
+		},
+		{
+			"id": "mail-in-voting-becomes-a-courtroom-fight",
+			"heading": {
+				"ja": "郵便投票制限は法廷戦に",
+				"en": "Mail-in voting becomes a courtroom fight"
+			},
+			"pairs": [
+				{
+					"en": "Mail-in voting becomes a courtroom fight",
+					"ja": "郵便投票制限は法廷戦に"
+				}
+			]
+		},
+		{
+			"id": "what-happened-challenges-in-federal-court-continued-against-trump-s-move-to-restrict-mail-in-vot",
+			"heading": {
+				"ja": "何が起きたか: トランプ政権の郵便投票制限を狙う大統領令に対し、連邦裁判所で差し止めを求める動きが続いた。制度設計そのものが争点になっている。",
+				"en": "What happened: Challenges in federal court continued against Trump’s move to restrict mail-in voting. The issue is no longer just a campaign message; it is a direct test of election administration."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Challenges in federal court continued against Trump's move to restrict mail-in voting.",
+					"ja": "何が起きたか: トランプ政権の郵便投票制限を狙う大統領令に対し、連邦裁判所で差し止めを求める動きが続いた。制度設計そのものが争点になっている。"
+				},
+				{
+					"en": "The issue is no longer just a campaign message; it is a direct test of election administration.",
+					"ja": "何が起きたか: トランプ政権の郵便投票制限を狙う大統領令に対し、連邦裁判所で差し止めを求める動きが続いた。制度設計そのものが争点になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-the-case-could-affect-access-to-voting-and-the-balance-between-federal-and-state-",
+			"heading": {
+				"ja": "なぜ重要か: 2026年の選挙戦略だけでなく、投票アクセスと州権限の境界線を再定義する可能性がある。短期の政治メッセージではなく、制度の持続性が問われている。",
+				"en": "Why it matters: The case could affect access to voting and the balance between federal and state authority. It may also become a template for how future election rules are contested."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: The case could affect access to voting and the balance between federal and state authority.",
+					"ja": "なぜ重要か: 2026年の選挙戦略だけでなく、投票アクセスと州権限の境界線を再定義する可能性がある。短期の政治メッセージではなく、制度の持続性が問われている。"
+				},
+				{
+					"en": "It may also become a template for how future election rules are contested.",
+					"ja": "なぜ重要か: 2026年の選挙戦略だけでなく、投票アクセスと州権限の境界線を再定義する可能性がある。短期の政治メッセージではなく、制度の持続性が問われている。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-injunction-question-and-any-state-level-pushback-are-the-key-near-term-si",
+			"heading": {
+				"ja": "今後の注視点: 差し止め判断の有無と、州ごとの反応が連鎖するかどうかを確認したい。",
+				"en": "What to watch next: The injunction question and any state-level pushback are the key near-term signals."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The injunction question and any state-level pushback are the key near-term signals.",
+					"ja": "今後の注視点: 差し止め判断の有無と、州ごとの反応が連鎖するかどうかを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "iran-ceasefire-remains-unresolved",
+			"heading": {
+				"ja": "イラン停戦はまだ不確実",
+				"en": "Iran ceasefire remains unresolved"
+			},
+			"pairs": [
+				{
+					"en": "Iran ceasefire remains unresolved",
+					"ja": "イラン停戦はまだ不確実"
+				}
+			]
+		},
+		{
+			"id": "what-happened-messages-from-washington-and-tehran-still-do-not-line-up-on-whether-ceasefire-or-m",
+			"heading": {
+				"ja": "何が起きたか: 停戦延長や協議再開をめぐって、米国とイランのメッセージはまだ噛み合っていない。仲介が進んでいるのか、それとも一時停止に近いのかが読みづらい。",
+				"en": "What happened: Messages from Washington and Tehran still do not line up on whether ceasefire or mediation talks are really extending. The diplomacy looks active, but not settled."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Messages from Washington and Tehran still do not line up on whether ceasefire or mediation talks are really extending.",
+					"ja": "何が起きたか: 停戦延長や協議再開をめぐって、米国とイランのメッセージはまだ噛み合っていない。仲介が進んでいるのか、それとも一時停止に近いのかが読みづらい。"
+				},
+				{
+					"en": "The diplomacy looks active, but not settled.",
+					"ja": "何が起きたか: 停戦延長や協議再開をめぐって、米国とイランのメッセージはまだ噛み合っていない。仲介が進んでいるのか、それとも一時停止に近いのかが読みづらい。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-middle-east-tension-can-move-oil-fx-and-broader-risk-assets-quickly-even-small-de",
+			"heading": {
+				"ja": "なぜ重要か: 中東の緊張は原油、為替、リスク資産に直結する。外交の一手遅れが市場のボラティリティを増やす局面にある。",
+				"en": "Why it matters: Middle East tension can move oil, FX, and broader risk assets quickly. Even small delays in diplomacy can widen market volatility."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Middle East tension can move oil, FX, and broader risk assets quickly.",
+					"ja": "なぜ重要か: 中東の緊張は原油、為替、リスク資産に直結する。外交の一手遅れが市場のボラティリティを増やす局面にある。"
+				},
+				{
+					"en": "Even small delays in diplomacy can widen market volatility.",
+					"ja": "なぜ重要か: 中東の緊張は原油、為替、リスク資産に直結する。外交の一手遅れが市場のボラティリティを増やす局面にある。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-track-formal-announcements-shipping-activity-around-the-strait-of-hormuz-and-",
+			"heading": {
+				"ja": "今後の注視点: 公式発表だけでなく、ホルムズ海峡周辺の動きと原油市場の反応を合わせて見る必要がある。",
+				"en": "What to watch next: Track formal announcements, shipping activity around the Strait of Hormuz, and the oil market reaction together."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Track formal announcements, shipping activity around the Strait of Hormuz, and the oil market reaction together.",
+					"ja": "今後の注視点: 公式発表だけでなく、ホルムズ海峡周辺の動きと原油市場の反応を合わせて見る必要がある。"
+				}
+			]
+		},
+		{
+			"id": "brazil-tariff-pressure-moves-to-the-front",
+			"heading": {
+				"ja": "ブラジル関税案が前面に",
+				"en": "Brazil tariff pressure moves to the front"
+			},
+			"pairs": [
+				{
+					"en": "Brazil tariff pressure moves to the front",
+					"ja": "ブラジル関税案が前面に"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-u-s-trade-representative-proposed-a-25-tariff-on-brazil-pushing-trade-friction",
+			"heading": {
+				"ja": "何が起きたか: 米通商代表部がブラジルに25%の関税を提案し、通商摩擦が再び政治課題になった。ブラジル側は国内政治への介入だと反発している。",
+				"en": "What happened: The U.S. trade representative proposed a 25% tariff on Brazil, pushing trade friction back into the political spotlight. Brazil’s response framed the move as politically motivated interference."
+			},
+			"pairs": [
+				{
+					"en": "trade representative proposed a 25% tariff on Brazil, pushing trade friction back into the political spotlight.",
+					"ja": "何が起きたか: 米通商代表部がブラジルに25%の関税を提案し、通商摩擦が再び政治課題になった。ブラジル側は国内政治への介入だと反発している。"
+				},
+				{
+					"en": "Brazil's response framed the move as politically motivated interference.",
+					"ja": "何が起きたか: 米通商代表部がブラジルに25%の関税を提案し、通商摩擦が再び政治課題になった。ブラジル側は国内政治への介入だと反発している。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-tariffs-are-being-used-as-leverage-not-just-trade-policy-that-makes-the-story-rel",
+			"heading": {
+				"ja": "なぜ重要か: 関税は単なる貿易条件ではなく、外交圧力の手段として使われている。ラテンアメリカ政策や農産品・資源価格への波及にも注意が必要だ。",
+				"en": "Why it matters: Tariffs are being used as leverage, not just trade policy. That makes the story relevant to Latin America policy and to commodity-sensitive industries."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Tariffs are being used as leverage, not just trade policy.",
+					"ja": "なぜ重要か: 関税は単なる貿易条件ではなく、外交圧力の手段として使われている。ラテンアメリカ政策や農産品・資源価格への波及にも注意が必要だ。"
+				},
+				{
+					"en": "That makes the story relevant to Latin America policy and to commodity-sensitive industries.",
+					"ja": "なぜ重要か: 関税は単なる貿易条件ではなく、外交圧力の手段として使われている。ラテンアメリカ政策や農産品・資源価格への波及にも注意が必要だ。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-look-for-the-timing-any-retaliation-and-whether-brazil-chooses-a-legal-diplom",
+			"heading": {
+				"ja": "今後の注視点: 措置の発効時期、報復関税の有無、ブラジル側の政治的対応を確認したい。",
+				"en": "What to watch next: Look for the timing, any retaliation, and whether Brazil chooses a legal, diplomatic, or domestic political response."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Look for the timing, any retaliation, and whether Brazil chooses a legal, diplomatic, or domestic political response.",
+					"ja": "今後の注視点: 措置の発効時期、報復関税の有無、ブラジル側の政治的対応を確認したい。"
+				}
+			]
+		},
+		{
+			"id": "rubio-keeps-the-door-open-to-iran-talks",
+			"heading": {
+				"ja": "対イラン協議は再開余地あり",
+				"en": "Rubio keeps the door open to Iran talks"
+			},
+			"pairs": [
+				{
+					"en": "Rubio keeps the door open to Iran talks",
+					"ja": "対イラン協議は再開余地あり"
+				}
+			]
+		},
+		{
+			"id": "what-happened-secretary-of-state-rubio-left-open-the-possibility-of-renewed-iran-talks-even-as-c",
+			"heading": {
+				"ja": "何が起きたか: ルビオ国務長官は、対イラン協議の再開に一定の含みを残した。議会内では慎重論もあり、外交シグナルは一枚岩ではない。",
+				"en": "What happened: Secretary of State Rubio left open the possibility of renewed Iran talks, even as congressional skepticism remains. The diplomatic signal is not fully aligned across the U.S. government."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Secretary of State Rubio left open the possibility of renewed Iran talks, even as congressional skepticism remains.",
+					"ja": "何が起きたか: ルビオ国務長官は、対イラン協議の再開に一定の含みを残した。議会内では慎重論もあり、外交シグナルは一枚岩ではない。"
+				},
+				{
+					"en": "The diplomatic signal is not fully aligned across the U.",
+					"ja": "何が起きたか: ルビオ国務長官は、対イラン協議の再開に一定の含みを残した。議会内では慎重論もあり、外交シグナルは一枚岩ではない。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-whether-talks-restart-affects-sanctions-oil-supply-and-coordination-with-allies-i",
+			"heading": {
+				"ja": "なぜ重要か: 協議再開の有無は、制裁、原油供給、同盟国との調整に直結する。政治メッセージが早くても、実務調整が遅れれば市場は不安定なままだ。",
+				"en": "Why it matters: Whether talks restart affects sanctions, oil supply, and coordination with allies. If political messaging runs ahead of implementation, markets will stay uneasy."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Whether talks restart affects sanctions, oil supply, and coordination with allies.",
+					"ja": "なぜ重要か: 協議再開の有無は、制裁、原油供給、同盟国との調整に直結する。政治メッセージが早くても、実務調整が遅れれば市場は不安定なままだ。"
+				},
+				{
+					"en": "If political messaging runs ahead of implementation, markets will stay uneasy.",
+					"ja": "なぜ重要か: 協議再開の有無は、制裁、原油供給、同盟国との調整に直結する。政治メッセージが早くても、実務調整が遅れれば市場は不安定なままだ。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-for-a-new-negotiation-date-sanctions-language-and-congressional-reactio",
+			"heading": {
+				"ja": "今後の注視点: 新たな交渉日程、制裁の扱い、議会の反応が実際の政策にどう反映されるかを見る。",
+				"en": "What to watch next: Watch for a new negotiation date, sanctions language, and congressional reaction."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch for a new negotiation date, sanctions language, and congressional reaction.",
+					"ja": "今後の注視点: 新たな交渉日程、制裁の扱い、議会の反応が実際の政策にどう反映されるかを見る。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-cleveland-fed-president-hammack-said-rates-may-need-to-rise-further-if-inflation-r",
+			"heading": {
+				"ja": "何が起きたか: クリーブランド連銀のハマック総裁は、インフレが収まらなければ金利をさらに引き上げる必要があると述べた。市場の早期利下げ期待に冷や水を浴びせた形だ。",
+				"en": "What happened: Cleveland Fed President Hammack said rates may need to rise further if inflation refuses to cool. That pushed back on hopes for an early easing cycle."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Cleveland Fed President Hammack said rates may need to rise further if inflation refuses to cool.",
+					"ja": "何が起きたか: クリーブランド連銀のハマック総裁は、インフレが収まらなければ金利をさらに引き上げる必要があると述べた。市場の早期利下げ期待に冷や水を浴びせた形だ。"
+				},
+				{
+					"en": "That pushed back on hopes for an early easing cycle.",
+					"ja": "何が起きたか: クリーブランド連銀のハマック総裁は、インフレが収まらなければ金利をさらに引き上げる必要があると述べた。市場の早期利下げ期待に冷や水を浴びせた形だ。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-rate-expectations-drive-equities-housing-and-business-investment-even-with-strong",
+			"heading": {
+				"ja": "なぜ重要か: 金利見通しは株式、住宅、企業投資の前提条件になる。AI投資が強くても、金融環境が引き締まれば資本コストは上がる。",
+				"en": "Why it matters: Rate expectations drive equities, housing, and business investment. Even with strong AI spending, higher funding costs can change the pace of expansion."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Rate expectations drive equities, housing, and business investment.",
+					"ja": "なぜ重要か: 金利見通しは株式、住宅、企業投資の前提条件になる。AI投資が強くても、金融環境が引き締まれば資本コストは上がる。"
+				},
+				{
+					"en": "Even with strong AI spending, higher funding costs can change the pace of expansion.",
+					"ja": "なぜ重要か: 金利見通しは株式、住宅、企業投資の前提条件になる。AI投資が強くても、金融環境が引き締まれば資本コストは上がる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-the-next-round-of-fed-commentary-and-inflation-data-for-any-shift-in-th",
+			"heading": {
+				"ja": "今後の注視点: その後のFRB高官発言と、物価指標が年内の方向感をどう変えるかを見る。",
+				"en": "What to watch next: Watch the next round of Fed commentary and inflation data for any shift in the policy path."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch the next round of Fed commentary and inflation data for any shift in the policy path.",
+					"ja": "今後の注視点: その後のFRB高官発言と、物価指標が年内の方向感をどう変えるかを見る。"
+				}
+			]
+		},
+		{
+			"id": "ai-capex-is-still-propping-up-stocks",
+			"heading": {
+				"ja": "AI投資で高値圏は維持",
+				"en": "AI capex is still propping up stocks"
+			},
+			"pairs": [
+				{
+					"en": "AI capex is still propping up stocks",
+					"ja": "AI投資で高値圏は維持"
+				}
+			]
+		},
+		{
+			"id": "what-happened-u-s-stocks-slipped-slightly-after-recent-records-but-the-ai-infrastructure-story-s",
+			"heading": {
+				"ja": "何が起きたか: 米株は過去最高圏のあとにやや反落したが、AIインフラ投資への期待はまだ崩れていない。市場の主役が景気指標だけでなく、AI関連の設備投資になっている。",
+				"en": "What happened: U.S. stocks slipped slightly after recent records, but the AI infrastructure story still anchored sentiment. Markets are increasingly pricing growth through the lens of capex, not just revenue."
+			},
+			"pairs": [
+				{
+					"en": "stocks slipped slightly after recent records, but the AI infrastructure story still anchored sentiment.",
+					"ja": "何が起きたか: 米株は過去最高圏のあとにやや反落したが、AIインフラ投資への期待はまだ崩れていない。市場の主役が景気指標だけでなく、AI関連の設備投資になっている。"
+				},
+				{
+					"en": "Markets are increasingly pricing growth through the lens of capex, not just revenue.",
+					"ja": "何が起きたか: 米株は過去最高圏のあとにやや反落したが、AIインフラ投資への期待はまだ崩れていない。市場の主役が景気指標だけでなく、AI関連の設備投資になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-the-valuation-framework-is-shifting-toward-whether-ai-buildout-can-keep-compoundi",
+			"heading": {
+				"ja": "なぜ重要か: 相場の評価軸が、売上成長だけでなくAI向けCAPEXの継続性に移っている。資本市場は「成長はあるが金利も高い」という新しい均衡を探している。",
+				"en": "Why it matters: The valuation framework is shifting toward whether AI buildout can keep compounding. That makes capital spending, power demand, and cloud deployment more important than generic growth narratives."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: The valuation framework is shifting toward whether AI buildout can keep compounding.",
+					"ja": "なぜ重要か: 相場の評価軸が、売上成長だけでなくAI向けCAPEXの継続性に移っている。資本市場は「成長はあるが金利も高い」という新しい均衡を探している。"
+				},
+				{
+					"en": "That makes capital spending, power demand, and cloud deployment more important than generic growth narratives.",
+					"ja": "なぜ重要か: 相場の評価軸が、売上成長だけでなくAI向けCAPEXの継続性に移っている。資本市場は「成長はあるが金利も高い」という新しい均衡を探している。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-monitor-capex-guidance-from-major-tech-firms-and-whether-higher-rates-start-t",
+			"heading": {
+				"ja": "今後の注視点: 主要ハイテク企業の設備投資見通しと、金利上昇がバリュエーションに与える影響を追いたい。",
+				"en": "What to watch next: Monitor capex guidance from major tech firms and whether higher rates start to compress valuations."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Monitor capex guidance from major tech firms and whether higher rates start to compress valuations.",
+					"ja": "今後の注視点: 主要ハイテク企業の設備投資見通しと、金利上昇がバリュエーションに与える影響を追いたい。"
+				}
+			]
+		},
+		{
+			"id": "hpe-jumped-on-ai-server-demand",
+			"heading": {
+				"ja": "HPEがAIサーバー需要で急伸",
+				"en": "HPE jumped on AI server demand"
+			},
+			"pairs": [
+				{
+					"en": "HPE jumped on AI server demand",
+					"ja": "HPEがAIサーバー需要で急伸"
+				}
+			]
+		},
+		{
+			"id": "what-happened-hpe-raised-its-forecast-as-ai-server-demand-stayed-strong-and-the-stock-surged-the",
+			"heading": {
+				"ja": "何が起きたか: HPEはAIサーバー需要の強さを理由に見通しを上方修正し、株価が大きく上昇した。AI需要がソフトウェアだけでなく、実際のハードウェア販売に落ちている。",
+				"en": "What happened: HPE raised its forecast as AI server demand stayed strong, and the stock surged. The AI theme is now showing up in real hardware orders, not just in promise."
+			},
+			"pairs": [
+				{
+					"en": "What happened: HPE raised its forecast as AI server demand stayed strong, and the stock surged.",
+					"ja": "何が起きたか: HPEはAIサーバー需要の強さを理由に見通しを上方修正し、株価が大きく上昇した。AI需要がソフトウェアだけでなく、実際のハードウェア販売に落ちている。"
+				},
+				{
+					"en": "The AI theme is now showing up in real hardware orders, not just in promise.",
+					"ja": "何が起きたか: HPEはAIサーバー需要の強さを理由に見通しを上方修正し、株価が大きく上昇した。AI需要がソフトウェアだけでなく、実際のハードウェア販売に落ちている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-this-is-evidence-that-the-ai-cycle-is-moving-down-the-stack-into-infrastructure-r",
+			"heading": {
+				"ja": "なぜ重要か: 生成AIの投資テーマが、GPU供給やデータセンター機器といった実需に移っていることを示す。投資家は「言葉」より「受注」で評価する段階に入っている。",
+				"en": "Why it matters: This is evidence that the AI cycle is moving down the stack into infrastructure revenue. Investors are increasingly rewarding concrete order flow and not just strategy decks."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: This is evidence that the AI cycle is moving down the stack into infrastructure revenue.",
+					"ja": "なぜ重要か: 生成AIの投資テーマが、GPU供給やデータセンター機器といった実需に移っていることを示す。投資家は「言葉」より「受注」で評価する段階に入っている。"
+				},
+				{
+					"en": "Investors are increasingly rewarding concrete order flow and not just strategy decks.",
+					"ja": "なぜ重要か: 生成AIの投資テーマが、GPU供給やデータセンター機器といった実需に移っていることを示す。投資家は「言葉」より「受注」で評価する段階に入っている。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-next-earnings-call-will-tell-us-whether-order-backlog-margins-and-custome",
+			"heading": {
+				"ja": "今後の注視点: 次回決算での受注残、粗利率、AI案件の継続性を確認したい。",
+				"en": "What to watch next: The next earnings call will tell us whether order backlog, margins, and customer conversion stay strong."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The next earnings call will tell us whether order backlog, margins, and customer conversion stay strong.",
+					"ja": "今後の注視点: 次回決算での受注残、粗利率、AI案件の継続性を確認したい。"
+				}
+			]
+		},
+		{
+			"id": "alphabet-is-funding-the-ai-buildout",
+			"heading": {
+				"ja": "AlphabetがAI資金を大規模調達",
+				"en": "Alphabet is funding the AI buildout"
+			},
+			"pairs": [
+				{
+					"en": "Alphabet is funding the AI buildout",
+					"ja": "AlphabetがAI資金を大規模調達"
+				}
+			]
+		},
+		{
+			"id": "what-happened-alphabet-is-reportedly-raising-massive-funding-to-keep-building-ai-infrastructure-",
+			"heading": {
+				"ja": "何が起きたか: AlphabetはAIインフラ整備のために大規模な資金調達を進めていると報じられた。AI向けの計算資源確保が、もはや通常の設備投資を超えた規模になっている。",
+				"en": "What happened: Alphabet is reportedly raising massive funding to keep building AI infrastructure. Compute capacity has become a strategic asset that now justifies capital-market scale financing."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Alphabet is reportedly raising massive funding to keep building AI infrastructure.",
+					"ja": "何が起きたか: AlphabetはAIインフラ整備のために大規模な資金調達を進めていると報じられた。AI向けの計算資源確保が、もはや通常の設備投資を超えた規模になっている。"
+				},
+				{
+					"en": "Compute capacity has become a strategic asset that now justifies capital-market scale financing.",
+					"ja": "何が起きたか: AlphabetはAIインフラ整備のために大規模な資金調達を進めていると報じられた。AI向けの計算資源確保が、もはや通常の設備投資を超えた規模になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-ai-competition-is-now-about-how-fast-each-player-can-stack-compute-energy-and-dat",
+			"heading": {
+				"ja": "なぜ重要か: 巨額調達は、AI投資が資本市場と直結した長期戦になったことを示す。競争軸はモデル性能だけでなく、計算資源をどれだけ早く積み上げられるかに移っている。",
+				"en": "Why it matters: AI competition is now about how fast each player can stack compute, energy, and data-center capacity. That makes balance-sheet strength part of the product race."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: AI competition is now about how fast each player can stack compute, energy, and data-center capacity.",
+					"ja": "なぜ重要か: 巨額調達は、AI投資が資本市場と直結した長期戦になったことを示す。競争軸はモデル性能だけでなく、計算資源をどれだけ早く積み上げられるかに移っている。"
+				},
+				{
+					"en": "That makes balance-sheet strength part of the product race.",
+					"ja": "なぜ重要か: 巨額調達は、AI投資が資本市場と直結した長期戦になったことを示す。競争軸はモデル性能だけでなく、計算資源をどれだけ早く積み上げられるかに移っている。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-monitor-financing-terms-what-the-money-is-earmarked-for-and-whether-peers-fol",
+			"heading": {
+				"ja": "今後の注視点: 資金調達の条件、投資対象、そして他の大手クラウド企業への波及を確認したい。",
+				"en": "What to watch next: Monitor financing terms, what the money is earmarked for, and whether peers follow the same route."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Monitor financing terms, what the money is earmarked for, and whether peers follow the same route.",
+					"ja": "今後の注視点: 資金調達の条件、投資対象、そして他の大手クラウド企業への波及を確認したい。"
+				}
+			]
+		},
+		{
+			"id": "job-openings-rise-hiring-stays-weak",
+			"heading": {
+				"ja": "求人増でも採用は鈍い",
+				"en": "Job openings rise, hiring stays weak"
+			},
+			"pairs": [
+				{
+					"en": "Job openings rise, hiring stays weak",
+					"ja": "求人増でも採用は鈍い"
+				}
+			]
+		},
+		{
+			"id": "what-happened-april-u-s-job-openings-climbed-to-a-near-two-year-high-but-hiring-stayed-weak-dema",
+			"heading": {
+				"ja": "何が起きたか: 4月の米求人件数は約2年ぶりの高水準に達したが、実際の採用はなお弱いままだった。労働需要の底堅さと慎重な採用姿勢が同居している。",
+				"en": "What happened: April U.S. job openings climbed to a near two-year high, but hiring stayed weak. Demand for labor is still there, yet firms remain cautious about turning openings into headcount."
+			},
+			"pairs": [
+				{
+					"en": "job openings climbed to a near two-year high, but hiring stayed weak.",
+					"ja": "何が起きたか: 4月の米求人件数は約2年ぶりの高水準に達したが、実際の採用はなお弱いままだった。労働需要の底堅さと慎重な採用姿勢が同居している。"
+				},
+				{
+					"en": "Demand for labor is still there, yet firms remain cautious about turning openings into headcount.",
+					"ja": "何が起きたか: 4月の米求人件数は約2年ぶりの高水準に達したが、実際の採用はなお弱いままだった。労働需要の底堅さと慎重な採用姿勢が同居している。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-labor-data-influence-both-growth-expectations-and-the-fed-s-reaction-function-a-w",
+			"heading": {
+				"ja": "なぜ重要か: 労働市場は景気減速の先行指標であると同時に、FRBの判断材料でもある。求人が強くても採用が鈍ければ、賃金と消費の伸びは限定される可能性がある。",
+				"en": "Why it matters: Labor data influence both growth expectations and the Fed’s reaction function. A wide gap between openings and hiring usually signals caution about the next stage of the cycle."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Labor data influence both growth expectations and the Fed's reaction function.",
+					"ja": "なぜ重要か: 労働市場は景気減速の先行指標であると同時に、FRBの判断材料でもある。求人が強くても採用が鈍ければ、賃金と消費の伸びは限定される可能性がある。"
+				},
+				{
+					"en": "A wide gap between openings and hiring usually signals caution about the next stage of the cycle.",
+					"ja": "なぜ重要か: 労働市場は景気減速の先行指標であると同時に、FRBの判断材料でもある。求人が強くても採用が鈍ければ、賃金と消費の伸びは限定される可能性がある。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-next-jobs-report-should-show-whether-the-openings-hiring-gap-is-widening-",
+			"heading": {
+				"ja": "今後の注視点: 来週以降の雇用統計で、求人と採用のズレがさらに広がるかを確認したい。",
+				"en": "What to watch next: The next jobs report should show whether the openings-hiring gap is widening further."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The next jobs report should show whether the openings-hiring gap is widening further.",
+					"ja": "今後の注視点: 来週以降の雇用統計で、求人と採用のズレがさらに広がるかを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "majorana-2-brings-quantum-farther-forward",
+			"heading": {
+				"ja": "Majorana 2で量子計算を前倒し",
+				"en": "Majorana 2 brings quantum farther forward"
+			},
+			"pairs": [
+				{
+					"en": "Majorana 2 brings quantum farther forward",
+					"ja": "Majorana 2で量子計算を前倒し"
+				}
+			]
+		},
+		{
+			"id": "what-happened-microsoft-unveiled-majorana-2-and-said-ai-assisted-design-helped-move-quantum-hard",
+			"heading": {
+				"ja": "何が起きたか: MicrosoftはMajorana 2を公表し、AIを使った設計で量子ハードウェアの前進を図っていると説明した。商用的に意味のある量子計算機を2029年に目指す方針も示した。",
+				"en": "What happened: Microsoft unveiled Majorana 2 and said AI-assisted design helped move quantum hardware forward. It also set a 2029 target for commercially meaningful quantum systems."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Microsoft unveiled Majorana 2 and said AI-assisted design helped move quantum hardware forward.",
+					"ja": "何が起きたか: MicrosoftはMajorana 2を公表し、AIを使った設計で量子ハードウェアの前進を図っていると説明した。商用的に意味のある量子計算機を2029年に目指す方針も示した。"
+				},
+				{
+					"en": "It also set a 2029 target for commercially meaningful quantum systems.",
+					"ja": "何が起きたか: MicrosoftはMajorana 2を公表し、AIを使った設計で量子ハードウェアの前進を図っていると説明した。商用的に意味のある量子計算機を2029年に目指す方針も示した。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-quantum-computing-is-moving-from-open-ended-research-toward-named-targets-and-pub",
+			"heading": {
+				"ja": "なぜ重要か: 量子計算は長く「研究の先」の話だったが、企業が明確な年限を置く段階に入っている。実用化の期待が高まるほど、基礎研究と資本市場の距離が縮まる。",
+				"en": "Why it matters: Quantum computing is moving from open-ended research toward named targets and public milestones. The more concrete the timeline becomes, the more investors and researchers can test the claims."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Quantum computing is moving from open-ended research toward named targets and public milestones.",
+					"ja": "なぜ重要か: 量子計算は長く「研究の先」の話だったが、企業が明確な年限を置く段階に入っている。実用化の期待が高まるほど、基礎研究と資本市場の距離が縮まる。"
+				},
+				{
+					"en": "The more concrete the timeline becomes, the more investors and researchers can test the claims.",
+					"ja": "なぜ重要か: 量子計算は長く「研究の先」の話だったが、企業が明確な年限を置く段階に入っている。実用化の期待が高まるほど、基礎研究と資本市場の距離が縮まる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-for-reproducibility-error-correction-progress-and-independent-validatio",
+			"heading": {
+				"ja": "今後の注視点: 再現性、エラー訂正、そして外部研究者の検証でどこまで評価が固まるかを見る。",
+				"en": "What to watch next: Watch for reproducibility, error correction progress, and independent validation from the research community."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch for reproducibility, error correction progress, and independent validation from the research community.",
+					"ja": "今後の注視点: 再現性、エラー訂正、そして外部研究者の検証でどこまで評価が固まるかを見る。"
+				}
+			]
+		},
+		{
+			"id": "rtx-spark-pushes-ai-onto-pcs",
+			"heading": {
+				"ja": "RTX SparkでPCをAI端末に",
+				"en": "RTX Spark pushes AI onto PCs"
+			},
+			"pairs": [
+				{
+					"en": "RTX Spark pushes AI onto PCs",
+					"ja": "RTX SparkでPCをAI端末に"
+				}
+			]
+		},
+		{
+			"id": "what-happened-nvidia-introduced-a-chip-line-designed-to-bring-ai-directly-onto-pcs-the-strategy-",
+			"heading": {
+				"ja": "何が起きたか: Nvidiaは、PCにAIを直接載せる新しいチップ群を打ち出した。クラウド依存だけでなく、端末側でのAI処理を強化する狙いが見える。",
+				"en": "What happened: Nvidia introduced a chip line designed to bring AI directly onto PCs. The strategy is to reduce cloud dependence and move more inference to the device."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Nvidia introduced a chip line designed to bring AI directly onto PCs.",
+					"ja": "何が起きたか: Nvidiaは、PCにAIを直接載せる新しいチップ群を打ち出した。クラウド依存だけでなく、端末側でのAI処理を強化する狙いが見える。"
+				},
+				{
+					"en": "The strategy is to reduce cloud dependence and move more inference to the device.",
+					"ja": "何が起きたか: Nvidiaは、PCにAIを直接載せる新しいチップ群を打ち出した。クラウド依存だけでなく、端末側でのAI処理を強化する狙いが見える。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-ai-pcs-can-trigger-both-consumer-refresh-cycles-and-enterprise-device-upgrades-lo",
+			"heading": {
+				"ja": "なぜ重要か: AI PCは、消費者向け端末の更新需要と企業の端末刷新を同時に刺激しうる。推論の一部をローカルで処理できれば、レイテンシーとコストの両面で利点がある。",
+				"en": "Why it matters: AI PCs can trigger both consumer refresh cycles and enterprise device upgrades. Local inference also helps with latency and cost."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: AI PCs can trigger both consumer refresh cycles and enterprise device upgrades.",
+					"ja": "なぜ重要か: AI PCは、消費者向け端末の更新需要と企業の端末刷新を同時に刺激しうる。推論の一部をローカルで処理できれば、レイテンシーとコストの両面で利点がある。"
+				},
+				{
+					"en": "Local inference also helps with latency and cost.",
+					"ja": "なぜ重要か: AI PCは、消費者向け端末の更新需要と企業の端末刷新を同時に刺激しうる。推論の一部をローカルで処理できれば、レイテンシーとコストの両面で利点がある。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-track-oem-adoption-and-whether-app-developers-actually-optimize-for-the-new-h",
+			"heading": {
+				"ja": "今後の注視点: OEM各社の採用状況と、実際のアプリケーションがどこまで最適化されるかを追いたい。",
+				"en": "What to watch next: Track OEM adoption and whether app developers actually optimize for the new hardware."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Track OEM adoption and whether app developers actually optimize for the new hardware.",
+					"ja": "今後の注視点: OEM各社の採用状況と、実際のアプリケーションがどこまで最適化されるかを追いたい。"
+				}
+			]
+		},
+		{
+			"id": "blocking-ai-capable-cpus-in-china-is-hard",
+			"heading": {
+				"ja": "AI対応CPUの対中規制は難題",
+				"en": "Blocking AI-capable CPUs in China is hard"
+			},
+			"pairs": [
+				{
+					"en": "Blocking AI-capable CPUs in China is hard",
+					"ja": "AI対応CPUの対中規制は難題"
+				}
+			]
+		},
+		{
+			"id": "what-happened-arm-s-ceo-argued-that-fully-blocking-ai-capable-cpus-from-china-would-be-difficult",
+			"heading": {
+				"ja": "何が起きたか: ArmのCEOは、AI機能を備えたCPUの中国向け輸出を完全に止めるのは難しいと述べた。規制の線引きが、製品世代をまたいで曖昧になっている。",
+				"en": "What happened: Arm’s CEO argued that fully blocking AI-capable CPUs from China would be difficult. That suggests export controls remain porous once products are reconfigured across generations."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Arm's CEO argued that fully blocking AI-capable CPUs from China would be difficult.",
+					"ja": "何が起きたか: ArmのCEOは、AI機能を備えたCPUの中国向け輸出を完全に止めるのは難しいと述べた。規制の線引きが、製品世代をまたいで曖昧になっている。"
+				},
+				{
+					"en": "That suggests export controls remain porous once products are reconfigured across generations.",
+					"ja": "何が起きたか: ArmのCEOは、AI機能を備えたCPUの中国向け輸出を完全に止めるのは難しいと述べた。規制の線引きが、製品世代をまたいで曖昧になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-semiconductor-controls-are-shaping-tech-diplomacy-but-blunt-bans-often-trigger-re",
+			"heading": {
+				"ja": "なぜ重要か: 半導体規制は、単純な禁止措置では回避や再設計が起きやすい。サプライチェーンのどこまでが規制対象かが、今後の技術外交の争点になる。",
+				"en": "Why it matters: Semiconductor controls are shaping tech diplomacy, but blunt bans often trigger redesigns and workarounds. The real policy question is where the controllable boundary sits."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Semiconductor controls are shaping tech diplomacy, but blunt bans often trigger redesigns and workarounds.",
+					"ja": "なぜ重要か: 半導体規制は、単純な禁止措置では回避や再設計が起きやすい。サプライチェーンのどこまでが規制対象かが、今後の技術外交の争点になる。"
+				},
+				{
+					"en": "The real policy question is where the controllable boundary sits.",
+					"ja": "なぜ重要か: 半導体規制は、単純な禁止措置では回避や再設計が起きやすい。サプライチェーンのどこまでが規制対象かが、今後の技術外交の争点になる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-how-u-s-china-export-controls-expand-across-cpus-gpus-and-design-ip",
+			"heading": {
+				"ja": "今後の注視点: 米中の輸出規制が、CPU、GPU、設計IPのどこに広がるかを確認したい。",
+				"en": "What to watch next: Watch how U.S.-China export controls expand across CPUs, GPUs, and design IP."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch how U.",
+					"ja": "今後の注視点: 米中の輸出規制が、CPU、GPU、設計IPのどこに広がるかを確認したい。"
+				},
+				{
+					"en": "-China export controls expand across CPUs, GPUs, and design IP.",
+					"ja": "今後の注視点: 米中の輸出規制が、CPU、GPU、設計IPのどこに広がるかを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "cisco-is-building-ai-agent-defenses",
+			"heading": {
+				"ja": "AIエージェント防御をCiscoが用意",
+				"en": "Cisco is building AI-agent defenses"
+			},
+			"pairs": [
+				{
+					"en": "Cisco is building AI-agent defenses",
+					"ja": "AIエージェント防御をCiscoが用意"
+				}
+			]
+		},
+		{
+			"id": "what-happened-cisco-launched-tools-to-help-companies-build-ai-agents-and-defend-the-systems-they",
+			"heading": {
+				"ja": "何が起きたか: Ciscoは、企業がAIエージェントを作るための機能と、それを守るための防御ツールを発表した。AI導入が実験段階から運用段階へ移る中で、保護機能もセットで必要になっている。",
+				"en": "What happened: Cisco launched tools to help companies build AI agents and defend the systems they run on. AI deployment is now moving from demos to operations, and security is arriving with it."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Cisco launched tools to help companies build AI agents and defend the systems they run on.",
+					"ja": "何が起きたか: Ciscoは、企業がAIエージェントを作るための機能と、それを守るための防御ツールを発表した。AI導入が実験段階から運用段階へ移る中で、保護機能もセットで必要になっている。"
+				},
+				{
+					"en": "AI deployment is now moving from demos to operations, and security is arriving with it.",
+					"ja": "何が起きたか: Ciscoは、企業がAIエージェントを作るための機能と、それを守るための防御ツールを発表した。AI導入が実験段階から運用段階へ移る中で、保護機能もセットで必要になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-agentic-ai-raises-the-stakes-around-permissions-data-leakage-and-uncontrolled-act",
+			"heading": {
+				"ja": "なぜ重要か: エージェント型AIは便利だが、権限の暴走やデータ流出のリスクも増える。インフラ企業が防御まで含めて提供することで、導入のハードルが下がる。",
+				"en": "Why it matters: Agentic AI raises the stakes around permissions, data leakage, and uncontrolled action. Infrastructure vendors that package defense with deployment make adoption easier."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Agentic AI raises the stakes around permissions, data leakage, and uncontrolled action.",
+					"ja": "なぜ重要か: エージェント型AIは便利だが、権限の暴走やデータ流出のリスクも増える。インフラ企業が防御まで含めて提供することで、導入のハードルが下がる。"
+				},
+				{
+					"en": "Infrastructure vendors that package defense with deployment make adoption easier.",
+					"ja": "なぜ重要か: エージェント型AIは便利だが、権限の暴走やデータ流出のリスクも増える。インフラ企業が防御まで含めて提供することで、導入のハードルが下がる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-the-real-test-is-how-much-autonomy-companies-let-agents-have-and-how-much-hum",
+			"heading": {
+				"ja": "今後の注視点: 企業ユーザーがどこまで自動化を任せ、どこに人手レビューを残すかが実装の分かれ目になる。",
+				"en": "What to watch next: The real test is how much autonomy companies let agents have, and how much human review remains."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: The real test is how much autonomy companies let agents have, and how much human review remains.",
+					"ja": "今後の注視点: 企業ユーザーがどこまで自動化を任せ、どこに人手レビューを残すかが実装の分かれ目になる。"
+				}
+			]
+		},
+		{
+			"id": "marvell-is-the-next-big-chip-bet",
+			"heading": {
+				"ja": "Marvellに次の大型期待",
+				"en": "Marvell is the next big-chip bet"
+			},
+			"pairs": [
+				{
+					"en": "Marvell is the next big-chip bet",
+					"ja": "Marvellに次の大型期待"
+				}
+			]
+		},
+		{
+			"id": "what-happened-marvell-shares-jumped-after-nvidia-ceo-jensen-huang-described-it-as-a-future-trill",
+			"heading": {
+				"ja": "何が起きたか: Nvidiaの黄仁勲CEOがMarvellを将来の巨大企業候補と評価し、株価が急伸した。AI半導体の勝者はGPUだけでなく、周辺のカスタム半導体にも広がっている。",
+				"en": "What happened: Marvell shares jumped after Nvidia CEO Jensen Huang described it as a future trillion-dollar company. The AI semiconductor story is widening beyond GPUs into custom chips and networking."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Marvell shares jumped after Nvidia CEO Jensen Huang described it as a future trillion-dollar company.",
+					"ja": "何が起きたか: Nvidiaの黄仁勲CEOがMarvellを将来の巨大企業候補と評価し、株価が急伸した。AI半導体の勝者はGPUだけでなく、周辺のカスタム半導体にも広がっている。"
+				},
+				{
+					"en": "The AI semiconductor story is widening beyond GPUs into custom chips and networking.",
+					"ja": "何が起きたか: Nvidiaの黄仁勲CEOがMarvellを将来の巨大企業候補と評価し、株価が急伸した。AI半導体の勝者はGPUだけでなく、周辺のカスタム半導体にも広がっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-the-ai-boom-is-not-just-a-gpu-story-capital-is-also-flowing-to-adjacent-chips-int",
+			"heading": {
+				"ja": "なぜ重要か: AIブームの恩恵は、クラウド大手とGPUメーカーだけに限られない。専用チップや通信・ネットワークの供給企業まで投資資金が広がる。",
+				"en": "Why it matters: The AI boom is not just a GPU story. Capital is also flowing to adjacent chips, interconnects, and infrastructure suppliers that sit around the core compute layer."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: The AI boom is not just a GPU story.",
+					"ja": "なぜ重要か: AIブームの恩恵は、クラウド大手とGPUメーカーだけに限られない。専用チップや通信・ネットワークの供給企業まで投資資金が広がる。"
+				},
+				{
+					"en": "Capital is also flowing to adjacent chips, interconnects, and infrastructure suppliers that sit around the core compute layer.",
+					"ja": "なぜ重要か: AIブームの恩恵は、クラウド大手とGPUメーカーだけに限られない。専用チップや通信・ネットワークの供給企業まで投資資金が広がる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-see-whether-cloud-providers-deepen-investment-in-custom-asics-and-networking-",
+			"heading": {
+				"ja": "今後の注視点: 大手クラウドやAI企業が、汎用GPUだけでなく専用ASICやネットワーク側にも投資を広げるかを見る。",
+				"en": "What to watch next: See whether cloud providers deepen investment in custom ASICs and networking gear rather than relying only on general-purpose GPUs."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: See whether cloud providers deepen investment in custom ASICs and networking gear rather than relying only on general-purpose GPUs.",
+					"ja": "今後の注視点: 大手クラウドやAI企業が、汎用GPUだけでなく専用ASICやネットワーク側にも投資を広げるかを見る。"
+				}
+			]
+		},
+		{
+			"id": "ai-is-shifting-from-a-model-race-to-a-full-stack-competition-covering-capital-power-regulation-d",
+			"heading": {
+				"ja": "- AIは「モデルの性能競争」から「資本投下、電力、規制、端末側実装」を含む総合戦に移っている。",
+				"en": "- AI is shifting from a model race to a full-stack competition covering capital, power, regulation, devices, and infrastructure."
+			},
+			"pairs": [
+				{
+					"en": "- AI is shifting from a model race to a full-stack competition covering capital, power, regulation, devices, and infrastructure.",
+					"ja": "- AIは「モデルの性能競争」から「資本投下、電力、規制、端末側実装」を含む総合戦に移っている。"
+				}
+			]
+		},
+		{
+			"id": "middle-east-tensions-and-brazil-tariff-pressure-can-quickly-show-up-in-oil-fx-and-risk-assets-so",
+			"heading": {
+				"ja": "- 中東情勢と対ブラジル関税は、原油・為替・リスク資産に短期で波及しやすく、政治イベントがそのまま市場イベントになっている。",
+				"en": "- Middle East tensions and Brazil tariff pressure can quickly show up in oil, FX, and risk assets, so politics and markets are now tightly linked."
+			},
+			"pairs": [
+				{
+					"en": "- Middle East tensions and Brazil tariff pressure can quickly show up in oil, FX, and risk assets, so politics and markets are now tightly linked.",
+					"ja": "- 中東情勢と対ブラジル関税は、原油・為替・リスク資産に短期で波及しやすく、政治イベントがそのまま市場イベントになっている。"
+				}
+			]
+		},
+		{
+			"id": "the-rate-hike-conversation-and-ai-capex-are-pulling-in-opposite-directions-leaving-markets-to-pr",
+			"heading": {
+				"ja": "- 利上げ再観測とAI CAPEXの綱引きで、株式市場は成長期待と資本コストの両方を織り込む局面にある。",
+				"en": "- The rate-hike conversation and AI capex are pulling in opposite directions, leaving markets to price both growth and funding costs at once."
+			},
+			"pairs": [
+				{
+					"en": "- The rate-hike conversation and AI capex are pulling in opposite directions, leaving markets to price both growth and funding costs at once.",
+					"ja": "- 利上げ再観測とAI CAPEXの綱引きで、株式市場は成長期待と資本コストの両方を織り込む局面にある。"
+				}
+			]
+		},
+		{
+			"id": "quantum-computing-ai-pcs-agentic-ai-and-security-tooling-all-suggest-that-experimental-ai-is-bec",
+			"heading": {
+				"ja": "- 量子計算、AI PC、AIエージェント、防御ツールは、実験段階から導入段階への移行を示すが、実運用の検証はまだこれからだ。",
+				"en": "- Quantum computing, AI PCs, agentic AI, and security tooling all suggest that experimental AI is becoming operational AI."
+			},
+			"pairs": [
+				{
+					"en": "- Quantum computing, AI PCs, agentic AI, and security tooling all suggest that experimental AI is becoming operational AI.",
+					"ja": "- 量子計算、AI PC、AIエージェント、防御ツールは、実験段階から導入段階への移行を示すが、実運用の検証はまだこれからだ。"
+				}
+			]
+		},
+		{
+			"id": "whether-trump-era-ai-and-mail-in-voting-actions-survive-court-review",
+			"heading": {
+				"ja": "- トランプ政権のAI大統領令と郵便投票制限が、どこまで裁判所で止まるか。",
+				"en": "- Whether Trump-era AI and mail-in voting actions survive court review."
+			},
+			"pairs": [
+				{
+					"en": "- Whether Trump-era AI and mail-in voting actions survive court review.",
+					"ja": "- トランプ政権のAI大統領令と郵便投票制限が、どこまで裁判所で止まるか。"
+				}
+			]
+		},
+		{
+			"id": "whether-iran-ceasefire-or-nuclear-talks-restart-in-a-way-that-changes-oil-and-shipping-markets",
+			"heading": {
+				"ja": "- イラン停戦や核協議が再開した場合、原油・為替・安全保障の連鎖がどう出るか。",
+				"en": "- Whether Iran ceasefire or nuclear talks restart in a way that changes oil and shipping markets."
+			},
+			"pairs": [
+				{
+					"en": "- Whether Iran ceasefire or nuclear talks restart in a way that changes oil and shipping markets.",
+					"ja": "- イラン停戦や核協議が再開した場合、原油・為替・安全保障の連鎖がどう出るか。"
+				}
+			]
+		},
+		{
+			"id": "whether-alphabet-hpe-and-nvidia-linked-suppliers-turn-ai-spending-into-stronger-orders-and-margi",
+			"heading": {
+				"ja": "- Alphabet、HPE、Nvidia周辺のAI投資が、次回決算で受注と利益率の両方に反映されるか。",
+				"en": "- Whether Alphabet, HPE, and Nvidia-linked suppliers turn AI spending into stronger orders and margins."
+			},
+			"pairs": [
+				{
+					"en": "- Whether Alphabet, HPE, and Nvidia-linked suppliers turn AI spending into stronger orders and margins.",
+					"ja": "- Alphabet、HPE、Nvidia周辺のAI投資が、次回決算で受注と利益率の両方に反映されるか。"
+				}
+			]
+		},
+		{
+			"id": "whether-fed-speakers-and-fresh-labor-inflation-data-keep-rate-cut-hopes-alive-or-move-the-market",
+			"heading": {
+				"ja": "- FRB高官の発言と雇用・物価指標が、年後半の利下げ観測を維持するか、それとも利上げ警戒へ振れるか。",
+				"en": "- Whether Fed speakers and fresh labor/inflation data keep rate-cut hopes alive or move the market back toward tightening risk."
+			},
+			"pairs": [
+				{
+					"en": "- Whether Fed speakers and fresh labor/inflation data keep rate-cut hopes alive or move the market back toward tightening risk.",
+					"ja": "- FRB高官の発言と雇用・物価指標が、年後半の利下げ観測を維持するか、それとも利上げ警戒へ振れるか。"
+				}
+			]
+		},
+		{
+			"id": "whether-majorana-2-rtx-spark-and-cisco-s-ai-agent-security-tools-turn-into-real-deployments-rath",
+			"heading": {
+				"ja": "- Majorana 2、RTX Spark、CiscoのAIエージェント防御ツールが、発表止まりで終わるか、実導入へ進むか。",
+				"en": "- Whether Majorana 2, RTX Spark, and Cisco’s AI-agent security tools turn into real deployments rather than launch-day narratives."
+			},
+			"pairs": [
+				{
+					"en": "- Whether Majorana 2, RTX Spark, and Cisco's AI-agent security tools turn into real deployments rather than launch-day narratives.",
+					"ja": "- Majorana 2、RTX Spark、CiscoのAIエージェント防御ツールが、発表止まりで終わるか、実導入へ進むか。"
+				}
+			]
+		}
+	]
+}

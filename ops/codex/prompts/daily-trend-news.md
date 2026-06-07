@@ -55,12 +55,14 @@ policy, business, and practical decisions.
   plain `出典メモ:` text line in News digests.
 - Do not create `report.md` or another second copy of the same article body.
 - Create a public research trail in
-  `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx` alongside the
-  article body. Include a `## 利用環境` section with the automation model and
-  the GitHub URL for the prompt source, plus a
+  `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx` and
+  `articles/news/daily-trends-<YYYY-MM-DD>/en/research-log.mdx` alongside the
+  article body. In Japanese logs, include a `## 利用環境` section with the
+  automation model and the GitHub URL for the prompt source, plus a
   `## 調査命令` section that summarizes the Run Context as the research
   instruction: research date, topic hint if present, category/count constraints,
-  recency window, and the intended deliverable.
+  recency window, and the intended deliverable. In English logs, use the
+  corresponding headings `## Environment` and `## Research Instruction`.
 - Confirm the public trail is reachable from
   `/news/daily-trends-<YYYY-MM-DD>/research/`.
 
@@ -171,6 +173,9 @@ Rules for source memo cards:
 
 - Include at least one `NewsSourceCard` for each of the fifteen topics.
 - `href`, `source`, `title`, and `description` are required.
+- MDX treats raw `<...>` text as JSX. Do not write unescaped angle-bracket
+  phrases in prose, titles, descriptions, or research logs. Use normal words,
+  inline code, or `&lt;` / `&gt;` when a literal angle bracket is necessary.
 - `imageUrl` and `imageAlt` are required for every News topic card.
 - Prefer a reliable image directly attached to the source article, official
   announcement, company page, regulator page, or public agency page.

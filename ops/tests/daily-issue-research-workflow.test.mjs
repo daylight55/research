@@ -316,9 +316,21 @@ assert.match(
 )
 
 assert.match(
+	trendWorkflow,
+	/pnpm exec prettier --plugin-search-dir=\. --check "\$\{changed_mdx_files\[@\]\}"/,
+	'Daily Trend News should parse-check generated MDX before selecting images or building'
+)
+
+assert.match(
 	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
 	/exactly three balanced[\s\S]*?NewsDigestSection[\s\S]*?one politics[\s\S]*?one economy[\s\S]*?one technology/,
 	'Daily Trend News prompt should require balanced localized NewsDigestSection blocks'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/## Environment[\s\S]*?## Research Instruction[\s\S]*?MDX treats raw `<\.\.\.>` text as JSX/,
+	'Daily Trend News prompt should require English research-log headings and warn against raw angle-bracket MDX prose'
 )
 
 assert.match(

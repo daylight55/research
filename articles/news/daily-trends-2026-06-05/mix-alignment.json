@@ -1,0 +1,928 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "ai-policy-redesign-wider-tariffs-middle-east-tension-and-the-wait-for-jobs-data-are-all-moving-a",
+			"heading": {
+				"ja": "AI政策の再設計、関税の拡張、中東緊張、そして雇用統計待ちの市場が同時に進み、政策と相場が切り離せない状態になっている。技術ニュースも個別企業の話ではなく、AI投資の持続性と規制対応の問題として読まれる局面が強まった。",
+				"en": "AI policy redesign, wider tariffs, Middle East tension, and the wait for jobs data are all moving at the same time. The main signal today is that policy and markets are no longer separate tracks."
+			},
+			"pairs": [
+				{
+					"en": "AI policy redesign, wider tariffs, Middle East tension, and the wait for jobs data are all moving at the same time.",
+					"ja": "AI政策の再設計、関税の拡張、中東緊張、そして雇用統計待ちの市場が同時に進み、政策と相場が切り離せない状態になっている。技術ニュースも個別企業の話ではなく、AI投資の持続性と規制対応の問題として読まれる局面が強まった。"
+				},
+				{
+					"en": "The main signal today is that policy and markets are no longer separate tracks.",
+					"ja": "AI政策の再設計、関税の拡張、中東緊張、そして雇用統計待ちの市場が同時に進み、政策と相場が切り離せない状態になっている。技術ニュースも個別企業の話ではなく、AI投資の持続性と規制対応の問題として読まれる局面が強まった。"
+				}
+			]
+		},
+		{
+			"id": "new-rules-for-ai-model-control",
+			"heading": {
+				"ja": "AIモデル統制の新指針",
+				"en": "New rules for AI model control"
+			},
+			"pairs": [
+				{
+					"en": "New rules for AI model control",
+					"ja": "AIモデル統制の新指針"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-white-house-released-an-executive-order-that-tries-to-promote-ai-adoption-whil",
+			"heading": {
+				"ja": "何が起きたか: ホワイトハウスがAIの安全保障と普及促進を同時に狙う大統領令を公表した。政府利用のAI保護と、民間モデルの任意提出を組み合わせる構図だ。",
+				"en": "What happened: The White House released an executive order that tries to promote AI adoption while tightening security controls. It also folds voluntary frontier-model submission into a government benchmark framework."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The White House released an executive order that tries to promote AI adoption while tightening security controls.",
+					"ja": "何が起きたか: ホワイトハウスがAIの安全保障と普及促進を同時に狙う大統領令を公表した。政府利用のAI保護と、民間モデルの任意提出を組み合わせる構図だ。"
+				},
+				{
+					"en": "It also folds voluntary frontier-model submission into a government benchmark framework.",
+					"ja": "何が起きたか: ホワイトハウスがAIの安全保障と普及促進を同時に狙う大統領令を公表した。政府利用のAI保護と、民間モデルの任意提出を組み合わせる構図だ。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-this-is-not-just-regulation-it-points-to-government-led-ai-testing-standards-that",
+			"heading": {
+				"ja": "なぜ重要か: 規制強化だけでなく、政府がAI検証の基準作りに踏み込む点が大きい。民間モデルの評価実務や調達条件に波及する可能性がある。",
+				"en": "Why it matters: This is not just regulation. It points to government-led AI testing standards that could spill into procurement and compliance."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: This is not just regulation.",
+					"ja": "なぜ重要か: 規制強化だけでなく、政府がAI検証の基準作りに踏み込む点が大きい。民間モデルの評価実務や調達条件に波及する可能性がある。"
+				},
+				{
+					"en": "It points to government-led AI testing standards that could spill into procurement and compliance.",
+					"ja": "なぜ重要か: 規制強化だけでなく、政府がAI検証の基準作りに踏み込む点が大きい。民間モデルの評価実務や調達条件に波及する可能性がある。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-track-agency-guidance-and-whether-major-ai-companies-participate-in-the-volun",
+			"heading": {
+				"ja": "今後の注視点: 省庁ごとの実装指針と、主要AI企業が任意提出の枠組みにどう反応するかを見る必要がある。",
+				"en": "What to watch next: Track agency guidance and whether major AI companies participate in the voluntary framework."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Track agency guidance and whether major AI companies participate in the voluntary framework.",
+					"ja": "今後の注視点: 省庁ごとの実装指針と、主要AI企業が任意提出の枠組みにどう反応するかを見る必要がある。"
+				}
+			]
+		},
+		{
+			"id": "us-china-clash-on-tiananmen",
+			"heading": {
+				"ja": "Tiananmenで中米が応酬",
+				"en": "US-China clash on Tiananmen"
+			},
+			"pairs": [
+				{
+					"en": "US-China clash on Tiananmen",
+					"ja": "Tiananmenで中米が応酬"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-tiananmen-anniversary-became-a-fresh-stage-for-us-china-friction-with-taiwan-a",
+			"heading": {
+				"ja": "何が起きたか: 天安門事件の記念日に合わせ、中国と米国の対立が再燃し、台湾も歴史認識を前面に出した。象徴的な日付が対外姿勢の再確認の場になった。",
+				"en": "What happened: The Tiananmen anniversary became a fresh stage for US-China friction, with Taiwan also pushing its own historical framing."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The Tiananmen anniversary became a fresh stage for US-China friction, with Taiwan also pushing its own historical framing.",
+					"ja": "何が起きたか: 天安門事件の記念日に合わせ、中国と米国の対立が再燃し、台湾も歴史認識を前面に出した。象徴的な日付が対外姿勢の再確認の場になった。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-taiwan-tension-is-built-through-repeated-messaging-not-only-military-moves-symbol",
+			"heading": {
+				"ja": "なぜ重要か: 台湾海峡の緊張は、軍事だけでなく外交メッセージの積み上げで高まる。記念日や発言のたびに、米中関係の温度が測られる。",
+				"en": "Why it matters: Taiwan tension is built through repeated messaging, not only military moves. Symbolic dates still matter for strategic signaling."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Taiwan tension is built through repeated messaging, not only military moves.",
+					"ja": "なぜ重要か: 台湾海峡の緊張は、軍事だけでなく外交メッセージの積み上げで高まる。記念日や発言のたびに、米中関係の温度が測られる。"
+				},
+				{
+					"en": "Symbolic dates still matter for strategic signaling.",
+					"ja": "なぜ重要か: 台湾海峡の緊張は、軍事だけでなく外交メッセージの積み上げで高まる。記念日や発言のたびに、米中関係の温度が測られる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-for-follow-up-statements-from-beijing-and-washington",
+			"heading": {
+				"ja": "今後の注視点: 中国側の追加反応と、米国側が台湾・人権・安全保障をどう結びつけて発信するかを見る。",
+				"en": "What to watch next: Watch for follow-up statements from Beijing and Washington."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch for follow-up statements from Beijing and Washington.",
+					"ja": "今後の注視点: 中国側の追加反応と、米国側が台湾・人権・安全保障をどう結びつけて発信するかを見る。"
+				}
+			]
+		},
+		{
+			"id": "wider-tariff-push-for-60-economies",
+			"heading": {
+				"ja": "60経済圏への追加関税案",
+				"en": "Wider tariff push for 60 economies"
+			},
+			"pairs": [
+				{
+					"en": "Wider tariff push for 60 economies",
+					"ja": "60経済圏への追加関税案"
+				}
+			]
+		},
+		{
+			"id": "what-happened-a-tariff-proposal-spanning-60-economies-would-push-import-costs-and-negotiation-pr",
+			"heading": {
+				"ja": "何が起きたか: 複数の経済圏に広がる追加関税案が浮上し、輸入コストと交渉カードが一段と政治化している。企業側はサプライチェーンの再見積もりを迫られる。",
+				"en": "What happened: A tariff proposal spanning 60 economies would push import costs and negotiation pressure higher. Companies now need a fresh supply-chain readout."
+			},
+			"pairs": [
+				{
+					"en": "What happened: A tariff proposal spanning 60 economies would push import costs and negotiation pressure higher.",
+					"ja": "何が起きたか: 複数の経済圏に広がる追加関税案が浮上し、輸入コストと交渉カードが一段と政治化している。企業側はサプライチェーンの再見積もりを迫られる。"
+				},
+				{
+					"en": "Companies now need a fresh supply-chain readout.",
+					"ja": "何が起きたか: 複数の経済圏に広がる追加関税案が浮上し、輸入コストと交渉カードが一段と政治化している。企業側はサプライチェーンの再見積もりを迫られる。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-the-breadth-of-the-proposal-matters-more-than-the-exact-rate-retail-manufacturing",
+			"heading": {
+				"ja": "なぜ重要か: 関税率そのものより、対象地域の広さが大きい。小売、製造、物流の各段階で、価格転嫁と調達先の見直しが連鎖する。",
+				"en": "Why it matters: The breadth of the proposal matters more than the exact rate. Retail, manufacturing, and logistics all feel the knock-on effect."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: The breadth of the proposal matters more than the exact rate.",
+					"ja": "なぜ重要か: 関税率そのものより、対象地域の広さが大きい。小売、製造、物流の各段階で、価格転嫁と調達先の見直しが連鎖する。"
+				},
+				{
+					"en": "Retail, manufacturing, and logistics all feel the knock-on effect.",
+					"ja": "なぜ重要か: 関税率そのものより、対象地域の広さが大きい。小売、製造、物流の各段階で、価格転嫁と調達先の見直しが連鎖する。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-final-rates-timing-and-exemptions-will-determine-how-seriously-importers-hedg",
+			"heading": {
+				"ja": "今後の注視点: 最終税率、発効時期、例外措置の有無が決まるまで、輸入企業のヘッジ行動を追う必要がある。",
+				"en": "What to watch next: Final rates, timing, and exemptions will determine how seriously importers hedge."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Final rates, timing, and exemptions will determine how seriously importers hedge.",
+					"ja": "今後の注視点: 最終税率、発効時期、例外措置の有無が決まるまで、輸入企業のヘッジ行動を追う必要がある。"
+				}
+			]
+		},
+		{
+			"id": "metal-tariffs-are-being-reset",
+			"heading": {
+				"ja": "金属関税の再調整",
+				"en": "Metal tariffs are being reset"
+			},
+			"pairs": [
+				{
+					"en": "Metal tariffs are being reset",
+					"ja": "金属関税の再調整"
+				}
+			]
+		},
+		{
+			"id": "what-happened-metal-tariffs-were-reset-again-bringing-industrial-costs-back-into-the-political-s",
+			"heading": {
+				"ja": "何が起きたか: 金属関連の関税が見直され、輸入コストの扱いが再び政策論点になった。設備投資や自動車、建設の原価見通しに直結する。",
+				"en": "What happened: Metal tariffs were reset again, bringing industrial costs back into the political spotlight."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Metal tariffs were reset again, bringing industrial costs back into the political spotlight.",
+					"ja": "何が起きたか: 金属関連の関税が見直され、輸入コストの扱いが再び政策論点になった。設備投資や自動車、建設の原価見通しに直結する。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-steel-aluminum-and-copper-feed-directly-into-the-cost-base-of-manufacturing-autos",
+			"heading": {
+				"ja": "なぜ重要か: 金属はあらゆる製造業の入力財なので、関税変更の波及範囲が広い。輸出国だけでなく米国内の加工業者にも影響が出る。",
+				"en": "Why it matters: Steel, aluminum, and copper feed directly into the cost base of manufacturing, autos, and construction."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Steel, aluminum, and copper feed directly into the cost base of manufacturing, autos, and construction.",
+					"ja": "なぜ重要か: 金属はあらゆる製造業の入力財なので、関税変更の波及範囲が広い。輸出国だけでなく米国内の加工業者にも影響が出る。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-exemptions-and-pass-through-pricing-will-decide-how-wide-the-impact-becomes",
+			"heading": {
+				"ja": "今後の注視点: 例外品目と既存契約の扱い、そして下流産業への価格転嫁がどこまで進むかを確認したい。",
+				"en": "What to watch next: Exemptions and pass-through pricing will decide how wide the impact becomes."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Exemptions and pass-through pricing will decide how wide the impact becomes.",
+					"ja": "今後の注視点: 例外品目と既存契約の扱い、そして下流産業への価格転嫁がどこまで進むかを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "immigration-and-dhs-funding-fight",
+			"heading": {
+				"ja": "移民・DHS予算の攻防",
+				"en": "Immigration and DHS funding fight"
+			},
+			"pairs": [
+				{
+					"en": "Immigration and DHS funding fight",
+					"ja": "移民・DHS予算の攻防"
+				}
+			]
+		},
+		{
+			"id": "what-happened-senate-scrutiny-of-immigration-enforcement-and-airport-threats-keeps-dhs-funding-i",
+			"heading": {
+				"ja": "何が起きたか: 移民執行や空港での脅威対応をめぐる議会審査が続き、DHS関連予算の妥当性が問われている。政策の焦点は人道と執行のどちらに重心を置くかだ。",
+				"en": "What happened: Senate scrutiny of immigration enforcement and airport threats keeps DHS funding in play."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Senate scrutiny of immigration enforcement and airport threats keeps DHS funding in play.",
+					"ja": "何が起きたか: 移民執行や空港での脅威対応をめぐる議会審査が続き、DHS関連予算の妥当性が問われている。政策の焦点は人道と執行のどちらに重心を置くかだ。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-this-is-about-budgets-detention-capacity-airport-operations-and-state-federal-fri",
+			"heading": {
+				"ja": "なぜ重要か: これは単なる治安の話ではなく、州政府、空港運営、拘留施設、連邦予算に広く影響する。夏の政治争点として拡大しやすい。",
+				"en": "Why it matters: This is about budgets, detention capacity, airport operations, and state-federal friction all at once."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: This is about budgets, detention capacity, airport operations, and state-federal friction all at once.",
+					"ja": "なぜ重要か: これは単なる治安の話ではなく、州政府、空港運営、拘留施設、連邦予算に広く影響する。夏の政治争点として拡大しやすい。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-follow-the-senate-vote-path-and-any-extra-measures-triggered-by-protests-or-d",
+			"heading": {
+				"ja": "今後の注視点: 上院での採決の行方と、抗議や空港混乱が追加措置を促すかどうかを見る。",
+				"en": "What to watch next: Follow the Senate vote path and any extra measures triggered by protests or disruptions."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Follow the Senate vote path and any extra measures triggered by protests or disruptions.",
+					"ja": "今後の注視点: 上院での採決の行方と、抗議や空港混乱が追加措置を促すかどうかを見る。"
+				}
+			]
+		},
+		{
+			"id": "warsh-inherits-a-squeezed-economy",
+			"heading": {
+				"ja": "ワーシュ新FRBの初手",
+				"en": "Warsh inherits a squeezed economy"
+			},
+			"pairs": [
+				{
+					"en": "Warsh inherits a squeezed economy",
+					"ja": "ワーシュ新FRBの初手"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-next-fed-era-inherits-a-difficult-mix-of-sticky-prices-and-investment-needs",
+			"heading": {
+				"ja": "何が起きたか: FRBの新体制を巡る議論の中で、物価上昇と投資需要の板挟みが改めて意識されている。政策の焦点は景気下支えとインフレ抑制の両立だ。",
+				"en": "What happened: The next Fed era inherits a difficult mix of sticky prices and investment needs."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The next Fed era inherits a difficult mix of sticky prices and investment needs.",
+					"ja": "何が起きたか: FRBの新体制を巡る議論の中で、物価上昇と投資需要の板挟みが改めて意識されている。政策の焦点は景気下支えとインフレ抑制の両立だ。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-interest-rate-expectations-still-move-everything-from-housing-to-capital-spending",
+			"heading": {
+				"ja": "なぜ重要か: 金利期待が少し動くだけで、住宅、設備投資、株価バリュエーションが同時に反応する。FRBのメッセージが市場全体の前提条件になる。",
+				"en": "Why it matters: Interest-rate expectations still move everything from housing to capital spending to equity multiples."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Interest-rate expectations still move everything from housing to capital spending to equity multiples.",
+					"ja": "なぜ重要か: 金利期待が少し動くだけで、住宅、設備投資、株価バリュエーションが同時に反応する。FRBのメッセージが市場全体の前提条件になる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-listen-for-fed-remarks-that-either-pull-cuts-forward-or-push-them-back",
+			"heading": {
+				"ja": "今後の注視点: 次回会合までの発言とデータが、利下げ観測を強めるか、逆に後ずれさせるかを見たい。",
+				"en": "What to watch next: Listen for Fed remarks that either pull cuts forward or push them back."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Listen for Fed remarks that either pull cuts forward or push them back.",
+					"ja": "今後の注視点: 次回会合までの発言とデータが、利下げ観測を強めるか、逆に後ずれさせるかを見たい。"
+				}
+			]
+		},
+		{
+			"id": "jobs-data-is-the-next-market-test",
+			"heading": {
+				"ja": "雇用統計待ちの市場",
+				"en": "Jobs data is the next market test"
+			},
+			"pairs": [
+				{
+					"en": "Jobs data is the next market test",
+					"ja": "雇用統計待ちの市場"
+				}
+			]
+		},
+		{
+			"id": "what-happened-stocks-are-high-but-the-labor-report-is-about-to-decide-the-next-move-in-rates-and",
+			"heading": {
+				"ja": "何が起きたか: 米株の上昇が続く一方で、次の雇用統計が利下げ時期の見極めに直結する局面になった。投資家は好材料よりも金利経路の変化に敏感だ。",
+				"en": "What happened: Stocks are high, but the labor report is about to decide the next move in rates and yields."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Stocks are high, but the labor report is about to decide the next move in rates and yields.",
+					"ja": "何が起きたか: 米株の上昇が続く一方で、次の雇用統計が利下げ時期の見極めに直結する局面になった。投資家は好材料よりも金利経路の変化に敏感だ。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-jobs-data-tells-the-market-whether-growth-is-cooling-or-inflation-is-still-sticky",
+			"heading": {
+				"ja": "なぜ重要か: 雇用統計は成長鈍化とインフレ粘着のどちらを市場が重く見るかを左右する。債券利回りが動けば、株の優位もすぐ揺れる。",
+				"en": "Why it matters: Jobs data tells the market whether growth is cooling or inflation is still sticky."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Jobs data tells the market whether growth is cooling or inflation is still sticky.",
+					"ja": "なぜ重要か: 雇用統計は成長鈍化とインフレ粘着のどちらを市場が重く見るかを左右する。債券利回りが動けば、株の優位もすぐ揺れる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-headline-payrolls-wages-and-unemployment-will-drive-the-reaction",
+			"heading": {
+				"ja": "今後の注視点: 雇用者数、賃金、失業率のどれがサプライズになるかで、相場の方向感が決まる。",
+				"en": "What to watch next: Headline payrolls, wages, and unemployment will drive the reaction."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Headline payrolls, wages, and unemployment will drive the reaction.",
+					"ja": "今後の注視点: 雇用者数、賃金、失業率のどれがサプライズになるかで、相場の方向感が決まる。"
+				}
+			]
+		},
+		{
+			"id": "middle-east-tension-hits-stocks",
+			"heading": {
+				"ja": "中東緊張で株式が失速",
+				"en": "Middle East tension hits stocks"
+			},
+			"pairs": [
+				{
+					"en": "Middle East tension hits stocks",
+					"ja": "中東緊張で株式が失速"
+				}
+			]
+		},
+		{
+			"id": "what-happened-escalating-middle-east-tension-pushed-stocks-a-bit-lower-and-nudged-investors-towa",
+			"heading": {
+				"ja": "何が起きたか: 中東の緊張が高まる中で、米株は小幅安となり、投資家は安全資産への逃避を強めた。地政学の見出しがそのまま取引材料になっている。",
+				"en": "What happened: Escalating Middle East tension pushed stocks a bit lower and nudged investors toward safety."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Escalating Middle East tension pushed stocks a bit lower and nudged investors toward safety.",
+					"ja": "何が起きたか: 中東の緊張が高まる中で、米株は小幅安となり、投資家は安全資産への逃避を強めた。地政学の見出しがそのまま取引材料になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-geopolitics-now-affects-equities-energy-and-rates-all-at-the-same-time",
+			"heading": {
+				"ja": "なぜ重要か: 地政学の悪化は株価だけでなく、エネルギー、輸送、金利期待にも波及する。単発のニュースでも、相場全体のリスクプレミアムを押し上げやすい。",
+				"en": "Why it matters: Geopolitics now affects equities, energy, and rates all at the same time."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Geopolitics now affects equities, energy, and rates all at the same time.",
+					"ja": "なぜ重要か: 地政学の悪化は株価だけでなく、エネルギー、輸送、金利期待にも波及する。単発のニュースでも、相場全体のリスクプレミアムを押し上げやすい。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-watch-oil-and-treasury-yields-for-a-combined-move",
+			"heading": {
+				"ja": "今後の注視点: 原油と国債利回りの同時変動が続くか、あるいは株が一時的に耐えるかを確認したい。",
+				"en": "What to watch next: Watch oil and Treasury yields for a combined move."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Watch oil and Treasury yields for a combined move.",
+					"ja": "今後の注視点: 原油と国債利回りの同時変動が続くか、あるいは株が一時的に耐えるかを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "oil-and-inflation-risk-are-back",
+			"heading": {
+				"ja": "原油高とインフレ再燃",
+				"en": "Oil and inflation risk are back"
+			},
+			"pairs": [
+				{
+					"en": "Oil and inflation risk are back",
+					"ja": "原油高とインフレ再燃"
+				}
+			]
+		},
+		{
+			"id": "what-happened-crude-prices-rose-on-middle-east-risk-reviving-inflation-concerns",
+			"heading": {
+				"ja": "何が起きたか: 原油市場は中東情勢を受けて上昇し、エネルギー価格の再加速が意識されている。株式市場ではAI関連の強さがその逆風を一部相殺している。",
+				"en": "What happened: Crude prices rose on Middle East risk, reviving inflation concerns."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Crude prices rose on Middle East risk, reviving inflation concerns.",
+					"ja": "何が起きたか: 原油市場は中東情勢を受けて上昇し、エネルギー価格の再加速が意識されている。株式市場ではAI関連の強さがその逆風を一部相殺している。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-oil-feeds-into-transport-costs-expectations-and-the-fed-narrative",
+			"heading": {
+				"ja": "なぜ重要か: 物価に効くのは原油だけではなく、輸送費や期待インフレも動く。インフレ再燃の警戒が、FRB観測に戻ってくる。",
+				"en": "Why it matters: Oil feeds into transport costs, expectations, and the Fed narrative."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Oil feeds into transport costs, expectations, and the Fed narrative.",
+					"ja": "なぜ重要か: 物価に効くのは原油だけではなく、輸送費や期待インフレも動く。インフレ再燃の警戒が、FRB観測に戻ってくる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-whether-the-move-becomes-a-supply-story-instead-of-a-one-day-spike",
+			"heading": {
+				"ja": "今後の注視点: 原油の上昇が一時的か、供給不安として定着するかで、次の物価見通しが変わる。",
+				"en": "What to watch next: Whether the move becomes a supply story instead of a one-day spike."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Whether the move becomes a supply story instead of a one-day spike.",
+					"ja": "今後の注視点: 原油の上昇が一時的か、供給不安として定着するかで、次の物価見通しが変わる。"
+				}
+			]
+		},
+		{
+			"id": "customs-enforcement-and-de-minimis",
+			"heading": {
+				"ja": "税関改革とde minimis縮小",
+				"en": "Customs enforcement and de minimis"
+			},
+			"pairs": [
+				{
+					"en": "Customs enforcement and de minimis",
+					"ja": "税関改革とde minimis縮小"
+				}
+			]
+		},
+		{
+			"id": "what-happened-customs-enforcement-is-getting-tougher-which-raises-the-cost-of-low-value-imports-",
+			"heading": {
+				"ja": "何が起きたか: 税関執行の強化が公表され、少額輸入の扱いや密輸対策が再び注目されている。実務上は通関コストと検査頻度の上昇につながる。",
+				"en": "What happened: Customs enforcement is getting tougher, which raises the cost of low-value imports and inspection-heavy flows."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Customs enforcement is getting tougher, which raises the cost of low-value imports and inspection-heavy flows.",
+					"ja": "何が起きたか: 税関執行の強化が公表され、少額輸入の扱いや密輸対策が再び注目されている。実務上は通関コストと検査頻度の上昇につながる。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-for-importers-and-logistics-firms-operational-changes-often-hurt-more-than-headli",
+			"heading": {
+				"ja": "なぜ重要か: 輸入業者、EC、国際物流にとっては、関税率よりも運用変更の方が痛いことが多い。小口輸入の通関効率が落ちれば、在庫戦略が変わる。",
+				"en": "Why it matters: For importers and logistics firms, operational changes often hurt more than headline tariff rates."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: For importers and logistics firms, operational changes often hurt more than headline tariff rates.",
+					"ja": "なぜ重要か: 輸入業者、EC、国際物流にとっては、関税率よりも運用変更の方が痛いことが多い。小口輸入の通関効率が落ちれば、在庫戦略が変わる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-which-product-categories-become-the-main-enforcement-targets",
+			"heading": {
+				"ja": "今後の注視点: どの品目が重点対象になるか、そして通関現場での遅延がどこまで広がるかを見たい。",
+				"en": "What to watch next: Which product categories become the main enforcement targets."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Which product categories become the main enforcement targets.",
+					"ja": "今後の注視点: どの品目が重点対象になるか、そして通関現場での遅延がどこまで広がるかを見たい。"
+				}
+			]
+		},
+		{
+			"id": "nvidia-s-pc-focused-ai-chip",
+			"heading": {
+				"ja": "NvidiaのPC向けAIチップ",
+				"en": "Nvidia's PC-focused AI chip"
+			},
+			"pairs": [
+				{
+					"en": "Nvidia's PC-focused AI chip",
+					"ja": "NvidiaのPC向けAIチップ"
+				}
+			]
+		},
+		{
+			"id": "what-happened-nvidia-introduced-a-new-chip-that-brings-ai-processing-closer-to-the-pc-itself",
+			"heading": {
+				"ja": "何が起きたか: Nvidiaが、AI処理をPC側でより直接に動かす新チップを打ち出した。クラウド依存を少し減らし、端末側AIの競争を押し上げる動きだ。",
+				"en": "What happened: Nvidia introduced a new chip that brings AI processing closer to the PC itself."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Nvidia introduced a new chip that brings AI processing closer to the PC itself.",
+					"ja": "何が起きたか: Nvidiaが、AI処理をPC側でより直接に動かす新チップを打ち出した。クラウド依存を少し減らし、端末側AIの競争を押し上げる動きだ。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-device-side-ai-can-change-the-upgrade-cycle-and-reduce-reliance-on-the-cloud",
+			"heading": {
+				"ja": "なぜ重要か: 生成AIの体験は、モデルの性能だけでなく、端末でどれだけ軽く速く動くかで決まる。PC更新需要にも波及しうる。",
+				"en": "Why it matters: Device-side AI can change the upgrade cycle and reduce reliance on the cloud."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Device-side AI can change the upgrade cycle and reduce reliance on the cloud.",
+					"ja": "なぜ重要か: 生成AIの体験は、モデルの性能だけでなく、端末でどれだけ軽く速く動くかで決まる。PC更新需要にも波及しうる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-oem-adoption-and-software-optimization",
+			"heading": {
+				"ja": "今後の注視点: OEM各社が採用を広げるか、ソフト側の最適化が追いつくかを確認したい。",
+				"en": "What to watch next: OEM adoption and software optimization."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: OEM adoption and software optimization.",
+					"ja": "今後の注視点: OEM各社が採用を広げるか、ソフト側の最適化が追いつくかを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "what-happened-marvell-rallied-after-huang-called-it-the-next-trillion-dollar-company",
+			"heading": {
+				"ja": "何が起きたか: 黄仁勲氏の「次の1兆ドル企業」発言を受けて、Marvellへの期待が一気に跳ねた。AI向けインフラ周辺株の物色が続いている。",
+				"en": "What happened: Marvell rallied after Huang called it the next trillion-dollar company."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Marvell rallied after Huang called it the next trillion-dollar company.",
+					"ja": "何が起きたか: 黄仁勲氏の「次の1兆ドル企業」発言を受けて、Marvellへの期待が一気に跳ねた。AI向けインフラ周辺株の物色が続いている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-the-ai-trade-is-spreading-beyond-nvidia-into-networking-memory-and-infrastructure",
+			"heading": {
+				"ja": "なぜ重要か: AI相場はNvidia本体だけでなく、接続、メモリ、ネットワークの周辺にも広がる。評価の裾野がどこまで伸びるかが問われる。",
+				"en": "Why it matters: The AI trade is spreading beyond Nvidia into networking, memory, and infrastructure."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: The AI trade is spreading beyond Nvidia into networking, memory, and infrastructure.",
+					"ja": "なぜ重要か: AI相場はNvidia本体だけでなく、接続、メモリ、ネットワークの周辺にも広がる。評価の裾野がどこまで伸びるかが問われる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-whether-revenue-and-guidance-justify-the-valuation-jump",
+			"heading": {
+				"ja": "今後の注視点: ガイダンスや受注が期待を裏付けるか、それとも話題先行で終わるかを確認したい。",
+				"en": "What to watch next: Whether revenue and guidance justify the valuation jump."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Whether revenue and guidance justify the valuation jump.",
+					"ja": "今後の注視点: ガイダンスや受注が期待を裏付けるか、それとも話題先行で終わるかを確認したい。"
+				}
+			]
+		},
+		{
+			"id": "anthropic-is-preparing-for-ipo",
+			"heading": {
+				"ja": "AnthropicのIPO準備",
+				"en": "Anthropic is preparing for IPO"
+			},
+			"pairs": [
+				{
+					"en": "Anthropic is preparing for IPO",
+					"ja": "AnthropicのIPO準備"
+				}
+			]
+		},
+		{
+			"id": "what-happened-anthropic-is-reported-to-have-filed-confidentially-for-an-ipo",
+			"heading": {
+				"ja": "何が起きたか: Anthropicが秘密裏にIPOを進めていると報じられた。収益化だけでなく、資本市場との距離をどう取るかが話題になっている。",
+				"en": "What happened: Anthropic is reported to have filed confidentially for an IPO."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Anthropic is reported to have filed confidentially for an IPO.",
+					"ja": "何が起きたか: Anthropicが秘密裏にIPOを進めていると報じられた。収益化だけでなく、資本市場との距離をどう取るかが話題になっている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-capital-markets-and-governance-are-becoming-core-issues-for-large-ai-firms",
+			"heading": {
+				"ja": "なぜ重要か: 巨額投資を続けるAI企業にとって、上場は資金調達と説明責任の両面で意味が大きい。競合各社の評価にも連鎖する。",
+				"en": "Why it matters: Capital markets and governance are becoming core issues for large AI firms."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: Capital markets and governance are becoming core issues for large AI firms.",
+					"ja": "なぜ重要か: 巨額投資を続けるAI企業にとって、上場は資金調達と説明責任の両面で意味が大きい。競合各社の評価にも連鎖する。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-revenue-growth-compute-access-and-disclosure-quality",
+			"heading": {
+				"ja": "今後の注視点: 収益成長、計算資源の確保、ガバナンス開示のどこが市場の焦点になるかを見る。",
+				"en": "What to watch next: Revenue growth, compute access, and disclosure quality."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Revenue growth, compute access, and disclosure quality.",
+					"ja": "今後の注視点: 収益成長、計算資源の確保、ガバナンス開示のどこが市場の焦点になるかを見る。"
+				}
+			]
+		},
+		{
+			"id": "broadcom-weakness-clouds-the-ai-boom",
+			"heading": {
+				"ja": "Broadcom失速でAI相場に警戒",
+				"en": "Broadcom weakness clouds the AI boom"
+			},
+			"pairs": [
+				{
+					"en": "Broadcom weakness clouds the AI boom",
+					"ja": "Broadcom失速でAI相場に警戒"
+				}
+			]
+		},
+		{
+			"id": "what-happened-broadcom-s-revenue-miss-dragged-on-the-ai-trade",
+			"heading": {
+				"ja": "何が起きたか: Broadcomの決算や収益見通しがAIブームの期待を下回り、関連株に警戒感が広がった。相場は好材料だけでは支えきれない段階に入っている。",
+				"en": "What happened: Broadcom’s revenue miss dragged on the AI trade."
+			},
+			"pairs": [
+				{
+					"en": "What happened: Broadcom's revenue miss dragged on the AI trade.",
+					"ja": "何が起きたか: Broadcomの決算や収益見通しがAIブームの期待を下回り、関連株に警戒感が広がった。相場は好材料だけでは支えきれない段階に入っている。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-ai-capex-needs-demand-margins-and-execution-to-all-stay-strong",
+			"heading": {
+				"ja": "なぜ重要か: AI投資は設備投資、需要、利益率の3点が揃って初めて続く。1社の未達でも、周辺セクターのバリュエーション全体に触れる。",
+				"en": "Why it matters: AI capex needs demand, margins, and execution to all stay strong."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: AI capex needs demand, margins, and execution to all stay strong.",
+					"ja": "なぜ重要か: AI投資は設備投資、需要、利益率の3点が揃って初めて続く。1社の未達でも、周辺セクターのバリュエーション全体に触れる。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-upcoming-chip-earnings-will-show-whether-demand-is-durable",
+			"heading": {
+				"ja": "今後の注視点: 次の大型半導体決算で、需要の強さが一過性か構造的かを見極めたい。",
+				"en": "What to watch next: Upcoming chip earnings will show whether demand is durable."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Upcoming chip earnings will show whether demand is durable.",
+					"ja": "今後の注視点: 次の大型半導体決算で、需要の強さが一過性か構造的かを見極めたい。"
+				}
+			]
+		},
+		{
+			"id": "ecb-wants-targeted-ai-risk-controls",
+			"heading": {
+				"ja": "ECBがAIリスク対策を要求",
+				"en": "ECB wants targeted AI risk controls"
+			},
+			"pairs": [
+				{
+					"en": "ECB wants targeted AI risk controls",
+					"ja": "ECBがAIリスク対策を要求"
+				}
+			]
+		},
+		{
+			"id": "what-happened-the-ecb-told-banks-to-focus-on-targeted-ai-risk-controls",
+			"heading": {
+				"ja": "何が起きたか: ECBが銀行に対し、AIリスクへの個別対応を求めた。大枠の方針ではなく、業務別のリスク管理が必要というメッセージだ。",
+				"en": "What happened: The ECB told banks to focus on targeted AI risk controls."
+			},
+			"pairs": [
+				{
+					"en": "What happened: The ECB told banks to focus on targeted AI risk controls.",
+					"ja": "何が起きたか: ECBが銀行に対し、AIリスクへの個別対応を求めた。大枠の方針ではなく、業務別のリスク管理が必要というメッセージだ。"
+				}
+			]
+		},
+		{
+			"id": "why-it-matters-ai-is-now-a-model-risk-and-governance-issue-for-finance-not-just-a-productivity-t",
+			"heading": {
+				"ja": "なぜ重要か: 金融機関にとってAIは効率化の手段である一方、モデルリスクや説明責任の新たな源でもある。規制が実装を左右する。",
+				"en": "Why it matters: AI is now a model-risk and governance issue for finance, not just a productivity tool."
+			},
+			"pairs": [
+				{
+					"en": "Why it matters: AI is now a model-risk and governance issue for finance, not just a productivity tool.",
+					"ja": "なぜ重要か: 金融機関にとってAIは効率化の手段である一方、モデルリスクや説明責任の新たな源でもある。規制が実装を左右する。"
+				}
+			]
+		},
+		{
+			"id": "what-to-watch-next-documentation-validation-and-governance-demands-from-supervisors",
+			"heading": {
+				"ja": "今後の注視点: 監督当局が求める文書化、検証、ガバナンスがどこまで厳しくなるかを追う。",
+				"en": "What to watch next: Documentation, validation, and governance demands from supervisors."
+			},
+			"pairs": [
+				{
+					"en": "What to watch next: Documentation, validation, and governance demands from supervisors.",
+					"ja": "今後の注視点: 監督当局が求める文書化、検証、ガバナンスがどこまで厳しくなるかを追う。"
+				}
+			]
+		},
+		{
+			"id": "ai-is-moving-from-product-story-to-regulation-security-and-market-structure-story",
+			"heading": {
+				"ja": "- AIは「製品の話」から「規制・安全保障・市場構造の話」へ移っている。ホワイトハウスのAI指針とECBのAIリスク要求は、企業の実装コストを押し上げる方向で重なる。",
+				"en": "- AI is moving from product story to regulation, security, and market-structure story."
+			},
+			"pairs": [
+				{
+					"en": "- AI is moving from product story to regulation, security, and market-structure story.",
+					"ja": "- AIは「製品の話」から「規制・安全保障・市場構造の話」へ移っている。ホワイトハウスのAI指針とECBのAIリスク要求は、企業の実装コストを押し上げる方向で重なる。"
+				}
+			]
+		},
+		{
+			"id": "tariffs-and-customs-enforcement-are-functioning-as-industrial-policy-not-just-trade-policy",
+			"heading": {
+				"ja": "- 関税と税関執行は、外交政策ではなくサプライチェーンの設計変更を迫る経済政策として機能している。金属、少額輸入、広域関税案が同時に出ている点が重要だ。",
+				"en": "- Tariffs and customs enforcement are functioning as industrial policy, not just trade policy."
+			},
+			"pairs": [
+				{
+					"en": "- Tariffs and customs enforcement are functioning as industrial policy, not just trade policy.",
+					"ja": "- 関税と税関執行は、外交政策ではなくサプライチェーンの設計変更を迫る経済政策として機能している。金属、少額輸入、広域関税案が同時に出ている点が重要だ。"
+				}
+			]
+		},
+		{
+			"id": "middle-east-risk-is-now-affecting-equities-oil-and-rate-expectations-at-the-same-time",
+			"heading": {
+				"ja": "- 中東緊張は原油だけでなく、株式のバリュエーションと金利観測にも波及している。相場は地政学の見出しに以前より短いタイムラグで反応している。",
+				"en": "- Middle East risk is now affecting equities, oil, and rate expectations at the same time."
+			},
+			"pairs": [
+				{
+					"en": "- Middle East risk is now affecting equities, oil, and rate expectations at the same time.",
+					"ja": "- 中東緊張は原油だけでなく、株式のバリュエーションと金利観測にも波及している。相場は地政学の見出しに以前より短いタイムラグで反応している。"
+				}
+			]
+		},
+		{
+			"id": "the-ai-hardware-trade-is-still-broad-but-it-is-becoming-more-sensitive-to-earnings-misses-and-gu",
+			"heading": {
+				"ja": "- 半導体とAIインフラは、Nvidia本体からMarvell、Broadcom、周辺機器へと評価の裾野が広い。強気相場の持続性は、1社ではなくセクター全体の利益成長で判断される。",
+				"en": "- The AI hardware trade is still broad, but it is becoming more sensitive to earnings misses and guidance."
+			},
+			"pairs": [
+				{
+					"en": "- The AI hardware trade is still broad, but it is becoming more sensitive to earnings misses and guidance.",
+					"ja": "- 半導体とAIインフラは、Nvidia本体からMarvell、Broadcom、周辺機器へと評価の裾野が広い。強気相場の持続性は、1社ではなくセクター全体の利益成長で判断される。"
+				}
+			]
+		},
+		{
+			"id": "whether-the-ai-executive-order-turns-into-agency-level-operating-rules",
+			"heading": {
+				"ja": "- AI大統領令の実装が、各省庁の調達や評価基準まで落ちるかどうか。",
+				"en": "- Whether the AI executive order turns into agency-level operating rules."
+			},
+			"pairs": [
+				{
+					"en": "- Whether the AI executive order turns into agency-level operating rules.",
+					"ja": "- AI大統領令の実装が、各省庁の調達や評価基準まで落ちるかどうか。"
+				}
+			]
+		},
+		{
+			"id": "whether-the-60-economy-tariff-proposal-becomes-a-real-rate-schedule",
+			"heading": {
+				"ja": "- 60経済圏向け関税案が、交渉材料で終わるのか、実際の税率として発効するのか。",
+				"en": "- Whether the 60-economy tariff proposal becomes a real rate schedule."
+			},
+			"pairs": [
+				{
+					"en": "- Whether the 60-economy tariff proposal becomes a real rate schedule.",
+					"ja": "- 60経済圏向け関税案が、交渉材料で終わるのか、実際の税率として発効するのか。"
+				}
+			]
+		},
+		{
+			"id": "whether-jobs-data-changes-the-fed-path-and-the-current-stock-rally",
+			"heading": {
+				"ja": "- 雇用統計が金利期待を動かし、株高を支えるか、それとも利下げ後ずれで崩すか。",
+				"en": "- Whether jobs data changes the Fed path and the current stock rally."
+			},
+			"pairs": [
+				{
+					"en": "- Whether jobs data changes the Fed path and the current stock rally.",
+					"ja": "- 雇用統計が金利期待を動かし、株高を支えるか、それとも利下げ後ずれで崩すか。"
+				}
+			]
+		},
+		{
+			"id": "whether-oil-keeps-the-inflation-narrative-alive-beyond-a-one-day-spike",
+			"heading": {
+				"ja": "- 中東情勢と原油高が、インフレ見通しにどこまで恒常的な上振れを与えるか。",
+				"en": "- Whether oil keeps the inflation narrative alive beyond a one-day spike."
+			},
+			"pairs": [
+				{
+					"en": "- Whether oil keeps the inflation narrative alive beyond a one-day spike.",
+					"ja": "- 中東情勢と原油高が、インフレ見通しにどこまで恒常的な上振れを与えるか。"
+				}
+			]
+		},
+		{
+			"id": "whether-ai-infrastructure-names-can-justify-current-valuations-with-actual-earnings",
+			"heading": {
+				"ja": "- AI相場の周辺銘柄が、ガイダンスと受注で現在の高い期待値を正当化できるか。",
+				"en": "- Whether AI infrastructure names can justify current valuations with actual earnings."
+			},
+			"pairs": [
+				{
+					"en": "- Whether AI infrastructure names can justify current valuations with actual earnings.",
+					"ja": "- AI相場の周辺銘柄が、ガイダンスと受注で現在の高い期待値を正当化できるか。"
+				}
+			]
+		}
+	]
+}

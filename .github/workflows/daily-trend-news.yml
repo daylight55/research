@@ -266,7 +266,8 @@ jobs:
           fi
           for localized_article_path in "articles/news/${SLUG}"/{ja,en}/index.mdx; do
             if [[ ! -f "${localized_article_path}" ]]; then
-              continue
+              echo "::error file=${localized_article_path}::Generated news article must include both Japanese and English localized articles."
+              exit 1
             fi
             localized_title="$(
               awk '
@@ -303,6 +304,10 @@ jobs:
               fi
             done
           done
+          if [[ ! -f "articles/news/${SLUG}/mix-alignment.json" ]]; then
+            echo "::error file=articles/news/${SLUG}/mix-alignment.json::Generated bilingual news must include mix-alignment.json for MIX article display."
+            exit 1
+          fi
           if [[ "${article_title}" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]]+ホットトレンド[:：][[:space:]]*政治・経済・技術$ ]]; then
             echo "::error::News article title must summarize the day's overall situation instead of listing generic categories."
             exit 1
@@ -458,6 +463,10 @@ jobs:
       - name: Verify unique hero images
         if: steps.diff_check.outputs.has_changes == 'true'
         run: pnpm test:hero-images
+
+      - name: Verify generated mixed news alignment
+        if: steps.diff_check.outputs.has_changes == 'true'
+        run: node ops/scripts/validate-mix-alignment.mjs --changed
 
       - name: Build generated site
         if: steps.diff_check.outputs.has_changes == 'true'

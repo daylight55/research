@@ -48,7 +48,6 @@ jobs:
         run: node ops/scripts/validate-mix-alignment.mjs --changed origin/${{ github.base_ref }}...HEAD
 
       - name: Validate all mixed article alignment
-        if: github.event_name != 'pull_request'
         run: node ops/scripts/validate-mix-alignment.mjs
 
       - name: Build site

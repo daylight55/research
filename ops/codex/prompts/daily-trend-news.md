@@ -24,8 +24,9 @@ policy, business, and practical decisions.
 ## Repository Rules
 
 - Follow `AGENTS.md`.
-- Write the reader-facing article body directly in
-  `articles/news/daily-trends-<YYYY-MM-DD>/ja/index.mdx`.
+- Write the reader-facing article bodies directly in
+  `articles/news/daily-trends-<YYYY-MM-DD>/ja/index.mdx` and
+  `articles/news/daily-trends-<YYYY-MM-DD>/en/index.mdx`.
 - Use `ops/codex/templates/news-digest.mdx` as the required article shape.
 - Keep the frontmatter fields from the News template, including
   `contentType: news`, `category: tech-news`, `rssSummary`, and
@@ -63,6 +64,9 @@ policy, business, and practical decisions.
   instruction: research date, topic hint if present, category/count constraints,
   recency window, and the intended deliverable. In English logs, use the
   corresponding headings `## Environment` and `## Research Instruction`.
+- Create `articles/news/daily-trends-<YYYY-MM-DD>/mix-alignment.json` for MIX
+  display. Use `version: 1`, `sourceLocale: ja`, `targetLocale: en`, and enough
+  Japanese/English sentence pairs to satisfy `ops/scripts/validate-mix-alignment.mjs`.
 - Confirm the public trail is reachable from
   `/news/daily-trends-<YYYY-MM-DD>/research/`.
 
@@ -219,6 +223,8 @@ Run focused verification before finishing:
 - Confirm every `NewsSourceCard` has `imageUrl` and `imageAlt`.
 - Confirm every localized MDX article has exactly three balanced
   `NewsDigestSection` blocks: one politics, one economy, and one technology.
+- Confirm `mix-alignment.json` exists for MIX display and covers the generated
+  English article.
 - Confirm `NewsSourceCard` `imageUrl` values are unique within the article after
   ignoring query strings.
 - Confirm `heroImageQuery` is specific to people, organizations, companies,

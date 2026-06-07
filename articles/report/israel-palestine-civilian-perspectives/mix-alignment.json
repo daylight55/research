@@ -1,0 +1,296 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "The Israel-Palestine conflict is not explained by territory, diplomacy, and military power alone.",
+          "ja": "イスラエル・パレスチナ問題は、領土、軍事、外交だけでなく、市民が何を恐れ、何を失い、何を記憶し、どの範囲まで日常を維持できるかで形が決まる。"
+        },
+        {
+          "en": "It is also shaped by what civilians fear, what they lose, what they remember, and how much ordinary life they can still preserve.",
+          "ja": "ここでいう市民感情は、心理学的な診断ではなく、公開情報から読める公共感情、集団記憶、生活上の恐怖、政治への信頼・不信の束として扱うほうが実務的である。"
+        },
+        {
+          "en": "The most important finding is that the two sides' civilian emotions are not symmetrical, but they do mirror each other.",
+          "ja": "最も重要なのは、双方の市民感情が「対称」ではないのに、互いに鏡像化している点である。"
+        },
+        {
+          "en": "On the Israeli side, the October 7, 2023 attack, the war that followed, rocket threats, reserve duty, and hostage anxiety made national security feel almost identical to personal safety.",
+          "ja": "イスラエル側では、2023年10月7日の攻撃とその後の戦争、ロケット脅威、予備役負担、拉致人質の不安が、国家の安全と個人の安全をほぼ同義に見せた。"
+        },
+        {
+          "en": "On the Palestinian side, blockade, occupation, airstrikes, checkpoints, home demolitions, arrest, and forced displacement have turned daily life itself into a political condition.",
+          "ja": "パレスチナ側では、封鎖、占領、空爆、検問、家屋破壊、逮捕、強制移動が、日常そのものを政治に変えてきた。"
+        },
+        {
+          "en": "Third, there is no single Palestinian public and no single Israeli public.",
+          "ja": "第三に、パレスチナ市民は一枚岩ではない。"
+        },
+        {
+          "en": "The practical value of this perspective is simple: it helps explain why compromise is so hard without justifying violence.",
+          "ja": "結論として、この問題を市民感情から読む意味は、暴力の正当化を避けつつ、なぜ妥協が難しいのかを説明できることにある。"
+        }
+      ]
+    },
+    {
+      "id": "what-counts",
+      "heading": {
+        "ja": "2. 何を「市民感情」として読むか",
+        "en": "2. What Counts as \"Civilian Sentiment\""
+      },
+      "pairs": [
+        {
+          "en": "Civilian sentiment here is not a simple average of anger and sadness.",
+          "ja": "ここでの市民感情は、怒りや悲しみの単純な平均ではない。"
+        },
+        {
+          "en": "It is a practical concept that brings together intergenerational memory, family loss, movement restrictions, school and workplace experience, social-media mistrust, and the political preferences visible in polls.",
+          "ja": "何世代にもわたる記憶、家族の喪失、移動制限、学校や職場での経験、SNS 上の相互不信、選挙や世論調査に表れる政治的選好をまとめて読むための概念である。"
+        },
+        {
+          "en": "The reason to use this lens is that sentiment is not a side effect of politics.",
+          "ja": "この視点を取る理由は、感情が政治の副産物ではなく、政治そのものを動かす入力だからだ。"
+        },
+        {
+          "en": "It is part of the mechanism that moves politics.",
+          "ja": "恐怖が強いほど、人々は安全保障を優先し、相手を危険源として読みやすくなる。"
+        },
+        {
+          "en": "Reading sentiment is therefore a practical way to inspect the inputs that shape political behavior.",
+          "ja": "したがって、市民感情を追うことは「感傷的」なのではなく、政治行動の前提を確認する実務的な方法である。"
+        }
+      ]
+    },
+    {
+      "id": "historical-backbone",
+      "heading": {
+        "ja": "3. 歴史の骨格",
+        "en": "3. The Historical Backbone"
+      },
+      "pairs": [
+        {
+          "en": "The fastest way to understand the conflict is through the 1947 partition plan, the 1948 war and refugee displacement, the 1967 war and occupation, the 1993 Oslo process, the Gaza blockade from 2007 onward, and the October 7, 2023 attack and subsequent war.",
+          "ja": "この問題の歴史は、1947 年の分割案、1948 年戦争と難民化、1967 年戦争と占領、1993 年のオスロ合意、2007 年以降のガザ封鎖、そして 2023 年 10 月 7 日の攻撃とその後の戦争を通して理解するのが早い。"
+        },
+        {
+          "en": "The 1948 refugee experience is the starting point for today's diaspora and neighboring-country publics, while the 1967 occupation has structurally constrained everyday life in the West Bank and East Jerusalem ever since.",
+          "ja": "特に 1948 年の難民化は、現在のディアスポラと周辺国の感情を作る出発点であり、1967 年以降の占領は、ヨルダン川西岸と東エルサレムの生活を構造的に制約してきた。"
+        },
+        {
+          "en": "Oslo opened a framework for mutual recognition and interim administration, but it did not resolve sovereignty.",
+          "ja": "1993 年のオスロは、相互承認と暫定統治の枠組みを開いたが、主権の最終決着には至らなかった。"
+        },
+        {
+          "en": "Since the 2000s, settlement expansion, fragmentation, checkpoints, the Gaza blockade, rocket fire, and repeated military operations have shaped daily life more than peace language has.",
+          "ja": "2000 年代以降は、入植、分断、検問、ガザの封鎖、ロケット攻撃と軍事作戦の反復が、和平の言葉よりも日常の現実を規定した。"
+        },
+        {
+          "en": "The 2024 ICJ advisory opinion made the legal character of occupation, and the problem of permanent control over the occupied territory including East Jerusalem, visible again.",
+          "ja": "2024 年の ICJ 勧告的意見は、占領の法的性格と、東エルサレムを含む被占領地における永続的支配の問題を改めて可視化した。"
+        }
+      ]
+    },
+    {
+      "id": "four-layers",
+      "heading": {
+        "ja": "4. 市民感情の四つの層",
+        "en": "4. Four Layers of Civilian Sentiment"
+      },
+      "pairs": [
+        {
+          "en": "This table shows that \"Israel\" and \"Palestine\" conceal very different living conditions.",
+          "ja": "この表は、同じ「パレスチナ」「イスラエル」という語が、実際には異なる生活条件を隠すことを示している。"
+        },
+        {
+          "en": "A Palestinian citizen of Israel does not live under the same legal and spatial constraints as a Gaza resident, and a Gaza resident does not live under the same constraints as someone in the West Bank.",
+          "ja": "たとえばイスラエル国籍のパレスチナ系市民は、ガザ住民とは法的地位が違い、ガザ住民は西岸住民とも制約の形が違う。"
+        },
+        {
+          "en": "For Jewish citizens of Israel, the core feeling is the collapse of safety.",
+          "ja": "イスラエルのユダヤ系市民にとって中心にあるのは、安全の崩れである。"
+        },
+        {
+          "en": "Hostages make national military action and civilian emotion almost inseparable.",
+          "ja": "人質の存在は、国家の軍事行動と市民の感情を強く結びつける。"
+        },
+        {
+          "en": "For Palestinian citizens of Israel, the key experience is living inside the same state while seeing both its security logic and the pressure it places on minority life.",
+          "ja": "イスラエル国籍のパレスチナ系市民は、同じ国家の中にいながら、国家の語る安全保障と、自分たちの日常が受ける治安圧力の両方を見ている。"
+        },
+        {
+          "en": "For Palestinians in Gaza and the West Bank, the core feeling is uncertainty about movement and survival.",
+          "ja": "ガザと西岸のパレスチナ市民にとって中心にあるのは、移動と生存の不確実性である。"
+        },
+        {
+          "en": "For diaspora communities and neighboring publics, the emotional update comes from the persistence of a state of \"cannot return.\"",
+          "ja": "ディアスポラと周辺国の住民は、戦争そのものより「帰れない状態」の継続で感情が更新される。"
+        }
+      ]
+    },
+    {
+      "id": "everyday-pressure",
+      "heading": {
+        "ja": "5. 日常生活への圧力",
+        "en": "5. Pressure on Everyday Life"
+      },
+      "pairs": [
+        {
+          "en": "To understand civilian sentiment, it is better to study daily movement than battlefield maps.",
+          "ja": "市民感情を理解するには、戦場の地図より生活の動線を見るほうがよい。"
+        },
+        {
+          "en": "In Gaza, housing loss, repeated displacement, shortages of food and water, unstable electricity and communications, and the inability of schools and hospitals to function normally update sentiment every day.",
+          "ja": "ガザでは、住居喪失、避難の反復、食料と水の不足、電力・通信の不安定、学校と病院の継続困難が、感情を毎日更新している。"
+        },
+        {
+          "en": "In the West Bank, movement restrictions, military operations, settler violence, arrest, and home demolition keep breaking long-term plans.",
+          "ja": "西岸では、移動制限、軍事作戦、入植者暴力、逮捕、家屋取り壊しが、将来の計画を壊し続ける。"
+        },
+        {
+          "en": "On the Israeli side, evacuation, alerts, reserve mobilization, grief, and political division also disrupt the rhythm of ordinary life.",
+          "ja": "イスラエル側でも、避難、警報、予備役動員、喪失、政治的分裂が、日常生活のリズムを崩す。"
+        },
+        {
+          "en": "OCHA's 2026 updates still describe Gaza's humanitarian situation as extremely severe, while displacement and violence continue in the West Bank.",
+          "ja": "2026 年時点の OCHA の更新では、ガザの人道状況は依然として極めて厳しく、西岸でも避難と暴力が続いている。"
+        },
+        {
+          "en": "What we are seeing is exhaustion that cannot be reduced to counts alone.",
+          "ja": "ここで起きているのは、被害の量だけでは説明できない疲労である。"
+        }
+      ]
+    },
+    {
+      "id": "polling",
+      "heading": {
+        "ja": "6. 世論調査が示すもの",
+        "en": "6. What Polling Tells Us"
+      },
+      "pairs": [
+        {
+          "en": "Polling does not measure sentiment itself, but it does show which issues are at the front of public consciousness.",
+          "ja": "世論調査は、感情そのものを測る装置ではない。だが、何が政治問題として前面に出ているかはかなりよく映す。"
+        },
+        {
+          "en": "In the July 2024 joint PCPSR-Tel Aviv University survey, both Israelis and Palestinians showed deep mistrust and mirror-image fears of genocide.",
+          "ja": "2024 年 7 月の PCPSR と Tel Aviv University の共同調査では、イスラエル人とパレスチナ人の双方に、相手を人間として見失うほどの不信と、相互に「ジェノサイド」の恐怖が広がっていることが示された。"
+        },
+        {
+          "en": "On the Israeli side, the 2025 IDI survey found that a majority said it was time to end the war, with hostage danger and fatigue as the main reasons.",
+          "ja": "イスラエル側の 2025 年の IDI 調査では、戦争を終わらせる時期が来たとする回答が多数派で、理由として人質の危険と長期化疲れが大きい。"
+        },
+        {
+          "en": "Israeli society therefore contains both a desire to keep fighting and a desire to stop.",
+          "ja": "つまり、イスラエル社会の内部にも、戦争継続を求める感情と、終わらせたい感情が同居している。"
+        },
+        {
+          "en": "On the Palestinian side, the picture is also mixed.",
+          "ja": "パレスチナ側でも、支持や不支持の線は単純ではない。"
+        },
+        {
+          "en": "Polling should therefore be used not to decide who is right, but to read what is making compromise so hard.",
+          "ja": "世論調査は「どちらが正しいか」を決める資料ではなく、何が妥協を難しくしているかを読む資料として使うべきである。"
+        }
+      ]
+    },
+    {
+      "id": "hardening",
+      "heading": {
+        "ja": "7. なぜ感情が政治を硬直させるのか",
+        "en": "7. Why Sentiment Hardens Politics"
+      },
+      "pairs": [
+        {
+          "en": "Sentiment hardens politics not because it is irrational, but because it is tied directly to security, movement, education, return, and trust in governance.",
+          "ja": "感情が政治を硬直させる理由は、感情が非合理だからではない。むしろ、感情が安全保障、移動、教育、帰還、統治への信頼と直結しているからだ。"
+        },
+        {
+          "en": "For people who have lost homes, peace is not an abstract aim but a promise built on top of the fear of losing again.",
+          "ja": "家を失った人にとっては、和平は抽象的な目標ではなく、再び失うかもしれない不安の上に乗る。"
+        },
+        {
+          "en": "For people who have experienced hostages or rocket alerts, compromise is also a calculation about recurrence risk.",
+          "ja": "人質やロケット警報を経験した人にとっても、譲歩は抽象論ではなく、再発リスクの計算になる。"
+        },
+        {
+          "en": "The loop moves in both directions, but in different forms.",
+          "ja": "この循環は、双方で形を変えながら同時に進む。"
+        },
+        {
+          "en": "Publicly available information suggests that authorities tend to prioritize fragmented surveillance and punishment over symbolic concessions.",
+          "ja": "公表情報からの推定として、当局は象徴的な譲歩より、監視と処罰の細分化を優先しやすい。"
+        },
+        {
+          "en": "Sentiment is therefore both a target of manipulation and a record of structure.",
+          "ja": "こうして、感情は政治の土台であると同時に、政治が感情を再生産する装置にもなる。"
+        }
+      ]
+    },
+    {
+      "id": "implications",
+      "heading": {
+        "ja": "8. 実務上の含意",
+        "en": "8. Practical Implications"
+      },
+      "pairs": [
+        {
+          "en": "Practitioners need to separate at least four issues.",
+          "ja": "この問題を扱う実務者は、少なくとも次の 4 点を分けて考える必要がある。"
+        },
+        {
+          "en": "If these are not separated, even the phrase \"peace support\" becomes ambiguous.",
+          "ja": "この分け方をしないと、同じ「和平支援」でも、誰の恐怖を和らげ、誰の喪失を再固定化するのかが見えない。"
+        },
+        {
+          "en": "For Japan's diplomacy, humanitarian assistance, academic cooperation, and corporate compliance, Gaza, the West Bank, Palestinian citizens of Israel, and diaspora communities should not be placed in one box.",
+          "ja": "日本の外交・人道支援・学術連携・企業コンプライアンスでも、ガザ、西岸、イスラエル国籍のパレスチナ系市民、ディアスポラを同じ箱に入れないことが重要である。"
+        },
+        {
+          "en": "A useful way to think about peace is not only as a border agreement, but as a process that restores the reversibility of daily life.",
+          "ja": "実務的に有効なのは、和平を「国境線の合意」だけでなく、「日常の可逆性」を回復する工程として見ることだ。"
+        },
+        {
+          "en": "This is not idealism.",
+          "ja": "これは理想論ではなく、停戦や復興の持続条件である。"
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "heading": {
+        "ja": "9. 限界と監視ポイント",
+        "en": "9. Limits and Monitoring Points"
+      },
+      "pairs": [
+        {
+          "en": "This kind of report has clear limits.",
+          "ja": "この種の報告には限界がある。"
+        },
+        {
+          "en": "UN, NGO, local media, and polling organizations reach different populations.",
+          "ja": "UN、NGO、現地メディア、世論調査は、それぞれ到達できる人々が違う。"
+        },
+        {
+          "en": "The most important signals to monitor next are:",
+          "ja": "今後の監視ポイントは、少なくとも次の 5 つである。"
+        },
+        {
+          "en": "If these five signals do not improve, civilian sentiment will be slow to recover even if a peace text exists.",
+          "ja": "もしこの 5 点が改善しないなら、和平文書があっても市民感情は回復しにくい。"
+        },
+        {
+          "en": "If they do improve, the effects of legal and diplomatic agreements can finally reach everyday life.",
+          "ja": "逆に、ここが改善すれば、法的・外交的な合意の効果はようやく生活に降りてくる。"
+        }
+      ]
+    }
+  ]
+}

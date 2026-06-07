@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "直近48時間は、関税と通商交渉が政治の不確実性を広げる一方で、雇用統計と金利観測が市場の再評価を促し、AI関連の機能更新とクラウド契約が製品競争をさらに押し上げた。",
+      "en": "The last 48 hours showed tariffs and trade talks widening political uncertainty, while jobs data and rate expectations pushed markets to reprice risk and AI product updates and cloud contracts kept product competition moving."
+    },
+    {
+      "ja": "USTRは、強制労働への対応が不十分だとして60の経済圏に追加関税案を示し、7月の意見募集に入った。",
+      "en": "USTR proposed extra tariffs on imports tied to forced-labor enforcement gaps across 60 economies and opened a July comment window."
+    },
+    {
+      "ja": "関税の論点が個別国対応からサプライチェーン全体のコンプライアンスに広がっており、輸出企業の見通しを一段と不安定にする。",
+      "en": "Trade pressure is now broader than a single country case, which makes supply-chain compliance a larger policy and earnings risk."
+    },
+    {
+      "ja": "米通商当局は、ブラジルからの輸入に25%関税を課す案を示し、デジタル貿易や市場アクセスをめぐる不満を表面化させた。",
+      "en": "U.S. trade officials proposed a 25% tariff on Brazilian imports and brought digital trade, market access, and other grievances into the open."
+    },
+    {
+      "ja": "ブラジルは供給網と農産品輸出の双方で影響が大きく、関税がそのまま政治問題と企業収益の問題に重なる。",
+      "en": "Brazil sits in both supply chains and agricultural exports, so the tariff question quickly becomes a political and corporate earnings issue."
+    },
+    {
+      "ja": "欧州議会の委員会は、米国製品への関税を外して通商摩擦の再燃を避ける方向に進んだ。",
+      "en": "A European Parliament committee moved to remove tariffs on U.S. goods and avoid a renewed trade clash."
+    },
+    {
+      "ja": "EU側の調整は、米国との関税報復合戦を抑えるだけでなく、他の通商案件にも連鎖する。",
+      "en": "The EU move could cool retaliation pressure and spill into other trade files."
+    },
+    {
+      "ja": "米最高裁は、FCCとSECに有利な判断を示し、連邦規制当局の手続きを支える流れを強めた。",
+      "en": "The U.S. Supreme Court issued decisions that favored the FCC and SEC and reinforced the procedural position of federal regulators."
+    },
+    {
+      "ja": "規制当局の執行力が維持されると、通信、証券、テック周辺の企業は訴訟戦略を見直す必要が出る。",
+      "en": "If regulators keep their enforcement edge, telecom, securities, and tech-adjacent companies will need to revisit litigation strategy."
+    },
+    {
+      "ja": "インド通商相は、米印貿易合意の第1弾が7月中旬までにまとまる可能性を示し、交渉が大詰めに近いことを示唆した。",
+      "en": "India's trade minister suggested that the first tranche of a U.S.-India trade deal could be done by mid-July."
+    },
+    {
+      "ja": "対米交渉は関税回避だけでなく、IT、製造業、農産品の輸出条件を左右する。",
+      "en": "The talks affect tariff relief as well as export conditions for IT, manufacturing, and farm goods."
+    },
+    {
+      "ja": "5月の米雇用統計は非農業部門雇用者数が17.2万人増となり、失業率は4.3%で横ばいだった。",
+      "en": "The May U.S. jobs report showed 172,000 nonfarm payroll gains and a flat 4.3% unemployment rate."
+    },
+    {
+      "ja": "景気減速の警戒が残るなかでも雇用の底堅さが確認され、利下げ時期の見方を遅らせる材料になる。",
+      "en": "That kind of resilience slows the case for early rate cuts and keeps the soft-landing debate alive."
+    },
+    {
+      "ja": "ECBは来週の会合を前に、インフレ再加速への警戒を軸に利上げ観測が強まっている。",
+      "en": "The ECB heads into next week's meeting with renewed attention on whether inflation pressure is strong enough to justify a hike."
+    },
+    {
+      "ja": "欧州金利の方向感は、ユーロ圏の住宅ローンや企業投資だけでなく、ドルとの金利差にも影響する。",
+      "en": "Eurozone rates affect mortgages, corporate investment, and the dollar-euro spread."
+    },
+    {
+      "ja": "インド準備銀行は主要政策金利を5.25%で据え置き、通貨安と成長の両方をにらむ姿勢を続けた。",
+      "en": "The Reserve Bank of India held its main policy rate at 5.25% and kept balancing currency weakness against growth concerns."
+    },
+    {
+      "ja": "新興国の金利据え置きは資本流出リスクと輸入インフレのバランスを反映し、アジア市場にも波及する。",
+      "en": "A hold in an emerging market can still move capital flows, imported inflation, and Asian market sentiment."
+    },
+    {
+      "ja": "HPEとAlphabetを起点にAI投資の追い風が意識され、米株は高値圏を試した。",
+      "en": "AI-related spending hopes tied to HPE and Alphabet helped push U.S. equities to fresh highs."
+    },
+    {
+      "ja": "AI関連の設備投資が、単なるテーマ株ではなく指数全体の相場けん引役になっている。",
+      "en": "AI capex is no longer just a stock-picking theme; it is becoming a market-wide driver."
+    },
+    {
+      "ja": "AI向けデータセンター投資が拡大するなかで、インフレ気味の国債市場にまで波紋が広がった。",
+      "en": "Data-center investment for AI is spilling into an inflation-sensitive Treasury market."
+    },
+    {
+      "ja": "生成AIの投資ブームは株式だけでなく、長期金利や資金調達コストにも直接効く。",
+      "en": "The AI boom is now touching long rates and the cost of capital, not just equities."
+    },
+    {
+      "ja": "NVIDIAはRTX Sparkを軸に、Windows PCをローカルAI端末として使う流れを押し出した。",
+      "en": "NVIDIA pushed RTX Spark as a way to turn Windows PCs into local AI devices."
+    },
+    {
+      "ja": "クラウド依存を減らす方向は、端末更新サイクルとAI推論コストの両方に影響する。",
+      "en": "Moving inference away from the cloud changes both device upgrade cycles and AI compute economics."
+    },
+    {
+      "ja": "Metaは、広告対応や営業支援を自動化する法人向けAI Business Agentを打ち出した。",
+      "en": "Meta introduced a business AI agent for automated ad replies and sales support."
+    },
+    {
+      "ja": "生成AIの競争はチャット機能から業務自動化へ移っており、広告収益との接続が強い。",
+      "en": "The AI race is moving from chat features toward workflow automation, which is tightly linked to ad revenue."
+    },
+    {
+      "ja": "MetaのAIチャットボットに関する侵害が報じられ、自動化の安全設計が改めて問われた。",
+      "en": "A reported breach involving Meta's AI chatbot renewed concern about how automation is being secured."
+    },
+    {
+      "ja": "生成AIは導入速度が速いほど、権限管理とログ監査の弱さがそのまま事故につながる。",
+      "en": "Fast deployment without strong access controls or logging can turn a product win into an incident."
+    },
+    {
+      "ja": "OpenAIはChatGPTのMemoryを強化し、Active sessionsの管理も更新した。",
+      "en": "OpenAI upgraded ChatGPT Memory and updated active sessions management."
+    },
+    {
+      "ja": "個人化の精度が上がるほど、利便性とプライバシーの線引きが製品評価の中心になる。",
+      "en": "Better personalization raises the value of the product, but it also makes privacy boundaries more visible."
+    },
+    {
+      "ja": "SpaceXはGoogleとのクラウド契約をSEC開示で示し、計算資源の確保を進めた。",
+      "en": "SpaceX disclosed a cloud contract with Google in an SEC filing, signaling a push to secure more compute capacity."
+    },
+    {
+      "ja": "宇宙・通信・クラウドの連携は、AI計算資源の調達先をめぐる競争を広げる。",
+      "en": "The link between space, connectivity, and cloud services keeps widening the competition for AI compute supply."
+    },
+    {
+      "ja": "関税と司法判断が同時に動き、通商と規制の不確実性が政策リスクとして再び前面に出た。",
+      "en": "Tariffs and court rulings moved at the same time, putting trade and regulatory uncertainty back in the center of policy risk."
+    },
+    {
+      "ja": "雇用統計は底堅さを示したが、ECBやRBIの金利判断はなおインフレと成長の綱引きにある。",
+      "en": "Jobs data showed resilience, but ECB and RBI decisions still sit in a tug of war between inflation and growth."
+    },
+    {
+      "ja": "AI投資は株高の追い風になる一方で、国債市場と設備投資の資金需要を通じて金利にも跳ね返っている。",
+      "en": "AI spending is helping equities, yet it also feeds directly into Treasury yields and financing costs through data-center demand."
+    },
+    {
+      "ja": "製品側では、AIの機能拡張と安全性の失敗が同時に進み、導入速度だけでは競争優位にならなくなっている。",
+      "en": "On the product side, AI capability gains and security failures are advancing together, so speed alone is no longer a durable edge."
+    },
+    {
+      "ja": "米印通商交渉の初弾が本当に7月中旬にまとまるか。",
+      "en": "Whether the first U.S.-India trade tranche really closes by mid-July."
+    },
+    {
+      "ja": "ECBが来週の会合で利上げに踏み込むのか、それともインフレ警戒を強めるだけで終わるのか。",
+      "en": "Whether the ECB actually hikes next week or just toughens its inflation language."
+    },
+    {
+      "ja": "OpenAI、Meta、SpaceX関連の更新が、機能追加だけでなく安全性と運用負荷の面でも継続的に進むか。",
+      "en": "Whether OpenAI, Meta, and SpaceX-linked updates keep improving capability without adding more operational and security burden."
+    }
+  ]
+}

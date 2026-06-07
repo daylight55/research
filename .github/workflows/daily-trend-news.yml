@@ -225,6 +225,11 @@ jobs:
                 perl -0pi -e 's/[ \t]+$//mg; s/\n+\z/\n/s' "${file}"
               done
 
+          mapfile -d '' changed_mdx_files < <(git ls-files --modified --others --exclude-standard -z -- '*.mdx')
+          if (( ${#changed_mdx_files[@]} > 0 )); then
+            pnpm exec prettier --plugin-search-dir=. --check "${changed_mdx_files[@]}"
+          fi
+
           if [[ ! -f "${ARTICLE_PATH}" ]]; then
             echo "::error::Expected generated article was not found: ${ARTICLE_PATH}"
             exit 1
@@ -409,6 +414,30 @@ jobs:
             echo "::error::Generated article contains unresolved placeholders."
             exit 1
           fi
+
+          for localized_log_path in "articles/news/${SLUG}"/{ja,en}/research-log.mdx; do
+            if [[ ! -f "${localized_log_path}" ]]; then
+              echo "::error file=${localized_log_path}::Generated news article must include localized research logs."
+              exit 1
+            fi
+
+            if [[ "${localized_log_path}" == */ja/research-log.mdx ]]; then
+              required_context_heading="## 利用環境"
+              required_instruction_heading="## 調査命令"
+            else
+              required_context_heading="## Environment"
+              required_instruction_heading="## Research Instruction"
+            fi
+
+            if ! grep -qFx "${required_context_heading}" "${localized_log_path}"; then
+              echo "::error file=${localized_log_path}::Research log is missing ${required_context_heading}."
+              exit 1
+            fi
+            if ! grep -qFx "${required_instruction_heading}" "${localized_log_path}"; then
+              echo "::error file=${localized_log_path}::Research log is missing ${required_instruction_heading}."
+              exit 1
+            fi
+          done
 
           # Include newly created files in diff checks without staging contents.
           git add --intent-to-add .

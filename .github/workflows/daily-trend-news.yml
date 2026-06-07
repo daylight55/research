@@ -211,6 +211,156 @@ jobs:
         run: |
           rm -rf ops/codex/runtime codex-output.md
 
+      - name: Preflight generated news article
+        id: generated_news_preflight_1
+        continue-on-error: true
+        shell: bash
+        env:
+          ARTICLE_PATH: ${{ steps.run_context.outputs.article_path }}
+          SLUG: ${{ steps.run_context.outputs.slug }}
+        run: bash ops/scripts/preflight-generated-trend-news.sh
+
+      - name: Prepare generated news repair prompt (attempt 1)
+        if: steps.generated_news_preflight_1.outcome == 'failure' && steps.run_context.outputs.article_exists != 'true'
+        shell: bash
+        env:
+          ARTICLE_PATH: ${{ steps.run_context.outputs.article_path }}
+          SLUG: ${{ steps.run_context.outputs.slug }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p ops/codex/runtime
+          validation_log="${RUNNER_TEMP}/generated-news-preflight-1.log"
+          if ! bash ops/scripts/preflight-generated-trend-news.sh > "${validation_log}" 2>&1; then
+            true
+          fi
+
+          {
+            echo "# Repair Daily Trend News Output"
+            echo
+            echo "The generated Daily Trend News output failed preflight validation before the workflow opened a PR."
+            echo "Fix the existing generated files in-place. Do not restart the article from scratch unless the current files are unusable."
+            echo
+            echo "## Required Files"
+            echo
+            echo "- Article slug: ${SLUG}"
+            echo "- Japanese article: articles/news/${SLUG}/ja/index.mdx"
+            echo "- English article: articles/news/${SLUG}/en/index.mdx"
+            echo "- Japanese research log: articles/news/${SLUG}/ja/research-log.mdx"
+            echo "- English research log: articles/news/${SLUG}/en/research-log.mdx"
+            echo "- MIX alignment: articles/news/${SLUG}/mix-alignment.json"
+            echo
+            echo "## Validation Log"
+            echo
+            echo '```text'
+            cat "${validation_log}"
+            echo '```'
+            echo
+            echo "After editing, run:"
+            echo
+            echo '```bash'
+            echo "ARTICLE_PATH='${ARTICLE_PATH}' SLUG='${SLUG}' bash ops/scripts/preflight-generated-trend-news.sh"
+            echo '```'
+          } > ops/codex/runtime/daily-trend-news-repair-1.md
+
+      - name: Repair generated news article (attempt 1)
+        if: steps.generated_news_preflight_1.outcome == 'failure' && steps.run_context.outputs.article_exists != 'true'
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: ops/codex/runtime/daily-trend-news-repair-1.md
+          output-file: codex-repair-1-output.md
+          safety-strategy: drop-sudo
+          sandbox: workspace-write
+          model: ${{ env.OPENAI_MODEL }}
+          effort: medium
+          allow-bots: true
+
+      - name: Restore Node after repair attempt 1
+        if: steps.generated_news_preflight_1.outcome == 'failure' && steps.run_context.outputs.article_exists != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Preflight generated news article after repair attempt 1
+        id: generated_news_preflight_2
+        if: steps.generated_news_preflight_1.outcome == 'failure' && steps.run_context.outputs.article_exists != 'true'
+        continue-on-error: true
+        shell: bash
+        env:
+          ARTICLE_PATH: ${{ steps.run_context.outputs.article_path }}
+          SLUG: ${{ steps.run_context.outputs.slug }}
+        run: bash ops/scripts/preflight-generated-trend-news.sh
+
+      - name: Prepare generated news repair prompt (attempt 2)
+        if: steps.generated_news_preflight_2.outcome == 'failure' && steps.run_context.outputs.article_exists != 'true'
+        shell: bash
+        env:
+          ARTICLE_PATH: ${{ steps.run_context.outputs.article_path }}
+          SLUG: ${{ steps.run_context.outputs.slug }}
+        run: |
+          set -euo pipefail
+
+          mkdir -p ops/codex/runtime
+          validation_log="${RUNNER_TEMP}/generated-news-preflight-2.log"
+          if ! bash ops/scripts/preflight-generated-trend-news.sh > "${validation_log}" 2>&1; then
+            true
+          fi
+
+          {
+            echo "# Repair Daily Trend News Output"
+            echo
+            echo "This is the second and final automatic repair attempt. Fix only the remaining validation failures."
+            echo
+            echo "## Required Files"
+            echo
+            echo "- Article slug: ${SLUG}"
+            echo "- Japanese article: articles/news/${SLUG}/ja/index.mdx"
+            echo "- English article: articles/news/${SLUG}/en/index.mdx"
+            echo "- Japanese research log: articles/news/${SLUG}/ja/research-log.mdx"
+            echo "- English research log: articles/news/${SLUG}/en/research-log.mdx"
+            echo "- MIX alignment: articles/news/${SLUG}/mix-alignment.json"
+            echo
+            echo "## Validation Log"
+            echo
+            echo '```text'
+            cat "${validation_log}"
+            echo '```'
+            echo
+            echo "After editing, run:"
+            echo
+            echo '```bash'
+            echo "ARTICLE_PATH='${ARTICLE_PATH}' SLUG='${SLUG}' bash ops/scripts/preflight-generated-trend-news.sh"
+            echo '```'
+          } > ops/codex/runtime/daily-trend-news-repair-2.md
+
+      - name: Repair generated news article (attempt 2)
+        if: steps.generated_news_preflight_2.outcome == 'failure' && steps.run_context.outputs.article_exists != 'true'
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: ops/codex/runtime/daily-trend-news-repair-2.md
+          output-file: codex-repair-2-output.md
+          safety-strategy: drop-sudo
+          sandbox: workspace-write
+          model: ${{ env.OPENAI_MODEL }}
+          effort: medium
+          allow-bots: true
+
+      - name: Restore Node after repair attempt 2
+        if: steps.generated_news_preflight_2.outcome == 'failure' && steps.run_context.outputs.article_exists != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Remove repair prompt artifacts
+        if: always()
+        shell: bash
+        run: |
+          rm -rf ops/codex/runtime codex-repair-1-output.md codex-repair-2-output.md
+
       - name: Check generated news article
         id: diff_check
         shell: bash

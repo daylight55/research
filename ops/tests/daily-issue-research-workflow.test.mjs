@@ -382,6 +382,30 @@ assert.match(
 )
 
 assert.match(
+	trendWorkflow,
+	/- name: Preflight generated news article[\s\S]*?continue-on-error: true[\s\S]*?ops\/scripts\/preflight-generated-trend-news\.sh/,
+	'Daily Trend News should run a non-terminal preflight before the strict generated article check'
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Repair generated news article \(attempt 1\)[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?- name: Repair generated news article \(attempt 2\)[\s\S]*?uses: openai\/codex-action@v1/,
+	'Daily Trend News should let Codex repair generated article validation failures twice before failing the workflow'
+)
+
+assert.match(
+	trendWorkflow,
+	/generated_news_preflight_1\.outcome == 'failure'[\s\S]*?daily-trend-news-repair-1\.md[\s\S]*?generated_news_preflight_2\.outcome == 'failure'[\s\S]*?daily-trend-news-repair-2\.md/,
+	'Daily Trend News repair prompts should be created from failed preflight attempts'
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Remove repair prompt artifacts[\s\S]*?rm -rf ops\/codex\/runtime codex-repair-1-output\.md codex-repair-2-output\.md[\s\S]*?- name: Check generated news article/,
+	'Daily Trend News should remove repair prompt artifacts before collecting generated article diffs'
+)
+
+assert.match(
 	testWorkflow,
 	/- name: Validate all mixed article alignment[\s\S]*?run: node ops\/scripts\/validate-mix-alignment\.mjs/,
 	'Test workflow should run full mixed article alignment validation'

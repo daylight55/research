@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "中東の緊張が原油とインフレを押し上げる一方で、選挙、移民政策、そしてAI商用化の話題が同時に進み、政策と市場の判断材料が一気に増えた一日だった。",
+      "en": "The day’s signal is a split screen: geopolitical strain is feeding inflation and oil prices, while elections, fiscal policy, and AI commercialization are moving at the same time."
+    },
+    {
+      "ja": "トランプ政権は移民執行を支える約700億ドルの法案に署名し、ICEとCBPの予算を任期末まで確保した。",
+      "en": "What happened: Trump signed a roughly $70 billion immigration enforcement package that locks ICE and CBP funding through 2029."
+    },
+    {
+      "ja": "米国とイランの対立は追加攻撃と報復でさらに深まり、停戦交渉は続くもののホルムズ海峡の不安が残った。",
+      "en": "What happened: The U.S.-Iran confrontation intensified again, with renewed strikes and still-open diplomacy keeping the Strait of Hormuz and energy flows in focus."
+    },
+    {
+      "ja": "アルメニアではパシニャン首相が再選後も親西側路線を維持する見通しで、対アゼルバイジャン和平が焦点になっている。",
+      "en": "What happened: Armenia’s Nikol Pashinyan remains on a pro-Western track after the election, and the balance between peace with Azerbaijan and distance from Moscow is still the key test."
+    },
+    {
+      "ja": "ペルー大統領選は開票終盤でも僅差が続き、海外票の処理と抗議行動が結果の受容性を左右している。",
+      "en": "What happened: Peru’s presidential race stayed razor thin in the final count, and overseas ballots plus protest pressure are shaping how the result is received."
+    },
+    {
+      "ja": "スイスでは人口1,000万人上限をめぐる住民投票が迫り、移民制限とEU関係のどちらを優先するかが問われている。",
+      "en": "What happened: Switzerland is heading into a referendum on capping the resident population at 10 million, forcing a choice between migration limits and EU ties."
+    },
+    {
+      "ja": "米国の5月CPIは前年比4.2%まで再加速し、エネルギー高が物価と家計心理を同時に圧迫した。",
+      "en": "What happened: U.S. inflation accelerated to 4.2% in May, with energy costs once again doing most of the damage."
+    },
+    {
+      "ja": "原油は再び1バレル92ドル近辺まで反発し、イラン情勢とホルムズ海峡の供給不安が市場を動かした。",
+      "en": "What happened: Oil prices rebounded to around $92 a barrel as the market priced in renewed risk around Iran and the Strait of Hormuz."
+    },
+    {
+      "ja": "Fitchは中東ショックを理由に2026年の世界成長見通しを2.4%へ下方修正した。",
+      "en": "What happened: Fitch cut its 2026 global growth forecast to 2.4%, warning that the Middle East shock is now feeding directly into slower demand."
+    },
+    {
+      "ja": "ドイツ経済はエネルギーショックの余波で技術的リセッション入りのリスクが意識されている。",
+      "en": "What happened: Germany is being warned about a technical recession as the energy shock ripples through Europe."
+    },
+    {
+      "ja": "WH Smithは米空港の旅客減少を受けて業績警告を出し、1000万ポンド規模の資金調達でバランスシートを守る構えを示した。",
+      "en": "What happened: WH Smith issued a profit warning after weaker U.S. airport traffic, then moved to shore up its balance sheet with a fresh fund raise."
+    },
+    {
+      "ja": "VisaはChatGPTに決済網をつなぎ、AIエージェントが商品選択から購入まで進める商用モデルを現実に近づけた。",
+      "en": "What happened: Visa plugged its payments network into ChatGPT, letting AI agents move from recommendation to checkout."
+    },
+    {
+      "ja": "OpenAIは上場準備の機密書類を提出し、巨大AI企業の資金調達が私募市場から公開市場へ移る可能性を示した。",
+      "en": "What happened: OpenAI filed confidential IPO paperwork, signaling that the biggest AI firms may be moving from private fundraising into public markets."
+    },
+    {
+      "ja": "AppleはWWDCでSiri AIを前面に出し、Google Gemini系の技術を取り込む形で音声アシスタントの再設計を進めた。",
+      "en": "What happened: Apple used WWDC to put Siri AI at the center of its next software cycle, including technology linked to Google Gemini."
+    },
+    {
+      "ja": "Microsoftの6月Patch Tuesdayは200件の脆弱性を修正し、ゼロデイ3件を含むため迅速な更新が必要になった。",
+      "en": "What happened: Microsoft’s June Patch Tuesday fixed 200 vulnerabilities, including three zero-days that need immediate attention."
+    },
+    {
+      "ja": "FIFAワールドカップではGoogle Geminiの活用が進み、選手分析とファン向け生成体験が大規模イベントの実運用で試されている。",
+      "en": "What happened: Google’s work with FIFA is turning the 2026 World Cup into a live test case for AI-assisted analysis and fan experiences."
+    },
+    {
+      "ja": "生成AIの競争軸が対話品質だけでなく、実際の売買と収益化に移っている。",
+      "en": "Why it matters: The AI race is shifting from conversational quality to actual transactions and revenue capture."
+    },
+    {
+      "ja": "中東の軍事・外交リスクが原油を通じて物価と成長率に波及し、政治と経済の境界がさらに薄くなっている。",
+      "en": "Geopolitics is no longer separate from macro data; it is now a direct input into inflation, rates, and growth forecasts."
+    },
+    {
+      "ja": "選挙と住民投票は、移民、対外関係、治安の争点が国内政治を直接左右する局面を示している。",
+      "en": "Elections and referendums are showing how migration, external relations, and security concerns now shape domestic policy directly."
+    },
+    {
+      "ja": "AIは説明段階を超え、決済、上場準備、OS設計、スポーツ運営に入り始めている。",
+      "en": "AI is moving beyond demos into payments, operating systems, and large-scale event operations."
+    },
+    {
+      "ja": "企業側は拡張だけでなく、セキュリティ更新や資本増強のような防御的手当ても同時に進めている。",
+      "en": "The common corporate response is to pair ambition with controls, whether that means payment limits, security patches, or capital raises."
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "The practical takeaway is simple.",
+          "ja": "クルド問題は、単一の「クルド民族 vs 各国政府」という一本線では読めない。"
+        },
+        {
+          "en": "In Turkey it is a problem of insurgency and domestic integration; in Syria it is a question of autonomy inside postwar state reconstruction; in Iraq it is a problem of federalism, oil, and security; and in Iran it is mainly a problem of regime security and fragmented opposition.",
+          "ja": "トルコでは反乱鎮圧と国内統合の問題、シリアでは内戦後の自治と国家再建の問題、イラクでは連邦制と石油・治安の問題、イランでは治安維持と反体制勢力の分断の問題として現れる。"
+        },
+        {
+          "en": "As of 2026, Syria's post-Assad transition, the PKK's 2025 decision to dissolve and disarm, and the slow implementation of Damascus-SDF integration talks have changed the regional baseline.",
+          "ja": "2026 年時点では、アサド政権崩壊後のシリア再編、PKK の解散・武装解除決定、SDF とダマスカスの統合交渉の停滞が重なり、地域全体の前提が 2010 年代とは変わっている。"
+        },
+        {
+          "en": "Kurds live across four states, but their legal status, armed organizations, party systems, and room for autonomy differ sharply by country.",
+          "ja": "クルド人は四カ国にまたがって暮らすが、各国で法的位置、武装組織、政党、自治の可能性が異なる。"
+        },
+        {
+          "en": "The right question is not \"Who are the Kurds?\" but \"Which state, which institution, which armed actor, and which social pressure is colliding in which place?\"",
+          "ja": "したがって、政策判断では「クルド人は誰か」よりも、「どの国で、どの制度、どの武装主体、どの生活圧力が衝突しているか」を先に分けるべきである。"
+        },
+        {
+          "en": "The practical takeaway is simple.",
+          "ja": "実務上の要点は三つある。"
+        },
+        {
+          "en": "Refugee flows, autonomy claims, counterterrorism, and border control are linked, so a move in one arena spills into the others.",
+          "ja": "難民、自治、対テロ、国境管理は相互に連動しており、どこか一つを動かすと他の現場に波及する。"
+        }
+      ]
+    },
+    {
+      "id": "historical-backbone",
+      "heading": {
+        "ja": "2. 歴史の骨格",
+        "en": "2. Historical Backbone"
+      },
+      "pairs": [
+        {
+          "en": "After the collapse of the Ottoman Empire, the Kurdish population was split across four states.",
+          "ja": "クルド人は、オスマン帝国崩壊後の国境再編の中で四カ国に分かれた。"
+        },
+        {
+          "en": "The 1920 Treaty of Sèvres pointed toward Kurdish autonomy or even independence, but the 1923 Treaty of Lausanne removed that premise.",
+          "ja": "1920 年のセーヴル条約はクルド自治や独立の可能性を示したが、1923 年のローザンヌ条約ではその前提が消えた。"
+        },
+        {
+          "en": "The modern Middle East was therefore consolidated without a Kurdish state, and that unresolved promise still shapes the issue today.",
+          "ja": "以後の中東秩序はクルド国家を持たないまま固定され、今日の「自決の約束が残ったまま国家化しなかった」起点になった。"
+        },
+        {
+          "en": "Since the 1990s, the issue has multiplied rather than narrowed.",
+          "ja": "1990 年代以降は、PKK の武装闘争、イラク北部の自治強化、シリア内戦後の北東部自治、イラン系クルド反体制勢力の越境拠点化が重なり、クルド問題は一つの正面戦から複数の正面へ拡散した。"
+        },
+        {
+          "en": "The 2025 PKK decision, for example, does not end the issue; it opens a new phase in which fighters, autonomy projects, border control, and returns all have to be re-sorted.",
+          "ja": "2025 年の PKK 解散決定も、それ自体で問題を終わらせるのではなく、残る武装勢力、自治構想、帰還、国境管理の再配置を始める契機に近い。"
+        }
+      ]
+    },
+    {
+      "id": "four-arenas",
+      "heading": {
+        "ja": "3. 4つの現場",
+        "en": "3. Four Arenas"
+      },
+      "pairs": [
+        {
+          "en": "The Kurdish question is closer to four connected arenas than to one front line.",
+          "ja": "クルド問題は一つの戦線ではなく、四つの現場として見るほうが現実に近い。"
+        },
+        {
+          "en": "In Turkey, the Kurdish question has been a security issue since the republic's state-building phase.",
+          "ja": "トルコでは、クルド問題は共和国建設以来の治安問題であり、国内政治の争点でもある。"
+        },
+        {
+          "en": "In Syria, Kurdish self-rule expanded because of civil war and the anti-ISIS campaign.",
+          "ja": "シリアでは、クルド自治は内戦と ISIS 掃討の副産物として拡大した。"
+        },
+        {
+          "en": "In Iraq, the Kurdish question is no longer mainly a rebellion against the state.",
+          "ja": "イラクでは、クルド問題は既に「国家に対する反乱」よりも「連邦制の運用」として現れる。"
+        },
+        {
+          "en": "In Iran, Kurdish politics is squeezed into a narrower space.",
+          "ja": "イランでは、クルド政治はより狭い政治空間に押し込まれる。"
+        },
+        {
+          "en": "Autonomy does not eliminate friction; in some ways it makes the bargaining permanent.",
+          "ja": "自治があるから安定ではなく、自治があるからこそ調整コストが継続する。"
+        }
+      ]
+    },
+    {
+      "id": "syria-turkey-operations",
+      "heading": {
+        "ja": "4. シリア内戦、ISIS、トルコの軍事作戦",
+        "en": "4. Syria, ISIS, and Turkish Military Operations"
+      },
+      "pairs": [
+        {
+          "en": "The Syrian civil war was the main event that pulled the Kurdish question back into regional geopolitics.",
+          "ja": "シリア内戦は、クルド問題を地域政治に引き戻した最大の要因だった。"
+        },
+        {
+          "en": "That was both an expansion of autonomy and a forward-loading of state-like responsibilities.",
+          "ja": "これは自治の拡大であると同時に、統治責任の前倒しでもあった。"
+        },
+        {
+          "en": "Turkey's perspective was the reverse.",
+          "ja": "トルコの見方は逆である。"
+        },
+        {
+          "en": "Cross-border operations since 2016, allegations of abuses after the Afrin occupation, and the remaking of the border zone all pushed Turkish security interests, Syrian sovereignty, and northeastern Syrian autonomy in opposite directions.",
+          "ja": "2016 年以降の越境作戦、アフリン占領後の人権侵害の指摘、国境地帯の再編は、トルコの安全保障とシリアの主権と北東シリアの自治を同時に圧迫した。"
+        },
+        {
+          "en": "The humanitarian backlog also remains unresolved.",
+          "ja": "人道面では、アル・ホールなどの拘束キャンプ、避難、家族再統合、戦闘員と市民の区分けが終わっていない。"
+        },
+        {
+          "en": "The same military action can therefore be described as self-defense, occupation, or stabilization, depending on the actor speaking.",
+          "ja": "ここでは、同じ軍事行動が「自衛」「占領」「治安回復」のどれに見えるかで、評価が大きく割れる。"
+        }
+      ]
+    },
+    {
+      "id": "security-language",
+      "heading": {
+        "ja": "5. 市民感情と国家安全保障言説",
+        "en": "5. Civilian Sentiment and Security Language"
+      },
+      "pairs": [
+        {
+          "en": "The most difficult part of the issue is the clash between civilian lived experience and state security language.",
+          "ja": "この問題で厄介なのは、市民の生活感覚と国家の安全保障言説が正面衝突しやすいことだ。"
+        },
+        {
+          "en": "The Kurdish side is not homogeneous either.",
+          "ja": "ここでの重要点は、クルド人の側にも単一の政治意識はないということだ。"
+        },
+        {
+          "en": "State security language is also not homogeneous.",
+          "ja": "国家側の安全保障言説も一枚岩ではない。"
+        },
+        {
+          "en": "The Kurdish side is not homogeneous either.",
+          "ja": "ここでの重要点は、クルド人の側にも単一の政治意識はないということだ。"
+        },
+        {
+          "en": "Put differently, states are usually less afraid of \"the Kurds\" as an ethnicity than of governance being rewritten from across the border.",
+          "ja": "言い換えると、同じ「クルド問題」でも、国家が恐れているのは民族そのものではなく、自国の統治が他所から上書きされることだ。"
+        }
+      ]
+    },
+    {
+      "id": "practical-implications",
+      "heading": {
+        "ja": "6. 実務上の含意",
+        "en": "6. Practical Implications"
+      },
+      "pairs": [
+        {
+          "en": "For Japanese policymakers and companies, this is not a single \"Middle East ethnic issue\" but a multi-jurisdictional risk problem.",
+          "ja": "日本の政策担当者や企業にとって、このテーマは「中東の民族問題」ではなく、複数国にまたがる制度リスクである。"
+        },
+        {
+          "en": "In sanctions screening and security review, PKK-related, SDF-related, and KRG-related cases need to be reviewed by jurisdiction and by actual control on the ground.",
+          "ja": "安全保障やコンプライアンスでは、PKK 関連、SDF 関連、KRG 関連の案件を、法域ごとに分けて審査する必要がある。"
+        },
+        {
+          "en": "These questions are linked.",
+          "ja": "この四点は互いに独立していない。"
+        },
+        {
+          "en": "Four practical questions matter most.",
+          "ja": "実務的に見るべき論点は四つある。"
+        },
+        {
+          "en": "If Turkey's domestic reconciliation channel narrows, cross-border operations and security pressure will squeeze autonomy spaces elsewhere.",
+          "ja": "逆に、トルコ国内の和解回路が細ると、越境作戦と治安圧力が他国の自治空間をさらに狭める。"
+        },
+        {
+          "en": "If northeastern Syria is reintegrated into central structures, Turkey's border calculus changes.",
+          "ja": "たとえば、シリア北東部が中央政府に再統合されれば、トルコの国境安全保障の計算は変わる。"
+        }
+      ]
+    },
+    {
+      "id": "limits-watchpoints",
+      "heading": {
+        "ja": "7. 限界と監視ポイント",
+        "en": "7. Limits and Watchpoints"
+      },
+      "pairs": [
+        {
+          "en": "The main limitation of this report is that the Kurdish question mixes emotion, security, autonomy, sect, tribe, refugees, and cross-border militancy, so public sources cannot fully reveal internal decision-making.",
+          "ja": "この報告の限界は、クルド問題が感情、治安、自治、宗派、部族、難民、越境武装を同時に含むため、公開情報だけでは内部意思決定を完全に追えない点にある。"
+        },
+        {
+          "en": "The report therefore uses public information as the basis for an informed reading rather than a final verdict.",
+          "ja": "したがって、本文は断定ではなく、公開情報からの推定を含む読みとして使うべきである。"
+        },
+        {
+          "en": "The next watchpoints are straightforward.",
+          "ja": "今後の監視ポイントは次の五つである。"
+        },
+        {
+          "en": "If they do move, the Kurdish question can shift from a frozen ethnic conflict toward a sequence of institutional bargains.",
+          "ja": "逆に、ここが動けば、クルド問題は民族対立の固定化から、制度交渉の問題へ少しずつ移る。"
+        },
+        {
+          "en": "If none of these move, \"resolution\" will remain rhetorical.",
+          "ja": "これらが改善しない限り、地域の「解決」は言葉だけに留まる。"
+        }
+      ]
+    }
+  ]
+}

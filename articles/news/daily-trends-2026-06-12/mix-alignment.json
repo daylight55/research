@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "intro",
+      "pairs": [
+        {
+          "ja": "米国政治の対立、イラン情勢の再緊張、そして主要IT企業のAIとセキュリティ更新が同時に進み、政策と市場の両方で警戒感が高まった一日だった。",
+          "en": "U.S. political conflict, renewed Iran tensions, and major AI and security updates from big tech all moved at once, keeping both policy and market risk on edge."
+        },
+        {
+          "ja": "イラン情勢とホルムズ海峡の懸念が、原油・ECB・住宅金利にまで連鎖し、地政学がそのまま物価と金融政策のテーマになった。",
+          "en": "Iran tensions and the Strait of Hormuz story linked politics, crude prices, ECB policy, and mortgage rates into one inflation narrative."
+        },
+        {
+          "ja": "米国政治の対立、イラン情勢の再緊張、そして主要IT企業のAIとセキュリティ更新が同時に進み、政策と市場の両方で警戒感が高まった一日だった。",
+          "en": "Markets reacted less to one data point than to the combination of geopolitical risk and policy uncertainty."
+        }
+      ]
+    },
+    {
+      "id": "extra",
+      "pairs": [
+        {
+          "ja": "FISA第702条は対外情報収集の中核であり、制度変更は安全保障と市民監視の両面に波及する。",
+          "en": "Section 702 sits at the core of foreign intelligence collection, so any change carries both security and civil-liberties implications."
+        },
+        {
+          "ja": "今の認証は当面続くが、政治的な不確実性は高いままだ。",
+          "en": "The current certification keeps it alive for now, but the political risk remains high."
+        },
+        {
+          "ja": "交渉期待が高まれば原油とリスク資産の動きが和らぐ一方、否定されれば逆方向のボラティリティが強まる。",
+          "en": "If talks gain traction, oil and risk assets can cool quickly; if the claim is rejected, volatility can snap back just as fast."
+        },
+        {
+          "ja": "中東の緊張は市場だけでなく外交日程にも直結する。",
+          "en": "Middle East tension now sits directly on top of the market calendar."
+        },
+        {
+          "ja": "選挙制度は一度動くと長く尾を引き、党内結束の試金石になりやすい。",
+          "en": "Election rules become politically sticky once they move, and they can reshape campaign strategy for years."
+        },
+        {
+          "ja": "今後の法案設計次第で、2026年中間選挙をめぐる攻防にも影響する。",
+          "en": "The bill’s final form could affect the 2026 midterm fight."
+        },
+        {
+          "ja": "移民政策が治安問題に接続すると、地域政治は急速に硬化する。",
+          "en": "When migration policy turns into a public-order issue, local politics can harden very quickly."
+        },
+        {
+          "ja": "英国全体でも、治安と受け入れ政策の両立が難しくなりやすい。",
+          "en": "The Northern Ireland case also echoes wider UK debates over security and integration."
+        },
+        {
+          "ja": "G7は中東や貿易、安全保障の論点を一気に集める場になる。",
+          "en": "G7 meetings quickly pull in Middle East, trade, and security issues, so even the security setup reflects the geopolitical temperature."
+        },
+        {
+          "ja": "会合の前哨段階から厳戒になるのは、国際政治の緊張度を映す。",
+          "en": "A tense pre-summit phase usually signals a difficult agenda."
+        },
+        {
+          "ja": "卸売段階の上振れは、今後のPCEや消費者物価にも波及しやすい。",
+          "en": "Wholesale inflation can flow into the Fed’s preferred PCE gauge and eventually into consumer prices."
+        },
+        {
+          "ja": "FRBの利下げ観測を強める材料にはなりにくい。",
+          "en": "That makes rate-cut expectations harder to justify."
+        },
+        {
+          "ja": "中央銀行の利上げは、成長の鈍化と物価抑制の両方をにらむ難しい判断になる。",
+          "en": "Central-bank tightening changes borrowing costs, investment plans, and the pace of economic growth."
+        },
+        {
+          "ja": "ユーロ圏の借り入れコストと企業投資に直結する。",
+          "en": "For Europe, the trade-off between inflation control and weaker demand gets harder fast."
+        },
+        {
+          "ja": "ホルムズは世界の原油輸送の要であり、ここが詰まると物流と燃料価格に広く波及する。",
+          "en": "Hormuz is one of the world’s most important crude routes, so any disruption quickly spills into transport and fuel costs."
+        },
+        {
+          "ja": "インフレ期待を再び押し上げる典型的な地政学ショックだ。",
+          "en": "That makes this a classic geopolitical inflation shock."
+        },
+        {
+          "ja": "住宅市場は金利の変化に敏感で、需要回復の遅れは住宅関連消費にも広がる。",
+          "en": "Housing demand is highly sensitive to interest rates, and a slow rebound can spill into broader consumer spending."
+        },
+        {
+          "ja": "売り手市場からの戻りは、まだ限定的だ。",
+          "en": "The market is still far from a clean recovery."
+        },
+        {
+          "ja": "雇用がゆるやかに減速しても崩れない局面では、FRBは利下げを急ぎにくい。",
+          "en": "A labor market that cools without cracking keeps the Fed cautious."
+        },
+        {
+          "ja": "景気後退ではなく減速局面として解釈されやすい。",
+          "en": "Jobs and inflation are still the two levers behind policy."
+        },
+        {
+          "ja": "AppleのAI戦略は、他社モデルを借りるだけでなく、自社のUIと端末体験に閉じ込める方向へ進む。",
+          "en": "Apple’s AI strategy is shifting from borrowing outside models to controlling the full user experience on its own devices."
+        },
+        {
+          "ja": "iPhoneの使い方そのものが変わる可能性がある。",
+          "en": "That could change how people use the iPhone."
+        },
+        {
+          "ja": "対象外機種の正式発表と、関連する修理・下取り施策を見る。",
+          "en": "The formal list of unsupported models and any trade-in or repair changes will matter."
+        },
+        {
+          "ja": "次の大型OS更新で、さらに同様の線引きが広がる可能性がある。",
+          "en": "The next major OS cycle could widen the cutoff again."
+        },
+        {
+          "ja": "展開後の不具合と、企業環境での段階的適用の速さを見る。",
+          "en": "The focus will be on rollout problems and whether enterprises can deploy the update in stages."
+        },
+        {
+          "ja": "ゼロデイの悪用範囲が広がるかどうかも重要だ。",
+          "en": "Any broader abuse of the zero-days would make the cycle more urgent."
+        },
+        {
+          "ja": "CISAのKEV登録や、影響を受けた企業の公表が広がるかを見る。",
+          "en": "CISA’s KEV list and any public victim disclosures will show how wide the impact is."
+        },
+        {
+          "ja": "境界機器の脆弱性管理は、今後も優先度が高いままだ。",
+          "en": "Edge-device patching remains one of the highest-priority security jobs."
+        },
+        {
+          "ja": "追加の離職や、Google側の説明が出るかを見る。",
+          "en": "Additional departures or a formal response from Google would show how serious the dispute is."
+        },
+        {
+          "ja": "軍事向けAI案件への社内反発が、他社にも波及するかが論点だ。",
+          "en": "Similar tension could spread to other AI companies with government work."
+        },
+        {
+          "ja": "きょうの市場は、景気指標そのものよりも、政策不確実性とエネルギー供給リスクへの反応が大きかった。",
+          "en": "Markets reacted less to one data point than to the combination of geopolitical risk and policy uncertainty."
+        },
+        {
+          "ja": "イラン情勢とホルムズ海峡の懸念が、原油・ECB・住宅金利にまで連鎖し、地政学がそのまま物価と金融政策のテーマになった。",
+          "en": "Iran tensions and the Strait of Hormuz story linked politics, crude prices, ECB policy, and mortgage rates into one inflation narrative."
+        },
+        {
+          "ja": "米国内ではFISA、選挙制度、移民感情、G7警備が重なり、治安と制度設計の両方で政治的緊張が強い。",
+          "en": "U.S. domestic politics stayed noisy, with surveillance law, election rules, immigration tensions, and G7 security all pointing to a harder policy environment."
+        },
+        {
+          "ja": "技術面ではAppleのAI刷新とWindows、VPN、Googleの軍事AIをめぐる論点が並び、AIとセキュリティが経営と統治の中心に来ている。",
+          "en": "Tech news was not just about new features: AI rollout, software support cycles, VPN exploits, and military contracts all pointed to governance pressure."
+        }
+      ]
+    },
+    {
+      "id": "politics",
+      "pairs": [
+        {
+          "ja": "米下院はFISA第702条の短期延長案を否決し、監視権限の延命に失敗した。",
+          "en": "The House rejected a short-term extension of FISA Section 702, cutting off the easiest route to keep the surveillance authority alive."
+        },
+        {
+          "ja": "トランプ氏は、米国とイランが合意に近づいていると主張し、軍事作戦を止めたと述べた。",
+          "en": "Trump said the United States and Iran were close to an agreement and said he had stopped military operations."
+        },
+        {
+          "ja": "トランプ氏は、防衛費と選挙規制を束ねた Save America Act の早期成立を求めた。",
+          "en": "Trump pressed for quick passage of the Save America Act, which ties defense spending to voting restrictions."
+        },
+        {
+          "ja": "反移民感情を背景にした暴動がベルファストで広がり、標的にされた住所について事前警告があったことが報じられた。",
+          "en": "Riots tied to anti-immigration sentiment spread in Belfast, and reporting said targeted addresses had been flagged months earlier."
+        },
+        {
+          "ja": "6月15日からのG7を前に、仏瑞当局は国境周辺の警備を引き締めた。",
+          "en": "With the G7 set to open on June 15, French and Swiss authorities tightened security around the border area."
+        }
+      ]
+    },
+    {
+      "id": "economy",
+      "pairs": [
+        {
+          "ja": "5月の卸売物価は市場予想を上回る伸びを示し、インフレ圧力がなお残っていることが意識された。",
+          "en": "May wholesale prices rose more than markets expected, signaling that inflation pressure has not faded away."
+        },
+        {
+          "ja": "ECBは、インフレ再燃への警戒を背景に利上げを決めた。",
+          "en": "The ECB raised rates after renewed inflation anxiety returned to the eurozone outlook."
+        },
+        {
+          "ja": "イランによるホルムズ海峡の封鎖発表を受け、原油価格は2%以上上昇した。",
+          "en": "Oil prices jumped more than 2 percent after Iran said it would close the Strait of Hormuz."
+        },
+        {
+          "ja": "30年固定の住宅ローン金利は6.55%前後で横ばいとなった。",
+          "en": "The 30-year mortgage rate hovered around 6.55 percent, so the market stopped rising without becoming cheap."
+        },
+        {
+          "ja": "新規失業保険申請はやや増えたが、急激な悪化には至っていない。",
+          "en": "Initial jobless claims rose a bit, but not enough to signal a sharp labor-market break."
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "pairs": [
+        {
+          "ja": "AppleはWWDC 2026でSiri AIを打ち出し、文脈理解とApple Intelligenceとの連携を強調した。",
+          "en": "Apple unveiled Siri AI at WWDC 2026 and highlighted context awareness and tighter links with Apple Intelligence."
+        },
+        {
+          "ja": "Apple Watchの一部旧機種が、watchOS 27の対象から外れる見通しになった。",
+          "en": "Some older Apple Watch models are expected to be left out of watchOS 27."
+        },
+        {
+          "ja": "Windows 11の更新は206件超の修正を含み、3件のゼロデイにも対処した。",
+          "en": "The Windows 11 update included more than 206 fixes and addressed three zero-days."
+        },
+        {
+          "ja": "Check PointのVPN脆弱性は、Qilinランサムウェア集団による攻撃に使われたとされる。",
+          "en": "Check Point’s VPN weakness was reportedly exploited by the Qilin ransomware group."
+        },
+        {
+          "ja": "Googleの幹部が、ペンタゴン向けAI契約を理由に辞任したと報じられた。",
+          "en": "A Google director reportedly resigned over a Pentagon AI contract."
+        }
+      ]
+    }
+  ]
+}

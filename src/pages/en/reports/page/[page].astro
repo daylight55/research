@@ -4,11 +4,16 @@ import ListCategories from '@/components/ListCategories'
 import ListPosts from '@/components/ListPosts'
 import Pagination from '@/components/Pagination'
 import TitlePage from '@/components/TitlePage'
-import { createArticleListPage, getReportPosts } from '@/utils'
+import { createArticleListStaticPaths, getReportPosts } from '@/utils'
 
 const locale = 'en'
-const reportPosts = await getReportPosts(undefined, locale)
-const page = createArticleListPage(reportPosts, 'reports', 1, locale)
+
+export async function getStaticPaths() {
+	const reportPosts = await getReportPosts(undefined, 'en')
+	return createArticleListStaticPaths(reportPosts, 'reports', 'en')
+}
+
+const { page } = Astro.props
 const posts = page.data
 ---
 

@@ -3,6 +3,10 @@ import { strict as assert } from 'node:assert'
 
 const workflow = readFileSync('.github/workflows/daily-issue-research.yml', 'utf8')
 const trendWorkflow = readFileSync('.github/workflows/daily-trend-news.yml', 'utf8')
+const trendNewsPreflightScript = readFileSync(
+	'ops/scripts/preflight-generated-trend-news.sh',
+	'utf8'
+)
 const dailyIssuePrompt = readFileSync('ops/codex/prompts/daily-issue-research.md', 'utf8')
 const cloudflarePreviewWorkflow = readFileSync(
 	'.github/workflows/cloudflare-pages-preview.yml',
@@ -388,6 +392,24 @@ assert.match(
 )
 
 assert.match(
+	trendNewsPreflightScript,
+	/node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
+	'Daily Trend News preflight should run generated article structure and news-label tests before the final strict CI gate'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/English topic paragraphs must use exactly these labels[\s\S]*?What happened:[\s\S]*?Why it matters:[\s\S]*?What to watch:/,
+	'Daily Trend News prompt should pin canonical English digest labels before generation'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/- Automation model: `<MODEL_USED_TO_CREATE_ARTICLE>`/,
+	'Daily Trend News prompt should pin the research-log automation model line format'
+)
+
+assert.match(
 	trendWorkflow,
 	/- name: Repair generated news article \(attempt 1\)[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?- name: Repair generated news article \(attempt 2\)[\s\S]*?uses: openai\/codex-action@v1/,
 	'Daily Trend News should let Codex repair generated article validation failures twice before failing the workflow'
@@ -409,6 +431,24 @@ assert.match(
 	testWorkflow,
 	/- name: Validate all mixed article alignment[\s\S]*?run: node ops\/scripts\/validate-mix-alignment\.mjs/,
 	'Test workflow should run full mixed article alignment validation'
+)
+
+assert.match(
+	testWorkflow,
+	/- name: Run repository lint[\s\S]*?run: pnpm lint[\s\S]*?- name: Build site/,
+	'Test workflow should run repository lint before building'
+)
+
+assert.match(
+	cloudflarePreviewWorkflow,
+	/- name: Run repository lint[\s\S]*?run: pnpm lint[\s\S]*?- name: Build/,
+	'Cloudflare preview should run repository lint before deploying'
+)
+
+assert.match(
+	cloudflareDeployWorkflow,
+	/- name: Run repository lint[\s\S]*?run: pnpm lint[\s\S]*?- name: Build/,
+	'Cloudflare production deploy should run repository lint before deploying'
 )
 
 assert.doesNotMatch(

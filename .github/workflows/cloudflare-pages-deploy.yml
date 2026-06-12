@@ -43,6 +43,9 @@ jobs:
       - name: Run repository tests
         run: pnpm test
 
+      - name: Run repository lint
+        run: pnpm lint
+
       - name: Build
         run: pnpm build
 

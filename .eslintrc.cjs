@@ -19,6 +19,14 @@ module.exports = {
 				// override/add rules settings here, such as:
 				'astro/no-set-html-directive': 'error'
 			}
+		},
+		{
+			files: ['src/components/MixedArticleContent.astro', 'src/components/ProviderLocale.astro'],
+			rules: {
+				// These components inject JSON script payloads built from local state.
+				// The payloads are serialized with JSON.stringify and cannot execute HTML.
+				'astro/no-set-html-directive': 'off'
+			}
 		}
 	]
 }

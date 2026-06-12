@@ -393,14 +393,14 @@ assert.match(
 
 assert.match(
 	trendNewsPreflightScript,
-	/node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
-	'Daily Trend News preflight should run generated article structure and news-label tests before the final strict CI gate'
+	/node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-news-item-format\.mjs --changed[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
+	'Daily Trend News preflight should run generated article, Smart Brevity, and MIX tests before the final strict CI gate'
 )
 
 assert.match(
 	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
-	/English topic paragraphs must use exactly these labels[\s\S]*?What happened:[\s\S]*?Why it matters:[\s\S]*?What to watch:/,
-	'Daily Trend News prompt should pin canonical English digest labels before generation'
+	/Axios-inspired Smart Brevity[\s\S]*?The bottom line:[\s\S]*?What happened:[\s\S]*?Why it matters:[\s\S]*?What to watch:/,
+	'Daily Trend News prompt should pin Axios-inspired Smart Brevity labels before generation'
 )
 
 assert.match(
@@ -437,6 +437,12 @@ assert.match(
 	testWorkflow,
 	/- name: Run repository lint[\s\S]*?run: pnpm lint[\s\S]*?- name: Build site/,
 	'Test workflow should run repository lint before building'
+)
+
+assert.match(
+	testWorkflow,
+	/- name: Validate changed news item format[\s\S]*?run: node ops\/scripts\/validate-news-item-format\.mjs --changed origin\/\$\{\{ github\.base_ref \}\}\.\.\.HEAD[\s\S]*?- name: Validate changed mixed article alignment/,
+	'Test workflow should validate changed news item format before mixed article alignment'
 )
 
 assert.match(

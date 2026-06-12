@@ -64,6 +64,12 @@ policy, business, and practical decisions.
   instruction: research date, topic hint if present, category/count constraints,
   recency window, and the intended deliverable. In English logs, use the
   corresponding headings `## Environment` and `## Research Instruction`.
+- In both localized research logs, write the model bullet in this exact format:
+  ```md
+  - Automation model: `<MODEL_USED_TO_CREATE_ARTICLE>`
+  ```
+  Replace only the placeholder with the model from Automation Metadata. Do not
+  use localized variants such as `モデル:`.
 - Create `articles/news/daily-trends-<YYYY-MM-DD>/mix-alignment.json` for MIX
   display. Use `version: 1`, `sourceLocale: ja`, `targetLocale: en`, and enough
   Japanese/English sentence pairs to satisfy `ops/scripts/validate-mix-alignment.mjs`.
@@ -159,6 +165,10 @@ For each of the fifteen topic items, include:
 - `なぜ重要か`
 - `今後の注視点`: the reader-facing takeaway should explain what to monitor next
   after this news, not a generic business action item.
+- English topic paragraphs must use exactly these labels, each as its own
+  paragraph: `What happened:`, `Why it matters:`, and `What to watch:`. Do not
+  use shortened or stale labels such as `Watch:`, `Why it's important:`, or
+  `Implications for practice:`.
 
 Use this component shape directly after each topic heading:
 

@@ -29,4 +29,5 @@ for required_file in \
 	fi
 done
 
+node --test ops/tests/article-structure.test.mjs ops/tests/news-title-summaries.test.mjs
 node ops/scripts/validate-mix-alignment.mjs --changed

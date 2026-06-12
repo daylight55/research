@@ -46,6 +46,10 @@ jobs:
       - name: Run repository lint
         run: pnpm lint
 
+      - name: Validate changed news item format
+        if: github.event_name == 'pull_request'
+        run: node ops/scripts/validate-news-item-format.mjs --changed origin/${{ github.base_ref }}...HEAD
+
       - name: Validate changed mixed article alignment
         if: github.event_name == 'pull_request'
         run: node ops/scripts/validate-mix-alignment.mjs --changed origin/${{ github.base_ref }}...HEAD

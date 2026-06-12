@@ -161,14 +161,24 @@ For each of the fifteen topic items, include:
 - do not prefix topic headings with category names or numbers such as
   `政治 1.`, `経済 2.`, or `技術 3.`
 - one `NewsSourceCard` source memo card immediately below the heading
-- `何が起きたか`
-- `なぜ重要か`
+- an Axios-inspired Smart Brevity summary paragraph before the details
+- `要点`: one short sentence that gives the bottom line first
+- `何が起きたか`: one short paragraph on the factual update
+- `なぜ重要か`: one short paragraph on the decision or market relevance
 - `今後の注視点`: the reader-facing takeaway should explain what to monitor next
   after this news, not a generic business action item.
-- English topic paragraphs must use exactly these labels, each as its own
-  paragraph: `What happened:`, `Why it matters:`, and `What to watch:`. Do not
-  use shortened or stale labels such as `Watch:`, `Why it's important:`, or
+- Keep each labelled paragraph short enough to scan. Do not split one label
+  across multiple paragraphs.
+- Japanese topic paragraphs must use exactly these labels, each as its own
+  paragraph and in this order: `要点:`, `何が起きたか:`, `なぜ重要か:`, and
+  `今後の注視点:`.
+- English topic paragraphs must use exactly these Axios-inspired Smart Brevity
+  labels, each as its own paragraph and in this order: `The bottom line:`,
+  `What happened:`, `Why it matters:`, and `What to watch:`. Do not use
+  shortened or stale labels such as `Watch:`, `Why it's important:`, or
   `Implications for practice:`.
+- Do not mention Axios or Smart Brevity in the reader-facing article body. Use
+  the format, not the brand name.
 
 Use this component shape directly after each topic heading:
 

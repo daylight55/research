@@ -3,11 +3,16 @@ import BaseLayout from '@/layouts/BaseLayout'
 import ListPosts from '@/components/ListPosts'
 import Pagination from '@/components/Pagination'
 import TitlePage from '@/components/TitlePage'
-import { createArticleListPage, getNewsPosts } from '@/utils'
+import { createArticleListStaticPaths, getNewsPosts } from '@/utils'
 
 const locale = 'en'
-const newsPosts = await getNewsPosts(undefined, locale)
-const page = createArticleListPage(newsPosts, 'news', 1, locale)
+
+export async function getStaticPaths() {
+	const newsPosts = await getNewsPosts(undefined, 'en')
+	return createArticleListStaticPaths(newsPosts, 'news', 'en')
+}
+
+const { page } = Astro.props
 const posts = page.data
 ---
 
@@ -19,16 +24,6 @@ const posts = page.data
 			trends.
 		</p>
 	</div>
-	{
-		posts.length > 0 ? (
-			<>
-				<ListPosts posts={posts} locale={locale} />
-				<Pagination page={page} />
-			</>
-		) : (
-			<p class='rounded-md border border-black/10 bg-white/70 p-5 leading-7 text-gray-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-300'>
-				English translations have not been generated yet.
-			</p>
-		)
-	}
+	<ListPosts posts={posts} locale={locale} />
+	<Pagination page={page} />
 </BaseLayout>

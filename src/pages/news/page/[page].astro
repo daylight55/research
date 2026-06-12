@@ -3,10 +3,14 @@ import BaseLayout from '@/layouts/BaseLayout'
 import ListPosts from '@/components/ListPosts'
 import Pagination from '@/components/Pagination'
 import TitlePage from '@/components/TitlePage'
-import { createArticleListPage, getNewsPosts, withBase } from '@/utils'
+import { createArticleListStaticPaths, getNewsPosts, withBase } from '@/utils'
 
-const newsPosts = await getNewsPosts()
-const page = createArticleListPage(newsPosts, 'news')
+export async function getStaticPaths() {
+	const newsPosts = await getNewsPosts()
+	return createArticleListStaticPaths(newsPosts, 'news')
+}
+
+const { page } = Astro.props
 const posts = page.data
 ---
 
@@ -23,16 +27,6 @@ const posts = page.data
 			News RSS
 		</a>
 	</div>
-	{
-		posts.length > 0 ? (
-			<>
-				<ListPosts posts={posts} />
-				<Pagination page={page} />
-			</>
-		) : (
-			<p class='rounded-md border border-black/10 bg-white/70 p-5 leading-7 text-gray-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-300'>
-				現在公開中のニュース記事はありません。調査方針や情報源は Reference に移しました。
-			</p>
-		)
-	}
+	<ListPosts posts={posts} />
+	<Pagination page={page} />
 </BaseLayout>

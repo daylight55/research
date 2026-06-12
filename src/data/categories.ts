@@ -1,5 +1,6 @@
 // Research report categories
 export const CATEGORIES = [
+	'africa-history',
 	'ai-market',
 	'ai-systems',
 	'ai-market',

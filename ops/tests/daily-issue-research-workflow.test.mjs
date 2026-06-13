@@ -405,14 +405,20 @@ assert.match(
 
 assert.match(
 	trendNewsPreflightScript,
-	/articles\/news\/\$\{SLUG\}\/ja\/source-notes\.mdx[\s\S]*articles\/news\/\$\{SLUG\}\/en\/source-notes\.mdx[\s\S]*node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-news-item-format\.mjs --changed[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
-	'Daily Trend News preflight should run generated article, Smart Brevity, and MIX tests before the final strict CI gate'
+	/articles\/news\/\$\{SLUG\}\/ja\/source-notes\.mdx[\s\S]*articles\/news\/\$\{SLUG\}\/en\/source-notes\.mdx[\s\S]*node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-article-frontmatter\.mjs --changed[\s\S]*node ops\/scripts\/validate-news-item-format\.mjs --changed[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
+	'Daily Trend News preflight should run generated article, frontmatter, Smart Brevity, and MIX tests before the final strict CI gate'
 )
 
 assert.match(
 	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
 	/Axios-inspired Smart Brevity[\s\S]*?The bottom line:[\s\S]*?What happened:[\s\S]*?Why it matters:[\s\S]*?What to watch:/,
 	'Daily Trend News prompt should pin Axios-inspired Smart Brevity labels before generation'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/Quote every frontmatter string scalar[\s\S]*?Do not leave colons in unquoted[\s\S]*?frontmatter values/,
+	'Daily Trend News prompt should prevent malformed YAML frontmatter before generation'
 )
 
 assert.match(

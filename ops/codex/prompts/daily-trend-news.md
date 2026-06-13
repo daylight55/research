@@ -31,6 +31,11 @@ policy, business, and practical decisions.
 - Keep the frontmatter fields from the News template, including
   `contentType: news`, `category: tech-news`, `rssSummary`, and
   `heroImageQuery`.
+- Quote every frontmatter string scalar with single quotes, especially `title`,
+  `description`, `rssSummary`, `heroImageQuery`, `heroImageAlt`,
+  `heroImageCredit`, and `heroImageCreditUrl`. If the value itself contains a
+  single quote, escape it by doubling it. Do not leave colons in unquoted
+  frontmatter values.
 - Keep the template's `generation` frontmatter block. Set only `model` from
   `Automation Metadata`. Do not store prompt source, prompt summary, Run
   Context, or other prompt details in article frontmatter.

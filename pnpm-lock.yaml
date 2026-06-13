@@ -23,6 +23,9 @@ importers:
       sentence-splitter:
         specifier: ^5.0.1
         version: 5.0.1
+      yaml:
+        specifier: 2.8.4
+        version: 2.8.4
     devDependencies:
       '@astrojs/mdx':
         specifier: 5.0.6

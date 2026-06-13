@@ -14,7 +14,9 @@ export async function getStaticPaths() {
 	const posts = (await getCollection('blog')).filter(
 		(post) => getPostLocale(post) === DEFAULT_LOCALE && post.data.contentType === 'report'
 	)
-	const researchEntries = await getCollection('articleResearch')
+	const researchEntries = (await getCollection('articleResearch')).filter(
+		(entry) => getPostLocale(entry) === DEFAULT_LOCALE
+	)
 	const researchBySlug = new Map(researchEntries.map((entry) => [getPostSlug(entry), entry]))
 
 	return posts

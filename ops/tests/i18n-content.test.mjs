@@ -82,6 +82,21 @@ async function englishArticleFiles() {
 	return files
 }
 
+async function englishResearchLogFiles() {
+	const files = []
+	for (const type of articleTypes) {
+		for (const slug of await articleSlugs(type, 'en')) {
+			const localeEntries = await readdir(join(articlesDir, type, slug, 'en'), {
+				withFileTypes: true
+			})
+			if (localeEntries.some((entry) => entry.isFile() && entry.name === 'research-log.mdx')) {
+				files.push({ type, slug, path: join(articlesDir, type, slug, 'en', 'research-log.mdx') })
+			}
+		}
+	}
+	return files
+}
+
 async function mixedAlignmentFiles() {
 	const files = []
 	for (const type of articleTypes) {
@@ -169,6 +184,33 @@ test('English Mermaid diagrams do not contain Japanese labels', async () => {
 				`${file.type}/${file.slug} Mermaid diagrams should use English labels only`
 			)
 		}
+	}
+})
+
+test('English research logs and routes stay locale-specific', async () => {
+	for (const file of await englishResearchLogFiles()) {
+		if (file.slug !== 'global-landmine-contamination-clearance') continue
+
+		const source = await readFile(file.path, 'utf8')
+		assert.doesNotMatch(
+			source,
+			japaneseText,
+			`${file.type}/${file.slug} English research log should use English metadata and body`
+		)
+	}
+
+	const researchPages = await Promise.all(
+		[
+			'src/pages/reports/[slug]/research.astro',
+			'src/pages/en/reports/[slug]/research.astro',
+			'src/pages/news/[slug]/research.astro',
+			'src/pages/en/news/[slug]/research.astro'
+		].map((file) => readFile(join(repoRoot.pathname, file), 'utf8'))
+	)
+
+	for (const source of researchPages) {
+		assert.match(source, /const researchEntries = \(await getCollection\('articleResearch'\)\)\.filter\(/)
+		assert.match(source, /getPostLocale\(entry\)\s*===/)
 	}
 })
 

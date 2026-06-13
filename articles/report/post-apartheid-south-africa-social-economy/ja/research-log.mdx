@@ -1,0 +1,83 @@
+---
+title: '調査プロセス: 民主化後の南アフリカの社会経済問題'
+description: '民主化後の南アフリカにおける格差、失業、土地、治安、汚職、電力危機、ANC 支配の変化を整理するための公開調査ログ。'
+pubDate: '2026-06-13'
+category: 'africa-history'
+tags: ['south-africa', 'inequality', 'unemployment', 'land-reform', 'eskom', 'corruption', 'anc']
+generation:
+  model: 'gpt-5.4-mini'
+draft: false
+---
+
+# 調査プロセス: 民主化後の南アフリカの社会経済問題
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- issue: `#32`
+- title: `民主化後の南アフリカの社会経済問題を調査する`
+- publishable request summary: 南アフリカの民主化後の社会経済問題について、格差、失業、土地問題、治安、汚職、電力危機、ANC 支配の変化を調べる。民主化で改善した点と残った構造的不平等を分け、BEE 政策、土地改革、教育、都市空間の課題を整理し、Eskom の電力危機と政治腐敗が市民生活に与える影響、そして最新の選挙結果と政党状況を確認する。
+- scope constraints:
+  - 公式統計、国際機関、政府・議会・監督機関、主要通信社を優先する。
+  - 失業、格差、治安、汚職の数字は、分野ごとに定義差が大きいので、必要な場合だけ使う。
+  - 公開できる調査過程、採用資料、採用しなかった情報、残る不確実性を同じ記事ディレクトリで共有する。
+  - 日本語を正本とし、英語版と MIX 対訳も同時に整備する。
+- inferred deliverable: `articles/report/post-apartheid-south-africa-social-economy/ja/index.mdx` を正本とする公開レポート、`en/index.mdx`、`mix-alignment.json`、公開 source-notes、公開 research-log の整備。
+
+## 何を確かめたか
+
+### 1. 民主化で改善した点
+
+南アフリカでは 1994 年以降、普遍選挙、憲法秩序、社会給付、基礎サービスの拡張が進んだことを確認した。民主化は政治的権利の回復としては大きいが、雇用や資産の自動的な再配分ではないと判断した。
+
+### 2. 残った構造的不平等
+
+World Bank の South Africa overview と apartheid 史の整理を参照し、土地、居住地、交通、教育、雇用機会が結びついた二重経済として書く方が適切だと判断した。失業を単独の景気指標ではなく、空間的分断の帰結として扱った。
+
+### 3. B-BBEE、土地改革、教育、都市空間
+
+B-BBEE は dtic の公式説明を確認し、所有移転だけでなく技能、調達、企業育成を含む枠組みとして扱った。土地改革は 2025 年の Expropriation Act を確認し、再配分の法的枠組みは変わっても、政治的争点は残ると判断した。教育は Guardian の 2025 年報道を使い、就学率と学習成果を分けて説明した。
+
+### 4. 電力危機、治安、汚職
+
+AP の世界銀行支援報道を使い、停電が鉱業、自動車産業、雇用、生活コストに波及することを確認した。治安と汚職は、警察首脳の停職や腐敗疑惑、Zondo 委員会の state capture 記録を軸に、単なる街頭犯罪ではなく統治能力の問題として整理した。
+
+### 5. 最新選挙と ANC 支配の変化
+
+2024 年総選挙で ANC が初めて国政過半数を失い、GNU へ移行したことを AP の選挙報道で確認した。2025 年の予算争いでは、連立内対立が税制や財政優先順位に直結することを確認し、ANC 支配の変化を「単独支配から連立交渉へ」という政治構造の変化として本文に反映した。
+
+## 採用した主な資料
+
+- [World Bank, South Africa overview](https://www.worldbank.org/en/country/southafrica/overview)
+- [South Africa Department of Trade, Industry and Competition, Broad-Based Black Economic Empowerment](https://www.thedtic.gov.za/financial-and-non-financial-support/b-bbee/broad-based-black-economic-empowerment/)
+- [State Capture Inquiry / Zondo Commission](https://www.statecapture.org.za/site/information/reports)
+- [AP News, South Africa's ANC loses majority, setting up coalition talks](https://apnews.com/article/d9da7582ca98a4e00fec2da6a5fe1e91)
+- [AP News, South Africa's Ramaphosa wins second term after election setback](https://apnews.com/article/2e3de777cb7deb1956bbffe6e607f006)
+- [AP News, South Africa budget: tax hike reversed after coalition backlash](https://apnews.com/article/8665b73d7526ae2f44cbf2994ee0bb70)
+- [AP News, World Bank loan backs South Africa reforms as blackouts, joblessness and crime bite](https://apnews.com/article/ceb8af11c31241e9508ec612fccdc2a5)
+- [AP News, South Africa passes land expropriation law, angering some white farmers and the US](https://apnews.com/article/7930f26fbac90468d26053c1b99a789f)
+- [AP News, South Africa's police minister is suspended while under investigation](https://apnews.com/article/13107d0f89b7beb1a587d3e5b1b5b7c3)
+- [AP News, South Africa's police commissioner faces corruption allegations](https://apnews.com/article/5e1899af8da9182597db1fffd82eda4c)
+- [The Guardian, South Africa's children are in school - but many still can't read for meaning](https://www.theguardian.com/global-development/2025/mar/11/children-school-south-africa-early-learning-sector-funding)
+- [South African History Online, History of apartheid in South Africa](https://www.sahistory.org.za/article/history-apartheid-south-africa)
+
+## 採用しなかった情報
+
+- SNS 由来の犯罪統計や停電体験談は、再現性と検証性が低いため採用しなかった。
+- 単一の CPI スコアや失業率だけで問題を代表させる説明は、南アフリカの空間・制度・政治の複合性を落とすため避けた。
+- 特定企業や個人への汚職断定は、公開記録で裏づけられる範囲を超えるので本文では一般化した。
+
+## 限界
+
+- 最新の失業率や土地所有比率を本文に入れることも可能だったが、時点差と集計差があるため、今回は構造理解を優先した。
+- GNU の安定性は 2026 年時点でも交渉依存であり、予算と治安と土地改革の組み合わせ次第で変わる。
+- B-BBEE と土地改革の効果は、産業別・地域別に差が大きく、単一の結論にはできない。
+
+## 反映への影響
+
+本文は、南アフリカを「民主化で終わった物語」ではなく、「政治的権利は拡大したが、配分と統治の課題が残った国」として書いた。電力、治安、汚職、教育、土地を別々の問題として並べず、相互に失業と信頼低下へつながる一つの構図として整理した。

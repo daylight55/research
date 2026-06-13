@@ -175,9 +175,21 @@ test('research logs record public generation context and investigation input', (
 		const { type } = articleKey(file.replace(/research-log\.mdx$/, 'index.mdx'))
 		const source = readFileSync(file, 'utf8')
 
-		assert.match(source, /^## (?:利用環境|Environment)$/m, `${file} should include generation context`)
-		assert.match(source, /^-\s+(?:Automation\s+)?model:\s+`gpt-5\.4-mini`$/im, `${file} should record the model`)
-		assert.match(source, /^## (?:調査命令|Research Instruction)$/m, `${file} should include the investigation input`)
+		assert.match(
+			source,
+			/^## (?:利用環境|Environment)$/m,
+			`${file} should include generation context`
+		)
+		assert.match(
+			source,
+			/^-\s+(?:Automation\s+)?model:\s+`gpt-5\.4-mini`$/im,
+			`${file} should record the model`
+		)
+		assert.match(
+			source,
+			/^## (?:調査命令|Research Instruction)$/m,
+			`${file} should include the investigation input`
+		)
 		assert.doesNotMatch(
 			source,
 			/research-queue\/issues|github\.com\/daylight55\/research-queue\/issues/,
@@ -241,5 +253,37 @@ test('articles with research logs have sibling indexes and public route support'
 	for (const log of logs) {
 		const indexFile = path.join(path.dirname(log), 'index.mdx')
 		assert.ok(existsSync(indexFile), `${log} should have a sibling index.mdx`)
+	}
+})
+
+test('research routes select logs from the matching content locale', () => {
+	const routeLocales = [
+		['src/pages/reports/[slug]/research.astro', /getPostLocale\(entry\) === DEFAULT_LOCALE/],
+		['src/pages/news/[slug]/research.astro', /getPostLocale\(entry\) === DEFAULT_LOCALE/],
+		['src/pages/en/reports/[slug]/research.astro', /getPostLocale\(entry\) === 'en'/],
+		['src/pages/en/news/[slug]/research.astro', /getPostLocale\(entry\) === 'en'/]
+	]
+	const articleLocales = [
+		['src/pages/reports/[...slug].astro', /getPostLocale\(entry\) === locale/],
+		['src/pages/news/[...slug].astro', /getPostLocale\(entry\) === locale/],
+		['src/pages/en/reports/[...slug].astro', /getPostLocale\(entry\) === locale/],
+		['src/pages/en/news/[...slug].astro', /getPostLocale\(entry\) === locale/],
+		['src/pages/mix/reports/[...slug].astro', /getPostLocale\(entry\) === DEFAULT_LOCALE/],
+		['src/pages/mix/news/[...slug].astro', /getPostLocale\(entry\) === DEFAULT_LOCALE/]
+	]
+
+	for (const [file, localeFilter] of routeLocales) {
+		const source = readFileSync(file, 'utf8')
+		assert.match(source, localeFilter, `${file} should filter research logs by locale`)
+	}
+
+	for (const [file, localeFilter] of articleLocales) {
+		const source = readFileSync(file, 'utf8')
+		assert.match(source, localeFilter, `${file} should detect research logs by locale`)
+		assert.match(
+			source,
+			/getPostSlug\(entry\) === postSlug/,
+			`${file} should still match research logs by article slug`
+		)
 	}
 })

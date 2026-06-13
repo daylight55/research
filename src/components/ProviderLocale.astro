@@ -36,8 +36,6 @@ const localeAvailabilityScript = `window.__localeAvailability=${JSON.stringify({
 	const SWIPE_MAX_WIDTH = 768
 	const SWIPE_MIN_DISTANCE = 72
 	const SWIPE_MAX_VERTICAL_DISTANCE = 70
-	const ARTICLE_BLOCK_SELECTOR = 'h1, h2, h3, h4, p, li, blockquote, table'
-	const ARTICLE_VIEWPORT_ANCHOR_RATIO = 0.42
 	const CURRENT_CONTENT_PATH = window.__localeAvailability?.contentPath ?? '/'
 	const AVAILABLE_LOCALES_FOR_CURRENT_PATH =
 		window.__localeAvailability?.availableLocales ?? SUPPORTED_LOCALES
@@ -191,138 +189,13 @@ const localeAvailabilityScript = `window.__localeAvailability=${JSON.stringify({
 			document.documentElement.clientHeight
 		)
 
-	const clamp = (value, min, max) => Math.min(max, Math.max(min, value))
-
-	const normalizeScrollAnchorText = (text) =>
-		(text ?? '')
-			.replace(/[“”]/g, '"')
-			.replace(/[‘’]/g, "'")
-			.replace(/[`*]/g, '')
-			.replace(/\s+/g, ' ')
-			.trim()
-
-	const getArticleContentRoot = () =>
-		document.querySelector('article [data-mixed-english]') ??
-		document.querySelector('article .prose') ??
-		document.querySelector('article')
-
-	const getArticleBlocks = () => {
-		const root = getArticleContentRoot()
-		if (!root) return []
-
-		return [...root.querySelectorAll(ARTICLE_BLOCK_SELECTOR)].filter((block) => {
-			if (
-				block.closest('.not-prose, [hidden], [data-mixed-japanese], .source-note, [role="note"]')
-			) {
-				return false
-			}
-
-			const rect = block.getBoundingClientRect()
-			return rect.height > 0 && (block.textContent ?? '').trim().length > 0
-		})
-	}
-
-	const getBlockTextAnchors = (block, locale = getPathLocale(window.location.pathname)) => {
-		const englishText = normalizeScrollAnchorText(block.dataset?.scrollAnchorEn)
-		const japaneseText = normalizeScrollAnchorText(block.dataset?.scrollAnchorJa)
-		const blockText = normalizeScrollAnchorText(block.textContent)
-
-		return {
-			en: englishText || (locale === 'en' ? blockText : ''),
-			ja: japaneseText || (locale === 'ja' ? blockText : '')
-		}
-	}
-
-	const textAnchorMatches = (left, right) => {
-		if (!left || !right) return false
-		if (left.length < 8 || right.length < 8) return false
-		return left === right || left.includes(right) || right.includes(left)
-	}
-
-	const findArticleBlockByTextAnchor = (anchor, blocks) => {
-		const targetLocale = getPathLocale(window.location.pathname)
-		const preferredLocales = targetLocale === 'mix' ? ['en', 'ja'] : [targetLocale]
-
-		for (const locale of preferredLocales) {
-			const savedText = anchor.textByLocale?.[locale]
-			if (!savedText) continue
-
-			const matchedBlock = blocks.find((block) => {
-				const blockText = getBlockTextAnchors(block, targetLocale)[locale]
-				return textAnchorMatches(blockText, savedText)
-			})
-			if (matchedBlock) return matchedBlock
-		}
-
-		for (const locale of ['en', 'ja']) {
-			const savedText = anchor.textByLocale?.[locale]
-			if (!savedText) continue
-
-			const matchedBlock = blocks.find((block) =>
-				textAnchorMatches(normalizeScrollAnchorText(block.textContent), savedText)
-			)
-			if (matchedBlock) return matchedBlock
-		}
-
-		return null
-	}
-
-	const getArticleScrollAnchor = () => {
-		const blocks = getArticleBlocks()
-		if (blocks.length === 0) return null
-
-		const referenceY = window.innerHeight * ARTICLE_VIEWPORT_ANCHOR_RATIO
-		const visibleBlock =
-			blocks.find((block) => {
-				const rect = block.getBoundingClientRect()
-				return rect.bottom >= referenceY && rect.top <= window.innerHeight
-			}) ??
-			blocks.find((block) => block.getBoundingClientRect().bottom >= 0) ??
-			blocks[0]
-
-		const rect = visibleBlock.getBoundingClientRect()
-		const blockIndex = blocks.indexOf(visibleBlock)
-		const blockOffsetRatio =
-			rect.height > 0 ? clamp((referenceY - rect.top) / rect.height, 0, 1) : 0
-
-		return {
-			blockIndex,
-			blockOffsetRatio,
-			textByLocale: getBlockTextAnchors(visibleBlock),
-			viewportRatio: ARTICLE_VIEWPORT_ANCHOR_RATIO
-		}
-	}
-
-	const scrollToArticleAnchor = (anchor) => {
-		if (!anchor || typeof anchor.blockIndex !== 'number') return false
-
-		const blocks = getArticleBlocks()
-		if (blocks.length === 0) return false
-
-		const block =
-			findArticleBlockByTextAnchor(anchor, blocks) ??
-			blocks[clamp(anchor.blockIndex, 0, blocks.length - 1)]
-		if (!block) return false
-
-		const rect = block.getBoundingClientRect()
-		const maxScroll = Math.max(0, getScrollableHeight() - window.innerHeight)
-		const viewportY = window.innerHeight * (anchor.viewportRatio ?? ARTICLE_VIEWPORT_ANCHOR_RATIO)
-		const blockY = window.scrollY + rect.top + rect.height * (anchor.blockOffsetRatio ?? 0)
-		const targetY = clamp(blockY - viewportY, 0, maxScroll)
-
-		window.scrollTo({ top: targetY, left: 0, behavior: 'instant' })
-		return Math.abs(window.scrollY - targetY) < 4
-	}
-
 	const saveScrollPosition = (targetLocale) => {
 		const maxScroll = Math.max(1, getScrollableHeight() - window.innerHeight)
-		const isAtPageTop = window.scrollY <= 1
 		const saved = {
 			locale: targetLocale,
 			path: stripLocale(window.location.pathname),
 			y: window.scrollY,
 			ratio: window.scrollY / maxScroll,
-			anchor: isAtPageTop ? null : getArticleScrollAnchor(),
 			time: Date.now()
 		}
 
@@ -383,11 +256,6 @@ const localeAvailabilityScript = `window.__localeAvailability=${JSON.stringify({
 			const previousBehavior = root.style.scrollBehavior
 
 			root.style.scrollBehavior = 'auto'
-			if (scrollToArticleAnchor(saved.anchor)) {
-				root.style.scrollBehavior = previousBehavior
-				return true
-			}
-
 			const targetY = Math.min(saved.y ?? maxScroll * (saved.ratio ?? 0), maxScroll)
 			window.scrollTo({ top: targetY, left: 0, behavior: 'instant' })
 			root.style.scrollBehavior = previousBehavior

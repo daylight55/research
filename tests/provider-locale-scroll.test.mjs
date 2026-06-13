@@ -22,7 +22,7 @@ test('locale switch scroll restoration cancels stale restore attempts', async ()
 	assert.match(source, /findArticleBlockByTextAnchor\(anchor, blocks\) \?\?/)
 	assert.match(source, /viewportRatio: ARTICLE_VIEWPORT_ANCHOR_RATIO/)
 	assert.match(source, /const scrollToArticleAnchor = \(anchor\) =>/)
-	assert.match(source, /anchor: getArticleScrollAnchor\(\)/)
+	assert.match(source, /anchor: isAtPageTop \? null : getArticleScrollAnchor\(\)/)
 	assert.match(source, /if \(scrollToArticleAnchor\(saved\.anchor\)\)/)
 	assert.match(source, /let scrollRestoreRun = 0/)
 	assert.match(source, /const clearScheduledScrollRestores = \(\) =>/)
@@ -38,6 +38,13 @@ test('locale switch scroll restoration cancels stale restore attempts', async ()
 	assert.match(source, /window\.requestAnimationFrame\(\(\) => clearWhenRestored\(\)\)/)
 	assert.doesNotMatch(source, /window\.setTimeout\(clearWhenRestored,\s*\d+/)
 	assert.doesNotMatch(source, /window\.requestAnimationFrame\(clearWhenRestored\)/)
+})
+
+test('locale switch from the top keeps absolute top position instead of article anchor', async () => {
+	const source = await readFile(providerLocalePath, 'utf8')
+
+	assert.match(source, /const isAtPageTop = window\.scrollY <= 1/)
+	assert.match(source, /anchor: isAtPageTop \? null : getArticleScrollAnchor\(\)/)
 })
 
 test('locale switch scroll restoration is aborted by user scroll input', async () => {

@@ -1,0 +1,342 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "South Africa's democratization ended white minority rule, restored universal suffrage, and expanded constitutional rights and social protection.",
+          "ja": "南アフリカの民主化は、白人少数支配の終結、普遍選挙、憲法上の権利、社会給付の拡大をもたらした。"
+        },
+        {
+          "en": "But the apartheid-era map of land, space, education, and work did not disappear.",
+          "ja": "しかし、アパルトヘイトが残した土地配分、都市空間、教育、雇用の分断は消えていない。"
+        },
+        {
+          "en": "The most useful way to read the country is as a democracy whose social and economic layers are still split in two.",
+          "ja": "南アフリカは「政治制度は民主化したが、社会経済の地層はなお二重化している」国として読むのが最も実務的である。"
+        },
+        {
+          "en": "The key takeaways are threefold.",
+          "ja": "この報告の要点は三つある。"
+        },
+        {
+          "en": "First, democracy delivered real gains, but it did not quickly reduce unemployment or inequality.",
+          "ja": "第一に、民主化で得られたものは大きいが、失業と格差の縮小は限定的だった。"
+        },
+        {
+          "en": "Second, B-BBEE, land reform, education, and urban restructuring were necessary redress tools, but they also created incentives for distributional politics and implementation distortions.",
+          "ja": "第二に、B-BBEE、土地改革、教育、都市再編は是正政策として必要だった一方、実装過程で配分競争や政治的な歪みを招きやすかった。"
+        },
+        {
+          "en": "Third, after the 2024 election the ANC lost its parliamentary majority for the first time, so economic policy now runs through coalition bargaining rather than single-party rule.",
+          "ja": "第三に、2024年選挙で ANC は初めて国政で過半数を失い、GNU 体制に移ったため、社会経済政策は単独支配ではなく連立交渉の中で動くようになった。"
+        },
+        {
+          "en": "This diagram shows South Africa's social economy as a loop linking historical space, current state capacity, and coalition politics, not as a single policy failure.",
+          "ja": "この図は、南アフリカの社会経済問題を単独の政策失敗ではなく、歴史的な空間配置と現在の統治能力が結びついた循環として示したものである。"
+        }
+      ]
+    },
+    {
+      "id": "improvements",
+      "heading": {
+        "ja": "2. 民主化で改善した点",
+        "en": "2. What Improved After Democratization"
+      },
+      "pairs": [
+        {
+          "en": "After 1994, South Africans gained equal political participation under law.",
+          "ja": "1994年以降、南アフリカの市民は法の上では平等な政治参加を得た。"
+        },
+        {
+          "en": "The state could now expand social protection, education, health, housing, and electricity without the formal racial restrictions of apartheid.",
+          "ja": "アパルトヘイト期のように人種で公民権が制度的に分割されることはなくなり、国家は社会給付、教育、保健、住宅、電力などに広く手を伸ばせるようになった。"
+        },
+        {
+          "en": "The biggest democratic gain was not only voting rights but the shift from governing Black South Africans as subjects to governing them as citizens.",
+          "ja": "民主化の成果は、制度的な権利の回復と、国家が「黒人多数派を統治対象ではなく市民として扱う」枠組みに移った点にある。"
+        },
+        {
+          "en": "Social grants and basic services mattered.",
+          "ja": "実務上は、社会給付の広がりと基礎サービスの拡張が重要だった。"
+        },
+        {
+          "en": "South Africa did not erase poverty, but it did build a larger protection net and soften the most extreme exclusions.",
+          "ja": "南アフリカは、貧困を完全には解消できなかったが、民主化後の国家能力を使って保護網を広げ、極端な排除を和らげてきた。"
+        },
+        {
+          "en": "Still, grants are not the same as job creation, and service quality remains uneven across regions.",
+          "ja": "とはいえ、給付の拡大は雇用創出の代わりにはならず、地域差も大きい。"
+        },
+        {
+          "en": "The point of the table is not to judge South Africa as a success or failure.",
+          "ja": "この表は、民主化を「成功か失敗か」の二分法で読むのではなく、政治的権利の改善と社会経済的再配分の遅れを分けて考えるための整理である。"
+        }
+      ]
+    },
+    {
+      "id": "structural-inequality",
+      "heading": {
+        "ja": "3. 残った構造的不平等",
+        "en": "3. The Structural Inequalities That Remain"
+      },
+      "pairs": [
+        {
+          "en": "South African inequality is locked in through income, assets, land, residence, schools, and transport access.",
+          "ja": "南アフリカの格差は、所得だけでなく資産、土地、居住地、学校、交通アクセスの組み合わせで固定されている。"
+        },
+        {
+          "en": "Former townships and peripheral settlements remain far from major job centers, with higher commuting costs and more uneven public services.",
+          "ja": "旧タウンシップや周縁部の居住地は、雇用中心地から遠く、通勤コストが高く、公共サービスの質もばらつきやすい。"
+        },
+        {
+          "en": "That is both an apartheid inheritance and the result of insufficient post-1994 spatial repair.",
+          "ja": "これはアパルトヘイトの名残であると同時に、民主化後も空間再編が十分に進まなかった結果でもある。"
+        },
+        {
+          "en": "Unemployment is the clearest pressure point.",
+          "ja": "失業は最もわかりやすい圧力である。"
+        },
+        {
+          "en": "South Africa does not only lack jobs; it also has a large cohort of young people who cannot enter work early enough for labor markets to reproduce household stability.",
+          "ja": "南アフリカでは、雇用が不足するだけでなく、初職に入れない若者が厚く積み上がるため、労働市場が家計の再生産装置になりにくい。"
+        },
+        {
+          "en": "AP reported in 2025 that the country continues to face very high unemployment and low growth, with electricity and transport bottlenecks dragging on job creation.",
+          "ja": "AP は 2025 年の世界銀行支援報道の中で、南アフリカが非常に高い失業率と低成長に悩んでいること、そして黒字化しにくい電力・交通・物流の制約が雇用を抑えていることを指摘した。"
+        },
+        {
+          "en": "Education remains unequal as well.",
+          "ja": "教育の不均等も残る。"
+        },
+        {
+          "en": "Access expanded, but quality still tracks income and geography.",
+          "ja": "公教育へのアクセスは広がったが、学力の分布は依然として所得と地域に強く引っ張られる。"
+        },
+        {
+          "en": "The Guardian reported in 2025 that most 10-year-olds in South Africa still cannot read for meaning, which shows that school enrollment and actual learning outcomes are very different things.",
+          "ja": "The Guardian が 2025 年に報じたところでは、南アフリカでは 10 歳児の大半が意味を理解して読む段階に達しておらず、制度上の就学率が高くても学習成果は低いという問題が続いている。"
+        },
+        {
+          "en": "So the problem is not simply that South Africa is poor.",
+          "ja": "つまり、南アフリカの問題は「貧しい国だから困っている」のではない。"
+        },
+        {
+          "en": "It is that the country has state capacity for an upper-middle-income economy, but land, space, schools, jobs, and transport do not improve in the same direction.",
+          "ja": "中所得国としての国家能力はあるのに、土地と都市空間、学校、雇用、交通が同じ方向に改善していないため、民主化の恩恵が生活実感に変わりにくいのである。"
+        },
+        {
+          "en": "That is a longer-lasting apartheid legacy than any single legal reform.",
+          "ja": "これは政策失敗というより、アパルトヘイトの制度遺産が長期にわたって残っているという方が正確だ。"
+        }
+      ]
+    },
+    {
+      "id": "policy-tools",
+      "heading": {
+        "ja": "4. B-BBEE、土地改革、教育、都市空間",
+        "en": "4. B-BBEE, Land Reform, Education, and Urban Space"
+      },
+      "pairs": [
+        {
+          "en": "B-BBEE is South Africa's redress framework for ownership, procurement, skills, and enterprise participation.",
+          "ja": "B-BBEE は、人種排除で形成された所有権、調達、技能、取引機会の偏りを是正するための政策枠組みである。"
+        },
+        {
+          "en": "In principle, it is meant to widen economic access rather than merely transfer shares.",
+          "ja": "狙いは black ownership の拡大ではなく、サプライチェーン、技能形成、企業育成を通じた経済参加の広げ直しにある。"
+        },
+        {
+          "en": "In practice, redress policies can turn into distributional politics.",
+          "ja": "ただし、是正政策は配分政治になりやすい。"
+        },
+        {
+          "en": "If implementation leans too much toward ownership transfers or procurement access, it can look like a channel for rents through political and bureaucratic networks rather than a way to expand productive capacity.",
+          "ja": "制度が所有移転や調達配分に偏ると、真に新しい生産能力を増やすよりも、既存の政治・官僚ネットワークを通じた利得配分に見えやすくなる。"
+        },
+        {
+          "en": "That is an inference from the policy design and from the corruption environment around it, not a blanket claim about every B-BBEE program.",
+          "ja": "これは B-BBEE の理念そのものではなく、実装が供給制約と監督不足にぶつかったときに起きる典型的な歪みだというのが、公開情報からの推定である。"
+        },
+        {
+          "en": "Land reform remains one of the most sensitive issues in the country.",
+          "ja": "土地改革は、なお最も政治的に敏感な論点の一つである。"
+        },
+        {
+          "en": "South Africa's 2025 Expropriation Act changed the legal framework so that land can be taken for public purpose or public interest, with limited cases where compensation can be zero if negotiations fail.",
+          "ja": "2025 年の Expropriation Act により、南アフリカは公共目的と公共利益を理由に土地を収用でき、交渉が不調なら補償なし収用が限定的に可能だと定めたが、それは自動的な再配分を意味しない。"
+        },
+        {
+          "en": "But legal change does not automatically produce redistribution, and it does not resolve the conflict among farm reform, investor predictability, and urban land pressure.",
+          "ja": "農地改革、都市周縁の居住再編、投資の予見可能性の三つを同時に満たすのは難しい。"
+        },
+        {
+          "en": "Education and urban space sit underneath the land question.",
+          "ja": "教育と都市空間は、土地問題の裏側にある。"
+        },
+        {
+          "en": "If school quality depends on neighborhood and income, young people can finish school without gaining real labor-market access.",
+          "ja": "学校の質が地域と所得に左右されると、若者は都市で学んでも都市で働けない。"
+        },
+        {
+          "en": "If housing is far from jobs, transport eats wages and makes work fragile even when employment exists.",
+          "ja": "住宅が職場から遠ければ、通勤費が賃金を食い、失業していなくても生活が厳しくなる。"
+        },
+        {
+          "en": "South Africa's urban problem is therefore not only a housing shortage; it is a spatial system that keeps reproducing inequality.",
+          "ja": "南アフリカの都市問題は、単に「住宅不足」ではなく、空間が不平等を再生産する構造そのものにある。"
+        }
+      ]
+    },
+    {
+      "id": "power-safety-corruption",
+      "heading": {
+        "ja": "5. 電力危機、治安、汚職",
+        "en": "5. Power, Safety, and Corruption"
+      },
+      "pairs": [
+        {
+          "en": "Eskom's power crisis is more than an outage problem.",
+          "ja": "Eskom の電力危機は、単なる停電問題ではない。"
+        },
+        {
+          "en": "It lowers factory utilization, disrupts logistics, weakens hospitals and schools, and pulls down tax revenues by reducing output.",
+          "ja": "工場、物流、鉱山、病院、学校、小売の稼働率をまとめて下げる供給制約であり、雇用と税収の両方を圧迫する。"
+        },
+        {
+          "en": "AP reported, in its coverage of World Bank support, that repeated blackouts have hurt mining and auto manufacturing.",
+          "ja": "AP は世界銀行の支援報道の中で、頻発する停電が鉱業や自動車産業を含む経済活動を損ねていると伝えた。"
+        },
+        {
+          "en": "Even if South Africa is past the worst stage of rolling outages, the system remains fragile enough to cap growth quickly.",
+          "ja": "電力危機は最悪期を脱した局面があるとしても、供給網と送電網が脆弱なままでは、成長率はすぐに頭打ちになる。"
+        },
+        {
+          "en": "The diagram shows how outages spill from household inconvenience into a loop that hits investment, employment, and the state budget.",
+          "ja": "この図は、停電が家計の不便だけでなく、投資、雇用、財政に波及する循環を示している。"
+        },
+        {
+          "en": "Safety is also an economic issue.",
+          "ja": "治安も同様に、経済問題である。"
+        },
+        {
+          "en": "High crime raises commuting risk, night-time mobility costs, cash-handling costs, and logistics costs for informal and formal firms alike.",
+          "ja": "犯罪率の高さは通勤、夜間移動、零細商売、現金商取引、物流コストを押し上げる。"
+        },
+        {
+          "en": "When police corruption or collusion with criminal syndicates becomes visible, enforcement capacity itself weakens.",
+          "ja": "さらに、警察組織の腐敗や、犯罪シンジケートとの癒着が疑われると、取り締まりの実効性そのものが落ちる。"
+        },
+        {
+          "en": "AP reported in 2025 and 2026 on the suspension of the police minister and on corruption allegations against senior police officials, which shows that safety in South Africa is partly a state-capacity problem, not only a street-crime problem.",
+          "ja": "AP は 2025 年から 2026 年にかけて、警察相の停職、上級警察幹部の腐敗疑惑、犯罪ネットワークとの関係をめぐる捜査を報じており、治安問題が単純な街頭犯罪ではなく、国家の執行能力の問題になっていることを示した。"
+        },
+        {
+          "en": "On corruption, the Zondo Commission is the starting point because it documented state capture at scale.",
+          "ja": "汚職については、Zondo 委員会が国家捕獲の広がりを記録したことが出発点になる。"
+        },
+        {
+          "en": "But documentation is not the same as punishment.",
+          "ja": "だが、文書化と実際の処罰は別物である。"
+        },
+        {
+          "en": "If prosecutions, asset recovery, and institutional reform move slowly, corruption remains a present-day cost of governing rather than a closed chapter.",
+          "ja": "公開記録は十分でも、訴追、回収、制度改革が遅れれば、汚職は「過去の事件」ではなく「現在進行形の統治コスト」として残る。"
+        }
+      ]
+    },
+    {
+      "id": "election-shift",
+      "heading": {
+        "ja": "6. 最新選挙と ANC 支配の変化",
+        "en": "6. The Latest Election and the Changing ANC Order"
+      },
+      "pairs": [
+        {
+          "en": "In the 2024 national election, the ANC lost its parliamentary majority for the first time and South Africa moved into a GNU-style coalition arrangement.",
+          "ja": "2024 年総選挙で ANC は国政で初めて過半数を失い、連立前提の GNU 体制に入った。"
+        },
+        {
+          "en": "AP reported that the ANC fell to just over 40 percent, while the DA and MK emerged as major forces.",
+          "ja": "AP の報道によれば、ANC は約 4 割台に低下し、DA と MK が存在感を増した。"
+        },
+        {
+          "en": "The significance is larger than a seat count: the assumption that the ANC could govern the state on its own after 1994 has broken.",
+          "ja": "これは単なる議席変動ではなく、1994 年以来の「ANC が国家を単独で動かす」前提が壊れたことを意味する。"
+        },
+        {
+          "en": "GNU politics mean that policy now has to pass through coalition bargaining before it becomes implementation.",
+          "ja": "GNU 化の実務的な含意は、政策が「実装」より前に「連立内交渉」を通るようになったことだ。"
+        },
+        {
+          "en": "In the 2025 budget debate, a proposed VAT increase triggered coalition conflict and was later reversed.",
+          "ja": "2025 年の予算では付加価値税引き上げをめぐって連立内対立が起き、政府は後に方針を取り下げた。"
+        },
+        {
+          "en": "That shows that fiscal policy, redistribution, and growth are now negotiated inside the coalition rather than imposed by a single governing party.",
+          "ja": "これは財政・再分配・成長の優先順位が、今や党内独裁ではなく連立調整で決まることを示している。"
+        },
+        {
+          "en": "What matters here is not that the ANC \"failed\" or that democracy \"succeeded.\"",
+          "ja": "この表で重要なのは、ANC の弱体化が「民主化の成功」でも「国家の失敗」でもない点である。"
+        },
+        {
+          "en": "The real shift is that South Africa now looks more like a normal fragmented multiparty system, where no party can automatically solve the social economy on its own.",
+          "ja": "むしろ、旧与党が支配力を失っても、代替勢力が直ちに社会経済問題を解決するわけではない、という正常な多党化への移行と見るべきだ。"
+        }
+      ]
+    },
+    {
+      "id": "implications",
+      "heading": {
+        "ja": "7. 実務含意",
+        "en": "7. Practical Implications"
+      },
+      "pairs": [
+        {
+          "en": "The biggest mistake is to read South Africa as either a total failure or a normal middle-income success story.",
+          "ja": "南アフリカを読むとき、最も危険なのは「一枚岩の失敗国」か「制度が整った中所得国」のどちらか一方としてだけ見ることだ。"
+        },
+        {
+          "en": "In reality, central cities, formal finance, courts, and the constitution are relatively strong, while peripheral settlements, youth employment, municipalities, and the power system remain extremely weak.",
+          "ja": "実際には、都市の中心部、正式雇用、資本市場、司法制度は比較的近代的だが、郊外、若年失業者、非公式経済、地方自治体、電力網は非常に脆い。"
+        },
+        {
+          "en": "The policy priority list is short.",
+          "ja": "政策面の優先順位は三つに絞れる。"
+        },
+        {
+          "en": "First, electricity, ports, rail, and municipal accounts need to be fixed together.",
+          "ja": "第一に、電力、港湾、鉄道、自治体会計を同時に立て直すこと。"
+        },
+        {
+          "en": "Second, B-BBEE and land reform need to be tied to productive capacity rather than only to redistribution politics.",
+          "ja": "第二に、B-BBEE と土地改革を、政治的配分ではなく生産能力の拡張につなげること。"
+        },
+        {
+          "en": "Third, school quality, early learning, and urban settlement patterns need to be treated as direct anti-youth-unemployment policy.",
+          "ja": "第三に、学校の質、初等教育、都市の居住配置を、若年失業への直接対策として扱うことだ。"
+        },
+        {
+          "en": "The research conclusion is simple.",
+          "ja": "研究上の結論は明快である。"
+        },
+        {
+          "en": "South Africa's democracy was a real advance, but it was never going to dissolve inequality automatically.",
+          "ja": "南アフリカの民主化は本物の進歩だったが、それは格差の自動解消ではなかった。"
+        },
+        {
+          "en": "Political inclusion and social-economic restructuring are separate tasks, and the latter will only move if power, land, schools, safety, municipalities, and coalition politics are pushed together.",
+          "ja": "政治的権利の拡大と社会経済の再編は別工程であり、後者は電力、土地、学校、治安、自治体、連立政治という複数のレバーを同時に動かさない限り進みにくい。"
+        }
+      ]
+    }
+  ]
+}

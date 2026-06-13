@@ -2,42 +2,50 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content'
 import BaseLayout from '@/layouts/BaseLayout'
 import Code from '@/components/mdx/Code'
+import SourceNote from '@/components/mdx/SourceNote'
+import NewsSourceCard from '@/components/mdx/NewsSourceCard'
 import ArrowUpRight from '@/components/icons/ArrowUpRight'
-import { getPostLocale, getPostSlug, hasArticleSourceNotes, localizedPath } from '@/utils'
+import { getPostLocale, getPostSlug, hasAnyArticleSourceNotes, localizedPath } from '@/utils'
 
 type Props = {
 	post: CollectionEntry<'blog'>
-	research: CollectionEntry<'articleResearch'>
-	hasSourceNotes: boolean
+	sourceNotes: CollectionEntry<'articleSourceNotes'>
+	hasResearchLog: boolean
 }
 
 export async function getStaticPaths() {
+	if (!hasAnyArticleSourceNotes()) return []
+
 	const posts = (await getCollection('blog')).filter(
-		(post) => getPostLocale(post) === 'en' && post.data.contentType === 'news'
+		(post) => getPostLocale(post) === 'en' && post.data.contentType === 'report'
 	)
+	const sourceEntries = (await getCollection('articleSourceNotes')).filter(
+		(entry) => getPostLocale(entry) === 'en'
+	)
+	const sourceBySlug = new Map(sourceEntries.map((entry) => [getPostSlug(entry), entry]))
 	const researchEntries = (await getCollection('articleResearch')).filter(
 		(entry) => getPostLocale(entry) === 'en'
 	)
-	const researchBySlug = new Map(researchEntries.map((entry) => [getPostSlug(entry), entry]))
+	const researchSlugs = new Set(researchEntries.map((entry) => getPostSlug(entry)))
 
 	return posts
 		.map((post) => {
 			const slug = getPostSlug(post)
-			const research = researchBySlug.get(slug)
-			if (!research || post.data.draft) return null
+			const sourceNotes = sourceBySlug.get(slug)
+			if (!sourceNotes || post.data.draft) return null
 			return {
 				params: { slug },
-				props: { post, research, hasSourceNotes: hasArticleSourceNotes(slug, 'en') }
+				props: { post, sourceNotes, hasResearchLog: researchSlugs.has(slug) }
 			}
 		})
 		.filter((path): path is { params: { slug: string }; props: Props } => path !== null)
 }
 
 const locale = 'en'
-const { post, research, hasSourceNotes } = Astro.props
+const { post, sourceNotes, hasResearchLog } = Astro.props
 const postSlug = getPostSlug(post)
-const { Content } = await render(research)
-const title = research.data.title ?? `${post.data.title} research trail`
+const { Content } = await render(sourceNotes)
+const title = sourceNotes.data.title ?? `${post.data.title} source notes`
 ---
 
 <BaseLayout
@@ -50,20 +58,20 @@ const title = research.data.title ?? `${post.data.title} research trail`
 		<header class='research-hero grid gap-6 rounded-lg px-5 py-6 shadow-sm sm:px-8 sm:py-8'>
 			<div class='flex flex-wrap gap-3'>
 				<a
-					href={localizedPath(locale, `/news/${postSlug}/`)}
+					href={localizedPath(locale, `/reports/${postSlug}/`)}
 					class='inline-flex w-fit items-center gap-2 rounded-full border border-black/10 bg-white/75 px-3 py-1.5 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-200 [&_svg]:h-4 [&_svg]:w-4'
 				>
 					<ArrowUpRight />
 					Back to article
 				</a>
 				{
-					hasSourceNotes && (
+					hasResearchLog && (
 						<a
-							href={localizedPath(locale, `/news/${postSlug}/sources/`)}
+							href={localizedPath(locale, `/reports/${postSlug}/research/`)}
 							class='inline-flex w-fit items-center gap-2 rounded-full border border-black/10 bg-white/75 px-3 py-1.5 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-200 [&_svg]:h-4 [&_svg]:w-4'
 						>
 							<ArrowUpRight />
-							Source notes
+							Research trail
 						</a>
 					)
 				}
@@ -72,7 +80,7 @@ const title = research.data.title ?? `${post.data.title} research trail`
 				<p
 					class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'
 				>
-					Research Trail
+					Source Notes
 				</p>
 				<h1
 					class='text-3xl font-semibold leading-tight text-gray-950 dark:text-gray-50 md:text-5xl'
@@ -80,8 +88,8 @@ const title = research.data.title ?? `${post.data.title} research trail`
 					{title}
 				</h1>
 				<p class='max-w-4xl leading-7 text-gray-700 dark:text-gray-300'>
-					A public record of the questions, source selection, rejected evidence, decision criteria,
-					and update conditions behind this news article.
+					An intermediate note for organizing research material, evidence links, issue structure,
+					and inclusion decisions before the reader-facing article is written.
 				</p>
 			</div>
 		</header>
@@ -89,7 +97,7 @@ const title = research.data.title ?? `${post.data.title} research trail`
 		<div
 			class='prose prose-base max-w-none rounded-lg border border-black/10 bg-white/85 px-5 py-6 dark:border-white/10 dark:bg-white/5 dark:prose-invert sm:px-8 md:prose-lg prose-h2:border-t prose-h2:border-black/10 prose-h2:pt-7 prose-h2:first:border-t-0 prose-h2:first:pt-0 prose-p:leading-8 prose-li:leading-8 prose-table:text-sm dark:prose-h2:border-white/10'
 		>
-			<Content components={{ pre: Code }} />
+			<Content components={{ pre: Code, SourceNote, NewsSourceCard }} />
 		</div>
 	</article>
 </BaseLayout>

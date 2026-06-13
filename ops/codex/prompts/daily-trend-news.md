@@ -55,6 +55,13 @@ policy, business, and practical decisions.
   `何が起きたか` / `なぜ重要か` / `今後の注視点` paragraphs. Do not leave a
   plain `出典メモ:` text line in News digests.
 - Do not create `report.md` or another second copy of the same article body.
+- Create public pre-article source notes in
+  `articles/news/daily-trends-<YYYY-MM-DD>/ja/source-notes.mdx` and
+  `articles/news/daily-trends-<YYYY-MM-DD>/en/source-notes.mdx`. Use these
+  files for source inventory, topic selection notes, image/source-card evidence,
+  rejected or downgraded candidate topics, uncertainty labels, and cross-topic
+  synthesis before the material is edited into the reader-facing digest. Do not
+  make them duplicate copies of the final article.
 - Create a public research trail in
   `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx` and
   `articles/news/daily-trends-<YYYY-MM-DD>/en/research-log.mdx` alongside the
@@ -75,6 +82,8 @@ policy, business, and practical decisions.
   Japanese/English sentence pairs to satisfy `ops/scripts/validate-mix-alignment.mjs`.
 - Confirm the public trail is reachable from
   `/news/daily-trends-<YYYY-MM-DD>/research/`.
+- Confirm the public source notes are reachable from
+  `/news/daily-trends-<YYYY-MM-DD>/sources/`.
 
 ## Context Budget Rules
 
@@ -245,6 +254,8 @@ Run focused verification before finishing:
   `NewsDigestSection` blocks: one politics, one economy, and one technology.
 - Confirm `mix-alignment.json` exists for MIX display and covers the generated
   English article.
+- Confirm localized `source-notes.mdx` files exist and summarize source
+  selection before the final digest.
 - Confirm `NewsSourceCard` `imageUrl` values are unique within the article after
   ignoring query strings.
 - Confirm `heroImageQuery` is specific to people, organizations, companies,
@@ -258,6 +269,7 @@ Run focused verification before finishing:
   - `/news/rss.xml`
   - `/news/daily-trends-<YYYY-MM-DD>/index.html`
   - `/news/daily-trends-<YYYY-MM-DD>/research/index.html`
+  - `/news/daily-trends-<YYYY-MM-DD>/sources/index.html`
 
 ## Final Message
 

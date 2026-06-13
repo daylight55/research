@@ -15,6 +15,7 @@ Use this skill for durable research artifacts in this repository. Follow `AGENTS
 - Treat `articles/<type>/<slug>/ja/index.mdx` as the canonical Japanese reader-facing body.
 - Keep `articles/<type>/<slug>/en/index.mdx` synchronized in the same PR when adding or updating a published article. Do not add Japanese-only public routes unless the user explicitly asks to defer English output.
 - Put the full article body directly in `index.mdx`. Do not create `report.md`, `research-tasks.md`, `notes/`, `sources/`, `figures/`, or `prototype/` under `articles/`.
+- Use `articles/<type>/<slug>/<locale>/source-notes.mdx` for publishable pre-article research material: source inventory, evidence notes, issue structure, and inclusion or exclusion decisions. Keep it as an intermediate research note, not a duplicate copy of the final article.
 - If the research trail is useful and publishable, summarize it in `articles/<type>/<slug>/ja/research-log.mdx`; add or update the English research log when that route is published.
 - When creating a report, use `ops/codex/templates/blog-entry.mdx` as the frontmatter and body shape.
 - Ensure frontmatter `contentType` matches the directory type when it is present: `report` for `articles/report` and `news` for `articles/news`.
@@ -34,7 +35,9 @@ If the report or digest must appear on the website, top page, category pages, or
 9. Confirm the build generated the expected pages:
    - report: `dist/reports/<slug>/index.html`
    - report research log: `dist/reports/<slug>/research/index.html` when `research-log.mdx` exists
+   - report source notes: `dist/reports/<slug>/sources/index.html` when `source-notes.mdx` exists
    - news: `dist/news/<slug>/index.html`
+   - news source notes: `dist/news/<slug>/sources/index.html` when `source-notes.mdx` exists
    - category: `dist/category/<category-name>/1/index.html`
    - homepage: `dist/index.html`
 10. Check `dist/index.html` or a local preview with `curl` for the slug, title, and category link before saying the article is visible.
@@ -50,8 +53,9 @@ If the report or digest must appear on the website, top page, category pages, or
 6. Distinguish established facts, emerging evidence, product/vendor claims, inference from public information, open questions, limitations, and practical implications.
 7. Write in Japanese for practitioners, researchers, and decision makers who need source-grounded judgment.
 8. Keep the article standalone; future readers should not need the GitHub issue or chat context.
-9. Use `research-log.mdx` for publishable questions checked, sources used, assumptions, rejected leads, limits, and follow-up items.
-10. Verify links, placeholders, SourceNote formatting, diagrams, and Japanese-English parity before publication.
+9. Use `source-notes.mdx` for publishable source inventory, evidence notes, competing interpretations, and inclusion/exclusion decisions before drafting the reader-facing article.
+10. Use `research-log.mdx` for publishable questions checked, automation context, assumptions, rejected leads, limits, and follow-up items.
+11. Verify links, placeholders, SourceNote formatting, diagrams, and Japanese-English parity before publication.
 
 ## Publication Workflow
 
@@ -136,7 +140,7 @@ Use this shape unless the topic needs something else:
 
 Before finishing:
 
-- Article files use `articles/(report|news)/<slug>/(ja|en)/(index|research-log).mdx`.
+- Article files use `articles/(report|news)/<slug>/(ja|en)/(index|research-log|source-notes).mdx`.
 - No duplicate `report.md`, `research-tasks.md`, `notes/`, `sources/`, `figures/`, or `prototype/` material exists under `articles/`.
 - Japanese and English published routes are synchronized.
 - `mix-alignment.json` is valid when the mixed reading view is maintained.

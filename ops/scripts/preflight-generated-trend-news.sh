@@ -20,6 +20,8 @@ for required_file in \
 	"${ARTICLE_PATH}" \
 	"articles/news/${SLUG}/ja/index.mdx" \
 	"articles/news/${SLUG}/en/index.mdx" \
+	"articles/news/${SLUG}/ja/source-notes.mdx" \
+	"articles/news/${SLUG}/en/source-notes.mdx" \
 	"articles/news/${SLUG}/ja/research-log.mdx" \
 	"articles/news/${SLUG}/en/research-log.mdx" \
 	"articles/news/${SLUG}/mix-alignment.json"; do

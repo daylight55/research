@@ -34,6 +34,14 @@ drivers, risks, and practical implications.
   executive summary, major claims, recommendations, and limitations.
 - Do not create `report.md` or another second copy of the same article body.
   Duplicate report bodies drift and make the workflow slower.
+- Create or update `articles/report/<topic>/ja/source-notes.mdx` as the
+  pre-article research material note. Use it for source inventory, primary
+  evidence notes, competing interpretations, issue structure, and
+  inclusion/exclusion decisions that help turn the raw investigation into a
+  readable report. Do not make it a second copy of the final article.
+- Also create or update `articles/report/<topic>/en/source-notes.mdx` in the
+  same change when publishing the English article, so the English `/sources/`
+  route does not lag behind the Japanese source material.
 - Write the investigation process in
   `articles/report/<topic>/ja/research-log.mdx` as a public research trail:
   questions checked, key sources, rejected evidence, limits, and how those
@@ -114,6 +122,14 @@ drivers, risks, and practical implications.
   Summarize what happened, why it matters, what structural forces are behind it,
   what may change next, and what remains uncertain.
 - Keep public investigation notes in `articles/report/<topic>/ja/research-log.mdx`.
+- Keep public pre-article source material in
+  `articles/report/<topic>/ja/source-notes.mdx`.
+- In `source-notes.mdx`, include:
+  - a compact source map grouped by primary sources, authoritative data, and
+    secondary context
+  - evidence notes for the claims that should shape the article
+  - rejected or downgraded sources with short reasons
+  - open questions and uncertainty labels that the final report should preserve
 - In `research-log.mdx`, include:
   - the model used by the automation
   - a GitHub URL link to `.codex/skills/research-report/SKILL.md`

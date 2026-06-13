@@ -1,5 +1,5 @@
 ---
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { stripLocaleFromPath, type Locale } from '@/utils'
 
@@ -12,6 +12,11 @@ const articleRoot =
 const hasEnglishArticle = articleRoot ? existsSync(join(articleRoot, 'en', 'index.mdx')) : true
 const hasMixedArticle =
 	Boolean(articleRoot) && hasEnglishArticle && existsSync(join(articleRoot, 'mix-alignment.json'))
+const localeScrollAlignmentPath = articleRoot ? join(articleRoot, 'mix-alignment.json') : undefined
+const localeScrollAlignment =
+	localeScrollAlignmentPath && existsSync(localeScrollAlignmentPath)
+		? JSON.parse(readFileSync(localeScrollAlignmentPath, 'utf8'))
+		: undefined
 const availableLocalesForCurrentPath = [
 	'ja',
 	hasEnglishArticle && 'en',
@@ -21,9 +26,16 @@ const localeAvailabilityScript = `window.__localeAvailability=${JSON.stringify({
 	contentPath: currentContentPath,
 	availableLocales: availableLocalesForCurrentPath
 })};`
+const localeScrollAlignmentScript = localeScrollAlignment
+	? `window.__localeScrollAlignment=${JSON.stringify({
+			contentPath: currentContentPath,
+			alignment: localeScrollAlignment
+		}).replace(/</g, '\\u003c')};`
+	: undefined
 ---
 
 <script is:inline set:html={localeAvailabilityScript} />
+{localeScrollAlignmentScript && <script is:inline set:html={localeScrollAlignmentScript} />}
 
 <script>
 	import { navigate } from 'astro:transitions/client'
@@ -36,6 +48,8 @@ const localeAvailabilityScript = `window.__localeAvailability=${JSON.stringify({
 	const SWIPE_MAX_WIDTH = 768
 	const SWIPE_MIN_DISTANCE = 72
 	const SWIPE_MAX_VERTICAL_DISTANCE = 70
+	const ARTICLE_BLOCK_SELECTOR = 'h1, h2, h3, h4, p, li, blockquote, table'
+	const ARTICLE_VIEWPORT_ANCHOR_RATIO = 0.42
 	const CURRENT_CONTENT_PATH = window.__localeAvailability?.contentPath ?? '/'
 	const AVAILABLE_LOCALES_FOR_CURRENT_PATH =
 		window.__localeAvailability?.availableLocales ?? SUPPORTED_LOCALES
@@ -189,13 +203,197 @@ const localeAvailabilityScript = `window.__localeAvailability=${JSON.stringify({
 			document.documentElement.clientHeight
 		)
 
+	const clamp = (value, min, max) => Math.min(max, Math.max(min, value))
+
+	const normalizeScrollAnchorText = (text) =>
+		(text ?? '')
+			.replace(/[“”]/g, '"')
+			.replace(/[‘’]/g, "'")
+			.replace(/[`*]/g, '')
+			.replace(/\s+/g, ' ')
+			.trim()
+
+	const getArticleContentRoot = () =>
+		document.querySelector('article [data-mixed-english]') ??
+		document.querySelector('article .prose') ??
+		document.querySelector('article')
+
+	const cloneBlockForAnchorText = (block) => {
+		const clone = block.cloneNode(true)
+		clone
+			.querySelectorAll('.source-note, [role="note"], .not-prose')
+			.forEach((node) => node.remove())
+		return clone
+	}
+
+	const getComparableBlockText = (block) =>
+		normalizeScrollAnchorText(cloneBlockForAnchorText(block).textContent)
+
+	const getArticleBlocks = () => {
+		const root = getArticleContentRoot()
+		if (!root) return []
+
+		return [...root.querySelectorAll(ARTICLE_BLOCK_SELECTOR)].filter((block) => {
+			if (
+				block.closest('.not-prose, [hidden], [data-mixed-japanese], .source-note, [role="note"]')
+			) {
+				return false
+			}
+
+			const rect = block.getBoundingClientRect()
+			return rect.height > 0 && getComparableBlockText(block).length > 0
+		})
+	}
+
+	const alignmentPairsFromData = (alignment) => {
+		if (!alignment || typeof alignment !== 'object') return []
+		const topLevelPairs = Array.isArray(alignment.pairs) ? alignment.pairs : []
+		const sectionPairs = Array.isArray(alignment.sections)
+			? alignment.sections.flatMap((section) => (Array.isArray(section.pairs) ? section.pairs : []))
+			: []
+		const headingPairs = Array.isArray(alignment.sections)
+			? alignment.sections
+					.map((section) => section?.heading)
+					.filter((heading) => typeof heading?.en === 'string' && typeof heading?.ja === 'string')
+			: []
+
+		return [...headingPairs, ...topLevelPairs, ...sectionPairs]
+			.filter((pair) => typeof pair?.en === 'string' && typeof pair?.ja === 'string')
+			.map((pair) => ({
+				en: normalizeScrollAnchorText(pair.en),
+				ja: normalizeScrollAnchorText(pair.ja)
+			}))
+			.filter((pair) => pair.en.length >= 4 && pair.ja.length >= 4)
+	}
+
+	const getLocaleScrollAlignmentPairs = () => {
+		const payload = window.__localeScrollAlignment
+		if (
+			!payload ||
+			normalizePath(payload.contentPath ?? '/') !==
+				normalizePath(stripLocale(window.location.pathname))
+		) {
+			return []
+		}
+		return alignmentPairsFromData(payload.alignment)
+	}
+
+	const anchorTextMatches = (blockText, anchorText) => {
+		if (!blockText || !anchorText) return false
+		if (blockText.length < 8 || anchorText.length < 8) return false
+		return (
+			blockText === anchorText || blockText.includes(anchorText) || anchorText.includes(blockText)
+		)
+	}
+
+	const annotateArticleScrollAnchors = () => {
+		const currentLocale = getPathLocale(window.location.pathname)
+		if (currentLocale === 'mix') return
+
+		const pairs = getLocaleScrollAlignmentPairs()
+		if (pairs.length === 0) return
+
+		getArticleBlocks().forEach((block) => {
+			if (block.dataset.scrollAnchorEn && block.dataset.scrollAnchorJa) return
+
+			const blockText = getComparableBlockText(block)
+			const matchedPairs = pairs.filter((pair) => anchorTextMatches(blockText, pair[currentLocale]))
+			if (matchedPairs.length === 0) return
+
+			const englishText = normalizeScrollAnchorText(matchedPairs.map((pair) => pair.en).join(' '))
+			const japaneseText = normalizeScrollAnchorText(matchedPairs.map((pair) => pair.ja).join(' '))
+			if (englishText) block.dataset.scrollAnchorEn = englishText
+			if (japaneseText) block.dataset.scrollAnchorJa = japaneseText
+		})
+	}
+
+	const getBlockTextAnchors = (block, locale = getPathLocale(window.location.pathname)) => {
+		const englishText = normalizeScrollAnchorText(block.dataset?.scrollAnchorEn)
+		const japaneseText = normalizeScrollAnchorText(block.dataset?.scrollAnchorJa)
+		const blockText = getComparableBlockText(block)
+
+		return {
+			en: englishText || (locale === 'en' ? blockText : ''),
+			ja: japaneseText || (locale === 'ja' ? blockText : '')
+		}
+	}
+
+	const findArticleBlockByTextAnchor = (anchor, blocks) => {
+		const targetLocale = getPathLocale(window.location.pathname)
+		const preferredLocales = targetLocale === 'mix' ? ['en', 'ja'] : [targetLocale]
+
+		for (const locale of preferredLocales) {
+			const savedText = anchor.textByLocale?.[locale]
+			if (!savedText) continue
+
+			const matchedBlock = blocks.find((block) => {
+				const blockText = getBlockTextAnchors(block, targetLocale)[locale]
+				return anchorTextMatches(blockText, savedText)
+			})
+			if (matchedBlock) return matchedBlock
+		}
+
+		return null
+	}
+
+	const getArticleScrollAnchor = () => {
+		annotateArticleScrollAnchors()
+
+		const blocks = getArticleBlocks()
+		if (blocks.length === 0) return null
+
+		const referenceY = window.innerHeight * ARTICLE_VIEWPORT_ANCHOR_RATIO
+		const visibleBlock =
+			blocks.find((block) => {
+				const rect = block.getBoundingClientRect()
+				return rect.bottom >= referenceY && rect.top <= window.innerHeight
+			}) ??
+			blocks.find((block) => block.getBoundingClientRect().bottom >= 0) ??
+			blocks[0]
+
+		const rect = visibleBlock.getBoundingClientRect()
+		const blockIndex = blocks.indexOf(visibleBlock)
+		const blockOffsetRatio =
+			rect.height > 0 ? clamp((referenceY - rect.top) / rect.height, 0, 1) : 0
+
+		return {
+			blockIndex,
+			blockOffsetRatio,
+			textByLocale: getBlockTextAnchors(visibleBlock),
+			viewportRatio: ARTICLE_VIEWPORT_ANCHOR_RATIO
+		}
+	}
+
+	const scrollToArticleAnchor = (anchor) => {
+		if (!anchor || typeof anchor.blockIndex !== 'number') return false
+
+		annotateArticleScrollAnchors()
+
+		const blocks = getArticleBlocks()
+		if (blocks.length === 0) return false
+
+		const block = findArticleBlockByTextAnchor(anchor, blocks)
+		if (!block) return false
+
+		const rect = block.getBoundingClientRect()
+		const maxScroll = Math.max(0, getScrollableHeight() - window.innerHeight)
+		const viewportY = window.innerHeight * (anchor.viewportRatio ?? ARTICLE_VIEWPORT_ANCHOR_RATIO)
+		const blockY = window.scrollY + rect.top + rect.height * (anchor.blockOffsetRatio ?? 0)
+		const targetY = clamp(blockY - viewportY, 0, maxScroll)
+
+		window.scrollTo({ top: targetY, left: 0, behavior: 'instant' })
+		return Math.abs(window.scrollY - targetY) < 4
+	}
+
 	const saveScrollPosition = (targetLocale) => {
 		const maxScroll = Math.max(1, getScrollableHeight() - window.innerHeight)
+		const isAtPageTop = window.scrollY <= 1
 		const saved = {
 			locale: targetLocale,
 			path: stripLocale(window.location.pathname),
 			y: window.scrollY,
 			ratio: window.scrollY / maxScroll,
+			anchor: isAtPageTop ? null : getArticleScrollAnchor(),
 			time: Date.now()
 		}
 
@@ -256,6 +454,11 @@ const localeAvailabilityScript = `window.__localeAvailability=${JSON.stringify({
 			const previousBehavior = root.style.scrollBehavior
 
 			root.style.scrollBehavior = 'auto'
+			if (scrollToArticleAnchor(saved.anchor)) {
+				root.style.scrollBehavior = previousBehavior
+				return true
+			}
+
 			const targetY = Math.min(saved.y ?? maxScroll * (saved.ratio ?? 0), maxScroll)
 			window.scrollTo({ top: targetY, left: 0, behavior: 'instant' })
 			root.style.scrollBehavior = previousBehavior
@@ -400,10 +603,15 @@ const localeAvailabilityScript = `window.__localeAvailability=${JSON.stringify({
 	window.addEventListener('wheel', cancelScrollRestoreForUserInput, { passive: true })
 	window.addEventListener('touchmove', cancelScrollRestoreForUserInput, { passive: true })
 	window.addEventListener('keydown', cancelScrollRestoreForScrollKey)
-	document.addEventListener('DOMContentLoaded', restoreScrollPosition)
-	document.addEventListener('astro:page-load', () => {
-		syncLocale()
+	document.addEventListener('DOMContentLoaded', () => {
+		annotateArticleScrollAnchors()
 		restoreScrollPosition()
 	})
+	document.addEventListener('astro:page-load', () => {
+		syncLocale()
+		annotateArticleScrollAnchors()
+		restoreScrollPosition()
+	})
+	annotateArticleScrollAnchors()
 	syncLocale()
 </script>

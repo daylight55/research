@@ -25,22 +25,25 @@ test('post layout keeps readable spacing around sidebars on wide screens', () =>
 test('post sidebar keeps the research trail link immediately before share', () => {
 	const postPage = readFileSync('src/pages/reports/[...slug].astro', 'utf8')
 	const englishPostPage = readFileSync('src/pages/en/reports/[...slug].astro', 'utf8')
+	const articleResearchLinks = readFileSync('src/components/ArticleResearchLinks.astro', 'utf8')
 
 	for (const source of [postPage, englishPostPage]) {
-		const researchIndex = source.lastIndexOf('Research trail')
+		const researchIndex = source.lastIndexOf('<ArticleResearchLinks')
 		const shareIndex = source.lastIndexOf('<Share title={post.data.title} />')
 
 		assert.ok(researchIndex > 0)
 		assert.ok(shareIndex > researchIndex)
 	}
 
+	assert.match(articleResearchLinks, /Research trail/)
+	assert.match(articleResearchLinks, /Source notes/)
 	assert.match(
-		englishPostPage,
-		/href=\{localizedPath\(locale, `\/reports\/\$\{postSlug\}\/research\/`\)\}/
+		articleResearchLinks,
+		/href=\{localizedPath\(locale, `\/\$\{section\}\/\$\{slug\}\/research\/`\)\}/
 	)
 	assert.doesNotMatch(
-		englishPostPage,
-		/href=\{localizedPath\('ja', `\/reports\/\$\{postSlug\}\/research\/`\)\}/
+		articleResearchLinks,
+		/href=\{localizedPath\('ja', `\/\$\{section\}\/\$\{slug\}\/research\/`\)\}/
 	)
 })
 

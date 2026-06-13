@@ -29,6 +29,7 @@ export {
 export { remarkReadingTime } from './readTime'
 export { getMixedArticleAlignment } from './mixedAlignment'
 export type { MixedArticleAlignment } from './mixedAlignment'
+export { hasAnyArticleSourceNotes, hasArticleSourceNotes } from './articleSupport'
 export {
 	ARTICLE_LIST_PAGE_SIZE,
 	createArticleListPage,

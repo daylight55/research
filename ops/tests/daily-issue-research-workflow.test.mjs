@@ -105,6 +105,12 @@ assert.match(
 
 assert.match(
 	dailyIssuePrompt,
+	/articles\/report\/<topic>\/ja\/source-notes\.mdx[\s\S]*?source inventory[\s\S]*?inclusion\/exclusion decisions/,
+	'Daily Issue Research prompt should require pre-article source notes for source material before drafting'
+)
+
+assert.match(
+	dailyIssuePrompt,
 	/Do not include an issue URL because the research queue[\s\S]*?may be private/,
 	'Daily Issue Research prompt should keep private issue URLs out of research logs'
 )
@@ -119,6 +125,12 @@ assert.match(
 	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
 	/research-log\.mdx[\s\S]*?## 調査命令[\s\S]*?Run Context[\s\S]*?topic hint/,
 	'Daily Trend News prompt should ask optional research logs to summarize the run instruction context'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/source-notes\.mdx[\s\S]*?source inventory[\s\S]*?topic selection notes[\s\S]*?\/sources\//,
+	'Daily Trend News prompt should require localized source notes and a public sources route'
 )
 
 assert.match(
@@ -393,7 +405,7 @@ assert.match(
 
 assert.match(
 	trendNewsPreflightScript,
-	/node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-news-item-format\.mjs --changed[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
+	/articles\/news\/\$\{SLUG\}\/ja\/source-notes\.mdx[\s\S]*articles\/news\/\$\{SLUG\}\/en\/source-notes\.mdx[\s\S]*node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-news-item-format\.mjs --changed[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
 	'Daily Trend News preflight should run generated article, Smart Brevity, and MIX tests before the final strict CI gate'
 )
 

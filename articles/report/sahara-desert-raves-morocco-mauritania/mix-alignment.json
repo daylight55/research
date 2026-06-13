@@ -1,0 +1,238 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "モロッコ南部から西サハラ、モーリタニアへ向かう砂漠地帯の「レイブ」は、一つの現象ではない。",
+					"en": "\"Desert rave\" around southern Morocco, Western Sahara, and Mauritania is not one unified phenomenon."
+				},
+				{
+					"ja": "映画『Sirât』が描くような遊牧的な free party、モロッコの psytrance フェス、Ouarzazate 周辺の商業電子音楽フェス、M'hamid El Ghizlane の地域音楽・教育フェスは、主催者も目的も違う。",
+					"en": "The free-party image made visible by the film *Sirât*, Moroccan psytrance festivals, commercial electronic music events around Ouarzazate, and community music projects in M'hamid El Ghizlane involve different organizers and purposes."
+				},
+				{
+					"ja": "現時点で確認できる範囲では、これらを宗教団体や政治組織が一元的に主導しているとは言えない。",
+					"en": "Based on the available evidence, these events are not centrally led by a religious or political organization."
+				},
+				{
+					"ja": "宗教分布はかなり明確である。",
+					"en": "The religious profile is clear."
+				},
+				{
+					"ja": "モロッコは人口の99%超がスンニ派ムスリムとされ、国家はマリキ派スンニ・アシュアリー系の教育と宗教管理を重視する。",
+					"en": "Morocco is more than 99 percent Sunni Muslim, and the state gives special weight to Maliki Sunni-Ashari religious education and regulation."
+				},
+				{
+					"ja": "モーリタニアも政府推計で約99%がスンニ派ムスリムで、イスラムが国家と市民の唯一の宗教と位置づけられる。",
+					"en": "Mauritania is also overwhelmingly Sunni Muslim, with government estimates placing Sunni Muslims at about 99 percent of the population; Islam is defined as the sole religion of the state and citizenry."
+				},
+				{
+					"ja": "したがって、レイブとの宗教関連性は「宗教団体が主催している」というより、保守的イスラム社会の規範、観光・若者文化、欧州 free party 文化、Sufi/Gnawa 系音楽伝統が交差する背景として読むべきである。",
+					"en": "The religious relevance of desert raves is therefore not that religious groups run them."
+				},
+				{
+					"ja": "したがって、レイブとの宗教関連性は「宗教団体が主催している」というより、保守的イスラム社会の規範、観光・若者文化、欧州 free party 文化、Sufi/Gnawa 系音楽伝統が交差する背景として読むべきである。",
+					"en": "It is that conservative Islamic social norms, tourism, youth culture, European free-party culture, and Sufi/Gnawa musical traditions meet in the same social space."
+				},
+				{
+					"ja": "安全保障上の核心は、西サハラの Moroccan Berm と地雷・不発弾である。",
+					"en": "The main security issue is the Moroccan Berm and landmine/explosive ordnance contamination in Western Sahara."
+				},
+				{
+					"ja": "UNMAS は、汚染の多くが地域を分断する 1,465km の砂の Berm 沿いに集中するとし、2008年以降に約1億5000万平方メートルの危険地を解放したと報告する。",
+					"en": "UNMAS says much contamination is concentrated along the 1,465 km sand berm that divides the region, and that since 2008 it has released approximately 150 million square meters of hazardous land."
+				},
+				{
+					"ja": "鉄道は、モーリタニア側に実在する SNIM の鉄鉱石鉄道が重要である。",
+					"en": "The most important railway is Mauritania's SNIM iron-ore railway."
+				},
+				{
+					"ja": "公式資料は、既存鉄道が 704km の単線で、M'Haoudatt 側から Nouadhibou の鉱石港までを結ぶと説明する。",
+					"en": "SNIM's own 2024 stakeholder plan describes the existing railway as a 704 km single-track line linking the M'Haoudatt side to the Nouadhibou ore port."
+				},
+				{
+					"ja": "映画や旅行記で印象的に扱われる鉄鉱石列車はこの産業インフラであり、地雷帯や西サハラの政治境界と同一視してはいけない。",
+					"en": "The iron-ore train that appears in travel writing and film discussion is an industrial railway, not the same thing as the landmine belt or the Western Sahara military boundary."
+				}
+			]
+		},
+		{
+			"id": "three-meanings",
+			"heading": {
+				"ja": "2. 「砂漠レイブ」を三つに分ける",
+				"en": "2. Three Different Meanings of \"Desert Rave\""
+			},
+			"pairs": [
+				{
+					"ja": "第一は、映画『Sirât』が強く可視化した free party 的なレイブ像である。",
+					"en": "The first meaning is the free-party image foregrounded by *Sirât*."
+				},
+				{
+					"ja": "これは実在の rave culture を取り込んだ作品だが、映画内のレイブを、特定の現地団体が定期開催する公的イベントと同一視するのは危険である。",
+					"en": "The film draws on real rave culture, but its rave should not be treated as a regular public event run by one identifiable local organization."
+				},
+				{
+					"ja": "場所は非公開で、開催継続性や中止の有無は年によって揺れる。",
+					"en": "The exact location is undisclosed, and the event's continuity appears to vary by year."
+				},
+				{
+					"ja": "これは「宗教団体」でも「国家的文化政策」でもなく、国際的な psytrance / festival travel 圏の運営コレクティブとして見るのが妥当である。",
+					"en": "The best classification is therefore not religious movement or state cultural policy, but an international psytrance/festival-travel collective."
+				},
+				{
+					"ja": "第二は、Transahara のような psytrance 系の砂漠フェスである。",
+					"en": "The second meaning is a psytrance desert festival such as Transahara."
+				},
+				{
+					"ja": "第三は、Joudour Sahara / Zamane のような地域文化・教育型の音楽事業である。",
+					"en": "The third meaning is community music and education work such as Joudour Sahara/Zamane."
+				},
+				{
+					"ja": "これは「レイブ」ではなく、サハラ地域の文化インフラである。",
+					"en": "This is not a rave; it is cultural infrastructure in the Sahara edge region."
+				}
+			]
+		},
+		{
+			"id": "religion",
+			"heading": {
+				"ja": "3. 宗教分布とレイブとの関連性",
+				"en": "3. Religious Distribution and Relevance"
+			},
+			"pairs": [
+				{
+					"ja": "モロッコとモーリタニアはいずれも、宗教的にはスンニ派イスラムが圧倒的多数である。",
+					"en": "Morocco and Mauritania are overwhelmingly Sunni Muslim societies."
+				},
+				{
+					"ja": "レイブとの関係は三つに分けられる。",
+					"en": "The relationship between raves and religion has three layers."
+				},
+				{
+					"ja": "第一に、主催団体の宗教性である。",
+					"en": "First, organizer identity: the major examples identified here are psytrance/festival travel, community music education, or commercial electronic music events, not religious institutions."
+				},
+				{
+					"ja": "第二に、社会規範との摩擦である。",
+					"en": "Second, social friction: alcohol, drugs, mixed-gender night events, and tourist behavior operate within police administration, family expectations, local reputation, and Islamic norms."
+				},
+				{
+					"ja": "第三に、音楽文化の宗教的層である。",
+					"en": "Third, musical tradition: UNESCO describes Gnawa as Sufi brotherhood music tied to therapeutic ritual and performance, which should not be collapsed into electronic dance festivals."
+				}
+			]
+		},
+		{
+			"id": "mines",
+			"heading": {
+				"ja": "4. 地雷地帯はどれだけあるのか",
+				"en": "4. How Large Are the Mine-Affected Areas?"
+			},
+			"pairs": [
+				{
+					"ja": "西サハラの地雷問題は、面積よりも「Berm とその周辺」という線的な危険として理解した方が正確である。",
+					"en": "Western Sahara's landmine problem is better understood as a linear hazard around the Berm than as one clean area total."
+				},
+				{
+					"ja": "UNMAS は、1975-1991年の紛争の遺産として、地雷と不発弾の多くが地域を分断する 1,465km の砂の Berm 沿いに集中していると説明する。",
+					"en": "UNMAS says landmines and explosive ordnance are a legacy of the 1975-1991 conflict and that much contamination is concentrated along the 1,465 km sand berm dividing the region."
+				},
+				{
+					"ja": "本文では新しい UNMAS ページの数値を主に使うが、重要なのは「総面積が一つに確定されている」のではなく、既知区域・疑い区域・解放済み区域・Berm 長で管理されているという点である。",
+					"en": "The important point is not a single definitive contaminated square-kilometer total."
+				},
+				{
+					"ja": "モーリタニア国内の汚染も、西サハラ紛争の遺産である。",
+					"en": "Mauritania's remaining contamination is also a legacy of the Western Sahara conflict."
+				},
+				{
+					"ja": "2024年末時点で、モーリタニアは対人地雷の confirmed hazardous area が22件、クラスター弾残存物の confirmed hazardous area が9件あると報告している。",
+					"en": "Landmine Monitor says that as of the end of 2024, Mauritania reported 22 confirmed hazardous areas for antipersonnel mines, nine confirmed hazardous areas for cluster munition remnants, 1.5 square kilometers of suspected hazardous area for cluster munition remnants, and 16.88 square kilometers of suspected hazardous area for explosive remnants of war."
+				}
+			]
+		},
+		{
+			"id": "railways",
+			"heading": {
+				"ja": "5. 鉄道はどこにあるのか",
+				"en": "5. Where Are the Railways?"
+			},
+			"pairs": [
+				{
+					"ja": "この地域で実在性が高く、象徴性も強い鉄道は、モーリタニアの SNIM 鉄鉱石鉄道である。",
+					"en": "The railway with the strongest real-world significance is Mauritania's SNIM iron-ore railway."
+				},
+				{
+					"ja": "モロッコ側は、鉄道網の近代化・高速鉄道延伸を進めているが、現在の砂漠レイブ候補地や西サハラの Berm 周辺を直接結ぶ実在鉄道としては扱えない。",
+					"en": "Morocco is modernizing and expanding its rail system, but that should not be confused with an existing railway into the desert rave zones or the Berm."
+				}
+			]
+		},
+		{
+			"id": "history",
+			"heading": {
+				"ja": "6. 歴史・紛争・社会問題",
+				"en": "6. History, Conflict, and Social Issues"
+			},
+			"pairs": [
+				{
+					"ja": "対象地域の政治史は、西サハラを抜きに説明できない。",
+					"en": "The political history of the region cannot be explained without Western Sahara."
+				},
+				{
+					"ja": "西サハラは1976年までスペイン植民地であり、脱植民地化の過程でモロッコとモーリタニアが領有を主張し、Frente POLISARIO が反対した。",
+					"en": "Western Sahara was a Spanish colony until 1976."
+				},
+				{
+					"ja": "1991年、安保理決議690で MINURSO が設立され、住民投票を準備する予定だった。",
+					"en": "In 1991, Security Council Resolution 690 established MINURSO to prepare a referendum."
+				},
+				{
+					"ja": "社会問題は二つの層で見るべきである。",
+					"en": "The social issues sit on two levels."
+				},
+				{
+					"ja": "モーリタニアでは、奴隷制の制度的遺産、Haratine や Afro-Mauritanian への差別、活動家への圧力、雇用と抽出産業依存が中心論点である。",
+					"en": "In Mauritania, the key social issues are the legacy of slavery, discrimination against Haratine and Afro-Mauritanians, pressure on activists, employment, and dependence on extractive industries."
+				}
+			]
+		},
+		{
+			"id": "practical-reading",
+			"heading": {
+				"ja": "7. 実務的な読み方",
+				"en": "7. Practical Reading"
+			},
+			"pairs": [
+				{
+					"ja": "この地域の砂漠レイブを理解するには、三つの誤読を避けるべきである。",
+					"en": "Three misreadings should be avoided."
+				},
+				{
+					"ja": "第一に、映画的な無法地帯イメージで現実の安全保障を読むこと。",
+					"en": "First, do not use cinematic lawlessness to understand real security conditions."
+				},
+				{
+					"ja": "第二に、宗教を単純な対立軸にすること。",
+					"en": "Second, do not reduce the issue to religion."
+				},
+				{
+					"ja": "第三に、鉄鉱石列車や砂漠の移動を「冒険」としてだけ読むこと。",
+					"en": "Third, do not treat the iron-ore train and desert mobility only as adventure."
+				},
+				{
+					"ja": "結論として、モロッコ・モーリタニア周辺の砂漠レイブは、宗教運動でも地政学運動でもない。",
+					"en": "The best conclusion is that desert raves around Morocco and Mauritania are neither a religious movement nor a geopolitical movement."
+				}
+			]
+		}
+	]
+}

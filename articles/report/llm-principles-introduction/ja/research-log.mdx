@@ -1,0 +1,55 @@
+---
+title: '調査プロセス: LLMの基本原理入門'
+---
+
+作成日: 2026-06-14
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- issue number: `#33`
+- issue title: `LLMの基本原理を非専門家にも分かる形で調査する`
+- publishable request summary: トークン化、埋め込み、Transformer、事前学習、次トークン予測、推論、文脈長の観点からLLMの原理を体系的に説明し、非専門家にも分かる説明と必要最小限の技術説明を両立させる。
+- scope constraints: Transformerの自己注意を図解する。LLMが知識を保存しているという表現の正確さと限界を説明する。誤解されやすい点をQ&A形式で整理する。可能なら Mermaid 図解、比較表、時系列表を入れる。最新性が重要な論点は一次情報で確認する。
+- inferred deliverable: `articles/report/llm-principles-introduction/ja/index.mdx` を正本とする日本語レポート、対応する英語レポート、`mix-alignment.json`、公開 source-notes、公開 research-log の同時整備。
+
+## 調査の考え方
+
+このテーマは、最新ニュースというより基礎原理の整理が中心だが、文脈長や指示追従、訓練データ記憶は近年の研究で更新があるため、古典的な Transformer 論文だけでなく、より新しい実証研究も確認した。本文では、数式を避けつつ、実務に必要な最小限の技術語は残す方針にした。
+
+## 確認した主要論点
+
+- トークン化は文字列をサブワード単位に分割する処理として整理した。
+- 埋め込みはトークンを高次元ベクトルへ写す処理として説明した。
+- Transformer の中心は自己注意であり、文脈中の関係を直接学習する。
+- 事前学習は次トークン予測を通じた広い一般化の獲得として位置づけた。
+- 推論は学習済み重みを使った実行時の候補生成として説明した。
+- 文脈長は万能ではなく、長文脈でも情報の取りこぼしがある。
+- 知識の保存は分布的保持と部分的な丸暗記を区別して書いた。
+
+## 採用した一次・準一次資料
+
+- Vaswani et al. の Transformer 原論文
+- Brown et al. の GPT-3 論文
+- Devlin et al. の BERT 論文
+- Ouyang et al. の InstructGPT 論文
+- Bai et al. の Constitutional AI 論文
+- Carlini et al. と Nasr et al. の記憶・抽出研究
+- Lewis et al. と Guu et al. の retrieval-augmented 設計
+- Liu et al. の long-context 実証研究
+
+## 採用を見送った情報
+
+- 数式の詳細展開は、非専門家向けの読みやすさを優先して省いた。
+- ベンダーごとの細かな仕様比較は、原理説明の主軸から外れるため省いた。
+- 注意重みをそのまま説明とみなす単純な解釈は、誤解を招きやすいため中心に置かなかった。
+
+## 残課題
+
+- 将来的に長文脈モデルの実務評価を深掘りするなら、タスク別の失敗条件を別レポートで整理するとよい。
+- 生成結果の検証方法を掘り下げるなら、RAG、評価、監査、ガードレールを別テーマに分けられる。

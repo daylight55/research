@@ -1,0 +1,58 @@
+---
+title: '調査素材ノート: LLMの基本原理入門'
+---
+
+## 1. ソースマップ
+
+### Primary sources
+
+- Vaswani et al., [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- Brown et al., [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
+- Devlin et al., [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+- Ouyang et al., [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
+- Bai et al., [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073)
+- Carlini et al., [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805)
+- Nasr et al., [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035)
+- Lewis et al., [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+- Guu et al., [REALM: Retrieval-Augmented Language Model Pre-Training](https://proceedings.mlr.press/v119/guu20a.html)
+- Liu et al., [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)
+
+### Authoritative context
+
+- Kudo and Richardson, [SentencePiece](https://aclanthology.org/D18-2012/) and related subword-tokenization work
+- Anthropic and OpenAI public material on instruction following and agentic workflows, as background context rather than core evidence
+
+### Secondary context
+
+- Bender et al., [On the Dangers of Stochastic Parrots](https://dl.acm.org/doi/10.1145/3442188.3445922)
+
+## 2. Evidence notes
+
+- トークン化は、文字列をモデルが扱える単位へ分解する処理として整理する。
+- 埋め込みは、トークンを高次元ベクトルへ写す層として扱う。
+- Transformer の自己注意は、文脈中の要素間関係を直接計算する仕組みとして説明する。
+- 事前学習は、次トークン予測を通じて広い一般化を学ぶ工程として扱う。
+- 推論は、学習済み重みを使った実行時の候補生成として整理する。
+- 文脈長は、モデルが一度に参照できる入力の上限として扱う。
+- 「知識を保存している」という表現は、分布的保持と部分的な丸暗記を区別して書く。
+
+## 3. Inclusion and exclusion decisions
+
+- 入れる: 非専門家向けに理解しやすい基本原理、最小限の技術語、実務での注意点。
+- 入れる: self-attention を図解し、Q/K/V は役割名として説明する。
+- 入れる: 「知識保存」の正確さと限界を、記憶・一般化・抽出可能性に分けて扱う。
+- 入れる: 文脈長の限界と、外部検索との併用を実務含意として明示する。
+- 外す: 数式の導出、学習損失の詳細、最適化アルゴリズムの比較、ベンチマークの細部。
+- 外す: 特定ベンダーの最新製品比較や価格、日々更新される仕様の羅列。
+
+## 4. Rejected or downgraded sources
+
+- 二次解説ブログは、説明がわかりやすいものでも、原理説明の根拠には使わない。
+- 速報的な製品記事は、今回の焦点が基礎原理なので優先度を下げた。
+- 注意重みをそのまま説明とみなす解釈は、理解を誤らせやすいため、本文では主張の中心に置かなかった。
+
+## 5. Open questions
+
+- 長文脈の実運用で、どの長さから失敗率が急に上がるかはタスク依存である。
+- 訓練データの丸暗記がどの程度起きるかは、モデル、重複率、検査手法によって変わる。
+- 「理解」という語は哲学的論点を含むため、本文では実務上の判定軸に寄せている。

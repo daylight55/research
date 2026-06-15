@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "The most common mistake in LLM discussions is to treat pretraining, fine-tuning, prompting, RAG, tool use, and agents as if they were all the same kind of improvement.",
+          "ja": "LLMの議論で最も混同されやすいのは、事前学習、ファインチューニング、プロンプト、RAG、ツール利用、エージェントを同じ種類の「改善策」と見なすことである。"
+        },
+        {
+          "en": "In reality, pretraining and fine-tuning change model weights, prompting and RAG change runtime context, tool use expands what the model can do in the outside world, and agents add a control loop that can plan, act, and verify across multiple steps.",
+          "ja": "実際には、事前学習とファインチューニングはモデルの重みを変え、プロンプトとRAGは実行時の文脈を変え、ツール利用は外部操作を増やし、エージェントはそれらを複数手順で回す制御ループを加える。"
+        },
+        {
+          "en": "In practice, the fastest way to choose is to ask what you are trying to change.",
+          "ja": "実務の判断は、まず「何を変えたいか」を分けると速い。"
+        },
+        {
+          "en": "If you want stable wording or format, start with prompting and then consider fine-tuning.",
+          "ja": "出力の書式や口調を安定させたいなら、まずプロンプトを試し、必要ならファインチューニングを検討する。"
+        },
+        {
+          "en": "If you want answers grounded in current company documents or frequently changing facts, use RAG.",
+          "ja": "社内文書や最新情報を根拠付きで返したいならRAGが向く。"
+        },
+        {
+          "en": "MCP sits in the integration layer, not the learning layer, so it helps standardize tool and data connections rather than alter model behavior.",
+          "ja": "MCPはこのうち学習方法ではなく、外部ツールやデータ接続を標準化するための層に位置する。"
+        }
+      ]
+    },
+    {
+      "id": "layers",
+      "heading": {
+        "ja": "2. レイヤーの切り分け",
+        "en": "2. The Layers"
+      },
+      "pairs": [
+        {
+          "en": "Pretraining builds broad generalization on top of a massive corpus.",
+          "ja": "事前学習は、巨大なコーパスで広い一般化能力を作る工程である。"
+        },
+        {
+          "en": "Fine-tuning adds task-specific examples, style rules, labels, or policy constraints on top of that base.",
+          "ja": "ファインチューニングは、その土台に対して、特定のタスク、書式、分類基準、用語集、応答方針を追加学習する工程である。"
+        },
+        {
+          "en": "Prompting is the instruction you give at runtime without changing the model.",
+          "ja": "プロンプトは、学習済みモデルに与える実行時指示であり、モデル自体は変えない。"
+        },
+        {
+          "en": "RAG retrieves external documents and injects them into context so the model can answer with fresher or domain-specific information.",
+          "ja": "RAGは、検索で外部文書を拾って文脈に差し込む設計であり、知識の置き場をモデル内部から外部へずらす。"
+        },
+        {
+          "en": "Tool use lets the model call calculators, search systems, databases, and business APIs.",
+          "ja": "ツール利用は、計算機、検索、DB、業務APIなどを呼べるようにする。"
+        },
+        {
+          "en": "Agents wrap those capabilities in a plan-act-check loop.",
+          "ja": "エージェントは、それらを計画・実行・検証のループにまとめる。"
+        },
+        {
+          "en": "This is a structural comparison, not a vendor price sheet.",
+          "ja": "この表は厳密な市場価格表ではなく、構造比較である。"
+        },
+        {
+          "en": "Even so, the ordering is usually stable: changing weights is the most expensive route, and changing context or actions is usually the cheapest way to iterate.",
+          "ja": "ただし、重みを変えるほど高コストで、文脈と操作を変えるほど低コストかつ即時に試せる、という序列はほぼ崩れない。"
+        }
+      ]
+    },
+    {
+      "id": "selection",
+      "heading": {
+        "ja": "3. 使い分けの判断基準",
+        "en": "3. How to Choose"
+      },
+      "pairs": [
+        {
+          "en": "The first question is whether the problem is really about knowledge or about procedure.",
+          "ja": "まず確認すべきなのは、その問題が「知識の問題」か「手順の問題」かである。"
+        },
+        {
+          "en": "If the problem is knowledge, RAG is the strongest default when the source material changes often or when you need citations.",
+          "ja": "知識の問題ならRAGが有力で、特に更新頻度が高い社内文書や、根拠を提示したい回答に向く。"
+        },
+        {
+          "en": "If the problem is procedure, start with prompting; if the same failure keeps recurring, consider fine-tuning.",
+          "ja": "手順の問題なら、まずプロンプトで十分かを見て、繰り返し同じ失敗をするならファインチューニングを検討する。"
+        },
+        {
+          "en": "The second question is whether the system must merely read external systems or also write to them.",
+          "ja": "次に確認するのは、外部システムを「読むだけ」か「書き込む」かである。"
+        },
+        {
+          "en": "Write access demands approval, diff review, rollback, and logging.",
+          "ja": "書き込むなら、承認、差分確認、ロールバック、監査ログが必要になる。"
+        },
+        {
+          "en": "A single API call is a tool use case.",
+          "ja": "単発のAPI呼び出しならツール利用で足りるが、複数の判断をまたいで進むならエージェントが必要になる。"
+        },
+        {
+          "en": "A sequence that can replan, retry, and verify is an agent use case.",
+          "ja": "再計画、再試行、検証が必要ならエージェントの用途である。"
+        },
+        {
+          "en": "In real systems, the common pattern is to combine them: prompt plus RAG, fine-tuning plus RAG, or tools plus agents.",
+          "ja": "実際には、プロンプト + RAG、ファインチューニング + RAG、ツール + エージェントのような組み合わせが多い。"
+        }
+      ]
+    },
+    {
+      "id": "mcp",
+      "heading": {
+        "ja": "4. MCP と外部ツール連携",
+        "en": "4. MCP and External Tooling"
+      },
+      "pairs": [
+        {
+          "en": "MCP is a protocol for connecting context, tools, and resources to LLM applications in a standardized way.",
+          "ja": "MCPは、LLMが使う外部ツールやデータ接続を、個別実装ではなく共通プロトコルで扱うための仕組みである。"
+        },
+        {
+          "en": "The key point is that MCP does not add knowledge to the model.",
+          "ja": "ここで重要なのは、MCPがモデルの知識を増やすわけではない点である。"
+        },
+        {
+          "en": "It is closer to a wiring layer that helps those capabilities travel across assistants and environments.",
+          "ja": "むしろ、RAG用の文書ソース、社内API、開発ツール、運用ツールを、同じ接続方式で提供するための配線層に近い。"
+        }
+      ]
+    },
+    {
+      "id": "risks-limits",
+      "heading": {
+        "ja": "5. リスク・限界",
+        "en": "5. Risks and Limits"
+      },
+      "pairs": [
+        {
+          "en": "First, RAG does not guarantee correctness.",
+          "ja": "第一に、RAGは正しさを保証しない。"
+        },
+        {
+          "en": "RAG makes grounded answers easier, but it does not automatically produce truth.",
+          "ja": "したがって、RAGは「根拠付き回答を作りやすくする」技術であって、「真実を自動保証する」技術ではない。"
+        },
+        {
+          "en": "Second, fine-tuning is not a substitute for freshness.",
+          "ja": "第二に、ファインチューニングは最新性の代替ではない。"
+        },
+        {
+          "en": "Third, the more useful tools and agents become, the larger the blast radius of mistakes.",
+          "ja": "第三に、ツール利用とエージェントは、便利になるほど損害半径も広がる。"
+        },
+        {
+          "en": "That is why the NIST AI RMF treats AI risk management as an ongoing Govern / Map / Measure / Manage process.",
+          "ja": "NISTのAI RMFのように、評価、監視、是正を継続プロセスとして回す前提が要る。"
+        },
+        {
+          "en": "Fourth, agents are not the answer to everything.",
+          "ja": "第四に、エージェントは万能ではない。"
+        },
+        {
+          "en": "Predictable jobs often belong in workflows, and only the exploratory or retry-heavy parts belong in an agent loop.",
+          "ja": "予測可能な仕事はworkflowで十分なことが多く、探索や再試行が本当に必要な部分だけをagentに任せる方が安定する。"
+        }
+      ]
+    },
+    {
+      "id": "recommendation",
+      "heading": {
+        "ja": "6. 推奨方針",
+        "en": "6. Recommended Sequence"
+      },
+      "pairs": [
+        {
+          "en": "The least risky rollout path, inferred from public information, is this:",
+          "ja": "公表情報からの推定として、実務では次の順で導入するのが最も無理が少ない。"
+        },
+        {
+          "en": "Try prompting first.",
+          "ja": "1. まずプロンプトで試す。"
+        },
+        {
+          "en": "Add RAG when external knowledge matters.",
+          "ja": "2. 次にRAGで外部知識を足す。"
+        },
+        {
+          "en": "Consider fine-tuning when a format or classification pattern repeats at scale.",
+          "ja": "3. 反復する書式や分類があるならファインチューニングを検討する。"
+        },
+        {
+          "en": "Add tools when the system has to affect the outside world.",
+          "ja": "4. システムが外部世界に作用するならツールを追加する。"
+        },
+        {
+          "en": "Move to agents when multi-step automation becomes necessary.",
+          "ja": "5. 複数手順の自動化が必要になった時点でエージェント化する。"
+        },
+        {
+          "en": "Standardize the connectors with MCP once integrations start to proliferate.",
+          "ja": "6. 接続先が増えたらMCPで配線を標準化する。"
+        },
+        {
+          "en": "Fine-tuning and agents are not goals in themselves.",
+          "ja": "逆に言えば、ファインチューニングやエージェントは「使うこと自体」が目的ではない。"
+        }
+      ]
+    }
+  ]
+}

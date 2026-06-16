@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "The generative AI application layer is more likely to capture value when the company owns workflow context, permissions, data, and distribution, not when it only sells model access.",
+          "ja": "生成AIのアプリケーション層で価値が残りやすいのは、モデルを単体で売る企業ではなく、既存業務の文脈、権限、データ、配布経路を押さえる企業である。"
+        },
+        {
+          "en": "Model companies monetize inference through APIs and seat plans, while application companies monetize business outcomes, retention, managed data, and approval flows.",
+          "ja": "モデル企業は推論能力そのものをAPIや席課金で売るが、アプリ企業は業務成果、継続利用、管理対象データ、承認フローを収益化する。"
+        },
+        {
+          "en": "For investors, the near-term profit pools are more likely to sit in horizontal workflow layers such as business automation, developer tools, and CRM.",
+          "ja": "投資テーマとしては、短期の利益捕捉は「業務自動化」「開発支援」「CRM」のような横断ワークフロー層に寄りやすい。"
+        },
+        {
+          "en": "Regulated sectors such as healthcare, finance, and legal are harder to enter, but once they are won, the installed base tends to be stickier and the pricing can be higher.",
+          "ja": "一方で、医療、金融、法務のような規制産業は導入障壁が高いぶん、導入できた企業の粘着性と単価は高くなりやすい。"
+        },
+        {
+          "en": "Ads and education are large markets, but monetization is constrained by privacy, distribution, procurement, and willingness to pay.",
+          "ja": "広告と教育は市場は大きいが、プライバシー、配信経路、調達、支払意思の制約で収益化の難度が上がる。"
+        },
+        {
+          "en": "Generative AI has very different economics at the foundation-model layer and the application layer.",
+          "ja": "生成AIの収益構造は、基盤モデル層の従量課金と、アプリ層の席課金・成果課金・利用課金で大きく異なる。"
+        },
+        {
+          "en": "Incumbent SaaS vendors gain pricing power when AI is attached to a system of record, a workflow, an approval path, or an audit trail.",
+          "ja": "既存SaaSがAIで価格決定力を得る条件は、AIを単なる機能追加ではなく、システム・オブ・レコード、ワークフロー、監査、権限に結びつけることにある。"
+        },
+        {
+          "en": "Among sectors, developer tools and CRM are the clearest early wins, followed by business automation and then regulated vertical workflows in finance, healthcare, and legal.",
+          "ja": "業界別では、開発支援とCRMが最も分かりやすい近道で、次に業務自動化と金融・医療・法務の規制業務が続く。"
+        },
+        {
+          "en": "The diagram shows that value capture does not depend on model intelligence alone.",
+          "ja": "この図が示すのは、価値捕捉の中心が「賢いモデル」だけではないという点である。"
+        },
+        {
+          "en": "If context, data, permissions, and audit are weak, AI becomes a polished feature with weak economics.",
+          "ja": "文脈、データ、権限、監査が弱いと、AIは見栄えのよい機能で終わる。"
+        },
+        {
+          "en": "If AI is embedded in the workflow, pricing can expand from seats to usage, actions, and outcome-linked billing.",
+          "ja": "逆に、業務フローに深く入ると、価格は席課金だけでなく、利用量、アクション数、成果連動に広がる。"
+        }
+      ]
+    },
+    {
+      "id": "revenue-structure",
+      "heading": {
+        "ja": "2. 収益構造: モデル企業とアプリ企業の違い",
+        "en": "2. Revenue Structure: Model Companies vs Application Companies"
+      },
+      "pairs": [
+        {
+          "en": "Foundation-model companies usually monetize through inference usage, developer APIs, enterprise seats, and premium plans.",
+          "ja": "基盤モデル企業は、主に推論の利用量、開発者向け API、法人向け席課金、上位プランで収益化する。"
+        },
+        {
+          "en": "Application companies usually monetize through existing seats, add-ons, workflow usage, feature bundles, or outcome-adjacent billing.",
+          "ja": "これに対してアプリ企業は、既存の業務席、アドオン、ワークフロー利用量、機能バンドル、成果に近い課金で収益化する。"
+        },
+        {
+          "en": "Public pricing already shows a hybrid pattern: even pure model vendors now combine usage-based access with subscription plans.",
+          "ja": "公表価格を見ると、OpenAI と Anthropic はすでに「API 従量課金」と「席課金」を併用しており、純粋なモデル企業でも収益モデルがハイブリッド化している。"
+        },
+        {
+          "en": "That difference matters for valuation.",
+          "ja": "この差は投資判断に直結する。"
+        },
+        {
+          "en": "Foundation-model businesses have a wide market, but their differentiation is thinner and their margins are more exposed to inference costs and price competition.",
+          "ja": "基盤モデル層は市場が広いが、差別化が相対的に薄く、推論コストと価格競争の影響を受けやすい。"
+        },
+        {
+          "en": "Application businesses may look narrower, but if they sit inside the workflow, manage permissions, and connect to the records system, they can defend gross margin and retention much more easily.",
+          "ja": "アプリ層は市場が狭く見えても、ワークフロー、データ接続、導入支援、監査機能が積み上がると、粗利と継続率を守りやすい。"
+        },
+        {
+          "en": "The real question is not who gets the model call fee.",
+          "ja": "投資家が見るべきなのは、どの会社が「モデルの呼び出し料金」を受け取るかではない。"
+        },
+        {
+          "en": "It is who owns the front door of work and the origin of the invoice.",
+          "ja": "どの会社が「業務の入口」と「請求書の起点」を握るかである。"
+        },
+        {
+          "en": "Incumbent SaaS vendors gain AI pricing power only when four conditions are met.",
+          "ja": "既存SaaSのAI機能が価格決定力を持つかどうかは、次の四条件でかなり判別できる。"
+        },
+        {
+          "en": "The AI is inside an existing system of record.",
+          "ja": "そのAIが既存のシステム・オブ・レコードに入っている。"
+        },
+        {
+          "en": "The output triggers a decision, an approval, an update, or a distribution event.",
+          "ja": "出力が意思決定、承認、更新、配信のどれかに直結する。"
+        },
+        {
+          "en": "Customers are reluctant to give up a learned workflow.",
+          "ja": "顧客が学習済みのワークフローを手放しにくい。"
+        },
+        {
+          "en": "The vendor can charge by seat, usage, or action.",
+          "ja": "ベンダーが利用量、アクション数、または部門単位の席で課金できる。"
+        },
+        {
+          "en": "Microsoft 365 Copilot and Salesforce Agentforce are useful examples.",
+          "ja": "Microsoft 365 Copilot や Salesforce Agentforce は、この条件の実例として分かりやすい。"
+        },
+        {
+          "en": "Microsoft positions Copilot as an add-on to commercial plans, while Salesforce offers Flex Credits, Conversation, and per-user licensing.",
+          "ja": "Microsoft は Copilot を既存の商用プランに追加する席課金として位置づけ、Salesforce は Flex Credits、Conversation、per-user licensing を用意している。"
+        },
+        {
+          "en": "The implication is simple: AI can be a free feature in some cases, but when it is deeply embedded in workflow it becomes an upcharge product.",
+          "ja": "ここから分かるのは、AI が「無料の付加価値」になるケースもある一方、ワークフローに深く入ると「追加単価を取りやすい製品」に変わるということである。"
+        }
+      ]
+    },
+    {
+      "id": "sector-comparison",
+      "heading": {
+        "ja": "3. 業界別比較",
+        "en": "3. Sector Comparison"
+      },
+      "pairs": [
+        {
+          "en": "The table below is a synthesis from public information.",
+          "ja": "下の整理は、公表情報からの推定である。"
+        },
+        {
+          "en": "It compares sectors on regulation, data advantage, switching costs, and the likely billing unit.",
+          "ja": "各業界の導入障壁と価格決定力を比べるため、規制、データ優位性、スイッチングコスト、販売単位を同じ物差しで見ている。"
+        },
+        {
+          "en": "The regulatory baseline comes from NIST AI RMF, FDA guidance on AI/ML software, HHS HIPAA de-identification guidance, FERPA, Federal Reserve SR 11-7, and ABA Formal Opinion 512.",
+          "ja": "規制や統制の前提は、NIST AI RMF、FDA の医療ソフトウェア指針、HHS の HIPAA de-identification、教育分野の FERPA、金融分野のモデル・リスク管理、法務分野の ABA の生成AI倫理指針を参照した。"
+        },
+        {
+          "en": "Business automation is the broadest horizontal category.",
+          "ja": "業務自動化は、導入対象が広く、営業、生産管理、経理、サポート、調達、バックオフィスまで横断できる。"
+        },
+        {
+          "en": "Developer tools are one of the easiest AI application themes to measure.",
+          "ja": "開発支援は、最も測定しやすいAIアプリテーマの一つである。"
+        },
+        {
+          "en": "CRM is one of the clearest places where generative AI can gain pricing power.",
+          "ja": "CRM は、生成AIの価格決定力が最も出やすい領域の一つである。"
+        },
+        {
+          "en": "Ads can benefit enormously from generative AI, but the market is winner-take-most.",
+          "ja": "広告は、生成AIの恩恵が大きい一方、勝者総取りになりやすい。"
+        },
+        {
+          "en": "Education has high social importance but weaker willingness to pay and slower procurement cycles.",
+          "ja": "教育は社会的な関心は高いが、支払い能力と調達サイクルが厳しい。"
+        },
+        {
+          "en": "Healthcare can produce some of the highest operational gains, but it is also one of the heaviest validation environments.",
+          "ja": "医療は、AI が最も大きな業務改善を生みやすい一方、最も検証コストが重い。"
+        },
+        {
+          "en": "Legal is a high-value AI market, but one that demands responsibility by design.",
+          "ja": "法務は、生成AIの価値が高いが、責任設計が不可欠な領域である。"
+        },
+        {
+          "en": "Finance is one of the best commercial opportunities for AI and one of the hardest execution environments.",
+          "ja": "金融は、AI の導入先として最もおいしい部類に入るが、同時に最も厳しい。"
+        }
+      ]
+    },
+    {
+      "id": "marketing-segmentation",
+      "heading": {
+        "ja": "4. マーケティング分析用セグメント表",
+        "en": "4. Marketing Segmentation Table"
+      },
+      "pairs": [
+        {
+          "en": "This table is a practical segmentation tool for investors and business development teams.",
+          "ja": "この表は、投資家や事業開発が「どの市場を狙うべきか」を切るための実務用セグメントである。"
+        },
+        {
+          "en": "Before estimating TAM, you need to know who buys, what budget the product connects to, and where churn is likely to happen.",
+          "ja": "TAM の数字を置く前に、誰が買うのか、何に予算を出すのか、どこで解約が起きるのかを決める必要がある。"
+        },
+        {
+          "en": "The main lesson is that the market is not defined by industry name alone.",
+          "ja": "この表から見えるのは、投資対象は「業界」だけでは決まらないということだ。"
+        },
+        {
+          "en": "A CRM tool for sales and a CRM tool for legal review need different data, metrics, sales cycles, and accountability structures.",
+          "ja": "同じ CRM でも、営業チーム向けのアクション提案と、法務向けの契約レビューでは、必要なデータ、評価指標、販売サイクル、責任分界が違う。"
+        },
+        {
+          "en": "In practice, the best market cut is the budget line, not the industry label.",
+          "ja": "投資やマーケティングでは、業界名よりも、どの業務予算に接続するかで区切る方が当たりやすい。"
+        }
+      ]
+    },
+    {
+      "id": "risks-limits",
+      "heading": {
+        "ja": "5. リスク・限界",
+        "en": "5. Risks and Limits"
+      },
+      "pairs": [
+        {
+          "en": "First, as model differences narrow, the real differentiator moves to workflow design and data connections.",
+          "ja": "第一に、モデル差が縮むと、アプリ層の差はワークフロー設計とデータ接続に移る。"
+        },
+        {
+          "en": "AI features that look similar on the surface are easy to copy, so a thin chat UI is rarely enough on its own.",
+          "ja": "見た目が似た AI 機能はすぐに模倣されるため、単なるチャット UI だけでは防御力が弱い。"
+        },
+        {
+          "en": "Second, in regulated sectors, a successful pilot is not the same thing as a successful rollout.",
+          "ja": "第二に、規制産業では PoC の成功と本番導入の成功は別物である。"
+        },
+        {
+          "en": "Healthcare, finance, education, and legal all require approvals, audit, legal review, and responsibility design before the product can scale.",
+          "ja": "医療、金融、教育、法務では、承認、監査、法務レビュー、責任分界を組み込まないと、営業段階で止まりやすい。"
+        },
+        {
+          "en": "Third, data advantage is not permanent.",
+          "ja": "第三に、データ優位は永続ではない。"
+        },
+        {
+          "en": "In ads, even a first-party-data strategy can lose its edge if platform rules or measurement constraints change.",
+          "ja": "広告のように first-party data が重要な市場でも、プラットフォーム側のルール変更や計測制約で前提が変わる。"
+        },
+        {
+          "en": "Fourth, AI responsibility ultimately stays with the user organization.",
+          "ja": "第四に、AI の責任は最終的に利用者に残る。"
+        },
+        {
+          "en": "NIST AI RMF makes clear that AI risk management is continuous, and finance regulation shows that model governance is not optional.",
+          "ja": "NIST AI RMF が示すように、AI は継続的に Govern / Map / Measure / Manage されるべきであり、金融のような領域ではモデル・リスク管理が必須になる。"
+        }
+      ]
+    },
+    {
+      "id": "extrapolation",
+      "heading": {
+        "ja": "6. 公表情報からの推定",
+        "en": "6. Extrapolation from Public Information"
+      },
+      "pairs": [
+        {
+          "en": "There is no official roadmap here, so the following is an extrapolation from public information.",
+          "ja": "公式ロードマップがあるわけではないので、ここは公表情報からの推定である。"
+        },
+        {
+          "en": "Based on current pricing and product packaging, the likely value capture order looks like this.",
+          "ja": "現在の価格設計と製品の出し方を見る限り、価値が残りやすい順序は次のように読むのが自然だ。"
+        },
+        {
+          "en": "AI extensions for incumbent SaaS that already own the workflow.",
+          "ja": "既存ワークフローを握る横断 SaaS の AI 拡張"
+        },
+        {
+          "en": "Developer tools with frequent usage and easy-to-measure ROI.",
+          "ja": "開発支援のように利用頻度が高く、効果測定がしやすい領域"
+        },
+        {
+          "en": "CRM, customer service, and sales automation where seats and outcomes can both be monetized.",
+          "ja": "CRM、CS、営業自動化のように席数と業務成果を両立できる領域"
+        },
+        {
+          "en": "Finance, healthcare, and legal, where unit economics can be excellent but validation costs are heavy.",
+          "ja": "金融、医療、法務のように高単価だが検証コストが重い規制産業"
+        },
+        {
+          "en": "Ads, where data advantage is strong but platform changes can move the goalposts.",
+          "ja": "広告のようにデータ優位が強いが、プラットフォーム変更の影響を受けやすい領域"
+        },
+        {
+          "en": "Education, where the social need is large but payment ability and procurement are constrained.",
+          "ja": "教育のように社会的意義は大きいが、支払い能力と調達制約が強い領域"
+        },
+        {
+          "en": "This order is not the same as market size.",
+          "ja": "この順序は、必ずしも市場規模の大きさ順ではない。"
+        },
+        {
+          "en": "It is more about whether the product can attach to an existing budget, convert AI into seat or usage pricing, and build switching costs.",
+          "ja": "むしろ「既存予算を取り込めるか」「AI を席課金や利用課金に変えられるか」「スイッチングコストを作れるか」の順である。"
+        }
+      ]
+    },
+    {
+      "id": "recommended-policy",
+      "heading": {
+        "ja": "7. 推奨方針",
+        "en": "7. Recommended Policy"
+      },
+      "pairs": [
+        {
+          "en": "For investors, the important question is not which model is strongest.",
+          "ja": "投資家にとって重要なのは、「どのモデルが強いか」より「どの業務で、どの予算から、どの形で継続課金を取れるか」である。"
+        },
+        {
+          "en": "It is which business can charge for a workflow, from which budget, and in what recurring form.",
+          "ja": "AI アプリケーション層を評価するときは、次の問いで絞るのが実務的である。"
+        },
+        {
+          "en": "Does the product enter an existing workflow?",
+          "ja": "その製品は既存ワークフローに入るか。"
+        },
+        {
+          "en": "Is it connected to customer data, permissions, and audit?",
+          "ja": "顧客データ、権限、監査に結びついているか。"
+        },
+        {
+          "en": "Can it charge by outcome or by seat, not only by usage?",
+          "ja": "利用量ではなく、成果または席に課金できるか。"
+        },
+        {
+          "en": "Would the customer lose operational knowledge, not just data, if it churned?",
+          "ja": "解約時にデータだけでなく運用知識も失うか。"
+        },
+        {
+          "en": "Will the margin survive model price compression and regulatory change?",
+          "ja": "規制変更やモデル価格低下が来ても利益が残るか。"
+        },
+        {
+          "en": "The short-term themes are likely to remain horizontal workflow layers and CRM.",
+          "ja": "結論として、短期の投資テーマは横断ワークフロー層と CRM に寄りやすい。"
+        },
+        {
+          "en": "In the medium term, regulated sectors such as healthcare, finance, and legal can produce strong stickiness for the companies that can actually execute.",
+          "ja": "中期では、医療、金融、法務のような高規制領域で、実装できる企業に高い粘着性が残る。"
+        },
+        {
+          "en": "In the long term, the winners are likely to be the companies that control data, permissions, distribution, and audit more than the model itself.",
+          "ja": "長期では、モデルの差より、データ、権限、配布経路、監査を握るアプリ企業が優位に立つ可能性が高い。"
+        }
+      ]
+    }
+  ]
+}

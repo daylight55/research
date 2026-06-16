@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Google</title>
+  <desc id="d">Stylized card for the Google military AI dispute story.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.5" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="990" cy="165" r="170" fill="#93c5fd" opacity="0.20"/>
+  <circle cx="900" cy="490" r="220" fill="#bbf7d0" opacity="0.10"/>
+  <text x="70" y="150" fill="#dbeafe" font-family="Arial, sans-serif" font-size="34" letter-spacing="2">TECH</text>
+  <text x="70" y="285" fill="#ffffff" font-family="Arial, sans-serif" font-size="78" font-weight="700">GOOGLE</text>
+  <text x="70" y="350" fill="#ecfccb" font-family="Arial, sans-serif" font-size="34">AI governance</text>
+</svg>

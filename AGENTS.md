@@ -1,6 +1,6 @@
-# Technical Research Repository Instructions
+# Research Repository Instructions
 
-このリポジトリは、広範な技術調査とニュース整理を記事種別ごとの浅いディレクトリで継続管理するためのものです。
+このリポジトリは、広範な調査レポートとニュース整理を記事種別ごとの浅いディレクトリで継続管理するためのものです。
 
 ## Repository Structure
 
@@ -9,18 +9,20 @@
 - `<slug>` は記事URLにも使う短い kebab-case 名にする。例: `graphiti-mcp-memory`, `oauth21-pkce-mcp-auth`。
 - Webサイト上に表示する調査テーマでは、`articles/report/<slug>/ja/index.mdx` を日本語本文の正本として扱う。
 - Webサイト上に表示するニュースでは、`articles/news/<slug>/ja/index.mdx` を日本語本文の正本として扱う。
-- 公開可能な調査プロセス、根拠、判断ログがある場合は同じ記事ディレクトリの `ja/research-log.mdx` にまとめる。
-- `notes/`, `sources/`, `figures/`, `prototype/` などの非公開作業ディレクトリは原則作らない。公開価値のある情報は `research-log.mdx` に要約、リンク、図表として含める。
-- 記事本文から `research-log.mdx` へ辿れる導線を維持する。サイト側に調査ログが存在する場合は `/reports/<slug>/research/` を公開する。
+- 記事化する手前の調査素材、一次情報、論点整理、採否判断は、公開可能な範囲で同じ記事ディレクトリの `ja/source-notes.mdx` にまとめる。これは記事本文を読みやすく編集するための中間ノートであり、最終記事本文の重複コピーにはしない。
+- 公開可能な調査プロセス、実行条件、判断ログ、残課題がある場合は同じ記事ディレクトリの `ja/research-log.mdx` にまとめる。
+- `notes/`, `sources/`, `figures/`, `prototype/` などの非公開作業ディレクトリは原則作らない。公開価値のある素材は `source-notes.mdx` に、公開価値のあるプロセスは `research-log.mdx` に要約、リンク、図表として含める。
+- 記事本文から `research-log.mdx` と `source-notes.mdx` へ辿れる導線を維持する。サイト側に調査ログが存在する場合は `/reports/<slug>/research/` を、調査素材ノートが存在する場合は `/reports/<slug>/sources/` を公開する。ニュースでは `/news/<slug>/research/` と `/news/<slug>/sources/` を使う。
 
 ## Required Skill
 
-調査レポート、技術選定、研究整理、論文比較、実務導入方針を作るときは、repo-local skill `technical-research-report` を使う。
+調査レポート、研究整理、論文比較、技術・政策・経済・地政学などの論点整理や考察を書くときは、repo-local skill `research-report` を使う。
 
 ## Astro Site Publication Workflow
 
 - Webサイト上に表示する調査レポートは、最初から `articles/report/<slug>/ja/index.mdx` に本文を書く。
 - `report.md` などの別本文を作ってから `index.mdx` へコピーする運用は禁止する。本文が二重化し、片方だけ浅い/古い状態になりやすいため。
+- 調査素材を公開する場合は、単独の `sources/` ディレクトリや `notes/` ディレクトリではなく同じ記事ディレクトリの `source-notes.mdx` にまとめる。
 - 調査タスクや残課題を公開する場合は、単独のタスクリストではなく同じ記事ディレクトリの `research-log.mdx` に調査プロセスとしてまとめる。
 - 新しいカテゴリを使う場合は、`src/data/categories.ts` の `CATEGORIES` に追加する。既存カテゴリとのコンフリクト時は、main側のカテゴリを消さずに和集合で解消する。
 - サイト用記事のヘッダー画像は補助要素として控えめに扱う。本文の可読性を優先し、情報的価値が薄いCodex生成の抽象画像をカテゴリ画像として追加しない。
@@ -34,6 +36,7 @@
   - ニュースの場合は `/news/<slug>/index.html`
   - レポートの場合は `/reports/<slug>/index.html`
   - `research-log.mdx` がある場合は `/reports/<slug>/research/index.html`
+  - `source-notes.mdx` がある場合は `/reports/<slug>/sources/index.html` または `/news/<slug>/sources/index.html`
   - `/category/<category-name>/1/index.html`
   - `/index.html`
 - さらに、`dist/index.html` またはローカル preview への `curl` で、トップページに `<slug>`、記事タイトル、カテゴリリンクが含まれることを確認する。
@@ -103,7 +106,7 @@ Mermaidは、本文を置き換える巨大な図ではなく、本文理解を�
 ## Writing Style
 
 - 既定の言語は日本語。
-- 読者は実務でAI・データ・組織ナレッジ活用を検討する技術者・意思決定者とする。
-- 学術的厳密さと実務判断の両方を重視する。
-- 主張、根拠、限界、実務含意を分けて書く。
+- 読者はAI・データ・組織ナレッジ・経済・政策・地政学などの調査内容そのものに関心を持つ人とする。
+- 学術的厳密さと、調査対象そのものに基づく考察を重視する。
+- 主張、根拠、限界、調査内容に基づく考察を分けて書く。
 - 「できること」と「できないこと」を明確にする。

@@ -43,6 +43,9 @@ jobs:
       - name: Run repository tests
         run: pnpm test
 
+      - name: Run repository lint
+        run: pnpm lint
+
       - name: Build
         run: pnpm build
 
@@ -53,7 +56,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.TF_VAR_CLOUDFLARE_ACCOUNT_ID }}
           packageManager: pnpm
-          command: pages deploy dist --project-name=daylight-research --branch=main
+          command: pages deploy dist --project-name=daylight-research --branch=main --commit-message="Cloudflare Pages production deploy ${{ github.sha }}" --commit-dirty=true
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Print deployment URL

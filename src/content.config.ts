@@ -20,6 +20,11 @@ const blog = defineCollection({
 			contentType: z.enum(['report', 'news']).default('report'),
 			category: z.enum(CATEGORIES),
 			tags: z.array(z.string()),
+			generation: z
+				.object({
+					model: z.string()
+				})
+				.optional(),
 			draft: z.boolean().default(false)
 		})
 })
@@ -31,4 +36,11 @@ const articleResearch = defineCollection({
 	})
 })
 
-export const collections = { blog, articleResearch }
+const articleSourceNotes = defineCollection({
+	loader: glob({ base: './articles', pattern: '**/source-notes.{md,mdx}' }),
+	schema: z.object({
+		title: z.string().optional()
+	})
+})
+
+export const collections = { blog, articleResearch, articleSourceNotes }

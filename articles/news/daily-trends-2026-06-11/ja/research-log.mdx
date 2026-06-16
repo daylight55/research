@@ -1,0 +1,47 @@
+---
+title: '2026-06-11 daily-trends-2026-06-11 調査ログ'
+description: '日次ニュースダイジェストの調査メモと採用ソースの記録。'
+contentType: news
+pubDate: '2026-06-11'
+category: 'tech-news'
+draft: false
+---
+
+# 2026-06-11 daily-trends-2026-06-11 調査ログ
+
+## 利用環境
+
+- automation model: `gpt-5.4-mini`
+- prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+- workspace: `daylight55/research`
+
+## 調査命令
+
+- research date: `2026-06-11`
+- topic hint: 政治、経済、技術の最新トレンドを同日に並べて整理する
+- category/count constraints: 政治5件、経済5件、技術5件、合計15件
+- recency window: 主に直近24-48時間、必要に応じて少し古いが継続的に重要な話題を含める
+- deliverable: 日本語本体を正本とする日次ニュースダイジェストと、その英語版、MIX整合JSONを作成する
+
+## 採用ソース
+
+- https://www.theguardian.com/us-news/2026/jun/10/trump-signs-70-billion-dollar-immigration-act-ice
+- https://www.theguardian.com/world/live/2026/jun/10/iran-war-updates-missile-strikes-trump-us-retaliation-middle-east-crisis-war-live
+- https://www.theguardian.com/world/2026/jun/08/armenia-europe-party-wins-election-russia-nikol-pashinyan
+- https://elpais.com/america/2026-06-10/resultados-de-las-elecciones-en-peru-en-vivo.html
+- https://apnews.com/article/759c3e38d33b2dfee9561375eae25d39
+- https://www.theguardian.com/business/live/2026/jun/10/asian-stocks-fall-us-iran-exchange-fire-middle-east-strait-of-hormuz-oil-prices-latest-news-updates
+- https://m.economictimes.com/markets/commodities/news/oil-rises-nearly-1-as-us-launches-new-strikes-against-iran-supply-tightens/articleshow/131622459.cms
+- https://www.wsj.com/economy/fitch-cuts-global-growth-outlook-in-latest-downgrade-to-capture-mideast-impact-17bec74a
+- https://www.theguardian.com/business/live/2026/jun/10/asian-stocks-fall-us-iran-exchange-fire-middle-east-strait-of-hormuz-oil-prices-latest-news-updates
+- https://apnews.com/article/d769dec86344cb4977c98789e8ec492f
+- https://www.axios.com/2026/06/08/openai-ipo
+- https://www.theverge.com/news/683897/wwdc-2026-apple-ai-siri-gemini
+- https://timesofindia.indiatimes.com/technology/tech-news/microsoft-releases-june-2026-patch-why-you-should-update-your-windows-pcs-right-now/articleshow/131638163.cms
+- https://www.wired.com/story/artificial-intelligence-sneaks-into-the-world-cup-thanks-to-google-gemini/
+
+## 調査メモ
+
+- 直近の地政学リスクを中心に、原油・インフレ・成長見通しへ波及する記事を優先した。
+- 技術分野はAI商用化、OS再設計、脆弱性修正、イベント運用への実装を分けて整理した。
+- 画像は各 `NewsSourceCard` でテーマに近い固定URLを使い、カードごとに重複しないようにした。

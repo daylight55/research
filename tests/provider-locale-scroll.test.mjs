@@ -5,31 +5,57 @@ import test from 'node:test'
 
 const repoRoot = new URL('..', import.meta.url)
 const providerLocalePath = join(repoRoot.pathname, 'src/components/ProviderLocale.astro')
+const mixedArticleContentPath = join(repoRoot.pathname, 'src/components/MixedArticleContent.astro')
+
+test('locale switch scroll restoration uses translated text anchors before coordinate fallback', async () => {
+	const source = await readFile(providerLocalePath, 'utf8')
+
+	assert.match(source, /window\.__localeScrollAlignment/)
+	assert.match(source, /const ARTICLE_BLOCK_SELECTOR = 'h1, h2, h3, h4, p, li, blockquote, table'/)
+	assert.match(source, /const ARTICLE_VIEWPORT_ANCHOR_RATIO = 0\.42/)
+	assert.match(source, /const annotateArticleScrollAnchors = \(\) =>/)
+	assert.match(source, /alignmentPairsFromData/)
+	assert.match(source, /block\.dataset\.scrollAnchorEn = englishText/)
+	assert.match(source, /block\.dataset\.scrollAnchorJa = japaneseText/)
+	assert.match(source, /const getArticleScrollAnchor = \(\) =>/)
+	assert.match(source, /textByLocale: getBlockTextAnchors\(visibleBlock\)/)
+	assert.match(source, /const scrollToArticleAnchor = \(anchor\) =>/)
+	assert.match(source, /const block = findArticleBlockByTextAnchor\(anchor, blocks\)/)
+	assert.match(source, /if \(scrollToArticleAnchor\(saved\.anchor\)\)/)
+	assert.match(source, /y: window\.scrollY/)
+	assert.match(source, /ratio: window\.scrollY \/ maxScroll/)
+	assert.match(
+		source,
+		/const targetY = Math\.min\(saved\.y \?\? maxScroll \* \(saved\.ratio \?\? 0\), maxScroll\)/
+	)
+	assert.doesNotMatch(source, /findArticleBlockByTextAnchor\(anchor, blocks\) \?\?/)
+})
 
 test('locale switch scroll restoration cancels stale restore attempts', async () => {
 	const source = await readFile(providerLocalePath, 'utf8')
 
-	assert.match(source, /const ARTICLE_BLOCK_SELECTOR = 'h1, h2, h3, h4, p, li, blockquote, table'/)
-	assert.match(source, /const ARTICLE_VIEWPORT_ANCHOR_RATIO = 0\.42/)
-	assert.match(source, /const getArticleContentRoot = \(\) =>/)
-	assert.match(source, /document\.querySelector\('article \[data-mixed-english\]'\)/)
-	assert.match(source, /const getArticleScrollAnchor = \(\) =>/)
-	assert.match(source, /blockIndex/)
-	assert.match(source, /blockOffsetRatio/)
-	assert.match(source, /viewportRatio: ARTICLE_VIEWPORT_ANCHOR_RATIO/)
-	assert.match(source, /const scrollToArticleAnchor = \(anchor\) =>/)
-	assert.match(source, /anchor: getArticleScrollAnchor\(\)/)
-	assert.match(source, /if \(scrollToArticleAnchor\(saved\.anchor\)\)/)
 	assert.match(source, /let scrollRestoreRun = 0/)
 	assert.match(source, /const clearScheduledScrollRestores = \(\) =>/)
 	assert.match(source, /if \(restoreRun !== scrollRestoreRun\) return/)
 	assert.match(source, /if \(readSavedScrollPosition\(\) !== saved\) return/)
+	assert.match(source, /pendingScrollRestore = raw \? JSON\.parse\(raw\) : null/)
 	assert.match(source, /clearSavedScrollPosition\(\)\s+clearScheduledScrollRestores\(\)/)
 	assert.match(
 		source,
 		/clearWhenRestored\(\)\s+if \(readSavedScrollPosition\(\) !== saved\) return/
 	)
+	assert.match(source, /scheduleRestore\(1200, true\)/)
+	assert.match(source, /window\.requestAnimationFrame\(\(\) => clearWhenRestored\(\)\)/)
 	assert.doesNotMatch(source, /window\.setTimeout\(clearWhenRestored,\s*\d+/)
+	assert.doesNotMatch(source, /window\.requestAnimationFrame\(clearWhenRestored\)/)
+})
+
+test('locale switch from the top keeps absolute top position', async () => {
+	const source = await readFile(providerLocalePath, 'utf8')
+
+	assert.match(source, /const isAtPageTop = window\.scrollY <= 1/)
+	assert.match(source, /y: window\.scrollY/)
+	assert.match(source, /anchor: isAtPageTop \? null : getArticleScrollAnchor\(\)/)
 })
 
 test('locale switch scroll restoration is aborted by user scroll input', async () => {
@@ -49,6 +75,29 @@ test('locale switch scroll restoration is aborted by user scroll input', async (
 	assert.match(source, /'PageUp'/)
 })
 
+test('mixed article blocks expose bilingual scroll anchors', async () => {
+	const source = await readFile(mixedArticleContentPath, 'utf8')
+
+	assert.match(
+		source,
+		/function setBlockScrollAnchors\(block, englishSentences, japaneseSentences\)/
+	)
+	assert.match(source, /block\.dataset\.scrollAnchorEn = englishText/)
+	assert.match(source, /block\.dataset\.scrollAnchorJa = japaneseText/)
+	assert.match(source, /setBlockScrollAnchors\(block, englishSentences, pairedJapaneseSentences\)/)
+})
+
+test('sparse explicit mixed alignment falls back to section pairing for the remaining article', async () => {
+	const source = await readFile(mixedArticleContentPath, 'utf8')
+
+	assert.doesNotMatch(source, /block\.dataset\.mixedExplicit = 'true'/)
+	assert.doesNotMatch(source, /!block\.dataset\.mixedExplicit/)
+	assert.doesNotMatch(
+		source,
+		/function pairBlocksWithExplicitAlignment|pairBlocksWithExplicitAlignment\(/
+	)
+})
+
 test('mobile horizontal swipes switch locale without replacing vertical scroll', async () => {
 	const source = await readFile(providerLocalePath, 'utf8')
 
@@ -56,11 +105,12 @@ test('mobile horizontal swipes switch locale without replacing vertical scroll',
 	assert.match(source, /const SWIPE_MIN_DISTANCE = 72/)
 	assert.match(source, /const SWIPE_MAX_VERTICAL_DISTANCE = 70/)
 	assert.match(source, /let swipeStart = null/)
+	assert.match(source, /window\.__localeAvailability/)
+	assert.match(source, /AVAILABLE_LOCALES_FOR_CURRENT_PATH/)
 	assert.match(source, /const availableLocalesForPath = \(contentPath\) =>/)
-	assert.match(
-		source,
-		/canRedirectToMixedArticle\(contentPath\) \? SUPPORTED_LOCALES : \['ja', 'en'\]/
-	)
+	assert.match(source, /normalizePath\(contentPath\) === normalizePath\(CURRENT_CONTENT_PATH\)/)
+	assert.match(source, /\? AVAILABLE_LOCALES_FOR_CURRENT_PATH/)
+	assert.match(source, /canRedirectToMixedArticle\(contentPath\)/)
 	assert.match(source, /const switchLocaleBySwipe = \(direction\) =>/)
 	assert.match(source, /window\.addEventListener\(\s*'touchstart'/)
 	assert.match(source, /window\.addEventListener\(\s*'touchend'/)

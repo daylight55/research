@@ -1,0 +1,47 @@
+---
+title: '2026-06-11 daily-trends-2026-06-11 research log'
+description: 'Research notes and source records for the daily news digest.'
+contentType: news
+pubDate: '2026-06-11'
+category: 'tech-news'
+draft: false
+---
+
+# 2026-06-11 daily-trends-2026-06-11 research log
+
+## Environment
+
+- automation model: `gpt-5.4-mini`
+- prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+- workspace: `daylight55/research`
+
+## Research Instruction
+
+- research date: `2026-06-11`
+- topic hint: organize the day’s hottest politics, economy, and technology trends
+- category/count constraints: 5 politics items, 5 economy items, 5 technology items, 15 total
+- recency window: mostly the last 24-48 hours, with slightly older items allowed if they still drive decisions
+- deliverable: a Japanese source-of-truth daily news digest plus the synchronized English version and MIX alignment JSON
+
+## Selected Sources
+
+- https://www.theguardian.com/us-news/2026/jun/10/trump-signs-70-billion-dollar-immigration-act-ice
+- https://www.theguardian.com/world/live/2026/jun/10/iran-war-updates-missile-strikes-trump-us-retaliation-middle-east-crisis-war-live
+- https://www.theguardian.com/world/2026/jun/08/armenia-europe-party-wins-election-russia-nikol-pashinyan
+- https://elpais.com/america/2026-06-10/resultados-de-las-elecciones-en-peru-en-vivo.html
+- https://apnews.com/article/759c3e38d33b2dfee9561375eae25d39
+- https://www.theguardian.com/business/live/2026/jun/10/asian-stocks-fall-us-iran-exchange-fire-middle-east-strait-of-hormuz-oil-prices-latest-news-updates
+- https://m.economictimes.com/markets/commodities/news/oil-rises-nearly-1-as-us-launches-new-strikes-against-iran-supply-tightens/articleshow/131622459.cms
+- https://www.wsj.com/economy/fitch-cuts-global-growth-outlook-in-latest-downgrade-to-capture-mideast-impact-17bec74a
+- https://www.theguardian.com/business/live/2026/jun/10/asian-stocks-fall-us-iran-exchange-fire-middle-east-strait-of-hormuz-oil-prices-latest-news-updates
+- https://apnews.com/article/d769dec86344cb4977c98789e8ec492f
+- https://www.axios.com/2026/06/08/openai-ipo
+- https://www.theverge.com/news/683897/wwdc-2026-apple-ai-siri-gemini
+- https://timesofindia.indiatimes.com/technology/tech-news/microsoft-releases-june-2026-patch-why-you-should-update-your-windows-pcs-right-now/articleshow/131638163.cms
+- https://www.wired.com/story/artificial-intelligence-sneaks-into-the-world-cup-thanks-to-google-gemini/
+
+## Notes
+
+- I prioritized recent geopolitical risk because it was clearly feeding into oil, inflation, and growth expectations.
+- I separated technology into commercialization, platform design, security patching, and live-event deployment.
+- I used fixed topic-specific image URLs in each `NewsSourceCard` and avoided reusing the same image URL across cards.

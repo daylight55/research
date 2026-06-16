@@ -1,0 +1,32 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+import ListPosts from '@/components/ListPosts'
+import Pagination from '@/components/Pagination'
+import TitlePage from '@/components/TitlePage'
+import { createArticleListStaticPaths, getNewsPosts, withBase } from '@/utils'
+
+export async function getStaticPaths() {
+	const newsPosts = await getNewsPosts()
+	return createArticleListStaticPaths(newsPosts, 'news')
+}
+
+const { page } = Astro.props
+const posts = page.data
+---
+
+<BaseLayout title='News'>
+	<TitlePage title='News' />
+	<div class='mb-6 grid gap-2'>
+		<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>
+			世界・日本の技術トレンド、公式発表、研究動向、脆弱性情報、政策・規制、日本・国際政治情勢の変化を継続的に追うためのニュース記事一覧。
+		</p>
+		<a
+			href={withBase('/news/rss.xml')}
+			class='w-fit text-sm font-semibold text-gray-900 underline-offset-4 hover:underline dark:text-gray-100'
+		>
+			News RSS
+		</a>
+	</div>
+	<ListPosts posts={posts} />
+	<Pagination page={page} />
+</BaseLayout>

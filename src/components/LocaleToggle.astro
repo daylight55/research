@@ -1,4 +1,6 @@
 ---
+import { existsSync } from 'node:fs'
+import { join } from 'node:path'
 import { DEFAULT_LOCALE, localizedPath, stripLocaleFromPath, type Locale } from '@/utils'
 
 const { locale = DEFAULT_LOCALE, variant = 'header' } = Astro.props as {
@@ -6,19 +8,37 @@ const { locale = DEFAULT_LOCALE, variant = 'header' } = Astro.props as {
 	variant?: 'header' | 'floating'
 }
 
+const articleMatch = stripLocaleFromPath(Astro.url.pathname).match(/^\/(news|reports)\/([^/]+)\/?$/)
+const articleType = articleMatch?.[1] === 'reports' ? 'report' : articleMatch?.[1]
+const articleSlug = articleMatch?.[2]
+const articleRoot =
+	articleType && articleSlug ? join(process.cwd(), 'articles', articleType, articleSlug) : undefined
+const hasEnglishArticle = articleRoot ? existsSync(join(articleRoot, 'en', 'index.mdx')) : true
+const hasMixedArticle =
+	Boolean(articleRoot) && hasEnglishArticle && existsSync(join(articleRoot, 'mix-alignment.json'))
 const currentContentPath = stripLocaleFromPath(Astro.url.pathname)
 const isArticleDetailPath = /^\/(news|reports)\/[^/]+\/?$/.test(currentContentPath)
-const showMixedToggle = locale === 'mix' || isArticleDetailPath
+const availableLocales = [
+	'ja',
+	hasEnglishArticle && 'en',
+	(locale === 'mix' || (isArticleDetailPath && hasMixedArticle)) && 'mix'
+].filter(Boolean) as Locale[]
+const displayLocales = ['ja', 'en', (locale === 'mix' || isArticleDetailPath) && 'mix'].filter(
+	Boolean
+) as Locale[]
+const showMixedToggle = displayLocales.includes('mix')
+const shouldRender = displayLocales.length > 1
 const japaneseHref = localizedPath('ja', currentContentPath)
 const englishHref = localizedPath('en', currentContentPath)
 const mixedHref = localizedPath('mix', currentContentPath)
+const activeIndex = Math.max(displayLocales.indexOf(locale), 0)
 const isFloating = variant === 'floating'
 const navClass = isFloating
-	? 'fixed bottom-4 left-1/2 z-40 -translate-x-1/2 sm:bottom-5'
+	? 'fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-1/2 z-50 -translate-x-1/2 sm:bottom-[max(1.25rem,env(safe-area-inset-bottom))]'
 	: 'shrink-0'
 const controlClass = isFloating
 	? [
-			'relative grid h-10 items-center rounded-full border border-black/10 bg-[#f8f7f2]/85 p-1 text-[11px] font-bold shadow-sm backdrop-blur transition-colors dark:border-white/10 dark:bg-[#11110f]/85',
+			'relative grid h-10 items-center rounded-full border border-black/20 bg-white/95 p-1 text-[11px] font-bold shadow-2xl shadow-black/20 ring-1 ring-black/10 backdrop-blur transition-colors dark:border-white/20 dark:bg-[#11110f]/95 dark:shadow-black/50 dark:ring-white/15',
 			showMixedToggle ? 'w-48 grid-cols-3' : 'w-32 grid-cols-2'
 		]
 	: [
@@ -28,51 +48,79 @@ const controlClass = isFloating
 const indicatorClass = [
 	'pointer-events-none absolute inset-y-1 left-1 rounded-full bg-black transition-transform duration-200 ease-out dark:bg-white',
 	showMixedToggle ? 'w-[calc((100%_-_0.5rem)/3)]' : 'w-[calc((100%_-_0.5rem)/2)]',
-	locale === 'en' && 'translate-x-full',
-	showMixedToggle && locale === 'mix' && 'translate-x-[200%]'
+	activeIndex === 1 && 'translate-x-full',
+	activeIndex === 2 && 'translate-x-[200%]'
 ]
 const linkClass =
 	'relative z-10 inline-flex h-full items-center justify-center rounded-full transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black dark:focus-visible:outline-white'
 const inactiveClass = 'text-[#181713] hover:bg-black/5 dark:text-[#f4efe4] dark:hover:bg-white/10'
 const activeClass = 'text-white dark:text-black'
+const unavailableClass = 'cursor-not-allowed text-[#181713]/40 dark:text-[#f4efe4]/35'
 ---
 
-<nav aria-label='Language' class={navClass}>
-	<div class:list={controlClass} role='radiogroup' aria-label='Language'>
-		<span class:list={indicatorClass} aria-hidden='true'></span>
-		<a
-			href={japaneseHref}
-			data-locale-switch='ja'
-			role='radio'
-			aria-checked={locale === 'ja'}
-			aria-label='Switch to Japanese'
-			class:list={[linkClass, locale === 'ja' ? activeClass : inactiveClass]}
-		>
-			JA
-		</a>
-		<a
-			href={englishHref}
-			data-locale-switch='en'
-			role='radio'
-			aria-checked={locale === 'en'}
-			aria-label='Switch to English'
-			class:list={[linkClass, locale === 'en' ? activeClass : inactiveClass]}
-		>
-			EN
-		</a>
-		{
-			showMixedToggle && (
+{
+	shouldRender && (
+		<nav aria-label='Language' class={navClass}>
+			<div class:list={controlClass} role='radiogroup' aria-label='Language'>
+				<span class:list={indicatorClass} aria-hidden='true' />
 				<a
-					href={mixedHref}
-					data-locale-switch='mix'
+					href={japaneseHref}
+					data-locale-switch='ja'
 					role='radio'
-					aria-checked={locale === 'mix'}
-					aria-label='Switch to Japanese-English mixed reading'
-					class:list={[linkClass, locale === 'mix' ? activeClass : inactiveClass]}
+					aria-checked={locale === 'ja'}
+					aria-label='Switch to Japanese'
+					class:list={[linkClass, locale === 'ja' ? activeClass : inactiveClass]}
 				>
-					MIX
+					JA
 				</a>
-			)
-		}
-	</div>
-</nav>
+				{availableLocales.includes('en') ? (
+					<a
+						href={englishHref}
+						data-locale-switch='en'
+						role='radio'
+						aria-checked={locale === 'en'}
+						aria-label='Switch to English'
+						class:list={[linkClass, locale === 'en' ? activeClass : inactiveClass]}
+					>
+						EN
+					</a>
+				) : (
+					<button
+						type='button'
+						disabled
+						role='radio'
+						aria-checked='false'
+						aria-label='English version is not available yet'
+						class:list={[linkClass, unavailableClass]}
+					>
+						EN
+					</button>
+				)}
+				{showMixedToggle &&
+					(availableLocales.includes('mix') ? (
+						<a
+							href={mixedHref}
+							data-locale-switch='mix'
+							role='radio'
+							aria-checked={locale === 'mix'}
+							aria-label='Switch to Japanese-English mixed reading'
+							class:list={[linkClass, locale === 'mix' ? activeClass : inactiveClass]}
+						>
+							MIX
+						</a>
+					) : (
+						<button
+							type='button'
+							disabled
+							role='radio'
+							aria-checked='false'
+							aria-label='Mixed reading is not available yet'
+							class:list={[linkClass, unavailableClass]}
+						>
+							MIX
+						</button>
+					))}
+			</div>
+		</nav>
+	)
+}

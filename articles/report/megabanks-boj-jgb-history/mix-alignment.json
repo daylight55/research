@@ -1,0 +1,181 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "日本のメガバンク再編は、バブル崩壊後の不良債権、1997-1998年の金融危機、金融行政の再設計、公的資金注入、会計・検査ルールの厳格化が重なって起きた。",
+					"en": "Japan's megabank consolidation was the result of overlapping pressures: post-bubble non-performing loans, the 1997-1998 financial crisis, redesign of financial supervision, public capital injections, and stricter accounting and inspection rules."
+				},
+				{
+					"ja": "現在の三大メガバンクは、単なる自主的な大型合併ではなかった。",
+					"en": "The three current megabank groups were not just voluntary large mergers."
+				},
+				{
+					"ja": "日銀は2001年3月の量的緩和で長期国債買入を増やす枠組みを導入した。",
+					"en": "The BOJ introduced a quantitative easing framework in March 2001 that allowed it to increase outright purchases of long-term JGBs."
+				},
+				{
+					"ja": "「その時に日銀が国債を買い取った」という見方は、半分は事実に触れているが、因果関係を短絡しやすい。",
+					"en": "The claim that \"the BOJ bought government bonds at that time\" touches part of the truth but can easily compress separate causal chains."
+				},
+				{
+					"ja": "しかし、銀行救済の主な仕組みは預金保険機構と政府の財政措置を軸にした公的資金枠だった。",
+					"en": "The main bank rescue mechanism, however, was a public funding framework centered on the Deposit Insurance Corporation and fiscal measures by the government."
+				},
+				{
+					"ja": "2026年5月20日時点の日銀勘定では、日銀の国債保有は531.8兆円である。",
+					"en": "As of the BOJ accounts for May 20, 2026, the Bank held 531.8 trillion yen of JGBs."
+				},
+				{
+					"ja": "したがって、「日銀が大量に国債を持っているから日本経済の財政リスク論は全部無根拠」とは言えない。",
+					"en": "It does not follow that all fiscal-risk arguments about Japan are baseless because the BOJ holds a large amount of JGBs."
+				}
+			]
+		},
+		{
+			"id": "what-happened",
+			"heading": {
+				"ja": "2. 何が起きたのか：銀行危機から三大グループへ",
+				"en": "2. What happened: from banking crisis to three major groups"
+			},
+			"pairs": [
+				{
+					"ja": "1990年代の銀行問題は、地価と株価の下落で担保価値が崩れ、企業向け貸出の不良債権が膨らんだことから始まった。",
+					"en": "Japan's banking problem in the 1990s began when falling land and equity prices weakened collateral values and expanded non-performing corporate loans."
+				},
+				{
+					"ja": "これは単なる景気循環の問題ではなかった。",
+					"en": "This was not a simple business-cycle problem."
+				},
+				{
+					"ja": "危機が制度改革を強制した。",
+					"en": "The crisis forced institutional reform."
+				},
+				{
+					"ja": "1998年、金融監督庁は日銀と協力して主要19行を検査した。",
+					"en": "In 1998, the Financial Supervisory Agency inspected 19 major banks in cooperation with the BOJ."
+				},
+				{
+					"ja": "この流れの中で銀行は、自己資本を厚くし、不良債権を処理し、システム投資や国際業務を支える規模を確保する必要に迫られた。",
+					"en": "Banks then had to thicken capital, dispose of bad loans, and secure enough scale to support system investment and international operations."
+				},
+				{
+					"ja": "三井住友銀行は住友銀行とさくら銀行の2001年合併で発足した。",
+					"en": "Sumitomo Mitsui Banking Corporation was formed by the 2001 merger of Sumitomo Bank and Sakura Bank."
+				}
+			]
+		},
+		{
+			"id": "public-capital",
+			"heading": {
+				"ja": "3. 公的資金注入はどう資金化されたのか",
+				"en": "3. How public capital was funded"
+			},
+			"pairs": [
+				{
+					"ja": "銀行救済の制度面では、預金者保護、破綻金融機関処理、健全行の資本増強を別々に設計した。",
+					"en": "The rescue framework separated depositor protection, failed-institution resolution, and recapitalization of viable banks."
+				},
+				{
+					"ja": "この時代に「国債」「政府保証」「日銀」が同時に出てくるため、誤解が起きやすい。",
+					"en": "This period is easy to misread because JGBs, government guarantees, and the BOJ appear in the same historical frame."
+				},
+				{
+					"ja": "公的資本注入には政府保証、預金保険機構の資金調達、財政措置が関わった。",
+					"en": "Public capital injections involved government guarantees, funding by the Deposit Insurance Corporation, and fiscal measures."
+				},
+				{
+					"ja": "日銀も金融システム安定のため流動性を供給し、検査にも協力した。",
+					"en": "The BOJ also supplied liquidity and cooperated in inspections to stabilize the financial system."
+				},
+				{
+					"ja": "銀行救済は金融システム安定化の財政措置、日銀の国債買入拡大はデフレ下の金融緩和であり、相互に同じ危機環境に反応したが、同一の取引ではない。",
+					"en": "Bank rescue was a fiscal and supervisory program for financial-system stabilization. The expansion of BOJ JGB purchases was monetary easing under deflation. They responded to the same crisis environment, but they were not the same transaction."
+				}
+			]
+		},
+		{
+			"id": "current-holdings",
+			"heading": {
+				"ja": "4. 今の日銀はどれだけ国債を持っているのか",
+				"en": "4. How many JGBs does the BOJ hold now?"
+			},
+			"pairs": [
+				{
+					"ja": "日銀の2026年5月20日時点の営業毎旬報告では、資産側の「Japanese government securities」は531.8兆円、内訳は長期国債531.8兆円、国庫短期証券0円である。",
+					"en": "The BOJ's May 20, 2026 accounts show 531.8 trillion yen of Japanese government securities on the asset side."
+				},
+				{
+					"ja": "この規模は大きい。",
+					"en": "That scale is large."
+				}
+			]
+		},
+		{
+			"id": "fiscal-risk",
+			"heading": {
+				"ja": "5. 日銀保有なら財政リスクは消えるのか",
+				"en": "5. Does fiscal risk disappear when the BOJ holds the bonds?"
+			},
+			"pairs": [
+				{
+					"ja": "中央銀行が国債を持つと、政府が払う利息の一部は日銀収益となり、最終的に国庫納付を通じて政府へ戻りうる。",
+					"en": "When a central bank holds government bonds, part of the interest paid by the government becomes BOJ income and can eventually flow back to the government through remittances."
+				},
+				{
+					"ja": "その意味では、財政負担の見え方は民間保有国債とは異なる。",
+					"en": "In that sense, the fiscal burden looks different from JGBs held by private investors."
+				},
+				{
+					"ja": "しかし、日銀の資産側に国債があり、負債側に日銀当座預金があることを忘れると誤る。",
+					"en": "The analysis breaks down if we forget that BOJ assets are matched by BOJ liabilities, especially current account balances held by financial institutions."
+				},
+				{
+					"ja": "日銀がその当座預金に利息を払い、政策金利が上がれば、日銀の支払利息も増える。",
+					"en": "If the BOJ pays interest on those balances and policy rates rise, the BOJ's interest expenses also rise."
+				},
+				{
+					"ja": "もう一つの制約は、国債市場の機能である。",
+					"en": "The second constraint is JGB market functioning."
+				},
+				{
+					"ja": "日銀の大きな存在感は利回りを押し下げ、政府資金調達を安定させうる。",
+					"en": "A large BOJ presence can push yields down and stabilize government funding."
+				}
+			]
+		},
+		{
+			"id": "practical-reading",
+			"heading": {
+				"ja": "6. 実務的な読み方",
+				"en": "6. Practical reading"
+			},
+			"pairs": [
+				{
+					"ja": "このテーマで重要なのは、二つの問いを分けることである。",
+					"en": "The key is to separate two questions."
+				},
+				{
+					"ja": "1990年代後半から2000年代前半の銀行再編とは何だったのか。",
+					"en": "First, what was the bank consolidation of the late 1990s and early 2000s?"
+				},
+				{
+					"ja": "日銀保有分が大きいほど、短期的な民間消化圧力は弱まる。",
+					"en": "A larger BOJ holding reduces short-term pressure from private absorption."
+				},
+				{
+					"ja": "どれか一つだけを見て「問題なし」または「すぐ危機」と結論づける議論は、歴史にも制度にも合っていない。",
+					"en": "Arguments that use only one of those numbers to conclude either \"no problem\" or \"imminent crisis\" do not fit the history or the institutional structure."
+				}
+			]
+		}
+	]
+}

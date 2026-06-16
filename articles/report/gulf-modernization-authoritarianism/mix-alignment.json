@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "Saudi Arabia, the UAE, and Qatar all talk about modernization, but their programs are not democratization projects.",
+          "ja": "サウジアラビア、UAE、カタールは、いずれも「近代化」を掲げているが、その中身は民主化ではない。"
+        },
+        {
+          "en": "Their official strategies use oil and gas revenue to diversify the economy, expand cities, tourism, logistics, finance, tech, and sports, and keep political participation tightly managed.",
+          "ja": "公式戦略は、石油・ガス収入を使って経済を多角化し、都市、観光、物流、金融、テック、スポーツを伸ばしつつ、政治参加は厳しく制御する設計になっている。"
+        },
+        {
+          "en": "In the Gulf, modernization means controlled change, not liberalization by default.",
+          "ja": "つまり、湾岸の近代化は、開放と統制が同時に進む管理された変化である。"
+        },
+        {
+          "en": "The key to this pattern is how hydrocarbon rents shaped state formation.",
+          "ja": "この構図を理解する鍵は、資源収入が国家形成をどう変えたかである。"
+        },
+        {
+          "en": "As a public-information inference, that rentier logic produced a distribution state rather than a tax state, and it prioritized stability over political opening.",
+          "ja": "公表情報からの推定として、これが湾岸型の租税国家ではなく配分国家を生み、政治的自由の拡大よりも統治の安定を優先させた。"
+        },
+        {
+          "en": "For practical readers, the three countries are easiest to distinguish this way: Saudi Arabia is the largest rentier monarchy and is using top-down reform to reshape domestic life; the UAE is the most polished brand state and combines federation with global-hub politics; Qatar is a small state optimizing gas, sport, media, and mediation.",
+          "ja": "実務上の読み方は単純である。サウジアラビアは国内改革と宗教的・政治的統制を同時に進める最大の資源国家、UAEは連邦制とグローバル・ハブ化を組み合わせた最も洗練されたブランド国家、カタールは小国ゆえに天然ガス、スポーツ、メディア、外交仲介を結びつける最適化を進める国家として読むと、かなり整理しやすい。"
+        },
+        {
+          "en": "For Japan, the practical point is straightforward: Gulf opportunities are real, but they are conditional markets.",
+          "ja": "日本にとって重要なのは、湾岸を「富裕で安定した地域」とだけ見ないことである。"
+        },
+        {
+          "en": "Energy, ports, construction, logistics, tourism, sports, data centers, and finance all carry labor, compliance, export-control, and reputation risks.",
+          "ja": "エネルギー、港湾、建設、物流、観光、スポーツ、データセンター、金融の案件では、労働監督、人権デューデリジェンス、輸出管理、対外評判のリスクが一緒に動く。"
+        }
+      ]
+    },
+    {
+      "id": "state-bargain",
+      "heading": {
+        "ja": "2. 湾岸型の国家形成",
+        "en": "2. How the Gulf State Bargain Works"
+      },
+      "pairs": [
+        {
+          "en": "The modern Gulf state is better understood as a rentier distribution state than as a tax state.",
+          "ja": "湾岸の現代国家は、税収国家というより、資源レント国家として形成された。"
+        },
+        {
+          "en": "Hydrocarbon revenue allowed rulers to build a first-order ability to distribute benefits before they had to negotiate representation.",
+          "ja": "石油・ガスは、徴税と議会の取引を通じて国家を弱めるのではなく、むしろ国家が先に配分能力を獲得する経路を開いた。"
+        },
+        {
+          "en": "The important implication is that economic diversification does not automatically bring political opening.",
+          "ja": "このモデルの重要点は、経済多角化が直ちに政治開放を意味しないことだ。"
+        },
+        {
+          "en": "In fact, the more a state relies on foreign investors, tourists, global events, and international brand value, the more it cares about governance performance and reputational management.",
+          "ja": "むしろ、資源以外の収入源を増やすほど、国家は投資家、観光客、国際イベント、外資、ブランド評価に敏感になる。"
+        },
+        {
+          "en": "That can produce more sophisticated administration without opening the political field.",
+          "ja": "その結果、統治は「支持を得るための再分配」から「国際競争に耐える統治品質の演出」へ少しずつ重心を移すが、選挙競争や自由な野党活動が広がるとは限らない。"
+        }
+      ]
+    },
+    {
+      "id": "comparison",
+      "heading": {
+        "ja": "3. 三つの国家比較",
+        "en": "3. A Three-Country Comparison"
+      },
+      "pairs": [
+        {
+          "en": "The main point of the table is that all three states use the language of reform, but their reforms focus on economic reorganization and state redesign rather than political participation.",
+          "ja": "表の要点は、3国とも「改革」を語るが、その改革は政治参加の拡大よりも、経済の組み替えと統治の再設計に向いていることである。"
+        },
+        {
+          "en": "Saudi Arabia reshapes social life from the top down, the UAE sells a low-friction global platform, and Qatar uses small-state agility to punch above its weight.",
+          "ja": "サウジアラビアは国家主導で生活世界を変え、UAEは規制の軽さと国際接続性で魅せ、カタールは小国の機動力を使って存在感を作る。"
+        },
+        {
+          "en": "Saudi modernization is a process of redesigning domestic life under strong state control.",
+          "ja": "サウジアラビアの近代化は、国家が国内生活をより細かく設計し直す過程として進んでいる。"
+        },
+        {
+          "en": "Politically, however, there is still no meaningful electoral competition or open power-sharing.",
+          "ja": "だが、政治的には、選挙競争や公開された権力交代の回路はほとんど開いていない。"
+        },
+        {
+          "en": "The UAE is the Gulf's most heavily branded state.",
+          "ja": "UAE は、最もブランド化された湾岸国家である。"
+        },
+        {
+          "en": "Modernization here is designed to attract capital and talent while preserving dynastic authority.",
+          "ja": "ここでの近代化は、統治家系の権威を前提に、制度の摩擦を減らして外資と人材を呼び込む方向に設計されている。"
+        },
+        {
+          "en": "Qatar is small, but its strategy is sharp.",
+          "ja": "カタールは、人口規模が小さいぶん、国家戦略が鋭い。"
+        },
+        {
+          "en": "Qatar's strength is that LNG, mediation, sport, and media reinforce one another.",
+          "ja": "カタールの強みは、LNG、外交仲介、スポーツ、メディアを相互に補強させる点にある。"
+        }
+      ]
+    },
+    {
+      "id": "labor",
+      "heading": {
+        "ja": "4. 移民労働と市民権の線引き",
+        "en": "4. Migrant Labor and the Citizen/Noncitizen Boundary"
+      },
+      "pairs": [
+        {
+          "en": "The most important social divide in the Gulf is the boundary between citizens and noncitizens.",
+          "ja": "湾岸の近代化で最も重要なのは、国民と非国民の分断である。"
+        },
+        {
+          "en": "That dual structure speeds growth, but it also creates a persistent protection gap.",
+          "ja": "この二重構造が、経済成長の速度を上げる一方で、権利保護の空白も生みやすい。"
+        },
+        {
+          "en": "Saudi labor reform has moved forward, but the risk of exploitation has not disappeared.",
+          "ja": "サウジでは、労務制度改革は進んだが、搾取のリスクは消えていない。"
+        },
+        {
+          "en": "The UAE is one of the most extreme cases of migrant-labor dependence.",
+          "ja": "UAE は、移民労働の比重が最も極端に高い国の一つである。"
+        },
+        {
+          "en": "In Qatar, the government and the ILO have advanced reforms on minimum wages, job mobility, and exit restrictions.",
+          "ja": "カタールでは、ILO と政府の協力で最低賃金、職場移動、出国制限の緩和が進められてきた。"
+        },
+        {
+          "en": "But the population and labor structure are so skewed that weak enforcement can hollow out rights on the ground.",
+          "ja": "それでも、人口構成と雇用構造が極端なため、執行が緩い現場では権利が空洞化しやすい。"
+        }
+      ]
+    },
+    {
+      "id": "branding",
+      "heading": {
+        "ja": "5. 投資・スポーツ・観光は何を狙うか",
+        "en": "5. What Investment, Sports, and Tourism Are Trying to Do"
+      },
+      "pairs": [
+        {
+          "en": "The Gulf's image strategy is not just public relations.",
+          "ja": "湾岸の「イメージ戦略」は、単なる広報ではない。"
+        },
+        {
+          "en": "First, it attracts investment and tourism by signaling credibility.",
+          "ja": "第一に、投資と観光を呼び込むための信頼形成であり、"
+        },
+        {
+          "en": "Second, it absorbs youth expectations by creating jobs and new urban experiences.",
+          "ja": "第二に、若年層の期待を吸収する雇用創出であり、"
+        },
+        {
+          "en": "Third, it softens international criticism by building diplomatic assets.",
+          "ja": "第三に、外部からの人権批判を和らげる外交資産でもある。"
+        },
+        {
+          "en": "In Saudi Arabia, tourism, entertainment, and sports sit at the center of Vision 2030, and the country's 2034 FIFA World Cup hosting rights are part of that same logic.",
+          "ja": "サウジアラビアでは、観光、娯楽、スポーツが Vision 2030 の中心テーマであり、2034年の FIFA World Cup 開催権はその延長線上にある。"
+        },
+        {
+          "en": "In the UAE, soft power and national branding are built into the state itself.",
+          "ja": "UAE では、ソフトパワーと国家ブランドが制度的に組み込まれている。"
+        },
+        {
+          "en": "Qatar has used sport and media to prove that a small state can still sit at the center of global attention.",
+          "ja": "カタールは、スポーツとメディアを用いて「小国でも中心になれる」ことを証明しようとしてきた。"
+        },
+        {
+          "en": "But international attention does not erase rights criticism.",
+          "ja": "もっとも、国際的な注目は、権利侵害や表現制約の影を完全には消さない。"
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "heading": {
+        "ja": "6. 実務上の見方",
+        "en": "6. Practical Reading Rules"
+      },
+      "pairs": [
+        {
+          "en": "For Japanese firms and policymakers, the Gulf should be treated as a conditional market, not just a wealthy market.",
+          "ja": "日本の企業と政策担当者は、湾岸を「買い手の国」としてだけではなく、「統治の条件つき市場」として見るべきである。"
+        },
+        {
+          "en": "Projects can be attractive, but they also carry labor, data, anti-bribery, export-control, contract, reputation, and geopolitical risks.",
+          "ja": "案件の魅力は高いが、労務、データ、贈賄防止、制裁、契約解除、評判毀損、地政学的変動が同時に乗る。"
+        },
+        {
+          "en": "The practical checklist is short:",
+          "ja": "実務チェックは次の四つに絞ると使いやすい。"
+        },
+        {
+          "en": "Check where hydrocarbon revenue is being redistributed.",
+          "ja": "どの国が資源収入を何に再配分しているか。"
+        },
+        {
+          "en": "Distinguish political participation from economic administration.",
+          "ja": "改革が政治参加ではなく、経済管理の改善にとどまっていないか。"
+        },
+        {
+          "en": "Verify whether migrant-labor protections work in practice, not just on paper.",
+          "ja": "移民労働の権利保護が、法文だけでなく現場で機能しているか。"
+        },
+        {
+          "en": "Ask how sports, tourism, and investment events affect human-rights and compliance exposure.",
+          "ja": "スポーツ、観光、投資イベントの評価が、人権・労務・コンプライアンスにどう波及するか。"
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "heading": {
+        "ja": "7. 限界と今後の注視点",
+        "en": "7. Limits and Watchpoints"
+      },
+      "pairs": [
+        {
+          "en": "This report has three limits.",
+          "ja": "本稿の限界は三つある。"
+        },
+        {
+          "en": "First, official Gulf strategies are promotional documents, so targets must be separated from outcomes.",
+          "ja": "第一に、湾岸の公式戦略は自己申告色が強く、達成度は定期的に更新される。"
+        },
+        {
+          "en": "Second, labor conditions are visible enough in international reports to identify the pattern, but nonpublic bargaining and security decisions remain hard to observe.",
+          "ja": "第二に、移民労働の現場実態は報告書でかなり見えるが、非公開の取引や治安判断までは追いにくい。"
+        },
+        {
+          "en": "Third, Gulf policy can move quickly, so assumptions can change within months.",
+          "ja": "第三に、この地域では政策の変更速度が速く、数か月で前提が変わることがある。"
+        },
+        {
+          "en": "The next thing to watch is not just the price of oil and gas, but how each state reallocates that revenue and whether rights protection becomes enforceable on the ground.",
+          "ja": "したがって、次に見るべきは、資源価格そのものより、資源収入をどう再配分し、どの程度まで権利保護を実装できるかである。"
+        },
+        {
+          "en": "Gulf modernization will continue, but much of it is likely to strengthen authoritarian rule rather than replace it.",
+          "ja": "湾岸の近代化は続くが、その多くは、政治的自由を増やす方向ではなく、権威主義をアップデートする方向に働いている。"
+        }
+      ]
+    }
+  ]
+}

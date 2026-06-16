@@ -1,0 +1,46 @@
+---
+title: 'LLM Training, Fine-Tuning, RAG, and Agents: Source Notes'
+---
+
+# LLM Training, Fine-Tuning, RAG, and Agents: Source Notes
+
+## Source Map
+
+### Primary / Official
+
+- [OpenAI fine-tuning guide](https://platform.openai.com/docs/guides/fine-tuning)
+- [OpenAI function calling guide](https://platform.openai.com/docs/guides/function-calling)
+- [Anthropic, Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
+- [Anthropic, Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [MCP specification](https://modelcontextprotocol.io/specification/2025-03-26)
+- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)
+
+### Foundational / Academic
+
+- [Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+
+### Secondary / Orientation
+
+- Vendor explainers were used only for orientation and were not treated as durable definitions unless they matched the official docs above.
+
+## Evidence Notes for the Main Claims
+
+- Pretraining and fine-tuning both change model weights, but they differ in scope, cost, and retraining cadence.
+- Prompting changes runtime context, not weights. Long or highly constrained instructions become brittle more quickly than narrower prompts.
+- RAG injects retrieved documents into context, so it is suitable for fresh information and internal knowledge, but retrieval misses and bad source quality still leak into the answer.
+- Tool use gives the model external actions such as calculation, lookup, database operations, or business API calls. A single call is different from a multi-step autonomous loop.
+- Agents are control loops that iterate through planning, execution, and verification. They are not synonymous with workflows.
+- MCP is an integration protocol, not a training method. It complements RAG and tool use rather than replacing them.
+
+## Downgraded or Rejected Material
+
+- Vendor marketing claims were downgraded when they lacked evaluation details or stable definitions.
+- Detailed implementation examples were omitted because the report is a comparison and decision guide, not an engineering cookbook.
+- Claims that RAG guarantees correctness or that fine-tuning can absorb constantly changing facts were rejected.
+
+## Open Questions
+
+- The actual lift from fine-tuning depends on the dataset and the evaluation metric.
+- RAG quality depends on chunking, metadata, retrieval quality, and access control.
+- Agent safety depends on permissions, sandboxing, auditability, and rollback paths.
+- MCP’s practical value depends on how much connector sprawl it can reduce in a real deployment.

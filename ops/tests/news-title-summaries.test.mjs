@@ -3,8 +3,7 @@ import { readFileSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 import { test } from 'node:test'
 
-const GENERIC_NEWS_TITLE_RE =
-	/^\d{4}-\d{2}-\d{2}\s+ホットトレンド[:：]\s*政治・経済・技術$/
+const GENERIC_NEWS_TITLE_RE = /^\d{4}-\d{2}-\d{2}\s+ホットトレンド[:：]\s*政治・経済・技術$/
 
 function frontmatterOf(source, file) {
 	const match = source.match(/^---\n([\s\S]*?)\n---/)
@@ -60,7 +59,7 @@ test('news article titles summarize the day after the date', () => {
 test('translated news digest labels stay paragraph-separated', () => {
 	const files = findFiles('articles/news/*/en/index.mdx')
 
-	const digestLabelRe = /^(What happened|Why it matters|What to watch):/
+	const digestLabelRe = /^(What happened|Why it matters|What to watch(?: next)?):/
 	const staleLabelRe =
 		/^(What Happened|Why it's important|Implications for practice|Practical implication|Practical Implications):/
 
@@ -105,7 +104,30 @@ test('news digests use forward-looking watch labels instead of practice implicat
 			`${file} should not use stale practice implication labels`
 		)
 
-		const expectedLabel = file.includes('/en/') ? 'What to watch:' : '今後の注視点:'
-		assert.match(source, new RegExp(`^${expectedLabel}`, 'm'), `${file} should use ${expectedLabel}`)
+		const expectedLabelRe = file.includes('/en/') ? /^What to watch(?: next)?:/m : /^今後の注視点:/m
+		assert.match(source, expectedLabelRe, `${file} should use a forward-looking watch label`)
+	}
+})
+
+test('news source cards appear directly below each topic heading', () => {
+	const files = findFiles('articles/news/*/ja/index.mdx', 'articles/news/*/en/index.mdx')
+
+	for (const file of files) {
+		const source = readFileSync(file, 'utf8')
+		const frontmatter = frontmatterOf(source, file)
+		if (readScalar(frontmatter, 'contentType') !== 'news') continue
+		if (readScalar(frontmatter, 'draft') === 'true') continue
+
+		const lines = source.split('\n')
+		for (const [index, line] of lines.entries()) {
+			if (!line.startsWith('### ')) continue
+
+			const nextContentLine = lines.slice(index + 1).find((candidate) => candidate.trim() !== '')
+			assert.equal(
+				nextContentLine,
+				'<NewsSourceCard',
+				`${file}:${index + 1} should place NewsSourceCard directly below the topic heading`
+			)
+		}
 	}
 })

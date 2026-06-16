@@ -1,0 +1,432 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "The word often rendered as \"Sirat\" has at least two layers.",
+          "ja": "日本語で「シラート」と呼ばれる語には、少なくとも二つの層がある。"
+        },
+        {
+          "en": "In the Quran, ṣirāṭ primarily means a path, way, or straight path.",
+          "ja": "第一に、クルアーン本文の ṣirāṭ は、神が示す「道」「直道」を指す語である。"
+        },
+        {
+          "en": "In hadith and creed, al-Ṣirāṭ also becomes the bridge laid over Hell on the Day of Judgment.",
+          "ja": "第二に、ハディースと信条文献では、al-Ṣirāṭ が終末の日に地獄の上に架けられる橋として語られる。"
+        },
+        {
+          "en": "These layers are related, but they are not identical.",
+          "ja": "両者は別概念ではないが、同じでもない。"
+        },
+        {
+          "en": "The first concerns the direction of life; the second dramatizes that direction as an eschatological crossing.",
+          "ja": "前者は生の方向づけ、後者はその方向づけが審判で可視化される図像である。"
+        },
+        {
+          "en": "Missing this distinction makes it seem as if the Quran itself directly describes the bridge as \"thinner than hair and sharper than a sword.\"",
+          "ja": "この区別を外すと、クルアーンが直接「髪より細く剣より鋭い橋」を描いているように読んでしまう。"
+        },
+        {
+          "en": "The Quranic center is the prayer \"guide us along the Straight Path.\"",
+          "ja": "実際には、クルアーンの中心表現は「われらを直道へ導きたまえ」である。"
+        },
+        {
+          "en": "The practical reading is that sirat asks not only whether a believer knows the right path, but whether that path is maintained.",
+          "ja": "実務的に読むなら、シラートは「正しい道を知っているか」だけでなく、「その道を日々保ち続けるか」を問う概念である。"
+        },
+        {
+          "en": "The repeated prayer of al-Fātiḥah, ethical forks in daily life, communal norms, and postmortem accountability all gather around one metaphor.",
+          "ja": "礼拝で繰り返される『開端章』の祈り、倫理的な分岐、共同体の規範、死後の責任が一つの比喩軸に乗る。"
+        },
+        {
+          "en": "Sirat is not just an afterlife image; it is a device that links guidance, submission, freedom, responsibility, and salvation in Islamic thought.",
+          "ja": "だからシラートは、単なる終末怪奇譚ではなく、イスラム思想における導き、服従、自由意思、責任、救済を結びつける装置として読むべきである。"
+        }
+      ]
+    },
+    {
+      "id": "quran-overview",
+      "heading": {
+        "ja": "2. クルアーンの概要",
+        "en": "2. Quran Overview"
+      },
+      "pairs": [
+        {
+          "en": "The Quran is the sacred scripture of Islam.",
+          "ja": "クルアーン、またはコーランは、イスラムにおける聖典である。"
+        },
+        {
+          "en": "In Islamic belief it is God's speech revealed to the Prophet Muhammad through the angel Jibril.",
+          "ja": "イスラム信仰では、天使ジブリールを通じて預言者ムハンマドに下された神の言葉とされる。"
+        },
+        {
+          "en": "Historically, the revelation is usually described as unfolding in Mecca and Medina from around 610 until Muhammad's death in 632.",
+          "ja": "歴史的記述としては、啓示は610年頃から632年のムハンマドの死まで、メッカとメディナで段階的に語られたものと説明される。"
+        },
+        {
+          "en": "The Arabic text is divided into 114 surahs and addresses prayer, recitation, law, ethics, eschatology, narrative, polemic, and divine unity.",
+          "ja": "本文はアラビア語で、114のスーラに分かれ、礼拝、朗誦、法、倫理、終末、物語、論争、神の唯一性をめぐる説諭を含む。"
+        },
+        {
+          "en": "The Quran is not simply a book for silent reading.",
+          "ja": "クルアーンは単なる読書用の本ではなく、朗誦される言葉として理解されてきた。"
+        },
+        {
+          "en": "The Arabic word qurʾān is itself connected with reading or recitation, and Islamic culture has treated voice, memory, prayer, writing, and illumination as mutually reinforcing ways of honoring scripture.",
+          "ja": "アラビア語の qurʾān 自体も「読む」「朗誦する」と関係づけられる。"
+        },
+        {
+          "en": "Historical research separates belief in divine revelation from questions that can be examined historically or philologically.",
+          "ja": "歴史研究では、啓示の神的起源そのものは信仰命題であり、歴史学や文献学で証明・反証する対象ではない。"
+        },
+        {
+          "en": "The latter include transmission, collection, and standardization.",
+          "ja": "検討対象になるのは、本文がどの時期に、どのような伝達・標準化過程を経たかである。"
+        },
+        {
+          "en": "Islamic tradition describes post-prophetic collection under Zayd ibn Thabit and later standardization under the caliph Uthman to reduce divergence in recitation.",
+          "ja": "伝統的説明では、ムハンマドの死後にザイド・イブン・サービトによる収集が行われ、第三代カリフのウスマーン期に朗誦の差異を抑えるため標準化された。"
+        },
+        {
+          "en": "Manuscript evidence broadly fits the view that the received consonantal text existed by about the mid-seventh century, while leaving room for scholarly questions about early editing and reading traditions.",
+          "ja": "近年の写本研究は、受容された本文が7世紀半ば頃に存在していたという伝統的理解と大きく矛盾しない結果も示している。"
+        }
+      ]
+    },
+    {
+      "id": "what-sirat-means",
+      "heading": {
+        "ja": "3. シラートとは何か",
+        "en": "3. What Sirat Means"
+      },
+      "pairs": [
+        {
+          "en": "The Arabic ṣirāṭ means a path, way, or route.",
+          "ja": "アラビア語の ṣirāṭ は、クルアーンでは「道」「進路」「まっすぐな道」を指す。"
+        },
+        {
+          "en": "Its most famous occurrence is al-Fātiḥah 1:6, ihdinā al-ṣirāṭ al-mustaqīm, \"guide us along the Straight Path.\"",
+          "ja": "代表例は『開端章』1章6節の ihdinā al-ṣirāṭ al-mustaqīm、すなわち「われらを直道へ導きたまえ」である。"
+        },
+        {
+          "en": "Verse 1:7 then identifies that path as the path of those blessed by God.",
+          "ja": "続く1章7節では、その道が「恵みを受けた者たちの道」として説明される。"
+        },
+        {
+          "en": "It should not be confused with sīrah, the genre of prophetic biography.",
+          "ja": "ただし、発音が近い sīrah と混同してはいけない。"
+        },
+        {
+          "en": "Ṣirāṭ is the path; sīrah is biography or life narrative.",
+          "ja": "ṣirāṭ は道、sīrah は伝記・生涯記述であり、学術的には別の語である。"
+        },
+        {
+          "en": "Across the Quran, ṣirāṭ marks divine guidance, prophetic calling, communal ethics, and sometimes a path toward Hell.",
+          "ja": "クルアーン全体では、ṣirāṭ は神の導き、預言者の呼びかけ、共同体の倫理的方向、時に地獄へ向かう道を表す。"
+        },
+        {
+          "en": "Quran 6:153 contrasts God's single straight path with other ways that scatter people away from His way.",
+          "ja": "6章153節は「これがわが直道である。これに従い、ほかの道に従うな」と述べ、単数の直道と複数の分岐する道を対比する。"
+        },
+        {
+          "en": "In this verse, the path is a metaphor, but it also names concrete moral orientation.",
+          "ja": "ここでは「道」は比喩であると同時に、具体的な生の選択を指す。"
+        }
+      ]
+    },
+    {
+      "id": "scriptural-meaning",
+      "heading": {
+        "ja": "4. 経典上の意味と教示",
+        "en": "4. Scriptural Meaning and Teaching"
+      },
+      "pairs": [
+        {
+          "en": "The sirat of al-Fātiḥah is embedded in prayer.",
+          "ja": "『開端章』のシラートは、イスラムの礼拝実践と直結している。"
+        },
+        {
+          "en": "Muslims repeatedly recite al-Fātiḥah in the daily prayers, and its core request is guidance.",
+          "ja": "『開端章』は日々の礼拝で繰り返し朗誦される章であり、その中核に「導き」の祈りが置かれる。"
+        },
+        {
+          "en": "The prayer is not a declaration that the believer has already arrived.",
+          "ja": "つまりシラートは、すでに信仰者である者が、自分は完成していると宣言する言葉ではない。"
+        },
+        {
+          "en": "It positions the believer as someone who continually needs guidance, firmness, correction, and continuity.",
+          "ja": "むしろ、神の導きを毎日必要とする存在として自分を置き直す言葉である。"
+        },
+        {
+          "en": "Classical tafsir reads al-ṣirāṭ al-mustaqīm as the clear path without branching and connects it with Islam, God's guidance, God's limits, and correct obedience.",
+          "ja": "古典的タフスィールでは、al-ṣirāṭ al-mustaqīm は「枝分かれのない明白な道」と説明され、イスラムそのもの、神の書、神の境界、正しい服従と結びつけられる。"
+        },
+        {
+          "en": "The teaching is therefore larger than rule compliance.",
+          "ja": "この教示が意味しているのは、倫理を単なる規則遵守に縮めないことである。"
+        },
+        {
+          "en": "Quranic sirat asks not only which rule a person followed, but which direction a life is taking.",
+          "ja": "クルアーンのシラートは「どの規則を守ったか」だけでなく、「どの方向へ歩いているか」を問う。"
+        },
+        {
+          "en": "Quran 6:153 makes this explicit by opposing one straight path to multiple diverging ways.",
+          "ja": "6章153節の対比が示すように、道は一つの大きな方向性であり、分岐する道は人を神の道から離す力である。"
+        },
+        {
+          "en": "That structure connects prayer, daily ethics, communal discipline, and final accountability.",
+          "ja": "この構造は、礼拝、日常倫理、共同体の規範、終末の責任をつなぐ。"
+        }
+      ]
+    },
+    {
+      "id": "bridge",
+      "heading": {
+        "ja": "5. 終末の橋としてのアル＝シラート",
+        "en": "5. Al-Sirat as the Bridge"
+      },
+      "pairs": [
+        {
+          "en": "Hadith literature presents al-Ṣirāṭ as the bridge laid over Hell on the Day of Judgment.",
+          "ja": "ハディースでは、al-Ṣirāṭ は終末の日に地獄の上に置かれる橋として語られる。"
+        },
+        {
+          "en": "Sahih al-Bukhari 806 places the bridge within a resurrection and judgment scene and says it will be laid across Hell.",
+          "ja": "『サヒーフ・ブハーリー』806では、復活の日の審判場面で、地獄の上にシラートが架けられ、ムハンマドとその共同体が渡るとされる。"
+        },
+        {
+          "en": "Sunan Ibn Majah 4280 says the Sirat will be placed across Hell and that people will cross it: some safe, some detained, and some falling.",
+          "ja": "『スナン・イブン・マージャ』4280では、シラートが地獄の上に置かれ、人々が通過し、ある者は安全に渡り、ある者は留められ、ある者は落ちるとされる。"
+        },
+        {
+          "en": "This image overlays the earthly straight path with the afterlife crossing.",
+          "ja": "この橋のイメージは、現世の「直道」と来世の「通過」を重ねる。"
+        },
+        {
+          "en": "The way one walked in life becomes visible as one's passage at judgment.",
+          "ja": "現世で人がどの道を選んだかが、終末に渡れるかどうかとして現れる。"
+        },
+        {
+          "en": "Its theological function is more precise: it compresses belief, action, mercy, judgment, and communal belonging into one scene.",
+          "ja": "シラートは、信仰、行為、神の慈悲、審判、共同体帰属を一つの緊張ある場面に集約する。"
+        },
+        {
+          "en": "The bridge also enters creed.",
+          "ja": "この点は信条文献にも入る。"
+        },
+        {
+          "en": "The English translation of al-Aqidah al-Tahawiyyah lists belief in resurrection, recompense, presentation of deeds, reckoning, reading of the book of deeds, reward and punishment, the bridge over Hell al-sirat, and the scale al-mizan.",
+          "ja": "『アル＝アキーダ・アル＝タハーウィーヤ』の英訳は、復活、行為の提示、清算、書の読誦、報酬と罰、地獄の上の橋 al-sirat、秤 al-mizan への信仰を列挙する。"
+        },
+        {
+          "en": "In that setting, the Sirat is part of eschatological doctrine rather than an optional story.",
+          "ja": "ここではシラートは周辺的逸話ではなく、終末論の一部である。"
+        }
+      ]
+    },
+    {
+      "id": "historical-interpretation",
+      "heading": {
+        "ja": "6. 歴史的解釈",
+        "en": "6. Historical Interpretation"
+      },
+      "pairs": [
+        {
+          "en": "Historically, three layers should be kept separate.",
+          "ja": "歴史的には、三つの層を分けると理解しやすい。"
+        },
+        {
+          "en": "The first is Quranic vocabulary: ṣirāṭ as path.",
+          "ja": "第一層はクルアーンの語彙であり、ṣirāṭ は「道」として現れる。"
+        },
+        {
+          "en": "The second is tafsir: the straight path as Islam, divine guidance, God's limits, and continued guidance.",
+          "ja": "第二層はタフスィールであり、1章6節の「直道」を、イスラム、神の導き、神の境界、導きの継続として説明する。"
+        },
+        {
+          "en": "The third is hadith, creed, preaching, and popular eschatology: the earthly path dramatized as the bridge over Hell.",
+          "ja": "第三層はハディース・信条・説教文学であり、現世の直道が終末の橋として劇的に可視化される。"
+        },
+        {
+          "en": "The bridge image also has a comparative religious context.",
+          "ja": "この橋のイメージには、比較宗教学上の近似もある。"
+        },
+        {
+          "en": "Zoroastrianism has the Chinvat Bridge, crossed by the soul after death; it becomes broad and comfortable for the righteous and narrow and perilous for the wicked.",
+          "ja": "ゾロアスター教には、死者の魂が渡るチンワト橋があり、正しい者には広く快適に、悪しき者には狭く危険になると説明される。"
+        },
+        {
+          "en": "This comparison is useful, but similarity does not by itself prove direct borrowing.",
+          "ja": "これはイスラムのシラート橋とよく比較される。ただし、類似があることは、直ちに直接借用を証明しない。"
+        },
+        {
+          "en": "Modern historical method should therefore not treat Quranic text, early reports, later creed, sermons, and art as evidence of the same kind.",
+          "ja": "近代的な歴史研究では、クルアーン本文、初期伝承、後代信条、民衆的説教、図像表現を同じ強度の根拠として扱わない。"
+        },
+        {
+          "en": "The firm distinction is between the Quranic word and the bridge image matured in religious culture.",
+          "ja": "最も堅い区別は、「クルアーンにある語」と「後代の宗教文化で成熟した像」である。"
+        },
+        {
+          "en": "The path is unambiguously Quranic; the bridge must be read through hadith and reception history.",
+          "ja": "シラートの場合、道という語はクルアーンに明確にある。橋としての具体像は、ハディースとその受容史を通じて理解する必要がある。"
+        }
+      ]
+    },
+    {
+      "id": "religious-interpretation",
+      "heading": {
+        "ja": "7. 宗教上の解釈",
+        "en": "7. Religious Interpretation"
+      },
+      "pairs": [
+        {
+          "en": "In Sunni creed, the Sirat bridge belongs to resurrection, judgment, and recompense.",
+          "ja": "スンナ派の信条では、シラート橋は復活の日の審判と報いの一部として語られる。"
+        },
+        {
+          "en": "Creeds such as al-Tahawiyyah tend to receive it as an afterlife reality rather than dissolving it into allegory.",
+          "ja": "『タハーウィーヤ』のような信条文献では、橋を過度に寓意化するより、来世の事柄として受け入れる姿勢が強い。"
+        },
+        {
+          "en": "In preaching and tafsir, however, the bridge also becomes an ethical warning: correct the path you are walking now.",
+          "ja": "とはいえ、説教やタフスィールでは、橋の描写は現世の倫理的警告として用いられる。"
+        },
+        {
+          "en": "In Twelver Shia contexts, Sirat can be linked more directly with recognition of the Imams, obedience, and wilayah.",
+          "ja": "十二イマーム派シーア派の文脈では、シラートはさらにイマームへの認識、服従、ウィラーヤと結びつけられることがある。"
+        },
+        {
+          "en": "Here the bridge visualizes relation to legitimate spiritual authority, not only general morality.",
+          "ja": "ここでは、橋は単なる一般的道徳ではなく、正統な霊的権威への関係を可視化する。"
+        },
+        {
+          "en": "In ethical and mystical readings, Sirat is also interior orientation.",
+          "ja": "神秘主義的・倫理的に読む場合、シラートは内面の方向づけでもある。"
+        },
+        {
+          "en": "The path to God is not only external rule-following; it involves habits, desire, self-command, and the direction of the heart.",
+          "ja": "神へ向かう道を外から与えられた規則だけでなく、心の傾き、習慣、欲望、自己統御の問題として読む。"
+        },
+        {
+          "en": "The fear of the bridge becomes moral fear, and the prayer for guidance becomes a daily audit of one's own footing.",
+          "ja": "ここでは、橋の恐怖は道徳的恐怖であり、導きの祈りは自分の足元を毎日点検する行為になる。"
+        }
+      ]
+    },
+    {
+      "id": "artworks",
+      "heading": {
+        "ja": "8. 芸術作品と視覚文化",
+        "en": "8. Artworks and Visual Culture"
+      },
+      "pairs": [
+        {
+          "en": "The first artistic field is the Quran manuscript.",
+          "ja": "シラートの芸術表現を考えるとき、まずクルアーン写本を外せない。"
+        },
+        {
+          "en": "Because al-Fātiḥah contains the prayer for the straight path, illuminated openings of al-Fātiḥah are visual entrances into the concept.",
+          "ja": "『開端章』は直道の祈りを含むため、アル＝ファーティハの装飾写本はシラート理解の視覚的入口になる。"
+        },
+        {
+          "en": "The Metropolitan Museum of Art records a late eighteenth- to early nineteenth-century Quran manuscript attributed to Kashmir, whose opening surahs, including al-Fātiḥah, use a blue and gold palette.",
+          "ja": "メトロポリタン美術館のカシミール由来とされる18世紀末から19世紀初頭のクルアーン写本は、アル＝ファーティハなど複数章の冒頭に青と金の豪華な装飾を施している。"
+        },
+        {
+          "en": "Mamluk Quran manuscripts provide a second example.",
+          "ja": "マムルーク朝期のクルアーン写本も重要である。"
+        },
+        {
+          "en": "The Museum With No Frontiers record for a Quran associated with Sultan Jaqmaq describes a double-page opening for al-Fātiḥah and al-Baqara, thuluth script, vegetal motifs, and golden tri-petalled verse separators.",
+          "ja": "Museum With No Frontiers の記録するスルタン・ジャクマク期の写本では、アル＝ファーティハとアル＝バカラ冒頭が見開きで装飾され、トゥルス体、植物文、金の三弁花形の区切りが用いられる。"
+        },
+        {
+          "en": "This shows how the prayer for the straight path was made visible through recitation, writing, patronage, and ornament.",
+          "ja": "これは直道の祈りが、単に読まれる文ではなく、礼拝・朗誦・書写・権力の庇護を通じて視覚化されることを示す。"
+        },
+        {
+          "en": "The bridge image appears less often as a museum object title and more often inside Mi'raj, hell, last judgment, paradise, and hell-tour imagery.",
+          "ja": "一方、橋としてのシラートは、写本カタログでは作品名として直接出るよりも、ミウラージュ、地獄、最後の審判、楽園・地獄巡りの図像群のなかに近接して現れる。"
+        },
+        {
+          "en": "The 1436 Mi'rajnameh image of Muhammad visiting Hell with Jibril is not titled as the Sirat bridge, but it is important for the broader visual culture of afterlife, punishment, and salvation.",
+          "ja": "1436年の『ミウラージュ・ナーマ』写本に含まれる「ムハンマドがジブリールに導かれて地獄を訪れる」細密画は、橋そのものを題名にしたものではないが、終末・地獄・救済の視覚文化を理解する重要な例である。"
+        },
+        {
+          "en": "There are therefore two good entry points for artworks.",
+          "ja": "したがって、芸術作品としてのシラートを探すときは、二つの入口を使うべきである。"
+        },
+        {
+          "en": "The first is Quran calligraphy and illumination around al-Fātiḥah, where the straight path is expressed through script, light, geometry, and vegetal ornament.",
+          "ja": "第一はアル＝ファーティハを含むクルアーン写本とカリグラフィで、ここでは直道の祈りが文字・光・幾何学・植物文として表現される。"
+        },
+        {
+          "en": "The second is Mi'raj and eschatological painting, where bridge, Hell, judgment, and salvation are narrated visually.",
+          "ja": "第二はミウラージュや終末図像で、ここでは橋、地獄、審判、救済が物語画として展開する。"
+        },
+        {
+          "en": "A simple rule such as \"Islamic art never depicts figures\" does not hold.",
+          "ja": "「イスラム美術は偶像を描かない」と単純化すると誤る。"
+        },
+        {
+          "en": "Figural practice varies by region, period, genre, and devotional context.",
+          "ja": "預言者像を避ける、顔を覆う、火炎光背で示すなど、地域や時代、ジャンル、信仰文脈によって実践は異なる。"
+        }
+      ]
+    },
+    {
+      "id": "limits",
+      "heading": {
+        "ja": "9. 読み方の限界",
+        "en": "9. Limits of Interpretation"
+      },
+      "pairs": [
+        {
+          "en": "First, the Quranic ṣirāṭ and the bridge of hadith and creed should not be collapsed.",
+          "ja": "第一に、クルアーン本文の ṣirāṭ とハディース・信条の橋を混同しないこと。"
+        },
+        {
+          "en": "Second, the bridge should not be forced into a binary of literal versus allegorical.",
+          "ja": "第二に、橋の描写をすべて文字通りか寓意かの二択にしないこと。"
+        },
+        {
+          "en": "Communities may receive it as an afterlife reality, use it as moral warning, and internalize it spiritually at the same time.",
+          "ja": "宗教共同体の内部では、来世の事柄として受け入れる読み、倫理的警告として用いる読み、神秘主義的に内面化する読みが重なっている。"
+        },
+        {
+          "en": "Third, the comparison with the Zoroastrian Chinvat Bridge should not be overstated as proof of origin.",
+          "ja": "第三に、ゾロアスター教のチンワト橋との類似を「起源の証明」として過剰に使わないこと。"
+        },
+        {
+          "en": "Comparison is valuable only when textual layer, chronology, and transmission route remain visible.",
+          "ja": "比較は有効だが、伝播経路、時代、文献層を分ける必要がある。"
+        },
+        {
+          "en": "The best reading treats Sirat as a theology of the path.",
+          "ja": "本稿の要点は、シラートを「橋の怪異」としてではなく、「道の神学」として読むことにある。"
+        },
+        {
+          "en": "The Quranic straight path is the guidance a believer asks for every day.",
+          "ja": "クルアーンの直道は、信仰者が日々求める導きである。"
+        },
+        {
+          "en": "The hadith bridge is the scene in which one's response to that guidance is judged.",
+          "ja": "ハディースの橋は、その導きへの応答が終末において問われる場面である。"
+        },
+        {
+          "en": "Artworks make both layers visible through script, light, ornament, hell journeys, and judgment imagery.",
+          "ja": "芸術作品は、その二つを文字、光、装飾、地獄巡り、審判図像として見える形にした。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+---
+import ArrowUpRight from '@/components/icons/ArrowUpRight'
+import { localizedPath, type Locale } from '@/utils'
+
+type Props = {
+	locale: Locale
+	section: 'reports' | 'news'
+	slug: string
+	hasResearchLog: boolean
+	hasSourceNotes: boolean
+}
+
+const { locale, section, slug, hasResearchLog, hasSourceNotes } = Astro.props
+const showLinks = hasResearchLog || hasSourceNotes
+---
+
+{
+	showLinks && (
+		<section class='flex flex-col gap-2'>
+			<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+				Research
+			</p>
+			<div class='flex flex-col gap-2'>
+				{hasResearchLog && (
+					<a
+						href={localizedPath(locale, `/${section}/${slug}/research/`)}
+						class='inline-flex items-center gap-1.5 rounded-md border border-black/10 bg-white/70 px-3 py-2 font-semibold leading-snug text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-300 [&_svg]:h-4 [&_svg]:w-4'
+					>
+						<ArrowUpRight />
+						Research trail
+					</a>
+				)}
+				{hasSourceNotes && (
+					<a
+						href={localizedPath(locale, `/${section}/${slug}/sources/`)}
+						class='inline-flex items-center gap-1.5 rounded-md border border-black/10 bg-white/70 px-3 py-2 font-semibold leading-snug text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-300 [&_svg]:h-4 [&_svg]:w-4'
+					>
+						<ArrowUpRight />
+						Source notes
+					</a>
+				)}
+			</div>
+		</section>
+	)
+}

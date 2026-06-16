@@ -4,446 +4,575 @@
 	"targetLocale": "en",
 	"sections": [
 		{
-			"id": "executive-summary",
-			"heading": {
-				"ja": "1. エグゼクティブサマリー",
-				"en": "1. Executive Summary"
-			},
+			"id": "tacit-knowledge-business-theory-1",
 			"pairs": [
 				{
-					"en": "Although tacit knowledge is \"knowledge that cannot be put into words,\" this short definition alone is of little use.",
-					"ja": "暗黙知は「言葉にできない知識」ではあるが、この短い定義だけではほとんど役に立たない。"
+					"ja": "暗黙知は「言葉にできない知識」ではあるが、この短い定義だけではほとんど役に立たない。",
+					"en": "Although tacit knowledge is \"knowledge that cannot be put into words,\" this short definition alone is of little use."
 				},
 				{
-					"en": "More precisely, it is the background, physical, social, and situation-dependent knowledge that makes certain actions, judgments, observations, conversations, research, manufacturing, sales, diagnosis, and designs possible, but that is not focused on by the person concerned in propositions. Polanyi's famous proposition is \"we can know more than we can tell.\" However, what is important here is not the \"unspeakable mystery,\" but the relationship between what we are focusing on and the peripheral clues that support it. Craftsmen, researchers, doctors, salespeople, engineers, and managers often use the questions \"Where should I look,\" \"What's wrong,\" \"Shouldn't I pursue this further now,\" and \"Who should I check with?\" as embodied caution before checklists. Tacit knowledge theory in business can be broadly divided into three genealogies. First, a genealogy that explains organizational knowledge creation through the mutual transformation of tacit and explicit knowledge, such as Nonaka's SECI model. Second, a lineage that sees actual work, learning, and innovation as embedded in communities of practice rather than formal procedures, such as communities of practice leading to Brown and Duguid and Wenger. Thirdly, it is a lineage of practical methods, such as Cognitive Task Analysis, that structurally elicit the cognitions, cues, branching of judgments, and failure avoidance of experts. The trend in the era of generative AI is not to \"extract all tacit knowledge to AI,\" but to \"use AI to assist the process of human observation, discussion, reflection, and verification.\" LLM, RAG, conversational agents, and business log analysis are useful for picking up pieces of tacit knowledge. However, since tacit knowledge is not linked to missing documents but to practices, situations, bodies, communities, and evaluation criteria, if a summary created by AI is regarded as \"organizational knowledge\", it will destroy the decision-making structure in the field.",
-					"ja": "より正確には、ある行為、判断、観察、会話、研究、製造、営業、診断、設計を成り立たせているが、当人が焦点的に命題化して語っているわけではない背景的・身体的・社会的・状況依存的な知である。"
+					"ja": "より正確には、ある行為、判断、観察、会話、研究、製造、営業、診断、設計を成り立たせているが、当人が焦点的に命題化して語っているわけではない背景的・身体的・社会的・状況依存的な知である。",
+					"en": "More precisely, it is the background, physical, social, and situation-dependent knowledge that makes certain actions, judgments, observations, conversations, research, manufacturing, sales, diagnosis, and designs possible, but that is not focused on by the person concerned in propositions."
+				},
+				{
+					"ja": "ポランニーの有名な命題は「we can know more than we can tell」である。",
+					"en": "Polanyi's famous proposition is \"we can know more than we can tell.\""
+				},
+				{
+					"ja": "ただし、ここで重要なのは「語れない神秘」ではなく、焦点的に見ているものと、それを支える周辺的な手がかりの関係である。",
+					"en": "However, what is important here is not the \"unspeakable mystery,\" but the relationship between what we are focusing on and the peripheral clues that support it."
+				},
+				{
+					"ja": "職人、研究者、医師、営業、エンジニア、マネージャーは、しばしば「どこを見ればよいか」「何が変か」「今は深追いすべきでないか」「誰に確認すべきか」を、チェックリストより先に身体化された注意として使っている。",
+					"en": "Craftsmen, researchers, doctors, salespeople, engineers, and managers often use the questions \"Where should I look,\" \"What's wrong,\" \"Shouldn't I pursue this further now,\" and \"Who should I check with?\""
+				},
+				{
+					"ja": "ビジネス上の暗黙知論は、大きく三つの系譜に分けられる。",
+					"en": "as embodied caution before checklists."
+				},
+				{
+					"ja": "第一に、Nonaka の SECI モデルのように、暗黙知と形式知の相互変換を通じて組織的知識創造を説明する系譜。",
+					"en": "Tacit knowledge theory in business can be broadly divided into three genealogies."
+				},
+				{
+					"ja": "第一に、Nonaka の SECI モデルのように、暗黙知と形式知の相互変換を通じて組織的知識創造を説明する系譜。",
+					"en": "First, a genealogy that explains organizational knowledge creation through the mutual transformation of tacit and explicit knowledge, such as Nonaka's SECI model."
+				},
+				{
+					"ja": "第二に、Brown and Duguid や Wenger につながる communities of practice のように、実際の仕事、学習、革新が公式手順ではなく実践共同体に埋め込まれていると見る系譜。",
+					"en": "Second, a lineage that sees actual work, learning, and innovation as embedded in communities of practice rather than formal procedures, such as communities of practice leading to Brown and Duguid and Wenger."
+				},
+				{
+					"ja": "第三に、Cognitive Task Analysis のように、熟達者の認知、手がかり、判断の分岐、失敗回避を構造的に引き出す実務手法の系譜である。",
+					"en": "Thirdly, it is a lineage of practical methods, such as Cognitive Task Analysis, that structurally elicit the cognitions, cues, branching of judgments, and failure avoidance of experts."
+				},
+				{
+					"ja": "生成AI時代のトレンドは、「暗黙知をAIに全部吸い出す」方向ではなく、「人が観察し、語り、反省し、検証するプロセスをAIで補助する」方向に進んでいる。",
+					"en": "The trend in the era of generative AI is not to \"extract all tacit knowledge to AI,\" but to \"use AI to assist the process of human observation, discussion, reflection, and verification.\""
+				},
+				{
+					"ja": "LLM、RAG、会話型エージェント、業務ログ分析は、暗黙知の断片を拾うには有用である。",
+					"en": "LLM, RAG, conversational agents, and business log analysis are useful for picking up pieces of tacit knowledge."
+				},
+				{
+					"ja": "しかし、暗黙知は文書の欠落ではなく、実践、状況、身体、共同体、評価規準に結びつくため、AIで作った要約をそのまま「組織知」と見なすと、現場の判断構造を壊す。",
+					"en": "However, since tacit knowledge is not linked to missing documents but to practices, situations, bodies, communities, and evaluation criteria, if a summary created by AI is regarded as \"organizational knowledge\", it will destroy the decision-making structure in the field."
 				}
 			]
 		},
 		{
-			"id": "definition",
-			"heading": {
-				"ja": "2. 暗黙知の定義",
-				"en": "2. Definition of tacit knowledge"
-			},
+			"id": "tacit-knowledge-business-theory-2",
 			"pairs": [
 				{
-					"en": "It is a mistake to understand tacit knowledge only as the opposite of explicit knowledge.",
-					"ja": "暗黙知は、形式知の反対語としてだけ理解すると誤る。"
+					"ja": "暗黙知は、形式知の反対語としてだけ理解すると誤る。",
+					"en": "It is a mistake to understand tacit knowledge only as the opposite of explicit knowledge."
 				},
 				{
-					"en": "Explicit knowledge is easily shared in the form of documents, formulas, specifications, manuals, code, data models, and diagrams.",
-					"ja": "形式知は、文書、数式、仕様、マニュアル、コード、データモデル、図表として共有しやすい。"
+					"ja": "形式知は、文書、数式、仕様、マニュアル、コード、データモデル、図表として共有しやすい。",
+					"en": "Explicit knowledge is easily shared in the form of documents, formulas, specifications, manuals, code, data models, and diagrams."
 				},
 				{
-					"en": "Tacit knowledge includes, but is not limited to, knowledge that has not been verbalized.",
-					"ja": "暗黙知は、言語化されていないだけの知識も含むが、それだけではない。"
+					"ja": "暗黙知は、言語化されていないだけの知識も含むが、それだけではない。",
+					"en": "Tacit knowledge includes, but is not limited to, knowledge that has not been verbalized."
 				},
 				{
-					"en": "This includes things that transform into other knowledge the moment they are put into words, things that rely on physical manipulation or a collection of perceptions, and things that depend on community norms and context. Tacit knowledge is easier to handle if it is divided into at least the following four layers. The significance of this classification is to avoid monolithic instructions to \"convert tacit knowledge into explicit knowledge.\" If the knowledge is undocumented, it should be documented. Cognitive Task Analysis and case reviews are effective for determining clues. Embodied skills require videos, imitation, practice, and feedback. For communal norms, it is necessary to observe community-of-practice conversations, reviews, and failure handling rather than individual interviews.",
-					"ja": "そもそも言語化した瞬間に別の知識へ変形してしまうもの、身体操作や知覚のまとまりに乗っているもの、共同体の規範や文脈に依存するものも含む。"
+					"ja": "そもそも言語化した瞬間に別の知識へ変形してしまうもの、身体操作や知覚のまとまりに乗っているもの、共同体の規範や文脈に依存するものも含む。",
+					"en": "This includes things that transform into other knowledge the moment they are put into words, things that rely on physical manipulation or a collection of perceptions, and things that depend on community norms and context."
+				},
+				{
+					"ja": "暗黙知は少なくとも次の四層に分けて考えると扱いやすい。",
+					"en": "Tacit knowledge is easier to handle if it is divided into at least the following four layers."
+				},
+				{
+					"ja": "この分類の意義は、「暗黙知を形式知に変換せよ」という一枚岩の指示を避けることにある。",
+					"en": "The significance of this classification is to avoid monolithic instructions to \"convert tacit knowledge into explicit knowledge.\""
+				},
+				{
+					"ja": "未文書化知なら文書化すればよい。",
+					"en": "If the knowledge is undocumented, it should be documented."
+				},
+				{
+					"ja": "判断手がかりなら Cognitive Task Analysis やケースレビューが効く。",
+					"en": "Cognitive Task Analysis and case reviews are effective for determining clues."
+				},
+				{
+					"ja": "身体化技能なら動画、模倣、練習、フィードバックが必要である。",
+					"en": "Embodied skills require videos, imitation, practice, and feedback."
+				},
+				{
+					"ja": "共同体的規範なら、個人インタビューよりも実践共同体の会話、レビュー、失敗処理を観察する必要がある。",
+					"en": "For communal norms, it is necessary to observe community-of-practice conversations, reviews, and failure handling rather than individual interviews."
 				}
 			]
 		},
 		{
-			"id": "polanyi-background",
-			"heading": {
-				"ja": "3. ポランニー: 暗黙知は「背景として働く知」",
-				"en": "3. Polanyi: Tacit knowledge is \"knowledge that acts as a background\""
-			},
+			"id": "tacit-knowledge-business-theory-3",
 			"pairs": [
 				{
-					"en": "Polanyi's point is not to view knowledge as a \"collection of explicit propositions.\" When people recognize faces, they do not add up clues such as the eyes, nose, mouth, outline, voice, and mood one by one to form propositions.",
-					"ja": "ポランニーのポイントは、知識を「明示命題の集まり」と見ないことである。"
+					"ja": "ポランニーのポイントは、知識を「明示命題の集まり」と見ないことである。",
+					"en": "Polanyi's point is not to view knowledge as a \"collection of explicit propositions.\""
 				},
 				{
-					"en": "While relying on details, the focus is on \"the person.\" The same is true for experienced practitioners, who rely on individual clues to focus on things like, \"This is likely to be a quality incident,\" \"This customer is not satisfied yet,\" and \"This design will fail in the future.\" From this, tacit knowledge has two important implications.",
-					"ja": "人は顔を認識するとき、目、鼻、口、輪郭、声、雰囲気といった手がかりを一つずつ命題として足し合わせているわけではない。"
+					"ja": "人は顔を認識するとき、目、鼻、口、輪郭、声、雰囲気といった手がかりを一つずつ命題として足し合わせているわけではない。",
+					"en": "When people recognize faces, they do not add up clues such as the eyes, nose, mouth, outline, voice, and mood one by one to form propositions."
 				},
 				{
-					"en": "First, tacit knowledge is not an anti-scientific intuition.",
-					"ja": "細部に依拠しながら、焦点的には「その人」を見ている。"
+					"ja": "細部に依拠しながら、焦点的には「その人」を見ている。",
+					"en": "While relying on details, the focus is on \"the person.\""
 				},
 				{
-					"en": "Scientific discoveries and professional judgments also have tacit aspects such as how to find problems, experimental habits, discomfort in measured values, and how to formulate valid questions. Second, tacit knowledge cannot always be completely externalized. We can talk, but storytelling is not a replacement for practice, but a guide to returning to practice.",
-					"ja": "熟達した実務家も同じで、個別の手がかりに依拠しながら、焦点的には「これは品質事故になりそうだ」「この顧客はまだ納得していない」「この設計は将来詰まる」と把握する。"
+					"ja": "熟達した実務家も同じで、個別の手がかりに依拠しながら、焦点的には「これは品質事故になりそうだ」「この顧客はまだ納得していない」「この設計は将来詰まる」と把握する。",
+					"en": "The same is true for experienced practitioners, who rely on individual clues to focus on things like, \"This is likely to be a quality incident,\" \"This customer is not satisfied yet,\" and \"This design will fail in the future.\""
+				},
+				{
+					"ja": "ここから、暗黙知には二つの重要な含意がある。",
+					"en": "From this, tacit knowledge has two important implications."
+				},
+				{
+					"ja": "第一に、暗黙知は反科学的な直感ではない。",
+					"en": "First, tacit knowledge is not an anti-scientific intuition."
+				},
+				{
+					"ja": "科学的発見や専門的判断にも、問題の見つけ方、実験の癖、測定値の違和感、妥当な問いの立て方という暗黙的な側面がある。",
+					"en": "Scientific discoveries and professional judgments also have tacit aspects such as how to find problems, experimental habits, discomfort in measured values, and how to formulate valid questions."
+				},
+				{
+					"ja": "第二に、暗黙知は完全に外部化できるとは限らない。",
+					"en": "Second, tacit knowledge cannot always be completely externalized."
+				},
+				{
+					"ja": "語ることはできるが、語りは実践の置き換えではなく、実践へ戻るための手がかりである。",
+					"en": "We can talk, but storytelling is not a replacement for practice, but a guide to returning to practice."
 				}
 			]
 		},
 		{
-			"id": "wittgenstein-paraphrase",
-			"heading": {
-				"ja": "4. ウィトゲンシュタイン: 言い換えのリスクと実践の文法",
-				"en": "4. Wittgenstein: The risks of paraphrasing and the grammar of practice"
-			},
+			"id": "tacit-knowledge-business-theory-4",
 			"pairs": [
 				{
-					"en": "If we are to connect the \"Tractise on Logical Philosophy\" and \"Philosophical Inquiry\" that users have read to tacit knowledge, the difference between the first and second periods is important.",
-					"ja": "ユーザーが読んだ『論理哲学論考』と『哲学探究』を暗黙知に接続するなら、前期と後期の落差が重要である。"
+					"ja": "ユーザーが読んだ『論理哲学論考』と『哲学探究』を暗黙知に接続するなら、前期と後期の落差が重要である。",
+					"en": "If we are to connect the \"Tractise on Logical Philosophy\" and \"Philosophical Inquiry\" that users have read to tacit knowledge, the difference between the first and second periods is important."
 				},
 				{
-					"en": "In his early years, Wittgenstein thought about the pictorial theory that propositions represent the world and the limits of what can be said.",
-					"ja": "前期ウィトゲンシュタインは、命題が世界を写し取るという絵画説や、語りうるものの限界をめぐって考えた。"
+					"ja": "前期ウィトゲンシュタインは、命題が世界を写し取るという絵画説や、語りうるものの限界をめぐって考えた。",
+					"en": "In his early years, Wittgenstein thought about the pictorial theory that propositions represent the world and the limits of what can be said."
 				},
 				{
-					"en": "Here, language is treated strictly as a mirror of the world's logical forms.",
-					"ja": "ここでは、言語は世界の論理形式を写すものとして厳しく扱われる。"
+					"ja": "ここでは、言語は世界の論理形式を写すものとして厳しく扱われる。",
+					"en": "Here, language is treated strictly as a mirror of the world's logical forms."
 				},
 				{
-					"en": "In his later Philosophical Inquiries, meaning is not considered to be a fixed object behind words, but rather to be found in language games, usage, and form. This turn provides a strong warning against the business use of tacit knowledge. Replacing the words used in the workplace with other words not only changes the expression, but also erases the judgment criteria, relationships with other parties, confirmation techniques, responsibility in the event of failure, and subtle strengths and weaknesses that were used there. For example, when a veteran says, \"It's better to put this matter to rest,\" if you rephrase that to \"lower the priority,\" you may lose time, the psychology of the other party, internal politics, the maturity of information, and the next observation point. The risk of paraphrasing is particularly great when externalizing tacit knowledge. In an interview, the moment the interviewer summarizes, \"This is what it means,\" it becomes difficult for experts to argue. Summarization moves the conversation forward, but it also erases the distinctions used in the field. Therefore, in tacit knowledge research, before turning paraphrases into artifacts, it is necessary to preserve the original narrative, actual situations, exceptions, counterexamples, and paraphrases that the person in question dislikes.",
-					"ja": "後期の『哲学探究』では、意味は語の背後にある固定的対象ではなく、言語ゲーム、使用、形式の中にあると考えられる。"
+					"ja": "後期の『哲学探究』では、意味は語の背後にある固定的対象ではなく、言語ゲーム、使用、形式の中にあると考えられる。",
+					"en": "In his later Philosophical Inquiries, meaning is not considered to be a fixed object behind words, but rather to be found in language games, usage, and form."
+				},
+				{
+					"ja": "この転回は、暗黙知のビジネス利用に強い警告を与える。",
+					"en": "This turn provides a strong warning against the business use of tacit knowledge."
+				},
+				{
+					"ja": "現場の言葉を別の言葉へ置き換えると、単に表現が変わるだけでなく、そこで使われていた判断規準、相手関係、確認の手つき、失敗時の責任、微妙な強弱が消えることがある。",
+					"en": "Replacing the words used in the workplace with other words not only changes the expression, but also erases the judgment criteria, relationships with other parties, confirmation techniques, responsibility in the event of failure, and subtle strengths and weaknesses that were used there."
+				},
+				{
+					"ja": "たとえば、ベテランが「この案件はまだ寝かせた方がいい」と言うとき、それを「優先度を下げる」と言い換えると、時間、相手の心理、社内政治、情報の熟成、次の観察ポイントが落ちるかもしれない。",
+					"en": "For example, when a veteran says, \"It's better to put this matter to rest,\" if you rephrase that to \"lower the priority,\" you may lose time, the psychology of the other party, internal politics, the maturity of information, and the next observation point."
+				},
+				{
+					"ja": "言い換えのリスクは、暗黙知の外部化で特に大きい。",
+					"en": "The risk of paraphrasing is particularly great when externalizing tacit knowledge."
+				},
+				{
+					"ja": "インタビューで「つまり、こういうことですね」と聞き手がまとめた瞬間、専門家は反論しにくくなる。",
+					"en": "In an interview, the moment the interviewer summarizes, \"This is what it means,\" it becomes difficult for experts to argue."
+				},
+				{
+					"ja": "要約は会話を前へ進めるが、同時に、現場で使われていた区別を消す。",
+					"en": "Summarization moves the conversation forward, but it also erases the distinctions used in the field."
+				},
+				{
+					"ja": "したがって暗黙知調査では、言い換えを成果物にする前に、元の語り、実際の場面、例外、反例、当人が嫌がる言い換えを残すべきである。",
+					"en": "Therefore, in tacit knowledge research, before turning paraphrases into artifacts, it is necessary to preserve the original narrative, actual situations, exceptions, counterexamples, and paraphrases that the person in question dislikes."
 				}
 			]
 		},
 		{
-			"id": "cat-twist-problem",
-			"heading": {
-				"ja": "5. 猫ひねり問題: 観察が理論に先行する例",
-				"en": "5. Cat-twist problem: An example where observation precedes theory."
-			},
+			"id": "tacit-knowledge-business-theory-5",
 			"pairs": [
 				{
-					"en": "The cat-twist problem is a useful metaphor for tacit knowledge.",
-					"ja": "猫ひねり問題は、暗黙知の比喩として有用である。"
+					"ja": "猫ひねり問題は、暗黙知の比喩として有用である。",
+					"en": "The cat-twist problem is a useful metaphor for tacit knowledge."
 				},
 				{
-					"en": "At first glance, the phenomenon in which a falling body appears to change direction without receiving any external torque appears to violate conservation of angular momentum.",
-					"ja": "落下する身体が外部からトルクを受けずに向きを変えるように見える現象は、一見すると角運動量保存に反するように見える。"
+					"ja": "落下する身体が外部からトルクを受けずに向きを変えるように見える現象は、一見すると角運動量保存に反するように見える。",
+					"en": "At first glance, the phenomenon in which a falling body appears to change direction without receiving any external torque appears to violate conservation of angular momentum."
 				},
 				{
-					"en": "However, the premise of viewing the object as a rigid body is wrong.",
-					"ja": "しかし、対象を剛体として見る前提が間違っている。"
+					"ja": "しかし、対象を剛体として見る前提が間違っている。",
+					"en": "However, the premise of viewing the object as a rigid body is wrong."
 				},
 				{
-					"en": "The body transforms, changes shape, and changes direction as a whole. The lesson from this example is not that \"what cannot be explained is irrational,\" but that \"the granularity of observations and coarse assumptions of models can lead us to mistakenly estimate that correct practice is impossible.\" The same goes for tacit knowledge. If we look at the actions of experts only in terms of fixed procedures, judgment criteria, inputs and outputs, we will not be able to see why they are able to make such judgments. However, when observing the body, gaze, timing, environment, tools, reactions of others, and community norms, the parts that can be formalized and the parts that should be preserved as practice are divided.",
-					"ja": "身体は変形し、形を変えながら、全体として向きを変える。"
+					"ja": "身体は変形し、形を変えながら、全体として向きを変える。",
+					"en": "The body transforms, changes shape, and changes direction as a whole."
+				},
+				{
+					"ja": "この例から得られる教訓は、「説明できないものは非合理」ではなく、「観察の粒度とモデルの前提が粗いと、正しい実践を誤って不可能に見積もる」ということだ。",
+					"en": "The lesson from this example is not that \"what cannot be explained is irrational,\" but that \"the granularity of observations and coarse assumptions of models can lead us to mistakenly estimate that correct practice is impossible.\""
+				},
+				{
+					"ja": "暗黙知も同じである。",
+					"en": "The same goes for tacit knowledge."
+				},
+				{
+					"ja": "熟達者の行為を、固定的な手順、判断基準、入力と出力だけで見ると、なぜその判断ができるのかが見えない。",
+					"en": "If we look at the actions of experts only in terms of fixed procedures, judgment criteria, inputs and outputs, we will not be able to see why they are able to make such judgments."
+				},
+				{
+					"ja": "だが、身体、視線、タイミング、環境、道具、相手の反応、共同体の規範まで観察すると、形式化できる部分と、実践として保持すべき部分が分かれる。",
+					"en": "However, when observing the body, gaze, timing, environment, tools, reactions of others, and community norms, the parts that can be formalized and the parts that should be preserved as practice are divided."
 				}
 			]
 		},
 		{
-			"id": "nonaka-seci",
-			"heading": {
-				"ja": "6. ビジネス理論 1: Nonaka の SECI モデル",
-				"en": "6. Business Theory 1: Nonaka's SECI Model"
-			},
+			"id": "tacit-knowledge-business-theory-6",
 			"pairs": [
 				{
-					"en": "A representative theory that spread tacit knowledge in the business field is Nonaka's theory of organizational knowledge creation.",
-					"ja": "ビジネス領域で暗黙知を広めた代表理論が、Nonaka の組織的知識創造論である。"
+					"ja": "ビジネス領域で暗黙知を広めた代表理論が、Nonaka の組織的知識創造論である。",
+					"en": "A representative theory that spread tacit knowledge in the business field is Nonaka's theory of organizational knowledge creation."
 				},
 				{
-					"en": "Nonaka (1994) argued that organizational knowledge emerges from a continuous dialogue between tacit and explicit knowledge and showed four modes of transformation.",
-					"ja": "Nonaka (1994) は、組織知識が暗黙知と形式知の継続的対話から生まれると論じ、四つの変換モードを示した。"
+					"ja": "Nonaka (1994) は、組織知識が暗黙知と形式知の継続的対話から生まれると論じ、四つの変換モードを示した。",
+					"en": "Nonaka (1994) argued that organizational knowledge emerges from a continuous dialogue between tacit and explicit knowledge and showed four modes of transformation."
 				},
 				{
-					"en": "Socialization is the sharing of tacit knowledge to tacit knowledge, Externalization is the expression of tacit knowledge to explicit knowledge, Combination is the integration of explicit knowledge into explicit knowledge, and Internalization is the embodiment of explicit knowledge into tacit knowledge.",
-					"ja": "Socialization は暗黙知から暗黙知への共有、Externalization は暗黙知から形式知への表現、Combination は形式知から形式知への統合、Internalization は形式知から暗黙知への身体化である。"
+					"ja": "Socialization は暗黙知から暗黙知への共有、Externalization は暗黙知から形式知への表現、Combination は形式知から形式知への統合、Internalization は形式知から暗黙知への身体化である。",
+					"en": "Socialization is the sharing of tacit knowledge to tacit knowledge, Externalization is the expression of tacit knowledge to explicit knowledge, Combination is the integration of explicit knowledge into explicit knowledge, and Internalization is the embodiment of explicit knowledge into tacit knowledge."
 				},
 				{
-					"en": "The strength of this model is that it views knowledge not as mere information processing, but as a creative process that extends to individuals, teams, organizations, and between organizations.",
-					"ja": "このモデルの強みは、知識を単なる情報処理ではなく、個人、チーム、組織、組織間へ広がる創造プロセスとして捉える点にある。"
+					"ja": "このモデルの強みは、知識を単なる情報処理ではなく、個人、チーム、組織、組織間へ広がる創造プロセスとして捉える点にある。",
+					"en": "The strength of this model is that it views knowledge not as mere information processing, but as a creative process that extends to individuals, teams, organizations, and between organizations."
 				},
 				{
-					"en": "In particular, his approach to treating tacit knowledge as an object for organizations to design \"places\", \"dialogues\", \"metaphors\", and \"practices\" rather than confining it to individuals had a major impact on the practice of knowledge management. However, the SECI model is not a panacea. The expression that tacit knowledge can be converted into explicit knowledge often gives rise to the misunderstanding that \"everything can be documented.\" In reality, it is not the tacit knowledge itself that can be externalized, but the narratives, metaphors, procedures, judgment examples, cases, and models that rely on tacit knowledge. If we do not go back to practice and internalize it, we will end up with a proliferation of documents that are disconnected from the field, rather than knowledge creation.",
-					"ja": "特に、暗黙知を個人に閉じ込めず、組織が「場」「対話」「比喩」「実践」を設計する対象として扱った点は、ナレッジマネジメントの実務に大きな影響を与えた。"
+					"ja": "特に、暗黙知を個人に閉じ込めず、組織が「場」「対話」「比喩」「実践」を設計する対象として扱った点は、ナレッジマネジメントの実務に大きな影響を与えた。",
+					"en": "In particular, his approach to treating tacit knowledge as an object for organizations to design \"places\", \"dialogues\", \"metaphors\", and \"practices\" rather than confining it to individuals had a major impact on the practice of knowledge management."
+				},
+				{
+					"ja": "ただし、SECI モデルは万能ではない。",
+					"en": "However, the SECI model is not a panacea."
+				},
+				{
+					"ja": "暗黙知を形式知へ変換できるという表現は、しばしば「すべて文書化できる」という誤解を生む。",
+					"en": "The expression that tacit knowledge can be converted into explicit knowledge often gives rise to the misunderstanding that \"everything can be documented.\""
+				},
+				{
+					"ja": "実際には、外部化できるのは暗黙知そのものではなく、暗黙知に依拠した語り、比喩、手順、判断例、ケース、モデルである。",
+					"en": "In reality, it is not the tacit knowledge itself that can be externalized, but the narratives, metaphors, procedures, judgment examples, cases, and models that rely on tacit knowledge."
+				},
+				{
+					"ja": "そこから再び実践へ戻って内面化しなければ、知識創造ではなく、現場から切り離された文書の増殖になる。",
+					"en": "If we do not go back to practice and internalize it, we will end up with a proliferation of documents that are disconnected from the field, rather than knowledge creation."
 				}
 			]
 		},
 		{
-			"id": "communities-of-practice",
-			"heading": {
-				"ja": "7. ビジネス理論 2: Communities of Practice",
-				"en": "7. Business Theory 2: Communities of Practice"
-			},
+			"id": "tacit-knowledge-business-theory-7",
 			"pairs": [
 				{
-					"en": "Brown and Duguid's communities of practice focus on the gap between formal procedures and actual work.",
-					"ja": "Brown and Duguid の communities of practice は、公式手順と実際の仕事のズレに注目する。"
+					"ja": "Brown and Duguid の communities of practice は、公式手順と実際の仕事のズレに注目する。",
+					"en": "Brown and Duguid's communities of practice focus on the gap between formal procedures and actual work."
 				},
 				{
-					"en": "Organizational charts, job descriptions, and manuals may appear to explain the job, but learning and innovation in the field often occurs in informal conversations, collaboration, troubleshooting, failure stories, tool mastery, and peripheral participation. From this perspective, tacit knowledge is not \"an asset held in an individual's head,\" but \"something acquired through participation in a community of practice.\" Therefore, the typical management measure that leads to the loss of tacit knowledge is not a lack of interviews with veterans, but the destruction of communities of practice. Excessive division of labor, short-term KPIs, excessive shift to chat, reduction of review time, self-study onboarding, and abolishment of on-site companionship will cut off the circuit of reproduction of tacit knowledge.",
-					"ja": "組織図、職務記述書、マニュアルは仕事を説明しているように見えるが、現場の学習と革新は、しばしば非公式な会話、共同作業、トラブル対応、失敗談、道具の使いこなし、周辺的参加の中で生まれる。"
+					"ja": "組織図、職務記述書、マニュアルは仕事を説明しているように見えるが、現場の学習と革新は、しばしば非公式な会話、共同作業、トラブル対応、失敗談、道具の使いこなし、周辺的参加の中で生まれる。",
+					"en": "Organizational charts, job descriptions, and manuals may appear to explain the job, but learning and innovation in the field often occurs in informal conversations, collaboration, troubleshooting, failure stories, tool mastery, and peripheral participation."
+				},
+				{
+					"ja": "この視点では、暗黙知は「個人の頭の中にある資産」ではなく、「実践共同体の中で、参加しながら身につけるもの」である。",
+					"en": "From this perspective, tacit knowledge is not \"an asset held in an individual's head,\" but \"something acquired through participation in a community of practice.\""
+				},
+				{
+					"ja": "したがって、暗黙知を失わせる典型的な経営施策は、ベテランへのインタビュー不足ではなく、実践共同体の破壊である。",
+					"en": "Therefore, the typical management measure that leads to the loss of tacit knowledge is not a lack of interviews with veterans, but the destruction of communities of practice."
+				},
+				{
+					"ja": "過度な分業、短期KPI、チャットへの過剰移行、レビュー時間の削減、オンボーディングの自習化、現場同行の廃止は、暗黙知の再生産回路を切る。",
+					"en": "Excessive division of labor, short-term KPIs, excessive shift to chat, reduction of review time, self-study onboarding, and abolishment of on-site companionship will cut off the circuit of reproduction of tacit knowledge."
 				}
 			]
 		},
 		{
-			"id": "cognitive-task-analysis",
-			"heading": {
-				"ja": "8. ビジネス理論 3: Cognitive Task Analysis",
-				"en": "8. Business Theory 3: Cognitive Task Analysis"
-			},
+			"id": "tacit-knowledge-business-theory-8",
 			"pairs": [
 				{
-					"en": "Cognitive Task Analysis is a group of methods that reveal what experts see, what clues they emphasize, at what points they diverge in judgment, and what mistakes they avoid.",
-					"ja": "Cognitive Task Analysis は、熟達者が何を見て、どの手がかりを重視し、どの時点で判断を分岐し、どの失敗を避けているかを引き出す手法群である。"
+					"ja": "Cognitive Task Analysis は、熟達者が何を見て、どの手がかりを重視し、どの時点で判断を分岐し、どの失敗を避けているかを引き出す手法群である。",
+					"en": "Cognitive Task Analysis is a group of methods that reveal what experts see, what clues they emphasize, at what points they diverge in judgment, and what mistakes they avoid."
 				},
 				{
-					"en": "It is difficult for experts themselves to explain their own cognitive processes in interviews that simply ask, \"Tell me some tips.\" Therefore, like Critical Decision Method and Applied Cognitive Task Analysis, we systematically explore specific situations, important judgments, clues, alternatives, exceptions, and points that beginners overlook.",
-					"ja": "単なる「コツを教えてください」というインタビューでは、専門家自身も自分の認知プロセスを説明しにくい。"
+					"ja": "単なる「コツを教えてください」というインタビューでは、専門家自身も自分の認知プロセスを説明しにくい。",
+					"en": "It is difficult for experts themselves to explain their own cognitive processes in interviews that simply ask, \"Tell me some tips.\""
 				},
 				{
-					"en": "In business practice, it can be applied to knowledge transfer for those planning to retire, accident/failure reviews, sales project reviews, medical/manufacturing/maintenance proficiency skills, software design reviews, security judgments, employment interviews, investment decisions, etc. The key is to return to the actual case rather than listening to the person's abstract beliefs.",
-					"ja": "そこで、Critical Decision Method や Applied Cognitive Task Analysis のように、具体場面、重要判断、手がかり、代替案、例外、初心者が見落とす点を構造的に掘る。"
+					"ja": "そこで、Critical Decision Method や Applied Cognitive Task Analysis のように、具体場面、重要判断、手がかり、代替案、例外、初心者が見落とす点を構造的に掘る。",
+					"en": "Therefore, like Critical Decision Method and Applied Cognitive Task Analysis, we systematically explore specific situations, important judgments, clues, alternatives, exceptions, and points that beginners overlook."
+				},
+				{
+					"ja": "ビジネス実務では、退職予定者の知識継承、事故・障害レビュー、営業案件レビュー、医療・製造・保守の熟達技能、ソフトウェア設計レビュー、セキュリティ判断、採用面接、投資判断などに応用できる。",
+					"en": "In business practice, it can be applied to knowledge transfer for those planning to retire, accident/failure reviews, sales project reviews, medical/manufacturing/maintenance proficiency skills, software design reviews, security judgments, employment interviews, investment decisions, etc."
+				},
+				{
+					"ja": "重要なのは、本人の抽象的な信念を聞くのではなく、実際のケースに戻すことである。",
+					"en": "The key is to return to the actual case rather than listening to the person's abstract beliefs."
 				}
 			]
 		},
 		{
-			"id": "critical-issues",
-			"heading": {
-				"ja": "9. 暗黙知を扱うときの批判的論点",
-				"en": "9. Critical issues when dealing with tacit knowledge"
-			},
+			"id": "tacit-knowledge-business-theory-9",
 			"pairs": [
 				{
-					"en": "The term tacit knowledge is useful, but it is also dangerous.",
-					"ja": "暗黙知という言葉は便利だが、危険でもある。"
+					"ja": "暗黙知という言葉は便利だが、危険でもある。",
+					"en": "The term tacit knowledge is useful, but it is also dangerous."
 				},
 				{
-					"en": "First, simply calling undocumented information \"tacit knowledge\" makes the discussion ambiguous.",
-					"ja": "第一に、単に文書化されていない情報まで「暗黙知」と呼ぶと、議論が曖昧になる。"
+					"ja": "第一に、単に文書化されていない情報まで「暗黙知」と呼ぶと、議論が曖昧になる。",
+					"en": "First, simply calling undocumented information \"tacit knowledge\" makes the discussion ambiguous."
 				},
 				{
-					"en": "Second, too much respect for everything that experts cannot explain leads to unverifiable authoritarianism.",
-					"ja": "第二に、専門家が説明できないことをすべて尊重しすぎると、検証不能な権威主義になる。"
+					"ja": "第二に、専門家が説明できないことをすべて尊重しすぎると、検証不能な権威主義になる。",
+					"en": "Second, too much respect for everything that experts cannot explain leads to unverifiable authoritarianism."
 				},
 				{
-					"en": "Third, if we think that everything can be made explicit, we destroy mastery, context, physicality, and community norms. Particularly in business, the term tacit knowledge can sometimes become a euphemism for \"individualization.\" Some cases of personalization include cases where documentation is simply lacking, cases where authority design is poor, cases where business processes are immature, and cases where evaluation systems impede knowledge sharing. If we call all of this \"tacit knowledge,\" then only a knowledge base development project will begin, rather than on-site observation. Therefore, the first step in tacit knowledge management is not to respect tacit knowledge, but to classify it.",
-					"ja": "第三に、逆にすべてを明文化できると考えると、熟達、文脈、身体性、共同体規範を壊す。"
+					"ja": "第三に、逆にすべてを明文化できると考えると、熟達、文脈、身体性、共同体規範を壊す。",
+					"en": "Third, if we think that everything can be made explicit, we destroy mastery, context, physicality, and community norms."
+				},
+				{
+					"ja": "特にビジネスでは、暗黙知という言葉が「属人化」の婉曲表現になることがある。",
+					"en": "Particularly in business, the term tacit knowledge can sometimes become a euphemism for \"individualization.\""
+				},
+				{
+					"ja": "属人化の中には、単にドキュメントが不足しているだけのもの、権限設計が悪いもの、業務プロセスが未成熟なもの、評価制度が知識共有を阻害しているものが混ざる。",
+					"en": "Some cases of personalization include cases where documentation is simply lacking, cases where authority design is poor, cases where business processes are immature, and cases where evaluation systems impede knowledge sharing."
+				},
+				{
+					"ja": "これを全部「暗黙知」と呼ぶと、現場観察ではなく、ナレッジベース整備プロジェクトだけが始まる。",
+					"en": "If we call all of this \"tacit knowledge,\" then only a knowledge base development project will begin, rather than on-site observation."
+				},
+				{
+					"ja": "したがって、暗黙知マネジメントの第一歩は、暗黙知を尊重することではなく、分類することである。",
+					"en": "Therefore, the first step in tacit knowledge management is not to respect tacit knowledge, but to classify it."
 				}
 			]
 		},
 		{
-			"id": "genai-trends",
-			"heading": {
-				"ja": "10. 生成AI時代のトレンド",
-				"en": "10. Trends in the era of generative AI"
-			},
-			"pairs": []
-		},
-		{
-			"id": "document-search-to-dialogue",
-			"heading": {
-				"ja": "10.1 知識管理は「文書検索」から「対話と実践支援」へ移る",
-				"en": "10.1 Knowledge management moves from “document search” to “dialogue and practical support”"
-			},
+			"id": "tacit-knowledge-business-theory-10",
 			"pairs": [
 				{
-					"en": "Generative AI is rapidly transforming internal document searches, FAQs, meeting minutes summaries, inquiry handling, proposal writing, and onboarding support.",
-					"ja": "生成AIは、社内文書検索、FAQ、議事録要約、問い合わせ対応、提案書作成、オンボーディング支援を急速に変えている。"
+					"ja": "### 10.1 知識管理は「文書検索」から「対話と実践支援」へ移る",
+					"en": "1 Knowledge management moves from \"document search\" to \"dialogue and practical support\""
 				},
 				{
-					"en": "However, from the perspective of tacit knowledge, simply making documents searchable is not enough.",
-					"ja": "しかし、暗黙知の観点では、文書を検索できるようにするだけでは足りない。"
+					"ja": "生成AIは、社内文書検索、FAQ、議事録要約、問い合わせ対応、提案書作成、オンボーディング支援を急速に変えている。",
+					"en": "Generative AI is rapidly transforming internal document searches, FAQs, meeting minutes summaries, inquiry handling, proposal writing, and onboarding support."
 				},
 				{
-					"en": "Rather, what is important is the flow of listening to experts' judgments on a case-by-case basis, preserving the words used in the field, recording counterexamples and boundary conditions, and verifying them in the next practice.",
-					"ja": "むしろ重要なのは、熟達者の判断をケースベースで聞き出し、現場で使われた言葉を保ち、反例と境界条件を記録し、次の実践で検証する流れである。"
+					"ja": "しかし、暗黙知の観点では、文書を検索できるようにするだけでは足りない。",
+					"en": "However, from the perspective of tacit knowledge, simply making documents searchable is not enough."
+				},
+				{
+					"ja": "むしろ重要なのは、熟達者の判断をケースベースで聞き出し、現場で使われた言葉を保ち、反例と境界条件を記録し、次の実践で検証する流れである。",
+					"en": "Rather, what is important is the flow of listening to experts' judgments on a case-by-case basis, preserving the words used in the field, recording counterexamples and boundary conditions, and verifying them in the next practice."
+				},
+				{
+					"ja": "### 10.2 AI スキリングは、ツール研修だけでなく実践共同体の再設計になる",
+					"en": "2 AI skilling will be a redesign of communities of practice, not just tool training"
+				},
+				{
+					"ja": "AI 導入では、プロンプト研修やツール配布だけでは足りない。",
+					"en": "When introducing AI, prompt training and tool distribution alone are not enough."
+				},
+				{
+					"ja": "何をAIに任せ、何を人間が観察し、どこで検証し、どの語りを保存し、どの語りを捨てるかを決める必要がある。",
+					"en": "We need to decide what to leave to AI, what humans should observe, where to verify it, which narratives to preserve, and which narratives to discard."
+				},
+				{
+					"ja": "これは、スキル研修であると同時に、実践共同体の再設計である。",
+					"en": "This is as much a redesign of communities of practice as it is skills training."
+				},
+				{
+					"ja": "### 10.3 LLM による暗黙知抽出は研究段階から実装探索へ進んでいる",
+					"en": "3 Tacit knowledge extraction using LLM is progressing from the research stage to implementation exploration"
+				},
+				{
+					"ja": "2025年以降、暗黙知の保存・移転に LLM や会話型エージェントを使う研究が増えている。",
+					"en": "After 2025, there will be an increasing number of studies using LLM and conversational agents to store and transfer tacit knowledge."
+				},
+				{
+					"ja": "方向性は、退職者インタビュー、オンボーディング、専門家のヒューリスティック抽出、組織内の知識保持者発見、会話からの断片的知識抽出である。",
+					"en": "The directions are exit interviews, onboarding, heuristic extraction of experts, discovery of knowledge holders within the organization, and extraction of fragmented knowledge from conversations."
+				},
+				{
+					"ja": "ただし、これらはまだ研究・提案段階のものも多く、AI が暗黙知そのものを獲得したとまでは言えない。",
+					"en": "However, many of these are still at the research and proposal stage, and it cannot be said that AI has acquired tacit knowledge itself."
+				},
+				{
+					"ja": "### 10.4 業務ログ、会話ログ、プロセスマイニングは観察の補助線になる",
+					"en": "4 Business logs, conversation logs, and process mining serve as auxiliary lines for observation"
+				},
+				{
+					"ja": "従来の暗黙知調査は、熟達者インタビューと現場観察に依存していた。",
+					"en": "Traditional tacit knowledge research relies on expert interviews and field observations."
+				},
+				{
+					"ja": "今後は、チケット、Pull Request、Slack、CRM、通話録音、議事録、障害対応ログ、操作ログを組み合わせ、実際の判断の痕跡を追える。",
+					"en": "From now on, you can combine tickets, pull requests, Slack, CRM, call recordings, meeting minutes, troubleshooting logs, and operation logs to trace the traces of actual decisions."
+				},
+				{
+					"ja": "これは強力だが、ログは実践の全体ではない。",
+					"en": "This is powerful, but logging is not the entirety of your practice."
+				},
+				{
+					"ja": "ログに残るのは、行為の一部、しかも記録された後の痕跡である。",
+					"en": "What remains in the log is only part of the action, and moreover, only the traces left after it has been recorded."
+				},
+				{
+					"ja": "沈黙、視線、言い淀み、場の空気、相手の反応、道具の使い方は、別途観察しなければならない。",
+					"en": "Silence, gaze, hesitation, the atmosphere, the reaction of the other person, and the use of tools must be separately observed."
 				}
 			]
 		},
 		{
-			"id": "ai-skilling-community-redesign",
-			"heading": {
-				"ja": "10.2 AI スキリングは、ツール研修だけでなく実践共同体の再設計になる",
-				"en": "10.2 AI skilling will be a redesign of communities of practice, not just tool training"
-			},
+			"id": "tacit-knowledge-business-theory-11",
 			"pairs": [
 				{
-					"en": "When introducing AI, prompt training and tool distribution alone are not enough.",
-					"ja": "AI 導入では、プロンプト研修やツール配布だけでは足りない。"
+					"ja": "暗黙知マネジメントは、ナレッジベース構築から始めるより、観察可能な業務リスクから始める方がよい。",
+					"en": "It is better to start tacit knowledge management with observable operational risks than with building a knowledge base."
 				},
 				{
-					"en": "We need to decide what to leave to AI, what humans should observe, where to verify it, which narratives to preserve, and which narratives to discard.",
-					"ja": "何をAIに任せ、何を人間が観察し、どこで検証し、どの語りを保存し、どの語りを捨てるかを決める必要がある。"
+					"ja": "たとえば「ベテラン退職で障害対応が危ない」「営業案件の見極めが若手に伝わらない」「設計レビューの質が人によって違う」「AI要約で重要な文脈が落ちる」といった具体問題を選ぶ。",
+					"en": "For example, select specific problems such as \"The ability to deal with disabilities due to veteran retirement is at risk,\" \"The assessment of sales projects is not conveyed to younger employees,\" \"The quality of design reviews differs from person to person,\" and \"Important context is missing in AI summaries.\""
 				},
 				{
-					"en": "This is as much a redesign of communities of practice as it is skills training.",
-					"ja": "これは、スキル研修であると同時に、実践共同体の再設計である。"
+					"ja": "推奨プロセスは次の通りである。",
+					"en": "The recommended process is as follows."
+				},
+				{
+					"ja": "対象業務を一つ選ぶ。",
+					"en": "Select one target business."
+				},
+				{
+					"ja": "全社暗黙知ではなく、失敗コストが高い判断場面に絞る。",
+					"en": "Focus on decision situations where the cost of failure is high, rather than company-wide tacit knowledge."
+				},
+				{
+					"ja": "実際のケースを集める。",
+					"en": "Include not only successful examples, but also failure examples, examples of confusion, and exception handling."
+				},
+				{
+					"ja": "熟達者の語りを元の言葉で残す。",
+					"en": "Preserve the narrations of experts in their original words."
+				},
+				{
+					"ja": "最初から標準用語に置き換えない。",
+					"en": "Don't replace it with standard terminology from the beginning."
+				},
+				{
+					"ja": "観察とインタビューを分ける。",
+					"en": "Separate observations and interviews."
+				},
+				{
+					"ja": "言ったことと、実際に見ていたものを混ぜない。",
+					"en": "Don't mix up what you say with what you actually see."
+				},
+				{
+					"ja": "判断手がかり、分岐、境界条件、初心者の誤解を抽出する。",
+					"en": "Extract decision clues, branches, boundary conditions, and beginners' misunderstandings."
+				},
+				{
+					"ja": "手順、チェックリスト、ケース集、動画、レビュー観点、AIプロンプトに分けて形式化する。",
+					"en": "Format it into steps, checklists, case collections, videos, review perspectives, and AI prompts."
+				},
+				{
+					"ja": "現場で試し、反例を集めて更新する。",
+					"en": "Try it out in the field, collect counterexamples and update."
 				}
 			]
 		},
 		{
-			"id": "llm-tacit-extraction",
-			"heading": {
-				"ja": "10.3 LLM による暗黙知抽出は研究段階から実装探索へ進んでいる",
-				"en": "10.3 Tacit knowledge extraction using LLM is progressing from the research stage to implementation exploration"
-			},
+			"id": "tacit-knowledge-business-theory-12",
 			"pairs": [
 				{
-					"en": "After 2025, there will be an increasing number of studies using LLM and conversational agents to store and transfer tacit knowledge.",
-					"ja": "2025年以降、暗黙知の保存・移転に LLM や会話型エージェントを使う研究が増えている。"
+					"ja": "第一に、AI要約を正本にしない。",
+					"en": "First, do not use the AI ​​summary as the original."
 				},
 				{
-					"en": "The directions are exit interviews, onboarding, heuristic extraction of experts, discovery of knowledge holders within the organization, and extraction of fragmented knowledge from conversations.",
-					"ja": "方向性は、退職者インタビュー、オンボーディング、専門家のヒューリスティック抽出、組織内の知識保持者発見、会話からの断片的知識抽出である。"
+					"ja": "暗黙知調査では、元発話、元ケース、観察メモ、動画、判断時点の状況を残す。",
+					"en": "In tacit knowledge research, the original utterance, original case, observation memo, video, and situation at the time of judgment are recorded."
 				},
 				{
-					"en": "However, many of these are still at the research and proposal stage, and it cannot be said that AI has acquired tacit knowledge itself.",
-					"ja": "ただし、これらはまだ研究・提案段階のものも多く、AI が暗黙知そのものを獲得したとまでは言えない。"
+					"ja": "AI要約は入口であり、証拠ではない。",
+					"en": "AI summaries are an entry point, not evidence."
+				},
+				{
+					"ja": "第二に、言い換えには差分レビューを入れる。",
+					"en": "Second, include a differential review in your paraphrases."
+				},
+				{
+					"ja": "専門家の語りを標準用語へ置き換えるときは、「この言い換えで何が落ちたか」を確認する。",
+					"en": "When replacing the words of experts with standard terminology, check to see what was lost in this rephrasing."
+				},
+				{
+					"ja": "特に、曖昧な語、比喩、ためらい、強調、順序、例外は落ちやすい。",
+					"en": "Ambiguous words, metaphors, hesitation, emphasis, order, and exceptions are especially easy to fail."
+				},
+				{
+					"ja": "第三に、暗黙知を人から奪う資産として扱わない。",
+					"en": "Third, do not treat tacit knowledge as an asset that can be taken away from people."
+				},
+				{
+					"ja": "暗黙知の共有は、評価、信頼、帰属、権限、心理的安全性に依存する。",
+					"en": "Sharing tacit knowledge depends on recognition, trust, attribution, authority, and psychological safety."
+				},
+				{
+					"ja": "退職者から知識を吸い出すだけのプロジェクトは、短期的には文書を増やしても、長期的には知識共有文化を壊す。",
+					"en": "Projects that simply extract knowledge from retirees may increase documentation in the short term, but destroy the knowledge-sharing culture in the long term."
+				},
+				{
+					"ja": "第四に、形式化した知識は必ず実践へ戻す。",
+					"en": "Fourth, formalized knowledge must be put back into practice."
+				},
+				{
+					"ja": "チェックリスト、RAG、FAQ、AIエージェントは、現場で判断を改善して初めて価値がある。",
+					"en": "Checklists, RAGs, FAQs, and AI agents are only valuable if they improve judgment in the field."
+				},
+				{
+					"ja": "形式化は終点ではなく、再訓練の素材である。",
+					"en": "Formalization is not the end point, but the material for retraining."
 				}
 			]
 		},
 		{
-			"id": "logs-process-mining",
-			"heading": {
-				"ja": "10.4 業務ログ、会話ログ、プロセスマイニングは観察の補助線になる",
-				"en": "10.4 Business logs, conversation logs, and process mining serve as auxiliary lines for observation"
-			},
+			"id": "tacit-knowledge-business-theory-13",
 			"pairs": [
 				{
-					"en": "Traditional tacit knowledge research relies on expert interviews and field observations.",
-					"ja": "従来の暗黙知調査は、熟達者インタビューと現場観察に依存していた。"
+					"ja": "ビジネス上、暗黙知を扱う最も現実的な方針は、「文書化できるものは文書化し、文書化できないものは観察・訓練・共同体・ケースレビューとして設計する」ことである。",
+					"en": "The most realistic policy for dealing with tacit knowledge in business is to \"document what can be documented, and design what cannot be documented as observation, training, community, and case reviews.\""
 				},
 				{
-					"en": "From now on, you can combine tickets, pull requests, Slack, CRM, call recordings, meeting minutes, troubleshooting logs, and operation logs to trace the traces of actual decisions.",
-					"ja": "今後は、チケット、Pull Request、Slack、CRM、通話録音、議事録、障害対応ログ、操作ログを組み合わせ、実際の判断の痕跡を追える。"
+					"ja": "暗黙知を全部AIに入れる、全部マニュアル化する、全部ベテランに聞く、という発想はどれも弱い。",
+					"en": "The ideas of putting all tacit knowledge into AI, making it into a manual, and asking experienced experts are all weak ideas."
 				},
 				{
-					"en": "This is powerful, but logging is not the entirety of your practice.",
-					"ja": "これは強力だが、ログは実践の全体ではない。"
+					"ja": "良い設計は、複数の媒体を使い分ける。",
+					"en": "Good design uses multiple media."
 				},
 				{
-					"en": "What remains in the log is only part of the action, and moreover, only the traces left after it has been recorded.",
-					"ja": "ログに残るのは、行為の一部、しかも記録された後の痕跡である。"
+					"ja": "今回の読書経験から引き出せる実務上の核心は、暗黙知とは「まだ言えていないもの」だけでなく、「言うことで変質するもの」でもあるという点である。",
+					"en": "The practical core that can be drawn from this reading experience is that tacit knowledge is not only \"something that cannot be said yet,\" but also \"something that changes when you say it.\""
 				},
 				{
-					"en": "Silence, gaze, hesitation, the atmosphere, the reaction of the other person, and the use of tools must be separately observed.",
-					"ja": "沈黙、視線、言い淀み、場の空気、相手の反応、道具の使い方は、別途観察しなければならない。"
-				}
-			]
-		},
-		{
-			"id": "implementation-policy",
-			"heading": {
-				"ja": "11. 実務導入方針",
-				"en": "11. Practical implementation policy"
-			},
-			"pairs": [
-				{
-					"en": "It is better to start tacit knowledge management with observable operational risks than with building a knowledge base.",
-					"ja": "暗黙知マネジメントは、ナレッジベース構築から始めるより、観察可能な業務リスクから始める方がよい。"
+					"ja": "したがって、暗黙知を扱う実務者は、説明者である前に観察者でなければならない。",
+					"en": "Therefore, practitioners who deal with tacit knowledge must be observers before they are explainers."
 				},
 				{
-					"en": "For example, select specific problems such as \"The ability to deal with disabilities due to veteran retirement is at risk,\" \"The assessment of sales projects is not conveyed to younger employees,\" \"The quality of design reviews differs from person to person,\" and \"Important context is missing in AI summaries.\" The recommended process is as follows.",
-					"ja": "たとえば「ベテラン退職で障害対応が危ない」「営業案件の見極めが若手に伝わらない」「設計レビューの質が人によって違う」「AI要約で重要な文脈が落ちる」といった具体問題を選ぶ。"
-				},
-				{
-					"en": "1.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Select one target business.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Focus on decision situations where the cost of failure is high, rather than company-wide tacit knowledge.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "2.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Collect real cases.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Include not only successful examples, but also failure examples, examples of confusion, and exception handling.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "3.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Preserve the narrations of experts in their original words.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Don't replace it with standard terminology from the beginning.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "4.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Separate observations and interviews.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Don't mix up what you say with what you actually see.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "5.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Extract decision clues, branches, boundary conditions, and beginners' misunderstandings.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "6.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Format it into steps, checklists, case collections, videos, review perspectives, and AI prompts.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "7.",
-					"ja": "推奨プロセスは次の通りである。"
-				},
-				{
-					"en": "Try it out in the field, collect counterexamples and update.",
-					"ja": "推奨プロセスは次の通りである。"
-				}
-			]
-		},
-		{
-			"id": "ai-era-principles",
-			"heading": {
-				"ja": "12. AI時代に守るべき原則",
-				"en": "12. Principles to follow in the AI ​​era"
-			},
-			"pairs": [
-				{
-					"en": "First, do not use the AI ​​summary as the original.",
-					"ja": "第一に、AI要約を正本にしない。"
-				},
-				{
-					"en": "In tacit knowledge research, the original utterance, original case, observation memo, video, and situation at the time of judgment are recorded.",
-					"ja": "暗黙知調査では、元発話、元ケース、観察メモ、動画、判断時点の状況を残す。"
-				},
-				{
-					"en": "AI summaries are an entry point, not evidence. Second, include a differential review in your paraphrases. When replacing the words of experts with standard terminology, check to see what was lost in this rephrasing. Ambiguous words, metaphors, hesitation, emphasis, order, and exceptions are especially easy to fail. Third, do not treat tacit knowledge as an asset that can be taken away from people. Sharing tacit knowledge depends on recognition, trust, attribution, authority, and psychological safety. Projects that simply extract knowledge from retirees may increase documentation in the short term, but destroy the knowledge-sharing culture in the long term. Fourth, formalized knowledge must be put back into practice. Checklists, RAGs, FAQs, and AI agents are only valuable if they improve judgment in the field. Formalization is not the end point, but the material for retraining.",
-					"ja": "AI要約は入口であり、証拠ではない。"
-				}
-			]
-		},
-		{
-			"id": "recommended-policy",
-			"heading": {
-				"ja": "13. 推奨方針",
-				"en": "13. Recommended policy"
-			},
-			"pairs": [
-				{
-					"en": "The most realistic policy for dealing with tacit knowledge in business is to \"document what can be documented, and design what cannot be documented as observation, training, community, and case reviews.\" The ideas of putting all tacit knowledge into AI, making it into a manual, and asking experienced experts are all weak ideas.",
-					"ja": "ビジネス上、暗黙知を扱う最も現実的な方針は、「文書化できるものは文書化し、文書化できないものは観察・訓練・共同体・ケースレビューとして設計する」ことである。"
-				},
-				{
-					"en": "Good design uses multiple media.",
-					"ja": "ビジネス上、暗黙知を扱う最も現実的な方針は、「文書化できるものは文書化し、文書化できないものは観察・訓練・共同体・ケースレビューとして設計する」ことである。"
-				},
-				{
-					"en": "The practical core that can be drawn from this reading experience is that tacit knowledge is not only \"something that cannot be said yet,\" but also \"something that changes when you say it.\" Therefore, practitioners who deal with tacit knowledge must be observers before they are explainers.",
-					"ja": "ビジネス上、暗黙知を扱う最も現実的な方針は、「文書化できるものは文書化し、文書化できないものは観察・訓練・共同体・ケースレビューとして設計する」ことである。"
-				},
-				{
-					"en": "Before paraphrasing, we must look at which words are used in which situations, to whom, and in conjunction with which actions.",
-					"ja": "ビジネス上、暗黙知を扱う最も現実的な方針は、「文書化できるものは文書化し、文書化できないものは観察・訓練・共同体・ケースレビューとして設計する」ことである。"
+					"ja": "言い換える前に、どの言葉がどの場面で、誰に向けて、どの行為と結びついて使われているかを見なければならない。",
+					"en": "Before paraphrasing, we must look at which words are used in which situations, to whom, and in conjunction with which actions."
 				}
 			]
 		}

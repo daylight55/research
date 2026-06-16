@@ -1,0 +1,29 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+import ListPosts from '@/components/ListPosts'
+import Pagination from '@/components/Pagination'
+import TitlePage from '@/components/TitlePage'
+import { createArticleListStaticPaths, getNewsPosts } from '@/utils'
+
+const locale = 'en'
+
+export async function getStaticPaths() {
+	const newsPosts = await getNewsPosts(undefined, 'en')
+	return createArticleListStaticPaths(newsPosts, 'news', 'en')
+}
+
+const { page } = Astro.props
+const posts = page.data
+---
+
+<BaseLayout title='News' locale={locale}>
+	<TitlePage title='News' />
+	<div class='mb-6 grid gap-2'>
+		<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>
+			Translated news articles tracking technology, policy, research, security, and geopolitical
+			trends.
+		</p>
+	</div>
+	<ListPosts posts={posts} locale={locale} />
+	<Pagination page={page} />
+</BaseLayout>

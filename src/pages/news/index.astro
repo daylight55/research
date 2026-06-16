@@ -1,17 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout'
+import ListPosts from '@/components/ListPosts'
+import Pagination from '@/components/Pagination'
 import TitlePage from '@/components/TitlePage'
-import {
-	cn,
-	getCategoryAccentClass,
-	getCategorySurfaceClass,
-	getNewsPosts,
-	getPostUrl,
-	withBase
-} from '@/utils'
-import { Image } from 'astro:assets'
+import { createArticleListPage, getNewsPosts, withBase } from '@/utils'
 
 const newsPosts = await getNewsPosts()
+const page = createArticleListPage(newsPosts, 'news')
+const posts = page.data
 ---
 
 <BaseLayout title='News'>
@@ -28,50 +24,11 @@ const newsPosts = await getNewsPosts()
 		</a>
 	</div>
 	{
-		newsPosts.length > 0 ? (
-			<div class='min-w-0 max-w-full overflow-x-auto overscroll-x-contain pb-2'>
-				<div class='flex snap-x snap-mandatory flex-nowrap gap-4'>
-					{newsPosts.map((post) => (
-						<a
-							href={getPostUrl(post)}
-							class={cn(
-								'group grid flex-[0_0_100%] snap-start overflow-hidden rounded-md border border-black/10 shadow-sm transition hover:-translate-y-0.5 hover:border-black/30 hover:shadow-md dark:border-white/10 dark:hover:border-white/30 sm:grid-cols-[10rem_1fr] md:flex-[0_0_calc((100%_-_1rem)/2)] xl:flex-[0_0_calc((100%_-_2rem)/3)]',
-								getCategorySurfaceClass(post.data.category)
-							)}
-						>
-							<div class='h-32 bg-gray-100 dark:bg-gray-900 sm:h-full'>
-								<Image
-									src={post.data.heroImage}
-									width={320}
-									height={180}
-									format='webp'
-									class='h-full w-full object-cover transition duration-200 group-hover:scale-[101%]'
-									alt={post.data.heroImageAlt ?? `img of ${post.data.title}`}
-								/>
-							</div>
-							<div class='grid gap-2 p-4'>
-								<div class='flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-semibold tracking-[0.14em] text-gray-500 dark:text-gray-400'>
-									<span>{post.data.pubDate.toLocaleDateString('ja-JP')}</span>
-									<span
-										class={cn(
-											'rounded-full border bg-white/55 px-2 py-0.5 tracking-[0.08em] dark:bg-black/15',
-											getCategoryAccentClass(post.data.category)
-										)}
-									>
-										{post.data.category}
-									</span>
-								</div>
-								<h2 class='line-clamp-2 text-lg font-semibold leading-7 text-gray-900 dark:text-gray-100'>
-									{post.data.title}
-								</h2>
-								<p class='line-clamp-2 text-sm leading-6 text-gray-700 dark:text-gray-300'>
-									{post.data.rssSummary ?? post.data.description}
-								</p>
-							</div>
-						</a>
-					))}
-				</div>
-			</div>
+		posts.length > 0 ? (
+			<>
+				<ListPosts posts={posts} />
+				<Pagination page={page} />
+			</>
 		) : (
 			<p class='rounded-md border border-black/10 bg-white/70 p-5 leading-7 text-gray-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-300'>
 				現在公開中のニュース記事はありません。調査方針や情報源は Reference に移しました。

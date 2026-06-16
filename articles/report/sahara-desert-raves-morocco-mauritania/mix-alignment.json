@@ -1,0 +1,281 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "モロッコ南部からモーリタニア周辺にかけて語られる「砂漠レイブ」は、一つの団体や運動ではない。",
+					"en": "\"Desert rave\" around southern Morocco and Mauritania is not one organization or movement."
+				},
+				{
+					"ja": "少なくとも四つに分けて読む必要がある。",
+					"en": "It should be split into at least four categories: the free-party image made visible by the film Sirât, Transahara-style psytrance festival travel around Merzouga, community music and education projects such as Joudour Sahara/Zamane in M'hamid El Ghizlane, and commercial electronic music festivals around places such as Ouarzazate."
+				},
+				{
+					"ja": "確認できる範囲では、これらを宗教団体や政治組織が一元的に主導しているとは言えない。",
+					"en": "The available evidence does not show a religious or political organization centrally directing these events."
+				},
+				{
+					"ja": "Transahara は国際的な psytrance / festival travel 圏として読むのがよい。",
+					"en": "Transahara is best read as part of an international psytrance/festival-travel circuit."
+				},
+				{
+					"ja": "Joudour Sahara は音楽教育と地域文化のプログラムである。",
+					"en": "Joudour Sahara is a Playing For Change Foundation-linked music education and local culture program."
+				},
+				{
+					"ja": "Oasis系イベントは商業フェスである。",
+					"en": "Oasis-type events are commercial festivals."
+				},
+				{
+					"ja": "『Sirât』の砂漠レイブは実在文化を取り込むが、定期イベントの証拠ではない。",
+					"en": "The desert rave in Sirât draws on real rave culture, but a staged film event should not be treated as proof of a recurring public event led by one local organization."
+				},
+				{
+					"ja": "宗教分布は明確である。",
+					"en": "The religious profile is clear."
+				},
+				{
+					"ja": "モロッコとモーリタニアは圧倒的多数がスンニ派ムスリムである。",
+					"en": "Morocco and Mauritania are overwhelmingly Sunni Muslim societies."
+				},
+				{
+					"ja": "レイブとの宗教関連性は、宗教団体主催ではない。",
+					"en": "The religious relevance of desert raves is therefore not that religious groups run them."
+				},
+				{
+					"ja": "イスラム社会規範、観光、若者文化、free party、Gnawa/Sufi音楽が交差する。",
+					"en": "It is that conservative Islamic social norms, tourism, youth culture, European free-party culture, and Gnawa/Sufi musical traditions meet in the same social space."
+				},
+				{
+					"ja": "イスラム神秘主義は独立宗派というより、イスラム内部の霊性の伝統である。",
+					"en": "Islamic mysticism, usually called Sufism in English and taṣawwuf in Arabic, is better read as a spiritual tradition within Islam than as a separate sect parallel to Sunni and Shia Islam."
+				},
+				{
+					"ja": "本稿の論点は、Sufi教団が砂漠レイブを主催するという話ではない。",
+					"en": "For this report, the point is not that Sufi orders organize desert raves."
+				},
+				{
+					"ja": "Gnawaが反復リズム、トランス、治癒儀礼を通じて電子音楽文化と響き合う。",
+					"en": "It is that Gnawa, described as Sufi brotherhood music, creates a cultural bridge through repeated rhythm, all-night bodily experience, trance, healing ritual, and sacred/secular overlap that can resonate with world music, electronic music, and rave culture."
+				},
+				{
+					"ja": "地雷、鉄道、紛争は重要だが本稿の中心ではない。",
+					"en": "Landmines, the Mauritanian iron-ore railway, and the Western Sahara conflict matter, but they are not the central subject of this report."
+				},
+				{
+					"ja": "それらは移動・安全保障・インフラ・紛争史の別問題である。",
+					"en": "They are not supporting details about rave organizers; they are a separate question about mobility, security, infrastructure, and conflict history."
+				}
+			]
+		},
+		{
+			"id": "organizers",
+			"heading": {
+				"ja": "2. 主導しているグループは何者か",
+				"en": "2. Who Is Leading These Events?"
+			},
+			"pairs": [
+				{
+					"ja": "Transahara は宗教運動でも政治団体でもない。",
+					"en": "Transahara is not, on the public record, a religious movement or political group."
+				},
+				{
+					"ja": "Underground Sound は Nomadstribe を関連コレクティブとして挙げる。",
+					"en": "Underground Sound describes it as a psytrance desert festival at an undisclosed dune location north of Merzouga and names Nomadstribe as the related organizing collective."
+				},
+				{
+					"ja": "非公開立地のため、開催地と継続性は慎重に扱う。",
+					"en": "Because the location is undisclosed, the exact site and year-to-year continuity should be treated carefully."
+				},
+				{
+					"ja": "現地宗教団体ではなく、psytrance、旅行者、砂漠観光の重なりとして読む。",
+					"en": "The better reading is not local religious organization, but the overlap of international psytrance, traveler communities, and desert tourism."
+				},
+				{
+					"ja": "Joudour Sahara/Zamane はレイブではない。",
+					"en": "Joudour Sahara/Zamane is not a rave."
+				},
+				{
+					"ja": "これは音楽教育、若者、環境、文化継承のプログラムである。",
+					"en": "Joudour Sahara is a Playing For Change Foundation program focused on music education, girls' and youth opportunity, environmental work, anti-desertification, and cultural heritage."
+				},
+				{
+					"ja": "砂漠で行われるからといって電子音楽イベントと同一視すべきでない。",
+					"en": "Grouping it with electronic dance events because both happen in the desert would misstate its purpose and institutional form."
+				},
+				{
+					"ja": "Oasis型の商業電子音楽フェスは観光・電子音楽産業に属する。",
+					"en": "Commercial electronic festivals such as Oasis: Into the Wild belong to Morocco's tourism and electronic-music economy."
+				},
+				{
+					"ja": "国際DJ、宿泊、観光、ブランド運営を含む。",
+					"en": "They involve international DJs, hospitality, tourism, and brand operations."
+				}
+			]
+		},
+		{
+			"id": "religion",
+			"heading": {
+				"ja": "3. 宗教分布と宗派",
+				"en": "3. Religious Distribution and Sectarian Background"
+			},
+			"pairs": [
+				{
+					"ja": "モロッコはスンニ派ムスリムが99%超である。",
+					"en": "Morocco's State Department profile gives a population of 37.4 million, more than 99 percent Sunni Muslim, and less than one percent combined Christians, Jews, Shia Muslims, Baha'is, and other minorities."
+				},
+				{
+					"ja": "宗教管理が強くても、砂漠フェスの主催が宗教機関という意味ではない。",
+					"en": "Strong religious administration does not mean desert festivals are run by religious institutions."
+				},
+				{
+					"ja": "モーリタニアも約99%がスンニ派ムスリムである。",
+					"en": "In Mauritania, government estimates put Sunni Muslims at about 99 percent of the population."
+				},
+				{
+					"ja": "イスラムは国家と市民の唯一の宗教とされる。",
+					"en": "Islam is designated as the sole religion of the state and citizenry."
+				},
+				{
+					"ja": "モーリタニアで夜間イベントを論じるには制度的宗教枠組みが重要である。",
+					"en": "Any discussion of desert music, tourism, or night events in Mauritania has to account for this stronger institutional religious frame."
+				}
+			]
+		},
+		{
+			"id": "sufism",
+			"heading": {
+				"ja": "4. イスラム神秘主義とは何か",
+				"en": "4. What Is Islamic Mysticism?"
+			},
+			"pairs": [
+				{
+					"ja": "イスラム神秘主義はSufismまたはtaṣawwufと呼ばれる。",
+					"en": "Islamic mysticism is usually called Sufism in English and taṣawwuf in Arabic."
+				},
+				{
+					"ja": "Sufismはスンニ派やシーア派と並ぶ宗派ではない。",
+					"en": "For this report, Sufism should not be read as a sect parallel to Sunni and Shia Islam."
+				},
+				{
+					"ja": "イスラム内部の修行、制度、身体実践として読むのがよい。",
+					"en": "It is better read as a set of spiritual disciplines, institutions, and embodied practices within Islam."
+				},
+				{
+					"ja": "モロッコ文脈では抽象的なSufismよりGnawaが重要である。",
+					"en": "In the Moroccan context, the most relevant bridge is not abstract Sufism but Gnawa."
+				},
+				{
+					"ja": "UNESCOはGnawaをSufi brotherhood musicと説明する。",
+					"en": "UNESCO describes Gnawa as Sufi brotherhood music and notes all-night rhythm and trance healing ceremonies in which ancestral African practices and Islamic saint veneration overlap."
+				},
+				{
+					"ja": "Sufismとレイブの接点は間接的である。",
+					"en": "The Sufism-rave link is therefore indirect."
+				},
+				{
+					"ja": "Sufi教団が砂漠レイブを主催している証拠ではない。",
+					"en": "It is not evidence that Sufi orders organize desert raves."
+				},
+				{
+					"ja": "接点は反復リズム、夜通しの身体経験、トランス、聖俗境界にある。",
+					"en": "The connection lies in repeated rhythm, all-night collective bodily experience, trance, sacred/secular boundary work, and the relocation of ritual aesthetics into tourism, world music, and electronic-music festival settings."
+				},
+				{
+					"ja": "Gnaoua FestivalやMOGAはGnawa遺産と電子音楽が同じフェス空間を共有できることを示す。",
+					"en": "Essaouira's Gnaoua and World Music Festival and MOGA-style electronic festival contexts show how Gnawa heritage and electronic/world music can share festival space."
+				},
+				{
+					"ja": "それはTransaharaなどが宗教的に主導される証明ではない。",
+					"en": "They do not prove that Transahara or similar desert raves are religiously led."
+				}
+			]
+		},
+		{
+			"id": "religious-relevance",
+			"heading": {
+				"ja": "5. レイブと宗教の関係",
+				"en": "5. How Raves and Religion Intersect"
+			},
+			"pairs": [
+				{
+					"ja": "関係は三層に分けられる。",
+					"en": "The relationship has three layers."
+				},
+				{
+					"ja": "第一に主催者属性である。",
+					"en": "First, organizer identity: the major examples identified here are psytrance/festival travel, music education, or commercial events, not religious institutions."
+				},
+				{
+					"ja": "第二に社会規範との摩擦である。",
+					"en": "Second, social friction: alcohol, drugs, mixed-gender night events, and tourist behavior operate within police administration, family expectations, local reputation, and Islamic norms."
+				},
+				{
+					"ja": "第三に音楽文化の宗教的層である。",
+					"en": "Third, musical tradition: UNESCO describes Gnawa as Sufi brotherhood music tied to therapeutic ritual and performance, which should not be collapsed into electronic dance festivals."
+				},
+				{
+					"ja": "つながりは主催者系譜ではなく形式・市場・象徴で見る。",
+					"en": "The connection should be framed through form, market, and symbol rather than institutional lineage."
+				},
+				{
+					"ja": "形式としては反復リズムと長時間の身体的没入がある。",
+					"en": "At the level of form, both Gnawa trance practice and rave culture can rely on repeated rhythm and long bodily immersion."
+				},
+				{
+					"ja": "市場としてはGnawa音楽がworld musicや観光やフェス空間へ移動している。",
+					"en": "At the level of market, sacred Gnawa music has moved into world music, tourism, and festival spaces."
+				},
+				{
+					"ja": "これらは類似性と再文脈化であり、Sufi儀礼との同一視ではない。",
+					"en": "These are similarities and recontextualizations, not evidence that a desert rave is a Sufi ritual."
+				},
+				{
+					"ja": "『Sirât』の宗教性は別である。",
+					"en": "The religious frame of Sirât is different."
+				},
+				{
+					"ja": "映画はレイブを宗教儀礼ではなく象徴空間として使う。",
+					"en": "The film uses the rave not as a religious ritual, but as a symbolic space for loss, passage, death, and community."
+				}
+			]
+		},
+		{
+			"id": "practical-reading",
+			"heading": {
+				"ja": "6. 砂漠レイブを読む実務上の注意",
+				"en": "6. Practical Reading"
+			},
+			"pairs": [
+				{
+					"ja": "判断単位は「砂漠レイブ」という語ではない。",
+					"en": "For research or travel decisions, the relevant unit is not the phrase \"desert rave.\""
+				},
+				{
+					"ja": "開催地、許認可、主催者、参加者層、地域社会との関係を見る。",
+					"en": "It is the event location, permit status, organizer, participant profile, and relationship with local communities."
+				},
+				{
+					"ja": "映画的無法地帯、旅行宣伝、地域音楽教育、商業フェスは異なる。",
+					"en": "Cinematic lawlessness, traveler marketing, local music education, and commercial festival operations are different phenomena."
+				},
+				{
+					"ja": "地雷帯とSNIM鉄道は重要だが、主催者レポートに押し込むべきではない。",
+					"en": "The Western Sahara mine belt and Mauritania's SNIM railway remain important for understanding the region, but they should not be forced into a report about rave organizers."
+				},
+				{
+					"ja": "それらは移動、安全保障、国家インフラ、鉱業依存の問題である。",
+					"en": "They are questions of mobility, security, state infrastructure, and mining dependence."
+				}
+			]
+		}
+	]
+}

@@ -25,22 +25,25 @@ test('post layout keeps readable spacing around sidebars on wide screens', () =>
 test('post sidebar keeps the research trail link immediately before share', () => {
 	const postPage = readFileSync('src/pages/reports/[...slug].astro', 'utf8')
 	const englishPostPage = readFileSync('src/pages/en/reports/[...slug].astro', 'utf8')
+	const articleResearchLinks = readFileSync('src/components/ArticleResearchLinks.astro', 'utf8')
 
 	for (const source of [postPage, englishPostPage]) {
-		const researchIndex = source.lastIndexOf('Research trail')
+		const researchIndex = source.lastIndexOf('<ArticleResearchLinks')
 		const shareIndex = source.lastIndexOf('<Share title={post.data.title} />')
 
 		assert.ok(researchIndex > 0)
 		assert.ok(shareIndex > researchIndex)
 	}
 
+	assert.match(articleResearchLinks, /Research trail/)
+	assert.match(articleResearchLinks, /Source notes/)
 	assert.match(
-		englishPostPage,
-		/href=\{localizedPath\(locale, `\/reports\/\$\{postSlug\}\/research\/`\)\}/
+		articleResearchLinks,
+		/href=\{localizedPath\(locale, `\/\$\{section\}\/\$\{slug\}\/research\/`\)\}/
 	)
 	assert.doesNotMatch(
-		englishPostPage,
-		/href=\{localizedPath\('ja', `\/reports\/\$\{postSlug\}\/research\/`\)\}/
+		articleResearchLinks,
+		/href=\{localizedPath\('ja', `\/\$\{section\}\/\$\{slug\}\/research\/`\)\}/
 	)
 })
 
@@ -59,7 +62,10 @@ test('English research process route links back to the English article', () => {
 	const englishResearchPage = readFileSync('src/pages/en/reports/[slug]/research.astro', 'utf8')
 
 	assert.match(englishResearchPage, /const locale = 'en'/)
-	assert.match(englishResearchPage, /href=\{localizedPath\(locale, `\/reports\/\$\{postSlug\}\/`\)\}/)
+	assert.match(
+		englishResearchPage,
+		/href=\{localizedPath\(locale, `\/reports\/\$\{postSlug\}\/`\)\}/
+	)
 	assert.match(englishResearchPage, /Back to article/)
 })
 
@@ -69,4 +75,17 @@ test('post lists keep cards readable at intermediate viewport widths', () => {
 	assert.match(listPosts, /repeat\(auto-fit,minmax\(min\(100%,17rem\),1fr\)\)/)
 	assert.match(listPosts, /lg:grid-cols-3/)
 	assert.doesNotMatch(listPosts, /md:grid-cols-3/)
+})
+
+test('mobile theme toggle has a visible light-mode fallback', () => {
+	const header = readFileSync('src/components/Header.astro', 'utf8')
+	const toggleTheme = readFileSync('src/components/ToggleTheme.astro', 'utf8')
+
+	assert.match(header, /class='flex shrink-0 items-center gap-2 md:pl-2'/)
+	assert.match(toggleTheme, /<theme-toggle class='relative block h-9 w-9 shrink-0'>/)
+	assert.match(toggleTheme, /type='button'/)
+	assert.match(toggleTheme, /aria-pressed='false'/)
+	assert.match(toggleTheme, /theme-toggle__moon/)
+	assert.match(toggleTheme, /button\[aria-pressed='false'\] \.theme-toggle__moon/)
+	assert.doesNotMatch(toggleTheme, /group-aria-\[/)
 })

@@ -2,11 +2,14 @@
 import BaseLayout from '@/layouts/BaseLayout'
 import ListCategories from '@/components/ListCategories'
 import ListPosts from '@/components/ListPosts'
+import Pagination from '@/components/Pagination'
 import TitlePage from '@/components/TitlePage'
-import { getReportPosts } from '@/utils'
+import { createArticleListPage, getReportPosts } from '@/utils'
 
 const locale = 'en'
 const reportPosts = await getReportPosts(undefined, locale)
+const page = createArticleListPage(reportPosts, 'reports', 1, locale)
+const posts = page.data
 ---
 
 <BaseLayout title='Reports' locale={locale}>
@@ -19,5 +22,6 @@ const reportPosts = await getReportPosts(undefined, locale)
 	<div class='mb-6 min-w-0'>
 		<ListCategories locale={locale} />
 	</div>
-	<ListPosts posts={reportPosts} locale={locale} />
+	<ListPosts posts={posts} locale={locale} />
+	<Pagination page={page} />
 </BaseLayout>

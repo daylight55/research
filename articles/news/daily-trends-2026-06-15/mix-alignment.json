@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "米イラン和平協議の揺れが政治と原油・金利を同時に動かし、Apple・Google・Microsoftの大型更新が技術面の主役になった。",
+      "en": "US-Iran peace talks are moving politics, oil, and rates at the same time, while major Apple, Google, and Microsoft updates dominate the tech side."
+    },
+    {
+      "ja": "要点: ベイルート空爆で、米イラン和平は数時間単位で遅れるほど脆い。",
+      "en": "The bottom line: The Beirut strike shows how fast the Iran deal can slip when regional fire flares up."
+    },
+    {
+      "ja": "何が起きたか: イスラエルの空爆で死傷者が出て、トランプ氏は和平合意が数時間遅れたと述べた。",
+      "en": "What happened: Israeli airstrikes on Beirut killed and injured civilians, and Trump said the attack delayed the expected peace deal by hours."
+    },
+    {
+      "ja": "要点: イランの強硬派は、和平案を国内の拒否運動に変えようとしている。",
+      "en": "The bottom line: Iran's hardliners are trying to turn the draft deal into a domestic fight."
+    },
+    {
+      "ja": "要点: ホルムズ海峡の再開条件が、交渉の中心になっている。",
+      "en": "The bottom line: The Hormuz trade-off is now the center of the talks."
+    },
+    {
+      "ja": "要点: FISA再延長は、トランプ氏の投票法案と引き換えに使われている。",
+      "en": "The bottom line: FISA renewal is being used as leverage for Trump's voting bill."
+    },
+    {
+      "ja": "要点: ホワイトハウスUFCは、暗号資産と倫理の話題になっている。",
+      "en": "The bottom line: The White House UFC event has become a crypto and ethics story."
+    },
+    {
+      "ja": "要点: ガソリン安が、家計の気分を少し押し上げている。",
+      "en": "The bottom line: Lower gas prices are giving households a small but real mood lift."
+    },
+    {
+      "ja": "要点: 失業保険申請は増えたが、雇用崩れのサインとはまだ言いにくい。",
+      "en": "The bottom line: The job market still looks solid even as claims rose to a four-month high."
+    },
+    {
+      "ja": "要点: 卸売インフレは、まだ市場を揺らせる熱さを残している。",
+      "en": "The bottom line: Wholesale inflation is still hot enough to shake markets."
+    },
+    {
+      "ja": "要点: ECBは、戦争由来のインフレに対抗して利上げを再開した。",
+      "en": "The bottom line: The ECB has restarted hiking to fight war-driven inflation."
+    },
+    {
+      "ja": "要点: 住宅ローン金利は、買い手が慎重になる水準にまだ張り付いている。",
+      "en": "The bottom line: Mortgage rates are still stuck in a zone that keeps buyers cautious."
+    },
+    {
+      "ja": "要点: Appleの新しいSiriは、ようやく本格的なAI製品に近づいた。",
+      "en": "The bottom line: Apple's new Siri is finally turning into a real AI product."
+    },
+    {
+      "ja": "要点: クック氏の退任が、AppleのAI推進に新しい継承論点を加えている。",
+      "en": "The bottom line: Cook's exit adds a succession question to Apple's AI push."
+    },
+    {
+      "ja": "要点: GoogleはI/Oで、Geminiをチャットボットから日常OSへ押し上げた。",
+      "en": "The bottom line: Google used I/O to push Gemini from chatbot to daily operating system."
+    },
+    {
+      "ja": "要点: Microsoftの6月更新は、記録級のセキュリティ整理になっている。",
+      "en": "The bottom line: Microsoft's June patch cycle is a record-sized security cleanup."
+    },
+    {
+      "ja": "要点: Check PointのVPNゼロデイは、緊急対応が必要な政府級パッチ課題になった。",
+      "en": "The bottom line: Check Point's VPN zero-day has become an urgent government-grade patching problem."
+    },
+    {
+      "ja": "中東の外交は、軍事とエネルギーと金融の三つを同時に動かしており、政治ニュースがそのまま家計と市場の論点になっている。",
+      "en": "Middle East diplomacy is now driving security, oil, and rates at the same time, so political headlines are feeding directly into household costs."
+    },
+    {
+      "ja": "FISA再延長とホワイトハウスUFCは、制度論よりも党内交渉やブランド戦略が前面に出た政治の形を示している。",
+      "en": "FISA renewal and the White House UFC story both show politics, branding, and private incentives bleeding into public institutions."
+    },
+    {
+      "ja": "AppleとGoogleは、AIを機能追加ではなく製品の中核に置き直しており、競争軸がモデル性能から体験設計へ移っている。",
+      "en": "Apple and Google are converging on assistant-first AI, but the real test is whether the tools stay useful outside staged demos."
+    },
+    {
+      "ja": "MicrosoftとCheck Pointの更新は、AIの普及が進むほどセキュリティ修正の速度が競争力になることを示している。",
+      "en": "Security patching is becoming a product story, not just an IT story, as Microsoft and Check Point both highlight the cost of delay."
+    },
+    {
+      "ja": "イラン側が和平案に署名するのか、それとも国内反発で条件を引き直すのか。",
+      "en": "Watch for any signed Iran memo or fresh strike that changes the peace timeline."
+    },
+    {
+      "ja": "中東のエネルギーショックが次のインフレ指標とFRB判断に波及するか。",
+      "en": "Watch the next inflation releases and the Fed meeting for signs that energy shocks are feeding through."
+    },
+    {
+      "ja": "Appleのベータ段階とGoogleの展開計画が、AI機能の到達順を左右する。",
+      "en": "Watch Apple's beta gates and Google's rollout schedule to see which AI features reach ordinary users first."
+    },
+    {
+      "ja": "企業パッチが完全に行き渡る前に、ゼロデイや悪用証明が増えるか。",
+      "en": "Watch whether more zero-days or exploit proofs appear before enterprise patches fully land."
+    }
+  ]
+}

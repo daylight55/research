@@ -4,9 +4,13 @@ import { execFileSync } from 'node:child_process'
 import { test } from 'node:test'
 
 function reportArticleFiles() {
-	return execFileSync('find', ['articles/report', '-path', 'articles/report/*/*/index.mdx', '-type', 'f'], {
-		encoding: 'utf8'
-	})
+	return execFileSync(
+		'find',
+		['articles/report', '-path', 'articles/report/*/*/index.mdx', '-type', 'f'],
+		{
+			encoding: 'utf8'
+		}
+	)
 		.split('\n')
 		.map((line) => line.trim())
 		.filter(Boolean)
@@ -50,4 +54,15 @@ test('SourceNote is written inline without duplicated citation punctuation', () 
 			`${file} should not add manual parentheses or source labels inside SourceNote`
 		)
 	}
+})
+
+test('SourceNote renders a localized label for English report pages', () => {
+	const source = readFileSync('src/components/mdx/SourceNote.astro', 'utf8')
+
+	assert.match(source, /Source/, 'SourceNote should be able to render an English source label')
+	assert.doesNotMatch(
+		source,
+		/const\s+\{\s*label\s*=\s*'出典'\s*\}/,
+		'SourceNote should not hard-code 出典 as the only default label'
+	)
 })

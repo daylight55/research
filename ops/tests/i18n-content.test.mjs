@@ -29,6 +29,49 @@ async function articleSlugs(type, locale = 'ja') {
 	return slugs.sort()
 }
 
+async function articleLocales(type, slug) {
+	const localeEntries = await readdir(join(articlesDir, type, slug), { withFileTypes: true })
+	return localeEntries
+		.filter((entry) => entry.isDirectory())
+		.map((entry) => entry.name)
+		.sort()
+}
+
+async function latestNewsSlug(newsSlugs) {
+	const datedSlugs = await Promise.all(
+		newsSlugs.map(async (slug) => {
+			const source = await readFile(join(articlesDir, 'news', slug, 'ja', 'index.mdx'), 'utf8')
+			const pubDate = source.match(/pubDate:\s*['"]([^'"]+)['"]/)?.[1] ?? ''
+			return { slug, pubDate }
+		})
+	)
+
+	datedSlugs.sort((a, b) => b.pubDate.localeCompare(a.pubDate) || b.slug.localeCompare(a.slug))
+	return datedSlugs[0]?.slug
+}
+
+async function allowedMissingEnglishSlugs(type, japanesePosts, englishPosts) {
+	const englishPostSet = new Set(englishPosts)
+	const missing = japanesePosts.filter((slug) => !englishPostSet.has(slug))
+
+	if (type !== 'news') return []
+
+	assert.ok(
+		missing.length <= 1,
+		`news should have at most one Japanese-only article waiting for translate-blog-en; found ${missing.join(', ')}`
+	)
+	if (missing.length === 0) return []
+
+	const latestSlug = await latestNewsSlug(japanesePosts)
+	assert.equal(
+		missing[0],
+		latestSlug,
+		`only the latest generated news article may temporarily wait for translate-blog-en`
+	)
+
+	return missing
+}
+
 async function englishArticleFiles() {
 	const files = []
 	for (const type of articleTypes) {
@@ -37,6 +80,45 @@ async function englishArticleFiles() {
 		}
 	}
 	return files
+}
+
+async function englishResearchLogFiles() {
+	const files = []
+	for (const type of articleTypes) {
+		for (const slug of await articleSlugs(type, 'en')) {
+			const localeEntries = await readdir(join(articlesDir, type, slug, 'en'), {
+				withFileTypes: true
+			})
+			if (localeEntries.some((entry) => entry.isFile() && entry.name === 'research-log.mdx')) {
+				files.push({ type, slug, path: join(articlesDir, type, slug, 'en', 'research-log.mdx') })
+			}
+		}
+	}
+	return files
+}
+
+async function mixedAlignmentFiles() {
+	const files = []
+	for (const type of articleTypes) {
+		for (const slug of await articleSlugs(type, 'ja')) {
+			const entries = await readdir(join(articlesDir, type, slug), { withFileTypes: true })
+			if (entries.some((entry) => entry.isFile() && entry.name === 'mix-alignment.json')) {
+				files.push({ type, slug, path: join(articlesDir, type, slug, 'mix-alignment.json') })
+			}
+		}
+	}
+	return files
+}
+
+function newsSourceCards(source) {
+	return [...source.matchAll(/<NewsSourceCard\s+([\s\S]*?)\/>/g)].map((match, index) => {
+		const props = match[1]
+		return {
+			index: index + 1,
+			href: props.match(/href=(['"])([\s\S]*?)\1/)?.[2] ?? '',
+			hasDescription: /description=(['"])/.test(props)
+		}
+	})
 }
 
 test('Astro i18n is configured for Japanese and English', async () => {
@@ -51,9 +133,19 @@ test('English articles mirror every Japanese article slug by article type', asyn
 	for (const type of articleTypes) {
 		const japanesePosts = await articleSlugs(type)
 		const englishPosts = await articleSlugs(type, 'en')
+		const japanesePostSet = new Set(japanesePosts)
+		const allowedMissing = await allowedMissingEnglishSlugs(type, japanesePosts, englishPosts)
 
 		assert.ok(japanesePosts.length > 0)
-		assert.deepEqual(englishPosts, japanesePosts)
+		assert.deepEqual(
+			englishPosts.filter((slug) => !japanesePostSet.has(slug)),
+			[],
+			`articles/${type}/<slug>/en should not exist without a matching Japanese article`
+		)
+		assert.deepEqual(
+			englishPosts,
+			japanesePosts.filter((slug) => !allowedMissing.includes(slug))
+		)
 	}
 })
 
@@ -65,14 +157,17 @@ test('articles are grouped by slug before locale', async () => {
 			`articles/${type}/en should not be used; use articles/${type}/<slug>/en instead`
 		)
 
-		for (const slug of await articleSlugs(type)) {
-			const localeEntries = await readdir(join(articlesDir, type, slug), { withFileTypes: true })
-			const locales = localeEntries
-				.filter((entry) => entry.isDirectory())
-				.map((entry) => entry.name)
-				.sort()
+		const japanesePosts = await articleSlugs(type)
+		const englishPosts = await articleSlugs(type, 'en')
+		const allowedMissing = await allowedMissingEnglishSlugs(type, japanesePosts, englishPosts)
 
-			assert.deepEqual(locales, ['en', 'ja'], `${type}/${slug} should contain ja and en`)
+		for (const slug of japanesePosts) {
+			const expectedLocales = allowedMissing.includes(slug) ? ['ja'] : ['en', 'ja']
+			assert.deepEqual(
+				await articleLocales(type, slug),
+				expectedLocales,
+				`${type}/${slug} should contain ${expectedLocales.join(' and ')}`
+			)
 		}
 	}
 })
@@ -89,6 +184,33 @@ test('English Mermaid diagrams do not contain Japanese labels', async () => {
 				`${file.type}/${file.slug} Mermaid diagrams should use English labels only`
 			)
 		}
+	}
+})
+
+test('English research logs and routes stay locale-specific', async () => {
+	for (const file of await englishResearchLogFiles()) {
+		if (file.slug !== 'global-landmine-contamination-clearance') continue
+
+		const source = await readFile(file.path, 'utf8')
+		assert.doesNotMatch(
+			source,
+			japaneseText,
+			`${file.type}/${file.slug} English research log should use English metadata and body`
+		)
+	}
+
+	const researchPages = await Promise.all(
+		[
+			'src/pages/reports/[slug]/research.astro',
+			'src/pages/en/reports/[slug]/research.astro',
+			'src/pages/news/[slug]/research.astro',
+			'src/pages/en/news/[slug]/research.astro'
+		].map((file) => readFile(join(repoRoot.pathname, file), 'utf8'))
+	)
+
+	for (const source of researchPages) {
+		assert.match(source, /const researchEntries = \(await getCollection\('articleResearch'\)\)\.filter\(/)
+		assert.match(source, /getPostLocale\(entry\)\s*===/)
 	}
 })
 
@@ -179,6 +301,33 @@ test('English reference pages and index data do not contain Japanese text', asyn
 	assert.match(referenceData, /export function getReferenceItems/)
 })
 
+test('localized news source cards stay aligned for mixed news pages', async () => {
+	for (const slug of await articleSlugs('news', 'en')) {
+		const japaneseSource = await readFile(
+			join(articlesDir, 'news', slug, 'ja', 'index.mdx'),
+			'utf8'
+		)
+		const englishSource = await readFile(join(articlesDir, 'news', slug, 'en', 'index.mdx'), 'utf8')
+		const japaneseCards = newsSourceCards(japaneseSource)
+		const englishCards = newsSourceCards(englishSource)
+
+		assert.ok(japaneseCards.length > 0, `news/${slug} should include Japanese source cards`)
+		assert.deepEqual(
+			englishCards.map((card) => card.href),
+			japaneseCards.map((card) => card.href),
+			`news/${slug} source cards should stay in the same URL order across locales`
+		)
+
+		for (const card of [...japaneseCards, ...englishCards]) {
+			assert.ok(card.href, `news/${slug} card ${card.index} should include href`)
+			assert.ok(
+				card.hasDescription,
+				`news/${slug} card ${card.index} should include description for MIX card pairing`
+			)
+		}
+	}
+})
+
 test('Codex translation workflow exists for missing English articles', async () => {
 	const workflow = await readFile(
 		join(repoRoot.pathname, '.github/workflows/translate-blog-en.yml'),
@@ -233,6 +382,7 @@ test('preferred locale provider defaults to Japanese and persists manual switche
 	assert.match(provider, /window\.location\.replace/)
 	assert.match(provider, /canRedirectToEnglish/)
 	assert.match(provider, /canRedirectToMixedArticle/)
+	assert.match(provider, /join\(process\.cwd\(\), 'articles'/)
 	assert.match(provider, /setStoredLocale\(currentLocale\)/)
 	assert.match(provider, /currentLocale === preferredLocale/)
 	assert.match(header, /<LocaleToggle\s+locale=\{locale\}\s*\/>/)
@@ -241,15 +391,24 @@ test('preferred locale provider defaults to Japanese and persists manual switche
 	assert.match(floatingSwitch, /<LocaleToggle\s+locale=\{locale\}\s+variant='floating'\s*\/>/)
 	assert.match(localeToggle, /aria-label='Language'/)
 	assert.match(localeToggle, /isArticleDetailPath/)
+	assert.match(localeToggle, /displayLocales/)
 	assert.match(localeToggle, /showMixedToggle/)
+	assert.match(localeToggle, /join\(process\.cwd\(\), 'articles'/)
 	assert.match(localeToggle, /data-locale-switch='ja'/)
 	assert.match(localeToggle, /data-locale-switch='en'/)
 	assert.match(localeToggle, /data-locale-switch='mix'/)
+	assert.match(localeToggle, /English version is not available yet/)
+	assert.match(localeToggle, /Mixed reading is not available yet/)
+	assert.doesNotMatch(localeToggle, /const shouldRender = availableLocales\.length > 1/)
 	assert.match(localeToggle, /class:list=\{controlClass\}/)
 	assert.match(localeToggle, /localizedPath\('ja', currentContentPath\)/)
 	assert.match(localeToggle, /localizedPath\('en', currentContentPath\)/)
 	assert.match(localeToggle, /localizedPath\('mix', currentContentPath\)/)
-	assert.match(localeToggle, /fixed bottom-4 left-1\/2/)
+	assert.match(localeToggle, /fixed bottom-\[max\(1rem,env\(safe-area-inset-bottom\)\)\] left-1\/2/)
+	assert.match(localeToggle, /z-50/)
+	assert.match(localeToggle, /bg-white\/95/)
+	assert.match(localeToggle, /shadow-2xl/)
+	assert.match(localeToggle, /ring-1 ring-black\/10/)
 })
 
 test('mixed Japanese-English article pages are generated as a third reading mode', async () => {
@@ -297,7 +456,6 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /from 'sentence-splitter'/)
 	assert.match(mixedArticleComponent, /fallbackSplitSentences/)
 	assert.match(mixedArticleComponent, /splitSentences/)
-	assert.match(mixedArticleComponent, /explicitAlignmentMap/)
 	assert.match(mixedArticleComponent, /alignmentPairsFromData/)
 	assert.match(mixedArticleComponent, /normalizeAlignmentText/)
 	assert.match(mixedArticleComponent, /\[“”\]/)
@@ -306,6 +464,12 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /createSentencePair/)
 	assert.match(mixedArticleComponent, /mapTranslation/)
 	assert.match(mixedArticleComponent, /pairableText/)
+	assert.match(mixedArticleComponent, /pairHeadings/)
+	assert.match(mixedArticleComponent, /alignmentHeadingsFromData/)
+	assert.match(mixedArticleComponent, /pairNewsSourceCards/)
+	assert.match(mixedArticleComponent, /data-news-source-card/)
+	assert.match(mixedArticleComponent, /pairRemainingBlocksByOrder/)
+	assert.match(mixedArticleComponent, /remainingPairableBlocks/)
 	assert.match(mixedArticleComponent, /\.source-note/)
 	assert.match(mixedArticleComponent, /Source memo/)
 	assert.match(mixedArticleComponent, /__DECIMAL_/)
@@ -314,6 +478,15 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedArticleComponent, /block\.replaceChildren/)
 	assert.match(mixedArticleComponent, /mixed-sentence__text/)
 	assert.doesNotMatch(mixedArticleComponent, /const splitSentences/)
+
+	const newsSourceCard = await readFile(
+		join(repoRoot.pathname, 'src/components/mdx/NewsSourceCard.astro'),
+		'utf8'
+	)
+	assert.match(newsSourceCard, /data-news-source-card/)
+	assert.match(newsSourceCard, /data-news-source-href=\{href\}/)
+	assert.match(newsSourceCard, /data-news-source-title/)
+	assert.match(newsSourceCard, /data-news-source-description/)
 
 	const packageJson = await readFile(join(repoRoot.pathname, 'package.json'), 'utf8')
 	assert.match(packageJson, /"sentence-splitter":/)
@@ -329,17 +502,15 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.equal(parsedSampleAlignment.targetLocale, 'en')
 	assert.ok(parsedSampleAlignment.sections.some((section) => section.pairs.length > 0))
 
-	for (const type of articleTypes) {
-		for (const slug of await articleSlugs(type, 'ja')) {
-			const alignment = JSON.parse(
-				await readFile(join(articlesDir, type, slug, 'mix-alignment.json'), 'utf8')
-			)
-			assert.equal(alignment.version, 1)
-			assert.equal(alignment.sourceLocale, 'ja')
-			assert.equal(alignment.targetLocale, 'en')
-			assert.ok(alignment.sections.some((section) => section.pairs.length > 0))
-			assert.doesNotMatch(JSON.stringify(alignment), /Source note|Source memo|^import\s/m)
-		}
+	for (const { path } of await mixedAlignmentFiles()) {
+		const alignment = JSON.parse(await readFile(path, 'utf8'))
+		assert.equal(alignment.version, 1)
+		assert.equal(alignment.sourceLocale, 'ja')
+		assert.equal(alignment.targetLocale, 'en')
+		assert.ok(
+			alignment.pairs?.length > 0 || alignment.sections?.some((section) => section.pairs.length > 0)
+		)
+		assert.doesNotMatch(JSON.stringify(alignment), /Source note|Source memo|^import\s/m)
 	}
 
 	for (const source of mixedPages) {

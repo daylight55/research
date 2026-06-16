@@ -1,0 +1,598 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "article-title",
+      "heading": {
+        "ja": "記事タイトル",
+        "en": "Article title"
+      },
+      "pairs": [
+        {
+          "ja": "2026-06-02 イラン緊張とAI投資熱で市場揺れ、対中規制も強化",
+          "en": "2026-06-02 Iran tensions and AI fervor jolt markets, China curbs tighten"
+        }
+      ]
+    },
+    {
+      "id": "overview",
+      "heading": {
+        "ja": "概要",
+        "en": "Overview"
+      },
+      "pairs": [
+        {
+          "ja": "イラン情勢が原油・為替・株式を同時に動かす一方、AI半導体とクラウド規制のニュースも重なり、米中対立と供給網の再配置が一段と見えやすくなった。",
+          "en": "At the same time that Iran tensions moved oil, FX, and stocks, news on AI semiconductors and cloud rules piled up, making U.S.-China rivalry and supply-chain reallocation easier to see."
+        },
+        {
+          "ja": "政治では米イラン協議と対中安全保障、経済では原油高と通商交渉、技術ではNvidiaとAnthropicを中心に「AI投資の拡大」と「輸出規制の強化」が同時進行している。",
+          "en": "In politics, U.S.-Iran talks and China security policy moved in parallel; in the economy, higher oil prices and trade talks did too; and in technology, Nvidia and Anthropic reflected two simultaneous forces: expanding AI investment and tighter export controls."
+        }
+      ]
+    },
+    {
+      "id": "trump-suggests-iran-talks-are-continuing",
+      "heading": {
+        "ja": "トランプ、イラン協議継続を示唆",
+        "en": "Trump suggests Iran talks are continuing"
+      },
+      "pairs": [
+        {
+          "ja": "トランプ氏がイランとの対話は続いていると述べ、停戦や限定合意の観測が再び市場の焦点になった。",
+          "en": "Trump said dialogue with Iran is continuing, bringing speculation about a ceasefire or a limited deal back to the market's attention."
+        },
+        {
+          "ja": "対話継続のメッセージは出たが、交渉の中身や期限はなお不透明だ。",
+          "en": "The message signaled ongoing talks, but the substance and timing of negotiations remain unclear."
+        },
+        {
+          "ja": "中東情勢は原油、為替、株式に直結するため、発言ひとつで市場期待が大きく振れる。",
+          "en": "Middle East developments move oil, FX, and stocks directly, so a single comment can swing expectations sharply."
+        },
+        {
+          "ja": "外交の進展が遅れれば、軍事的緊張を前提にしたリスクプレミアムが残る。",
+          "en": "If diplomacy stalls, a risk premium built around military tension is likely to remain."
+        },
+        {
+          "ja": "次の注目点は、米国が求める条件とイラン側の譲歩範囲がどこまで接近するかだ。",
+          "en": "The next question is how closely U.S. demands and Iran's room for concessions can converge."
+        },
+        {
+          "ja": "合意文言が具体化するか、逆に実務協議の停滞が伝わるかで、相場の方向は変わりやすい。",
+          "en": "Markets will react differently depending on whether a deal text becomes more concrete or whether practical talks appear to stall."
+        }
+      ]
+    },
+    {
+      "id": "iran-looks-for-a-limited-deal",
+      "heading": {
+        "ja": "イラン、限定合意を模索",
+        "en": "Iran looks for a limited deal"
+      },
+      "pairs": [
+        {
+          "ja": "イランは経済的な圧力を和らげるため、全面解決ではない限定合意の余地を探っていると報じられた。",
+          "en": "Iran is said to be exploring room for a limited deal, rather than a full settlement, in order to ease economic pressure."
+        },
+        {
+          "ja": "制裁解除や核関連の実務条件をどこまで切り分けるかが焦点になっている。",
+          "en": "The key question is how far sanctions relief and nuclear-related operating conditions can be separated."
+        },
+        {
+          "ja": "限定合意でも成立すれば、原油供給不安や周辺国の警戒感をいったん和らげる可能性がある。",
+          "en": "Even a limited deal could temporarily ease worries about oil supply and neighboring countries' caution."
+        },
+        {
+          "ja": "逆に小幅な前進に終われば、政治的には「協議継続」、市場では「緊張継続」という解釈が残る。",
+          "en": "If progress is only marginal, politics will still read as ongoing talks, while markets will still read as continuing tension."
+        },
+        {
+          "ja": "交渉の論点が制裁、ウラン濃縮、監視強化のどこに絞られるかを見る必要がある。",
+          "en": "Watch whether the negotiating agenda narrows to sanctions, uranium enrichment, or stronger monitoring."
+        },
+        {
+          "ja": "実務交渉が続くかどうかで、次の市場反応の大きさが変わる。",
+          "en": "The size of the next market reaction will depend on whether practical negotiations continue."
+        }
+      ]
+    },
+    {
+      "id": "hegseth-warns-about-chinas-military-buildup",
+      "heading": {
+        "ja": "ヘグセス、中国軍拡に警戒を促す",
+        "en": "Hegseth warns about China's military buildup"
+      },
+      "pairs": [
+        {
+          "ja": "ヘグセス氏はアジアの安全保障フォーラムで、中国の軍事的な拡張に強い警戒感を示した。",
+          "en": "At an Asian security forum, Hegseth expressed strong concern about China's military expansion."
+        },
+        {
+          "ja": "米国は同盟国に対し、防衛費の上積みを求める姿勢を崩していない。",
+          "en": "The U.S. is still pressing allies to increase defense spending."
+        },
+        {
+          "ja": "これは単なる外交演説ではなく、インド太平洋の防衛負担を誰がどれだけ持つかという政策メッセージだ。",
+          "en": "This was not just a diplomatic speech."
+        },
+        {
+          "ja": "市場にも、防衛産業や半導体の対中規制が続くシグナルとして読まれる。",
+          "en": "It was a policy message about who should carry how much of the Indo-Pacific defense burden, and markets can read it as a sign that defense-industry support and China controls on semiconductors are likely to continue."
+        },
+        {
+          "ja": "日本、韓国、オーストラリアなどがどこまで追加支出や共同演習に応じるかが鍵になる。",
+          "en": "The key question is how far Japan, South Korea, and Australia will go on additional spending and joint exercises."
+        },
+        {
+          "ja": "米国の圧力が関税や技術規制と結びつくかも見ておきたい。",
+          "en": "It is also worth watching whether U.S. pressure becomes tied to tariffs or tech restrictions."
+        }
+      ]
+    },
+    {
+      "id": "us-and-chinese-militaries-keep-talking-in-hawaii",
+      "heading": {
+        "ja": "米中軍、ハワイで対話を継続",
+        "en": "U.S. and Chinese militaries keep talking in Hawaii"
+      },
+      "pairs": [
+        {
+          "ja": "米中軍の関係者がハワイで会談し、海空での偶発的衝突を避けるための対話を続けた。",
+          "en": "U.S. and Chinese military officials met in Hawaii and continued talks aimed at avoiding accidental air or sea clashes."
+        },
+        {
+          "ja": "軍事摩擦が高まるなかでも、最低限の連絡回線は維持されている。",
+          "en": "Even as military friction rises, a minimum communication channel is still being maintained."
+        },
+        {
+          "ja": "米中対立は貿易だけでなく、軍事的な誤認や偶発事故の管理が大きなリスクになっている。",
+          "en": "U.S.-China rivalry is not only about trade, but also about managing the risks of military misjudgment and accidental incidents."
+        },
+        {
+          "ja": "対話が途切れれば、台湾海峡や南シナ海の緊張が一気に跳ね上がる。",
+          "en": "If dialogue breaks down, tensions in the Taiwan Strait and the South China Sea could jump quickly."
+        },
+        {
+          "ja": "今後は実務レベルのホットラインが機能しているか、共同発表の有無を見たい。",
+          "en": "What matters next is whether practical hotlines are working and whether there is any joint statement."
+        },
+        {
+          "ja": "会談が継続するほど、少なくとも危機管理の最低限は保たれていると読める。",
+          "en": "The longer the meetings continue, the more likely it is that basic crisis management is still holding."
+        }
+      ]
+    },
+    {
+      "id": "china-steps-up-patrols-east-of-taiwan",
+      "heading": {
+        "ja": "中国、台湾東方で巡回を強化",
+        "en": "China steps up patrols east of Taiwan"
+      },
+      "pairs": [
+        {
+          "ja": "中国は台湾の東側海域で巡回を行い、日本とフィリピンの海域協力の動きに反応した。",
+          "en": "China carried out patrols in waters east of Taiwan in response to Japan and the Philippines moving closer on maritime cooperation."
+        },
+        {
+          "ja": "海洋秩序をめぐる演出としても、周辺国への牽制としても読める。",
+          "en": "The move can be read both as an exercise in maritime order and as a warning to neighboring countries."
+        },
+        {
+          "ja": "台湾海峡だけでなく、周辺海域の実効支配や通航自由をめぐる動きが広がっている。",
+          "en": "The contest is spreading beyond the Taiwan Strait to effective control over surrounding waters and freedom of navigation."
+        },
+        {
+          "ja": "局地的な巡回でも、偶発的な接触が外交摩擦に発展しやすい。",
+          "en": "Even local patrols can easily escalate into diplomatic friction if there is an accidental encounter."
+        },
+        {
+          "ja": "日本、フィリピン、台湾の側が警備や合同訓練をどう強めるかが焦点だ。",
+          "en": "The key is how Japan, the Philippines, and Taiwan strengthen patrols and joint exercises."
+        },
+        {
+          "ja": "中国側の巡回頻度が上がるかどうかで、地域の緊張水準が見えやすくなる。",
+          "en": "If Chinese patrol frequency rises, the region's tension level will be easier to see."
+        }
+      ]
+    },
+    {
+      "id": "oil-spikes-on-reports-of-stalled-iran-talks",
+      "heading": {
+        "ja": "原油急騰、対イラン協議停止報道で",
+        "en": "Oil spikes on reports of stalled Iran talks"
+      },
+      "pairs": [
+        {
+          "ja": "米イラン協議の行方が不透明になり、原油は一日で約5ドル高の勢いを見せた。",
+          "en": "Uncertainty over the direction of U.S.-Iran talks pushed oil up by about $5 a barrel in a single day."
+        },
+        {
+          "ja": "市場は供給障害と封鎖リスクを織り込む形で反応している。",
+          "en": "Markets reacted by pricing in supply disruptions and blockade risk."
+        },
+        {
+          "ja": "原油高は輸送、製造、エネルギーコストを通じて広く物価に波及する。",
+          "en": "Higher oil prices spill into inflation through transport, manufacturing, and energy costs."
+        },
+        {
+          "ja": "地政学ショックが続くほど、インフレ鈍化の道筋が読みづらくなる。",
+          "en": "The longer the geopolitical shock lasts, the harder it is to read the path back to lower inflation."
+        },
+        {
+          "ja": "次に見るべきは、中東の海上輸送に実害が出るかどうかだ。",
+          "en": "The next thing to watch is whether Middle East shipping sees any real damage."
+        },
+        {
+          "ja": "値上がりが一時的か、供給網の織り込みに変わるかで影響が変わる。",
+          "en": "The impact will differ depending on whether the move is just a temporary spike or becomes part of supply-chain planning."
+        }
+      ]
+    },
+    {
+      "id": "us-crude-exports-hit-record-high-in-may",
+      "heading": {
+        "ja": "米原油輸出、5月に過去最高",
+        "en": "U.S. crude exports hit record high in May"
+      },
+      "pairs": [
+        {
+          "ja": "5月の米原油輸出が記録的な水準に達し、世界の供給先の組み替えが進んだ。",
+          "en": "U.S. crude exports reached record levels in May, showing a reshuffling of global supply destinations."
+        },
+        {
+          "ja": "中東の不安定化が、米国産原油の出番を押し上げている。",
+          "en": "Instability in the Middle East is pushing more demand toward U.S. crude."
+        },
+        {
+          "ja": "米国の輸出増は、国内需給だけでなくアジア・欧州の調達戦略にも影響する。",
+          "en": "Higher U.S. exports affect not just domestic supply-demand balances, but also procurement strategies in Asia and Europe."
+        },
+        {
+          "ja": "供給の受け皿が増えるほど、価格変動の波及は広がりやすい。",
+          "en": "The more outlets supply has, the easier it is for price swings to spread."
+        },
+        {
+          "ja": "輸出の伸びが一時的なスパイクで終わるか、継続的な流れになるかを見たい。",
+          "en": "The question is whether the export surge turns out to be a one-off spike or a sustained trend."
+        },
+        {
+          "ja": "精製能力や輸送コストが次の制約になる可能性がある。",
+          "en": "Refining capacity and transport costs could become the next constraints."
+        }
+      ]
+    },
+    {
+      "id": "the-dollar-holds-firm-while-markets-weigh-geopolitics-and-policy",
+      "heading": {
+        "ja": "ドル、地政学と金融政策を見極めて底堅い",
+        "en": "The dollar holds firm while markets weigh geopolitics and policy"
+      },
+      "pairs": [
+        {
+          "ja": "ドルは急伸こそしなかったものの、地政学リスクと金融政策の見極めで下値が堅かった。",
+          "en": "The dollar did not surge, but it held its ground as markets weighed geopolitical risk and monetary policy."
+        },
+        {
+          "ja": "市場はイラン情勢だけでなく、今後の中銀メッセージも待っている。",
+          "en": "Investors are watching not only Iran, but also the next round of central-bank messaging."
+        },
+        {
+          "ja": "ドルの強弱は資源価格、輸入物価、新興国資金フローに広く効く。",
+          "en": "Dollar strength or weakness affects commodity prices, import prices, and capital flows in emerging markets."
+        },
+        {
+          "ja": "地政学だけでなく、中央銀行のスタンスが交錯する局面では値動きが荒くなりやすい。",
+          "en": "Volatility tends to rise when geopolitical tension and central-bank positioning collide."
+        },
+        {
+          "ja": "米金利見通しや安全資産需要が強まると、ドル高圧力は再び強まる。",
+          "en": "If U.S. rate expectations or demand for safe assets strengthen, dollar pressure to the upside could return."
+        },
+        {
+          "ja": "逆に中東情勢が落ち着けば、リスク選好で緩む余地がある。",
+          "en": "If the Middle East calms down, there is room for risk appetite to ease it back."
+        }
+      ]
+    },
+    {
+      "id": "stocks-stay-near-highs-on-ai-optimism",
+      "heading": {
+        "ja": "AI期待で株式は高値圏を維持",
+        "en": "Stocks stay near highs on AI optimism"
+      },
+      "pairs": [
+        {
+          "ja": "株式市場はイラン緊張に揺さぶられながらも、AI投資への期待で高値圏を維持した。",
+          "en": "The stock market stayed near highs thanks to expectations for AI investment, even as Iran tensions shook sentiment."
+        },
+        {
+          "ja": "短期の地政学ノイズより、長期の成長テーマが相場を支えている。",
+          "en": "Long-term growth themes are supporting the market more than short-term geopolitical noise."
+        },
+        {
+          "ja": "市場が「戦争リスク」と「AI成長」をどう天秤にかけるかは、資金の流れを決める。",
+          "en": "How markets balance war risk against AI growth will shape capital flows."
+        },
+        {
+          "ja": "大型ハイテクの強さが続くなら、指数全体の底堅さも保たれやすい。",
+          "en": "If large-cap tech keeps outperforming, the broader index should remain relatively resilient."
+        },
+        {
+          "ja": "エネルギー高が企業利益を圧迫し始めるか、AI関連の投資熱が鈍るかを見たい。",
+          "en": "Watch whether higher energy prices start to weigh on corporate profits or whether AI-related investment enthusiasm cools."
+        },
+        {
+          "ja": "利益見通しの修正が出ると、高値圏維持は難しくなる。",
+          "en": "If earnings guidance is revised down, it will be harder to keep the market at high levels."
+        }
+      ]
+    },
+    {
+      "id": "us-and-india-move-trade-talks-toward-the-finish-line",
+      "heading": {
+        "ja": "米印、関税条件で通商協議が最終局面",
+        "en": "U.S. and India move trade talks toward the finish line"
+      },
+      "pairs": [
+        {
+          "ja": "米印通商協議は、関税や救済措置の条件整理が大詰めに入った。",
+          "en": "U.S.-India trade talks are in the final stretch as tariff and relief terms are sorted out."
+        },
+        {
+          "ja": "合意がまとまれば、両国の企業にとって不確実性が一段と下がる。",
+          "en": "If an agreement is reached, uncertainty for companies in both countries will fall further."
+        },
+        {
+          "ja": "インドは対中分散の受け皿として注目されており、米国との制度調整は投資判断に直結する。",
+          "en": "India is drawing attention as a destination for diversification away from China, so regulatory alignment with the United States directly affects investment decisions."
+        },
+        {
+          "ja": "関税条件が整えば、サプライチェーン再編の追い風になりやすい。",
+          "en": "Once tariff terms are in place, supply-chain restructuring tends to get a tailwind."
+        },
+        {
+          "ja": "Section 301の扱いと、どの品目が譲歩対象になるかを見る必要がある。",
+          "en": "The key issues are the handling of Section 301 and which products become bargaining chips."
+        },
+        {
+          "ja": "発表が遅れれば、市場は再び「合意は近いがまだ未確定」と読むだろう。",
+          "en": "If the announcement is delayed, markets will again read it as \"close, but not final.\""
+        }
+      ]
+    },
+    {
+      "id": "nvidia-launches-a-new-chip-for-ai-pcs",
+      "heading": {
+        "ja": "Nvidia、AI PC向け新チップを投入",
+        "en": "Nvidia launches a new chip for AI PCs"
+      },
+      "pairs": [
+        {
+          "ja": "Nvidiaは個人向けPCでAI処理を前面に出す新チップを打ち出した。",
+          "en": "Nvidia rolled out a new chip that puts AI processing front and center on consumer PCs."
+        },
+        {
+          "ja": "クラウド依存だけでなく、端末内で推論する流れがさらに強くなっている。",
+          "en": "The shift toward on-device inference is strengthening alongside cloud-based AI."
+        },
+        {
+          "ja": "AI PCは、半導体、OS、アプリの設計をまとめて変える可能性がある。",
+          "en": "AI PCs could reshape semiconductor, OS, and application design at the same time."
+        },
+        {
+          "ja": "端末内AIが進めば、クラウド課金型とローカル処理型の競争が一段と鮮明になる。",
+          "en": "If on-device AI keeps growing, the competition between cloud-billed and local processing models will become clearer."
+        },
+        {
+          "ja": "実際のベンチマーク、価格、搭載PCの出荷時期が次の焦点だ。",
+          "en": "The next focus is real benchmarks, pricing, and when the PCs carrying the chip will ship."
+        },
+        {
+          "ja": "ソフト側が追随できるかで、単なる発表か市場拡大の起点かが分かれる。",
+          "en": "Whether software follows through will determine whether this is just an announcement or the start of a larger market shift."
+        }
+      ]
+    },
+    {
+      "id": "the-us-closes-a-loophole-in-nvidias-china-shipments",
+      "heading": {
+        "ja": "対中向けNvidiaチップの抜け穴を米国が封じる",
+        "en": "The U.S. closes a loophole in Nvidia's China shipments"
+      },
+      "pairs": [
+        {
+          "ja": "米国は、中国企業向けのNvidia AIチップが中国国外から流れる抜け穴をふさぐ方向に動いた。",
+          "en": "The U.S. is moving to close the loophole that let Nvidia AI chips for Chinese firms flow in from outside China."
+        },
+        {
+          "ja": "直接輸出だけでなく、迂回ルートまで規制対象を広げる流れだ。",
+          "en": "The effort expands restrictions from direct exports to rerouted supply paths as well."
+        },
+        {
+          "ja": "米中のAI競争が、製品性能ではなく供給経路の管理まで含む段階に入ったことを示す。",
+          "en": "This shows the U.S.-China AI race has entered a stage that includes managing supply routes, not just product performance."
+        },
+        {
+          "ja": "半導体メーカーと流通業者のコンプライアンス負担も重くなる。",
+          "en": "It also raises compliance burdens for semiconductor makers and distributors."
+        },
+        {
+          "ja": "実際の規制文言と執行範囲がどこまで広がるかが重要だ。",
+          "en": "The important question is how far the actual rule language and enforcement scope will go."
+        },
+        {
+          "ja": "中国側が国産代替を急げば、供給網の分断はさらに進む。",
+          "en": "If China speeds up domestic substitutes, supply-chain fragmentation will deepen further."
+        }
+      ]
+    },
+    {
+      "id": "anthropic-files-confidentially-for-an-ipo",
+      "heading": {
+        "ja": "Anthropic、IPOに向けて機密申請",
+        "en": "Anthropic files confidentially for an IPO"
+      },
+      "pairs": [
+        {
+          "ja": "Anthropicが米国でのIPOに向けて機密申請を行ったと報じられた。",
+          "en": "Anthropic reportedly filed confidentially in preparation for a U.S. IPO."
+        },
+        {
+          "ja": "上場時期や評価額はまだ公開されていないが、準備は具体化している。",
+          "en": "The timing and valuation are not public yet, but the preparations are becoming concrete."
+        },
+        {
+          "ja": "生成AI企業の資金調達は、未上場の大型調達から公開市場への移行期に入っている。",
+          "en": "Funding for generative AI companies is moving from large private rounds toward the public market."
+        },
+        {
+          "ja": "OpenAIとの競争だけでなく、投資家の評価軸もより厳しくなる。",
+          "en": "That raises the bar not just against OpenAI, but also in how investors evaluate the companies."
+        },
+        {
+          "ja": "申請書の公開時期、売上成長、赤字縮小の見通しが焦点だ。",
+          "en": "The focus is on when the filing becomes public, as well as revenue growth and the outlook for narrowing losses."
+        },
+        {
+          "ja": "上場条件が厳しければ、AIブームの持続力を測る試金石になる。",
+          "en": "If the listing conditions are tough, it will become a test of how durable the AI boom really is."
+        }
+      ]
+    },
+    {
+      "id": "eu-proposal-would-narrow-access-for-u-s-cloud-giants-in-strategic-procurement",
+      "heading": {
+        "ja": "EU、戦略調達で米クラウド大手を絞り込む案",
+        "en": "EU proposal would narrow access for U.S. cloud giants in strategic procurement"
+      },
+      "pairs": [
+        {
+          "ja": "EUは、戦略的なクラウド調達でAmazonやGoogleなどの米大手へのアクセスを狭める方向を検討している。",
+          "en": "The EU is considering a direction that would narrow access for Amazon, Google, and other U.S. cloud giants in strategic cloud procurement."
+        },
+        {
+          "ja": "データ主権と安全保障を優先する姿勢が強い。",
+          "en": "The bloc is clearly leaning toward data sovereignty and security."
+        },
+        {
+          "ja": "クラウドはAI、行政、産業データの土台なので、調達条件は市場シェアに直結する。",
+          "en": "Cloud is the foundation for AI, government, and industrial data, so procurement conditions translate directly into market share."
+        },
+        {
+          "ja": "規制が強まれば、欧州内の代替事業者に追い風が吹く。",
+          "en": "If rules tighten, European alternatives are likely to get a lift."
+        },
+        {
+          "ja": "最終案にどこまで制限が入るか、そして加盟国が足並みをそろえるかを見たい。",
+          "en": "Watch how much restriction ends up in the final draft and whether member states line up behind it."
+        },
+        {
+          "ja": "米欧のデジタル通商摩擦に発展する可能性もある。",
+          "en": "The issue could also evolve into a transatlantic digital-trade friction point."
+        }
+      ]
+    },
+    {
+      "id": "gas-leak-at-sk-hynix-plant-raises-supply-chain-concerns",
+      "heading": {
+        "ja": "SK hynix工場でガス漏れ、供給網に警戒",
+        "en": "Gas leak at SK Hynix plant raises supply-chain concerns"
+      },
+      "pairs": [
+        {
+          "ja": "SK hynixの工場でガス漏れが報じられ、作業員の被曝や稼働への影響が確認された。",
+          "en": "A gas leak was reported at an SK Hynix plant, and the exposure of workers as well as the effect on operations were confirmed."
+        },
+        {
+          "ja": "半導体製造は微細工程が多く、短時間の事故でも生産計画に響きやすい。",
+          "en": "Semiconductor manufacturing involves many fine-grained steps, so even a short incident can affect production plans."
+        },
+        {
+          "ja": "メモリ半導体はAIサーバーやPCの需要増で注目されており、工場トラブルは供給懸念に直結する。",
+          "en": "Memory chips are in focus because demand for AI servers and PCs is rising, and plant trouble directly feeds supply concerns."
+        },
+        {
+          "ja": "個別事故でも、部材・装置・保険の見直しが連鎖する。",
+          "en": "Even a single accident can trigger reviews of components, equipment, and insurance."
+        },
+        {
+          "ja": "稼働停止の有無、復旧見通し、顧客向け納期への影響が焦点になる。",
+          "en": "The key questions are whether operations were halted, how fast recovery is expected, and whether customer delivery schedules are affected."
+        },
+        {
+          "ja": "事故の規模次第では、メモリ価格や在庫戦略にも波及する。",
+          "en": "Depending on the scale of the accident, memory prices and inventory strategy could also be affected."
+        }
+      ]
+    },
+    {
+      "id": "cross-cutting-view",
+      "heading": {
+        "ja": "横断的な見立て",
+        "en": "Cross-cutting view"
+      },
+      "pairs": [
+        {
+          "ja": "イラン緊張は政治だけでなく、原油、為替、株式の順に速く波及している。",
+          "en": "Iran tensions are spreading faster than politics into oil, FX, and stocks."
+        },
+        {
+          "ja": "地政学リスクがそのままインフレと企業コストの再上昇につながる構図だ。",
+          "en": "Geopolitical risk is directly feeding back into inflation and higher corporate costs."
+        },
+        {
+          "ja": "AI関連では、Nvidiaの製品投入とAnthropicのIPO準備が「資金流入の継続」を示す一方、米国の対中規制とEUの調達制限が「用途と供給経路の統制」を強めている。",
+          "en": "In AI, Nvidia's product launch and Anthropic's IPO preparations signal continued capital inflows, while U.S. restrictions on China and EU procurement limits are strengthening control over use cases and supply routes."
+        },
+        {
+          "ja": "米中対立は関税や輸出規制だけでなく、軍事対話と海域巡回まで含む多層構造になっている。",
+          "en": "U.S.-China rivalry has become multi-layered, spanning tariffs, export controls, military dialogue, and patrols at sea."
+        },
+        {
+          "ja": "誤算回避の対話が残るかどうかが、次の大きな分岐点だ。",
+          "en": "Whether channels for miscalculation avoidance survive is the next major inflection point."
+        },
+        {
+          "ja": "通商面では、米印協議の進展が中国依存の分散先を広げる可能性がある。",
+          "en": "On trade, progress in U.S.-India talks could widen the set of alternatives to China dependency."
+        },
+        {
+          "ja": "サプライチェーン再編は、関税や安全保障と切り離しては見られない。",
+          "en": "Supply-chain realignment cannot be separated from tariffs or security."
+        }
+      ]
+    },
+    {
+      "id": "items-to-track",
+      "heading": {
+        "ja": "追跡すべき未確定事項",
+        "en": "Items to track"
+      },
+      "pairs": [
+        {
+          "ja": "米イラン協議が限定合意に向かうのか、協議継続のまま不透明感が残るのか。",
+          "en": "Whether U.S.-Iran talks move toward a limited deal or remain uncertain."
+        },
+        {
+          "ja": "原油高が一時的なリスクプレミアムで終わるのか、輸送・保険・在庫に実需の変化を起こすのか。",
+          "en": "Whether higher oil prices end as a temporary risk premium or trigger real changes in transport, insurance, and inventories."
+        },
+        {
+          "ja": "Nvidia向けの対中規制が、第三国経由の供給網までどこまで捕捉するのか。",
+          "en": "How far China-focused restrictions on Nvidia catch supply chains routed through third countries."
+        },
+        {
+          "ja": "EUのクラウド調達ルールが、実際の執行段階でどの程度厳格化されるのか。",
+          "en": "How strict the EU cloud procurement rules become in the actual enforcement stage."
+        },
+        {
+          "ja": "米印通商協議が関税調整でまとまるのか、実務協定の発表が来週以降にずれ込むのか。",
+          "en": "Whether U.S.-India talks reach agreement on tariffs or whether the practical deal slips into next week or later."
+        }
+      ]
+    }
+  ]
+}

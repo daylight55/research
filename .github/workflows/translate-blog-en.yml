@@ -69,6 +69,7 @@ jobs:
           model: gpt-5.4-mini
           effort: medium
           allow-bots: true
+          allow-bot-users: daylight55-research-queue[bot]
 
       - name: Restore Node for site build
         if: steps.prepare_prompt.outputs.missing_count != '0'
@@ -83,7 +84,11 @@ jobs:
           set -euo pipefail
           git diff --check
           ! grep -RInE '\b(TBD|TODO|FIXME|未定|要確認)\b' articles/report articles/news
+          node ops/scripts/validate-mix-alignment.mjs --changed
           pnpm build
+
+      - name: Validate existing mixed article alignment
+        run: node ops/scripts/validate-mix-alignment.mjs
 
       - name: Create translation pull request
         if: steps.prepare_prompt.outputs.missing_count != '0'

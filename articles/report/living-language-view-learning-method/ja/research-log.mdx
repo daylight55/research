@@ -1,0 +1,76 @@
+---
+title: '調査プロセス: 生きた言語観を作る第二言語学習法'
+---
+
+## 読み方
+
+このログは、本文の結論を繰り返すためではなく、どの理論を採用し、どの論点を `公表情報からの推定` として残したかを確認するための公開メモである。第二言語学習を、生活文脈・出力・修正・再利用の循環としてまとめるにあたり、採用した理論と除外した情報を分けて記録する。
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- issue number: `#18`
+- issue title: `生きた言語観を作る第二言語学習法を調査する`
+- publishable request summary: 文法暗記や翻訳ではなく、自分の経験・感情・判断を第二言語で表現できるようになる学習設計を調べる。コミュニカティブ・アプローチ、task-based learning、noticing、output hypothesis を整理し、生活文脈から語彙・表現・構文を獲得する方法、AI 添削や会話 AI の利点と危険、週次プロトコルまでまとめる。
+- scope constraints: 一次情報や信頼できる公開資料を優先する。重要な論点は最新の研究で確認する。主張、根拠、限界、実務含意を分ける。可能なら図解を入れる。
+- inferred deliverable: 日本語本文を正本とする公開レポート、英語版、MIX 対応、研究ログの同時整備。
+
+## 調査目的
+
+第二言語学習を、語彙や文法の積み上げではなく、`生活の中で言いたいことを第二言語に載せ替え、修正し、再利用する` 過程として説明できるかを確認した。特に、教室内の理論と教室外の実践をつなげ、AI は補助にとどめる線引きを公開可能な形で示すことを目的にした。
+
+## 調査設計
+
+| 観点 | 確認したこと | 本文への反映 |
+| --- | --- | --- |
+| 教授法 | communicative approach, task-based language teaching | 生活文脈から始めるタスク設計に接続 |
+| 認知過程 | noticing, output, interaction, feedback | 3章で分けて整理 |
+| 生活文脈 | informal learning, extramural English, purpose matters | 4章の比較と週次プロトコルに反映 |
+| AI 活用 | 会話 AI, 自動添削, 生成 AI の利点と危険 | 5章で利点とリスクを対比 |
+
+## 採用した主要資料
+
+- Ellis, *Task-based research and language pedagogy*
+- Kim & Namkung, *Methodological characteristics in technology-mediated task-based language teaching research*
+- Truscott & Sharwood Smith, *The role of noticing in second language acquisition*
+- Izumi et al., *The role of output in second language acquisition*
+- Long, *The role of the linguistic environment in second language acquisition*
+- Brown et al., *Corrective feedback in second language writing*
+- Lai & Wang, *Online informal learning of English and receptive vocabulary knowledge: purpose matters*
+- Arndt & Kusyk, *Informal second language learning*
+- Goh & Aryadoust, *Developing and assessing second language listening and speaking: does AI make it better?*
+- Pegrum, *From revolution to evolution: what generative AI really means for language learning*
+
+採用理由は、`使う理由を作る教授法` `気づきと出力` `外部とのやり取り` `生活文脈` `AI の利点と危険` を、一つの学習設計に接続しやすいからである。
+
+## 採用しなかった情報
+
+- 学習アプリの宣伝文句は、効果の検証条件が追えないため採用しなかった。
+- 個人ブログの体験談は、再現条件と比較対象が不明なので本文の根拠には使わなかった。
+- AI の能力を過大評価する紹介記事は、誤答や標準化のリスクを十分に扱っていないため外した。
+- 文法説明だけで完結する教材論は、生活文脈からの獲得という主題に戻れないため外した。
+
+## 本文に残した推定
+
+- コミュニカティブ・アプローチは、task-based learning によって実装しやすくなると整理した。
+- 生活文脈からの獲得は、単なる雑談ではなく、意味・目的・再利用がそろったタスクとして扱った。
+- AI は有効だが、最終判定者ではなく、候補生成と修正補助の役割に置いた。
+- 週次学習プロトコルは、単一研究が規定した形式ではなく、複数の研究を継続可能な粒度にまとめた実務上の推定である。
+
+## 残課題
+
+- 熟達度別に、入力・出力・フィードバックの比率をどう変えるか。
+- 英会話 AI の修正が、長期的な流暢さや自発性にどこまで転移するか。
+- 生活文脈の学習が、汎用表現や未知場面への応用にどうつながるか。
+- AI 添削を使う場合に、どの程度の人間レビューが必要か。
+
+## 更新が必要になる条件
+
+- task-based language teaching や corrective feedback の新しいメタ分析で、学習設計の推奨比率が変わる
+- informal learning や extramural English の研究で、目的の役割が大きく再定義される
+- 生成 AI の hallucination、privacy、standardization に関する実証が進み、AI 利用の安全境界が変わる

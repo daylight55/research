@@ -139,7 +139,7 @@ jobs:
             echo
             echo "## Selected Issue Context"
             echo
-            jq -r '"- Issue: #\(.number) \(.title)\n- URL: \(.url)\n- Labels: \([.labels[].name] | join(", "))"' ops/codex/runtime/selected-issue.json
+            jq -r '"- Issue: #\(.number) \(.title)\n- Labels: \([.labels[].name] | join(", "))"' ops/codex/runtime/selected-issue.json
             echo
             echo "### Issue Body"
             echo
@@ -148,8 +148,8 @@ jobs:
             echo "## Automation Metadata"
             echo
             echo "- Model: ${OPENAI_MODEL}"
-            echo "- Required skill: [technical-research-report](../../.codex/skills/technical-research-report/SKILL.md)"
-            echo "- Prompt source: [ops/codex/prompts/daily-issue-research.md](../../ops/codex/prompts/daily-issue-research.md)"
+            echo "- Required skill: [research-report](https://github.com/${GITHUB_REPOSITORY}/blob/main/.codex/skills/research-report/SKILL.md)"
+            echo "- Prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/${GITHUB_REPOSITORY}/blob/main/ops/codex/prompts/daily-issue-research.md)"
           } >> ops/codex/runtime/daily-research-prompt.md
 
       - name: Record Daily CI start time
@@ -286,6 +286,10 @@ jobs:
         if: steps.diff_check.outputs.has_changes == 'true'
         run: pnpm test:hero-images
 
+      - name: Verify generated mixed article alignment
+        if: steps.diff_check.outputs.has_changes == 'true'
+        run: node ops/scripts/validate-mix-alignment.mjs --changed
+
       - name: Build generated site
         if: steps.diff_check.outputs.has_changes == 'true'
         run: pnpm build
@@ -334,6 +338,7 @@ jobs:
           git switch -c "${branch}"
           git add -A
           git commit -m "Add daily research report"
+          head_ref_oid="$(git rev-parse HEAD)"
           gh api \
             --method POST \
             "repos/${GITHUB_REPOSITORY}/git/refs" \
@@ -382,6 +387,7 @@ jobs:
             echo "pr_number=${pr_number}"
             echo "branch=${branch}"
             echo "base_ref_oid=${base_ref_oid}"
+            echo "head_ref_oid=${head_ref_oid}"
           } >> "${GITHUB_OUTPUT}"
 
       - name: Comment OpenAI usage on PR
@@ -405,6 +411,7 @@ jobs:
           GH_TOKEN: ${{ steps.research_app_token.outputs.token }}
           PR_NUMBER: ${{ steps.create_pr.outputs.pr_number }}
           PREVIEW_BRANCH: ${{ steps.create_pr.outputs.branch }}
+          PREVIEW_CHECKOUT_REF: ${{ steps.create_pr.outputs.head_ref_oid }}
         run: |
           set -euo pipefail
 
@@ -412,7 +419,7 @@ jobs:
             --ref main \
             -f pr_number="${PR_NUMBER}" \
             -f preview_branch="${PREVIEW_BRANCH}" \
-            -f checkout_ref="${PREVIEW_BRANCH}"
+            -f checkout_ref="${PREVIEW_CHECKOUT_REF}"
 
       - name: Mark issue with PR
         if: steps.create_pr.outputs.pr_url != ''

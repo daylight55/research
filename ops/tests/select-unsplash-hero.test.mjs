@@ -1,10 +1,17 @@
 import { strict as assert } from 'node:assert'
+import { execFileSync } from 'node:child_process'
+import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
 import { test } from 'node:test'
 
 import {
+	articleSlugFromFile,
 	buildRetryQueries,
+	existingHeroState,
 	imageHash,
-	selectUniqueUnsplashPhoto
+	selectUniqueUnsplashPhoto,
+	syncLocalizedHeroFields
 } from '../scripts/select-unsplash-hero.mjs'
 
 test('buildRetryQueries prioritizes news-specific people and organizations before generic news terms', () => {
@@ -21,6 +28,17 @@ test('buildRetryQueries prioritizes news-specific people and organizations befor
 			'politics economy technology',
 			'global newsroom editorial'
 		]
+	)
+})
+
+test('articleSlugFromFile derives the article slug rather than the locale directory', () => {
+	assert.equal(
+		articleSlugFromFile('articles/news/daily-trends-2026-05-28/en/index.mdx'),
+		'daily-trends-2026-05-28'
+	)
+	assert.equal(
+		articleSlugFromFile('articles/report/cognitive-schema-update-language-learning/ja/index.mdx'),
+		'cognitive-schema-update-language-learning'
 	)
 })
 
@@ -92,4 +110,104 @@ test('selectUniqueUnsplashPhoto rejects previously used Unsplash photo ids witho
 
 	assert.equal(selected.photo.id, 'new-photo')
 	assert.equal(downloads, 1)
+})
+
+test('existingHeroState treats an untracked current article as duplicate when it reuses a tracked hero', () => {
+	const previousCwd = process.cwd()
+	const tempDir = mkdtempSync(join(tmpdir(), 'hero-state-'))
+
+	try {
+		process.chdir(tempDir)
+		execFileSync('git', ['init', '--quiet'])
+		mkdirSync('src/assets/images/hero', { recursive: true })
+		mkdirSync('articles/report/existing/en', { recursive: true })
+		mkdirSync('articles/news/generated/en', { recursive: true })
+		writeFileSync('src/assets/images/hero/en.jpg', 'same-image')
+		writeFileSync(
+			'articles/report/existing/en/index.mdx',
+			`---
+title: Existing
+contentType: report
+heroImage: '../../../../src/assets/images/hero/en.jpg'
+draft: false
+---
+`
+		)
+		writeFileSync(
+			'articles/news/generated/en/index.mdx',
+			`---
+title: Generated
+contentType: news
+heroImage: '../../../../src/assets/images/hero/en.jpg'
+heroImageQuery: generated news
+draft: false
+---
+`
+		)
+		execFileSync('git', [
+			'add',
+			'articles/report/existing/en/index.mdx',
+			'src/assets/images/hero/en.jpg'
+		])
+
+		assert.equal(
+			existingHeroState({ currentFile: 'articles/news/generated/en/index.mdx' })
+				.duplicateCurrentHero,
+			true
+		)
+	} finally {
+		process.chdir(previousCwd)
+		rmSync(tempDir, { recursive: true, force: true })
+	}
+})
+
+test('syncLocalizedHeroFields copies selected Unsplash metadata across locales', async () => {
+	const tempDir = mkdtempSync(join(tmpdir(), 'hero-sync-'))
+
+	try {
+		const sourceFile = join(tempDir, 'articles/news/generated/en/index.mdx')
+		const targetFile = join(tempDir, 'articles/news/generated/ja/index.mdx')
+		mkdirSync(join(tempDir, 'articles/news/generated/en'), { recursive: true })
+		mkdirSync(join(tempDir, 'articles/news/generated/ja'), { recursive: true })
+		writeFileSync(
+			sourceFile,
+			`---
+title: English
+heroImage: '../../../../src/assets/images/hero/generated.jpg'
+heroImageCredit: 'Photo by Shared Author on Unsplash'
+heroImageCreditUrl: 'https://unsplash.com/@shared?utm_source=daylight_research_atlas'
+heroImageSourceId: 'unsplash:shared-photo'
+draft: false
+---
+`
+		)
+		writeFileSync(
+			targetFile,
+			`---
+title: Japanese
+heroImage: '../../../../src/assets/images/hero/old.jpg'
+heroImageCredit: 'Photo by Old Author on Unsplash'
+heroImageCreditUrl: 'https://unsplash.com/@old?utm_source=daylight_research_atlas'
+heroImageSourceId: 'unsplash:old-photo'
+draft: false
+---
+`
+		)
+
+		await syncLocalizedHeroFields(sourceFile, [sourceFile, targetFile])
+
+		const target = readFileSync(targetFile, 'utf8')
+		assert.match(
+			target,
+			/heroImage: '\.\.\/\.\.\/\.\.\/\.\.\/src\/assets\/images\/hero\/generated\.jpg'/
+		)
+		assert.match(target, /heroImageCredit: 'Photo by Shared Author on Unsplash'/)
+		assert.match(
+			target,
+			/heroImageCreditUrl: 'https:\/\/unsplash\.com\/@shared\?utm_source=daylight_research_atlas'/
+		)
+		assert.match(target, /heroImageSourceId: 'unsplash:shared-photo'/)
+	} finally {
+		rmSync(tempDir, { recursive: true, force: true })
+	}
 })

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Belfast</title>
+  <desc id="d">Stylized card for the Belfast unrest story.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="980" cy="160" r="170" fill="#99f6e4" opacity="0.20"/>
+  <circle cx="900" cy="490" r="210" fill="#ccfbf1" opacity="0.12"/>
+  <text x="70" y="150" fill="#ccfbf1" font-family="Arial, sans-serif" font-size="34" letter-spacing="2">POLITICS</text>
+  <text x="70" y="285" fill="#ffffff" font-family="Arial, sans-serif" font-size="78" font-weight="700">BELFAST</text>
+  <text x="70" y="350" fill="#ecfeff" font-family="Arial, sans-serif" font-size="34">Unrest and warnings</text>
+</svg>

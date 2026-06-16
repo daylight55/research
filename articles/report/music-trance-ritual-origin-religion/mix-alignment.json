@@ -1,0 +1,235 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "文化人類学的に価値のある研究テーマは、現在のレイブ的トランス集団が「原始宗教」の残存であるかどうかではない。",
+					"en": "The culturally useful research theme is not whether present-day rave-like trance groups are remnants of \"primitive religion.\""
+				},
+				{
+					"ja": "その枠組みは、生きている共同体を進化段階の標本にしてしまう。",
+					"en": "That framing would turn living communities into evolutionary specimens."
+				},
+				{
+					"ja": "より強い問いは、音楽による集団的変性意識がどの条件で宗教的意味、治癒、社会的記憶、持続的な儀礼形式になるのか、である。",
+					"en": "The stronger question is this: > Under what conditions does music-induced collective altered consciousness become religious meaning, healing, social memory, and durable ritual form?"
+				},
+				{
+					"ja": "答えには三つの層が必要である。",
+					"en": "The answer requires three layers."
+				},
+				{
+					"ja": "第一に、反復音、踊り、詠唱、断食、睡眠不足、薬物によって変性意識を育てる現代の集団や場は存在する。",
+					"en": "First, there are contemporary groups and scenes in which repetitive sound, dance, chant, fasting, sleep loss, or drugs are used to cultivate altered states."
+				},
+				{
+					"ja": "Gnawa、Mevlevi Sema、zār、シャーマニックな実践、charismatic worship、rave、psytrance festival は比較対象に入るが、同じ意味を持つわけではない。",
+					"en": "Gnawa, Mevlevi Sema, zār, shamanic practices, charismatic worship, rave, and psytrance festivals all belong in the comparison, but they do not mean the same thing."
+				},
+				{
+					"ja": "第二に、それらは初期宗教の化石ではない。",
+					"en": "Second, these cases are not fossils of early religion."
+				},
+				{
+					"ja": "似た身体的アフォーダンスが異なる制度へ組み込まれる道筋を示している。",
+					"en": "They show how similar bodily affordances can be institutionalized in different ways."
+				},
+				{
+					"ja": "第三に、生理学は重要だが、解釈を決定しない。",
+					"en": "Third, physiology matters, but it does not settle interpretation."
+				},
+				{
+					"ja": "リズム、同期、運動、注意、報酬、覚醒、痛覚閾値は強い状態を支えうるが、共同体がそれを possession、神秘修行、神の臨在、治癒、畏怖、festival vibe のどれとして読むかを決める。",
+					"en": "Rhythm, synchrony, exertion, attention, reward, arousal, and pain threshold can help produce powerful states; communities decide whether those states count as spirit possession, mystical discipline, divine presence, healing, awe, or a festival vibe."
+				},
+				{
+					"ja": "これは音が自動的に宗教を生むという単線的な主張ではない。",
+					"en": "This is not a linear claim that sound automatically causes religion."
+				},
+				{
+					"ja": "音が身体を揃え、揃った身体が異常な状態に入り、共同体がそれを解釈し、反復された解釈が儀礼制度になる、という研究モデルである。",
+					"en": "It is a research model: sound can coordinate bodies; coordinated bodies can enter unusual states; communities interpret those states; repeated interpretation can become ritual institution."
+				}
+			]
+		},
+		{
+			"id": "reframing-the-question",
+			"heading": {
+				"ja": "2. 問いの立て直し",
+				"en": "2. Reframing The Question"
+			},
+			"pairs": [
+				{
+					"ja": "「原始宗教」は歴史的に重い言葉である。",
+					"en": "\"Primitive religion\" is a historically loaded phrase."
+				},
+				{
+					"ja": "現代人類学は、その枠組みをそのまま継承できない。",
+					"en": "Contemporary anthropology cannot simply inherit that frame, because it often treats present communities as survivals of an earlier human stage rather than as historical actors shaped by migration, slavery, urbanization, media, law, commerce, and self-interpretation."
+				},
+				{
+					"ja": "したがって研究問題は、メカニズムと制度の問題として定式化すべきである。",
+					"en": "The research problem should therefore be stated as a mechanism and institution problem: > How do music-induced trance practices translate bodily synchrony and altered awareness into spirit relations, healing authority, social bonding, or self-transformation?"
+				},
+				{
+					"ja": "レイブは通常、教義宗教ではないからこそ重要な比較対象である。",
+					"en": "Rave is valuable here precisely because it is not usually a doctrinal religion."
+				},
+				{
+					"ja": "レイブや psytrance festival は、反復音、夜通しの踊り、睡眠不足、向精神薬、閾的空間、強い集団感情を結びつけうる。",
+					"en": "Rave and psytrance festivals can combine repetitive sound, night-long dance, sleep loss, psychoactive drugs, threshold spaces, and strong group emotion."
+				},
+				{
+					"ja": "それらは明示的な宗教儀礼と、世俗的または準宗教的な集団変容の形式を比較できるようにする。",
+					"en": "They allow comparison between explicitly religious ritual and secular or para-religious forms of collective transformation."
+				}
+			]
+		},
+		{
+			"id": "contemporary-comparative-cases",
+			"heading": {
+				"ja": "3. 現在存在する比較対象",
+				"en": "3. Contemporary Comparative Cases"
+			},
+			"pairs": [
+				{
+					"ja": "現代の音楽誘導トランスは一つの型に還元できない。",
+					"en": "Contemporary music-induced trance cannot be reduced to one type."
+				},
+				{
+					"ja": "比較には、霊的所有、訓練された神秘主義、治癒、カリスマ的注意、festival transformation を分ける必要がある。",
+					"en": "A workable comparison needs to separate spirit possession, disciplined mysticism, healing, charismatic attention, and festival transformation."
+				},
+				{
+					"ja": "Gnawa は最も明瞭な現代事例の一つである。",
+					"en": "Gnawa is one of the clearest contemporary cases."
+				},
+				{
+					"ja": "UNESCO は Gnawa を、世俗と聖性を混ぜる音楽イベント、友愛実践、治癒儀礼の集合として説明している。",
+					"en": "UNESCO describes it as a set of musical events, fraternal practices, and therapeutic rituals mixing the secular and the sacred, with urban therapeutic possession rituals through all-night rhythm and trance ceremonies."
+				},
+				{
+					"ja": "Mevlevi Sema は重要な対照を与える。",
+					"en": "Mevlevi Sema provides an important contrast."
+				},
+				{
+					"ja": "それはレイブ的な解放ではなく、訓練された儀礼的規律である。",
+					"en": "It is not a rave-like release but a trained ceremonial discipline."
+				},
+				{
+					"ja": "UNESCO は Mevleviye を、1273年にKonyaで創設され、現在も世界のトルコ系共同体で実践される禁欲的Sufi教団として説明する。",
+					"en": "UNESCO describes the Mevleviye as an ascetic Sufi order founded in 1273 in Konya and practiced today in Turkish communities worldwide, especially Konya and Istanbul."
+				},
+				{
+					"ja": "zār は変容を通じた持続を示すため有用である。",
+					"en": "zār is useful because it shows persistence through transformation."
+				},
+				{
+					"ja": "2025年の OpenEdition 論文は、1932年の Arab Music Congress から村落実践者の録音、スマートフォン流通まで、Cairo と Nile Delta の zār 録音史をたどる。",
+					"en": "A 2025 OpenEdition article traces Cairo and Nile Delta zār recordings from the 1932 Arab Music Congress to village practitioner recordings from the 1970s through 1990s and contemporary circulation on smartphones."
+				},
+				{
+					"ja": "重要なのは、zār が静的ではないという点である。",
+					"en": "The point is not that zār is static."
+				},
+				{
+					"ja": "公共空間と私的空間、聖なる空間と録音、周縁化と新メディアの間を移動しながら持続している。",
+					"en": "It persists by moving between public and private space, sacred space and recorded sound, marginalization and new media."
+				},
+				{
+					"ja": "レイブと psytrance は宗教という分類へ無理に入れずに比較に残すべきである。",
+					"en": "Rave and psytrance should stay in the comparison without being forced into the category of religion."
+				},
+				{
+					"ja": "St John は、psytrance festival を、technology、New Age spirituality、liminality、collective effervescence が交差する neotrance として分析する。",
+					"en": "St John analyzes psytrance festivals as a form of \"neotrance,\" where technology, New Age spirituality, liminality, and collective effervescence intersect."
+				}
+			]
+		},
+		{
+			"id": "historical-background",
+			"heading": {
+				"ja": "4. 歴史的背景: 連続ではなく収束",
+				"en": "4. Historical Background: Convergence, Not Survival"
+			},
+			"pairs": [
+				{
+					"ja": "これらの事例は一つの連続した系譜を形成しない。",
+					"en": "These cases do not form one continuous lineage."
+				},
+				{
+					"ja": "Mevlevi Sema はSufi修行に属する。",
+					"en": "Mevlevi Sema belongs to Sufi discipline."
+				},
+				{
+					"ja": "Gnawa は奴隷制、Sufi実践、都市祭礼、治癒儀礼を横断する。",
+					"en": "Gnawa crosses slavery, Sufi practice, urban festival culture, and healing ritual."
+				},
+				{
+					"ja": "zār は録音、公共空間の制約、スマートフォンによって作り替えられてきた。",
+					"en": "zār has been reshaped by sound recording, public-space constraints, and smartphones."
+				},
+				{
+					"ja": "Rave は20世紀後半の電子音響、club culture、counterculture、薬物政治から生まれた。",
+					"en": "Rave emerged from late twentieth-century electronic sound, club culture, counterculture, and drug politics."
+				},
+				{
+					"ja": "よりよい仮説は収束である。",
+					"en": "The better hypothesis is convergence."
+				},
+				{
+					"ja": "人間の身体は、反復リズム、同期運動、呼吸、暗闇、疲労、期待、注意、大音量に反応する。",
+					"en": "Human bodies respond to repetitive rhythm, synchronized movement, breathing, darkness, fatigue, expectation, attention, and loud sound."
+				},
+				{
+					"ja": "社会はそれらの反応を、霊、祖先、治癒、祈り、自己変容、友情、抵抗、商業という語彙で解釈する。",
+					"en": "Societies then interpret those responses through different vocabularies: spirits, ancestors, healing, prayer, self-transformation, friendship, resistance, or commerce."
+				},
+				{
+					"ja": "Rouget の古典的議論はなお決定的である。",
+					"en": "Rouget's classic argument remains decisive."
+				},
+				{
+					"ja": "彼は儀礼トランスがしばしば音楽と結び付くことを認めつつ、音楽とトランスを結ぶ普遍法則を退けた。",
+					"en": "He accepted that ritual trance is often associated with music, but rejected a universal law linking music and trance."
+				},
+				{
+					"ja": "両者の関係は意味体系と文化的行動に依存する。",
+					"en": "The relation depends on systems of meaning and cultural behavior."
+				},
+				{
+					"ja": "Becker はこの問題を、音楽、emotion、trancing の科学的・文化的アプローチの接合へ広げる。",
+					"en": "Becker extends this problem by joining scientific and cultural approaches to music, emotion, and trancing."
+				},
+				{
+					"ja": "これは「宗教の起源」をどう研究すべきかを変える。",
+					"en": "This changes how \"origins of religion\" should be studied."
+				},
+				{
+					"ja": "宗教は教義、聖典、神学として始まる必要はない。",
+					"en": "Religion need not begin as doctrine, scripture, or theology."
+				},
+				{
+					"ja": "身体、音、場、専門家、禁忌、治癒、贈与、死、霊、記憶の反復的な連結としてモデル化できる。",
+					"en": "It may also be modeled as a repeated linkage among body, sound, place, specialists, taboo, healing, gift, death, spirit, and memory."
+				},
+				{
+					"ja": "それは宗教の真の起源の証明ではない。",
+					"en": "That is not proof of the true origin of religion."
+				},
+				{
+					"ja": "それは、宗教制度が形成されうる条件の比較モデルである。",
+					"en": "It is a comparative model of conditions under which religious institutions can form."
+				}
+			]
+		}
+	]
+}

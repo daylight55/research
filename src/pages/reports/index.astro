@@ -2,10 +2,13 @@
 import BaseLayout from '@/layouts/BaseLayout'
 import ListCategories from '@/components/ListCategories'
 import ListPosts from '@/components/ListPosts'
+import Pagination from '@/components/Pagination'
 import TitlePage from '@/components/TitlePage'
-import { getReportPosts, withBase } from '@/utils'
+import { createArticleListPage, getReportPosts, withBase } from '@/utils'
 
 const reportPosts = await getReportPosts()
+const page = createArticleListPage(reportPosts, 'reports')
+const posts = page.data
 ---
 
 <BaseLayout title='Reports'>
@@ -24,5 +27,6 @@ const reportPosts = await getReportPosts()
 	<div class='mb-6 min-w-0'>
 		<ListCategories />
 	</div>
-	<ListPosts posts={reportPosts} />
+	<ListPosts posts={posts} />
+	<Pagination page={page} />
 </BaseLayout>

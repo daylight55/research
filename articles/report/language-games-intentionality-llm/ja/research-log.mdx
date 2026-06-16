@@ -1,0 +1,73 @@
+---
+title: '調査プロセス: 言語ゲーム・志向性・LLM'
+---
+
+## 読み方
+
+この調査ログは、本文の主張がどの文献選定と判断に基づくかを残すための記録である。網羅的なシステマティックレビューではなく、ユーザーの問い「言語ゲームを志向性から論じて、LLMと重ねて論じている論文はあるか」に対する、実務向けの文献整理として設計した。
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- 調査対象: 言語ゲーム・志向性・LLM
+- 依頼内容: ウィトゲンシュタインの言語ゲーム、志向性、LLMをめぐる近年の論文を整理し、人間-LLM相互作用をどう捉えるべきかを検討する。
+- 指定カテゴリ・slug: `philosophy-knowledge` / `language-games-intentionality-llm`
+- 関連タグ: Wittgenstein, Intentionality, LLM, Philosophy of Language
+- 主要な制約: 一次情報または信頼できる公開情報を優先し、主張、根拠、限界、実務含意を分けて書く。
+- 参照した記事ファイル: `articles/report/language-games-intentionality-llm/ja/index.mdx`
+- 完了条件: 日本語本文を公開記事として表示し、調査ログで資料選定、採用しなかった情報、判断基準、更新条件を確認できるようにする。
+
+## 調査目的
+
+ウィトゲンシュタインの言語ゲーム、志向性、LLMを重ねる近年の論文を確認し、LLMを参加者、道具、非対称なコミュニケーション構成要素のどれとして扱うべきかを整理する。
+
+## 調査設計
+
+| 観点       | 確認したこと                                              | 本文での使い方                             |
+| ---------- | --------------------------------------------------------- | ------------------------------------------ |
+| 言語ゲーム | LLMを言語ゲーム参加者として扱う議論                       | O'Connor を中心に整理                      |
+| 志向性     | linguistic intentionality と mental intentionality の区別 | Grindrod を中心に整理                      |
+| 非対称性   | uptake、accountability、discursive standing               | Fenoglio を中心に整理                      |
+| 懐疑論     | form/meaning、擬人化、接地問題                            | Bender and Koller、Shanahan、Harnad で補強 |
+| 実務含意   | 出力の採用、責任、監査、UI設計                            | 非対称コミュニケーションとして提案         |
+
+## 資料選定の方針
+
+- 一次情報、査読論文、著者公開の論文ページ、学会論文ページを優先した。
+- SSRN のワーキングペーパーは、2026年5月時点の未査読または査読前公開の可能性を明示し、中心結論の補助として扱った。
+- 二次記事やブログは、今回の本文では中心根拠にしなかった。
+- ウィトゲンシュタインとデネットの原典は背景理論として扱い、LLMへの直接適用は近年文献に依拠した。
+
+## 確認済みの根拠
+
+- [x] O'Connor, _AIs as fellow participants in the language game_ の論旨を確認
+- [x] Grindrod, _Large language models and linguistic intentionality_ の論旨を確認
+- [x] Fenoglio, _Large Language Models and Language Games: Asymmetric Communication_ の論旨を確認
+- [x] Bender and Koller, _Climbing towards NLU_ の form/meaning 区別を確認
+- [x] Shanahan, _Talking About Large Language Models_ と補足論文を確認
+- [x] Harnad の symbol grounding problem を懐疑論の背景として確認
+- [x] 参加者説、言語的志向性説、非対称コミュニケーション説、接地懐疑論を比較表に整理
+- [x] Mermaid 図を本文に含めた
+
+## 採用しなかった情報
+
+- Reddit や一般ニュース記事の議論は、関心の所在を知る補助にはなるが本文の根拠にはしなかった。
+- AI意識一般、Turing test、theory of mind ベンチマークは論点が広がるため、本文では最小限の参照に留めた。
+- Luhmann、Esposito、Brandom の原典比較は、Fenoglio の理論背景として重要だが、今回の短い実務レポートでは深掘りしなかった。
+
+## 判断基準
+
+本文では、LLMを人間と同じ話者とみなすか否かを結論にせず、どの種類の志向性と規範性をどこに置くかを分けた。特に、LLM出力が言語ゲーム内の手として機能しうることと、責任主体であることを分離した。
+
+## 更新が必要になる条件
+
+- Fenoglio 論文が査読誌掲載または改稿された場合
+- O'Connor、Grindrod への応答論文が出た場合
+- LLMのエージェント化により、継続的目標、記憶、ツール実行、自己修正の制度設計が大きく変わった場合
+- 医療、教育、法務、メンタルヘルスなどの高リスク領域で、LLMへの志向性帰属に関する実証研究が増えた場合
+- 日本語圏でウィトゲンシュタイン、志向性、LLMをつなぐ独自研究が増えた場合

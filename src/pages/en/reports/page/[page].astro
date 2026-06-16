@@ -1,0 +1,32 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+import ListCategories from '@/components/ListCategories'
+import ListPosts from '@/components/ListPosts'
+import Pagination from '@/components/Pagination'
+import TitlePage from '@/components/TitlePage'
+import { createArticleListStaticPaths, getReportPosts } from '@/utils'
+
+const locale = 'en'
+
+export async function getStaticPaths() {
+	const reportPosts = await getReportPosts(undefined, 'en')
+	return createArticleListStaticPaths(reportPosts, 'reports', 'en')
+}
+
+const { page } = Astro.props
+const posts = page.data
+---
+
+<BaseLayout title='Reports' locale={locale}>
+	<TitlePage title='Reports' />
+	<div class='mb-6 grid gap-2'>
+		<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>
+			Long-form research reports translated from the Japanese atlas.
+		</p>
+	</div>
+	<div class='mb-6 min-w-0'>
+		<ListCategories locale={locale} />
+	</div>
+	<ListPosts posts={posts} locale={locale} />
+	<Pagination page={page} />
+</BaseLayout>

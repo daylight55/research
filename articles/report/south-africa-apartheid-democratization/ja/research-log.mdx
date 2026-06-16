@@ -1,0 +1,73 @@
+---
+title: '調査プロセス: 南アフリカのアパルトヘイト史と民主化'
+---
+
+作成日: 2026-06-12
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- issue: `#31`
+- title: `南アフリカのアパルトヘイト史と民主化を調査する`
+- publishable request summary: 南アフリカの歴史を、植民地支配、アパルトヘイト、ANC、ネルソン・マンデラ、民主化、真実和解委員会の観点から調査する。植民地期からアパルトヘイト制度化までを時系列で整理し、人種分類、居住分離、労働、教育、政治参加制限を具体的に説明し、国内抵抗、国際制裁、冷戦文脈、民主化後の和解モデルの評価と限界を論じる。
+- scope constraints:
+  - 歴史叙述だけでなく、制度の作動原理と政治的帰結が分かる構成にする。
+  - 最新性が重要な論点は、作成時点の一次情報・公式資料・主要報道で確認する。
+  - 公開可能な調査過程、採用資料、採用しなかった材料、限界を同じ記事ディレクトリにまとめる。
+  - 日本語を正本として、英語版と MIX 対訳も同時に整備する。
+- inferred deliverable: 日本語の公開レポート、英語版レポート、`mix-alignment.json`、公開 research-log を同一テーマで整備する。カテゴリは `africa-history`、slug は `south-africa-apartheid-democratization` を使う前提で整理した。
+
+## 何を確かめたか
+
+### 1. 植民地支配から制度化まで
+
+南アフリカのアパルトヘイトは 1948 年に突然始まったのではなく、植民地期の土地奪取、都市への制限的流入、労働統制の上に積み上がったことを確認した。1913 年土地法、1936 年の政治参加制限、1948 年の国民党政権、1950 年代の人種登録・集団地域法・通行証・バントゥー教育が、ひとつの支配体系として連結していた点を本文の中心に置いた。
+
+### 2. 抵抗運動
+
+ANC の結成、自由憲章、シャープビル事件以後の弾圧と地下化を確認した。自由憲章は、土地、住宅、雇用、教育、法の下の平等を掲げる対抗的な市民権の設計図として使えると判断した。
+
+### 3. 国際圧力と冷戦
+
+国連による非難、武器禁輸、制裁強化の流れを確認した。あわせて、冷戦下では米英などの西側諸国が反共戦略や地政学上の配慮から強い制裁に慎重だったことを踏まえ、本文ではその点を「公開情報からの推定」と明記した。
+
+### 4. マンデラ、交渉、民主化
+
+マンデラ釈放、ANC 合法化、1994 年の初の全人種参加選挙、1996 年の新憲法と TRC の流れを確認した。マンデラ個人の役割は象徴としてだけでなく、武力対立を交渉に変える入口として位置づけた。
+
+### 5. TRC の評価
+
+TRC の公式文書から、真実の申告、記録、条件付き恩赦、補償と名誉回復を組み合わせた制度だったことを確認した。2025 年の AP 報道も参照し、現在なおアパルトヘイト時代の犯罪の再調査や訴追が続いているため、TRC は終点ではなく出発点として読むべきだと判断した。
+
+## 採用した主な資料
+
+- [South African History Online, History of apartheid in South Africa](https://www.sahistory.org.za/article/history-apartheid-south-africa)
+- [South African History Online, History of Separate Development in South Africa](https://www.sahistory.org.za/article/history-separate-development-south-africa)
+- [South African History Online, South Africa and the UN: 1946-1990](https://www.sahistory.org.za/article/south-africa-and-un-1946-1990)
+- [ANC, The Freedom Charter](https://www.anc1912.org.za/the-freedom-charter-2/)
+- [South African Truth and Reconciliation Commission documentation](https://www.justice.gov.za/trc/)
+- [AP News, South Africa inquiry into apartheid-era killings](https://apnews.com/article/51e910faa6bc7251f081ec5eb97c601e)
+- [The Guardian, 2026 documentary review mentioning Mandela's 1990 release and 1994 election](https://www.theguardian.com/tv-and-radio/2026/jun/11/free-nelson-mandela-struggle-against-apartheid-tv-show-documentary-channel-four)
+
+## 採用しなかった情報
+
+- 出典の追跡が難しい SNS 投稿や断片動画は、国際制裁や国内抵抗の根拠にしなかった。
+- ひとつの人種差別体験を南アフリカ全体の代表例として一般化する説明は避けた。
+- 具体的な被害統計は、時点と集計方法でぶれるため、本文では制度の作動原理と政治的帰結を優先した。
+- 植民地期の細かな政権交代や戦争史は、今回の問いに対しては詳細すぎるため、公開本文では要点に絞った。
+
+## 限界
+
+- 公開情報だけでは、ANC 内部や政府内部の意思決定を完全には追えない。
+- TRC が残した和解と正義の緊張は、法制度だけでは測れず、遺族・地域社会・経済再配分の実感が必要になる。
+- マンデラ個人の経歴は、今回は公式一次資料よりも公開できる二次資料の可読性を優先した。
+- したがって、本文中の一部は事実の断定ではなく、公開情報からの推定を含む歴史解釈として書いた。
+
+## 反映への影響
+
+本文は、単なる年表ではなく、制度の作動原理を見せる構成にした。具体的には、土地、居住、労働、教育、政治参加の五領域に分け、抵抗と制裁をその制度への応答として整理した。最後に TRC の評価を独立させ、民主化が「差別の終了」と同義ではないことを明記した。

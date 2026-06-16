@@ -1,0 +1,323 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"en": "If you trace the spillover from GPU demand, the next large AI infrastructure bets are not one industry.",
+					"ja": "GPU需要の派生需要を追うと、次に大きくなる投資先は単一の業種ではない。"
+				},
+				{
+					"en": "The first bottleneck is power and grid connection.",
+					"ja": "最初に詰まるのは電力と系統接続である。"
+				},
+				{
+					"en": "The next is cooling, then data center land and buildings, then optics and networking, and only later storage.",
+					"ja": "そこから冷却、データセンター用地と建屋、光通信・ネットワーク、最後にストレージへ波及する。"
+				},
+				{
+					"en": "AI infrastructure is \"after semiconductors\" only in the sense that the chip is the visible center; in practice it is a bundle of constraints around the chip.",
+					"ja": "AIインフラは「半導体の次」ではあるが、実際には半導体の外側にある制約の束である。"
+				},
+				{
+					"en": "The ordering is not a fixed causal chain, but in practice it tends to clog in this sequence.",
+					"ja": "この順番は厳密な因果の固定列ではないが、実務ではこの順で先に詰まりやすい。"
+				},
+				{
+					"en": "Power is the first constraint.",
+					"ja": "最優先のボトルネックは電力である。"
+				},
+				{
+					"en": "GPU expansion can hit transformers, substations, and grid interconnection before it hits semiconductors.",
+					"ja": "GPUの増設は、半導体より先に変電設備、系統接続、受電容量で止まる。"
+				},
+				{
+					"en": "Cooling comes next.",
+					"ja": "冷却は電力の次に来る。"
+				},
+				{
+					"en": "High-density racks often need liquid cooling and heat-exchange infrastructure beyond conventional air cooling.",
+					"ja": "高密度ラックでは空冷だけでは追いつかず、液冷と熱交換設備の投資が必要になる。"
+				},
+				{
+					"en": "Data center real estate monetizes early but stays supply constrained.",
+					"ja": "データセンター不動産は遅れやすいが、需要が強い局面では最も早く埋まる。"
+				},
+				{
+					"en": "Optics and networking matter when clusters scale, not when a single GPU is purchased.",
+					"ja": "光通信・ネットワークは、単一GPUではなくクラスター規模の拡張で効いてくる。"
+				},
+				{
+					"en": "The key revenue moments are generational jumps such as 400G to 800G and, later, 1.6T.",
+					"ja": "400Gから800G、さらに1.6Tへの世代更新が収益化の節目になる。"
+				},
+				{
+					"en": "Storage is later but durable.",
+					"ja": "ストレージは遅行だが継続性が高い。"
+				},
+				{
+					"en": "Training data, logs, inference outputs, and retention policies all add up over time.",
+					"ja": "学習データ、ログ、推論結果、データ保全が増えるほど需要は積み上がる。"
+				},
+				{
+					"en": "The practical takeaway is that \"AI infrastructure\" is not a single trade.",
+					"ja": "「AIインフラの次の勝ち筋」は一つの銘柄群ではなく、上流の制約から順に見るのが実務的である。"
+				}
+			]
+		},
+		{
+			"id": "bottleneck-map",
+			"heading": {
+				"ja": "2. 何が次のボトルネックか",
+				"en": "2. What the Next Bottleneck Is"
+			},
+			"pairs": [
+				{
+					"en": "AI GPUs move as systems, not as isolated chips.",
+					"ja": "AI GPUは、単体のチップではなく高密度なシステムとして動く。"
+				},
+				{
+					"en": "The real constraint is not whether a GPU can be purchased.",
+					"ja": "本当の制約は「チップを買えるか」ではない。"
+				},
+				{
+					"en": "It is whether a dense rack can be powered, cooled, and operated continuously at the required density.",
+					"ja": "チップを載せたラックを安全に、連続的に、十分な密度で動かせるかにある。"
+				},
+				{
+					"en": "The IEA estimates that data centers and data transmission networks consumed about 415 TWh in 2024 and could exceed 1,000 TWh by 2030.",
+					"ja": "IEAは、2024年のデータセンターとデータ伝送網の電力消費を約415TWhと見積もり、2030年には1,000TWh超もあり得ると示した。"
+				},
+				{
+					"en": "That makes AI a core infrastructure demand, not a side effect.",
+					"ja": "これは、AIがインフラ投資の主軸に押し上がっていることを意味する。"
+				},
+				{
+					"en": "More GPUs require more power.",
+					"ja": "GPUが増えるほど、まず電力が必要になる。"
+				},
+				{
+					"en": "More power requires more cooling.",
+					"ja": "電力が増えるほど冷却が必要になる。"
+				},
+				{
+					"en": "Once power and cooling are in place, floor space becomes the next issue.",
+					"ja": "冷却と受電が揃うと設置面積が必要になる。"
+				},
+				{
+					"en": "As clusters get larger, network density rises, and as training and inference expand, retained data grows as well.",
+					"ja": "さらにクラスターが大きくなると通信密度が上がり、学習と推論が増えると保存すべきデータが増える。"
+				},
+				{
+					"en": "Liquids move heat far more effectively than air, which makes them critical for very high-density racks.",
+					"ja": "液体は空気よりはるかに大きな熱輸送能力を持つため、液冷が高密度ラックで重要になる。"
+				}
+			]
+		},
+		{
+			"id": "area-comparison",
+			"heading": {
+				"ja": "3. 領域別比較",
+				"en": "3. Area-by-Area Comparison"
+			},
+			"pairs": [
+				{
+					"en": "The table below compares the AI spillover layers by what is sold, how quickly it monetizes, and where it runs into constraints.",
+					"ja": "以下は、AI需要の派生先を「何が売れるか」「どのくらい早く収益化するか」「どこで規制にぶつかるか」で並べたものである。"
+				},
+				{
+					"en": "The sequence is an inference from public information, not an official roadmap.",
+					"ja": "ここでの順序は公表情報からの推定であり、公式ロードマップではない。"
+				},
+				{
+					"en": "As a public-information inference, short-term monetization should be strongest in power, cooling, and data center real estate, followed by networking and optics, and then storage.",
+					"ja": "短期の収益化は電力・冷却・データセンター不動産が先行し、中期にネットワークと光部品、後期にストレージが厚くなる。"
+				},
+				{
+					"en": "Power and cooling are needed as soon as the facility ramps.",
+					"ja": "電力と冷却は施設の立ち上がりと同時に必要になる。"
+				},
+				{
+					"en": "Optics and storage become stronger only after AI clusters are actually running and the data policy is set.",
+					"ja": "光通信やストレージは、AIクラスタが実際に動き、データ保持ポリシーが固まってから強くなる。"
+				},
+				{
+					"en": "Fund compositions differ, so the label is not enough on its own.",
+					"ja": "地域や構成比が異なるため、名前だけで中身を決めない方がよい。"
+				},
+				{
+					"en": "The most useful indicators are not GPU counts by themselves.",
+					"ja": "実務で見るべき指標は、GPU台数そのものより、GPUを動かすための周辺投資である。"
+				},
+				{
+					"en": "Pure-play AI infrastructure ETFs are still relatively limited.",
+					"ja": "純粋なAIインフラETFはまだ少ない。"
+				},
+				{
+					"en": "In practice, investors often combine broad infrastructure ETFs with individual stocks.",
+					"ja": "実務では、広いインフラETFと個別株を組み合わせることが多い。"
+				}
+			]
+		},
+		{
+			"id": "monetization-cycle",
+			"heading": {
+				"ja": "4. 収益化タイミングとcapexサイクル",
+				"en": "4. Monetization Timing and Capex Cycles"
+			},
+			"pairs": [
+				{
+					"en": "Speed of monetization is driven less by the size of the opportunity than by the distance to purchase order.",
+					"ja": "収益化の早さは、需要の大きさよりも「受注までの距離」で決まる。"
+				},
+				{
+					"en": "GPU demand does not become revenue immediately.",
+					"ja": "GPU需要は、GPUが増えた瞬間に売上が立つわけではない。"
+				},
+				{
+					"en": "It passes through power contracts, design freeze, construction, and go-live.",
+					"ja": "電力契約、設計凍結、建設、稼働開始という複数の段階を経て設備投資が流れる。"
+				},
+				{
+					"en": "Power and cooling are needed as soon as the facility ramps.",
+					"ja": "電力と冷却は施設の立ち上がりと同時に必要になる。"
+				},
+				{
+					"en": "Optics and storage become stronger only after AI clusters are actually running and the data policy is set.",
+					"ja": "光通信やストレージは、AIクラスタが実際に動き、データ保持ポリシーが固まってから強くなる。"
+				},
+				{
+					"en": "As a result, a theme can look crowded long before it turns into revenue.",
+					"ja": "投資テーマとしては「いつ売上に変わるか」を見ないと、人気先行で時間だけ失いやすい。"
+				}
+			]
+		},
+		{
+			"id": "regulation-constraints",
+			"heading": {
+				"ja": "5. 規制・制約",
+				"en": "5. Regulation and Constraints"
+			},
+			"pairs": [
+				{
+					"en": "AI infrastructure is often delayed more by siting and regulation than by technology.",
+					"ja": "AIインフラは、技術よりも立地と規制で遅れることが多い。"
+				},
+				{
+					"en": "Power and cooling are especially exposed to grid interconnection, land use, permits, water, and environmental rules.",
+					"ja": "特に電力と冷却は、系統接続、用地、許認可、水、環境規制で詰まりやすい。"
+				},
+				{
+					"en": "Power is first constrained by grid connection queues.",
+					"ja": "電力は系統接続待ちが最初の障害になる。"
+				},
+				{
+					"en": "Cooling can be limited by water availability and heat rejection rules.",
+					"ja": "冷却は水資源と熱排出で制約を受ける。"
+				},
+				{
+					"en": "Data center real estate faces zoning, noise, visual, and transmission-line constraints.",
+					"ja": "データセンター不動産は、用途地域、騒音、景観、送電線の距離に縛られる。"
+				},
+				{
+					"en": "Storage demand is shaped by data sovereignty and retention policy.",
+					"ja": "ストレージは、データ主権や保全ポリシーの違いで需要の形が変わる。"
+				}
+			]
+		},
+		{
+			"id": "representative-examples",
+			"heading": {
+				"ja": "6. 代表企業・ETF・上場セクター",
+				"en": "6. Representative Companies, ETFs, and Listed Sectors"
+			},
+			"pairs": [
+				{
+					"en": "This is not a stock recommendation.",
+					"ja": "これは銘柄推奨ではない。"
+				},
+				{
+					"en": "It is a map of where capital is likely to flow.",
+					"ja": "どの層にマネーが流れているかを把握するための見取り図である。"
+				},
+				{
+					"en": "Pure-play AI infrastructure ETFs are still relatively limited.",
+					"ja": "純粋なAIインフラETFはまだ少ない。"
+				},
+				{
+					"en": "In practice, investors often combine broad infrastructure ETFs with individual stocks.",
+					"ja": "実務では、広いインフラETFと個別株を組み合わせることが多い。"
+				},
+				{
+					"en": "Fund compositions differ, so the label is not enough on its own.",
+					"ja": "地域や構成比が異なるため、名前だけで中身を決めない方がよい。"
+				}
+			]
+		},
+		{
+			"id": "practical-implications",
+			"heading": {
+				"ja": "7. 実務含意",
+				"en": "7. Practical Implications"
+			},
+			"pairs": [
+				{
+					"en": "The most useful indicators are not GPU counts by themselves.",
+					"ja": "実務で見るべき指標は、GPU台数そのものより、GPUを動かすための周辺投資である。"
+				},
+				{
+					"en": "They are the adjacent investments that make GPUs usable.",
+					"ja": "GPUを動かすための周辺投資である。"
+				},
+				{
+					"en": "When those move first, AI demand is spreading beyond semiconductors into construction, power, communications, and storage.",
+					"ja": "これらが先に動くほど、AI需要は半導体だけでなく、建設、電力、通信、保管に波及していると読める。"
+				},
+				{
+					"en": "If only GPU sales look strong, but power and buildings are stuck, the demand has not become deployed capacity yet.",
+					"ja": "GPUの販売だけが強くても、電力と建屋が詰まれば実需には変わらない。"
+				},
+				{
+					"en": "To understand what comes after semiconductors, you have to read both upstream constraints and downstream order books.",
+					"ja": "上流の供給制約と下流の受注残を同時に見る必要がある。"
+				}
+			]
+		},
+		{
+			"id": "risks-limits",
+			"heading": {
+				"ja": "8. リスク・限界",
+				"en": "8. Risks and Limits"
+			},
+			"pairs": [
+				{
+					"en": "AI power forecasts can move if model efficiency improves or workloads change.",
+					"ja": "AI需要の電力推計は、モデル効率の改善やワークロードの変化で上下する。"
+				},
+				{
+					"en": "Second, company disclosures are forward-looking, so revenue realization may lag the build cycle.",
+					"ja": "会社側の開示は将来見通しを含み、実際の売上化にはラグがある。"
+				},
+				{
+					"en": "Third, regional power costs and regulation differ sharply, so the same theme can behave differently in different markets.",
+					"ja": "地域ごとに規制と電力コストが違うため、同じテーマでも市場ごとに勝ち筋が変わる。"
+				},
+				{
+					"en": "The report therefore does not claim to identify the single \"winner\" after semiconductors.",
+					"ja": "このレポートは「どの業種が上がるか」を断定するものではない。"
+				},
+				{
+					"en": "It is a map of where GPU demand gets converted into cash first.",
+					"ja": "GPU需要がどの層で先に収益化されるかを整理するための地図である。"
+				}
+			]
+		}
+	]
+}

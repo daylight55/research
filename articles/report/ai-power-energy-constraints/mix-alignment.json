@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "AI power risk is not just a question of whether enough electricity exists.",
+          "ja": "AIブームの電力問題は、単純に「発電量が足りるか」だけではない。"
+        },
+        {
+          "en": "The real bottlenecks are the grid, substations, connection queues, cooling, operating rules, and power contracts that determine whether new load can actually come online.",
+          "ja": "実際には、送電網、変電設備、接続許認可、冷却、系統運用、電源の契約条件が同時に制約になる。"
+        },
+        {
+          "en": "The practical sequence is simple.",
+          "ja": "結論を先に言うと、AI データセンターのエネルギー制約は次の順で現れやすい。"
+        },
+        {
+          "en": "Grid and interconnection queues bite first.",
+          "ja": "送電網と接続待ちが最初に詰まる。"
+        },
+        {
+          "en": "Cooling and electrical equipment follow.",
+          "ja": "次に、冷却と受電設備が追いつかなくなる。"
+        },
+        {
+          "en": "Then PPAs, renewables, nuclear, gas, and batteries come into play on different timelines.",
+          "ja": "その後、PPA で確保した再エネ、原子力の再評価、ガス火力、蓄電がそれぞれ別の時間軸で必要になる。"
+        },
+        {
+          "en": "The key question is therefore not which power source is best in the abstract, but which constraint each tool can solve, and when.",
+          "ja": "したがって、「何が一番良い電源か」ではなく、「どの制約を、いつ、どの手段で解くか」が実務上の論点になる。"
+        },
+        {
+          "en": "This report compares demand forecasts, regional grid constraints, PPAs, nuclear, gas, and storage so that AI companies, cloud providers, utilities, and policymakers can make decisions against a current evidence base.",
+          "ja": "このレポートは、AI 企業、クラウド事業者、電力会社、政策当局の意思決定を助けるために、需要見通し、地域別の送電網制約、PPA、原子力、ガス火力、蓄電を比較する。"
+        },
+        {
+          "en": "As a public-information inference, the near term favors grid gear, interconnection, cooling, and flexibility; the medium term favors PPAs and batteries; and the long term favors nuclear and large-scale transmission buildout.",
+          "ja": "公表情報からの推定としては、短期は送電網・受電・冷却、 中期は PPA と蓄電、長期は原子力と大規模系統増強が効きやすい。"
+        }
+      ]
+    },
+    {
+      "id": "demand-forecasts",
+      "heading": {
+        "ja": "2. 需要見通し: 何がどのくらい増えるか",
+        "en": "2. Demand Forecasts: How Fast Is Demand Rising?"
+      },
+      "pairs": [
+        {
+          "en": "The latest primary sources agree on direction even if their scopes differ.",
+          "ja": "最新の一次情報を並べると、AI 関連の電力需要は「増えるかどうか」ではなく「どの速さで増えるか」が論点になっている。"
+        },
+        {
+          "en": "In 2025, the IEA estimated that global data center electricity demand was about 415 TWh in 2024, with scenarios that could push it above 1,000 TWh by 2030.",
+          "ja": "IEA は 2025 年のレポートで、世界のデータセンター電力需要が 2024 年に約 415 TWh だったと示し、2030 年には 1,000 TWh を超えるシナリオを提示した。"
+        },
+        {
+          "en": "In its 2026 update, the IEA said data center electricity use rose 17% in 2025 and that AI-oriented data center demand could roughly triple by 2030.",
+          "ja": "2026 年の IEA の更新では、データセンター電力使用が 2025 年に 17% 増え、AI 向け施設の需要は 2030 年までにおよそ 3 倍になるとされた。"
+        },
+        {
+          "en": "For the United States, Lawrence Berkeley National Laboratory estimated that data centers consumed 176 TWh in 2023 and could reach 325 to 580 TWh by 2028.",
+          "ja": "米国については、LBNL が 2024 年末に公表したレポートで、2023 年のデータセンター電力消費を 176 TWh と推定し、2028 年には 325 〜 580 TWh に達しうるとした。"
+        },
+        {
+          "en": "The EIA likewise says the strongest four-year growth in U.S. electricity demand since the early 2000s is being driven in large part by data centers and other large computing loads.",
+          "ja": "EIA も、2026 年の電力見通しで、今後の需要増のかなりの部分がデータセンターと大規模計算施設に由来すると見ている。"
+        },
+        {
+          "en": "These estimates are not directly comparable because the definitions differ.",
+          "ja": "これらの数字は前提と定義が違うので、単純比較はできない。"
+        },
+        {
+          "en": "Still, they point in the same direction: AI demand keeps rising even when model efficiency improves, because usage, inference volume, agentic workloads, and data retention can offset gains.",
+          "ja": "ただし方向は一致している。AI の電力需要は、モデル効率が改善しても、利用量、推論回数、エージェント実行、データ保持の増加で相殺されやすい。"
+        }
+      ]
+    },
+    {
+      "id": "grid-bottlenecks",
+      "heading": {
+        "ja": "3. どこで詰まるか: 送電網、変電、接続、冷却",
+        "en": "3. What Actually Bottlenecks First"
+      },
+      "pairs": [
+        {
+          "en": "The center of gravity is the grid connection point, not the power plant.",
+          "ja": "電力制約の中心は発電所ではなく、系統接続の現場にある。"
+        },
+        {
+          "en": "To add new AI load, a site needs transmission capacity, substations, transformers, protective equipment, permits, and community acceptance.",
+          "ja": "新しい負荷を接続するには、送電線、変電所、変圧器、保護装置、許認可、そして地域の住民合意が必要になる。"
+        },
+        {
+          "en": "NERC warned in 2025 that emerging large loads create new reliability risks for planning and operations.",
+          "ja": "NERC は 2025 年の Emerging Large Loads に関する白書で、大規模負荷の接続が系統運用と計画の両面で新しいリスクになると警告した。"
+        },
+        {
+          "en": "IEA grid work says the bottleneck is now grid expansion itself: permitting is slow, build times are long, and power-system investment has to keep up with electrification, renewables, and data centers at the same time.",
+          "ja": "IEA のグリッド報告は、送電網の拡張が再エネ、産業電化、データセンター、EV を同時に支える必要がある一方、許認可と建設が遅いことを問題の核心に挙げている。"
+        },
+        {
+          "en": "Cooling matters for the same reason.",
+          "ja": "冷却も同じくらい重要だ。"
+        },
+        {
+          "en": "High-density racks require liquid cooling, CDUs, and more localized redundancy.",
+          "ja": "高密度ラックでは空冷だけでなく、液冷、CDU、熱交換器、局所的な冗長化が必要になる。"
+        }
+      ]
+    },
+    {
+      "id": "regional-patterns",
+      "heading": {
+        "ja": "4. 地域別の制約",
+        "en": "4. Regional Patterns"
+      },
+      "pairs": [
+        {
+          "en": "Regional patterns differ sharply.",
+          "ja": "地域差は大きい。"
+        },
+        {
+          "en": "In the United States, the fastest growth is concentrated in existing large-load regions such as PJM, Virginia, and Texas.",
+          "ja": "米国では、需要の急増がまず既存の大負荷地域に集中する。特に PJM、Virginia、Texas では、電力需要の伸びがデータセンターの立地と重なりやすい。"
+        },
+        {
+          "en": "EIA expects data centers to account for a large share of near-term power demand growth, while NERC treats large-load interconnection as a reliability issue rather than a purely commercial one.",
+          "ja": "EIA は、米国の電力需要増のかなりの部分がこうした大規模計算負荷に由来すると見ており、NERC も大規模負荷の接続を信頼度リスクとして扱っている。"
+        },
+        {
+          "en": "Japan is responding differently.",
+          "ja": "日本では、経産省と総務省が進める「ワット・ビット連携」が象徴的である。"
+        },
+        {
+          "en": "METI and MIC have been promoting \"watt-bit\" coordination, which treats power and communications planning as one integrated problem.",
+          "ja": "2025 年の METI 英文発表は、データセンターと通信を一体で考える政策枠組みを示した。"
+        },
+        {
+          "en": "A 2025 METI press release and 2026 ENECHO material both point to the same direction: siting, efficiency, and grid planning have to be designed together rather than handled separately.",
+          "ja": "2026 年の経産省紹介記事では、データセンターの省エネや立地分散の重要性が改めて強調されている。"
+        },
+        {
+          "en": "Europe is less homogeneous, but the same basic constraint appears there too: transmission capacity, permits, and siting are often harder than buying electricity on paper.",
+          "ja": "欧州では、需要の伸びは米国ほど急ではない地域もあるが、送電容量不足、許認可、立地制約はより早く顕在化しやすい。"
+        },
+        {
+          "en": "The exact policy mix varies by country, but the common denominator is that connection is the scarce asset.",
+          "ja": "ここでは各国の電源構成が違うため一枚岩ではないが、「電力があるか」より「接続できるか」が共通の制約である。"
+        }
+      ]
+    },
+    {
+      "id": "supply-options",
+      "heading": {
+        "ja": "5. 供給側の選択肢: PPA、原子力、ガス火力、蓄電",
+        "en": "5. Supply-Side Options: PPAs, Nuclear, Gas, and Batteries"
+      },
+      "pairs": [
+        {
+          "en": "The fastest mainstream answer is a renewable PPA, because it can finance new supply and help a buyer meet emissions goals.",
+          "ja": "最も実務的なのは、再エネの PPA を使って新規電源を呼び込む方法である。"
+        },
+        {
+          "en": "The IEA says renewables will provide a large share of the new electricity needed for data centers, and that technology companies made up a major share of corporate renewable PPAs in 2025.",
+          "ja": "IEA は 2026 年の更新で、データセンター需要の増加分のかなりの部分を再エネが賄う見込みを示し、技術企業が企業向け再エネ PPA の大きな割合を占めると整理した。"
+        },
+        {
+          "en": "PPAs are necessary, but they do not eliminate physical grid limits.",
+          "ja": "ただし、PPA は会計上の再エネ調達を助けても、送電網の物理制約は消さない。"
+        },
+        {
+          "en": "Nuclear is being re-evaluated as long-duration firm power rather than as a quick fix.",
+          "ja": "原子力は、データセンターにとって「すぐ使える電源」ではないが、「長期の firm power」として再評価されている。"
+        },
+        {
+          "en": "The IEA says the AI boom is reviving interest in nuclear, including life extensions, restarts, and SMRs.",
+          "ja": "IEA は 2026 年の更新で、AI ブームが原子力の再評価を促しているとし、SMR や既存炉の再稼働・延命が議論の中心になっていると述べた。"
+        },
+        {
+          "en": "Gas remains the fastest path to dispatchable power in many markets.",
+          "ja": "ガス火力は、最も速く firm な電力を追加しやすい手段として残る。"
+        },
+        {
+          "en": "The EIA says natural gas supply remains a critical input as data center demand expands in the U.S.",
+          "ja": "EIA は、米国の需要増の中で天然ガス供給の重要性を改めて指摘している。"
+        },
+        {
+          "en": "Batteries are not a standalone solution for multi-day AI power demand, but they are useful for peak smoothing, short-duration backup, congestion relief, and demand-response integration.",
+          "ja": "蓄電は、単独でデータセンター全体を支えるというより、接続待ちの緩和、短時間のピーク平滑化、需給調整、停電対策に効く。"
+        },
+        {
+          "en": "That means they should be read as the flexibility layer around the AI load stack, not as the core energy source.",
+          "ja": "したがって、蓄電は単体の電源というより、再エネ、ガス、送電網の調整弁として読む方が正しい。"
+        }
+      ]
+    },
+    {
+      "id": "implications",
+      "heading": {
+        "ja": "6. AI 企業、クラウド、政策への含意",
+        "en": "6. What It Means for AI Companies, Cloud Providers, and Policymakers"
+      },
+      "pairs": [
+        {
+          "en": "For AI companies, the competitive issue is no longer just model quality.",
+          "ja": "AI 企業にとって重要なのは、モデル性能そのものより、電力の確保方法である。"
+        },
+        {
+          "en": "It is where to site data centers, how to sequence interconnections, when to sign PPAs, whether to add on-site power, and how much load flexibility can be engineered into the stack.",
+          "ja": "具体的には、どの地域に建てるか、どの接続順序で増やすか、PPA をいつ締結するか、オンサイト電源を入れるか、負荷をどこまで平準化できるかが競争力になる。"
+        },
+        {
+          "en": "For policymakers, three issues matter most.",
+          "ja": "政策当局にとっての論点は三つある。"
+        },
+        {
+          "en": "First, interconnection queues need to be transparent and predictable.",
+          "ja": "第一に、系統接続の透明化と順番待ちの可視化である。"
+        },
+        {
+          "en": "Second, flexible supply near demand centers has to expand, including batteries and other dispatchable resources.",
+          "ja": "第二に、需要地の近くで使える柔軟な電源と蓄電を増やすことである。"
+        },
+        {
+          "en": "Third, data centers should not be handled as a standalone industrial category; they are infrastructure that interacts with telecom, land use, environmental permitting, and power policy at the same time.",
+          "ja": "第三に、データセンターを通信網、土地利用、環境規制、産業政策と分けて考えず、統合して扱うことである。"
+        },
+        {
+          "en": "Japan's watt-bit coordination is a useful example of that integrated approach.",
+          "ja": "日本の「ワット・ビット連携」は、この統合設計の方向を示している。"
+        }
+      ]
+    },
+    {
+      "id": "risk-and-limits",
+      "heading": {
+        "ja": "7. 過熱テーマとしてのリスク",
+        "en": "7. The Overheated-Theme Risk"
+      },
+      "pairs": [
+        {
+          "en": "This theme can overheat easily.",
+          "ja": "このテーマは過熱しやすい。"
+        },
+        {
+          "en": "The reason is straightforward: power demand stories are vivid, but revenue from the necessary infrastructure arrives only after long delays.",
+          "ja": "理由は単純で、電力需要の話は派手だが、実際に売上になるまでの時間差が長いからである。"
+        },
+        {
+          "en": "One common mistake is to treat announced capex as if it were already connected load.",
+          "ja": "市場では「AI データセンター需要が増える」というストーリーが先に走り、変電設備、送電網増強、許認可、建設、燃料手当てが後から追いかける。"
+        },
+        {
+          "en": "Another risk is underestimating efficiency.",
+          "ja": "もう一つのリスクは、効率改善を過小評価することだ。"
+        },
+        {
+          "en": "Better model efficiency, inference optimization, liquid cooling, heat recovery, and demand response can all reduce electricity per task.",
+          "ja": "モデル効率、推論最適化、液冷、熱回収、需要応答が進めば、単位計算あたりの電力は下がる。"
+        },
+        {
+          "en": "But total energy use can still rise if demand grows faster than those gains.",
+          "ja": "ただし、総使用量は別問題であり、利用者が増えれば全体はまだ伸びうる。"
+        },
+        {
+          "en": "The theme is real, but the trade can still be crowded if investors and policymakers price in the story before the infrastructure is actually deliverable.",
+          "ja": "だから、テーマとしては強いが、足元の株価や政策期待が先行しすぎると危険である。"
+        }
+      ]
+    },
+    {
+      "id": "indicators",
+      "heading": {
+        "ja": "8. 実務で見る指標",
+        "en": "8. Practical Indicators to Watch"
+      },
+      "pairs": [
+        {
+          "en": "In practice, these indicators matter more than GPU counts or model announcements.",
+          "ja": "実務では、GPU 台数やモデルの発表より、以下を追う方が早い。"
+        },
+        {
+          "en": "Substation and transmission build orders.",
+          "ja": "変電所、変圧器、送電線の発注と工事進捗"
+        },
+        {
+          "en": "Interconnection queue changes and queue reform.",
+          "ja": "接続待ちリストと系統接続ルールの変更"
+        },
+        {
+          "en": "PPA tenor, price, additionality, and deliverability.",
+          "ja": "PPA の長さ、価格、追加性、送電距離"
+        },
+        {
+          "en": "Nuclear restarts, life extensions, and SMR pilot progress.",
+          "ja": "原子力の再稼働、延命、SMR の実証進捗"
+        },
+        {
+          "en": "Gas permitting and fuel contracts.",
+          "ja": "ガス設備の許認可と燃料契約"
+        },
+        {
+          "en": "Battery and demand-response adoption.",
+          "ja": "蓄電池と需要応答の採用状況"
+        }
+      ]
+    }
+  ]
+}

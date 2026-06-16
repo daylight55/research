@@ -22,7 +22,7 @@ LLMは、文章をそのまま読んでいるように見えて、実際には�
 
 理解の順番としては、まずトークン化で文字列を部品に分け、埋め込みで数値ベクトルにし、Transformerの自己注意で文脈上の関係を重み付けし、最後に次トークン予測として出力する、と分けるとよい。LLMの「知識」は辞書のように明示的に保存されるのではなく、学習された重みの中に分布的に埋め込まれる。ただし、その知識はときに文面を丸ごと覚える形でも残る。<SourceNote>[Neural Machine Translation with Byte-Level Subwords](https://arxiv.org/abs/1909.03341) はサブワード型のトークン化を扱い、[Attention Is All You Need](https://arxiv.org/abs/1706.03762) は入力埋め込みと位置情報を組み合わせる。LLMの訓練データの記憶と抽出可能性は [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805) と [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035) が示している。</SourceNote>
 
-実務上の重要点は、LLMを「賢い回答装置」として評価するより、どの入力を与え、どの外部情報を検索し、どの検証手段を通すかで性能を設計することにある。文脈長は万能ではなく、長くすればするほど自動的に賢くなるわけでもない。したがって、LLMの活用は、モデル単体の理解ではなく、入力設計、外部参照、権限、監査、再確認を含むシステム設計として考えるべきである。<SourceNote>長文脈でも情報の取りこぼしや位置依存が残ることは [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) が示している。外部検索を組み合わせる基本発想は [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) と [REALM: Retrieval-Augmented Language Model Pre-Training](https://proceedings.mlr.press/v119/guu20a.html) に沿う。</SourceNote>
+利用設計で重要なのは、LLMを「賢い回答装置」として評価するより、どの入力を与え、どの外部情報を検索し、どの検証手段を通すかで性能を設計することにある。文脈長は万能ではなく、長くすればするほど自動的に賢くなるわけでもない。したがって、LLMの活用は、モデル単体の理解ではなく、入力設計、外部参照、権限、監査、再確認を含むシステム設計として考えるべきである。<SourceNote>長文脈でも情報の取りこぼしや位置依存が残ることは [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172) が示している。外部検索を組み合わせる基本発想は [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) と [REALM: Retrieval-Augmented Language Model Pre-Training](https://proceedings.mlr.press/v119/guu20a.html) に沿う。</SourceNote>
 
 ## 2. まず全体像をつかむ
 
@@ -64,7 +64,7 @@ flowchart TD
   E --> F["次層へ"]
 ```
 
-自己注意が強いのは、文脈のどこに重要な手掛かりがあるかを柔軟に拾えるからである。一方で、注意の重みをそのまま「説明」とみなすのは危険であり、モデルが何を根拠にしているかは別途検証が必要になる。<SourceNote>Transformerの設計上の強みは文脈関係の学習にあるが、モデルの出力を説明可能性と同一視してはいけないという注意は、注意機構の実装そのものよりも、出力を検証する実務設計から出てくる。</SourceNote>
+自己注意が強いのは、文脈のどこに重要な手掛かりがあるかを柔軟に拾えるからである。一方で、注意の重みをそのまま「説明」とみなすのは危険であり、モデルが何を根拠にしているかは別途検証が必要になる。<SourceNote>Transformerの設計上の強みは文脈関係の学習にあるが、モデルの出力を説明可能性と同一視してはいけないという注意は、注意機構の実装そのものよりも、出力を検証する利用設計から出てくる。</SourceNote>
 
 ## 5. 事前学習と次トークン予測
 
@@ -94,7 +94,7 @@ LLMが知識を保存している、という言い方は半分正しく、半�
 
 ### Q1. LLMは本当に「理解」しているのか
 
-厳密には、人間と同じ意味で理解していると断言するのは難しい。少なくとも、LLMがやっている中心作業は、文脈に応じた次トークン予測である。だから、理解に見える振る舞いは出せても、それをそのまま人間の理解と同一視するのは早い。<SourceNote>この回答は、自己回帰的な学習目標と訓練データ記憶の研究を踏まえた実務的推論である [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805)。</SourceNote>
+厳密には、人間と同じ意味で理解していると断言するのは難しい。少なくとも、LLMがやっている中心作業は、文脈に応じた次トークン予測である。だから、理解に見える振る舞いは出せても、それをそのまま人間の理解と同一視するのは早い。<SourceNote>この回答は、自己回帰的な学習目標と訓練データ記憶の研究を踏まえた設計上の推論である [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805)。</SourceNote>
 
 ### Q2. なぜLLMは平気で間違うのか
 
@@ -112,6 +112,6 @@ LLMは、真偽を照合する装置として訓練されているわけでは�
 
 LLMを実務で使うなら、まず「何を覚えさせるか」より「何を毎回見せるか」を決める方がよい。頻繁に変わる情報、正確さが重要な情報、責任が伴う情報は、モデル内部の記憶に頼らず、外部データとして渡す方がよい。<SourceNote>この方針は、自己回帰モデルの一般化能力と訓練データ記憶の両方を踏まえた設計上の帰結である [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805)。</SourceNote>
 
-次に、出力をそのまま採用せず、検索、ルール、計算、レビューを通す。LLMは説明文、候補案、下書き、要約、分類には強いが、最終的な正確性保証は別の仕組みが担うべきである。要するに、LLMは「考える主体」ではなく、「文脈を受けて候補を出す部品」として組み込むのがよい。<SourceNote>検索拡張生成と長文脈研究は、LLMを単体で使うより、外部の確定情報を接続する方が実務的であることを示している [RAG](https://arxiv.org/abs/2005.11401) [Lost in the Middle](https://arxiv.org/abs/2307.03172)。</SourceNote>
+次に、出力をそのまま採用せず、検索、ルール、計算、レビューを通す。LLMは説明文、候補案、下書き、要約、分類には強いが、最終的な正確性保証は別の仕組みが担うべきである。要するに、LLMは「考える主体」ではなく、「文脈を受けて候補を出す部品」として組み込むのがよい。<SourceNote>検索拡張生成と長文脈研究は、LLMを単体で使うより、外部の確定情報を接続する方が設計上有効であることを示している [RAG](https://arxiv.org/abs/2005.11401) [Lost in the Middle](https://arxiv.org/abs/2307.03172)。</SourceNote>
 
-最後に、LLMの強みと弱みを混同しないことが大事である。強みは、あいまいな入力を扱い、文章の形にして返し、関連情報をまとめることにある。弱みは、真偽保証、恒久記憶、責任主体性、長い作業の自己管理にある。ここを取り違えなければ、LLMはかなり有用な道具になる。<SourceNote>このまとめは、Transformerの自己回帰生成、長文脈の限界、訓練データ記憶の研究を統合した実務的整理である [Attention Is All You Need](https://arxiv.org/abs/1706.03762) [Lost in the Middle](https://arxiv.org/abs/2307.03172) [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035)。</SourceNote>
+最後に、LLMの強みと弱みを混同しないことが大事である。強みは、あいまいな入力を扱い、文章の形にして返し、関連情報をまとめることにある。弱みは、真偽保証、恒久記憶、責任主体性、長い作業の自己管理にある。ここを取り違えなければ、LLMはかなり有用な道具になる。<SourceNote>このまとめは、Transformerの自己回帰生成、長文脈の限界、訓練データ記憶の研究を統合した設計上の整理である [Attention Is All You Need](https://arxiv.org/abs/1706.03762) [Lost in the Middle](https://arxiv.org/abs/2307.03172) [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035)。</SourceNote>

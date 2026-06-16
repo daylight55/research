@@ -107,7 +107,7 @@ Palantirを理解する鍵はOntologyである。一般的なRDF/OWL型のオン
 
 <SourceNote>W3CはOWLを「things, groups of things, and relations between things」を表すSemantic Web言語として説明している。[W3C OWL](https://www.w3.org/OWL/) を参照。Palantir側はOntologyに「semantic elements」と「kinetic elements」を含めると説明している。[Ontology overview](https://www.palantir.com/docs/foundry/ontology/overview) を参照。</SourceNote>
 
-この違いは実務上大きい。従来のBIでは、営業案件、在庫、患者、部品、警報、部隊、輸送計画の状態を表示できても、現場の変更行為は別システムに残ることが多い。Palantirは、変更そのものをActionとして扱い、誰が、いつ、どの対象を、どの理由で変更したかをOntologyのデータとして戻す。これにより、業務判断、監査、改善サイクルが同じ基盤に乗る。
+この違いは導入上大きい。従来のBIでは、営業案件、在庫、患者、部品、警報、部隊、輸送計画の状態を表示できても、現場の変更行為は別システムに残ることが多い。Palantirは、変更そのものをActionとして扱い、誰が、いつ、どの対象を、どの理由で変更したかをOntologyのデータとして戻す。これにより、業務判断、監査、改善サイクルが同じ基盤に乗る。
 
 <SourceNote>PalantirのAction logは、Action提出をオブジェクトとしてモデル化し、意思決定やデータ編集をOntology内で分析可能にする仕組みである。[Action log](https://www.palantir.com/docs/foundry/action-types/action-log) を参照。</SourceNote>
 
@@ -246,7 +246,7 @@ NHS FDPは、Palantirリスクが最も分かりやすく表れた事例であ�
 
 Palantirは、導入先の業務モデル、データ変換、アプリ、Action、権限、監査を深く統合する。これは価値の源泉だが、同時に移行困難性を生む。特に、Ontology設計、Functions、Workshopアプリ、Action Log、アクセス制御、現場運用手順がPalantir固有の実装に依存すると、契約終了時に「データは出せるが業務能力は出せない」状態になりやすい。
 
-実務的には、導入前に次を契約・設計で固定すべきである。
+導入前には次を契約・設計で固定すべきである。
 
 - データとメタデータのエクスポート形式
 - Ontology定義、Action定義、権限定義の可搬性
@@ -306,7 +306,7 @@ Palantirが向くのは、データ統合だけでなく、意思決定と現場
 
 ただし、採用判断は「AI導入」ではなく「組織運用基盤の外部委託」として扱うべきである。民間企業なら、価値仮説、ロックイン、データ主権、社内運用能力を契約前に詰める。公共機関なら、それに加えて、民主的統制、住民・患者・職員への説明、第三者監査、調達透明性、目的外利用防止を導入条件にする。
 
-実務上の推奨は次である。
+導入判断での推奨は次である。
 
 - **採用を検討すべき場合**: 高価値・高複雑度・高規制の業務で、データ統合からActionまで短期間で変える必要がある。
 - **慎重にすべき場合**: 医療、治安、移民、軍事、教育、福祉のように、個人の権利や公共信頼への影響が大きい。

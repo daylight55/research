@@ -56,7 +56,7 @@
 				},
 				{
 					"en": "In practice, it is important not to over-summarize the narratives of experts, to preserve the original cases and original expressions, and to separate the parts that can be explained from the parts that should be preserved as practice.",
-					"ja": "実務上は、熟達者の語りを要約しすぎないこと、元ケースと元表現を残すこと、説明可能な部分と実践として保持すべき部分を分けることが重要である。"
+					"ja": "知識移転では、熟達者の語りを要約しすぎないこと、元ケースと元表現を残すこと、説明可能な部分と実践として保持すべき部分を分けることが重要である。"
 				}
 			]
 		},
@@ -439,7 +439,7 @@
 			]
 		},
 		{
-			"id": "8-practical-implications",
+			"id": "8-knowledge-transfer-lessons",
 			"heading": {
 				"en": "8. Lessons for Knowledge Transfer",
 				"ja": "8. 知識移転への示唆"

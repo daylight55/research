@@ -56,7 +56,7 @@
           "en": "The diagram shows how geopolitical pressure flows beyond defense policy into procurement and investment decisions."
         },
         {
-          "ja": "防衛、供給網、サイバーを別案件として扱うと、実務上のリスクを見落としやすい。",
+          "ja": "防衛、供給網、サイバーを別案件として扱うと、運用上のリスクを見落としやすい。",
           "en": "Treating defense, supply chains, and cyber as separate topics makes it easy to miss the operational risk."
         }
       ]
@@ -89,7 +89,7 @@
           "en": "Diplomatic Bluebook 2025 also treats the abduction issue as directly relevant to Japan’s security."
         },
         {
-          "ja": "実務的には、迎撃、警戒監視、情報収集、制裁実施を平時から回す必要がある。",
+          "ja": "安全保障運用では、迎撃、警戒監視、情報収集、制裁実施を平時から回す必要がある。",
           "en": "In operational terms, that means interception, warning and surveillance, intelligence collection, and sanctions enforcement must all run continuously in peacetime."
         },
         {
@@ -238,7 +238,7 @@
       ]
     },
     {
-      "id": "practical-implications",
+      "id": "dependencies-for-firms-policymakers",
       "heading": {
         "ja": "6. 企業・政策担当者が見るべき依存関係",
         "en": "6. Dependencies for Firms and Policymakers"

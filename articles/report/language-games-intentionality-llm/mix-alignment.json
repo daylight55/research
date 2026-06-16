@@ -11,7 +11,7 @@
 					"en": "The philosophical question raised by LLMs is not only whether they possess inner understanding."
 				},
 				{
-					"ja": "むしろ、LLMの出力が人間の実践の中でどのように受け取られ、訂正され、権威づけられ、責任づけられるかを見た方が、実務にも研究にも役に立つ。",
+					"ja": "むしろ、LLMの出力が人間の実践の中でどのように受け取られ、訂正され、権威づけられ、責任づけられるかを見た方が、導入現場にも研究にも役に立つ。",
 					"en": "A more useful question is how their outputs enter human practices, become accepted or rejected, gain authority, and create responsibilities."
 				},
 				{
@@ -39,7 +39,7 @@
 					"en": "Enzo Fenoglio treats human-LLM interaction as asymmetric communication: LLM outputs can be taken up as moves, but their correctness, authority, and force depend on human uptake and accountability."
 				},
 				{
-					"ja": "実務上の推奨は、LLMを「意図を持つ同僚」とも「無意味な道具」とも固定せず、非対称な言語ゲームの構成要素 として扱うことである。",
+					"ja": "導入時の推奨は、LLMを「意図を持つ同僚」とも「無意味な道具」とも固定せず、非対称な言語ゲームの構成要素 として扱うことである。",
 					"en": "Bender and Koller, Shanahan, and Harnad provide the skeptical counterweight: form is not meaning, anthropomorphic vocabulary is risky, and grounding remains a serious problem."
 				},
 				{
@@ -203,7 +203,7 @@
 					"en": "Fenoglio's 2026 working paper can be read as a middle position between the participant view and grounding skepticism."
 				},
 				{
-					"ja": "彼は、LLMの出力が人間に解釈され、言語ゲームの手として取り込まれることを認める一方で、その手の正しさ、権威、実務上の効力は人間側の uptake と accountability に依存すると論じる。",
+					"ja": "彼は、LLMの出力が人間に解釈され、言語ゲームの手として取り込まれることを認める一方で、その手の正しさ、権威、現場での効力は人間側の uptake と accountability に依存すると論じる。",
 					"en": "It accepts that LLM outputs may be interpreted and taken up as moves in language games."
 				},
 				{
@@ -223,7 +223,7 @@
 					"en": "They are components in sociotechnical systems that generate communicative events while normative responsibility remains with people, organizations, and institutions."
 				},
 				{
-					"ja": "この見方は実務上も強い。",
+					"ja": "この見方は導入現場でも強い。",
 					"en": "This position is especially useful in practice."
 				},
 				{
@@ -268,11 +268,11 @@
 					"en": "Bender and Koller's argument does not imply that LLMs are useless."
 				},
 				{
-					"ja": "形式と意味を区別しないと、ベンチマークや実務評価が、何を測っているのか分からなくなる。",
+					"ja": "形式と意味を区別しないと、ベンチマークや導入評価が、何を測っているのか分からなくなる。",
 					"en": "The issue is whether task performance should be equated with understanding."
 				},
 				{
-					"ja": "懐疑論を通すと、次のような実務上の線引きが見える。",
+					"ja": "懐疑論を通すと、次のような導入時の線引きが見える。",
 					"en": "Without separating form from meaning, benchmarks and deployments become unclear about what they are measuring."
 				}
 			]
@@ -359,7 +359,7 @@
 					"en": "Fenoglio accepts language-game uptake while keeping responsibility and normative authority on the human side."
 				},
 				{
-					"ja": "実務としては、次の定式が最も扱いやすい。",
+					"ja": "導入時には、次の定式が最も扱いやすい。",
 					"en": "For practice, the following formulation is the most usable:"
 				},
 				{

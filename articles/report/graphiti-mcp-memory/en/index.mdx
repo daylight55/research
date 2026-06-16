@@ -1,7 +1,7 @@
 ---
 title: 'AI agent memory platform created with Graphiti and MCP'
 description: "A practical report that organizes the design theory, implementation decisions, and major alternative services for long-term memory that combines Graphiti's temporal knowledge graph and MCP."
-rssSummary: 'We will organize the design, implementation decision, and alternative services of AI agent memory infrastructure using Graphiti and MCP from a practical perspective.'
+rssSummary: 'We will organize the design, implementation decision, and alternative services of AI agent memory infrastructure using Graphiti and MCP from a deployment perspective.'
 pubDate: '2026-05-15'
 heroImage: '../../../../src/assets/images/hero/graphiti-mcp-memory.jpg'
 heroImageAlt: 'a blue background with lines and dots'
@@ -18,7 +18,7 @@ draft: false
 ## 1. Executive Summary
 
 By combining Graphiti and MCP, AI agents can be provided with "memory that persists across conversation sessions" and "a standard point of contact from external clients." However, the roles of both are different. Graphiti is the internal representation of memory, and MCP is the interface for how to expose that memory. If this is confused, it will directly lead to practical failures, such as being able to search but with ambiguous permissions, or being able to write but not be able to audit.
-To conclude first, the practical judgment as of 2026 is as follows.
+To conclude first, the deployment judgment as of 2026 is as follows.
 
 1. Graphiti is suitable for long-term memory that needs to deal with history, relationships, state changes, and evidence. It is especially valuable when you want to preserve information about "who knew what, when, and why."
 2. MCP is effective as a standardization layer for distributing storage infrastructure to multiple clients such as Claude Desktop / Cursor / proprietary hosts. However, MCP itself does not resolve memory correctness, authority, reputation, or data models.

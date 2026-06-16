@@ -24,10 +24,10 @@
 				},
 				{
 					"en": "If this is confused, it will directly lead to practical failures, such as being able to search but with ambiguous permissions, or being able to write but not be able to audit.",
-					"ja": "ここを混同すると、検索はできるが権限が曖昧、書き込みはできるが監査できない、という実務上の失敗に直結する。"
+					"ja": "ここを混同すると、検索はできるが権限が曖昧、書き込みはできるが監査できない、という運用上の失敗に直結する。"
 				},
 				{
-					"en": "To conclude first, the practical judgment as of 2026 is as follows.",
+					"en": "To conclude first, the deployment judgment as of 2026 is as follows.",
 					"ja": "結論を先に言うと、2026 年時点での実務判断は次の通りである。"
 				},
 				{
@@ -397,7 +397,7 @@
 				},
 				{
 					"en": "In practice, it is appropriate to enter conversations, email summaries, meeting notes, and case histories in Graphiti, while leaving the original contracts, sales, authority, and inventory in the existing DB.",
-					"ja": "実務上は、Graphiti に会話、メール要約、会議メモ、案件履歴を入れ、正本の契約、売上、権限、在庫は既存 DB に残すのが妥当である。"
+					"ja": "運用上は、Graphiti に会話、メール要約、会議メモ、案件履歴を入れ、正本の契約、売上、権限、在庫は既存 DB に残すのが妥当である。"
 				},
 				{
 					"en": "The purpose of organizational knowledge is not to centralize knowledge, but to securely distribute reusable relationships.",
@@ -523,7 +523,7 @@
 				},
 				{
 					"en": "The shortest practical route is to first introduce it as a read-only memory server and then open limited writebacks later.",
-					"ja": "実務上の最短ルートは、まず read-only の memory server として導入し、後から writeback を限定的に開くことである。"
+					"ja": "導入の最短ルートは、まず read-only の memory server として導入し、後から writeback を限定的に開くことである。"
 				},
 				{
 					"en": "If we summarize everything from the beginning as \"memory and execution are all MCP,\" design responsibilities become mixed.",

@@ -37,6 +37,11 @@ ARTICLE_PATH="articles/news/daily-trends-<YYYY-MM-DD>/ja/index.mdx" SLUG="daily-
 
 - If validation fails, edit only `daily-trend-news.json` and rerun the same two
   commands. The renderer is the only supported way to create the public files.
+- The renderer accepts and normalizes common generated JSON variants. Prefer the
+  field names below, but minor variants such as `url` for `href`, `name` for
+  `source`, `bottom_line` for `bottomLine`, label-prefixed prose, section order
+  changes, missing date prefixes in titles, and extra topics are rounded into
+  the canonical output when enough source-backed content is present.
 - Do not create `report.md` or another second copy of the article body.
 
 The deterministic renderer creates:
@@ -51,8 +56,9 @@ The deterministic renderer creates:
 
 ## Structured JSON Shape
 
-Use this exact top-level shape. Values shown in angle brackets are placeholders
-to replace with researched content.
+Prefer this top-level shape. Values shown in angle brackets are placeholders to
+replace with researched content. The renderer will normalize common key aliases,
+but using this shape makes the result easier to inspect.
 
 ```json
 {
@@ -173,9 +179,9 @@ Each topic object must use this shape:
   event-specific English search terms from the selected topics. Do not use
   generic phrases such as `news collage`, `politics economy technology`,
   `global newsroom`, or `data streams`.
-- Do not put rendered labels in topic values. For example, `bottomLine.ja`
-  should not start with `要点:` and `bottomLine.en` should not start with
-  `The bottom line:`.
+- Prefer not to put rendered labels in topic values. If values start with labels
+  such as `要点:` or `The bottom line:`, the renderer strips the duplicate label
+  before writing MDX.
 - The renderer adds the Axios-inspired Smart Brevity labels in this order:
   `要点:`, `何が起きたか:`, `なぜ重要か:`, `今後の注視点:` and
   `The bottom line:`, `What happened:`, `Why it matters:`, `What to watch:`.
@@ -183,17 +189,41 @@ Each topic object must use this shape:
   blocks: one politics, one economy, and one technology.
 - Do not mention Axios or Smart Brevity in reader-facing values. Use the format,
   not the brand name.
-- Keep every topic paragraph short enough to scan; the structured validator
-  rejects long single-label lines.
+- Keep every topic paragraph short enough to scan.
 - Include one source object for each of the fifteen topics.
 - `href`, `source`, `title`, `description`, `imageUrl`, and `imageAlt` are
   required.
 - `imageUrl` must be stable and topic-specific. Do not use
   `https://source.unsplash.com/...`; it is deprecated and can return 503.
-- Do not reuse the same `imageUrl` across source cards within the article after
+- Avoid reusing the same `imageUrl` across source cards within the article after
   query strings are ignored.
 - Raw `<...>`, `{...}`, quotes, and ampersands are allowed in JSON values only
   when they are part of the content; the renderer escapes them for MDX.
+
+## Renderer Normalization Boundary
+
+The renderer should rescue format noise, not invent facts.
+
+It may normalize:
+
+- section order and section-name aliases such as `tech`, `technology`, or `技術`
+- object-key aliases such as `url` / `href`, `name` / `source`, and
+  `image_url` / `imageUrl`
+- section topic arrays named `items`, `stories`, or `articles`
+- source cards given as `source`, `sourceCard`, `citation`, or the first item in
+  `sources`
+- source-card image objects such as `{ "image": { "url": "...", "alt": "..." } }`
+- label-prefixed prose
+- localized fields accidentally provided as one plain string
+- missing date prefixes in titles
+- extra topics beyond five per section, by keeping the first five
+
+It should still fail when the article would require factual invention:
+
+- fewer than five usable topics in a required section
+- missing source URL, source name, topic prose, or source-card image URL
+- unresolved placeholders such as `<SUMMARY_PHRASE>`
+- empty Japanese or English article-level summary fields
 
 ## Public Trail
 

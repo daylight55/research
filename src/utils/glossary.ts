@@ -1108,16 +1108,29 @@ export function groupGlossaryTermsByCategory(
 	terms: GlossaryIndexTerm[],
 	categoryOrder: readonly string[] = []
 ): GlossaryCategoryGroup[] {
-	const categoryRank = new Map(categoryOrder.map((category, index) => [category, index]))
+	const categoryRank = new Map<string, number>()
+	for (const category of categoryOrder) {
+		if (!categoryRank.has(category)) categoryRank.set(category, categoryRank.size)
+	}
 	const groups = new Map<string, GlossaryIndexTerm[]>()
 
 	for (const term of terms) {
-		const categories = new Set(term.posts.map((post) => post.category))
-		for (const category of categories) {
-			const groupTerms = groups.get(category) ?? []
-			groupTerms.push(term)
-			groups.set(category, groupTerms)
+		const categoryCounts = new Map<string, number>()
+		for (const post of term.posts) {
+			categoryCounts.set(post.category, (categoryCounts.get(post.category) ?? 0) + 1)
 		}
+		const representativeCategory = Array.from(categoryCounts.entries()).sort(
+			([categoryA, countA], [categoryB, countB]) => {
+				const rankA = categoryRank.get(categoryA) ?? Number.MAX_SAFE_INTEGER
+				const rankB = categoryRank.get(categoryB) ?? Number.MAX_SAFE_INTEGER
+				return countB - countA || rankA - rankB || categoryA.localeCompare(categoryB)
+			}
+		)[0]?.[0]
+		if (!representativeCategory) continue
+
+		const groupTerms = groups.get(representativeCategory) ?? []
+		groupTerms.push(term)
+		groups.set(representativeCategory, groupTerms)
 	}
 
 	return Array.from(groups.entries())

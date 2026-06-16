@@ -162,7 +162,7 @@ Graphiti は Knowledge Graph と MCP の実装論点を扱う。
 	)
 })
 
-test('groups glossary terms by article category order', () => {
+test('groups glossary terms by one representative article category', () => {
 	const index = buildGlossaryIndex([
 		{
 			id: 'graphiti-mcp-memory',
@@ -204,7 +204,36 @@ Ontology は Knowledge Graph の概念設計に関わる。
 	)
 	assert.deepEqual(
 		groups.find((group) => group.category === 'ai-systems')?.terms.map((term) => term.label),
-		['Knowledge Graph', 'Graphiti', 'MCP']
+		['Graphiti', 'MCP']
+	)
+	assert.equal(
+		groups.flatMap((group) => group.terms).filter((term) => term.slug === 'knowledge-graph')
+			.length,
+		1
+	)
+})
+
+test('chooses the most frequent glossary category before category order', () => {
+	const groups = groupGlossaryTermsByCategory(
+		[
+			{
+				label: 'RAG',
+				slug: 'rag',
+				count: 3,
+				postCount: 3,
+				posts: [
+					{ category: 'knowledge-systems' },
+					{ category: 'ai-systems' },
+					{ category: 'ai-systems' }
+				]
+			}
+		],
+		['knowledge-systems', 'ai-systems']
+	)
+
+	assert.deepEqual(
+		groups.map((group) => [group.category, group.terms.map((term) => term.label)]),
+		[['ai-systems', ['RAG']]]
 	)
 })
 

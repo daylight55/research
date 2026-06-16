@@ -18,5 +18,6 @@ export const CATEGORIES = [
 	'geopolitics',
 	'japan-politics',
 	'real-estate',
+	'ancient-history',
 	'cultural-anthropology'
 ] as const

@@ -1,0 +1,74 @@
+---
+title: '調査プロセス: LLMの限界と幻覚・評価方法'
+description: '幻覚、事実性、推論、長文脈、評価ベンチマーク、安全性、説明可能性を整理した公開調査ログ。'
+pubDate: '2026-06-16'
+category: 'ai-systems'
+tags: ['LLM', 'Hallucination', 'Evaluation', 'RAG', 'Safety', 'Explainability']
+generation:
+  model: 'gpt-5.4-mini'
+draft: false
+---
+
+# 調査プロセス: LLMの限界と幻覚・評価方法
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- issue number: `#35`
+- issue title: `LLMの限界・幻覚・評価方法を調査する`
+- publishable request summary: LLM の限界を、幻覚、事実性、推論、長文脈、評価ベンチマーク、安全性、説明可能性の観点から整理し、幻覚の仕組み、ベンチマーク評価と実務評価の差、RAG・検証・引用・ツール利用の効き方と残余リスク、実務での品質保証プロセスをまとめる。
+- scope constraints: 最新性が重要な論点は一次情報・公式資料・主要統計で確認する。主張、根拠、限界、実務含意を分ける。可能な範囲で Mermaid 図解、比較表、品質保証の手順を入れる。公開可能な調査材料は source-notes に、公開可能な調査経過は research-log にまとめる。英語版と mix-alignment.json も同時に整える。
+- inferred deliverable: `articles/report/llm-limitations-hallucination-evaluation/ja/index.mdx` を正本とする日本語レポート、対応する英語レポート、`mix-alignment.json`、公開 source-notes、公開 research-log の同時整備。
+
+## 調査方針
+
+このテーマは「LLM は何が苦手か」を一般論で終わらせると実務に落ちないため、最初に幻覚の生成要因、次に評価のずれ、最後に運用上の品質保証という順で切り分けた。単なる用語集ではなく、実際に事故を減らすための設計問題として扱う方針にした。
+
+## 確認した論点
+
+- LLM は真偽照合機ではなく、次トークン予測とデコーディングの組み合わせで動くため、不確実な問いに対して推測が有利になりうる。
+- 2025 年の理論整理は、幻覚を訓練と評価のインセンティブ構造から説明している。
+- 2023 年の校正研究は、任意の事実に対して幻覚の下限が残ることを示している。
+- ベンチマークは比較には有効だが、汚染、過学習、分布ずれ、静的データ化の問題がある。
+- 実務では、accuracy だけでなく拒否率、引用支持率、latency、cost、再実行時の安定性が重要になる。
+- RAG は鮮度と根拠提示を助けるが、RAGTruth などは証拠があっても幻覚が残ることを示している。
+- 引用と説明は provenance の手掛かりにはなるが、忠実性の証明ではない。
+- 外部取得は prompt injection や retriever 汚染の攻撃面を増やす。
+- 長文脈は便利だが、位置依存の限界があるため、入力を単純に長くするだけでは解決しない。
+- 実務の品質保証は、公開ベンチマーク、社内ホールドアウト、adversarial set、人手確認、監査ログを組み合わせるのが妥当である。
+
+## 主要な参照先
+
+- Why Language Models Hallucinate
+- Calibrated Language Models Must Hallucinate
+- Holistic Evaluation of Language Models
+- An Open Source Data Contamination Report for Large Language Models
+- The Vulnerability of Language Model Benchmarks: Do They Accurately Reflect True LLM Performance?
+- Lost in the Middle: How Language Models Use Long Contexts
+- RAGTruth
+- Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting
+- Indirect Prompt Injection in the Wild: An Empirical Study of Prevalence, Techniques, and Objectives
+- Backdoored Retrievers for Prompt Injection Attacks on Retrieval Augmented Generation of Large Language Models
+- NIST AI RMF
+- Attention Is All You Need
+- Language Models are Few-Shot Learners
+- Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+
+## 採用を弱めた情報
+
+- ベンダーの宣伝的な解説は、定義が不安定で評価設計が薄いため本文の中心から外した。
+- ベンチマークの単純な順位表は、汚染と分布ずれを無視しやすいので、実務評価の補助としてのみ扱った。
+- 説明可能性を「モデルが自分で理由を語れること」と同一視する主張は採用しなかった。
+- RAG だけで正確性が保証される、という断定は退けた。
+
+## 残課題
+
+- 任意事実に対する幻覚をどこまで許容するかは、業務ごとのリスク許容度で変わる。
+- ベンチマーク汚染の検出は、公開データだけでは不十分な場合がある。
+- RAG とツール利用の安全性は、権限、監査、入力整流、差分確認でさらに変わる。
+- 高リスク領域では、人手確認の閾値を制度として決める必要がある。

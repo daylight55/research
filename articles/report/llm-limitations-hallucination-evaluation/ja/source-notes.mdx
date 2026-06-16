@@ -1,0 +1,67 @@
+---
+title: 'LLMの限界と幻覚: Source Notes'
+---
+
+# LLMの限界と幻覚: Source Notes
+
+## ソースマップ
+
+### Primary / Foundational
+
+- [Why Language Models Hallucinate](https://arxiv.org/abs/2509.04664)
+- [Calibrated Language Models Must Hallucinate](https://arxiv.org/abs/2311.14648)
+- [Holistic Evaluation of Language Models](https://arxiv.org/abs/2211.09110)
+- [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)
+- [RAGTruth: A Hallucination Corpus for Developing Trustworthy Retrieval-Augmented Language Models](https://arxiv.org/abs/2401.00396)
+- [Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting](https://arxiv.org/abs/2305.04388)
+- [An Open Source Data Contamination Report for Large Language Models](https://arxiv.org/abs/2310.17589)
+- [The Vulnerability of Language Model Benchmarks: Do They Accurately Reflect True LLM Performance?](https://arxiv.org/abs/2412.03597)
+- [Indirect Prompt Injection in the Wild: An Empirical Study of Prevalence, Techniques, and Objectives](https://arxiv.org/abs/2604.27202)
+- [Backdoored Retrievers for Prompt Injection Attacks on Retrieval Augmented Generation of Large Language Models](https://arxiv.org/abs/2410.14479)
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+- [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805)
+- [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035)
+
+### Authoritative / Official
+
+- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)
+
+### Secondary / Context
+
+- The article does not depend on vendor marketing posts or leaderboard commentary for core claims.
+- Background explainers were only used when they added stable wording or evaluation context.
+
+## 重要論点に対する証拠メモ
+
+- 幻覚は、学習で次トークン予測が最適化され、評価でも正解を当てることが報われるため、不確実な問いで推測が有利になりうる。
+- 2025 年の理論整理は、幻覚を訓練と評価のインセンティブ構造から説明している。
+- 2023 年の校正研究は、任意の事実に対して幻覚の下限が残ることを示している。
+- ベンチマークは比較には有効だが、汚染、過学習、分布ずれの影響を受けるため、実務評価と同一視できない。
+- HELM は accuracy だけでなく calibration, robustness, fairness, bias, toxicity, efficiency を含む多面的評価を志向している。
+- 長文脈は有用だが、中央付近の情報の取りこぼしが残る。
+- RAG は鮮度と根拠提示を助けるが、証拠があっても unsupported claim が残る。
+- 引用や説明は provenance を示しても、忠実性の証明ではない。
+- 外部取得は prompt injection と retriever 汚染の攻撃面を増やす。
+- 実務の品質保証は、公開ベンチマーク、社内固定セット、adversarial set、人手確認、監査を組み合わせるのが妥当である。
+
+## 反映を弱めた情報
+
+- ベンダーの宣伝文句は、定義が不安定で方法論が薄いものが多かったため本文の中心から外した。
+- 単純なリーダーボード順位は、汚染や分布ずれを考慮しないと誤読しやすいため、補助的な位置に留めた。
+- 説明可能性を「モデルが語る理由」と同義にする議論は採用しなかった。
+- RAG が真実を保証するという断定は採用しなかった。
+
+## 退けた、または補助に留めた情報
+
+- 主要論点の裏取りに不要な一般向け解説記事は外した。
+- 個別ベンチマークの宣伝色が強い記事は、評価原理の説明には使わなかった。
+- 速報的なニュース記事は、永続的な論点整理には不向きだったため補助に留めた。
+
+## 開いている論点
+
+- 任意事実に対する幻覚率の許容値は、利用分野ごとに変わる。
+- どの業務で human review を必須にするかは、制度設計として決める必要がある。
+- ベンチマーク汚染の検出は、公開データだけでは不十分な場合がある。
+- RAG と tool use の安全性は、権限、監査、入力整流、差分確認でさらに変わる。

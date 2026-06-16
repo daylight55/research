@@ -1,0 +1,74 @@
+---
+title: 'Research Log: LLM Limits, Hallucinations, and Evaluation Methods'
+description: 'Public research trail for the report that organizes hallucination, factuality, reasoning, long context, benchmark evaluation, safety, and explainability.'
+pubDate: '2026-06-16'
+category: 'ai-systems'
+tags: ['LLM', 'Hallucination', 'Evaluation', 'RAG', 'Safety', 'Explainability']
+generation:
+  model: 'gpt-5.4-mini'
+draft: false
+---
+
+# Research Log: LLM Limits, Hallucinations, and Evaluation Methods
+
+## Environment
+
+- model: `gpt-5.4-mini`
+- skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## Research Instruction
+
+- issue number: `#35`
+- issue title: `LLMの限界・幻覚・評価方法を調査する`
+- publishable request summary: Organize LLM limits across hallucination, factuality, reasoning, long context, benchmark evaluation, safety, and explainability. Explain how hallucinations arise, how benchmark evaluation differs from practical evaluation, what RAG, verification, citations, and tool use improve, and what quality assurance process should be used in practice.
+- scope constraints: Verify unstable claims against primary or official sources. Separate claims, evidence, limits, and practical implications. Include Mermaid diagrams, comparison tables, and a quality assurance process where helpful. Keep publishable research material in `source-notes.mdx` and publishable process notes in `research-log.mdx`. Update the English article and `mix-alignment.json` at the same time.
+- inferred deliverable: A Japanese report at `articles/report/llm-limitations-hallucination-evaluation/ja/index.mdx`, the English report, `mix-alignment.json`, public source notes, and public research logs.
+
+## Research Approach
+
+I framed the topic as a system-design problem rather than a vocabulary list. The article therefore moves from hallucination mechanisms, to benchmark limitations, to production quality assurance, because that sequence is the most decision-useful for practitioners.
+
+## Checked Claims
+
+- LLMs are not truth checkers. They optimize next-token prediction, which can reward plausible guesses under uncertainty.
+- Hallucination is shaped by training incentives and evaluation incentives, not only by architecture.
+- Calibration helps, but it does not remove the lower bound for arbitrary facts.
+- Benchmarks are useful for comparison, but contamination, overfitting, and distribution shift make them insufficient on their own.
+- Practical evaluation should include refusal quality, provenance support, latency, cost, and rerun stability.
+- RAG improves freshness and evidence access, but unsupported claims can still appear.
+- Citations and explanations are signals, not proofs of fidelity.
+- External retrieval increases the attack surface through prompt injection and retriever poisoning.
+- Long context helps, but positional weakness remains.
+- Quality assurance should combine public benchmarks, private holdouts, adversarial sets, human review, and audit logs.
+
+## Main References
+
+- Why Language Models Hallucinate
+- Calibrated Language Models Must Hallucinate
+- Holistic Evaluation of Language Models
+- An Open Source Data Contamination Report for Large Language Models
+- The Vulnerability of Language Model Benchmarks: Do They Accurately Reflect True LLM Performance?
+- Lost in the Middle: How Language Models Use Long Contexts
+- RAGTruth
+- Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting
+- Indirect Prompt Injection in the Wild: An Empirical Study of Prevalence, Techniques, and Objectives
+- Backdoored Retrievers for Prompt Injection Attacks on Retrieval Augmented Generation of Large Language Models
+- NIST AI RMF
+- Attention Is All You Need
+- Language Models are Few-Shot Learners
+- Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+
+## Downgraded Material
+
+- Vendor explainers were used only as orientation when they lacked stable definitions or evaluation detail.
+- Simple benchmark leaderboards were not treated as sufficient evidence because contamination and distribution shift can distort them.
+- Claims that explanations are automatically faithful were excluded.
+- Claims that RAG alone guarantees correctness were excluded.
+
+## Remaining Limits
+
+- The acceptable hallucination rate depends on the risk tolerance of the domain.
+- Detecting benchmark contamination may require more than public data alone.
+- The safety of RAG and tool use still depends on permissions, auditability, input sanitation, and diff review.
+- High-risk domains still need a policy decision on the threshold for human review.

@@ -56,7 +56,7 @@
 				},
 				{
 					"en": "In practical terms, the central issue regarding aid to Ukraine has shifted from \"how much to spend?\" to \"which channels should we use for air defense, ammunition, drones, maintenance, training, and joint production.\"",
-					"ja": "実務的には、対ウクライナ支援の中心論点は「いくら出すか」よりも、「防空、弾薬、無人機、保守、訓練、共同生産をどのチャネルで回すか」に移っている。"
+					"ja": "支援設計では、対ウクライナ支援の中心論点は「いくら出すか」よりも、「防空、弾薬、無人機、保守、訓練、共同生産をどのチャネルで回すか」に移っている。"
 				},
 				{
 					"en": "The key uncertainties going forward are the priorities of the US Congress and the executive branch, fiscal and political agreements within the EU, and production capacity for artillery shells and air defense missiles.",
@@ -428,15 +428,15 @@
 			]
 		},
 		{
-			"id": "practical-implications",
+			"id": "support-export-control-issues",
 			"heading": {
 				"ja": "14. 支援評価と輸出管理で見る点",
 				"en": "14. Support Evaluation and Export-Control Points"
 			},
 			"pairs": [
 				{
-					"en": "The implications for Japanese policymakers, export control officials, and supply chain officials are clear.",
-					"ja": "日本の政策担当者、輸出管理担当、サプライチェーン担当にとっての含意は明確である。"
+					"en": "For Japanese policymakers, export-control officials, and supply-chain teams, the points to watch are clear.",
+					"ja": "日本の政策担当者、輸出管理担当、サプライチェーン担当が見るべき点は明確である。"
 				},
 				{
 					"en": "Supply networks for air defense, ammunition, drones and maintenance components are both a security concern for Europe and a market opportunity.",

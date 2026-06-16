@@ -294,7 +294,7 @@
 				},
 				{
 					"en": "Its practical value is less \"replace Playwright Test\" and more \"give agents a dense, safety-aware browser CLI.\"",
-					"ja": "AgentBrowserの実務上の強みは、回帰E2Eそのものよりも「エージェントが安全にブラウザを触るためのCLI面」を厚くしている点にある。"
+					"ja": "AgentBrowserの運用上の強みは、回帰E2Eそのものよりも「エージェントが安全にブラウザを触るためのCLI面」を厚くしている点にある。"
 				},
 				{
 					"en": "The same CLI includes network / HAR, trace, profiler, console, visual diff, snapshot diff, React introspection, Web Vitals, annotated screenshots, a dashboard, domain allowlists, action policies, confirmations, and output length limits.",

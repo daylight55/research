@@ -24,7 +24,7 @@
 				},
 				{
 					"en": "The practical arguments of this paper are the following four points.",
-					"ja": "本稿の実務上の主張は次の4点である。"
+					"ja": "本稿の要約運用上の主張は次の4点である。"
 				},
 				{
 					"en": "Tacit knowledge is not \"knowledge that has not yet been written down,\" but is the background structure that supports the act of knowing.",
@@ -242,7 +242,7 @@
 				},
 				{
 					"en": "Rather, it is a practical estimate of a safe division of roles when using AI.",
-					"ja": "むしろ、AI を使うときの安全な役割分担を示した実務上の推定である。"
+					"ja": "むしろ、AI を使うときの安全な役割分担を示した要約設計上の推定である。"
 				},
 				{
 					"en": "It makes more sense to view AI as an editing aid that speeds up `外化` and `連結` rather than an extractor of tacit knowledge.",

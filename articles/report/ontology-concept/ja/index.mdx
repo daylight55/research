@@ -48,7 +48,7 @@ flowchart TD
 
 第二に、AI・知識表現の ontology は、ある領域における概念化を明示的に仕様化したものである。Gruber (1993) の有名な定義は、オントロジーを「conceptualization の specification」と捉える。ここで重要なのは、対象世界そのものではなく、人間またはシステムがその領域をどう概念化するかを明示する点である。
 
-<SourceNote>Gruber の [A Translation Approach to Portable Ontology Specifications](https://doi.org/10.1006/knac.1993.1008) および著者ページの [definition note](https://tomgruber.org/writing/ontolingua-kaj-1993/) は、オントロジーを「概念化の仕様」として位置づける。Noy and McGuinness の [Ontology Development 101](https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html) も、この定義を実務的な開発手順に展開している。</SourceNote>
+<SourceNote>Gruber の [A Translation Approach to Portable Ontology Specifications](https://doi.org/10.1006/knac.1993.1008) および著者ページの [definition note](https://tomgruber.org/writing/ontolingua-kaj-1993/) は、オントロジーを「概念化の仕様」として位置づける。Noy and McGuinness の [Ontology Development 101](https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html) も、この定義を実装向けの開発手順に展開している。</SourceNote>
 
 第三に、近年の業務AI・データ基盤では、ontology が semantic layer、canonical data model、business object layer、digital twin に近い意味で使われることがある。Palantir Foundry の Ontology は、RDF/OWL仕様そのものではなく、データ、オブジェクト、関係、アクション、関数、動的セキュリティを統合する operational layer として説明されている。
 
@@ -72,7 +72,7 @@ Gruber (1993) の定義は、オントロジーを「特定システムの内部
 
 ## 4. オントロジーを構成する要素
 
-実務上、オントロジーは次の要素で構成される。
+設計上、オントロジーは次の要素で構成される。
 
 | 要素                  | 意味                       | 例                                 |
 | --------------------- | -------------------------- | ---------------------------------- |
@@ -144,7 +144,7 @@ Noy and McGuinness は、オントロジー開発を「一度で完成する定�
 
 分類体系や用語集は、オントロジーの入口として有用である。しかし、たとえば「顧客」「契約」「請求」という言葉を定義しただけでは、契約が必ず一つ以上の顧客に紐づくのか、顧客が法人と個人で別クラスなのか、請求の取消はどの状態で許されるのかは分からない。こうした関係・制約・状態遷移・権限が必要になった時点で、単なる用語集からオントロジー設計へ進む。
 
-SKOSは、この境界領域を扱う実務的な標準である。シソーラス、分類体系、件名標目のような semi-formal な知識組織システムをRDFで表現できる。厳密な論理推論を狙うOWLより軽く、既存の分類・タグ体系を機械可読にする用途に向く。
+SKOSは、この境界領域を扱う分類・語彙設計の標準である。シソーラス、分類体系、件名標目のような semi-formal な知識組織システムをRDFで表現できる。厳密な論理推論を狙うOWLより軽く、既存の分類・タグ体系を機械可読にする用途に向く。
 
 <SourceNote>W3C [SKOS Primer](https://www.w3.org/TR/skos-primer/) は、SKOSをシソーラス、分類体系、件名標目のような知識組織システムを表すRDF vocabularyとして説明する。SKOSは、OWLの厳密さとWeb上の弱構造データの間をつなぐ bridge として位置づけられている。</SourceNote>
 
@@ -163,7 +163,7 @@ SKOSは、この境界領域を扱う実務的な標準である。シソーラ�
 | SHACL          | RDFグラフ検証                          | 必須項目、型、範囲、整合性チェック            |
 | schema.org     | Web上の構造化データ語彙                | Webページ、メール、JSON-LDの意味注釈          |
 
-RDFはデータモデルであり、OWLはオントロジー言語であり、SHACLは検証言語である。この区別は実務上かなり重要である。OWLは、open world assumption のもとで「明示されていないことは偽とは限らない」と扱う。これはWeb上の分散知識には適しているが、業務データの入力検証では違和感を生みやすい。業務システムで「契約に顧客IDがないならエラー」と言いたい場合、SHACLやアプリケーション側の検証が必要になる。
+RDFはデータモデルであり、OWLはオントロジー言語であり、SHACLは検証言語である。この区別は業務データ設計ではかなり重要である。OWLは、open world assumption のもとで「明示されていないことは偽とは限らない」と扱う。これはWeb上の分散知識には適しているが、業務データの入力検証では違和感を生みやすい。業務システムで「契約に顧客IDがないならエラー」と言いたい場合、SHACLやアプリケーション側の検証が必要になる。
 
 <SourceNote>W3C [RDF 1.1 Primer](https://www.w3.org/TR/rdf-primer/) は、RDF statement を subject、predicate、object の triples として説明する。W3C [OWL 2 Primer](https://www.w3.org/TR/owl-primer/) は、OWLをクラス、プロパティ、個体、データ値を扱うSemantic Web用のオントロジー言語として説明する。W3C [SHACL](https://www.w3.org/TR/shacl/) は、RDF graph を shapes graph に対して検証する制約言語として定義されている。</SourceNote>
 
@@ -272,7 +272,7 @@ flowchart LR
 | Source   | 根拠として参照する文献・公式資料・仕様 |
 | Claim    | レポート内の検証可能な主張             |
 | Evidence | Claimを支える具体的根拠                |
-| Decision | 実務上の判断・推奨                     |
+| Decision | 設計上の判断・推奨                     |
 | Risk     | 限界、未確認事項、失敗可能性           |
 | Concept  | 再利用したい抽象概念                   |
 

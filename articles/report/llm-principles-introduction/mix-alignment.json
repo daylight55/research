@@ -32,7 +32,7 @@
         },
         {
           "en": "For practical work, the important question is not whether the model is “smart,” but which inputs, external references, and verification steps you give it.",
-          "ja": "実務上の重要点は、LLMを「賢い回答装置」として評価するより、どの入力を与え、どの外部情報を検索し、どの検証手段を通すかで性能を設計することにある。"
+          "ja": "利用設計で重要なのは、LLMを「賢い回答装置」として評価するより、どの入力を与え、どの外部情報を検索し、どの検証手段を通すかで性能を設計することにある。"
         },
         {
           "en": "Context length is useful, but it is not a magic fix, and longer inputs do not automatically make a model more reliable.",
@@ -368,7 +368,7 @@
       ]
     },
     {
-      "id": "practical-implications",
+      "id": "llm-use-design",
       "heading": {
         "ja": "9. 実務でどう使うか",
         "en": "9. How to Use LLMs Safely"

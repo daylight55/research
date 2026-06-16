@@ -23,7 +23,7 @@ In practice, MCP server authentication and authorization can be easily understoo
 Source note: See [MCP Authorization](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization), [draft-ietf-oauth-v2-1](https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/), [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636), [OpenID Connect Discovery 1.0](https://openid.net/specs/openid-connect-discovery-1_0.html), [RFC 8414](https://www.rfc-editor.org/rfc/rfc8414).
 With Claude's remote connector, the user adds the connection destination URL and, if necessary, passes the OAuth client ID / secret to connect. According to Anthropic's official information, remote MCP is handled via Anthropic's cloud, and a custom client ID/secret can be set even if the server side does not have DCR.
 Source note: See [Anthropic: Getting started with custom integrations using remote MCP](https://support.anthropic.com/en/articles/11175166-getting-started-with-custom-integrations-using-remote-mcp) and Anthropic's connector configuration guide.
-The practical points are as follows.
+The implementation points are as follows.
 
 1. The MCP server is not a "business API" but a "protected resource" and guides the authorization server with 401 responses and resource metadata.
 2. OIDC provider exposes `authorization_endpoint`, `token_endpoint`, etc. through Authorization Server Metadata or OIDC Discovery.

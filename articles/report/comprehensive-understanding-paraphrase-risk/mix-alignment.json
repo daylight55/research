@@ -339,7 +339,7 @@
 				},
 				{
 					"en": "Rather, it is more practical to determine what can be preserved through a medium and what changes when the medium is changed.",
-					"ja": "むしろ、何が媒介で保存でき、何が媒介を変えると変質するのかを見極める方が実務的である。"
+					"ja": "むしろ、何が媒介で保存でき、何が媒介を変えると変質するのかを見極める方が運用上有効である。"
 				},
 				{
 					"en": "In this respect, paraphrasing is a \"translation,\" but it is not an equivalence transformation in the strict sense of the word.",
@@ -356,7 +356,7 @@
 			]
 		},
 		{
-			"id": "practice-implications",
+			"id": "effects-on-knowledge-work",
 			"heading": {
 				"ja": "9. 教育・組織ナレッジ・AI要約への影響",
 				"en": "9. Effects on education, organizational knowledge, and AI summarization"
@@ -489,7 +489,7 @@
 					"ja": "ウィトゲンシュタイン、現象学、実践理論、意味論、認知科学、組織論を横断するには、さらに別の文献レビューが必要である。"
 				},
 				{
-					"en": "Nevertheless, the conclusions of this paper are of sufficient practical use.",
+					"en": "Nevertheless, the conclusions of this paper are of actionable enough.",
 					"ja": "それでも、本稿の結論は実務に十分使える。"
 				},
 				{
@@ -510,8 +510,8 @@
 			},
 			"pairs": [
 				{
-					"en": "The practical recommendations are clear.",
-					"ja": "実務上の推奨は明確である。"
+					"en": "The summarization recommendations are clear.",
+					"ja": "要約運用での推奨は明確である。"
 				},
 				{
 					"en": "Use paraphrases for sharing and searching.",

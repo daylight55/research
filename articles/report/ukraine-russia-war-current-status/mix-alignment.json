@@ -61,7 +61,7 @@
 				},
 				{
 					"en": "Therefore, rather than looking only at advances and retreats on a single day, it is more practical to understand in which theaters losses are accumulating, which attacks are spilling over into civilian life, and over what period of time support.",
-					"ja": "したがって、1日の前進・後退だけを見るより、どの戦域で損耗が積み上がっているか、どの攻撃が民間生活に波及しているか、そして支援がどの期間をつなぐのかで理解したほうが実務的である。"
+					"ja": "したがって、1日の前進・後退だけを見るより、どの戦域で損耗が積み上がっているか、どの攻撃が民間生活に波及しているか、そして支援がどの期間をつなぐのかで理解したほうが正確である。"
 				}
 			]
 		},
@@ -278,7 +278,7 @@
 				},
 				{
 					"en": "The practical meaning of support is twofold.",
-					"ja": "支援の実務的な意味は二つある。"
+					"ja": "支援の政策上の意味は二つある。"
 				},
 				{
 					"en": "First, Ukraine maintains its wartime economy while relying on international organizations and the EU for short-term funding.",
@@ -336,7 +336,7 @@
 			]
 		},
 		{
-			"id": "practical-implications",
+			"id": "policy-business-risks",
 			"heading": {
 				"ja": "9. 政策・事業判断で見るべきリスク",
 				"en": "9. Risks for Policy and Business Decisions"

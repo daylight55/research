@@ -165,7 +165,7 @@
 				},
 				{
 					"en": "The focus in practice after 2024 will shift from a single model to agents, tool usage, long context, external storage, permissions, auditing, and business application integration.",
-					"ja": "2024年以降の実務上の焦点は、モデル単体から、エージェント、ツール利用、長文脈、外部記憶、権限、監査、業務アプリ統合へ移っている。"
+					"ja": "2024年以降の導入現場の焦点は、モデル単体から、エージェント、ツール利用、長文脈、外部記憶、権限、監査、業務アプリ統合へ移っている。"
 				},
 				{
 					"en": "This means that AI is moving from \"software that answers\" to \"software that acts within a work environment.\"",
@@ -298,7 +298,7 @@
 				},
 				{
 					"en": "In practice, these methods do not mean that the model has ethics built into it.",
-					"ja": "実務上は、これらの手法は「モデルに倫理を内蔵した」ことを意味しない。"
+					"ja": "運用上は、これらの手法は「モデルに倫理を内蔵した」ことを意味しない。"
 				},
 				{
 					"en": "It merely improves the output trends; permissions, audits, approvals, logs, and evaluations remain on the system side.",
@@ -352,7 +352,7 @@
 			"pairs": [
 				{
 					"en": "If we limit the difference between LLMs and humans to \"humans have minds, and AIs do not,\" it will not be of much use in practical design.",
-					"ja": "LLMと人間の違いを「人間には心がある、AIにはない」という形で止めると、実務設計にはあまり役に立たない。"
+					"ja": "LLMと人間の違いを「人間には心がある、AIにはない」という形で止めると、システム設計にはあまり役に立たない。"
 				},
 				{
 					"en": "The important differences in practice are as follows.",

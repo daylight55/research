@@ -88,7 +88,7 @@ flowchart LR
 
 ## 4. MCP と外部ツール連携
 
-MCPは、LLMが使う外部ツールやデータ接続を、個別実装ではなく共通プロトコルで扱うための仕組みである。ここで重要なのは、MCPがモデルの知識を増やすわけではない点である。MCPが変えるのは接続の標準化であり、実務上は「どのLLMクライアントでも同じ種類の文脈・ツールを接続しやすくする」ことに価値がある。<SourceNote>[MCP specification](https://modelcontextprotocol.io/specification/2025-03-26) は、MCP を context, tools, resources を LLM アプリに接続するためのオープン標準として定義している。</SourceNote>
+MCPは、LLMが使う外部ツールやデータ接続を、個別実装ではなく共通プロトコルで扱うための仕組みである。ここで重要なのは、MCPがモデルの知識を増やすわけではない点である。MCPが変えるのは接続の標準化であり、接続設計では「どのLLMクライアントでも同じ種類の文脈・ツールを接続しやすくする」ことに価値がある。<SourceNote>[MCP specification](https://modelcontextprotocol.io/specification/2025-03-26) は、MCP を context, tools, resources を LLM アプリに接続するためのオープン標準として定義している。</SourceNote>
 
 その意味で、MCPはRAGやツール利用の上位互換ではない。むしろ、RAG用の文書ソース、社内API、開発ツール、運用ツールを、同じ接続方式で提供するための配線層に近い。モデルの選択よりも、権限、認証、ログ、取り消し可能性をどう設計するかが重要になる。
 

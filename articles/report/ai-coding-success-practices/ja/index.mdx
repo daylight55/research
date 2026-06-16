@@ -1,7 +1,7 @@
 ---
 title: 'AI Codingプラクティス: 成功確率を上げるための設計論'
-description: 'LLMを用いたAI Codingを、魔法の自動化ではなく成功確率を上げる工学として捉え直し、文脈、操作面、検証、統制の実務プラクティスを整理する。'
-rssSummary: 'AI Codingは「任せる量」ではなく「成功確率を上げる設計」で捉えるべきだ。文脈、操作面、検証、統制の実務プラクティスを整理する。'
+description: 'LLMを用いたAI Codingを、魔法の自動化ではなく成功確率を上げる工学として捉え直し、文脈、操作面、検証、統制のエンジニアリングプラクティスを整理する。'
+rssSummary: 'AI Codingは「任せる量」ではなく「成功確率を上げる設計」で捉えるべきだ。文脈、操作面、検証、統制のエンジニアリングプラクティスを整理する。'
 pubDate: '2026-05-27'
 heroImage: '../../../../src/assets/images/hero/ai-coding-success-practices.jpg'
 heroImageQuery: 'software engineering team, terminal, code review, developer workflow'
@@ -144,7 +144,7 @@ flowchart TD
 
 <SourceNote>OpenAIはCodexの実行環境を、リポジトリとユーザー定義の開発環境を持つ隔離コンテナとして説明し、ファイルと端末ログによって検証可能な証拠を残すとしている [Codex system card addendum](https://openai.com/index/o3-o4-mini-codex-system-card-addendum/)。AnthropicもClaude Codeの製品説明で、操作ごとの承認、safe/risky actionの区別、human controlをAgent safetyの要素として説明している [Claude Code product](https://www.anthropic.com/product/claude-code)。</SourceNote>
 
-## 5. 実務プラクティス
+## 5. エンジニアリングプラクティス
 
 ### 5.1 AGENTS.mdは行動規範ではなく作業ナビにする
 
@@ -170,7 +170,7 @@ AGENTS.mdには、長い設計思想より、Agentが最初に読むべき場所
 
 Agentは失敗ログを読んで修正するため、テストの失敗メッセージは開発者向けであると同時にAgent向けでもある。何が期待され、何が実際に起き、どのファイルを見ればよいかが分かる失敗は、Agentの自己修正を助ける。逆に、巨大なsnapshot差分や環境依存のflakeは、Agentを誤誘導する。
 
-実務上は、Agent作業向けに次を用意すると効果が高い。
+Agent作業では次を用意すると効果が高い。
 
 1. 変更対象に近い高速テスト。
 2. 失敗理由が短く出るassertion。

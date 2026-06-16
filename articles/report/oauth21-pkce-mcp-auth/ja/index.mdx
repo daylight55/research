@@ -19,7 +19,7 @@ draft: false
 
 ## 1. エグゼクティブサマリー
 
-MCPサーバーの認証認可は、実務上は「MCPサーバーが保護リソースとして振る舞い、OAuth 2.1 の Authorization Code + PKCE でトークンを取得し、その Bearer token で MCP ツール呼び出しを許可する」流れとして理解すると分かりやすい。MCPの最新公開仕様では、HTTP系のMCPサーバーは Protected Resource Metadata を公開し、クライアントはそこから Authorization Server Metadata と OIDC Discovery をたどって認可サーバーを特定する前提になっている。OAuth 2.1 は2026年5月時点でも Internet-Draft で、Authorization Code flow と PKCE を前提にする整理が主流である。
+MCPサーバーの認証認可は、実装上は「MCPサーバーが保護リソースとして振る舞い、OAuth 2.1 の Authorization Code + PKCE でトークンを取得し、その Bearer token で MCP ツール呼び出しを許可する」流れとして理解すると分かりやすい。MCPの最新公開仕様では、HTTP系のMCPサーバーは Protected Resource Metadata を公開し、クライアントはそこから Authorization Server Metadata と OIDC Discovery をたどって認可サーバーを特定する前提になっている。OAuth 2.1 は2026年5月時点でも Internet-Draft で、Authorization Code flow と PKCE を前提にする整理が主流である。
 
 <SourceNote>[MCP Authorization](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization)、[draft-ietf-oauth-v2-1](https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/)、[RFC 7636](https://www.rfc-editor.org/rfc/rfc7636)、[OpenID Connect Discovery 1.0](https://openid.net/specs/openid-connect-discovery-1_0.html)、[RFC 8414](https://www.rfc-editor.org/rfc/rfc8414) を参照。</SourceNote>
 
@@ -27,13 +27,13 @@ Claude系の remote connector では、ユーザーは接続先URLを追加し�
 
 <SourceNote>[Anthropic: Getting started with custom integrations using remote MCP](https://support.anthropic.com/en/articles/11175166-getting-started-with-custom-integrations-using-remote-mcp) と Anthropic の connector 設定案内を参照。</SourceNote>
 
-実務上の要点は次のとおりである。
+実装上の要点は次のとおりである。
 
 1. MCPサーバーは「業務API」ではなく「保護リソース」であり、401 応答と resource metadata で認可サーバーを案内する。
 2. OIDCプロバイダーは、Authorization Server Metadata か OIDC Discovery を通じて `authorization_endpoint` と `token_endpoint` などを公開する。
 3. OAuthクライアントは、ブラウザで認可コードを受け取り、PKCE の `code_verifier` でトークン交換する。
 4. Claudeは、remote connector の形でこのクライアント役を担う。設定上は「接続先URL」「クライアントID/Secret」「必要なスコープ」が肝になる。
-5. OpenAPIだけを持つ既存サービスは、そのままでは MCP クライアントの接続先にはならない。MCPサーバーで OpenAPI をラップして、OAuth 2.1 PKCE をそこで受けるのが実務的である。これは MCP が外部システムへの接続標準であり、クライアントが MCP サーバーに接続するという仕様からの推定である。
+5. OpenAPIだけを持つ既存サービスは、そのままでは MCP クライアントの接続先にはならない。MCPサーバーで OpenAPI をラップして、OAuth 2.1 PKCE をそこで受けるのが実装上自然である。これは MCP が外部システムへの接続標準であり、クライアントが MCP サーバーに接続するという仕様からの推定である。
 
 <SourceNote>[MCP Authorization](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization) を参照。OpenAPI-only の扱いはこの仕様を踏まえた推定である。</SourceNote>
 
@@ -105,13 +105,13 @@ MCPサーバーは、保護されたエンドポイントに対して無認証�
 
 ### 3.3 PKCE付き認可コード
 
-クライアントは、`code_verifier` と `code_challenge` を用意して認可リクエストを送る。ユーザーはIdP上で認証・同意し、認可コードを受ける。クライアントは token endpoint にコードと `code_verifier` を送り、アクセストークンを取得する。OAuth 2.1 の整理では、この流れが標準で、PKCEは必須前提として扱うのが実務的である。
+クライアントは、`code_verifier` と `code_challenge` を用意して認可リクエストを送る。ユーザーはIdP上で認証・同意し、認可コードを受ける。クライアントは token endpoint にコードと `code_verifier` を送り、アクセストークンを取得する。OAuth 2.1 の整理では、この流れが標準で、PKCEは必須前提として扱うのが実装上自然である。
 
 <SourceNote>[RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) と [draft-ietf-oauth-v2-1](https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/) を参照。</SourceNote>
 
 ### 3.4 MCPツール呼び出し
 
-以後のMCP呼び出しは、Bearer token を付けた通常のHTTPリクエストになる。MCPサーバーはトークンの署名、issuer、audience、scope を検証し、許可されたツールだけを返す。トークンの中身をMCPサーバーがJWT検証で直接見てもよいし、introspection を併用してもよいが、どちらにせよ「トークンを持っているだけ」で全権限を与えない設計が重要である。これは MCP の仕様要件というより、OAuthの実務設計としての推奨である。
+以後のMCP呼び出しは、Bearer token を付けた通常のHTTPリクエストになる。MCPサーバーはトークンの署名、issuer、audience、scope を検証し、許可されたツールだけを返す。トークンの中身をMCPサーバーがJWT検証で直接見てもよいし、introspection を併用してもよいが、どちらにせよ「トークンを持っているだけ」で全権限を与えない設計が重要である。これは MCP の仕様要件というより、OAuthの権限設計としての推奨である。
 
 <SourceNote>[MCP Authorization](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization) と [RFC 6749](https://www.rfc-editor.org/rfc/rfc6749) を参照。</SourceNote>
 
@@ -182,7 +182,7 @@ Anthropic の公式案内では、remote MCP connector に接続先を追加し�
 
 ### 4.5 OpenAPI-onlyな既存サービス
 
-ここは少し注意が必要である。OpenAPI は API の記述形式であって、MCP ではない。したがって、OpenAPIだけを持つ既存サービスは、通常そのままでは Claude の MCP connector の接続先にはならない。実務上は、MCPサーバーを一枚かませて OpenAPI の各 operation を MCP tool にマッピングし、そのMCPサーバーが OAuth 2.1 PKCE を受ける構成にする。これは MCP が外部システムへの接続標準であり、クライアントが MCP サーバーに接続するという仕様からの推定である。
+ここは少し注意が必要である。OpenAPI は API の記述形式であって、MCP ではない。したがって、OpenAPIだけを持つ既存サービスは、通常そのままでは Claude の MCP connector の接続先にはならない。実装上は、MCPサーバーを一枚かませて OpenAPI の各 operation を MCP tool にマッピングし、そのMCPサーバーが OAuth 2.1 PKCE を受ける構成にする。これは MCP が外部システムへの接続標準であり、クライアントが MCP サーバーに接続するという仕様からの推定である。
 
 <SourceNote>[MCP Authorization](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization) を参照。OpenAPI-only の扱いはこの仕様を踏まえた推定である。</SourceNote>
 

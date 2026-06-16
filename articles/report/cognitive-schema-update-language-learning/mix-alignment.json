@@ -11,7 +11,7 @@
 					"en": "If English learning is treated only as adding vocabulary and grammar, literal translation often remains in place even after substantial study."
 				},
 				{
-					"ja": "より実務的には、英語学習は 母語の枠組みをそのまま当てはめる状態 から 状況・意図・コロケーションに基づいて英語のまま組み立てる状態 へ、認知スキーマを更新するプロセスと捉えた方が説明力が高い。",
+					"ja": "学習設計としては、英語学習は 母語の枠組みをそのまま当てはめる状態 から 状況・意図・コロケーションに基づいて英語のまま組み立てる状態 へ、認知スキーマを更新するプロセスと捉えた方が説明力が高い。",
 					"en": "A more useful model is to treat English learning as a process that updates cognitive schemas: moving from mapping Japanese frames onto English to building meaning directly from situation, intention, and collocation."
 				},
 				{
@@ -216,7 +216,7 @@
 				},
 				{
 					"ja": "読解ノートは次の形式が使いやすい。",
-					"en": "A practical reading note can use this format:"
+					"en": "A learning note can use this format:"
 				}
 			]
 		},
@@ -224,7 +224,7 @@
 			"id": "cognitive-schema-update-language-learning-6",
 			"pairs": [
 				{
-					"ja": "この考え方には、実務上の落とし穴がある。",
+					"ja": "この考え方には、学習設計上の落とし穴がある。",
 					"en": "This model has practical traps."
 				},
 				{
@@ -261,7 +261,7 @@
 			"id": "cognitive-schema-update-language-learning-7",
 			"pairs": [
 				{
-					"ja": "実務に落とすなら、次の一文に集約できる。",
+					"ja": "学習設計に落とすなら、次の一文に集約できる。",
 					"en": "The practical summary is:"
 				},
 				{

@@ -21,7 +21,7 @@ draft: false
 
 結論から言うと、生成AIは「暗黙知をそのまま理解する装置」ではなく、「明示された材料を圧縮・再編する装置」として使うのが妥当である。SECIモデルのうち、AIは `外化` と `連結` に強く、`共同化` と `内面化` は補助にとどまる。暗黙知そのものは、文書化される前から、身体化・熟達・価値判断・場の文脈に埋め込まれているためである。
 
-本稿の実務上の主張は次の4点である。
+本稿の要約運用上の主張は次の4点である。
 
 1. 暗黙知は「まだ書けていない知識」ではなく、知る行為を支える背景構造である。
 2. LLM は明示テキストの要約、翻訳、検索、分類には有効だが、身体知や責任を伴う判断の代替にはならない。
@@ -56,7 +56,7 @@ Polanyi の重要点は、「私たちは言葉にできる以上のことを知
 
 Nonaka & Takeuchi の SECI は、暗黙知と形式知が `社会化` `外化` `連結` `内面化` を通じて螺旋的に循環する、という組織知識創造のモデルである。ここで注意すべきなのは、SECI は「全部を文書化できる」という約束ではなく、知識移転の設計図であることだ。AI はこの設計図の一部を高速化できるが、現場の身体的学習そのものを置き換えるわけではない。
 
-<SourceNote>SECI の基本説明は [HBR の原文](https://hbr.org/1991/11/the-knowledge-creating-company-2) と [Google Books の書誌項目](https://books.google.com/books/about/The_Knowledge_Creating_Company.html?id=pSHhzwEACAAJ) を起点にたどれる。ここでの「設計図」という表現は、公表文献からの実務上の解釈である。</SourceNote>
+<SourceNote>SECI の基本説明は [HBR の原文](https://hbr.org/1991/11/the-knowledge-creating-company-2) と [Google Books の書誌項目](https://books.google.com/books/about/The_Knowledge_Creating_Company.html?id=pSHhzwEACAAJ) を起点にたどれる。ここでの「設計図」という表現は、公表文献からの要約設計上の解釈である。</SourceNote>
 
 ## 3. LLM が暗黙知を扱える範囲
 
@@ -70,7 +70,7 @@ LLM は、文章の中に既に表れているパターンを強く扱える。�
 
 翻訳と要約は、暗黙知を明示化する入口として有効だが、同時に危険でもある。なぜなら、要約は必ず `選択` だからである。モデルは文脈の中から目立つ語を残し、低頻度だが重要な注記を落としやすい。特に、例外条件、保留、迷い、失敗事例、現場特有の比喩は、要約で真っ先に平板化される。これは公表研究と実務観察からの推定である。
 
-<SourceNote>LLM の事実性・忠実性の問題は、幻覚や不忠実な要約を扱う [survey](https://arxiv.org/abs/2311.05232) と、要約の品質が参照文書との整合に依存する後続研究で整理されている。ここでの「平板化」は、これらの研究を踏まえた実務上の推定であり、単一論文の直接主張ではない。</SourceNote>
+<SourceNote>LLM の事実性・忠実性の問題は、幻覚や不忠実な要約を扱う [survey](https://arxiv.org/abs/2311.05232) と、要約の品質が参照文書との整合に依存する後続研究で整理されている。ここでの「平板化」は、これらの研究を踏まえた要約設計上の推定であり、単一論文の直接主張ではない。</SourceNote>
 
 ### 3.3 実務プロセスの観点
 
@@ -113,7 +113,7 @@ flowchart TB
 | 連結     | 高         | 文書横断の要約、翻訳、タグ付け、検索  | 出典の混在、古い知識の再流通 |
 | 内面化   | 低〜中     | 学習用クイズ、シナリオ生成、復習支援  | 実地での身体化が起きない     |
 
-この表は、SECI の理論をそのまま AI に当てはめたものではない。むしろ、AI を使うときの安全な役割分担を示した実務上の推定である。AI は暗黙知の抽出器というより、`外化` と `連結` を高速化する編集補助と見る方が筋がよい。
+この表は、SECI の理論をそのまま AI に当てはめたものではない。むしろ、AI を使うときの安全な役割分担を示した要約設計上の推定である。AI は暗黙知の抽出器というより、`外化` と `連結` を高速化する編集補助と見る方が筋がよい。
 
 <SourceNote>SECI の基本構造は [HBR](https://hbr.org/1991/11/the-knowledge-creating-company-2) に依拠する。AI との相性は、Polanyi の暗黙知論と LLM の grounding / fidelity 制約を合わせた公表情報からの推定である。</SourceNote>
 
@@ -157,7 +157,7 @@ flowchart TB
 
 したがって、AI 活用の成否は `要約の長さ` ではなく、`例外を残せたか` `判断の根拠を残せたか` `現場で再現できたか` で測るべきである。
 
-<SourceNote>暗黙知の非還元性は [Polanyi Society](https://polanyisociety.org/mp-structure.htm) と [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html)。LLM の限界は [Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf)、有用性は [Brown et al.](https://arxiv.org/abs/2005.14165) に依拠する。ここでの `測るべき` は、これらの研究を踏まえた実務上の推定である。</SourceNote>
+<SourceNote>暗黙知の非還元性は [Polanyi Society](https://polanyisociety.org/mp-structure.htm) と [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html)。LLM の限界は [Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf)、有用性は [Brown et al.](https://arxiv.org/abs/2005.14165) に依拠する。ここでの `測るべき` は、これらの研究を踏まえた要約設計上の推定である。</SourceNote>
 
 ## 8. 推奨方針
 

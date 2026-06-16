@@ -16,7 +16,7 @@
         },
         {
           "en": "It is also shaped by what civilians fear, what they lose, what they remember, and how much ordinary life they can still preserve.",
-          "ja": "ここでいう市民感情は、心理学的な診断ではなく、公開情報から読める公共感情、集団記憶、生活上の恐怖、政治への信頼・不信の束として扱うほうが実務的である。"
+          "ja": "ここでいう市民感情は、心理学的な診断ではなく、公開情報から読める公共感情、集団記憶、生活上の恐怖、政治への信頼・不信の束として扱うほうが分析上有効である。"
         },
         {
           "en": "The most important finding is that the two sides' civilian emotions are not symmetrical, but they do mirror each other.",
@@ -65,7 +65,7 @@
         },
         {
           "en": "Reading sentiment is therefore a useful way to inspect the inputs that shape political behavior.",
-          "ja": "したがって、市民感情を追うことは「感傷的」なのではなく、政治行動の前提を確認する実務的な方法である。"
+          "ja": "したがって、市民感情を追うことは「感傷的」なのではなく、政治行動の前提を確認する分析上有効な方法である。"
         }
       ]
     },
@@ -235,7 +235,7 @@
       ]
     },
     {
-      "id": "implications",
+      "id": "ceasefire-reconstruction-view",
       "heading": {
         "ja": "8. 停戦・復興を考える視点",
         "en": "8. Ceasefire and Reconstruction Lenses"
@@ -255,7 +255,7 @@
         },
         {
           "en": "A useful way to think about peace is not only as a border agreement, but as a process that restores the reversibility of daily life.",
-          "ja": "実務的に有効なのは、和平を「国境線の合意」だけでなく、「日常の可逆性」を回復する工程として見ることだ。"
+          "ja": "政策設計で有効なのは、和平を「国境線の合意」だけでなく、「日常の可逆性」を回復する工程として見ることだ。"
         },
         {
           "en": "This is not idealism.",

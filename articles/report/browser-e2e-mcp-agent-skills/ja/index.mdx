@@ -119,7 +119,7 @@ Webwrightの価値は、長いWebタスクを、エージェントの一連の�
 
 <SourceNote>[agent-browser READMEのAuthentication節](https://github.com/vercel-labs/agent-browser) は、Chrome profile reuse、persistent profile、session persistence、`--auto-connect` + `state save`、state file、auth vaultを比較している。state fileはsession tokenを含むためgitignoreと削除が必要で、`AGENT_BROWSER_ENCRYPTION_KEY` による暗号化も案内されている。</SourceNote>
 
-AgentBrowserの実務上の強みは、回帰E2Eそのものよりも「エージェントが安全にブラウザを触るためのCLI面」を厚くしている点にある。network / HAR、trace、profiler、console、visual diff、snapshot diff、React introspection、Web Vitals、annotated screenshot、dashboard、domain allowlist、action policy、confirmation、output length limitまで同じCLIに入っている。Playwright Testの代替というより、ローカルQA、探索、証跡作成、ログイン済み再現を1つのCLIで扱う選択肢である。
+AgentBrowserの運用上の強みは、回帰E2Eそのものよりも「エージェントが安全にブラウザを触るためのCLI面」を厚くしている点にある。network / HAR、trace、profiler、console、visual diff、snapshot diff、React introspection、Web Vitals、annotated screenshot、dashboard、domain allowlist、action policy、confirmation、output length limitまで同じCLIに入っている。Playwright Testの代替というより、ローカルQA、探索、証跡作成、ログイン済み再現を1つのCLIで扱う選択肢である。
 
 <SourceNote>[agent-browser README](https://github.com/vercel-labs/agent-browser) は、network/HAR、trace/profiler/console/errors、diff、React/Web Vitals、dashboard、domain allowlist、action policy、confirmation、content boundariesを説明している。これらは本稿では「エージェント用操作面と安全策」として評価した。</SourceNote>
 

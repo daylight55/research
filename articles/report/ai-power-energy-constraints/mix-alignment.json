@@ -36,7 +36,7 @@
         },
         {
           "en": "The key question is therefore not which power source is best in the abstract, but which constraint each tool can solve, and when.",
-          "ja": "したがって、「何が一番良い電源か」ではなく、「どの制約を、いつ、どの手段で解くか」が実務上の論点になる。"
+          "ja": "したがって、「何が一番良い電源か」ではなく、「どの制約を、いつ、どの手段で解くか」が計画上の論点になる。"
         },
         {
           "en": "This report compares demand forecasts, regional grid constraints, PPAs, nuclear, gas, and storage so that AI companies, cloud providers, utilities, and policymakers can make decisions against a current evidence base.",
@@ -168,7 +168,7 @@
       "pairs": [
         {
           "en": "The fastest mainstream answer is a renewable PPA, because it can finance new supply and help a buyer meet emissions goals.",
-          "ja": "最も実務的なのは、再エネの PPA を使って新規電源を呼び込む方法である。"
+          "ja": "短中期で有効なのは、再エネの PPA を使って新規電源を呼び込む方法である。"
         },
         {
           "en": "The IEA says renewables will provide a large share of the new electricity needed for data centers, and that technology companies made up a major share of corporate renewable PPAs in 2025.",
@@ -205,7 +205,7 @@
       ]
     },
     {
-      "id": "implications",
+      "id": "constraints-for-ai-cloud-policy",
       "heading": {
         "ja": "6. AI企業・クラウド・政策が見るべき制約",
         "en": "6. What It Means for AI Companies, Cloud Providers, and Policymakers"

@@ -8,6 +8,7 @@ import { validateArticleMdx } from '../scripts/validate-article-mdx.mjs'
 import { validateArticleMixAlignment } from '../scripts/validate-mix-alignment.mjs'
 import { validateNewsItemFormat } from '../scripts/validate-news-item-format.mjs'
 import {
+	normalizeDailyTrendNewsData,
 	renderDailyTrendNews,
 	validateDailyTrendNewsData
 } from '../scripts/render-daily-trend-news.mjs'
@@ -170,6 +171,63 @@ function makeStructuredData(overrides = {}) {
 	}
 }
 
+function makeGeneratedVariantData() {
+	const data = makeStructuredData({
+		version: undefined,
+		category: undefined,
+		tags: ['technology', 'news'],
+		generation: {},
+		sections: [
+			{
+				tone: 'technology',
+				topics: [
+					...Array.from({ length: 5 }, (_, index) => makeTopic(sectionConfig[2], index)),
+					makeTopic(sectionConfig[2], 5)
+				]
+			},
+			{
+				tone: 'politics',
+				topics: Array.from({ length: 5 }, (_, index) => {
+					const topic = makeTopic(sectionConfig[0], index)
+					if (index === 0) {
+						topic.title = 'AI regulation hearing'
+						topic.sources = [
+							{
+								url: topic.source.href,
+								name: topic.source.source,
+								headline: topic.source.title.en,
+								memo: topic.source.description.en,
+								image: {
+									url: topic.source.imageUrl,
+									alt: topic.source.imageAlt.en
+								}
+							}
+						]
+						delete topic.source
+						topic.bottom_line = `The bottom line: ${topic.bottomLine.en}`
+						topic.what_happened = `What happened: ${topic.whatHappened.en}`
+						topic.why_it_matters = `Why it matters: ${topic.whyItMatters.en}`
+						topic.what_to_watch = `What to watch: ${topic.whatToWatch.en}`
+						delete topic.bottomLine
+						delete topic.whatHappened
+						delete topic.whyItMatters
+						delete topic.whatToWatch
+					}
+					return topic
+				})
+			},
+			{
+				tone: 'economy',
+				heading: 'Markets',
+				items: Array.from({ length: 5 }, (_, index) => makeTopic(sectionConfig[1], index))
+			}
+		]
+	})
+	data.locales.ja.title = '政策と市場、AI運用が同時に動く'
+	data.locales.en.title = 'Policy, markets, and AI operations move together'
+	return data
+}
+
 test('structured Daily Trend News data enforces the required section counts', () => {
 	const valid = validateDailyTrendNewsData(makeStructuredData())
 	assert.deepEqual(valid.errors, [])
@@ -193,6 +251,54 @@ test('structured Daily Trend News data rejects unresolved template placeholders'
 
 	const result = validateDailyTrendNewsData(data)
 	assert.match(result.errors.join('\n'), /locales\.ja\.title must not contain unresolved/)
+})
+
+test('structured Daily Trend News data normalizes common generated JSON variants', () => {
+	const data = makeGeneratedVariantData()
+
+	const normalized = normalizeDailyTrendNewsData(data)
+	const result = validateDailyTrendNewsData(data)
+
+	assert.deepEqual(result.errors, [])
+	assert.equal(normalized.version, 1)
+	assert.equal(normalized.category, 'tech-news')
+	assert.deepEqual(normalized.tags, ['news', 'politics', 'economy', 'technology'])
+	assert.deepEqual(
+		normalized.sections.map((section) => section.tone),
+		['politics', 'economy', 'technology']
+	)
+	assert.equal(normalized.sections[2].topics.length, 5)
+	assert.equal(normalized.locales.ja.title, '2026-06-17 政策と市場、AI運用が同時に動く')
+	assert.equal(normalized.sections[0].topics[0].title.ja, 'AI regulation hearing')
+	assert.doesNotMatch(normalized.sections[0].topics[0].bottomLine.en, /^The bottom line:/)
+	assert.equal(normalized.sections[1].heading.ja, 'Markets')
+	assert.equal(normalized.sections[2].heading.ja, '技術')
+})
+
+test('structured Daily Trend News renderer writes valid artifacts from normalized generated variants', async () => {
+	const rootDir = mkdtempSync(path.join(tmpdir(), 'daily-trend-news-variant-render-'))
+	const data = makeGeneratedVariantData()
+	const dataFile = path.join(rootDir, 'daily-trend-news.json')
+	writeFileSync(dataFile, JSON.stringify(data, null, 2))
+
+	renderDailyTrendNews({ dataFile, rootDir })
+
+	const jaArticlePath = `articles/news/${data.slug}/ja/index.mdx`
+	const enArticlePath = `articles/news/${data.slug}/en/index.mdx`
+	const jaArticle = readFileSync(path.join(rootDir, jaArticlePath), 'utf8')
+	const enArticle = readFileSync(path.join(rootDir, enArticlePath), 'utf8')
+
+	assert.match(jaArticle, /^# 2026-06-17 政策と市場、AI運用が同時に動く/m)
+	assert.match(enArticle, /### AI regulation hearing/)
+	assert.doesNotMatch(enArticle, /The bottom line: The bottom line:/)
+	assert.deepEqual(
+		(await validateArticleMdx({ file: jaArticlePath, source: jaArticle })).errors,
+		[]
+	)
+	assert.deepEqual(
+		(await validateArticleMdx({ file: enArticlePath, source: enArticle })).errors,
+		[]
+	)
 })
 
 test('structured Daily Trend News renderer writes valid localized article artifacts', async () => {

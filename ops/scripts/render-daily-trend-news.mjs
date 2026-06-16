@@ -33,6 +33,25 @@ const LABEL_LINE_LIMIT = {
 	en: 240
 }
 const UNRESOLVED_PLACEHOLDER_RE = /<(?!https?:\/\/)[^<>]{2,80}>/
+const TONE_ALIASES = {
+	politics: 'politics',
+	political: 'politics',
+	政治: 'politics',
+	economy: 'economy',
+	economic: 'economy',
+	markets: 'economy',
+	market: 'economy',
+	経済: 'economy',
+	technology: 'technology',
+	tech: 'technology',
+	技術: 'technology'
+}
+const FIELD_ALIASES = {
+	bottomLine: ['bottomLine', 'bottom_line', 'bottomline', 'summary', 'theBottomLine'],
+	whatHappened: ['whatHappened', 'what_happened', 'happened', 'facts'],
+	whyItMatters: ['whyItMatters', 'why_it_matters', 'importance', 'impact'],
+	whatToWatch: ['whatToWatch', 'what_to_watch', 'watch', 'next']
+}
 
 function isRecord(value) {
 	return value !== null && typeof value === 'object' && !Array.isArray(value)
@@ -48,6 +67,236 @@ function hasText(value) {
 
 function normalizedWhitespace(value) {
 	return String(value).replace(/\s+/g, ' ').trim()
+}
+
+function compactObject(value) {
+	return JSON.parse(JSON.stringify(value))
+}
+
+function firstText(...values) {
+	for (const value of values.flat()) {
+		if (hasText(value)) return normalizedWhitespace(value)
+	}
+	return ''
+}
+
+function firstValue(data, keys) {
+	if (!isRecord(data)) return undefined
+	for (const key of keys) {
+		if (data[key] !== undefined) return data[key]
+	}
+	return undefined
+}
+
+function normalizeLocaleText(value, fallback = '') {
+	if (isRecord(value)) {
+		const ja = firstText(
+			value.ja,
+			value.japanese,
+			value.jp,
+			value.en,
+			value.english,
+			fallback?.ja,
+			fallback
+		)
+		const en = firstText(
+			value.en,
+			value.english,
+			value.ja,
+			value.japanese,
+			value.jp,
+			fallback?.en,
+			fallback
+		)
+		return { ja, en }
+	}
+	return {
+		ja: firstText(value, fallback?.ja, fallback),
+		en: firstText(value, fallback?.en, fallback)
+	}
+}
+
+function normalizeTextArray(value) {
+	if (Array.isArray(value)) return value.map((entry) => normalizedWhitespace(entry)).filter(Boolean)
+	if (!hasText(value)) return []
+	return normalizedWhitespace(value)
+		.split(/\s*(?:\n+|(?:^|\s)[-*]\s+)\s*/)
+		.map((entry) => entry.trim())
+		.filter(Boolean)
+}
+
+function normalizeTitle(value, date) {
+	const title = normalizedWhitespace(value)
+	if (!hasText(title)) return title
+	if (!hasText(date)) return title
+	const withDate = title.startsWith(`${date} `) ? title : `${date} ${title}`
+	return withDate.length <= 80 ? withDate : withDate.slice(0, 80).trimEnd()
+}
+
+function stripRenderedLabel(value, locale, field) {
+	const text = normalizedWhitespace(value)
+	const labels = new Set([
+		ARTICLE_LABELS[locale][field],
+		ARTICLE_LABELS.ja[field],
+		ARTICLE_LABELS.en[field]
+	])
+	for (const label of labels) {
+		if (text.startsWith(label)) return text.slice(label.length).trim()
+	}
+	return text
+}
+
+function canonicalTone(value) {
+	const key = normalizedWhitespace(value).toLowerCase()
+	return TONE_ALIASES[key] ?? undefined
+}
+
+function normalizeSource(source) {
+	const sourceData = isRecord(source) ? source : {}
+	const imageData = isRecord(sourceData.image) ? sourceData.image : {}
+	return {
+		href: firstText(firstValue(sourceData, ['href', 'url', 'link'])),
+		source: firstText(firstValue(sourceData, ['source', 'name', 'publisher', 'outlet'])),
+		title: normalizeLocaleText(firstValue(sourceData, ['title', 'headline', 'sourceTitle'])),
+		description: normalizeLocaleText(
+			firstValue(sourceData, ['description', 'memo', 'summary', 'sourceMemo'])
+		),
+		imageUrl: firstText(
+			firstValue(sourceData, ['imageUrl', 'image_url', 'imageHref']),
+			firstValue(imageData, ['url', 'href', 'src']),
+			hasText(sourceData.image) ? sourceData.image : ''
+		),
+		imageAlt: normalizeLocaleText(
+			firstValue(sourceData, ['imageAlt', 'image_alt', 'alt']) ??
+				firstValue(imageData, ['alt', 'imageAlt', 'image_alt'])
+		)
+	}
+}
+
+function normalizeTopic(topic, tone, index) {
+	const topicData = isRecord(topic) ? topic : {}
+	const source = normalizeSource(
+		topicData.source ?? topicData.sourceCard ?? topicData.citation ?? topicData.sources?.[0]
+	)
+	const normalized = {
+		id: firstText(topicData.id, `${tone}-${index + 1}`),
+		title: normalizeLocaleText(
+			firstValue(topicData, ['title', 'heading', 'headline', 'name', 'topic'])
+		),
+		source
+	}
+
+	for (const field of ['bottomLine', 'whatHappened', 'whyItMatters', 'whatToWatch']) {
+		const text = normalizeLocaleText(firstValue(topicData, FIELD_ALIASES[field]))
+		normalized[field] = {
+			ja: stripRenderedLabel(text.ja, 'ja', field),
+			en: stripRenderedLabel(text.en, 'en', field)
+		}
+	}
+
+	return normalized
+}
+
+function rawSections(value) {
+	if (Array.isArray(value)) return value
+	if (!isRecord(value)) return []
+	return Object.entries(value).map(([tone, section]) =>
+		isRecord(section) ? { tone, ...section } : { tone, topics: section }
+	)
+}
+
+function normalizeSection(section, fallbackTone) {
+	const tone =
+		canonicalTone(section?.tone) ??
+		canonicalTone(section?.category) ??
+		canonicalTone(section?.heading) ??
+		canonicalTone(section?.title) ??
+		canonicalTone(section?.name) ??
+		fallbackTone
+	const defaultHeading = SECTION_LABELS[tone] ?? { ja: tone, en: tone }
+	const heading = normalizeLocaleText(
+		section?.heading ?? section?.title ?? section?.name,
+		defaultHeading
+	)
+	const topics = firstValue(section, ['topics', 'items', 'stories', 'articles'])
+	return {
+		tone,
+		heading,
+		topics: (Array.isArray(topics) ? topics : [])
+			.filter(isRecord)
+			.slice(0, 5)
+			.map((topic, index) => normalizeTopic(topic, tone, index))
+	}
+}
+
+function normalizeSections(sections) {
+	const sectionsByTone = new Map()
+	for (const section of rawSections(sections)) {
+		const tone =
+			canonicalTone(section?.tone) ??
+			canonicalTone(section?.category) ??
+			canonicalTone(section?.heading) ??
+			canonicalTone(section?.title) ??
+			canonicalTone(section?.name)
+		if (tone && !sectionsByTone.has(tone)) sectionsByTone.set(tone, section)
+	}
+
+	return EXPECTED_SECTIONS.map((tone) => normalizeSection(sectionsByTone.get(tone) ?? {}, tone))
+}
+
+function normalizeLocaleBlock(localeData, date) {
+	const data = isRecord(localeData) ? localeData : {}
+	return {
+		title: normalizeTitle(data.title, date),
+		description: firstText(data.description),
+		rssSummary: firstText(data.rssSummary, data.rss_summary),
+		opening: firstText(data.opening, data.summary, data.lede),
+		crossCutting: normalizeTextArray(data.crossCutting ?? data.cross_cutting),
+		watchItems: normalizeTextArray(data.watchItems ?? data.watch_items),
+		sourceNotes: {
+			politics: normalizeTextArray(data.sourceNotes?.politics),
+			economy: normalizeTextArray(data.sourceNotes?.economy),
+			technology: normalizeTextArray(data.sourceNotes?.technology),
+			decisions: normalizeTextArray(data.sourceNotes?.decisions ?? data.sourceNotes?.selection)
+		},
+		researchLog: {
+			instruction: normalizeTextArray(data.researchLog?.instruction),
+			decisionNotes: normalizeTextArray(
+				data.researchLog?.decisionNotes ?? data.researchLog?.decisions
+			),
+			followUps: normalizeTextArray(data.researchLog?.followUps ?? data.researchLog?.follow_ups)
+		}
+	}
+}
+
+export function normalizeDailyTrendNewsData(data) {
+	if (!isRecord(data)) return data
+	const normalized = compactObject(data)
+	const date = firstText(normalized.date, normalized.slug?.match(/\d{4}-\d{2}-\d{2}/)?.[0])
+	const slug = firstText(normalized.slug, date ? `daily-trends-${date}` : '')
+
+	normalized.version = normalized.version ?? 1
+	normalized.date = date
+	normalized.slug = slug
+	normalized.category = normalized.category ?? 'tech-news'
+	normalized.tags = REQUIRED_TAGS
+	normalized.generation = {
+		model: firstText(normalized.generation?.model, process.env.OPENAI_MODEL, 'gpt-5.4-mini')
+	}
+	normalized.heroImage = {
+		query: firstText(normalized.heroImage?.query, normalized.heroImageQuery),
+		alt: normalizeLocaleText(
+			normalized.heroImage?.alt ?? normalized.heroImageAlt,
+			normalized.heroImage?.query
+		)
+	}
+	normalized.locales = {
+		ja: normalizeLocaleBlock(normalized.locales?.ja, date),
+		en: normalizeLocaleBlock(normalized.locales?.en, date)
+	}
+	normalized.sections = normalizeSections(normalized.sections)
+
+	return normalized
 }
 
 function ensureText(errors, data, keyPath) {
@@ -240,27 +489,35 @@ function validateSections(errors, data) {
 export function validateDailyTrendNewsData(data) {
 	const errors = []
 	if (!isRecord(data)) return { errors: ['Daily Trend News data must be a JSON object'] }
+	const normalized = normalizeDailyTrendNewsData(data)
 
-	if (data.version !== 1) errors.push('version must be 1')
-	if (!/^daily-trends-\d{4}-\d{2}-\d{2}$/.test(data.slug ?? '')) {
+	if (normalized.version !== 1) errors.push('version must be 1')
+	if (!/^daily-trends-\d{4}-\d{2}-\d{2}$/.test(normalized.slug ?? '')) {
 		errors.push('slug must use daily-trends-YYYY-MM-DD')
 	}
-	if (!/^\d{4}-\d{2}-\d{2}$/.test(data.date ?? '')) {
+	if (!/^\d{4}-\d{2}-\d{2}$/.test(normalized.date ?? '')) {
 		errors.push('date must use YYYY-MM-DD')
 	}
-	if (hasText(data.slug) && hasText(data.date) && data.slug !== `daily-trends-${data.date}`) {
+	if (
+		hasText(normalized.slug) &&
+		hasText(normalized.date) &&
+		normalized.slug !== `daily-trends-${normalized.date}`
+	) {
 		errors.push('slug must match date')
 	}
-	if (data.category !== 'tech-news') errors.push('category must be tech-news')
-	if (!Array.isArray(data.tags) || REQUIRED_TAGS.some((tag) => !data.tags.includes(tag))) {
+	if (normalized.category !== 'tech-news') errors.push('category must be tech-news')
+	if (
+		!Array.isArray(normalized.tags) ||
+		REQUIRED_TAGS.some((tag) => !normalized.tags.includes(tag))
+	) {
 		errors.push(`tags must include ${REQUIRED_TAGS.join(', ')}`)
 	}
 
-	ensureText(errors, data, 'generation.model')
-	ensureText(errors, data, 'heroImage.query')
-	ensureLocalizedText(errors, data, 'heroImage.alt')
-	validateLocales(errors, data)
-	validateSections(errors, data)
+	ensureText(errors, normalized, 'generation.model')
+	ensureText(errors, normalized, 'heroImage.query')
+	ensureLocalizedText(errors, normalized, 'heroImage.alt')
+	validateLocales(errors, normalized)
+	validateSections(errors, normalized)
 
 	return { errors }
 }
@@ -481,7 +738,7 @@ function readDataFile(dataFile, rootDir) {
 
 export function renderDailyTrendNews({ dataFile, rootDir = process.cwd(), validateOnly = false }) {
 	if (!dataFile) throw new Error('dataFile is required')
-	const data = readDataFile(dataFile, rootDir)
+	const data = normalizeDailyTrendNewsData(readDataFile(dataFile, rootDir))
 	const validation = validateDailyTrendNewsData(data)
 	if (validation.errors.length > 0) {
 		throw new Error(`Structured Daily Trend News data is invalid:\n${validation.errors.join('\n')}`)

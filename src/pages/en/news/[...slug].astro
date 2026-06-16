@@ -49,7 +49,9 @@ const getRelatedPosts = (post: Props) => {
 
 const relatedPosts = getRelatedPosts(post)
 const researchEntries = await getCollection('articleResearch')
-const hasResearchLog = researchEntries.some((entry) => getPostSlug(entry) === postSlug)
+const hasResearchLog = researchEntries.some(
+	(entry) => getPostLocale(entry) === locale && getPostSlug(entry) === postSlug
+)
 const hasSourceNotes = hasArticleSourceNotes(postSlug, locale)
 
 const { Content, headings, remarkPluginFrontmatter } = await render(post)

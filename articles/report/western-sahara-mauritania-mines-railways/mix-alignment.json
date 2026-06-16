@@ -1,0 +1,200 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "西サハラからモーリタニアにかけての砂漠地域は空白地帯ではない。",
+					"en": "The desert zone stretching from Western Sahara toward Mauritania is not an empty space."
+				},
+				{
+					"ja": "地雷・不発弾・クラスター弾残存物が残る。",
+					"en": "Mine, explosive-ordnance, and cluster-munition contamination remains around the Moroccan Berm in Western Sahara, while Mauritania has the internationally known SNIM iron-ore railway."
+				},
+				{
+					"ja": "これらは同じ問題ではない。",
+					"en": "These are not the same problem."
+				},
+				{
+					"ja": "前者は紛争と停戦監視、後者は鉱業・輸出・インフラの問題である。",
+					"en": "The former is tied to the Western Sahara conflict and ceasefire monitoring; the latter is a mining, export, and state-infrastructure issue."
+				},
+				{
+					"ja": "地雷影響地域は Berm 周辺の線的危険として理解する方がよい。",
+					"en": "The mine-affected area is better understood as a linear hazard around the Berm than as one clean area total."
+				},
+				{
+					"ja": "UNMAS は多くの汚染が 1,465km の砂の Berm 沿いに集中すると述べる。",
+					"en": "UNMAS says much contamination is concentrated along the 1,465 km sand berm dividing the region, and that since 2008 it has released approximately 150 million square meters of hazardous land."
+				},
+				{
+					"ja": "Moroccan Wall/Berm 全体は約2,700kmとも説明される。",
+					"en": "The broader Moroccan Wall/Berm is often described as roughly 2,700 km long, so figures vary depending on the exact boundary and operational definition."
+				},
+				{
+					"ja": "SNIM鉄道は鉱山地帯と Nouadhibou を結ぶ。",
+					"en": "Mauritania's SNIM railway links the mining zone around Zouerate with the ore port at Nouadhibou."
+				},
+				{
+					"ja": "既存鉄道は 704km 単線である。",
+					"en": "SNIM's 2024 stakeholder participation plan describes the existing railway as a 704 km single-track line from the M'Haoudatt side to Nouadhibou, with 17 passing sidings."
+				},
+				{
+					"ja": "鉄鉱石列車は産業インフラである。",
+					"en": "The iron-ore train that appears in travel writing and film discussion is industrial infrastructure, not the mine belt or the Western Sahara military boundary."
+				}
+			]
+		},
+		{
+			"id": "mine-areas",
+			"heading": {
+				"ja": "2. 地雷帯はどこまで広がっているのか",
+				"en": "2. How Large Are the Mine-Affected Areas?"
+			},
+			"pairs": [
+				{
+					"ja": "西サハラの地雷問題は一つの塗りつぶし面積ではない。",
+					"en": "Western Sahara's landmine problem is not one shaded polygon on a map."
+				},
+				{
+					"ja": "地雷と不発弾は1975-1991年紛争の遺産である。",
+					"en": "UNMAS says landmines and explosive ordnance are a legacy of the 1975-1991 conflict and that much contamination is concentrated along the 1,465 km sand berm dividing the region."
+				},
+				{
+					"ja": "UNMASは約1億5000万平方メートルの危険地を解放したと報告する。",
+					"en": "Since 2008, UNMAS Western Sahara reports releasing approximately 150 million square meters of hazardous land, including 43 of 67 known minefields and 508 of 541 cluster munition strike areas."
+				},
+				{
+					"ja": "MINURSOの数値は低い。",
+					"en": "MINURSO's mine-action page gives lower cumulative figures: more than 84 million square meters released, 42 of 66 known minefields released, and 505 of 540 cluster strike areas released."
+				},
+				{
+					"ja": "差は更新時点と範囲によると見られる。",
+					"en": "The difference appears to reflect update timing and scope."
+				},
+				{
+					"ja": "単一の総面積が重要なのではない。",
+					"en": "The important point is not a single definitive contaminated square-kilometer total."
+				},
+				{
+					"ja": "区域やルート確認で管理される。",
+					"en": "The area is managed through known hazardous areas, suspected hazardous areas, released areas, route verification, and the Berm's length."
+				},
+				{
+					"ja": "モーリタニアの汚染も西サハラ紛争の遺産である。",
+					"en": "Mauritania's remaining contamination is also a legacy of the Western Sahara conflict."
+				}
+			]
+		},
+		{
+			"id": "railways",
+			"heading": {
+				"ja": "3. 鉄道はどこにあるのか",
+				"en": "3. Where Are the Railways?"
+			},
+			"pairs": [
+				{
+					"ja": "SNIM鉄道は砂漠移動の象徴だが目的は鉱石輸送である。",
+					"en": "Mauritania's SNIM iron-ore railway is a powerful symbol of desert mobility, but its purpose is ore transport rather than ordinary passenger mobility."
+				},
+				{
+					"ja": "SNIMは既存鉄道を704km単線と説明する。",
+					"en": "SNIM's 2024 stakeholder participation plan states that the existing railway is a 704 km single-track line linking M'Haoudatt station to the Nouadhibou ore port, with 17 passing sidings."
+				},
+				{
+					"ja": "SNIMはZouerateからNouadhibouまでの鉄道敷を保有する。",
+					"en": "SNIM holds the railway right-of-way from Zouerate to Nouadhibou."
+				},
+				{
+					"ja": "モロッコの鉄道近代化はBermやSNIM鉄道とは別である。",
+					"en": "Morocco is modernizing and expanding its rail system, but that should not be confused with the Western Sahara Berm or Mauritania's iron-ore railway."
+				},
+				{
+					"ja": "将来構想、観光ルート、現存の産業鉄道は分ける必要がある。",
+					"en": "Future concepts, tourist routes, and the existing industrial railway need to be kept separate."
+				}
+			]
+		},
+		{
+			"id": "conflict-history",
+			"heading": {
+				"ja": "4. 紛争史との関係",
+				"en": "4. Conflict History"
+			},
+			"pairs": [
+				{
+					"ja": "西サハラは1976年までスペイン植民地だった。",
+					"en": "Western Sahara was a Spanish colony until 1976."
+				},
+				{
+					"ja": "モロッコとモーリタニアが領有を主張し、POLISARIOが反対した。",
+					"en": "During decolonization, Morocco and Mauritania claimed the territory, while the Frente POLISARIO opposed both claims."
+				},
+				{
+					"ja": "Madrid Accords後に武力紛争が起きた。",
+					"en": "After the 1975 Madrid Accords transferred Spain's administrative responsibilities to Morocco and Mauritania, armed conflict broke out between the Polisario Front and the two states."
+				},
+				{
+					"ja": "モーリタニアは1979年に領有主張を放棄した。",
+					"en": "Mauritania gave up its claim in 1979; Morocco then administered the area vacated by Mauritania."
+				},
+				{
+					"ja": "1991年にMINURSOが設立された。",
+					"en": "In 1991, Security Council Resolution 690 established MINURSO to prepare a referendum."
+				},
+				{
+					"ja": "住民投票は実施されていない。",
+					"en": "The referendum was never held because of disputes over implementation, including voter identification."
+				}
+			]
+		},
+		{
+			"id": "social-issues",
+			"heading": {
+				"ja": "5. 社会問題と実務的な読み方",
+				"en": "5. Social Issues and Practical Reading"
+			},
+			"pairs": [
+				{
+					"ja": "Freedom House はモロッコが西サハラの4分の3超を支配すると述べる。",
+					"en": "In Western Sahara, Freedom House describes the territory as a UN-listed non-self-governing territory and says Morocco controls more than three-quarters of it."
+				},
+				{
+					"ja": "地雷問題は人道危険であり政治的地位問題でもある。",
+					"en": "The mine issue is therefore both a humanitarian danger and part of an unresolved political-status problem."
+				},
+				{
+					"ja": "モーリタニアでは奴隷制遺産、差別、活動家圧力、鉱業依存が中心論点である。",
+					"en": "In Mauritania, the key social issues are the legacy of slavery, discrimination against Haratine and Afro-Mauritanians, pressure on activists, employment, and dependence on extractive industries."
+				},
+				{
+					"ja": "SNIM列車は冒険旅行のアイコンだが鉱業インフラである。",
+					"en": "The SNIM train is easy to consume as an adventure-travel icon, but it is mining infrastructure tied to employment, regional development, export earnings, and state revenue."
+				},
+				{
+					"ja": "実務上は地雷帯、鉄道、観光、音楽イベントを分ける。",
+					"en": "The practical point is to separate mine belts, railways, desert tourism, and music events."
+				},
+				{
+					"ja": "地雷・不発弾は安全保障問題である。",
+					"en": "Mines and explosive ordnance are security issues that require UNMAS/MINURSO and official travel-safety checks."
+				},
+				{
+					"ja": "SNIM鉄道は鉱業インフラである。",
+					"en": "The SNIM railway is mining infrastructure."
+				},
+				{
+					"ja": "地図上で近く見えてもリスクと責任主体は異なる。",
+					"en": "They may look close on a map, but their risk types and responsible actors differ."
+				}
+			]
+		}
+	]
+}

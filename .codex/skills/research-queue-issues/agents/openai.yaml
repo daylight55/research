@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Queue Issues"
+  short_description: "Create research-queue issues for automated research."
+  default_prompt: "Add research topics to the research queue as well-structured GitHub issues."

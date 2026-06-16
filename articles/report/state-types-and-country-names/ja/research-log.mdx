@@ -1,0 +1,53 @@
+---
+title: '国の種別と国名ルールの読み方 Research Log'
+---
+
+# 国の種別と国名ルールの読み方 Research Log
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- workflow: Codex repo-local `research-report` skill
+- skill source: https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md
+- prompt source: https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md
+- date: 2026-06-16
+- base branch: `origin/main`
+- working branch: `codex/state-types-report`
+
+## 調査命令
+
+ユーザーは、共有されたChatGPT会話 `https://chatgpt.com/share/6a2d07d3-24e4-83e8-b36b-fe7b57041440` の内容を記事化し、最新のmainをベースにレポートを作成するよう依頼した。共有会話の主題は、共和国、王国、英国、オランダ、朝鮮などを含む「国の種別」と国名に付く語のルール整理だった。
+
+## 実施したこと
+
+- `origin/main` をfetchし、`codex/state-types-report`を`origin/main`から作成した。
+- 共有ChatGPTページのReact Routerデータから、会話本文の主要な長文回答を抽出した。
+- 共有会話の論点を、主権国家、国連上の地位、共和国、王国、連邦、単一国家、Commonwealth、People’s Republic、Democratic People’s Republicの読み方に分解した。
+- 共有会話内の引用はそのまま使わず、国連、憲法、政府公式、外交当局、議会教育資料に差し替えた。
+- 日本語本文、英語本文、日英source-notes、研究ログ、MIX表示用のalignmentを同時に追加した。
+- ヒーロー画像にはWikimedia CommonsのUN総会議場写真を使い、著作者、ライセンス、元ページをfrontmatterに記録した。
+
+## 確認した資料
+
+- 国連加盟国数と公式国名資料。
+- 国連非加盟オブザーバー国家。
+- モンテビデオ条約1条の国家要件。
+- 日本国憲法1条、3条、4条。
+- 英国政府の地名ガイド。
+- オランダ政府の王国内責任分担説明。
+- 英国王室とCommonwealth事務局のCommonwealth説明。
+- Australia DFATのDPRK country brief。
+- Australian Parliamentary Education Officeの政府形態説明。
+
+## 判断ログ
+
+- 記事の中心は「全世界の国名一覧」ではなく「国名を読むための分類軸」に置いた。
+- 国名語の網羅表を大きくしすぎると本文が辞書化するため、代表語と紛らわしい固有例に絞った。
+- Commonwealth Realmは、現行の王室公式説明に合わせて、英国に加えて14、合計15とした。
+- 日本はKingdomではないが共和国でもないため、国名ではなく憲法上の天皇の地位と国民主権で説明した。
+- 未承認国家や限定承認国家は、個別紛争ごとの調査が必要なため、国連非加盟オブザーバー国家に触れる範囲に留めた。
+
+## 残るレビュー観点
+
+- 国際法上の承認論はさらに深掘りできるが、この記事では入門的な読み方に絞った。
+- 英語版は日本語正本に同期しているが、細かな政治学用語の訳語は人手レビューの余地がある。

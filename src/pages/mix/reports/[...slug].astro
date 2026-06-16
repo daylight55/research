@@ -5,11 +5,11 @@ import Code from '@/components/mdx/Code'
 import ListRelatedPosts from '@/components/ListRelatedPosts'
 import FormattedDate from '@/components/FormattedDate'
 import ArticleGenerationModel from '@/components/ArticleGenerationModel'
+import ArticleResearchLinks from '@/components/ArticleResearchLinks'
 import Share from '@/components/Share'
 import TableOfContents from '@/components/TableOfContents'
 import MermaidRenderer from '@/components/MermaidRenderer'
 import MixedArticleContent from '@/components/MixedArticleContent'
-import ArrowUpRight from '@/components/icons/ArrowUpRight'
 import {
 	DEFAULT_LOCALE,
 	findPostTranslation,
@@ -18,6 +18,7 @@ import {
 	getPostSlug,
 	getPostUrl,
 	getReportPosts,
+	hasArticleSourceNotes,
 	localizedPath,
 	tagSlug
 } from '@/utils'
@@ -64,6 +65,7 @@ const researchEntries = await getCollection('articleResearch')
 const hasResearchLog = researchEntries.some(
 	(entry) => getPostLocale(entry) === DEFAULT_LOCALE && getPostSlug(entry) === postSlug
 )
+const hasSourceNotes = hasArticleSourceNotes(postSlug, DEFAULT_LOCALE)
 
 const { Content: EnglishContent, headings, remarkPluginFrontmatter } = await render(post)
 const { Content: JapaneseContent } = japanesePost
@@ -145,22 +147,13 @@ const disqusEnabled = disqusConfig.enabled
 					)
 				}
 
-				{
-					hasResearchLog && (
-						<section class='flex flex-col gap-2'>
-							<p class='text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
-								Research
-							</p>
-							<a
-								href={localizedPath(DEFAULT_LOCALE, `/reports/${postSlug}/research/`)}
-								class='inline-flex items-center gap-1.5 rounded-md border border-black/10 bg-white/70 px-3 py-2 font-semibold leading-snug text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-300 [&_svg]:h-4 [&_svg]:w-4'
-							>
-								<ArrowUpRight />
-								Research trail
-							</a>
-						</section>
-					)
-				}
+				<ArticleResearchLinks
+					locale={DEFAULT_LOCALE}
+					section='reports'
+					slug={postSlug}
+					hasResearchLog={hasResearchLog}
+					hasSourceNotes={hasSourceNotes}
+				/>
 
 				<Share title={post.data.title} />
 			</div>

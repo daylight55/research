@@ -3,11 +3,12 @@ import { type CollectionEntry, getCollection, render } from 'astro:content'
 import BaseLayout from '@/layouts/BaseLayout'
 import Code from '@/components/mdx/Code'
 import ArrowUpRight from '@/components/icons/ArrowUpRight'
-import { getPostLocale, getPostSlug, localizedPath } from '@/utils'
+import { getPostLocale, getPostSlug, hasArticleSourceNotes, localizedPath } from '@/utils'
 
 type Props = {
 	post: CollectionEntry<'blog'>
 	research: CollectionEntry<'articleResearch'>
+	hasSourceNotes: boolean
 }
 
 export async function getStaticPaths() {
@@ -26,14 +27,14 @@ export async function getStaticPaths() {
 			if (!research || post.data.draft) return null
 			return {
 				params: { slug },
-				props: { post, research }
+				props: { post, research, hasSourceNotes: hasArticleSourceNotes(slug, 'en') }
 			}
 		})
 		.filter((path): path is { params: { slug: string }; props: Props } => path !== null)
 }
 
 const locale = 'en'
-const { post, research } = Astro.props
+const { post, research, hasSourceNotes } = Astro.props
 const postSlug = getPostSlug(post)
 const { Content } = await render(research)
 const title = research.data.title ?? `${post.data.title} research trail`
@@ -47,13 +48,26 @@ const title = research.data.title ?? `${post.data.title} research trail`
 >
 	<article class='mx-auto grid max-w-6xl gap-8 py-4'>
 		<header class='research-hero grid gap-6 rounded-lg px-5 py-6 shadow-sm sm:px-8 sm:py-8'>
-			<a
-				href={localizedPath(locale, `/news/${postSlug}/`)}
-				class='inline-flex w-fit items-center gap-2 rounded-full border border-black/10 bg-white/75 px-3 py-1.5 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-200 [&_svg]:h-4 [&_svg]:w-4'
-			>
-				<ArrowUpRight />
-				Back to article
-			</a>
+			<div class='flex flex-wrap gap-3'>
+				<a
+					href={localizedPath(locale, `/news/${postSlug}/`)}
+					class='inline-flex w-fit items-center gap-2 rounded-full border border-black/10 bg-white/75 px-3 py-1.5 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-200 [&_svg]:h-4 [&_svg]:w-4'
+				>
+					<ArrowUpRight />
+					Back to article
+				</a>
+				{
+					hasSourceNotes && (
+						<a
+							href={localizedPath(locale, `/news/${postSlug}/sources/`)}
+							class='inline-flex w-fit items-center gap-2 rounded-full border border-black/10 bg-white/75 px-3 py-1.5 text-sm font-semibold text-gray-800 transition hover:border-indigo-300 hover:text-indigo-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-200 dark:hover:border-indigo-300 dark:hover:text-indigo-200 [&_svg]:h-4 [&_svg]:w-4'
+						>
+							<ArrowUpRight />
+							Source notes
+						</a>
+					)
+				}
+			</div>
 			<div class='grid gap-2'>
 				<p
 					class='text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400'

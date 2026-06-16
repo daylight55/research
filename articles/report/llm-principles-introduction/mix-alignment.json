@@ -1,0 +1,416 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "An LLM may look as if it reads text directly, but in practice it receives a sequence of tokens and computes probabilities for the next likely token.",
+          "ja": "LLMは、文章をそのまま読んでいるように見えて、実際にはトークン列を受け取り、次に来そうなトークンの確率を計算しているモデルである。"
+        },
+        {
+          "en": "It is more accurate to think of it as a large probabilistic model that generates continuations matching the context than as a system that directly understands the world like a human.",
+          "ja": "人間のように世界を直接理解していると考えるより、「巨大な確率モデルが、文脈に合う続きを生成している」と捉える方が正確である。"
+        },
+        {
+          "en": "The easiest way to understand the pipeline is to split it into tokenization, embedding, contextualization with Transformer self-attention, and next-token prediction.",
+          "ja": "理解の順番としては、まずトークン化で文字列を部品に分け、埋め込みで数値ベクトルにし、Transformerの自己注意で文脈上の関係を重み付けし、最後に次トークン予測として出力する、と分けるとよい。"
+        },
+        {
+          "en": "The “knowledge” inside an LLM is not stored like a dictionary of explicit facts; it is distributed across learned weights.",
+          "ja": "LLMの「知識」は辞書のように明示的に保存されるのではなく、学習された重みの中に分布的に埋め込まれる。"
+        },
+        {
+          "en": "That said, the model can also memorize passages verbatim.",
+          "ja": "ただし、その知識はときに文面を丸ごと覚える形でも残る。"
+        },
+        {
+          "en": "For practical work, the important question is not whether the model is “smart,” but which inputs, external references, and verification steps you give it.",
+          "ja": "実務上の重要点は、LLMを「賢い回答装置」として評価するより、どの入力を与え、どの外部情報を検索し、どの検証手段を通すかで性能を設計することにある。"
+        },
+        {
+          "en": "Context length is useful, but it is not a magic fix, and longer inputs do not automatically make a model more reliable.",
+          "ja": "文脈長は万能ではなく、長くすればするほど自動的に賢くなるわけでもない。"
+        },
+        {
+          "en": "LLM use should therefore be treated as system design: prompt design, retrieval, permissions, auditing, and review all matter.",
+          "ja": "したがって、LLMの活用は、モデル単体の理解ではなく、入力設計、外部参照、権限、監査、再確認を含むシステム設計として考えるべきである。"
+        }
+      ]
+    },
+    {
+      "id": "the-big-picture",
+      "heading": {
+        "ja": "2. まず全体像をつかむ",
+        "en": "2. The Big Picture"
+      },
+      "pairs": [
+        {
+          "en": "An LLM does not “understand the whole sentence” in one step.",
+          "ja": "LLMは、入力を受けた瞬間に「文全体の意味」を一気に理解するわけではない。"
+        },
+        {
+          "en": "It first splits the input into smaller units, maps them into numeric representations, computes which words should matter to each other in context, and then ranks output candidates.",
+          "ja": "実際には、入力を短い単位に切り、順番に数値表現へ変え、文脈の中でどの語がどの語に結びつくかを計算し、出力候補を並べる。"
+        },
+        {
+          "en": "The core idea is not to look up a meaning dictionary, but to produce a probability distribution over continuations.",
+          "ja": "ここでの本質は、意味の辞書を引くことではなく、次に続く表現の確率分布を作ることである。"
+        },
+        {
+          "en": "This diagram is simplified, but it is good enough as a map for a first reading.",
+          "ja": "この図は単純化しているが、LLMを理解する最初の地図としては十分である。"
+        },
+        {
+          "en": "In real models, the flow includes multiple Transformer blocks, normalization, feed-forward layers, and a learned output head.",
+          "ja": "実際のモデルでは、この流れの中に多層のTransformerブロック、正規化、フィードフォワード層、学習済みの出力ヘッドが入る。"
+        }
+      ]
+    },
+    {
+      "id": "tokenization-and-embeddings",
+      "heading": {
+        "ja": "3. トークン化と埋め込み",
+        "en": "3. Tokenization and Embeddings"
+      },
+      "pairs": [
+        {
+          "en": "Tokenization breaks text into units that the model can process more easily.",
+          "ja": "トークン化は、文章をモデルが扱いやすい単位に分割する作業である。"
+        },
+        {
+          "en": "In practice, those units are usually subwords rather than full words or characters, because subwords handle rare words and symbols more robustly.",
+          "ja": "文字単位でも単語単位でもなく、実務でよく使われるのはサブワード単位で、見慣れない単語や記号でも分解して扱えるようにする。"
+        },
+        {
+          "en": "So the model does not memorize raw strings as-is; it learns reusable pieces.",
+          "ja": "つまりLLMは、原文をそのまま丸暗記するのではなく、再利用しやすい部品へ分けて学習する。"
+        },
+        {
+          "en": "Embeddings map each token into a high-dimensional vector.",
+          "ja": "埋め込みは、各トークンを数百次元のような高次元ベクトルに写す層である。"
+        },
+        {
+          "en": "You can think of that vector as a coordinate in a semantic space, where tokens used in similar ways tend to end up near each other.",
+          "ja": "ここでベクトルは「意味の座標」のようなもので、似た使われ方をするトークンほど近い場所に置かれやすい。"
+        },
+        {
+          "en": "Because order matters, position information is added as well.",
+          "ja": "加えて、文章は順番が大事なので、位置情報も足される。"
+        },
+        {
+          "en": "Transformer combines token embeddings with positional encoding to process sequences.",
+          "ja": "Transformerは、入力埋め込みと位置エンコーディングを組み合わせて系列を処理する。"
+        },
+        {
+          "en": "In plain language, the model does not hold “meaning” directly; it holds numbers that capture how text is used.",
+          "ja": "埋め込みまでを直感で言い換えると、LLMは「単語の意味」を直接持っているのではなく、「使われ方の近さ」を数字で持っている。"
+        },
+        {
+          "en": "That is why the same word can end up represented differently in different contexts, and why words with similar roles can be close together.",
+          "ja": "だから同じ語でも文脈が変わると表現が変わり、似た働きをする語は近づく。"
+        }
+      ]
+    },
+    {
+      "id": "transformer-and-self-attention",
+      "heading": {
+        "ja": "4. Transformerと自己注意",
+        "en": "4. Transformer and Self-Attention"
+      },
+      "pairs": [
+        {
+          "en": "The center of Transformer is self-attention.",
+          "ja": "Transformerの中心は自己注意である。"
+        },
+        {
+          "en": "A simple way to think about it is that each token decides which other tokens in the sentence it should pay attention to, and how much.",
+          "ja": "自己注意は、各トークンが文中の他のどのトークンをどの程度参照するかを決める仕組みだと思えばよい。"
+        },
+        {
+          "en": "Pronouns, conditions, and references often need to connect to words that are far away, not just nearby.",
+          "ja": "たとえば「彼」「それ」「この条件」のような参照語は、近くの単語だけでなく、離れた場所の名詞や条件文とも結びつく必要がある。"
+        },
+        {
+          "en": "Transformer computes those links through attention weights rather than through sequential recurrence.",
+          "ja": "その結びつきを、RNNのような逐次処理ではなく、注意の重みとして一度に計算する。"
+        },
+        {
+          "en": "Self-attention often uses the terms Q, K, and V.",
+          "ja": "自己注意では、よくQ, K, Vと呼ばれる三つの役割を使う。"
+        },
+        {
+          "en": "It helps to think of them as the question, the thing being matched against, and the information being collected.",
+          "ja": "問いかける側、照合される側、集められた情報だと思うと分かりやすい。"
+        },
+        {
+          "en": "Each token compares itself with others, decides which ones matter, and then pulls in the context it needs.",
+          "ja": "各トークンは、他のトークンとの相性を見て重みを決め、必要な文脈を引き寄せる。"
+        },
+        {
+          "en": "Multi-head attention repeats this process in parallel.",
+          "ja": "これを複数の「頭」で同時に行うのが多頭注意である。"
+        },
+        {
+          "en": "Self-attention is powerful because it can pick up the relevant clue wherever it appears in the context.",
+          "ja": "自己注意が強いのは、文脈のどこに重要な手掛かりがあるかを柔軟に拾えるからである。"
+        },
+        {
+          "en": "At the same time, the attention weights themselves should not be treated as a full explanation, and the actual basis for a model’s answer still needs separate verification.",
+          "ja": "一方で、注意の重みをそのまま「説明」とみなすのは危険であり、モデルが何を根拠にしているかは別途検証が必要になる。"
+        }
+      ]
+    },
+    {
+      "id": "pretraining-and-next-token-prediction",
+      "heading": {
+        "ja": "5. 事前学習と次トークン予測",
+        "en": "5. Pretraining and Next-Token Prediction"
+      },
+      "pairs": [
+        {
+          "en": "Most LLMs are built first through pretraining.",
+          "ja": "LLMの大半は、まず事前学習で作られる。"
+        },
+        {
+          "en": "Pretraining means reading huge amounts of text and code and repeatedly practicing the task of predicting the next token.",
+          "ja": "事前学習とは、大量のテキストやコードを読み込み、次に来るトークンを当てる練習を繰り返すことだと考えてよい。"
+        },
+        {
+          "en": "Instead of manually labeling every example, the model learns from the text itself by turning continuation into a prediction problem.",
+          "ja": "ここでは正解ラベルを人が細かく付けるのではなく、データそのものから「続きを予測する」課題を作る。"
+        },
+        {
+          "en": "GPT-3 showed that scaling this autoregressive setup produces behavior that generalizes to unseen tasks through context.",
+          "ja": "GPT-3は、この自己回帰的な学習を大規模化すると、未知のタスクでも文脈に応じて振る舞えることを示した。"
+        },
+        {
+          "en": "At this stage, the model absorbs grammar, phrasing, factual fragments, code patterns, article structure, and dialogue flow.",
+          "ja": "この段階でモデルは、文法、言い回し、事実の断片、コードの定型、文章の構成、会話の流れを広く吸収する。"
+        },
+        {
+          "en": "But this is closer to building a broad pattern compressor than to building a knowledge base.",
+          "ja": "ただし、それは「知識ベースを作る」というより、「次の語を当てるために役立つパターンを広く学ぶ」ことに近い。"
+        },
+        {
+          "en": "Pretraining is not magical understanding; it is a way to learn generally useful statistical regularities.",
+          "ja": "つまり、事前学習は万能な理解の付与ではなく、汎用性のある圧縮を作る工程である。"
+        },
+        {
+          "en": "After that, extra training is often added for instruction following and safety.",
+          "ja": "その後に、指示追従や安全性のための追加学習が入る。"
+        },
+        {
+          "en": "Human feedback and principle-based methods are both used in practice.",
+          "ja": "たとえば人間のフィードバックを使う方法や、原則に従わせる方法がある。"
+        },
+        {
+          "en": "But these methods do not mean the model has ethics built into it; they only shift output behavior.",
+          "ja": "だが、こうした追加学習は「モデルに倫理が宿る」ことを意味しない。"
+        },
+        {
+          "en": "Responsibility, approval, and audit still belong in the system.",
+          "ja": "出力傾向を調整しているだけであり、実務での責任、承認、監査は別に必要である。"
+        }
+      ]
+    },
+    {
+      "id": "inference-and-context-length",
+      "heading": {
+        "ja": "6. 推論と文脈長",
+        "en": "6. Inference and Context Length"
+      },
+      "pairs": [
+        {
+          "en": "Inference here does not mean human-style deliberation or mathematical proof.",
+          "ja": "ここでいう推論は、数学の証明や人間の熟考と同義ではない。"
+        },
+        {
+          "en": "At runtime, the learned weights stay fixed, and the model selects one token after another from the prompt and its current context.",
+          "ja": "実行時には、学習済みの重みが固定され、与えられたプロンプトと文脈をもとに、次のトークン候補を順に選ぶ。"
+        },
+        {
+          "en": "Different temperatures or sampling rules can produce different outputs from the same input because generation is probabilistic.",
+          "ja": "温度やサンプリング方法を変えると、同じ入力からでも違う文が出るのはこのためである。"
+        },
+        {
+          "en": "LLM inference is best understood as reusing learned patterns at runtime.",
+          "ja": "LLMの推論は、学習で得たパターンをその場で再利用する工程だと考えるとよい。"
+        },
+        {
+          "en": "Context length is the maximum number of tokens the model can directly condition on at once.",
+          "ja": "文脈長は、モデルが一度に直接見られるトークン数の上限である。"
+        },
+        {
+          "en": "If you give it a long document, it does not see every part with equal strength, and it can lose track of important material as the input gets longer.",
+          "ja": "長い文書を渡しても、その全部が同じ強さで見えるわけではないし、長くなるほどどこに重要情報があるかを取りこぼすこともある。"
+        },
+        {
+          "en": "Long context helps, but it is not a cure-all.",
+          "ja": "長文脈は有効だが、万能ではない。"
+        },
+        {
+          "en": "So it is risky to think that choosing the longest-context model will solve everything.",
+          "ja": "したがって、「文脈長が長いモデルを選べばすべて解決する」と考えるのは危険である。"
+        },
+        {
+          "en": "In many cases, it is better to summarize the relevant parts, retrieve only the documents that matter, and keep structured data outside the prompt.",
+          "ja": "長い入力を入れる前に、どの情報を要約し、どの情報を外部検索に回し、どの情報を構造化データとして別に持つかを決める方が重要だ。"
+        }
+      ]
+    },
+    {
+      "id": "what-storing-knowledge-really-means",
+      "heading": {
+        "ja": "7. 「知識を保存している」の正確さと限界",
+        "en": "7. What “Storing Knowledge” Really Means"
+      },
+      "pairs": [
+        {
+          "en": "Saying that an LLM stores knowledge is partly right and partly misleading.",
+          "ja": "LLMが知識を保存している、という言い方は半分正しく、半分不正確である。"
+        },
+        {
+          "en": "It is right in the sense that facts and patterns are distributed across the learned weights and can help the model respond.",
+          "ja": "正しい部分は、学習を通じて事実やパターンが重みの中に分布的に保持され、応答に役立つことである。"
+        },
+        {
+          "en": "It is misleading if you imagine a human-like understanding or a database-style lookup table hidden inside the model.",
+          "ja": "不正確な部分は、そこに人間のような意味理解や、データベースのような明示的検索がそのまま入っていると考えることだ。"
+        },
+        {
+          "en": "The key point is that “the model remembers something” and “the model can retrieve it correctly” are different claims.",
+          "ja": "この点で重要なのは、LLMが「覚えている」ことと「正しく取り出せる」ことは別だということだ。"
+        },
+        {
+          "en": "It may behave plausibly in one context and fail when conditions change slightly.",
+          "ja": "似た文脈ではもっともらしく振る舞えても、少し条件が変わると誤ることがある。"
+        },
+        {
+          "en": "It may also complete facts correctly from learned regularities even when the exact passage was never memorized.",
+          "ja": "逆に、記憶していないはずの情報でも、学習済みの規則性からうまく補完することがある。"
+        },
+        {
+          "en": "So LLM knowledge should be treated as a mix of memory, generalization, completion, and confusion.",
+          "ja": "つまり、LLMの知識は、記憶、一般化、補完、混同が入り混じったものとして扱う必要がある。"
+        },
+        {
+          "en": "That is why production systems should not expect the model alone to be the source of truth.",
+          "ja": "だから実務では、LLM単体に「正しい知識の所在」を期待しない方がよい。"
+        },
+        {
+          "en": "If you need the canonical answer, connect the model to search, SQL, APIs, rule engines, audit logs, and approval flows.",
+          "ja": "正本が必要なら、検索、SQL、API、ルールエンジン、監査ログ、承認フローとつなぐべきである。"
+        },
+        {
+          "en": "LLMs are strong at drafting and summarization, but they are not the final authority for correctness.",
+          "ja": "LLMは文章化と要約に強く、根拠の固定化と最終判断には向かない。"
+        }
+      ]
+    },
+    {
+      "id": "common-questions",
+      "heading": {
+        "ja": "8. よくある誤解Q&A",
+        "en": "8. Common Questions"
+      },
+      "pairs": [
+        {
+          "en": "Strictly speaking, it is hard to say that it understands in the same sense as a human.",
+          "ja": "厳密には、人間と同じ意味で理解していると断言するのは難しい。"
+        },
+        {
+          "en": "The model’s core job is next-token prediction conditioned on context.",
+          "ja": "少なくとも、LLMがやっている中心作業は、文脈に応じた次トークン予測である。"
+        },
+        {
+          "en": "So even if its behavior looks like understanding, it is too early to equate that behavior with human understanding.",
+          "ja": "だから、理解に見える振る舞いは出せても、それをそのまま人間の理解と同一視するのは早い。"
+        },
+        {
+          "en": "Because it is not trained as a truth-checking engine.",
+          "ja": "LLMは、真偽を照合する装置として訓練されているわけではない。"
+        },
+        {
+          "en": "It is optimized first to produce the most plausible continuation, so ambiguity, data bias, and weak context can lead to plausible but wrong answers.",
+          "ja": "まずはもっともらしい続きを出すことに最適化されているので、入力の曖昧さ、訓練データの偏り、文脈不足があると、もっともらしい誤りを出しやすい。"
+        },
+        {
+          "en": "No.",
+          "ja": "上がるとは限らない。"
+        },
+        {
+          "en": "Longer context gives the model more material to work with, but it can also hide important facts or make the middle of the input less useful.",
+          "ja": "長い文脈は参照できる材料を増やすが、長すぎると重要情報が埋もれたり、中央部の情報が使われにくくなったりする。"
+        },
+        {
+          "en": "In many cases, it is better to extract the essentials and feed only the relevant sources.",
+          "ja": "長く入れるより、要点を抽出し、必要な資料だけを渡す方が強い場合がある。"
+        },
+        {
+          "en": "Not completely.",
+          "ja": "完全な代わりにはならない。"
+        },
+        {
+          "en": "Search is good at finding evidence, while an LLM is good at reorganizing and explaining what it found.",
+          "ja": "検索は根拠を見つけるのが得意で、LLMは見つけた材料を読みやすくまとめるのが得意である。"
+        },
+        {
+          "en": "The best pattern is to use both, not to force one tool to do both jobs.",
+          "ja": "両者を組み合わせると、調査と要約の分業ができる。"
+        }
+      ]
+    },
+    {
+      "id": "practical-implications",
+      "heading": {
+        "ja": "9. 実務でどう使うか",
+        "en": "9. Practical Implications"
+      },
+      "pairs": [
+        {
+          "en": "In practice, it is better to decide first what the model should see every time than what it should “remember.”",
+          "ja": "LLMを実務で使うなら、まず「何を覚えさせるか」より「何を毎回見せるか」を決める方がよい。"
+        },
+        {
+          "en": "Fast-changing information, high-accuracy information, and responsibility-bearing information should be passed in as external data rather than trusted as internal memory.",
+          "ja": "頻繁に変わる情報、正確さが重要な情報、責任が伴う情報は、モデル内部の記憶に頼らず、外部データとして渡す方がよい。"
+        },
+        {
+          "en": "Next, the output should not be used raw.",
+          "ja": "次に、出力をそのまま採用せず、検索、ルール、計算、レビューを通す。"
+        },
+        {
+          "en": "Route it through retrieval, rules, computation, and review.",
+          "ja": "LLMは説明文、候補案、下書き、要約、分類には強いが、最終的な正確性保証は別の仕組みが担うべきである。"
+        },
+        {
+          "en": "LLMs are strong at explanations, drafts, summaries, and classification, but final correctness should come from other mechanisms.",
+          "ja": "要するに、LLMは「考える主体」ではなく、「文脈を受けて候補を出す部品」として組み込むのがよい。"
+        },
+        {
+          "en": "In short, an LLM should be embedded as a component that proposes candidates from context, not as an isolated thinking subject.",
+          "ja": "最後に、LLMの強みと弱みを混同しないことが大事である。"
+        },
+        {
+          "en": "Finally, do not confuse the model’s strengths and weaknesses.",
+          "ja": "強みは、あいまいな入力を扱い、文章の形にして返し、関連情報をまとめることにある。"
+        },
+        {
+          "en": "Its strengths are handling vague input, turning it into text, and consolidating related information.",
+          "ja": "弱みは、真偽保証、恒久記憶、責任主体性、長い作業の自己管理にある。"
+        },
+        {
+          "en": "Its weaknesses are truth guarantees, permanent memory, responsible agency, and self-management over long tasks.",
+          "ja": "ここを取り違えなければ、LLMはかなり有用な道具になる。"
+        }
+      ]
+    }
+  ]
+}

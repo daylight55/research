@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "The most comprehensive public sources available as of 2025 are Landmine Monitor 2025 and Mine Action Review 2025.",
+          "ja": "2025年時点で公表されている最も包括的な情報は、Landmine Monitor 2025 と Mine Action Review 2025 である。"
+        },
+        {
+          "en": "Landmine Monitor identifies at least 57 states and other areas contaminated by antipersonnel mines: 32 States Parties with current Article 5 clearance deadlines under the Mine Ban Treaty, 22 states not party, and three other areas unable to accede because of political status.",
+          "ja": "Landmine Monitor は、少なくとも57の国・地域が対人地雷で汚染されていると整理している。"
+        },
+        {
+          "en": "Landmine contamination is therefore not a narrow post-war problem.",
+          "ja": "これは「地雷原が戦争直後の一部地域にだけ残る」という問題ではない。"
+        },
+        {
+          "en": "It persists around borders, former front lines, occupation lines, military bases, withdrawal routes, and civil-war zones in places such as Ukraine, Iraq, Afghanistan, Cambodia, Bosnia and Herzegovina, Türkiye's border regions, and Western Sahara.",
+          "ja": "ウクライナ、イラク、アフガニスタン、カンボジア、ボスニア・ヘルツェゴビナ、トルコ国境地帯、西サハラなど、国境、旧前線、占領線、軍事基地、撤退路、内戦地域に長期化して残る。"
+        },
+        {
+          "en": "Modern clearance is not just a deminer walking a grid with a metal detector.",
+          "ja": "除去は「金属探知機で順番に掘る」だけではない。"
+        },
+        {
+          "en": "Humanitarian mine action works through land release: non-technical survey, technical survey, cancellation or reduction of hazardous areas, manual clearance, mechanical processing, animal detection, explosive ordnance disposal, quality assurance, and risk education.",
+          "ja": "現代の人道的地雷対策は、非技術調査、技術調査、危険区域の取消し・縮小、手作業の除去、機械処理、探知動物、爆発物処理、品質保証、リスク教育を組み合わせる land release として進む。"
+        },
+        {
+          "en": "Most land released by area came through non-technical survey, which shows that the practical task is often to narrow uncertainty before expensive clearance assets enter the ground.",
+          "ja": "解放面積の大半は非技術調査によるもので、実務上は高コストの除去資産を投入する前に不確実性を狭めることが重要になる。"
+        },
+        {
+          "en": "Military forces do sometimes remove mines after hostilities, either voluntarily, under ceasefire arrangements, or under treaty and national obligations.",
+          "ja": "戦争・紛争終結時に軍が自発的、停戦合意、条約・国内義務として地雷除去に関与することはある。"
+        },
+        {
+          "en": "Modern armed forces are expected to record their own minefields, protect civilians, and provide information after hostilities.",
+          "ja": "近代的な軍には、自軍の地雷原を記録し、民間人を保護し、戦闘後に情報を提供することが期待される。"
+        },
+        {
+          "en": "In practice, records are often incomplete, lost, inaccurate, politically withheld, or irrelevant to improvised and remotely scattered mines.",
+          "ja": "実務では、記録が不完全、喪失、不正確、政治的に秘匿、または即席地雷や遠隔散布地雷には役立たないことが多い。"
+        },
+        {
+          "en": "Civil wars, non-state armed groups, hasty withdrawals, improvised mines, and changing terrain frequently force mine action authorities to rely on survey rather than records alone.",
+          "ja": "内戦、非国家武装勢力、急な撤退、即席地雷、地形変化により、地雷対策機関は記録だけでなく調査に頼らざるを得ない。"
+        },
+        {
+          "en": "The strategic purpose of mines is counter-mobility.",
+          "ja": "地雷の戦略目的は counter-mobility、すなわち敵の機動を制約することにある。"
+        },
+        {
+          "en": "Military doctrine uses minefields to delay, disrupt, turn, fix, or block an enemy, to protect key terrain, to economize forces along a wide front, to cover withdrawals, and to make roads, bridges, bases, and borders costly to use.",
+          "ja": "軍事教義では、地雷原は敵を遅延、混乱、誘導、固定、阻止し、重要地形を守り、広い正面を少ない兵力で支え、撤退を覆い、道路・橋・基地・国境の利用コストを上げるために使われる。"
+        },
+        {
+          "en": "The humanitarian problem is that a short-term military delay becomes a long-term delay in return, farming, schooling, road repair, power restoration, and reconstruction.",
+          "ja": "人道上の問題は、短期の軍事的遅延が、帰還、農業、通学、道路補修、送電復旧、復興の長期遅延へ変わることである。"
+        }
+      ]
+    },
+    {
+      "id": "global-distribution",
+      "heading": {
+        "ja": "2. どこに多いのか",
+        "en": "2. Global Distribution"
+      },
+      "pairs": [
+        {
+          "en": "Landmine contamination remains both an active-conflict and a legacy-war issue.",
+          "ja": "地雷汚染は、現在の戦闘地域の問題であると同時に、過去の戦争の遺産でもある。"
+        },
+        {
+          "en": "Landmine Monitor 2025 classifies massive antipersonnel mine contamination, meaning more than 100km2, in Afghanistan, Bosnia and Herzegovina, Cambodia, Ethiopia, Iraq, Türkiye, and Ukraine among States Parties.",
+          "ja": "Landmine Monitor 2025 は、100平方キロメートル超の massive 汚染を、アフガニスタン、ボスニア・ヘルツェゴビナ、カンボジア、エチオピア、イラク、トルコ、ウクライナに分類している。"
+        },
+        {
+          "en": "Ukraine's estimate should be read cautiously because the war is ongoing and large-scale survey is still incomplete.",
+          "ja": "ウクライナの推定値は、戦争継続中で大規模調査が未完了のため慎重に読む必要がある。"
+        },
+        {
+          "en": "The key unit is not only the number of mines.",
+          "ja": "重要な単位は地雷の個数だけではない。"
+        },
+        {
+          "en": "It is land that cannot be used.",
+          "ja": "使えない土地そのものが問題である。"
+        },
+        {
+          "en": "Contamination blocks farming, school routes, roads, power lines, housing, and the return of displaced people even when no explosion has occurred.",
+          "ja": "汚染は、爆発が起きていなくても、農業、通学路、道路、送電線、住宅、避難民帰還を止める。"
+        },
+        {
+          "en": "Mine action outcomes should therefore be judged by safe land release, restored movement, and public-service recovery as well as mines destroyed.",
+          "ja": "したがって地雷対策の成果は、破壊した地雷数だけでなく、安全な土地解放、移動再開、公共サービス復旧でも判断すべきである。"
+        },
+        {
+          "en": "The first is border and ceasefire-line contamination, as seen in Korea, Türkiye's border regions, Tajikistan's Afghan border, and Cyprus.",
+          "ja": "第一の型は、朝鮮半島、トルコ国境地帯、タジキスタンのアフガニスタン国境、キプロスに見られる国境・停戦線汚染である。"
+        },
+        {
+          "en": "The second is civil-war and insurgency contamination, where improvised mines and non-state armed groups are central, as in Colombia, Myanmar, the Sahel, and Yemen.",
+          "ja": "第二の型は、コロンビア、ミャンマー、サヘル、イエメンのように即席地雷や非国家武装勢力が中心となる内戦・反乱型汚染である。"
+        },
+        {
+          "en": "The third is large-scale conventional-war and withdrawal contamination, where former front lines, trenches, bases, roads, and agricultural areas are layered with mines and other explosive ordnance, as in Ukraine, Iraq, Afghanistan, Cambodia, and Bosnia and Herzegovina.",
+          "ja": "第三の型は、ウクライナ、イラク、アフガニスタン、カンボジア、ボスニア・ヘルツェゴビナのように、旧前線、塹壕、基地、道路、農地に地雷と他の爆発物が重なる大規模通常戦争・撤退型汚染である。"
+        }
+      ]
+    },
+    {
+      "id": "clearance-methods",
+      "heading": {
+        "ja": "3. 除去方法",
+        "en": "3. Clearance Methods"
+      },
+      "pairs": [
+        {
+          "en": "Modern clearance begins by reducing uncertainty.",
+          "ja": "現代の地雷除去は、不確実性を減らすところから始まる。"
+        },
+        {
+          "en": "Non-technical survey gathers military records, community testimony, accident data, former front-line information, imagery, terrain evidence, land-use patterns, and displacement or return data.",
+          "ja": "非技術調査では、軍の記録、住民証言、事故記録、旧前線情報、画像、地形証拠、土地利用、避難・帰還情報を集める。"
+        },
+        {
+          "en": "It can cancel a suspected area, reduce its boundaries, or justify technical survey.",
+          "ja": "これにより、疑わしい区域を取り消す、境界を縮小する、または技術調査に進める判断ができる。"
+        },
+        {
+          "en": "Technical survey then uses intrusive methods to confirm the presence, type, distribution, and boundaries of explosive ordnance.",
+          "ja": "技術調査では、立ち入りを伴う方法で爆発物の存在、種類、分布、境界を確認する。"
+        },
+        {
+          "en": "It is evidence collection, not automatically full clearance.",
+          "ja": "これは証拠収集であり、自動的に全域除去を意味しない。"
+        },
+        {
+          "en": "Clearance itself may use manual detection and excavation, mechanical vegetation and soil processing, animal detection systems, explosive ordnance disposal teams, and remotely operated machines.",
+          "ja": "実際の除去には、手作業の探知・掘削、機械による植生・土壌処理、動物探知、爆発物処理班、遠隔操作機械が使われる。"
+        },
+        {
+          "en": "Low-metal plastic mines, deeply buried mines in sand, rocks, forest, rice fields, urban rubble, improvised mines, and anti-handling devices require different combinations.",
+          "ja": "低金属のプラスチック地雷、砂に深く埋まった地雷、岩場、森林、水田、都市がれき、即席地雷、対処妨害装置は、それぞれ異なる組み合わせを必要とする。"
+        },
+        {
+          "en": "Quality assurance is not an afterthought.",
+          "ja": "品質保証は後付けの作業ではない。"
+        },
+        {
+          "en": "Accreditation, procedures, safety distances, equipment, daily records, supervision, community liaison, and post-clearance inspection create the confidence needed for residents to use the land.",
+          "ja": "認証、手順、安全距離、装備、日々の記録、監督、住民連絡、除去後検査が、住民が土地を使えるという信頼を作る。"
+        },
+        {
+          "en": "Mine action is therefore not only an engineering task.",
+          "ja": "したがって地雷対策は工兵作業だけではない。"
+        },
+        {
+          "en": "It is also information management, public administration, community participation, medicine, education, and reconstruction planning.",
+          "ja": "情報管理、行政、住民参加、医療、教育、復興計画でもある。"
+        }
+      ]
+    },
+    {
+      "id": "military-records",
+      "heading": {
+        "ja": "4. 軍が自主的に除去するのか",
+        "en": "4. Do Militaries Remove Their Own Mines?"
+      },
+      "pairs": [
+        {
+          "en": "States Parties to the Mine Ban Treaty must identify mined areas under their jurisdiction or control, mark and protect them, and destroy antipersonnel mines as soon as possible, normally within ten years.",
+          "ja": "対人地雷禁止条約の締約国は、管轄・支配下の地雷区域を特定し、標識・保護し、通常10年以内に対人地雷を破壊する義務を負う。"
+        },
+        {
+          "en": "Article 7 also requires reporting, to the extent possible, the location of mined areas and details on mine type, quantity, and emplacement timing.",
+          "ja": "第7条は、可能な限り、地雷区域の位置、地雷種別、数量、敷設時期を報告することも求める。"
+        },
+        {
+          "en": "This creates a legal framework in which the military, state mine action authorities, international organizations, NGOs, and commercial clearance firms may work together after conflict.",
+          "ja": "これにより、紛争後に軍、国家地雷対策機関、国際機関、NGO、商業除去会社が協力する法的枠組みができる。"
+        },
+        {
+          "en": "CCW Amended Protocol II also requires recording information on minefields, mined areas, mines, booby-traps, and other devices, and using that information after hostilities to protect civilians and support removal.",
+          "ja": "CCW 改正議定書IIも、地雷原、地雷区域、地雷、ブービートラップ、その他装置の情報を記録し、戦闘後に民間人保護と除去支援に使うことを求める。"
+        },
+        {
+          "en": "Records are still often incomplete.",
+          "ja": "それでも記録はしばしば不完全である。"
+        },
+        {
+          "en": "Records can survive, but war, translation, coordinate error, terrain change, shifting sand, lost files, and political disputes mean they cannot be treated as proof of safety.",
+          "ja": "記録が残ることはあるが、戦争、翻訳、座標誤差、地形変化、砂丘移動、ファイル喪失、政治的紛争により、安全の証明としては扱えない。"
+        }
+      ]
+    }
+  ]
+}

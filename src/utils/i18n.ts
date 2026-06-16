@@ -33,7 +33,12 @@ export function getPostLocale(post: PostLike): Locale {
 export function articleSlugFromId(id: string): string {
 	const segments = id.split('/').filter(Boolean)
 	const last = segments.at(-1)
-	if (last === 'index' || last === 'research' || last === 'research-log') {
+	if (
+		last === 'index' ||
+		last === 'research' ||
+		last === 'research-log' ||
+		last === 'source-notes'
+	) {
 		segments.pop()
 	}
 

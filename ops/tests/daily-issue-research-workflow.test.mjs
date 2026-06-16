@@ -105,6 +105,12 @@ assert.match(
 
 assert.match(
 	dailyIssuePrompt,
+	/articles\/report\/<topic>\/ja\/source-notes\.mdx[\s\S]*?source inventory[\s\S]*?inclusion\/exclusion decisions/,
+	'Daily Issue Research prompt should require pre-article source notes for source material before drafting'
+)
+
+assert.match(
+	dailyIssuePrompt,
 	/Do not include an issue URL because the research queue[\s\S]*?may be private/,
 	'Daily Issue Research prompt should keep private issue URLs out of research logs'
 )
@@ -119,6 +125,12 @@ assert.match(
 	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
 	/research-log\.mdx[\s\S]*?## 調査命令[\s\S]*?Run Context[\s\S]*?topic hint/,
 	'Daily Trend News prompt should ask optional research logs to summarize the run instruction context'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/source-notes\.mdx[\s\S]*?source inventory[\s\S]*?topic selection notes[\s\S]*?\/sources\//,
+	'Daily Trend News prompt should require localized source notes and a public sources route'
 )
 
 assert.match(
@@ -338,6 +350,12 @@ assert.match(
 )
 
 assert.match(
+	trendNewsPreflightScript,
+	/node ops\/scripts\/validate-article-mdx\.mjs --changed/,
+	'Daily Trend News preflight should reject generated MDX syntax errors before the strict Astro build gate'
+)
+
+assert.match(
 	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
 	/exactly three balanced[\s\S]*?NewsDigestSection[\s\S]*?one politics[\s\S]*?one economy[\s\S]*?one technology/,
 	'Daily Trend News prompt should require balanced localized NewsDigestSection blocks'
@@ -393,14 +411,20 @@ assert.match(
 
 assert.match(
 	trendNewsPreflightScript,
-	/node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
-	'Daily Trend News preflight should run generated article structure and news-label tests before the final strict CI gate'
+	/articles\/news\/\$\{SLUG\}\/ja\/source-notes\.mdx[\s\S]*articles\/news\/\$\{SLUG\}\/en\/source-notes\.mdx[\s\S]*node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-article-frontmatter\.mjs --changed[\s\S]*node ops\/scripts\/validate-article-mdx\.mjs --changed[\s\S]*node ops\/scripts\/validate-news-item-format\.mjs --changed[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
+	'Daily Trend News preflight should run generated article, frontmatter, MDX syntax, Smart Brevity, and MIX tests before the final strict CI gate'
 )
 
 assert.match(
 	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
-	/English topic paragraphs must use exactly these labels[\s\S]*?What happened:[\s\S]*?Why it matters:[\s\S]*?What to watch:/,
-	'Daily Trend News prompt should pin canonical English digest labels before generation'
+	/Axios-inspired Smart Brevity[\s\S]*?The bottom line:[\s\S]*?What happened:[\s\S]*?Why it matters:[\s\S]*?What to watch:/,
+	'Daily Trend News prompt should pin Axios-inspired Smart Brevity labels before generation'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/Quote every frontmatter string scalar[\s\S]*?Do not leave colons in unquoted[\s\S]*?frontmatter values/,
+	'Daily Trend News prompt should prevent malformed YAML frontmatter before generation'
 )
 
 assert.match(
@@ -437,6 +461,12 @@ assert.match(
 	testWorkflow,
 	/- name: Run repository lint[\s\S]*?run: pnpm lint[\s\S]*?- name: Build site/,
 	'Test workflow should run repository lint before building'
+)
+
+assert.match(
+	testWorkflow,
+	/- name: Validate changed news item format[\s\S]*?run: node ops\/scripts\/validate-news-item-format\.mjs --changed origin\/\$\{\{ github\.base_ref \}\}\.\.\.HEAD[\s\S]*?- name: Validate changed mixed article alignment/,
+	'Test workflow should validate changed news item format before mixed article alignment'
 )
 
 assert.match(

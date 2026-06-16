@@ -36,4 +36,11 @@ const articleResearch = defineCollection({
 	})
 })
 
-export const collections = { blog, articleResearch }
+const articleSourceNotes = defineCollection({
+	loader: glob({ base: './articles', pattern: '**/source-notes.{md,mdx}' }),
+	schema: z.object({
+		title: z.string().optional()
+	})
+})
+
+export const collections = { blog, articleResearch, articleSourceNotes }

@@ -1,0 +1,52 @@
+---
+title: 'LLMの学習・微調整・RAG・エージェント: Source Notes'
+---
+
+# LLMの学習・微調整・RAG・エージェント: Source Notes
+
+## ソースマップ
+
+### Primary / Official
+
+- [OpenAI fine-tuning guide](https://platform.openai.com/docs/guides/fine-tuning)
+- [OpenAI function calling guide](https://platform.openai.com/docs/guides/function-calling)
+- [Anthropic, Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
+- [Anthropic, Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [MCP specification](https://modelcontextprotocol.io/specification/2025-03-26)
+- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)
+
+### Foundational / Academic
+
+- [Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+
+### Secondary / Orientation
+
+- Vendor and ecosystem explainers used only for orientation were excluded from the final dependency chain if they did not add a durable definition or evaluation method.
+
+## 重要論点に対する証拠メモ
+
+- 事前学習とファインチューニングは、ともにモデル重みを変えるが、スコープとコストが異なる。本文では「広くて高コスト」と「狭くて比較的低コスト」の対比で整理する。
+- プロンプトは実行時文脈の設計であり、重み更新ではない。長い指示や複雑な制約は、プロンプトだけだと壊れやすい。
+- RAG は検索した文書を文脈に差し込む設計で、最新情報や社内文書に向くが、検索ミスや文書品質の悪さはそのまま回答に反映される。
+- ツール利用は、計算、検索、DB、業務APIなどの外部操作をモデルに許す層である。単発のAPI呼び出しと複数ステップの自律実行は分けて書く。
+- エージェントは、計画、実行、検証を反復する制御ループであり、workflow と完全に同義ではない。予測可能な部分は workflow の方が安全である。
+- MCP は学習法ではなく接続標準である。RAG や tool use を置き換えるのではなく、共通の配線層として補う。
+
+## 反映を弱めた情報
+
+- ベンダーの機能名や価格は、改定が早いため本文の中心に置かなかった。使い分けの原理を優先した。
+- 「エージェントはすべてを自動化できる」という主張は、評価条件と権限設計が欠けるため採用しなかった。
+- 「RAG だけで正確性が保証される」という理解は誤解を招くため避けた。
+- 「ファインチューニングだけで最新事実を埋め込める」という理解も避けた。
+
+## 退けた、または補助に留めた情報
+
+- 個別ベンダーの宣伝記事は、定義が曖昧なものが多いため補助に留めた。
+- 実装例の細部は、この記事の目的が比較と判断基準の提示であるため省いた。
+
+## 開いている論点
+
+- どの程度の改善がファインチューニングで得られるかは、データセットと評価指標に依存する。
+- RAG の品質は、検索アルゴリズム、chunk 設計、メタデータ、アクセス制御に左右される。
+- Agent の安全性は、権限、サンドボックス、監査、失敗時の巻き戻しで決まる。
+- MCP の実運用上の価値は、接続先が増えたときにどこまで運用負荷を下げるかで評価する必要がある。

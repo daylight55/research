@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "Apartheid in South Africa was not just prejudice.",
+          "ja": "南アフリカのアパルトヘイトは、単なる人種差別ではなく、土地、居住、労働、教育、政治参加を分割統治する法制度だった。"
+        },
+        {
+          "en": "It was a legal order that sorted land, residence, labor, education, and political participation into separate tracks.",
+          "ja": "植民地期の土地奪取と隔離の慣行の上に、1913年土地法、1936年の政治権利制限、1948年以降の国民党政権、1950年代の人種分類と居住分離法が積み上がり、黒人多数派の生活空間を行政的に狭めた。"
+        },
+        {
+          "en": "Colonial land dispossession and segregation provided the foundation.",
+          "ja": "植民地期の土地奪取と隔離の慣行が土台をつくった。"
+        },
+        {
+          "en": "The 1913 Land Act, the 1936 political settlement, the 1948 National Party victory, and the 1950s classification and residential laws turned that foundation into a governing system that narrowed the lives of the Black majority.",
+          "ja": "1913年土地法、1936年の政治権利制限、1948年以降の国民党政権、1950年代の人種分類と居住分離法が積み上がり、黒人多数派の生活空間を行政的に狭めた。"
+        },
+        {
+          "en": "The practical reading is straightforward.",
+          "ja": "実務上の読み方は明確である。"
+        },
+        {
+          "en": "Apartheid was not simply a period of bias; it was a state design that controlled movement, housing, education, labor markets, and voting rights through law.",
+          "ja": "アパルトヘイトは「偏見が強かった時代」ではなく、法によって人びとの移動、住宅、教育、労働市場、投票権を別々に制御した国家設計だった。"
+        },
+        {
+          "en": "Democratization and reconciliation ended formal white minority rule and rebuilt constitutional order, but they did not fully repair land inequality, wealth gaps, or accountability for crimes committed under the old regime.",
+          "ja": "民主化後の和解も、暴力の終結と憲法秩序の再建には成功したが、土地と富の再配分、加害責任の追及、世代をまたぐ不平等の修復までは完了していない。"
+        }
+      ]
+    },
+    {
+      "id": "historical-backbone",
+      "heading": {
+        "ja": "2. 背景と年表",
+        "en": "2. Historical Backbone"
+      },
+      "pairs": [
+        {
+          "en": "South Africa's rule structure was built in layers: Dutch colonial settlement, British rule, white settler dominance, and then apartheid.",
+          "ja": "南アフリカの支配構造は、オランダ植民地、英国支配、ボーア系白人国家、そしてアパルトヘイト国家という層の上に形成された。"
+        },
+        {
+          "en": "The key point is that racial domination did not begin in 1948.",
+          "ja": "重要なのは、1948年に突然「差別が生まれた」のではなく、それ以前から土地の奪取、都市への制限的流入、雇用の従属化が進んでいたことである。"
+        },
+        {
+          "en": "Long before that, land seizure, restricted urban access, and labor dependency were already being built into the colonial economy.",
+          "ja": "1913年土地法、1936年の政治参加制限、1948年の国民党政権、1950年代の人種登録・集団地域法・通行証・バントゥー教育が、ひとつの支配体系として連結していた点を本文の中心に置いた。"
+        },
+        {
+          "en": "The core logic is that apartheid was not a single discriminatory law.",
+          "ja": "この年表の核は、アパルトヘイトが「差別法」ではなく、土地と都市、労働と教育、投票と国籍を連動させる統治装置だったという点にある。"
+        },
+        {
+          "en": "It was a system that linked land, city space, labor, schooling, and voting so that each layer reinforced the next.",
+          "ja": "1948年に突然「差別が生まれた」のではなく、それ以前から土地の奪取、都市への制限的流入、雇用の従属化が進んでいた。"
+        }
+      ]
+    },
+    {
+      "id": "apartheid-workings",
+      "heading": {
+        "ja": "3. アパルトヘイトの作動原理",
+        "en": "3. How Apartheid Worked"
+      },
+      "pairs": [
+        {
+          "en": "The Population Registration system sorted people into categories such as White, Black, Coloured, and Indian.",
+          "ja": "人口登録法によって白人、黒人、カラード、インド系などに分類した。"
+        },
+        {
+          "en": "Administrative identity came first, and rights followed that identity.",
+          "ja": "行政上の身分が先に決まり、権利配分が後から従った。"
+        },
+        {
+          "en": "The Group Areas framework, forced removals, townships, and Bantustans split space by race.",
+          "ja": "集団地域法、強制移住、タウンシップ、バントゥースタンで空間を分けた。"
+        },
+        {
+          "en": "Mixed urban life was prevented, and city centers remained under white control.",
+          "ja": "生活圏の混在を防ぎ、都市中心部を白人支配に保った。"
+        },
+        {
+          "en": "Pass laws, influx control, job reservation, and migrant labor tied Black mobility to white demand.",
+          "ja": "通行証、流入規制、技能職の排除、移住労働に依存した。"
+        },
+        {
+          "en": "Black workers were treated as a flexible labor supply, not as full urban residents.",
+          "ja": "黒人労働を必要なときだけ都市に入れる「可用な労働力」にした。"
+        },
+        {
+          "en": "Bantu Education was designed for subordinate labor rather than equal citizenship.",
+          "ja": "バントゥー教育で、従属的労働に適した教育を別枠で与えた。"
+        },
+        {
+          "en": "Schooling reproduced hierarchy instead of expanding opportunity.",
+          "ja": "教育を上昇移動の手段ではなく、地位固定の装置にした。"
+        },
+        {
+          "en": "Black political rights were reduced through separate representation and homeland politics.",
+          "ja": "共同有権者名簿からの排除、代表制の縮小、ホームランド化。"
+        },
+        {
+          "en": "The majority population was denied real national voice.",
+          "ja": "多数派である黒人の制度的発言権を奪った。"
+        }
+      ]
+    },
+    {
+      "id": "resistance-pressure",
+      "heading": {
+        "ja": "4. 抵抗と国際圧力",
+        "en": "4. Resistance and International Pressure"
+      },
+      "pairs": [
+        {
+          "en": "The ANC was founded in 1912.",
+          "ja": "ANC は1912年に結成され、当初は請願と法的抗議を中心に戦ったが、1950年代以降は大衆動員と自由憲章の政治に進んだ。"
+        },
+        {
+          "en": "Early resistance relied on petitions and legal protest, but by the 1950s it had moved toward mass mobilization and the politics of the Freedom Charter.",
+          "ja": "自由憲章は、土地、住宅、雇用、教育、法の下の平等を掲げ、アパルトヘイト国家が否定した市民権の別案を示した。"
+        },
+        {
+          "en": "The Charter set out an alternative citizenship program built around land, housing, work, education, and equality before the law.",
+          "ja": "1960年のシャープビル虐殺は、国内抗議の局面を変えた。"
+        },
+        {
+          "en": "Sharpeville in 1960 changed the politics of protest.",
+          "ja": "以後、ANC などの主要組織は弾圧で地下化・亡命化し、国内抵抗は労組、学生、教会、市民運動へ分散していった。"
+        },
+        {
+          "en": "After the massacre, major anti-apartheid organizations were banned or driven underground, and resistance was redistributed across unions, students, churches, and civic groups.",
+          "ja": "国連は1960年代以降、南アフリカを非難し、武器禁輸や制裁を積み上げたが、冷戦の下では米英などが反共戦略や地政学上の理由から強い包囲に慎重だった。"
+        },
+        {
+          "en": "International pressure grew in stages.",
+          "ja": "国際圧力は段階的に強まった。"
+        },
+        {
+          "en": "The United Nations condemned South Africa and built toward embargoes and sanctions.",
+          "ja": "国連は1960年代以降、南アフリカを非難し、武器禁輸や制裁を積み上げた。"
+        },
+        {
+          "en": "During the Cold War, however, the United States and the United Kingdom were often cautious about a harder line because anti-communist strategy and geopolitical calculation mattered.",
+          "ja": "冷戦の下では米英などが反共戦略や地政学上の理由から強い包囲に慎重だった。"
+        },
+        {
+          "en": "Domestic resistance and international sanctions worked together.",
+          "ja": "国内抵抗と国際制裁は別々の力ではない。"
+        },
+        {
+          "en": "As the regime lost legitimacy at home and faced higher costs abroad, apartheid became a system that could still be maintained but no longer justified.",
+          "ja": "国内で統治の正統性が崩れ、国外で経済と外交のコストが上がったことで、アパルトヘイトは「維持できるが正当化できない制度」になっていった。"
+        }
+      ]
+    },
+    {
+      "id": "democratization-trc",
+      "heading": {
+        "ja": "5. 民主化、マンデラ、TRC",
+        "en": "5. Democratization, Mandela, and the TRC"
+      },
+      "pairs": [
+        {
+          "en": "Mandela's 1990 release and the legalization of the ANC were not just symbolic events.",
+          "ja": "1990年のマンデラ釈放と ANC 合法化は、単なる象徴事件ではなく、武力衝突を交渉に置き換える転換点だった。"
+        },
+        {
+          "en": "They marked the transition from confrontation toward negotiation.",
+          "ja": "1994年の初の全人種参加選挙で ANC が勝利し、マンデラ政権の下で新憲法と移行期の制度設計が進んだ。"
+        },
+        {
+          "en": "In 1994, South Africa held its first all-race election, the ANC won, and a new constitutional order began to take shape under Mandela's leadership.",
+          "ja": "TRC は、真実の申告、被害の記録、条件付き恩赦、補償と名誉回復を組み合わせた制度だった。"
+        },
+        {
+          "en": "The TRC combined truth telling, public record keeping, conditional amnesty, and reparative recognition.",
+          "ja": "狙いは、全面的な報復ではなく、公的記録を通じて新しい憲法秩序の共通基盤をつくることにあった。"
+        },
+        {
+          "en": "Its goal was not revenge.",
+          "ja": "狙いは、全面的な報復ではなく、公的記録を通じて新しい憲法秩序の共通基盤をつくることにあった。"
+        },
+        {
+          "en": "It was to create a shared factual basis for a new constitutional order while preventing the transition from collapsing into large-scale retaliatory violence.",
+          "ja": "TRC の最大の強みは、勝者の正義だけで新国家を作らずに済ませたことだった。"
+        },
+        {
+          "en": "The TRC's biggest strength was that South Africa did not need to build a new state entirely through victor's justice.",
+          "ja": "最大の弱みは、真実の公開と構造的不平等の是正が同じ速度では進まなかったことにある。"
+        },
+        {
+          "en": "Its biggest weakness was that truth recovery and structural repair moved at different speeds.",
+          "ja": "これは制度設計の欠陥というより、移行期に現実的に取りうる妥協の限界である。"
+        },
+        {
+          "en": "That was not just a design flaw; it was also the limit of what was politically possible in a fragile transition.",
+          "ja": "アパルトヘイト時代の犯罪をめぐる現在の訴追や再調査が続いている事実は、TRC が「終わり」を宣言したのではなく、「公的な出発点」を作ったにすぎないことを示している。"
+        },
+        {
+          "en": "The continuing inquiries into apartheid-era crimes show that the TRC did not end the justice question.",
+          "ja": "2025年の AP の報道でも、家族や遺族はなお責任追及を求めている。"
+        },
+        {
+          "en": "It created an official starting point.",
+          "ja": "TRC が「終わり」を宣言したのではなく、「公的な出発点」を作ったにすぎない。"
+        }
+      ]
+    },
+    {
+      "id": "evaluation",
+      "heading": {
+        "ja": "6. 和解モデルの評価",
+        "en": "6. Evaluating the Reconciliation Model"
+      },
+      "pairs": [
+        {
+          "en": "The TRC deserves credit for three things.",
+          "ja": "TRC を高く評価できる理由は三つある。"
+        },
+        {
+          "en": "First, it avoided turning the transition into a total revenge project.",
+          "ja": "第一に、移行期の暴力を全体報復にしなかった。"
+        },
+        {
+          "en": "Second, it preserved state violence as a public record of victim testimony.",
+          "ja": "第二に、国家暴力を被害者の語りとして公的に残した。"
+        },
+        {
+          "en": "Third, it treated democratization as memory-making as well as election-making.",
+          "ja": "第三に、民主化を「選挙」だけでなく「記憶の制度化」として扱った。"
+        },
+        {
+          "en": "The limits are equally clear.",
+          "ja": "ただし、和解モデルには明確な限界がある。"
+        },
+        {
+          "en": "Conditional amnesty meant that some perpetrators were not punished in the way victims had hoped.",
+          "ja": "真実を話した者を一部免責し、刑事責任を後回しにしたため、被害者から見れば「知ったが、裁かれていない」という感覚が残りやすい。"
+        },
+        {
+          "en": "More importantly, the economic and spatial inheritance of apartheid survived the transition.",
+          "ja": "さらに、土地再分配、都市空間の再編、教育格差の解消が追いつかなかったため、制度的人種差別の経済的遺産は長く残った。"
+        },
+        {
+          "en": "Land, urban geography, and education remained unequal long after the legal framework changed.",
+          "ja": "したがって、南アフリカの事例は「和解があれば十分」という教訓ではない。"
+        },
+        {
+          "en": "So the lesson is not that reconciliation alone is enough.",
+          "ja": "正確には、和解は暴力の停止と政治秩序の再建には有効だが、配分正義と生活再建は別の政策として続けなければならない、という教訓である。"
+        },
+        {
+          "en": "The sharper lesson is that reconciliation can stop violence and rebuild political order, but redistribution and social repair require separate policy work.",
+          "ja": "南アフリカは、その難しさを比較可能な形で示した稀有な事例である。"
+        }
+      ]
+    },
+    {
+      "id": "practical-implications",
+      "heading": {
+        "ja": "7. 実務含意",
+        "en": "7. Practical Implications"
+      },
+      "pairs": [
+        {
+          "en": "For readers who want to apply the case, the first implication is that discriminatory systems are often designed as linked institutions, not as one-off prejudices.",
+          "ja": "この歴史を実務で読むなら、第一に「制度は差別を意図して設計されうる」と理解することが重要である。"
+        },
+        {
+          "en": "Racial classification, housing control, mobility control, education, and political exclusion can be assembled into a durable regime.",
+          "ja": "人口分類、居住制限、移動規制、教育の分離、政治参加の遮断は、別々の政策ではなく、ひとつの支配体系をつくる。"
+        },
+        {
+          "en": "The second implication is that democratization is not the end of the story.",
+          "ja": "第二に、民主化は制度の終わりではない。"
+        },
+        {
+          "en": "South Africa after 1994 still had to deal with land, labor, security, schooling, memory, and accountability.",
+          "ja": "1994年以後の南アフリカでも、土地、雇用、治安、教育、記憶をめぐる争いは続いている。"
+        },
+        {
+          "en": "Historical repair takes longer than legal reform.",
+          "ja": "過去の制度をどう記憶し、どう補償し、どう再配分するかは、今日の政策設計にも残る課題である。"
+        },
+        {
+          "en": "The third implication is comparative.",
+          "ja": "第三に、他国の比較では、TRC を「万能の模範」にしない方がよい。"
+        },
+        {
+          "en": "The TRC is best read as a transition mechanism for a society trying to avoid civil war while keeping the state intact.",
+          "ja": "移行期正義は、国家が壊れないことと、被害者が忘れさせられないことの両方を満たす必要があるが、その両立は難しい。"
+        },
+        {
+          "en": "It is not a universal template for post-authoritarian justice.",
+          "ja": "南アフリカは、その難しさを比較可能な形で示した稀有な事例である。"
+        }
+      ]
+    }
+  ]
+}

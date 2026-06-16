@@ -31,6 +31,11 @@ policy, business, and practical decisions.
 - Keep the frontmatter fields from the News template, including
   `contentType: news`, `category: tech-news`, `rssSummary`, and
   `heroImageQuery`.
+- Quote every frontmatter string scalar with single quotes, especially `title`,
+  `description`, `rssSummary`, `heroImageQuery`, `heroImageAlt`,
+  `heroImageCredit`, and `heroImageCreditUrl`. If the value itself contains a
+  single quote, escape it by doubling it. Do not leave colons in unquoted
+  frontmatter values.
 - Keep the template's `generation` frontmatter block. Set only `model` from
   `Automation Metadata`. Do not store prompt source, prompt summary, Run
   Context, or other prompt details in article frontmatter.
@@ -55,6 +60,13 @@ policy, business, and practical decisions.
   `何が起きたか` / `なぜ重要か` / `今後の注視点` paragraphs. Do not leave a
   plain `出典メモ:` text line in News digests.
 - Do not create `report.md` or another second copy of the same article body.
+- Create public pre-article source notes in
+  `articles/news/daily-trends-<YYYY-MM-DD>/ja/source-notes.mdx` and
+  `articles/news/daily-trends-<YYYY-MM-DD>/en/source-notes.mdx`. Use these
+  files for source inventory, topic selection notes, image/source-card evidence,
+  rejected or downgraded candidate topics, uncertainty labels, and cross-topic
+  synthesis before the material is edited into the reader-facing digest. Do not
+  make them duplicate copies of the final article.
 - Create a public research trail in
   `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx` and
   `articles/news/daily-trends-<YYYY-MM-DD>/en/research-log.mdx` alongside the
@@ -75,6 +87,8 @@ policy, business, and practical decisions.
   Japanese/English sentence pairs to satisfy `ops/scripts/validate-mix-alignment.mjs`.
 - Confirm the public trail is reachable from
   `/news/daily-trends-<YYYY-MM-DD>/research/`.
+- Confirm the public source notes are reachable from
+  `/news/daily-trends-<YYYY-MM-DD>/sources/`.
 
 ## Context Budget Rules
 
@@ -161,14 +175,24 @@ For each of the fifteen topic items, include:
 - do not prefix topic headings with category names or numbers such as
   `政治 1.`, `経済 2.`, or `技術 3.`
 - one `NewsSourceCard` source memo card immediately below the heading
-- `何が起きたか`
-- `なぜ重要か`
+- an Axios-inspired Smart Brevity summary paragraph before the details
+- `要点`: one short sentence that gives the bottom line first
+- `何が起きたか`: one short paragraph on the factual update
+- `なぜ重要か`: one short paragraph on the decision or market relevance
 - `今後の注視点`: the reader-facing takeaway should explain what to monitor next
   after this news, not a generic business action item.
-- English topic paragraphs must use exactly these labels, each as its own
-  paragraph: `What happened:`, `Why it matters:`, and `What to watch:`. Do not
-  use shortened or stale labels such as `Watch:`, `Why it's important:`, or
+- Keep each labelled paragraph short enough to scan. Do not split one label
+  across multiple paragraphs.
+- Japanese topic paragraphs must use exactly these labels, each as its own
+  paragraph and in this order: `要点:`, `何が起きたか:`, `なぜ重要か:`, and
+  `今後の注視点:`.
+- English topic paragraphs must use exactly these Axios-inspired Smart Brevity
+  labels, each as its own paragraph and in this order: `The bottom line:`,
+  `What happened:`, `Why it matters:`, and `What to watch:`. Do not use
+  shortened or stale labels such as `Watch:`, `Why it's important:`, or
   `Implications for practice:`.
+- Do not mention Axios or Smart Brevity in the reader-facing article body. Use
+  the format, not the brand name.
 
 Use this component shape directly after each topic heading:
 
@@ -235,6 +259,8 @@ Run focused verification before finishing:
   `NewsDigestSection` blocks: one politics, one economy, and one technology.
 - Confirm `mix-alignment.json` exists for MIX display and covers the generated
   English article.
+- Confirm localized `source-notes.mdx` files exist and summarize source
+  selection before the final digest.
 - Confirm `NewsSourceCard` `imageUrl` values are unique within the article after
   ignoring query strings.
 - Confirm `heroImageQuery` is specific to people, organizations, companies,
@@ -248,6 +274,7 @@ Run focused verification before finishing:
   - `/news/rss.xml`
   - `/news/daily-trends-<YYYY-MM-DD>/index.html`
   - `/news/daily-trends-<YYYY-MM-DD>/research/index.html`
+  - `/news/daily-trends-<YYYY-MM-DD>/sources/index.html`
 
 ## Final Message
 

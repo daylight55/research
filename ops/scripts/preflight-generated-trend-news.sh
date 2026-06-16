@@ -20,6 +20,8 @@ for required_file in \
 	"${ARTICLE_PATH}" \
 	"articles/news/${SLUG}/ja/index.mdx" \
 	"articles/news/${SLUG}/en/index.mdx" \
+	"articles/news/${SLUG}/ja/source-notes.mdx" \
+	"articles/news/${SLUG}/en/source-notes.mdx" \
 	"articles/news/${SLUG}/ja/research-log.mdx" \
 	"articles/news/${SLUG}/en/research-log.mdx" \
 	"articles/news/${SLUG}/mix-alignment.json"; do
@@ -30,4 +32,7 @@ for required_file in \
 done
 
 node --test ops/tests/article-structure.test.mjs ops/tests/news-title-summaries.test.mjs
+node ops/scripts/validate-article-frontmatter.mjs --changed
+node ops/scripts/validate-article-mdx.mjs --changed
+node ops/scripts/validate-news-item-format.mjs --changed
 node ops/scripts/validate-mix-alignment.mjs --changed

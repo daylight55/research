@@ -1,0 +1,61 @@
+---
+title: 'Research Log: LLM Training, Fine-Tuning, RAG, and Agents'
+description: 'Public research trail for the report that separates training, fine-tuning, prompting, retrieval, tool use, and agents.'
+pubDate: '2026-06-15'
+category: 'ai-systems'
+tags: ['LLM', 'Fine-tuning', 'RAG', 'Agents', 'MCP', 'Prompt Engineering']
+generation:
+  model: 'gpt-5.4-mini'
+draft: false
+---
+
+# Research Log: LLM Training, Fine-Tuning, RAG, and Agents
+
+## Environment
+
+- model: `gpt-5.4-mini`
+- skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## Research Instruction
+
+- issue number: `#34`
+- issue title: `Investigate the differences between LLM training, fine-tuning, RAG, and agents`
+- publishable request summary: Compare pretraining, fine-tuning, prompting, RAG, tool use, and agents by what each changes, how much they cost, what data they need, how quickly they update, how accurate they tend to be, and what governance burden they create. Also explain how MCP and external tool integration fit into the picture.
+- scope constraints: Verify unstable claims against primary or official sources. Keep claims, evidence, limits, and practical implications separate. Include a mermaid diagram and comparison table where helpful. Put publishable research process notes in `research-log.mdx` and source inventory in `source-notes.mdx`.
+- inferred deliverable: A Japanese report at `articles/report/llm-training-finetuning-rag-agents/ja/index.mdx`, the English article, `mix-alignment.json`, public source notes, and public research logs.
+
+## Research Approach
+
+I treated the issue as a decision-support comparison rather than a taxonomy exercise. The article therefore starts by separating the layers that are often conflated: weights, runtime context, external actions, and control loops. That framing made it easier to compare cost, freshness, governance, and operational risk.
+
+## Checked Claims
+
+- Pretraining and fine-tuning both change model weights, but they differ in scope and retraining cadence.
+- Prompting changes runtime instructions, not weights.
+- RAG improves access to fresh or internal knowledge by retrieving documents into context, but it does not guarantee correctness.
+- Tool use adds external actions such as search, calculation, and writeback.
+- Agents add planning, execution, and verification loops.
+- MCP is an integration protocol, not a learning method.
+
+## Main References
+
+- OpenAI fine-tuning guide
+- OpenAI function calling guide
+- Anthropic Building effective agents
+- Anthropic Effective context engineering for AI agents
+- MCP specification
+- Retrieval-Augmented Generation paper
+- NIST AI RMF
+
+## Downgraded Material
+
+- Vendor marketing copy was treated as orientation only when it lacked stable definitions or evaluation detail.
+- Absolute pricing comparisons were not emphasized because they change frequently and vary by model and contract.
+- Overconfident claims that RAG guarantees truth or agents can automate everything were excluded.
+
+## Remaining Limits
+
+- The real lift from fine-tuning depends on dataset quality and evaluation design.
+- RAG quality depends on retrieval, chunking, metadata, and access control.
+- Agent safety depends on permissions, sandboxing, audit logs, and rollback paths.

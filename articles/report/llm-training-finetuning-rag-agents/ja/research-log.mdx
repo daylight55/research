@@ -1,0 +1,61 @@
+---
+title: '調査プロセス: LLMの学習・微調整・RAG・エージェントの使い分け'
+description: 'LLMの学習、微調整、RAG、ツール利用、エージェントの違いを整理した公開調査ログ。'
+pubDate: '2026-06-15'
+category: 'ai-systems'
+tags: ['LLM', 'Fine-tuning', 'RAG', 'Agents', 'MCP', 'Prompt Engineering']
+generation:
+  model: 'gpt-5.4-mini'
+draft: false
+---
+
+# 調査プロセス: LLMの学習・微調整・RAG・エージェントの使い分け
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- issue number: `#34`
+- issue title: `LLMの学習・微調整・RAG・エージェントの違いを調査する`
+- publishable request summary: 事前学習、ファインチューニング、プロンプト、RAG、ツール利用、エージェントの違いを、何を変える技術か、コスト、データ要件、更新頻度、精度、ガバナンスの観点で整理し、実務導入でどれを選ぶべきかの判断基準を作る。必要に応じてMCPや外部ツール連携との関係にも触れる。
+- scope constraints: 最新性が重要な論点は一次情報・公式資料で確認する。主張、根拠、限界、実務含意を分ける。可能なら Mermaid 図解と比較表を入れる。公開可能な調査材料は source-notes に、公開可能な調査経過は research-log にまとめる。
+- inferred deliverable: `articles/report/llm-training-finetuning-rag-agents/ja/index.mdx` を正本とする日本語レポート、対応する英語レポート、`mix-alignment.json`、公開 source-notes、公開 research-log の同時整備。
+
+## 調査方針
+
+このテーマは技術選定の比較が主題なので、個別機能の紹介ではなく、各手法が「何を変えるのか」を先に切り分けた。特に、重みを変える方法、実行時文脈を変える方法、外部操作を増やす方法、複数ステップを回す方法を別レイヤーとして扱う方針にした。
+
+## 確認した論点
+
+- 事前学習とファインチューニングは、ともにモデルの重みを変えるが、スコープと更新コストが異なる。
+- プロンプトは実行時文脈の設計であり、学習方法ではない。
+- RAG は検索結果を文脈に差し込む設計で、知識の鮮度を上げやすいが、検索品質に依存する。
+- ツール利用は、外部システムを呼び出す能力を追加する。
+- エージェントは、計画・実行・検証を繰り返す制御ループである。
+- MCP は学習法ではなく、接続の標準化レイヤーである。
+
+## 主要な参照先
+
+- OpenAI fine-tuning guide
+- OpenAI function calling guide
+- Anthropic Building effective agents
+- Anthropic Effective context engineering for AI agents
+- MCP specification
+- Retrieval-Augmented Generation paper
+- NIST AI RMF
+
+## 採用を弱めた情報
+
+- 個別ベンダーの宣伝文句は、定義が不安定なため本文の中心から外した。
+- 価格の絶対値は改定が早く、モデルや契約形態で変わるため、相対比較に留めた。
+- 「RAG だけで正確性が保証される」「エージェントで何でも自動化できる」といった断定は避けた。
+
+## 残課題
+
+- 実務では、ファインチューニングの効果はデータセットと評価指標に強く依存する。
+- RAG は chunk 設計、メタデータ、アクセス制御、検索品質で性能が変わる。
+- エージェントの安全性は、権限、サンドボックス、監査、巻き戻しの設計で決まる。

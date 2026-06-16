@@ -1,0 +1,58 @@
+---
+title: 'Research Notes: LLM Principles, Explained'
+---
+
+## 1. Source map
+
+### Primary sources
+
+- Vaswani et al., [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- Brown et al., [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
+- Devlin et al., [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
+- Ouyang et al., [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
+- Bai et al., [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073)
+- Carlini et al., [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805)
+- Nasr et al., [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035)
+- Lewis et al., [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+- Guu et al., [REALM: Retrieval-Augmented Language Model Pre-Training](https://proceedings.mlr.press/v119/guu20a.html)
+- Liu et al., [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)
+
+### Authoritative context
+
+- Kudo and Richardson, [SentencePiece](https://aclanthology.org/D18-2012/) and related subword-tokenization work
+- Public material from Anthropic and OpenAI on instruction following and agentic workflows, used as context rather than core evidence
+
+### Secondary context
+
+- Bender et al., [On the Dangers of Stochastic Parrots](https://dl.acm.org/doi/10.1145/3442188.3445922)
+
+## 2. Evidence notes
+
+- Tokenization is treated as splitting text into units the model can process.
+- Embeddings are treated as high-dimensional vector representations of tokens.
+- Transformer self-attention is explained as direct context relation modeling.
+- Pretraining is treated as learning broad generalization through next-token prediction.
+- Inference is treated as runtime candidate generation using fixed weights.
+- Context length is treated as the maximum input the model can directly condition on.
+- “The model stores knowledge” is written carefully to distinguish distributed retention from verbatim memorization.
+
+## 3. Inclusion and exclusion decisions
+
+- Include: non-specialist explanations of the core pipeline, minimal technical terms, and practical cautions.
+- Include: a self-attention diagram and an explanation of Q/K/V as role names.
+- Include: the accuracy and limits of “knowledge storage” through memory, generalization, and extractability.
+- Include: context-length limits and the practical case for retrieval alongside the model.
+- Exclude: derivations, loss-function details, optimizer comparisons, and benchmark minutiae.
+- Exclude: current vendor feature comparisons, pricing, and fast-changing product specs.
+
+## 4. Rejected or downgraded sources
+
+- Secondary blog explainers were not used as core evidence, even when they were readable.
+- News-style product commentary was downgraded because the article is about first principles.
+- Interpretations that treat attention weights as a direct explanation were not centered because they can mislead readers.
+
+## 5. Open questions
+
+- The failure threshold for long-context use depends strongly on the task.
+- The rate of verbatim memorization varies by model, duplication rate, and evaluation method.
+- The word “understanding” is philosophically loaded, so the article keeps the practical decision axis in focus.

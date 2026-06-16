@@ -1,25 +1,24 @@
 ---
-import { getCollection } from 'astro:content'
 import BaseLayout from '@/layouts/BaseLayout'
 import GlossaryTermCard from '@/components/GlossaryTermCard'
 import { CATEGORIES } from '@/data/categories'
 import {
 	DEFAULT_LOCALE,
 	buildGlossaryIndex,
-	getPostLocale,
+	getGlossarySourcePages,
 	groupGlossaryTermsByCategory,
 	localizedPath
 } from '@/utils'
 
 const locale = DEFAULT_LOCALE
-const posts = (await getCollection('blog')).filter((post) => getPostLocale(post) === locale)
-const glossary = buildGlossaryIndex(posts)
+const pages = await getGlossarySourcePages(locale)
+const glossary = buildGlossaryIndex(pages)
 const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 ---
 
 <BaseLayout
 	title='用語辞典'
-	description='記事から抽出した専門用語のうち、外部出典にもとづく調査プロファイルを持つ語をカテゴリ別に整理した用語一覧。'
+	description='公開ページから抽出した専門用語のうち、外部出典にもとづく調査プロファイルを持つ語をカテゴリ別に整理した用語一覧。'
 	locale={locale}
 >
 	<section class='grid gap-8'>
@@ -29,7 +28,7 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 			</p>
 			<h1 class='text-4xl font-semibold md:text-5xl'>用語辞典</h1>
 			<p class='max-w-3xl leading-8 text-gray-700 dark:text-gray-300'>
-				各記事のタグ、見出し、本文に現れる専門用語のうち、外部出典にもとづく定義と出典確認が済んだ語を、記事間で共有される概念のつながりとして整理しています。
+				記事本文、調査ログ、調査素材に現れる専門用語のうち、外部出典にもとづく定義と出典確認が済んだ語を、ページ間で共有される概念のつながりとして整理しています。
 			</p>
 		</header>
 
@@ -37,7 +36,7 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 			<div class='grid gap-2'>
 				<h2 class='text-2xl font-semibold'>カテゴリ別の用語一覧</h2>
 				<p class='max-w-3xl text-sm leading-7 text-gray-600 dark:text-gray-400'>
-					調査プロファイルを持つ用語を、登場する記事カテゴリごとに分類しています。複数カテゴリで使われる用語は、それぞれのカテゴリに表示されます。
+					調査プロファイルを持つ用語を、登場するページのカテゴリごとに分類しています。複数カテゴリで使われる用語は、それぞれのカテゴリに表示されます。
 				</p>
 			</div>
 			<div class='grid gap-8'>
@@ -63,7 +62,7 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 									<GlossaryTermCard
 										term={term}
 										href={localizedPath(locale, `/glossary/${term.slug}/`)}
-										meta={`${term.postCount}件の記事で使用 / 関連語 ${term.relatedTerms.length}件`}
+										meta={`${term.postCount}件のページで使用 / 関連語 ${term.relatedTerms.length}件`}
 									/>
 								))}
 							</ul>

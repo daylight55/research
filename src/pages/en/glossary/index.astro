@@ -1,24 +1,23 @@
 ---
-import { getCollection } from 'astro:content'
 import BaseLayout from '@/layouts/BaseLayout'
 import GlossaryTermCard from '@/components/GlossaryTermCard'
 import { CATEGORIES } from '@/data/categories'
 import {
 	buildGlossaryIndex,
-	getPostLocale,
+	getGlossarySourcePages,
 	groupGlossaryTermsByCategory,
 	localizedPath
 } from '@/utils'
 
 const locale = 'en'
-const posts = (await getCollection('blog')).filter((post) => getPostLocale(post) === locale)
-const glossary = buildGlossaryIndex(posts, locale)
+const pages = await getGlossarySourcePages(locale)
+const glossary = buildGlossaryIndex(pages, locale)
 const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 ---
 
 <BaseLayout
 	title='Glossary'
-	description='A categorized glossary of extracted terms that already have source-backed research profiles.'
+	description='A categorized glossary of extracted page terms that already have source-backed research profiles.'
 	locale={locale}
 >
 	<section class='grid gap-8'>
@@ -28,8 +27,8 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 			</p>
 			<h1 class='text-4xl font-semibold md:text-5xl'>Glossary</h1>
 			<p class='max-w-3xl leading-8 text-gray-700 dark:text-gray-300'>
-				Technical terms are selected from article tags, headings, and body text only after they
-				have source-backed definitions and checked references.
+				Technical terms are selected from article bodies, research trails, and source notes only
+				after they have source-backed definitions and checked references.
 			</p>
 		</header>
 
@@ -37,8 +36,8 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 			<div class='grid gap-2'>
 				<h2 class='text-2xl font-semibold'>Terms by Category</h2>
 				<p class='max-w-3xl text-sm leading-7 text-gray-600 dark:text-gray-400'>
-					Profiled terms are grouped by the article categories where they appear. Terms used
-					across multiple categories appear in each relevant category.
+					Profiled terms are grouped by the page categories where they appear. Terms used across
+					multiple categories appear in each relevant category.
 				</p>
 			</div>
 			<div class='grid gap-8'>
@@ -64,7 +63,7 @@ const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
 									<GlossaryTermCard
 										term={term}
 										href={localizedPath(locale, `/glossary/${term.slug}/`)}
-										meta={`Used in ${term.postCount} articles / ${term.relatedTerms.length} related terms`}
+										meta={`Used on ${term.postCount} pages / ${term.relatedTerms.length} related terms`}
 									/>
 								))}
 							</ul>

@@ -1,12 +1,11 @@
 ---
-import { getCollection } from 'astro:content'
 import BaseLayout from '@/layouts/BaseLayout'
 import KnowledgeGraph from '@/components/KnowledgeGraph'
 import GlossaryResearchPanel from '@/components/GlossaryResearchPanel'
 import {
 	DEFAULT_LOCALE,
 	buildGlossaryIndex,
-	getPostLocale,
+	getGlossarySourcePages,
 	getPostUrl,
 	localizedPath
 } from '@/utils'
@@ -14,10 +13,8 @@ import {
 const locale = DEFAULT_LOCALE
 
 export async function getStaticPaths() {
-	const posts = (await getCollection('blog')).filter(
-		(post) => getPostLocale(post) === DEFAULT_LOCALE
-	)
-	const glossary = buildGlossaryIndex(posts)
+	const pages = await getGlossarySourcePages(DEFAULT_LOCALE)
+	const glossary = buildGlossaryIndex(pages)
 
 	return glossary.terms.map((term) => ({
 		params: { term: term.slug },
@@ -31,7 +28,7 @@ const graphNodes = [
 	{
 		id: term.slug,
 		label: term.label,
-		description: `${term.explanation} 使用記事数: ${term.postCount}件。`,
+		description: `${term.explanation} 使用ページ数: ${term.postCount}件。`,
 		href: localizedPath(locale, `/glossary/${term.slug}/`),
 		kind: 'term' as const
 	},
@@ -45,8 +42,8 @@ const graphNodes = [
 	...term.posts.slice(0, 8).map((post) => ({
 		id: `post-${post.id}`,
 		label: post.title,
-		description: `${term.label} が登場する ${post.category} カテゴリの記事。${post.description ?? ''}`,
-		href: getPostUrl(post),
+		description: `${term.label} が登場する ${post.category} カテゴリのページ。${post.description ?? ''}`,
+		href: post.url ?? getPostUrl(post),
 		kind: 'post' as const
 	}))
 ]
@@ -68,7 +65,7 @@ const graphEdges = [
 
 <BaseLayout
 	title={`${term.label} | 用語辞典`}
-	description={`${term.label} が登場する記事と関連語。`}
+	description={`${term.label} が登場するページと関連語。`}
 	locale={locale}
 >
 	<section class='grid gap-8'>
@@ -87,7 +84,7 @@ const graphEdges = [
 					<dt
 						class='text-xs font-semibold uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400'
 					>
-						Articles
+						Pages
 					</dt>
 					<dd class='text-base font-semibold text-gray-900 dark:text-gray-100'>{term.postCount}</dd>
 				</div>
@@ -130,20 +127,20 @@ const graphEdges = [
 		<div class='grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]'>
 			<div class='grid gap-8'>
 				<section class='grid gap-4'>
-					<h2 class='text-2xl font-semibold'>記事内関連</h2>
+					<h2 class='text-2xl font-semibold'>ページ内関連</h2>
 					<ul class='grid gap-4'>
 						{
 							term.contexts.map((context) => (
 								<li class='rounded-md border border-black/10 bg-white/70 p-4 dark:border-white/10 dark:bg-white/5'>
 									<a
-										href={getPostUrl({ id: context.postId })}
+										href={context.url ?? getPostUrl({ id: context.postId })}
 										class='font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
 									>
 										{context.postTitle}
 									</a>
 									<figure class='mt-3 grid gap-2 border-l-2 border-indigo-300 pl-3 dark:border-indigo-500'>
 										<blockquote
-											cite={getPostUrl({ id: context.postId })}
+											cite={context.url ?? getPostUrl({ id: context.postId })}
 											class='text-sm leading-7 text-gray-700 dark:text-gray-300'
 										>
 											{context.excerpt}
@@ -162,13 +159,13 @@ const graphEdges = [
 				</section>
 
 				<section class='grid gap-4'>
-					<h2 class='text-2xl font-semibold'>登場記事</h2>
+					<h2 class='text-2xl font-semibold'>登場ページ</h2>
 					<ul class='grid gap-4'>
 						{
 							term.posts.map((post) => (
 								<li class='rounded-md border border-black/10 bg-white/70 p-4 dark:border-white/10 dark:bg-white/5'>
 									<a
-										href={getPostUrl(post)}
+										href={post.url ?? getPostUrl(post)}
 										class='font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
 									>
 										{post.title}

@@ -78,6 +78,51 @@ test('builds a glossary index with post counts and related terms', () => {
 	)
 })
 
+test('builds glossary entries across article support pages', () => {
+	const index = buildGlossaryIndex([
+		{
+			id: 'report/graphiti-mcp-memory/ja/index',
+			data: {
+				title: 'Graphiti MCP Memory',
+				description: 'Graphiti と MCP の関係',
+				category: 'ai-systems',
+				contentType: 'report',
+				tags: ['Graphiti', 'MCP'],
+				glossaryPageKind: 'article',
+				glossaryPageUrl: '/reports/graphiti-mcp-memory/'
+			},
+			body: sampleBody
+		},
+		{
+			id: 'report/graphiti-mcp-memory/ja/source-notes',
+			data: {
+				title: 'Graphiti MCP Memory source notes',
+				description: 'Graphiti と MCP の調査素材',
+				category: 'ai-systems',
+				contentType: 'report',
+				tags: ['Graphiti', 'MCP'],
+				glossaryPageKind: 'sources',
+				glossaryPageUrl: '/reports/graphiti-mcp-memory/sources/'
+			},
+			body: `# MCP source notes
+
+MCP specification and Graphiti documentation are checked as source material.
+`
+		}
+	])
+
+	const mcp = index.terms.find((term) => term.slug === 'mcp')
+	assert.equal(mcp?.postCount, 2)
+	assert.deepEqual(
+		mcp?.posts.map((post) => post.url),
+		['/reports/graphiti-mcp-memory/', '/reports/graphiti-mcp-memory/sources/']
+	)
+	assert.deepEqual(
+		mcp?.contexts.map((context) => context.url),
+		['/reports/graphiti-mcp-memory/', '/reports/graphiti-mcp-memory/sources/']
+	)
+})
+
 test('builds glossary terms from Astro post data when body omits frontmatter', () => {
 	const index = buildGlossaryIndex([
 		{
@@ -238,7 +283,7 @@ test('builds English glossary explanations from English article context', () => 
 	)
 
 	const mcp = index.terms.find((term) => term.slug === 'mcp')
-	assert.match(mcp?.explanation ?? '', /appears in "Graphiti and MCP Memory"/)
+	assert.match(mcp?.explanation ?? '', /appears on "Graphiti and MCP Memory"/)
 	assert.match(mcp?.explanation ?? '', /A practical report/)
 	assert.equal(
 		mcp?.wikipediaUrl,

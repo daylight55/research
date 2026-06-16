@@ -28,8 +28,10 @@ export {
 	extractGlossaryTermsFromMarkdown,
 	getWikipediaLocaleForLabel,
 	groupGlossaryTermsByCategory,
-	linkFirstGlossaryMentions
+	linkFirstGlossaryMentions,
+	selectExternalReference
 } from './glossary'
+export { getGlossarySourcePages } from './glossarySources'
 export {
 	getCategories,
 	getPosts,

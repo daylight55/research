@@ -13,8 +13,12 @@ type PostLike = {
 		draft?: boolean
 		heroImage?: ImageMetadata
 		heroImageAlt?: string
+		glossaryPageKind?: GlossaryPageKind
+		glossaryPageUrl?: string
 	}
 }
+
+export type GlossaryPageKind = 'article' | 'research' | 'sources' | 'reference'
 
 export type GlossaryTerm = {
 	label: string
@@ -28,6 +32,8 @@ export type GlossaryPostReference = {
 	title: string
 	description?: string
 	category: string
+	pageKind: GlossaryPageKind
+	url?: string
 	heroImage?: ImageMetadata
 	heroImageAlt?: string
 }
@@ -37,6 +43,8 @@ export type GlossaryTermContext = {
 	postTitle: string
 	category: string
 	excerpt: string
+	url?: string
+	pageKind: GlossaryPageKind
 }
 
 export type GlossaryIndexTerm = {
@@ -788,22 +796,22 @@ const createTermExplanation = (term: GlossaryIndexTerm, locale: GlossaryLocale) 
 	const primaryContext = term.contexts[0]
 	if (!primaryPost) {
 		return locale === 'en'
-			? `${term.label} is a term extracted from articles on this site.`
-			: `${term.label} は、このサイトの記事から抽出された用語です。`
+			? `${term.label} is a term extracted from published pages on this site.`
+			: `${term.label} は、このサイトの公開ページから抽出された用語です。`
 	}
 
 	const usage = primaryPost.description || primaryContext?.excerpt
 	if (usage) {
 		if (locale === 'en') {
-			return `${term.label} appears in "${primaryPost.title}" in the context of: "${usage}"`
+			return `${term.label} appears on "${primaryPost.title}" in the context of: "${usage}"`
 		}
-		return `${term.label} は、記事「${primaryPost.title}」では「${usage}」という文脈で扱われています。`
+		return `${term.label} は、ページ「${primaryPost.title}」では「${usage}」という文脈で扱われています。`
 	}
 
 	if (locale === 'en') {
-		return `${term.label} appears in the ${primaryPost.category} article "${primaryPost.title}".`
+		return `${term.label} appears on the ${primaryPost.category} page "${primaryPost.title}".`
 	}
-	return `${term.label} は、${primaryPost.category} カテゴリの記事「${primaryPost.title}」で扱われている用語です。`
+	return `${term.label} は、${primaryPost.category} カテゴリのページ「${primaryPost.title}」で扱われている用語です。`
 }
 
 const uniqueValues = (values: string[]) => {
@@ -981,6 +989,8 @@ export function buildGlossaryIndex(
 			title: post.data.title,
 			description: post.data.description,
 			category: post.data.category,
+			pageKind: post.data.glossaryPageKind ?? 'article',
+			url: post.data.glossaryPageUrl,
 			heroImage: post.data.heroImage,
 			heroImageAlt: post.data.heroImageAlt
 		}
@@ -992,7 +1002,9 @@ export function buildGlossaryIndex(
 						postId: post.id,
 						postTitle: post.data.title,
 						category: post.data.category,
-						excerpt: contextExcerpt
+						excerpt: contextExcerpt,
+						url: postRef.url,
+						pageKind: postRef.pageKind
 					}
 				: null
 			const existing = bySlug.get(term.slug)

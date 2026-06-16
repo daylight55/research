@@ -2167,6 +2167,712 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 				reason: 'The article matches the field studying relations among states, markets, society, and distribution.'
 			}
 		}
+	},
+	irgc: {
+		ja: {
+			definition:
+				'IRGC は Islamic Revolutionary Guard Corps、すなわちイランのイスラム革命防衛隊を指し、正規軍とは別に革命体制の防衛を担う軍事・政治・経済的影響力を持つ組織です。',
+			background:
+				'1979年革命後に革命体制を守る組織として形成され、地上・海上・航空戦力、バシジ、対外作戦に関わるコッズ部隊、経済ネットワークなどを通じてイランの安全保障と国内統治に深く関与してきました。',
+			position:
+				'イラン体制、地域代理勢力、制裁、国内抑圧、権力継承を読むうえで、通常の軍隊名以上に政治制度上の力を持つ用語です。',
+			distinctions: [
+				'IRGC はイラン正規軍 Artesh と同一ではありません。',
+				'単なる軍事組織ではなく、政治・経済・対外影響力を持つ体制機関として扱う必要があります。'
+			],
+			sources: [
+				{
+					title: 'The Islamic Revolutionary Guard Corps - Council on Foreign Relations',
+					url: 'https://www.cfr.org/backgrounders/irans-revolutionary-guards',
+					kind: 'reference'
+				},
+				{
+					title: 'Islamic Revolutionary Guard Corps - Britannica',
+					url: 'https://www.britannica.com/topic/Islamic-Revolutionary-Guard-Corps',
+					kind: 'reference'
+				},
+				{
+					title: 'The Revolutionary Guards - The Iran Primer',
+					url: 'https://iranprimer.usip.org/resource/revolutionary-guards',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Islamic Revolutionary Guard Corps',
+				url: 'https://en.wikipedia.org/wiki/Islamic_Revolutionary_Guard_Corps',
+				reason: 'イランの Islamic Revolutionary Guard Corps を指す略称として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'IRGC stands for the Islamic Revolutionary Guard Corps, an Iranian military, political, and economic power center separate from the regular armed forces and tasked with defending the revolutionary system.',
+			background:
+				'Formed after the 1979 revolution, it has developed ground, naval, air, Basij, and Quds Force components and became deeply involved in Iranian security policy, domestic control, external influence, and economic networks.',
+			position:
+				'It is a key term for understanding the Iranian state, regional proxy networks, sanctions, repression, and succession politics.',
+			distinctions: [
+				'The IRGC is not the same as Iran’s regular military, the Artesh.',
+				'It should be read as a regime institution with military, political, economic, and external influence, not merely as an army branch.'
+			],
+			sources: [
+				{
+					title: 'The Islamic Revolutionary Guard Corps - Council on Foreign Relations',
+					url: 'https://www.cfr.org/backgrounders/irans-revolutionary-guards',
+					kind: 'reference'
+				},
+				{
+					title: 'Islamic Revolutionary Guard Corps - Britannica',
+					url: 'https://www.britannica.com/topic/Islamic-Revolutionary-Guard-Corps',
+					kind: 'reference'
+				},
+				{
+					title: 'The Revolutionary Guards - The Iran Primer',
+					url: 'https://iranprimer.usip.org/resource/revolutionary-guards',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Islamic Revolutionary Guard Corps',
+				url: 'https://en.wikipedia.org/wiki/Islamic_Revolutionary_Guard_Corps',
+				reason: 'The article matches IRGC as the Islamic Revolutionary Guard Corps of Iran.'
+			}
+		}
+	},
+	tractatus: {
+		ja: {
+			definition:
+				'Tractatus は、Ludwig Wittgenstein の著作 Tractatus Logico-Philosophicus を指し、世界、命題、論理、言語の限界を扱う20世紀分析哲学の古典です。',
+			background:
+				'前期 Wittgenstein の中心著作であり、論理的構成によって世界・思考・言語の限界を示そうとしました。後期 Wittgenstein の言語ゲーム論は、この前期の言語観との対比で理解されることが多いです。',
+			position:
+				'暗黙知、言語化できるものとできないもの、言語哲学、Wittgenstein の前期・後期の違いを読むためのニッチだが重要な参照点です。',
+			distinctions: [
+				'Tractatus は後期 Wittgenstein の Philosophical Investigations とは別の著作です。',
+				'単なる論理学の本ではなく、言語・世界・哲学の限界をめぐる哲学書として扱われます。'
+			],
+			sources: [
+				{
+					title: 'Ludwig Wittgenstein - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/wittgenstein/',
+					kind: 'reference'
+				},
+				{
+					title: 'Wittgenstein, Ludwig - Internet Encyclopedia of Philosophy',
+					url: 'https://iep.utm.edu/wittgens/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Tractatus Logico-Philosophicus',
+				url: 'https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus',
+				reason: 'Wittgenstein の著作 Tractatus Logico-Philosophicus を指す文脈と一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Tractatus refers to Ludwig Wittgenstein’s Tractatus Logico-Philosophicus, a classic of twentieth-century analytic philosophy on world, propositions, logic, and the limits of language.',
+			background:
+				'It is the central work of early Wittgenstein and tries to show the limits of world, thought, and language through a logical construction. Later Wittgenstein is often read against this earlier picture of language.',
+			position:
+				'It is a niche but important reference for Tacit Knowledge, what can or cannot be put into words, philosophy of language, and the early-later Wittgenstein contrast.',
+			distinctions: [
+				'The Tractatus is distinct from later Wittgenstein’s Philosophical Investigations.',
+				'It is not merely a logic textbook; it is a philosophical work about the limits of language, world, and philosophy.'
+			],
+			sources: [
+				{
+					title: 'Ludwig Wittgenstein - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/wittgenstein/',
+					kind: 'reference'
+				},
+				{
+					title: 'Wittgenstein, Ludwig - Internet Encyclopedia of Philosophy',
+					url: 'https://iep.utm.edu/wittgens/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Tractatus Logico-Philosophicus',
+				url: 'https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus',
+				reason: 'The article matches Wittgenstein’s Tractatus Logico-Philosophicus.'
+			}
+		}
+	},
+	snim: {
+		ja: {
+			definition:
+				'SNIM は Mauritania の Société Nationale Industrielle et Minière の略称で、鉄鉱石採掘と鉱山鉄道を担う国有系企業です。',
+			background:
+				'SNIM は Zouérate 周辺の鉄鉱石産地と Nouadhibou 港を結ぶ700km超の鉄道路線を所有・運営し、モーリタニア経済と西サハラ周辺の地理を理解するうえで重要な存在です。',
+			position:
+				'西サハラ・モーリタニアの鉄道、資源輸送、地雷帯、砂漠地理を読む際に、単なる企業名ではなくインフラ主体として説明が必要な用語です。',
+			distinctions: [
+				'SNIM は鉄道路線名ではなく、鉱山会社・鉄道運営主体です。',
+				'観光的に知られる鉄鉱石列車は、もともと資源輸送インフラです。'
+			],
+			sources: [
+				{
+					title: 'About us - Société Nationale Industrielle et Minière',
+					url: 'https://snim.com/en/qui-sommes-nous',
+					kind: 'official'
+				},
+				{
+					title: 'Mauritania Railway Modernisation - European Investment Bank',
+					url: 'https://www.eib.org/en/projects/all/20240336',
+					kind: 'official'
+				}
+			],
+			wikipedia: wikipediaUnverified(
+				'SNIM 固有の英語版 Wikipedia 記事との一致を確認できなかったため、公式サイトを主参照にします。'
+			)
+		},
+		en: {
+			definition:
+				'SNIM stands for Société Nationale Industrielle et Minière, Mauritania’s state-linked iron ore mining company and railway operator.',
+			background:
+				'SNIM owns and operates a railway of more than 700 km linking the iron ore mining area around Zouérate to the port of Nouadhibou, making it central to Mauritania’s economy and desert infrastructure.',
+			position:
+				'It is a niche but important term for Western Sahara and Mauritania railway, resource transport, mine contamination, and desert geography contexts.',
+			distinctions: [
+				'SNIM is not the railway line itself; it is the mining company and railway operator.',
+				'The well-known iron ore train is primarily resource transport infrastructure, not a tourism system.'
+			],
+			sources: [
+				{
+					title: 'About us - Société Nationale Industrielle et Minière',
+					url: 'https://snim.com/en/qui-sommes-nous',
+					kind: 'official'
+				},
+				{
+					title: 'Mauritania Railway Modernisation - European Investment Bank',
+					url: 'https://www.eib.org/en/projects/all/20240336',
+					kind: 'official'
+				}
+			],
+			wikipedia: wikipediaUnverified(
+				'No exact English Wikipedia article for SNIM was verified; the official company site is the safer reference.'
+			)
+		}
+	},
+	'landmine-monitor': {
+		ja: {
+			definition:
+				'Landmine Monitor は、対人地雷禁止条約やクラスター弾禁止条約の履行状況、被害、除去、支援を追跡する市民社会系の調査・監視イニシアチブです。',
+			background:
+				'International Campaign to Ban Landmines と Cluster Munition Coalition の調査基盤として、各国の地雷・クラスター弾の使用、備蓄、除去、被害者支援、資金拠出などを年次報告で整理してきました。',
+			position:
+				'地雷汚染や除去状況の数字を読む際、政府発表だけではなく国際的な監視データとして参照されるニッチだが重要な出典名です。',
+			distinctions: [
+				'Landmine Monitor は政府機関ではなく、市民社会ネットワークによる調査・監視枠組みです。',
+				'Mine Action Review や UNMAS とは役割が異なり、履行監視と報告に強みがあります。'
+			],
+			sources: [
+				{
+					title: 'Landmine and Cluster Munition Monitor',
+					url: 'https://the-monitor.org/',
+					kind: 'official'
+				},
+				{
+					title: 'Landmine Monitor and Cluster Munition Monitor - Mine Action Review',
+					url: 'https://www.mineactionreview.org/about-us/icbl/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: wikipediaUnverified(
+				'Landmine Monitor 単独の適切な Wikipedia 記事を確認できなかったため、公式サイトを主参照にします。'
+			)
+		},
+		en: {
+			definition:
+				'Landmine Monitor is a civil society research and monitoring initiative tracking treaty implementation, casualties, clearance, assistance, and funding related to landmines and cluster munitions.',
+			background:
+				'It provides research for the International Campaign to Ban Landmines and the Cluster Munition Coalition, compiling annual reporting on use, stockpiles, clearance, victim assistance, and support.',
+			position:
+				'It is a niche but important source name when reading figures on mine contamination, clearance, and treaty implementation beyond government reporting.',
+			distinctions: [
+				'Landmine Monitor is not a government agency; it is a civil society monitoring framework.',
+				'It differs from Mine Action Review and UNMAS by emphasizing treaty monitoring and reporting.'
+			],
+			sources: [
+				{
+					title: 'Landmine and Cluster Munition Monitor',
+					url: 'https://the-monitor.org/',
+					kind: 'official'
+				},
+				{
+					title: 'Landmine Monitor and Cluster Munition Monitor - Mine Action Review',
+					url: 'https://www.mineactionreview.org/about-us/icbl/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: wikipediaUnverified(
+				'No exact Wikipedia article for Landmine Monitor was verified; the official Monitor site is the safer reference.'
+			)
+		}
+	},
+	'mine-action': {
+		ja: {
+			definition:
+				'Mine Action は、地雷・不発弾・爆発性戦争残存物による危険を減らすための調査、除去、危険教育、被害者支援、備蓄破壊、アドボカシーなどを含む包括的な活動領域です。',
+			background:
+				'UNMAS や International Mine Action Standards は、地雷除去を単独作業ではなく、調査、標識、教育、支援、標準化を含む体系的な人道・安全保障実務として整理しています。',
+			position:
+				'地雷原分布、除去方法、技術調査、復興、住民保護を読む際に、単なる demining より広い上位概念として重要です。',
+			distinctions: [
+				'Mine Action は mine clearance だけを意味しません。',
+				'軍事作戦上の地雷敷設ではなく、人道的リスク低減と復旧の実務領域を指します。'
+			],
+			sources: [
+				{
+					title: 'Glossary of mine action terms, definitions and abbreviations - IMAS 04.10',
+					url: 'https://www.mineactionstandards.org/standards/04-10/',
+					kind: 'standard'
+				},
+				{
+					title: '5 Pillars of Mine Action - UNMAS',
+					url: 'https://unmas.org/en/5-pillars-of-mine-action',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Mine action',
+				url: 'https://en.wikipedia.org/wiki/Mine_action',
+				reason: '地雷・不発弾の人道的リスク低減を扱う mine action の概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Mine Action is the broad field of reducing risks from landmines, unexploded ordnance, and explosive remnants of war through survey, clearance, risk education, victim assistance, stockpile destruction, and advocacy.',
+			background:
+				'UNMAS and the International Mine Action Standards frame mine action as a systematic humanitarian and security practice that includes survey, marking, education, assistance, and standards, not only physical clearance.',
+			position:
+				'It is the umbrella concept for reading mine contamination, clearance methods, technical survey, reconstruction, and civilian protection.',
+			distinctions: [
+				'Mine action is broader than mine clearance alone.',
+				'It refers to humanitarian risk reduction and recovery work, not the military use of mines.'
+			],
+			sources: [
+				{
+					title: 'Glossary of mine action terms, definitions and abbreviations - IMAS 04.10',
+					url: 'https://www.mineactionstandards.org/standards/04-10/',
+					kind: 'standard'
+				},
+				{
+					title: '5 Pillars of Mine Action - UNMAS',
+					url: 'https://unmas.org/en/5-pillars-of-mine-action',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Mine action',
+				url: 'https://en.wikipedia.org/wiki/Mine_action',
+				reason: 'The article matches mine action as humanitarian risk reduction around mines and explosive remnants.'
+			}
+		}
+	},
+	trc: {
+		ja: {
+			definition:
+				'TRC は South Africa の Truth and Reconciliation Commission を指し、アパルトヘイト期の重大な人権侵害を調査し、真実の記録と和解を目指した委員会です。',
+			background:
+				'1990年代半ばに設置され、被害者証言、加害者の恩赦申請、公的記録の作成を通じて、民主化後の南アフリカが過去の暴力と向き合う制度的枠組みになりました。',
+			position:
+				'アパルトヘイト後の移行期正義、和解、記憶政治、民主化の限界を読むための中核用語です。',
+			distinctions: [
+				'TRC は通常の刑事裁判ではなく、真実究明と条件付き恩赦を含む移行期正義の制度です。',
+				'和解の象徴である一方、経済的不平等や構造的責任を十分扱えなかったという批判もあります。'
+			],
+			sources: [
+				{
+					title: 'Truth and Reconciliation Commission, South Africa - Britannica',
+					url: 'https://www.britannica.com/topic/Truth-and-Reconciliation-Commission-South-Africa',
+					kind: 'reference'
+				},
+				{
+					title: 'South African Truth Commission - Cornell Law School Wex',
+					url: 'https://www.law.cornell.edu/wex/south_african_truth_commission',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Truth and Reconciliation Commission (South Africa)',
+				url: 'https://en.wikipedia.org/wiki/Truth_and_Reconciliation_Commission_(South_Africa)',
+				reason: '南アフリカの Truth and Reconciliation Commission を指す略称として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'TRC refers to South Africa’s Truth and Reconciliation Commission, a body created to investigate gross human rights violations under apartheid and support truth-telling and reconciliation.',
+			background:
+				'Established in the mid-1990s, it combined victim testimony, amnesty applications, and public reporting as a post-apartheid framework for confronting past violence.',
+			position:
+				'It is a core term for transitional justice, reconciliation, memory politics, and the limits of democratization after apartheid.',
+			distinctions: [
+				'The TRC was not an ordinary criminal court; it was a transitional justice institution with truth-seeking and conditional amnesty functions.',
+				'It became a symbol of reconciliation, but has also been criticized for not fully addressing economic inequality and structural responsibility.'
+			],
+			sources: [
+				{
+					title: 'Truth and Reconciliation Commission, South Africa - Britannica',
+					url: 'https://www.britannica.com/topic/Truth-and-Reconciliation-Commission-South-Africa',
+					kind: 'reference'
+				},
+				{
+					title: 'South African Truth Commission - Cornell Law School Wex',
+					url: 'https://www.law.cornell.edu/wex/south_african_truth_commission',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Truth and Reconciliation Commission (South Africa)',
+				url: 'https://en.wikipedia.org/wiki/Truth_and_Reconciliation_Commission_(South_Africa)',
+				reason: 'The article matches TRC as South Africa’s Truth and Reconciliation Commission.'
+			}
+		}
+	},
+	anc: {
+		ja: {
+			definition:
+				'ANC は African National Congress の略称で、南アフリカの反アパルトヘイト運動と民主化後の政権運営を担ってきた主要政党・民族解放運動です。',
+			background:
+				'1912年に設立され、黒人多数派の政治的権利とアパルトヘイト廃止を求める運動の中心となり、1994年の民主化後は長期にわたり与党として統治を担いました。',
+			position:
+				'南アフリカの民主化、アパルトヘイト後の政治経済、汚職、公共サービス、与党支配の変化を読むための基礎用語です。',
+			distinctions: [
+				'ANC は反アパルトヘイト運動体であると同時に、民主化後は統治責任を負う政党です。',
+				'Nelson Mandela 個人の評価と ANC の長期統治評価は分けて読む必要があります。'
+			],
+			sources: [
+				{
+					title: 'African National Congress - Britannica',
+					url: 'https://www.britannica.com/topic/African-National-Congress',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'African National Congress',
+				url: 'https://en.wikipedia.org/wiki/African_National_Congress',
+				reason: '南アフリカの African National Congress を指す略称として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'ANC stands for the African National Congress, South Africa’s major liberation movement and political party associated with the anti-apartheid struggle and post-1994 government.',
+			background:
+				'Founded in 1912, it became central to the struggle for Black political rights and the end of apartheid, then governed South Africa for decades after democratization in 1994.',
+			position:
+				'It is a base term for South African democratization, post-apartheid political economy, corruption, public services, and changing patterns of party dominance.',
+			distinctions: [
+				'The ANC is both an anti-apartheid movement and a governing party after democratization.',
+				'Assessments of Nelson Mandela and assessments of long-term ANC governance should be kept separate.'
+			],
+			sources: [
+				{
+					title: 'African National Congress - Britannica',
+					url: 'https://www.britannica.com/topic/African-National-Congress',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'African National Congress',
+				url: 'https://en.wikipedia.org/wiki/African_National_Congress',
+				reason: 'The article matches ANC as the African National Congress in South Africa.'
+			}
+		}
+	},
+	levant: {
+		ja: {
+			definition:
+				'Levant は、東地中海沿岸を中心とする西アジアの歴史地理的地域名で、現在のシリア、レバノン、イスラエル、パレスチナ、ヨルダン周辺を指すことが多い用語です。',
+			background:
+				'中東という広い地域名の中でも、地中海東岸の交易、帝国、宗教、民族、紛争が重なる地域を指す歴史的な呼び方として使われます。ただし範囲は文脈によって揺れます。',
+			position:
+				'中東主要国史、シリア、レバノン、イスラエル・パレスチナ、地域秩序を読む際に、国境単位では捉えにくい歴史地理を示す用語です。',
+			distinctions: [
+				'Levant は Middle East 全体と同義ではありません。',
+				'固定された国リストではなく、歴史・地理・政策文脈によって範囲が変わります。'
+			],
+			sources: [
+				{
+					title: 'Middle East - Britannica',
+					url: 'https://www.britannica.com/place/Middle-East',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Levant',
+				url: 'https://en.wikipedia.org/wiki/Levant',
+				reason: '東地中海沿岸を中心とする歴史地理的地域名として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Levant is a historical-geographic term for the eastern Mediterranean part of West Asia, often referring to the area around Syria, Lebanon, Israel, Palestine, and Jordan.',
+			background:
+				'Within the broader Middle East, it names a historically layered region of eastern Mediterranean trade, empires, religions, communities, and conflicts. Its boundaries vary by context.',
+			position:
+				'It is useful for reading Middle Eastern history, Syria, Lebanon, Israel-Palestine, and regional order beyond current state borders alone.',
+			distinctions: [
+				'The Levant is not synonymous with the whole Middle East.',
+				'It is not a fixed list of countries; its scope changes across historical, geographic, and policy contexts.'
+			],
+			sources: [
+				{
+					title: 'Middle East - Britannica',
+					url: 'https://www.britannica.com/place/Middle-East',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Levant',
+				url: 'https://en.wikipedia.org/wiki/Levant',
+				reason: 'The article matches Levant as an eastern Mediterranean historical-geographic region.'
+			}
+		}
+	},
+	hezbollah: {
+		ja: {
+			definition:
+				'Hezbollah は、レバノンを拠点とするシーア派イスラム主義の政治組織・武装組織で、イランとの関係、イスラエルとの対立、レバノン政治で重要な役割を持ちます。',
+			background:
+				'1982年のイスラエルのレバノン侵攻後に台頭し、武装部門、政党、社会サービス網を併せ持つ非国家主体として、地域安全保障と国内政治の両方に影響しています。',
+			position:
+				'イランの地域代理勢力、レバノン政治、イスラエルとの紛争、中東の非国家武装主体を読むための重要語です。',
+			distinctions: [
+				'Hezbollah は国家軍ではなく、政党・武装組織・社会サービス網を併せ持つ複合的な主体です。',
+				'各国・機関によるテロ組織指定の扱いは国際的に一様ではありません。'
+			],
+			sources: [
+				{
+					title: 'What Is Hezbollah? - Council on Foreign Relations',
+					url: 'https://www.cfr.org/backgrounders/what-hezbollah',
+					kind: 'reference'
+				},
+				{
+					title: 'Hezbollah - Britannica',
+					url: 'https://www.britannica.com/topic/Hezbollah',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Hezbollah',
+				url: 'https://en.wikipedia.org/wiki/Hezbollah',
+				reason: 'レバノンの Hezbollah を指す文脈として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Hezbollah is a Lebanese Shia Islamist political and militant organization with major roles in Lebanese politics, Iran-linked regional networks, and conflict with Israel.',
+			background:
+				'It emerged after Israel’s 1982 invasion of Lebanon and combines armed capabilities, party politics, and social services, making it influential both domestically and regionally.',
+			position:
+				'It is a key term for Iran-linked regional actors, Lebanese politics, conflict with Israel, and nonstate armed organizations in the Middle East.',
+			distinctions: [
+				'Hezbollah is not a state army; it combines political, military, and social-service functions.',
+				'Terrorist designation varies by country and institution, so legal treatment is not uniform internationally.'
+			],
+			sources: [
+				{
+					title: 'What Is Hezbollah? - Council on Foreign Relations',
+					url: 'https://www.cfr.org/backgrounders/what-hezbollah',
+					kind: 'reference'
+				},
+				{
+					title: 'Hezbollah - Britannica',
+					url: 'https://www.britannica.com/topic/Hezbollah',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Hezbollah',
+				url: 'https://en.wikipedia.org/wiki/Hezbollah',
+				reason: 'The article matches Hezbollah as the Lebanese organization.'
+			}
+		}
+	},
+	houthis: {
+		ja: {
+			definition:
+				'Houthis は、イエメン北部を起点とするザイド派系の政治・武装運動 Houthi movement を指し、イエメン内戦と紅海周辺の安全保障で中心的な非国家主体です。',
+			background:
+				'2014年以降のイエメン内戦で主要勢力となり、イランとの関係、サウジアラビアとの対立、紅海航路への攻撃を通じて地域安全保障上の重要性が高まりました。',
+			position:
+				'イランの地域影響力、代理勢力論、イエメン内戦、紅海の海上交通リスクを読むためのニッチだが重要な用語です。',
+			distinctions: [
+				'Houthis はイエメン国家全体を代表する政府名ではありません。',
+				'イランとの関係は重要ですが、単純な完全代理主体としてだけ読むと地域内の自律性を見落とします。'
+			],
+			sources: [
+				{
+					title: "Iran's Support of the Houthis: What to Know - Council on Foreign Relations",
+					url: 'https://www.cfr.org/articles/irans-support-houthis-what-know',
+					kind: 'reference'
+				},
+				{
+					title: 'Houthi movement - Britannica',
+					url: 'https://www.britannica.com/topic/Houthi-movement',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Houthi movement',
+				url: 'https://en.wikipedia.org/wiki/Houthi_movement',
+				reason: 'イエメンの Houthi movement を指す複数形表記として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Houthis refers to the Houthi movement, a Zaidi-linked political and armed movement originating in northern Yemen and central to the Yemeni civil war and Red Sea security.',
+			background:
+				'The movement became a major force in Yemen after 2014, and its ties with Iran, conflict with Saudi Arabia, and Red Sea attacks have made it regionally important.',
+			position:
+				'It is a niche but important term for Iran-linked influence, proxy debates, the Yemeni civil war, and maritime risk in the Red Sea.',
+			distinctions: [
+				'The Houthis are not the name of the Yemeni state as a whole.',
+				'Iranian support matters, but treating the movement only as a simple proxy can obscure its local autonomy.'
+			],
+			sources: [
+				{
+					title: "Iran's Support of the Houthis: What to Know - Council on Foreign Relations",
+					url: 'https://www.cfr.org/articles/irans-support-houthis-what-know',
+					kind: 'reference'
+				},
+				{
+					title: 'Houthi movement - Britannica',
+					url: 'https://www.britannica.com/topic/Houthi-movement',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Houthi movement',
+				url: 'https://en.wikipedia.org/wiki/Houthi_movement',
+				reason: 'The article matches Houthis as the Houthi movement in Yemen.'
+			}
+		}
+	},
+	sirat: {
+		ja: {
+			definition:
+				'Sirat は、イスラム文脈で「道」「直道」を意味する語で、クルアーンの al-Sirat al-Mustaqim では神へ向かう正しい道を指し、後世の終末論では審判の日に渡る橋としても語られます。',
+			background:
+				'同じ語根・表記が、信仰上の正しい道という倫理的・神学的概念と、死後の審判をめぐる象徴的イメージの双方に関わるため、文脈を分けて読む必要があります。',
+			position:
+				'クルアーン解釈、イスラム終末論、宗教象徴、映画や文化表象を読む際に、単なる固有名詞ではなく複数の意味層を持つ用語です。',
+			distinctions: [
+				'Sirat al-Mustaqim の直道概念と、As-Sirat の橋のイメージは関連しますが同一視しすぎない方が安全です。',
+				'映画タイトルや文化表象で使われる場合、神学用語そのものと作品上の比喩を分けて読む必要があります。'
+			],
+			sources: [
+				{
+					title: 'The Straight Path (al-Sirat al-Mustaqim) - St Andrews Encyclopaedia of Theology',
+					url: 'https://www.saet.ac.uk/Islam/TheStraightPath',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'As-Sirat',
+				url: 'https://en.wikipedia.org/wiki/As-Sir%C4%81t',
+				reason: '終末論上の橋としての As-Sirat を扱う記事ですが、直道概念とは範囲が異なるため文脈確認が必要です。'
+			}
+		},
+		en: {
+			definition:
+				'Sirat is an Islamic term for path or straight path: al-Sirat al-Mustaqim names the right path toward God, while later eschatological usage also speaks of As-Sirat as a bridge crossed on the Day of Judgment.',
+			background:
+				'The term therefore carries both an ethical-theological sense of guidance and a symbolic eschatological image, making context important.',
+			position:
+				'It is a niche term for Qur’anic interpretation, Islamic eschatology, religious symbolism, and cultural or cinematic representation.',
+			distinctions: [
+				'The straight path of al-Sirat al-Mustaqim and the bridge image of As-Sirat are related but should not be collapsed without context.',
+				'When used in film or cultural analysis, the theological term and artistic metaphor should be separated.'
+			],
+			sources: [
+				{
+					title: 'The Straight Path (al-Sirat al-Mustaqim) - St Andrews Encyclopaedia of Theology',
+					url: 'https://www.saet.ac.uk/Islam/TheStraightPath',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'As-Sirat',
+				url: 'https://en.wikipedia.org/wiki/As-Sir%C4%81t',
+				reason: 'The article covers As-Sirat as the eschatological bridge, though that is narrower than the straight-path concept.'
+			}
+		}
+	},
+	'mevlevi-sema': {
+		ja: {
+			definition:
+				'Mevlevi Sema は、メヴレヴィー教団に由来するスーフィー儀礼で、旋回舞踊、音楽、詩、象徴的所作を通じて神への精神的接近を表す儀式です。',
+			background:
+				'UNESCO の無形文化遺産にも登録されており、旋回する修行者 semazen の動きは観光的な「回るダンス」としてだけでなく、規則を持つ宗教的・芸術的儀礼として理解されます。',
+			position:
+				'トランス、音楽、宗教儀礼、スーフィズム、文化表象を読む際に、一般的なダンスや音楽イベントとは区別して説明が必要なニッチ語です。',
+			distinctions: [
+				'Mevlevi Sema は単なる舞踊公演ではなく、宗教的象徴を含む儀礼です。',
+				'すべてのスーフィズムが旋回舞踊を中心にするわけではありません。'
+			],
+			sources: [
+				{
+					title: 'Mevlevi Sema ceremony - UNESCO Intangible Cultural Heritage',
+					url: 'https://ich.unesco.org/en/RL/mevlevi-sema-ceremony-00100',
+					kind: 'official'
+				},
+				{
+					title: 'Mevlevi Sema Ceremony - Yaşayan Miras',
+					url: 'https://yakegm.ktb.gov.tr/TR-345100/mevlevi-sema-ceremony.html',
+					kind: 'official'
+				}
+			],
+			wikipedia: wikipediaUnverified(
+				'Mevlevi Sema 単独の適切な Wikipedia 記事を確認できなかったため、UNESCO と公式文化遺産ページを主参照にします。'
+			)
+		},
+		en: {
+			definition:
+				'Mevlevi Sema is a Sufi ceremony associated with the Mevlevi order, using whirling movement, music, poetry, and symbolic gestures to express spiritual movement toward God.',
+			background:
+				'Recognized by UNESCO as intangible cultural heritage, the ceremony is better understood as a rule-bound religious and artistic practice than as a generic whirling dance performance.',
+			position:
+				'It is a niche term for trance, music, religious ritual, Sufism, and cultural representation where ordinary dance or concert categories are insufficient.',
+			distinctions: [
+				'Mevlevi Sema is not merely a dance performance; it carries religious symbolism and ritual rules.',
+				'Not all Sufi traditions center on whirling ceremonies.'
+			],
+			sources: [
+				{
+					title: 'Mevlevi Sema ceremony - UNESCO Intangible Cultural Heritage',
+					url: 'https://ich.unesco.org/en/RL/mevlevi-sema-ceremony-00100',
+					kind: 'official'
+				},
+				{
+					title: 'Mevlevi Sema Ceremony - Yaşayan Miras',
+					url: 'https://yakegm.ktb.gov.tr/TR-345100/mevlevi-sema-ceremony.html',
+					kind: 'official'
+				}
+			],
+			wikipedia: wikipediaUnverified(
+				'No exact Wikipedia article for Mevlevi Sema was verified; UNESCO and official heritage pages are safer references.'
+			)
+		}
 	}
 } satisfies Record<string, LocaleProfile>
 

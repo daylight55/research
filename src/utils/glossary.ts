@@ -396,6 +396,7 @@ const ENGLISH_STOPWORDS = new Set([
 
 const GLOSSARY_LABEL_ALIASES = new Map([
 	['AI 要約', 'AI要約'],
+	['anc', 'ANC'],
 	['MCP サーバ', 'MCPサーバー'],
 	['MCP サーバー', 'MCPサーバー'],
 	['NANDフラッシュ', 'NAND'],
@@ -406,6 +407,7 @@ const GLOSSARY_LABEL_ALIASES = new Map([
 	['SECIモデル', 'SECI'],
 	['SSDs', 'SSD'],
 	['Tractatus Logico-Philosophique', 'Tractatus'],
+	['trc', 'TRC'],
 	['Ludwig Wittgenstein', 'Wittgenstein']
 ])
 

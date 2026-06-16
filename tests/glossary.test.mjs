@@ -211,6 +211,45 @@ test('remark glossary uses Astro frontmatter tags for article sidebars', () => {
 	assert.equal(tree.children[0].children[0].url, '/en/glossary/language-games/')
 })
 
+test('publishes niche source-backed terms instead of dropping them as too narrow', () => {
+	const index = buildGlossaryIndex([
+		{
+			id: 'global-landmine-contamination-clearance',
+			data: {
+				title: 'Global Landmine Contamination',
+				description: 'Mine action and monitoring terminology.',
+				category: 'geopolitics',
+				tags: ['Mine Action']
+			},
+			body: `
+# Global Landmine Contamination
+
+Landmine Monitor tracks mine action reporting. Landmine Monitor is a niche source term.
+`
+		},
+		{
+			id: 'south-africa-apartheid-democratization',
+			data: {
+				title: 'South Africa Apartheid and Democratization',
+				description: 'ANC and TRC context.',
+				category: 'africa-history',
+				tags: ['anc', 'trc']
+			},
+			body: `
+# South Africa
+
+anc and trc are used as compact frontmatter terms.
+`
+		}
+	])
+
+	assert.deepEqual(
+		index.terms.map((term) => `${term.label}:${term.slug}`).sort(),
+		['ANC:anc', 'TRC:trc', 'Landmine Monitor:landmine-monitor', 'Mine Action:mine-action']
+			.sort()
+	)
+})
+
 test('groups glossary terms by one representative article category', () => {
 	const index = buildGlossaryIndex([
 		{

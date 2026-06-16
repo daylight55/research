@@ -441,13 +441,13 @@
 		{
 			"id": "8-practical-implications",
 			"heading": {
-				"en": "8. Practical implications",
-				"ja": "8. 実務的含意"
+				"en": "8. Lessons for Knowledge Transfer",
+				"ja": "8. 知識移転への示唆"
 			},
 			"pairs": [
 				{
-					"en": "This argument is effective in practice because it provides judgments that are not \"over-summarized\" when extracting tacit knowledge and transferring knowledge.",
-					"ja": "この論点が実務に効くのは、暗黙知の抽出や知識移転で「要約しすぎない」判断を与えるからである。"
+					"en": "This argument matters for knowledge transfer because it provides judgments that are not \"over-summarized\" when extracting tacit knowledge and transferring knowledge.",
+					"ja": "この論点が知識移転に効くのは、暗黙知の抽出や知識移転で「要約しすぎない」判断を与えるからである。"
 				},
 				{
 					"en": "Leave the original case: In addition to the general theory of experts, leave specific examples, failures, and exceptions.",

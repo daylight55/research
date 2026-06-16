@@ -16,7 +16,7 @@ The selected issue may be about technology trends, AI, security, infrastructure,
 macroeconomics, Japan politics, international relations, geopolitical risk, or
 country/region affairs. Infer the correct domain from the issue title and body,
 then write a standalone report that helps readers understand the situation,
-drivers, risks, and practical implications.
+drivers, risks, and decision points that are materially tied to the topic.
 
 ## Repository Rules
 
@@ -96,8 +96,8 @@ drivers, risks, and practical implications.
   - current political actors and power balances
   - domestic social or economic pressures
   - international alignment, sanctions, conflict, trade, energy, migration, or
-    security implications where relevant
-  - Japan-facing implications when they materially affect policy, markets,
+    security consequences where relevant
+  - Japan-facing consequences when they materially affect policy, markets,
     supply chains, security, or business decisions
 - Place source links near the supported claims using `<SourceNote>...</SourceNote>`.
   The post renderer registers `SourceNote`, so do not import it in ordinary
@@ -108,7 +108,11 @@ drivers, risks, and practical implications.
   add manual parentheses or labels such as `出典:`, `Source note:`, or `Source:`
   inside the component; the component renders that wrapper.
 - Clearly separate established facts, product/vendor claims, public-information
-  inference, open questions, limitations, and practical implications.
+  inference, open questions, limitations, and decision points. Do not add a
+  generic `実務上の含意` / `Practical implications` section unless the topic has a
+  direct policy, business, safety, compliance, or operational decision surface;
+  when it does, name the section after that surface, such as monitoring points,
+  risk-screening criteria, deployment decisions, or policy tradeoffs.
 - If no official roadmap exists, write `公表情報からの推定`.
 - Include Mermaid diagrams when they materially improve the explanation.
 

@@ -273,7 +273,7 @@
         },
         {
           "en": "GNU politics mean that policy now has to pass through coalition bargaining before it becomes implementation.",
-          "ja": "GNU 化の実務的な含意は、政策が「実装」より前に「連立内交渉」を通るようになったことだ。"
+          "ja": "GNU 化で重要なのは、政策が「実装」より前に「連立内交渉」を通るようになったことだ。"
         },
         {
           "en": "In the 2025 budget debate, a proposed VAT increase triggered coalition conflict and was later reversed.",
@@ -296,8 +296,8 @@
     {
       "id": "implications",
       "heading": {
-        "ja": "7. 実務含意",
-        "en": "7. Practical Implications"
+        "ja": "7. 制度変化の読み方",
+        "en": "7. How to Read the Institutional Shift"
       },
       "pairs": [
         {

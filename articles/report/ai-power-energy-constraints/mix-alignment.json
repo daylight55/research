@@ -207,7 +207,7 @@
     {
       "id": "implications",
       "heading": {
-        "ja": "6. AI 企業、クラウド、政策への含意",
+        "ja": "6. AI企業・クラウド・政策が見るべき制約",
         "en": "6. What It Means for AI Companies, Cloud Providers, and Policymakers"
       },
       "pairs": [
@@ -281,8 +281,8 @@
     {
       "id": "indicators",
       "heading": {
-        "ja": "8. 実務で見る指標",
-        "en": "8. Practical Indicators to Watch"
+        "ja": "8. 監視すべき指標",
+        "en": "8. Indicators to Watch"
       },
       "pairs": [
         {

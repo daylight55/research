@@ -108,7 +108,7 @@ No. Longer context gives the model more material to work with, but it can also h
 
 Not completely. Search is good at finding evidence, while an LLM is good at reorganizing and explaining what it found. The best pattern is to use both, not to force one tool to do both jobs. <SourceNote>RAG and REALM show the basic structure for connecting external evidence to generation [RAG](https://arxiv.org/abs/2005.11401) [REALM](https://proceedings.mlr.press/v119/guu20a.html).</SourceNote>
 
-## 9. Practical Implications
+## 9. How to Use LLMs Safely
 
 In practice, it is better to decide first what the model should see every time than what it should “remember.” Fast-changing information, high-accuracy information, and responsibility-bearing information should be passed in as external data rather than trusted as internal memory. <SourceNote>This follows from the combination of broad generalization and training-data memorization shown in [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) and [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805).</SourceNote>
 

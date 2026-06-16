@@ -166,6 +166,27 @@ test('article body does not import duplicate report bodies or unresolved placeho
 	}
 })
 
+test('report headings avoid generic practical-implication labels', () => {
+	const genericPracticalHeadingRe =
+		/(?:^#{2,6}\s+\d+(?:\.\d+)?\.\s+|"(?:ja|en)":\s*"\d+(?:\.\d+)?\.\s*)(?:実務上の含意|実務的な含意|実務的含意|実務含意|実務への含意|業務への含意|実務上の見方|実務的な読み方|実務的な見方|実務上どう読むべきか|Practical Reading(?: Rules)?|Practical reading|Practical perspective|Practical Takeaways|Practical [Ii]mplications?)(?:"|$)/m
+	const genericPracticalPhraseRe = /実務上の見方は単純/
+
+	for (const file of gitFiles(['articles/report/**/index.mdx', 'articles/report/**/mix-alignment.json'])) {
+		const source = readFileSync(file, 'utf8')
+
+		assert.doesNotMatch(
+			source,
+			genericPracticalHeadingRe,
+			`${file} should name decision-oriented sections after their actual context`
+		)
+		assert.doesNotMatch(
+			source,
+			genericPracticalPhraseRe,
+			`${file} should avoid generic practical-view boilerplate in report body text`
+		)
+	}
+})
+
 test('published Japanese articles have public research logs', () => {
 	for (const file of gitFiles(['articles/*/*/ja/index.mdx'])) {
 		const logFile = path.join(path.dirname(file), 'research-log.mdx')

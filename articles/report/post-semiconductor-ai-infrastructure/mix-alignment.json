@@ -67,7 +67,7 @@
 					"ja": "学習データ、ログ、推論結果、データ保全が増えるほど需要は積み上がる。"
 				},
 				{
-					"en": "The practical takeaway is that \"AI infrastructure\" is not a single trade.",
+					"en": "The takeaway is that \"AI infrastructure\" is not a single trade.",
 					"ja": "「AIインフラの次の勝ち筋」は一つの銘柄群ではなく、上流の制約から順に見るのが実務的である。"
 				}
 			]
@@ -264,8 +264,8 @@
 		{
 			"id": "practical-implications",
 			"heading": {
-				"ja": "7. 実務含意",
-				"en": "7. Practical Implications"
+				"ja": "7. 投資・インフラ評価の見方",
+				"en": "7. How to Evaluate Investment and Infrastructure Signals"
 			},
 			"pairs": [
 				{

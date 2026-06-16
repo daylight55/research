@@ -1,0 +1,67 @@
+---
+title: 'LLM Limits and Hallucinations: Source Notes'
+---
+
+# LLM Limits and Hallucinations: Source Notes
+
+## Source Map
+
+### Primary / Foundational
+
+- [Why Language Models Hallucinate](https://arxiv.org/abs/2509.04664)
+- [Calibrated Language Models Must Hallucinate](https://arxiv.org/abs/2311.14648)
+- [Holistic Evaluation of Language Models](https://arxiv.org/abs/2211.09110)
+- [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)
+- [RAGTruth: A Hallucination Corpus for Developing Trustworthy Retrieval-Augmented Language Models](https://arxiv.org/abs/2401.00396)
+- [Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting](https://arxiv.org/abs/2305.04388)
+- [An Open Source Data Contamination Report for Large Language Models](https://arxiv.org/abs/2310.17589)
+- [The Vulnerability of Language Model Benchmarks: Do They Accurately Reflect True LLM Performance?](https://arxiv.org/abs/2412.03597)
+- [Indirect Prompt Injection in the Wild: An Empirical Study of Prevalence, Techniques, and Objectives](https://arxiv.org/abs/2604.27202)
+- [Backdoored Retrievers for Prompt Injection Attacks on Retrieval Augmented Generation of Large Language Models](https://arxiv.org/abs/2410.14479)
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165)
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+- [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805)
+- [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035)
+
+### Authoritative / Official
+
+- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)
+
+### Secondary / Context
+
+- The report does not depend on vendor marketing posts or leaderboard commentary for its core claims.
+- Background explainers were used only when they clarified durable evaluation concepts.
+
+## Evidence Notes
+
+- Hallucination is easiest to understand as a consequence of next-token prediction plus evaluation incentives that reward guessing under uncertainty.
+- The 2025 theoretical framing explicitly connects hallucination to the training and evaluation setup.
+- The 2023 calibration paper shows a lower bound on hallucination for arbitrary facts.
+- Benchmarks are useful for comparison, but contamination, overfitting, and distribution shift make them insufficient as the only measure of capability.
+- HELM is valuable because it broadens evaluation beyond accuracy to calibration, robustness, fairness, bias, toxicity, and efficiency.
+- Long context helps, but positional weakness remains.
+- RAG improves freshness and provenance access, but unsupported claims can still remain.
+- Citations and explanations can indicate provenance, but they do not prove fidelity.
+- External retrieval increases the attack surface through prompt injection and retriever poisoning.
+- Production quality assurance is best understood as a stack of public benchmarks, private holdouts, adversarial cases, human review, and audit logs.
+
+## Downgraded Material
+
+- Vendor marketing copy was excluded from the core evidence chain because its definitions and evaluation methods were not stable enough.
+- Simple leaderboards were treated only as supporting context because contamination and distribution shift can distort them.
+- Claims that explanations are automatically faithful were not used.
+- Claims that RAG guarantees truth were not used.
+
+## Rejected or Lower-Priority Sources
+
+- Popular explainers that did not include a concrete evaluation method were downgraded.
+- Highly promotional benchmark commentary was not used for the main argument.
+- Short news writeups were not strong enough for durable claims about evaluation design.
+
+## Open Questions
+
+- The acceptable hallucination rate depends on domain risk tolerance.
+- Which workflows must require human review is a policy decision, not a pure model question.
+- Detecting benchmark contamination may require more than public data alone.
+- The safety of RAG and tool use still depends on permissions, auditability, input sanitation, and diff review.

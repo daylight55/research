@@ -1,0 +1,411 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "en": "LLMs generate plausible text, but they are not truth checkers.",
+          "ja": "LLMは、もっともらしい文を生成する装置であって、真偽を照合する装置ではない。"
+        },
+        {
+          "en": "Training optimizes next-token prediction, and evaluation often rewards guessing, so uncertainty can still produce confident-looking answers.",
+          "ja": "学習では次トークン予測が最適化され、評価ではしばしば正解を当てることが褒められるため、不確実な場面でも推測が有利になる。"
+        },
+        {
+          "en": "Hallucination is therefore not just a bug.",
+          "ja": "したがって、幻覚は単なるバグではない。"
+        },
+        {
+          "en": "It is a predictable result of learning objectives, scoring rules, and decoding behavior that can make guessing attractive.",
+          "ja": "学習目的、採点方法、推論時のデコーディングが重なって、推測が報われる条件ができると起きやすい。"
+        },
+        {
+          "en": "The practical question is not whether hallucination exists.",
+          "ja": "実務の問いは、幻覚をゼロにできるかではない。"
+        },
+        {
+          "en": "The practical question is how much uncertainty the system should tolerate, when it should abstain, and what external checks it needs.",
+          "ja": "どの程度の不確実性を許容し、どの場面で拒否させ、どの外部検証を挟むかである。"
+        },
+        {
+          "en": "Benchmarks are useful because they standardize comparison, but benchmark scores do not equal field performance.",
+          "ja": "ベンチマークは比較に有効だが、現場の性能と同義ではない。"
+        },
+        {
+          "en": "Public and static datasets can be contaminated, and operational metrics such as latency, cost, refusal rate, and auditability also matter.",
+          "ja": "公開固定データは汚染されうるし、業務では latency、費用、拒否率、監査可能性、権限設計も効く。"
+        },
+        {
+          "en": "RAG, citations, tools, and verification help, but none of them guarantee truth.",
+          "ja": "RAG、引用、ツール利用、検証は助けになるが、真実保証ではない。"
+        },
+        {
+          "en": "Unsupported claims still appear, citations can fail to reflect the real basis for an answer, and external retrieval opens a path for injection and poisoning.",
+          "ja": "RAGでも unsupported claim は残り、出典は付いていても忠実性は別問題であり、外部取得は注入攻撃や汚染の入口にもなる。"
+        }
+      ]
+    },
+    {
+      "id": "background",
+      "heading": {
+        "ja": "2. 背景と研究史",
+        "en": "2. Background and Research History"
+      },
+      "pairs": [
+        {
+          "en": "The starting point of LLM research is Transformer-based autoregressive generation.",
+          "ja": "LLM研究の出発点は、Transformer による自己回帰生成である。"
+        },
+        {
+          "en": "The model looks at an input sequence and then chooses the next token step by step.",
+          "ja": "モデルは入力文を見て、次に来そうなトークンを順に選ぶ。"
+        },
+        {
+          "en": "Truth checking is not the central operation in that loop.",
+          "ja": "そこでは真偽よりも、文脈上もっともらしい続きを作ることが中心になる。"
+        },
+        {
+          "en": "RAG then spread as a way to inject external documents into context.",
+          "ja": "その後、RAG は外部文書を文脈に差し込む設計として広まった。"
+        },
+        {
+          "en": "Long context, tool use, benchmark expansion, calibration, and explainability research followed in parallel.",
+          "ja": "さらに、長文脈、ツール利用、ベンチマーク拡張、校正、説明可能性の研究が並走した。"
+        },
+        {
+          "en": "Hallucination research moved from describing wrong answers to explaining why wrong answers happen systematically.",
+          "ja": "幻覚の研究は、単なる誤答の記述から、なぜ誤答が体系的に起きるかの分析へ進んだ。"
+        },
+        {
+          "en": "By 2023, the key themes were training-data extraction, position effects in long context, and the limits of calibration and refusal.",
+          "ja": "2023年には、訓練データの抽出、長文脈の位置依存、校正と拒否の限界が論点になった。"
+        },
+        {
+          "en": "From 2024 to 2026, RAG fidelity, benchmark contamination, injection attacks, and unfaithful explanations became clearer.",
+          "ja": "2024年から2026年にかけては、RAG の忠実性、ベンチマーク汚染、注入攻撃、説明の不忠実性がより明確になった。"
+        },
+        {
+          "en": "The lesson from that history is that LLM limits are not confined to one layer.",
+          "ja": "この研究史から見えるのは、LLM の限界が一つの層で完結していないことである。"
+        },
+        {
+          "en": "Pretraining, inference, retrieval, evaluation, and auditing can all fail, so a single fix is not enough.",
+          "ja": "事前学習、推論、検索、評価、監査の各層で失敗しうるため、対策も一つでは足りない。"
+        }
+      ]
+    },
+    {
+      "id": "mechanism",
+      "heading": {
+        "ja": "3. 幻覚はなぜ起きるか",
+        "en": "3. Why Hallucinations Happen"
+      },
+      "pairs": [
+        {
+          "en": "The first point is that LLMs are not optimized to tell the truth.",
+          "ja": "最初の要点は、LLM が真実を当てるように最適化されているわけではないことである。"
+        },
+        {
+          "en": "In many training setups, the model learns to predict the next token, and evaluation mainly rewards the right answer.",
+          "ja": "多くの訓練設定では、モデルは次の語を当てることを学び、評価では正しい答えを出したかどうかだけが目立つ。"
+        },
+        {
+          "en": "That means guessing can be more attractive than saying \"I do not know.\"",
+          "ja": "その結果、分からないときに「分からない」と言うより、推測する方が報酬的に有利になりうる。"
+        },
+        {
+          "en": "The second point is that decoding is not evidence checking.",
+          "ja": "第二の要点は、推論時のデコーディングが証拠確認ではないことである。"
+        },
+        {
+          "en": "The model simply emits high-probability continuations step by step, so plausibility and correctness do not always match.",
+          "ja": "モデルは高い確率を持つ続きを順に出すだけなので、もっともらしさと正確さは一致しない。"
+        },
+        {
+          "en": "Lower temperature does not remove the underlying uncertainty.",
+          "ja": "温度を下げても、基礎的な不確実性が消えるわけではない。"
+        },
+        {
+          "en": "The third point is that memory and factuality are different things.",
+          "ja": "第三の要点は、記憶と事実性が別物であることである。"
+        },
+        {
+          "en": "A model can memorize parts of training data, but it cannot always retrieve them reliably.",
+          "ja": "モデルは訓練データの一部を覚えうるが、覚えたことを常に正しく取り出せるわけではない。"
+        },
+        {
+          "en": "A fact may be in memory and still be replaced by a plausible alternative when the context shifts.",
+          "ja": "記憶はあっても、文脈が少し変わると別のもっともらしい答えを作ってしまう。"
+        },
+        {
+          "en": "The fourth point is that hallucination is not only about low confidence.",
+          "ja": "第四の要点は、幻覚の中心が「自信のなさ」そのものではないことである。"
+        },
+        {
+          "en": "When the prompt is ambiguous or the context is incomplete, the model may still fill the gap with a plausible completion.",
+          "ja": "曖昧な問いや欠損した文脈の下で、もっともらしい補完が生成される。"
+        },
+        {
+          "en": "That is statistical completion, not semantic verification.",
+          "ja": "これは統計的な補完であって、意味論的な検証ではない。"
+        },
+        {
+          "en": "The fifth point is that hallucination is not always a fully wrong answer.",
+          "ja": "第五の要点は、幻覚は「完全な誤り」だけではないことである。"
+        },
+        {
+          "en": "A sentence can be mostly right while the number, attribute, causal link, or citation target is wrong.",
+          "ja": "部分的に正しい文の中に、数字、属性、因果、引用先だけがずれることがある。"
+        },
+        {
+          "en": "In practice, those partial errors are often the most dangerous.",
+          "ja": "実務上は、この半分だけ合っている誤りの方が危険である。"
+        }
+      ]
+    },
+    {
+      "id": "benchmark-vs-practice",
+      "heading": {
+        "ja": "4. ベンチマーク評価と実務評価の違い",
+        "en": "4. Benchmark Evaluation vs Practical Evaluation"
+      },
+      "pairs": [
+        {
+          "en": "A benchmark is a comparison instrument.",
+          "ja": "ベンチマークは比較のための装置である。"
+        },
+        {
+          "en": "Practical evaluation is a failure-prevention instrument for a real workflow.",
+          "ja": "実務評価は、実際の業務で失敗しないかを確かめる装置である。"
+        },
+        {
+          "en": "They look similar, but they serve different purposes.",
+          "ja": "両者は似ているが、目的が違う。"
+        },
+        {
+          "en": "Benchmarks are reproducible.",
+          "ja": "ベンチマークは再現性が高い。"
+        },
+        {
+          "en": "But the more public, static, and popular a benchmark becomes, the more likely it is to be affected by overlap with training data or by overfitting.",
+          "ja": "だが、公開され、静的で、よく使われるほど、訓練データとの重複や過学習の影響を受けやすい。"
+        },
+        {
+          "en": "That is why a score alone is not enough.",
+          "ja": "したがって、スコアだけで能力を語るのは危険である。"
+        },
+        {
+          "en": "Practical evaluation must be built around the failures that matter in the actual workflow.",
+          "ja": "実務評価は、業務の失敗モードに合わせて作る必要がある。"
+        },
+        {
+          "en": "In legal, medical, financial, support, and internal-search settings, refusal quality, provenance tracking, latency, cost, and stability under reruns can matter more than a plain accuracy number.",
+          "ja": "たとえば、法務、医療、金融、サポート、社内検索では、単純な正解率より、拒否の妥当性、根拠の追跡可能性、遅延、コスト、再実行時の安定性が重要になる。"
+        },
+        {
+          "en": "The point of the table is not to reject benchmarks.",
+          "ja": "この表の意味は、ベンチマークを捨てることではない。"
+        },
+        {
+          "en": "The point is that benchmarks are necessary but not sufficient.",
+          "ja": "ベンチマークは必要だが、十分ではないということだ。"
+        }
+      ]
+    },
+    {
+      "id": "what-helps",
+      "heading": {
+        "ja": "5. RAG・検証・引用・ツール利用で何が改善し、何が残るか",
+        "en": "5. What Helps and What Remains"
+      },
+      "pairs": [
+        {
+          "en": "RAG inserts external documents into context.",
+          "ja": "RAG は、外部文書を文脈に入れて答えを作る。"
+        },
+        {
+          "en": "That improves freshness and makes internal knowledge easier to use.",
+          "ja": "これは古い知識を減らし、社内文書や最新情報を使いやすくする。"
+        },
+        {
+          "en": "But if the retrieved material is wrong, the answer can still be wrong.",
+          "ja": "だが、検索した文書が誤っていれば答えも誤る。"
+        },
+        {
+          "en": "Citations help expose provenance.",
+          "ja": "引用は出典を見せるのに役立つ。"
+        },
+        {
+          "en": "But a citation attached by the model is not the same thing as the real basis for the answer.",
+          "ja": "だが、モデルが付けた引用が、その主張の本当の根拠であるとは限らない。"
+        },
+        {
+          "en": "Citations show provenance, but they do not prove fidelity.",
+          "ja": "引用は provenance を見せるが、忠実性の証明ではない。"
+        },
+        {
+          "en": "Tool use can add factual checks through calculation, search, database lookups, and external APIs.",
+          "ja": "ツール利用は、計算、検索、DB 照会、外部 API 呼び出しで事実確認を補える。"
+        },
+        {
+          "en": "That is useful, but it also requires permissions, auditing, rollback, and protection against polluted inputs.",
+          "ja": "これは有効だが、権限、監査、ロールバック、入力汚染への対策が必要になる。"
+        },
+        {
+          "en": "Long context is not a universal fix either.",
+          "ja": "長文脈も万能ではない。"
+        },
+        {
+          "en": "When the relevant information sits in the middle of a long input, the model can still miss it.",
+          "ja": "必要な情報が長い入力の中央にあると、モデルが見落とすことがある。"
+        },
+        {
+          "en": "It is better to decide what should be retrieved, what should be structured, and what should be refused before you simply make the input longer.",
+          "ja": "だから、長く入れる前に、何を検索に回し、何を構造化し、何を拒否させるかを決める方がよい。"
+        }
+      ]
+    },
+    {
+      "id": "qa-process",
+      "heading": {
+        "ja": "6. 実務での品質保証プロセス",
+        "en": "6. A Quality Assurance Process"
+      },
+      "pairs": [
+        {
+          "en": "What follows is a public-information inference.",
+          "ja": "以下は公表情報からの推定である。"
+        },
+        {
+          "en": "In high-risk LLM use, you need quality assurance for the whole system, not only for the model.",
+          "ja": "高リスクの LLM 利用では、モデル単体の精度ではなく、運用全体の品質保証が必要になる。"
+        },
+        {
+          "en": "First, separate questions into facts, reasoning, summaries, calculations, and actions.",
+          "ja": "まず、質問を事実、推論、要約、計算、操作に分ける。"
+        },
+        {
+          "en": "Facts go to source checks, reasoning goes to condition checks, summaries go to fidelity checks, calculations go to tools, and actions go to permission checks.",
+          "ja": "事実は出典照合、推論は条件検査、要約は忠実性検査、計算はツール実行、操作は権限確認に回す。"
+        },
+        {
+          "en": "Next, keep evaluation in three layers.",
+          "ja": "次に、評価セットを三層で持つ。"
+        },
+        {
+          "en": "Use public benchmarks to check breadth, a private holdout to check workflow fit, and an adversarial set to check hallucination and injection.",
+          "ja": "公開ベンチマークで広さを確認し、社内の固定ホールドアウトで業務適合を確認し、意地悪な adversarial set で幻覚と注入を確認する。"
+        },
+        {
+          "en": "Then measure the following every time.",
+          "ja": "そのうえで、次の指標を毎回見る。"
+        },
+        {
+          "en": "The point of the flow is not to hope that the model becomes correct.",
+          "ja": "この流れの狙いは、モデルに「正しさ」を祈ることではない。"
+        },
+        {
+          "en": "The point is to find failures early, reproduce them, isolate them, and watch for regressions.",
+          "ja": "失敗を早く見つけ、失敗を再現し、失敗を隔離し、再発を監視することである。"
+        }
+      ]
+    },
+    {
+      "id": "risks",
+      "heading": {
+        "ja": "7. リスク・限界",
+        "en": "7. Risks and Limits"
+      },
+      "pairs": [
+        {
+          "en": "First, zero hallucination is not realistic.",
+          "ja": "第一に、幻覚をゼロにするのは現実的ではない。"
+        },
+        {
+          "en": "For arbitrary facts, there will always be residual error under the structure of training and evaluation.",
+          "ja": "任意の事実に関する答えでは、学習と評価の構造上、誤りの余地が残る。"
+        },
+        {
+          "en": "The practical question is not zero hallucination, but the acceptable failure rate.",
+          "ja": "だから重要なのはゼロ幻覚ではなく、許容可能な失敗率をどこに置くかである。"
+        },
+        {
+          "en": "Second, explanations are not proofs.",
+          "ja": "第二に、説明は証明ではない。"
+        },
+        {
+          "en": "LLMs can produce plausible reasons, but those reasons may not reflect the actual internal process.",
+          "ja": "LLM はもっともらしい理由を語れるが、その理由が実際の内部過程を反映しているとは限らない。"
+        },
+        {
+          "en": "Explanations should therefore not replace audit evidence.",
+          "ja": "したがって、説明を監査証跡の代わりに使ってはいけない。"
+        },
+        {
+          "en": "Third, RAG improves freshness, but it is not a truth guarantee.",
+          "ja": "第三に、RAG は知識の鮮度を上げるが、真実保証ではない。"
+        },
+        {
+          "en": "Retrieval sources can be contaminated, and injection attacks can slip in instructions or malicious documents that should not have been there.",
+          "ja": "検索対象が汚染されることもあるし、注入攻撃により、見せたくない指示や悪性文書が入り込むこともある。"
+        },
+        {
+          "en": "Fourth, benchmarks are fragile.",
+          "ja": "第四に、ベンチマークは壊れやすい。"
+        },
+        {
+          "en": "Public data is easy to contaminate, and a number does not map cleanly to a workflow failure mode.",
+          "ja": "公開データは汚染されやすく、数字は業務の失敗モードをそのまま表さない。"
+        },
+        {
+          "en": "A high score is not the same as practical usefulness.",
+          "ja": "スコアが高いことと実用的であることは別である。"
+        }
+      ]
+    },
+    {
+      "id": "recommendations",
+      "heading": {
+        "ja": "8. 推奨方針",
+        "en": "8. Recommendations"
+      },
+      "pairs": [
+        {
+          "en": "Separate questions the model can answer from questions it should refuse.",
+          "ja": "まず、答えられる問いと、答えてはいけない問いを分ける。"
+        },
+        {
+          "en": "Decide on refusal and deferral behavior before deployment.",
+          "ja": "次に、拒否と保留の設計を決める。"
+        },
+        {
+          "en": "Externalize evidence through RAG and tool use.",
+          "ja": "そのうえで、RAG とツール利用で根拠を外部化する。"
+        },
+        {
+          "en": "Keep citations, but do not treat citations themselves as proof.",
+          "ja": "引用は残すが、引用そのものを証明扱いしない。"
+        },
+        {
+          "en": "Use benchmarks, but supplement them with internal holdouts and adversarial sets.",
+          "ja": "ベンチマークは使うが、社内ホールドアウトと adversarial set で補う。"
+        },
+        {
+          "en": "For high-risk use cases, retain human review and audit logs.",
+          "ja": "高リスク用途では、人手確認と監査ログを残す。"
+        },
+        {
+          "en": "This sequence is sensible because finding and stopping failures early is often more effective than trying to make the model smarter.",
+          "ja": "この順序が妥当なのは、モデルの賢さを上げるよりも、失敗を早く見つけて止める方が、現実の事故率を下げやすいからである。"
+        }
+      ]
+    }
+  ]
+}

@@ -98,6 +98,42 @@ assert.match(
 )
 
 assert.match(
+	trendWorkflow,
+	/cache_key="daily-trend-news-v2-\$\{report_date\}"/,
+	'Daily Trend News should version its generation cache when the output contract changes'
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Render structured trend news article[\s\S]*?node ops\/scripts\/render-daily-trend-news\.mjs "articles\/news\/\$\{SLUG\}\/daily-trend-news\.json"/,
+	'Daily Trend News should render localized MDX from structured JSON before preflight'
+)
+
+assert.doesNotMatch(
+	trendWorkflow,
+	/Repair generated news article/,
+	'Daily Trend News should not spend extra Codex repair attempts on generated MDX structure failures'
+)
+
+assert.match(
+	trendNewsPreflightScript,
+	/render-daily-trend-news\.mjs "articles\/news\/\$\{SLUG\}\/daily-trend-news\.json" --validate-only/,
+	'Daily Trend News preflight should validate structured news data when the JSON contract is present'
+)
+
+assert.match(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/articles\/news\/daily-trends-<YYYY-MM-DD>\/daily-trend-news\.json[\s\S]*?render-daily-trend-news\.mjs/,
+	'Daily Trend News prompt should ask Codex to produce structured JSON and run the deterministic renderer'
+)
+
+assert.doesNotMatch(
+	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
+	/Write the reader-facing article bodies directly/,
+	'Daily Trend News prompt should not ask Codex to hand-author final MDX bodies'
+)
+
+assert.match(
 	dailyIssuePrompt,
 	/articles\/report\/<topic>\/ja\/research-log\.mdx[\s\S]*?## 調査命令[\s\S]*?issue[\s\S]*?title[\s\S]*?body/,
 	'Daily Issue Research prompt should ask research logs to summarize the issue-based research instruction'
@@ -279,7 +315,7 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
-	/cache_key="daily-trend-news-\$\{report_date\}"[\s\S]*?cache_key="\$\{cache_key\}-\$\{topic_hint_hash\}"/,
+	/cache_key="daily-trend-news-v2-\$\{report_date\}"[\s\S]*?cache_key="\$\{cache_key\}-\$\{topic_hint_hash\}"/,
 	'trend news workflow should derive a date cache key and include topic hint when present'
 )
 
@@ -405,8 +441,14 @@ assert.match(
 
 assert.match(
 	trendWorkflow,
-	/- name: Preflight generated news article[\s\S]*?continue-on-error: true[\s\S]*?ops\/scripts\/preflight-generated-trend-news\.sh/,
-	'Daily Trend News should run a non-terminal preflight before the strict generated article check'
+	/- name: Preflight generated news article[\s\S]*?run: bash ops\/scripts\/preflight-generated-trend-news\.sh/,
+	'Daily Trend News should run preflight before the strict generated article check'
+)
+
+assert.doesNotMatch(
+	trendWorkflow,
+	/- name: Preflight generated news article[\s\S]*?continue-on-error: true[\s\S]*?- name: Check generated news article/,
+	'Daily Trend News preflight should fail fast instead of falling through to repair attempts'
 )
 
 assert.match(
@@ -422,33 +464,33 @@ assert.match(
 )
 
 assert.match(
-	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
-	/Quote every frontmatter string scalar[\s\S]*?Do not leave colons in unquoted[\s\S]*?frontmatter values/,
-	'Daily Trend News prompt should prevent malformed YAML frontmatter before generation'
+	readFileSync('ops/scripts/render-daily-trend-news.mjs', 'utf8'),
+	/function yamlSingleQuoted[\s\S]*?replace\(\s*\/'\//,
+	'Daily Trend News renderer should quote and escape YAML frontmatter values deterministically'
 )
 
 assert.match(
-	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
-	/- Automation model: `<MODEL_USED_TO_CREATE_ARTICLE>`/,
-	'Daily Trend News prompt should pin the research-log automation model line format'
+	readFileSync('ops/scripts/render-daily-trend-news.mjs', 'utf8'),
+	/- Automation model: \\`\$\{escapeMdxText\(data\.generation\.model\)\}\\`/,
+	'Daily Trend News renderer should pin the research-log automation model line format'
 )
 
-assert.match(
+assert.doesNotMatch(
 	trendWorkflow,
 	/- name: Repair generated news article \(attempt 1\)[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?- name: Repair generated news article \(attempt 2\)[\s\S]*?uses: openai\/codex-action@v1/,
-	'Daily Trend News should let Codex repair generated article validation failures twice before failing the workflow'
+	'Daily Trend News should not spend extra Codex repair attempts on deterministic structure failures'
 )
 
-assert.match(
+assert.doesNotMatch(
 	trendWorkflow,
 	/generated_news_preflight_1\.outcome == 'failure'[\s\S]*?daily-trend-news-repair-1\.md[\s\S]*?generated_news_preflight_2\.outcome == 'failure'[\s\S]*?daily-trend-news-repair-2\.md/,
-	'Daily Trend News repair prompts should be created from failed preflight attempts'
+	'Daily Trend News should not create repair prompts from failed preflight attempts'
 )
 
-assert.match(
+assert.doesNotMatch(
 	trendWorkflow,
 	/- name: Remove repair prompt artifacts[\s\S]*?rm -rf ops\/codex\/runtime codex-repair-1-output\.md codex-repair-2-output\.md[\s\S]*?- name: Check generated news article/,
-	'Daily Trend News should remove repair prompt artifacts before collecting generated article diffs'
+	'Daily Trend News should not need repair prompt artifacts before collecting generated article diffs'
 )
 
 assert.match(

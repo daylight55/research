@@ -50,7 +50,7 @@ If the report or digest must appear on the website, top page, category pages, or
 3. Prefer primary sources: papers, specifications, official documentation, official announcements, standards, government documents, central-bank or international-organization reports, treaty/legal texts, and source repositories.
 4. Use secondary sources only for orientation, market context, or competing interpretations.
 5. Verify current product, AI model, pricing, roadmap, library, specification, politics, sanctions, conflict, election, and diplomacy claims against current sources.
-6. Distinguish established facts, emerging evidence, product/vendor claims, inference from public information, open questions, limitations, and practical implications.
+6. Distinguish established facts, emerging evidence, product/vendor claims, inference from public information, open questions, limitations, and decision points or operational consequences only when they are materially tied to the topic.
 7. Write in Japanese for practitioners, researchers, and decision makers who need source-grounded judgment.
 8. Keep the article standalone; future readers should not need the GitHub issue or chat context.
 9. Use `source-notes.mdx` for publishable source inventory, evidence notes, competing interpretations, and inclusion/exclusion decisions before drafting the reader-facing article.
@@ -127,7 +127,7 @@ Use this shape unless the topic needs something else:
 
 ## 4. 主要アプローチ比較
 
-## 5. 実務活用
+## 5. 意思決定・運用への接続
 
 ## 6. リスク・限界
 

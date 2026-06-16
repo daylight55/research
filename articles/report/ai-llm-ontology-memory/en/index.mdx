@@ -135,7 +135,7 @@ flowchart LR
 
 The success or failure of AI utilization depends more on "what to make available for input" than "which model to use." Information useful for practical input can be organized in the following hierarchy.
 This chapter is at the intersection of RAGs, knowledge graphs, operational data modeling, and workflow management. Lewis et al. (2020)'s RAG and Guu et al. (2020)'s REALM pointed toward connecting searched external knowledge to generation, rather than keeping all knowledge within the model. In practice, if the search target remains a mere document corpus, handling of business status, authority, history, and exceptions becomes weak.
-Source note: RAG is [Lewis et al. (2020)](https://arxiv.org/abs/2005.11401), REALM is [Guu et al. (2020)](https://proceedings.mlr.press/v119/guu20a.html). Here, it is cited as a practical implication that search expansion needs to be expanded to include business objects, states, and actions, not just "document search."
+Source note: RAG is [Lewis et al. (2020)](https://arxiv.org/abs/2005.11401), REALM is [Guu et al. (2020)](https://proceedings.mlr.press/v119/guu20a.html). Here, it is cited to show the design consequence that search expansion needs to include business objects, states, and actions, not just "document search."
 
 ### 5.1 Layer 1: Documents
 
@@ -323,7 +323,7 @@ Source note: MCP announcement is [Anthropic, Introducing the Model Context Proto
 6. **Expansion of computing resources**: We are expanding our learning and inference capabilities through additional collaboration with AWS.
 7. **Separation of experimentation and commercialization**: This shows a system in which research previews, experimental functions, and productization are promoted separately through Labs.
 
-### 11.2 Practical reading
+### 11.2 Implementation reading
 
 Anthropic's direction has shifted from competition in the performance of individual models to a business agent platform, tool connectivity, organizational implementation, and auditable autonomous work. MCP, Skills, Subagents, long context, office collaboration, and Claude Code/Cowork are heading in the same direction.
 However, you should avoid making a definitive statement that "Anthropic will definitely do this in the future." If used as a roadmap, it would be appropriate to treat it as a "hypothesis for practical implementation based on published functions".

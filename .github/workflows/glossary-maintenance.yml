@@ -1,0 +1,109 @@
+name: Glossary Maintenance
+
+on:
+  schedule:
+    # 03:00 JST every 3 days. This is intentionally separate from PR CI.
+    - cron: "0 18 */3 * *"
+  workflow_dispatch:
+    inputs:
+      max_terms:
+        description: "Maximum unresolved terms to research"
+        required: false
+        default: "3"
+        type: string
+      max_results_per_query:
+        description: "Maximum web results per search query"
+        required: false
+        default: "3"
+        type: string
+      min_score:
+        description: "Minimum candidate score"
+        required: false
+        default: "9"
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: glossary-maintenance
+  cancel-in-progress: false
+
+jobs:
+  research-candidates:
+    name: Select and research glossary candidates
+    runs-on: ubuntu-latest
+    env:
+      BRAVE_SEARCH_API_KEY: ${{ secrets.BRAVE_SEARCH_API_KEY }}
+      TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+      MAX_TERMS: ${{ github.event.inputs.max_terms || '3' }}
+      MAX_RESULTS_PER_QUERY: ${{ github.event.inputs.max_results_per_query || '3' }}
+      MIN_SCORE: ${{ github.event.inputs.min_score || '9' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Select unresolved glossary terms
+        run: |
+          set -euo pipefail
+          mkdir -p ops/codex/runtime/glossary-research
+          pnpm glossary:candidates -- \
+            --max-terms "${MAX_TERMS}" \
+            --min-score "${MIN_SCORE}" \
+            --out ops/codex/runtime/glossary-candidates.json \
+            --markdown-out ops/codex/runtime/glossary-candidates.md
+
+      - name: Research selected terms
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('node:fs')
+          const payload = JSON.parse(fs.readFileSync('ops/codex/runtime/glossary-candidates.json', 'utf8'))
+          const lines = ['set -euo pipefail']
+
+          for (const candidate of payload.candidates) {
+            const out = `ops/codex/runtime/glossary-research/${candidate.slug}.json`
+            const related = (candidate.related || []).slice(0, 5).join(',')
+            lines.push([
+              'pnpm glossary:research --',
+              '--term', JSON.stringify(candidate.label),
+              '--locale ja',
+              '--category', JSON.stringify(candidate.category || ''),
+              '--related', JSON.stringify(related),
+              '--max-results "${MAX_RESULTS_PER_QUERY}"',
+              '--out', JSON.stringify(out)
+            ].join(' '))
+          }
+
+          if (payload.candidates.length === 0) {
+            lines.push('echo "No glossary candidates selected."')
+          }
+
+          fs.writeFileSync('ops/codex/runtime/run-glossary-research.sh', `${lines.join('\n')}\n`)
+          NODE
+          bash ops/codex/runtime/run-glossary-research.sh
+
+      - name: Upload glossary research artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: glossary-maintenance-${{ github.run_id }}
+          path: |
+            ops/codex/runtime/glossary-candidates.json
+            ops/codex/runtime/glossary-candidates.md
+            ops/codex/runtime/glossary-research/*.json
+          if-no-files-found: error
+          retention-days: 14

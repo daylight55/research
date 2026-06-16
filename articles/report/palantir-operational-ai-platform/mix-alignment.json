@@ -267,7 +267,7 @@
 				},
 				{
 					"en": "This difference is significant in practice.",
-					"ja": "この違いは実務上大きい。"
+					"ja": "この違いは導入上大きい。"
 				},
 				{
 					"en": "While traditional BI can display the status of opportunities, inventory, patients, parts, alarms, units, and transportation plans, field changes often remain in a separate system.",
@@ -572,7 +572,7 @@
 				},
 				{
 					"en": "In practice, the following should be fixed in the contract and design before implementation.",
-					"ja": "実務的には、導入前に次を契約・設計で固定すべきである。"
+					"ja": "導入前には次を契約・設計で固定すべきである。"
 				},
 				{
 					"en": "Data and metadata export formats",
@@ -751,8 +751,8 @@
 					"ja": "公共機関なら、それに加えて、民主的統制、住民・患者・職員への説明、第三者監査、調達透明性、目的外利用防止を導入条件にする。"
 				},
 				{
-					"en": "The practical recommendations are as follows.",
-					"ja": "実務上の推奨は次である。"
+					"en": "The deployment recommendations are as follows.",
+					"ja": "導入判断での推奨は次である。"
 				},
 				{
 					"en": "**When you should consider hiring**: High-value, high-complexity, highly regulated business that needs to change from data integration to action in a short period of time.",

@@ -179,7 +179,10 @@ test('article body does not import duplicate report bodies or unresolved placeho
 test('report headings avoid generic practical-implication labels', () => {
 	const genericPracticalHeadingRe =
 		/(?:^#{2,6}\s+\d+(?:\.\d+)?\.\s+|"(?:ja|en)":\s*"\d+(?:\.\d+)?\.\s*)(?:実務上の含意|実務的な含意|実務的含意|実務含意|実務への含意|業務への含意|実務上の見方|実務的な読み方|実務的な見方|実務上どう読むべきか|Practical Reading(?: Rules)?|Practical reading|Practical perspective|Practical Takeaways|Practical [Ii]mplications?)(?:"|$)/m
-	const genericPracticalPhraseRe = /実務上の見方は単純/
+	const genericPracticalPhraseRe =
+		/実務上の見方は単純|実務上の要点|実務上の推奨|実務的に見るべき|含意は明確|日本の含意は|The practical point is|The practical points are|There are three practical points|The practical recommendations are clear|For practical readers|The practical checklist is/
+	const genericPracticalIdRe =
+		/"id":\s*"(?:practical-implications|practice-implications|implications)"/
 
 	for (const file of gitFiles([
 		'articles/report/**/index.mdx',
@@ -196,6 +199,11 @@ test('report headings avoid generic practical-implication labels', () => {
 			source,
 			genericPracticalPhraseRe,
 			`${file} should avoid generic practical-view boilerplate in report body text`
+		)
+		assert.doesNotMatch(
+			source,
+			genericPracticalIdRe,
+			`${file} should use context-specific mixed-section ids instead of generic implication ids`
 		)
 	}
 })

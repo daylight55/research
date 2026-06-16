@@ -12,7 +12,7 @@
 			"pairs": [
 				{
 					"en": "In practice, MCP server authentication and authorization can be easily understood as the flow of \"The MCP server acts as a protected resource, obtains a token with OAuth 2.1 Authorization Code + PKCE, and uses that Bearer token to permit MCP tool calls.\"",
-					"ja": "MCPサーバーの認証認可は、実務上は「MCPサーバーが保護リソースとして振る舞い、OAuth 2.1 の Authorization Code + PKCE でトークンを取得し、その Bearer token で MCP ツール呼び出しを許可する」流れとして理解すると分かりやすい。"
+					"ja": "MCPサーバーの認証認可は、実装上は「MCPサーバーが保護リソースとして振る舞い、OAuth 2.1 の Authorization Code + PKCE でトークンを取得し、その Bearer token で MCP ツール呼び出しを許可する」流れとして理解すると分かりやすい。"
 				},
 				{
 					"en": "In the latest published specifications of MCP, HTTP-based MCP servers publish Protected Resource Metadata, and clients are assumed to identify the authorization server by tracing Authorization Server Metadata and OIDC Discovery from there.",
@@ -31,8 +31,8 @@
 					"ja": "Anthropic の公式案内では、remote MCP は Anthropic 側のクラウド経由で扱われ、サーバー側が DCR を持たない場合でも custom client ID / secret を設定できる。"
 				},
 				{
-					"en": "The practical points are as follows.",
-					"ja": "実務上の要点は次のとおりである。"
+					"en": "The implementation points are as follows.",
+					"ja": "実装上の要点は次のとおりである。"
 				},
 				{
 					"en": "The MCP server is not a \"business API\" but a \"protected resource\" and guides the authorization server with 401 responses and resource metadata.",
@@ -60,7 +60,7 @@
 				},
 				{
 					"en": "It is practical to wrap OpenAPI in an MCP server and receive OAuth 2.1 PKCE there.",
-					"ja": "MCPサーバーで OpenAPI をラップして、OAuth 2.1 PKCE をそこで受けるのが実務的である。"
+					"ja": "MCPサーバーで OpenAPI をラップして、OAuth 2.1 PKCE をそこで受けるのが実装上自然である。"
 				},
 				{
 					"en": "This is an inference from the specification that MCP is a standard for connecting to external systems and that clients connect to MCP servers.",
@@ -173,7 +173,7 @@
 				},
 				{
 					"en": "When organizing OAuth 2.1, this flow is the standard, and it is practical to treat PKCE as an essential premise.",
-					"ja": "OAuth 2.1 の整理では、この流れが標準で、PKCEは必須前提として扱うのが実務的である。"
+					"ja": "OAuth 2.1 の整理では、この流れが標準で、PKCEは必須前提として扱うのが実装上自然である。"
 				}
 			]
 		},
@@ -198,7 +198,7 @@
 				},
 				{
 					"en": "This is a recommendation as a practical design for OAuth rather than a specification requirement for MCP.",
-					"ja": "これは MCP の仕様要件というより、OAuthの実務設計としての推奨である。"
+					"ja": "これは MCP の仕様要件というより、OAuthの権限設計としての推奨である。"
 				}
 			]
 		},
@@ -423,7 +423,7 @@
 				},
 				{
 					"en": "In practice, one MCP server is installed, each OpenAPI operation is mapped to the MCP tool, and the MCP server is configured to receive OAuth 2.1 PKCE.",
-					"ja": "実務上は、MCPサーバーを一枚かませて OpenAPI の各 operation を MCP tool にマッピングし、そのMCPサーバーが OAuth 2.1 PKCE を受ける構成にする。"
+					"ja": "実装上は、MCPサーバーを一枚かませて OpenAPI の各 operation を MCP tool にマッピングし、そのMCPサーバーが OAuth 2.1 PKCE を受ける構成にする。"
 				},
 				{
 					"en": "This is an inference from the specification that MCP is a standard for connecting to external systems and that clients connect to MCP servers.",

@@ -26,7 +26,7 @@
 		"sync": "astro sync",
 		"preview": "astro preview",
 		"postbuild": "pagefind --site dist",
-		"test": "node --test ops/tests/*.test.mjs tests/*.test.mjs",
+		"test": "node --experimental-strip-types --test ops/tests/*.test.mjs tests/*.test.mjs",
 		"test:workflows": "node ops/tests/daily-issue-research-workflow.test.mjs && node --test ops/tests/publication-workflow-policy.test.mjs",
 		"test:content": "node --test ops/tests/news-title-summaries.test.mjs ops/tests/source-note-citations.test.mjs",
 		"test:ui": "node --test ops/tests/home-news-carousel.test.mjs",
@@ -34,6 +34,8 @@
 		"test:hero-images": "node --test ops/tests/select-unsplash-hero.test.mjs ops/tests/hero-images.test.mjs ops/tests/news-source-card-images.test.mjs",
 		"ci:head": "git diff --check && pnpm test && pnpm lint && pnpm build",
 		"ci:pr": "bash ops/scripts/run-pr-ci-locally.sh",
+		"glossary:candidates": "node --experimental-strip-types ops/scripts/select-glossary-candidates.mjs",
+		"glossary:research": "node ops/scripts/research-glossary-term.mjs",
 		"format:check": "prettier --plugin-search-dir=. --check .",
 		"format": "prettier --plugin-search-dir=. --write .",
 		"lint": "eslint ."
@@ -42,6 +44,7 @@
 		"@astrojs/rss": "4.0.18",
 		"astro": "6.3.7",
 		"beautiful-mermaid": "1.1.3",
+		"cytoscape": "^3.33.4",
 		"mermaid": "^11.15.0",
 		"sentence-splitter": "^5.0.1",
 		"yaml": "2.8.4"

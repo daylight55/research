@@ -1,0 +1,76 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+import GlossaryTermCard from '@/components/GlossaryTermCard'
+import { CATEGORIES } from '@/data/categories'
+import {
+	buildGlossaryIndex,
+	getGlossarySourcePages,
+	groupGlossaryTermsByCategory,
+	localizedPath
+} from '@/utils'
+
+const locale = 'en'
+const pages = await getGlossarySourcePages(locale)
+const glossary = buildGlossaryIndex(pages, locale)
+const glossaryGroups = groupGlossaryTermsByCategory(glossary.terms, CATEGORIES)
+---
+
+<BaseLayout
+	title='Glossary'
+	description='A categorized glossary of extracted page terms that already have source-backed research profiles.'
+	locale={locale}
+>
+	<section class='grid gap-8'>
+		<header class='grid gap-3'>
+			<p class='text-sm font-semibold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-400'>
+				Glossary
+			</p>
+			<h1 class='text-4xl font-semibold md:text-5xl'>Glossary</h1>
+			<p class='max-w-3xl leading-8 text-gray-700 dark:text-gray-300'>
+				Technical terms are selected from article bodies, research trails, and source notes only
+				after they have source-backed definitions and checked references.
+			</p>
+		</header>
+
+		<section class='grid gap-4'>
+			<div class='grid gap-2'>
+				<h2 class='text-2xl font-semibold'>Terms by Category</h2>
+				<p class='max-w-3xl text-sm leading-7 text-gray-600 dark:text-gray-400'>
+					Profiled terms are assigned to their most frequent representative category. Terms used
+					across multiple categories appear only once on this index.
+				</p>
+			</div>
+			<div class='grid gap-8'>
+				{
+					glossaryGroups.map((group) => (
+						<section class='grid gap-3'>
+							<div class='flex flex-wrap items-baseline justify-between gap-3 border-b border-black/10 pb-2 dark:border-white/10'>
+								<div>
+									<h3 class='text-xl font-semibold'>{group.category}</h3>
+									<p class='mt-1 text-sm text-gray-600 dark:text-gray-400'>
+										{group.terms.length} terms
+									</p>
+								</div>
+								<a
+									href={localizedPath(locale, `/category/${group.category}/1/`)}
+									class='text-sm font-semibold text-indigo-700 underline decoration-black/20 underline-offset-4 hover:text-indigo-900 dark:text-indigo-300 dark:decoration-white/20 dark:hover:text-indigo-100'
+								>
+									View articles in this category
+								</a>
+							</div>
+							<ul class='grid gap-2 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4'>
+								{group.terms.map((term) => (
+									<GlossaryTermCard
+										term={term}
+										href={localizedPath(locale, `/glossary/${term.slug}/`)}
+										meta={`Used on ${term.postCount} pages / ${term.relatedTerms.length} related terms`}
+									/>
+								))}
+							</ul>
+						</section>
+					))
+				}
+			</div>
+		</section>
+	</section>
+</BaseLayout>

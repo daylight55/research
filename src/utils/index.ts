@@ -18,6 +18,21 @@ export { getCategoryAccentClass, getCategorySurfaceClass } from './categoryStyle
 export { renderNewsRssContent, renderReportRssContent } from './rssContent'
 export { tagSlug } from './tagSlug'
 export {
+	buildGlossaryIndex,
+	createGlossarySlug,
+	createWikipediaSearchApiUrl,
+	createWikipediaSearchQuery,
+	createWikipediaSummaryApiUrl,
+	createWikipediaUrl,
+	createWikipediaValidationKeywords,
+	extractGlossaryTermsFromMarkdown,
+	getWikipediaLocaleForLabel,
+	groupGlossaryTermsByCategory,
+	linkFirstGlossaryMentions,
+	selectExternalReference
+} from './glossary'
+export { getGlossarySourcePages } from './glossarySources'
+export {
 	getCategories,
 	getPosts,
 	getReportPosts,
@@ -27,6 +42,7 @@ export {
 	filterPostsByCategory
 } from './post'
 export { remarkReadingTime } from './readTime'
+export { remarkGlossary } from './remarkGlossary'
 export { getMixedArticleAlignment } from './mixedAlignment'
 export type { MixedArticleAlignment } from './mixedAlignment'
 export { hasAnyArticleSourceNotes, hasArticleSourceNotes } from './articleSupport'

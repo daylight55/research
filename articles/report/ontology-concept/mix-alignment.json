@@ -187,7 +187,7 @@
 			"pairs": [
 				{
 					"en": "In practice, an ontology consists of the following elements:",
-					"ja": "実務上、オントロジーは次の要素で構成される。"
+					"ja": "設計上、オントロジーは次の要素で構成される。"
 				},
 				{
 					"en": "As you can see from this list, ontology is not a \"dictionary that explains the meaning of words\".",
@@ -248,7 +248,7 @@
 				},
 				{
 					"en": "SKOS is a practical standard that deals with this boundary area.",
-					"ja": "SKOSは、この境界領域を扱う実務的な標準である。"
+					"ja": "SKOSは、この境界領域を扱う分類・語彙設計の標準である。"
 				},
 				{
 					"en": "Semi-formal knowledge organization systems such as thesauri, classification systems, and subject headings can be expressed in RDF.",
@@ -281,7 +281,7 @@
 				},
 				{
 					"en": "This distinction is of considerable practical importance.",
-					"ja": "この区別は実務上かなり重要である。"
+					"ja": "この区別は業務データ設計ではかなり重要である。"
 				},
 				{
 					"en": "OWL treats \"what is not explicitly stated as not necessarily false\" under the open world assumption.",

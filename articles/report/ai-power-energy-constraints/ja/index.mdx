@@ -27,7 +27,7 @@ AIブームの電力問題は、単純に「発電量が足りるか」だけで
 1. 送電網と接続待ちが最初に詰まる。
 2. 次に、冷却と受電設備が追いつかなくなる。
 3. その後、PPA で確保した再エネ、原子力の再評価、ガス火力、蓄電がそれぞれ別の時間軸で必要になる。
-4. したがって、「何が一番良い電源か」ではなく、「どの制約を、いつ、どの手段で解くか」が実務上の論点になる。
+4. したがって、「何が一番良い電源か」ではなく、「どの制約を、いつ、どの手段で解くか」が計画上の論点になる。
 
 このレポートは、AI 企業、クラウド事業者、電力会社、政策当局の意思決定を助けるために、需要見通し、地域別の送電網制約、PPA、原子力、ガス火力、蓄電を比較する。公表情報からの推定としては、短期は送電網・受電・冷却、 中期は PPA と蓄電、長期は原子力と大規模系統増強が効きやすい。<SourceNote>[IEA, Powering Data Centres in the Age of AI](https://www.iea.org/reports/powering-data-centres-in-the-age-of-ai) と [IEA, Energy and AI](https://www.iea.org/reports/energy-and-ai) は、データセンター需要の増加が電力システム全体の問題だと示している。これは公表情報からの推定であり、公式ロードマップではない。</SourceNote>
 
@@ -67,7 +67,7 @@ IEA のグリッド報告は、送電網の拡張が再エネ、産業電化、�
 
 地域差は大きい。米国では、需要の急増がまず既存の大負荷地域に集中する。特に PJM、Virginia、Texas では、電力需要の伸びがデータセンターの立地と重なりやすく、送電網と変電設備のボトルネックが前面に出る。EIA は、米国の電力需要増のかなりの部分がこうした大規模計算負荷に由来すると見ており、NERC も大規模負荷の接続を信頼度リスクとして扱っている。<SourceNote>[U.S. EIA, electricity demand forecast 2026](https://www.eia.gov/outlooks/steo/) と [NERC, 2025 Long-Term Reliability Assessment](https://www.nerc.com/pa/RAPA/ra/Reliability%20Assessments%20DL/NERC_LTRA_2025.pdf) を参照した。</SourceNote>
 
-日本では、経産省と総務省が進める「ワット・ビット連携」が象徴的である。2025 年の METI 英文発表は、データセンターと通信を一体で考える政策枠組みを示した。2026 年の経産省紹介記事では、データセンターの省エネや立地分散の重要性が改めて強調されている。日本の含意は、電源を単独で増やすより、需要地・通信網・送電線をまとめて設計する必要がある、という点にある。<SourceNote>[METI, Japan and U.S. agreed to launch the AI initiative by the next Leaders' Summit](https://www.meti.go.jp/english/press/2025/0612_001.html) と [ENECHO, データセンターの電力需要](https://www.enecho.meti.go.jp/about/special/johoteikyo/data_center2026.html) を参照した。</SourceNote>
+日本では、経産省と総務省が進める「ワット・ビット連携」が象徴的である。2025 年の METI 英文発表は、データセンターと通信を一体で考える政策枠組みを示した。2026 年の経産省紹介記事では、データセンターの省エネや立地分散の重要性が改めて強調されている。日本での論点は、電源を単独で増やすより、需要地・通信網・送電線をまとめて設計する必要がある、という点にある。<SourceNote>[METI, Japan and U.S. agreed to launch the AI initiative by the next Leaders' Summit](https://www.meti.go.jp/english/press/2025/0612_001.html) と [ENECHO, データセンターの電力需要](https://www.enecho.meti.go.jp/about/special/johoteikyo/data_center2026.html) を参照した。</SourceNote>
 
 欧州では、需要の伸びは米国ほど急ではない地域もあるが、送電容量不足、許認可、立地制約はより早く顕在化しやすい。EU や英国では、新設発電よりもまず、系統増強、需要応答、蓄電、既存負荷との調整が優先されやすい。ここでは各国の電源構成が違うため一枚岩ではないが、「電力があるか」より「接続できるか」が共通の制約である。<SourceNote>[IEA, Electricity 2026](https://www.iea.org/reports/electricity-2026) に基づく地域別の整理である。</SourceNote>
 
@@ -75,7 +75,7 @@ IEA のグリッド報告は、送電網の拡張が再エネ、産業電化、�
 
 ### 5-1. PPA と再エネ
 
-最も実務的なのは、再エネの PPA を使って新規電源を呼び込む方法である。IEA は 2026 年の更新で、データセンター需要の増加分のかなりの部分を再エネが賄う見込みを示し、技術企業が企業向け再エネ PPA の大きな割合を占めると整理した。Google や Microsoft の公開情報も、長期の電力調達契約がデータセンターの成長条件になっていることを裏づける。<SourceNote>[IEA, Data centre electricity use surged in 2025 even with tightening bottlenecks](https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions)、[Google, Responsible energy growth for our data centers](https://blog.google/outreach-initiatives/sustainability/responsible-energy-growth-for-our-data-centers/)、[Microsoft, Carbon negative by 2030 and data center energy procurement](https://blogs.microsoft.com/blog/2026/02/18/a-milestone-achievement-in-our-journey-to-carbon-negative/) を参照した。</SourceNote>
+短中期で有効なのは、再エネの PPA を使って新規電源を呼び込む方法である。IEA は 2026 年の更新で、データセンター需要の増加分のかなりの部分を再エネが賄う見込みを示し、技術企業が企業向け再エネ PPA の大きな割合を占めると整理した。Google や Microsoft の公開情報も、長期の電力調達契約がデータセンターの成長条件になっていることを裏づける。<SourceNote>[IEA, Data centre electricity use surged in 2025 even with tightening bottlenecks](https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions)、[Google, Responsible energy growth for our data centers](https://blog.google/outreach-initiatives/sustainability/responsible-energy-growth-for-our-data-centers/)、[Microsoft, Carbon negative by 2030 and data center energy procurement](https://blogs.microsoft.com/blog/2026/02/18/a-milestone-achievement-in-our-journey-to-carbon-negative/) を参照した。</SourceNote>
 
 ただし、PPA は会計上の再エネ調達を助けても、送電網の物理制約は消さない。電源は契約できても、同じ地域に送る線がなければ動かない。したがって、PPA は必要条件であって十分条件ではない。<SourceNote>[IEA, grids and secure energy transitions](https://www.iea.org/reports/grids-and-secure-energy-transitions) に基づく。</SourceNote>
 

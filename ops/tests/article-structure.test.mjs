@@ -7,10 +7,20 @@ import { test } from 'node:test'
 const placeholderRe = /\b(TBD|TODO|FIXME|未定|要確認)\b/
 
 function gitFiles(patterns) {
-	return execFileSync('git', ['ls-files', ...patterns], { encoding: 'utf8' })
-		.split('\n')
-		.map((line) => line.trim())
-		.filter(Boolean)
+	return [
+		...new Set(
+			execFileSync(
+				'git',
+				['ls-files', '--cached', '--modified', '--others', '--exclude-standard', '--', ...patterns],
+				{
+					encoding: 'utf8'
+				}
+			)
+				.split('\n')
+				.map((line) => line.trim())
+				.filter(Boolean)
+		)
+	]
 }
 
 function frontmatterOf(source, file) {
@@ -171,7 +181,10 @@ test('report headings avoid generic practical-implication labels', () => {
 		/(?:^#{2,6}\s+\d+(?:\.\d+)?\.\s+|"(?:ja|en)":\s*"\d+(?:\.\d+)?\.\s*)(?:実務上の含意|実務的な含意|実務的含意|実務含意|実務への含意|業務への含意|実務上の見方|実務的な読み方|実務的な見方|実務上どう読むべきか|Practical Reading(?: Rules)?|Practical reading|Practical perspective|Practical Takeaways|Practical [Ii]mplications?)(?:"|$)/m
 	const genericPracticalPhraseRe = /実務上の見方は単純/
 
-	for (const file of gitFiles(['articles/report/**/index.mdx', 'articles/report/**/mix-alignment.json'])) {
+	for (const file of gitFiles([
+		'articles/report/**/index.mdx',
+		'articles/report/**/mix-alignment.json'
+	])) {
 		const source = readFileSync(file, 'utf8')
 
 		assert.doesNotMatch(

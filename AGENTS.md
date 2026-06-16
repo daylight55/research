@@ -57,6 +57,10 @@
 - PR本文には、要約、背景・目的、主な変更点、確認したこと、レビュー観点、残課題・フォローアップを含める。
 - PR作成前に、対象差分を確認し、無関係な変更を含めない。
 - ユーザーが明示的に依頼した変更は、作業単位ごとにコミットしてよい。追加確認なしでコミットしてよいが、コミット前に対象差分を確認し、無関係な変更を含めない。
+- ローカル検証はCIが見る状態と一致させる。コミット後・push前にcleanな作業ツリーで `pnpm ci:pr` を実行し、最新の `origin/main` と現在のHEADをmergeしたPR Test workflow相当の状態で `install`、`git diff --check`、`test`、`lint`、changed validators、full mix-alignment、`build` が通ることを確認する。
+- 短時間の修正確認では `pnpm ci:head` や個別テストを使ってよいが、それだけでPR可否を判断しない。GitHubの `pull_request` workflowはhead単体ではなくbase branchとのmerge結果を検証するため、base branchが進んだときは必ず `pnpm ci:pr` で確認する。
+- 新規記事・素材ファイルを追加した直後は、未trackedのまま `git ls-files` 系テストだけを実行してもCI相当にならない。検証前に意図したファイルをstageするか、未trackedも拾う検証コマンドを使い、push後に初めて発覚する状態を作らない。
+- ローカルで通ったのにCIで落ちた場合は、落ちた箇所だけを直して終わらない。CIログ、workflow定義、base/head ref、tracked/untracked差分、依存関係・Node/pnpmバージョン、環境変数、キャッシュ差を比較し、同じ種類の不一致を次回ローカルで検出できるようにテスト、script、AGENTS.md、またはskillへ反映する。
 - 少なくとも `git diff --check` を実行し、Markdown内の未解決プレースホルダ（例: `TBD`, `TODO`, `未定`, `要確認`, `FIXME`）が残っていないことを確認する。
 - push後はPRが最新の `main` とコンフリクトしていないことを確認する。`gh pr view <PR番号> --json mergeable,mergeStateStatus` で `CONFLICTING` / `DIRTY` の場合は、`origin/main` を取り込み、コンフリクトを解消してから再pushする。
 - PR作成後は `gh pr checks <PR番号>` などでCI状態を確認する。失敗、キャンセル、pendingが残る場合は、該当runのログと最新runの状態を確認し、失敗原因を修正またはキャンセル理由を明示してから報告する。

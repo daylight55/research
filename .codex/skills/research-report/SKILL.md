@@ -66,6 +66,10 @@ If the report or digest must appear on the website, top page, category pages, or
 - Write PR titles and bodies in Japanese. Follow `.github/PULL_REQUEST_TEMPLATE.md` without deleting template headings.
 - Before committing, inspect the intended diff and avoid staging unrelated files.
 - At minimum run `git diff --check` and check for unresolved placeholders such as `TBD`, `TODO`, `FIXME`, `未定`, and `要確認`.
+- After committing and before push or PR readiness, run `pnpm ci:pr` from a clean working tree to reproduce the GitHub pull_request Test workflow on a temporary worktree that merges the current HEAD with the latest `origin/main`.
+- Use `pnpm ci:head` or targeted tests only as fast inner-loop checks. Do not treat them as PR-equivalent when `main` may have advanced or when GitHub will test a merge commit.
+- When adding article files, make sure local validation sees the same file set that CI will see. Stage intended new files before relying on `git ls-files`-based checks, or use validators that explicitly include untracked files.
+- If CI fails after local checks passed, treat it as a parity defect. Compare CI logs, workflow commands, base/head refs, tracked versus untracked files, dependency/runtime versions, environment variables, and cache behavior; then update local tests, scripts, or this skill so the same class fails before push next time.
 - If public article content changed, run `pnpm build` and confirm the generated pages listed in Site Visibility.
 - After PR creation, run `gh pr checks <PR_NUMBER>` or equivalent. Investigate failing, cancelled, or pending checks before reporting completion.
 - After push, verify the PR is not conflicting with `main` using `gh pr view <PR_NUMBER> --json mergeable,mergeStateStatus`.
@@ -156,6 +160,7 @@ Before finishing:
 - Diagrams render as Mermaid-compatible Markdown where possible.
 - The article distinguishes evidence from inference.
 - `git diff --check` passes.
+- `pnpm ci:pr` passes before push or PR readiness, especially when the base branch has advanced.
 - Unresolved placeholders such as `TBD`, `TODO`, `FIXME`, `未定`, and `要確認` are absent or intentionally explained outside published prose.
 - If public content changed, `pnpm build` generated the expected report/news/category/home pages and the homepage HTML contains the slug, title, and category link.
 - If creating a PR, the PR title and body are Japanese, follow `.github/PULL_REQUEST_TEMPLATE.md`, CI has been checked, conflicts with `main` have been checked, and final output includes verified PR metadata.

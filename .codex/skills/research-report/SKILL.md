@@ -19,6 +19,8 @@ Use this skill for durable research artifacts in this repository. Follow `AGENTS
 - If the research trail is useful and publishable, summarize it in `articles/<type>/<slug>/ja/research-log.mdx`; add or update the English research log when that route is published.
 - When creating a report, use `ops/codex/templates/blog-entry.mdx` as the frontmatter and body shape.
 - Ensure frontmatter `contentType` matches the directory type when it is present: `report` for `articles/report` and `news` for `articles/news`.
+- Published `index.mdx` frontmatter must record `generation.model: 'gpt-5.4-mini'` exactly. Do not substitute the runtime model name such as `gpt-5`; `ops/tests/article-structure.test.mjs` asserts this fixed metadata contract.
+- Published `research-log.mdx` files must include an environment section with `model: \`gpt-5.4-mini\``, the repo-local skill link, and a prompt source link to `https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md`.
 
 ## Site Visibility
 
@@ -143,6 +145,7 @@ Before finishing:
 - Article files use `articles/(report|news)/<slug>/(ja|en)/(index|research-log|source-notes).mdx`.
 - No duplicate `report.md`, `research-tasks.md`, `notes/`, `sources/`, `figures/`, or `prototype/` material exists under `articles/`.
 - Japanese and English published routes are synchronized.
+- Published article frontmatter and research logs use the CI-required `gpt-5.4-mini` model string, and research logs link to `ops/codex/prompts/daily-issue-research.md`.
 - `mix-alignment.json` is valid when the mixed reading view is maintained.
 - New categories are registered in `src/data/categories.ts`.
 - Reference routes and reference data remain locale-aware and in parity.

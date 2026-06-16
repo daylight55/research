@@ -498,6 +498,600 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 			)
 		}
 	},
+	llm: {
+		ja: {
+			definition:
+				'LLM は、大量のテキストを学習し、自然言語の理解、生成、要約、推論補助などを行う大規模言語モデルです。',
+			background:
+				'Transformer 系の深層学習モデルと大規模データ・計算資源の組み合わせによって、文章生成、質問応答、コード生成、対話型アプリケーションの基盤として使われるようになりました。',
+			position:
+				'RAG、MCP、エージェント、プロンプト設計、ファインチューニング、Knowledge Graph 連携などの中心にある基盤モデル概念です。',
+			distinctions: [
+				'LLM は生成 AI の代表例ですが、生成 AI 全体は画像、音声、動画などの生成モデルも含みます。',
+				'LLM は知識ベースそのものではなく、外部知識を扱うには RAG、ツール接続、メモリ基盤などと組み合わせます。'
+			],
+			sources: [
+				{
+					title: 'What Are Large Language Models (LLMs)? - IBM',
+					url: 'https://www.ibm.com/think/topics/large-language-models',
+					kind: 'reference'
+				},
+				{
+					title: 'AI Demystified: Introduction to large language models, Stanford University IT',
+					url: 'https://uit.stanford.edu/service/techtraining/ai-demystified/llm',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Large language model',
+				url: 'https://en.wikipedia.org/wiki/Large_language_model',
+				reason: 'LLM が large language model を指す AI システム文脈と一致します。'
+			}
+		},
+		en: {
+			definition:
+				'An LLM is a large language model trained on large text corpora to understand, generate, summarize, and transform natural language.',
+			background:
+				'Transformer-based deep learning, large datasets, and large-scale compute made LLMs a foundation for chat interfaces, code generation, question answering, and text automation.',
+			position:
+				'LLMs sit at the center of RAG, MCP, agents, prompting, fine-tuning, and Knowledge Graph-connected applications.',
+			distinctions: [
+				'LLMs are a major form of generative AI, but generative AI also includes image, audio, video, and other model types.',
+				'An LLM is not a knowledge base by itself; retrieval, tools, and memory systems are added when external knowledge is needed.'
+			],
+			sources: [
+				{
+					title: 'What Are Large Language Models (LLMs)? - IBM',
+					url: 'https://www.ibm.com/think/topics/large-language-models',
+					kind: 'reference'
+				},
+				{
+					title: 'AI Demystified: Introduction to large language models, Stanford University IT',
+					url: 'https://uit.stanford.edu/service/techtraining/ai-demystified/llm',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Large language model',
+				url: 'https://en.wikipedia.org/wiki/Large_language_model',
+				reason: 'The article matches LLM as large language model in the AI systems context.'
+			}
+		}
+	},
+	'generative-ai': {
+		ja: {
+			definition:
+				'生成 AI は、テキスト、画像、音声、動画、コードなどの新しいコンテンツを生成できる AI の総称です。',
+			background:
+				'2022 年以降、対話型 LLM や画像生成モデルの普及により、教育、研究、業務、創作、ソフトウェア開発で利用が急速に広がりました。',
+			position:
+				'LLM、RAG、AI エージェント、投資テーマ、教育利用、ナレッジマネジメントの上位カテゴリとして扱います。',
+			distinctions: [
+				'生成 AI は LLM だけを意味せず、画像・音声・動画などの生成モデルも含みます。',
+				'従来の識別・分類・予測中心の AI と比べ、出力として新しいコンテンツを作る点が焦点です。'
+			],
+			sources: [
+				{
+					title: 'AI principles - OECD',
+					url: 'https://www.oecd.org/en/topics/sub-issues/ai-principles.html',
+					kind: 'official'
+				},
+				{
+					title: 'Guidance for generative AI in education and research - UNESCO',
+					url: 'https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Generative artificial intelligence',
+				url: 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence',
+				reason: '生成 AI の技術カテゴリを扱う記事で、LLM だけでない広い概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Generative AI is a category of AI systems that can create new content such as text, images, audio, video, and code.',
+			background:
+				'Since 2022, chat-based LLMs and image generation models accelerated adoption in education, research, business workflows, creative work, and software development.',
+			position:
+				'It is the umbrella category around LLMs, RAG, AI agents, investment themes, education use, and knowledge management.',
+			distinctions: [
+				'Generative AI is broader than LLMs and includes image, audio, video, and other generative model families.',
+				'Compared with AI focused on classification or prediction, the defining point is creating new content.'
+			],
+			sources: [
+				{
+					title: 'AI principles - OECD',
+					url: 'https://www.oecd.org/en/topics/sub-issues/ai-principles.html',
+					kind: 'official'
+				},
+				{
+					title: 'Guidance for generative AI in education and research - UNESCO',
+					url: 'https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Generative artificial intelligence',
+				url: 'https://en.wikipedia.org/wiki/Generative_artificial_intelligence',
+				reason: 'The article matches generative AI as the broad technology category, not only LLMs.'
+			}
+		}
+	},
+	'knowledge-management': {
+		ja: {
+			definition:
+				'Knowledge Management は、組織内の情報と知識が必要な人へ適切なタイミングで届くよう、作成、共有、再利用、学習を設計する実践です。',
+			background:
+				'APQC などの実務知では、KM は単なる文書管理ではなく、人、プロセス、技術、文化を組み合わせて知識の流れを改善する取り組みとして扱われます。',
+			position:
+				'暗黙知、形式知、SECI、AI 要約、RAG、企業内ナレッジ基盤を接続する実務寄りの上位概念です。',
+			distinctions: [
+				'Knowledge Management はツール導入だけではなく、組織の行動、業務プロセス、共有文化を含みます。',
+				'単なる検索システムや社内 Wiki ではなく、知識が使われ続ける仕組み全体を扱います。'
+			],
+			sources: [
+				{
+					title: 'What is Knowledge Management (KM)? - APQC',
+					url: 'https://www.apqc.org/expertise/whatisknowledgemanagement',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Knowledge management',
+				url: 'https://en.wikipedia.org/wiki/Knowledge_management',
+				reason: '組織における知識の作成・共有・利用を扱う概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Knowledge Management is the practice of designing how information and knowledge are created, shared, reused, and learned from across an organization.',
+			background:
+				'APQC frames KM as more than document management: it combines people, process, technology, and culture so knowledge flows to the right people at the right time.',
+			position:
+				'It connects tacit knowledge, explicit knowledge, SECI, AI summarization, RAG, and enterprise knowledge systems.',
+			distinctions: [
+				'Knowledge Management is not just tool deployment; it includes organizational behavior, process, and culture.',
+				'It is broader than search or an internal wiki because it concerns whether knowledge is reused in practice.'
+			],
+			sources: [
+				{
+					title: 'What is Knowledge Management (KM)? - APQC',
+					url: 'https://www.apqc.org/expertise/whatisknowledgemanagement',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Knowledge management',
+				url: 'https://en.wikipedia.org/wiki/Knowledge_management',
+				reason: 'The article matches the organizational practice of creating, sharing, and using knowledge.'
+			}
+		}
+	},
+	'second-language-acquisition': {
+		ja: {
+			definition:
+				'Second Language Acquisition は、母語以外の言語をどのように習得するかを扱う応用言語学・認知科学上の研究領域です。',
+			background:
+				'学習者の入力、相互作用、気づき、タスク、年齢、動機づけ、認知過程などを通じて、第二言語がどのように発達するかを説明します。',
+			position:
+				'英語学習、タスク型言語教育、noticing、認知スキーマ更新、生成 AI を使った学習支援を理解する基礎概念です。',
+			distinctions: [
+				'Second Language Acquisition は単なる語学勉強法ではなく、習得過程を説明する研究領域です。',
+				'外国語教育と重なりますが、教育技法だけでなく認知・社会・相互作用の過程も扱います。'
+			],
+			sources: [
+				{
+					title: 'Language acquisition - Britannica',
+					url: 'https://www.britannica.com/topic/language-acquisition',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Second-language acquisition',
+				url: 'https://en.wikipedia.org/wiki/Second-language_acquisition',
+				reason: 'SLA と呼ばれる第二言語習得研究の概念に一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Second Language Acquisition is the field that studies how people acquire a language other than their first language.',
+			background:
+				'It examines input, interaction, noticing, tasks, age, motivation, and cognitive processes to explain how second-language ability develops.',
+			position:
+				'It provides the foundation for discussions of English learning, task-based language teaching, noticing, cognitive schema updates, and generative AI-assisted learning.',
+			distinctions: [
+				'Second Language Acquisition is a research field, not merely a set of language-study tips.',
+				'It overlaps language teaching but also studies cognitive, social, and interactional acquisition processes.'
+			],
+			sources: [
+				{
+					title: 'Language acquisition - Britannica',
+					url: 'https://www.britannica.com/topic/language-acquisition',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Second-language acquisition',
+				url: 'https://en.wikipedia.org/wiki/Second-language_acquisition',
+				reason: 'The article matches second-language acquisition as the SLA research field.'
+			}
+		}
+	},
+	'ai-infrastructure': {
+		ja: {
+			definition:
+				'AI Infrastructure は、AI モデルの学習・推論・配備を支える計算資源、データセンター、電力、冷却、ネットワーク、ストレージ、運用基盤の総称です。',
+			background:
+				'生成 AI の普及により、高密度サーバー、GPU/アクセラレータ、電力供給、冷却、データセンター立地が AI 産業の制約条件として注目されるようになりました。',
+			position:
+				'半導体、データセンター、電力、クラウド、投資テーマをつなぐインフラ側の上位概念です。',
+			distinctions: [
+				'AI Infrastructure はモデルやアプリケーションそのものではなく、それらを動かす物理・クラウド・運用基盤です。',
+				'GPU だけでなく、電力、冷却、ネットワーク、ストレージ、デプロイ基盤まで含みます。'
+			],
+			sources: [
+				{
+					title: 'Energy demand from AI - IEA',
+					url: 'https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai',
+					kind: 'official'
+				},
+				{
+					title: 'Uptime Institute Global Data Center Survey 2024',
+					url: 'https://datacenter.uptimeinstitute.com/rs/711-RIA-145/images/2024.GlobalDataCenterSurvey.Report.pdf',
+					kind: 'reference'
+				}
+			],
+			wikipedia: wikipediaUnverified(
+				'AI Infrastructure 全体を対象にした検証済みの単一 Wikipedia 記事は未確認です。'
+			)
+		},
+		en: {
+			definition:
+				'AI Infrastructure is the compute, data center, power, cooling, networking, storage, and operations foundation needed to train, serve, and deploy AI models.',
+			background:
+				'Generative AI made high-density servers, accelerators, power supply, cooling, and data center location central constraints for the AI industry.',
+			position:
+				'It connects semiconductors, data centers, power, cloud platforms, and AI investment themes.',
+			distinctions: [
+				'AI Infrastructure is not the model or application itself; it is the physical, cloud, and operational base that runs them.',
+				'It includes more than GPUs: power, cooling, networking, storage, and deployment operations also matter.'
+			],
+			sources: [
+				{
+					title: 'Energy demand from AI - IEA',
+					url: 'https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai',
+					kind: 'official'
+				},
+				{
+					title: 'Uptime Institute Global Data Center Survey 2024',
+					url: 'https://datacenter.uptimeinstitute.com/rs/711-RIA-145/images/2024.GlobalDataCenterSurvey.Report.pdf',
+					kind: 'reference'
+				}
+			],
+			wikipedia: wikipediaUnverified(
+				'No verified single Wikipedia article represents AI Infrastructure as the full compute, data center, power, and operations concept.'
+			)
+		}
+	},
+	'data-centers': {
+		ja: {
+			definition:
+				'Data Centers は、サーバー、ストレージ、ネットワーク、電源、冷却、物理セキュリティを集約し、デジタルサービスを稼働させる施設です。',
+			background:
+				'クラウド、AI、動画配信、金融、企業 IT の拡大により、データセンターは電力需要、冷却、地域インフラ、災害耐性の観点から重要性が増しています。',
+			position:
+				'AI Infrastructure、電力、冷却、半導体、クラウド投資を結びつける物理インフラの中核です。',
+			distinctions: [
+				'Data Centers は単なるサーバールームではなく、冗長電源、冷却、ネットワーク、運用監視を備えた施設です。',
+				'AI データセンターでは通常の IT 負荷より高い電力密度や冷却要件が問題になりやすくなります。'
+			],
+			sources: [
+				{
+					title: 'Uptime Institute Global Data Center Survey 2024',
+					url: 'https://datacenter.uptimeinstitute.com/rs/711-RIA-145/images/2024.GlobalDataCenterSurvey.Report.pdf',
+					kind: 'reference'
+				},
+				{
+					title: 'Energy demand from AI - IEA',
+					url: 'https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Data center',
+				url: 'https://en.wikipedia.org/wiki/Data_center',
+				reason: 'データセンター施設の一般概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Data centers are facilities that house servers, storage, networking, power, cooling, and physical security for running digital services.',
+			background:
+				'Cloud computing, AI, streaming, finance, and enterprise IT have made data centers important for power demand, cooling, regional infrastructure, and resilience.',
+			position:
+				'They are the physical infrastructure core connecting AI Infrastructure, power, cooling, semiconductors, and cloud investment.',
+			distinctions: [
+				'Data centers are more than server rooms; they include redundant power, cooling, networking, operations, and monitoring.',
+				'AI data centers often raise higher-density power and cooling issues than conventional IT workloads.'
+			],
+			sources: [
+				{
+					title: 'Uptime Institute Global Data Center Survey 2024',
+					url: 'https://datacenter.uptimeinstitute.com/rs/711-RIA-145/images/2024.GlobalDataCenterSurvey.Report.pdf',
+					kind: 'reference'
+				},
+				{
+					title: 'Energy demand from AI - IEA',
+					url: 'https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Data center',
+				url: 'https://en.wikipedia.org/wiki/Data_center',
+				reason: 'The article matches the general facility concept of data centers.'
+			}
+		}
+	},
+	semiconductors: {
+		ja: {
+			definition:
+				'Semiconductors は、導体と絶縁体の中間的な電気的性質を持つ材料や、それを使った集積回路・チップを指す用語です。',
+			background:
+				'現代の計算機、スマートフォン、AI アクセラレータ、メモリ、通信機器は半導体デバイスに依存しており、産業政策や地政学の焦点にもなっています。',
+			position:
+				'AI Infrastructure、NAND、SSD、データセンター、台湾情勢、クラウド投資を理解する基礎概念です。',
+			distinctions: [
+				'材料としての semiconductor と、産業上の semiconductor chips は文脈により指す範囲が異なります。',
+				'NAND や GPU は半導体デバイスの具体例であり、Semiconductors はそれらを含む上位概念です。'
+			],
+			sources: [
+				{
+					title: 'Semiconductor Industry Association',
+					url: 'https://www.semiconductors.org/',
+					kind: 'official'
+				},
+				{
+					title: 'Semiconductor - Britannica',
+					url: 'https://www.britannica.com/science/semiconductor',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Semiconductor',
+				url: 'https://en.wikipedia.org/wiki/Semiconductor',
+				reason: '半導体材料・デバイスの基礎概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Semiconductors are materials with electrical conductivity between conductors and insulators, and the term also commonly refers to chips built from such materials.',
+			background:
+				'Modern computers, phones, AI accelerators, memory, and communications equipment depend on semiconductor devices, making them central to industrial policy and geopolitics.',
+			position:
+				'They are foundational for AI Infrastructure, NAND, SSDs, data centers, Taiwan-related supply chains, and cloud investment.',
+			distinctions: [
+				'The material meaning of semiconductor and the industry meaning of semiconductor chips differ by context.',
+				'NAND and GPUs are specific semiconductor devices; Semiconductors is the broader category.'
+			],
+			sources: [
+				{
+					title: 'Semiconductor Industry Association',
+					url: 'https://www.semiconductors.org/',
+					kind: 'official'
+				},
+				{
+					title: 'Semiconductor - Britannica',
+					url: 'https://www.britannica.com/science/semiconductor',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Semiconductor',
+				url: 'https://en.wikipedia.org/wiki/Semiconductor',
+				reason: 'The article matches the basic material and device concept.'
+			}
+		}
+	},
+	'international-humanitarian-law': {
+		ja: {
+			definition:
+				'International Humanitarian Law は、武力紛争の影響を人道上の理由から制限し、戦闘に参加していない人や負傷者などを保護する国際法の体系です。',
+			background:
+				'ジュネーブ諸条約と追加議定書を中心に、戦争の方法・手段、捕虜、文民、負傷者、医療施設などの保護を定めます。',
+			position:
+				'地雷、民間人保護、戦争被害、停戦、占領、武力紛争下の責任を理解するための法的基盤です。',
+			distinctions: [
+				'International Humanitarian Law は武力紛争中のルールであり、人権法とは重なりつつも適用場面が異なります。',
+				'戦争を合法化する概念ではなく、紛争下でも越えてはならない制約を定めるものです。'
+			],
+			sources: [
+				{
+					title: 'What is International Humanitarian Law? - ICRC',
+					url: 'https://www.icrc.org/sites/default/files/document/file_list/what-is-ihl-factsheet.pdf',
+					kind: 'official'
+				},
+				{
+					title: 'The Geneva Conventions and their Commentaries - ICRC',
+					url: 'https://www.icrc.org/en/law-and-policy/geneva-conventions-and-their-commentaries',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'International humanitarian law',
+				url: 'https://en.wikipedia.org/wiki/International_humanitarian_law',
+				reason: '武力紛争下の人道法体系として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'International Humanitarian Law is the body of international law that limits the effects of armed conflict and protects people who are not or are no longer taking part in hostilities.',
+			background:
+				'Centered on the Geneva Conventions and their Additional Protocols, it regulates means and methods of warfare and protects civilians, prisoners, wounded people, and medical services.',
+			position:
+				'It is the legal foundation for understanding landmines, civilian protection, war harm, ceasefires, occupation, and responsibility during armed conflict.',
+			distinctions: [
+				'International Humanitarian Law governs armed conflict; human rights law overlaps but has a different scope and legal structure.',
+				'It does not legitimize war; it sets limits that still apply during conflict.'
+			],
+			sources: [
+				{
+					title: 'What is International Humanitarian Law? - ICRC',
+					url: 'https://www.icrc.org/sites/default/files/document/file_list/what-is-ihl-factsheet.pdf',
+					kind: 'official'
+				},
+				{
+					title: 'The Geneva Conventions and their Commentaries - ICRC',
+					url: 'https://www.icrc.org/en/law-and-policy/geneva-conventions-and-their-commentaries',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'International humanitarian law',
+				url: 'https://en.wikipedia.org/wiki/International_humanitarian_law',
+				reason: 'The article matches the legal body governing armed conflict for humanitarian reasons.'
+			}
+		}
+	},
+	'monetary-policy': {
+		ja: {
+			definition:
+				'Monetary Policy は、中央銀行が物価安定や雇用・経済活動の安定を目的に、政策金利、資金供給、資産買入れなどを通じて金融環境を調整する政策です。',
+			background:
+				'日本銀行、FRB、ECB などの中央銀行は、それぞれの法的使命と経済環境に応じて、金利、量的緩和、フォワードガイダンスなどを使います。',
+			position:
+				'金利、住宅ローン、為替、物価、賃金、国債、財政との関係を理解する基礎概念です。',
+			distinctions: [
+				'Monetary Policy は中央銀行の政策であり、政府の歳出・税制を扱う Fiscal Policy とは異なります。',
+				'金利操作だけでなく、資産買入れ、準備預金、コミュニケーション政策も含みます。'
+			],
+			sources: [
+				{
+					title: 'Outline of Monetary Policy - Bank of Japan',
+					url: 'https://www.boj.or.jp/en/mopo/outline/index.htm',
+					kind: 'official'
+				},
+				{
+					title: 'Monetary Policy Strategies of Major Central Banks - Federal Reserve',
+					url: 'https://www.federalreserve.gov/monetarypolicy/monetary-policy-strategies-of-major-central-banks.htm',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Monetary policy',
+				url: 'https://en.wikipedia.org/wiki/Monetary_policy',
+				reason: '中央銀行による金融政策の一般概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Monetary Policy is central-bank policy that adjusts financial conditions through interest rates, liquidity, asset purchases, and communication to support price stability and economic objectives.',
+			background:
+				'Central banks such as the Bank of Japan, the Federal Reserve, and the ECB use tools such as policy rates, quantitative easing, and forward guidance according to their mandates and economic conditions.',
+			position:
+				'It is foundational for understanding interest rates, mortgages, exchange rates, inflation, wages, government bonds, and fiscal interactions.',
+			distinctions: [
+				'Monetary Policy is central-bank policy; Fiscal Policy concerns government spending and taxation.',
+				'It includes more than interest-rate moves, such as asset purchases, reserves, and policy communication.'
+			],
+			sources: [
+				{
+					title: 'Outline of Monetary Policy - Bank of Japan',
+					url: 'https://www.boj.or.jp/en/mopo/outline/index.htm',
+					kind: 'official'
+				},
+				{
+					title: 'Monetary Policy Strategies of Major Central Banks - Federal Reserve',
+					url: 'https://www.federalreserve.gov/monetarypolicy/monetary-policy-strategies-of-major-central-banks.htm',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Monetary policy',
+				url: 'https://en.wikipedia.org/wiki/Monetary_policy',
+				reason: 'The article matches monetary policy as the general central-bank policy concept.'
+			}
+		}
+	},
+	newsql: {
+		ja: {
+			definition:
+				'NewSQL は、リレーショナルデータベースの SQL とトランザクション性を保ちながら、分散システムとして水平スケールや高可用性を目指すデータベース分類です。',
+			background:
+				'クラウドや大規模アプリケーションで、従来の RDBMS の整合性と NoSQL 系のスケール特性を両立したい需要から注目されました。',
+			position:
+				'Distributed SQL、PostgreSQL 互換、YugabyteDB、CockroachDB、クラウドネイティブなデータ基盤を理解する上位概念です。',
+			distinctions: [
+				'NewSQL は特定製品名ではなく、分散 SQL データベースの設計思想・分類です。',
+				'NoSQL と違い、SQL、スキーマ、ACID トランザクションとの互換性を重視することが多いです。'
+			],
+			sources: [
+				{
+					title: 'Distributed SQL - Cockroach Labs',
+					url: 'https://www.cockroachlabs.com/glossary/distributed-db/distributed-sql/',
+					kind: 'reference'
+				},
+				{
+					title: 'YugabyteDB vs CockroachDB',
+					url: 'https://www.yugabyte.com/yugabytedb-vs-cockroachdb/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'NewSQL',
+				url: 'https://en.wikipedia.org/wiki/NewSQL',
+				reason: 'SQL と分散スケールを組み合わせるデータベース分類として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'NewSQL is a database category that aims to preserve SQL and relational transaction semantics while adding horizontal scale and high availability through distributed systems.',
+			background:
+				'It emerged from demand for combining traditional RDBMS consistency with scale characteristics associated with cloud and large-scale applications.',
+			position:
+				'It frames Distributed SQL, PostgreSQL compatibility, YugabyteDB, CockroachDB, and cloud-native data infrastructure.',
+			distinctions: [
+				'NewSQL is not a single product name; it is a design category for distributed SQL databases.',
+				'Unlike many NoSQL systems, NewSQL usually emphasizes SQL, schemas, and ACID transaction compatibility.'
+			],
+			sources: [
+				{
+					title: 'Distributed SQL - Cockroach Labs',
+					url: 'https://www.cockroachlabs.com/glossary/distributed-db/distributed-sql/',
+					kind: 'reference'
+				},
+				{
+					title: 'YugabyteDB vs CockroachDB',
+					url: 'https://www.yugabyte.com/yugabytedb-vs-cockroachdb/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'NewSQL',
+				url: 'https://en.wikipedia.org/wiki/NewSQL',
+				reason: 'The article matches NewSQL as the database category combining SQL and distributed scale.'
+			}
+		}
+	},
 	'oauth-2.1': {
 		ja: {
 			definition:

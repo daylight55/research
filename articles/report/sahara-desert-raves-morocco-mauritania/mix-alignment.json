@@ -55,6 +55,18 @@
 					"en": "It is that conservative Islamic social norms, tourism, youth culture, European free-party culture, and Gnawa/Sufi musical traditions meet in the same social space."
 				},
 				{
+					"ja": "イスラム神秘主義は独立宗派というより、イスラム内部の霊性の伝統である。",
+					"en": "Islamic mysticism, usually called Sufism in English and taṣawwuf in Arabic, is better read as a spiritual tradition within Islam than as a separate sect parallel to Sunni and Shia Islam."
+				},
+				{
+					"ja": "本稿の論点は、Sufi教団が砂漠レイブを主催するという話ではない。",
+					"en": "For this report, the point is not that Sufi orders organize desert raves."
+				},
+				{
+					"ja": "Gnawaが反復リズム、トランス、治癒儀礼を通じて電子音楽文化と響き合う。",
+					"en": "It is that Gnawa, described as Sufi brotherhood music, creates a cultural bridge through repeated rhythm, all-night bodily experience, trance, healing ritual, and sacred/secular overlap that can resonate with world music, electronic music, and rave culture."
+				},
+				{
 					"ja": "地雷、鉄道、紛争は重要だが本稿の中心ではない。",
 					"en": "Landmines, the Mauritanian iron-ore railway, and the Western Sahara conflict matter, but they are not the central subject of this report."
 				},
@@ -139,10 +151,59 @@
 			]
 		},
 		{
+			"id": "sufism",
+			"heading": {
+				"ja": "4. イスラム神秘主義とは何か",
+				"en": "4. What Is Islamic Mysticism?"
+			},
+			"pairs": [
+				{
+					"ja": "イスラム神秘主義はSufismまたはtaṣawwufと呼ばれる。",
+					"en": "Islamic mysticism is usually called Sufism in English and taṣawwuf in Arabic."
+				},
+				{
+					"ja": "Sufismはスンニ派やシーア派と並ぶ宗派ではない。",
+					"en": "For this report, Sufism should not be read as a sect parallel to Sunni and Shia Islam."
+				},
+				{
+					"ja": "イスラム内部の修行、制度、身体実践として読むのがよい。",
+					"en": "It is better read as a set of spiritual disciplines, institutions, and embodied practices within Islam."
+				},
+				{
+					"ja": "モロッコ文脈では抽象的なSufismよりGnawaが重要である。",
+					"en": "In the Moroccan context, the most relevant bridge is not abstract Sufism but Gnawa."
+				},
+				{
+					"ja": "UNESCOはGnawaをSufi brotherhood musicと説明する。",
+					"en": "UNESCO describes Gnawa as Sufi brotherhood music and notes all-night rhythm and trance healing ceremonies in which ancestral African practices and Islamic saint veneration overlap."
+				},
+				{
+					"ja": "Sufismとレイブの接点は間接的である。",
+					"en": "The Sufism-rave link is therefore indirect."
+				},
+				{
+					"ja": "Sufi教団が砂漠レイブを主催している証拠ではない。",
+					"en": "It is not evidence that Sufi orders organize desert raves."
+				},
+				{
+					"ja": "接点は反復リズム、夜通しの身体経験、トランス、聖俗境界にある。",
+					"en": "The connection lies in repeated rhythm, all-night collective bodily experience, trance, sacred/secular boundary work, and the relocation of ritual aesthetics into tourism, world music, and electronic-music festival settings."
+				},
+				{
+					"ja": "Gnaoua FestivalやMOGAはGnawa遺産と電子音楽が同じフェス空間を共有できることを示す。",
+					"en": "Essaouira's Gnaoua and World Music Festival and MOGA-style electronic festival contexts show how Gnawa heritage and electronic/world music can share festival space."
+				},
+				{
+					"ja": "それはTransaharaなどが宗教的に主導される証明ではない。",
+					"en": "They do not prove that Transahara or similar desert raves are religiously led."
+				}
+			]
+		},
+		{
 			"id": "religious-relevance",
 			"heading": {
-				"ja": "4. レイブと宗教の関係",
-				"en": "4. How Raves and Religion Intersect"
+				"ja": "5. レイブと宗教の関係",
+				"en": "5. How Raves and Religion Intersect"
 			},
 			"pairs": [
 				{
@@ -162,6 +223,22 @@
 					"en": "Third, musical tradition: UNESCO describes Gnawa as Sufi brotherhood music tied to therapeutic ritual and performance, which should not be collapsed into electronic dance festivals."
 				},
 				{
+					"ja": "つながりは主催者系譜ではなく形式・市場・象徴で見る。",
+					"en": "The connection should be framed through form, market, and symbol rather than institutional lineage."
+				},
+				{
+					"ja": "形式としては反復リズムと長時間の身体的没入がある。",
+					"en": "At the level of form, both Gnawa trance practice and rave culture can rely on repeated rhythm and long bodily immersion."
+				},
+				{
+					"ja": "市場としてはGnawa音楽がworld musicや観光やフェス空間へ移動している。",
+					"en": "At the level of market, sacred Gnawa music has moved into world music, tourism, and festival spaces."
+				},
+				{
+					"ja": "これらは類似性と再文脈化であり、Sufi儀礼との同一視ではない。",
+					"en": "These are similarities and recontextualizations, not evidence that a desert rave is a Sufi ritual."
+				},
+				{
 					"ja": "『Sirât』の宗教性は別である。",
 					"en": "The religious frame of Sirât is different."
 				},
@@ -174,8 +251,8 @@
 		{
 			"id": "practical-reading",
 			"heading": {
-				"ja": "5. 砂漠レイブを読む実務上の注意",
-				"en": "5. Practical Reading"
+				"ja": "6. 砂漠レイブを読む実務上の注意",
+				"en": "6. Practical Reading"
 			},
 			"pairs": [
 				{

@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "6月16日は、米国の州・市レベルの投票が集中し、原油安が市場を支える一方で、AI規制とゼロデイ対応が同時進行した。",
+      "en": "June 16 is a day of clustered state and city voting in the U.S., with cheaper oil supporting markets even as AI rules and zero-day response move in parallel."
+    },
+    {
+      "ja": "政治は投票日、経済はエネルギーと景気、技術は安全保障と障害対応が主軸だ。",
+      "en": "Politics is about election day, the economy is about energy and demand, and technology is being shaped by security and service reliability."
+    },
+    {
+      "ja": "アラバマ州の決選は、上院候補指名と州内の争いを一気に絞る。",
+      "en": "The bottom line: Alabama's runoff is a test of both Senate nominations and statewide power."
+    },
+    {
+      "ja": "APは、上院選と州内の複数レースが注目されると整理した。",
+      "en": "AP framed the race as one of the day’s most consequential primary contests."
+    },
+    {
+      "ja": "ジョージア州では、党内の主導権争いが本選の土台を左右する。",
+      "en": "The bottom line: Georgia's runoff is really a fight over who owns the party base."
+    },
+    {
+      "ja": "APは、投票と動員の差が結果を分けると伝えた。",
+      "en": "AP said the turnout gap and candidate alignment are likely to matter most."
+    },
+    {
+      "ja": "カリフォルニア14区の特別予備選は、下院の空席争いを前進させる。",
+      "en": "The bottom line: California's 14th district special primary moves a House vacancy one step closer to resolution."
+    },
+    {
+      "ja": "州の公式選挙案内が、投票手続きと日程の前提を示す。",
+      "en": "The state election page gives the official voting and timing baseline."
+    },
+    {
+      "ja": "オクラホマ州の予備選は、州内の政策争点を一気に可視化する。",
+      "en": "The bottom line: Oklahoma's primary turns policy questions into a live test of voter priorities."
+    },
+    {
+      "ja": "州選管の案内は、当日の投票導線を確認する基礎になる。",
+      "en": "The state board's guidance anchors the official voting process."
+    },
+    {
+      "ja": "D.C.の予備選と特別選挙は、制度の違いそのものが争点になる。",
+      "en": "The bottom line: Washington, DC's primary and special election make the system itself part of the story."
+    },
+    {
+      "ja": "APは、選挙区ごとの動員差が結果を左右すると報じた。",
+      "en": "AP said local turnout gaps could swing the result."
+    },
+    {
+      "ja": "原油安が、インフレ懸念より先に株式市場を押し上げた。",
+      "en": "The bottom line: Cheaper oil moved markets faster than inflation fears did."
+    },
+    {
+      "ja": "市場は、供給不安の後退を先に織り込んでいる。",
+      "en": "Markets are treating the supply shift as the first-order signal."
+    },
+    {
+      "ja": "世界経済の底上げは、まだエネルギーと地政学に縛られている。",
+      "en": "The bottom line: The global growth floor is still pinned by energy and geopolitics."
+    },
+    {
+      "ja": "足元の改善より、下振れリスクの大きさが目立つ。",
+      "en": "The near-term story is still about downside risk."
+    },
+    {
+      "ja": "ガソリン安は、家計の気分を少しだけ持ち上げた。",
+      "en": "The bottom line: Lower gas prices gave household mood a modest lift."
+    },
+    {
+      "ja": "改善幅はまだ限定的だ。",
+      "en": "The move is still limited, not a full rebound."
+    },
+    {
+      "ja": "中央銀行は、原油ショックの持続性を見極めるまで動きにくい。",
+      "en": "The bottom line: Central banks are not moving until they know the oil shock is durable."
+    },
+    {
+      "ja": "市場は、原油安がすぐ政策変更につながるとは見ていない。",
+      "en": "Markets do not expect an immediate policy shift."
+    },
+    {
+      "ja": "SpaceXの値付けは、上場後も需要と供給の綱引きが続く。",
+      "en": "The bottom line: SpaceX is still being priced through a tug of war between demand and supply."
+    },
+    {
+      "ja": "投資家は、流通株式の薄さとロックアップの先を見ている。",
+      "en": "Traders are already looking ahead to the thin float and the lockup."
+    },
+    {
+      "ja": "Anthropicの扱いは、AI安全保障が事業運営に直結する段階に入った。",
+      "en": "The bottom line: Anthropic is now a case study in how AI safety can reshape operations."
+    },
+    {
+      "ja": "業界では、研究と配備の境界をどこに置くかが再び争点になっている。",
+      "en": "The debate is now about governance, not just capability."
+    },
+    {
+      "ja": "Appleは、Siriを単なる音声操作から実用AIの入口へ押し上げようとしている。",
+      "en": "The bottom line: Apple wants Siri to become a practical AI entry point, not just a voice command layer."
+    },
+    {
+      "ja": "狙いは、会話・検索・実行を一体化することだ。",
+      "en": "The goal is to make conversation, search, and action feel like one flow."
+    },
+    {
+      "ja": "Geminiの障害は、AIサービスも通常のクラウド同様に止まることを示した。",
+      "en": "The bottom line: Gemini's outage showed that AI services can fail like any other cloud product."
+    },
+    {
+      "ja": "UI上の不具合だけでなく、API利用にも波及しうる。",
+      "en": "The impact is not just on the app, but also on API workflows."
+    },
+    {
+      "ja": "VPNの脆弱性対応は、もはや数時間単位の競争になっている。",
+      "en": "The bottom line: VPN vulnerability response is now a race measured in hours, not days."
+    },
+    {
+      "ja": "CISAの緊急対応圧力も高い。",
+      "en": "CISA pressure for immediate action is part of the story."
+    },
+    {
+      "ja": "Oracle PeopleSoftの侵害は、古い業務基盤が今も高価値標的であることを示した。",
+      "en": "The bottom line: Oracle PeopleSoft is still a high-value target because old enterprise systems hold fresh data."
+    },
+    {
+      "ja": "ShinyHunters系とみられるデータ窃取の動きも警戒されている。",
+      "en": "The apparent ShinyHunters-style data theft pattern keeps the pressure on."
+    },
+    {
+      "ja": "米国の選挙は、州ごとの制度差よりも投票率と動員の差が結果を左右する局面に入っている。",
+      "en": "Election-day politics in the U.S. is increasingly about turnout and mobilization rather than only procedural rules."
+    },
+    {
+      "ja": "原油安は市場に安心感を与えたが、中銀がすぐに動けない以上、景気への効き方は遅れて表れる可能性がある。",
+      "en": "Cheaper oil lifted markets quickly, but the central bank response will lag until officials decide whether the move is durable."
+    },
+    {
+      "ja": "AIは機能競争だけでなく、制限、停止、監査の対象として見られるようになった。",
+      "en": "AI is being judged not only by capability but also by restrictions, outages, and security controls."
+    },
+    {
+      "ja": "大型未上場テックと基幹システムの双方で、資本効率よりも運用の安定性が評価軸になりやすい。",
+      "en": "Large private tech and legacy enterprise systems are both being priced on operational reliability, not just growth narratives."
+    },
+    {
+      "ja": "サイバー侵害は、IT部門の障害から経営判断の前提条件へと完全に格上げされた。",
+      "en": "Cyber incidents have moved from IT problems to board-level and procurement-level decisions."
+    },
+    {
+      "ja": "アラバマ、ジョージア、カリフォルニア、オクラホマ、D.C.の結果が、どの州で予想外の投票率差を生むか。",
+      "en": "Whether the Alabama, Georgia, California, Oklahoma, and DC results produce any turnout surprise."
+    },
+    {
+      "ja": "原油安が1日で戻るのか、地政学リスクの再燃で市場が逆回転するのか。",
+      "en": "Whether oil prices stay low long enough to change freight, fuel, and inflation expectations."
+    },
+    {
+      "ja": "Anthropic、Apple、GoogleのAI戦略が、実装・制限・障害対応のどこに重心を置くのか。",
+      "en": "Whether Anthropic, Apple, and Google emphasize delivery, control, or resilience in the next round of AI announcements."
+    },
+    {
+      "ja": "Check Point と Oracle の被害が、どこまで横展開し、どれだけ追加の通知や再点検を呼ぶか。",
+      "en": "Whether the Check Point and Oracle incidents trigger more disclosures, more revalidation, and wider follow-up patching."
+    }
+  ]
+}

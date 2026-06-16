@@ -25,3 +25,31 @@ test('publication workflow defines test-gated auto-merge policy', async () => {
 	assert.match(template, /自動マージしてよい/)
 	assert.match(template, /自動マージしない/)
 })
+
+test('local PR CI parity command mirrors the GitHub pull_request test workflow', async () => {
+	const packageJson = JSON.parse(await readFile('package.json', 'utf8'))
+	const script = await readFile('ops/scripts/run-pr-ci-locally.sh', 'utf8')
+
+	assert.equal(packageJson.scripts['ci:pr'], 'bash ops/scripts/run-pr-ci-locally.sh')
+	assert.equal(
+		packageJson.scripts['ci:head'],
+		'git diff --check && pnpm test && pnpm lint && pnpm build'
+	)
+
+	for (const command of [
+		'git status --porcelain',
+		'git fetch origin "${base_branch}"',
+		'git worktree add --detach "${worktree_dir}" "${head_ref}"',
+		'git merge --no-edit "${base_ref}"',
+		'pnpm install --frozen-lockfile',
+		'git diff --check',
+		'pnpm test',
+		'pnpm lint',
+		'node ops/scripts/validate-news-item-format.mjs --changed "${base_ref}...HEAD"',
+		'node ops/scripts/validate-mix-alignment.mjs --changed "${base_ref}...HEAD"',
+		'node ops/scripts/validate-mix-alignment.mjs',
+		'pnpm build'
+	]) {
+		assert.ok(script.includes(command), `local PR CI script should include: ${command}`)
+	}
+})

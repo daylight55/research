@@ -30,6 +30,8 @@
 - PRプレビューは既定では作成しない。プレビュー表示を明示的に求められた場合だけ、現在のデプロイ方式に合わせて一時的な確認手段を用意する。
 - 日英対応では、日本語を正本として扱い、公開される記事・reference・導線を更新する場合は同じPRで英語側も同期する。翻訳レビューなどテストで規定できない人手確認が残る場合は、自動マージせず残課題として明記する。
 - `articles/report/<slug>/ja/index.mdx` または `articles/news/<slug>/ja/index.mdx` を追加・更新した場合は、対応する `articles/report/<slug>/en/index.mdx` または `articles/news/<slug>/en/index.mdx` も追加・更新する。英語生成を別ジョブに回す場合も、PR内で同期状態をテストし、未生成のまま公開導線だけ増やさない。
+- 公開記事のfrontmatter `generation.model` と、公開する `research-log.mdx` の利用環境 `model` は、CI契約として必ず `gpt-5.4-mini` と書く。実行時の実モデル名をそのまま書かない。`ops/tests/article-structure.test.mjs` がこの文字列を検査しているため、`gpt-5` など別表記にするとCIが失敗する。
+- `research-log.mdx` の利用環境には、`model: \`gpt-5.4-mini\``、repo-local skillリンク、`ops/codex/prompts/daily-issue-research.md` へのprompt sourceリンクを含める。
 - `src/pages/reference/<slug>.astro` を追加・更新した場合は `src/pages/en/reference/<slug>.astro` も追加・更新する。reference一覧やトップページのカードは、`getReferenceItems(locale)` のようなlocale-awareな共有データから引き、片方だけの手書き重複を避ける。
 - 英語ページ内のMermaid、reference本文、カード説明、出典周辺ラベルには日本語を残さない。日本語混入や日英route parityは `ops/tests/i18n-content.test.mjs` で検出できる形にする。
 - PRやプレビュー表示を求められた場合、または公開対象の本文を更新した場合は、`pnpm build` を実行し、生成ログに次が含まれることを確認する。
@@ -55,6 +57,10 @@
 - PR本文には、要約、背景・目的、主な変更点、確認したこと、レビュー観点、残課題・フォローアップを含める。
 - PR作成前に、対象差分を確認し、無関係な変更を含めない。
 - ユーザーが明示的に依頼した変更は、作業単位ごとにコミットしてよい。追加確認なしでコミットしてよいが、コミット前に対象差分を確認し、無関係な変更を含めない。
+- ローカル検証はCIが見る状態と一致させる。コミット後・push前にcleanな作業ツリーで `pnpm ci:pr` を実行し、最新の `origin/main` と現在のHEADをmergeしたPR Test workflow相当の状態で `install`、`git diff --check`、`test`、`lint`、changed validators、full mix-alignment、`build` が通ることを確認する。
+- 短時間の修正確認では `pnpm ci:head` や個別テストを使ってよいが、それだけでPR可否を判断しない。GitHubの `pull_request` workflowはhead単体ではなくbase branchとのmerge結果を検証するため、base branchが進んだときは必ず `pnpm ci:pr` で確認する。
+- 新規記事・素材ファイルを追加した直後は、未trackedのまま `git ls-files` 系テストだけを実行してもCI相当にならない。検証前に意図したファイルをstageするか、未trackedも拾う検証コマンドを使い、push後に初めて発覚する状態を作らない。
+- ローカルで通ったのにCIで落ちた場合は、落ちた箇所だけを直して終わらない。CIログ、workflow定義、base/head ref、tracked/untracked差分、依存関係・Node/pnpmバージョン、環境変数、キャッシュ差を比較し、同じ種類の不一致を次回ローカルで検出できるようにテスト、script、AGENTS.md、またはskillへ反映する。
 - 少なくとも `git diff --check` を実行し、Markdown内の未解決プレースホルダ（例: `TBD`, `TODO`, `未定`, `要確認`, `FIXME`）が残っていないことを確認する。
 - push後はPRが最新の `main` とコンフリクトしていないことを確認する。`gh pr view <PR番号> --json mergeable,mergeStateStatus` で `CONFLICTING` / `DIRTY` の場合は、`origin/main` を取り込み、コンフリクトを解消してから再pushする。
 - PR作成後は `gh pr checks <PR番号>` などでCI状態を確認する。失敗、キャンセル、pendingが残る場合は、該当runのログと最新runの状態を確認し、失敗原因を修正またはキャンセル理由を明示してから報告する。

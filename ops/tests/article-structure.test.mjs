@@ -7,10 +7,20 @@ import { test } from 'node:test'
 const placeholderRe = /\b(TBD|TODO|FIXME|未定|要確認)\b/
 
 function gitFiles(patterns) {
-	return execFileSync('git', ['ls-files', ...patterns], { encoding: 'utf8' })
-		.split('\n')
-		.map((line) => line.trim())
-		.filter(Boolean)
+	return [
+		...new Set(
+			execFileSync(
+				'git',
+				['ls-files', '--cached', '--modified', '--others', '--exclude-standard', '--', ...patterns],
+				{
+					encoding: 'utf8'
+				}
+			)
+				.split('\n')
+				.map((line) => line.trim())
+				.filter(Boolean)
+		)
+	]
 }
 
 function frontmatterOf(source, file) {
@@ -174,7 +184,10 @@ test('report headings avoid generic practical-implication labels', () => {
 	const genericPracticalIdRe =
 		/"id":\s*"(?:practical-implications|practice-implications|implications)"/
 
-	for (const file of gitFiles(['articles/report/**/index.mdx', 'articles/report/**/mix-alignment.json'])) {
+	for (const file of gitFiles([
+		'articles/report/**/index.mdx',
+		'articles/report/**/mix-alignment.json'
+	])) {
 		const source = readFileSync(file, 'utf8')
 
 		assert.doesNotMatch(

@@ -32,6 +32,8 @@
 		"test:ui": "node --test ops/tests/home-news-carousel.test.mjs",
 		"test:i18n": "node --test ops/tests/i18n-content.test.mjs",
 		"test:hero-images": "node --test ops/tests/select-unsplash-hero.test.mjs ops/tests/hero-images.test.mjs ops/tests/news-source-card-images.test.mjs",
+		"ci:head": "git diff --check && pnpm test && pnpm lint && pnpm build",
+		"ci:pr": "bash ops/scripts/run-pr-ci-locally.sh",
 		"glossary:candidates": "node --experimental-strip-types ops/scripts/select-glossary-candidates.mjs",
 		"glossary:research": "node ops/scripts/research-glossary-term.mjs",
 		"format:check": "prettier --plugin-search-dir=. --check .",

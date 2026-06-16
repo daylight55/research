@@ -10,7 +10,7 @@ type ContentLocale = (typeof CONTENT_LOCALES)[number]
 
 type BlogPost = CollectionEntry<'blog'>
 type PostLike = Pick<BlogPost, 'id'>
-type RoutablePost = Pick<BlogPost, 'id' | 'data'>
+type RoutablePost = Pick<BlogPost, 'id'> & Partial<Pick<BlogPost, 'data'>>
 
 const ARTICLE_TYPES = new Set(['report', 'news'])
 const ARTICLE_SECTIONS = {
@@ -53,7 +53,9 @@ export function getPostSlug(post: PostLike): string {
 export function getPostSection(
 	post: RoutablePost
 ): (typeof ARTICLE_SECTIONS)[keyof typeof ARTICLE_SECTIONS] {
-	return ARTICLE_SECTIONS[post.data.contentType]
+	const contentType =
+		post.data?.contentType ?? post.id.split('/').find((segment) => ARTICLE_TYPES.has(segment))
+	return ARTICLE_SECTIONS[contentType as keyof typeof ARTICLE_SECTIONS] ?? ARTICLE_SECTIONS.report
 }
 
 export function stripLocaleFromPath(pathname: string): string {

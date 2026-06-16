@@ -14,7 +14,9 @@ const serializedAlignment = alignment
 <div class='mixed-article' data-mixed-article>
 	{
 		serializedAlignment && (
-			<script type='application/json' data-mixed-alignment set:html={serializedAlignment} />
+			<script type='application/json' data-mixed-alignment>
+				{serializedAlignment}
+			</script>
 		)
 	}
 	<div class='mixed-article__english' data-mixed-english>

@@ -33,5 +33,6 @@ done
 
 node --test ops/tests/article-structure.test.mjs ops/tests/news-title-summaries.test.mjs
 node ops/scripts/validate-article-frontmatter.mjs --changed
+node ops/scripts/validate-article-mdx.mjs --changed
 node ops/scripts/validate-news-item-format.mjs --changed
 node ops/scripts/validate-mix-alignment.mjs --changed

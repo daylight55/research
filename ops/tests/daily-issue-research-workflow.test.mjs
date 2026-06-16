@@ -350,6 +350,12 @@ assert.match(
 )
 
 assert.match(
+	trendNewsPreflightScript,
+	/node ops\/scripts\/validate-article-mdx\.mjs --changed/,
+	'Daily Trend News preflight should reject generated MDX syntax errors before the strict Astro build gate'
+)
+
+assert.match(
 	readFileSync('ops/codex/prompts/daily-trend-news.md', 'utf8'),
 	/exactly three balanced[\s\S]*?NewsDigestSection[\s\S]*?one politics[\s\S]*?one economy[\s\S]*?one technology/,
 	'Daily Trend News prompt should require balanced localized NewsDigestSection blocks'
@@ -405,8 +411,8 @@ assert.match(
 
 assert.match(
 	trendNewsPreflightScript,
-	/articles\/news\/\$\{SLUG\}\/ja\/source-notes\.mdx[\s\S]*articles\/news\/\$\{SLUG\}\/en\/source-notes\.mdx[\s\S]*node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-article-frontmatter\.mjs --changed[\s\S]*node ops\/scripts\/validate-news-item-format\.mjs --changed[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
-	'Daily Trend News preflight should run generated article, frontmatter, Smart Brevity, and MIX tests before the final strict CI gate'
+	/articles\/news\/\$\{SLUG\}\/ja\/source-notes\.mdx[\s\S]*articles\/news\/\$\{SLUG\}\/en\/source-notes\.mdx[\s\S]*node --test ops\/tests\/article-structure\.test\.mjs ops\/tests\/news-title-summaries\.test\.mjs[\s\S]*node ops\/scripts\/validate-article-frontmatter\.mjs --changed[\s\S]*node ops\/scripts\/validate-article-mdx\.mjs --changed[\s\S]*node ops\/scripts\/validate-news-item-format\.mjs --changed[\s\S]*node ops\/scripts\/validate-mix-alignment\.mjs --changed/,
+	'Daily Trend News preflight should run generated article, frontmatter, MDX syntax, Smart Brevity, and MIX tests before the final strict CI gate'
 )
 
 assert.match(

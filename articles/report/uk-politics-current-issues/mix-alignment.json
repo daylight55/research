@@ -1,0 +1,33 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "2026年6月16日時点のイギリス政治は、「下院では労働党が大多数を持つが、世論・地方・上院・経済制約では脆い」という構図で読むのがよい。",
+					"en": "As of June 16, 2026, UK politics is best read as a system where Labour has a large House of Commons majority but faces weak public tolerance, fiscal constraints, service backlogs, and a House of Lords it does not control."
+				}
+			]
+		},
+		{
+			"id": "party-distribution",
+			"heading": {
+				"ja": "2. 政党分布",
+				"en": "2. Party Distribution"
+			},
+			"pairs": [
+				{
+					"ja": "下院では、Labourの多数はかなり大きい。",
+					"en": "In the Commons, Labour's majority is large."
+				}
+			]
+		}
+	]
+}

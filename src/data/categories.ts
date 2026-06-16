@@ -16,6 +16,8 @@ export const CATEGORIES = [
 	'macro-finance',
 	'middle-east',
 	'geopolitics',
+	'uk-politics',
+	'uk-history',
 	'japan-politics',
 	'real-estate',
 	'cultural-anthropology'

@@ -1,0 +1,33 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "イギリス王政の歴史は、「王が強くなった歴史」であると同時に、「王が自分の権力を法律、議会、帝国、メディア、公共奉仕へ移し替えて生き残った歴史」でもある。",
+					"en": "The history of the British monarchy is both a story of royal power becoming stronger and a story of that power being transferred into law, Parliament, empire, media, and public service."
+				}
+			]
+		},
+		{
+			"id": "origins",
+			"heading": {
+				"ja": "2. 王政の誕生",
+				"en": "2. Origins"
+			},
+			"pairs": [
+				{
+					"ja": "「イギリス王政」は最初から現在の連合王国として生まれたわけではない。",
+					"en": "The British monarchy did not begin as the modern United Kingdom."
+				}
+			]
+		}
+	]
+}

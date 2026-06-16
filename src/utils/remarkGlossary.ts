@@ -2,7 +2,7 @@ import {
 	extractGlossaryTermsFromMarkdown,
 	hasGlossaryResearchProfile,
 	type GlossaryTerm
-} from './glossary'
+} from './glossary.ts'
 
 const SKIP_TYPES = new Set([
 	'code',
@@ -31,6 +31,22 @@ const getSourceLocale = (file: any) => {
 
 const glossaryHref = (slug: string, locale: 'ja' | 'en') =>
 	`${basePath}${locale === 'en' ? '/en' : ''}/glossary/${encodeURIComponent(slug)}/`
+
+const quoteYamlString = (value: unknown) => JSON.stringify(String(value))
+
+const createExtractionFrontmatter = (frontmatter: Record<string, unknown> = {}) => {
+	const tags = Array.isArray(frontmatter.tags) ? frontmatter.tags.map(String) : []
+	return [
+		'---',
+		frontmatter.title ? `title: ${quoteYamlString(frontmatter.title)}` : '',
+		frontmatter.category ? `category: ${quoteYamlString(frontmatter.category)}` : '',
+		frontmatter.contentType ? `contentType: ${quoteYamlString(frontmatter.contentType)}` : '',
+		tags.length ? `tags: [${tags.map(quoteYamlString).join(', ')}]` : '',
+		'---'
+	]
+		.filter(Boolean)
+		.join('\n')
+}
 
 const isWordChar = (character: string) => /[\p{Letter}\p{Number}_-]/u.test(character)
 
@@ -128,7 +144,8 @@ export function remarkGlossary() {
 	return function (tree: any, file: any) {
 		const source = String(file.value ?? '')
 		const locale = getSourceLocale(file)
-		const terms = extractGlossaryTermsFromMarkdown(source).filter((term) =>
+		const extractionSource = `${createExtractionFrontmatter(file.data?.astro?.frontmatter)}\n\n${source}`
+		const terms = extractGlossaryTermsFromMarkdown(extractionSource).filter((term) =>
 			hasGlossaryResearchProfile(term.slug, locale)
 		)
 		file.data.astro.frontmatter.glossaryTerms = terms

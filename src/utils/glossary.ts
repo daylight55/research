@@ -571,6 +571,7 @@ const shouldKeepTerm = (label: string, source: string) => {
 	if (!label || STOPWORDS.has(label)) return false
 	if (label.length < 2 || label.length > 48) return false
 	if (SOURCE_OR_REFERENCE_LABEL_PATTERN.test(label)) return false
+	if (source === 'frontmatter' && hasGlossaryResearchProfile(createGlossarySlug(label))) return true
 	if (/^[A-Z]\d$/i.test(label)) return false
 	if (/^[A-Z]{1,3}-\d+$/i.test(label)) return false
 	if (/[A-Z]{2,}\d/.test(label)) return false

@@ -1297,6 +1297,876 @@ export const GLOSSARY_RESEARCH_PROFILES = {
 				reason: 'The article matches Retrieval-Augmented Generation as the AI method discussed here.'
 			}
 		}
+	},
+	polanyi: {
+		ja: {
+			definition:
+				'Polanyi は、暗黙知、個人的知識、科学共同体における判断を論じたハンガリー系イギリスの思想家 Michael Polanyi を指します。',
+			background:
+				'Polanyi は化学者として出発し、のちに科学哲学・社会思想へ移り、The Tacit Dimension や Personal Knowledge で「語れる以上に知っている」という暗黙知の議論を展開しました。',
+			position:
+				'Tacit Knowledge、Value Judgment、Knowledge Management、AI 要約による知識の圧縮リスクを読むための基礎人物です。',
+			distinctions: [
+				'Polanyi は単なる「暗黙知」という用語の出典ではなく、知る行為を個人的関与と判断の構造として捉えた思想家です。',
+				'Karl Polanyi とは別人です。経済人類学の Karl Polanyi と混同しないようにします。'
+			],
+			sources: [
+				{
+					title: 'The Tacit Dimension - University of Chicago Press',
+					url: 'https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html',
+					kind: 'reference'
+				},
+				{
+					title: 'Michael Polanyi - University of Chicago Press',
+					url: 'https://press.uchicago.edu/ucp/books/author/P/M/au5523889.html',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Michael Polanyi',
+				url: 'https://en.wikipedia.org/wiki/Michael_Polanyi',
+				reason: '暗黙知・個人的知識の文脈で扱う Michael Polanyi に一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Polanyi refers here to Michael Polanyi, the Hungarian-British thinker associated with tacit knowledge, personal knowledge, and judgment in science.',
+			background:
+				'Trained as a chemist before moving into philosophy and social thought, Polanyi developed the idea that people can know more than they can explicitly tell.',
+			position:
+				'He anchors discussions of Tacit Knowledge, Value Judgment, Knowledge Management, and the risks of compressing expertise through AI summarization.',
+			distinctions: [
+				'Polanyi is not just a source for the term tacit knowledge; he treats knowing as a structure of personal commitment and judgment.',
+				'He should be distinguished from Karl Polanyi, the economic historian and anthropologist.'
+			],
+			sources: [
+				{
+					title: 'The Tacit Dimension - University of Chicago Press',
+					url: 'https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html',
+					kind: 'reference'
+				},
+				{
+					title: 'Michael Polanyi - University of Chicago Press',
+					url: 'https://press.uchicago.edu/ucp/books/author/P/M/au5523889.html',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Michael Polanyi',
+				url: 'https://en.wikipedia.org/wiki/Michael_Polanyi',
+				reason: 'The article matches Michael Polanyi in the tacit-knowledge context.'
+			}
+		}
+	},
+	wittgenstein: {
+		ja: {
+			definition:
+				'Wittgenstein は、言語、意味、論理、規則、生活形式をめぐる20世紀分析哲学の中心人物 Ludwig Wittgenstein を指します。',
+			background:
+				'前期の Tractatus Logico-Philosophicus では言語・世界・論理の限界を扱い、後期の Philosophical Investigations では意味を使用や言語ゲームの中で捉え直しました。',
+			position:
+				'言語ゲーム、Philosophy of Language、Intentionality、LLM の言語使用を論じる際の基礎参照点です。',
+			distinctions: [
+				'前期 Wittgenstein と後期 Wittgenstein は、言語観が大きく異なります。',
+				'Wittgenstein は LLM 論者ではなく、LLM 論では彼の言語観を応用的に参照します。'
+			],
+			sources: [
+				{
+					title: 'Ludwig Wittgenstein - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/wittgenstein/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Ludwig Wittgenstein',
+				url: 'https://en.wikipedia.org/wiki/Ludwig_Wittgenstein',
+				reason: '言語哲学・分析哲学の Ludwig Wittgenstein を指す文脈と一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Wittgenstein refers to Ludwig Wittgenstein, a central figure in twentieth-century analytic philosophy of language, logic, rules, and forms of life.',
+			background:
+				'His early Tractatus examined the limits of language, world, and logic; his later work reoriented meaning around use, practice, and language games.',
+			position:
+				'He is a key reference for language games, Philosophy of Language, Intentionality, and philosophical debates about LLM language use.',
+			distinctions: [
+				'Early and later Wittgenstein should not be collapsed into one doctrine.',
+				'Wittgenstein did not write about LLMs; contemporary LLM debates apply his concepts to a new setting.'
+			],
+			sources: [
+				{
+					title: 'Ludwig Wittgenstein - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/wittgenstein/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Ludwig Wittgenstein',
+				url: 'https://en.wikipedia.org/wiki/Ludwig_Wittgenstein',
+				reason: 'The article matches Ludwig Wittgenstein in the philosophy-of-language context.'
+			}
+		}
+	},
+	'language-games': {
+		ja: {
+			definition:
+				'Language Games は、言葉の意味を抽象的な対応関係ではなく、命令、質問、報告、約束などの具体的な実践の中で捉える Wittgenstein 後期哲学の概念です。',
+			background:
+				'Philosophical Investigations では、語の意味は生活形式に埋め込まれた使用から理解されるという観点が示され、規則、理解、共同実践の議論につながりました。',
+			position:
+				'LLM の出力を「理解しているか」だけでなく、人間の言語実践の中でどのような手として扱われるかを分析するための基礎概念です。',
+			distinctions: [
+				'通常のゲーム理論や娯楽としてのゲームではなく、言語使用の多様な実践を示す哲学的比喩です。',
+				'Language Games は LLM 固有の概念ではありませんが、LLM の発話が人間の実践にどう取り込まれるかを考える際に応用されます。'
+			],
+			sources: [
+				{
+					title: 'Ludwig Wittgenstein - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/wittgenstein/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Language game (philosophy)',
+				url: 'https://en.wikipedia.org/wiki/Language_game_(philosophy)',
+				reason: 'Wittgenstein 後期哲学における言語使用の実践概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Language Games is a later-Wittgensteinian concept that treats meaning through concrete practices such as commanding, questioning, reporting, promising, and correcting rather than through an abstract word-world mapping alone.',
+			background:
+				'In Philosophical Investigations, meaning is understood through use within forms of life, connecting language to rules, understanding, and shared practice.',
+			position:
+				'It is a base concept for analyzing LLM outputs not only by asking whether the system understands, but by asking what kind of move the output becomes in human linguistic practice.',
+			distinctions: [
+				'It is not game theory or entertainment; it is a philosophical metaphor for varied practices of language use.',
+				'Language games are not specific to LLMs, but they are useful for analyzing how LLM utterances are taken up by humans.'
+			],
+			sources: [
+				{
+					title: 'Ludwig Wittgenstein - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/wittgenstein/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Language game (philosophy)',
+				url: 'https://en.wikipedia.org/wiki/Language_game_(philosophy)',
+				reason: 'The article matches the later-Wittgensteinian concept of language use as practice.'
+			}
+		}
+	},
+	intentionality: {
+		ja: {
+			definition:
+				'Intentionality は、心的状態や表象が何かについてである、何かを表す、何かへ向かうという性質を指す哲学概念です。',
+			background:
+				'ブレンターノ以降の心の哲学・現象学・言語哲学で中心的に扱われ、信念、欲求、意味、表象、記号接地の議論に関わります。',
+			position:
+				'LLM が意味や理解を持つか、言語使用が何かについてであると言えるかを論じる際の中核概念です。',
+			distinctions: [
+				'日常語の intention、つまり意図や計画だけを意味するわけではありません。',
+				'心的志向性と、言語表現が意味を持つことは分けて扱う必要があります。'
+			],
+			sources: [
+				{
+					title: 'Intentionality - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/intentionality/',
+					kind: 'reference'
+				},
+				{
+					title: 'Rule-Following and Intentionality - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/rule-following/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Intentionality',
+				url: 'https://en.wikipedia.org/wiki/Intentionality',
+				reason: '心の哲学における aboutness の概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Intentionality is the philosophical notion that mental states or representations are about, represent, or stand for something.',
+			background:
+				'Since Brentano, intentionality has been central to philosophy of mind, phenomenology, and philosophy of language, especially in debates about belief, desire, meaning, representation, and grounding.',
+			position:
+				'It is central when asking whether LLM outputs can be about the world, carry meaning, or count as understanding.',
+			distinctions: [
+				'Intentionality is broader than ordinary intention as a plan or purpose.',
+				'Mental intentionality and linguistic meaning should be analyzed separately.'
+			],
+			sources: [
+				{
+					title: 'Intentionality - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/intentionality/',
+					kind: 'reference'
+				},
+				{
+					title: 'Rule-Following and Intentionality - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/rule-following/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Intentionality',
+				url: 'https://en.wikipedia.org/wiki/Intentionality',
+				reason: 'The article matches intentionality as aboutness in philosophy of mind.'
+			}
+		}
+	},
+	'philosophy-of-language': {
+		ja: {
+			definition:
+				'Philosophy of Language は、言語の意味、指示、真理、使用、理解、言語と世界・話者の関係を扱う哲学分野です。',
+			background:
+				'分析哲学の中心領域として、Frege、Russell、Wittgenstein、Austin、Grice、Davidson らの議論を通じて発展しました。',
+			position:
+				'LLM の発話、意味理解、言語ゲーム、Intentionality を論じる際の上位カテゴリです。',
+			distinctions: [
+				'言語学が言語の構造や使用を経験的に分析するのに対し、Philosophy of Language は意味・真理・指示などの概念問題を扱います。',
+				'自然言語処理の技術分野そのものではありません。'
+			],
+			sources: [
+				{
+					title: 'Philosophy of language - Britannica',
+					url: 'https://www.britannica.com/topic/philosophy-of-language',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Philosophy of language',
+				url: 'https://en.wikipedia.org/wiki/Philosophy_of_language',
+				reason: '言語の意味・指示・使用を扱う哲学分野として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Philosophy of Language studies meaning, reference, truth, use, understanding, and the relation between language, speakers, and the world.',
+			background:
+				'It became a central area of analytic philosophy through figures such as Frege, Russell, Wittgenstein, Austin, Grice, and Davidson.',
+			position:
+				'It is the umbrella field for discussions of LLM utterances, meaning, language games, and Intentionality.',
+			distinctions: [
+				'Linguistics empirically studies language structure and use; philosophy of language asks conceptual questions about meaning, truth, and reference.',
+				'It is not the same as natural language processing as a technical field.'
+			],
+			sources: [
+				{
+					title: 'Philosophy of language - Britannica',
+					url: 'https://www.britannica.com/topic/philosophy-of-language',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Philosophy of language',
+				url: 'https://en.wikipedia.org/wiki/Philosophy_of_language',
+				reason: 'The article matches the philosophical field concerned with meaning, reference, and language use.'
+			}
+		}
+	},
+	'value-judgment': {
+		ja: {
+			definition:
+				'Value Judgment は、事実の記述だけではなく、何が良い、重要、妥当、望ましいかを評価する判断です。',
+			background:
+				'倫理学、価値論、科学哲学、政策判断では、観察や分析に価値の選択がどのように入り込むかが問題になります。',
+			position:
+				'暗黙知、Polanyi、AI 要約、政策分析で、何を残し何を削るかを決める規範的な判断として重要です。',
+			distinctions: [
+				'Value Judgment は単なる好みではなく、理由づけや規範を伴う評価を含みます。',
+				'事実判断と対立するだけでなく、何を事実として重要視するかにも関わります。'
+			],
+			sources: [
+				{
+					title: 'Value Theory - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/value-theory/',
+					kind: 'reference'
+				},
+				{
+					title: 'Normativity in Metaethics - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/normativity-metaethics/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Value judgment',
+				url: 'https://en.wikipedia.org/wiki/Value_judgment',
+				reason: '事実記述ではなく評価を含む判断という概念に一致します。'
+			}
+		},
+		en: {
+			definition:
+				'A Value Judgment is an evaluative judgment about what is good, important, valid, desirable, or worth preserving, not merely a factual description.',
+			background:
+				'In ethics, value theory, philosophy of science, and policy analysis, the issue is how choices about value shape observation, explanation, and decision-making.',
+			position:
+				'It matters for Tacit Knowledge, Polanyi, AI summarization, and policy analysis because it determines what is preserved, emphasized, or omitted.',
+			distinctions: [
+				'A value judgment is not just a private preference; it can involve reasons and norms.',
+				'It is not simply opposed to fact judgment, because values also shape which facts are treated as salient.'
+			],
+			sources: [
+				{
+					title: 'Value Theory - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/value-theory/',
+					kind: 'reference'
+				},
+				{
+					title: 'Normativity in Metaethics - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/normativity-metaethics/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Value judgment',
+				url: 'https://en.wikipedia.org/wiki/Value_judgment',
+				reason: 'The article matches the concept of evaluative judgment rather than factual description.'
+			}
+		}
+	},
+	geopolitics: {
+		ja: {
+			definition:
+				'Geopolitics は、地理的条件が国家間の権力関係、戦略、資源、同盟、紛争に与える影響を分析する視点です。',
+			background:
+				'古典的には地理と大国戦略を結びつける議論として発展し、現在はエネルギー、海上交通、国境、軍事配置、サプライチェーンも含めて使われます。',
+			position:
+				'中東、ウクライナ、台湾、エネルギー安全保障、制裁、同盟を横断して読むための上位概念です。',
+			distinctions: [
+				'Geopolitics は単なる国際ニュースではなく、地理と権力関係の結びつきを読む分析枠組みです。',
+				'国名や地域名そのものではなく、それらを動かす構造に注目します。'
+			],
+			sources: [
+				{
+					title: 'Geopolitics - Britannica',
+					url: 'https://www.britannica.com/topic/geopolitics',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Geopolitics',
+				url: 'https://en.wikipedia.org/wiki/Geopolitics',
+				reason: '地理的影響と国際政治の権力関係を扱う概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Geopolitics analyzes how geography shapes power relations, strategy, resources, alliances, and conflict in international relations.',
+			background:
+				'Classically tied to geography and great-power strategy, the term now also covers energy, maritime routes, borders, military posture, and supply chains.',
+			position:
+				'It is an umbrella concept for reading the Middle East, Ukraine, Taiwan, energy security, sanctions, and alliances together.',
+			distinctions: [
+				'Geopolitics is not just international news; it is an analytical frame linking geography and power.',
+				'It focuses on structures around places rather than treating country names as explanations.'
+			],
+			sources: [
+				{
+					title: 'Geopolitics - Britannica',
+					url: 'https://www.britannica.com/topic/geopolitics',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Geopolitics',
+				url: 'https://en.wikipedia.org/wiki/Geopolitics',
+				reason: 'The article matches the concept of geographic influence on international power relations.'
+			}
+		}
+	},
+	'human-rights': {
+		ja: {
+			definition:
+				'Human Rights は、人が人であることに基づいて持つ、国家から付与される以前の普遍的な権利を指します。',
+			background:
+				'第二次世界大戦後、世界人権宣言や国際人権法を通じて、生命、自由、平等、政治参加、社会的権利などを国際的に保護する枠組みが整えられました。',
+			position:
+				'市民抑圧、占領、抗議運動、人道危機、国際法を読むための基本概念です。',
+			distinctions: [
+				'Human Rights は国際人道法とは異なり、平時にも戦時にも人の権利を扱います。',
+				'国家の慈善や政策目標ではなく、権利として主張される点が重要です。'
+			],
+			sources: [
+				{
+					title: 'What are human rights? - OHCHR',
+					url: 'https://www.ohchr.org/en/what-are-human-rights',
+					kind: 'official'
+				},
+				{
+					title: 'Universal Declaration of Human Rights - OHCHR',
+					url: 'https://www.ohchr.org/en/universal-declaration-of-human-rights',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Human rights',
+				url: 'https://en.wikipedia.org/wiki/Human_rights',
+				reason: '普遍的な人権概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Human Rights are universal rights people have simply by being human, not because a state grants them.',
+			background:
+				'After World War II, the Universal Declaration of Human Rights and international human rights law developed a global framework for civil, political, economic, social, and cultural rights.',
+			position:
+				'They are a core concept for reading repression, occupation, protest, humanitarian crisis, and international law.',
+			distinctions: [
+				'Human rights differ from international humanitarian law because they apply beyond armed conflict.',
+				'They are claimed as rights, not merely as charity or policy preferences.'
+			],
+			sources: [
+				{
+					title: 'What are human rights? - OHCHR',
+					url: 'https://www.ohchr.org/en/what-are-human-rights',
+					kind: 'official'
+				},
+				{
+					title: 'Universal Declaration of Human Rights - OHCHR',
+					url: 'https://www.ohchr.org/en/universal-declaration-of-human-rights',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Human rights',
+				url: 'https://en.wikipedia.org/wiki/Human_rights',
+				reason: 'The article matches the universal rights concept used here.'
+			}
+		}
+	},
+	sanctions: {
+		ja: {
+			definition:
+				'Sanctions は、国際平和、安全保障、人権、核不拡散などの目的で、国家・組織・個人に課される経済・金融・移動・武器関連の制限措置です。',
+			background:
+				'国連安全保障理事会、米国、EU などは、武力行使以外の圧力手段として資産凍結、渡航禁止、禁輸、金融制裁を使います。',
+			position:
+				'イラン核問題、ロシア制裁、代理勢力、国際秩序の強制手段を理解する基本概念です。',
+			distinctions: [
+				'Sanctions は外交的非難より強く、軍事行動よりは非軍事的な強制手段です。',
+				'国連制裁と各国・地域機構の独自制裁は法的根拠と範囲が異なります。'
+			],
+			sources: [
+				{
+					title: 'Sanctions - United Nations Security Council',
+					url: 'https://main.un.org/securitycouncil/en/sanctions/information',
+					kind: 'official'
+				},
+				{
+					title: 'OFAC Sanctions Programs and Information',
+					url: 'https://ofac.treasury.gov/sanctions-programs-and-country-information',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'International sanctions',
+				url: 'https://en.wikipedia.org/wiki/International_sanctions',
+				reason: '国際政治上の制裁措置を扱う文脈と一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Sanctions are restrictive measures, such as financial, trade, travel, or arms-related limits, imposed to pursue security, human-rights, non-proliferation, or peace objectives.',
+			background:
+				'The UN Security Council, the United States, the EU, and others use asset freezes, travel bans, embargoes, and financial restrictions as non-military pressure tools.',
+			position:
+				'They are central to Iran nuclear policy, Russia policy, proxy networks, and the enforcement side of international order.',
+			distinctions: [
+				'Sanctions are stronger than diplomatic criticism but usually short of military action.',
+				'UN sanctions and autonomous national or regional sanctions differ in legal basis and scope.'
+			],
+			sources: [
+				{
+					title: 'Sanctions - United Nations Security Council',
+					url: 'https://main.un.org/securitycouncil/en/sanctions/information',
+					kind: 'official'
+				},
+				{
+					title: 'OFAC Sanctions Programs and Information',
+					url: 'https://ofac.treasury.gov/sanctions-programs-and-country-information',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'International sanctions',
+				url: 'https://en.wikipedia.org/wiki/International_sanctions',
+				reason: 'The article matches sanctions as international restrictive measures.'
+			}
+		}
+	},
+	jcpoa: {
+		ja: {
+			definition:
+				'JCPOA は、イラン核計画を平和目的に限定するため、2015 年にイランと P5+1、EU が合意した Joint Comprehensive Plan of Action です。',
+			background:
+				'合意は、イランの濃縮、在庫、遠心分離機、検証を制約する代わりに、核関連制裁の解除を組み合わせる枠組みでした。',
+			position:
+				'イラン核問題、IAEA 監視、制裁、スナップバック、地域安全保障を読むための中心制度です。',
+			distinctions: [
+				'JCPOA は平和条約ではなく、核活動の制約と制裁緩和を交換する政治合意です。',
+				'NPT や IAEA 保障措置そのものとは別の合意です。'
+			],
+			sources: [
+				{
+					title: 'Joint Comprehensive Plan of Action - U.S. Department of State archive',
+					url: 'https://2009-2017.state.gov/e/eb/tfs/spi/iran/jcpoa/',
+					kind: 'official'
+				},
+				{
+					title: 'Nuclear Agreement - JCPOA - EEAS',
+					url: 'https://www.eeas.europa.eu/eeas/nuclear-agreement-%E2%80%93-jcpoa_en',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Iran nuclear deal',
+				url: 'https://en.wikipedia.org/wiki/Iran_nuclear_deal',
+				reason: 'JCPOA として知られるイラン核合意を扱う記事で一致します。'
+			}
+		},
+		en: {
+			definition:
+				'The JCPOA is the Joint Comprehensive Plan of Action, the 2015 agreement between Iran, the P5+1, and the EU to ensure Iran nuclear program remains exclusively peaceful.',
+			background:
+				'The agreement paired limits on enrichment, stockpiles, centrifuges, and verification with relief from nuclear-related sanctions.',
+			position:
+				'It is central to Iran nuclear policy, IAEA monitoring, sanctions, snapback, and regional security analysis.',
+			distinctions: [
+				'The JCPOA is a political nuclear agreement, not a peace treaty.',
+				'It is distinct from the NPT and from IAEA safeguards themselves.'
+			],
+			sources: [
+				{
+					title: 'Joint Comprehensive Plan of Action - U.S. Department of State archive',
+					url: 'https://2009-2017.state.gov/e/eb/tfs/spi/iran/jcpoa/',
+					kind: 'official'
+				},
+				{
+					title: 'Nuclear Agreement - JCPOA - EEAS',
+					url: 'https://www.eeas.europa.eu/eeas/nuclear-agreement-%E2%80%93-jcpoa_en',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Iran nuclear deal',
+				url: 'https://en.wikipedia.org/wiki/Iran_nuclear_deal',
+				reason: 'The article matches the Iran nuclear agreement known as the JCPOA.'
+			}
+		}
+	},
+	ceasefire: {
+		ja: {
+			definition:
+				'Ceasefire は、交戦当事者が敵対行為を停止または一時停止する取り決めや状態を指します。',
+			background:
+				'停戦は全面和平とは限らず、人道回廊、捕虜交換、交渉、戦線整理などのために限定的・一時的に設定されることがあります。',
+			position:
+				'ウクライナ戦争、イスラエル・パレスチナ、内戦、人道アクセスを読む際に、戦争継続と和平の間にある重要な概念です。',
+			distinctions: [
+				'Ceasefire は和平合意や終戦と同じではありません。',
+				'一方的停止、局地停戦、包括停戦では拘束力や範囲が異なります。'
+			],
+			sources: [
+				{
+					title: 'Ceasefire - ICRC Online Casebook',
+					url: 'https://casebook.icrc.org/a_to_z/glossary/ceasefire',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Ceasefire',
+				url: 'https://en.wikipedia.org/wiki/Ceasefire',
+				reason: '敵対行為の停止・一時停止を指す概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'A ceasefire is an arrangement or condition in which parties to a conflict stop or suspend hostilities.',
+			background:
+				'Ceasefires are not always peace settlements; they can be temporary or limited measures for humanitarian access, prisoner exchange, negotiation, or battlefield management.',
+			position:
+				'It is important for reading Ukraine, Israel-Palestine, civil wars, and humanitarian access as a space between active war and peace.',
+			distinctions: [
+				'A ceasefire is not the same as a peace agreement or the end of a war.',
+				'Unilateral pauses, local ceasefires, and comprehensive ceasefires differ in scope and force.'
+			],
+			sources: [
+				{
+					title: 'Ceasefire - ICRC Online Casebook',
+					url: 'https://casebook.icrc.org/a_to_z/glossary/ceasefire',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Ceasefire',
+				url: 'https://en.wikipedia.org/wiki/Ceasefire',
+				reason: 'The article matches the suspension of hostilities concept.'
+			}
+		}
+	},
+	nato: {
+		ja: {
+			definition:
+				'NATO は、北米と欧州の加盟国による政治・軍事同盟で、加盟国の自由と安全を集団防衛で守ることを目的とします。',
+			background:
+				'1949 年の北大西洋条約で設立され、冷戦期の抑止から、現在は集団防衛、危機管理、パートナー支援、安全保障協力を担っています。',
+			position:
+				'ウクライナ支援、欧州安全保障、抑止、同盟政治を理解する基本制度です。',
+			distinctions: [
+				'NATO は EU ではなく、政治・軍事同盟です。',
+				'NATO の支援は加盟国の直接参戦と同じではありません。'
+			],
+			sources: [
+				{
+					title: 'What is NATO?',
+					url: 'https://www.nato.int/en/what-is-nato',
+					kind: 'official'
+				},
+				{
+					title: "NATO's purpose",
+					url: 'https://www.nato.int/en/what-we-do/introduction-to-nato/natos-purpose',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'NATO',
+				url: 'https://en.wikipedia.org/wiki/NATO',
+				reason: 'North Atlantic Treaty Organization を指す同盟文脈と一致します。'
+			}
+		},
+		en: {
+			definition:
+				'NATO is a political and military alliance of North American and European members whose purpose is to safeguard member freedom and security through collective defense.',
+			background:
+				'Founded by the 1949 North Atlantic Treaty, NATO evolved from Cold War deterrence into collective defense, crisis management, partner support, and security cooperation.',
+			position:
+				'It is a core institution for understanding Ukraine support, European security, deterrence, and alliance politics.',
+			distinctions: [
+				'NATO is not the EU; it is a political and military alliance.',
+				'NATO support for a partner is not the same as direct combat participation by the alliance.'
+			],
+			sources: [
+				{
+					title: 'What is NATO?',
+					url: 'https://www.nato.int/en/what-is-nato',
+					kind: 'official'
+				},
+				{
+					title: "NATO's purpose",
+					url: 'https://www.nato.int/en/what-we-do/introduction-to-nato/natos-purpose',
+					kind: 'official'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'NATO',
+				url: 'https://en.wikipedia.org/wiki/NATO',
+				reason: 'The article matches the North Atlantic Treaty Organization alliance context.'
+			}
+		}
+	},
+	'martial-law': {
+		ja: {
+			definition:
+				'Martial Law は、緊急時に通常の文民当局が機能できないとみなされる区域で、軍当局が一時的に統治権限を担う状態です。',
+			background:
+				'戦争、反乱、大規模災害、国家非常事態の文脈で発動され、移動、集会、裁判、行政権限に大きな制約を及ぼすことがあります。',
+			position:
+				'戦時下の選挙、政権正統性、市民権制限を読むための制度概念です。',
+			distinctions: [
+				'Martial Law は通常の非常事態宣言より強い軍事的統治を含む場合があります。',
+				'軍政一般やクーデター後の恒常的な軍事支配とは区別します。'
+			],
+			sources: [
+				{
+					title: 'Martial law - Britannica',
+					url: 'https://www.britannica.com/topic/martial-law',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Martial law',
+				url: 'https://en.wikipedia.org/wiki/Martial_law',
+				reason: '緊急時に軍当局が統治権限を担う制度として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Martial Law is temporary rule by military authorities over a designated area during an emergency when civil authorities are deemed unable to function.',
+			background:
+				'It may be invoked in war, rebellion, disaster, or national emergency and can sharply affect movement, assembly, courts, and administrative authority.',
+			position:
+				'It is a key institutional concept for wartime elections, regime legitimacy, and civil-rights restrictions.',
+			distinctions: [
+				'Martial law can be stronger than an ordinary state of emergency because military authority takes a governing role.',
+				'It should be distinguished from general military rule or permanent post-coup government.'
+			],
+			sources: [
+				{
+					title: 'Martial law - Britannica',
+					url: 'https://www.britannica.com/topic/martial-law',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Martial law',
+				url: 'https://en.wikipedia.org/wiki/Martial_law',
+				reason: 'The article matches temporary military authority during emergency.'
+			}
+		}
+	},
+	legitimacy: {
+		ja: {
+			definition:
+				'Legitimacy は、政府、政権、制度、決定が、支配される人々や規範の観点から正当なものとして受け入れられる性質です。',
+			background:
+				'政治学・政治哲学では、同意、法、手続、代表、成果、規範的妥当性が、権力を単なる強制ではなく正当な権威として成立させるかが問われます。',
+			position:
+				'戦時下の選挙、権威主義体制、革命後体制、国際承認を読むための基本概念です。',
+			distinctions: [
+				'Legitimacy は合法性と重なりますが、法に従っていることだけでは尽きません。',
+				'実効支配や軍事力があることと、正当性があることは別です。'
+			],
+			sources: [
+				{
+					title: 'Legitimacy - Britannica',
+					url: 'https://www.britannica.com/topic/legitimacy',
+					kind: 'reference'
+				},
+				{
+					title: 'Political Legitimacy - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/legitimacy/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Legitimacy (political)',
+				url: 'https://en.wikipedia.org/wiki/Legitimacy_(political)',
+				reason: '政治制度や統治の正当性を扱う概念として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Legitimacy is the quality by which a government, regime, institution, or decision is accepted as rightful from the standpoint of the governed or relevant norms.',
+			background:
+				'Political science and political philosophy ask how consent, law, procedure, representation, performance, and normative justification turn power into authority rather than mere coercion.',
+			position:
+				'It is central for wartime elections, authoritarian regimes, post-revolutionary order, and international recognition.',
+			distinctions: [
+				'Legitimacy overlaps legality but is not exhausted by legal validity.',
+				'Effective control or military power is not the same as rightful authority.'
+			],
+			sources: [
+				{
+					title: 'Legitimacy - Britannica',
+					url: 'https://www.britannica.com/topic/legitimacy',
+					kind: 'reference'
+				},
+				{
+					title: 'Political Legitimacy - Stanford Encyclopedia of Philosophy',
+					url: 'https://plato.stanford.edu/entries/legitimacy/',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Legitimacy (political)',
+				url: 'https://en.wikipedia.org/wiki/Legitimacy_(political)',
+				reason: 'The article matches political legitimacy as rightful authority.'
+			}
+		}
+	},
+	'political-economy': {
+		ja: {
+			definition:
+				'Political Economy は、市場、国家、社会、制度、権力が経済活動や分配にどう関わるかを分析する社会科学分野です。',
+			background:
+				'古典派経済学の時代から使われ、現在は国内政治経済、国際政治経済、開発、資源、労働、福祉国家、権威主義的近代化の分析に広がっています。',
+			position:
+				'湾岸諸国、制裁、社会保障、資源国家、開発モデルを読むための横断概念です。',
+			distinctions: [
+				'Political Economy は経済指標だけでなく、制度と権力関係を含めて経済を読みます。',
+				'純粋な市場分析や政治ニュースの要約とは異なります。'
+			],
+			sources: [
+				{
+					title: 'Political economy - Britannica',
+					url: 'https://www.britannica.com/money/political-economy',
+					kind: 'reference'
+				},
+				{
+					title: 'International political economy - Britannica',
+					url: 'https://www.britannica.com/topic/international-political-economy',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Political economy',
+				url: 'https://en.wikipedia.org/wiki/Political_economy',
+				reason: '国家・市場・社会の関係を扱う分野として一致します。'
+			}
+		},
+		en: {
+			definition:
+				'Political Economy studies how markets, states, society, institutions, and power shape economic activity and distribution.',
+			background:
+				'Rooted in classical political economy, the field now covers domestic and international political economy, development, resources, labor, welfare states, and authoritarian modernization.',
+			position:
+				'It is a cross-cutting concept for Gulf states, sanctions, welfare, resource states, and development models.',
+			distinctions: [
+				'Political economy reads economics through institutions and power, not only through market indicators.',
+				'It is different from a summary of political news or a purely technical market analysis.'
+			],
+			sources: [
+				{
+					title: 'Political economy - Britannica',
+					url: 'https://www.britannica.com/money/political-economy',
+					kind: 'reference'
+				},
+				{
+					title: 'International political economy - Britannica',
+					url: 'https://www.britannica.com/topic/international-political-economy',
+					kind: 'reference'
+				}
+			],
+			wikipedia: {
+				status: 'verified',
+				title: 'Political economy',
+				url: 'https://en.wikipedia.org/wiki/Political_economy',
+				reason: 'The article matches the field studying relations among states, markets, society, and distribution.'
+			}
+		}
 	}
 } satisfies Record<string, LocaleProfile>
 

@@ -14,6 +14,7 @@ import {
 	selectExternalReference
 } from '../src/utils/glossary.ts'
 import { GLOSSARY_RESEARCH_PROFILES } from '../src/data/glossaryResearch.ts'
+import { remarkGlossary } from '../src/utils/remarkGlossary.ts'
 
 const sampleBody = `---
 title: Graphiti MCP Memory
@@ -160,6 +161,54 @@ Graphiti は Knowledge Graph と MCP の実装論点を扱う。
 		index.terms.map((term) => term.label),
 		['Graphiti', 'Knowledge Graph', 'MCP']
 	)
+})
+
+test('keeps source-backed frontmatter concepts with generic words', () => {
+	const terms = extractGlossaryTermsFromMarkdown(`---
+title: Language Games and LLMs
+tags: ['Language Games', 'Philosophy of Language']
+---
+
+# Language Games and LLMs
+`)
+
+	assert.deepEqual(
+		terms.map((term) => term.slug),
+		['language-games', 'philosophy-of-language']
+	)
+})
+
+test('remark glossary uses Astro frontmatter tags for article sidebars', () => {
+	const tree = {
+		type: 'root',
+		children: [
+			{
+				type: 'paragraph',
+				children: [{ type: 'text', value: 'Language Games connect LLM outputs to practice.' }]
+			}
+		]
+	}
+	const file = {
+		value: '# Language Games and LLMs',
+		path: 'articles/report/language-games-intentionality-llm/en/index.mdx',
+		data: {
+			astro: {
+				frontmatter: {
+					title: 'Language Games, Intentionality, and LLMs',
+					category: 'philosophy-knowledge',
+					tags: ['Language Games', 'Philosophy of Language']
+				}
+			}
+		}
+	}
+
+	remarkGlossary()(tree, file)
+
+	assert.deepEqual(
+		file.data.astro.frontmatter.glossaryTerms.map((term) => term.slug),
+		['language-games', 'philosophy-of-language']
+	)
+	assert.equal(tree.children[0].children[0].url, '/en/glossary/language-games/')
 })
 
 test('groups glossary terms by one representative article category', () => {

@@ -15,44 +15,24 @@
 					"en": "Words such as republic, kingdom, federal, united, people’s, democratic, Islamic, and Commonwealth do not all describe the same kind of thing."
 				},
 				{
-					"ja": "ある語は元首の種類を、別の語は中央政府と地方政府の関係を、さらに別の語は政治理念や歴史的自己表現を示す。",
-					"en": "Some words describe the head of state."
-				},
-				{
-					"ja": "ある語は元首の種類を、別の語は中央政府と地方政府の関係を、さらに別の語は政治理念や歴史的自己表現を示す。",
-					"en": "Others describe the relationship between the central government and territorial units."
-				},
-				{
-					"ja": "ある語は元首の種類を、別の語は中央政府と地方政府の関係を、さらに別の語は政治理念や歴史的自己表現を示す。",
-					"en": "Others are ideological, historical, or diplomatic self-descriptions."
-				},
-				{
 					"ja": "国名だけを見て「民主的」「独立国」「連邦国家」と判断すると誤る。",
 					"en": "Reading a country name alone as proof of democracy, independence, or federalism is therefore unreliable."
 				},
 				{
-					"ja": "実務上は、まず「主権国家か」「国連加盟国か」「国名上の自己表現か」を分ける必要がある。",
-					"en": "The practical first step is to separate statehood, UN membership, and official self-description."
+					"ja": "読むときの第一歩は、「主権国家か」「国連加盟国か」「統計・スポーツ・自治制度上の country か」「国名上の自己表現か」を分けることである。",
+					"en": "The first reading step is to separate sovereign state, UN member, statistical or sporting country, autonomous country, and official self-description."
 				},
 				{
-					"ja": "国連加盟国は現在193か国であり、国連は加盟国一覧と公式国名リストを管理している。",
-					"en": "The United Nations currently has 193 Member States, and the UN maintains both a member-state list and official country-name materials."
+					"ja": "国連加盟国は現在193か国である。",
+					"en": "The United Nations currently has 193 Member States."
 				},
 				{
-					"ja": "次に見るべきなのは、元首、権力分配、政治制度、理念、国際法上の地位である。",
-					"en": "After that, read five layers separately: head of state, territorial power structure, executive system, ideological language, and international legal status."
+					"ja": "非加盟オブザーバー国家を足すと、国連を中心にした外交上の基準線は195主体になる。",
+					"en": "If the two non-member observer states are added, the UN-centered diplomatic baseline becomes 195 entities."
 				},
 				{
-					"ja": "共和国は原則として世襲君主を置かないが、民主制を保証しない。",
-					"en": "A republic usually lacks a hereditary monarch, but that does not guarantee democracy."
-				},
-				{
-					"ja": "王国や立憲君主制は世襲君主を置くが、英国、オランダ、日本のように議会制民主主義と両立しうる。",
-					"en": "A kingdom or constitutional monarchy can still be a parliamentary democracy."
-				},
-				{
-					"ja": "連邦や合衆国は、元首ではなく中央と州の権限配分の話である。",
-					"en": "Federal and united terms usually speak to central-local authority, not to whether a country has a monarch."
+					"ja": "M49、WDI、IOC、FIFAの数は、何を数えるかで国数が変わることを示している。",
+					"en": "But the UN M49 statistical list has 248 countries or areas, the World Bank WDI covers 217 economies, the IOC recognizes 206 National Olympic Committees, and FIFA has 211 member associations."
 				},
 				{
 					"ja": "国名は「地図のラベル」ではなく、国家が自分をどう説明しているかの圧縮表現である。",
@@ -65,10 +45,63 @@
 			]
 		},
 		{
+			"id": "country-counts",
+			"heading": {
+				"ja": "2. 数で見る世界の「国」",
+				"en": "2. Counting Countries by Definition"
+			},
+			"pairs": [
+				{
+					"ja": "最も保守的に数えるなら、世界の「国」は国連加盟国の193か国である。",
+					"en": "The narrowest standard answer is 193: the current number of UN Member States."
+				},
+				{
+					"ja": "国連総会には、加盟国ではないがオブザーバー国家として参加するHoly SeeとState of Palestineがある。",
+					"en": "The UN General Assembly also has two non-member observer states, the Holy See and the State of Palestine."
+				},
+				{
+					"ja": "国連の席次を入口にするなら、まず195主体が基準線になる。",
+					"en": "If UN seating is the starting point, the first useful baseline is therefore 195 entities: 193 members plus two observer states."
+				},
+				{
+					"ja": "統計、貿易、スポーツ、自治制度の世界では、国連加盟国だけでは足りない。",
+					"en": "Statistics, trade, sport, and autonomy systems use broader units."
+				},
+				{
+					"ja": "海外領土、自治領、特別行政区、構成国、限定承認の主体、非自治地域も、データや競技団体では別単位として扱われることがある。",
+					"en": "Overseas territories, autonomous territories, special administrative regions, constituent countries, limited-recognition entities, and non-self-governing territories may appear as separate units in data or sports governance even when they are not separate UN Member States."
+				},
+				{
+					"ja": "国の数には、国連加盟国の中核、承認問題を含む周辺層、目的別の制度上の層がある。",
+					"en": "The distribution shows three layers."
+				},
+				{
+					"ja": "中核は、国連加盟国193という外交・国際法上の層である。",
+					"en": "First, there is a core diplomatic and international-law layer: the 193 UN Member States."
+				},
+				{
+					"ja": "第二層は、オブザーバー国家、限定承認の主体、非自治地域である。",
+					"en": "Second, there is a surrounding political layer of observer states, limited-recognition entities, and non-self-governing territories."
+				},
+				{
+					"ja": "第三層は、M49、WDI、IOC、FIFAのような目的別の国・地域単位である。",
+					"en": "Third, there is an institutional layer in which M49, WDI, the IOC, and FIFA count countries or areas for purposes other than recognition."
+				},
+				{
+					"ja": "国名の語種で見ても、分布は一枚岩ではない。",
+					"en": "Formal country-name words also vary widely."
+				},
+				{
+					"ja": "Republic、Kingdom、State、Federal Republicなどは、歴史や自己説明の手掛かりであり、民主性や自治の程度を測る物差しではない。",
+					"en": "These words are clues to institutional history and self-description, but they are not measures of democracy or autonomy."
+				}
+			]
+		},
+		{
 			"id": "axes",
 			"heading": {
-				"ja": "2. まず六つの軸に分ける",
-				"en": "2. Split the Name into Six Axes"
+				"ja": "3. まず六つの軸に分ける",
+				"en": "3. Split the Name into Six Axes"
 			},
 			"pairs": [
 				{
@@ -76,32 +109,28 @@
 					"en": "Country-name terms are easier to read when split into six axes."
 				},
 				{
-					"ja": "この表で重要なのは、同じ国名に複数の軸が重なることである。",
+					"ja": "同じ国名に複数の軸が重なることが重要である。",
 					"en": "The important point is that one country name can contain several axes at once."
 				},
 				{
-					"ja": "たとえば「Federal Republic」は「共和国」と「連邦制」を同時に示す。",
+					"ja": "Federal Republic は共和国と連邦制を同時に示す。",
 					"en": "Federal Republic combines a republican head-of-state claim with federal territorial structure."
 				},
 				{
-					"ja": "「United Kingdom」は王国であり、複数の構成部分を持つが、米国やUAEのような連邦国家ではない。",
+					"ja": "United Kingdomは王国であり、複数の構成部分を持つが、米国やUAEのような連邦国家ではない。",
 					"en": "United Kingdom is a kingdom with multiple constituent parts, but it is not a federation like the United States or the UAE."
 				},
 				{
-					"ja": "「Democratic People’s Republic」は民主、人民、共和国の語を重ねるが、それだけで自由選挙や権力分立があるとは読めない。",
+					"ja": "Democratic People’s Republicという名前だけでは、自由選挙や権力分立の存在は分からない。",
 					"en": "Democratic People’s Republic combines democratic, people’s, and republic language, but the name alone does not prove free elections or separation of powers."
-				},
-				{
-					"ja": "政府形態の分類でも、民主制以外に君主制、独裁制、寡頭制、神権政治、一党支配などがある。",
-					"en": "Government systems also need to be separated from labels."
 				}
 			]
 		},
 		{
 			"id": "statehood",
 			"heading": {
-				"ja": "3. 主権国家と国連上の地位",
-				"en": "3. Sovereign State and UN Status"
+				"ja": "4. 主権国家と国連上の地位",
+				"en": "4. Sovereign State and UN Status"
 			},
 			"pairs": [
 				{
@@ -109,31 +138,27 @@
 					"en": "The first question is not whether something is casually called a country, but whether it is a state in international-law terms."
 				},
 				{
-					"ja": "古典的には、モンテビデオ条約1条が、国家の要件として、恒久的住民、明確な領域、政府、他国と関係を結ぶ能力を挙げる。",
+					"ja": "モンテビデオ条約1条は、国家の要件として、恒久的住民、明確な領域、政府、他国と関係を結ぶ能力を挙げる。",
 					"en": "The classic entry point is Article 1 of the Montevideo Convention, which lists a permanent population, a defined territory, government, and capacity to enter into relations with other states."
-				},
-				{
-					"ja": "これは現代国際法のすべてを決める万能基準ではないが、主権国家を考える入口として今も便利である。",
-					"en": "This is not a complete decision rule for every modern status dispute, but it remains a useful starting point for thinking about statehood."
 				},
 				{
 					"ja": "国家性、承認、国連加盟は同じではない。",
 					"en": "Statehood, recognition, and UN membership are related but not identical."
 				},
 				{
-					"ja": "国連加盟国は193である一方、国連には非加盟オブザーバー国家としてHoly SeeとState of Palestineも存在する。",
+					"ja": "国連加盟国は193である。",
 					"en": "There are 193 UN Member States."
 				},
 				{
-					"ja": "国連加盟国は193である一方、国連には非加盟オブザーバー国家としてHoly SeeとState of Palestineも存在する。",
+					"ja": "Holy SeeとState of Palestineは非加盟オブザーバー国家である。",
 					"en": "There are also non-member observer states: the Holy See and the State of Palestine."
 				},
 				{
-					"ja": "「国」と呼ばれるものがすべて主権国家ではない点も重要である。",
+					"ja": "国と呼ばれるものがすべて主権国家ではない。",
 					"en": "Not everything called a country is a sovereign state."
 				},
 				{
-					"ja": "イングランド、スコットランド、ウェールズ、北アイルランドは日常語では country と呼ばれるが、国連加盟国としての独立国ではなく、英国という主権国家の構成部分である。",
+					"ja": "イングランド、スコットランド、ウェールズ、北アイルランドは英国の構成部分であり、別々の国連加盟国ではない。",
 					"en": "England, Scotland, Wales, and Northern Ireland may be called countries in ordinary language, but they are constituent parts of the United Kingdom, not separate UN Member States."
 				}
 			]
@@ -141,8 +166,8 @@
 		{
 			"id": "republic",
 			"heading": {
-				"ja": "4. 共和国は民主制の同義語ではない",
-				"en": "4. Republic Does Not Mean Democracy"
+				"ja": "5. 共和国は民主制の同義語ではない",
+				"en": "5. Republic Does Not Mean Democracy"
 			},
 			"pairs": [
 				{
@@ -150,19 +175,15 @@
 					"en": "A republic is normally a state without a hereditary monarch as head of state."
 				},
 				{
-					"ja": "元首は大統領、国家主席、集団指導機関などになりうる。",
-					"en": "The head of state may be a president, a state chair, a collective organ, or another non-hereditary institution."
-				},
-				{
-					"ja": "しかし、共和国は民主制の保証ではない。",
+					"ja": "共和国は民主制の同義語ではない。",
 					"en": "But republic is not a synonym for democracy."
 				},
 				{
-					"ja": "Republic、People’s Republic、Democratic Republic、Socialist Republic は、選挙競争、報道の自由、権力分立、人権保障の実態を自動的に示さない。",
+					"ja": "Republic、People’s Republic、Democratic Republic、Socialist Republic は、選挙競争や権力分立を自動的に示さない。",
 					"en": "Republic, People’s Republic, Democratic Republic, and Socialist Republic do not automatically indicate competitive elections, press freedom, separation of powers, or rights protection."
 				},
 				{
-					"ja": "逆に、英国、日本、オランダのような君主制国家でも、議会制民主主義が存在する。",
+					"ja": "英国、日本、オランダのような君主制国家でも、議会制民主主義は存在しうる。",
 					"en": "Conversely, constitutional monarchies such as the United Kingdom, Japan, and the Netherlands can operate as parliamentary democracies."
 				},
 				{
@@ -174,8 +195,8 @@
 		{
 			"id": "monarchy",
 			"heading": {
-				"ja": "5. 王国と立憲君主制",
-				"en": "5. Kingdoms and Constitutional Monarchies"
+				"ja": "6. 王国と立憲君主制",
+				"en": "6. Kingdoms and Constitutional Monarchies"
 			},
 			"pairs": [
 				{
@@ -187,40 +208,28 @@
 					"en": "In a constitutional monarchy, the monarch’s authority is constrained by the constitution, conventions, parliament, and cabinet."
 				},
 				{
-					"ja": "日本は、この分類でよく誤解される。",
-					"en": "Japan is a frequent source of confusion."
-				},
-				{
 					"ja": "日本の正式英語名は Kingdom of Japan ではなく Japan である。",
 					"en": "Its official English country name is Japan, not Kingdom of Japan."
 				},
 				{
-					"ja": "しかし、日本国憲法1条は天皇を日本国と日本国民統合の象徴とし、その地位は主権の存する日本国民の総意に基づくと定める。",
-					"en": "But Japan is also not a republic."
-				},
-				{
-					"ja": "日本は「共和国」ではなく、「天皇を象徴として持つ国民主権の議院内閣制国家」と読むのが正確である。",
+					"ja": "日本は、天皇を象徴として持つ国民主権の議院内閣制国家である。",
 					"en": "Japan is therefore best read as a parliamentary state with popular sovereignty and a symbolic hereditary Emperor."
 				},
 				{
-					"ja": "Commonwealth Realm も、植民地と混同しやすい。",
-					"en": "Commonwealth Realm is another term that is often confused with colonial status."
-				},
-				{
-					"ja": "現国王は英国に加えて14のCommonwealth realmsの君主であり、Commonwealth自体は56の独立国からなる自発的な連合体である。",
-					"en": "The current King is sovereign of 14 Commonwealth realms in addition to the United Kingdom, and the Commonwealth itself is a voluntary association of 56 independent countries."
+					"ja": "Commonwealth Realm は植民地ではなく、同じ人物を君主として共有する独立国である。",
+					"en": "Canada, Australia, and New Zealand are not British colonies; they are independent states that share the same person as their monarch."
 				}
 			]
 		},
 		{
 			"id": "federal",
 			"heading": {
-				"ja": "6. 連邦、合衆国、単一国家",
-				"en": "6. Federation, United States, and Unitary State"
+				"ja": "7. 連邦、合衆国、単一国家",
+				"en": "7. Federation, United States, and Unitary State"
 			},
 			"pairs": [
 				{
-					"ja": "連邦、合衆国、Federation は、君主か共和国かではなく、中央政府と州や構成単位の関係を示す。",
+					"ja": "連邦、合衆国、Federation は、中央政府と州や構成単位の関係を示す。",
 					"en": "Federal, United States, and Federation terms speak to the relationship between the central government and territorial units."
 				},
 				{
@@ -228,33 +237,79 @@
 					"en": "A unitary state places sovereign legislative authority primarily at the center."
 				},
 				{
-					"ja": "地方自治や分権があっても、州が連邦構成単位として憲法上の固有権限を持つ制度とは異なる。",
-					"en": "It may still have local autonomy or devolution, but those territorial units do not have the same constitutional position as states in a federation."
-				},
-				{
-					"ja": "ただし、単一国家にも複雑なものがある。",
-					"en": "Some unitary or monarchy-based systems are still complex."
-				},
-				{
 					"ja": "英国は四つの構成部分と分権行政を持つ。",
 					"en": "The United Kingdom has four constituent parts and devolved institutions."
 				},
 				{
-					"ja": "オランダ王国は、欧州のオランダだけではなく、Aruba、Curaçao、St Maartenを含む王国であり、Bonaire、St Eustatius、Sabaはオランダの特別自治体である。",
+					"ja": "オランダ王国には、欧州のNetherlandsだけでなくAruba、Curaçao、St Maartenも含まれる。",
 					"en": "The Kingdom of the Netherlands includes the European Netherlands as well as Aruba, Curaçao, and St Maarten as countries within the Kingdom, while Bonaire, St Eustatius, and Saba are special municipalities of the Netherlands."
 				}
 			]
 		},
 		{
-			"id": "practical-order",
+			"id": "legitimacy-words",
 			"heading": {
-				"ja": "9. 実務での読み方",
-				"en": "9. A Practical Reading Order"
+				"ja": "8. People’s、Democratic、Islamic、Socialistの読み方",
+				"en": "8. Reading People’s, Democratic, Islamic, and Socialist"
+			},
+			"pairs": [
+				{
+					"ja": "People’s、Democratic、Islamic、Socialist、Arab は、制度分類というより、国家の正統性を語る語である。",
+					"en": "People’s, Democratic, Islamic, Socialist, and Arab are often legitimacy words rather than precise institutional classifications."
+				},
+				{
+					"ja": "これらの語は、制度実態と必ず分けて読む。",
+					"en": "These words should always be read separately from institutional reality."
+				},
+				{
+					"ja": "国名の語だけで同じ箱に入れると、むしろ理解を誤る。",
+					"en": "Putting them in the same box because of one word in the name obscures more than it explains."
+				}
+			]
+		},
+		{
+			"id": "special-cases",
+			"heading": {
+				"ja": "9. 代表的な特殊例10件",
+				"en": "9. Ten Representative Special Cases"
+			},
+			"pairs": [
+				{
+					"ja": "特殊例とは、国名、主権、承認、自治、国際機関での扱いがずれるため、分類軸を決めないと誤読しやすい例である。",
+					"en": "Special case does not mean strange country."
+				},
+				{
+					"ja": "特殊例とは、国名、主権、承認、自治、国際機関での扱いがずれるため、分類軸を決めないと誤読しやすい例である。",
+					"en": "It means that name, sovereignty, recognition, autonomy, and international-organization treatment do not line up neatly."
+				},
+				{
+					"ja": "10件を見ると、国の数が定義で変わる理由が分かりやすい。",
+					"en": "The following ten cases make it easier to see why country counts change by definition."
+				}
+			]
+		},
+		{
+			"id": "reading-order",
+			"heading": {
+				"ja": "10. 国名を読む確認順序",
+				"en": "10. A Reading Order"
 			},
 			"pairs": [
 				{
 					"ja": "国名を見るときは、次の順番で読むとよい。",
 					"en": "Use this order when reading country names."
+				},
+				{
+					"ja": "国連加盟国、非加盟オブザーバー、限定承認の主体、構成国、自治領、海外領土のどれかを見る。",
+					"en": "Ask whether the entity is a UN Member State, non-member observer state, limited-recognition entity, constituent country, autonomous territory, or overseas territory."
+				},
+				{
+					"ja": "共和国、王国、公国、首長国、スルタン国などから、世襲君主の有無を見る。",
+					"en": "Use republic, kingdom, principality, emirate, and sultanate language to identify whether a hereditary monarch is present."
+				},
+				{
+					"ja": "Democratic、People’s、Islamic、Socialistなどを、制度実態ではなく自己表現として読む。",
+					"en": "Treat democratic, people’s, Islamic, socialist, and similar words as self-description until institutions are checked."
 				},
 				{
 					"ja": "この順序にすると、「名前」と「制度」と「実態」を混ぜずに済む。",
@@ -263,10 +318,6 @@
 				{
 					"ja": "国名は便利な入口だが、国そのものの評価ではない。",
 					"en": "A country name is a useful entry point, but it is not an evaluation of the country itself."
-				},
-				{
-					"ja": "とくに民主性、人権、自治、承認、領土問題を扱う場合は、国名からの印象ではなく、一次資料と現行制度に戻るべきである。",
-					"en": "For democracy, human rights, autonomy, recognition, or territorial disputes, return to primary sources and current institutions rather than relying on the label."
 				}
 			]
 		}

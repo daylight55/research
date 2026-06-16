@@ -23,7 +23,7 @@ draft: false
 
 国名に付く「共和国」「王国」「連邦」「合衆国」「人民」「民主」「イスラム」「Commonwealth」は、ひとつの分類軸を表しているわけではない。ある語は元首の種類を、別の語は中央政府と地方政府の関係を、さらに別の語は政治理念や歴史的自己表現を示す。したがって、国名だけを見て「民主的」「独立国」「連邦国家」と判断すると誤る。
 
-実務上は、まず「主権国家か」「国連加盟国か」「国名上の自己表現か」を分ける必要がある。国連加盟国は現在193か国であり、国連は加盟国一覧と公式国名リストを管理している。<SourceNote>[United Nations, Member States](https://www.un.org/en/about-us/member-states) と国連図書館の [UN Member States on the Record](https://www.un.org/en/library/unms) は193加盟国を示す。国名の正式表記は国連DGACMの [official names of countries PDF](https://www.un.org/dgacm/sites/www.un.org.dgacm/files/Documents_Protocol/officialnamesofcountries.pdf) を参照した。</SourceNote>
+読むときの第一歩は、「主権国家か」「国連加盟国か」「統計・スポーツ・自治制度上の country か」「国名上の自己表現か」を分けることである。国連加盟国は現在193か国、非加盟オブザーバー国家を足すと195主体になる。だが、国連M49の統計用「countries or areas」は248行、World BankのWDIは217 economies、IOCは206 National Olympic Committees、FIFAは211 member associationsを扱う。つまり、「世界には何か国あるか」は、何を数えるかを先に決めないと答えが変わる。<SourceNote>[United Nations, Member States](https://www.un.org/en/about-us/member-states) と国連図書館の [UN Member States on the Record](https://www.un.org/en/library/unms) は193加盟国を示す。[UN, Non-Member States](https://www.un.org/en/about-us/non-member-states) は Holy See と State of Palestine を非加盟オブザーバー国家として示す。統計用の国・地域リストは [UNSD, M49](https://unstats.un.org/unsd/methodology/m49/) を参照し、2026年6月16日に英語表のCountry or Area行を248件として確認した。World Bank WDIは [WDI home](https://wdi.worldbank.org/) で217 economiesを示す。</SourceNote>
 
 次に見るべきなのは、元首、権力分配、政治制度、理念、国際法上の地位である。共和国は原則として世襲君主を置かないが、民主制を保証しない。王国や立憲君主制は世襲君主を置くが、英国、オランダ、日本のように議会制民主主義と両立しうる。連邦や合衆国は、元首ではなく中央と州の権限配分の話である。People’s Republic や Democratic People’s Republic は、制度実態ではなく政治的自己表現として読むべき場合が多い。
 
@@ -38,7 +38,31 @@ flowchart TD
 
 この記事の結論は単純である。国名は「地図のラベル」ではなく、国家が自分をどう説明しているかの圧縮表現である。ただし、その表現は制度実態、民主性、人権状況、国際承認の程度をそのまま保証しない。
 
-## 2. まず六つの軸に分ける
+## 2. 数で見る世界の「国」
+
+最も保守的に数えるなら、世界の「国」は国連加盟国の193か国である。ただし、国際社会で国家として扱われる主体はそれだけではない。国連総会には、加盟国ではないがオブザーバー国家として参加するHoly SeeとState of Palestineがある。したがって、国連の席次を入口にするなら、193加盟国に2オブザーバー国家を足した195主体が、まず参照すべき基準線になる。
+
+一方で、統計、貿易、スポーツ、自治制度の世界では、国連加盟国だけでは足りない。海外領土、自治領、特別行政区、構成国、限定承認の主体、非自治地域も、データや競技団体では別単位として扱われることがある。次の表は、「国」という語がどの範囲まで広がるかを数で見たものだ。
+
+| 数え方                         | 件数 | 何を数えているか                                             | 読み方 |
+| ------------------------------ | ---: | ------------------------------------------------------------ | ------ |
+| 国連加盟国                     | 193  | 国連憲章上の加盟国                                           | 主権国家の最も標準的な数 |
+| 国連加盟国 + 非加盟オブザーバー国家 | 195  | 193加盟国 + Holy See + State of Palestine                    | 外交上の国家的主体を広めに見る数 |
+| UN M49のcountries or areas      | 248  | 国連統計部が統計処理に使う国・地域コード                     | 国家承認ではなく統計単位 |
+| World Bank WDIのeconomies       | 217  | 世界銀行がデータ系列で扱うeconomies                          | 経済データ上の単位 |
+| IOCのNational Olympic Committees | 206  | オリンピック運動で承認されたNOC                              | スポーツ代表単位 |
+| FIFAのmember associations       | 211  | サッカー協会の加盟単位                                       | 国家と領域・地域協会が混在 |
+| 国連の非自治地域               | 17   | 住民が十分な自治をまだ達成していないと国連が扱う領域         | 脱植民地化の対象で、独立国数ではない |
+| Commonwealth加盟国              | 56   | Commonwealthの独立かつ平等な加盟国                           | 旧英帝国圏を中心とする自発的連合 |
+| Commonwealth realms             | 15   | 英国国王を自国の君主として共有する独立国                     | 植民地ではなく、君主を共有する独立国 |
+
+<SourceNote>IOCの206は [IOC, National Olympic Committees](https://olympics.com/ioc/national-olympic-committees)、FIFAの211は [FIFA, Member Associations](https://inside.fifa.com/associations)、国連非自治地域17は [UN, Decolonization](https://dppa.un.org/en/decolonization)、Commonwealth 56とrealms 15は [The Commonwealth, About us](https://thecommonwealth.org/about-us) と [The Royal Family, The Commonwealth](https://www.royal.uk/the-commonwealth) を参照した。</SourceNote>
+
+この分布から分かるのは、国の数には少なくとも三つの層があることだ。第一に、国連加盟国193という外交・国際法上の中核がある。第二に、非加盟オブザーバー国家、限定承認の主体、非自治地域のように、国家性や承認をめぐる政治問題を含む周辺層がある。第三に、M49、WDI、IOC、FIFAのように、国家承認とは別の目的で「国・地域」を数える制度上の層がある。
+
+国名の語種で見ても、分布は一枚岩ではない。国連の公式国名には、Republic、Kingdom、State、Federal Republic、Islamic Republic、People’s Democratic Republic、Principality、Sultanate、Emiratesなどが混在する。これらは国家の制度・歴史・理念の手掛かりにはなるが、民主性や自治の程度を評価する指標ではない。たとえばRepublicは君主を置かないことを示すには便利だが、競争的選挙を保証しない。Kingdomは君主を置くことを示すが、絶対君主制か立憲君主制かは別に確認する必要がある。<SourceNote>国名の正式表記は国連DGACMの [official names of countries PDF](https://www.un.org/dgacm/sites/www.un.org.dgacm/files/Documents_Protocol/officialnamesofcountries.pdf) を参照した。本文の「語種」は国名上の読み方であり、政治体制の評価ではない。</SourceNote>
+
+## 3. まず六つの軸に分ける
 
 国名の語を読むときは、次の六つの軸に分けると混乱しにくい。
 
@@ -55,7 +79,7 @@ flowchart TD
 
 政府形態の分類でも、民主制以外に君主制、独裁制、寡頭制、神権政治、一党支配などがある。オーストラリア議会教育局は、民主制と並べて、君主制、独裁制、寡頭制、神権政治、一党制を説明している。<SourceNote>オーストラリア議会教育局の [Apart from democracy what other forms of governments are there?](https://peo.gov.au/understand-our-parliament/your-questions-on-notice/questions/apart-from-democracy-what-other-forms-of-governments-are-there) は、民主制以外の政府形態を短く整理している。</SourceNote>
 
-## 3. 主権国家と国連上の地位
+## 4. 主権国家と国連上の地位
 
 最初の基準は、日常語の「国」ではなく、国際法上の国家性である。古典的には、モンテビデオ条約1条が、国家の要件として、恒久的住民、明確な領域、政府、他国と関係を結ぶ能力を挙げる。これは現代国際法のすべてを決める万能基準ではないが、主権国家を考える入口として今も便利である。<SourceNote>[Montevideo Convention on the Rights and Duties of States](https://www.jus.uio.no/english/services/library/treaties/01/1-02/rights-duties-states.html) 1条は、国家の資格として permanent population、defined territory、government、capacity to enter into relations with other states を列挙する。</SourceNote>
 
@@ -63,7 +87,7 @@ flowchart TD
 
 「国」と呼ばれるものがすべて主権国家ではない点も重要である。イングランド、スコットランド、ウェールズ、北アイルランドは日常語では country と呼ばれるが、国連加盟国としての独立国ではなく、英国という主権国家の構成部分である。英国政府の地名ガイドは、英国がイングランド、スコットランド、ウェールズ、北アイルランドの四つの構成部分から成り、スコットランド、ウェールズ、北アイルランドには分権行政構造があると説明している。<SourceNote>英国政府の [Toponymic guidelines](https://www.gov.uk/government/publications/toponymic-guidelines/toponymic-guidelines-for-map-and-other-editors-united-kingdom-of-great-britain-and-northern-ireland--2) は、United Kingdom の四つの constituent parts と分権構造を説明する。</SourceNote>
 
-## 4. 共和国は民主制の同義語ではない
+## 5. 共和国は民主制の同義語ではない
 
 共和国は、原則として世襲君主を国家元首に置かない国である。元首は大統領、国家主席、集団指導機関などになりうる。フランス共和国、イタリア共和国、大韓民国のように、共和国という語は君主制ではないことを示すには有用である。
 
@@ -79,7 +103,7 @@ flowchart TD
 | Democratic Republic | 民主的共和国を名乗る               | 実態は制度別に確認する                   |
 | Islamic Republic    | 共和国にイスラム的正統性を組み込む | 宗教機関や法体系の位置づけが国ごとに違う |
 
-## 5. 王国と立憲君主制
+## 6. 王国と立憲君主制
 
 王国は、国王や女王などの世襲君主を元首に置く国である。ただし、君主がどれだけ政治権力を持つかは国ごとに大きく異なる。立憲君主制では、君主の権限は憲法や慣習、議会、内閣によって制限される。絶対君主制では、君主が実質的に大きな統治権を持つ。
 
@@ -87,7 +111,7 @@ flowchart TD
 
 Commonwealth Realm も、植民地と混同しやすい。現国王は英国に加えて14のCommonwealth realmsの君主であり、Commonwealth自体は56の独立国からなる自発的な連合体である。つまり、カナダ、オーストラリア、ニュージーランドなどは英国の植民地ではなく、同じ人物を自国の君主として持つ独立国である。<SourceNote>英国王室の [The Commonwealth](https://www.royal.uk/the-commonwealth) は、国王が英国に加えて14のCommonwealth realmsの君主であり、Commonwealthが56の独立国の voluntary association であると説明する。Commonwealth事務局の [About us](https://thecommonwealth.org/about-us) も56の独立かつ平等な国の連合体として説明している。</SourceNote>
 
-## 6. 連邦、合衆国、単一国家
+## 7. 連邦、合衆国、単一国家
 
 連邦、合衆国、Federation は、君主か共和国かではなく、中央政府と州や構成単位の関係を示す。アメリカ合衆国、ドイツ連邦共和国、インド、ブラジル、オーストラリア、UAEは、それぞれ制度は違うが、中央と構成単位の権限配分が国の骨格になっている。
 
@@ -103,7 +127,7 @@ Commonwealth Realm も、植民地と混同しやすい。現国王は英国に�
 | United Kingdom   | 複数構成部分を持つ王国     | 英国                           |
 | Unitary state    | 中央政府が主権的権限の中心 | 日本、フランス、韓国           |
 
-## 7. People’s、Democratic、Islamic、Socialistの読み方
+## 8. People’s、Democratic、Islamic、Socialistの読み方
 
 People’s、Democratic、Islamic、Socialist、Arab は、制度分類というより、国家の正統性を語る語である。革命、反植民地主義、宗教、民族、社会主義、人民主権を国名に刻むことで、国家が自分の起源や理念を説明している。
 
@@ -111,17 +135,26 @@ People’s、Democratic、Islamic、Socialist、Arab は、制度分類という
 
 国連の公式国名リストを見ると、Republic、Kingdom、State、People’s Democratic Republic、Islamic Republic、Socialist Republic、Principality などが混在している。これは国連が各国の正式名称を扱っているからであり、その名称が政治的自由度や統治品質の評価を意味するわけではない。<SourceNote>国連DGACMの [official names of countries PDF](https://www.un.org/dgacm/sites/www.un.org.dgacm/files/Documents_Protocol/officialnamesofcountries.pdf) は、加盟国の正式名称に Republic、Kingdom、State、People’s Democratic Republic、Islamic Republic などが混在することを示す。</SourceNote>
 
-## 8. 紛らわしい固有例
+## 9. 代表的な特殊例10件
 
-日本は、国名にKingdomを含まないが、世襲の天皇を象徴として持つ。共和国ではないが、天皇に国政権能はない。したがって、国名ではなく憲法上の地位と政治制度で読む必要がある。
+特殊例は、「変な国」という意味ではない。国名、主権、承認、自治、国際機関での扱いがずれるため、最初に分類軸を決めないと誤読しやすい例である。代表的には次の10件を見ると、国の数が定義で変わる理由が分かりやすい。
 
-英国は、United Kingdomという名前から「連邦」と誤解されることがある。しかし、United Kingdomは連邦国家ではなく、イングランド、スコットランド、ウェールズ、北アイルランドという構成部分を持つ王国である。分権の程度は強いが、米国型の連邦制とは別である。
+| 例 | 何が特殊か | 数えるときの扱い |
+| --- | ---------- | ---------------- |
+| 日本 | 正式英語名にKingdomはないが、世襲の天皇を象徴として持つ | 共和国ではなく、国民主権・象徴天皇制の国家 |
+| 英国 | United Kingdomは4つの構成部分を持つが、米国型の連邦国家ではない | 国連加盟国としては1か国、内部にはEnglandなどのconstituent parts |
+| オランダ王国 | Netherlands、Aruba、Curaçao、St Maartenという複数のcountriesを含む | 国連加盟国としてはKingdom of the Netherlandsの1席 |
+| Holy See | 国連加盟国ではないが、非加盟オブザーバー国家 | 193には入らず、195の数え方では入る |
+| State of Palestine | 国連加盟国ではないが、非加盟オブザーバー国家 | 国家承認・領域統治・和平交渉を分けて読む |
+| 台湾 | 事実上の政府、選挙、通貨、軍を持つが、国連加盟国ではない | 国連基準の193には入らず、政治的承認問題として扱う |
+| Kosovo | 一部の国が国家として承認する一方、国連加盟国ではない | 「承認国がある」ことと「国連加盟」は別 |
+| Western Sahara | UN M49に載り、国連非自治地域リストにも残る | 国家数ではなく、脱植民地化・領土問題として読む |
+| Aruba | オランダ王国内のcountryだが、独立した国連加盟国ではない | 王国内の自治単位として数える |
+| Greenland | デンマーク王国内の自治領で、独自政府を持つが主権国家ではない | 統計や自治制度では別単位、国連加盟国としてはデンマーク |
 
-オランダは、日常的には欧州のNetherlandsを思い浮かべやすいが、正式にはKingdom of the Netherlandsという王国の枠組みで読む必要がある。Aruba、Curaçao、St Maartenは王国内のcountriesであり、Bonaire、St Eustatius、Sabaはオランダの特別自治体である。
+<SourceNote>Holy SeeとState of Palestineは [UN, Non-Member States](https://www.un.org/en/about-us/non-member-states) に基づく。英国は [GOV.UK, Toponymic guidelines](https://www.gov.uk/government/publications/toponymic-guidelines/toponymic-guidelines-for-map-and-other-editors-united-kingdom-of-great-britain-and-northern-ireland--2)、オランダ王国とArubaは [Government of the Netherlands, Caribbean parts of the Kingdom](https://www.government.nl/themes/government-and-democracy/caribbean-parts-of-the-kingdom/responsibilities-of-the-netherlands-aruba-curacao-and-st-maarten)、Greenlandはデンマーク首相府の [The Unity of the Realm](https://english.stm.dk/the-prime-ministers-office/the-unity-of-the-realm/) を参照した。台湾、Kosovo、Western Saharaは、国連加盟国リスト、UN M49、UN Decolonization資料と照合し、ここでは国家承認の最終判断ではなく分類上の注意例として扱う。</SourceNote>
 
-朝鮮半島では、Republic of Korea と Democratic People’s Republic of Korea が並ぶ。どちらも「Republic」を含むが、政治制度、同盟関係、国際評価は大きく異なる。共和国という語は元首の性質を読む入口にはなるが、政治実態の評価には足りない。
-
-## 9. 実務での読み方
+## 10. 国名を読む確認順序
 
 国名を見るときは、次の順番で読むとよい。
 
@@ -139,10 +172,15 @@ People’s、Democratic、Islamic、Socialist、Arab は、制度分類という
 - [United Nations, Member States](https://www.un.org/en/about-us/member-states)
 - [UN Member States on the Record](https://www.un.org/en/library/unms)
 - [UN, Non-Member States](https://www.un.org/en/about-us/non-member-states)
+- [UNSD, Standard country or area codes for statistical use (M49)](https://unstats.un.org/unsd/methodology/m49/)
+- [World Bank, World Development Indicators](https://wdi.worldbank.org/)
+- [IOC, National Olympic Committees](https://olympics.com/ioc/national-olympic-committees)
+- [FIFA, Member Associations](https://inside.fifa.com/associations)
 - [Montevideo Convention on the Rights and Duties of States](https://www.jus.uio.no/english/services/library/treaties/01/1-02/rights-duties-states.html)
 - [Japanese Law Translation, The Constitution of Japan](https://www.japaneselawtranslation.go.jp/en/laws/view/174/en)
 - [GOV.UK, Toponymic guidelines](https://www.gov.uk/government/publications/toponymic-guidelines/toponymic-guidelines-for-map-and-other-editors-united-kingdom-of-great-britain-and-northern-ireland--2)
 - [Government of the Netherlands, Caribbean parts of the Kingdom](https://www.government.nl/themes/government-and-democracy/caribbean-parts-of-the-kingdom/responsibilities-of-the-netherlands-aruba-curacao-and-st-maarten)
+- [Danish Prime Minister's Office, The Unity of the Realm](https://english.stm.dk/the-prime-ministers-office/the-unity-of-the-realm/)
 - [The Royal Family, The Commonwealth](https://www.royal.uk/the-commonwealth)
 - [The Commonwealth, About us](https://thecommonwealth.org/about-us)
 - [DFAT, DPRK country brief](https://www.dfat.gov.au/geo/democratic-peoples-republic-of-korea/democratic-peoples-republic-of-korea-north-korea-country-brief)

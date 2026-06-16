@@ -31,6 +31,11 @@ for required_file in \
 	fi
 done
 
+structured_data_path="articles/news/${SLUG}/daily-trend-news.json"
+if [[ -f "${structured_data_path}" ]]; then
+	node ops/scripts/render-daily-trend-news.mjs "articles/news/${SLUG}/daily-trend-news.json" --validate-only
+fi
+
 node --test ops/tests/article-structure.test.mjs ops/tests/news-title-summaries.test.mjs
 node ops/scripts/validate-article-frontmatter.mjs --changed
 node ops/scripts/validate-article-mdx.mjs --changed

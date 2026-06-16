@@ -9,86 +9,217 @@ handling, or this prompt.
 
 ## Goal
 
-Create one Japanese News article that summarizes the most important recent hot
-trend topics for the configured research date. Cover three categories:
+Create one Daily Trend News digest for the configured research date. Cover three
+categories:
 
-- 政治
-- 経済
-- 技術
+- politics / 政治
+- economy / 経済
+- technology / 技術
 
 Select exactly five topics in each category, for a total of fifteen topics.
 Prioritize events and shifts from the most recent 24-48 hours, but include a
-slightly older item only when it is still driving current discussion or market /
+slightly older item only when it is still driving current discussion or market,
 policy, business, and practical decisions.
 
-## Repository Rules
+## Output Contract
 
 - Follow `AGENTS.md`.
-- Write the reader-facing article bodies directly in
-  `articles/news/daily-trends-<YYYY-MM-DD>/ja/index.mdx` and
-  `articles/news/daily-trends-<YYYY-MM-DD>/en/index.mdx`.
-- Use `ops/codex/templates/news-digest.mdx` as the required article shape.
-- Keep the frontmatter fields from the News template, including
-  `contentType: news`, `category: tech-news`, `rssSummary`, and
-  `heroImageQuery`.
-- Quote every frontmatter string scalar with single quotes, especially `title`,
-  `description`, `rssSummary`, `heroImageQuery`, `heroImageAlt`,
-  `heroImageCredit`, and `heroImageCreditUrl`. If the value itself contains a
-  single quote, escape it by doubling it. Do not leave colons in unquoted
-  frontmatter values.
-- Keep the template's `generation` frontmatter block. Set only `model` from
-  `Automation Metadata`. Do not store prompt source, prompt summary, Run
-  Context, or other prompt details in article frontmatter.
-- Set the article `title` and H1 to `YYYY-MM-DD <SUMMARY_PHRASE>`, where the
-  phrase after the date summarizes all fifteen topics or describes the most
+- Create the structured data file at
+  `articles/news/daily-trends-<YYYY-MM-DD>/daily-trend-news.json`.
+- Do not hand-author final MDX, frontmatter, component imports, source-card
+  JSX, `source-notes.mdx`, `research-log.mdx`, or `mix-alignment.json`.
+- After creating the JSON file, run:
+
+```bash
+node ops/scripts/render-daily-trend-news.mjs "articles/news/daily-trends-<YYYY-MM-DD>/daily-trend-news.json"
+ARTICLE_PATH="articles/news/daily-trends-<YYYY-MM-DD>/ja/index.mdx" SLUG="daily-trends-<YYYY-MM-DD>" bash ops/scripts/preflight-generated-trend-news.sh
+```
+
+- If validation fails, edit only `daily-trend-news.json` and rerun the same two
+  commands. The renderer is the only supported way to create the public files.
+- Do not create `report.md` or another second copy of the article body.
+
+The deterministic renderer creates:
+
+- `articles/news/daily-trends-<YYYY-MM-DD>/ja/index.mdx`
+- `articles/news/daily-trends-<YYYY-MM-DD>/en/index.mdx`
+- `articles/news/daily-trends-<YYYY-MM-DD>/ja/source-notes.mdx`
+- `articles/news/daily-trends-<YYYY-MM-DD>/en/source-notes.mdx`
+- `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx`
+- `articles/news/daily-trends-<YYYY-MM-DD>/en/research-log.mdx`
+- `articles/news/daily-trends-<YYYY-MM-DD>/mix-alignment.json`
+
+## Structured JSON Shape
+
+Use this exact top-level shape. Values shown in angle brackets are placeholders
+to replace with researched content.
+
+```json
+{
+	"version": 1,
+	"slug": "daily-trends-<YYYY-MM-DD>",
+	"date": "<YYYY-MM-DD>",
+	"category": "tech-news",
+	"tags": ["news", "politics", "economy", "technology"],
+	"generation": {
+		"model": "<MODEL_FROM_AUTOMATION_METADATA>"
+	},
+	"heroImage": {
+		"query": "<PERSON_OR_COMPANY_OR_LOCATION_OR_EVENT_SPECIFIC_ENGLISH_SEARCH_PHRASE>",
+		"alt": {
+			"ja": "<HERO_IMAGE_ALT_TEXT_JA>",
+			"en": "<HERO_IMAGE_ALT_TEXT_EN>"
+		}
+	},
+	"locales": {
+		"ja": {
+			"title": "<YYYY-MM-DD> <全15本のニュースを要約する状況タイトル>",
+			"description": "<ONE_SENTENCE_DESCRIPTION>",
+			"rssSummary": "<SHORT_RSS_SUMMARY>",
+			"opening": "<直近24-48時間の全体シグナルを1段落で要約する>",
+			"crossCutting": ["<横断的な見立て>", "<横断的な見立て>", "<横断的な見立て>"],
+			"watchItems": ["<追跡すべき未確定事項>", "<追跡すべき未確定事項>", "<追跡すべき未確定事項>"],
+			"sourceNotes": {
+				"politics": ["<source inventory and topic selection notes>"],
+				"economy": ["<source inventory and topic selection notes>"],
+				"technology": ["<source inventory and topic selection notes>"],
+				"decisions": ["<rejected or downgraded candidate topics and uncertainty labels>"]
+			},
+			"researchLog": {
+				"instruction": [
+					"Research date: <YYYY-MM-DD>",
+					"Article slug: `daily-trends-<YYYY-MM-DD>`",
+					"Run Context: include topic hint if present, category/count constraints, recency window, and deliverable."
+				],
+				"decisionNotes": ["<調査・採否・画像選定の判断ログ>"],
+				"followUps": ["<翌日以降に確認すべき残課題>"]
+			}
+		},
+		"en": {
+			"title": "<YYYY-MM-DD> <SITUATION_TITLE>",
+			"description": "<ONE_SENTENCE_DESCRIPTION>",
+			"rssSummary": "<SHORT_RSS_SUMMARY>",
+			"opening": "<ONE_PARAGRAPH_SIGNAL>",
+			"crossCutting": ["<cross-cutting read>", "<cross-cutting read>", "<cross-cutting read>"],
+			"watchItems": ["<what to watch next>", "<what to watch next>", "<what to watch next>"],
+			"sourceNotes": {
+				"politics": ["<source inventory and topic selection notes>"],
+				"economy": ["<source inventory and topic selection notes>"],
+				"technology": ["<source inventory and topic selection notes>"],
+				"decisions": ["<rejected or downgraded candidate topics and uncertainty labels>"]
+			},
+			"researchLog": {
+				"instruction": [
+					"Research date: <YYYY-MM-DD>",
+					"Article slug: `daily-trends-<YYYY-MM-DD>`",
+					"Run Context: include topic hint if present, category/count constraints, recency window, and deliverable."
+				],
+				"decisionNotes": ["<research and selection notes>"],
+				"followUps": ["<remaining follow-up points>"]
+			}
+		}
+	},
+	"sections": [
+		{
+			"tone": "politics",
+			"heading": { "ja": "政治", "en": "Politics" },
+			"topics": ["<exactly five topic objects>"]
+		},
+		{
+			"tone": "economy",
+			"heading": { "ja": "経済", "en": "Economy" },
+			"topics": ["<exactly five topic objects>"]
+		},
+		{
+			"tone": "technology",
+			"heading": { "ja": "技術", "en": "Technology" },
+			"topics": ["<exactly five topic objects>"]
+		}
+	]
+}
+```
+
+Each topic object must use this shape:
+
+```json
+{
+	"id": "<section>-<short-kebab-case-topic>",
+	"title": { "ja": "<短いトピック見出し>", "en": "<short topic heading>" },
+	"source": {
+		"href": "<SOURCE_URL>",
+		"source": "<SOURCE_NAME>",
+		"title": { "ja": "<SOURCE_TITLE_JA>", "en": "<SOURCE_TITLE_EN>" },
+		"description": {
+			"ja": "<ONE_SENTENCE_SOURCE_MEMO_JA>",
+			"en": "<ONE_SENTENCE_SOURCE_MEMO_EN>"
+		},
+		"imageUrl": "<STABLE_SOURCE_ARTICLE_OR_TOPIC_SPECIFIC_IMAGE_URL>",
+		"imageAlt": { "ja": "<IMAGE_ALT_JA>", "en": "<IMAGE_ALT_EN>" }
+	},
+	"bottomLine": { "ja": "<要点本文だけ>", "en": "<bottom-line text only>" },
+	"whatHappened": { "ja": "<何が起きたか本文だけ>", "en": "<what happened text only>" },
+	"whyItMatters": { "ja": "<なぜ重要か本文だけ>", "en": "<why it matters text only>" },
+	"whatToWatch": { "ja": "<今後の注視点本文だけ>", "en": "<what to watch text only>" }
+}
+```
+
+## JSON Rules
+
+- Keep each localized `title` at 80 characters or fewer, including the date.
+- The phrase after the date must summarize all fifteen topics or the most
   important situation of the day. Do not use generic category-list titles such
-  as `YYYY-MM-DD ホットトレンド: 政治・経済・技術`. Keep each localized
-  `title` and H1 at 80 characters or fewer, including the date.
-- Treat the News catch image as high priority. Set `heroImageQuery` to
-  person-, organization-, company-, location-, or event-specific English search
-  terms from the selected topics. Do not use generic phrases such as
-  `news collage`, `politics economy technology`, `global newsroom`, or
-  `data streams`.
-- Keep the `NewsDigestSection` and `NewsSourceCard` imports from the News
-  template.
-- Wrap the politics, economy, and technology blocks with exactly three balanced
-  `NewsDigestSection` blocks: one `politics`, one `economy`, and one
-  `technology`. Do not add a closing `</NewsDigestSection>` without the matching
-  opening tag.
-- For each individual topic, render source attribution with a `NewsSourceCard`
-  immediately after the `### <TOPIC_TITLE>` heading and before the
-  `何が起きたか` / `なぜ重要か` / `今後の注視点` paragraphs. Do not leave a
-  plain `出典メモ:` text line in News digests.
-- Do not create `report.md` or another second copy of the same article body.
-- Create public pre-article source notes in
-  `articles/news/daily-trends-<YYYY-MM-DD>/ja/source-notes.mdx` and
-  `articles/news/daily-trends-<YYYY-MM-DD>/en/source-notes.mdx`. Use these
-  files for source inventory, topic selection notes, image/source-card evidence,
-  rejected or downgraded candidate topics, uncertainty labels, and cross-topic
-  synthesis before the material is edited into the reader-facing digest. Do not
-  make them duplicate copies of the final article.
-- Create a public research trail in
-  `articles/news/daily-trends-<YYYY-MM-DD>/ja/research-log.mdx` and
-  `articles/news/daily-trends-<YYYY-MM-DD>/en/research-log.mdx` alongside the
-  article body. In Japanese logs, include a `## 利用環境` section with the
-  automation model and the GitHub URL for the prompt source, plus a
-  `## 調査命令` section that summarizes the Run Context as the research
-  instruction: research date, topic hint if present, category/count constraints,
-  recency window, and the intended deliverable. In English logs, use the
-  corresponding headings `## Environment` and `## Research Instruction`.
-- In both localized research logs, write the model bullet in this exact format:
-  ```md
-  - Automation model: `<MODEL_USED_TO_CREATE_ARTICLE>`
-  ```
-  Replace only the placeholder with the model from Automation Metadata. Do not
-  use localized variants such as `モデル:`.
-- Create `articles/news/daily-trends-<YYYY-MM-DD>/mix-alignment.json` for MIX
-  display. Use `version: 1`, `sourceLocale: ja`, `targetLocale: en`, and enough
-  Japanese/English sentence pairs to satisfy `ops/scripts/validate-mix-alignment.mjs`.
-- Confirm the public trail is reachable from
-  `/news/daily-trends-<YYYY-MM-DD>/research/`.
-- Confirm the public source notes are reachable from
-  `/news/daily-trends-<YYYY-MM-DD>/sources/`.
+  as `YYYY-MM-DD ホットトレンド: 政治・経済・技術`.
+- Set `heroImage.query` to person-, organization-, company-, location-, or
+  event-specific English search terms from the selected topics. Do not use
+  generic phrases such as `news collage`, `politics economy technology`,
+  `global newsroom`, or `data streams`.
+- Do not put rendered labels in topic values. For example, `bottomLine.ja`
+  should not start with `要点:` and `bottomLine.en` should not start with
+  `The bottom line:`.
+- The renderer adds the Axios-inspired Smart Brevity labels in this order:
+  `要点:`, `何が起きたか:`, `なぜ重要か:`, `今後の注視点:` and
+  `The bottom line:`, `What happened:`, `Why it matters:`, `What to watch:`.
+- The renderer emits exactly three balanced localized `NewsDigestSection`
+  blocks: one politics, one economy, and one technology.
+- Do not mention Axios or Smart Brevity in reader-facing values. Use the format,
+  not the brand name.
+- Keep every topic paragraph short enough to scan; the structured validator
+  rejects long single-label lines.
+- Include one source object for each of the fifteen topics.
+- `href`, `source`, `title`, `description`, `imageUrl`, and `imageAlt` are
+  required.
+- `imageUrl` must be stable and topic-specific. Do not use
+  `https://source.unsplash.com/...`; it is deprecated and can return 503.
+- Do not reuse the same `imageUrl` across source cards within the article after
+  query strings are ignored.
+- Raw `<...>`, `{...}`, quotes, and ampersands are allowed in JSON values only
+  when they are part of the content; the renderer escapes them for MDX.
+
+## Public Trail
+
+- The rendered localized `source-notes.mdx` files must summarize source
+  inventory, topic selection notes, image/source-card evidence, rejected or
+  downgraded candidate topics, uncertainty labels, and cross-topic synthesis.
+  They become reachable from `/news/daily-trends-<YYYY-MM-DD>/sources/`.
+- The rendered localized `research-log.mdx` files must summarize the execution
+  context separately from the research instruction.
+- In Japanese research-log content, the renderer creates `## 利用環境` and
+  `## 調査命令`; populate `locales.ja.researchLog.instruction` with Run
+  Context details including research date, topic hint if present, category/count
+  constraints, recency window, and the intended deliverable.
+- The generated `research-log.mdx` must therefore contain `## 調査命令` content
+  that summarizes the Run Context, including the optional topic hint when it is
+  present.
+- In English research-log content, the renderer creates `## Environment` and
+  `## Research Instruction`; populate `locales.en.researchLog.instruction` with
+  the corresponding Run Context details.
+- `## Environment` and `## Research Instruction` must stay in the English
+  research-log output. MDX treats raw `<...>` text as JSX, so keep literal angle
+  brackets only when they are intended content; the renderer escapes structured
+  JSON text before writing MDX.
+- The renderer creates `mix-alignment.json` for MIX display with `version: 1`,
+  `sourceLocale: ja`, `targetLocale: en`, and sentence pairs derived from the
+  structured fields.
 
 ## Context Budget Rules
 
@@ -99,7 +230,7 @@ policy, business, and practical decisions.
 - Do not run broad file inventory commands that enumerate existing articles,
   such as `rg --files articles src` or `find articles`; use exact file paths
   from this prompt instead.
-- Read only the News template, `AGENTS.md`, and the minimum site files needed to
+- Read only `AGENTS.md`, this prompt, and the minimum site files needed to
   confirm schema or routing if validation fails.
 - Spend research tokens on current sources for the fifteen topics, not on
   repository article examples.
@@ -116,124 +247,13 @@ policy, business, and practical decisions.
   - international organizations and statistical agencies
   - reputable news wires or specialist outlets when primary sources are not yet
     available
-- Place source links near the supported claims.
-- In News digests, implement that near-claim source note as an embedded
-  `NewsSourceCard`, not as a plain Markdown sentence. Use the component title
-  and description to summarize what the source supports.
-- Treat citation-card imagery as important article content, not decoration.
-  Add a relevant image to every `NewsSourceCard` whenever a source, official
-  page, web search result, or Unsplash result can reasonably support the topic.
-- Clearly label uncertain, fast-moving, or inferred points.
-- Avoid long verbatim quotations.
-
-## Article Shape
-
-Write in Japanese for readers who need a fast but decision-useful overview.
-
-Use this structure:
-
-1. Title:
-   `YYYY-MM-DD <SUMMARY_PHRASE>`
-   - The phrase after the date must be a compact Japanese summary of the full
-     article or the day's most notable situation.
-   - Avoid generic labels that only list categories, such as
-     `ホットトレンド: 政治・経済・技術`.
-2. Opening summary:
-   - one short paragraph explaining the day / window and the overall signal
-3. `<NewsDigestSection tone='politics'>`
-   - wrap the complete politics block in this component so the rendered page
-     shows the category range with a politics background
-4. `## 政治`
-   - five items with concise `### <TOPIC_TITLE>` headings
-5. `</NewsDigestSection>`
-6. `<NewsDigestSection tone='economy'>`
-   - wrap the complete economy block in this component so the rendered page
-     shows the category range with an economy background
-7. `## 経済`
-   - five items with concise `### <TOPIC_TITLE>` headings
-8. `</NewsDigestSection>`
-9. `<NewsDigestSection tone='technology'>`
-   - wrap the complete technology block in this component so the rendered page
-     shows the category range with a technology background
-10. `## 技術`
-
-- five items with concise `### <TOPIC_TITLE>` headings
-
-11. `</NewsDigestSection>`
-12. `## 横断的な見立て`
-
-- three to five bullets connecting categories and explaining why the set of
-  topics matters
-
-13. `## 追跡すべき未確定事項`
-
-- practical follow-up points for the next daily run
-
-For each of the fifteen topic items, include:
-
-- a concise heading
-- do not prefix topic headings with category names or numbers such as
-  `政治 1.`, `経済 2.`, or `技術 3.`
-- one `NewsSourceCard` source memo card immediately below the heading
-- an Axios-inspired Smart Brevity summary paragraph before the details
-- `要点`: one short sentence that gives the bottom line first
-- `何が起きたか`: one short paragraph on the factual update
-- `なぜ重要か`: one short paragraph on the decision or market relevance
-- `今後の注視点`: the reader-facing takeaway should explain what to monitor next
-  after this news, not a generic business action item.
-- Keep each labelled paragraph short enough to scan. Do not split one label
-  across multiple paragraphs.
-- Japanese topic paragraphs must use exactly these labels, each as its own
-  paragraph and in this order: `要点:`, `何が起きたか:`, `なぜ重要か:`, and
-  `今後の注視点:`.
-- English topic paragraphs must use exactly these Axios-inspired Smart Brevity
-  labels, each as its own paragraph and in this order: `The bottom line:`,
-  `What happened:`, `Why it matters:`, and `What to watch:`. Do not use
-  shortened or stale labels such as `Watch:`, `Why it's important:`, or
-  `Implications for practice:`.
-- Do not mention Axios or Smart Brevity in the reader-facing article body. Use
-  the format, not the brand name.
-
-Use this component shape directly after each topic heading:
-
-```mdx
-<NewsSourceCard
-	href='<SOURCE_URL>'
-	source='<SOURCE_NAME>'
-	title='<SOURCE_TITLE>'
-	description='<ONE_SENTENCE_SOURCE_MEMO>'
-	imageUrl='<STABLE_SOURCE_ARTICLE_OR_IMAGES_UNSPLASH_PHOTO_URL>'
-	imageAlt='<SOURCE_CARD_IMAGE_ALT_TEXT>'
-/>
-```
-
-Rules for source memo cards:
-
-- Include at least one `NewsSourceCard` for each of the fifteen topics.
-- `href`, `source`, `title`, and `description` are required.
-- MDX treats raw `<...>` text as JSX. Do not write unescaped angle-bracket
-  phrases in prose, titles, descriptions, or research logs. Use normal words,
-  inline code, or `&lt;` / `&gt;` when a literal angle bracket is necessary.
-- `imageUrl` and `imageAlt` are required for every News topic card.
-- Prefer a reliable image directly attached to the source article, official
-  announcement, company page, regulator page, or public agency page.
-- If the source article has no reliable related image, use an Unsplash or web
-  search image that is specific to the topic's key person, organization,
-  company, location, product, or event. Avoid generic newspaper, abstract data,
-  newsroom, stock-market, or technology-background images.
-- Do not reuse the same `imageUrl` for multiple `NewsSourceCard` blocks within
-  one article. If several sources expose the same shared image, keep it only for
-  the first matching topic and choose a different topic-specific official, web,
-  or Unsplash image for the later cards.
-- Do not use `https://source.unsplash.com/...` dynamic or featured URLs. They
-  are deprecated and can return 503. Use stable direct image URLs such as
-  `https://images.unsplash.com/photo-...?...` or an official article image URL.
-- If no article-attached image is visible, do not leave the card image blank.
-  Fall back in this order: official organization image, related source via web
-  search, topic-specific Unsplash image.
-- Prefer the source that directly supports the topic's most important factual
+- Place source links in the topic `source.href` field nearest to the supported
   claim.
-- Do not replace cards with a bare `出典メモ:` paragraph.
+- Treat citation-card imagery as important article content, not decoration.
+  Add a relevant image to every source card whenever a source, official page,
+  web search result, or Unsplash result can reasonably support the topic.
+- Clearly label uncertain, fast-moving, or inferred points in the prose.
+- Avoid long verbatim quotations.
 
 ## Scope Control
 
@@ -248,33 +268,20 @@ Rules for source memo cards:
 
 Run focused verification before finishing:
 
-- Check generated Markdown / MDX for unresolved placeholders.
-- Confirm `title` and the H1 are identical and use a date plus a substantive
-  summary phrase, not a generic category-list title. Confirm every localized
-  `title` is 80 characters or fewer.
-- Confirm the article imports `NewsSourceCard` and contains at least fifteen
-  `<NewsSourceCard ... />` blocks.
-- Confirm every `NewsSourceCard` has `imageUrl` and `imageAlt`.
-- Confirm every localized MDX article has exactly three balanced
-  `NewsDigestSection` blocks: one politics, one economy, and one technology.
-- Confirm `mix-alignment.json` exists for MIX display and covers the generated
-  English article.
-- Confirm localized `source-notes.mdx` files exist and summarize source
-  selection before the final digest.
-- Confirm `NewsSourceCard` `imageUrl` values are unique within the article after
-  ignoring query strings.
-- Confirm `heroImageQuery` is specific to people, organizations, companies,
-  locations, or events from the selected topics and is not a generic news
-  collage query.
-- Run `git diff --check`.
-- Do not run `pnpm build` inside the Codex action step. The workflow restores
-  the repository Node.js version and runs the build after Codex finishes.
-- The workflow will confirm generated output includes:
-  - `/news/index.html`
-  - `/news/rss.xml`
-  - `/news/daily-trends-<YYYY-MM-DD>/index.html`
-  - `/news/daily-trends-<YYYY-MM-DD>/research/index.html`
-  - `/news/daily-trends-<YYYY-MM-DD>/sources/index.html`
+- `node ops/scripts/render-daily-trend-news.mjs "articles/news/daily-trends-<YYYY-MM-DD>/daily-trend-news.json"`
+- `ARTICLE_PATH="articles/news/daily-trends-<YYYY-MM-DD>/ja/index.mdx" SLUG="daily-trends-<YYYY-MM-DD>" bash ops/scripts/preflight-generated-trend-news.sh`
+- `git diff --check`
+
+Do not run `pnpm build` inside the Codex action step. The workflow restores the
+repository Node.js version and runs the build after Codex finishes.
+
+The workflow will confirm generated output includes:
+
+- `/news/index.html`
+- `/news/rss.xml`
+- `/news/daily-trends-<YYYY-MM-DD>/index.html`
+- `/news/daily-trends-<YYYY-MM-DD>/research/index.html`
+- `/news/daily-trends-<YYYY-MM-DD>/sources/index.html`
 
 ## Final Message
 

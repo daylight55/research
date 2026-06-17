@@ -1,0 +1,27 @@
+# research-log
+
+## Environment
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## Research Instruction
+
+- Research date: 2026-06-17
+- Article slug: `daily-trends-2026-06-17`
+- Run Context: Daily Trend News digest covering politics, economy, and technology; exactly five topics in each category; prioritize the last 24-48 hours and allow slightly older items only when they are still driving current decisions; deliver structured JSON for the renderer.
+- Repo-local skill: [research-report](/home/runner/work/research/research/.codex/skills/research-report/SKILL.md)
+- Prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## Decision Notes
+
+- Politics was reduced to the most signal-rich federal actions and election developments.
+- Economy was framed as an oil-and-rates story with housing and utility stress layered on top.
+- Technology was filtered for infrastructure bottlenecks and operational constraints rather than hype.
+- Article-page images and stable article URLs were preferred so the renderer can produce durable source cards.
+
+## Follow-ups
+
+- Track whether the US-Iran de-escalation lasts through the next shipping and inflation data points.
+- Watch for new court and legislative actions on voting, education, and war powers.
+- Check whether AI datacenter supply, power, or compliance bottlenecks intensify in the next cycle.

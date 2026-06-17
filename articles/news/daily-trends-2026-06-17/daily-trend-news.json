@@ -1,0 +1,758 @@
+{
+  "version": 1,
+  "slug": "daily-trends-2026-06-17",
+  "date": "2026-06-17",
+  "category": "tech-news",
+  "tags": ["news", "politics", "economy", "technology"],
+  "generation": {
+    "model": "gpt-5.4-mini"
+  },
+  "heroImage": {
+    "query": "Strait of Hormuz oil tankers June 2026",
+    "alt": {
+      "ja": "ストレイト・オブ・ホルムズを進む船団",
+      "en": "Vessels in the Strait of Hormuz"
+    }
+  },
+  "locales": {
+    "ja": {
+      "title": "2026-06-17 中東緩和で市場が動き、米政局は硬直、AI投資は拡大",
+      "description": "中東の緊張緩和が原油と金利に波及し、米政局は選挙・戦争権限・教育をめぐって対立し、AIインフラ投資は電力と規制の壁に突き当たっている。",
+      "rssSummary": "原油安、中央銀行の警戒、米政局の対立、AIインフラ競争が同時進行した一日。",
+      "opening": "中東の緊張がいったん和らいだことで原油と金利の見通しが揺れ、米国では選挙、戦争権限、教育行政をめぐる対立が続いた。技術面では、Windowsの大規模修正、6Gチップ、クラウド容量争奪、データセンター反発、中国の国家AI網計画が並び、AI競争がモデルから電力と許認可へ移っている。出典は政治では The Guardian の US politics liveblog と個別記事、経済では The Guardian business liveblog と各国中銀・企業記事、技術では current coverage を中心に整理した。",
+      "crossCutting": [
+        "中東の緩和は原油、金利、住宅の順に波及し、マクロの主役が再びエネルギーになった。",
+        "米国内では選挙、戦争権限、教育行政をめぐる権力争いが同時に進み、制度面の不確実性が高い。",
+        "AIブームの焦点はモデル競争から、電力・データセンター・クラウド容量・セキュリティへ移っている。"
+      ],
+      "watchItems": [
+        "US-Iran の緩和が原油と海上輸送の正常化につながるか。",
+        "投票権、教育省、戦争権限をめぐる訴訟や議会反発がどこまで広がるか。",
+        "AI向けデータセンターの電力、許認可、資金調達の制約が投資計画を鈍らせるか。"
+      ],
+      "sourceNotes": {
+        "politics": [
+          "主要出典は Guardian の 6/16 US politics liveblog と 2 本の個別記事。訴追、上院採決、投票権、教育省縮小を優先し、地域選挙の細かな動きは外した。",
+          "G7 と Ukraine は重要だが、今回は制度対立がはっきり見える federal policy の5本に絞った。"
+        ],
+        "economy": [
+          "Guardian business liveblog に加え、BoJ、RBA、Thames Water、英国住宅市場の個別記事を採用した。",
+          "個別企業の M&A や外食ニュースは、マクロ判断への寄与が小さいため除外した。"
+        ],
+        "technology": [
+          "Patch Tuesday、IMEC 6G、Microsoft-Oracle、Pennsylvania の datacenter 反発、中国の AI データセンター網を採用した。",
+          "Apple の wearables 噂や見出し中心のコメント記事は、一次性と確度が弱いため見送った。"
+        ],
+        "decisions": [
+          "政治は White House UFC plot, Georgia runoff, voting rights, Iran war powers, Education Department を採用。G7/Ukraine は liveblog 内の補足として扱った。",
+          "経済は原油、BoJ、RBA、Thames Water、住宅市場を採用。欧州株や単発の小売ニュースは優先度を下げた。",
+          "技術はインフラ、セキュリティ、規制、電力制約に重心を置き、噂ベースの製品観測は原則外した。"
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-17",
+          "Article slug: `daily-trends-2026-06-17`",
+          "Run Context: Daily Trend News digest for politics, economy, and technology; exactly five topics per category; prioritize the last 24-48 hours and include slightly older items only when they still drive current discussion; deliver structured JSON for the renderer.",
+          "Repo-local skill: [research-report](/home/runner/work/research/research/.codex/skills/research-report/SKILL.md)",
+          "Prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)"
+        ],
+        "decisionNotes": [
+          "政治は liveblog の連続報道を軸に、訴追・選挙・投票権・戦争権限・教育行政へと整理した。",
+          "経済は中東緩和の原油影響を起点に、BoJ と RBA、Thames Water、住宅市場までを一つの金利・物価ストーリーとして束ねた。",
+          "技術は AI インフラの実務面に寄せ、security, compute, power, permitting に関係する記事を優先した。",
+          "画像は各記事の埋め込み写真または記事由来の安定 URL を優先し、コラージュや汎用素材は使っていない。"
+        ],
+        "followUps": [
+          "US-Iran の合意が実際の海上輸送と原油価格にどう反映されるかを翌日以降も確認する。",
+          "投票権や教育省再編をめぐる訴訟・議会対応が続くかを追跡する。",
+          "AI データセンターの電力制約と許認可の遅延が、クラウド拡張計画に波及するかを確認する。"
+        ]
+      }
+    },
+    "en": {
+      "title": "2026-06-17 Markets Reprice on Iran Truce, U.S. Politics Hardens, AI Bets Grow",
+      "description": "Oil and rates moved on signs of de-escalation in the Middle East, U.S. politics stayed locked over elections, war powers, and education, and AI infrastructure bets ran into power and permitting friction.",
+      "rssSummary": "Oil fell, central banks stayed cautious, U.S. politics hardened, and AI infrastructure competition kept spreading.",
+      "opening": "A softer Middle East backdrop pushed oil and rate expectations around, while U.S. fights over elections, war powers, and education kept the domestic agenda tense. In technology, a large Windows patch cycle, a 6G chip advance, cloud-capacity bargaining, local resistance to datacenters, and China’s AI grid plan all pointed to the same shift: the AI race is moving from model hype to power, security, and permits. Politics is organized from The Guardian's US politics liveblog and related articles, economy from The Guardian business liveblog plus central-bank and company coverage, and technology from current source-grounded reporting rather than rumor-heavy commentary.",
+      "crossCutting": [
+        "De-escalation in the Middle East is feeding quickly into oil, rates, and housing.",
+        "U.S. politics is fighting on multiple fronts at once: elections, war powers, and education administration.",
+        "The AI boom is shifting from model competition to power, datacenters, cloud capacity, and security."
+      ],
+      "watchItems": [
+        "Whether the US-Iran truce translates into sustained shipping normalization and lower oil.",
+        "How far court challenges and congressional pushback spread on voting rights and Education Department changes.",
+        "Whether power, permitting, and financing constraints slow the next wave of AI datacenter buildout."
+      ],
+      "sourceNotes": {
+        "politics": [
+          "Main sourcing came from a June 16 Guardian liveblog and two separate U.S. political articles. The final set prioritizes charges, a Senate vote, voting rights, and Education Department moves over lower-signal local contests.",
+          "G7 and Ukraine were covered inside the same live stream but were not split into a separate topic because the institutional fight was the stronger signal."
+        ],
+        "economy": [
+          "The economy section uses the Guardian business liveblog plus standalone pieces on the BoJ, RBA, Thames Water, and the UK housing market.",
+          "Corporate deal chatter and retail micro-news were downgraded because they added less to the macro picture."
+        ],
+        "technology": [
+          "Selected topics focus on security, compute, power, and regulation: Patch Tuesday, IMEC's 6G chip work, Microsoft-Oracle capacity talks, Pennsylvania datacenter pushback, and China's AI grid plan.",
+          "Apple wearable rumors and commentary-heavy product takes were left out because the sourcing was weaker and more speculative."
+        ],
+        "decisions": [
+          "Politics: White House UFC plot, Georgia runoff, voting rights, Iran war powers, and Education Department changes made the cut.",
+          "Economy: oil, the BoJ, the RBA, Thames Water, and UK housing were chosen as the most decision-relevant items.",
+          "Technology: the set was narrowed to infrastructure and security rather than product rumor cycles."
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-17",
+          "Article slug: `daily-trends-2026-06-17`",
+          "Run Context: Daily Trend News digest covering politics, economy, and technology; exactly five topics in each category; prioritize the last 24-48 hours and allow slightly older items only when they are still driving current decisions; deliver structured JSON for the renderer.",
+          "Repo-local skill: [research-report](/home/runner/work/research/research/.codex/skills/research-report/SKILL.md)",
+          "Prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)"
+        ],
+        "decisionNotes": [
+          "Politics was reduced to the most signal-rich federal actions and election developments.",
+          "Economy was framed as an oil-and-rates story with housing and utility stress layered on top.",
+          "Technology was filtered for infrastructure bottlenecks and operational constraints rather than hype.",
+          "Article-page images and stable article URLs were preferred so the renderer can produce durable source cards."
+        ],
+        "followUps": [
+          "Track whether the US-Iran de-escalation lasts through the next shipping and inflation data points.",
+          "Watch for new court and legislative actions on voting, education, and war powers.",
+          "Check whether AI datacenter supply, power, or compliance bottlenecks intensify in the next cycle."
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "tone": "politics",
+      "heading": {
+        "ja": "政治",
+        "en": "Politics"
+      },
+      "topics": [
+        {
+          "id": "politics-white-house-ufc-plot",
+          "title": {
+            "ja": "White House UFC襲撃計画で5人訴追",
+            "en": "Five Charged in White House UFC Plot"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/live/2026/jun/16/donald-trump-oklahoma-senator-governor-primary-g7-iran-us-politics-latest-news-updates",
+            "source": "The Guardian",
+            "title": {
+              "ja": "米政治ライブ: White House UFC計画で5人訴追",
+              "en": "US politics live: five men charged over White House UFC plot"
+            },
+            "description": {
+              "ja": "Guardian の US politics liveblog。White House の UFC イベント襲撃計画に関する訴追を追った。",
+              "en": "The Guardian's U.S. politics liveblog covering the DOJ charges tied to the White House UFC plot."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/0d68686b454d0341d2ba66208c79158d6f2daf84/696_0_6929_5546/master/6929.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "White HouseのUFCイベント上空の花火",
+              "en": "Fireworks over the White House UFC event"
+            }
+          },
+          "bottomLine": {
+            "ja": "司法省は、White HouseのUFCイベントを狙った攻撃計画に関与したとして5人を訴追した。",
+            "en": "The Justice Department charged five people over a plot tied to a White House UFC event."
+          },
+          "whatHappened": {
+            "ja": "捜査当局は、事件の共謀と準備行為を理由に複数人を起訴した。",
+            "en": "Investigators said the case involved conspiracy and preparatory steps that justified charges."
+          },
+          "whyItMatters": {
+            "ja": "大統領執務空間の安全性と、政治イベント周辺の治安警備に再び注目が集まる。",
+            "en": "It renews attention on White House security and the policing of political events."
+          },
+          "whatToWatch": {
+            "ja": "共犯者の有無、動機の全容、FBI長官の発言をめぐる批判の広がり。",
+            "en": "Watch for possible accomplices, the motive, and backlash over the FBI director's earlier remarks."
+          }
+        },
+        {
+          "id": "politics-georgia-runoff",
+          "title": {
+            "ja": "ジョージア上院予備選はマイク・コリンズ",
+            "en": "Mike Collins Wins Georgia Senate Runoff"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/16/georgia-runoff-mike-collins",
+            "source": "The Guardian",
+            "title": {
+              "ja": "マイク・コリンズ、ジョージア上院決選で勝利",
+              "en": "Mike Collins wins Georgia Senate runoff"
+            },
+            "description": {
+              "ja": "Guardian のジョージア上院レース記事。共和党候補の座をめぐる決選を整理している。",
+              "en": "A Guardian article on the Georgia Senate race and the Republican runoff result."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/7c4507429e171c7a6835ab510a8c31fca03245dc/307_0_3055_2445/master/3055.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "ジョージア州の選挙集会",
+              "en": "Election rally in Georgia"
+            }
+          },
+          "bottomLine": {
+            "ja": "共和党はマイク・コリンズを本選候補に立て、ジョージア上院選の本戦に入る。",
+            "en": "Republicans now move into the general election with Mike Collins as their nominee."
+          },
+          "whatHappened": {
+            "ja": "ジョージアの共和党予備選は、上院候補を決める段階で決着した。",
+            "en": "The Republican runoff in Georgia settled the party's Senate nominee."
+          },
+          "whyItMatters": {
+            "ja": "ジョージアは上院多数派を左右する激戦州で、候補の色が本選の争点を決める。",
+            "en": "Georgia is a swing state that can shape Senate control and the broader midterm fight."
+          },
+          "whatToWatch": {
+            "ja": "Ossoff 陣営の反撃、資金流入、郊外有権者の動き。",
+            "en": "Watch the Ossoff response, fundraising, and suburban turnout."
+          }
+        },
+        {
+          "id": "politics-voting-rights",
+          "title": {
+            "ja": "投票権をめぐる政権の攻勢が拡大",
+            "en": "Trump Escalates Voting-Rights Push"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/16/trump-voting-rights-elections",
+            "source": "The Guardian",
+            "title": {
+              "ja": "トランプ政権、投票権と選挙をめぐる攻勢を強める",
+              "en": "Trump and voting rights: the latest election fight"
+            },
+            "description": {
+              "ja": "Guardian の分析記事。郵便投票や州の有権者情報をめぐる圧力を整理した。",
+              "en": "A Guardian analysis of the pressure campaign around mail voting and election administration."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/2f5dd58f50c64cd7d6ecc73e8b1dde5c9b644f03/0_0_4800_3034/master/4800.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "投票所のサイン",
+              "en": "Polling place sign"
+            }
+          },
+          "bottomLine": {
+            "ja": "連邦政府は郵便投票や州の選挙データに圧力をかけ、投票ルールをめぐる争いを拡大させている。",
+            "en": "The federal government is widening the fight over mail voting and election data."
+          },
+          "whatHappened": {
+            "ja": "投票制度をめぐる連邦と州の攻防が、政策と訴訟の両面で進んだ。",
+            "en": "The conflict over voting rules advanced on both policy and litigation fronts."
+          },
+          "whyItMatters": {
+            "ja": "有権者登録、郵便投票、捜査権限の扱いが、2026年の選挙環境を変える。",
+            "en": "Rules on registration, mail ballots, and investigations could reshape the 2026 election environment."
+          },
+          "whatToWatch": {
+            "ja": "裁判所の差し止め、州選挙当局の反発、議会の監督。",
+            "en": "Watch for court blocks, state pushback, and congressional oversight."
+          }
+        },
+        {
+          "id": "politics-iran-war-powers",
+          "title": {
+            "ja": "イラン戦争の終結決議は上院で否決",
+            "en": "Senate Blocks Iran War Powers Resolution"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/live/2026/jun/16/donald-trump-oklahoma-senator-governor-primary-g7-iran-us-politics-latest-news-updates",
+            "source": "The Guardian",
+            "title": {
+              "ja": "米政治ライブ: イラン戦争権限をめぐる上院採決",
+              "en": "US politics live: Senate vote on Iran war powers"
+            },
+            "description": {
+              "ja": "Guardian のライブブログ。対イラン戦闘の継続に歯止めをかける戦争権限決議を追った。",
+              "en": "The Guardian liveblog tracked the Senate vote over war powers and Iran."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/327eecfe54f2e52f3e250db5713f310eeb228eaf/0_0_3936_2632/master/3936.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "上院本会議場",
+              "en": "The U.S. Senate chamber"
+            }
+          },
+          "bottomLine": {
+            "ja": "上院は、イランへの軍事関与を止めるための戦争権限決議を退けた。",
+            "en": "The Senate rejected a war powers resolution aimed at ending U.S. military involvement with Iran."
+          },
+          "whatHappened": {
+            "ja": "議員たちは、ホワイトハウスの対イラン方針をめぐって採決に踏み切った。",
+            "en": "Lawmakers voted after a renewed fight over the White House's Iran posture."
+          },
+          "whyItMatters": {
+            "ja": "議会の監視が弱いままだと、対イラン政策のエスカレーション管理が難しくなる。",
+            "en": "Weak congressional checks make escalation control around Iran harder."
+          },
+          "whatToWatch": {
+            "ja": "停戦の持続、次の戦争権限投票、政権内の対外強硬派の動き。",
+            "en": "Watch the durability of the truce, any follow-up votes, and internal hawk diplomacy."
+          }
+        },
+        {
+          "id": "politics-education-dept",
+          "title": {
+            "ja": "教育省の権限分散がさらに進む",
+            "en": "Education Department Powers Shift Again"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/live/2026/jun/16/donald-trump-oklahoma-senator-governor-primary-g7-iran-us-politics-latest-news-updates",
+            "source": "The Guardian",
+            "title": {
+              "ja": "米政治ライブ: 教育省の機能縮小",
+              "en": "US politics live: Education Department powers shifted again"
+            },
+            "description": {
+              "ja": "Guardian のライブブログが、教育省から特殊教育や公民権監督を切り出す動きを追った。",
+              "en": "The Guardian liveblog tracked fresh moves to shift functions out of the Education Department."
+            },
+            "imageUrl": "https://www.saaih.com/files/styles/gallery/public/gallery/-%D9%88%D8%A7%D8%B4%D9%86%D8%B7%D9%86%20%D8%AF%D9%8A%20%D8%B3%D9%8A/white-house-washington-dc-2.jpg",
+            "imageAlt": {
+              "ja": "ワシントンのホワイトハウス",
+              "en": "The White House in Washington, D.C."
+            }
+          },
+          "bottomLine": {
+            "ja": "教育省の機能を他省庁へ移す動きが進み、事実上の縮小が続いている。",
+            "en": "The administration is continuing to strip functions from the Education Department."
+          },
+          "whatHappened": {
+            "ja": "連邦教育行政の一部を他省庁へ移す方針が、さらに前へ進んだ。",
+            "en": "A plan to move parts of federal education oversight to other agencies moved further ahead."
+          },
+          "whyItMatters": {
+            "ja": "教育政策の一貫性、監督責任、議会との権限配分に影響する。",
+            "en": "It affects policy continuity, oversight, and the balance of power with Congress."
+          },
+          "whatToWatch": {
+            "ja": "議会の反発、州教育当局の対応、対象機能の追加移管。",
+            "en": "Watch for congressional pushback, state reactions, and any further transfers of authority."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "economy",
+      "heading": {
+        "ja": "経済",
+        "en": "Economy"
+      },
+      "topics": [
+        {
+          "id": "economy-brent-below-80",
+          "title": {
+            "ja": "ブレント原油は80ドルを割り込む",
+            "en": "Brent Falls Below $80"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/live/2026/jun/16/japan-hikes-interest-rates-inflation-iran-war-thames-water-rescue-nationalisation-latest-news-updates",
+            "source": "The Guardian",
+            "title": {
+              "ja": "ビジネスライブ: 原油と海上輸送の変化",
+              "en": "Business live: oil and shipping shifts"
+            },
+            "description": {
+              "ja": "Guardian business liveblog が、US-Iran の緩和観測で下げる Brent と海上輸送を整理した。",
+              "en": "The Guardian business liveblog tied softer Iran tensions to Brent crude and shipping through Hormuz."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/1c6ebf1b0189fdc5ad4dd7686705c3b07fada65f/1433_0_4067_3254/master/4067.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "ホルムズ海峡付近の船舶",
+              "en": "Tankers near the Strait of Hormuz"
+            }
+          },
+          "bottomLine": {
+            "ja": "US-Iran の緩和期待で shipping リスクが下がり、Brent は80ドル割れへ向かった。",
+            "en": "Softer Iran tensions cut shipping risk and pushed Brent below $80."
+          },
+          "whatHappened": {
+            "ja": "市場は、海上輸送の正常化と供給不安の後退を織り込み始めた。",
+            "en": "Markets started pricing in smoother shipping and less supply fear."
+          },
+          "whyItMatters": {
+            "ja": "原油はインフレ、運賃、家計支出に直結するため、下落は中央銀行にも効く。",
+            "en": "Oil feeds inflation, freight, and household costs, so a fall matters for central banks too."
+          },
+          "whatToWatch": {
+            "ja": "合意が本当に履行されるか、そして下げが一時的かどうか。",
+            "en": "Watch whether the deal is implemented and whether the price drop sticks."
+          }
+        },
+        {
+          "id": "economy-boj-rate-hike",
+          "title": {
+            "ja": "日銀は31年ぶりに1%へ利上げ",
+            "en": "Bank of Japan Raises Rates to 1%"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/2026/jun/16/bank-of-japan-raises-interest-rates-iran-war-inflation-us-fed-bank-of-england",
+            "source": "The Guardian",
+            "title": {
+              "ja": "日銀が金利を引き上げ",
+              "en": "Bank of Japan raises interest rates"
+            },
+            "description": {
+              "ja": "Guardian の日銀記事。インフレ圧力の中で 1% への利上げを報じた。",
+              "en": "A Guardian report on the Bank of Japan's rate hike amid still-sticky inflation."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/cb27df2742921f122acdcbb59502404ae2fb544a/0_0_6827_5464/master/6827.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "日本銀行本店",
+              "en": "Bank of Japan headquarters"
+            }
+          },
+          "bottomLine": {
+            "ja": "日銀はインフレ警戒を背景に、31年ぶりの水準まで短期金利を引き上げた。",
+            "en": "The BoJ raised short-term rates to their highest level in 31 years."
+          },
+          "whatHappened": {
+            "ja": "日本の金融政策は、依然として引き締め側にあることを示した。",
+            "en": "Japan's monetary policy stayed on the tightening side."
+          },
+          "whyItMatters": {
+            "ja": "円相場、輸入物価、アジアの金利見通しに波及する。",
+            "en": "It affects the yen, import prices, and rate expectations across Asia."
+          },
+          "whatToWatch": {
+            "ja": "賃上げの持続、円の反応、次回会合での追加利上げ示唆。",
+            "en": "Watch wage growth, yen moves, and any signal of another hike."
+          }
+        },
+        {
+          "id": "economy-rba-hold",
+          "title": {
+            "ja": "豪中銀は4.35%で据え置き",
+            "en": "RBA Holds at 4.35%"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/2026/jun/17/rba-meeting-interest-rates-hold-decision-iran-conflict-strait-of-hormuz-analysis",
+            "source": "The Guardian",
+            "title": {
+              "ja": "豪中銀、金利を据え置き",
+              "en": "RBA leaves rates unchanged"
+            },
+            "description": {
+              "ja": "Guardian の豪中銀記事。4.35%据え置きとインフレ警戒をまとめた。",
+              "en": "A Guardian report on the Reserve Bank of Australia's decision to hold rates at 4.35%."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/6d59bea2f77d976032d4e810dbc0700a7f698c79/219_0_2188_1750/master/2188.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "豪州準備銀行の会見",
+              "en": "Reserve Bank of Australia press conference"
+            }
+          },
+          "bottomLine": {
+            "ja": "RBAは4.35%で据え置き、なおインフレが残るなら再利上げも示唆した。",
+            "en": "The RBA held at 4.35% but kept the door open to another hike if inflation stays sticky."
+          },
+          "whatHappened": {
+            "ja": "豪州中銀は追加引き締めと様子見の間で、いったん停止を選んだ。",
+            "en": "Australia's central bank chose to pause rather than tighten again immediately."
+          },
+          "whyItMatters": {
+            "ja": "原油安が来ても、中央銀行がすぐには利下げへ向かわないことを示す。",
+            "en": "It shows that lower oil alone is not enough for central banks to pivot quickly."
+          },
+          "whatToWatch": {
+            "ja": "CPI、賃金データ、豪ドルの反応。",
+            "en": "Watch CPI, wages, and the Australian dollar."
+          }
+        },
+        {
+          "id": "economy-thames-water",
+          "title": {
+            "ja": "テムズ・ウォーターは国有化が近づく",
+            "en": "Thames Water Moves Toward Nationalization"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/2026/jun/16/thames-water-nationalisation-rescue-deal-ofwat",
+            "source": "The Guardian",
+            "title": {
+              "ja": "テムズ・ウォーターの救済と国有化",
+              "en": "Thames Water rescue talks and possible nationalization"
+            },
+            "description": {
+              "ja": "Guardian のテムズ・ウォーター記事。救済策と公的管理の可能性を追った。",
+              "en": "A Guardian report on Thames Water rescue plans and the risk of special administration."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/701b16c64b62c73d63238cd2ab586e61606e5a2d/245_0_2609_2089/master/2609.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "テムズ・ウォーターの車両",
+              "en": "A Thames Water van"
+            }
+          },
+          "bottomLine": {
+            "ja": "英政府は救済に慎重で、実質的な公的管理へ近づいている。",
+            "en": "The UK government is wary of a rescue and is edging closer to public control."
+          },
+          "whatHappened": {
+            "ja": "10億ポンド級の救済案が政治的に重荷になり、交渉が難しくなった。",
+            "en": "A roughly £1bn rescue plan became politically difficult and harder to close."
+          },
+          "whyItMatters": {
+            "ja": "水道料金、設備投資、公益事業の資本政策に直接響く。",
+            "en": "It has direct implications for bills, investment, and utility capital structure."
+          },
+          "whatToWatch": {
+            "ja": "特別管理への移行、料金改定、投資家の損失負担の分担。",
+            "en": "Watch for special administration, tariff changes, and who absorbs the losses."
+          }
+        },
+        {
+          "id": "economy-uk-house-prices",
+          "title": {
+            "ja": "英住宅価格はローン金利高で失速",
+            "en": "UK House Prices Cool as Rates Bite"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/money/2026/jun/01/uk-house-prices-fall-interest-rates-nationwide-savills-iran-war",
+            "source": "The Guardian",
+            "title": {
+              "ja": "英国住宅価格と金利の圧力",
+              "en": "UK house prices and rate pressure"
+            },
+            "description": {
+              "ja": "Guardian の住宅市場記事。金利高で英住宅価格が弱含む様子をまとめた。",
+              "en": "A Guardian article on cooling UK house prices as borrowing costs stay high."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/fb4244003344033eb34316e893aa49592478dd7f/46_0_6752_5404/master/6752.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "英国の住宅街",
+              "en": "A residential street in the UK"
+            }
+          },
+          "bottomLine": {
+            "ja": "住宅価格は年初来で初めて前月比下落し、借入コストの高さが需要を冷やしている。",
+            "en": "House prices fell month on month for the first time this year as higher borrowing costs cooled demand."
+          },
+          "whatHappened": {
+            "ja": "住宅市場は金利高と買い手の慎重姿勢で、回復ペースが鈍った。",
+            "en": "The housing market slowed as high rates and cautious buyers kept activity down."
+          },
+          "whyItMatters": {
+            "ja": "金利高が実体経済に効き始めたサインとして、消費と景気見通しに影響する。",
+            "en": "It is another sign that higher rates are feeding through to the real economy."
+          },
+          "whatToWatch": {
+            "ja": "8月以降の金利見通しと、住宅ローン申請の反発有無。",
+            "en": "Watch rate expectations for later in the year and whether mortgage demand rebounds."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "technology",
+      "heading": {
+        "ja": "技術",
+        "en": "Technology"
+      },
+      "topics": [
+        {
+          "id": "technology-patch-tuesday",
+          "title": {
+            "ja": "Microsoftの月例更新は過去最大規模",
+            "en": "Microsoft's Patch Tuesday Breaks Records"
+          },
+          "source": {
+            "href": "https://www.techradar.com/pro/security/microsoft-breaks-patch-tuesday-record-with-fixes-for-over-200-security-flaws",
+            "source": "TechRadar",
+            "title": {
+              "ja": "MicrosoftがPatch Tuesday記録を更新",
+              "en": "Microsoft breaks Patch Tuesday record"
+            },
+            "description": {
+              "ja": "TechRadar のセキュリティ記事。200件超の脆弱性修正をまとめた。",
+              "en": "A TechRadar security report on Microsoft's unusually large monthly patch set."
+            },
+            "imageUrl": "https://www.techradar.com/media/img/techradar_logo_v2.svg",
+            "imageAlt": {
+              "ja": "TechRadarのロゴ",
+              "en": "TechRadar logo"
+            }
+          },
+          "bottomLine": {
+            "ja": "Microsoft は約200件の脆弱性を修正し、Patch Tuesday は記録的な規模になった。",
+            "en": "Microsoft patched more than 200 vulnerabilities in a record-sized Patch Tuesday cycle."
+          },
+          "whatHappened": {
+            "ja": "Windows と関連製品の月例修正が、過去最大級のボリュームになった。",
+            "en": "The monthly Windows patch set landed at an unusually large scale."
+          },
+          "whyItMatters": {
+            "ja": "AI時代でも防御は増える一方で、セキュリティ運用の負荷が上がっている。",
+            "en": "Security operations are getting heavier, not lighter, even in the AI era."
+          },
+          "whatToWatch": {
+            "ja": "ゼロデイの再利用、企業の適用速度、修正漏れの有無。",
+            "en": "Watch for zero-day reuse, enterprise patch speed, and any missed fixes."
+          }
+        },
+        {
+          "id": "technology-imec-6g",
+          "title": {
+            "ja": "IMECの6GチップがNvidiaの次を示す",
+            "en": "IMEC's 6G Chip Points Beyond Nvidia"
+          },
+          "source": {
+            "href": "https://www.techradar.com/pro/nvidia-has-just-been-shown-up-by-people-on-the-other-side-of-the-world-with-an-impressive-new-chiplet-chip-and-its-a-300mm-breakthrough-in-chip-packaging",
+            "source": "TechRadar",
+            "title": {
+              "ja": "IMECの新しいchiplet技術",
+              "en": "IMEC's new chiplet technology"
+            },
+            "description": {
+              "ja": "TechRadar の記事。300mm chiplet での実装進展と Nvidia の通信領域を扱う。",
+              "en": "A TechRadar piece on IMEC's packaging advance and the telecom angle around Nvidia."
+            },
+            "imageUrl": "https://cdn.mos.cms.futurecdn.net/wrLF4dYevcuqm3CNmuqVKm.jpg",
+            "imageAlt": {
+              "ja": "IMECの研究施設",
+              "en": "An IMEC research facility"
+            }
+          },
+          "bottomLine": {
+            "ja": "IMECの実装技術は、AIと6Gをつなぐ通信チップの量産性を一段押し上げた。",
+            "en": "IMEC's packaging work improves the manufacturability of chips that link AI and 6G."
+          },
+          "whatHappened": {
+            "ja": "chiplet と 300mm 実装の進展が、次世代通信向け半導体の現実味を増した。",
+            "en": "Chiplet and 300mm packaging progress made next-gen telecom silicon more practical."
+          },
+          "whyItMatters": {
+            "ja": "Nvidia の成長ストーリーが GPU 以外の通信インフラにも広がる。",
+            "en": "Nvidia's growth story now stretches beyond GPUs into telecom infrastructure."
+          },
+          "whatToWatch": {
+            "ja": "量産時期、提携先、6G 規格化の進み方。",
+            "en": "Watch production timing, partners, and the pace of 6G standardization."
+          }
+        },
+        {
+          "id": "technology-oracle-cloud",
+          "title": {
+            "ja": "MicrosoftがOracleのクラウド容量を見送り",
+            "en": "Microsoft Walks Away from Oracle Cloud Capacity"
+          },
+          "source": {
+            "href": "https://www.businessinsider.com/microsoft-oracle-cloud-capacity-deal-collapse-fedramp-2026-06",
+            "source": "Business Insider",
+            "title": {
+              "ja": "MicrosoftとOracleのクラウド容量交渉が失速",
+              "en": "Microsoft and Oracle cloud capacity talks collapse"
+            },
+            "description": {
+              "ja": "Business Insider の報道。FedRAMP と認証要件で大型リース交渉が崩れたと伝える。",
+              "en": "A Business Insider report on the collapse of a large cloud-capacity lease talk over compliance concerns."
+            },
+            "imageUrl": "https://i.insider.com/6a316be173f469f2923c6592?width=700",
+            "imageAlt": {
+              "ja": "Satya Nadella",
+              "en": "Satya Nadella"
+            }
+          },
+          "bottomLine": {
+            "ja": "Microsoft は Oracle からのクラウド容量調達を見送り、AI計算資源争奪が認証問題と直結した。",
+            "en": "Microsoft passed on Oracle cloud capacity, showing that the AI compute race is now tied to compliance."
+          },
+          "whatHappened": {
+            "ja": "大型の容量契約が、セキュリティ認証や調達条件の壁で破談になった。",
+            "en": "A large capacity deal fell apart over security certification and procurement terms."
+          },
+          "whyItMatters": {
+            "ja": "compute は単なるハード不足ではなく、規制対応と供給網の問題になっている。",
+            "en": "Compute scarcity is now as much a compliance problem as a hardware problem."
+          },
+          "whatToWatch": {
+            "ja": "他のクラウド供給先、FedRAMP 対応の進展、調達コストの上昇。",
+            "en": "Watch for alternative suppliers, FedRAMP progress, and rising procurement costs."
+          }
+        },
+        {
+          "id": "technology-pennsylvania-datacenters",
+          "title": {
+            "ja": "ペンシルベニアでデータセンター反発",
+            "en": "Pennsylvania Pushback on Datacenters"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/technology/2026/jun/16/pennsylvania-datacenters-debate-politicians",
+            "source": "The Guardian",
+            "title": {
+              "ja": "ペンシルベニアでデータセンターをめぐる反発",
+              "en": "Pennsylvania datacenter debate"
+            },
+            "description": {
+              "ja": "Guardian の記事。AI向けデータセンター計画に対する地域の反発を追う。",
+              "en": "A Guardian report on local resistance to proposed AI datacenters in Pennsylvania."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/844d727372d31aaa5474559bac72d04c86bd617b/0_0_897_709/master/897.jpg?crop=none&dpr=1&s=none&width=445",
+            "imageAlt": {
+              "ja": "データセンター建設予定地の地図",
+              "en": "Map of a proposed datacenter site"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIデータセンターの建設が、電力・騒音・環境負荷をめぐる地域政治に変わっている。",
+            "en": "AI datacenter buildouts are turning into local battles over power, noise, and environmental strain."
+          },
+          "whatHappened": {
+            "ja": "地元政治家と住民が、巨大施設の誘致に慎重姿勢を強めた。",
+            "en": "Local officials and residents turned more cautious about bringing in large facilities."
+          },
+          "whyItMatters": {
+            "ja": "AI投資の成否は、州や自治体の許認可で詰まる。",
+            "en": "AI investment now depends heavily on state and local permitting."
+          },
+          "whatToWatch": {
+            "ja": "電力契約、用途変更許可、住民投票や条例の動き。",
+            "en": "Watch power contracts, zoning approvals, and any local ballot or ordinance fights."
+          }
+        },
+        {
+          "id": "technology-china-ai-grid",
+          "title": {
+            "ja": "中国は国家AIデータセンター網を計画",
+            "en": "China Plans a National AI Data-Center Grid"
+          },
+          "source": {
+            "href": "https://www.tomshardware.com/tech-industry/china-drafts-295-billion-plan-to-build-a-national-ai-data-center-grid-running-on-80-percent-domestic-chips",
+            "source": "Tom's Hardware",
+            "title": {
+              "ja": "中国の国家AIデータセンター計画",
+              "en": "China's national AI datacenter plan"
+            },
+            "description": {
+              "ja": "Tom's Hardware の報道。国内チップ中心の国家AIデータセンター網を紹介する。",
+              "en": "A Tom's Hardware report on China's plan for a national AI datacenter network built on domestic chips."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/44594205576f37ea0cc7dcddacaaf06eaaa42386/333_0_3333_2667/master/3333.jpg?crop=5%3A4&dpr=1&s=none&width=220",
+            "imageAlt": {
+              "ja": "サーバーラック",
+              "en": "Server racks"
+            }
+          },
+          "bottomLine": {
+            "ja": "北京はAI計算資源を国家インフラとして束ね、国内半導体中心の供給網を急いでいる。",
+            "en": "Beijing is treating AI compute as national infrastructure and moving to a domestic-chip supply chain."
+          },
+          "whatHappened": {
+            "ja": "国家主導で、計算資源と送電網を結ぶ広域計画が打ち出された。",
+            "en": "A state-led plan linked compute resources with the power grid across a wider network."
+          },
+          "whyItMatters": {
+            "ja": "AI競争がモデル性能から電力・CPU/GPU・国策インフラの競争へ移る。",
+            "en": "The AI race is shifting from model quality to power, chips, and state-backed infrastructure."
+          },
+          "whatToWatch": {
+            "ja": "国内チップ比率、送電制約、計画の実装速度。",
+            "en": "Watch domestic-chip targets, power constraints, and how quickly the plan is implemented."
+          }
+        }
+      ]
+    }
+  ]
+}

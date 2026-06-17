@@ -1,0 +1,255 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "2026年6月17日時点のイギリス政治は、「下院では労働党が大多数を持つが、世論・地方・上院・経済制約では脆い」という構図で読むのがよい。",
+					"en": "As of June 17, 2026, UK politics is best read as a system where Labour has a large House of Commons majority but faces weak public tolerance, fiscal constraints, service backlogs, local fragmentation, and a House of Lords it does not control."
+				},
+				{
+					"ja": "Labourは下院650議席のうち402議席を持ち、作業多数166の多数政府を形成している。",
+					"en": "Labour holds 402 of 650 Commons seats and forms the majority government, with a working majority of 166."
+				},
+				{
+					"ja": "Conservativeは116議席、Liberal Democratsは72議席、Reform UKは8議席、SNPとSinn Féinは各7議席である。",
+					"en": "The Conservatives have 116 seats, the Liberal Democrats 72, Reform UK 8, and the SNP and Sinn Féin 7 each."
+				},
+				{
+					"ja": "国内問題の中心は、生活費と金利、財政余地、雇用・不活発、移民、NHS、住宅、脱EU後の成長モデルである。",
+					"en": "The central domestic issues are living costs and interest rates, fiscal space, work and inactivity, migration, the NHS, housing, and the post-Brexit growth model."
+				},
+				{
+					"ja": "インフレはピークを過ぎたが、家計・住宅ローン・賃料・公共サービスを楽にするほどには緩んでいない。",
+					"en": "Inflation is no longer at its peak, but it has not eased enough to make households, mortgages, rents, or public services feel easy."
+				},
+				{
+					"ja": "下院議席だけを見ると政権は安定している。",
+					"en": "The Commons numbers make the government look stable."
+				},
+				{
+					"ja": "2026年5月の地方・分権選挙後の論点は、国政議席と地方統治のズレである。",
+					"en": "The post-May 2026 local and devolved election issue, however, is the mismatch between national seat strength and local governing capacity."
+				},
+				{
+					"ja": "Institute for Governmentは、2026年選挙を受けて英国政治の断片化は一時的現象ではなく、地方政府の実務にも直ちに影響すると分析した。",
+					"en": "The Institute for Government argued after the elections that the fracturing of British politics is not a temporary aberration and has immediate practical consequences for local government."
+				},
+				{
+					"ja": "YouGovの地方選後調査では、投票理由として価値観、地域課題、生活費、移民が目立った。",
+					"en": "YouGov's post-local-election survey found that 43% of voters said they backed the party that best reflected their values, 29% cited the best policies for local issues, and the top specific issues were the economy and cost of living at 27% and immigration at 26%."
+				}
+			]
+		},
+		{
+			"id": "party-distribution",
+			"heading": {
+				"ja": "2. 政党分布",
+				"en": "2. Party Distribution"
+			},
+			"pairs": [
+				{
+					"ja": "下院では、Labourの多数はかなり大きい。",
+					"en": "In the Commons, Labour's majority is large."
+				},
+				{
+					"ja": "しかし、英国を単純なLabour一党優位として読むべきではない。",
+					"en": "But the UK should not be read simply as a one-party Labour system."
+				},
+				{
+					"ja": "保守党は以前よりかなり小さく、Liberal Democrats、Reform UK、Green、地域政党、無所属が二大政党制の見出し以上に重要になっている。",
+					"en": "The Conservatives are much smaller than before, while the Liberal Democrats, Reform UK, Greens, regional parties, and independents matter more than a two-party headline suggests."
+				},
+				{
+					"ja": "Reform UKの議席数は小さいが、移民、税、ネットゼロ、反エスタブリッシュメントをめぐる圧力は保守党再建の主要な制約である。",
+					"en": "Reform UK's seat count is small, but its pressure on immigration, tax, net zero, and anti-establishment politics is a major constraint on Conservative recovery."
+				},
+				{
+					"ja": "上院は別の権力分布を持つ。",
+					"en": "The Lords has a different distribution."
+				},
+				{
+					"ja": "有資格メンバー773人の内訳にはConservative 245、Labour 216、Crossbench 156、Liberal Democrat 74などが含まれる。",
+					"en": "There are 773 eligible members, including Conservative 245, Labour 216, Crossbench 156, Liberal Democrat 74, Non-affiliated 45, and Bishops 22."
+				},
+				{
+					"ja": "つまりLabourは下院を通せても、上院での精査、修正、遅延、政治的協議を管理しなければならない。",
+					"en": "That means Labour can pass legislation through the Commons but must still manage scrutiny, amendments, delay, and political bargaining in the Lords."
+				},
+				{
+					"ja": "地方政治では、Reform UKとGreenの伸長が反政府票だけでなく統治課題になっている。",
+					"en": "At local level, Reform UK and Green gains are not only anti-government signals; they are now governing constraints."
+				},
+				{
+					"ja": "Reform UKの地方議席増は、Labour系市長の予算、住宅、交通、投資計画を難しくしうる。",
+					"en": "The Institute for Government argues that Reform UK gains in West Yorkshire, the North East, and the West Midlands could make it harder for Labour mayors to pass budgets, housing plans, transport plans, and investment strategies."
+				},
+				{
+					"ja": "Birmingham City Councilは断片化の例である。",
+					"en": "Birmingham City Council illustrates the fragmentation: Reform UK 23 seats, Greens 19, Labour 17, Conservatives 16, Liberal Democrats 12, and 14 independent or smaller-party councillors."
+				}
+			]
+		},
+		{
+			"id": "ranked-issues",
+			"heading": {
+				"ja": "3. 主要論点ランキング",
+				"en": "3. Ranked Issues"
+			},
+			"pairs": [
+				{
+					"ja": "生活費は最上位の争点である。",
+					"en": "Living costs are the top issue."
+				},
+				{
+					"ja": "インフレ率はピークより落ち着いて見えるが、住宅ローン、賃料、食料、交通、公共料金の累積圧力が政治判断を形づくる。",
+					"en": "The inflation rate looks calmer than during the peak, but cumulative pressure from mortgages, rents, food, transport, and utilities still shapes political judgement."
+				},
+				{
+					"ja": "労働党政権の主な制約は政策アイデア不足ではなく財政余地である。",
+					"en": "The main constraint on the Labour government is not a shortage of policy ideas; it is fiscal space."
+				},
+				{
+					"ja": "増税、歳出抑制、高成長はいずれも政治的コストを伴うため、政府は財政信認を保ちながら公共サービスを改善しなければならない。",
+					"en": "Tax rises, spending restraint, and higher growth all carry political costs, so the government has to improve public services while preserving fiscal credibility."
+				},
+				{
+					"ja": "移民は統計上は低下局面に入ったが、政治問題であり続けている。",
+					"en": "Migration has entered a lower statistical phase but remains a political issue."
+				},
+				{
+					"ja": "有権者は純移民だけに反応しているわけではない。",
+					"en": "Voters are not only reacting to net migration."
+				},
+				{
+					"ja": "有権者は不正規入国、亡命処理、定住ルール、技能政策にも反応している。",
+					"en": "They are also reacting to irregular arrival, asylum processing, settlement rules, and skills policy."
+				},
+				{
+					"ja": "Home Officeの白書は移民、技能、ビザ制度を国内労働力育成と結びつけた。",
+					"en": "The Home Office's 2025 white paper linked the immigration, skills, and visa systems to growing the domestic workforce and reducing reliance on overseas labour."
+				},
+				{
+					"ja": "2026年3月までの1年間には、不正規入国43,806件のうち小舟が90%を占めた。",
+					"en": "In the year ending March 2026, there were 43,806 detected arrivals via illegal routes, with small boats accounting for 90% of those arrivals."
+				},
+				{
+					"ja": "2026年6月15日には、Home Officeの小舟データで710人・11隻の到着が記録された。",
+					"en": "On June 15, 2026, the Home Office's small-boats dashboard recorded 710 arrivals in 11 boats."
+				},
+				{
+					"ja": "見出しの数字が下がっても、住宅、賃金、公共サービス、難民認定処理、Channel crossings、統合は政治の中で結びついたままである。",
+					"en": "Even when the headline number falls, housing, wages, public services, asylum processing, Channel crossings, and integration remain joined together in politics."
+				},
+				{
+					"ja": "Labourは統制と行政能力を示さなければならない。",
+					"en": "Labour has to show control and administrative competence."
+				},
+				{
+					"ja": "ConservativesとReform UKはより厳格な制限を競う。",
+					"en": "Conservatives and Reform UK compete for stricter restriction."
+				},
+				{
+					"ja": "Liberal DemocratsとGreensは通常、人道基準、地域統合、公共サービス能力をより重視する。",
+					"en": "Liberal Democrats and Greens usually put more weight on humanitarian standards, local integration, and public-service capacity."
+				},
+				{
+					"ja": "NHSは最も実感しやすい国内公共サービス問題である。",
+					"en": "The NHS is the most tangible domestic public-service issue."
+				},
+				{
+					"ja": "待機リストは単なる行政指標ではなく、就労参加、地域満足度、政府への信頼に影響する。",
+					"en": "Health waiting lists are not just an administrative metric; they affect work participation, local satisfaction, and trust in government."
+				},
+				{
+					"ja": "2025年Spending ReviewはNHSを測定可能な政治的約束にした。",
+					"en": "The 2025 Spending Review made this a measurable political promise."
+				},
+				{
+					"ja": "NHS Englandの日常支出増と18週以内開始目標が掲げられた。",
+					"en": "It provided a £29 billion real-terms increase in annual NHS England day-to-day spending from 2023-24 to 2028-29 and set an end-of-Parliament target for 92% of patients to start non-urgent consultant-led treatment within 18 weeks of referral."
+				}
+			]
+		},
+		{
+			"id": "domestic-problems",
+			"heading": {
+				"ja": "4. 国内問題の構造",
+				"en": "4. Domestic Problem Structure"
+			},
+			"pairs": [
+				{
+					"ja": "住宅は生活費、若年層の資産形成、移民、都市生産性、地域政治を結びつける。",
+					"en": "Housing connects living costs, young people's asset formation, migration, urban productivity, and local politics."
+				},
+				{
+					"ja": "金利と賃料が高いままなら、住宅価格が横ばいでも手が届きやすいとは感じられない。",
+					"en": "Even flat house prices do not feel affordable when rates and rents remain high."
+				},
+				{
+					"ja": "2026年4月のONS統計では、民間賃料と住宅価格がなお上昇していた。",
+					"en": "ONS April 2026 figures put average UK monthly private rents up 3.5% to £1,381 in the 12 months to March 2026, while average UK house prices rose 1.2% to £268,000 in the 12 months to February 2026."
+				},
+				{
+					"ja": "政府は議会任期中の150万戸建設と計画制度改革を掲げた。",
+					"en": "The government has pledged 1.5 million homes over the Parliament and announced a planning overhaul in December 2024."
+				},
+				{
+					"ja": "住宅供給を増やすには、計画改革、地方政府能力、建設労働、環境規制、交通投資が一緒に動く必要がある。",
+					"en": "Increasing housing supply requires planning reform, local-government capacity, construction labour, environmental rules, and transport investment to move together."
+				},
+				{
+					"ja": "一つの人気短期策では解けない。",
+					"en": "It is not solvable through one popular short-term measure."
+				},
+				{
+					"ja": "地方選後の政治断片化は、住宅計画や交通投資にも影響する。",
+					"en": "Local political fragmentation after the 2026 elections also matters because housing plans and transport investments need local agreement."
+				},
+				{
+					"ja": "ウクライナ戦争、ロシア脅威、ドローン、自律システム、NATO負担は英国政治を内政だけに留めない。",
+					"en": "The war in Ukraine, the Russian threat, drones, autonomous systems, and NATO burden-sharing pull British politics beyond a purely domestic cost-of-living frame."
+				},
+				{
+					"ja": "2026年6月5日の首相発言は、Defence Investment Planを防衛能力、技術、雇用に結びつけた。",
+					"en": "In remarks on June 5, 2026, the prime minister said the government would publish a Defence Investment Plan before the NATO summit, linking future capability, autonomous technology, regional jobs, and defence-industrial capacity."
+				},
+				{
+					"ja": "狭い財政環境では、防衛支出もNHSや住宅と競合する。",
+					"en": "In a narrow fiscal environment, defence spending competes with the NHS and housing for political and budgetary room."
+				},
+				{
+					"ja": "スコットランド、北アイルランド、ウェールズ、イングランド地域は一つの政治単位として動かない。",
+					"en": "Scotland, Northern Ireland, Wales, and English regions do not move as one political unit."
+				},
+				{
+					"ja": "SNPは下院7議席に過ぎないが、スコットランド自治と独立政治は消えていない。",
+					"en": "The SNP has only 7 Commons seats, but Scottish autonomy and independence politics have not disappeared."
+				},
+				{
+					"ja": "英国の国内問題は、低成長、公共サービス需要、住宅制約、地域格差、制度疲労の重なりとして理解するのがよい。",
+					"en": "The UK's domestic problem is best understood as the layering of low growth, high demand for public services, housing constraints, regional inequality, and institutional fatigue."
+				},
+				{
+					"ja": "地方選後の断片化は、国の公約を現場の実施に移す段階で摩擦を増やす。",
+					"en": "Post-election local fragmentation also increases friction when national pledges have to become planning decisions, permits, transport schemes, housing delivery, and social-care services."
+				},
+				{
+					"ja": "今後の見通しは四つの問いに集約できる。",
+					"en": "Four questions dominate the outlook."
+				},
+				{
+					"ja": "政府は断片化した政党システムの中で地域投資の合意を維持できるかが問われる。",
+					"en": "Fourth, can the government maintain governing coalitions around housing, transport, skills, defence industry, and regional investment in a more fragmented party system?"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,43 @@
+---
+title: 'イギリス政治の現在地 2026年版 調査ログ'
+description: '政党分布、国内課題、統計確認、本文化の判断を記録する。'
+pubDate: '2026-06-17'
+draft: false
+---
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- publishable request summary: イギリスの最近の政治論点、政党分布、国内問題を詳しく知るためのレポートを作り、追加調査で具体的ニュース・政策例も加える。
+- scope constraints: 最新の政党分布、統計、政策論点は公開済みの公式情報を確認し、本文中の主張近くに出典を置く。ニュース性のある素材は、地方選後の統治、移民、NHS、住宅、国防の構造理解に資するものに絞る。
+- inferred deliverable: `articles/report/uk-politics-current-issues/ja/index.mdx` を正本とする日本語レポート、対応する英語レポート、公開 source-notes、公開 research-log、mix alignment。
+
+## 調査目的
+
+2026年6月時点の英国政治について、政党分布と国内問題を読者が把握できるように整理した。主な問いは、下院・上院の議席分布、労働党政権の制約、国内問題の優先順位である。
+
+## 参照した一次・準一次情報
+
+- UK ParliamentのHouse of Commons party stateとHouse of Lords membershipを2026年6月17日に再確認した。
+- Bank of Englandの最新Bank Rateページと2026年4月MPC要約を確認した。
+- ONSの2026年4月CPI、2026年5月労働市場、2025年暦年長期国際移民推計を確認した。
+- OBRの2026年3月Economic and fiscal outlookを確認した。
+- NHS England/GOV.UKおよびBMAの2026年4月RTT待機統計を確認した。
+- Institute for Governmentの2026年地方・分権選挙後分析、Reform UKの地方議席増がLabour系メトロ市長の合意形成に与える影響を確認した。
+- YouGovの2026年地方選後調査を確認し、経済・生活費、移民、価値観投票の具体値を本文に反映した。
+- Home Officeの移民白書、不正規入国統計、小舟到着データを確認した。
+- HM TreasuryのSpending Review 2025と、GOV.UKの2026年6月5日首相発言を確認した。
+- ONSの2026年4月民間賃料・住宅価格統計を確認した。
+
+## 判断
+
+未来日付の統計を混ぜないため、2026年6月17日時点で公開済みの統計に限定した。政党分布は変動しやすいため、記事内で確認日を明記した。一般ニュースは見出し的評価を増やしやすいため、本文では公式統計、政府文書、Institute for Government、YouGovに限定して深掘りした。
+
+## 残る限界
+
+政党支持率や地方選結果は変動が大きく、本文では公式議席分布と制度制約を優先した。世論調査は地方選後の投票理由に限って採用し、全国支持率の逐次変動は別記事化できる。

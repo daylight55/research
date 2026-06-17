@@ -1,0 +1,195 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "イギリス王政の歴史は、王権が強まった歴史であると同時に、その権力が法、議会、帝国、メディア、公共奉仕へ移し替えられて生き残った歴史でもある。",
+					"en": "The history of the British monarchy is both a story of royal power becoming stronger and a story of that power being transferred into law, Parliament, empire, media, and public service."
+				},
+				{
+					"ja": "君主は今も国家元首だが、立法権は選挙で選ばれる議会にある。",
+					"en": "The monarch is still Head of State, but legislation belongs to an elected Parliament."
+				},
+				{
+					"ja": "王冠は行政権そのものではなく、継続性、儀礼、任命、栄典、外交儀礼、国民的同一性、Commonwealthの象徴として機能している。",
+					"en": "The Crown now functions less as executive power and more as continuity, ceremony, appointment, honours, diplomatic ritual, national identity, and Commonwealth symbolism."
+				},
+				{
+					"ja": "最も重要な転換は三つである。",
+					"en": "Three turns matter most."
+				},
+				{
+					"ja": "第一に、アングロ・サクソン王権とノルマン征服が土地、戦争、課税、教会を軸に強い王政を作った。",
+					"en": "First, Anglo-Saxon kingship and the Norman Conquest created a stronger monarchy built around land, war, taxation, and the Church."
+				},
+				{
+					"ja": "第二に、Magna Carta、議会、内戦、名誉革命、Bill of Rightsが王権を法と議会権威の下に制約した。",
+					"en": "Second, Magna Carta, Parliament, civil war, the Glorious Revolution, and the Bill of Rights constrained royal power under law and parliamentary authority."
+				},
+				{
+					"ja": "第三に、Victoria期以降、君主は直接統治者から帝国、国民統合、戦時耐久、福祉国家の継続性、戦後Commonwealthの象徴へ変わった。",
+					"en": "Third, from the Victorian period onward, the monarch became less a direct ruler and more a symbol of empire, national unity, wartime endurance, welfare-state continuity, and the postwar Commonwealth."
+				}
+			]
+		},
+		{
+			"id": "origins",
+			"heading": {
+				"ja": "2. 王政の誕生",
+				"en": "2. Origins"
+			},
+			"pairs": [
+				{
+					"ja": "イギリス王政は現代の連合王国として始まったわけではない。",
+					"en": "The British monarchy did not begin as the modern United Kingdom."
+				},
+				{
+					"ja": "その初期基盤は、アングロ・サクソン諸王国の漸進的統合にある。",
+					"en": "Its early foundation lies in the gradual consolidation of Anglo-Saxon kingdoms."
+				},
+				{
+					"ja": "王室史料はAthelstanを924年から939年の王統に位置づけている。",
+					"en": "The Royal Family's historical material places Athelstan in the line of kings from 924 to 939."
+				},
+				{
+					"ja": "この段階の王権は近代的国家元首ではなく、軍事指導、土地保有、教会保護、貢納、裁判だった。",
+					"en": "At this stage, kingship was not modern headship of state; it was military leadership, landholding, church patronage, tribute, and justice."
+				},
+				{
+					"ja": "1066年のノルマン征服は王政の性格を変えた。",
+					"en": "The Norman Conquest in 1066 changed the character of monarchy."
+				},
+				{
+					"ja": "William Iは没収した土地、城、封建的軍役、教会人事、Domesday調査を使い、王が土地・武力・財政情報を管理する体制を作った。",
+					"en": "William I used confiscated land, castles, feudal military obligations, church appointments, and the Domesday survey to build a regime in which the king controlled land, force, and fiscal information."
+				},
+				{
+					"ja": "それは単なる王朝交代ではなく、統治の再設計だった。",
+					"en": "This was not merely a change of dynasty; it was a redesign of government."
+				}
+			]
+		},
+		{
+			"id": "royal-power-and-constitution",
+			"heading": {
+				"ja": "3. 王権の興隆",
+				"en": "3. The Rise of Royal Power"
+			},
+			"pairs": [
+				{
+					"ja": "中世王権は戦争、土地、裁判、課税、教会を通じて成長した。",
+					"en": "Medieval royal power grew through war, land, justice, taxation, and the Church."
+				},
+				{
+					"ja": "しかし強い王政は抵抗も生んだ。",
+					"en": "But strong monarchy also produced resistance."
+				},
+				{
+					"ja": "1215年のMagna Cartaは、王と政府が法の上にいないという原理を文書化した。",
+					"en": "Magna Carta in 1215 put into writing the principle that the king and his government were not above the law."
+				},
+				{
+					"ja": "それは近代民主主義ではないが、王権が法で制限されるという伝統を作った。",
+					"en": "It was not modern democracy, but it made the limiting of royal power by law part of the constitutional tradition."
+				},
+				{
+					"ja": "議会は課税同意、請願、貴族・聖職者会議、都市と州の代表を通じて発達した。",
+					"en": "Parliament then developed through taxation consent, petition, aristocratic and clerical councils, and representatives of towns and counties."
+				},
+				{
+					"ja": "14世紀までにCommonsとLordsは別々の院として現れた。",
+					"en": "By the fourteenth century, Commons and Lords had emerged as separate houses."
+				},
+				{
+					"ja": "17世紀には国王と議会の対立が内戦になった。",
+					"en": "In the seventeenth century, conflict between king and Parliament became civil war."
+				},
+				{
+					"ja": "1649年に王政と貴族院は廃止され、1660年に王政は復古した。",
+					"en": "In 1649, monarchy and the House of Lords were abolished; in 1660, monarchy was restored."
+				},
+				{
+					"ja": "したがって英国王政には継続だけでなく中断の歴史もある。",
+					"en": "British monarchy therefore has a history not only of continuity, but of interruption."
+				},
+				{
+					"ja": "1689年のBill of Rightsは現代英国王政の中心にある。",
+					"en": "The Bill of Rights 1689 is central to modern British monarchy."
+				},
+				{
+					"ja": "それは王政を議会権威の内側に置いた。",
+					"en": "It placed monarchy inside parliamentary authority."
+				},
+				{
+					"ja": "王政は絶対主義へは進まなかった。",
+					"en": "The monarchy did not move toward absolutism."
+				},
+				{
+					"ja": "王政は議会主権と結びついた立憲的経路へ押し込まれた。",
+					"en": "It was forced into a constitutional path linked to parliamentary sovereignty."
+				}
+			]
+		},
+		{
+			"id": "union-empire-war",
+			"heading": {
+				"ja": "4. 帝国・国民統合・戦時王政",
+				"en": "4. Empire, National Integration, and Wartime Monarchy"
+			},
+			"pairs": [
+				{
+					"ja": "1707年の合同法でGreat Britainが成立し、1800年のアイルランドとの合同でUnited Kingdomの枠組みが作られた。",
+					"en": "The Acts of Union in 1707 created Great Britain, and the 1800 Union with Ireland created the United Kingdom framework."
+				},
+				{
+					"ja": "君主は連合国家の王冠となり、実際の統治権は議会、内閣、政党政治へ移った。",
+					"en": "The monarch became the Crown of a union state, while real governing authority moved toward Parliament, Cabinet, and party government."
+				},
+				{
+					"ja": "Victoriaの下で王政は直接政治権力を失う一方、象徴的な広がりを得た。",
+					"en": "Under Victoria, the monarchy lost direct political power while gaining symbolic reach."
+				},
+				{
+					"ja": "Victoriaは1837年に即位し、産業拡大、経済成長、帝国と結びついた。",
+					"en": "Victoria came to the throne in 1837 and became associated with industrial expansion, economic growth, and empire."
+				},
+				{
+					"ja": "Victoriaは帝国の象徴でもあった。",
+					"en": "Victoria was also an imperial symbol."
+				},
+				{
+					"ja": "二つの世界大戦は、王政を国民の苦難を共有する制度として再定義した。",
+					"en": "The two world wars recast monarchy as an institution that shared national hardship."
+				},
+				{
+					"ja": "George VIは特に重要である。",
+					"en": "George VI is especially important."
+				},
+				{
+					"ja": "彼はEdward VIIIの退位後、1936年に国王となった。",
+					"en": "He became king in 1936 after Edward VIII's abdication."
+				},
+				{
+					"ja": "第二次世界大戦中、彼は戦争の多くの期間をBuckingham Palaceに留まり、その宮殿は9回爆撃された。",
+					"en": "During the Second World War, he remained for much of the war at Buckingham Palace, which was bombed nine times."
+				},
+				{
+					"ja": "戦時王政の意味は、国王が政策を直接指揮したことではない。",
+					"en": "The meaning of wartime monarchy was not that the king directly commanded policy."
+				},
+				{
+					"ja": "それは、王政が議会民主主義と総力戦を象徴的に結びつけたということだった。",
+					"en": "It was that monarchy connected parliamentary democracy with total war symbolically."
+				}
+			]
+		}
+	]
+}

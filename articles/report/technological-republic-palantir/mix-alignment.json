@@ -1,0 +1,396 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "中心命題は、シリコンバレーの才能が消費者アプリ、広告、エンタメ、金融化された成長へ流れているというものだ。",
+      "en": "The central claim is direct: Silicon Valley once worked with government, universities, industry, and the military to build semiconductors, space systems, the internet, and defense technology, but too much of today's talent has drifted into consumer apps, advertising, entertainment, and financialized growth."
+    },
+    {
+      "ja": "AIとソフトウェアが軍事力、産業能力、行政能力の中心になるなら、技術者は国家規模の課題へ戻るべきだという主張である。",
+      "en": "If AI and software are becoming central to military power, industrial capacity, and public administration, technologists should return to national-scale problems."
+    },
+    {
+      "ja": "本書は防衛スタートアップを増やせというだけの本ではない。",
+      "en": "The book is not only a call for more defense startups."
+    },
+    {
+      "ja": "本書の構造は、ソフトウェア世紀、信念喪失、Palantir流の工学文化、西側再建論へ進む。",
+      "en": "Its structure runs through four parts and 18 chapters: the software century and AI deterrence, the loss of American belief, Palantir-style engineering culture, and a final argument about rebuilding the West through technology, religion, culture, and long-term public purpose."
+    },
+    {
+      "ja": "Palantirは中立的な観察者ではない。",
+      "en": "Third, Palantir is not a neutral observer."
+    },
+    {
+      "ja": "Maven Smart Systemを作り、NATOや米軍と働く企業は、ソフトウェアが西側のハードパワーを作るという議論に直接の利害を持つ。",
+      "en": "A company that builds Maven Smart System, works with NATO and the U."
+    },
+    {
+      "ja": "本書はPalantirの政治的オペレーティングシステムを外部化したものとして読める。",
+      "en": "The book is less a product explainer than an externalized political operating system for Palantir."
+    },
+    {
+      "ja": "最も強い論点は、AIとソフトウェアが抑止、産業動員、行政能力を形作るという点である。",
+      "en": "Its strongest argument is that AI and software now shape deterrence, industrial mobilization, and administrative capacity."
+    },
+    {
+      "ja": "最も弱い論点は、厚い信念や西側の目的を求めつつ、それを統治設計に十分変換していない点である。",
+      "en": "Its weakest argument is that it demands thicker belief, Western purpose, and cultural confidence without fully translating them into governance design."
+    },
+    {
+      "ja": "問うべきなのは、技術者が国家に奉仕すべきかではなく、公共目的、軍事力、企業利害、民主的統制をどう同時に設計するかである。",
+      "en": "The governing question is not whether technologists should serve the state, but how public purpose, military power, corporate incentives, and democratic control can be designed together."
+    },
+    {
+      "ja": "本書を保守的マニフェストとしてだけ読むと半分しか見えない。",
+      "en": "Reading the book only as a conservative manifesto misses half the point."
+    },
+    {
+      "ja": "KarpとZamiskaは一般的なAI企業の立場から語っているのではない。",
+      "en": "Karp and Zamiska are not speaking from a generic AI-company position."
+    },
+    {
+      "ja": "彼らは、データ、オントロジー、操作、権限、監査ログをつなぐ国家安全保障ソフトウェア企業の立場から語っている。",
+      "en": "They speak from a national-security software company whose products connect data, ontology, operational actions, permissions, and audit trails across military, government, and enterprise environments."
+    },
+    {
+      "ja": "問題は政府が消えたことではない。",
+      "en": "That matters because the issue is not that government disappeared."
+    },
+    {
+      "ja": "問題は公共目的、商業的誘因、調達、大学、防衛倫理がソフトウェア時代に十分接続されているかである。",
+      "en": "The issue is whether public purpose, commercial incentives, procurement systems, universities, and defense ethics are connected well enough for a software-first era."
+    },
+    {
+      "ja": "AIも著者たちの切迫感を支えている。",
+      "en": "AI also supports the authors' sense of urgency."
+    },
+    {
+      "ja": "問うべきことはPalantirを信じるかどうかではない。",
+      "en": "So the right question is not whether to believe Palantir."
+    },
+    {
+      "ja": "AIとソフトウェアが国家能力を形作るなら、その周囲にどのような統制、調達、透明性、権利保護、同盟国ガバナンスを置くべきかである。",
+      "en": "The right question is: if AI and software now shape state capacity, what forms of public control, procurement, transparency, rights protection, and allied governance should surround them?"
+    },
+    {
+      "ja": "第1部は本書で最も強い部分である。",
+      "en": "Part I is the book's strongest section."
+    },
+    {
+      "ja": "著者たちは初期シリコンバレーを政府、大学、軍、半導体企業、宇宙計画、国家需要の産物として描く。",
+      "en": "The authors describe early Silicon Valley as a product of government, universities, the military, semiconductor firms, space programs, and national demand."
+    },
+    {
+      "ja": "現代の技術産業は、才能をエンゲージメント、広告、便利さの市場に使いすぎていると対比される。",
+      "en": "They contrast that with a contemporary technology sector that spends too much talent on engagement, advertising, and convenience markets."
+    },
+    {
+      "ja": "統計的背景はこの懐古を複雑にする。",
+      "en": "The statistical backdrop complicates the nostalgia."
+    },
+    {
+      "ja": "R&Dは小さくなく、政府も消えていない。",
+      "en": "R&D is not small, and government has not vanished."
+    },
+    {
+      "ja": "よりよい読み方は、公共ミッション、商業的誘因、調達、ソフトウェア速度の弱い調整への批判として読むことである。",
+      "en": "The better reading is that the authors are objecting to weak coordination among public mission, commercial incentives, procurement, and software speed."
+    },
+    {
+      "ja": "第2章はAIを、軍事、教育、文化、組織に影響する汎用技術として置く。",
+      "en": "Chapter 2 places AI in the role of a general-purpose technology with military, educational, cultural, and organizational consequences."
+    },
+    {
+      "ja": "AI Indexは、資本が米国に集中する一方、中国との性能差が大きく縮小したことを示す。",
+      "en": "The AI Index supports the strategic part of that concern: capital is concentrated in the United States, but the performance gap with China has narrowed sharply."
+    },
+    {
+      "ja": "第3章の勝者の誤謬は、冷戦後の勝利が西側に市場自由主義とグローバル化の自走を仮定させたという主張である。",
+      "en": "Chapter 3's \"winner's fallacy\" is the claim that post-Cold War victory made the West assume that market liberalism and globalization would remain self-sustaining."
+    },
+    {
+      "ja": "第4章は抑止が核中心の時代から、センシング、標的設定、兵站、ドローン、サイバー、C2、情報融合を含むソフトウェアとAIの層へ移っていると論じる。",
+      "en": "Chapter 4 then argues that deterrence is moving from a nuclear-centered age toward a software-and-AI layer that includes sensing, targeting, logistics, drones, cyber operations, command and control, and information fusion."
+    },
+    {
+      "ja": "PalantirのMaven Smart Systemはその運用例である。",
+      "en": "Palantir's Maven Smart System is the operational example."
+    },
+    {
+      "ja": "PalantirはMavenをNGAのAIインフラの一部であり、戦場認識、統合、戦力管理、兵站、共同火力、標的設定を支えるソフトウェアだと説明する。",
+      "en": "Palantir describes Maven as part of NGA's AI infrastructure and as software that supports AI-enabled battlespace awareness, global integration, force management, contested logistics, joint fires, and targeting workflows."
+    },
+    {
+      "ja": "NATO MSSは衛星画像、ドローン任務、行動案生成とも統合されると説明されている。",
+      "en": "It also describes NATO MSS integrations with satellite imagery, drone tasking, and course-of-action generation."
+    },
+    {
+      "ja": "第2部は技術から文化へ移る。",
+      "en": "Part II shifts from technology to culture."
+    },
+    {
+      "ja": "著者たちはエリートが何を守っているのかを見失い、技術者が責任ではなく中立性を主張しすぎると論じる。",
+      "en": "The authors argue that elites no longer know what they are defending, and technologists too often claim neutrality rather than responsibility."
+    },
+    {
+      "ja": "第5章は信念の放棄という道徳的中心である。",
+      "en": "Chapter 5 is the moral center: the abandonment of belief."
+    },
+    {
+      "ja": "第6章は技術的不可知論を攻撃する。",
+      "en": "Chapter 6 attacks technological agnosticism: in domains such as AI weapons, surveillance, data integration, crime prevention, border enforcement, and military planning, \"we only build tools\" is not enough."
+    },
+    {
+      "ja": "顧客選択、モデルアクセス、監査設計、導入制約はプロダクト判断である。",
+      "en": "Customer choice, model access, audit design, and deployment constraints are product decisions."
+    },
+    {
+      "ja": "第7章は伝統、歴史、市民的義務から切り離されたエリート教育を批判する。",
+      "en": "Chapter 7 criticizes elite education that is cut loose from tradition, history, and civic obligation."
+    },
+    {
+      "ja": "第8章と第12章は、不完全でも行動できる公的な人物や制度を擁護する。",
+      "en": "Chapter 8 and Chapter 12 defend public figures and institutions that are imperfect but still capable of action."
+    },
+    {
+      "ja": "Palantirの要約は、AI兵器、国家奉仕、公的赦し、心理化された政治、宗教的信念、文化的判断を明示している。",
+      "en": "Palantir's April 2026 \"in brief\" summary makes this part explicit: it discusses AI weapons, national service, public forgiveness, psychologized politics, religious belief, and cultural judgment."
+    },
+    {
+      "ja": "弱みは、本書が信念を求めるほどには、その信念のための制度を設計していない点である。",
+      "en": "The weakness is that the book asks for belief more than it designs institutions for that belief."
+    },
+    {
+      "ja": "信念は権利、少数者保護、抑制と均衡、軍事監査可能性、AI説明責任に翻訳されなければならない。",
+      "en": "That criticism is useful: \"belief\" must be translated into rights, minority protections, checks and balances, military auditability, and AI accountability."
+    },
+    {
+      "ja": "第3部はPalantirの組織論として読むのがよい。",
+      "en": "Part III is best read as Palantir's organizational theory."
+    },
+    {
+      "ja": "エンジニアリングはコードを書くことだけではない。",
+      "en": "Engineering is not just coding."
+    },
+    {
+      "ja": "それは不確実な環境に入り、現場から学び、即興し、道具を変え、分析を運用につなげることである。",
+      "en": "It is entering uncertain environments, learning from the field, improvising, changing tools, and connecting analysis to operations."
+    },
+    {
+      "ja": "第10章は群れの端を、周縁の探索者が集団を動かす比喩として使う。",
+      "en": "Chapter 10 uses the swarm edge as a metaphor for how peripheral explorers can move the group."
+    },
+    {
+      "ja": "第11章は即興的スタートアップを説明する。",
+      "en": "Chapter 11 explains the improvisational startup: in defense, healthcare, finance, manufacturing, and public administration, requirements are rarely complete at the start."
+    },
+    {
+      "ja": "データ、権限、レガシーシステム、政治、ユーザーがすべてプロダクトを変える。",
+      "en": "Data, permissions, legacy systems, politics, and users all change the product."
+    },
+    {
+      "ja": "第13章は最も論争的で重要な章である。",
+      "en": "Chapter 13, \"Building a Better Rifle,\" is the most controversial and important chapter."
+    },
+    {
+      "ja": "著者たちは軍事行動への不同意と、危険に送られる人により良い道具を渡す義務を分ける。",
+      "en": "The authors separate disagreement over military action from the obligation to provide better tools to people sent into danger."
+    },
+    {
+      "ja": "これはPalantirの防衛事業への倫理的弁護でもある。",
+      "en": "This is also an ethical defense of Palantir's defense business."
+    },
+    {
+      "ja": "Maven Smart Systemは戦場認識から共同火力、標的設定までのワークフローを支えると説明されている。",
+      "en": "Maven Smart System is described as supporting workflows from battlespace awareness to joint fires and targeting."
+    },
+    {
+      "ja": "この議論が強くなるほど、統治が必要になる。",
+      "en": "The stronger this argument becomes, the more governance it requires."
+    },
+    {
+      "ja": "兵士のためのより良い道具は正当な目標になりうるが、標的設定、監視、付随被害、同盟国の説明責任、国際人道法は工学品質だけでは扱えない。",
+      "en": "Better tools for soldiers can be a valid goal, but targeting, surveillance, collateral harm, allied political accountability, and international humanitarian law cannot be handled by engineering quality alone."
+    },
+    {
+      "ja": "第14章は複雑なシステムを時計として扱うことに警告する。",
+      "en": "Chapter 14 warns against treating complex systems as clocks."
+    },
+    {
+      "ja": "その警告はAIにとって重要である。",
+      "en": "That warning matters for AI."
+    },
+    {
+      "ja": "LLMやエージェント的ツールは不確実な環境でそれらしい提案を出せる。",
+      "en": "LLMs and agentic tools can make plausible recommendations in uncertain environments."
+    },
+    {
+      "ja": "戦場、警察、医療、行政では、確率的出力は制度的責任と結びつけなければならない。",
+      "en": "In battlefields, policing, medicine, and public administration, probabilistic output must be tied to institutional responsibility."
+    },
+    {
+      "ja": "第4部は最も哲学的な部分である。",
+      "en": "Part IV is the most philosophical section."
+    },
+    {
+      "ja": "著者たちは技術者に快適な市場を離れ、国家、宗教、文化、文明の問いへ戻るよう求める。",
+      "en": "The authors ask technologists to leave comfortable markets and reenter national, religious, cultural, and civilizational questions."
+    },
+    {
+      "ja": "技術共和国は単なる政府契約ブームではない。",
+      "en": "The technological republic is not merely a government contracting boom."
+    },
+    {
+      "ja": "それは技術者、政府、軍、大学、企業、文化が共有された公共目的の周りで整合することを望む構想である。",
+      "en": "It is a desired alignment among technologists, government, the military, universities, firms, and culture around shared public purpose."
+    }
+  ],
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "`The Technological Republic: Hard Power, Soft Belief, and the Future of the West` は、Palantir共同創業者兼CEOのAlexander C. Karpと同社幹部Nicholas W. Zamiskaが書いた、テック業界への批判であり、国家安全保障論であり、Palantirの自己説明でもある。",
+          "en": "`The Technological Republic: Hard Power, Soft Belief, and the Future of the West` is a critique of the technology industry, a national-security argument, and a public account of Palantir’s political worldview."
+        }
+      ]
+    },
+    {
+      "id": "before-reading",
+      "heading": {
+        "ja": "2. 読む前に押さえる前提",
+        "en": "2. Before Reading"
+      },
+      "pairs": [
+        {
+          "ja": "この本を単なる保守的マニフェストとして読むと、半分しか見えない。",
+          "en": "Reading the book only as a conservative manifesto misses half the point."
+        }
+      ]
+    },
+    {
+      "id": "chapter-map",
+      "heading": {
+        "ja": "3. 18章の全体地図",
+        "en": "3. The 18-Chapter Map"
+      },
+      "pairs": [
+        {
+          "ja": "章を取りこぼさないため、まず構造を並べる。",
+          "en": "The table below keeps the actual structure visible."
+        }
+      ]
+    },
+    {
+      "id": "part-i",
+      "heading": {
+        "ja": "4. Part I: ソフトウェア世紀",
+        "en": "4. Part I: The Software Century"
+      },
+      "pairs": [
+        {
+          "ja": "第1部は、本書で最も説得力がある部分である。",
+          "en": "Part I is the book’s strongest section."
+        }
+      ]
+    },
+    {
+      "id": "part-ii",
+      "heading": {
+        "ja": "5. Part II: アメリカ精神の空洞化",
+        "en": "5. Part II: The Hollowing Out of the American Mind"
+      },
+      "pairs": [
+        {
+          "ja": "第2部は、技術論から文化論へ移る。",
+          "en": "Part II shifts from technology to culture."
+        }
+      ]
+    },
+    {
+      "id": "part-iii",
+      "heading": {
+        "ja": "6. Part III: Palantir流の工学マインド",
+        "en": "6. Part III: The Engineering Mindset"
+      },
+      "pairs": [
+        {
+          "ja": "第3部は、Palantirの組織論として読むとわかりやすい。",
+          "en": "Part III is best read as Palantir’s organizational theory."
+        }
+      ]
+    },
+    {
+      "id": "part-iv",
+      "heading": {
+        "ja": "7. Part IV: 技術共和国の再建",
+        "en": "7. Part IV: Rebuilding the Technological Republic"
+      },
+      "pairs": [
+        {
+          "ja": "第4部は、本書の最も思想的な部分である。",
+          "en": "Part IV is the most philosophical section."
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "heading": {
+        "ja": "8. 強調事象を統計で検証する",
+        "en": "8. Statistical Check"
+      },
+      "pairs": [
+        {
+          "ja": "本書の主張は大きい。",
+          "en": "The data suggests that the authors’ crisis language is not pure exaggeration."
+        }
+      ]
+    },
+    {
+      "id": "palantir-book",
+      "heading": {
+        "ja": "9. Palantirの本として読む",
+        "en": "9. Reading It as a Palantir Book"
+      },
+      "pairs": [
+        {
+          "ja": "本書は、Palantir抜きには読めない。",
+          "en": "The book cannot be separated from Palantir."
+        }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses",
+      "heading": {
+        "ja": "10. 何がよく、何が弱いか",
+        "en": "10. Strengths and Weaknesses"
+      },
+      "pairs": [
+        {
+          "ja": "本書の強みは、AIを単なる生産性や消費者体験ではなく、国家能力、抑止、産業、文化の問題として扱う点にある。",
+          "en": "The book’s strength is that it treats AI as a matter of state capacity, deterrence, industry, and culture, not merely productivity or consumer experience."
+        }
+      ]
+    },
+    {
+      "id": "public-ai-strategy-questions",
+      "heading": {
+        "ja": "11. 公共AI戦略として読む論点",
+        "en": "11. Public AI Strategy Questions"
+      },
+      "pairs": [
+        {
+          "ja": "政策、AI導入、防衛調達に関わる読者にとって、この本は賛同か反対かで終わらせるべきではない。",
+          "en": "The book is most useful as a checklist: 1."
+        }
+      ]
+    }
+  ]
+}

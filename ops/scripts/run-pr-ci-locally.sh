@@ -25,7 +25,7 @@ git worktree add --detach "${worktree_dir}" "${head_ref}"
 (
 	cd "${worktree_dir}"
 
-	git merge --no-edit "${base_ref}"
+	git -c commit.gpgsign=false merge --no-edit "${base_ref}"
 
 	pnpm install --frozen-lockfile
 	git diff --check

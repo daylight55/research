@@ -387,6 +387,12 @@ assert.match(
 
 assert.match(
 	trendNewsPreflightScript,
+	/pnpm exec prettier --plugin-search-dir=\. --write[\s\S]*?pnpm exec prettier --plugin-search-dir=\. --check/,
+	'Daily Trend News preflight should format generated MDX before enforcing the Prettier check'
+)
+
+assert.match(
+	trendNewsPreflightScript,
 	/node ops\/scripts\/validate-article-mdx\.mjs --changed/,
 	'Daily Trend News preflight should reject generated MDX syntax errors before the strict Astro build gate'
 )

@@ -1,0 +1,53 @@
+---
+title: '調査プロセス: 米国の国際政治プロファイル'
+description: '米国の制度、同盟、制裁、AI、移民、国内分極を整理するための公開調査ログ。'
+pubDate: '2026-06-17'
+category: 'country-profiles'
+tags: ['United States', 'Geopolitics', 'Research Log']
+generation:
+  model: 'gpt-5.4-mini'
+draft: false
+---
+
+# 調査プロセス: 米国の国際政治プロファイル
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- issue number: `#36`
+- issue title: `[01/50][北米] 米国の国際政治上の論点を調査する`
+- publishable request summary: 米国について、地域史・政治体制・安全保障・経済・市民生活の観点から国別プロファイルを作り、ニュースを読むための前提知識として整理する。大統領制と連邦制、米中競争、NATO、インド太平洋、ウクライナ・中東政策、分極化、選挙制度、司法、銃・移民・人種問題、ドル基軸、制裁、テック企業、AI・半導体政策を含める。
+- scope constraints: 最新性が重要な論点は政府資料、国際機関、公式統計、公式組織ページで確認する。主張、根拠、限界、実務含意を分ける。日本と東アジアへの含意を明示する。本文だけで読める国別プロファイルにする。
+- inferred deliverable: `articles/report/united-states-geopolitical-profile/ja/index.mdx` を正本とし、英語版、`mix-alignment.json`、`source-notes.mdx`、`research-log.mdx` を同時に整える。
+
+## 調査の進め方
+
+最初に、米国の制度構造を White House、USA.gov、House leadership で固めた。次に、2026年5月時点のBLS統計で物価と雇用の現在値を確認し、国内経済が対外関与の余地をどの程度縛っているかを見た。最後に、NATO、AI.Gov、OFAC を使って、同盟、AI、制裁を同じ地政学の束として整理した。
+
+この順番にしたのは、米国の場合は外交や軍事より先に、制度と国内政治の条件が外向きの動きを決めるからである。したがって、まず制度、次に国内圧力、最後に国際案件を並べる構成にした。
+
+## 採否判断
+
+- Senate の細かな党派構成は、今回は中心に置かなかった。下院の公式 leadership と White House の現在値だけで、制度上の制約条件は十分に説明できると判断した。
+- CBP の日次・月次の国境統計は参照しうるが、この記事は構造説明が主目的なので、速報値の競争には踏み込まなかった。
+- ドル基軸は重要だが、今回は定量表よりも制裁と金融審査の実務効果として扱った。
+- 対中関税や個別の輸出規制は、国別プロファイルの骨格を崩すほど細かいので、別の技術・通商稿に回すのが適切と判断した。
+
+## 反映した観点
+
+- 憲法の分立と連邦制が外交を遅くも強くもすることを、制度説明とフローチャートで示した。
+- AI と半導体を、単なる技術話ではなく、国家安全保障と産業競争の一体案件として扱った。
+- NATO と Ukraine support を、米国単独負担ではなく同盟国の共同調達と訓練の仕組みとして整理した。
+- 制裁を、対外政策の補助線ではなく、米国が金融と物流に介入する主要手段として扱った。
+- 日本・東アジアへの含意を、同盟、技術標準、制裁順守、産業基盤の4点に分けて書いた。
+
+## 残課題
+
+- 2026年後半の議会構成や大統領令の変化で、現在の優先順位は変わりうる。
+- 追加の移民統計や外交文書を入れれば、国境管理と中東政策の粒度はもっと上げられる。
+- AI と半導体の制度は変化が速いので、別途更新用の小稿を作る余地がある。

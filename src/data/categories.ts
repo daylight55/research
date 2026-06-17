@@ -16,6 +16,7 @@ export const CATEGORIES = [
 	'macro-finance',
 	'middle-east',
 	'geopolitics',
+	'country-profiles',
 	'uk-politics',
 	'uk-history',
 	'uk-culture',

@@ -12,6 +12,7 @@ git ls-files --modified --others --exclude-standard -z -- '*.md' '*.mdx' \
 changed_mdx_list="$(mktemp)"
 git ls-files --modified --others --exclude-standard -- '*.mdx' > "${changed_mdx_list}"
 if [[ -s "${changed_mdx_list}" ]]; then
+	xargs pnpm exec prettier --plugin-search-dir=. --write < "${changed_mdx_list}"
 	xargs pnpm exec prettier --plugin-search-dir=. --check < "${changed_mdx_list}"
 fi
 rm -f "${changed_mdx_list}"

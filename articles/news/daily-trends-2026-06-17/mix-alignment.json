@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "中東の緊張がいったん和らいだことで原油と金利の見通しが揺れ、米国では選挙、戦争権限、教育行政をめぐる対立が続いた。技術面では、Windowsの大規模修正、6Gチップ、クラウド容量争奪、データセンター反発、中国の国家AI網計画が並び、AI競争がモデルから電力と許認可へ移っている。出典は政治では The Guardian の US politics liveblog と個別記事、経済では The Guardian business liveblog と各国中銀・企業記事、技術では current coverage を中心に整理した。",
+      "en": "A softer Middle East backdrop pushed oil and rate expectations around, while U.S. fights over elections, war powers, and education kept the domestic agenda tense. In technology, a large Windows patch cycle, a 6G chip advance, cloud-capacity bargaining, local resistance to datacenters, and China’s AI grid plan all pointed to the same shift: the AI race is moving from model hype to power, security, and permits. Politics is organized from The Guardian's US politics liveblog and related articles, economy from The Guardian business liveblog plus central-bank and company coverage, and technology from current source-grounded reporting rather than rumor-heavy commentary."
+    },
+    {
+      "ja": "司法省は、White HouseのUFCイベントを狙った攻撃計画に関与したとして5人を訴追した。",
+      "en": "The Justice Department charged five people over a plot tied to a White House UFC event."
+    },
+    {
+      "ja": "捜査当局は、事件の共謀と準備行為を理由に複数人を起訴した。",
+      "en": "Investigators said the case involved conspiracy and preparatory steps that justified charges."
+    },
+    {
+      "ja": "大統領執務空間の安全性と、政治イベント周辺の治安警備に再び注目が集まる。",
+      "en": "It renews attention on White House security and the policing of political events."
+    },
+    {
+      "ja": "共犯者の有無、動機の全容、FBI長官の発言をめぐる批判の広がり。",
+      "en": "Watch for possible accomplices, the motive, and backlash over the FBI director's earlier remarks."
+    },
+    {
+      "ja": "共和党はマイク・コリンズを本選候補に立て、ジョージア上院選の本戦に入る。",
+      "en": "Republicans now move into the general election with Mike Collins as their nominee."
+    },
+    {
+      "ja": "ジョージアの共和党予備選は、上院候補を決める段階で決着した。",
+      "en": "The Republican runoff in Georgia settled the party's Senate nominee."
+    },
+    {
+      "ja": "ジョージアは上院多数派を左右する激戦州で、候補の色が本選の争点を決める。",
+      "en": "Georgia is a swing state that can shape Senate control and the broader midterm fight."
+    },
+    {
+      "ja": "Ossoff 陣営の反撃、資金流入、郊外有権者の動き。",
+      "en": "Watch the Ossoff response, fundraising, and suburban turnout."
+    },
+    {
+      "ja": "連邦政府は郵便投票や州の選挙データに圧力をかけ、投票ルールをめぐる争いを拡大させている。",
+      "en": "The federal government is widening the fight over mail voting and election data."
+    },
+    {
+      "ja": "投票制度をめぐる連邦と州の攻防が、政策と訴訟の両面で進んだ。",
+      "en": "The conflict over voting rules advanced on both policy and litigation fronts."
+    },
+    {
+      "ja": "有権者登録、郵便投票、捜査権限の扱いが、2026年の選挙環境を変える。",
+      "en": "Rules on registration, mail ballots, and investigations could reshape the 2026 election environment."
+    },
+    {
+      "ja": "裁判所の差し止め、州選挙当局の反発、議会の監督。",
+      "en": "Watch for court blocks, state pushback, and congressional oversight."
+    },
+    {
+      "ja": "上院は、イランへの軍事関与を止めるための戦争権限決議を退けた。",
+      "en": "The Senate rejected a war powers resolution aimed at ending U.S. military involvement with Iran."
+    },
+    {
+      "ja": "議員たちは、ホワイトハウスの対イラン方針をめぐって採決に踏み切った。",
+      "en": "Lawmakers voted after a renewed fight over the White House's Iran posture."
+    },
+    {
+      "ja": "議会の監視が弱いままだと、対イラン政策のエスカレーション管理が難しくなる。",
+      "en": "Weak congressional checks make escalation control around Iran harder."
+    },
+    {
+      "ja": "停戦の持続、次の戦争権限投票、政権内の対外強硬派の動き。",
+      "en": "Watch the durability of the truce, any follow-up votes, and internal hawk diplomacy."
+    },
+    {
+      "ja": "教育省の機能を他省庁へ移す動きが進み、事実上の縮小が続いている。",
+      "en": "The administration is continuing to strip functions from the Education Department."
+    },
+    {
+      "ja": "連邦教育行政の一部を他省庁へ移す方針が、さらに前へ進んだ。",
+      "en": "A plan to move parts of federal education oversight to other agencies moved further ahead."
+    },
+    {
+      "ja": "教育政策の一貫性、監督責任、議会との権限配分に影響する。",
+      "en": "It affects policy continuity, oversight, and the balance of power with Congress."
+    },
+    {
+      "ja": "議会の反発、州教育当局の対応、対象機能の追加移管。",
+      "en": "Watch for congressional pushback, state reactions, and any further transfers of authority."
+    },
+    {
+      "ja": "US-Iran の緩和期待で shipping リスクが下がり、Brent は80ドル割れへ向かった。",
+      "en": "Softer Iran tensions cut shipping risk and pushed Brent below $80."
+    },
+    {
+      "ja": "市場は、海上輸送の正常化と供給不安の後退を織り込み始めた。",
+      "en": "Markets started pricing in smoother shipping and less supply fear."
+    },
+    {
+      "ja": "原油はインフレ、運賃、家計支出に直結するため、下落は中央銀行にも効く。",
+      "en": "Oil feeds inflation, freight, and household costs, so a fall matters for central banks too."
+    },
+    {
+      "ja": "合意が本当に履行されるか、そして下げが一時的かどうか。",
+      "en": "Watch whether the deal is implemented and whether the price drop sticks."
+    },
+    {
+      "ja": "日銀はインフレ警戒を背景に、31年ぶりの水準まで短期金利を引き上げた。",
+      "en": "The BoJ raised short-term rates to their highest level in 31 years."
+    },
+    {
+      "ja": "日本の金融政策は、依然として引き締め側にあることを示した。",
+      "en": "Japan's monetary policy stayed on the tightening side."
+    },
+    {
+      "ja": "円相場、輸入物価、アジアの金利見通しに波及する。",
+      "en": "It affects the yen, import prices, and rate expectations across Asia."
+    },
+    {
+      "ja": "賃上げの持続、円の反応、次回会合での追加利上げ示唆。",
+      "en": "Watch wage growth, yen moves, and any signal of another hike."
+    },
+    {
+      "ja": "RBAは4.35%で据え置き、なおインフレが残るなら再利上げも示唆した。",
+      "en": "The RBA held at 4.35% but kept the door open to another hike if inflation stays sticky."
+    },
+    {
+      "ja": "豪州中銀は追加引き締めと様子見の間で、いったん停止を選んだ。",
+      "en": "Australia's central bank chose to pause rather than tighten again immediately."
+    },
+    {
+      "ja": "原油安が来ても、中央銀行がすぐには利下げへ向かわないことを示す。",
+      "en": "It shows that lower oil alone is not enough for central banks to pivot quickly."
+    },
+    {
+      "ja": "CPI、賃金データ、豪ドルの反応。",
+      "en": "Watch CPI, wages, and the Australian dollar."
+    },
+    {
+      "ja": "英政府は救済に慎重で、実質的な公的管理へ近づいている。",
+      "en": "The UK government is wary of a rescue and is edging closer to public control."
+    },
+    {
+      "ja": "10億ポンド級の救済案が政治的に重荷になり、交渉が難しくなった。",
+      "en": "A roughly £1bn rescue plan became politically difficult and harder to close."
+    },
+    {
+      "ja": "水道料金、設備投資、公益事業の資本政策に直接響く。",
+      "en": "It has direct implications for bills, investment, and utility capital structure."
+    },
+    {
+      "ja": "特別管理への移行、料金改定、投資家の損失負担の分担。",
+      "en": "Watch for special administration, tariff changes, and who absorbs the losses."
+    },
+    {
+      "ja": "住宅価格は年初来で初めて前月比下落し、借入コストの高さが需要を冷やしている。",
+      "en": "House prices fell month on month for the first time this year as higher borrowing costs cooled demand."
+    },
+    {
+      "ja": "住宅市場は金利高と買い手の慎重姿勢で、回復ペースが鈍った。",
+      "en": "The housing market slowed as high rates and cautious buyers kept activity down."
+    },
+    {
+      "ja": "金利高が実体経済に効き始めたサインとして、消費と景気見通しに影響する。",
+      "en": "It is another sign that higher rates are feeding through to the real economy."
+    },
+    {
+      "ja": "8月以降の金利見通しと、住宅ローン申請の反発有無。",
+      "en": "Watch rate expectations for later in the year and whether mortgage demand rebounds."
+    },
+    {
+      "ja": "Microsoft は約200件の脆弱性を修正し、Patch Tuesday は記録的な規模になった。",
+      "en": "Microsoft patched more than 200 vulnerabilities in a record-sized Patch Tuesday cycle."
+    },
+    {
+      "ja": "Windows と関連製品の月例修正が、過去最大級のボリュームになった。",
+      "en": "The monthly Windows patch set landed at an unusually large scale."
+    },
+    {
+      "ja": "AI時代でも防御は増える一方で、セキュリティ運用の負荷が上がっている。",
+      "en": "Security operations are getting heavier, not lighter, even in the AI era."
+    },
+    {
+      "ja": "ゼロデイの再利用、企業の適用速度、修正漏れの有無。",
+      "en": "Watch for zero-day reuse, enterprise patch speed, and any missed fixes."
+    },
+    {
+      "ja": "IMECの実装技術は、AIと6Gをつなぐ通信チップの量産性を一段押し上げた。",
+      "en": "IMEC's packaging work improves the manufacturability of chips that link AI and 6G."
+    },
+    {
+      "ja": "chiplet と 300mm 実装の進展が、次世代通信向け半導体の現実味を増した。",
+      "en": "Chiplet and 300mm packaging progress made next-gen telecom silicon more practical."
+    },
+    {
+      "ja": "Nvidia の成長ストーリーが GPU 以外の通信インフラにも広がる。",
+      "en": "Nvidia's growth story now stretches beyond GPUs into telecom infrastructure."
+    },
+    {
+      "ja": "量産時期、提携先、6G 規格化の進み方。",
+      "en": "Watch production timing, partners, and the pace of 6G standardization."
+    },
+    {
+      "ja": "Microsoft は Oracle からのクラウド容量調達を見送り、AI計算資源争奪が認証問題と直結した。",
+      "en": "Microsoft passed on Oracle cloud capacity, showing that the AI compute race is now tied to compliance."
+    },
+    {
+      "ja": "大型の容量契約が、セキュリティ認証や調達条件の壁で破談になった。",
+      "en": "A large capacity deal fell apart over security certification and procurement terms."
+    },
+    {
+      "ja": "compute は単なるハード不足ではなく、規制対応と供給網の問題になっている。",
+      "en": "Compute scarcity is now as much a compliance problem as a hardware problem."
+    },
+    {
+      "ja": "他のクラウド供給先、FedRAMP 対応の進展、調達コストの上昇。",
+      "en": "Watch for alternative suppliers, FedRAMP progress, and rising procurement costs."
+    },
+    {
+      "ja": "AIデータセンターの建設が、電力・騒音・環境負荷をめぐる地域政治に変わっている。",
+      "en": "AI datacenter buildouts are turning into local battles over power, noise, and environmental strain."
+    },
+    {
+      "ja": "地元政治家と住民が、巨大施設の誘致に慎重姿勢を強めた。",
+      "en": "Local officials and residents turned more cautious about bringing in large facilities."
+    },
+    {
+      "ja": "AI投資の成否は、州や自治体の許認可で詰まる。",
+      "en": "AI investment now depends heavily on state and local permitting."
+    },
+    {
+      "ja": "電力契約、用途変更許可、住民投票や条例の動き。",
+      "en": "Watch power contracts, zoning approvals, and any local ballot or ordinance fights."
+    },
+    {
+      "ja": "北京はAI計算資源を国家インフラとして束ね、国内半導体中心の供給網を急いでいる。",
+      "en": "Beijing is treating AI compute as national infrastructure and moving to a domestic-chip supply chain."
+    },
+    {
+      "ja": "国家主導で、計算資源と送電網を結ぶ広域計画が打ち出された。",
+      "en": "A state-led plan linked compute resources with the power grid across a wider network."
+    },
+    {
+      "ja": "AI競争がモデル性能から電力・CPU/GPU・国策インフラの競争へ移る。",
+      "en": "The AI race is shifting from model quality to power, chips, and state-backed infrastructure."
+    },
+    {
+      "ja": "国内チップ比率、送電制約、計画の実装速度。",
+      "en": "Watch domestic-chip targets, power constraints, and how quickly the plan is implemented."
+    },
+    {
+      "ja": "中東の緩和は原油、金利、住宅の順に波及し、マクロの主役が再びエネルギーになった。",
+      "en": "De-escalation in the Middle East is feeding quickly into oil, rates, and housing."
+    },
+    {
+      "ja": "米国内では選挙、戦争権限、教育行政をめぐる権力争いが同時に進み、制度面の不確実性が高い。",
+      "en": "U.S. politics is fighting on multiple fronts at once: elections, war powers, and education administration."
+    },
+    {
+      "ja": "AIブームの焦点はモデル競争から、電力・データセンター・クラウド容量・セキュリティへ移っている。",
+      "en": "The AI boom is shifting from model competition to power, datacenters, cloud capacity, and security."
+    },
+    {
+      "ja": "US-Iran の緩和が原油と海上輸送の正常化につながるか。",
+      "en": "Whether the US-Iran truce translates into sustained shipping normalization and lower oil."
+    },
+    {
+      "ja": "投票権、教育省、戦争権限をめぐる訴訟や議会反発がどこまで広がるか。",
+      "en": "How far court challenges and congressional pushback spread on voting rights and Education Department changes."
+    },
+    {
+      "ja": "AI向けデータセンターの電力、許認可、資金調達の制約が投資計画を鈍らせるか。",
+      "en": "Whether power, permitting, and financing constraints slow the next wave of AI datacenter buildout."
+    }
+  ]
+}

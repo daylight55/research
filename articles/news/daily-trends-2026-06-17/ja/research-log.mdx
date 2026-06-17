@@ -1,0 +1,27 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-06-17
+- Article slug: `daily-trends-2026-06-17`
+- Run Context: Daily Trend News digest for politics, economy, and technology; exactly five topics per category; prioritize the last 24-48 hours and include slightly older items only when they still drive current discussion; deliver structured JSON for the renderer.
+- Repo-local skill: [research-report](/home/runner/work/research/research/.codex/skills/research-report/SKILL.md)
+- Prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 判断メモ
+
+- 政治は liveblog の連続報道を軸に、訴追・選挙・投票権・戦争権限・教育行政へと整理した。
+- 経済は中東緩和の原油影響を起点に、BoJ と RBA、Thames Water、住宅市場までを一つの金利・物価ストーリーとして束ねた。
+- 技術は AI インフラの実務面に寄せ、security, compute, power, permitting に関係する記事を優先した。
+- 画像は各記事の埋め込み写真または記事由来の安定 URL を優先し、コラージュや汎用素材は使っていない。
+
+## 残課題
+
+- US-Iran の合意が実際の海上輸送と原油価格にどう反映されるかを翌日以降も確認する。
+- 投票権や教育省再編をめぐる訴訟・議会対応が続くかを追跡する。
+- AI データセンターの電力制約と許認可の遅延が、クラウド拡張計画に波及するかを確認する。

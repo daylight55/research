@@ -18,6 +18,7 @@ export const CATEGORIES = [
 	'geopolitics',
 	'uk-politics',
 	'uk-history',
+	'uk-culture',
 	'japan-politics',
 	'real-estate',
 	'ancient-history',

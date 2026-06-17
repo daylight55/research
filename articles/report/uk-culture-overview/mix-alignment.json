@@ -1,0 +1,248 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "culture-map",
+			"heading": {
+				"ja": "イギリス文化の見取り図",
+				"en": "A Map of British Culture"
+			},
+			"pairs": [
+				{
+					"ja": "イギリス文化は、単一の英国らしさではない。",
+					"en": "British culture is not a single \"Britishness\"."
+				},
+				{
+					"ja": "それはEngland、Scotland、Wales、Northern Ireland、移民コミュニティ、階級、地域、メディア、帝国の記憶、都市と地方の生活が重なった文化である。",
+					"en": "It is a layered culture made from England, Scotland, Wales, Northern Ireland, migrant communities, class, region, media, memories of empire, and urban and rural life."
+				},
+				{
+					"ja": "王室、議会、紅茶、パブ、サッカー、BBC、British Museum、文学、ロック音楽だけを並べても足りない。",
+					"en": "It is not enough to list the monarchy, Parliament, tea, pubs, football, the BBC, the British Museum, literature, and rock music."
+				},
+				{
+					"ja": "特徴は、古い制度と現代的多様性が共存することである。",
+					"en": "The distinctive feature is that old institutions and modern diversity coexist."
+				},
+				{
+					"ja": "言語は最良の入口である。",
+					"en": "Language is the best entry point."
+				},
+				{
+					"ja": "英語は世界語であり、英国の文化輸出の基盤である。",
+					"en": "English is a world language and the base of much British cultural export."
+				},
+				{
+					"ja": "Welsh、Gaelic、Scots、Irish、Ulster Scotsは観光記号にとどまらない。",
+					"en": "But Welsh in Wales, Gaelic and Scots in Scotland, and Irish and Ulster Scots in Northern Ireland are not just dialects or tourist symbols."
+				},
+				{
+					"ja": "それらはアイデンティティ、教育、公共表示、放送、政治意識に結びつく。",
+					"en": "They are tied to identity, education, public signage, broadcasting, and political consciousness."
+				},
+				{
+					"ja": "多文化化も入口である。",
+					"en": "Multicultural change is the other entry point."
+				},
+				{
+					"ja": "英国文化は白人・英語・国教会だけでは説明できない。",
+					"en": "British culture can no longer be explained as white, English-speaking, and Anglican."
+				},
+				{
+					"ja": "英語は英国文化の最大の輸出品である。",
+					"en": "English is Britain's largest cultural export."
+				},
+				{
+					"ja": "文学、映画、音楽、大学、金融、外交、科学出版、スポーツ実況、インターネット文化は英語で世界へ届く。",
+					"en": "Literature, film, music, universities, finance, diplomacy, scientific publishing, sports broadcasting, and much internet culture travel through English."
+				},
+				{
+					"ja": "英国の内部文化は一つの英語ではできていない。",
+					"en": "But Britain's internal culture is not made from one English."
+				},
+				{
+					"ja": "多数のアクセントが社会的意味を持つ。",
+					"en": "Received Pronunciation, Cockney, Estuary English, Scouse, Geordie, Brummie, Yorkshire, Scottish English, Welsh English, and Northern Irish English all carry social meaning."
+				},
+				{
+					"ja": "アクセントは出身地だけでなく、階級、教育、職業、メディア表象を示す。",
+					"en": "Accent signals not only where someone is from, but also class, education, occupation, and media identity."
+				},
+				{
+					"ja": "英国では言い方が内容と同じくらい重要になることがある。",
+					"en": "In Britain, how something is said can matter almost as much as what is said."
+				},
+				{
+					"ja": "これは階級社会の名残であり、地域の誇りでもある。",
+					"en": "That is a legacy of class society, but also a source of regional pride."
+				},
+				{
+					"ja": "WalesではWelshが公共文化の中心である。",
+					"en": "In Wales, Welsh is central to public culture."
+				},
+				{
+					"ja": "Welshは学校、標識、行政、放送、音楽、スポーツ、文学に存在する。",
+					"en": "It is present in schools, road signs, administration, broadcasting, music, sport, and literature."
+				},
+				{
+					"ja": "ScotlandではGaelicが数としては小さいが象徴的に重要である。",
+					"en": "In Scotland, Gaelic is numerically small but symbolically important for the Highlands and Islands, broadcasting, music, education, place names, and cultural revival."
+				},
+				{
+					"ja": "Scotsはより広い日常的・文学的な広がりを持つ。",
+					"en": "Scots has a wider everyday and literary reach, tied to Burns, song, spoken culture, and regional identity."
+				},
+				{
+					"ja": "階級は英国文化で避けられない。",
+					"en": "Class is unavoidable in British culture."
+				},
+				{
+					"ja": "階級はアクセント、学校、大学、職業、近隣、服装、ユーモア、休日、新聞、スポーツ、食、住宅に現れる。",
+					"en": "It appears in accent, school, university, profession, neighbourhood, clothing, humour, holidays, newspapers, sport, food, and housing."
+				},
+				{
+					"ja": "古典的な階級ラベルは単純化されているが、文化的意味は残る。",
+					"en": "Traditional labels such as aristocracy, upper middle class, professional class, and working class are simplified, but private schools, Oxbridge, London finance and law, post-industrial towns, public housing, and suburbs still carry cultural meaning."
+				},
+				{
+					"ja": "日常文化はqueue、understatement、pub、Sunday roast、tea、footballなどを中心に作られる。",
+					"en": "Everyday culture is built around queues, understatement, self-deprecating humour, privacy, small talk, pubs, Sunday roast, tea, football, gardens, charity shops, and the local high street."
+				},
+				{
+					"ja": "これらは観光記号だけではない。",
+					"en": "These are not just tourist signs."
+				},
+				{
+					"ja": "それらは公共空間、近隣関係、階級差、地域差を反映する。",
+					"en": "They reflect how public space, neighbourliness, class difference, and regional variation work."
+				},
+				{
+					"ja": "英国のユーモアは皮肉、遠回しな表現、失敗への寛容、権威のからかいに依存する。",
+					"en": "British humour often depends on irony, indirectness, tolerance of failure, and mocking authority."
+				},
+				{
+					"ja": "風刺、sitcom、panel show、stand-upは権威を笑いの対象にしてきた。",
+					"en": "Political satire, sitcoms, panel shows, stand-up comedy, and newspaper cartoons have made authority something to be laughed at as much as obeyed."
+				},
+				{
+					"ja": "英国文化は深いキリスト教制度を持つが、社会は急速に世俗化している。",
+					"en": "British culture carries deep Christian institutions, but society has secularised rapidly."
+				},
+				{
+					"ja": "EnglandにはChurch of Englandの痕跡が残る。",
+					"en": "England has the Church of England, with traces in monarchy, coronations, Parliament, schools, local churches, and the festival calendar."
+				},
+				{
+					"ja": "これは宗教文化が消えたという意味ではない。",
+					"en": "This does not mean religious culture has disappeared."
+				},
+				{
+					"ja": "宗教的痕跡と個人の世俗化が共存している。",
+					"en": "It means religious traces in weddings, funerals, schools, charity, local community, architecture, music, and festivals coexist with personal secularisation."
+				},
+				{
+					"ja": "英国は多宗教化も進んでいる。",
+					"en": "Britain is also increasingly multi-religious."
+				},
+				{
+					"ja": "イスラム教、ヒンドゥー教、シク教、ユダヤ教、仏教、移民系教会、無宗教が文化に影響している。",
+					"en": "Islam, Hinduism, Sikhism, Judaism, Buddhism, Caribbean and African churches, Eastern European Catholicism, and non-religion shape food, festivals, schools, local politics, music, and fashion."
+				},
+				{
+					"ja": "公共放送は英国文化の中心である。",
+					"en": "Public broadcasting is central to British culture."
+				},
+				{
+					"ja": "BBCなどは全国文化と地域文化を同時に作る。",
+					"en": "The BBC, ITV, Channel 4, Channel 5, BBC radio, local radio, newspapers, magazines, podcasts, and YouTube all make national and regional culture."
+				},
+				{
+					"ja": "BBCは長く共通文化基盤を提供してきた。",
+					"en": "The BBC has long provided a common cultural platform through news, education, drama, sport, children's programming, radio, and the World Service."
+				},
+				{
+					"ja": "しかしメディア文化は変化している。",
+					"en": "But media culture is changing."
+				},
+				{
+					"ja": "共有空間は全国放送からYouTube、streaming、social media、podcastへ分散している。",
+					"en": "The shared cultural space is dispersing from national broadcast television toward YouTube, streaming, social media, and podcasts."
+				},
+				{
+					"ja": "英国文学は古典と現代的多文化経験をつなぐ。",
+					"en": "British literature connects the canon and modern multicultural experience: Shakespeare, Austen, Dickens, the Brontës, Woolf, Orwell, Tolkien, Lessing, Rushdie, Zadie Smith, Kazuo Ishiguro, Bernardine Evaristo, and Ali Smith."
+				},
+				{
+					"ja": "文学は上品な教養だけではない。",
+					"en": "Literature is not only polite culture."
+				},
+				{
+					"ja": "そこでは階級、帝国、都市、ジェンダー、移民、植民地経験、地域が争われる。",
+					"en": "It is where class, empire, city life, gender, migration, colonial experience, and region are contested."
+				},
+				{
+					"ja": "英国文化は博物館と遺産を通じて可視化される。",
+					"en": "British culture is visible through museums and heritage."
+				},
+				{
+					"ja": "主要博物館は教育、観光、都市経済、国民記憶の結節点である。",
+					"en": "The British Museum, National Gallery, Tate, Victoria and Albert Museum, Natural History Museum, Science Museum, British Library, National Museums Scotland, Amgueddfa Cymru, and Ulster Museum are nodes of education, tourism, urban economy, and national memory."
+				},
+				{
+					"ja": "文化施設は回復しているが、一様にパンデミック前へ戻ったわけではない。",
+					"en": "Cultural institutions are recovering, but not uniformly back to pre-pandemic levels."
+				},
+				{
+					"ja": "博物館文化は帝国と切り離せない。",
+					"en": "Museum culture is also inseparable from empire."
+				},
+				{
+					"ja": "英国文化を称賛だけで読むと、この緊張を見落とす。",
+					"en": "A celebratory view of British culture misses this tension."
+				},
+				{
+					"ja": "スポーツは英国の最も強い日常言語の一つである。",
+					"en": "Sport is one of Britain's strongest everyday languages."
+				},
+				{
+					"ja": "サッカーは労働者階級文化、都市アイデンティティ、グローバル資本、移民選手、放映権を結びつける。",
+					"en": "Football combines working-class culture, city identity, global capital, migrant players, and broadcast rights."
+				},
+				{
+					"ja": "英国文化は経済でもある。",
+					"en": "British culture is also an economy."
+				},
+				{
+					"ja": "創造産業はfilm、TV、music、games、design、architecture、advertising、fashion、publishing、software、museums、performing artsを含む。",
+					"en": "The creative industries include film, TV, music, games, design, architecture, advertising, fashion, publishing, software, museums, and performing arts."
+				},
+				{
+					"ja": "文化は伝統だけではない。",
+					"en": "The key point is that culture is not only tradition."
+				},
+				{
+					"ja": "文化は輸出、雇用、都市再生、観光、国際関係、教育、AI時代のコンテンツ経済と結びつく。",
+					"en": "It is tied to exports, jobs, urban regeneration, tourism, international relations, education, and the AI-era content economy."
+				},
+				{
+					"ja": "ソフトパワーは実在する資産だが、自動的には維持されない。",
+					"en": "Soft power is a real asset, but it is not self-maintaining."
+				},
+				{
+					"ja": "英国文化は、古い制度を日常化しながら、移民、メディア、地域性で更新される文化である。",
+					"en": "British culture is best described as a culture that everyday-ises old institutions while constantly renewing itself through migration, media, and regional identity."
+				},
+				{
+					"ja": "英国文化は伝統か多文化かの二択ではない。",
+					"en": "British culture is therefore not a choice between tradition and multiculturalism."
+				},
+				{
+					"ja": "緊張そのものが文化である。",
+					"en": "The tension is the culture."
+				}
+			]
+		}
+	]
+}

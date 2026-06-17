@@ -1,0 +1,263 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "米国の国際政治を読むときは、軍事力だけでは足りない。",
+					"en": "Reading United States geopolitics requires more than looking at military power."
+				},
+				{
+					"ja": "憲法上の分立、連邦制、州の裁量、そして党派化した議会が、対外関与の速度と形を常に変える。",
+					"en": "Constitutional separation of powers, federalism, state discretion, and a polarized Congress continually change the speed and shape of foreign policy."
+				},
+				{
+					"ja": "現政権では、ホワイトハウスの優先順位に AI、経済、国家安全保障、国境管理、エネルギーが並び、下院ではマイク・ジョンソン議長を軸に共和党指導部が前面に出ている。",
+					"en": "The current administration puts AI, the economy, national security, border control, and energy at the top of its agenda, while House Republican leadership is visible around Speaker Mike Johnson."
+				},
+				{
+					"ja": "2026年5月のBLS統計では、CPIは前年同月比4.2%、失業率は4.3%だった。",
+					"en": "In the May 2026 BLS releases, CPI was up 4.2 percent year over year and unemployment was 4.3 percent."
+				},
+				{
+					"ja": "米国は依然としてNATOとウクライナ支援の中心であり、同時にAIを国家安全保障と産業競争の中核に置いている。",
+					"en": "The United States remains central to NATO and to support for Ukraine, while also putting AI at the center of national security and industrial competition."
+				},
+				{
+					"ja": "この国の実務上のポイントは、米国が強いか弱いかではない。",
+					"en": "The practical point is not whether the United States is simply strong or weak."
+				},
+				{
+					"ja": "どの国内連合が、どの政策を、どの制度経路で押し出すかで、同盟、制裁、輸出管理、移民、AI標準が変わることにある。",
+					"en": "The point is that different domestic coalitions push different policies through different institutional channels, which changes alliances, sanctions, export controls, migration, and AI standards."
+				},
+				{
+					"ja": "日本にとっては、米国を単独の国家ではなく、国内政治が外交通商と技術統制を再配線するシステムとして読むほうが有益である。",
+					"en": "For Japan, it is more useful to read the United States as a system in which domestic politics rewires diplomacy, trade, and technology control."
+				}
+			]
+		},
+		{
+			"id": "historical-institutional-base",
+			"heading": {
+				"ja": "2. 歴史と制度の骨格",
+				"en": "2. Historical and Institutional Base"
+			},
+			"pairs": [
+				{
+					"ja": "米国の基本構造は、憲法が立法・司法・行政の三権を分け、checks and balances で相互牽制することである。",
+					"en": "The basic structure of the United States is a constitutional system that divides power among the legislative, judicial, and executive branches and then layers checks and balances on top."
+				},
+				{
+					"ja": "建国以来の米国は、孤立と介入、自由貿易と保護、州権と連邦権のあいだを揺れてきた。",
+					"en": "Since the founding, the United States has swung between isolation and intervention, protection and free trade, state power and federal power."
+				},
+				{
+					"ja": "だが1945年以降は、同盟網、金融制裁、技術優位、海上覇権を組み合わせる方式が定着した。",
+					"en": "Since 1945, however, a durable pattern has emerged: the United States combines alliance networks, financial sanctions, technology advantage, and maritime power."
+				},
+				{
+					"ja": "現在の対外政策は、その延長線上で、国内の政治コストをどう吸収するかという設計問題になっている。",
+					"en": "Current policy is an extension of that pattern, filtered through domestic political costs."
+				}
+			]
+		},
+		{
+			"id": "current-power-configuration",
+			"heading": {
+				"ja": "3. 現在の権力配置",
+				"en": "3. Current Power Configuration"
+			},
+			"pairs": [
+				{
+					"ja": "今の米国を読むうえで重要なのは、連邦政府の制度経路が多いことだ。",
+					"en": "What matters now is that the federal system creates many policy paths."
+				},
+				{
+					"ja": "連邦政府は立法・司法・行政に分かれ、州政府と地方政府も独自の権限を持つため、外交は大統領だけで決まらない。",
+					"en": "Because the federal government is split into legislative, judicial, and executive branches and the states retain their own power, foreign policy is not made by the President alone."
+				},
+				{
+					"ja": "OFAC は制裁を、資産凍結と貿易制限を使う対外・安保の道具として運用する。",
+					"en": "OFAC uses sanctions as a tool of foreign policy and national security through asset blocking and trade restrictions."
+				},
+				{
+					"ja": "現在の制裁プログラム一覧には、ロシア、イラン、サイバー、北朝鮮などが並んでおり、外交の圧力は軍事力だけではなく金融と物流の規制で発揮される。",
+					"en": "The current sanctions list includes Russia, Iran, cyber, and North Korea, which shows that the United States routinely turns finance and logistics into geopolitical pressure points."
+				}
+			]
+		},
+		{
+			"id": "main-external-arenas",
+			"heading": {
+				"ja": "4. 対外政策の主戦場",
+				"en": "4. Main External Arenas"
+			},
+			"pairs": [
+				{
+					"ja": "米国は依然として NATO の中心だが、現実の支援は「米国単独の負担」ではなく、同盟国の資金を使って米国製装備を共同調達する形に寄っている。",
+					"en": "The United States is still central to NATO, but the real support model is no longer just a United States burden."
+				},
+				{
+					"ja": "NATO のページは、PURL による米国装備の共同調達と、NSATU による支援の束ね役を説明している。",
+					"en": "NATO says allies are jointly buying United States equipment through PURL and that NSATU bundles support and training."
+				},
+				{
+					"ja": "AI.Gov は、米国を AI の世界的主導権競争の当事者として位置づけ、Innovation、Infrastructure、International Diplomacy and Security を三本柱に据える。",
+					"en": "The AI portal describes the United States as engaged in a race for AI leadership and organizes policy around Innovation, Infrastructure, and International Diplomacy and Security."
+				},
+				{
+					"ja": "そこでは、米国の AI 技術スタックの輸出、連邦のデータセンター許認可の迅速化、計算資源の整備が明示されている。",
+					"en": "It also names the export of the American AI technology stack and faster federal permitting for data center infrastructure."
+				},
+				{
+					"ja": "The White House の現在の優先事項には secure border が含まれる。",
+					"en": "The White House's current priorities include a secure border."
+				},
+				{
+					"ja": "これは、移民を単なる社会福祉や労働市場の問題ではなく、法執行、選挙、州と連邦の権限配分、対外関係をまたぐ政治問題として扱っていることを意味する。",
+					"en": "That means migration is treated not only as a labor-market or welfare issue, but also as a law-enforcement issue, an election issue, and a federalism issue that touches state power and foreign relations."
+				},
+				{
+					"ja": "OFAC の制裁プログラムは、米国が金融と貿易のルールを通じて地政学を動かすことを示している。",
+					"en": "OFAC sanctions show how the United States turns finance and trade rules into geopolitics."
+				},
+				{
+					"ja": "ロシアやイランに対する制裁は、軍事的な圧力に加えて、銀行、保険、海運、再輸出、技術移転のコストを引き上げる。",
+					"en": "Sanctions on Russia and Iran raise the cost of banking, insurance, shipping, re-export, and technology transfer in addition to direct military pressure."
+				}
+			]
+		},
+		{
+			"id": "civil-society-and-polarization",
+			"heading": {
+				"ja": "5. 市民社会と国内分断",
+				"en": "5. Civil Society and Polarization"
+			},
+			"pairs": [
+				{
+					"ja": "米国の市民社会は一枚岩ではない。",
+					"en": "United States civil society is not one bloc."
+				},
+				{
+					"ja": "都市と地方、大学教育の有無、宗教、移民世代、人種、産業構造が重なって政治連合を形づくる。",
+					"en": "Urban and rural politics, educational attainment, religion, migration generations, race, and industrial structure all shape political coalitions."
+				},
+				{
+					"ja": "2026年5月のBLSデータでは、CPIは前年同月比4.2%、失業率は4.3%だった。",
+					"en": "The May 2026 BLS data show CPI at 4.2 percent year over year and unemployment at 4.3 percent."
+				},
+				{
+					"ja": "インフレは極端ではないが、家計の余裕を回復させるほど低くもない。",
+					"en": "Inflation is not extreme, but it is not low enough to create a feeling of slack."
+				}
+			]
+		},
+		{
+			"id": "implications-for-japan",
+			"heading": {
+				"ja": "6. 日本・東アジアへの含意",
+				"en": "6. Implications for Japan and East Asia"
+			},
+			"pairs": [
+				{
+					"ja": "第一に、日米同盟の安定は条約文だけでは決まらない。",
+					"en": "First, the stability of the Japan-United States alliance is not determined by treaty text alone."
+				},
+				{
+					"ja": "米国の国内政治が国境、エネルギー、AI、財政に引っ張られるほど、アジアへの資源配分は説明責任を伴うものになる。",
+					"en": "The more domestic politics pulls Washington toward the border, energy, AI, and fiscal issues, the more Asia policy has to be justified to voters and Congress."
+				},
+				{
+					"ja": "第二に、AI と半導体は、単なる技術政策ではない。",
+					"en": "Second, AI and semiconductors are not just technology policy."
+				},
+				{
+					"ja": "AI.Gov が示すように、米国は AI 技術スタックを外に広げつつ、自国の計算基盤も囲い込もうとしている。",
+					"en": "As the AI portal makes clear, the United States wants to expand its AI stack abroad while also securing its own compute base."
+				},
+				{
+					"ja": "第三に、制裁と金融審査は日本企業に直接跳ね返る。",
+					"en": "Third, sanctions and financial screening feed directly into Japanese business decisions."
+				},
+				{
+					"ja": "OFAC の制裁プログラムが広く使われる限り、米国の対外政策は軍事同盟だけでなく、決済、保険、海運、サプライチェーンの条件を通じてアジアの商流を変える。",
+					"en": "As long as OFAC sanctions are used broadly, United States foreign policy changes payment, insurance, shipping, and supply-chain conditions in Asia, not only military relationships."
+				},
+				{
+					"ja": "第四に、NATO で可視化される米国製装備の供給は、欧州だけの問題ではない。",
+					"en": "Fourth, the supply of United States equipment visible in NATO is not only a Europe issue."
+				},
+				{
+					"ja": "産業基盤が細ると、同じ工場、同じ部品、同じ弾薬が欧州とインド太平洋の両方で競合する。",
+					"en": "When industrial capacity tightens, the same factories, parts, and munitions can compete between Europe and the Indo-Pacific."
+				}
+			]
+		},
+		{
+			"id": "monitoring-points",
+			"heading": {
+				"ja": "7. 監視点",
+				"en": "7. Monitoring Points"
+			},
+			"pairs": [
+				{
+					"ja": "米国をニュース読解用の国別プロファイルとして見るなら、次の5点を定点観測するのがよい。",
+					"en": "If you want to read the United States as a country profile for news consumption, five indicators matter most."
+				},
+				{
+					"ja": "White House の優先事項が AI、国境、エネルギー、国家安全保障のどこに寄るか。",
+					"en": "Whether White House priorities move toward AI, the border, energy, or national security."
+				},
+				{
+					"ja": "BLS の CPI と失業率が、対外関与の政治余地をどれだけ広げるか。",
+					"en": "Whether BLS inflation and unemployment widen or narrow the political space for foreign commitments."
+				},
+				{
+					"ja": "OFAC の新規制裁が、ロシア、イラン、サイバー、技術移転のどこに伸びるか。",
+					"en": "Whether new OFAC sanctions expand into Russia, Iran, cyber, or technology transfer."
+				}
+			]
+		},
+		{
+			"id": "risks-and-limits",
+			"heading": {
+				"ja": "8. リスク・限界",
+				"en": "8. Risks and Limits"
+			},
+			"pairs": [
+				{
+					"ja": "本稿の限界は三つある。",
+					"en": "This profile has three limits."
+				},
+				{
+					"ja": "第一に、2026年6月17日時点の公開情報に依拠しているため、直近の大統領令、制裁、選挙、戦争の進展はすぐに前提を変えうる。",
+					"en": "First, it relies on public information as of June 17, 2026, so new executive orders, sanctions, elections, or wars can change the baseline quickly."
+				},
+				{
+					"ja": "第二に、下院の現在の党派分布は確認できても、上院の微妙な力学までは本稿の中心に置いていない。",
+					"en": "Second, the current House leadership is visible, but the more subtle Senate bargaining dynamic is not the center of this profile."
+				},
+				{
+					"ja": "第三に、ドル基軸や半導体供給網の詳細な数量分析は、別稿で補うほうが読みやすい。",
+					"en": "Third, a full quantitative treatment of dollar centrality and semiconductor supply chains would belong in a separate report."
+				},
+				{
+					"ja": "公表情報からの推定として、当面の米国は「国内優先を強めつつ、同盟・制裁・AI標準では世界に残る」方向を取りやすい。",
+					"en": "As a matter of public-information inference, the near-term United States is likely to remain more domestically selective while still active in alliances, sanctions, and AI standards."
+				},
+				{
+					"ja": "外交は縮むというより、国内に説明しやすいテーマから順に配分されるとみるのが妥当である。",
+					"en": "Foreign policy is more likely to be prioritized by what is easiest to explain at home than by any simple retreat from the world."
+				}
+			]
+		}
+	]
+}

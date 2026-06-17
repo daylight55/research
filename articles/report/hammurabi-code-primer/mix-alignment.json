@@ -11,20 +11,20 @@
 			},
 			"pairs": [
 				{
-					"en": "The Code of Hammurabi is not an Islamic text, and it is not connected to Muhammad.",
-					"ja": "ハンムラビ法典は、イスラム教の文書でも、ムハンマドに関係する文書でもない。"
-				},
-				{
-					"en": "It is an Old Babylonian collection of legal judgments associated with King Hammurabi of Babylon in the eighteenth century BCE.",
-					"ja": "紀元前18世紀ごろのバビロン王ハンムラビの名で伝わる、古代メソポタミアの法判断集である。"
+					"en": "The Code of Hammurabi is an Old Babylonian collection of legal judgments associated with King Hammurabi of Babylon in the eighteenth century BCE.",
+					"ja": "ハンムラビ法典は、紀元前18世紀ごろのバビロン王ハンムラビの名で伝わる、古代メソポタミアの法判断集である。"
 				},
 				{
 					"en": "The best-known surviving object is a black stone stele more than 2.25 meters high, now held and displayed by the Louvre Museum in Paris.",
 					"ja": "現在もっとも有名な実物は、高さ2.25メートルを超える黒い石碑で、パリのルーヴル美術館に収蔵・展示されている。"
 				},
 				{
-					"en": "The quickest way to understand it is to treat it not as a sacred scripture, but as a royal monument of justice.",
-					"ja": "この法典を理解する近道は、「宗教の経典」ではなく「王が正義を示すための記念碑」として見ることだ。"
+					"en": "It is enough to note, as a guardrail against confusion, that this is not a religious-classification question and the Code is not connected to Islam or Muhammad.",
+					"ja": "宗教分類で読む資料ではなく、イスラム教やムハンマドと直接関係しない点は、誤解防止の注意として押さえればよい。"
+				},
+				{
+					"en": "The quickest way to understand it is to treat it as a royal monument of justice.",
+					"ja": "この法典を理解する近道は、「王が正義を示すための記念碑」として見ることだ。"
 				},
 				{
 					"en": "This report therefore reads the Code through five concrete examples: a judge's mistaken written judgment, stolen property and witnesses, debt relief after crop failure, family labor for debt, and status-based bodily injury plus builder liability.",
@@ -35,25 +35,25 @@
 		{
 			"id": "royal-legal-monument",
 			"heading": {
-				"ja": "2. 宗教文書ではなく王権の法記念碑",
-				"en": "2. Not Scripture, but a Royal Legal Monument"
+				"ja": "2. 王権の法記念碑と神の図像",
+				"en": "2. Royal Law and Divine Imagery"
 			},
 			"pairs": [
 				{
-					"en": "The Code of Hammurabi is not a scripture of Islam, Christianity, or Judaism.",
-					"ja": "ハンムラビ法典は、イスラム教、キリスト教、ユダヤ教の聖典ではない。"
+					"en": "The main religious caution is limited: the Code of Hammurabi should not be read as a scripture of Islam, Christianity, or Judaism, or as a text from the age of Muhammad.",
+					"ja": "宗教との関係で必要な注意は、ハンムラビ法典をイスラム教、キリスト教、ユダヤ教の聖典として読まないこと、また預言者ムハンマドの時代の文書として読まないことである。"
 				},
 				{
-					"en": "It is also not a text from the age of Muhammad.",
-					"ja": "もちろん、預言者ムハンマドの時代の文書でもない。"
+					"en": "The main frame is therefore Mesopotamian cities and kingship, not religious classification.",
+					"ja": "したがって、主題は宗教分類ではなく、「メソポタミアの都市国家と王権の歴史」である。"
 				},
 				{
-					"en": "That does not mean religion is absent.",
+					"en": "That does not mean the gods are absent from the object.",
 					"ja": "ただし、神と無関係という意味ではない。"
 				},
 				{
-					"en": "The point is political and religious at once: the king presents justice as an order backed by the gods.",
-					"ja": "これは、王が神々の秩序に支えられて正義を行うという政治的メッセージである。"
+					"en": "In this context, divine imagery helps legitimate the king's justice.",
+					"ja": "ここでの神の図像は、王が神々の秩序に支えられて正義を行うという政治的正統化として理解できる。"
 				}
 			]
 		},
@@ -67,6 +67,10 @@
 				{
 					"en": "In the common schoolbook category of ancient river civilizations, the Code belongs to Mesopotamia.",
 					"ja": "日本の教科書的な言い方を使えば、ハンムラビ法典は「四大文明」のうちメソポタミア文明に属する。"
+				},
+				{
+					"en": "Rather than reading it through later religious history, it is better understood as a document of Mesopotamian political and legal order.",
+					"ja": "後世の宗教史と重ねるより、都市、農地、神殿、商取引、奴隷制、家族制度を持つ古代都市社会の法資料として捉える方がよい。"
 				},
 				{
 					"en": "More precisely, it is an Old Babylonian text from the world of the Tigris and Euphrates rivers.",
@@ -170,11 +174,11 @@
 			"pairs": [
 				{
 					"en": "The Code of Hammurabi is an Old Babylonian legal monument from about 3,800 years ago.",
-					"ja": "ハンムラビ法典は、「昔の宗教の本」ではなく、「古代メソポタミアの王が、神の権威を背景に社会秩序を示した法判断の記念碑」である。"
+					"ja": "ハンムラビ法典は、古代メソポタミアの王が社会秩序を示した法判断の記念碑である。"
 				},
 				{
-					"en": "It is not connected to Muhammad or Islam.",
-					"ja": "イスラム教やムハンマドとは直接関係しない。"
+					"en": "It is not a religious scripture, and it is not connected to Muhammad or Islam.",
+					"ja": "宗教上の経典ではなく、イスラム教やムハンマドとも直接関係しない。"
 				},
 				{
 					"en": "A deeper reading should also avoid being trapped by the word \"code.\"",

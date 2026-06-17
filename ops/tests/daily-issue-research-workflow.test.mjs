@@ -213,6 +213,12 @@ assert.match(
 
 assert.match(
 	workflow,
+	/- name: Verify unique hero images[\s\S]*?run: pnpm test:hero-images[\s\S]*?- name: Run repository tests[\s\S]*?run: pnpm test[\s\S]*?- name: Verify generated mixed article alignment/,
+	'Daily Issue Research should run the full repository test suite before creating and merging generated report PRs'
+)
+
+assert.match(
+	workflow,
 	/- name: Create research pull request[\s\S]*?head_ref_oid="\$\(git rev-parse HEAD\)"[\s\S]*?echo "head_ref_oid=\$\{head_ref_oid\}"/,
 	'Daily Issue Research should expose the generated PR head SHA for preview checkout'
 )

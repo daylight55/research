@@ -11,53 +11,57 @@
 			},
 			"pairs": [
 				{
-					"en": "The Code of Hammurabi is not an Islamic text, and it is not connected to Muhammad.",
-					"ja": "ハンムラビ法典は、イスラム教の文書でも、ムハンマドに関係する文書でもない。"
-				},
-				{
-					"en": "It is an Old Babylonian collection of legal judgments associated with King Hammurabi of Babylon in the eighteenth century BCE.",
-					"ja": "紀元前18世紀ごろのバビロン王ハンムラビの名で伝わる、古代メソポタミアの法判断集である。"
+					"en": "The Code of Hammurabi is an Old Babylonian collection of legal judgments associated with King Hammurabi of Babylon in the eighteenth century BCE.",
+					"ja": "ハンムラビ法典は、紀元前18世紀ごろのバビロン王ハンムラビの名で伝わる、古代メソポタミアの法判断集である。"
 				},
 				{
 					"en": "The best-known surviving object is a black stone stele more than 2.25 meters high, now held and displayed by the Louvre Museum in Paris.",
 					"ja": "現在もっとも有名な実物は、高さ2.25メートルを超える黒い石碑で、パリのルーヴル美術館に収蔵・展示されている。"
 				},
 				{
-					"en": "The quickest way to understand it is to treat it not as a sacred scripture, but as a royal monument of justice.",
-					"ja": "この法典を理解する近道は、「宗教の経典」ではなく「王が正義を示すための記念碑」として見ることだ。"
+					"en": "It is enough to note, as a guardrail against confusion, that this is not a religious-classification question and the Code is not connected to Islam or Muhammad.",
+					"ja": "宗教分類で読む資料ではなく、イスラム教やムハンマドと直接関係しない点は、誤解防止の注意として押さえればよい。"
+				},
+				{
+					"en": "The quickest way to understand it is to treat it as a royal monument of justice.",
+					"ja": "この法典を理解する近道は、「王が正義を示すための記念碑」として見ることだ。"
+				},
+				{
+					"en": "This report therefore reads the Code through five concrete examples: a judge's mistaken written judgment, stolen property and witnesses, debt relief after crop failure, family labor for debt, and status-based bodily injury plus builder liability.",
+					"ja": "本稿では、裁判官の誤判、盗品売買、災害時の債務、家族の債務労働、身分別の身体被害と建築責任という5つの具体例から読む。"
 				}
 			]
 		},
 		{
-			"id": "what-it-is-not",
+			"id": "royal-legal-monument",
 			"heading": {
-				"ja": "2. まず何ではないか",
-				"en": "2. What It Is Not"
+				"ja": "2. 王権の法記念碑と神の図像",
+				"en": "2. Royal Law and Divine Imagery"
 			},
 			"pairs": [
 				{
-					"en": "The Code of Hammurabi is not a scripture of Islam, Christianity, or Judaism.",
-					"ja": "ハンムラビ法典は、イスラム教、キリスト教、ユダヤ教の聖典ではない。"
+					"en": "The main religious caution is limited: the Code of Hammurabi should not be read as a scripture of Islam, Christianity, or Judaism, or as a text from the age of Muhammad.",
+					"ja": "宗教との関係で必要な注意は、ハンムラビ法典をイスラム教、キリスト教、ユダヤ教の聖典として読まないこと、また預言者ムハンマドの時代の文書として読まないことである。"
 				},
 				{
-					"en": "It is also not a text from the age of Muhammad.",
-					"ja": "もちろん、預言者ムハンマドの時代の文書でもない。"
+					"en": "The main frame is therefore Mesopotamian cities and kingship, not religious classification.",
+					"ja": "したがって、主題は宗教分類ではなく、「メソポタミアの都市国家と王権の歴史」である。"
 				},
 				{
-					"en": "Muhammad belongs to the seventh century CE, while the Code of Hammurabi belongs to the eighteenth century BCE, more than two millennia earlier.",
-					"ja": "ムハンマドは西暦7世紀の人物であり、ハンムラビ法典はその約2300年以上前に属する。"
-				},
-				{
-					"en": "That does not mean religion is absent.",
+					"en": "That does not mean the gods are absent from the object.",
 					"ja": "ただし、神と無関係という意味ではない。"
+				},
+				{
+					"en": "In this context, divine imagery helps legitimate the king's justice.",
+					"ja": "ここでの神の図像は、王が神々の秩序に支えられて正義を行うという政治的正統化として理解できる。"
 				}
 			]
 		},
 		{
-			"id": "period",
+			"id": "civilization-and-comparison",
 			"heading": {
-				"ja": "3. どの文明の時代か",
-				"en": "3. Which Civilization and Period?"
+				"ja": "3. どの文明の時代か、他にどんな法集があったか",
+				"en": "3. Which Civilization, and What Other Law Collections?"
 			},
 			"pairs": [
 				{
@@ -65,20 +69,28 @@
 					"ja": "日本の教科書的な言い方を使えば、ハンムラビ法典は「四大文明」のうちメソポタミア文明に属する。"
 				},
 				{
+					"en": "Rather than reading it through later religious history, it is better understood as a document of Mesopotamian political and legal order.",
+					"ja": "後世の宗教史と重ねるより、都市、農地、神殿、商取引、奴隷制、家族制度を持つ古代都市社会の法資料として捉える方がよい。"
+				},
+				{
 					"en": "More precisely, it is an Old Babylonian text from the world of the Tigris and Euphrates rivers.",
 					"ja": "より具体的には、チグリス川・ユーフラテス川流域で発展した古代近東世界の、古バビロニア時代の資料である。"
 				},
 				{
-					"en": "This places the Code in the era of ancient urban states, temples, canals, agricultural land, trade, slavery, and royal administration.",
-					"ja": "この時代は、エジプト、インダス、中国古代文明と並べて語られる「古代文明」の時代ではあるが、ハンムラビ法典そのものは「三大宗教」の時代よりはるかに古い。"
+					"en": "Nor should the Code of Hammurabi be called simply the first law in human history.",
+					"ja": "また、ハンムラビ法典は「人類最初の法律」と単純に言い切る対象でもない。"
+				},
+				{
+					"en": "Cuneiform law includes earlier and later collections such as the Laws of Ur-Nammu, the Laws of Lipit-Ishtar, the Laws of Eshnunna, the Hittite laws, and the Assyrian laws.",
+					"ja": "楔形文字法には、ウル・ナンム法典、リピト・イシュタル法典、エシュヌンナ法、ヒッタイト法、アッシリア法など、前後の法集がある。"
 				}
 			]
 		},
 		{
-			"id": "legal-character",
+			"id": "code-treatment",
 			"heading": {
-				"ja": "4. 中身はどんな法律か",
-				"en": "4. What Kind of Law Is It?"
+				"ja": "4. 当時「法典」はどう扱われたのか",
+				"en": "4. How Was a \"Code\" Treated Then?"
 			},
 			"pairs": [
 				{
@@ -92,14 +104,51 @@
 				{
 					"en": "The rules differentiate by status, gender, and enslavement.",
 					"ja": "条文は身分、性別、自由人か奴隷かによって扱いを変える。"
+				},
+				{
+					"en": "An ancient \"code\" was not a modern statute enacted by a legislature, published in an official gazette, and cited by courts as controlling legislation.",
+					"ja": "古代の「法典」は、議会が制定して官報に載せ、裁判所が条文番号を引用して適用する近代法典とは違う。"
+				},
+				{
+					"en": "The rules are written as \"if A, then B\" conditional cases rather than abstract rights.",
+					"ja": "条文は「もしAなら、Bする」という条件文で書かれ、抽象的な権利論よりも、典型的な争い方を並べる。"
+				},
+				{
+					"en": "So the Code should be read in three layers.",
+					"ja": "そのため、ハンムラビ法典を読むときは、三つの層を分ける必要がある。"
+				}
+			]
+		},
+		{
+			"id": "concrete-examples",
+			"heading": {
+				"ja": "5. 条文から見る具体例",
+				"en": "5. Five Concrete Examples from the Laws"
+			},
+			"pairs": [
+				{
+					"en": "Concrete examples show that the Code is not just a list of harsh punishments.",
+					"ja": "具体例を見ると、ハンムラビ法典が単なる残酷刑のリストではないことが分かる。"
+				},
+				{
+					"en": "It also deals with proof, contracts, agricultural risk, family, status, and professional responsibility.",
+					"ja": "証拠、契約、農業リスク、家族、身分、職業責任を扱う都市社会の資料でもある。"
+				},
+				{
+					"en": "These five examples show the Code turning typical urban disputes into the language of royal justice.",
+					"ja": "この5例から見えるのは、法典が都市社会の典型的な揉めごとを王の正義の言葉に変換した資料だということである。"
+				},
+				{
+					"en": "They also show clear distance from modern law: status hierarchy and family substitution are built into the reasoning.",
+					"ja": "同時に、身分差や家族成員への連座は明確であり、現代法の価値観にそのまま接続できない。"
 				}
 			]
 		},
 		{
 			"id": "surviving-object",
 			"heading": {
-				"ja": "5. 実物は存在するのか",
-				"en": "5. Does the Object Still Exist?"
+				"ja": "6. 実物は存在するのか",
+				"en": "6. Does the Object Still Exist?"
 			},
 			"pairs": [
 				{
@@ -113,31 +162,27 @@
 				{
 					"en": "The question of how many copies exist has two answers.",
 					"ja": "「いくつあるのか」という問いには、二つの答えがある。"
-				},
-				{
-					"en": "As a museum object, the famous Louvre stele is the central surviving monument.",
-					"ja": "第一に、ルーヴルにある有名な石碑としては一基である。"
 				}
 			]
 		},
 		{
 			"id": "conclusion",
 			"heading": {
-				"ja": "7. 初学者向けの結論",
-				"en": "7. Beginner's Conclusion"
+				"ja": "8. 初学者向けの結論",
+				"en": "8. Beginner's Conclusion"
 			},
 			"pairs": [
 				{
 					"en": "The Code of Hammurabi is an Old Babylonian legal monument from about 3,800 years ago.",
-					"ja": "ハンムラビ法典は、「昔の宗教の本」ではなく、「古代メソポタミアの王が、神の権威を背景に社会秩序を示した法判断の記念碑」である。"
+					"ja": "ハンムラビ法典は、古代メソポタミアの王が社会秩序を示した法判断の記念碑である。"
 				},
 				{
-					"en": "It is not connected to Muhammad or Islam.",
-					"ja": "イスラム教やムハンマドとは直接関係しない。"
+					"en": "It is not a religious scripture, and it is not connected to Muhammad or Islam.",
+					"ja": "宗教上の経典ではなく、イスラム教やムハンマドとも直接関係しない。"
 				},
 				{
-					"en": "It belongs to Mesopotamian civilization, and its best-known surviving object is the stele now in the Louvre Museum.",
-					"ja": "時代は紀元前18世紀ごろ、場所はバビロンを中心とするメソポタミア、実物の代表は現在ルーヴル美術館にある石碑である。"
+					"en": "A deeper reading should also avoid being trapped by the word \"code.\"",
+					"ja": "もう少し深く読むなら、「法典」という名前に引っ張られすぎないことが重要である。"
 				}
 			]
 		}

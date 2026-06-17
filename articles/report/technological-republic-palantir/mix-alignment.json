@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "`The Technological Republic: Hard Power, Soft Belief, and the Future of the West` は、Palantir共同創業者兼CEOのAlexander C. Karpと同社幹部Nicholas W. Zamiskaが書いた、テック業界への批判であり、国家安全保障論であり、Palantirの自己説明でもある。",
+          "en": "`The Technological Republic: Hard Power, Soft Belief, and the Future of the West` is a critique of the technology industry, a national-security argument, and a public account of Palantir’s political worldview."
+        }
+      ]
+    },
+    {
+      "id": "before-reading",
+      "heading": {
+        "ja": "2. 読む前に押さえる前提",
+        "en": "2. Before Reading"
+      },
+      "pairs": [
+        {
+          "ja": "この本を単なる保守的マニフェストとして読むと、半分しか見えない。",
+          "en": "Reading the book only as a conservative manifesto misses half the point."
+        }
+      ]
+    },
+    {
+      "id": "chapter-map",
+      "heading": {
+        "ja": "3. 18章の全体地図",
+        "en": "3. The 18-Chapter Map"
+      },
+      "pairs": [
+        {
+          "ja": "章を取りこぼさないため、まず構造を並べる。",
+          "en": "The table below keeps the actual structure visible."
+        }
+      ]
+    },
+    {
+      "id": "part-i",
+      "heading": {
+        "ja": "4. Part I: ソフトウェア世紀",
+        "en": "4. Part I: The Software Century"
+      },
+      "pairs": [
+        {
+          "ja": "第1部は、本書で最も説得力がある部分である。",
+          "en": "Part I is the book’s strongest section."
+        }
+      ]
+    },
+    {
+      "id": "part-ii",
+      "heading": {
+        "ja": "5. Part II: アメリカ精神の空洞化",
+        "en": "5. Part II: The Hollowing Out of the American Mind"
+      },
+      "pairs": [
+        {
+          "ja": "第2部は、技術論から文化論へ移る。",
+          "en": "Part II shifts from technology to culture."
+        }
+      ]
+    },
+    {
+      "id": "part-iii",
+      "heading": {
+        "ja": "6. Part III: Palantir流の工学マインド",
+        "en": "6. Part III: The Engineering Mindset"
+      },
+      "pairs": [
+        {
+          "ja": "第3部は、Palantirの組織論として読むとわかりやすい。",
+          "en": "Part III is best read as Palantir’s organizational theory."
+        }
+      ]
+    },
+    {
+      "id": "part-iv",
+      "heading": {
+        "ja": "7. Part IV: 技術共和国の再建",
+        "en": "7. Part IV: Rebuilding the Technological Republic"
+      },
+      "pairs": [
+        {
+          "ja": "第4部は、本書の最も思想的な部分である。",
+          "en": "Part IV is the most philosophical section."
+        }
+      ]
+    },
+    {
+      "id": "statistics",
+      "heading": {
+        "ja": "8. 強調事象を統計で検証する",
+        "en": "8. Statistical Check"
+      },
+      "pairs": [
+        {
+          "ja": "本書の主張は大きい。",
+          "en": "The data suggests that the authors’ crisis language is not pure exaggeration."
+        }
+      ]
+    },
+    {
+      "id": "palantir-book",
+      "heading": {
+        "ja": "9. Palantirの本として読む",
+        "en": "9. Reading It as a Palantir Book"
+      },
+      "pairs": [
+        {
+          "ja": "本書は、Palantir抜きには読めない。",
+          "en": "The book cannot be separated from Palantir."
+        }
+      ]
+    },
+    {
+      "id": "strengths-weaknesses",
+      "heading": {
+        "ja": "10. 何がよく、何が弱いか",
+        "en": "10. Strengths and Weaknesses"
+      },
+      "pairs": [
+        {
+          "ja": "本書の強みは、AIを単なる生産性や消費者体験ではなく、国家能力、抑止、産業、文化の問題として扱う点にある。",
+          "en": "The book’s strength is that it treats AI as a matter of state capacity, deterrence, industry, and culture, not merely productivity or consumer experience."
+        }
+      ]
+    },
+    {
+      "id": "practical-reading",
+      "heading": {
+        "ja": "11. この一冊から得る実務的な読み方",
+        "en": "11. Practical Reading"
+      },
+      "pairs": [
+        {
+          "ja": "実務家にとって、この本は賛同か反対かで終わらせるべきではない。",
+          "en": "The book is most useful as a checklist."
+        }
+      ]
+    }
+  ]
+}

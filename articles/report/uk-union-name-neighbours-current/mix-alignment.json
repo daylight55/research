@@ -1,0 +1,224 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "union-name-current",
+			"heading": {
+				"ja": "連合王国の国名と構成国の現在地",
+				"en": "The United Kingdom: Name, Union, Neighbours"
+			},
+			"pairs": [
+				{
+					"ja": "正式英語名はUnited Kingdom of Great Britain and Northern Irelandである。",
+					"en": "The formal English name of the country is United Kingdom of Great Britain and Northern Ireland."
+				},
+				{
+					"ja": "これは単一民族国家名ではない。",
+					"en": "The key point is that this is not the name of a single ethnic nation."
+				},
+				{
+					"ja": "それは複数の王国、議会、島嶼、アイルランド分離が生んだ連合国家名である。",
+					"en": "It is the name of a union state produced by multiple kingdoms, parliaments, islands, and the partial separation of Ireland."
+				},
+				{
+					"ja": "名前の層は三つに分けられる。",
+					"en": "The naming layers are easiest to separate into three steps."
+				},
+				{
+					"ja": "第一に、Great BritainはEngland、Scotland、Walesの島と1707年以後の王国を指す。",
+					"en": "First, Great Britain refers to the island containing England, Scotland, and Wales, and to the kingdom created after 1707."
+				},
+				{
+					"ja": "第二に、United Kingdomは1801年にGreat BritainとIrelandが合同してできた国家を指した。",
+					"en": "Second, United Kingdom originally referred to the state formed in 1801 when Great Britain and Ireland were united."
+				},
+				{
+					"ja": "第三に、現在名は1922年のIrish Free State成立とNorthern Ireland残留後に整理された。",
+					"en": "Third, the present name was settled after the Irish Free State was created in 1922 and the six north-eastern counties remained within the UK as Northern Ireland; in 1927 the state and Parliament were restyled around Great Britain and Northern Ireland."
+				},
+				{
+					"ja": "2026年のUK理解には、国名史と構成国政治を並べて読む必要がある。",
+					"en": "To understand the UK in 2026, the historical name must be read alongside the current politics of its constituent countries."
+				},
+				{
+					"ja": "Englandは人口、財政、議会の中心である。",
+					"en": "England is the demographic, fiscal, and parliamentary centre."
+				},
+				{
+					"ja": "ScotlandはSNPと独立問題に形づくられている。",
+					"en": "Scotland remains shaped by the SNP and the independence question."
+				},
+				{
+					"ja": "Walesは2026年Senedd選挙とPlaid Cymru伸長で変化した。",
+					"en": "Wales has been transformed by the 2026 Senedd election and Plaid Cymru's advance."
+				},
+				{
+					"ja": "Northern IrelandはUK内部市場とEU単一市場の間にある権力分担政治体である。",
+					"en": "Northern Ireland remains a power-sharing polity positioned between the UK internal market and the EU single market."
+				},
+				{
+					"ja": "Irelandは最も密接な隣国で、EUはBrexit後の再構築相手である。",
+					"en": "The Republic of Ireland is the UK's closest institutional neighbour, while the EU is the main post-Brexit relationship being rebuilt."
+				},
+				{
+					"ja": "Britainという日常語は複数の意味を隠す。",
+					"en": "The casual word \"Britain\" often hides several different meanings."
+				},
+				{
+					"ja": "Englandは構成国の一つであり、UK全体ではない。",
+					"en": "England is one constituent country, not the whole UK."
+				},
+				{
+					"ja": "Great BritainはEngland、Scotland、Walesの島と1707年後の王国を意味する。",
+					"en": "Great Britain usually means the island containing England, Scotland, and Wales, and the post-1707 kingdom."
+				},
+				{
+					"ja": "British Islesは地理表現だがIrelandでは政治的に敏感である。",
+					"en": "The British Isles is a geographical phrase that can include Ireland and the Crown Dependencies, but it is politically sensitive in Ireland."
+				},
+				{
+					"ja": "1707年のActs of UnionはEnglandとScotlandをKingdom of Great Britainにした。",
+					"en": "The 1707 Acts of Union made the Kingdom of England and the Kingdom of Scotland into the Kingdom of Great Britain."
+				},
+				{
+					"ja": "Walesは独立王国としてこの合同に入ったのではない。",
+					"en": "Wales did not enter this union as a separate kingdom; by then it was already tied into the English legal and political order."
+				},
+				{
+					"ja": "Great Britainは島名であり、連合で作られた国家名でもある。",
+					"en": "Great Britain is therefore both an island name and a state name created by union."
+				},
+				{
+					"ja": "1800年のActs of UnionはGreat BritainとIrelandを合同した。",
+					"en": "The 1800 Acts of Union joined Great Britain and Ireland into the United Kingdom of Great Britain and Ireland."
+				},
+				{
+					"ja": "United KingdomはもともとIrelandを含む連合を意味した。",
+					"en": "In other words, the phrase United Kingdom originally meant a union that included Ireland, not only Great Britain."
+				},
+				{
+					"ja": "現在の正式国名はアイルランド分離の結果である。",
+					"en": "The current formal name is the result of Irish separation."
+				},
+				{
+					"ja": "Irish Free Stateは1922年に成立し、北東部六県はNorthern IrelandとしてUKに残った。",
+					"en": "The Irish Free State was created in 1922, while six north-eastern counties remained in the UK as Northern Ireland."
+				},
+				{
+					"ja": "1927年法はWestminster Parliamentの名称とUnited Kingdomの意味を整理した。",
+					"en": "The Royal and Parliamentary Titles Act 1927 changed the style of the Westminster Parliament to the Parliament of the United Kingdom of Great Britain and Northern Ireland, and clarified the meaning of United Kingdom in later public documents."
+				},
+				{
+					"ja": "UKは構成国と分権機関を持つ単一国家である。",
+					"en": "The UK is a unitary state with constituent countries and devolved institutions."
+				},
+				{
+					"ja": "外交、防衛、通貨、マクロ財政の多くはWestminsterとUK Governmentにある。",
+					"en": "Foreign policy, defence, currency, and much macro-fiscal policy sit with Westminster and the UK Government."
+				},
+				{
+					"ja": "Scotland、Wales、Northern Irelandには異なる範囲の分権機関がある。",
+					"en": "Scotland, Wales, and Northern Ireland have devolved institutions that handle different combinations of health, education, transport, local government, environment, and parts of justice."
+				},
+				{
+					"ja": "Englandには独自のEngland Parliamentがない。",
+					"en": "England has no separate English Parliament, so many England-specific policies are decided at Westminster."
+				},
+				{
+					"ja": "Englandは人口面で圧倒的な重みを持つ。",
+					"en": "England has overwhelming demographic weight."
+				},
+				{
+					"ja": "人口増は移民に支えられ、ScotlandとWalesでは自然増がマイナスだった。",
+					"en": "Growth was mainly driven by international migration, while natural change was negative in Scotland and Wales."
+				},
+				{
+					"ja": "Republic of IrelandはUKの最も密接な制度的隣国である。",
+					"en": "The Republic of Ireland is the UK's closest institutional neighbour."
+				},
+				{
+					"ja": "関係は貿易・文化だけでなく、和平、国境、EU単一市場、Common Travel Area、二国間制度に及ぶ。",
+					"en": "The relationship covers trade and culture, but also Northern Ireland peace, borders, the EU single market, the Common Travel Area, and bilateral UK-Ireland institutions."
+				},
+				{
+					"ja": "2026年3月のUK-Ireland SummitではSME、デジタル化、AI、インフラ、クリーンエネルギー、海洋安全保障、文化的結びつきが協議された。",
+					"en": "At the March 2026 UK-Ireland Summit, the governments discussed SMEs, digitalisation, AI, infrastructure, clean energy, maritime security, and cultural ties."
+				},
+				{
+					"ja": "Northern IrelandはUK内部であり、アイルランド島政治秩序の一部でもある。",
+					"en": "Northern Ireland is both inside the UK and part of the political order of the island of Ireland."
+				},
+				{
+					"ja": "Good Friday Agreementは同意原則を中心に置いた。",
+					"en": "The Good Friday Agreement made consent central to Northern Ireland's constitutional status."
+				},
+				{
+					"ja": "Brexit後、Windsor FrameworkはNorthern Irelandに特別な位置を与えた。",
+					"en": "After Brexit, the Windsor Framework gave Northern Ireland a special position to avoid a hard land border while managing its relationship with the UK internal market and the EU single market."
+				},
+				{
+					"ja": "EU関係は対立から実務的再構築へ動いている。",
+					"en": "The EU relationship has moved from post-Brexit confrontation toward practical rebuilding."
+				},
+				{
+					"ja": "2025年のUK-EU Common Understandingは安全保障、防衛、若者交流、電力、SPS、排出量取引、移民などを扱う。",
+					"en": "The 2025 UK-EU Common Understanding covers security, defence, youth mobility, Erasmus+, electricity, SPS, emissions trading, competition, policing, judicial cooperation, and irregular migration."
+				},
+				{
+					"ja": "SPSはGreat BritainとEUの農食品移動を簡素化し、Northern Irelandの二重アクセスにも影響しうる。",
+					"en": "The SPS strand is especially important because it could simplify agri-food movements between Great Britain and the EU while also affecting Northern Ireland's dual-access position."
+				},
+				{
+					"ja": "Franceは海峡、移民、漁業、防衛、エネルギー、EU関係を通じて重要である。",
+					"en": "France matters through the Channel, migration, fisheries, defence, energy, and EU relations."
+				},
+				{
+					"ja": "UKは島国だが大陸欧州と構造的につながっている。",
+					"en": "The UK is an island state, but Dover-Calais, Eurotunnel, Channel crossings, North Sea energy, and NATO make it structurally tied to continental Europe."
+				},
+				{
+					"ja": "英国の近隣関係はIreland、France、EU、NATO、Crown Dependencies、Isle of Manを含む。",
+					"en": "The UK's neighbourhood therefore includes Ireland, France, the EU, NATO, the Crown Dependencies, and the Isle of Man."
+				},
+				{
+					"ja": "Englandは人口、税、下院議席、金融、メディア、大学、文化産業の中心である。",
+					"en": "England is the centre of UK population, tax, Commons seats, finance, media, universities, and cultural industries."
+				},
+				{
+					"ja": "ScotlandはUK内部で最も明確に異なる政治空間を持つ。",
+					"en": "Scotland has the most clearly distinct political arena inside the UK."
+				},
+				{
+					"ja": "Walesは2026年Senedd選挙で大きく変わった。",
+					"en": "Wales changed sharply at the 2026 Senedd election."
+				},
+				{
+					"ja": "Northern Irelandは国境とアイデンティティ問題が最も制度化された地域である。",
+					"en": "Northern Ireland is the part of the UK where border and identity questions are most deeply institutionalised."
+				},
+				{
+					"ja": "UKは中央政府、国家元首、通貨を一つ持つが、政治的には層状である。",
+					"en": "The UK has one central government, one head of state, and one currency, but politically it is a layered system of four constituent countries and several neighbouring relationships."
+				},
+				{
+					"ja": "正式国名はその層を保存している。",
+					"en": "The formal name preserves that layering."
+				},
+				{
+					"ja": "Britainは単純にEnglandではない。",
+					"en": "The basic correction is that Britain is not simply England."
+				},
+				{
+					"ja": "より深い点は、UKが統一されていても同質ではないことである。",
+					"en": "The deeper point is that the UK is unified but not homogeneous."
+				},
+				{
+					"ja": "正式国名は合同と分離の記録であり、現在政治もその記録の上で動いている。",
+					"en": "Its formal name is a record of union and separation, and its present politics still moves on that record."
+				}
+			]
+		}
+	]
+}

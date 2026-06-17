@@ -134,14 +134,14 @@
       ]
     },
     {
-      "id": "practical-reading",
+      "id": "public-ai-strategy-questions",
       "heading": {
-        "ja": "11. この一冊から得る実務的な読み方",
-        "en": "11. Practical Reading"
+        "ja": "11. 公共AI戦略として読む論点",
+        "en": "11. Public AI Strategy Questions"
       },
       "pairs": [
         {
-          "ja": "実務家にとって、この本は賛同か反対かで終わらせるべきではない。",
+          "ja": "政策、AI導入、防衛調達に関わる読者にとって、この本は賛同か反対かで終わらせるべきではない。",
           "en": "The book is most useful as a checklist."
         }
       ]

@@ -219,6 +219,12 @@ assert.match(
 
 assert.match(
 	workflow,
+	/- name: Run repository tests[\s\S]*?id: repository_tests[\s\S]*?continue-on-error: true[\s\S]*?pnpm test[\s\S]*?- name: Prepare generated article test repair prompt[\s\S]*?if: steps\.repository_tests\.outcome == 'failure' && steps\.restore_generated_article\.outputs\.cache-hit != 'true'[\s\S]*?- name: Repair generated article after repository test failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?effort: low[\s\S]*?- name: Require repository tests[\s\S]*?pnpm test[\s\S]*?- name: Verify generated mixed article alignment/,
+	'Daily Issue Research should spend repair tokens only after repository tests fail on freshly generated articles'
+)
+
+assert.match(
+	workflow,
 	/- name: Create research pull request[\s\S]*?head_ref_oid="\$\(git rev-parse HEAD\)"[\s\S]*?echo "head_ref_oid=\$\{head_ref_oid\}"/,
 	'Daily Issue Research should expose the generated PR head SHA for preview checkout'
 )

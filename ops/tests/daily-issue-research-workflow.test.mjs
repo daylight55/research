@@ -536,6 +536,24 @@ assert.match(
 )
 
 assert.match(
+	cloudflarePreviewWorkflow,
+	/CLOUDFLARE_API_TOKEN: \$\{\{ secrets\.CLOUDFLARE_API_TOKEN \}\}[\s\S]*?CLOUDFLARE_ACCOUNT_ID: \$\{\{ secrets\.TF_VAR_CLOUDFLARE_ACCOUNT_ID \}\}/,
+	'Cloudflare preview should expose deploy secrets through job env so deploy steps can be skipped safely when secrets are unavailable'
+)
+
+assert.match(
+	cloudflarePreviewWorkflow,
+	/- name: Report skipped Cloudflare Pages preview[\s\S]*?if: env\.CLOUDFLARE_API_TOKEN == '' \|\| env\.CLOUDFLARE_ACCOUNT_ID == ''[\s\S]*?- name: Deploy to Cloudflare Pages preview[\s\S]*?if: env\.CLOUDFLARE_API_TOKEN != '' && env\.CLOUDFLARE_ACCOUNT_ID != ''/,
+	'Cloudflare preview should skip deploy instead of failing when Cloudflare secrets are unavailable'
+)
+
+assert.match(
+	cloudflarePreviewWorkflow,
+	/- name: Comment preview URL[\s\S]*?if: steps\.deploy\.outcome == 'success' && \(github\.event_name == 'pull_request' \|\| inputs\.pr_number != ''\)[\s\S]*?- name: Comment preview URL on issue[\s\S]*?if: steps\.deploy\.outcome == 'success' && inputs\.issue_number != ''/,
+	'Cloudflare preview should comment preview URLs only after a successful deploy'
+)
+
+assert.match(
 	cloudflareDeployWorkflow,
 	/- name: Run repository lint[\s\S]*?run: pnpm lint[\s\S]*?- name: Build/,
 	'Cloudflare production deploy should run repository lint before deploying'

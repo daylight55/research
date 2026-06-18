@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "米イラン合意が市場の重しを外し、ガソリン・住宅金利・株価に波及する一方、米政界では補償や司法判断をめぐる対立が続いた。技術面では、ホワイトハウスのAI統治、Anthropicへの圧力、OpenAIとGoogle/Metaの人材移動が重なり、政策と採用競争が同時に加速している。",
+      "en": "The Iran deal is taking some pressure out of energy markets and spilling into gasoline, mortgage rates, and equities. At the same time, U.S. politics kept turning on compensation claims, court rulings, and legacy fights, while tech news centered on AI regulation, model restrictions, and a sharper talent race between OpenAI, Anthropic, Google, and Meta."
+    },
+    {
+      "ja": "米イランの暫定合意が成立し、戦闘停止とホルムズ海峡の再開が焦点になった。",
+      "en": "The U.S.-Iran interim deal is in place, and the focus is now on ending the fighting and reopening shipping lanes."
+    },
+    {
+      "ja": "米国は対イラン封鎖を解除し、双方は直接協議を継続する方向に進んだ。",
+      "en": "The U.S. lifted its blockade on Iran, and both sides moved toward continued direct talks."
+    },
+    {
+      "ja": "原油・ガソリン・海上輸送の不確実性を下げる一方、合意の持続性が市場と中東情勢を左右する。",
+      "en": "It lowers uncertainty for oil, gasoline, and shipping, but the durability of the deal will shape markets and the region."
+    },
+    {
+      "ja": "IAEA査察、制裁緩和の具体化、海峡航行の回復がどこまで進むか。",
+      "en": "Watch IAEA inspections, the shape of sanctions relief, and how quickly traffic through the strait resumes."
+    },
+    {
+      "ja": "米政府がエバンストンの補償制度を止めにかかり、再分配と平等保護の境界が再び争点になった。",
+      "en": "The federal government is trying to block Evanston's reparations program, reviving the boundary between redress and equal protection."
+    },
+    {
+      "ja": "司法省が連邦裁判所に参加し、同市の黒人向け補償制度は違憲だと主張した。",
+      "en": "The Justice Department joined the federal case and argued that the city's Black reparations program is unconstitutional."
+    },
+    {
+      "ja": "他都市の修復政策や公的補償の設計にも波及する可能性がある。",
+      "en": "The case could affect reparations design and other public redress programs in other cities."
+    },
+    {
+      "ja": "連邦裁判所の判断と、同種プログラムへの波及。",
+      "en": "Watch the federal ruling and any spillover to similar programs."
+    },
+    {
+      "ja": "オバマ・センターは開館し、文化施設であると同時に民主主義の象徴として打ち出された。",
+      "en": "The Obama Center has opened, positioning itself as both a cultural institution and a symbol of democracy."
+    },
+    {
+      "ja": "オバマ夫妻と3人の元大統領が出席し、著名人も集まる式典で開館した。",
+      "en": "Barack and Michelle Obama attended, along with three former presidents and other high-profile guests."
+    },
+    {
+      "ja": "オバマ時代の政治的レガシーを2026年の政治環境の中で再定義する場になる。",
+      "en": "It will help redefine Obama's legacy inside the 2026 political climate."
+    },
+    {
+      "ja": "来場者数、公共空間の使われ方、トランプ陣営の反応。",
+      "en": "Watch attendance, how the public space is used, and how Trump allies respond."
+    },
+    {
+      "ja": "最高裁は大麻使用者の一律な銃所持禁止に待ったをかけた。",
+      "en": "The Supreme Court is putting the blanket gun ban for marijuana users on hold."
+    },
+    {
+      "ja": "連邦法の包括的禁止は違憲として、危険性の個別判断を求めた。",
+      "en": "The court challenged the broad federal prohibition and pushed for individualized danger assessments."
+    },
+    {
+      "ja": "銃規制とカンナビス法制の接点に新しい基準を持ち込み、他の銃事件にも影響する。",
+      "en": "It introduces a new standard at the intersection of gun control and cannabis law and could shape other gun cases."
+    },
+    {
+      "ja": "下級審の扱い、危険性をどう証明するか、既存事件への波及。",
+      "en": "Watch how lower courts apply it, what proof of danger is required, and how existing cases shift."
+    },
+    {
+      "ja": "1月6日被告が連邦賠償制度を使い、刑事事件の後始末が再燃している。",
+      "en": "Jan. 6 defendants are using federal claims to reopen the fight over the aftermath of the attack."
+    },
+    {
+      "ja": "FTCAを使った請求が進み、政権判断次第で支払いが起こりうる。",
+      "en": "Claims under the FTCA are moving forward, and payment could follow depending on the administration's choices."
+    },
+    {
+      "ja": "納税者負担と法の一貫性、政権による裁量の境界が問われる。",
+      "en": "It raises questions about taxpayer costs, legal consistency, and the limits of executive discretion."
+    },
+    {
+      "ja": "司法省が和解に応じるか、議会での補償案が進むか。",
+      "en": "Watch whether the Justice Department settles and whether congressional compensation ideas gain traction."
+    },
+    {
+      "ja": "FRBは据え置いたが、年内利上げを想定するメンバーが増えた。",
+      "en": "The Fed held rates steady, but more members now see a possible hike later this year."
+    },
+    {
+      "ja": "6月会合で政策金利は維持された一方、半数近くが年内1回以上の利上げを示唆した。",
+      "en": "Rates stayed unchanged at the June meeting, while nearly half of the committee pointed to at least one hike this year."
+    },
+    {
+      "ja": "インフレ警戒が強まり、債券・株式・住宅ローンに広く影響する。",
+      "en": "It keeps inflation worries alive and affects bonds, equities, and mortgage costs."
+    },
+    {
+      "ja": "今後のインフレ指標と次のFOMC発言。",
+      "en": "Watch upcoming inflation data and the next round of Fed commentary."
+    },
+    {
+      "ja": "英中銀は据え置き、インフレ見通しの鈍化を材料に慎重姿勢を維持した。",
+      "en": "The Bank of England held rates and stayed cautious as inflation appeared to cool."
+    },
+    {
+      "ja": "政策金利は3.75%で維持され、年末に向けた物価鈍化を見込んだ。",
+      "en": "The policy rate stayed at 3.75%, with a weaker inflation path expected later in the year."
+    },
+    {
+      "ja": "英住宅・消費・ポンド相場の先行きに影響する。",
+      "en": "It shapes UK housing, consumer demand, and the pound."
+    },
+    {
+      "ja": "エネルギー価格の動きと次回会合の票割れ。",
+      "en": "Watch energy prices and any split in the next vote."
+    },
+    {
+      "ja": "米30年住宅ローン金利は6.47%まで低下し、借り手には小さな追い風になった。",
+      "en": "The average 30-year mortgage rate fell to 6.47%, a modest tailwind for borrowers."
+    },
+    {
+      "ja": "国債利回りの低下を受け、前週の6.52%から下がった。",
+      "en": "The drop followed lower Treasury yields and was down from 6.52% a week earlier."
+    },
+    {
+      "ja": "住宅購入の心理を下支えするが、高水準のままなので回復は限定的。",
+      "en": "It helps buyer sentiment, but rates are still high enough to limit a real rebound."
+    },
+    {
+      "ja": "10年債利回り、販売件数、夏の住宅市場。",
+      "en": "Watch 10-year yields, home-sales data, and the summer housing market."
+    },
+    {
+      "ja": "全米平均ガソリン価格が4ドルを割り、イラン合意の即効性が出た。",
+      "en": "The national average for gasoline slipped below $4, showing an immediate Iran-deal effect."
+    },
+    {
+      "ja": "AAA統計で1ガロン平均が3.999ドルになった。",
+      "en": "AAA put the national average at $3.999 a gallon."
+    },
+    {
+      "ja": "家計負担を和らげるが、前年比ではまだ高く、物価全体への波及は残る。",
+      "en": "It eases household pressure, but prices are still high enough to matter for inflation."
+    },
+    {
+      "ja": "ホルムズ海峡の供給回復と地域差。",
+      "en": "Watch supply recovery through Hormuz and regional price differences."
+    },
+    {
+      "ja": "米株は反発したが、原油・金利・Fed見通しへの反応がまだ荒い。",
+      "en": "U.S. stocks bounced, but reactions to oil, rates, and Fed guidance remain choppy."
+    },
+    {
+      "ja": "S&amp;P500、Nasdaq、Dowが上昇し、週次でも上げを確保した。",
+      "en": "The S&amp;P 500, Nasdaq, and Dow all rose, and weekly gains stayed intact."
+    },
+    {
+      "ja": "エネルギー安と金利低下が株高を支える一方、インフレ懸念は残る。",
+      "en": "Cheaper energy and lower yields help equities, but inflation worries still hang over the market."
+    },
+    {
+      "ja": "金利再上昇の有無と、テック主導の反発が続くか。",
+      "en": "Watch for another rate spike and whether tech keeps leading the rebound."
+    },
+    {
+      "ja": "ホワイトハウスはAI規制を否定しつつ、実務では業界を細かく動かしている。",
+      "en": "The White House says it is not regulating AI, but it is still shaping the industry in practice."
+    },
+    {
+      "ja": "州法の上書き、連邦調達、国家安全保障、輸出管理を通じて影響力を行使している。",
+      "en": "It is exerting influence through preemption, procurement, national security, and export controls."
+    },
+    {
+      "ja": "明示的な法規制がなくても、実質的なルール形成が進んでいる。",
+      "en": "Even without a single statute, the government is still creating de facto AI rules."
+    },
+    {
+      "ja": "Anthropicへの輸出管理交渉と、各省の自主的審査フレーム。",
+      "en": "Watch export-control talks involving Anthropic and how agencies tighten their own review rules."
+    },
+    {
+      "ja": "AnthropicのFable/Mythosは、政府の強い圧力で安全性と公開範囲が再び問われた。",
+      "en": "Anthropic's Fable and Mythos models are under renewed scrutiny as government pressure intensifies."
+    },
+    {
+      "ja": "90分での停止要求が報じられ、同社は高度モデルの扱いをめぐって米政府と対峙した。",
+      "en": "A reported 90-minute shutdown request put Anthropic back in direct conflict with the government over advanced models."
+    },
+    {
+      "ja": "先端モデルの配布可否が安全保障案件になっていることを示す。",
+      "en": "It shows that frontier-model distribution is now treated as a national-security issue."
+    },
+    {
+      "ja": "モデルの再公開条件と、輸出管理の線引き。",
+      "en": "Watch the conditions for relaunch and where export-control lines are drawn."
+    },
+    {
+      "ja": "OpenAIはハードウェアを本気で狙い、Metaから広報幹部を引き抜いた。",
+      "en": "OpenAI is treating hardware seriously and pulled a Meta communications executive into the effort."
+    },
+    {
+      "ja": "Ha ThaiがMetaを離れ、OpenAIのデバイス部門の広報を率いることになった。",
+      "en": "Ha Thai left Meta to lead communications for OpenAI's devices team."
+    },
+    {
+      "ja": "消費者向けAI機器の発売準備が具体化している。",
+      "en": "It suggests OpenAI's consumer hardware plans are becoming more concrete."
+    },
+    {
+      "ja": "年内の初号機、LoveFromとの役割分担、IPO準備。",
+      "en": "Watch for the first device, the division of labor with LoveFrom, and IPO preparation."
+    },
+    {
+      "ja": "OpenAIはGoogleからトップ研究者を引き抜き、AI人材戦争を優位に進めている。",
+      "en": "OpenAI has pulled a top researcher from Google, reinforcing the AI talent war."
+    },
+    {
+      "ja": "Noam ShazeerがGoogleを離れ、OpenAIに移る。",
+      "en": "Noam Shazeer is leaving Google for OpenAI."
+    },
+    {
+      "ja": "主要ラボ間の競争が、研究成果だけでなく人材獲得でも激化している。",
+      "en": "The major labs are competing not just on model quality but on who can hire the best people."
+    },
+    {
+      "ja": "OpenAIとAnthropicのIPO前競争、他の研究者の移籍連鎖。",
+      "en": "Watch the pre-IPO race between OpenAI and Anthropic and whether more researchers move."
+    },
+    {
+      "ja": "サンダース氏は、AI税制を一気に政治の中心へ押し上げた。",
+      "en": "Sanders has pushed AI taxation squarely into the political mainstream."
+    },
+    {
+      "ja": "年200Mドル以上のAI収益を出す企業に政府が出資する構想を示した。",
+      "en": "He floated a plan for government ownership tied to AI companies above a revenue threshold."
+    },
+    {
+      "ja": "AIによる雇用圧力と富の再分配を政治アジェンダに押し上げる。",
+      "en": "It makes AI-driven job pressure and wealth redistribution part of the policy debate."
+    },
+    {
+      "ja": "法案化の見通しと、企業側の反発。",
+      "en": "Watch whether it becomes legislation and how companies respond."
+    },
+    {
+      "ja": "エネルギー価格の緩和が金利と株価に波及し、政治と経済の境目が薄くなっている。",
+      "en": "Cheaper energy is feeding directly into rates and stocks, blurring the line between politics and macroeconomics."
+    },
+    {
+      "ja": "AIは新製品よりも規制、輸出管理、人材の流出入がニュースの中心になっている。",
+      "en": "AI coverage is shifting from product launches to regulation, export controls, and talent movement."
+    },
+    {
+      "ja": "司法判断や補償スキームが、選挙と文化戦争の両方に直接影響している。",
+      "en": "Court rulings and compensation schemes are shaping both election politics and culture-war narratives."
+    },
+    {
+      "ja": "イラン合意の持続性と、ホルムズ海峡の航行回復がどこまで進むか。",
+      "en": "Whether the Iran deal holds and shipping through Hormuz normalizes."
+    },
+    {
+      "ja": "今後のインフレ指標と中央銀行の発言が、金利見通しをどう動かすか。",
+      "en": "How incoming inflation data reshapes central-bank language on rates."
+    },
+    {
+      "ja": "AnthropicとOpenAIをめぐる政府対応、人材移動、資本政策が続くか。",
+      "en": "Whether government pressure, hiring, and capital plans keep moving across the AI sector."
+    }
+  ]
+}

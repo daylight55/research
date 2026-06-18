@@ -1,0 +1,27 @@
+# research-log
+
+## Environment
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## Research Instruction
+
+- Research date: 2026-06-18
+- Article slug: `daily-trends-2026-06-18`
+- Model: `gpt-5.4-mini`
+- Prompt source: `ops/codex/prompts/daily-trend-news.md`
+- Related repo skill: `research-report` (`.codex/skills/research-report/SKILL.md`) for broader research work; this task used the daily-trend-news renderer.
+- Run Context: Daily Trend News digest; required content type news; required category `tech-news`; required topic counts politics 5, economy 5, technology 5; prioritize the last 24-48 hours but allow slightly older items if they still drive current decisions; deliver `articles/news/daily-trends-2026-06-18/daily-trend-news.json` for renderer and preflight.
+
+## Decision Notes
+
+- Picked AP articles from June 1-18, 2026 that covered the required lanes and had usable topic-specific images.
+- Kept the White House UFC birthday piece in politics because it adds a different domestic signal from the summit diplomacy coverage.
+- Dropped older AI roundup pieces and duplicate market wraps to keep the digest current and non-repetitive.
+
+## Follow-ups
+
+- Confirm whether the Iran deal is formally signed and whether Congress receives briefings.
+- Watch whether the Fed's hawkish turn persists through the next inflation print.
+- Watch whether Apple ships a clear EU timeline and whether Nvidia's manufacturing claims turn into contracts.

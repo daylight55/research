@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "6月17-18日の流れは、G7で前に出た米イラン暫定合意が軸だった。同時に、Fedは利上げ再開の可能性を示し、原油や生活物価への波及が市場心理を左右した。技術面では、NvidiaとAppleがAI投資と製品更新を続け、EUは技術主権の名で依存低減策を押し進めた。",
+      "en": "The dominant thread on June 17-18 was the G7-backed interim Iran deal. At the same time, the Fed moved closer to a possible rate hike, keeping pressure on oil, inflation, and risk assets. On the tech side, Nvidia and Apple kept pushing AI spending and product updates, while the EU pressed ahead with a sovereignty agenda for chips, cloud, and AI."
+    },
+    {
+      "ja": "G7はイラン合意を後押ししたが、実施条件の詰めはまだ残る。",
+      "en": "The G7 backed the Iran deal, but the implementation details are still being worked out."
+    },
+    {
+      "ja": "米国とイランの枠組み合意は、G7で各国首脳の支持を得た。ホルムズ海峡の再開や制裁の扱いが、合意の実務面として前に出ている。",
+      "en": "The US-Iran framework won backing from G7 leaders. The practical issues now are reopening Hormuz and deciding how sanctions are handled."
+    },
+    {
+      "ja": "外交だけでなく、原油、物流、インフレ見通しを同時に動かすため、市場と安全保障の両面に波及する。",
+      "en": "It matters because it moves diplomacy, oil, logistics, and inflation expectations at the same time."
+    },
+    {
+      "ja": "正式署名の時期と、核関連条件や停戦条件が追加されるかをみる。",
+      "en": "Watch the timing of a formal signing and whether extra nuclear or ceasefire terms are added."
+    },
+    {
+      "ja": "議会は本文と執行条件を見ない限り、合意をそのまま受け入れない構えだ。",
+      "en": "Congress does not look ready to accept the deal without seeing the text and enforcement rules."
+    },
+    {
+      "ja": "超党派の議員が説明不足を指摘し、共和党は投票と監視の強化を求め、民主党は2015年合意との比較を始めた。",
+      "en": "Senators from both parties said the administration needs to explain the deal more fully, with Republicans pushing for a vote and Democrats comparing it with the 2015 accord."
+    },
+    {
+      "ja": "議会の反発は、合意の法的安定性と国内政治での持続力を弱めうる。",
+      "en": "Congressional pushback can weaken the deal's legal stability and its political durability at home."
+    },
+    {
+      "ja": "ホワイトハウスが本文公開や機密ブリーフィングの日程を出すかをみる。",
+      "en": "Watch for text release and any scheduled classified briefings from the White House."
+    },
+    {
+      "ja": "イラン合意が目立っても、G7はウクライナ支援を優先課題として残した。",
+      "en": "Even with the Iran deal dominating headlines, the G7 kept Ukraine high on the priority list."
+    },
+    {
+      "ja": "首脳たちは、防空ミサイルやエネルギー支援、追加制裁の枠組みを再確認した。",
+      "en": "Leaders reaffirmed air-defense support, energy assistance, and a sanctions framework."
+    },
+    {
+      "ja": "中東外交が前面に出ても、欧州戦争への支援が後退していないことを示す。",
+      "en": "It shows that support for Ukraine has not been displaced even as Middle East diplomacy takes center stage."
+    },
+    {
+      "ja": "パトリオット供与や新制裁の発動時期を追う。",
+      "en": "Watch the delivery timing for Patriots and any new sanctions language."
+    },
+    {
+      "ja": "Newsom氏は、司法省の動きを2026年選挙に向けた政治圧力だと受け止めている。",
+      "en": "Newsom is framing the DOJ move as political pressure ahead of the 2026 election cycle."
+    },
+    {
+      "ja": "Newsom氏は、妻や周辺人物への照会が進んでいると述べ、トランプ政権の司法省を名指しで批判した。",
+      "en": "Newsom said investigators are asking about his wife and associates and directly criticized Trump's Justice Department."
+    },
+    {
+      "ja": "捜査の有無よりも、連邦法執行が政治化しているとの印象が選挙戦を尖らせる。",
+      "en": "The bigger issue is the perception that federal law enforcement is being weaponized for politics."
+    },
+    {
+      "ja": "司法省の反応と、捜査が周辺人物以外に広がるかをみる。",
+      "en": "Watch for any DOJ response and whether the probe expands beyond associates."
+    },
+    {
+      "ja": "イラン合意を祝祭化することで、トランプ氏は自分の政治物語を強く押し出した。",
+      "en": "By turning the Iran deal into a spectacle, Trump amplified his own political narrative."
+    },
+    {
+      "ja": "ホワイトハウスのUFCイベントで、トランプ氏は合意の成果を前面に出し、支持者向けの演出を続けた。",
+      "en": "At the White House UFC event, Trump highlighted the deal's benefits and kept the spotlight on his political brand."
+    },
+    {
+      "ja": "政策の実質だけでなく、トランプ流のショーアップが支持固めの手段になっている。",
+      "en": "It shows that spectacle is part of how Trump is selling policy to his base."
+    },
+    {
+      "ja": "合意の中身が演出を上回るか、短期の政治効果が続くかをみる。",
+      "en": "Watch whether the substance of the deal holds up after the showmanship fades."
+    },
+    {
+      "ja": "FRBは据え置きでも、年内利上げの可能性を市場に残した。",
+      "en": "The Fed held rates steady, but it left the door open to hikes later this year."
+    },
+    {
+      "ja": "複数の当局者が利上げに理解を示し、ウォーシュ氏は先行きガイダンスを抑えめにした。",
+      "en": "Several officials signaled support for tighter policy, while Warsh pulled back on forward guidance."
+    },
+    {
+      "ja": "金利、住宅ローン、株式バリュエーションに逆風が続きやすい。",
+      "en": "That keeps pressure on borrowing costs, mortgages, and equity valuations."
+    },
+    {
+      "ja": "次のインフレ統計と、当局者の発言がタカ派のまま続くかをみる。",
+      "en": "Watch the next inflation print and whether officials stay hawkish."
+    },
+    {
+      "ja": "家計はまだ支出を続けているが、燃料高の負担は消えていない。",
+      "en": "Consumers are still spending, but the fuel shock has not gone away."
+    },
+    {
+      "ja": "税還付や幅広い支出増で、5月の売上が押し上げられた。",
+      "en": "Tax refunds and broad spending gains helped lift May sales."
+    },
+    {
+      "ja": "景気の土台はまだ崩れていない一方、価格上昇の吸収力が試される。",
+      "en": "It suggests the consumer is still resilient, even as price pressure tests that resilience."
+    },
+    {
+      "ja": "還付効果が剥げた後に支出が鈍るかをみる。",
+      "en": "Watch for any slowdown once the refund effect fades."
+    },
+    {
+      "ja": "外交が進んでも、原油供給の正常化はすぐには起きない。",
+      "en": "Diplomacy may move faster than the oil supply chain."
+    },
+    {
+      "ja": "APによると、船団の移動や保険、港湾処理が再開を遅らせる。",
+      "en": "AP says tanker movement, insurance, and port logistics will slow the restart."
+    },
+    {
+      "ja": "燃料と輸送コストは、しばらく高止まりする可能性がある。",
+      "en": "Fuel and transport costs can stay elevated for longer than the ceasefire headlines imply."
+    },
+    {
+      "ja": "掃海、保険条件、タンカー出港のペースを確認する。",
+      "en": "Watch mine clearing, insurance terms, and tanker departures."
+    },
+    {
+      "ja": "停戦や合意があっても、家計のコスト上昇はすぐには消えない。",
+      "en": "A ceasefire or deal will not erase the household price shock quickly."
+    },
+    {
+      "ja": "エネルギーと肥料の混乱が、食品や旅行の価格へも波及するとみられている。",
+      "en": "Energy and fertilizer disruptions are expected to feed into food and travel prices."
+    },
+    {
+      "ja": "ガソリンだけでなく食料と旅行まで波及すれば、インフレ圧力は広がる。",
+      "en": "If the shock spreads beyond gas into food and travel, the inflation problem broadens."
+    },
+    {
+      "ja": "小売の値上げ転嫁と、食料インフレのピーク時期をみる。",
+      "en": "Watch retailer price pass-through and when food inflation peaks."
+    },
+    {
+      "ja": "金利上昇の警戒が、株式の戻りを抑えた。",
+      "en": "Higher-rate fears kept stocks under pressure."
+    },
+    {
+      "ja": "S&amp;P500、ダウ、ナスダックがそろって下落し、利上げ織り込みが進んだ。",
+      "en": "The S&amp;P 500, Dow, and Nasdaq all fell as traders priced in more tightening."
+    },
+    {
+      "ja": "金利が上がれば、企業の資金調達コストと株式のバリュエーションに響く。",
+      "en": "If rates rise, funding costs and valuations both take a hit."
+    },
+    {
+      "ja": "米国債利回りと利上げ確率の変化を確認する。",
+      "en": "Watch Treasury yields and the market's hike probability."
+    },
+    {
+      "ja": "NvidiaはAIを半導体だけでなく製造業の雇用政策としても語っている。",
+      "en": "Nvidia is selling AI as an industrial job story, not just a chip story."
+    },
+    {
+      "ja": "同社はテキサスでの工場拡張と高速通信向け材料の投資を後押しした。",
+      "en": "The company backed a Texas expansion and investment in materials for faster chip communication."
+    },
+    {
+      "ja": "AIの恩恵を国内製造と結びつけることで、政策面の支持を取り込みやすくなる。",
+      "en": "Tying AI to domestic manufacturing makes the story more politically and industrially durable."
+    },
+    {
+      "ja": "投資が実際の雇用や電力効率改善につながるかをみる。",
+      "en": "Watch whether the investment becomes real jobs and better power efficiency."
+    },
+    {
+      "ja": "NvidiaはPCをローカルAI端末に変える方向へ押し進めている。",
+      "en": "Nvidia wants the PC to become a local AI machine."
+    },
+    {
+      "ja": "RTX Spark系の新チップを、Windowsノートやデスクトップ向けに打ち出した。",
+      "en": "The company rolled out RTX Spark-style chips for Windows laptops and desktops."
+    },
+    {
+      "ja": "CPU競争だけでなく、AI処理の全体設計でIntelやAMDと競う構図が強まる。",
+      "en": "The competitive field shifts from CPUs to full-stack AI device design."
+    },
+    {
+      "ja": "秋の製品投入と、消費者がAI PCをどこまで受け入れるかをみる。",
+      "en": "Watch the fall product cycle and consumer demand for AI PCs."
+    },
+    {
+      "ja": "AppleはAIで後れを取った印象を消しにかかっている。",
+      "en": "Apple is trying to erase the sense that it fell behind in AI."
+    },
+    {
+      "ja": "WWDCでは、Siriの刷新や視覚認識、端末内AI処理が前面に出た。",
+      "en": "WWDC put Siri upgrades, visual intelligence, and on-device AI front and center."
+    },
+    {
+      "ja": "Appleはプライバシーの強みを維持しながら、AI競争で信頼を回復したい。",
+      "en": "Apple wants to rebuild AI credibility without losing its privacy pitch."
+    },
+    {
+      "ja": "年内の正式リリース時期と、どの端末まで対応するかをみる。",
+      "en": "Watch the release timing and how broadly the new Siri ships."
+    },
+    {
+      "ja": "欧州では、AI機能の公開が規制対応の遅れで止まりかねない。",
+      "en": "In Europe, AI features can stall if compliance work gets in the way."
+    },
+    {
+      "ja": "AppleとEUは、Siri AIの展開遅延の責任を互いに押し付けている。",
+      "en": "Apple and Brussels are blaming each other over the delayed Siri AI rollout."
+    },
+    {
+      "ja": "DMA対応は、巨大市場での製品設計と投入速度を変える。",
+      "en": "The DMA can change both product design and launch speed in a huge market."
+    },
+    {
+      "ja": "Appleが欧州向けの再設計案や公開時期を示すかをみる。",
+      "en": "Watch for a compliant workaround or a new launch date from Apple."
+    },
+    {
+      "ja": "欧州は、米中依存を減らす技術主権路線を改めて前に出した。",
+      "en": "Europe is putting tech sovereignty back at the center of policy."
+    },
+    {
+      "ja": "欧州委員会は、域内のチップ、クラウド、AI能力を押し上げる計画を示した。",
+      "en": "The European Commission proposed ways to boost local chips, cloud, and AI capacity."
+    },
+    {
+      "ja": "地政学的な依存を減らす政策は、データセンターやサプライチェーンの投資に波及する。",
+      "en": "Reducing strategic dependence will affect data centers, supply chains, and public procurement."
+    },
+    {
+      "ja": "法案化の速度と、実際の設備投資が追いつくかをみる。",
+      "en": "Watch the pace of legislation and whether real investment follows."
+    },
+    {
+      "ja": "イラン合意は外交だけでなく、原油、物流、インフレ見通しを一気に動かす。",
+      "en": "The Iran deal is not just diplomacy; it feeds directly into oil, logistics, and inflation expectations."
+    },
+    {
+      "ja": "Fedのタカ派化は、地政学が和らいでも金利と株価の逆風が残ることを示す。",
+      "en": "The Fed's hawkish shift shows that softer geopolitics does not erase rate and equity headwinds."
+    },
+    {
+      "ja": "AIは製品発表と設備投資の両面で加速し、企業と規制当局の駆け引きが強まっている。",
+      "en": "AI is still a capital-spending and policy story at the same time, which keeps pressure on companies and regulators."
+    },
+    {
+      "ja": "イラン合意の正式署名と、核・停戦条件の追加交渉がどう進むか。",
+      "en": "Whether the Iran deal reaches a formal signing and whether extra nuclear or ceasefire terms are added."
+    },
+    {
+      "ja": "Fedの利上げシグナルが次のインフレ統計で維持されるか。",
+      "en": "Whether the Fed's hike signal survives the next inflation print."
+    },
+    {
+      "ja": "AppleのEU対応、Nvidiaの投資計画、EUの技術自立策が実際の出荷や契約に結びつくか。",
+      "en": "Whether Apple, Nvidia, and the EU turn announcements into shipping products, contracts, or enforceable rules."
+    }
+  ]
+}

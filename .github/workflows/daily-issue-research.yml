@@ -288,7 +288,79 @@ jobs:
 
       - name: Run repository tests
         if: steps.diff_check.outputs.has_changes == 'true'
-        run: pnpm test
+        id: repository_tests
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          pnpm test 2>&1 | tee "${RUNNER_TEMP}/daily-research-test.log"
+
+      - name: Prepare generated article test repair prompt
+        if: steps.repository_tests.outcome == 'failure' && steps.restore_generated_article.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p ops/codex/runtime
+          repair_prompt="ops/codex/runtime/daily-research-test-repair.md"
+          {
+            echo "The generated Daily Issue Research article failed repository tests."
+            echo
+            echo "Fix only the generated article files already present in the working tree."
+            echo "Do not redo the research, add unrelated content, or change workflow/test code."
+            echo "Preserve factual claims, source links, frontmatter contracts, and bilingual alignment."
+            echo "Make the smallest content or MIX-alignment edits needed for the failing repository tests."
+            echo
+            echo "## Changed generated files"
+            git ls-files --modified --others --exclude-standard
+            echo
+            echo "## Compact test failure summary"
+            grep -E "not ok|error:|failureType|location:|ERR_ASSERTION|operator:|stack:" \
+              "${RUNNER_TEMP}/daily-research-test.log" \
+              | head -120 \
+              || true
+            echo
+            echo "After editing, run: pnpm test"
+          } > "${repair_prompt}"
+
+      - name: Repair generated article after repository test failure
+        if: steps.repository_tests.outcome == 'failure' && steps.restore_generated_article.outputs.cache-hit != 'true'
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: ops/codex/runtime/daily-research-test-repair.md
+          output-file: codex-repair-output.md
+          safety-strategy: drop-sudo
+          sandbox: workspace-write
+          model: ${{ env.OPENAI_MODEL }}
+          effort: low
+          allow-bots: true
+
+      - name: Require repository tests
+        if: steps.diff_check.outputs.has_changes == 'true'
+        shell: bash
+        env:
+          INITIAL_REPOSITORY_TEST_OUTCOME: ${{ steps.repository_tests.outcome }}
+          GENERATED_ARTICLE_CACHE_HIT: ${{ steps.restore_generated_article.outputs.cache-hit }}
+        run: |
+          set -euo pipefail
+
+          if [[ "${INITIAL_REPOSITORY_TEST_OUTCOME}" == "success" ]]; then
+            exit 0
+          fi
+
+          if [[ "${GENERATED_ARTICLE_CACHE_HIT}" == "true" ]]; then
+            echo "::error::Cached generated article failed repository tests. Not spending Codex repair tokens on cached artifacts."
+            exit 1
+          fi
+
+          pnpm test
+
+      - name: Remove repository test repair artifacts
+        if: always() && steps.diff_check.outputs.has_changes == 'true'
+        shell: bash
+        run: rm -rf ops/codex/runtime codex-repair-output.md
 
       - name: Verify generated mixed article alignment
         if: steps.diff_check.outputs.has_changes == 'true'

@@ -320,6 +320,12 @@ assert.match(
 )
 
 assert.match(
+	dailyIssuePrompt,
+	/Build `mix-alignment\.json` from the final Japanese and English article prose[\s\S]*?Do not use the MIX file to invent,\s+summarize,\s+smooth,\s+or reframe article claims[\s\S]*?If a Japanese sentence would require a generic\s+translation such as `The practical point is`, revise the article sentence\s+first/,
+	'Daily Issue Research prompt should make MIX alignment an exact map of final article prose rather than a rewrite surface'
+)
+
+assert.match(
 	trendWorkflow,
 	/cache_key="daily-trend-news-v2-\$\{report_date\}"[\s\S]*?cache_key="\$\{cache_key\}-\$\{topic_hint_hash\}"/,
 	'trend news workflow should derive a date cache key and include topic hint when present'
@@ -527,6 +533,24 @@ assert.match(
 	cloudflarePreviewWorkflow,
 	/- name: Run repository lint[\s\S]*?run: pnpm lint[\s\S]*?- name: Build/,
 	'Cloudflare preview should run repository lint before deploying'
+)
+
+assert.match(
+	cloudflarePreviewWorkflow,
+	/CLOUDFLARE_API_TOKEN: \$\{\{ secrets\.CLOUDFLARE_API_TOKEN \}\}[\s\S]*?CLOUDFLARE_ACCOUNT_ID: \$\{\{ secrets\.TF_VAR_CLOUDFLARE_ACCOUNT_ID \}\}/,
+	'Cloudflare preview should expose deploy secrets through job env so deploy steps can be skipped safely when secrets are unavailable'
+)
+
+assert.match(
+	cloudflarePreviewWorkflow,
+	/- name: Report skipped Cloudflare Pages preview[\s\S]*?if: env\.CLOUDFLARE_API_TOKEN == '' \|\| env\.CLOUDFLARE_ACCOUNT_ID == ''[\s\S]*?- name: Deploy to Cloudflare Pages preview[\s\S]*?if: env\.CLOUDFLARE_API_TOKEN != '' && env\.CLOUDFLARE_ACCOUNT_ID != ''/,
+	'Cloudflare preview should skip deploy instead of failing when Cloudflare secrets are unavailable'
+)
+
+assert.match(
+	cloudflarePreviewWorkflow,
+	/- name: Comment preview URL[\s\S]*?if: steps\.deploy\.outcome == 'success' && \(github\.event_name == 'pull_request' \|\| inputs\.pr_number != ''\)[\s\S]*?- name: Comment preview URL on issue[\s\S]*?if: steps\.deploy\.outcome == 'success' && inputs\.issue_number != ''/,
+	'Cloudflare preview should comment preview URLs only after a successful deploy'
 )
 
 assert.match(

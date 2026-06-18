@@ -32,6 +32,15 @@ drivers, risks, and decision points that are materially tied to the topic.
   leave the MIX page to positional fallback only. Include enough sentence pairs
   to cover at least 35% of the English prose sentences, with emphasis on the
   executive summary, major claims, recommendations, and limitations.
+- Build `mix-alignment.json` from the final Japanese and English article prose
+  after both `index.mdx` files are written. Do not use the MIX file to invent,
+  summarize, smooth, or reframe article claims. Each `pairs[].ja` value must be
+  an exact Japanese sentence from `ja/index.mdx`, and each `pairs[].en` value
+  must be the matching exact English sentence from `en/index.mdx`, after normal
+  whitespace normalization. If a Japanese sentence would require a generic
+  translation such as `The practical point is`, revise the article sentence
+  first so the article and MIX pair both name the actual context-specific
+  reading, risk, or decision.
 - Do not create `report.md` or another second copy of the same article body.
   Duplicate report bodies drift and make the workflow slower.
 - Create or update `articles/report/<topic>/ja/source-notes.mdx` as the

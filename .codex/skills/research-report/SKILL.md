@@ -29,6 +29,9 @@ If the report or digest must appear on the website, top page, category pages, or
 1. Write or update `articles/report/<slug>/ja/index.mdx` for reports, or `articles/news/<slug>/ja/index.mdx` for news.
 2. Write or update the matching `en/index.mdx` in the same article directory.
 3. Add or update `mix-alignment.json` when maintaining the mixed Japanese-English reading view.
+   - Treat `mix-alignment.json` as an exact sentence-level reading map derived from the final `ja/index.mdx` and `en/index.mdx`, not as a summary or rewrite layer.
+   - Keep `pairs[].ja` and `pairs[].en` equal to sentences that actually appear in the corresponding article body after normal whitespace normalization.
+   - If a pair would require generic boilerplate such as `実務上のポイントは`, `The practical point is`, or `Practical implications`, revise the article prose first so both article and MIX pair name the concrete context-specific reading, risk, monitoring point, or decision.
 4. Add any new category to `src/data/categories.ts`; preserve existing categories as a union when resolving conflicts.
 5. Keep reference pages in route parity: `src/pages/reference/<slug>.astro` and `src/pages/en/reference/<slug>.astro`.
 6. Use locale-aware shared data such as `getReferenceItems(locale)` for reference indexes and homepage cards.

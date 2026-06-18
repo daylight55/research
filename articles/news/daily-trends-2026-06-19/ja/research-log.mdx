@@ -1,0 +1,24 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-06-19
+- Article slug: `daily-trends-2026-06-19`
+- Run Context: required category tech-news, required content type news, topic counts politics 5 / economy 5 / technology 5, recency window 24-48 hours, deliverable daily trend news JSON for the renderer.
+
+## 判断メモ
+
+- 最新24-48時間を優先しつつ、今も政策・市場・採用判断に影響している少し古いAI記事を残した。
+- 一次情報と大手報道を混ぜ、各トピックを1本ずつ独立したソースカードにした。
+- 記事本文は手書きせず、structured JSONのみを作成してレンダラーでMDXと補助ファイルを生成する方針にした。
+
+## 残課題
+
+- イラン合意の履行条件、制裁緩和、海上輸送の回復を次回確認する。
+- FedとBoEの次の発言で、利下げより利上げ警戒が続くかを見る。
+- Anthropic、OpenAI、Google、Metaの人材移動と政府対応を追う。

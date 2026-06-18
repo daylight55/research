@@ -112,7 +112,9 @@ drivers, risks, and decision points that are materially tied to the topic.
   generic `実務上の含意` / `Practical implications` section unless the topic has a
   direct policy, business, safety, compliance, or operational decision surface;
   when it does, name the section after that surface, such as monitoring points,
-  risk-screening criteria, deployment decisions, or policy tradeoffs.
+  risk-screening criteria, deployment decisions, or policy tradeoffs. Avoid
+  boilerplate sentences such as `実務上のポイントは` or `The practical point is`;
+  state the actual context-specific reading, risk, or decision instead.
 - If no official roadmap exists, write `公表情報からの推定`.
 - Include Mermaid diagrams when they materially improve the explanation.
 

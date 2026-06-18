@@ -495,6 +495,14 @@ test('mixed Japanese-English article pages are generated as a third reading mode
 	assert.match(mixedAlignmentUtils, /version: 1/)
 	assert.match(translationPrompt, /mix-alignment\.json/)
 	assert.match(translationPrompt, /semantic Japanese-English reading map/)
+	assert.match(
+		translationPrompt,
+		/Do not use the MIX file to invent,\s+summarize,\s+smooth,\s+or reframe article claims/
+	)
+	assert.match(
+		translationPrompt,
+		/generic boilerplate such as `The practical point is`, `Practical implications`, or `For practical readers`/
+	)
 
 	const parsedSampleAlignment = JSON.parse(sampleAlignment)
 	assert.equal(parsedSampleAlignment.version, 1)

@@ -1,0 +1,24 @@
+# research-log
+
+## Environment
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## Research Instruction
+
+- Research date: 2026-06-20
+- Article slug: `daily-trends-2026-06-20`
+- Run Context: required category `tech-news`, required content type `news`, recency window 24-48 hours, and exactly 15 topics split across politics/economy/technology at 5 each.
+- Deliverable: structured JSON at `articles/news/daily-trends-2026-06-20/daily-trend-news.json`, rendered through the repository trend-news pipeline.
+
+## Decision Notes
+
+- I split the Middle East file into ceasefire durability and the cancelled U.S.-Iran talks so the section does not collapse into one duplicate item.
+- The economy section was organized around spillovers from rates, oil, and borrowing rather than around a generic market recap.
+- The technology section focuses on AI infrastructure finance, regulatory pressure, and product/supply-chain rewrites.
+
+## Follow-ups
+
+- Recheck the ceasefire and oil-price reaction after the next market close.
+- Watch for any formal response from OpenAI, Apple, or Google that changes the story from rumor to decision.

@@ -1,0 +1,24 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-06-20
+- Article slug: `daily-trends-2026-06-20`
+- Run Context: required category `tech-news`, required content type `news`, recency window 24-48 hours, and exactly 15 topics split across politics/economy/technology at 5 each.
+- Deliverable: structured JSON at `articles/news/daily-trends-2026-06-20/daily-trend-news.json`, rendered by the repository trend-news pipeline.
+
+## 判断メモ
+
+- 中東停戦と米イラン協議は同じ局面を別角度から扱うため、政治カテゴリ内で役割を分けて採用した。
+- 経済は Fed、通貨、燃料、英国財政、住宅ローンに分解し、単なる相場総括ではなく実体経済への伝播を優先した。
+- 技術は AI 投資の資金調達と監督強化、Apple/Google/Intel の製品・供給網の判断点を中心に揃えた。
+
+## 残課題
+
+- 翌営業日に、停戦の継続可否と原油・ドル・金利の反応を再確認する。
+- OpenAI の調査進展、Apple の Siri 再構築、Google TPU 外販の正式発表が出るか追う。

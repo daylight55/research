@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "中東では停戦と米イラン協議の行方が交錯し、原油・ガソリン・金利見通しに波及した。米国内では選挙ルールとホワイトハウス予算をめぐる争いが続き、テックではAI投資の資金調達と規制が並走している。",
+      "en": "Middle East ceasefires and the fate of U.S.-Iran talks are spilling into oil, gasoline, and rate expectations, while domestic fights over voting rules and White House spending keep U.S. politics noisy. In tech, AI funding and regulation are now moving in parallel, with Apple, Google, Nvidia, and OpenAI all in the frame."
+    },
+    {
+      "ja": "停戦は再確認されたが、現地衝突と米イラン協議延期で安定性はなお低い。",
+      "en": "The ceasefire was reaffirmed, but clashes and the delayed U.S.-Iran talks still make it fragile."
+    },
+    {
+      "ja": "米当局は、レバノンでの停戦枠組みが再び有効になったと説明した。一方で、攻撃の応酬は予定時刻の前後まで続き、米イラン協議は先送りされた。",
+      "en": "U.S. officials said the Lebanon ceasefire framework was back in force. Attacks and retaliation continued around the scheduled start time, and the U.S.-Iran talks were pushed back."
+    },
+    {
+      "ja": "中東の安全保障は、外交だけでなく原油・金利・市場心理にも直結する。",
+      "en": "Middle East security feeds directly into diplomacy, oil, rates, and market sentiment."
+    },
+    {
+      "ja": "停戦監視が実際に機能するか、そして米イラン協議が再設定されるか。",
+      "en": "Watch whether ceasefire monitoring works in practice and whether the U.S.-Iran talks are reset."
+    },
+    {
+      "ja": "レバノンでの戦闘再燃が、合意実施に向けた協議を直撃した。",
+      "en": "Renewed fighting in Lebanon hit the talks meant to support the deal."
+    },
+    {
+      "ja": "スイスで予定されていた米イラン協議は、ヒズボラとイスラエルの攻撃応酬を受けて中止された。J.D.ヴァンス副大統領の渡航も取りやめになった。",
+      "en": "The Switzerland talks were cancelled after Hezbollah and Israel exchanged fire. Vice President J.D. Vance's travel was also called off."
+    },
+    {
+      "ja": "核交渉の遅延は停戦の持続性を疑わせ、エネルギー市場の警戒を強める。",
+      "en": "A delay in nuclear diplomacy raises doubts about the ceasefire and heightens energy-market caution."
+    },
+    {
+      "ja": "協議の再設定と、レバノンでの戦闘が米外交の足を引っ張り続けるか。",
+      "en": "Watch for any reset to the talks and whether the fighting keeps undercutting U.S. diplomacy."
+    },
+    {
+      "ja": "トランプの郵便投票制限策に対する州と団体の訴えが、法廷で先に進んだ。",
+      "en": "States and groups challenging Trump's mail-voting restrictions got to keep moving in court."
+    },
+    {
+      "ja": "ボストンの連邦判事は、民主党主導の州と投票権団体が訴訟を継続できると判断した。原告は、大統領令が州の選挙権限を侵していると主張している。",
+      "en": "A federal judge in Boston ruled that Democratic-led states and voting-rights groups could continue the case. The plaintiffs say the executive order intrudes on state election powers."
+    },
+    {
+      "ja": "2026年中間選挙の投票アクセスと州の権限をめぐる対立が長引く。",
+      "en": "The fight keeps the 2026 midterm debate over ballot access and state authority alive."
+    },
+    {
+      "ja": "救済の範囲がどこまで広がるか、また上級審が介入するか。",
+      "en": "Watch how broad the relief becomes and whether higher courts step in."
+    },
+    {
+      "ja": "私費建設のはずだった ballroom が、Secret Service 予算の付け替えで公費化しつつある。",
+      "en": "A project that was supposed to be privately funded is becoming public money through budget reprogramming."
+    },
+    {
+      "ja": "政権は、Secret Service向けだった連邦資金3,520万ドル以上を ballroom 建設関連口座へ振り向けた。政権は安全保障上の必要性を主張している。",
+      "en": "The administration moved more than $35.2 million from money intended for the Secret Service into accounts tied to ballroom construction. Officials say the shift is justified on security grounds."
+    },
+    {
+      "ja": "歳出の正当化と政治資金の透明性が同時に問われる。",
+      "en": "The move raises questions about spending justification and political transparency at the same time."
+    },
+    {
+      "ja": "議会と監督団体の反発、そして訴訟がどこまで拡大するか。",
+      "en": "Watch for congressional pushback, watchdog scrutiny, and any lawsuit that follows."
+    },
+    {
+      "ja": "議会の反発を受け、米国の海洋観測網は解体ではなく継続に向かう。",
+      "en": "Congressional pushback is steering the U.S. ocean observatory network away from shutdown and toward continuation."
+    },
+    {
+      "ja": "全米科学財団は、Ocean Observatories Initiative の機器撤去方針を見直した。議員は、予算権限を越えた判断だと批判していた。",
+      "en": "The National Science Foundation revisited its plan to remove equipment from the Ocean Observatories Initiative after lawmakers called it an overreach."
+    },
+    {
+      "ja": "気候・海流・極端気象の観測データが失われれば、研究と災害対応に影響する。",
+      "en": "Losing the data would hurt climate research, ocean-current tracking, and disaster response."
+    },
+    {
+      "ja": "運用継続の資金と、今後のレビュー体制がどう固まるか。",
+      "en": "Watch how the continuation is funded and how the review process is formalized."
+    },
+    {
+      "ja": "金利は据え置きでも、年内の利上げ確率は市場の前提になりつつある。",
+      "en": "Even without a move, the market is starting to price in a year-end hike."
+    },
+    {
+      "ja": "FRBは3.5-3.75%を維持したうえで、年末までの利上げ可能性を示した。声明は中東情勢による不確実性にも触れた。",
+      "en": "The Fed held at 3.5% to 3.75% and left open the possibility of a hike later in the year. Its statement also noted uncertainty from Middle East tensions."
+    },
+    {
+      "ja": "借入コスト、株式バリュエーション、住宅ローン金利に連鎖する。",
+      "en": "That feeds directly into borrowing costs, equity valuations, and mortgage rates."
+    },
+    {
+      "ja": "今後のインフレ指標と、市場が織り込む利下げ・利上げの方向。",
+      "en": "Watch the next inflation prints and whether markets keep leaning toward hikes or cuts."
+    },
+    {
+      "ja": "利上げ観測がドルを押し上げ、ユーロや金に逆風が出ている。",
+      "en": "Hawkish Fed expectations are lifting the dollar and pressuring the euro and gold."
+    },
+    {
+      "ja": "ドル指数は1年ぶり高値圏に上がり、市場は9月にも25bp利上げを織り込んだ。AI投資や高めの成長見通しも支えになった。",
+      "en": "The dollar index climbed to a one-year high, with markets pricing in a 25-basis-point hike as soon as September. AI investment and stronger growth expectations also helped."
+    },
+    {
+      "ja": "為替は輸入物価と資本流入を通じて、各国の金融条件を変える。",
+      "en": "FX moves change import prices and capital flows, which in turn reshape financial conditions."
+    },
+    {
+      "ja": "米金利見通しが維持されるか、あるいは一時的なドル高で終わるか。",
+      "en": "Watch whether the dollar keeps rising or this proves to be a short-lived spike."
+    },
+    {
+      "ja": "原油安は家計に少し息継ぎを与えたが、戦前水準にはまだ戻っていない。",
+      "en": "Cheaper crude gives households a little relief, but prices are still well above pre-crisis levels."
+    },
+    {
+      "ja": "米平均ガソリン価格は3.999ドルとなり、3月以来の4ドル割れとなった。原油安とホルムズ海峡再開期待が背景にある。",
+      "en": "The U.S. average gas price fell to $3.999, the first sub-$4 reading since March. Lower crude and hopes for a more open Hormuz Strait were the backdrop."
+    },
+    {
+      "ja": "燃料価格は物流・食料・航空運賃に波及するため、物価の底打ちを左右する。",
+      "en": "Fuel prices ripple into logistics, food, and airfares, so they matter for the inflation floor."
+    },
+    {
+      "ja": "イラン情勢と原油の戻り、そして家計価格への波及。",
+      "en": "Watch Iran developments, any oil-price rebound, and how fast household prices react."
+    },
+    {
+      "ja": "財政赤字の上振れが、英国の借入コストを押し上げた。",
+      "en": "A bigger-than-expected deficit pushed up the UK's borrowing costs."
+    },
+    {
+      "ja": "5月の英国借り入れは予想超えとなり、10年債利回りは上昇した。市場は財政規律を改めて見ている。",
+      "en": "May borrowing exceeded forecasts, and 10-year gilt yields moved higher. Markets are again focusing on fiscal discipline."
+    },
+    {
+      "ja": "財政運営の不安は、国債・通貨・家計ローンにすぐ反映される。",
+      "en": "Fiscal stress shows up quickly in bonds, currencies, and household loans."
+    },
+    {
+      "ja": "秋の財政見通しと、BoEの次の反応。",
+      "en": "Watch the autumn fiscal outlook and the Bank of England's response."
+    },
+    {
+      "ja": "固定金利は少し下がったが、依然として借り手には重い。",
+      "en": "Fixed rates dipped, but they are still heavy for borrowers."
+    },
+    {
+      "ja": "30年固定は6.51%まで低下したが、2026年初の水準よりは高いままだ。インフレと地政学リスクが住宅市場の重しになっている。",
+      "en": "The 30-year fixed rate fell to 6.51%, but that is still above early-2026 levels. Inflation and geopolitical risk continue to weigh on housing."
+    },
+    {
+      "ja": "住宅購入や借り換えの判断は、数bpの差でも総返済額を大きく変える。",
+      "en": "Even small rate moves change total repayment costs for buyers and refinancers."
+    },
+    {
+      "ja": "Fedの先行き観測と、貸し手の再値付け。",
+      "en": "Watch the Fed outlook and any repricing from lenders."
+    },
+    {
+      "ja": "GoogleはTPUを外部顧客にも広げ、Nvidia依存に挑んでいる。",
+      "en": "Google is pushing TPU beyond its own cloud and challenging Nvidia dependence."
+    },
+    {
+      "ja": "Googleは資金保証や提携を通じてTPUの採用を拡大し、AIインフラ投資を強めている。大手クラウド案件やAnthropic向けの動きも象徴的だ。",
+      "en": "Google is using financing support and partnerships to expand TPU adoption and deepen AI infrastructure spending. Its big cloud deals and Anthropic-related moves are emblematic."
+    },
+    {
+      "ja": "AI計算資源の供給網が、Nvidia一強から多極化に向かう可能性がある。",
+      "en": "AI compute could shift from a Nvidia-dominated market toward a more multipolar supply chain."
+    },
+    {
+      "ja": "TPUの外販がどこまで広がるか、Nvidiaの価格支配力がどう変わるか。",
+      "en": "Watch how far TPU sales spread and whether Nvidia's pricing power changes."
+    },
+    {
+      "ja": "AI投資は利益だけでなく、債券市場まで巻き込んで膨らんでいる。",
+      "en": "AI investment is now spilling into the bond market, not just profits and equity."
+    },
+    {
+      "ja": "Nvidiaは200億ドル規模の社債発行を始め、AIインフラや借り換え資金を調達している。大型テックが借入を使って投資を前倒しする流れも続く。",
+      "en": "Nvidia started a $20 billion bond sale to raise money for AI infrastructure and refinancing. Large tech firms keep pulling forward investment through debt."
+    },
+    {
+      "ja": "AIブームの資金循環が、株式ではなく負債市場にも広がっている。",
+      "en": "The AI boom is now recycling capital through debt markets, not just equities."
+    },
+    {
+      "ja": "引受需要と、他のハイパースケーラーへの波及。",
+      "en": "Watch underwriting demand and whether other hyperscalers follow."
+    },
+    {
+      "ja": "AIの安全性より先に、データと広告の統治が問われ始めた。",
+      "en": "Before safety debates end, data and advertising governance are already under scrutiny."
+    },
+    {
+      "ja": "42州の司法長官が、OpenAIの広告、データ取り扱い、未成年対応、モデルの迎合性などを対象に調査を始めた。IPO観測の直後でもある。",
+      "en": "Forty-two state attorneys general launched an investigation into OpenAI covering ads, data handling, minors, and model sycophancy, shortly after IPO chatter."
+    },
+    {
+      "ja": "生成AIの規制は、製品の安全性だけでなく事業モデル全体に及び始めている。",
+      "en": "Regulation of generative AI is starting to reach the business model itself, not just safety features."
+    },
+    {
+      "ja": "召喚状への回答と、追加の州規制が出るか。",
+      "en": "Watch the subpoena response and whether more state rules follow."
+    },
+    {
+      "ja": "Appleは既存Siriの延長ではなく、作り直しを選んだ。",
+      "en": "Apple chose a rebuild rather than another incremental Siri update."
+    },
+    {
+      "ja": "Appleは当初の漸進的改良をやめ、Siri AIを根本から再設計したと説明した。WWDC後の発言で、公開前の試作から方針転換した経緯が明らかになった。",
+      "en": "Apple said it abandoned its incremental plan and redesigned Siri AI from the ground up. Post-WWDC comments showed that the company changed course after an earlier prototype was ready."
+    },
+    {
+      "ja": "AppleのAI戦略は、単なる追随ではなく、体験の作り直しに賭けている。",
+      "en": "Apple's AI strategy is now a bet on rebuilding the experience, not just following rivals."
+    },
+    {
+      "ja": "年内リリースの品質と、他社AIとの実用差。",
+      "en": "Watch the quality of any release this year and the practical gap to rivals."
+    },
+    {
+      "ja": "AppleがIntelに一部製造を振るなら、サプライチェーン分散の意味が大きい。",
+      "en": "If Apple shifts any production to Intel, it would be a meaningful supply-chain diversification move."
+    },
+    {
+      "ja": "トランプ大統領がAppleとIntelの協業を示唆したが、両社はまだ確認していない。報道では、Intelの18A-Pや14Aが候補に挙がっている。",
+      "en": "President Trump suggested Apple and Intel were working together, but neither company has confirmed it. Reporting points to Intel's 18A-P and 14A nodes as possible options."
+    },
+    {
+      "ja": "もし成立すれば、Appleの製造依存はTSMC一極から少しだけ緩む。",
+      "en": "If it happens, Apple's manufacturing dependence would loosen slightly from a TSMC-centric model."
+    },
+    {
+      "ja": "Apple・Intelの正式コメントと、先端ノードの量産時期。",
+      "en": "Watch for official Apple and Intel comments and any update on advanced-node production timing."
+    },
+    {
+      "ja": "地政学の緊張は、停戦交渉そのものよりも、原油・通貨・金利の経路で実体経済へ波及している。",
+      "en": "Geopolitical tension is reaching the real economy less through headlines than through oil, currency, and rate channels."
+    },
+    {
+      "ja": "AI投資は設備投資だけでなく社債市場まで押し広げ、資金調達のスケールが一段上がっている。",
+      "en": "AI investment is now large enough to spill into the bond market, not just equity spending plans."
+    },
+    {
+      "ja": "米国内政治では、選挙制度、監督、連邦支出の3点が同時に争点化している。",
+      "en": "U.S. domestic politics is simultaneously litigating election rules, oversight, and federal spending."
+    },
+    {
+      "ja": "イスラエル-ヒズボラ停戦が実際に維持されるか。",
+      "en": "Whether the Israel-Hezbollah pause actually holds."
+    },
+    {
+      "ja": "Fedの次の発言と、ドル高・原油安が住宅ローンや輸入物価にどう波及するか。",
+      "en": "How the Fed's next signals interact with dollar strength, gasoline, and mortgage costs."
+    },
+    {
+      "ja": "OpenAIやAppleの動きが、追加規制や正式発表に進むか。",
+      "en": "Whether the OpenAI, Apple, and Google stories turn into formal filings or announcements."
+    }
+  ]
+}

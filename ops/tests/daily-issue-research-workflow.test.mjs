@@ -225,6 +225,30 @@ assert.match(
 
 assert.match(
 	workflow,
+	/- name: Prepare Codex unprivileged user[\s\S]*?sudo adduser --system --home \/home\/codex --shell \/bin\/bash --group codex[\s\S]*?sudo chown -R runner:codex "\$\{GITHUB_WORKSPACE\}"[\s\S]*?sudo chmod -R g\+rwX "\$\{GITHUB_WORKSPACE\}"/,
+	'Daily Issue Research should prepare a reusable unprivileged Codex user before invoking Codex multiple times'
+)
+
+assert.match(
+	workflow,
+	/- name: Run Codex research[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?safety-strategy: unprivileged-user[\s\S]*?codex-user: codex[\s\S]*?- name: Restore Node for site build/,
+	'Daily Issue Research should run initial Codex generation as the unprivileged Codex user'
+)
+
+assert.match(
+	workflow,
+	/- name: Repair generated article after repository test failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?safety-strategy: unprivileged-user[\s\S]*?codex-user: codex[\s\S]*?- name: Require repository tests/,
+	'Daily Issue Research should run Codex repair as the same unprivileged user instead of dropping sudo twice'
+)
+
+assert.doesNotMatch(
+	workflow,
+	/openai\/codex-action@v1[\s\S]*?safety-strategy: drop-sudo/,
+	'Daily Issue Research should not use drop-sudo when multiple Codex action invocations may occur in the same job'
+)
+
+assert.match(
+	workflow,
 	/- name: Create research pull request[\s\S]*?head_ref_oid="\$\(git rev-parse HEAD\)"[\s\S]*?echo "head_ref_oid=\$\{head_ref_oid\}"/,
 	'Daily Issue Research should expose the generated PR head SHA for preview checkout'
 )

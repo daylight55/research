@@ -1,0 +1,344 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "まず時代を直す必要がある。",
+          "en": "The first correction is chronological."
+        },
+        {
+          "ja": "『炎628』が直接扱うのは第一次世界大戦下のロシア農村ではなく、第二次世界大戦中、1941年から1944年にナチ・ドイツが占領したベラルーシである。",
+          "en": "Come and See is not primarily about rural Russia during the First World War."
+        },
+        {
+          "ja": "第一次世界大戦にもドイツ占領地の強制労働、徴発、経済収奪、厳格な軍政はあったが、SSや「628の村」が関わる焼き尽くしの記憶は第二次世界大戦の文脈に属する。",
+          "en": "It is about Belarus under Nazi German occupation during the Second World War, especially between 1941 and 1944."
+        },
+        {
+          "ja": "ベラルーシの村落破壊は、単発の「狂った兵士の残虐行為」ではない。",
+          "en": "The destruction of Belarusian villages was not a one-off eruption by deranged soldiers."
+        },
+        {
+          "ja": "それは戦闘行為ではなく、社会を壊す政治的暴力である。",
+          "en": "This was not combat."
+        },
+        {
+          "ja": "映画の「628」は、ソ連期の記憶政治の中で定着した「住民ごと焼かれたベラルーシの村」の数を指す。",
+          "en": "The number 628 in the film belongs to the Soviet-era memory of Belarusian villages burned with their inhabitants."
+        },
+        {
+          "ja": "したがって、628は映画が依拠した当時の記憶と象徴の数字であり、今日の調査値とは分けて扱うのがよい。",
+          "en": "The number 628 should therefore be read as the symbolic and memorial number used by the film, not as a fixed present-day archival total."
+        },
+        {
+          "ja": "あなたのラストシーン解釈は、おおむね映画の中心に触れている。",
+          "en": "Your interpretation of the ending reaches the film's core."
+        },
+        {
+          "ja": "少年フリョーラがヒトラーの肖像へ銃弾を撃ち込むのは怒りと復讐の噴出だが、幼児のヒトラー像で撃つのを止めることで、映画は「殺意の反復」だけでは終わらない。",
+          "en": "Flyora firing into Hitler's portrait is an eruption of rage and revenge, but the refusal to fire at the image of Hitler as a child prevents the film from ending as pure revenge fantasy."
+        }
+      ]
+    },
+    {
+      "id": "chronology",
+      "heading": {
+        "ja": "2. 第一次世界大戦ではなく、第二次世界大戦のベラルーシ",
+        "en": "2. Not the First World War, but Nazi-Occupied Belarus"
+      },
+      "pairs": [
+        {
+          "ja": "第一次世界大戦下のドイツ東部占領を無害化してよいわけではない。",
+          "en": "None of this means that Germany's First World War occupation of the east was harmless."
+        },
+        {
+          "ja": "Ober Ostでは、軍が行政を握り、移動統制、労働動員、徴発、資源収奪、植民構想が進められた。",
+          "en": "In Ober Ost, the army controlled administration, movement, labor mobilization, requisitions, resource extraction, and settlement projects."
+        },
+        {
+          "ja": "しかし『炎628』の主題は、第一次大戦の占領暴力ではなく、独ソ戦下の絶滅戦争である。",
+          "en": "Come and See, however, belongs to the Nazi war of annihilation against the Soviet Union."
+        },
+        {
+          "ja": "この違いは重要である。",
+          "en": "That distinction matters."
+        },
+        {
+          "ja": "第一次大戦のドイツ軍政にも住民を苦しめた制度的暴力があるが、『炎628』の集落焼却は、占領地を将来の植民空間と見なし、抵抗の疑いを村全体の死で処理し、住民を人間ではなく「支配の障害」として扱う第二次大戦東部戦線の暴力である。",
+          "en": "First World War occupation violence involved coercive rule and extraction, but the village burning in Come and See reflects the Eastern Front of the Second World War: an occupied landscape imagined as future colonial space, where suspected resistance could be answered by the death of an entire village."
+        }
+      ]
+    },
+    {
+      "id": "village-destruction",
+      "heading": {
+        "ja": "3. 村落破壊はどう行われたのか",
+        "en": "3. How the Village Destructions Worked"
+      },
+      "pairs": [
+        {
+          "ja": "Khatyn虐殺は、その構造を縮図のように示す。",
+          "en": "The Khatyn massacre shows the structure in miniature."
+        },
+        {
+          "ja": "1943年3月22日、近くの道路でドイツ将校がパルチザン攻撃により死亡した。",
+          "en": "On March 22, 1943, a German officer was killed in a partisan attack on a nearby road."
+        },
+        {
+          "ja": "Khatynの住民はその攻撃を知らなかったが、村は包囲され、住民は納屋に追い込まれた。",
+          "en": "Khatyn's villagers did not know about that attack, but the village was surrounded and residents were driven into a barn."
+        },
+        {
+          "ja": "扉は閉ざされ、藁と燃料で火が放たれ、外へ逃げようとした人々は機関銃で撃たれた。",
+          "en": "The doors were closed, straw and fuel were used to set the barn on fire, and those who tried to escape were shot."
+        },
+        {
+          "ja": "ここで重要なのは、村人が戦闘員だったかどうかではない。",
+          "en": "The crucial point is not whether the villagers were combatants."
+        },
+        {
+          "ja": "むしろ、非戦闘員である女性、子ども、高齢者、病人が意図的に巻き込まれた点に、対パルチザン作戦の犯罪性がある。",
+          "en": "The crime lies precisely in the deliberate targeting of noncombatants: women, children, older people, and the sick."
+        },
+        {
+          "ja": "虐殺の論理は、軍事的必要性ではなく、支配のための恐怖だった。",
+          "en": "The logic of massacre was terror rule, not military necessity."
+        },
+        {
+          "ja": "村を焼けば、食料供給、避難場所、住民の相互扶助、地域の記憶も消える。",
+          "en": "Burning a village removed food, shelter, mutual aid, local memory, and the possibility of return."
+        }
+      ]
+    },
+    {
+      "id": "perpetrators",
+      "heading": {
+        "ja": "4. 加害主体: SSだけではなく、SS、警察、補助部隊、現地協力者",
+        "en": "4. Perpetrators: SS, Police, Auxiliary Units, and Local Collaborators"
+      },
+      "pairs": [
+        {
+          "ja": "『炎628』を見ると、加害者は一体の悪として見える。",
+          "en": "In Come and See the perpetrators appear as a single face of evil."
+        },
+        {
+          "ja": "それは映画表現として正しい。",
+          "en": "That works cinematically, but historically the perpetrator structure was composite."
+        },
+        {
+          "ja": "しかし史実としては、加害主体は複合的だった。",
+          "en": "At Khatyn, Schutzmannschaft Battalion 118, an auxiliary police unit under German command, played the central role, while SS-Sonderbataillon Dirlewanger was involved."
+        },
+        {
+          "ja": "Dirlewanger部隊は、映画の記憶と結びつく特に悪名高い存在である。",
+          "en": "The Dirlewanger unit is the formation most closely associated with the idea of an SS unit built around criminals."
+        },
+        {
+          "ja": "ここで「犯罪者で構成されたSS」という理解は、Dirlewangerについては大筋で当たっている。",
+          "en": "So the idea of a criminal SS unit is broadly right for Dirlewanger."
+        },
+        {
+          "ja": "この区別は、責任を薄めるためではない。",
+          "en": "This distinction does not dilute responsibility."
+        },
+        {
+          "ja": "むしろ逆である。",
+          "en": "It expands it."
+        }
+      ]
+    },
+    {
+      "id": "production",
+      "heading": {
+        "ja": "5. 『炎628』の制作過程",
+        "en": "5. How Come and See Was Made"
+      },
+      "pairs": [
+        {
+          "ja": "『炎628』は、Elem KlimovがAles Adamovichと共同で脚本を書いた1985年のソ連映画である。",
+          "en": "Come and See is a 1985 Soviet film directed by Elem Klimov and cowritten by Klimov and Ales Adamovich."
+        },
+        {
+          "ja": "脚本の背後には、Adamovichの小説『Khatyn』と、火の村の生存証言を集めた『Out of the Fire』がある。",
+          "en": "Behind the script were Adamovich's novel Khatyn and the survivor-testimony collection Out of the Fire."
+        },
+        {
+          "ja": "Adamovichは戦時中に十代でパルチザン経験を持ち、戦後には生存者の声を文学化した。",
+          "en": "Adamovich had been a teenage partisan during the war and later turned survivor voices into documentary literature."
+        },
+        {
+          "ja": "制作は長く妨げられた。",
+          "en": "The production was delayed for years."
+        },
+        {
+          "ja": "Klimovは当初、より直截な題名「Kill Hitler」を考えていたが、最終題名は黙示録に由来する『Come and See』になった。",
+          "en": "Klimov originally considered the blunt working title Kill Hitler, while the final title Come and See comes from the Book of Revelation."
+        },
+        {
+          "ja": "映画のリアリティは、単に史実に忠実という意味ではない。",
+          "en": "The film's realism is not only fidelity to historical facts."
+        },
+        {
+          "ja": "ただし、この点は作品の倫理的評価と切り離せないため、映画の偉大さとして無批判に称揚するより、当時の安全感覚と制作倫理の危うさとしても読むべきである。",
+          "en": "This point should not be celebrated uncritically as proof of artistic greatness."
+        }
+      ]
+    },
+    {
+      "id": "klimov",
+      "heading": {
+        "ja": "6. 監督Elem Klimovはどういう人か",
+        "en": "6. Who Was Elem Klimov?"
+      },
+      "pairs": [
+        {
+          "ja": "Klimovは1933年、Stalingrad生まれのソ連映画監督である。",
+          "en": "Elem Klimov was a Soviet film director born in Stalingrad in 1933."
+        },
+        {
+          "ja": "彼の戦争感覚は抽象的な反戦思想ではない。",
+          "en": "His understanding of war was not abstract."
+        },
+        {
+          "ja": "『炎628』の地獄の質感は、ベラルーシの証言資料だけでなく、Klimov自身の幼少期の戦争記憶とも結びついている。",
+          "en": "Come and See therefore joins Belarusian survivor testimony to Klimov's own childhood memory of war."
+        },
+        {
+          "ja": "また、妻Larisa Shepitkoの死も無視できない。",
+          "en": "The death of his wife Larisa Shepitko also matters."
+        },
+        {
+          "ja": "この喪失の後に作られた『炎628』は、単なる歴史映画というより、喪失、証言、怒り、倫理の限界を背負った遺言的作品になった。",
+          "en": "Come and See, made after that loss, feels less like a conventional historical film than like a testament shaped by grief, witness, rage, and the limits of ethics."
+        }
+      ]
+    },
+    {
+      "id": "interpretation",
+      "heading": {
+        "ja": "7. 映画の考察: 悪意よりも、倫理の崩壊を見る",
+        "en": "7. Film Interpretation: Not Just Evil, but Ethical Collapse"
+      },
+      "pairs": [
+        {
+          "ja": "『炎628』の強烈さは、加害者を「底なしの悪意を持つ怪物」として見せるだけではない。",
+          "en": "The force of Come and See does not lie only in showing perpetrators as people of bottomless malice."
+        },
+        {
+          "ja": "むしろ、戦争が人間を怪物に変える、という説明だけでも足りない。",
+          "en": "Nor is it enough to say that war turns people into monsters."
+        },
+        {
+          "ja": "この映画の村落焼却場面が耐えがたいのは、死が「戦闘の結果」ではなく「催し物」のように演出されるからである。",
+          "en": "The village-burning sequence is unbearable because death is staged almost like entertainment."
+        },
+        {
+          "ja": "加害者は任務を遂行するだけでなく、住民の恐怖を娯楽に変える。",
+          "en": "The perpetrators do not merely kill."
+        },
+        {
+          "ja": "一方で、映画は暴力をスペクタクルとして消費させない。",
+          "en": "At the same time, the film does not let viewers consume violence as spectacle."
+        },
+        {
+          "ja": "少年の顔が変わっていくこと自体が、村落破壊の記録になる。",
+          "en": "The transformation of the boy's face becomes a record of the destruction of villages."
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "heading": {
+        "ja": "8. ラストシーンの解釈",
+        "en": "8. Reading the Final Scene"
+      },
+      "pairs": [
+        {
+          "ja": "ラストでフリョーラは、泥の中に置かれたヒトラーの肖像へ何度も発砲する。",
+          "en": "At the end, Flyora repeatedly fires at Hitler's portrait lying in the mud."
+        },
+        {
+          "ja": "映像は逆再生され、戦争、演説、行進、政治的上昇、若き日のヒトラーへ遡り、最後に幼児のヒトラー像へ至る。",
+          "en": "Newsreel images run backward through war, speeches, marches, political ascent, Hitler's youth, and finally Hitler as a child."
+        },
+        {
+          "ja": "ここで少年は撃つのを止める。",
+          "en": "Flyora stops firing at the infant image."
+        },
+        {
+          "ja": "この停止は、あなたの言う「同族にはならない」という矜持として読める。",
+          "en": "That pause can be read as the dignity of not becoming the same as the perpetrators."
+        },
+        {
+          "ja": "罪は存在そのものではなく、思想、選択、制度、行為、命令、加担、沈黙として歴史の中で形成される。",
+          "en": "Guilt is not existence itself."
+        },
+        {
+          "ja": "幼児を撃てないことは、フリョーラがまだ倫理を完全には失っていないことを示す。",
+          "en": "The inability to shoot the child shows that Flyora has not entirely lost ethical judgment."
+        },
+        {
+          "ja": "同時に、この場面は単純な「ヒトラー一人を殺せば歴史は救われた」という話でもない。",
+          "en": "The sequence is also not a simple claim that history would have been saved if one person had been killed."
+        },
+        {
+          "ja": "怒りは必要だが、怒りが無差別な殺意に変わった瞬間、フリョーラは加害者の論理へ近づいてしまう。",
+          "en": "Rage is necessary, but if rage becomes indiscriminate killing, Flyora moves closer to the logic of the perpetrators."
+        },
+        {
+          "ja": "あなたの解釈のうち、「無垢の子どもには罪はなく、存在ではなく行いに対して罪を糾弾すべきだ」という読みは特に妥当だと思う。",
+          "en": "Your reading that innocent children are not guilty, and that guilt should be aimed at actions rather than bare existence, is especially strong."
+        },
+        {
+          "ja": "時代に溶かすと責任が薄まる。",
+          "en": "If everything dissolves into the age, responsibility becomes too thin."
+        },
+        {
+          "ja": "映画は、時代の狂気と個人の加担を同時に見ろ、と迫っている。",
+          "en": "The film asks us to see both historical madness and individual complicity."
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": {
+        "ja": "9. 結論",
+        "en": "9. Conclusion"
+      },
+      "pairs": [
+        {
+          "ja": "『炎628』を理解するには、三つの層を分けるとよい。",
+          "en": "Come and See is best understood in three layers."
+        },
+        {
+          "ja": "第一に、史実としてのベラルーシ村落破壊である。",
+          "en": "The first is the historical destruction of Belarusian villages under Nazi occupation: civilian killing, village burning, forced labor, plunder, and terror rule under the name of anti-partisan warfare."
+        },
+        {
+          "ja": "第二に、記憶としてのKhatynと「628」である。",
+          "en": "The second is Khatyn and the memory of 628."
+        },
+        {
+          "ja": "第三に、映画としての『炎628』である。",
+          "en": "The third layer is the film itself."
+        },
+        {
+          "ja": "この作品は、戦争犯罪を説明する映画ではなく、観客に目撃させる映画である。",
+          "en": "Come and See does not merely explain war crimes."
+        },
+        {
+          "ja": "ラストで少年が銃を止める瞬間は、怒りを捨てることではない。",
+          "en": "When Flyora stops firing at the image of Hitler as a child, he does not abandon rage."
+        }
+      ]
+    }
+  ]
+}

@@ -69,6 +69,7 @@ If the report or digest must appear on the website, top page, category pages, or
 - Write PR titles and bodies in Japanese. Follow `.github/PULL_REQUEST_TEMPLATE.md` without deleting template headings.
 - Before committing, inspect the intended diff and avoid staging unrelated files.
 - At minimum run `git diff --check` and check for unresolved placeholders such as `TBD`, `TODO`, `FIXME`, `未定`, and `要確認`.
+- When published article prose changes, run the repo Stop Slop check (`node ops/scripts/validate-stop-slop.mjs` or `pnpm test:stop-slop`) so high-confidence AI tells from the APM-installed `stop-slop` skill fail locally.
 - After committing and before push or PR readiness, run `pnpm ci:pr` from a clean working tree to reproduce the GitHub pull_request Test workflow on a temporary worktree that merges the current HEAD with the latest `origin/main`.
 - Use `pnpm ci:head` or targeted tests only as fast inner-loop checks. Do not treat them as PR-equivalent when `main` may have advanced or when GitHub will test a merge commit.
 - When adding article files, make sure local validation sees the same file set that CI will see. Stage intended new files before relying on `git ls-files`-based checks, or use validators that explicitly include untracked files.
@@ -159,6 +160,7 @@ Before finishing:
 - English article Mermaid diagrams, reference pages, cards, and source labels contain no Japanese user-facing text.
 - Important claims have nearby links.
 - `SourceNote` elements are inline, one-line MDX, without manual parentheses or source labels inside.
+- Published prose passes the Stop Slop check for high-confidence filler, business jargon, mechanical contrasts, and Japanese summary crutches.
 - Current and unstable claims were verified against current sources.
 - Diagrams render as Mermaid-compatible Markdown where possible.
 - The article distinguishes evidence from inference.

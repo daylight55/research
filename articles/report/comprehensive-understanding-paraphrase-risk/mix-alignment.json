@@ -59,7 +59,7 @@
 					"ja": "組織ナレッジでは判断の根拠と反例を残す。"
 				},
 				{
-					"en": "In the AI \u200b\u200bsummary, the source and evaluation memo are included, rather than the original summary.",
+					"en": "In the AI ​​summary, the source and evaluation memo are included, rather than the original summary.",
 					"ja": "AI要約では、要約を正本にせず、ソースと評価メモを併記する。"
 				}
 			]
@@ -109,7 +109,7 @@
 			},
 			"pairs": [
 				{
-					"en": "What is important in this arrangement is to recognize that paraphrasing is not always \"degradation,\" but to still view it as not equivalent.",
+					"en": "This arrangement requires recognizing that paraphrasing is not always \"degradation,\" while still treating it as non-equivalent.",
 					"ja": "この整理で重要なのは、言い換えが常に「劣化」ではないことを認めつつ、それでも等価ではないと見る点である。"
 				},
 				{

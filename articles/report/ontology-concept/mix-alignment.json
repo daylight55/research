@@ -435,7 +435,7 @@
 					"ja": "この考え方はPalantir固有ではない。"
 				},
 				{
-					"en": "All platforms face the same issues when it comes to safely running business AI.",
+					"en": "All platforms face the same issues in safely running business AI.",
 					"ja": "業務AIを安全に動かすには、どのプラットフォームでも同じ問題に直面する。"
 				},
 				{
@@ -598,7 +598,7 @@
 					"ja": "すべてを厳密に定義しようとすると、運用負荷が増え、更新されないオントロジーになる。"
 				},
 				{
-					"en": "Updateability is often more important than completeness, especially when it comes to rapidly changing AI products, business rules, and organizational structures.",
+					"en": "Updateability is often more important than completeness, especially for rapidly changing AI products, business rules, and organizational structures.",
 					"ja": "特に変化の速いAI製品、業務ルール、組織体制では、完全性より更新可能性のほうが重要になる場合が多い。"
 				},
 				{
@@ -716,7 +716,7 @@
 					"ja": "業務AIでは、データ、業務対象、状態、行為、権限、監査をつなぐ operational ontology へ拡張される。"
 				},
 				{
-					"en": "What is important in the LLM era is not to mystify ontology.",
+					"en": "In the LLM era, ontology should not be mystified.",
 					"ja": "LLM時代に重要なのは、オントロジーを神秘化しないことである。"
 				},
 				{

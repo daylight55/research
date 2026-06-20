@@ -38,3 +38,7 @@ node_modules
 *.tfstate.*
 *.tfvars
 !*.tfvars.example
+
+
+# APM dependencies
+apm_modules/

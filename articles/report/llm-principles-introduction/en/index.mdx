@@ -51,7 +51,7 @@ In plain language, the model does not hold “meaning” directly; it holds numb
 
 ## 4. Transformer and Self-Attention
 
-The center of Transformer is self-attention. A simple way to think about it is that each token decides which other tokens in the sentence it should pay attention to, and how much. Pronouns, conditions, and references often need to connect to words that are far away, not just nearby. Transformer computes those links through attention weights rather than through sequential recurrence. <SourceNote>[Attention Is All You Need](https://arxiv.org/abs/1706.03762) showed that sequence transformation can be done with attention alone, without recurrence or convolution.</SourceNote>
+The center of Transformer is self-attention. Each token decides which other tokens in the sentence it should pay attention to, and how much. Pronouns, conditions, and references often need to connect to distant words. Transformer computes those links through attention weights rather than through sequential recurrence. <SourceNote>[Attention Is All You Need](https://arxiv.org/abs/1706.03762) showed that sequence transformation can be done with attention alone, without recurrence or convolution.</SourceNote>
 
 Self-attention often uses the terms Q, K, and V. It helps to think of them as the question, the thing being matched against, and the information being collected. Each token compares itself with others, decides which ones matter, and then pulls in the context it needs. Multi-head attention repeats this process in parallel. <SourceNote>Q, K, and V are the implementation roles defined by Transformer self-attention, and [Attention Is All You Need](https://arxiv.org/abs/1706.03762) provides the basic structure.</SourceNote>
 

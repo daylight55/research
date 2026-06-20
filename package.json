@@ -29,6 +29,7 @@
 		"test": "node --experimental-strip-types --test ops/tests/*.test.mjs tests/*.test.mjs",
 		"test:workflows": "node ops/tests/daily-issue-research-workflow.test.mjs && node --test ops/tests/publication-workflow-policy.test.mjs",
 		"test:content": "node --test ops/tests/news-title-summaries.test.mjs ops/tests/source-note-citations.test.mjs",
+		"test:stop-slop": "node ops/scripts/validate-stop-slop.mjs",
 		"test:ui": "node --test ops/tests/home-news-carousel.test.mjs",
 		"test:i18n": "node --test ops/tests/i18n-content.test.mjs",
 		"test:hero-images": "node --test ops/tests/select-unsplash-hero.test.mjs ops/tests/hero-images.test.mjs ops/tests/news-source-card-images.test.mjs",

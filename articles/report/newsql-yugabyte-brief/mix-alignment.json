@@ -192,7 +192,7 @@
 					"ja": "YB-Masterはカタログ管理とクラスタ編成、YB-TServerはtabletの保持とクエリ処理を担う。"
 				},
 				{
-					"en": "What is important to understand about YugabyteDB is that it does not simply run PostgreSQL on multiple machines, but rather connects a PostgreSQL-compatible query layer to a distributed storage layer.",
+					"en": "YugabyteDB does not simply run PostgreSQL on multiple machines. It connects a PostgreSQL-compatible query layer to a distributed storage layer.",
 					"ja": "YugabyteDBを理解するうえで重要なのは、「PostgreSQLをそのまま複数台で動かしている」のではなく、PostgreSQL互換のquery layerを分散ストレージ層に接続している点である。"
 				},
 				{

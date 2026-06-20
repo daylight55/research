@@ -328,7 +328,7 @@
 				},
 				{
 					"en": "In short, temporal KG is effective in areas that require a \"semantic network with history.\"",
-					"ja": "要するに、temporal KG は「履歴を伴う意味ネットワーク」を必要とする領域で効く。"
+					"ja": "temporal KG は「履歴を伴う意味ネットワーク」を必要とする領域で効く。"
 				},
 				{
 					"en": "On the other hand, the cost of graphing is often not worth it for simple inquiries about the latest values ​​or wide-area searches of large amounts of documents.",

@@ -480,7 +480,7 @@
 				},
 				{
 					"en": "In short, the MCP server is the \"entrance\", the OIDC provider is the \"identity verification and consent\", and the OAuth client is the \"person who collects the information on your behalf\".",
-					"ja": "要するに、MCPサーバーは「入口」、OIDCプロバイダーは「本人確認と同意」、OAuthクライアントは「代理で取りに行く人」である。"
+					"ja": "MCPサーバーは「入口」、OIDCプロバイダーは「本人確認と同意」、OAuthクライアントは「代理で取りに行く人」である。"
 				}
 			]
 		},

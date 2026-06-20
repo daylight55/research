@@ -112,6 +112,6 @@ LLMは、真偽を照合する装置として訓練されているわけでは�
 
 LLMを実務で使うなら、まず「何を覚えさせるか」より「何を毎回見せるか」を決める方がよい。頻繁に変わる情報、正確さが重要な情報、責任が伴う情報は、モデル内部の記憶に頼らず、外部データとして渡す方がよい。<SourceNote>この方針は、自己回帰モデルの一般化能力と訓練データ記憶の両方を踏まえた設計上の帰結である [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805)。</SourceNote>
 
-次に、出力をそのまま採用せず、検索、ルール、計算、レビューを通す。LLMは説明文、候補案、下書き、要約、分類には強いが、最終的な正確性保証は別の仕組みが担うべきである。要するに、LLMは「考える主体」ではなく、「文脈を受けて候補を出す部品」として組み込むのがよい。<SourceNote>検索拡張生成と長文脈研究は、LLMを単体で使うより、外部の確定情報を接続する方が設計上有効であることを示している [RAG](https://arxiv.org/abs/2005.11401) [Lost in the Middle](https://arxiv.org/abs/2307.03172)。</SourceNote>
+次に、出力をそのまま採用せず、検索、ルール、計算、レビューを通す。LLMは説明文、候補案、下書き、要約、分類には強いが、最終的な正確性保証は別の仕組みが担うべきである。LLMは「考える主体」ではなく、「文脈を受けて候補を出す部品」として組み込むのがよい。<SourceNote>検索拡張生成と長文脈研究は、LLMを単体で使うより、外部の確定情報を接続する方が設計上有効であることを示している [RAG](https://arxiv.org/abs/2005.11401) [Lost in the Middle](https://arxiv.org/abs/2307.03172)。</SourceNote>
 
 最後に、LLMの強みと弱みを混同しないことが大事である。強みは、あいまいな入力を扱い、文章の形にして返し、関連情報をまとめることにある。弱みは、真偽保証、恒久記憶、責任主体性、長い作業の自己管理にある。ここを取り違えなければ、LLMはかなり有用な道具になる。<SourceNote>このまとめは、Transformerの自己回帰生成、長文脈の限界、訓練データ記憶の研究を統合した設計上の整理である [Attention Is All You Need](https://arxiv.org/abs/1706.03762) [Lost in the Middle](https://arxiv.org/abs/2307.03172) [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035)。</SourceNote>

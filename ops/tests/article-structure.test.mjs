@@ -5,6 +5,8 @@ import path from 'node:path'
 import { test } from 'node:test'
 
 const placeholderRe = /\b(TBD|TODO|FIXME|未定|要確認)\b/
+const directResponseFramingRe =
+	/あなたの(?:解釈|質問|依頼|言う)|依頼文|質問文|まず時代を直す必要|The first correction is chronological|Your (?:interpretation|reading|question|request)|The prompt referred|the user asked/i
 
 function gitFiles(patterns) {
 	return [
@@ -173,6 +175,18 @@ test('article body does not import duplicate report bodies or unresolved placeho
 			`${file} should not import a duplicate report.md body`
 		)
 		assert.doesNotMatch(source, placeholderRe, `${file} should not contain unresolved placeholders`)
+	}
+})
+
+test('published article bodies avoid direct prompt-response framing', () => {
+	for (const file of gitFiles(['articles/*/**/index.mdx'])) {
+		const source = readFileSync(file, 'utf8')
+
+		assert.doesNotMatch(
+			source,
+			directResponseFramingRe,
+			`${file} should read as a standalone article rather than a direct answer to a prompt`
+		)
 	}
 })
 

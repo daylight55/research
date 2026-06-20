@@ -17,7 +17,7 @@
 ## Required Skill
 
 調査レポート、研究整理、論文比較、技術・政策・経済・地政学などの論点整理や考察を書くときは、repo-local skill `research-report` を使う。
-公開記事の本文を作成・更新・レビューするときは、APMで導入した repo-local skill `stop-slop` の観点を適用し、AI的な定型句、過剰な前置き、機械的な二項対立、不要な要約句を避ける。
+公開記事の本文を作成・更新・レビューするときは、APMで導入し Codex からも発見できる `.codex/skills/stop-slop/SKILL.md` の repo-local skill `stop-slop` の観点を適用し、AI的な定型句、過剰な前置き、機械的な二項対立、不要な要約句を避ける。
 
 ## Astro Site Publication Workflow
 

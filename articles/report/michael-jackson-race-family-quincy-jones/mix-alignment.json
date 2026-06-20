@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "マイケル・ジャクソンの生涯は、単なる「天才歌手の成功物語」ではなく、黒人音楽、テレビ、レコード産業、家族経営、身体イメージ、世界市場が交差した二十世紀後半の文化史として読むべきである。",
+          "en": "Michael Jackson’s life should not be reduced to a genius singer’s success story."
+        },
+        {
+          "ja": "1958年にインディアナ州ゲーリーで生まれ、子ども時代にJackson 5の中心としてMotownで成功し、成人後はQuincy Jonesとの三部作でポップ音楽の世界標準を作った。",
+          "en": "Born in Gary, Indiana, in 1958, he became the center of the Jackson 5 as a child, then reshaped adult pop with Quincy Jones."
+        },
+        {
+          "ja": "世界での受け入れられ方は、米国の黒人R&Bスターから、MTV時代の映像型ポップスター、さらに国境を越える「King of Pop」へ変わった。",
+          "en": "The way the world received him changed over time: first as a Black R&B child star in the United States, then as the defining video-era pop star, and finally as the global “King of Pop.”"
+        },
+        {
+          "ja": "`Thriller` は音楽、ダンス、短編映画風のミュージックビデオ、テレビ露出、ツアー、商品化を束ねた作品で、1984年のGrammy Awardsでは8部門を受賞した。",
+          "en": "`Thriller` joined music, dance, short-film music video, television exposure, touring, and merchandising into one cultural machine."
+        },
+        {
+          "ja": "黒人としての偏見はあった。",
+          "en": "He did face racial barriers."
+        },
+        {
+          "ja": "重要なのは、彼が「人種を超えた」から偏見が消えたのではなく、黒人音楽の商業価値が白人中心のテレビ・ロック市場に認められる過程で、境界を押し広げたという点である。",
+          "en": "The key point is not that he transcended race and therefore escaped prejudice."
+        },
+        {
+          "ja": "`Billie Jean` や `Beat It` のMTV放映をめぐる議論は、1980年代初頭の音楽テレビが黒人アーティストを十分に扱っていなかった構造を象徴する。",
+          "en": "The debate around MTV’s airing of `Billie Jean` and `Beat It` symbolizes how early 1980s music television had treated Black artists as marginal."
+        },
+        {
+          "ja": "父ジョー・ジャクソンによる虐待については、「真偽」を一語で片付けにくい。",
+          "en": "Joe Jackson’s abuse is hard to answer with a single true-or-false sentence."
+        },
+        {
+          "ja": "刑事裁判で確定した事実としてではなく、マイケル本人が回想録とテレビインタビューで身体的・心理的暴力を語り、兄弟姉妹や報道・伝記も厳格で暴力的な家庭統制を繰り返し記録している、という形で評価するのが妥当である。",
+          "en": "It is best treated not as a criminally adjudicated fact, but as a strongly supported pattern: Michael described physical and psychological violence in his memoir and in television interviews; siblings, biographies, and reporting repeatedly describe harsh and violent family discipline; Joe himself did not fully deny corporal punishment and later defended it as discipline."
+        },
+        {
+          "ja": "Quincy Jonesとの関係は、父からの解放を単純に意味したわけではない。",
+          "en": "The Quincy Jones relationship did not simply replace a father with a producer."
+        },
+        {
+          "ja": "ジョーは主に父・マネージャー・家族プロジェクトの統率者であり、Quincy Jonesは成人したマイケルの音楽的編集者、プロデューサー、スタジオの共同設計者だった。",
+          "en": "Joe Jackson was chiefly a father, manager, rehearsal enforcer, and family-business controller."
+        }
+      ]
+    },
+    {
+      "id": "life-and-reception",
+      "heading": {
+        "ja": "2. 生涯の骨格 / 3. 世界でどう受け入れられたか",
+        "en": "2. The Shape of His Life / 3. How the World Received Him"
+      },
+      "pairs": [
+        {
+          "ja": "マイケル・ジョセフ・ジャクソンは1958年8月29日、製鉄業の町ゲーリーで生まれた。",
+          "en": "Michael Joseph Jackson was born on August 29, 1958, in Gary, Indiana, a steel town."
+        },
+        {
+          "ja": "Jackson 5は兄弟グループとして地元クラブからMotownへ進み、1969年以降、`I Want You Back`、`ABC`、`The Love You Save`、`I'll Be There` で全米チャートを席巻した。",
+          "en": "The Jackson 5 moved from local clubs to Motown, and after 1969 they dominated the American charts with `I Want You Back`, `ABC`, `The Love You Save`, and `I'll Be There`."
+        },
+        {
+          "ja": "ここでのマイケルは、幼い声と大人びた表現力を同時に持つ「神童」として売り出された。",
+          "en": "In this period, Michael was marketed as a prodigy whose child’s voice carried adult emotional force."
+        },
+        {
+          "ja": "1970年代半ばに兄弟グループはMotownからEpic/CBSへ移り、名前もThe Jacksonsとなった。",
+          "en": "In the mid-1970s the group moved from Motown to Epic/CBS and became the Jacksons."
+        },
+        {
+          "ja": "1982年の `Thriller` は、アルバムというより複合メディア商品だった。",
+          "en": "`Thriller`, released in 1982, was less a conventional album than a multimedia product."
+        },
+        {
+          "ja": "1987年の `Bad` は、`Thriller` 後の期待に応える巨大プロジェクトだった。",
+          "en": "`Bad`, released in 1987, was an enormous project built under the pressure of following `Thriller`."
+        },
+        {
+          "ja": "後年は、音楽的影響力とスキャンダル、身体の変化、メディアの過剰な注視が切り離せなくなった。",
+          "en": "In later years, musical influence, scandal, bodily change, and media surveillance became inseparable."
+        },
+        {
+          "ja": "米国での受容は三段階に分けられる。",
+          "en": "American reception moved in three stages."
+        },
+        {
+          "ja": "第一に、Jackson 5期のマイケルは、Motownが築いた黒人ポップのファミリー向けスターだった。",
+          "en": "First, the Jackson 5 made Michael a family-friendly Black pop star within Motown’s tradition."
+        },
+        {
+          "ja": "世界では、彼は英語圏のポップスターというより、身体動作で翻訳されるスターだった。",
+          "en": "Globally, he was not only an English-language pop singer."
+        },
+        {
+          "ja": "ムーンウォーク、片手袋、フェドラ、つま先立ち、群舞、短く鋭い発声は、言語を越えて模倣できる記号になった。",
+          "en": "The moonwalk, the single glove, the fedora, toe stands, group choreography, and sharp vocal exclamations became signs that could be copied across languages."
+        },
+        {
+          "ja": "ただし、この世界的受容は、単に「皆に愛された」という話ではない。",
+          "en": "This global reception was not simply universal love."
+        },
+        {
+          "ja": "彼は普遍的なスターであるほど、各社会が自分の問題を投影するスクリーンにもなった。",
+          "en": "The more universal he became, the more each society projected its own anxieties onto him."
+        }
+      ]
+    },
+    {
+      "id": "race-family-jones",
+      "heading": {
+        "ja": "4. 黒人としての偏見と境界突破 / 5. 父ジョー・ジャクソンの暴力はどこまで言えるか / 6. ジョーからQuincy Jonesへ",
+        "en": "4. Race, Prejudice, and Boundary-Crossing / 5. How Strong Is the Evidence About Joe Jackson’s Violence? / 6. From Joe Jackson to Quincy Jones"
+      },
+      "pairs": [
+        {
+          "ja": "マイケルは黒人であることから自由ではなかった。",
+          "en": "Jackson was never free from being Black."
+        },
+        {
+          "ja": "MTVをめぐる議論は象徴的である。",
+          "en": "The MTV story is symbolic."
+        },
+        {
+          "ja": "一方で、彼の後年の肌の変化は、人種的自己否定としてだけ読むと危うい。",
+          "en": "At the same time, his later skin changes should not be reduced to racial self-rejection."
+        },
+        {
+          "ja": "マイケルは1993年に白斑症を公表し、肌色の変化を病気として説明した。",
+          "en": "In 1993 Jackson publicly described vitiligo and explained his changing skin color as a medical condition."
+        },
+        {
+          "ja": "偏見は、賞賛の形でも現れた。",
+          "en": "Prejudice also appeared as praise."
+        },
+        {
+          "ja": "ジョー・ジャクソンは、Jackson 5を作った人物であり、同時にマイケルの幼少期を恐怖で支配した人物として記憶されている。",
+          "en": "Joe Jackson is remembered both as the person who created the Jackson 5 and as the father who ruled Michael’s childhood through fear."
+        },
+        {
+          "ja": "この証言は孤立していない。",
+          "en": "The claims are not isolated."
+        },
+        {
+          "ja": "真偽の結論を慎重に書くなら、こうなる。",
+          "en": "A careful conclusion is this: the abuse should not be presented as a fully adjudicated legal record, but the evidence that Michael experienced physical and psychological abuse from his father is strong."
+        },
+        {
+          "ja": "この点は、彼の芸術性とも切り離せない。",
+          "en": "This evidence also matters artistically."
+        },
+        {
+          "ja": "ここで「父をプロデューサーから降板した」と言うと少しずれる。",
+          "en": "It is slightly misleading to say that Michael removed his father as producer."
+        },
+        {
+          "ja": "ジョー・ジャクソンはレコード制作上のプロデューサーというより、父、マネージャー、リハーサル監督、家族ビジネスの支配者だった。",
+          "en": "Joe Jackson was not mainly a record producer in the studio sense."
+        },
+        {
+          "ja": "Quincy Jonesとの出会いは `The Wiz` だった。",
+          "en": "Jackson met Quincy Jones through `The Wiz`."
+        },
+        {
+          "ja": "`Thriller` では、二人の関係はより高度な編集関係になった。",
+          "en": "On `Thriller`, their relationship became a sophisticated editorial partnership."
+        },
+        {
+          "ja": "`Bad` 後に関係が終わったのは、単なる不仲というより、マイケルが自分の音楽的権限をさらに広げた結果だった。",
+          "en": "The partnership ended after `Bad` not simply because of personal conflict, but because Jackson expanded his own musical authority."
+        },
+        {
+          "ja": "マイケル・ジャクソンは、黒人音楽の伝統から生まれ、白人中心のメディア市場を変え、世界規模で模倣されたスターだった。",
+          "en": "Michael Jackson came from Black musical traditions, changed white-dominated media markets, and became a globally imitated star."
+        },
+        {
+          "ja": "Quincy Jonesとの関係は、マイケルが父の家族支配から離れ、成人アーティストとして自分の声を市場に届けるための決定的な協働だった。",
+          "en": "Quincy Jones was central to Michael’s adult artistic emergence."
+        }
+      ]
+    }
+  ]
+}

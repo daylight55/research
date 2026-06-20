@@ -51,7 +51,10 @@ function candidateFiles(args) {
 		: positional.length > 0
 			? positional
 			: allArticleMdxFiles()
-	return candidates.filter((file) => file.endsWith('.mdx')).sort()
+	if (!changedOnly && positional.length > 0) {
+		return candidates.filter((file) => file.endsWith('.mdx')).sort()
+	}
+	return candidates.filter((file) => ARTICLE_MDX_RE.test(file)).sort()
 }
 
 function errorLocation(error) {

@@ -67,6 +67,12 @@ assert.match(
 	'Daily Issue Research prompt should require frontmatter generation model metadata for generated reports'
 )
 
+assert.match(
+	dailyIssuePrompt,
+	/article headline[\s\S]*?not an inventory[\s\S]*?Avoid colon-separated category lists[\s\S]*?integrated,\s*memorable phrase/,
+	'Daily Issue Research prompt should require article-style integrated titles, not topic inventories'
+)
+
 assert.doesNotMatch(
 	dailyIssuePrompt,
 	/frontmatter[\s\S]*?promptSource|frontmatter[\s\S]*?promptSummary/,

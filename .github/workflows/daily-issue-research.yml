@@ -232,6 +232,34 @@ jobs:
           effort: medium
           allow-bots: true
 
+      - name: Normalize generated article permissions
+        if: steps.select_issue.outputs.issue_found == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          changed_files="${RUNNER_TEMP}/daily-research-generated-files"
+          git ls-files --modified --others --exclude-standard -z > "${changed_files}"
+          if [[ ! -s "${changed_files}" ]]; then
+            exit 0
+          fi
+
+          while IFS= read -r -d '' file; do
+            if [[ ! -e "${file}" ]]; then
+              continue
+            fi
+
+            sudo chown runner:codex "${file}"
+            sudo chmod u+rw,g+rw "${file}"
+
+            dir="$(dirname "${file}")"
+            while [[ "${dir}" != "." && "${dir}" != "/" ]]; do
+              sudo chown runner:codex "${dir}"
+              sudo chmod u+rwx,g+rwx "${dir}"
+              dir="$(dirname "${dir}")"
+            done
+          done < "${changed_files}"
+
       - name: Restore Node for site build
         if: steps.select_issue.outputs.issue_found == 'true'
         uses: actions/setup-node@v4
@@ -354,6 +382,34 @@ jobs:
           effort: low
           allow-bots: true
 
+      - name: Normalize repaired article permissions
+        if: steps.repository_tests.outcome == 'failure' && steps.restore_generated_article.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          changed_files="${RUNNER_TEMP}/daily-research-repaired-files"
+          git ls-files --modified --others --exclude-standard -z > "${changed_files}"
+          if [[ ! -s "${changed_files}" ]]; then
+            exit 0
+          fi
+
+          while IFS= read -r -d '' file; do
+            if [[ ! -e "${file}" ]]; then
+              continue
+            fi
+
+            sudo chown runner:codex "${file}"
+            sudo chmod u+rw,g+rw "${file}"
+
+            dir="$(dirname "${file}")"
+            while [[ "${dir}" != "." && "${dir}" != "/" ]]; do
+              sudo chown runner:codex "${dir}"
+              sudo chmod u+rwx,g+rwx "${dir}"
+              dir="$(dirname "${dir}")"
+            done
+          done < "${changed_files}"
+
       - name: Require repository tests
         if: steps.diff_check.outputs.has_changes == 'true'
         shell: bash
@@ -383,10 +439,6 @@ jobs:
         if: steps.diff_check.outputs.has_changes == 'true'
         run: node ops/scripts/validate-mix-alignment.mjs --changed
 
-      - name: Build generated site
-        if: steps.diff_check.outputs.has_changes == 'true'
-        run: pnpm build
-
       - name: Create generated article cache archive
         if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
         shell: bash
@@ -406,6 +458,10 @@ jobs:
         with:
           path: ${{ runner.temp }}/generated-article-cache
           key: daily-issue-research-${{ steps.select_issue.outputs.issue_number }}
+
+      - name: Build generated site
+        if: steps.diff_check.outputs.has_changes == 'true'
+        run: pnpm build
 
       - name: Create research pull request
         if: steps.diff_check.outputs.has_changes == 'true'

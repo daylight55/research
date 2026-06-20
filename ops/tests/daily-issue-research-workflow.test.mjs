@@ -33,6 +33,12 @@ assert.match(
 
 assert.match(
 	workflow,
+	/- name: Verify generated mixed article alignment[\s\S]*?- name: Create generated article cache archive[\s\S]*?- name: Save generated article cache[\s\S]*?- name: Build generated site/,
+	'Daily Issue Research should save validated generated artifacts before build failures can force token-spending regeneration'
+)
+
+assert.match(
+	workflow,
 	/OPENAI_MODEL: gpt-5\.4-mini[\s\S]*?model: \$\{\{ env\.OPENAI_MODEL \}\}[\s\S]*?OPENAI_USAGE_MODEL: \$\{\{ env\.OPENAI_MODEL \}\}/,
 	'Daily Issue Research should define the Codex model once and reuse it for generation and usage reporting'
 )
@@ -231,14 +237,14 @@ assert.match(
 
 assert.match(
 	workflow,
-	/- name: Run Codex research[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?safety-strategy: unprivileged-user[\s\S]*?codex-user: codex[\s\S]*?- name: Restore Node for site build/,
-	'Daily Issue Research should run initial Codex generation as the unprivileged Codex user'
+	/- name: Run Codex research[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?safety-strategy: unprivileged-user[\s\S]*?codex-user: codex[\s\S]*?- name: Normalize generated article permissions[\s\S]*?git ls-files --modified --others --exclude-standard -z[\s\S]*?sudo chown runner:codex "\$\{file\}"[\s\S]*?sudo chmod u\+rw,g\+rw "\$\{file\}"[\s\S]*?- name: Restore Node for site build/,
+	'Daily Issue Research should run initial Codex generation as the unprivileged Codex user and restore runner write access'
 )
 
 assert.match(
 	workflow,
-	/- name: Repair generated article after repository test failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?safety-strategy: unprivileged-user[\s\S]*?codex-user: codex[\s\S]*?- name: Require repository tests/,
-	'Daily Issue Research should run Codex repair as the same unprivileged user instead of dropping sudo twice'
+	/- name: Repair generated article after repository test failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?safety-strategy: unprivileged-user[\s\S]*?codex-user: codex[\s\S]*?- name: Normalize repaired article permissions[\s\S]*?git ls-files --modified --others --exclude-standard -z[\s\S]*?sudo chown runner:codex "\$\{file\}"[\s\S]*?sudo chmod u\+rw,g\+rw "\$\{file\}"[\s\S]*?- name: Require repository tests/,
+	'Daily Issue Research should run Codex repair as the unprivileged Codex user and restore runner write access'
 )
 
 assert.doesNotMatch(

@@ -62,6 +62,12 @@ If the report or digest must appear on the website, top page, category pages, or
 10. Use `research-log.mdx` for publishable questions checked, automation context, assumptions, rejected leads, limits, and follow-up items.
 11. Verify links, placeholders, SourceNote formatting, diagrams, and Japanese-English parity before publication.
 
+## Source Notes First
+
+For broad surveys, rankings, comparisons, country profiles, historical lists, or selection-heavy reports, write `source-notes.mdx` as research-before-writing notes rather than after-the-fact bibliography. It should record what was checked first, selection axes, country/topic-specific evidence notes, inclusion/exclusion decisions, and weak spots before polished article prose compresses them.
+
+Do not let `source-notes.mdx` become only a thin source list or duplicate final prose. It should preserve the useful pre-article material a future reviewer needs to understand why the article selected, excluded, grouped, or ranked items the way it did.
+
 ## Publication Workflow
 
 - For research requests in this repository, a draft Pull Request is the standard delivery path unless the user explicitly says chat-only, no files, no PR, or only wants a plan.

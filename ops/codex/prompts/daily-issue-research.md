@@ -132,6 +132,10 @@ drivers, risks, and decision points that are materially tied to the topic.
 - Write in Japanese for practitioners, researchers, and decision makers.
 - Make the report standalone: a future reader should not need the GitHub issue
   to understand the topic.
+- Keep `index.mdx` as a self-contained reader-facing article, not a direct
+  answer to the issue, prompt, or user wording. Recast corrections, assumptions,
+  and scope limits as article prose. `source-notes.mdx` and `research-log.mdx`
+  may still record publishable investigation input and process context.
 - When the topic is Japan politics or international politics, write for readers
   who need a high-level but decision-useful overview, not only a news recap.
   Summarize what happened, why it matters, what structural forces are behind it,

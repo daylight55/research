@@ -15,6 +15,7 @@ Use this skill for durable research artifacts in this repository. Follow `AGENTS
 - Treat `articles/<type>/<slug>/ja/index.mdx` as the canonical Japanese reader-facing body.
 - Keep `articles/<type>/<slug>/en/index.mdx` synchronized in the same PR when adding or updating a published article. Do not add Japanese-only public routes unless the user explicitly asks to defer English output.
 - Put the full article body directly in `index.mdx`. Do not create `report.md`, `research-tasks.md`, `notes/`, `sources/`, `figures/`, or `prototype/` under `articles/`.
+- Keep reader-facing `index.mdx` standalone. Do not expose prompt, issue, or user-question framing in article prose; recast corrections and assumptions as article-scope statements. `source-notes.mdx` and `research-log.mdx` may still record publishable investigation scope, process, and input context.
 - Use `articles/<type>/<slug>/<locale>/source-notes.mdx` for publishable pre-article research material: source inventory, evidence notes, issue structure, and inclusion or exclusion decisions. Keep it as an intermediate research note, not a duplicate copy of the final article.
 - If the research trail is useful and publishable, summarize it in `articles/<type>/<slug>/ja/research-log.mdx`; add or update the English research log when that route is published.
 - When creating a report, use `ops/codex/templates/blog-entry.mdx` as the frontmatter and body shape.
@@ -58,9 +59,10 @@ If the report or digest must appear on the website, top page, category pages, or
 6. Distinguish established facts, emerging evidence, product/vendor claims, inference from public information, open questions, limitations, and decision points or operational consequences only when they are materially tied to the topic.
 7. Write in Japanese for practitioners, researchers, and decision makers who need source-grounded judgment.
 8. Keep the article standalone; future readers should not need the GitHub issue or chat context.
-9. Use `source-notes.mdx` for publishable source inventory, evidence notes, competing interpretations, and inclusion/exclusion decisions before drafting the reader-facing article.
-10. Use `research-log.mdx` for publishable questions checked, automation context, assumptions, rejected leads, limits, and follow-up items.
-11. Verify links, placeholders, SourceNote formatting, diagrams, and Japanese-English parity before publication.
+9. Article body should read as a self-contained publication, not as a direct answer to a prompt. Avoid phrases such as "your question," "your interpretation," or "the first correction is"; explain scope and caveats as part of the article itself.
+10. Use `source-notes.mdx` for publishable source inventory, evidence notes, competing interpretations, and inclusion/exclusion decisions before drafting the reader-facing article.
+11. Use `research-log.mdx` for publishable questions checked, automation context, assumptions, rejected leads, limits, and follow-up items.
+12. Verify links, placeholders, SourceNote formatting, diagrams, and Japanese-English parity before publication.
 
 ## Source Notes First
 

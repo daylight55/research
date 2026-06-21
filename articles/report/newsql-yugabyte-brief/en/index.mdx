@@ -86,7 +86,7 @@ flowchart TB
   Raft --> Doc
 ```
 
-What is important to understand about YugabyteDB is that it does not simply run PostgreSQL on multiple machines, but rather connects a PostgreSQL-compatible query layer to a distributed storage layer. Therefore, while PostgreSQL's ecosystem compatibility is a strong value, its performance characteristics are not the same as a single PostgreSQL. Distributed DB design targets include primary key design, tablet partitioning, region placement, connection pooling, long transactions, schema migration, and sequence usage.
+YugabyteDB does not simply run PostgreSQL on multiple machines. It connects a PostgreSQL-compatible query layer to a distributed storage layer. Therefore, while PostgreSQL's ecosystem compatibility is a strong value, its performance characteristics are not the same as a single PostgreSQL. Distributed DB design targets include primary key design, tablet partitioning, region placement, connection pooling, long transactions, schema migration, and sequence usage.
 
 ## 5. Services provided by Yugabyte
 

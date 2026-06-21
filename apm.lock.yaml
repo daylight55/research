@@ -1,0 +1,12 @@
+lockfile_version: '1'
+generated_at: '2026-06-20T15:25:40.825488+00:00'
+apm_version: 0.14.1
+dependencies:
+- repo_url: hardikpandya/stop-slop
+  host: github.com
+  resolved_commit: 8da1f030185bdfe8471220585162991eaeb970e9
+  resolved_ref: 8da1f030185bdfe8471220585162991eaeb970e9
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/stop-slop
+  content_hash: sha256:2e93df9fc59dbc268f98b75b51be8751f8db4e8c3943bb7f4beafa244a05785a

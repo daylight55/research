@@ -1,0 +1,371 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "中国をニュースで読むときの最初の前提は、これは通常の多元民主主義国家ではなく、中国共産党が国家を指導する党国家だという点である。",
+          "en": "When you read China in the news, the first assumption should be that this is not a normal pluralist democracy."
+        },
+        {
+          "ja": "2026年時点の公的な権力配置は、習近平が党総書記・国家主席・中央軍事委員会主席として中核に座り、李強が国務院総理、趙楽際が全国人民代表大会常務委員長、王滬寧が政治協商会議主席を務める構図になっている。",
+          "en": "It is a party-state in which the Chinese Communist Party leads the state."
+        },
+        {
+          "ja": "この体制の要点は、権力が分立しているように見えても、最終的な政治方向は党が握ることだ。",
+          "en": "In the public power map for 2026, Xi Jinping sits at the center as party general secretary, president, and chairman of the Central Military Commission, while Li Qiang serves as premier, Zhao Leji as chair of the National People’s Congress Standing Committee, and Wang Huning as chair of the Chinese People’s Political Consultative Conference."
+        },
+        {
+          "ja": "米国のような三権分立ではなく、国家機関、軍、司法、メディア、市民社会が党の指導の下に組み込まれる。",
+          "en": "The key point is that power may look divided, but the party still sets the final political direction."
+        },
+        {
+          "ja": "対外的には、台湾、南シナ海、東シナ海、対米技術競争、一帯一路が主要争点である。",
+          "en": "This is not a U.S.-style separation of powers."
+        },
+        {
+          "ja": "米国防総省の2025年版中国軍事力報告は、中国の台湾に対する軍事的圧力、海空域での主張、そしてAIや先端計算資源を含む技術競争を、国家安全保障の中心課題として扱っている。",
+          "en": "State institutions, the military, the courts, the media, and civil society are all organized under party leadership."
+        },
+        {
+          "ja": "国内では、世界第2位級の経済規模と製造業の厚みが依然として強みだが、不動産調整、地方政府債務、人口減少、少子化、若年雇用の脆弱さが成長モデルを圧迫している。",
+          "en": "Externally, Taiwan, the South China Sea, the East China Sea, competition with the United States over technology, and Belt and Road are the main fault lines."
+        },
+        {
+          "ja": "中国は大きいが、単純に安定しているわけではない。",
+          "en": "The Pentagon’s 2025 China military report treats pressure on Taiwan, maritime claims, and competition over AI and advanced compute as central national security issues."
+        },
+        {
+          "ja": "日本にとっての要点は、中国を「巨大市場」か「軍事的脅威」のどちらか一方で見ることではない。",
+          "en": "Domestically, China still has a second-tier global economy and a deep industrial base, but property adjustment, local government debt, population decline, low fertility, and fragile youth employment are all weighing on the growth model."
+        },
+        {
+          "ja": "党が社会と経済をどう制御し、台湾海峡や周辺海域でどの程度の圧力をかけ、技術と貿易の規則をどう使うかを、同時に読む必要がある。",
+          "en": "China is large, but it is not simply stable."
+        },
+        {
+          "ja": "この国を読むには、党国家、海洋秩序、技術統制、経済構造を一つの連続した問題として扱う方がよい。",
+          "en": "For Japan, the point is not to read China as either a giant market or a pure military threat."
+        }
+      ]
+    },
+    {
+      "id": "historical-and-institutional-base",
+      "heading": {
+        "ja": "2. 歴史と制度の骨格",
+        "en": "2. Historical and Institutional Base"
+      },
+      "pairs": [
+        {
+          "ja": "中国の現代史は、王朝国家の崩壊、列強の侵入、内戦、1949年の中華人民共和国成立、そして1978年以降の改革開放という連続した断絶として読むと理解しやすい。",
+          "en": "The better lens is a system that uses party control, maritime pressure, and technology rules at the same time."
+        },
+        {
+          "ja": "ここで重要なのは、1978年以降の市場化が党の退場を意味しなかったことである。",
+          "en": "Modern Chinese history is easier to read as a sequence of breaks: imperial collapse, foreign invasion, civil war, the founding of the People’s Republic in 1949, and the reform and opening era after 1978."
+        },
+        {
+          "ja": "市場は導入されたが、政治の最終責任者は党のままだった。",
+          "en": "The important point is that market reform did not mean the party left power."
+        },
+        {
+          "ja": "2012年以降の習近平期は、その党国家性をさらに強めた時期とみるのが妥当である。",
+          "en": "The market was introduced, but the party remained the final political authority."
+        },
+        {
+          "ja": "2025年版の米国防総省報告は、中国の国家戦略を、2049年までに「強い近代的社会主義国家」を完成させる長期目標の下で理解している。",
+          "en": "The Xi Jinping era since 2012 is best understood as a further tightening of that party-state model."
+        },
+        {
+          "ja": "制度面では、中国は人民代表大会制を採るが、実際には共産党の指導が上にある。",
+          "en": "The Pentagon’s 2025 report reads Chinese state strategy through a long-term goal of building a strong modern socialist country by 2049."
+        },
+        {
+          "ja": "中国共産党のトップが国家と軍の最終意思決定に影響し、国務院は行政を担うが、米国型の権力分立と同じではない。",
+          "en": "Institutionally, China uses a people’s congress system, but the Communist Party sits above it in practice."
+        },
+        {
+          "ja": "この違いはニュースの読み方に直結する。",
+          "en": "The party leader shapes the final decisions of the state and military, while the State Council runs the administration."
+        },
+        {
+          "ja": "たとえば政策変更が「省庁の技術調整」に見えても、背後には党内の優先順位、政治安全、社会統制、軍事準備がある。",
+          "en": "This is not the same as U.S.-style branch separation."
+        },
+        {
+          "ja": "単なる官僚的修正として読むと、方向の変化を見誤る。",
+          "en": "That difference matters for news reading."
+        }
+      ]
+    },
+    {
+      "id": "current-power-configuration",
+      "heading": {
+        "ja": "3. 現在の権力配置",
+        "en": "3. Current Power Configuration"
+      },
+      "pairs": [
+        {
+          "ja": "現在の権力配置は、党、国家、軍、監視装置が重なった構造である。",
+          "en": "A change that looks like a ministerial adjustment may actually reflect party priorities, political security, social control, or military preparation."
+        },
+        {
+          "ja": "公的な顔ぶれを把握しておくと、ニュースの文脈が読みやすい。",
+          "en": "If you read it as ordinary bureaucracy, you can miss the direction of travel."
+        },
+        {
+          "ja": "中国の国家機構は、党が定めた方向を行政が執行し、軍が保障し、メディアと教育が補強する方式で動く。",
+          "en": "China’s current power structure is a stack of party, state, military, and surveillance capacity."
+        },
+        {
+          "ja": "国家の外形は複雑でも、統治の中枢は比較的明確だ。",
+          "en": "It helps to keep the public leadership map in mind when reading the news."
+        },
+        {
+          "ja": "中国のメディアは党の指導の下に置かれ、治安・監視・言論統制は政治的安定の一部として扱われる。",
+          "en": "China’s state machine works by setting party direction first, then having the administration execute it, the military secure it, and the media and education system reinforce it."
+        },
+        {
+          "ja": "新疆やチベットは、民族政策だけでなく、国家の統合と統制の問題として扱われてきた。",
+          "en": "The institutional surface is complex, but the center of gravity is fairly clear."
+        }
+      ]
+    },
+    {
+      "id": "main-international-disputes",
+      "heading": {
+        "ja": "4. 国際政治の争点",
+        "en": "4. Main International Disputes"
+      },
+      "pairs": [
+        {
+          "ja": "台湾は、中国にとって単なる周辺問題ではなく、主権と体制の正統性に関わる核心問題である。",
+          "en": "The media operate under party leadership, and security, surveillance, and speech control are treated as part of political stability."
+        },
+        {
+          "ja": "米国防総省の報告は、人民解放軍が台湾に対する軍事的圧力を継続し、封鎖や侵攻ではなくても、危機時に急速にエスカレーションしうる能力を整備していると述べている。",
+          "en": "Xinjiang and Tibet are therefore not just minority-policy issues; they are also questions of integration and control."
+        },
+        {
+          "ja": "この争点では、軍事力だけでなく、演習、情報戦、経済圧力、国際的な孤立化工作が組み合わされる。",
+          "en": "Taiwan is not a peripheral issue for China."
+        },
+        {
+          "ja": "ニュース上は断片的な圧力に見えても、実際には台湾の意思決定コストを上げる総合戦略として理解した方がよい。",
+          "en": "It is a core issue tied to sovereignty and the legitimacy of the regime."
+        },
+        {
+          "ja": "南シナ海では、中国は海警、海軍、民兵を組み合わせたグレーゾーン圧力を使う。",
+          "en": "The Pentagon report says the People’s Liberation Army continues military pressure on Taiwan and is building capabilities that could escalate quickly in a crisis even if there is no immediate blockade or invasion."
+        },
+        {
+          "ja": "米国防総省報告は、南シナ海での強圧的行動と、周辺国との摩擦が継続していることを指摘している。",
+          "en": "This is not just a military issue."
+        },
+        {
+          "ja": "東シナ海では、尖閣諸島を含む海域が日中関係の摩擦点になる。",
+          "en": "Exercises, information warfare, economic pressure, and international isolation efforts are combined into one strategy."
+        },
+        {
+          "ja": "重要なのは、ここでも「一度の衝突」ではなく、常態化した圧力と既成事実化の積み上げが使われることだ。",
+          "en": "In the news, those pieces can look fragmented, but it is better to read them as a single effort to raise Taiwan’s decision costs."
+        },
+        {
+          "ja": "中国は世界最大の製造業国であり、鉄鋼、電池、電子機器、自動車、海運など、広い工業基盤を持つ。",
+          "en": "In the South China Sea, China uses gray-zone pressure that mixes coast guard, navy, and maritime militia activity."
+        },
+        {
+          "ja": "だからこそ、AI、半導体、先端製造装置、希少資源のサプライチェーンは、経済問題であると同時に安全保障問題になる。",
+          "en": "The Pentagon report says coercive behavior in the South China Sea and frictions with neighboring states continue."
+        },
+        {
+          "ja": "米国防総省報告は、中国がAIやデュアルユース技術を軍事・経済両面で重視していること、そして対外関係を通じて技術と影響力を広げようとしていることを強調している。",
+          "en": "In the East China Sea, the waters around the Senkaku Islands remain a friction point in Japan-China relations."
+        },
+        {
+          "ja": "一帯一路は、インフラ輸出だけでなく、金融、港湾、資源、外交関係を束ねる対外戦略として読むべきである。",
+          "en": "The important thing is that this is not about a single clash."
+        },
+        {
+          "ja": "中国の対外関与は、地域秩序を支える協力でもある一方、依存関係を通じた影響力の拡張でもある。",
+          "en": "It is about sustained pressure and the gradual creation of facts on the water."
+        }
+      ]
+    },
+    {
+      "id": "economic-and-social-pressures",
+      "heading": {
+        "ja": "5. 経済・社会の圧力",
+        "en": "5. Economic and Social Pressures"
+      },
+      "pairs": [
+        {
+          "ja": "中国は世界第2位級の経済であり、製造業の厚みは今も大きい。",
+          "en": "China is the world’s largest manufacturing power and has deep industrial capacity in steel, batteries, electronics, automobiles, and shipping."
+        },
+        {
+          "ja": "2026年3月時点の全国人民代表大会では、2025年の成長率目標をおおむね5%前後に置き、同時に内需拡大と先端製造への投資を重視していた。",
+          "en": "That is why AI, semiconductors, advanced manufacturing tools, and critical-resource supply chains are both economic and security issues."
+        },
+        {
+          "ja": "ただし、強みの裏側には調整圧力がある。",
+          "en": "The Pentagon report also stresses that China treats AI and dual-use technologies as strategically important in both military and economic terms, while trying to extend its technology and influence through foreign relations."
+        },
+        {
+          "ja": "不動産の調整は家計資産と地方財政を同時に痛め、地方政府債務は公共投資の余地を狭める。",
+          "en": "Belt and Road should be read not just as infrastructure export, but as a strategy that ties together finance, ports, resources, and diplomacy."
+        },
+        {
+          "ja": "世界銀行は、こうした問題に対して、単なる景気刺激では足りず、より大きな構造改革が必要だと警告した。",
+          "en": "China’s external engagement can support regional cooperation, but it also extends influence through dependence."
+        },
+        {
+          "ja": "人口動態も重い。",
+          "en": "China remains a second-tier global economy with a very large industrial base."
+        },
+        {
+          "ja": "中国の人口はピークアウトし、出生は低下し、死亡が出生を上回る局面が定着しつつある。",
+          "en": "At the March 2026 National People’s Congress, the growth target for 2025 was set at around 5 percent, while policy continued to emphasize domestic demand and advanced manufacturing."
+        },
+        {
+          "ja": "都市化は進んだが、地域格差、年齢構成、教育水準、民族構成は依然として一様ではない。",
+          "en": "But the strengths have costs."
+        },
+        {
+          "ja": "若年雇用は、景気指標の改善だけでは解消しない政治課題として残る。",
+          "en": "Property adjustment hurts household balance sheets and local public finances at the same time, while local government debt narrows room for stimulus."
+        },
+        {
+          "ja": "雇用の質が安定しなければ、消費回復も結婚・出産の回復も鈍る。",
+          "en": "The World Bank warned that these problems require deeper structural reform, not just ordinary cyclical support."
+        },
+        {
+          "ja": "中国の市民生活は一枚岩ではない。",
+          "en": "Demography is another heavy constraint."
+        },
+        {
+          "ja": "都市と農村、沿海部と内陸部、漢族と少数民族、国有部門と民間部門、若年層と高齢層で、機会と不満の形が違う。",
+          "en": "China’s population has peaked, births have fallen, and deaths are now outpacing births."
+        },
+        {
+          "ja": "だから、社会安定を語るときも、単純な「統制されているから安定」という理解は危うい。",
+          "en": "Urbanization has advanced, but regional inequality, age structure, education, and ethnic composition are still far from uniform."
+        }
+      ]
+    },
+    {
+      "id": "implications-for-japan-and-east-asia",
+      "heading": {
+        "ja": "6. 日本・東アジアへの含意",
+        "en": "6. Implications for Japan and East Asia"
+      },
+      "pairs": [
+        {
+          "ja": "第一に、日本は中国を市場としてだけではなく、強制力を持つ国家として読む必要がある。",
+          "en": "Youth employment remains a political problem that will not be solved by a simple improvement in headline growth."
+        },
+        {
+          "ja": "海上交通、サプライチェーン、レアアース、通信、データ、海底ケーブルは、商業問題であると同時に安全保障問題である。",
+          "en": "If job quality does not stabilize, consumer recovery and family formation will both stay weak."
+        },
+        {
+          "ja": "第二に、台湾有事は日米同盟の抽象論ではなく、実際の防空、避難、物流、通信、在日米軍の運用、世論対応に落ちる。",
+          "en": "Chinese society is not monolithic."
+        },
+        {
+          "ja": "そこで重要なのは、平時から危機のコストを見積もることである。",
+          "en": "Urban and rural China, coastal and inland regions, Han and minority communities, state-owned and private sectors, and younger and older cohorts all experience opportunity and frustration differently."
+        },
+        {
+          "ja": "第三に、AIと半導体、EVと電池、製造装置と素材の問題は、別々ではなく一つの経済安全保障の束として扱うべきである。",
+          "en": "So it is risky to treat social stability as if it only meant control."
+        },
+        {
+          "ja": "中国の製造業の深さは、対外依存を減らす力でもあり、逆に供給停止や制裁のレバレッジを生む弱点でもある。",
+          "en": "First, Japan needs to read China as a coercive state, not only as a market."
+        },
+        {
+          "ja": "第四に、中国の国内統制が強いほど、対外行動が自動的に予測可能になるわけではない。",
+          "en": "Sea lanes, supply chains, rare earths, communications, data, and submarine cables are commercial issues and security issues at the same time."
+        },
+        {
+          "ja": "むしろ、内部の政治安全を守るために、外で強硬に見える行動が選ばれやすい。",
+          "en": "Second, a Taiwan contingency would not stay in the abstract realm of alliance talk."
+        }
+      ]
+    },
+    {
+      "id": "monitoring-points",
+      "heading": {
+        "ja": "7. 監視点",
+        "en": "7. Monitoring Points"
+      },
+      "pairs": [
+        {
+          "ja": "中国をニュース読解用の国別プロファイルとして使うなら、次の5点を定点観測するとよい。",
+          "en": "It would become a practical issue of air defense, evacuation, logistics, communications, U.S. force operations in Japan, and public communication."
+        },
+        {
+          "ja": "台湾周辺での演習頻度と、実弾的な封鎖・検査・航行妨害の増減。",
+          "en": "The point is to estimate the cost of a crisis before it arrives."
+        },
+        {
+          "ja": "南シナ海と東シナ海での海警活動と既成事実化のテンポ。",
+          "en": "Third, AI and semiconductors, EVs and batteries, and advanced manufacturing tools and materials should be treated as one economic security bundle."
+        },
+        {
+          "ja": "不動産、地方財政、内需刺激の組み合わせが、成長率より先に家計心理を改善できるか。",
+          "en": "China’s industrial depth is both a source of resilience and a source of leverage through supply disruptions and sanctions risk."
+        },
+        {
+          "ja": "AI、半導体、電池、EV、先端製造装置での自立化が、輸出規制をどこまで吸収するか。",
+          "en": "Fourth, stronger domestic control does not automatically make China’s external behavior more predictable."
+        },
+        {
+          "ja": "人口減少、少子化、若年雇用、都市と農村の格差が、社会安定をどう変えるか。",
+          "en": "In practice, harder-looking moves abroad can become more attractive when the goal is to protect internal political security."
+        }
+      ]
+    },
+    {
+      "id": "risks-and-limits",
+      "heading": {
+        "ja": "8. リスク・限界",
+        "en": "8. Risks and Limits"
+      },
+      "pairs": [
+        {
+          "ja": "本稿の限界は三つある。",
+          "en": "If you use China as a country profile for news reading, five indicators are worth tracking."
+        },
+        {
+          "ja": "第一に、公開情報に依拠しているため、党内の非公開の権力交渉までは見えない。",
+          "en": "The frequency of exercises around Taiwan and any increase in blockade-like inspections or interference with shipping."
+        },
+        {
+          "ja": "第二に、経済指標は発表時点で変わりうるので、本文の一部は将来の統計で上書きされる。",
+          "en": "Coast guard activity and the tempo of facts-on-the-water tactics in the South and East China Seas."
+        },
+        {
+          "ja": "第三に、台湾や海洋秩序の将来は、公表情報からの推定にとどまる部分がある。",
+          "en": "Whether property support, local finance, and domestic-demand stimulus can improve household sentiment before headline growth does."
+        },
+        {
+          "ja": "当面の中国は、国内統制を維持しながら、台湾海峡、海上秩序、技術覇権、供給網の四つで外向きを強める可能性が高い。",
+          "en": "How far China’s push for self-sufficiency in AI, semiconductors, batteries, EVs, and advanced manufacturing tools can absorb export controls."
+        },
+        {
+          "ja": "したがって、日本に必要なのは、対中政策を一つのテーマではなく、抑止、通商、技術、世論、危機管理の束として設計することである。",
+          "en": "How population decline, low fertility, youth employment, and the urban-rural gap reshape social stability."
+        }
+      ]
+    }
+  ]
+}

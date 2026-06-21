@@ -141,12 +141,12 @@
 					"ja": "また、二十世紀の堀は産業構造にあったが、今世紀の唯一の堀はソフトウェアだと主張した。"
 				},
 				{
-					"en": "In this view, Palantir's competitors are not just BI vendors.",
+					"en": "In this view, Palantir competes with BI vendors.",
 					"ja": "この見方では、Palantirの競争相手は単なるBIベンダーではない。"
 				},
 				{
-					"en": "Bureaucracy, traditional SI, departmental SaaS, Excel, procurement systems, and organizational data insufficiency themselves become competitors.",
-					"ja": "官僚制、旧来SI、部門別SaaS、Excel、調達制度、組織のデータ不全そのものが競争相手になる。"
+					"ja": "官僚制、旧来SI、部門別SaaS、Excel、調達制度、組織のデータ不全そのものが競争相手になる。",
+					"en": "Bureaucracy, traditional SI, departmental SaaS, Excel, procurement systems, and organizational data insufficiency themselves become competitors."
 				},
 				{
 					"en": "The first insight that can be gleaned from this history is that Palantir's products are premised on \"reshaping an organization\" rather than \"implementing\" it.",
@@ -226,7 +226,7 @@
 				},
 				{
 					"en": "In short, the most profound lesson from Palantir's history is that competitive advantage in the age of AI lies not in having a model, but in translating an organization's reality into a structure that software can read, change, and audit.",
-					"ja": "要するに、Palantirの歴史から得られる最も深い教訓は、AI時代の競争優位は「モデルを持つこと」ではなく、「組織の現実を、ソフトウェアが読めて、変えられて、監査できる構造に変換すること」にある、ということだ。"
+					"ja": "Palantirの歴史から得られる最も深い教訓は、AI時代の競争優位は「モデルを持つこと」ではなく、「組織の現実を、ソフトウェアが読めて、変えられて、監査できる構造に変換すること」にある、ということだ。"
 				},
 				{
 					"en": "Palantir is leading the way in this regard.",
@@ -258,7 +258,7 @@
 					"ja": "一般的なRDF/OWL型のオントロジーは、概念、関係、制約を機械可読に表す知識表現の枠組みである。"
 				},
 				{
-					"en": "Palantir's Ontology is not just a similar \"semantics,\" but also includes a \"kinetic theory\" for implementing business changes.",
+					"en": "Palantir's Ontology adds a \"kinetic theory\" for implementing business changes to similar semantics.",
 					"ja": "PalantirのOntologyはそれに近い「意味論」だけでは足りず、業務上の変更を実行する「運動論」を含む。"
 				},
 				{
@@ -291,7 +291,7 @@
 			},
 			"pairs": [
 				{
-					"en": "AIP is not just a product that connects chatbots to internal data.",
+					"en": "AIP does more than connect chatbots to internal data.",
 					"ja": "AIPは、単にチャットボットを社内データにつなぐ製品ではない。"
 				},
 				{
@@ -299,7 +299,7 @@
 					"ja": "Palantirの説明では、AIPはOntology、開発ツール、評価、エージェント、オートメーション、LLM接続をまとめ、LLMが業務データ・業務ロジック・業務アクションにアクセスできるようにする。"
 				},
 				{
-					"en": "What is important is that LLM does not access all data on its own, but operates based on existing Foundry/Ontology authority, auditing, and lineage.",
+					"en": "LLMs do not access all data on their own; they operate based on existing Foundry/Ontology authority, auditing, and lineage.",
 					"ja": "重要なのは、LLMが勝手に全データへアクセスするのではなく、既存のFoundry/Ontologyの権限、監査、系譜の上で動く点である。"
 				},
 				{

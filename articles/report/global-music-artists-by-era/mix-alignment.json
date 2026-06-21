@@ -1,0 +1,1216 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "artist-list",
+      "heading": {
+        "ja": "国別・年代別アーティスト一覧",
+        "en": "Country and era artist list"
+      },
+      "pairs": [
+        {
+          "ja": "Michael Jackson - Motown出身から世界的ソロスターへ進み、MTV時代の映像・ダンス・R&B/ポップ融合を決定づけた。",
+          "en": "Michael Jackson - From Motown child star to global solo icon, he defined the MTV age through video, dance, R&B, and pop."
+        },
+        {
+          "ja": "Madonna - ニューヨークのクラブ文化から登場し、音楽・ファッション・映像・性的自己表現を結びつけた。",
+          "en": "Madonna - Emerging from New York club culture, she fused music, fashion, video, and sexual self-presentation."
+        },
+        {
+          "ja": "Prince - ミネアポリスを拠点に、ファンク、ロック、R&Bを自作自演で統合した作家型スターである。",
+          "en": "Prince - Based in Minneapolis, he merged funk, rock, R&B, production, and performance into an auteur model."
+        },
+        {
+          "ja": "Whitney Houston - ゴスペルとR&Bの基盤から、圧倒的な歌唱力で80年代後半のポップ・バラードを代表した。",
+          "en": "Whitney Houston - Rooted in gospel and R&B, she became the definitive late-1980s pop-ballad vocalist."
+        },
+        {
+          "ja": "Bruce Springsteen - 労働者階級の物語、アメリカンロック、スタジアムライブを結び、国民的存在になった。",
+          "en": "Bruce Springsteen - He joined working-class narrative, American rock, and stadium performance into a national figure."
+        },
+        {
+          "ja": "Mariah Carey - 圧倒的な声域とR&B寄りのポップで、90年代前半から米国チャートを支配した。",
+          "en": "Mariah Carey - Her vocal range and R&B-inflected pop dominated U.S. charts from the early 1990s."
+        },
+        {
+          "ja": "Nirvana - シアトルのグランジを主流化し、ロックの価値観を80年代的な華やかさから変えた。",
+          "en": "Nirvana - The Seattle band made grunge mainstream and changed rock after 1980s gloss."
+        },
+        {
+          "ja": "Tupac Shakur - 西海岸ヒップホップ、社会批評、個人史を重ね、死後も文化的象徴になった。",
+          "en": "Tupac Shakur - He combined West Coast hip-hop, social commentary, biography, and posthumous myth."
+        },
+        {
+          "ja": "Dr. Dre - N.W.A.後にGファンクを確立し、Snoop DoggやEminemへ続くプロデューサー軸にもなった。",
+          "en": "Dr. Dre - After N.W.A., he defined G-funk and became the production link to Snoop Dogg and Eminem."
+        },
+        {
+          "ja": "Garth Brooks - カントリーを巨大アリーナ級のポップ市場へ押し上げ、90年代米国音楽の規模感を変えた。",
+          "en": "Garth Brooks - He pushed country into an arena-scale pop market and changed its commercial reach."
+        },
+        {
+          "ja": "Beyoncé - Destiny's Childからソロへ移行し、R&B、ポップ、映像作品、ライブ演出を統合した。",
+          "en": "Beyoncé - Moving from Destiny's Child to solo work, she integrated R&B, pop, visuals, and live spectacle."
+        },
+        {
+          "ja": "Eminem - デトロイトから登場し、白人ラッパーとしてヒップホップの主流性と技術性を拡張した。",
+          "en": "Eminem - From Detroit, he expanded mainstream hip-hop as a white rapper with technical force."
+        },
+        {
+          "ja": "Kanye West - プロデューサーからラッパーへ転じ、サンプリング、ファッション、アルバム設計を変えた。",
+          "en": "Kanye West - He moved from producer to rapper and reshaped sampling, fashion, and album design."
+        },
+        {
+          "ja": "Britney Spears - ティーンポップの象徴として、MTV末期からCDセールス時代のスター制度を牽引した。",
+          "en": "Britney Spears - She became the teen-pop symbol of late MTV and peak CD-era star marketing."
+        },
+        {
+          "ja": "Alicia Keys - クラシックピアノとR&Bを結び、ネオソウル以後のシンガーソングライター像を広げた。",
+          "en": "Alicia Keys - She connected classical piano with R&B and widened the neo-soul singer-songwriter model."
+        },
+        {
+          "ja": "Taylor Swift - カントリー出身からポップへ転換し、ソングライティング、ファン経済、再録戦略で時代を作った。",
+          "en": "Taylor Swift - Moving from country to pop, she shaped songwriting, fan economics, and rerecording strategy."
+        },
+        {
+          "ja": "Drake - カナダ出身だが米国ヒップホップ/R&B市場の中心となり、ストリーミング時代の単曲消費を体現した。",
+          "en": "Drake - Canadian-born but central to U.S. hip-hop/R&B, he embodied streaming-era single consumption."
+        },
+        {
+          "ja": "Lady Gaga - ダンスポップ、演劇性、ファッション、LGBTQ+支持を組み合わせたスター像を築いた。",
+          "en": "Lady Gaga - She built a star persona from dance-pop, theatre, fashion, and LGBTQ+ advocacy."
+        },
+        {
+          "ja": "Kendrick Lamar - コンシャスラップ、ジャズ/ファンク継承、アルバム単位の物語性で2010年代ヒップホップを代表した。",
+          "en": "Kendrick Lamar - He defined 2010s hip-hop through conscious rap, jazz/funk inheritance, and album narrative."
+        },
+        {
+          "ja": "Billie Eilish - ベッドルームポップ的制作と暗いミニマリズムで、10年代末のZ世代スターになった。",
+          "en": "Billie Eilish - With bedroom-pop production and dark minimalism, she became a late-2010s Gen Z star."
+        },
+        {
+          "ja": "Taylor Swift - ツアー、再録、アルバム連続投入で、2020年代前半の世界的音楽消費を象徴した。",
+          "en": "Taylor Swift - Tours, rerecordings, and rapid album cycles made her a symbol of early-2020s global music consumption."
+        },
+        {
+          "ja": "Beyoncé - ハウス、カントリー、ブラックミュージック史を再構成し、アルバムごとに文脈を作る存在であり続けた。",
+          "en": "Beyoncé - She reframed house, country, and Black music history through concept-driven albums."
+        },
+        {
+          "ja": "Morgan Wallen - カントリーのストリーミング巨大化を象徴し、米国内外でアルバム消費を伸ばした。",
+          "en": "Morgan Wallen - He represents the streaming-era expansion of country music beyond its older frame."
+        },
+        {
+          "ja": "SZA - オルタナR&Bと内省的な歌詞で、長期ヒット型の2020年代R&Bを代表した。",
+          "en": "SZA - Her alternative R&B and inward lyric writing define long-tail 2020s R&B listening."
+        },
+        {
+          "ja": "Olivia Rodrigo - ディズニー出身からロック色のあるZ世代ポップへ移り、デビュー作で国際的に浸透した。",
+          "en": "Olivia Rodrigo - From Disney roots, she turned toward rock-inflected Gen Z pop with global reach."
+        },
+        {
+          "ja": "Taylor Swift - IFPIの2025年Global Artist Chartで首位に立ち、カタログ全体で消費されるスターである。",
+          "en": "Taylor Swift - She topped IFPI's 2025 Global Artist Chart and remains a catalogue-wide listening force."
+        },
+        {
+          "ja": "Kendrick Lamar - 作品性、ライブ、社会的文脈、ラップ技術のすべてで現在の米国ヒップホップを代表する。",
+          "en": "Kendrick Lamar - He remains a U.S. hip-hop reference point through craft, live performance, and social context."
+        },
+        {
+          "ja": "Billie Eilish - 若いリスナー層と批評的評価を保ち、音数の少ない親密なポップを主流に置き続けている。",
+          "en": "Billie Eilish - She keeps critical and youth-audience strength with sparse, intimate pop."
+        },
+        {
+          "ja": "Sabrina Carpenter - 俳優出身から国際的なポップヒットへ進み、2025年IFPI上位にも入った。",
+          "en": "Sabrina Carpenter - Moving from acting into international pop hits, she reached IFPI's 2025 global upper tier."
+        },
+        {
+          "ja": "SZA - R&Bとポップの境界を越え、アルバム単位でも単曲単位でも強い聴取を維持している。",
+          "en": "SZA - She sustains strong album and track listening across R&B and pop audiences."
+        },
+        {
+          "ja": "Queen - 70年代からの蓄積に加え、80年代はライブと大衆性で英国ロックの象徴となった。",
+          "en": "Queen - With earlier foundations already built, Queen became an emblem of British rock mass appeal and live power."
+        },
+        {
+          "ja": "David Bowie - 80年代には世界的ポップスターとして再拡張し、変身するアーティスト像を維持した。",
+          "en": "David Bowie - In the 1980s he re-expanded as a global pop star while keeping the model of artist-as-transformation."
+        },
+        {
+          "ja": "George Michael - Wham!からソロへ進み、英国発のR&B寄りポップを国際市場に届けた。",
+          "en": "George Michael - From Wham! to solo work, he brought British R&B-leaning pop to the world market."
+        },
+        {
+          "ja": "Kate Bush - 実験性、文学性、身体表現を持つシンガーソングライターとして独自の地位を築いた。",
+          "en": "Kate Bush - She established a singular singer-songwriter model built on experiment, literature, and movement."
+        },
+        {
+          "ja": "The Smiths - マンチェスター発のインディロックとして、歌詞とギターサウンドで後続に強く影響した。",
+          "en": "The Smiths - From Manchester, they shaped indie rock through lyrics and guitar language."
+        },
+        {
+          "ja": "Oasis - ブリットポップの大衆的頂点となり、労働者階級的なロックの物語を再提示した。",
+          "en": "Oasis - They became Britpop's mass peak and revived a working-class rock narrative."
+        },
+        {
+          "ja": "Blur - ブリットポップの知的・都市的側面を担い、のちに実験的な方向へ広がった。",
+          "en": "Blur - They represented Britpop's urban and art-school side before moving into experimentation."
+        },
+        {
+          "ja": "Spice Girls - ガールグループ、商品展開、メディア戦略を結び、90年代ポップの象徴となった。",
+          "en": "Spice Girls - They linked girl-group pop, merchandising, media strategy, and 1990s identity language."
+        },
+        {
+          "ja": "Radiohead - オルタナティブロックから電子音楽的な実験へ進み、アルバム表現を更新した。",
+          "en": "Radiohead - They moved from alternative rock to electronic experiment and changed album expectations."
+        },
+        {
+          "ja": "The Prodigy - レイヴ、ビッグビート、ロックの身体性を結び、英国クラブ文化を世界へ出した。",
+          "en": "The Prodigy - They carried rave, big beat, and rock physicality into global popular culture."
+        },
+        {
+          "ja": "Coldplay - ポストBritpop以後のメロディックなロックで、世界的スタジアムバンドになった。",
+          "en": "Coldplay - After Britpop, they became a global stadium band built on melodic rock."
+        },
+        {
+          "ja": "Amy Winehouse - ジャズ、ソウル、R&Bを現代的に再構成し、短い活動で強い影響を残した。",
+          "en": "Amy Winehouse - She reworked jazz, soul, and R&B into a modern voice with lasting influence."
+        },
+        {
+          "ja": "Adele - 2000年代末に登場し、歌唱力と普遍的なバラードで次の10年代の巨大化を準備した。",
+          "en": "Adele - Emerging at the end of the decade, she prepared the next decade's vocal-ballad dominance."
+        },
+        {
+          "ja": "Arctic Monkeys - インターネット時代の口コミから登場し、英国ギターロックの新世代を代表した。",
+          "en": "Arctic Monkeys - Internet word-of-mouth helped them become the new face of British guitar rock."
+        },
+        {
+          "ja": "Muse - プログレッシブなロック、電子音、スタジアム演出を組み合わせた。",
+          "en": "Muse - They combined progressive rock, electronics, and stadium theatricality."
+        },
+        {
+          "ja": "Adele - アルバム単位で世界的な売上を記録し、ストリーミング前後をまたぐ歌手になった。",
+          "en": "Adele - She sold albums globally at a scale that bridged the pre-streaming and streaming eras."
+        },
+        {
+          "ja": "Ed Sheeran - ループペダル型の弾き語りから世界的ポップ作家へ成長した。",
+          "en": "Ed Sheeran - From loop-pedal solo performance, he became a global pop songwriter and performer."
+        },
+        {
+          "ja": "One Direction - オーディション番組出身のボーイバンドとして、SNS時代のファンダムを拡大した。",
+          "en": "One Direction - The TV-formed boy band expanded fandom in the social-media era."
+        },
+        {
+          "ja": "Dua Lipa - ダンスポップとファッション性を結び、英国発の国際ポップスターになった。",
+          "en": "Dua Lipa - She connected dance-pop and fashion into an international British pop-star model."
+        },
+        {
+          "ja": "Sam Smith - ソウルフルな歌唱とバラードで国際チャートに浸透した。",
+          "en": "Sam Smith - Their soulful voice and ballads reached global charts."
+        },
+        {
+          "ja": "Harry Styles - One Direction後にソロでロック、ポップ、ファッションを横断した。",
+          "en": "Harry Styles - After One Direction, he crossed rock, pop, fashion, and film-like celebrity."
+        },
+        {
+          "ja": "Dua Lipa - ディスコ/ダンスポップ路線を強め、国際市場で継続的に存在感を持つ。",
+          "en": "Dua Lipa - She reinforced disco and dance-pop as a durable international lane."
+        },
+        {
+          "ja": "Adele - リリース頻度は高くないが、作品ごとに世界的な注目を集めるアルバムアーティストである。",
+          "en": "Adele - With infrequent releases, she still commands global album attention."
+        },
+        {
+          "ja": "Central Cee - UK drillを国際的なヒップホップ文脈へ接続した。",
+          "en": "Central Cee - He brought UK drill into broader international hip-hop circulation."
+        },
+        {
+          "ja": "Raye - ソングライター経験を背景に、独立後の成功と批評評価で注目された。",
+          "en": "Raye - After writing for others, her independent breakthrough combined industry critique and vocal craft."
+        },
+        {
+          "ja": "Dua Lipa - 英国発のグローバルダンスポップを代表し、ライブとブランド展開も強い。",
+          "en": "Dua Lipa - She remains Britain's leading global dance-pop export."
+        },
+        {
+          "ja": "Raye - 自作性、歌唱力、業界構造への発言で現在の英国ポップを象徴する。",
+          "en": "Raye - Her writing, voice, and industry narrative make her a current British-pop focal point."
+        },
+        {
+          "ja": "Charli xcx - クラブ、ハイパーポップ、ネット文化を接続し、2020年代の批評的中心に立った。",
+          "en": "Charli xcx - She connects club culture, hyperpop, and internet culture in 2020s pop criticism."
+        },
+        {
+          "ja": "Central Cee - 英国ラップを米国・欧州の聴取圏へ押し出した。",
+          "en": "Central Cee - He pushes British rap into U.S. and European listening circuits."
+        },
+        {
+          "ja": "Fred again.. - プロデューサー出身で、電子音楽とライブ即興を大衆的に見せた。",
+          "en": "Fred again.. - The producer turned electronic live performance into mass, improvisational pop spectacle."
+        },
+        {
+          "ja": "サザンオールスターズ - 70年代末から続く国民的バンドで、80年代にポップ、ロック、歌謡の横断性を広げた。",
+          "en": "サザンオールスターズ - A national band that broadened the blend of pop, rock, and kayokyoku."
+        },
+        {
+          "ja": "松任谷由実 - ニューミュージックから都市生活の叙情へ進み、女性シンガーソングライター像を確立した。",
+          "en": "松任谷由実 - She defined urban lyricism and the Japanese female singer-songwriter model."
+        },
+        {
+          "ja": "松田聖子 - アイドル歌謡とメディア露出を結び、80年代日本のアイドル像を作った。",
+          "en": "松田聖子 - She built the 1980s Japanese idol template through songs, television, and image."
+        },
+        {
+          "ja": "中森明菜 - アイドルの枠を超えた表現力と影のある楽曲で、80年代後半の象徴となった。",
+          "en": "中森明菜 - She pushed idol singing toward darker expression and performance maturity."
+        },
+        {
+          "ja": "Yellow Magic Orchestra - テクノポップ、電子音楽、デザイン感覚で国内外のポップに影響した。",
+          "en": "Yellow Magic Orchestra - Their technopop and design sensibility influenced pop and electronic music internationally."
+        },
+        {
+          "ja": "Mr.Children - J-POPのバンド型ヒットを代表し、内省的な歌詞と大衆性を両立した。",
+          "en": "Mr.Children - They joined introspective lyrics with mass J-pop band success."
+        },
+        {
+          "ja": "B'z - ハードロック的なギターと歌謡的メロディを結び、巨大セールスを記録した。",
+          "en": "B'z - Their guitar-driven hard-rock pop produced massive Japanese sales."
+        },
+        {
+          "ja": "DREAMS COME TRUE - R&B、ポップ、ライブ力で90年代J-POPの中心にいた。",
+          "en": "DREAMS COME TRUE - They sat at the center of 1990s J-pop through R&B, pop, and live strength."
+        },
+        {
+          "ja": "安室奈美恵 - 小室哲哉プロデュース期を経て、ダンスポップとファッションの象徴になった。",
+          "en": "安室奈美恵 - She became a dance-pop and fashion icon under and after Tetsuya Komuro."
+        },
+        {
+          "ja": "宇多田ヒカル - 90年代末にR&B感覚と自作性で登場し、J-POPの語法を変えた。",
+          "en": "宇多田ヒカル - Arriving in the late 1990s, she changed J-pop language through R&B feel and authorship."
+        },
+        {
+          "ja": "浜崎あゆみ - 歌詞、ビジュアル、ファン文化を統合し、2000年代前半のJ-POPを代表した。",
+          "en": "浜崎あゆみ - Lyrics, visuals, and fan culture made her a defining early-2000s J-pop star."
+        },
+        {
+          "ja": "宇多田ヒカル - アルバム単位の完成度と国際的なR&B/ポップ感覚で影響を維持した。",
+          "en": "宇多田ヒカル - Her albums kept a high standard of craft and international pop/R&B sensibility."
+        },
+        {
+          "ja": "嵐 - ジャニーズ型アイドル、テレビ、ライブ、CD販売を結ぶ国民的グループになった。",
+          "en": "嵐 - The idol group linked television, live shows, CD sales, and national popularity."
+        },
+        {
+          "ja": "EXILE - ダンス&ボーカルグループとして、2000年代以降の男性グループ像を広げた。",
+          "en": "EXILE - They expanded the Japanese dance-and-vocal group model."
+        },
+        {
+          "ja": "倖田來未 - R&B、ダンス、女性の自己表現を前面に出し、2000年代のポップを代表した。",
+          "en": "倖田來未 - She foregrounded R&B, dance, and female self-presentation in 2000s pop."
+        },
+        {
+          "ja": "AKB48 - 劇場、握手会、総選挙を組み合わせ、参加型アイドル市場を巨大化した。",
+          "en": "AKB48 - Theater shows, handshakes, and elections turned participation into idol-market scale."
+        },
+        {
+          "ja": "Perfume - 中田ヤスタカの電子音と精密な振付で、日本のテクノポップを更新した。",
+          "en": "Perfume - With Yasutaka Nakata's electronics and precise choreography, they updated Japanese technopop."
+        },
+        {
+          "ja": "ONE OK ROCK - 国内ロックから国際ツアーへ進み、日本のバンドの海外接続を広げた。",
+          "en": "ONE OK ROCK - They connected domestic rock with international touring."
+        },
+        {
+          "ja": "米津玄師 - ボカロ文化からメジャーへ移り、作家性と大衆性を両立した。",
+          "en": "米津玄師 - From Vocaloid culture, he entered the mainstream while keeping authorship."
+        },
+        {
+          "ja": "星野源 - 俳優、作家、音楽家として横断的に活動し、日常感のあるポップを広げた。",
+          "en": "星野源 - As actor, writer, and musician, he spread everyday-feeling pop across media."
+        },
+        {
+          "ja": "YOASOBI - 小説原作型の制作と配信時代のヒットで、日本語ポップの海外聴取も伸ばした。",
+          "en": "YOASOBI - Fiction-based production and streaming hits extended Japanese-language pop overseas."
+        },
+        {
+          "ja": "Ado - 顔出しを抑えた歌唱表現とボカロ/ネット文化を接続し、若年層に浸透した。",
+          "en": "Ado - With hidden-face performance and Vocaloid-network roots, she reached young listeners quickly."
+        },
+        {
+          "ja": "Official髭男dism - バンド演奏と高度なポップ作曲で、配信時代のJ-POP中心に立った。",
+          "en": "Official髭男dism - Their band performance and sophisticated pop writing anchor streaming-era J-pop."
+        },
+        {
+          "ja": "King Gnu - ミクスチャー、アート性、タイアップを結び、ロックバンドの新しい大衆性を示した。",
+          "en": "King Gnu - They join art-school aesthetics, rock, mix, and major tie-ins."
+        },
+        {
+          "ja": "Creepy Nuts - ヒップホップ、テレビ、アニメ主題歌を通じて国際的な単曲ヒットを得た。",
+          "en": "Creepy Nuts - Hip-hop, television, and anime themes gave them international track visibility."
+        },
+        {
+          "ja": "Mrs. GREEN APPLE - 2020年代半ばの国内チャートとライブ市場で大きな存在感を持つバンドである。",
+          "en": "Mrs. GREEN APPLE - The band is highly visible in mid-2020s Japanese charts and live culture."
+        },
+        {
+          "ja": "米津玄師 - ボカロ由来の作家性を保ちながら、映画、アニメ、ゲーム主題歌でも広く聴かれる。",
+          "en": "米津玄師 - His Vocaloid-rooted authorship remains powerful across film, anime, and game themes."
+        },
+        {
+          "ja": "YOASOBI - アニメ、海外フェス、配信を通じて日本語曲の国際接続を拡大している。",
+          "en": "YOASOBI - Anime, overseas festivals, and streaming keep extending Japanese-language reach."
+        },
+        {
+          "ja": "Snow Man - CD販売、映像、ライブ、ファンダムを結び、フィジカル市場の強さを示す。",
+          "en": "Snow Man - They show the continuing strength of physical sales, video, live shows, and fandom."
+        },
+        {
+          "ja": "Ado - 歌唱力と匿名性を武器に、国内外ツアーへ展開している。",
+          "en": "Ado - Her voice and relative anonymity support domestic and international touring."
+        },
+        {
+          "ja": "Cho Yong-pil - Cho Yong-pilは1980年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Cho Yong-pil - Cho Yong-pil is a representative entry point for the 1980s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Lee Moon-sae - Lee Moon-saeは1980年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Lee Moon-sae - Lee Moon-sae is a representative entry point for the 1980s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Kim Wan-sun - Kim Wan-sunは1980年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Kim Wan-sun - Kim Wan-sun is a representative entry point for the 1980s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Deulgukhwa - Deulgukhwaは1980年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Deulgukhwa - Deulgukhwa is a representative entry point for the 1980s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Nami - Namiは1980年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Nami - Nami is a representative entry point for the 1980s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Seo Taiji and Boys - Seo Taiji and Boysは1990年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Seo Taiji and Boys - Seo Taiji and Boys is a representative entry point for the 1990s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "H.O.T. - H.O.T.は1990年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "H.O.T. - H.O.T. is a representative entry point for the 1990s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "S.E.S. - S.E.S.は1990年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "S.E.S. - S.E.S. is a representative entry point for the 1990s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Kim Gun-mo - Kim Gun-moは1990年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Kim Gun-mo - Kim Gun-mo is a representative entry point for the 1990s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Deux - Deuxは1990年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Deux - Deux is a representative entry point for the 1990s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "BoA - BoAは2000年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "BoA - BoA is a representative entry point for the 2000s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "TVXQ! - TVXQ!は2000年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "TVXQ! - TVXQ! is a representative entry point for the 2000s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "BIGBANG - BIGBANGは2000年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "BIGBANG - BIGBANG is a representative entry point for the 2000s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Girls' Generation - Girls' Generationは2000年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Girls' Generation - Girls' Generation is a representative entry point for the 2000s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Wonder Girls - Wonder Girlsは2000年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Wonder Girls - Wonder Girls is a representative entry point for the 2000s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "BTS - BTSは2010年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "BTS - BTS is a representative entry point for the 2010s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "BLACKPINK - BLACKPINKは2010年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "BLACKPINK - BLACKPINK is a representative entry point for the 2010s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "EXO - EXOは2010年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "EXO - EXO is a representative entry point for the 2010s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "TWICE - TWICEは2010年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "TWICE - TWICE is a representative entry point for the 2010s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "IU - IUは2010年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "IU - IU is a representative entry point for the 2010s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Stray Kids - Stray Kidsは2020年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Stray Kids - Stray Kids is a representative entry point for the 2020s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "SEVENTEEN - SEVENTEENは2020年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "SEVENTEEN - SEVENTEEN is a representative entry point for the 2020s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "NewJeans - NewJeansは2020年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "NewJeans - NewJeans is a representative entry point for the 2020s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "aespa - aespaは2020年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "aespa - aespa is a representative entry point for the 2020s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "IVE - IVEは2020年代の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "IVE - IVE is a representative entry point for the 2020s. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Stray Kids - Stray Kidsは現在の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "Stray Kids - Stray Kids is a representative entry point for the Today. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "SEVENTEEN - SEVENTEENは現在の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "SEVENTEEN - SEVENTEEN is a representative entry point for the Today. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "BTS - BTSは現在の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "BTS - BTS is a representative entry point for the Today. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "BLACKPINK - BLACKPINKは現在の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "BLACKPINK - BLACKPINK is a representative entry point for the Today. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "aespa - aespaは現在の代表的な入口であり、国民的歌手、ロック、テレビ歌謡、ダンス文化を通じて、K-pop以前の韓国大衆音楽を形づくった。",
+          "en": "aespa - aespa is a representative entry point for the Today. It shows Korean popular music before and after K-pop through national singers, rock, television pop, and dance culture."
+        },
+        {
+          "ja": "Mylène Farmer - Mylène Farmerは1980年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Mylène Farmer - Mylène Farmer is a representative entry point for the 1980s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Jean-Jacques Goldman - Jean-Jacques Goldmanは1980年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Jean-Jacques Goldman - Jean-Jacques Goldman is a representative entry point for the 1980s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Indochine - Indochineは1980年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Indochine - Indochine is a representative entry point for the 1980s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Daniel Balavoine - Daniel Balavoineは1980年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Daniel Balavoine - Daniel Balavoine is a representative entry point for the 1980s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Vanessa Paradis - Vanessa Paradisは1980年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Vanessa Paradis - Vanessa Paradis is a representative entry point for the 1980s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "MC Solaar - MC Solaarは1990年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "MC Solaar - MC Solaar is a representative entry point for the 1990s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Daft Punk - Daft Punkは1990年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Daft Punk - Daft Punk is a representative entry point for the 1990s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "IAM - IAMは1990年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "IAM - IAM is a representative entry point for the 1990s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Zazie - Zazieは1990年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Zazie - Zazie is a representative entry point for the 1990s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Patricia Kaas - Patricia Kaasは1990年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Patricia Kaas - Patricia Kaas is a representative entry point for the 1990s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "David Guetta - David Guettaは2000年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "David Guetta - David Guetta is a representative entry point for the 2000s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Phoenix - Phoenixは2000年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Phoenix - Phoenix is a representative entry point for the 2000s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Air - Airは2000年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Air - Air is a representative entry point for the 2000s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Diam's - Diam'sは2000年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Diam's - Diam's is a representative entry point for the 2000s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Amel Bent - Amel Bentは2000年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Amel Bent - Amel Bent is a representative entry point for the 2000s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Christine and the Queens - Christine and the Queensは2010年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Christine and the Queens - Christine and the Queens is a representative entry point for the 2010s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Maître Gims - Maître Gimsは2010年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Maître Gims - Maître Gims is a representative entry point for the 2010s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "PNL - PNLは2010年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "PNL - PNL is a representative entry point for the 2010s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Aya Nakamura - Aya Nakamuraは2010年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Aya Nakamura - Aya Nakamura is a representative entry point for the 2010s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Jain - Jainは2010年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Jain - Jain is a representative entry point for the 2010s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Aya Nakamura - Aya Nakamuraは2020年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Aya Nakamura - Aya Nakamura is a representative entry point for the 2020s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Jul - Julは2020年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Jul - Jul is a representative entry point for the 2020s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Gazo - Gazoは2020年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Gazo - Gazo is a representative entry point for the 2020s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Orelsan - Orelsanは2020年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Orelsan - Orelsan is a representative entry point for the 2020s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Zaho de Sagazan - Zaho de Sagazanは2020年代の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Zaho de Sagazan - Zaho de Sagazan is a representative entry point for the 2020s. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Aya Nakamura - Aya Nakamuraは現在の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Aya Nakamura - Aya Nakamura is a representative entry point for the Today. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Jul - Julは現在の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Jul - Jul is a representative entry point for the Today. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Gazo - Gazoは現在の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Gazo - Gazo is a representative entry point for the Today. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Zaho de Sagazan - Zaho de Sagazanは現在の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Zaho de Sagazan - Zaho de Sagazan is a representative entry point for the Today. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Phoenix - Phoenixは現在の代表的な入口であり、フレンチポップ、ロック、ラップ、電子音楽を通じて、フランス語圏の時代感を示す。",
+          "en": "Phoenix - Phoenix is a representative entry point for the Today. It marks French-language pop through chanson-inflected pop, rock, rap, electronic music, and Afropop/R&B."
+        },
+        {
+          "ja": "Nena - Nenaは1980年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Nena - Nena is a representative entry point for the 1980s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Scorpions - Scorpionsは1980年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Scorpions - Scorpions is a representative entry point for the 1980s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Kraftwerk - Kraftwerkは1980年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Kraftwerk - Kraftwerk is a representative entry point for the 1980s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Modern Talking - Modern Talkingは1980年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Modern Talking - Modern Talking is a representative entry point for the 1980s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Herbert Grönemeyer - Herbert Grönemeyerは1980年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Herbert Grönemeyer - Herbert Grönemeyer is a representative entry point for the 1980s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Rammstein - Rammsteinは1990年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Rammstein - Rammstein is a representative entry point for the 1990s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Die Toten Hosen - Die Toten Hosenは1990年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Die Toten Hosen - Die Toten Hosen is a representative entry point for the 1990s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Scooter - Scooterは1990年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Scooter - Scooter is a representative entry point for the 1990s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Blümchen - Blümchenは1990年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Blümchen - Blümchen is a representative entry point for the 1990s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Enigma - Enigmaは1990年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Enigma - Enigma is a representative entry point for the 1990s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Tokio Hotel - Tokio Hotelは2000年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Tokio Hotel - Tokio Hotel is a representative entry point for the 2000s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Sarah Connor - Sarah Connorは2000年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Sarah Connor - Sarah Connor is a representative entry point for the 2000s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Seeed - Seeedは2000年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Seeed - Seeed is a representative entry point for the 2000s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Cascada - Cascadaは2000年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Cascada - Cascada is a representative entry point for the 2000s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Wir sind Helden - Wir sind Heldenは2000年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Wir sind Helden - Wir sind Helden is a representative entry point for the 2000s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Helene Fischer - Helene Fischerは2010年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Helene Fischer - Helene Fischer is a representative entry point for the 2010s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Robin Schulz - Robin Schulzは2010年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Robin Schulz - Robin Schulz is a representative entry point for the 2010s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Cro - Croは2010年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Cro - Cro is a representative entry point for the 2010s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Mark Forster - Mark Forsterは2010年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Mark Forster - Mark Forster is a representative entry point for the 2010s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Kraftklub - Kraftklubは2010年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Kraftklub - Kraftklub is a representative entry point for the 2010s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Apache 207 - Apache 207は2020年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Apache 207 - Apache 207 is a representative entry point for the 2020s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Luciano - Lucianoは2020年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Luciano - Luciano is a representative entry point for the 2020s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Ayliva - Aylivaは2020年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Ayliva - Ayliva is a representative entry point for the 2020s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Nina Chuba - Nina Chubaは2020年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Nina Chuba - Nina Chuba is a representative entry point for the 2020s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "AnnenMayKantereit - AnnenMayKantereitは2020年代の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "AnnenMayKantereit - AnnenMayKantereit is a representative entry point for the 2020s. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Ayliva - Aylivaは現在の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Ayliva - Ayliva is a representative entry point for the Today. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Apache 207 - Apache 207は現在の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Apache 207 - Apache 207 is a representative entry point for the Today. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Luciano - Lucianoは現在の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Luciano - Luciano is a representative entry point for the Today. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Nina Chuba - Nina Chubaは現在の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Nina Chuba - Nina Chuba is a representative entry point for the Today. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Rammstein - Rammsteinは現在の代表的な入口であり、ドイツ語ポップ、ロック、電子音楽、クラブ音楽、Deutschrapの変化を示す。",
+          "en": "Rammstein - Rammstein is a representative entry point for the Today. It shows changes in German-language pop, rock, electronic music, club music, and Deutschrap."
+        },
+        {
+          "ja": "Legião Urbana - Legião Urbanaは1980年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Legião Urbana - Legião Urbana is a representative entry point for the 1980s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Titãs - Titãsは1980年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Titãs - Titãs is a representative entry point for the 1980s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Cazuza - Cazuzaは1980年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Cazuza - Cazuza is a representative entry point for the 1980s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Os Paralamas do Sucesso - Os Paralamas do Sucessoは1980年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Os Paralamas do Sucesso - Os Paralamas do Sucesso is a representative entry point for the 1980s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Xuxa - Xuxaは1980年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Xuxa - Xuxa is a representative entry point for the 1980s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Sepultura - Sepulturaは1990年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Sepultura - Sepultura is a representative entry point for the 1990s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Marisa Monte - Marisa Monteは1990年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Marisa Monte - Marisa Monte is a representative entry point for the 1990s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Skank - Skankは1990年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Skank - Skank is a representative entry point for the 1990s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Daniela Mercury - Daniela Mercuryは1990年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Daniela Mercury - Daniela Mercury is a representative entry point for the 1990s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Racionais MC's - Racionais MC'sは1990年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Racionais MC's - Racionais MC's is a representative entry point for the 1990s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Ivete Sangalo - Ivete Sangaloは2000年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Ivete Sangalo - Ivete Sangalo is a representative entry point for the 2000s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Tribalistas - Tribalistasは2000年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Tribalistas - Tribalistas is a representative entry point for the 2000s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Seu Jorge - Seu Jorgeは2000年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Seu Jorge - Seu Jorge is a representative entry point for the 2000s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Sandy & Junior - Sandy & Juniorは2000年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Sandy & Junior - Sandy & Junior is a representative entry point for the 2000s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Charlie Brown Jr. - Charlie Brown Jr.は2000年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Charlie Brown Jr. - Charlie Brown Jr. is a representative entry point for the 2000s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Anitta - Anittaは2010年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Anitta - Anitta is a representative entry point for the 2010s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Emicida - Emicidaは2010年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Emicida - Emicida is a representative entry point for the 2010s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Criolo - Crioloは2010年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Criolo - Criolo is a representative entry point for the 2010s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Luan Santana - Luan Santanaは2010年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Luan Santana - Luan Santana is a representative entry point for the 2010s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Pabllo Vittar - Pabllo Vittarは2010年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Pabllo Vittar - Pabllo Vittar is a representative entry point for the 2010s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Anitta - Anittaは2020年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Anitta - Anitta is a representative entry point for the 2020s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Ludmilla - Ludmillaは2020年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Ludmilla - Ludmilla is a representative entry point for the 2020s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Marília Mendonça - Marília Mendonçaは2020年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Marília Mendonça - Marília Mendonça is a representative entry point for the 2020s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Matuê - Matuêは2020年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Matuê - Matuê is a representative entry point for the 2020s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Gloria Groove - Gloria Grooveは2020年代の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Gloria Groove - Gloria Groove is a representative entry point for the 2020s. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Anitta - Anittaは現在の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Anitta - Anitta is a representative entry point for the Today. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Ludmilla - Ludmillaは現在の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Ludmilla - Ludmilla is a representative entry point for the Today. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Matuê - Matuêは現在の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Matuê - Matuê is a representative entry point for the Today. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Ana Castela - Ana Castelaは現在の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Ana Castela - Ana Castela is a representative entry point for the Today. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Jão - Jãoは現在の代表的な入口であり、ロック、MPB、Axé、ヒップホップ、ファンク、sertanejoを通じてブラジル市場の厚みを示す。",
+          "en": "Jão - Jão is a representative entry point for the Today. It shows the depth of Brazil through rock, MPB, Axé, hip-hop, funk, sertanejo, and trap."
+        },
+        {
+          "ja": "Fela Kuti - Fela Kutiは1980年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Fela Kuti - Fela Kuti is a representative entry point for the 1980s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "King Sunny Adé - King Sunny Adéは1980年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "King Sunny Adé - King Sunny Adé is a representative entry point for the 1980s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Ebenezer Obey - Ebenezer Obeyは1980年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Ebenezer Obey - Ebenezer Obey is a representative entry point for the 1980s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Onyeka Onwenu - Onyeka Onwenuは1980年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Onyeka Onwenu - Onyeka Onwenu is a representative entry point for the 1980s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Majek Fashek - Majek Fashekは1980年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Majek Fashek - Majek Fashek is a representative entry point for the 1980s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Femi Kuti - Femi Kutiは1990年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Femi Kuti - Femi Kuti is a representative entry point for the 1990s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Lagbaja - Lagbajaは1990年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Lagbaja - Lagbaja is a representative entry point for the 1990s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Daddy Showkey - Daddy Showkeyは1990年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Daddy Showkey - Daddy Showkey is a representative entry point for the 1990s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "The Remedies - The Remediesは1990年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "The Remedies - The Remedies is a representative entry point for the 1990s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Sir Shina Peters - Sir Shina Petersは1990年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Sir Shina Peters - Sir Shina Peters is a representative entry point for the 1990s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "2Baba - 2Babaは2000年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "2Baba - 2Baba is a representative entry point for the 2000s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "D'banj - D'banjは2000年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "D'banj - D'banj is a representative entry point for the 2000s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "P-Square - P-Squareは2000年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "P-Square - P-Square is a representative entry point for the 2000s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Asa - Asaは2000年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Asa - Asa is a representative entry point for the 2000s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Nneka - Nnekaは2000年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Nneka - Nneka is a representative entry point for the 2000s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Wizkid - Wizkidは2010年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Wizkid - Wizkid is a representative entry point for the 2010s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Davido - Davidoは2010年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Davido - Davido is a representative entry point for the 2010s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Burna Boy - Burna Boyは2010年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Burna Boy - Burna Boy is a representative entry point for the 2010s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Tiwa Savage - Tiwa Savageは2010年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Tiwa Savage - Tiwa Savage is a representative entry point for the 2010s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Yemi Alade - Yemi Aladeは2010年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Yemi Alade - Yemi Alade is a representative entry point for the 2010s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Burna Boy - Burna Boyは2020年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Burna Boy - Burna Boy is a representative entry point for the 2020s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Rema - Remaは2020年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Rema - Rema is a representative entry point for the 2020s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Tems - Temsは2020年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Tems - Tems is a representative entry point for the 2020s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Asake - Asakeは2020年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Asake - Asake is a representative entry point for the 2020s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Ayra Starr - Ayra Starrは2020年代の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Ayra Starr - Ayra Starr is a representative entry point for the 2020s. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Burna Boy - Burna Boyは現在の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Burna Boy - Burna Boy is a representative entry point for the Today. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Rema - Remaは現在の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Rema - Rema is a representative entry point for the Today. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Tems - Temsは現在の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Tems - Tems is a representative entry point for the Today. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Asake - Asakeは現在の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Asake - Asake is a representative entry point for the Today. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Ayra Starr - Ayra Starrは現在の代表的な入口であり、Afrobeat、Juju、Naija pop、Afrobeatsをつなぎ、ナイジェリア音楽の国際化を示す。",
+          "en": "Ayra Starr - Ayra Starr is a representative entry point for the Today. It connects Afrobeat, juju, Naija pop, and Afrobeats as Nigerian music internationalized."
+        },
+        {
+          "ja": "Lata Mangeshkar - Lata Mangeshkarは1980年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Lata Mangeshkar - Lata Mangeshkar is a representative entry point for the 1980s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Kishore Kumar - Kishore Kumarは1980年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Kishore Kumar - Kishore Kumar is a representative entry point for the 1980s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Asha Bhosle - Asha Bhosleは1980年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Asha Bhosle - Asha Bhosle is a representative entry point for the 1980s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Ilaiyaraaja - Ilaiyaraajaは1980年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Ilaiyaraaja - Ilaiyaraaja is a representative entry point for the 1980s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Bappi Lahiri - Bappi Lahiriは1980年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Bappi Lahiri - Bappi Lahiri is a representative entry point for the 1980s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "A.R. Rahman - A.R. Rahmanは1990年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "A.R. Rahman - A.R. Rahman is a representative entry point for the 1990s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Kumar Sanu - Kumar Sanuは1990年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Kumar Sanu - Kumar Sanu is a representative entry point for the 1990s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Alka Yagnik - Alka Yagnikは1990年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Alka Yagnik - Alka Yagnik is a representative entry point for the 1990s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Udit Narayan - Udit Narayanは1990年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Udit Narayan - Udit Narayan is a representative entry point for the 1990s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Lucky Ali - Lucky Aliは1990年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Lucky Ali - Lucky Ali is a representative entry point for the 1990s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Shreya Ghoshal - Shreya Ghoshalは2000年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Shreya Ghoshal - Shreya Ghoshal is a representative entry point for the 2000s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Sonu Nigam - Sonu Nigamは2000年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Sonu Nigam - Sonu Nigam is a representative entry point for the 2000s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Sunidhi Chauhan - Sunidhi Chauhanは2000年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Sunidhi Chauhan - Sunidhi Chauhan is a representative entry point for the 2000s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Shaan - Shaanは2000年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Shaan - Shaan is a representative entry point for the 2000s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "KK - KKは2000年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "KK - KK is a representative entry point for the 2000s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Arijit Singh - Arijit Singhは2010年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Arijit Singh - Arijit Singh is a representative entry point for the 2010s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Neha Kakkar - Neha Kakkarは2010年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Neha Kakkar - Neha Kakkar is a representative entry point for the 2010s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Badshah - Badshahは2010年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Badshah - Badshah is a representative entry point for the 2010s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Yo Yo Honey Singh - Yo Yo Honey Singhは2010年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Yo Yo Honey Singh - Yo Yo Honey Singh is a representative entry point for the 2010s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Divine - Divineは2010年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Divine - Divine is a representative entry point for the 2010s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Arijit Singh - Arijit Singhは2020年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Arijit Singh - Arijit Singh is a representative entry point for the 2020s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Diljit Dosanjh - Diljit Dosanjhは2020年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Diljit Dosanjh - Diljit Dosanjh is a representative entry point for the 2020s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "AP Dhillon - AP Dhillonは2020年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "AP Dhillon - AP Dhillon is a representative entry point for the 2020s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "King - Kingは2020年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "King - King is a representative entry point for the 2020s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Anuv Jain - Anuv Jainは2020年代の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Anuv Jain - Anuv Jain is a representative entry point for the 2020s. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Arijit Singh - Arijit Singhは現在の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Arijit Singh - Arijit Singh is a representative entry point for the Today. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Diljit Dosanjh - Diljit Dosanjhは現在の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Diljit Dosanjh - Diljit Dosanjh is a representative entry point for the Today. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Shreya Ghoshal - Shreya Ghoshalは現在の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Shreya Ghoshal - Shreya Ghoshal is a representative entry point for the Today. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "AP Dhillon - AP Dhillonは現在の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "AP Dhillon - AP Dhillon is a representative entry point for the Today. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Anuv Jain - Anuv Jainは現在の代表的な入口であり、映画音楽、プレイバック歌唱、パンジャーブ系ポップ、ヒップホップ、インディを横断する。",
+          "en": "Anuv Jain - Anuv Jain is a representative entry point for the Today. It crosses film music, playback singing, Punjabi pop, hip-hop, and indie singer-songwriting."
+        },
+        {
+          "ja": "Cui Jian - Cui Jianは1980年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Cui Jian - Cui Jian is a representative entry point for the 1980s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Liu Huan - Liu Huanは1980年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Liu Huan - Liu Huan is a representative entry point for the 1980s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Mao Amin - Mao Aminは1980年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Mao Amin - Mao Amin is a representative entry point for the 1980s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Fei Xiang - Fei Xiangは1980年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Fei Xiang - Fei Xiang is a representative entry point for the 1980s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Na Ying - Na Yingは1980年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Na Ying - Na Ying is a representative entry point for the 1980s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Faye Wong - Faye Wongは1990年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Faye Wong - Faye Wong is a representative entry point for the 1990s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Cui Jian - Cui Jianは1990年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Cui Jian - Cui Jian is a representative entry point for the 1990s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Black Panther - Black Pantherは1990年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Black Panther - Black Panther is a representative entry point for the 1990s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Dou Wei - Dou Weiは1990年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Dou Wei - Dou Wei is a representative entry point for the 1990s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Na Ying - Na Yingは1990年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Na Ying - Na Ying is a representative entry point for the 1990s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Jay Chou - Jay Chouは2000年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Jay Chou - Jay Chou is a representative entry point for the 2000s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Jolin Tsai - Jolin Tsaiは2000年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Jolin Tsai - Jolin Tsai is a representative entry point for the 2000s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Stefanie Sun - Stefanie Sunは2000年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Stefanie Sun - Stefanie Sun is a representative entry point for the 2000s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Wang Leehom - Wang Leehomは2000年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Wang Leehom - Wang Leehom is a representative entry point for the 2000s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "S.H.E - S.H.Eは2000年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "S.H.E - S.H.E is a representative entry point for the 2000s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "G.E.M. - G.E.M.は2010年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "G.E.M. - G.E.M. is a representative entry point for the 2010s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Hua Chenyu - Hua Chenyuは2010年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Hua Chenyu - Hua Chenyu is a representative entry point for the 2010s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Lay Zhang - Lay Zhangは2010年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Lay Zhang - Lay Zhang is a representative entry point for the 2010s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "TFBoys - TFBoysは2010年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "TFBoys - TFBoys is a representative entry point for the 2010s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Li Ronghao - Li Ronghaoは2010年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Li Ronghao - Li Ronghao is a representative entry point for the 2010s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Zhou Shen - Zhou Shenは2020年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Zhou Shen - Zhou Shen is a representative entry point for the 2020s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Jackson Wang - Jackson Wangは2020年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Jackson Wang - Jackson Wang is a representative entry point for the 2020s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "G.E.M. - G.E.M.は2020年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "G.E.M. - G.E.M. is a representative entry point for the 2020s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Lexie Liu - Lexie Liuは2020年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Lexie Liu - Lexie Liu is a representative entry point for the 2020s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Wang Yibo - Wang Yiboは2020年代の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Wang Yibo - Wang Yibo is a representative entry point for the 2020s. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Zhou Shen - Zhou Shenは現在の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Zhou Shen - Zhou Shen is a representative entry point for the Today. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Hua Chenyu - Hua Chenyuは現在の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Hua Chenyu - Hua Chenyu is a representative entry point for the Today. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "G.E.M. - G.E.M.は現在の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "G.E.M. - G.E.M. is a representative entry point for the Today. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Jackson Wang - Jackson Wangは現在の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Jackson Wang - Jackson Wang is a representative entry point for the Today. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        },
+        {
+          "ja": "Lexie Liu - Lexie Liuは現在の代表的な入口であり、本土、香港、台湾、シンガポール、海外華人市場を横断する中国語ポップの流れを示す。",
+          "en": "Lexie Liu - Lexie Liu is a representative entry point for the Today. It follows Chinese-language pop across mainland China, Hong Kong, Taiwan, Singapore, and diaspora markets."
+        }
+      ]
+    }
+  ]
+}

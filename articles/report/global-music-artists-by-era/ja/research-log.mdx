@@ -1,0 +1,37 @@
+---
+title: '調査プロセス: 主要国の音楽アーティスト来歴一覧'
+---
+
+作成日: 2026-06-20
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- publishable request summary: 主要各国の主要音楽アーティストと来歴を、1980年代、1990年代、2000年代、2010年代、2020年代、現在の区分で、国ごとの見出しの下に年代順で5組ずつ整理する。
+- scope constraints: 国数は世界市場と地域バランスを考え、米国、英国、日本、韓国、フランス、ドイツ、ブラジル、ナイジェリア、インド、中国語圏の10単位に絞る。現在は2026年6月時点の継続的な活動・影響として扱う。
+- inferred deliverable: `articles/report/global-music-artists-by-era/ja/index.mdx` を正本とする日本語レポート、対応する英語レポート、`mix-alignment.json`、公開素材ノート、公開調査ログ。
+
+## 調査プロセス
+
+1. リポジトリの `AGENTS.md` と `research-report` skill を確認し、記事は `articles/report/<slug>/<locale>/index.mdx` に直接作成する方針を採った。
+2. 既存カテゴリと記事frontmatterの制約を確認し、`global-popular-music` カテゴリを追加する必要があると判断した。
+3. 2026年時点の市場・チャート情報としてIFPI Global Music Report 2026とIFPI Global Chartsを確認した。
+4. 米英の歴史的ポップスター性について、Billboardの時代別・21世紀ポップスター企画を補助的な比較軸として確認した。
+5. 10か国・地域、6区分、各5組の形式に合わせ、ランキングではなく代表性の高い入口リストとして本文を作成した。
+
+## 判断ログ
+
+- 中国は「中国本土」だけにするとMandopop/C-pop史の主要人物が抜けるため、中国語圏として扱い、本文中で明記した。
+- Drakeはカナダ出身だが、米国ヒップホップ/R&B市場の中心的アーティストとして米国セクションに置いた。
+- StromaeやAngèleのようなフランス語圏の重要アーティストはベルギー出身のため、フランスの国別リストからは外した。
+- 現在は2020年代と重複するが、ユーザー指定に合わせて独立区分とし、継続的な影響を説明した。
+
+## 残課題
+
+- このレポートは入口一覧であり、各国別の詳細な音楽史やジャンル別深掘りは別記事に分けた方がよい。
+- 人手での音楽史レビューを経ると、国やジャンルごとの偏りをさらに調整できる。

@@ -117,7 +117,7 @@
 					"ja": "ただし、需要が強すぎると物価上昇や資産価格の上昇を招く。"
 				},
 				{
-					"en": "What is important is that there is a time lag in interest rate policy.",
+					"en": "Interest rate policy works with a time lag.",
 					"ja": "重要なのは、金利政策には時間差があることだ。"
 				},
 				{
@@ -492,7 +492,7 @@
 					"ja": "為替介入は一時的な安定化策か、金利政策の代わりのように語られていないか。"
 				},
 				{
-					"en": "If you read them in this order, you can break down arguments such as \"Should interest rates be raised?\", \"Is a weak yen bad?\" and \"Is a wage increase a cause of inflation?\" not just pros and cons, but also which route is being emphasized.",
+					"en": "If you read them in this order, you can break down arguments such as \"Should interest rates be raised?\", \"Is a weak yen bad?\" and \"Is a wage increase a cause of inflation?\" by separating pros and cons from the route being emphasized.",
 					"ja": "この順番で読むと、「利上げすべきか」「円安は悪いか」「賃上げはインフレ要因か」といった議論を、単純な賛否ではなく、どの経路を重視している議論なのかに分解できる。"
 				}
 			]

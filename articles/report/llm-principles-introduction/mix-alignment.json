@@ -130,11 +130,11 @@
           "ja": "Transformerの中心は自己注意である。"
         },
         {
-          "en": "A simple way to think about it is that each token decides which other tokens in the sentence it should pay attention to, and how much.",
+          "en": "Each token decides which other tokens in the sentence it should pay attention to, and how much.",
           "ja": "自己注意は、各トークンが文中の他のどのトークンをどの程度参照するかを決める仕組みだと思えばよい。"
         },
         {
-          "en": "Pronouns, conditions, and references often need to connect to words that are far away, not just nearby.",
+          "en": "Pronouns, conditions, and references often need to connect to distant words.",
           "ja": "たとえば「彼」「それ」「この条件」のような参照語は、近くの単語だけでなく、離れた場所の名詞や条件文とも結びつく必要がある。"
         },
         {
@@ -392,7 +392,7 @@
         },
         {
           "en": "LLMs are strong at explanations, drafts, summaries, and classification, but final correctness should come from other mechanisms.",
-          "ja": "要するに、LLMは「考える主体」ではなく、「文脈を受けて候補を出す部品」として組み込むのがよい。"
+          "ja": "LLMは「考える主体」ではなく、「文脈を受けて候補を出す部品」として組み込むのがよい。"
         },
         {
           "en": "In short, an LLM should be embedded as a component that proposes candidates from context, not as an isolated thinking subject.",

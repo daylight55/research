@@ -15,6 +15,7 @@ Use this skill for durable research artifacts in this repository. Follow `AGENTS
 - Treat `articles/<type>/<slug>/ja/index.mdx` as the canonical Japanese reader-facing body.
 - Keep `articles/<type>/<slug>/en/index.mdx` synchronized in the same PR when adding or updating a published article. Do not add Japanese-only public routes unless the user explicitly asks to defer English output.
 - Put the full article body directly in `index.mdx`. Do not create `report.md`, `research-tasks.md`, `notes/`, `sources/`, `figures/`, or `prototype/` under `articles/`.
+- Keep reader-facing `index.mdx` standalone. Do not expose prompt, issue, or user-question framing in article prose; recast corrections and assumptions as article-scope statements. `source-notes.mdx` and `research-log.mdx` may still record publishable investigation scope, process, and input context.
 - Use `articles/<type>/<slug>/<locale>/source-notes.mdx` for publishable pre-article research material: source inventory, evidence notes, issue structure, and inclusion or exclusion decisions. Keep it as an intermediate research note, not a duplicate copy of the final article.
 - If the research trail is useful and publishable, summarize it in `articles/<type>/<slug>/ja/research-log.mdx`; add or update the English research log when that route is published.
 - When creating a report, use `ops/codex/templates/blog-entry.mdx` as the frontmatter and body shape.
@@ -58,9 +59,16 @@ If the report or digest must appear on the website, top page, category pages, or
 6. Distinguish established facts, emerging evidence, product/vendor claims, inference from public information, open questions, limitations, and decision points or operational consequences only when they are materially tied to the topic.
 7. Write in Japanese for practitioners, researchers, and decision makers who need source-grounded judgment.
 8. Keep the article standalone; future readers should not need the GitHub issue or chat context.
-9. Use `source-notes.mdx` for publishable source inventory, evidence notes, competing interpretations, and inclusion/exclusion decisions before drafting the reader-facing article.
-10. Use `research-log.mdx` for publishable questions checked, automation context, assumptions, rejected leads, limits, and follow-up items.
-11. Verify links, placeholders, SourceNote formatting, diagrams, and Japanese-English parity before publication.
+9. Article body should read as a self-contained publication, not as a direct answer to a prompt. Avoid phrases such as "your question," "your interpretation," or "the first correction is"; explain scope and caveats as part of the article itself.
+10. Use `source-notes.mdx` for publishable source inventory, evidence notes, competing interpretations, and inclusion/exclusion decisions before drafting the reader-facing article.
+11. Use `research-log.mdx` for publishable questions checked, automation context, assumptions, rejected leads, limits, and follow-up items.
+12. Verify links, placeholders, SourceNote formatting, diagrams, and Japanese-English parity before publication.
+
+## Source Notes First
+
+For broad surveys, rankings, comparisons, country profiles, historical lists, or selection-heavy reports, write `source-notes.mdx` as research-before-writing notes rather than after-the-fact bibliography. It should record what was checked first, selection axes, country/topic-specific evidence notes, inclusion/exclusion decisions, and weak spots before polished article prose compresses them.
+
+Do not let `source-notes.mdx` become only a thin source list or duplicate final prose. It should preserve the useful pre-article material a future reviewer needs to understand why the article selected, excluded, grouped, or ranked items the way it did.
 
 ## Publication Workflow
 
@@ -69,6 +77,7 @@ If the report or digest must appear on the website, top page, category pages, or
 - Write PR titles and bodies in Japanese. Follow `.github/PULL_REQUEST_TEMPLATE.md` without deleting template headings.
 - Before committing, inspect the intended diff and avoid staging unrelated files.
 - At minimum run `git diff --check` and check for unresolved placeholders such as `TBD`, `TODO`, `FIXME`, `未定`, and `要確認`.
+- When published article prose changes, run the repo Stop Slop check (`node ops/scripts/validate-stop-slop.mjs` or `pnpm test:stop-slop`) so high-confidence AI tells from the APM-installed `stop-slop` skill fail locally.
 - After committing and before push or PR readiness, run `pnpm ci:pr` from a clean working tree to reproduce the GitHub pull_request Test workflow on a temporary worktree that merges the current HEAD with the latest `origin/main`.
 - Use `pnpm ci:head` or targeted tests only as fast inner-loop checks. Do not treat them as PR-equivalent when `main` may have advanced or when GitHub will test a merge commit.
 - When adding article files, make sure local validation sees the same file set that CI will see. Stage intended new files before relying on `git ls-files`-based checks, or use validators that explicitly include untracked files.
@@ -159,6 +168,7 @@ Before finishing:
 - English article Mermaid diagrams, reference pages, cards, and source labels contain no Japanese user-facing text.
 - Important claims have nearby links.
 - `SourceNote` elements are inline, one-line MDX, without manual parentheses or source labels inside.
+- Published prose passes the Stop Slop check for high-confidence filler, business jargon, mechanical contrasts, and Japanese summary crutches.
 - Current and unstable claims were verified against current sources.
 - Diagrams render as Mermaid-compatible Markdown where possible.
 - The article distinguishes evidence from inference.

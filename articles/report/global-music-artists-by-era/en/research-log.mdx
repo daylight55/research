@@ -1,0 +1,37 @@
+---
+title: 'Research Process: Major Music Artists by Country and Era'
+---
+
+Created: 2026-06-20
+
+## Environment
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## Research Instruction
+
+- publishable request summary: Summarize major music artists and their backgrounds by major country, with five artists under each era: 1980s, 1990s, 2000s, 2010s, 2020s, and today.
+- scope constraints: For readability and regional balance, the country set is limited to ten units: United States, United Kingdom, Japan, South Korea, France, Germany, Brazil, Nigeria, India, and the Chinese-language market. Today means continuing activity or influence as of June 2026.
+- inferred deliverable: Japanese canonical report at `articles/report/global-music-artists-by-era/ja/index.mdx`, synchronized English report, `mix-alignment.json`, public source notes, and public research log.
+
+## Process
+
+1. Checked repository `AGENTS.md` and the `research-report` skill, then created the report directly under `articles/report/<slug>/<locale>/index.mdx`.
+2. Reviewed existing categories and frontmatter constraints, then identified the need for a new `global-popular-music` category.
+3. Checked IFPI Global Music Report 2026 and IFPI Global Charts for the current market and chart layer.
+4. Used Billboard's era and 21st-century pop-star projects as an auxiliary axis for Anglo-American pop-stardom history.
+5. Built a representative entry list rather than a strict ranking: ten countries or markets, six periods, five artists in each period.
+
+## Judgment Log
+
+- China is handled as a Chinese-language market because a mainland-only frame would omit central Mandopop and C-pop figures from Taiwan, Hong Kong, Singapore, and diaspora circulation.
+- Drake is Canadian-born but placed in the United States section because his central market role is U.S. hip-hop and R&B.
+- Important Belgian French-language artists such as Stromae and Angèle were excluded from France to keep the country frame coherent.
+- Today intentionally overlaps with the 2020s because the user requested it as a separate section.
+
+## Remaining Work
+
+- This is an entry list, not a complete country-by-country music history.
+- Human music-history review could further adjust country, genre, gender, and regional balance.

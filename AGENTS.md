@@ -17,11 +17,13 @@
 ## Required Skill
 
 調査レポート、研究整理、論文比較、技術・政策・経済・地政学などの論点整理や考察を書くときは、repo-local skill `research-report` を使う。
+公開記事の本文を作成・更新・レビューするときは、APMで導入し Codex からも発見できる `.codex/skills/stop-slop/SKILL.md` の repo-local skill `stop-slop` の観点を適用し、AI的な定型句、過剰な前置き、機械的な二項対立、不要な要約句を避ける。
 
 ## Astro Site Publication Workflow
 
 - Webサイト上に表示する調査レポートは、最初から `articles/report/<slug>/ja/index.mdx` に本文を書く。
 - `report.md` などの別本文を作ってから `index.mdx` へコピーする運用は禁止する。本文が二重化し、片方だけ浅い/古い状態になりやすいため。
+- 公開記事本文（`index.mdx`）は、依頼文・質問文・プロンプトへの返答として書かない。読者が依頼元を知らなくても成立するよう、主題、範囲、論点を記事内の自然な文脈として説明し、「依頼文では」「あなたの質問」「まず誤解を直す」のようなメタな導入を避ける。`source-notes.mdx` と `research-log.mdx` では、公開可能な範囲で調査範囲、判断ログ、入力条件を書いてよい。
 - 調査素材を公開する場合は、単独の `sources/` ディレクトリや `notes/` ディレクトリではなく同じ記事ディレクトリの `source-notes.mdx` にまとめる。
 - 調査タスクや残課題を公開する場合は、単独のタスクリストではなく同じ記事ディレクトリの `research-log.mdx` に調査プロセスとしてまとめる。
 - 新しいカテゴリを使う場合は、`src/data/categories.ts` の `CATEGORIES` に追加する。既存カテゴリとのコンフリクト時は、main側のカテゴリを消さずに和集合で解消する。
@@ -62,6 +64,7 @@
 - 新規記事・素材ファイルを追加した直後は、未trackedのまま `git ls-files` 系テストだけを実行してもCI相当にならない。検証前に意図したファイルをstageするか、未trackedも拾う検証コマンドを使い、push後に初めて発覚する状態を作らない。
 - ローカルで通ったのにCIで落ちた場合は、落ちた箇所だけを直して終わらない。CIログ、workflow定義、base/head ref、tracked/untracked差分、依存関係・Node/pnpmバージョン、環境変数、キャッシュ差を比較し、同じ種類の不一致を次回ローカルで検出できるようにテスト、script、AGENTS.md、またはskillへ反映する。
 - 少なくとも `git diff --check` を実行し、Markdown内の未解決プレースホルダ（例: `TBD`, `TODO`, `未定`, `要確認`, `FIXME`）が残っていないことを確認する。
+- 公開記事本文を追加・更新した場合は `node ops/scripts/validate-stop-slop.mjs` または `pnpm test:stop-slop` で、APM導入済みの `stop-slop` skill に基づく高確度なAI臭の検査が通ることを確認する。
 - push後はPRが最新の `main` とコンフリクトしていないことを確認する。`gh pr view <PR番号> --json mergeable,mergeStateStatus` で `CONFLICTING` / `DIRTY` の場合は、`origin/main` を取り込み、コンフリクトを解消してから再pushする。
 - PR作成後は `gh pr checks <PR番号>` などでCI状態を確認する。失敗、キャンセル、pendingが残る場合は、該当runのログと最新runの状態を確認し、失敗原因を修正またはキャンセル理由を明示してから報告する。
 - Cloudflare Pages Preview などのPreview系workflowがある場合は、PRのhead branchまたはPR番号に対応する最新runを確認する。Previewが失敗している、またはchecksが出ていない場合は、`gh run list` / `gh run view --log` で原因を確認し、必要なら再pushまたはworkflow再実行後に再確認する。

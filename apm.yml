@@ -1,0 +1,10 @@
+name: research
+version: 1.0.0
+description: APM project for research
+author: daylight55
+dependencies:
+  apm:
+  - hardikpandya/stop-slop#8da1f030185bdfe8471220585162991eaeb970e9
+  mcp: []
+includes: auto
+scripts: {}

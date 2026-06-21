@@ -7,11 +7,15 @@ import { siteConfig } from './src/data/site.config'
 
 const site = process.env.ASTRO_SITE ?? siteConfig.site
 const base = process.env.ASTRO_BASE ?? '/'
+const astroCacheDir = process.env.ASTRO_CACHE_DIR
+const viteCacheDir = process.env.VITE_CACHE_DIR
 
 // https://astro.build/config
 export default defineConfig({
 	site,
 	base,
+	...(astroCacheDir ? { cacheDir: astroCacheDir } : {}),
+	...(viteCacheDir ? { vite: { cacheDir: viteCacheDir } } : {}),
 	i18n: {
 		locales: ['ja', 'en'],
 		defaultLocale: 'ja'

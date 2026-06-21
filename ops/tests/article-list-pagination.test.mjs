@@ -88,3 +88,48 @@ test('news list pages use report-list card layout instead of the home carousel',
 		)
 	}
 })
+
+test('news list pages use compact list cards to keep page height manageable', async () => {
+	const listPostsSource = await readRepoFile('src/components/ListPosts.astro')
+	const postCardSource = await readRepoFile('src/components/PostCard.astro')
+
+	assert.match(
+		listPostsSource,
+		/variant\?: 'card' \| 'compact'/,
+		'ListPosts should expose an explicit compact variant'
+	)
+	assert.match(
+		postCardSource,
+		/variant === 'compact'[\s\S]*?lg:grid-cols-\[10rem_minmax\(0,1fr\)\][\s\S]*?lg:aspect-auto/,
+		'PostCard compact variant should use a short horizontal card without aspect-ratio overflow on wide screens'
+	)
+
+	for (const { label, indexPath, pagePath } of listPages) {
+		const indexSource = await readRepoFile(indexPath)
+		const pagedSource = await readRepoFile(pagePath)
+
+		if (indexPath.includes('/news/')) {
+			assert.match(
+				indexSource,
+				/<ListPosts posts=\{posts\}[^>]*variant='compact'/,
+				`${label} index should use compact news cards`
+			)
+			assert.match(
+				pagedSource,
+				/<ListPosts posts=\{posts\}[^>]*variant='compact'/,
+				`${label} paged route should use compact news cards`
+			)
+		} else {
+			assert.doesNotMatch(
+				indexSource,
+				/variant='compact'/,
+				`${label} index should keep full report cards`
+			)
+			assert.doesNotMatch(
+				pagedSource,
+				/variant='compact'/,
+				`${label} paged route should keep full report cards`
+			)
+		}
+	}
+})

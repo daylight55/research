@@ -1,0 +1,25 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-06-22
+- Article slug: `daily-trends-2026-06-22`
+- Run Context: required content type news, required category tech-news, and exact topic counts of politics 5, economy 5, technology 5; focus on the most recent 24-48 hours, with slightly older items only when they still drive current policy, market, or product decisions.
+- Deliverable: structured JSON for deterministic rendering into the public daily trend news digest.
+
+## 判断メモ
+
+- G7、関税、EU移民、Fed、AIインフラを中心に、直近の意思決定に影響する材料だけを残した。
+- 可視化はソースカード画像で補う前提とし、各トピックに個別の画像URLを割り当てた。
+- 一部のAI話題は単独で完結したニュースではなく、規制・供給・運用の接点として採用した。
+
+## 残課題
+
+- EU-UK交渉の進展と追加合意の有無を翌日以降に確認する。
+- Fedとエネルギー価格の連動が続くかを追う。
+- TPU更新とLinux脆弱性の続報が製品採用や修正対応にどう波及するかを確認する。

@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "政治ではG7の余波とEUの移民・対英関係が前面に出ており、経済ではFedと関税の組み合わせが市場心理を左右している。技術分野では、GoogleのTPU更新、Linux脆弱性、AnthropicをめぐるAI統治論が同じ時間帯に動き、インフラとルール作りが同時に進んでいる。",
+      "en": "Politics is being driven by the aftershocks of the G7, plus EU migration and UK reset debates. On the economic side, the Fed, tariffs, and energy prices are shaping expectations, while technology is split between new TPU hardware, a Linux security issue, and a fresh round of AI governance scrutiny."
+    },
+    {
+      "ja": "G7の写真をめぐる発言が、対米関係の微妙さを象徴する材料になった。",
+      "en": "The G7 photo comment became a symbol of how delicate the Trump-Meloni relationship still is."
+    },
+    {
+      "ja": "トランプ氏の発言が、G7の場でのメローニ氏との関係を巡る追加の論争を呼んだ。",
+      "en": "Trump's remarks triggered another round of controversy over how he handled Meloni at the G7."
+    },
+    {
+      "ja": "首脳間の印象操作は、外交の実務そのものよりも早く政治的な空気を変える。",
+      "en": "Leader optics can shift the political atmosphere faster than the underlying diplomacy."
+    },
+    {
+      "ja": "イタリア政府がこの件をどう受け止め、対米メッセージに反映するかを見る。",
+      "en": "Watch whether Rome turns the episode into any broader message about the US relationship."
+    },
+    {
+      "ja": "英国はEUとの関係修復を進める一方、復帰論はまだ政治の中心には置いていない。",
+      "en": "The UK is repairing ties with the EU, but re-entry is still not on the near-term political menu."
+    },
+    {
+      "ja": "スターマー氏は、EUとの関係を戻す流れは認めつつ、Brexit撤回の議論には距離を置いた。",
+      "en": "Starmer signaled openness to closer EU ties while distancing himself from any outright Brexit reversal talk."
+    },
+    {
+      "ja": "英国の通商・移民・規制の設計は、復帰ではなく段階的な再接続で進む公算が大きい。",
+      "en": "Trade, migration, and regulation are likely to move through gradual reconnection rather than full reversal."
+    },
+    {
+      "ja": "今後の実務協定が、象徴論ではなく制度変更に踏み込むかを確認する。",
+      "en": "Watch whether the next agreements change institutions, not just rhetoric."
+    },
+    {
+      "ja": "関税合意は、政治的な勝敗より制度実装の段階に入った。",
+      "en": "The tariff deal is moving from political win-loss talk into implementation."
+    },
+    {
+      "ja": "欧州議会が、トランプ氏との関税合意を正式に進める動きを見せた。",
+      "en": "The European Parliament moved to formalize the tariff arrangement with Trump."
+    },
+    {
+      "ja": "通商交渉は、署名よりも実装段階で摩擦が出やすい。",
+      "en": "Trade deals often generate their hardest friction during implementation, not signing."
+    },
+    {
+      "ja": "加盟国が細部の適用や例外規定で再び対立するかを見る。",
+      "en": "Watch for renewed fights over exemptions and fine print."
+    },
+    {
+      "ja": "世論は、英国とEUの距離を縮める政治的な追い風をまだ残している。",
+      "en": "Public opinion still leaves room for a closer UK-EU relationship."
+    },
+    {
+      "ja": "EU市民の多くが、英国の再加盟を支持するとの調査結果が出た。",
+      "en": "A survey found that most EU citizens would support the UK's return."
+    },
+    {
+      "ja": "交渉の実務だけでなく、世論が政策の上限を決める。",
+      "en": "Public opinion helps set the ceiling for how far policymakers can go."
+    },
+    {
+      "ja": "この支持が、実際の交渉アジェンダに反映されるかを見る。",
+      "en": "Watch whether that support shows up in the negotiating agenda."
+    },
+    {
+      "ja": "移民政策は、EUの制度交渉ではなく国内政治の衝突点として機能している。",
+      "en": "Migration policy is still acting as a domestic political flashpoint inside the EU."
+    },
+    {
+      "ja": "EUの移民法をめぐる採決で、右派勢力が強く反発した。",
+      "en": "Right-wing lawmakers reacted forcefully to the EU migration law vote."
+    },
+    {
+      "ja": "移民は単独の政策ではなく、選挙と連立の安定性を左右する争点になっている。",
+      "en": "Migration now affects elections and coalition stability, not just border management."
+    },
+    {
+      "ja": "各国での国内法化の過程で、どこまで修正圧力がかかるかを見る。",
+      "en": "Watch how much the national transposition process changes the law."
+    },
+    {
+      "ja": "据え置き自体より、Fedが次の一手をどう言葉にするかが焦点になった。",
+      "en": "The bigger story was the Fed's wording about the next move, not the hold itself."
+    },
+    {
+      "ja": "Fedは金利を据え置き、慎重なスタンスを示した。",
+      "en": "The Fed held rates steady and kept a cautious stance."
+    },
+    {
+      "ja": "金利見通しは企業投資、住宅、借り換えコストに直結する。",
+      "en": "Rate expectations feed directly into investment, housing, and refinancing costs."
+    },
+    {
+      "ja": "次回会合までにインフレと雇用がどちらに傾くかを見る。",
+      "en": "Watch whether inflation or labor data moves first before the next meeting."
+    },
+    {
+      "ja": "利下げ時期だけでなく、Fedの設計そのものが争点になりつつある。",
+      "en": "The debate is moving beyond cuts and into the Fed's design itself."
+    },
+    {
+      "ja": "ワーシュ氏は、Fedの役割や運営の見直しを進める意向を示した。",
+      "en": "Warsh said he wants to reshape how the Fed operates and is structured."
+    },
+    {
+      "ja": "中央銀行の独立性やコミュニケーションの設計は、長期金利の前提を動かす。",
+      "en": "Central-bank independence and communication rules can move long-rate assumptions."
+    },
+    {
+      "ja": "人事と制度改革の両方が、実際の政策期待にどう反映されるかを見る。",
+      "en": "Watch how personnel and institutional reform get priced into policy expectations."
+    },
+    {
+      "ja": "エネルギーと地政学のショックが、フランスの成長見通しを押し下げた。",
+      "en": "Energy and geopolitical shocks are pulling France's growth outlook lower."
+    },
+    {
+      "ja": "INSEEが、今年の成長見通しを引き下げた。",
+      "en": "INSEE cut its growth forecast for the year."
+    },
+    {
+      "ja": "成長率の修正は、財政政策とECBの見立てに連鎖しやすい。",
+      "en": "Growth revisions quickly feed into fiscal planning and ECB expectations."
+    },
+    {
+      "ja": "家計消費がさらに弱くなるかどうかを見る。",
+      "en": "Watch whether household spending weakens further."
+    },
+    {
+      "ja": "エネルギー価格が落ち着いても、供給網のリスクはすぐには消えない。",
+      "en": "Even if energy prices settle, supply-chain risk does not disappear quickly."
+    },
+    {
+      "ja": "中東情勢の変化が、世界経済の見通しを再点検させた。",
+      "en": "Developments in the Middle East forced another review of global growth assumptions."
+    },
+    {
+      "ja": "エネルギー、物流、保険料の変化は、インフレと企業利益に波及する。",
+      "en": "Energy, logistics, and insurance changes feed into inflation and corporate margins."
+    },
+    {
+      "ja": "原油と海運コストが数日ではなく数週間のスパンでどう動くかを見る。",
+      "en": "Watch oil and freight costs over weeks, not just days."
+    },
+    {
+      "ja": "関税合意は決着ではなく、コスト配分の調整段階に入った。",
+      "en": "The tariff deal is not over; it is entering the cost-allocation phase."
+    },
+    {
+      "ja": "欧州議会が、対米関税合意の前進を承認した。",
+      "en": "The European Parliament approved moving the US tariff deal forward."
+    },
+    {
+      "ja": "輸出企業は税率よりも、例外条件と実施時期に左右されやすい。",
+      "en": "Exporters care as much about exceptions and timing as they do about headline rates."
+    },
+    {
+      "ja": "各業界のロビー活動が細則にどう反映されるかを見る。",
+      "en": "Watch how industry lobbying shapes the fine print."
+    },
+    {
+      "ja": "AI競争は、モデルだけでなく専用チップの更新速度でも勝負になっている。",
+      "en": "AI competition is increasingly about chip refresh speed, not just model quality."
+    },
+    {
+      "ja": "Google Cloudが第8世代TPUを発表し、エージェント向けの計算基盤を強調した。",
+      "en": "Google Cloud introduced eighth-generation TPUs and framed them around agent workloads."
+    },
+    {
+      "ja": "推論コストが下がれば、企業の導入余地が一気に広がる。",
+      "en": "Lower inference cost can widen enterprise adoption very quickly."
+    },
+    {
+      "ja": "クラウド顧客がNVIDIA以外の選択肢としてどこまで採用するかを見る。",
+      "en": "Watch how far cloud customers take this as an alternative to NVIDIA."
+    },
+    {
+      "ja": "TPUは単発の製品発表ではなく、学習基盤の継続アップデートとして見るべきだ。",
+      "en": "TPUs should be read as an evolving training platform, not a one-off product launch."
+    },
+    {
+      "ja": "GoogleのTPU訓練インフラを説明する研究成果が出た。",
+      "en": "Research describing Google's TPU training infrastructure was published."
+    },
+    {
+      "ja": "モデル開発の競争力は、チップとネットワーク設計の積み上げに依存する。",
+      "en": "Model competitiveness depends on accumulated chip and networking design."
+    },
+    {
+      "ja": "次の世代でどこまで推論と学習の両方を効率化できるかを見る。",
+      "en": "Watch how much the next generation improves both inference and training."
+    },
+    {
+      "ja": "基盤ソフトの脆弱性は、AIの華やかな発表より先に企業ITを止めることがある。",
+      "en": "A core software flaw can disrupt enterprise IT faster than any flashy AI launch."
+    },
+    {
+      "ja": "Linux関連のCopy Fail脆弱性が、実際の攻撃リスクとして注目された。",
+      "en": "The Linux-related Copy Fail flaw drew attention as a real exploitation risk."
+    },
+    {
+      "ja": "クラウド、組み込み機器、コンテナ基盤の広い範囲に波及する可能性がある。",
+      "en": "It can affect cloud, embedded, and container environments at scale."
+    },
+    {
+      "ja": "ベンダーの修正版と、KEV入りの有無を追う。",
+      "en": "Watch for vendor patches and any move into known-exploited lists."
+    },
+    {
+      "ja": "モデルの性能だけではなく、誰がどう管理したかが問題になっている。",
+      "en": "The issue is not just model quality, but who controlled it and how."
+    },
+    {
+      "ja": "AnthropicとFableをめぐる議論が、AI企業の統治問題として続いた。",
+      "en": "The Anthropic-Fable debate continued as a question of AI governance."
+    },
+    {
+      "ja": "生成AIの信頼は、透明性と監査可能性に大きく依存する。",
+      "en": "Trust in generative AI depends heavily on transparency and auditability."
+    },
+    {
+      "ja": "企業が説明責任をどう補強するかを見る。",
+      "en": "Watch how the company strengthens accountability."
+    },
+    {
+      "ja": "AI企業は規制を嫌うだけでなく、分断そのものを事業リスクとして扱い始めた。",
+      "en": "AI firms are now treating regulatory fragmentation itself as a business risk."
+    },
+    {
+      "ja": "アモデイ氏が、G7にAI政策の分断回避を求めた。",
+      "en": "Amodei called on the G7 to avoid splintering AI policy."
+    },
+    {
+      "ja": "安全ルールの不一致は、モデルの配布や監査コストを押し上げる。",
+      "en": "Inconsistent rules raise the cost of distribution and auditing."
+    },
+    {
+      "ja": "各国政府が共通基準をどこまで作れるかを見る。",
+      "en": "Watch whether governments move toward shared standards."
+    },
+    {
+      "ja": "外交・通商・移民が分かれた話題ではなく、同じ政策パッケージとして扱われ始めている。",
+      "en": "Diplomacy, trade, and migration are being treated as one policy stack rather than separate stories."
+    },
+    {
+      "ja": "金利とエネルギーの見通しは、地政学イベントのたびに再計算されている。",
+      "en": "Rate expectations are being reset every time geopolitics shifts energy and inflation assumptions."
+    },
+    {
+      "ja": "AIは計算資源の更新とガバナンス議論が切り離せない段階に入っている。",
+      "en": "AI now moves on two tracks at once: faster infrastructure and tighter governance."
+    },
+    {
+      "ja": "EUと英国の関係修復が実務レベルでどこまで進むか。",
+      "en": "How far EU-UK cooperation can move from signaling into implementation."
+    },
+    {
+      "ja": "Fedが利下げ時期の示唆をどこまで明確化するか。",
+      "en": "Whether the Fed gets more explicit about the timing of any cuts."
+    },
+    {
+      "ja": "TPUやAIモデルの供給制約が各社の導入計画にどう出るか。",
+      "en": "Whether TPU and model supply constraints change deployment plans at major buyers."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# research-log
+
+## Environment
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## Research Instruction
+
+- Research date: 2026-06-22
+- Article slug: `daily-trends-2026-06-22`
+- Run Context: required content type news, required category tech-news, and exact topic counts of politics 5, economy 5, technology 5; prioritize the most recent 24-48 hours and keep slightly older items only if they still shape policy, markets, or product decisions.
+- Deliverable: structured JSON for deterministic rendering into the public daily trend news digest.
+
+## Decision Notes
+
+- I kept the mix anchored on G7, tariffs, migration, Fed signaling, TPU hardware, and AI governance because those clusters were still moving together.
+- Each topic was given one source object and a topical image URL so the renderer could build source cards without hand-authored MDX.
+- I avoided thin rumor coverage and kept only items with clear source-backed signals.
+
+## Follow-ups
+
+- Check whether EU-UK talks produce a more concrete joint statement.
+- Track whether energy and inflation data validate the market reaction to the Fed.
+- Follow TPU and Linux vulnerability remediation updates for downstream deployment impact.

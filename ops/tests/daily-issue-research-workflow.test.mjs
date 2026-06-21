@@ -648,3 +648,9 @@ assert.match(
 	/command: pages deploy dist --project-name=daylight-research --branch=main --commit-message="Cloudflare Pages production deploy \$\{\{ github\.sha \}\}" --commit-dirty=true/,
 	'Cloudflare production deploy should pass an ASCII commit message to Wrangler'
 )
+
+assert.match(
+	workflow,
+	/- name: Normalize generated build cache permissions[\s\S]*?sudo rm -rf "\$\{GITHUB_WORKSPACE\}\/\.astro"[\s\S]*?sudo chown -R runner:codex "\$\{RUNNER_TEMP\}\/astro-cache" "\$\{RUNNER_TEMP\}\/vite-cache"[\s\S]*?- name: Build generated site/,
+	'Daily Issue Research should clear Codex-owned Astro content state and restore runner-owned build caches before site build'
+)

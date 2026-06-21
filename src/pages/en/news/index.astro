@@ -22,7 +22,7 @@ const posts = page.data
 	{
 		posts.length > 0 ? (
 			<>
-				<ListPosts posts={posts} locale={locale} />
+				<ListPosts posts={posts} locale={locale} variant='compact' />
 				<Pagination page={page} />
 			</>
 		) : (

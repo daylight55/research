@@ -1,7 +1,7 @@
 import { strict as assert } from 'node:assert'
 import { execFileSync } from 'node:child_process'
 import { spawnSync } from 'node:child_process'
-import { mkdtempSync, writeFileSync } from 'node:fs'
+import { mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { test } from 'node:test'
@@ -71,6 +71,21 @@ test('changed article MDX validation succeeds when changed range has no article 
 	)
 
 	assert.match(output, /Validated article MDX syntax for 0 file\(s\)\./)
+})
+
+test('changed article MDX validation ignores non-article MDX templates', () => {
+	const file = 'ops/codex/templates/tmp-validation-ignore.mdx'
+	writeFileSync(file, '<PlaceholderTemplate />\n')
+
+	try {
+		const output = execFileSync('node', ['ops/scripts/validate-article-mdx.mjs', '--changed'], {
+			encoding: 'utf8'
+		})
+
+		assert.doesNotMatch(output, /tmp-validation-ignore\.mdx/)
+	} finally {
+		rmSync(file, { force: true })
+	}
 })
 
 test('article MDX validation CLI reports malformed explicit article files', () => {

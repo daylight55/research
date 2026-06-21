@@ -68,6 +68,14 @@ drivers, risks, and decision points that are materially tied to the topic.
 - Add or update `src/data/categories.ts` category wiring as needed.
 - When creating `articles/report/<topic>/ja/index.mdx`, use
   `ops/codex/templates/blog-entry.mdx` as the site-entry shape.
+  Write the public article `title` like an article headline, not an inventory
+  of topics. Avoid colon-separated category lists such as
+  `<person>: 受容、人種、家族支配` or
+  `<technology>: 仕組み、リスク、活用`. Instead, choose one integrated,
+  memorable phrase that symbolizes the report's central tension or conclusion,
+  then add a concise subtitle only when it sharpens the meaning. The title
+  should make readers understand the angle of the piece, not merely the
+  research checklist.
   Include `rssSummary` in frontmatter as a concise RSS/share summary. Keep it
   understandable outside the site UI and distinct from long article prose.
   Include the template's `generation` frontmatter block with only `model` from

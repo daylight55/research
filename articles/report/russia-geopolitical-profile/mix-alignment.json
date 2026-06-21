@@ -1,0 +1,303 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "ロシアは、核兵器、国連安全保障理事会常任理事国、エネルギー輸出国という地位を持ちながら、2022年の全面侵攻以後は制裁と孤立を前提にした戦時体制へ移った。",
+          "en": "Russia is a nuclear-armed permanent member of the UN Security Council and a major energy exporter, but after the 2022 full-scale invasion it moved into a wartime posture built around sanctions and isolation."
+        },
+        {
+          "ja": "2024年の大統領選でプーチンは第五期に入り、ミハイル・ミシュスチンは首相に再任された。",
+          "en": "Putin entered a fifth term after the 2024 presidential election, and Mikhail Mishustin was reappointed as prime minister."
+        },
+        {
+          "ja": "表向きは選挙と官僚制が残っていても、実権は大統領府と安全保障機構に強く集中している。",
+          "en": "The public face of the system still includes elections and a bureaucracy, but real power is concentrated in the Kremlin and the security apparatus."
+        },
+        {
+          "ja": "経済は崩壊していないが、余力は細っている。",
+          "en": "The economy has not collapsed, but it is running with less slack."
+        },
+        {
+          "ja": "世界銀行は2025年の成長率を0.9%と見込み、2026年と2027年も約1%成長を見込む。",
+          "en": "The World Bank expects growth of 0.9 percent in 2025 and about 1 percent in 2026 and 2027."
+        },
+        {
+          "ja": "IMFは2026年の実質成長率を1.1%、消費者物価を5.6%と見積もる。",
+          "en": "The IMF projects 1.1 percent real growth and 5.6 percent consumer-price inflation in 2026."
+        },
+        {
+          "ja": "したがって、ロシアを読む軸は「強いか弱いか」ではない。",
+          "en": "The right way to read Russia is not to ask whether it is simply strong or weak."
+        },
+        {
+          "ja": "国内統制、ウクライナ戦争、核抑止、資源外交、そして中国・イラン・北朝鮮との相互依存が、どの順序で政策に現れるかを見ることにある。",
+          "en": "The more useful question is how domestic control, the Ukraine war, nuclear signaling, resource diplomacy, and dependence on China, Iran, and North Korea appear in policy and in what order."
+        }
+      ]
+    },
+    {
+      "id": "historical-and-institutional-base",
+      "heading": {
+        "ja": "2. 背景と制度の骨格",
+        "en": "2. Historical and Institutional Base"
+      },
+      "pairs": [
+        {
+          "ja": "ロシア国家は、帝国、革命、ソ連、1991年の崩壊、1993年憲法という断層の上にある。",
+          "en": "The Russian state sits on top of discontinuities: empire, revolution, the Soviet Union, the 1991 collapse, and the 1993 constitution."
+        },
+        {
+          "ja": "2012年以降の権力集中と、2020年の憲法改正による任期計算のやり直しが、プーチンの長期統治を制度化した。",
+          "en": "The consolidation of power after 2012, combined with the 2020 constitutional amendments that reset the term count, institutionalized Putin’s long rule."
+        },
+        {
+          "ja": "この制度は、地方分権の外観を残しつつ、実際には忠誠と統制を優先する。",
+          "en": "The system keeps the appearance of federalism, but in practice it prioritizes loyalty and control."
+        },
+        {
+          "ja": "選挙は政権の正統性を補強する儀式として機能し、司法とメディアは独立した監視装置というより、体制維持の一部として扱われる。",
+          "en": "Elections reinforce regime legitimacy, while the courts and media operate more as parts of regime maintenance than as independent oversight institutions."
+        }
+      ]
+    },
+    {
+      "id": "current-power-configuration",
+      "heading": {
+        "ja": "3. 現在の権力配置",
+        "en": "3. Current Power Configuration"
+      },
+      "pairs": [
+        {
+          "ja": "現在のロシアでは、外交と安全保障の境界が薄い。",
+          "en": "In today’s Russia, the line between foreign policy and security policy is thin."
+        },
+        {
+          "ja": "大統領府、治安機構、国防省、外務省、国営メディア、国営企業が縦につながり、危機対応と対外メッセージが一体で動く。",
+          "en": "The Kremlin, the security organs, the Defense Ministry, the Foreign Ministry, state media, and state firms are linked vertically, so crisis response and external messaging move together."
+        },
+        {
+          "ja": "アレクセイ・ナワリヌイは2024年2月に収監先で死亡し、体制内に残っていた全国的野党の軸はさらに弱まった。",
+          "en": "Alexei Navalny died in custody in February 2024, and the remaining national opposition axis became even weaker."
+        },
+        {
+          "ja": "反対派は国外、地下、獄中に分散し、国内政治の競争性は目に見えて低下した。",
+          "en": "Opposition activity was pushed further into exile, prisons, and silence, and domestic competition fell sharply."
+        },
+        {
+          "ja": "この構図は、ロシア政治を「大統領が強い」だけでは説明できないことを示す。",
+          "en": "That means Russian politics cannot be explained by saying that the president is simply strong."
+        },
+        {
+          "ja": "正確には、大統領が安全保障機構と国営経済を束ね、反対派の空間を狭めることで、政策選択肢そのものを減らしている。",
+          "en": "More precisely, the presidency ties together the security apparatus and the state economy while shrinking the space in which opposition politics can form."
+        }
+      ]
+    },
+    {
+      "id": "war-nuclear-signaling-and-external-relations",
+      "heading": {
+        "ja": "4. 戦争・核・対外関係",
+        "en": "4. War, Nuclear Signaling, and External Relations"
+      },
+      "pairs": [
+        {
+          "ja": "ウクライナ戦争は、ロシア外交の中心であり続ける。",
+          "en": "The Ukraine war remains the center of Russian foreign policy."
+        },
+        {
+          "ja": "NATOはウクライナ支援の枠組みを公表し、欧州の抑止はロシアへの対抗軸として維持されている。",
+          "en": "NATO has published its support framework for Ukraine, and European deterrence remains organized around resistance to Russia."
+        },
+        {
+          "ja": "2026年2月に新START条約は失効し、核軍縮の最後の大枠はさらに細くなった。",
+          "en": "The New START treaty expired in February 2026, and the last major nuclear arms-control framework became thinner still."
+        },
+        {
+          "ja": "ロシアはその後も核戦力演習を行い、核抑止を対外圧力の中心に置き続けている。",
+          "en": "Russia then staged nuclear force drills, keeping nuclear deterrence at the center of external pressure."
+        },
+        {
+          "ja": "中国との関係は最も重要な対外支柱であり、イランと北朝鮮は制裁下の代替回路として働く。",
+          "en": "China is the most important external pillar, while Iran and North Korea function as alternative channels under sanctions."
+        },
+        {
+          "ja": "2025年から2026年にかけての公表情報は、ロシアがこれらの相手国との連携を戦争遂行と制裁回避の両面で深めていることを示す。",
+          "en": "Public reporting in 2025 and 2026 shows Russia deepening ties with those partners both to sustain the war and to reduce the pressure of sanctions."
+        },
+        {
+          "ja": "中国との関係は同盟ではないが、交易、技術、エネルギー、外交の四つでロシアを支える。",
+          "en": "The China relationship is not an alliance, but it supports Russia through trade, technology, energy, and diplomacy."
+        },
+        {
+          "ja": "北朝鮮との関係はさらに危険で、弾薬、兵員、工兵、再建支援の往復が、東アジアの安全保障環境を悪化させる。",
+          "en": "The North Korea relationship is even more dangerous because ammunition, personnel, engineering support, and reconstruction cooperation make Northeast Asia’s security environment more fragile."
+        },
+        {
+          "ja": "イランとの関係は、制裁慣れした国家どうしが互いの弱点を補う構図として読むのが妥当である。",
+          "en": "The Iran relationship is best read as a pairing of sanctions-hardened states that cover each other’s weak spots."
+        }
+      ]
+    },
+    {
+      "id": "economy-and-society-under-wartime-adaptation",
+      "heading": {
+        "ja": "5. 経済・社会と戦時適応",
+        "en": "5. Economy and Society Under Wartime Adaptation"
+      },
+      "pairs": [
+        {
+          "ja": "ロシア経済は、戦争に合わせて歪んだ需要配分の上で動いている。",
+          "en": "Russia’s economy now runs on a distorted wartime pattern of demand."
+        },
+        {
+          "ja": "世界銀行は、制裁の継続、低いエネルギー価格、借入コストの高さを前提に、2025年と2026年の成長率が鈍いとみている。",
+          "en": "The World Bank expects slow growth in 2025 and 2026 because sanctions, lower energy prices, and high borrowing costs continue to weigh on activity."
+        },
+        {
+          "ja": "中央銀行は物価抑制を優先してきたが、借り入れコストはなお高い。",
+          "en": "The central bank has prioritized inflation control, but borrowing costs are still high."
+        },
+        {
+          "ja": "2026年6月の市場報道では、ロシア中銀は政策金利を14.25%に引き下げたが、物価と戦時需要の圧力は残ると報じられた。",
+          "en": "Market reporting in June 2026 said the Russian central bank cut its policy rate to 14.25 percent, yet inflation and war demand pressures remained."
+        },
+        {
+          "ja": "ロシア社会は一枚岩ではない。",
+          "en": "Russian society is not one block."
+        },
+        {
+          "ja": "大都市の中間層、地方の低賃金層、少数民族地域、軍関連産業の労働者、亡命者、徴兵対象年齢の男性は、それぞれ戦争の受け止め方が違う。",
+          "en": "Metropolitan middle classes, low-wage regional workers, ethnic republics, defense-sector employees, exiles, and men of draft age all experience the war differently."
+        },
+        {
+          "ja": "だが体制は、報道統制、治安、年金、賃上げ、国営メディアを組み合わせて、不満が政治連合に変わるのを防いでいる。",
+          "en": "Yet the regime combines censorship, policing, pensions, wage support, and state media to prevent dissatisfaction from turning into a political coalition."
+        },
+        {
+          "ja": "このため、市民の感情を一語でまとめるのは危険である。",
+          "en": "The result is that public sentiment should not be summarized in one word."
+        },
+        {
+          "ja": "愛国、戦争疲れ、沈黙、実利、国外退避が混在しており、賛成か反対かではなく、どの領域でリスクを取らないかが重要になっている。",
+          "en": "Patriotism, war fatigue, silence, pragmatism, and exit all coexist, and the key question is not who supports the war but where people are unwilling to take risks."
+        }
+      ]
+    },
+    {
+      "id": "implications-for-japan-and-east-asia",
+      "heading": {
+        "ja": "6. 日本・東アジアへの含意",
+        "en": "6. Implications for Japan and East Asia"
+      },
+      "pairs": [
+        {
+          "ja": "第一に、対露制裁は法務だけではなく、調達、保険、海運、決済、輸出管理をまたぐ。",
+          "en": "First, sanctions on Russia are not just a legal issue."
+        },
+        {
+          "ja": "日本企業は、相手先の実体、所有構造、最終用途、第三国迂回の可能性を一体で点検しないと、意図せぬ制裁違反を起こしやすい。",
+          "en": "They cut across procurement, insurance, shipping, payments, and export control, so Japanese firms need to check counterparties, ownership, end use, and third-country diversion as a single risk package."
+        },
+        {
+          "ja": "第二に、エネルギーは価格だけの問題ではない。",
+          "en": "Second, energy is not only a price problem."
+        },
+        {
+          "ja": "ロシア産資源は、直取引が難しくなっても、第三国経由、混合貨物、海上保険、金融仲介のどこかで再び現れる。",
+          "en": "Russian resources can reappear through third-country routing, blended cargoes, marine insurance, or financial intermediation, even when direct trade becomes harder."
+        },
+        {
+          "ja": "日本のリスク管理は、調達先の国名よりも、サプライチェーンの経路を追う必要がある。",
+          "en": "Japan’s risk management therefore has to follow the supply chain rather than just the country name."
+        },
+        {
+          "ja": "第三に、北朝鮮との軍事協力は日本海側の抑止環境を悪化させる。",
+          "en": "Third, military cooperation with North Korea worsens the deterrence environment around Japan."
+        },
+        {
+          "ja": "ロシアが北朝鮮の能力を受け入れるほど、朝鮮半島、日本海、シベリア極東のリスクは連動しやすくなる。",
+          "en": "The more Russia absorbs North Korea’s capacity, the more closely the Korean Peninsula, the Sea of Japan, and the Russian Far East move together as a risk zone."
+        },
+        {
+          "ja": "第四に、ロシアは中国と完全に一体化しているわけではないが、中国への依存が高まるほど、東アジアの安全保障は米中対立だけでなく、露中連携の強度にも左右される。",
+          "en": "Fourth, Russia is not fully fused with China, but rising dependence on China means East Asian security is shaped not only by U.S.-China rivalry but also by the strength of the Russia-China link."
+        },
+        {
+          "ja": "日本にとっては、北方領土問題や海洋警備だけでなく、対中政策と対露政策を切り分けすぎない視点が必要である。",
+          "en": "For Japan, that argues for a view that does not separate the China policy file from the Russia policy file too cleanly."
+        }
+      ]
+    },
+    {
+      "id": "monitoring-points",
+      "heading": {
+        "ja": "7. 監視点",
+        "en": "7. Monitoring Points"
+      },
+      "pairs": [
+        {
+          "ja": "ロシアをニュース読解用の国別プロファイルとして見るなら、次の5点を定点観測するのがよい。",
+          "en": "If you want to read Russia as a country profile for news consumption, five indicators matter most."
+        },
+        {
+          "ja": "ウクライナ戦争の消耗度が、徴兵、財政、治安にどう跳ね返るか。",
+          "en": "How the wear and tear of the Ukraine war feeds back into conscription, fiscal pressure, and internal security."
+        },
+        {
+          "ja": "中国との取引条件が、エネルギー、軍需、デジタル技術のどこで変わるか。",
+          "en": "Where the terms of trade with China shift, especially in energy, military industry, and digital technology."
+        },
+        {
+          "ja": "北朝鮮やイランとの連携が、兵器、弾薬、制裁回避のどこに広がるか。",
+          "en": "How cooperation with North Korea or Iran expands in weapons, ammunition, and sanctions evasion."
+        },
+        {
+          "ja": "中央銀行の金利とインフレが、戦時経済の持続力をどこまで削るか。",
+          "en": "How central-bank rates and inflation affect the durability of the wartime economy."
+        },
+        {
+          "ja": "体制内部の人事や健康問題が、ポスト・プーチンの順序をどう示し始めるか。",
+          "en": "Whether personnel changes or health issues inside the regime begin to reveal post-Putin sequencing."
+        }
+      ]
+    },
+    {
+      "id": "risks-and-limits",
+      "heading": {
+        "ja": "8. リスク・限界",
+        "en": "8. Risks and Limits"
+      },
+      "pairs": [
+        {
+          "ja": "本稿の限界は三つある。",
+          "en": "This profile has three limits."
+        },
+        {
+          "ja": "第一に、2026年6月20日時点の公開情報に依拠しているため、戦況、制裁、金利、対外会談はすぐに前提を変えうる。",
+          "en": "First, it relies on public information as of June 20, 2026, so battlefield shifts, sanctions, interest-rate changes, and foreign meetings can move the baseline quickly."
+        },
+        {
+          "ja": "第二に、核戦力、治安機構、財政の内部数字は不透明で、公開情報からの推定に頼る部分がある。",
+          "en": "Second, internal figures for nuclear forces, the security apparatus, and fiscal operations are opaque, so some conclusions are inference from public signals."
+        },
+        {
+          "ja": "第三に、ロシア社会の感情は地域差と階層差が大きく、全国を一つの反応でまとめるべきではない。",
+          "en": "Third, Russian public sentiment varies widely by region and class, so it should not be collapsed into a single national reaction."
+        },
+        {
+          "ja": "公表情報からの推定として、当面のロシアは「戦争を続けながら、制裁圧力を中国と制裁回避ネットワークで吸収し、核抑止で交渉力を維持する」方向を取りやすい。",
+          "en": "As a matter of public-information inference, the near-term Russian pattern is likely to remain: keep the war going, absorb sanctions pressure through China and sanctions-evasion networks, and preserve bargaining power through nuclear deterrence."
+        }
+      ]
+    }
+  ]
+}

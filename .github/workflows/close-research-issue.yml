@@ -8,15 +8,29 @@ permissions:
   issues: write
   pull-requests: read
 
+env:
+  RESEARCH_QUEUE_REPOSITORY: daylight55/research-queue
+  RESEARCH_QUEUE_APP_ID: ${{ secrets.RESEARCH_QUEUE_APP_ID }}
+  RESEARCH_QUEUE_APP_PRIVATE_KEY: ${{ secrets.RESEARCH_QUEUE_APP_PRIVATE_KEY }}
+
 jobs:
   close-issue:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
+      - name: Create research queue token
+        id: queue_app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ env.RESEARCH_QUEUE_APP_ID }}
+          private-key: ${{ env.RESEARCH_QUEUE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: research-queue
+
       - name: Close target issue
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.queue_app_token.outputs.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           PR_BODY: ${{ github.event.pull_request.body }}
         run: |
@@ -28,11 +42,12 @@ jobs:
             exit 0
           fi
 
-          issue_state="$(gh issue view "${issue_number}" --json state --jq '.state')"
+          issue_state="$(gh issue view "${issue_number}" --repo "${RESEARCH_QUEUE_REPOSITORY}" --json state --jq '.state')"
           if [[ "${issue_state}" == "OPEN" ]]; then
             gh issue close "${issue_number}" \
+              --repo "${RESEARCH_QUEUE_REPOSITORY}" \
               --reason completed \
               --comment "Closing because daily Codex research PR #${PR_NUMBER} was merged into main."
           else
-            echo "Issue #${issue_number} is already ${issue_state}; no close action needed."
+            echo "Issue #${issue_number} already ${issue_state}; no close action needed."
           fi

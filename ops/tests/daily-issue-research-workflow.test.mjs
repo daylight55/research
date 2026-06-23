@@ -231,8 +231,8 @@ assert.match(
 
 assert.match(
 	workflow,
-	/- name: Run repository tests[\s\S]*?id: repository_tests[\s\S]*?continue-on-error: true[\s\S]*?pnpm test[\s\S]*?- name: Prepare generated article test repair prompt[\s\S]*?if: steps\.repository_tests\.outcome == 'failure' && steps\.restore_generated_article\.outputs\.cache-hit != 'true'[\s\S]*?- name: Repair generated article after repository test failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?effort: low[\s\S]*?- name: Require repository tests[\s\S]*?pnpm test[\s\S]*?- name: Verify generated mixed article alignment/,
-	'Daily Issue Research should spend repair tokens only after repository tests fail on freshly generated articles'
+	/- name: Run repository tests[\s\S]*?id: repository_tests[\s\S]*?continue-on-error: true[\s\S]*?pnpm test[\s\S]*?- name: Run generated mixed article alignment check[\s\S]*?id: generated_mix_alignment[\s\S]*?continue-on-error: true[\s\S]*?node ops\/scripts\/validate-mix-alignment\.mjs --changed[\s\S]*?- name: Prepare generated article verification repair prompt[\s\S]*?if: \${\{ \(steps\.repository_tests\.outcome == 'failure' \|\| steps\.generated_mix_alignment\.outcome == 'failure'\) && steps\.restore_generated_article\.outputs\.cache-hit != 'true' \}\}[\s\S]*?daily-research-mix-alignment\.log[\s\S]*?- name: Repair generated article verification failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?effort: low[\s\S]*?- name: Require generated article verification[\s\S]*?INITIAL_MIX_ALIGNMENT_OUTCOME: \${\{ steps\.generated_mix_alignment\.outcome \}\}[\s\S]*?pnpm test[\s\S]*?- name: Verify generated mixed article alignment/,
+	'Daily Issue Research should repair fresh generated articles when repository tests or MIX alignment validation fails'
 )
 
 assert.match(
@@ -249,7 +249,7 @@ assert.match(
 
 assert.match(
 	workflow,
-	/- name: Repair generated article after repository test failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?safety-strategy: unprivileged-user[\s\S]*?codex-user: codex[\s\S]*?- name: Normalize repaired article permissions[\s\S]*?git ls-files --modified --others --exclude-standard -z[\s\S]*?sudo chown runner:codex "\$\{file\}"[\s\S]*?sudo chmod u\+rw,g\+rw "\$\{file\}"[\s\S]*?- name: Require repository tests/,
+	/- name: Repair generated article verification failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?safety-strategy: unprivileged-user[\s\S]*?codex-user: codex[\s\S]*?- name: Normalize repaired article permissions[\s\S]*?git ls-files --modified --others --exclude-standard -z[\s\S]*?sudo chown runner:codex "\$\{file\}"[\s\S]*?sudo chmod u\+rw,g\+rw "\$\{file\}"[\s\S]*?- name: Require generated article verification/,
 	'Daily Issue Research should run Codex repair as the unprivileged Codex user and restore runner write access'
 )
 

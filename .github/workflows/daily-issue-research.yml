@@ -340,8 +340,18 @@ jobs:
 
           pnpm test 2>&1 | tee "${RUNNER_TEMP}/daily-research-test.log"
 
-      - name: Prepare generated article test repair prompt
-        if: steps.repository_tests.outcome == 'failure' && steps.restore_generated_article.outputs.cache-hit != 'true'
+      - name: Run generated mixed article alignment check
+        if: steps.diff_check.outputs.has_changes == 'true'
+        id: generated_mix_alignment
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          node ops/scripts/validate-mix-alignment.mjs --changed 2>&1 | tee "${RUNNER_TEMP}/daily-research-mix-alignment.log"
+
+      - name: Prepare generated article verification repair prompt
+        if: ${{ (steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -349,27 +359,34 @@ jobs:
           mkdir -p ops/codex/runtime
           repair_prompt="ops/codex/runtime/daily-research-test-repair.md"
           {
-            echo "The generated Daily Issue Research article failed repository tests."
+            echo "The generated Daily Issue Research article failed generated-article verification."
             echo
             echo "Fix only the generated article files already present in the working tree."
             echo "Do not redo the research, add unrelated content, or change workflow/test code."
             echo "Preserve factual claims, source links, frontmatter contracts, and bilingual alignment."
-            echo "Make the smallest content or MIX-alignment edits needed for the failing repository tests."
+            echo "Make the smallest content or MIX-alignment edits needed for the failing verification."
             echo
             echo "## Changed generated files"
             git ls-files --modified --others --exclude-standard
             echo
-            echo "## Compact test failure summary"
+            echo "## Compact repository test failure summary"
             grep -E "not ok|error:|failureType|location:|ERR_ASSERTION|operator:|stack:" \
               "${RUNNER_TEMP}/daily-research-test.log" \
               | head -120 \
               || true
             echo
-            echo "After editing, run: pnpm test"
+            echo "## MIX alignment validation output"
+            if [[ -f "${RUNNER_TEMP}/daily-research-mix-alignment.log" ]]; then
+              cat "${RUNNER_TEMP}/daily-research-mix-alignment.log"
+            else
+              echo "MIX alignment validation did not run."
+            fi
+            echo
+            echo "After editing, run: pnpm test && node ops/scripts/validate-mix-alignment.mjs --changed"
           } > "${repair_prompt}"
 
-      - name: Repair generated article after repository test failure
-        if: steps.repository_tests.outcome == 'failure' && steps.restore_generated_article.outputs.cache-hit != 'true'
+      - name: Repair generated article verification failure
+        if: ${{ (steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
@@ -383,7 +400,7 @@ jobs:
           allow-bots: true
 
       - name: Normalize repaired article permissions
-        if: steps.repository_tests.outcome == 'failure' && steps.restore_generated_article.outputs.cache-hit != 'true'
+        if: ${{ (steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -410,21 +427,22 @@ jobs:
             done
           done < "${changed_files}"
 
-      - name: Require repository tests
+      - name: Require generated article verification
         if: steps.diff_check.outputs.has_changes == 'true'
         shell: bash
         env:
           INITIAL_REPOSITORY_TEST_OUTCOME: ${{ steps.repository_tests.outcome }}
+          INITIAL_MIX_ALIGNMENT_OUTCOME: ${{ steps.generated_mix_alignment.outcome }}
           GENERATED_ARTICLE_CACHE_HIT: ${{ steps.restore_generated_article.outputs.cache-hit }}
         run: |
           set -euo pipefail
 
-          if [[ "${INITIAL_REPOSITORY_TEST_OUTCOME}" == "success" ]]; then
+          if [[ "${INITIAL_REPOSITORY_TEST_OUTCOME}" == "success" && "${INITIAL_MIX_ALIGNMENT_OUTCOME}" == "success" ]]; then
             exit 0
           fi
 
           if [[ "${GENERATED_ARTICLE_CACHE_HIT}" == "true" ]]; then
-            echo "::error::Cached generated article failed repository tests. Not spending Codex repair tokens on cached artifacts."
+            echo "::error::Cached generated article failed generated-article verification. Not spending Codex repair tokens on cached artifacts."
             exit 1
           fi
 

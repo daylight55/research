@@ -427,6 +427,13 @@ jobs:
             done
           done < "${changed_files}"
 
+      - name: Restore Node after generated article repair
+        if: ${{ (steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
       - name: Require generated article verification
         if: steps.diff_check.outputs.has_changes == 'true'
         shell: bash
@@ -457,6 +464,24 @@ jobs:
         if: steps.diff_check.outputs.has_changes == 'true'
         run: node ops/scripts/validate-mix-alignment.mjs --changed
 
+      - name: Normalize generated build cache permissions
+        if: steps.diff_check.outputs.has_changes == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          sudo rm -rf "${GITHUB_WORKSPACE}/.astro"
+          mkdir -p "${RUNNER_TEMP}/astro-cache" "${RUNNER_TEMP}/vite-cache"
+          sudo chown -R runner:codex "${RUNNER_TEMP}/astro-cache" "${RUNNER_TEMP}/vite-cache"
+          sudo chmod -R u+rwX,g+rwX "${RUNNER_TEMP}/astro-cache" "${RUNNER_TEMP}/vite-cache"
+
+      - name: Build generated site
+        if: steps.diff_check.outputs.has_changes == 'true'
+        env:
+          ASTRO_CACHE_DIR: ${{ runner.temp }}/astro-cache
+          VITE_CACHE_DIR: ${{ runner.temp }}/vite-cache
+        run: pnpm build
+
       - name: Create generated article cache archive
         if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
         shell: bash
@@ -476,24 +501,6 @@ jobs:
         with:
           path: ${{ runner.temp }}/generated-article-cache
           key: daily-issue-research-${{ steps.select_issue.outputs.issue_number }}
-
-      - name: Normalize generated build cache permissions
-        if: steps.diff_check.outputs.has_changes == 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          sudo rm -rf "${GITHUB_WORKSPACE}/.astro"
-          mkdir -p "${RUNNER_TEMP}/astro-cache" "${RUNNER_TEMP}/vite-cache"
-          sudo chown -R runner:codex "${RUNNER_TEMP}/astro-cache" "${RUNNER_TEMP}/vite-cache"
-          sudo chmod -R u+rwX,g+rwX "${RUNNER_TEMP}/astro-cache" "${RUNNER_TEMP}/vite-cache"
-
-      - name: Build generated site
-        if: steps.diff_check.outputs.has_changes == 'true'
-        env:
-          ASTRO_CACHE_DIR: ${{ runner.temp }}/astro-cache
-          VITE_CACHE_DIR: ${{ runner.temp }}/vite-cache
-        run: pnpm build
 
       - name: Create research pull request
         if: steps.diff_check.outputs.has_changes == 'true'

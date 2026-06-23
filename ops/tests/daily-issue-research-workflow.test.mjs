@@ -33,8 +33,8 @@ assert.match(
 
 assert.match(
 	workflow,
-	/- name: Verify generated mixed article alignment[\s\S]*?- name: Create generated article cache archive[\s\S]*?- name: Save generated article cache[\s\S]*?- name: Build generated site/,
-	'Daily Issue Research should save validated generated artifacts before build failures can force token-spending regeneration'
+	/- name: Verify generated mixed article alignment[\s\S]*?- name: Build generated site[\s\S]*?- name: Create generated article cache archive[\s\S]*?- name: Save generated article cache/,
+	'Daily Issue Research should save generated artifacts only after verification and build succeed'
 )
 
 assert.match(
@@ -207,6 +207,12 @@ assert.match(
 
 assert.match(
 	workflow,
+	/- name: Build generated site[\s\S]*?run: pnpm build[\s\S]*?- name: Create generated article cache archive[\s\S]*?- name: Save generated article cache[\s\S]*?- name: Create research pull request/,
+	'Daily Issue Research should save generated article cache only after the generated site builds successfully'
+)
+
+assert.match(
+	workflow,
 	/- name: Create research repository token[\s\S]*?id: research_app_token[\s\S]*?uses: actions\/create-github-app-token@v3[\s\S]*?repositories: \$\{\{ env\.RESEARCH_REPOSITORY \}\}/,
 	'workflow should create a GitHub App installation token for the research repository'
 )
@@ -251,6 +257,12 @@ assert.match(
 	workflow,
 	/- name: Repair generated article verification failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?safety-strategy: unprivileged-user[\s\S]*?codex-user: codex[\s\S]*?- name: Normalize repaired article permissions[\s\S]*?git ls-files --modified --others --exclude-standard -z[\s\S]*?sudo chown runner:codex "\$\{file\}"[\s\S]*?sudo chmod u\+rw,g\+rw "\$\{file\}"[\s\S]*?- name: Require generated article verification/,
 	'Daily Issue Research should run Codex repair as the unprivileged Codex user and restore runner write access'
+)
+
+assert.match(
+	workflow,
+	/- name: Normalize repaired article permissions[\s\S]*?- name: Restore Node after generated article repair[\s\S]*?uses: actions\/setup-node@v4[\s\S]*?node-version-file: \.nvmrc[\s\S]*?- name: Require generated article verification/,
+	'Daily Issue Research should restore repository Node.js after Codex repair before rerunning Node-based verification'
 )
 
 assert.doesNotMatch(

@@ -53,3 +53,22 @@ test('local PR CI parity command mirrors the GitHub pull_request test workflow',
 		assert.ok(script.includes(command), `local PR CI script should include: ${command}`)
 	}
 })
+
+test('close research issue workflow closes the external queue issue safely', async () => {
+	const workflow = await readFile('.github/workflows/close-research-issue.yml', 'utf8')
+
+	assert.match(workflow, /RESEARCH_QUEUE_REPOSITORY: daylight55\/research-queue/)
+	assert.match(workflow, /uses: actions\/create-github-app-token@v3/)
+	assert.match(workflow, /repositories: research-queue/)
+	assert.match(workflow, /GH_TOKEN: \$\{\{ steps\.queue_app_token\.outputs\.token \}\}/)
+	assert.match(workflow, /if \[\[ -z "\$\{issue_number\}" \]\]; then/)
+	assert.match(
+		workflow,
+		/gh issue view "\$\{issue_number\}" --repo "\$\{RESEARCH_QUEUE_REPOSITORY\}"/
+	)
+	assert.match(workflow, /if \[\[ "\$\{issue_state\}" == "OPEN" \]\]; then/)
+	assert.match(
+		workflow,
+		/gh issue close "\$\{issue_number\}" \\\n\s+--repo "\$\{RESEARCH_QUEUE_REPOSITORY\}"/
+	)
+})

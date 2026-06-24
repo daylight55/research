@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "米国では、選挙ルールや移民執行を巡る司法判断が続き、議会ではイラン戦費と追加予算、住宅対策が並んで動いた。市場では原油安とテック株安が交錯し、住宅ローン金利は少し下がったが、インフレはなお高い。技術面では、AIの攻撃利用と軍事利用、そして製品側のAI競争が重なり、規制と導入の両方が前に出た。",
+      "en": "In the U.S., court rulings kept reshaping voting rules and immigration enforcement while Congress moved on Iran funding, war powers, and housing. Markets reacted to weaker tech stocks and softer oil, mortgage rates eased a bit, and inflation still sat above 4%. On the technology side, AI showed up as a security problem, a military priority, and a product race all at once."
+    },
+    {
+      "ja": "連邦判事が、投票登録に市民権証明を求める命令を差し止めた。",
+      "en": "A federal judge blocked the order requiring proof of citizenship for voter registration."
+    },
+    {
+      "ja": "ボストンの連邦地裁は、選挙規制は議会と州に権限があるとして、命令の主要部分を恒久的に無効にした。",
+      "en": "A federal court in Boston ruled that election rules belong to Congress and the states, not the White House, and permanently blocked the core of the order."
+    },
+    {
+      "ja": "有権者登録の手続きと郵便投票ルールを巡る争いが、11月の中間選挙に直結する。",
+      "en": "The fight over voter registration and mail ballots goes straight to the 2026 midterm map."
+    },
+    {
+      "ja": "司法省が控訴するか、連邦最高裁が郵便投票の別件判断をどう出すかをみる。",
+      "en": "Watch for an appeal and for any Supreme Court move on related mail-ballot cases."
+    },
+    {
+      "ja": "サンフランシスコの連邦判事が、移民裁判所での拘束を全国で禁じた。",
+      "en": "A federal judge in San Francisco blocked immigration arrests at immigration courts nationwide."
+    },
+    {
+      "ja": "行政手続法に基づく説明が足りないとして、長年の保護を覆した方針を無効にした。",
+      "en": "The court said the administration had not given enough justification and invalidated a policy that had upended long-standing protections."
+    },
+    {
+      "ja": "出廷をためらわせる効果があるため、移民審理と強制送還の運用に広く影響する。",
+      "en": "The ruling affects whether people feel safe showing up for hearings, so it can change how immigration enforcement works in practice."
+    },
+    {
+      "ja": "政権が指針を修正するか、別の法廷で同種の差し止めが広がるか。",
+      "en": "Watch for a revised directive or for similar injunctions in other courts."
+    },
+    {
+      "ja": "NATOのルッテ事務総長が、トランプ氏との関係修復を図った。",
+      "en": "NATO chief Mark Rutte sought to reset ties with Trump."
+    },
+    {
+      "ja": "米軍の欧州展開見直しと、イラン紛争での同盟国の対応をめぐり、トランプ氏はNATOを強く批判している。",
+      "en": "Trump is criticizing NATO while the U.S. reviews its Europe deployment and allies weigh their response to the Iran conflict."
+    },
+    {
+      "ja": "米欧の防衛負担と地域配備の見直しは、同盟の実務に直接響く。",
+      "en": "Changes in burden-sharing and force posture affect how the alliance actually operates."
+    },
+    {
+      "ja": "米軍の欧州戦力見直しと、次回首脳会議での防衛費目標をみる。",
+      "en": "Watch the U.S. force review in Europe and any new defense-spending target at the summit."
+    },
+    {
+      "ja": "上院が、イランへの軍事行動を止める戦争権限決議を初めて可決した。",
+      "en": "The Senate passed a war powers resolution to block military action against Iran."
+    },
+    {
+      "ja": "50対48で可決し、共和党からも4人が賛成に回った。",
+      "en": "The vote passed 50 to 48, with four Republicans joining Democrats."
+    },
+    {
+      "ja": "戦争継続と予算手当の両方に、議会の抵抗がはっきり出た。",
+      "en": "Congress is now pushing back both on the war itself and on how it gets funded."
+    },
+    {
+      "ja": "下院とホワイトハウスがどう応じるか、資金要求に条件がつくかをみる。",
+      "en": "Watch the House and White House response, and whether the funding request gets conditioned."
+    },
+    {
+      "ja": "ホワイトハウスが、イラン戦費を中心に876億ドル規模の追加予算を議会に求めた。",
+      "en": "The White House asked Congress for a supplemental package worth $87.6 billion."
+    },
+    {
+      "ja": "国防費のほか、農家支援、エボラ対応、ワシントンD.C.の復旧費も束ねた。",
+      "en": "The package bundles defense spending with farm aid, Ebola response money, and recovery costs for Washington, D.C."
+    },
+    {
+      "ja": "戦費だけでなく国内施策を抱き合わせたため、採決の政治コストが高い。",
+      "en": "Bundling war costs with domestic items raises the political cost of the vote."
+    },
+    {
+      "ja": "下院歳出委員会と上院がこの一括案を分割するかを見る。",
+      "en": "Watch whether House and Senate appropriators split the package apart."
+    },
+    {
+      "ja": "米株はまちまちで引け、Microsoftなどの下げが指数を押し下げた。",
+      "en": "U.S. stocks ended mixed as losses in Microsoft and other tech names weighed on the indexes."
+    },
+    {
+      "ja": "S&amp;P500は小幅安、Dowは上昇、Nasdaqは0.4%下落した。原油安でインフレ懸念は和らいだ。",
+      "en": "The S&amp;P 500 edged lower, the Dow rose, and the Nasdaq fell 0.4%, while softer oil eased inflation worries."
+    },
+    {
+      "ja": "AI関連株の高値警戒と原油の落ち着きが、短期の相場テーマを同時に作っている。",
+      "en": "High valuations in AI names and calmer oil prices are now pulling the market in opposite directions."
+    },
+    {
+      "ja": "PCE物価指数と、メガテックの持ち直しが続くかをみる。",
+      "en": "Watch the PCE inflation data and whether mega-cap tech rebounds."
+    },
+    {
+      "ja": "住宅費抑制を狙う超党派法案が議会を通過した。",
+      "en": "A bipartisan bill aimed at lowering housing costs cleared Congress."
+    },
+    {
+      "ja": "規制緩和、建設促進、賃借人保護、地域向け資金をまとめた。",
+      "en": "The bill bundles deregulation, construction incentives, renter protections, and local funding."
+    },
+    {
+      "ja": "供給不足が続く住宅市場に、久しぶりの大きな連邦介入になる。",
+      "en": "It is one of the larger federal moves in a housing market still short on supply."
+    },
+    {
+      "ja": "トランプ氏が署名するか、実務上の資金配分がどこまで速いか。",
+      "en": "Watch whether Trump signs it and how quickly the money can flow."
+    },
+    {
+      "ja": "米30年固定住宅ローン金利が6.47%まで下がった。",
+      "en": "The average 30-year fixed mortgage rate slipped to 6.47%."
+    },
+    {
+      "ja": "イラン情勢の沈静化で米国債利回りが下がり、住宅ローン金利もつられた。",
+      "en": "Lower Treasury yields after the Iran scare eased mortgage rates as well."
+    },
+    {
+      "ja": "借り入れ負担は少し軽くなるが、販売水準はなお歴史的な低迷圏にある。",
+      "en": "Borrowing gets a little cheaper, but home sales remain near depressed levels."
+    },
+    {
+      "ja": "10年債利回りと、既存住宅販売の回復ペースをみる。",
+      "en": "Watch the 10-year Treasury yield and the pace of existing-home sales."
+    },
+    {
+      "ja": "FOMC参加者の半数が、年内の利上げを支持する姿勢を示した。",
+      "en": "Half of the Fed participants signaled support for rate hikes later this year."
+    },
+    {
+      "ja": "声明は据え置きだったが、前回より明確にタカ派へ傾いた。",
+      "en": "The statement held steady, but the tone moved more hawkish than before."
+    },
+    {
+      "ja": "インフレが3年ぶり高水準にある中で、金融条件は再び引き締まる可能性がある。",
+      "en": "With inflation at a three-year high, financial conditions could tighten again."
+    },
+    {
+      "ja": "次回会合でのメッセージと、国債利回りの反応。",
+      "en": "Watch the next meeting message and the Treasury-yield reaction."
+    },
+    {
+      "ja": "5月の米消費者物価は前年比4.2%上昇し、3年ぶりの高水準になった。",
+      "en": "U.S. consumer prices rose 4.2% year over year in May, the highest in three years."
+    },
+    {
+      "ja": "原油・ガソリン高が押し上げ要因となり、衣料、航空運賃、電気代も上がった。",
+      "en": "Higher oil and gasoline prices pushed the index up, alongside gains in clothing, airfares, and electricity."
+    },
+    {
+      "ja": "家計負担と政策判断の両方に、エネルギー価格が強く効いている。",
+      "en": "Energy prices are now hitting both household budgets and the Fed's policy choices."
+    },
+    {
+      "ja": "原油がさらに下がるか、6月分で基調インフレが鈍るか。",
+      "en": "Watch whether oil falls further and whether June core inflation cools."
+    },
+    {
+      "ja": "Googleは、AIで未知の脆弱性を探る攻撃を止めたと明らかにした。",
+      "en": "Google said it stopped an attack that used AI to probe for unknown weaknesses."
+    },
+    {
+      "ja": "攻撃者はゼロデイ脆弱性を探し、二要素認証を迂回しようとしていた。",
+      "en": "The attackers were searching for zero-day weaknesses and trying to get around two-factor authentication."
+    },
+    {
+      "ja": "攻撃側もAIを使い始めたことで、サイバー防御の前提が変わる。",
+      "en": "Once attackers use AI too, the assumptions behind cyber defense change fast."
+    },
+    {
+      "ja": "企業向けの防御AIと、同種の攻撃報告が増えるか。",
+      "en": "Watch for more enterprise defense tools and more reports of similar attacks."
+    },
+    {
+      "ja": "サイバー防御のため、Anthropicの最新モデル制限を緩めるよう求める公開書簡が出た。",
+      "en": "A public letter asked for Anthropic's latest model limits to be eased for cyber defense."
+    },
+    {
+      "ja": "AdobeやNvidiaなどの関係者が、輸出制限は米国の防御力を落としかねないと訴えた。",
+      "en": "Adobe, Nvidia, and others argued that export limits could weaken U.S. defensive capability."
+    },
+    {
+      "ja": "AIの安全性を強める規制が、同時に防御用途を細らせるという難しさがある。",
+      "en": "Rules that improve AI safety can also choke off defensive uses."
+    },
+    {
+      "ja": "ホワイトハウスが規制を維持するか、条件を調整するか。",
+      "en": "Watch whether the White House keeps the limits or adjusts them."
+    },
+    {
+      "ja": "トランプ氏が、軍と安全保障機関にAI活用を急ぐよう求めた。",
+      "en": "Trump told the military and security agencies to move faster on AI."
+    },
+    {
+      "ja": "自律兵器の指針見直しを命じつつ、米国人への違法監視は禁じる方針を示した。",
+      "en": "He ordered a review of autonomous-weapon rules while also barring illegal surveillance of Americans."
+    },
+    {
+      "ja": "AI導入の速度と市民的自由の保護を、同じ文書で扱う段階に入った。",
+      "en": "The administration is now trying to balance speed of adoption with civil-liberties limits in one policy package."
+    },
+    {
+      "ja": "国防総省が新指針をどう書き換えるか、民間契約の条件が変わるか。",
+      "en": "Watch how the Pentagon rewrites the guidance and whether contractor terms change."
+    },
+    {
+      "ja": "Nvidiaは、AI機能をPCに持ち込む新しいRTX Sparkを発表した。",
+      "en": "Nvidia unveiled RTX Spark, a chip designed to bring AI features onto PCs."
+    },
+    {
+      "ja": "MicrosoftやDellの新機種で、ローカル実行のAIエージェントを売りにする。",
+      "en": "Microsoft and Dell are packaging new machines around local AI agents."
+    },
+    {
+      "ja": "データセンター中心だったAI投資が、個人端末にも広がろうとしている。",
+      "en": "AI investment is moving from data centers toward the personal device."
+    },
+    {
+      "ja": "秋の出荷時期と、Intel・AMDの対抗製品。",
+      "en": "Watch the fall shipment schedule and rival chips from Intel and AMD."
+    },
+    {
+      "ja": "AppleはWWDCで、SiriのAI強化と写真編集の新機能を打ち出した。",
+      "en": "Apple used WWDC to show off a smarter Siri and new photo-editing features."
+    },
+    {
+      "ja": "Geminiを使う新Siriを示し、Tim Cook最後のWWDCとしても注目を集めた。",
+      "en": "The company previewed a new Siri that uses Gemini and treated the event as Tim Cook's last WWDC."
+    },
+    {
+      "ja": "AppleがようやくAI競争に本格参入し、OS体験の主導権争いが濃くなる。",
+      "en": "Apple is finally joining the AI race in earnest, which sharpens the fight over the OS experience."
+    },
+    {
+      "ja": "EUと中国での提供時期、そして秋の正式版の完成度。",
+      "en": "Watch the timing in the EU and China, plus how polished the fall release looks."
+    },
+    {
+      "ja": "イランをめぐる軍事と予算の争点が、議会、同盟運営、原油、インフレを一気につないでいる。",
+      "en": "The Iran fight now runs through war powers, budgets, allies, oil, and inflation in the same news cycle."
+    },
+    {
+      "ja": "住宅と金利は別の見出しに見えて、実際には物価と国債利回りを通じて同じ家計負担に戻ってくる。",
+      "en": "Housing and rates look separate, but both feed back into the same household cost pressure through yields and prices."
+    },
+    {
+      "ja": "AIは製品競争だけでなく、サイバー防御と軍事運用のルール作りに移っている。",
+      "en": "AI is moving beyond product launches into cyber defense rules and military use cases."
+    },
+    {
+      "ja": "連邦最高裁が投票ルールや移民執行の差し止めにどう触れるか。",
+      "en": "Whether the Supreme Court takes up the voting-rule and immigration injunctions."
+    },
+    {
+      "ja": "PCE物価指数と原油の戻りが、利下げ期待をどこまで押し戻すか。",
+      "en": "Whether PCE inflation and oil prices change the rate-cut path again."
+    },
+    {
+      "ja": "Apple、Nvidia、AnthropicのAI方針が、秋の製品投入と規制調整にどうつながるか。",
+      "en": "How Apple, Nvidia, Anthropic, and Google turn current AI policy into shipping products."
+    }
+  ]
+}

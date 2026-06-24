@@ -1,0 +1,748 @@
+{
+  "version": 1,
+  "slug": "daily-trends-2026-06-25",
+  "date": "2026-06-25",
+  "category": "tech-news",
+  "tags": ["news", "politics", "economy", "technology"],
+  "generation": {
+    "model": "gpt-5.4-mini"
+  },
+  "heroImage": {
+    "query": "Donald Trump Mark Rutte White House June 2026",
+    "alt": {
+      "ja": "トランプ大統領とNATOのルッテ事務総長がホワイトハウスで会う場面を想起させる画像",
+      "en": "An image evoking President Trump meeting NATO Secretary-General Mark Rutte at the White House"
+    }
+  },
+  "locales": {
+    "ja": {
+      "title": "2026-06-25 トランプ政治が選挙・住宅・AI政策を同時に動かす",
+      "description": "米政治の司法判断、住宅法案、物価、AI規制が同時に動き、次の政策判断を押し出している。",
+      "rssSummary": "政治、住宅、物価、AIが同時進行した一日を15本で整理。",
+      "opening": "米国では、選挙ルールや移民執行を巡る司法判断が続き、議会ではイラン戦費と追加予算、住宅対策が並んで動いた。市場では原油安とテック株安が交錯し、住宅ローン金利は少し下がったが、インフレはなお高い。技術面では、AIの攻撃利用と軍事利用、そして製品側のAI競争が重なり、規制と導入の両方が前に出た。",
+      "crossCutting": [
+        "イランをめぐる軍事と予算の争点が、議会、同盟運営、原油、インフレを一気につないでいる。",
+        "住宅と金利は別の見出しに見えて、実際には物価と国債利回りを通じて同じ家計負担に戻ってくる。",
+        "AIは製品競争だけでなく、サイバー防御と軍事運用のルール作りに移っている。"
+      ],
+      "watchItems": [
+        "連邦最高裁が投票ルールや移民執行の差し止めにどう触れるか。",
+        "PCE物価指数と原油の戻りが、利下げ期待をどこまで押し戻すか。",
+        "Apple、Nvidia、AnthropicのAI方針が、秋の製品投入と規制調整にどうつながるか。"
+      ],
+      "sourceNotes": {
+        "politics": [
+          "APの6月24日配信を中心に、選挙ルール、移民執行、NATO、戦争権限、追加予算の5本を採用した。司法判断と議会対応が同じ日に重なり、制度変更の即効性が高い材料を優先した。"
+        ],
+        "economy": [
+          "同日の市場総括、住宅法案、住宅ローン金利、FRBのタカ派シグナル、物価上昇を並べ、家計コストと資金調達の両面を拾った。相場の細かな日中変動より、政策判断に効く材料を優先している。"
+        ],
+        "technology": [
+          "AIの攻撃利用、Anthropic制限見直し、軍事AI、NvidiaのAI PC、AppleのSiri刷新を採用した。新製品ニュースだけでなく、サイバー防御と安全保障の論点が現在の技術議題を形作っているため、6月上旬から中旬の記事も含めた。"
+        ],
+        "decisions": [
+          "政治枠の250周年関連や世論調査は、制度と外交の直接インパクトを持つ5本に比べて優先度を下げた。",
+          "経済枠では単発の株価材料より、住宅、金利、インフレの連動が見える記事を残した。",
+          "技術枠では、同日に十分な新製品ニュースが少なかったため、最近2週間のAI安全保障・製品ニュースを併用した。"
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-25",
+          "Article slug: `daily-trends-2026-06-25`",
+          "Run Context: daily trend news digest; required categories politics, economy, and technology; exactly five topics per category; prioritize the most recent 24-48 hours and allow slightly older items only when they still drive current discussion or decisions; deliver the structured JSON for renderer output.",
+          "Environment: model `gpt-5.4-mini`; repo-local skill `research-report`; prompt source `ops/codex/prompts/daily-issue-research.md`."
+        ],
+        "decisionNotes": [
+          "APの当日配信を軸に、裁判、議会、NATO、インフレ、住宅、AIの順で材料を並べた。記事本文よりも、翌日の判断に残る制度変更と価格シグナルを優先した。",
+          "技術面は同日の大きな製品発表が薄かったため、6月上旬から中旬のAI関連記事を採用した。現在のAI議題は製品リリースだけでなく、規制、サイバー、防衛用途に分かれている。",
+          "画像はAP本文の代表写真を優先し、記事ごとのトピックに近いものを選んだ。"
+        ],
+        "followUps": [
+          "連邦最高裁の判断が、郵便投票と移民執行の差し止めに波及するかを確認する。",
+          "PCE物価指数と原油相場の続落が、金利と住宅ローンにどう反映するかを追う。",
+          "Apple、Nvidia、Anthropic、Googleの次のAIアップデートと、政府側の規制調整を追う。"
+        ]
+      }
+    },
+    "en": {
+      "title": "2026-06-25 Trump politics pulls elections, housing, and AI together",
+      "description": "Judges, lawmakers, prices, and AI policy all moved at once, setting up the next round of decisions.",
+      "rssSummary": "Fifteen stories on a day when politics, housing, inflation, and AI all moved together.",
+      "opening": "In the U.S., court rulings kept reshaping voting rules and immigration enforcement while Congress moved on Iran funding, war powers, and housing. Markets reacted to weaker tech stocks and softer oil, mortgage rates eased a bit, and inflation still sat above 4%. On the technology side, AI showed up as a security problem, a military priority, and a product race all at once.",
+      "crossCutting": [
+        "The Iran fight now runs through war powers, budgets, allies, oil, and inflation in the same news cycle.",
+        "Housing and rates look separate, but both feed back into the same household cost pressure through yields and prices.",
+        "AI is moving beyond product launches into cyber defense rules and military use cases."
+      ],
+      "watchItems": [
+        "Whether the Supreme Court takes up the voting-rule and immigration injunctions.",
+        "Whether PCE inflation and oil prices change the rate-cut path again.",
+        "How Apple, Nvidia, Anthropic, and Google turn current AI policy into shipping products."
+      ],
+      "sourceNotes": {
+        "politics": [
+          "We used five AP stories from June 24 on voting rules, immigration enforcement, NATO, war powers, and supplemental funding. The mix favors rulings and congressional action because those items move policy fastest."
+        ],
+        "economy": [
+          "We paired the market wrap, housing bill, mortgage rates, Fed hawkishness, and inflation so the section tracks household costs and financing conditions rather than intraday noise."
+        ],
+        "technology": [
+          "The tech set covers AI abuse, Anthropic limits, military AI, Nvidia’s AI PCs, and Apple’s Siri push. Fresh same-day product news was thin, so we leaned on recent stories that still shape the current debate."
+        ],
+        "decisions": [
+          "We downgraded anniversary coverage and lighter political chatter in favor of rulings, funding fights, and foreign-policy items.",
+          "We kept economics focused on the links between prices, rates, and housing rather than on a single equity headline.",
+          "We used a small amount of slightly older tech material because the current discussion is still driven by those June stories."
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-25",
+          "Article slug: `daily-trends-2026-06-25`",
+          "Run Context: daily trend news digest; required categories politics, economy, and technology; exactly five topics per category; prioritize the most recent 24-48 hours and allow slightly older items only when they still drive current discussion or decisions; deliver the structured JSON for renderer output.",
+          "Environment: model `gpt-5.4-mini`; repo-local skill `research-report`; prompt source `ops/codex/prompts/daily-issue-research.md`."
+        ],
+        "decisionNotes": [
+          "We anchored the digest in AP coverage and selected stories with the clearest policy or market consequence.",
+          "Tech coverage extends back into early June because the latest AI cycle is still being driven by those announcements.",
+          "We prioritized representative photos tied to each AP story when the article exposed them."
+        ],
+        "followUps": [
+          "Check whether the Supreme Court adds urgency to the voting and immigration cases.",
+          "Track PCE inflation, oil, and mortgage rates for confirmation that the easing move holds.",
+          "Watch for the next Apple, Nvidia, Anthropic, and Google AI moves, plus any government response."
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "tone": "politics",
+      "heading": {
+        "ja": "政治",
+        "en": "Politics"
+      },
+      "topics": [
+        {
+          "id": "politics-voting-proof-blocked",
+          "title": {
+            "ja": "投票要件の証明義務を差し止め",
+            "en": "Voting proof requirement blocked"
+          },
+          "source": {
+            "href": "https://apnews.com/article/trump-elections-judge-358912bcb6c7223b3d2d36465156fde9",
+            "source": "AP News",
+            "title": {
+              "ja": "投票登録に市民権証明を求める命令を差し止め",
+              "en": "Judge blocks proof-of-citizenship voting order"
+            },
+            "description": {
+              "ja": "連邦判事が、投票登録に市民権証明を求める大統領令の主要部分を無効にした。",
+              "en": "A federal judge struck down the core of the order requiring proof of citizenship for voter registration."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/c66efce/2147483647/strip/true/crop/3000x2000%2B0%2B0/resize/320x213%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F94%2Feb%2F5ce0514ec027bca317e6a05b87ac%2F47ac5a9c4959424b9fbdf20b257a04d5",
+            "imageAlt": {
+              "ja": "選挙制度をめぐる法廷判断を示す場面",
+              "en": "A courtroom scene tied to election-rule litigation"
+            }
+          },
+          "bottomLine": {
+            "ja": "連邦判事が、投票登録に市民権証明を求める命令を差し止めた。",
+            "en": "A federal judge blocked the order requiring proof of citizenship for voter registration."
+          },
+          "whatHappened": {
+            "ja": "ボストンの連邦地裁は、選挙規制は議会と州に権限があるとして、命令の主要部分を恒久的に無効にした。",
+            "en": "A federal court in Boston ruled that election rules belong to Congress and the states, not the White House, and permanently blocked the core of the order."
+          },
+          "whyItMatters": {
+            "ja": "有権者登録の手続きと郵便投票ルールを巡る争いが、11月の中間選挙に直結する。",
+            "en": "The fight over voter registration and mail ballots goes straight to the 2026 midterm map."
+          },
+          "whatToWatch": {
+            "ja": "司法省が控訴するか、連邦最高裁が郵便投票の別件判断をどう出すかをみる。",
+            "en": "Watch for an appeal and for any Supreme Court move on related mail-ballot cases."
+          }
+        },
+        {
+          "id": "politics-courthouse-arrests",
+          "title": {
+            "ja": "裁判所での移民拘束を禁止",
+            "en": "Immigration court arrests barred"
+          },
+          "source": {
+            "href": "https://apnews.com/article/judge-rules-against-immigration-courthouse-arrests-e99e8e3a27647a716917217cc1c207ab",
+            "source": "AP News",
+            "title": {
+              "ja": "移民裁判所での拘束を全国で禁止",
+              "en": "Judge bars immigration court arrests nationwide"
+            },
+            "description": {
+              "ja": "サンフランシスコの連邦判事が、移民裁判所での拘束を全国で禁じた。",
+              "en": "A federal judge in San Francisco barred immigration arrests at immigration courts nationwide."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/2a7ccc4/2147483647/strip/true/crop/8088x5392%2B0%2B0/resize/320x213%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F0a%2F81%2Fb878fd09b76fa1f8404cfd464a26%2Fd9feef8d8e664664a17de23678e8037e",
+            "imageAlt": {
+              "ja": "移民裁判所と拘束をめぐる法廷場面",
+              "en": "A courtroom scene tied to immigration enforcement"
+            }
+          },
+          "bottomLine": {
+            "ja": "サンフランシスコの連邦判事が、移民裁判所での拘束を全国で禁じた。",
+            "en": "A federal judge in San Francisco blocked immigration arrests at immigration courts nationwide."
+          },
+          "whatHappened": {
+            "ja": "行政手続法に基づく説明が足りないとして、長年の保護を覆した方針を無効にした。",
+            "en": "The court said the administration had not given enough justification and invalidated a policy that had upended long-standing protections."
+          },
+          "whyItMatters": {
+            "ja": "出廷をためらわせる効果があるため、移民審理と強制送還の運用に広く影響する。",
+            "en": "The ruling affects whether people feel safe showing up for hearings, so it can change how immigration enforcement works in practice."
+          },
+          "whatToWatch": {
+            "ja": "政権が指針を修正するか、別の法廷で同種の差し止めが広がるか。",
+            "en": "Watch for a revised directive or for similar injunctions in other courts."
+          }
+        },
+        {
+          "id": "politics-nato-rutte-meets-trump",
+          "title": {
+            "ja": "NATOのRutte氏がホワイトハウス訪問",
+            "en": "Rutte visits Trump"
+          },
+          "source": {
+            "href": "https://apnews.com/article/trump-nato-mark-rutte-iran-5c2f88363f7a066c02103ab1ce1c8d6b",
+            "source": "AP News",
+            "title": {
+              "ja": "NATOのルッテ事務総長がトランプ氏と会談",
+              "en": "NATO chief Mark Rutte meets Trump"
+            },
+            "description": {
+              "ja": "次回首脳会議を前に、NATOのルッテ事務総長がトランプ氏との関係修復を探った。",
+              "en": "Ahead of the next summit, NATO chief Mark Rutte tried to steady relations with Trump."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/837f493/2147483647/strip/true/crop/4047x2698%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Ffa%2F8c%2F1b1456aceb82ad29e561086697b3%2F7841e00c9de443df9336a66275a67a65",
+            "imageAlt": {
+              "ja": "ホワイトハウスで会うNATO首脳とトランプ大統領",
+              "en": "Trump meeting NATO Secretary-General Mark Rutte at the White House"
+            }
+          },
+          "bottomLine": {
+            "ja": "NATOのルッテ事務総長が、トランプ氏との関係修復を図った。",
+            "en": "NATO chief Mark Rutte sought to reset ties with Trump."
+          },
+          "whatHappened": {
+            "ja": "米軍の欧州展開見直しと、イラン紛争での同盟国の対応をめぐり、トランプ氏はNATOを強く批判している。",
+            "en": "Trump is criticizing NATO while the U.S. reviews its Europe deployment and allies weigh their response to the Iran conflict."
+          },
+          "whyItMatters": {
+            "ja": "米欧の防衛負担と地域配備の見直しは、同盟の実務に直接響く。",
+            "en": "Changes in burden-sharing and force posture affect how the alliance actually operates."
+          },
+          "whatToWatch": {
+            "ja": "米軍の欧州戦力見直しと、次回首脳会議での防衛費目標をみる。",
+            "en": "Watch the U.S. force review in Europe and any new defense-spending target at the summit."
+          }
+        },
+        {
+          "id": "politics-war-powers-resolution",
+          "title": {
+            "ja": "上院がイラン戦争の戦費拘束決議",
+            "en": "Senate rebukes Iran war"
+          },
+          "source": {
+            "href": "https://apnews.com/article/senate-iran-war-powers-resolution-trump-7462a9a561103f531d995aac91f9fc96",
+            "source": "AP News",
+            "title": {
+              "ja": "上院がイラン戦争の戦費を制限する決議を可決",
+              "en": "Senate passes war powers resolution on Iran"
+            },
+            "description": {
+              "ja": "上院が、イランへの軍事行動を止める戦争権限決議を可決した。",
+              "en": "The Senate passed a war powers resolution aimed at limiting military action on Iran."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/c5b7cc7/2147483647/strip/true/crop/7319x4880%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F1b%2F1d%2F427f8d5cc9b37baf7826284d58ce%2F8620bc588e6a4be696beb5821b9c5f27",
+            "imageAlt": {
+              "ja": "米上院の採決を示す議場の様子",
+              "en": "The U.S. Senate chamber during a vote"
+            }
+          },
+          "bottomLine": {
+            "ja": "上院が、イランへの軍事行動を止める戦争権限決議を初めて可決した。",
+            "en": "The Senate passed a war powers resolution to block military action against Iran."
+          },
+          "whatHappened": {
+            "ja": "50対48で可決し、共和党からも4人が賛成に回った。",
+            "en": "The vote passed 50 to 48, with four Republicans joining Democrats."
+          },
+          "whyItMatters": {
+            "ja": "戦争継続と予算手当の両方に、議会の抵抗がはっきり出た。",
+            "en": "Congress is now pushing back both on the war itself and on how it gets funded."
+          },
+          "whatToWatch": {
+            "ja": "下院とホワイトハウスがどう応じるか、資金要求に条件がつくかをみる。",
+            "en": "Watch the House and White House response, and whether the funding request gets conditioned."
+          }
+        },
+        {
+          "id": "politics-iran-funding-request",
+          "title": {
+            "ja": "ホワイトハウスが876億ドル追加要求",
+            "en": "White House seeks $87.6B"
+          },
+          "source": {
+            "href": "https://apnews.com/article/c0cbd21df91c48fa821fc21e021d8831",
+            "source": "AP News",
+            "title": {
+              "ja": "ホワイトハウスがイラン戦費などで876億ドルを要求",
+              "en": "White House seeks $87.6 billion for Iran war costs"
+            },
+            "description": {
+              "ja": "ホワイトハウスが、イラン戦費を中心に追加予算を議会へ求めた。",
+              "en": "The White House asked Congress for a supplemental package centered on Iran war costs."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/9fb8414/2147483647/strip/true/crop/3936x2632%2B0%2B0/resize/599x401%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F6f%2Fb6%2F030eee08cb55b05bd7578adee571%2Faabaa2ca64b048739a30a3bee9c1110b",
+            "imageAlt": {
+              "ja": "ホワイトハウスの予算要求を示す画像",
+              "en": "A White House image tied to the supplemental funding request"
+            }
+          },
+          "bottomLine": {
+            "ja": "ホワイトハウスが、イラン戦費を中心に876億ドル規模の追加予算を議会に求めた。",
+            "en": "The White House asked Congress for a supplemental package worth $87.6 billion."
+          },
+          "whatHappened": {
+            "ja": "国防費のほか、農家支援、エボラ対応、ワシントンD.C.の復旧費も束ねた。",
+            "en": "The package bundles defense spending with farm aid, Ebola response money, and recovery costs for Washington, D.C."
+          },
+          "whyItMatters": {
+            "ja": "戦費だけでなく国内施策を抱き合わせたため、採決の政治コストが高い。",
+            "en": "Bundling war costs with domestic items raises the political cost of the vote."
+          },
+          "whatToWatch": {
+            "ja": "下院歳出委員会と上院がこの一括案を分割するかを見る。",
+            "en": "Watch whether House and Senate appropriators split the package apart."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "economy",
+      "heading": {
+        "ja": "経済",
+        "en": "Economy"
+      },
+      "topics": [
+        {
+          "id": "economy-stocks-mixed-tech-losses",
+          "title": {
+            "ja": "テック株安でウォール街がまちまち",
+            "en": "Wall Street ends mixed"
+          },
+          "source": {
+            "href": "https://apnews.com/article/stocks-markets-ai-us-iran-oil-b631564d3b359644eda586b047c9bcf0",
+            "source": "AP News",
+            "title": {
+              "ja": "テック株安で米株はまちまち",
+              "en": "U.S. stocks end mixed as tech falls"
+            },
+            "description": {
+              "ja": "米株はまちまちで引け、テック株安と原油安が同じ日に出た。",
+              "en": "U.S. stocks finished mixed as tech shares fell and oil prices eased."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/e39369f/2147483647/strip/true/crop/5403x3602%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F19%2Fbf%2Fe79adb89f06fdbe3556c2f38cc90%2Ff5b9adf46a3446dcab0fcc55e766ef89",
+            "imageAlt": {
+              "ja": "米株市場の値動きを示す画像",
+              "en": "A U.S. stock market image"
+            }
+          },
+          "bottomLine": {
+            "ja": "米株はまちまちで引け、Microsoftなどの下げが指数を押し下げた。",
+            "en": "U.S. stocks ended mixed as losses in Microsoft and other tech names weighed on the indexes."
+          },
+          "whatHappened": {
+            "ja": "S&P500は小幅安、Dowは上昇、Nasdaqは0.4%下落した。原油安でインフレ懸念は和らいだ。",
+            "en": "The S&P 500 edged lower, the Dow rose, and the Nasdaq fell 0.4%, while softer oil eased inflation worries."
+          },
+          "whyItMatters": {
+            "ja": "AI関連株の高値警戒と原油の落ち着きが、短期の相場テーマを同時に作っている。",
+            "en": "High valuations in AI names and calmer oil prices are now pulling the market in opposite directions."
+          },
+          "whatToWatch": {
+            "ja": "PCE物価指数と、メガテックの持ち直しが続くかをみる。",
+            "en": "Watch the PCE inflation data and whether mega-cap tech rebounds."
+          }
+        },
+        {
+          "id": "economy-housing-bill",
+          "title": {
+            "ja": "住宅法案が下院で最終可決",
+            "en": "House passes housing bill"
+          },
+          "source": {
+            "href": "https://apnews.com/article/housing-costs-congress-affordable-trump-9bb60c16e3fd18d8d111a19bbad46686",
+            "source": "AP News",
+            "title": {
+              "ja": "住宅費抑制を狙う法案が下院を通過",
+              "en": "House passes bill aimed at lowering housing costs"
+            },
+            "description": {
+              "ja": "住宅費抑制を狙う超党派法案が議会を通過した。",
+              "en": "A bipartisan housing bill aimed at lower costs cleared the House."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/e7cad96/2147483647/strip/true/crop/8247x5498%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F24%2F80%2Ff29c672839fa9aa7490025c9d3f6%2F11c627b4f2d14b98a6ab1832782a4275",
+            "imageAlt": {
+              "ja": "住宅政策と議会採決を連想させる画像",
+              "en": "An image tied to housing policy and congressional action"
+            }
+          },
+          "bottomLine": {
+            "ja": "住宅費抑制を狙う超党派法案が議会を通過した。",
+            "en": "A bipartisan bill aimed at lowering housing costs cleared Congress."
+          },
+          "whatHappened": {
+            "ja": "規制緩和、建設促進、賃借人保護、地域向け資金をまとめた。",
+            "en": "The bill bundles deregulation, construction incentives, renter protections, and local funding."
+          },
+          "whyItMatters": {
+            "ja": "供給不足が続く住宅市場に、久しぶりの大きな連邦介入になる。",
+            "en": "It is one of the larger federal moves in a housing market still short on supply."
+          },
+          "whatToWatch": {
+            "ja": "トランプ氏が署名するか、実務上の資金配分がどこまで速いか。",
+            "en": "Watch whether Trump signs it and how quickly the money can flow."
+          }
+        },
+        {
+          "id": "economy-mortgage-rates",
+          "title": {
+            "ja": "30年住宅ローン金利が6.47%に低下",
+            "en": "30-year mortgage rate dips"
+          },
+          "source": {
+            "href": "https://apnews.com/article/mortgages-interest-rates-economy-housing-real-estate-c25912a7738a43c558044341c076cc9d",
+            "source": "AP News",
+            "title": {
+              "ja": "30年固定住宅ローン金利が低下",
+              "en": "30-year fixed mortgage rates fall"
+            },
+            "description": {
+              "ja": "米30年固定住宅ローン金利が6.47%まで下がった。",
+              "en": "The average 30-year fixed mortgage rate fell to 6.47%."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/f97867c/2147483647/strip/true/crop/8448x5632%2B0%2B0/resize/320x213%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F43%2F4d%2F54dc262ecbae0b0389f3424049cf%2Fe0d61c014195484c8e0a93f513a4897b",
+            "imageAlt": {
+              "ja": "住宅ローン金利の低下を示す画像",
+              "en": "An image tied to falling mortgage rates"
+            }
+          },
+          "bottomLine": {
+            "ja": "米30年固定住宅ローン金利が6.47%まで下がった。",
+            "en": "The average 30-year fixed mortgage rate slipped to 6.47%."
+          },
+          "whatHappened": {
+            "ja": "イラン情勢の沈静化で米国債利回りが下がり、住宅ローン金利もつられた。",
+            "en": "Lower Treasury yields after the Iran scare eased mortgage rates as well."
+          },
+          "whyItMatters": {
+            "ja": "借り入れ負担は少し軽くなるが、販売水準はなお歴史的な低迷圏にある。",
+            "en": "Borrowing gets a little cheaper, but home sales remain near depressed levels."
+          },
+          "whatToWatch": {
+            "ja": "10年債利回りと、既存住宅販売の回復ペースをみる。",
+            "en": "Watch the 10-year Treasury yield and the pace of existing-home sales."
+          }
+        },
+        {
+          "id": "economy-fed-hawkish",
+          "title": {
+            "ja": "FOMCは年内利上げを示唆",
+            "en": "Fed signals possible hikes"
+          },
+          "source": {
+            "href": "https://apnews.com/article/federal-reserve-kevin-warsh-interest-rates-103325df845d2d6bde63dfa4b8093d35",
+            "source": "AP News",
+            "title": {
+              "ja": "FRB参加者の半数が年内利上げを支持",
+              "en": "Half of Fed participants back hikes this year"
+            },
+            "description": {
+              "ja": "FOMC参加者の半数が年内の利上げを支持する姿勢を示した。",
+              "en": "Half of the Fed participants signaled support for rate hikes later this year."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/124ed83/2147483647/strip/true/crop/4403x2935%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F1c%2F47%2F998a5b3da907df8a140192818686%2Fb2e68cb354a549018148c457b06d9ae6",
+            "imageAlt": {
+              "ja": "FRBの金利見通しを示す画像",
+              "en": "An image tied to Fed interest-rate expectations"
+            }
+          },
+          "bottomLine": {
+            "ja": "FOMC参加者の半数が、年内の利上げを支持する姿勢を示した。",
+            "en": "Half of the Fed participants signaled support for rate hikes later this year."
+          },
+          "whatHappened": {
+            "ja": "声明は据え置きだったが、前回より明確にタカ派へ傾いた。",
+            "en": "The statement held steady, but the tone moved more hawkish than before."
+          },
+          "whyItMatters": {
+            "ja": "インフレが3年ぶり高水準にある中で、金融条件は再び引き締まる可能性がある。",
+            "en": "With inflation at a three-year high, financial conditions could tighten again."
+          },
+          "whatToWatch": {
+            "ja": "次回会合でのメッセージと、国債利回りの反応。",
+            "en": "Watch the next meeting message and the Treasury-yield reaction."
+          }
+        },
+        {
+          "id": "economy-inflation-energy",
+          "title": {
+            "ja": "ガソリン高でインフレが4%超え",
+            "en": "Inflation tops 4%"
+          },
+          "source": {
+            "href": "https://apnews.com/article/consumer-prices-inflation-war-gas-878f6759c93fcb078aeefffe19d4dfa5",
+            "source": "AP News",
+            "title": {
+              "ja": "ガソリン高で米インフレが4%超え",
+              "en": "U.S. inflation tops 4% on higher gas prices"
+            },
+            "description": {
+              "ja": "5月の米消費者物価は前年比4.2%上昇し、3年ぶりの高水準になった。",
+              "en": "U.S. consumer prices rose 4.2% year over year in May, the highest in three years."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/212960d/2147483647/strip/true/crop/3888x5832%2B0%2B0/resize/599x899%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F65%2F8c%2Fd4744bdb5d662f0f3b5045a30631%2Fc592ece7dcc0439696b7d081127ab5b",
+            "imageAlt": {
+              "ja": "物価上昇とガソリン高を連想させる画像",
+              "en": "An image tied to inflation and higher gas prices"
+            }
+          },
+          "bottomLine": {
+            "ja": "5月の米消費者物価は前年比4.2%上昇し、3年ぶりの高水準になった。",
+            "en": "U.S. consumer prices rose 4.2% year over year in May, the highest in three years."
+          },
+          "whatHappened": {
+            "ja": "原油・ガソリン高が押し上げ要因となり、衣料、航空運賃、電気代も上がった。",
+            "en": "Higher oil and gasoline prices pushed the index up, alongside gains in clothing, airfares, and electricity."
+          },
+          "whyItMatters": {
+            "ja": "家計負担と政策判断の両方に、エネルギー価格が強く効いている。",
+            "en": "Energy prices are now hitting both household budgets and the Fed's policy choices."
+          },
+          "whatToWatch": {
+            "ja": "原油がさらに下がるか、6月分で基調インフレが鈍るか。",
+            "en": "Watch whether oil falls further and whether June core inflation cools."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "technology",
+      "heading": {
+        "ja": "技術",
+        "en": "Technology"
+      },
+      "topics": [
+        {
+          "id": "technology-google-ai-hack",
+          "title": {
+            "ja": "GoogleがAI悪用の侵入を阻止",
+            "en": "Google stops AI hack"
+          },
+          "source": {
+            "href": "https://apnews.com/article/google-ai-cybersecurity-exploitation-mythos-926aea7f7dc5e0e61adce3273c55c6d4",
+            "source": "AP News",
+            "title": {
+              "ja": "GoogleがAIを使った攻撃を阻止",
+              "en": "Google stops attackers using AI"
+            },
+            "description": {
+              "ja": "Googleが、AIで未知の脆弱性を探る攻撃を止めたと明らかにした。",
+              "en": "Google said it stopped an attack that used AI to hunt for unknown weaknesses."
+            },
+            "imageUrl": "https://apnews.com/article/google-ai-cybersecurity-exploitation-mythos-926aea7f7dc5e0e61adce3273c55c6d4",
+            "imageAlt": {
+              "ja": "GoogleのAIとサイバー防御を連想させる画像",
+              "en": "An image tied to Google's AI and cybersecurity response"
+            }
+          },
+          "bottomLine": {
+            "ja": "Googleは、AIで未知の脆弱性を探る攻撃を止めたと明らかにした。",
+            "en": "Google said it stopped an attack that used AI to probe for unknown weaknesses."
+          },
+          "whatHappened": {
+            "ja": "攻撃者はゼロデイ脆弱性を探し、二要素認証を迂回しようとしていた。",
+            "en": "The attackers were searching for zero-day weaknesses and trying to get around two-factor authentication."
+          },
+          "whyItMatters": {
+            "ja": "攻撃側もAIを使い始めたことで、サイバー防御の前提が変わる。",
+            "en": "Once attackers use AI too, the assumptions behind cyber defense change fast."
+          },
+          "whatToWatch": {
+            "ja": "企業向けの防御AIと、同種の攻撃報告が増えるか。",
+            "en": "Watch for more enterprise defense tools and more reports of similar attacks."
+          }
+        },
+        {
+          "id": "technology-anthropic-limits",
+          "title": {
+            "ja": "Anthropic制限の解除を求める声",
+            "en": "Push to ease Anthropic limits"
+          },
+          "source": {
+            "href": "https://apnews.com/article/anthropic-trump-fable-mythos-tech-0a87a0f7773255419936af053ad8bdef",
+            "source": "AP News",
+            "title": {
+              "ja": "Anthropicのモデル制限見直しを求める書簡",
+              "en": "Letter urges easing Anthropic model limits"
+            },
+            "description": {
+              "ja": "サイバー防御のため、Anthropicの最新モデル制限を緩めるよう求める公開書簡が出た。",
+              "en": "A public letter urged easing Anthropic's latest model limits for cyber defense."
+            },
+            "imageUrl": "https://apnews.com/article/anthropic-trump-fable-mythos-tech-0a87a0f7773255419936af053ad8bdef",
+            "imageAlt": {
+              "ja": "AnthropicのAI規制をめぐる議論を示す画像",
+              "en": "An image tied to the Anthropic AI-policy debate"
+            }
+          },
+          "bottomLine": {
+            "ja": "サイバー防御のため、Anthropicの最新モデル制限を緩めるよう求める公開書簡が出た。",
+            "en": "A public letter asked for Anthropic's latest model limits to be eased for cyber defense."
+          },
+          "whatHappened": {
+            "ja": "AdobeやNvidiaなどの関係者が、輸出制限は米国の防御力を落としかねないと訴えた。",
+            "en": "Adobe, Nvidia, and others argued that export limits could weaken U.S. defensive capability."
+          },
+          "whyItMatters": {
+            "ja": "AIの安全性を強める規制が、同時に防御用途を細らせるという難しさがある。",
+            "en": "Rules that improve AI safety can also choke off defensive uses."
+          },
+          "whatToWatch": {
+            "ja": "ホワイトハウスが規制を維持するか、条件を調整するか。",
+            "en": "Watch whether the White House keeps the limits or adjusts them."
+          }
+        },
+        {
+          "id": "technology-military-ai-memo",
+          "title": {
+            "ja": "軍のAI活用を急がせる大統領メモ",
+            "en": "Trump pushes military AI"
+          },
+          "source": {
+            "href": "https://apnews.com/article/artificial-intelligence-ai-military-trump-weapons-1078e23edada2bc16db12dba109015c0",
+            "source": "AP News",
+            "title": {
+              "ja": "軍のAI活用を急がせるトランプ大統領の方針",
+              "en": "Trump orders faster military AI use"
+            },
+            "description": {
+              "ja": "トランプ氏が、軍と安全保障機関にAI活用を急ぐよう求めた。",
+              "en": "Trump told the military and security agencies to move faster on AI adoption."
+            },
+            "imageUrl": "https://apnews.com/article/artificial-intelligence-ai-military-trump-weapons-1078e23edada2bc16db12dba109015c0",
+            "imageAlt": {
+              "ja": "軍事AI政策を連想させる画像",
+              "en": "An image tied to military AI policy"
+            }
+          },
+          "bottomLine": {
+            "ja": "トランプ氏が、軍と安全保障機関にAI活用を急ぐよう求めた。",
+            "en": "Trump told the military and security agencies to move faster on AI."
+          },
+          "whatHappened": {
+            "ja": "自律兵器の指針見直しを命じつつ、米国人への違法監視は禁じる方針を示した。",
+            "en": "He ordered a review of autonomous-weapon rules while also barring illegal surveillance of Americans."
+          },
+          "whyItMatters": {
+            "ja": "AI導入の速度と市民的自由の保護を、同じ文書で扱う段階に入った。",
+            "en": "The administration is now trying to balance speed of adoption with civil-liberties limits in one policy package."
+          },
+          "whatToWatch": {
+            "ja": "国防総省が新指針をどう書き換えるか、民間契約の条件が変わるか。",
+            "en": "Watch how the Pentagon rewrites the guidance and whether contractor terms change."
+          }
+        },
+        {
+          "id": "technology-nvidia-ai-pcs",
+          "title": {
+            "ja": "NvidiaがAI PC向け新チップ",
+            "en": "Nvidia bets on AI PCs"
+          },
+          "source": {
+            "href": "https://apnews.com/article/nvidia-microsoft-ai-laptops-jensen-chip-c807f7333b93b9927b62b1240dcf65a1",
+            "source": "AP News",
+            "title": {
+              "ja": "NvidiaがAI PC向け新チップを発表",
+              "en": "Nvidia unveils a new chip for AI PCs"
+            },
+            "description": {
+              "ja": "Nvidiaが、AI機能をPCに持ち込む新しいRTX Sparkを発表した。",
+              "en": "Nvidia unveiled a new RTX Spark chip aimed at bringing AI features onto PCs."
+            },
+            "imageUrl": "https://apnews.com/article/nvidia-microsoft-ai-laptops-jensen-chip-c807f7333b93b9927b62b1240dcf65a1",
+            "imageAlt": {
+              "ja": "NvidiaのAI PC発表を示す画像",
+              "en": "An image tied to Nvidia's AI PC announcement"
+            }
+          },
+          "bottomLine": {
+            "ja": "Nvidiaは、AI機能をPCに持ち込む新しいRTX Sparkを発表した。",
+            "en": "Nvidia unveiled RTX Spark, a chip designed to bring AI features onto PCs."
+          },
+          "whatHappened": {
+            "ja": "MicrosoftやDellの新機種で、ローカル実行のAIエージェントを売りにする。",
+            "en": "Microsoft and Dell are packaging new machines around local AI agents."
+          },
+          "whyItMatters": {
+            "ja": "データセンター中心だったAI投資が、個人端末にも広がろうとしている。",
+            "en": "AI investment is moving from data centers toward the personal device."
+          },
+          "whatToWatch": {
+            "ja": "秋の出荷時期と、Intel・AMDの対抗製品。",
+            "en": "Watch the fall shipment schedule and rival chips from Intel and AMD."
+          }
+        },
+        {
+          "id": "technology-apple-siri-refresh",
+          "title": {
+            "ja": "AppleがSiri刷新を正式披露",
+            "en": "Apple refreshes Siri"
+          },
+          "source": {
+            "href": "https://apnews.com/article/apple-siri-wwdc-iphone-aa25d07c06d366ec5b62643a1f5b0db9",
+            "source": "AP News",
+            "title": {
+              "ja": "AppleがWWDCでSiri刷新を披露",
+              "en": "Apple shows off a refreshed Siri at WWDC"
+            },
+            "description": {
+              "ja": "AppleがWWDCで、SiriのAI強化と写真編集の新機能を打ち出した。",
+              "en": "Apple used WWDC to show off a smarter Siri and new photo-editing features."
+            },
+            "imageUrl": "https://apnews.com/article/apple-siri-wwdc-iphone-aa25d07c06d366ec5b62643a1f5b0db9",
+            "imageAlt": {
+              "ja": "AppleのWWDC発表を連想させる画像",
+              "en": "An image tied to Apple's WWDC announcement"
+            }
+          },
+          "bottomLine": {
+            "ja": "AppleはWWDCで、SiriのAI強化と写真編集の新機能を打ち出した。",
+            "en": "Apple used WWDC to show off a smarter Siri and new photo-editing features."
+          },
+          "whatHappened": {
+            "ja": "Geminiを使う新Siriを示し、Tim Cook最後のWWDCとしても注目を集めた。",
+            "en": "The company previewed a new Siri that uses Gemini and treated the event as Tim Cook's last WWDC."
+          },
+          "whyItMatters": {
+            "ja": "AppleがようやくAI競争に本格参入し、OS体験の主導権争いが濃くなる。",
+            "en": "Apple is finally joining the AI race in earnest, which sharpens the fight over the OS experience."
+          },
+          "whatToWatch": {
+            "ja": "EUと中国での提供時期、そして秋の正式版の完成度。",
+            "en": "Watch the timing in the EU and China, plus how polished the fall release looks."
+          }
+        }
+      ]
+    }
+  ]
+}

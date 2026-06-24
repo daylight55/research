@@ -1,0 +1,25 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-06-25
+- Article slug: `daily-trends-2026-06-25`
+- Run Context: daily trend news digest; required categories politics, economy, and technology; exactly five topics per category; prioritize the most recent 24-48 hours and allow slightly older items only when they still drive current discussion or decisions; deliver the structured JSON for renderer output.
+- Environment: model `gpt-5.4-mini`; repo-local skill `research-report`; prompt source `ops/codex/prompts/daily-issue-research.md`.
+
+## 判断メモ
+
+- APの当日配信を軸に、裁判、議会、NATO、インフレ、住宅、AIの順で材料を並べた。記事本文よりも、翌日の判断に残る制度変更と価格シグナルを優先した。
+- 技術面は同日の大きな製品発表が薄かったため、6月上旬から中旬のAI関連記事を採用した。現在のAI議題は製品リリースだけでなく、規制、サイバー、防衛用途に分かれている。
+- 画像はAP本文の代表写真を優先し、記事ごとのトピックに近いものを選んだ。
+
+## 残課題
+
+- 連邦最高裁の判断が、郵便投票と移民執行の差し止めに波及するかを確認する。
+- PCE物価指数と原油相場の続落が、金利と住宅ローンにどう反映するかを追う。
+- Apple、Nvidia、Anthropic、Googleの次のAIアップデートと、政府側の規制調整を追う。

@@ -173,6 +173,7 @@ jobs:
       - name: Run Codex trend news research
         if: steps.run_context.outputs.article_exists != 'true' && steps.restore_generated_news_article.outputs.cache-hit != 'true'
         id: run_codex
+        continue-on-error: true
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
@@ -185,13 +186,14 @@ jobs:
           allow-bots: true
 
       - name: Restore Node for site build
+        if: steps.run_codex.outcome != 'failure'
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: pnpm
 
       - name: Render structured trend news article
-        if: steps.run_context.outputs.article_exists != 'true' && steps.restore_generated_news_article.outputs.cache-hit != 'true'
+        if: steps.run_context.outputs.article_exists != 'true' && steps.restore_generated_news_article.outputs.cache-hit != 'true' && steps.run_codex.outcome != 'failure'
         shell: bash
         env:
           SLUG: ${{ steps.run_context.outputs.slug }}
@@ -224,7 +226,19 @@ jobs:
         run: |
           rm -rf ops/codex/runtime codex-output.md
 
+      - name: Report skipped Codex trend news generation
+        if: steps.run_codex.outcome == 'failure'
+        shell: bash
+        run: |
+          if [[ "${GITHUB_EVENT_NAME}" != "schedule" ]]; then
+            echo "::error::Codex trend news generation failed during a manual run. Inspect the Run Codex trend news research logs."
+            exit 1
+          fi
+
+          echo "::warning::Codex trend news generation failed, likely because OpenAI quota or service capacity was unavailable. Skipping this scheduled run without opening a PR."
+
       - name: Preflight generated news article
+        if: steps.run_codex.outcome != 'failure'
         shell: bash
         env:
           ARTICLE_PATH: ${{ steps.run_context.outputs.article_path }}
@@ -232,6 +246,7 @@ jobs:
         run: bash ops/scripts/preflight-generated-trend-news.sh
 
       - name: Check generated news article
+        if: steps.run_codex.outcome != 'failure'
         id: diff_check
         shell: bash
         env:

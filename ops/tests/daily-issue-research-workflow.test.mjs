@@ -33,6 +33,18 @@ assert.match(
 
 assert.match(
 	workflow,
+	/- name: Run Codex research[\s\S]*?continue-on-error: true[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?- name: Report skipped Codex research generation[\s\S]*?if: steps\.run_codex\.outcome == 'failure'[\s\S]*?GITHUB_EVENT_NAME[\s\S]*?!= "schedule"[\s\S]*?exit 1[\s\S]*?Skipping this scheduled run without opening a PR/,
+	'Daily Issue Research should skip scheduled runs instead of failing CI when Codex generation is unavailable'
+)
+
+assert.match(
+	trendWorkflow,
+	/- name: Run Codex trend news research[\s\S]*?continue-on-error: true[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?- name: Report skipped Codex trend news generation[\s\S]*?if: steps\.run_codex\.outcome == 'failure'[\s\S]*?GITHUB_EVENT_NAME[\s\S]*?!= "schedule"[\s\S]*?exit 1[\s\S]*?Skipping this scheduled run without opening a PR/,
+	'Daily Trend News should skip scheduled runs instead of failing CI when Codex generation is unavailable'
+)
+
+assert.match(
+	workflow,
 	/- name: Verify generated mixed article alignment[\s\S]*?- name: Build generated site[\s\S]*?- name: Create generated article cache archive[\s\S]*?- name: Save generated article cache/,
 	'Daily Issue Research should save generated artifacts only after verification and build succeed'
 )

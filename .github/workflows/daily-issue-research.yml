@@ -220,6 +220,7 @@ jobs:
       - name: Run Codex research
         if: steps.select_issue.outputs.issue_found == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
         id: run_codex
+        continue-on-error: true
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
@@ -261,7 +262,7 @@ jobs:
           done < "${changed_files}"
 
       - name: Restore Node for site build
-        if: steps.select_issue.outputs.issue_found == 'true'
+        if: steps.select_issue.outputs.issue_found == 'true' && steps.run_codex.outcome != 'failure'
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
@@ -291,8 +292,19 @@ jobs:
         run: |
           rm -rf ops/codex/runtime codex-output.md
 
+      - name: Report skipped Codex research generation
+        if: steps.run_codex.outcome == 'failure'
+        shell: bash
+        run: |
+          if [[ "${GITHUB_EVENT_NAME}" != "schedule" ]]; then
+            echo "::error::Codex research generation failed during a manual run. Inspect the Run Codex research logs."
+            exit 1
+          fi
+
+          echo "::warning::Codex research generation failed, likely because OpenAI quota or service capacity was unavailable. Skipping this scheduled run without opening a PR."
+
       - name: Check generated diff
-        if: steps.select_issue.outputs.issue_found == 'true'
+        if: steps.select_issue.outputs.issue_found == 'true' && steps.run_codex.outcome != 'failure'
         id: diff_check
         shell: bash
         run: |

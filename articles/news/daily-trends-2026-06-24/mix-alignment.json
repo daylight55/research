@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "6月24日のニュースは、安全保障と市場の境界が薄くなった日として読める。政治では、NATOの相互防衛とイラン核施設攻撃後の説明責任が焦点になった。経済では、Fedと日銀の次の一手、原油、株式、為替が中東リスクに反応した。技術では、AI株の変動、量子計算、半導体素材、サイバー対策、AIサーバー投資が、研究開発から電力・供給網・資本政策へ広がった。",
+      "en": "The June 24 news cycle linked security policy and markets. In politics, NATO mutual defense language and post-strike Iran intelligence claims drove the day. In the economy, investors watched the Fed, BOJ, oil, equities, and currencies through the same Middle East risk lens. In technology, AI stock swings, quantum orders, semiconductor materials, cybersecurity pressure, and AI server plans showed how AI investment now depends on power, supply chains, capital, and operating risk."
+    },
+    {
+      "ja": "NATOの抑止力は軍事力だけでなく、米国が言葉で約束を弱めないことにも依存する。",
+      "en": "NATO deterrence depends on U.S. words as much as military capacity."
+    },
+    {
+      "ja": "APは、トランプ氏がNATOの相互防衛義務に含みを残す発言をしたと報じた。",
+      "en": "AP reported that Trump left ambiguity around the U.S. commitment to NATO mutual defense."
+    },
+    {
+      "ja": "同盟国は共同声明や防衛費より前に、米国の意思が危機時に読めるかを見ている。",
+      "en": "Allies read U.S. intent before they price summit communiques or defense spending."
+    },
+    {
+      "ja": "首脳会合後の文書が、5条への支持を明確な表現で補強するかを見る。",
+      "en": "Watch whether summit language reinforces Article 5 without caveats."
+    },
+    {
+      "ja": "NATOは首脳会合の前に、米国の要求を同盟国が受け止められる形へ翻訳する必要がある。",
+      "en": "NATO needs to translate U.S. demands into a form allies can accept before the summit."
+    },
+    {
+      "ja": "ルッテ事務総長はホワイトハウスを訪れ、防衛費負担とイラン情勢をめぐる調整に入った。",
+      "en": "Secretary General Mark Rutte visited the White House for talks on burden-sharing and Iran."
+    },
+    {
+      "ja": "欧州側が米国の安全保障要求に応じるほど、対ロシア抑止と中東対応の議論は一体化する。",
+      "en": "The more Europe accommodates U.S. security demands, the more Russia deterrence and Middle East policy converge."
+    },
+    {
+      "ja": "防衛費目標が、実際の調達計画や基地使用の協力に接続するかを追う。",
+      "en": "Track whether spending targets connect to procurement plans and base-access cooperation."
+    },
+    {
+      "ja": "軍事行動の成果が曖昧だと、次の外交交渉も国内説明も弱くなる。",
+      "en": "Ambiguous strike results weaken both diplomacy and domestic justification."
+    },
+    {
+      "ja": "APは、初期情報評価を受けても政権側が攻撃成果を強く主張したと報じた。",
+      "en": "AP reported that the administration defended the strike results despite an early intelligence assessment."
+    },
+    {
+      "ja": "核開発の遅延幅は、追加制裁、停戦履行、議会監視の前提になる。",
+      "en": "The delay inflicted on nuclear work anchors sanctions, compliance, and congressional oversight."
+    },
+    {
+      "ja": "独立した評価や議会説明で、施設被害と復旧可能性がどこまで示されるかを見る。",
+      "en": "Watch how independent reviews and congressional briefings describe damage and recovery."
+    },
+    {
+      "ja": "停戦後の市場安定は、合意文書より履行監視の実効性にかかる。",
+      "en": "Post-ceasefire stability depends more on compliance monitoring than the text itself."
+    },
+    {
+      "ja": "Reutersは、トランプ氏がイランの合意違反時に行動すると警告したと報じた。",
+      "en": "Reuters reported Trump's warning that he would act if Iran failed to live up to the deal."
+    },
+    {
+      "ja": "履行リスクは、原油、海運、制裁、同盟国の軍事配置を同時に動かす。",
+      "en": "Compliance risk moves oil, shipping, sanctions, and allied force posture together."
+    },
+    {
+      "ja": "査察、濃縮活動、代理勢力の行動をどの機関が検証するかが焦点になる。",
+      "en": "Watch which bodies verify inspections, enrichment activity, and proxy behavior."
+    },
+    {
+      "ja": "核開発をめぐる説明が過大なら、攻撃の正当化と停戦後の外交余地が同時に狭まる。",
+      "en": "Overstated nuclear claims would narrow both strike justification and diplomatic room."
+    },
+    {
+      "ja": "APは、ネタニヤフ氏の発言と公開情報の整合性を検証した。",
+      "en": "AP examined how Netanyahu's statements matched public evidence."
+    },
+    {
+      "ja": "危機時の事実認定は、軍事判断だけでなく同盟国の支持維持にも影響する。",
+      "en": "Fact-finding during a crisis affects military decisions and allied support."
+    },
+    {
+      "ja": "IAEAや米情報機関の追加評価が、イスラエル側説明を補強するかを見る。",
+      "en": "Watch whether IAEA or U.S. intelligence assessments support Israeli claims."
+    },
+    {
+      "ja": "市場の利下げ待ちは、Fed内部のインフレ警戒で後ろ倒しになりやすい。",
+      "en": "Markets waiting for cuts may face delay as Fed officials refocus on inflation."
+    },
+    {
+      "ja": "Reutersは、Fed当局者の約半数が年内利上げを選択肢に見ていると報じた。",
+      "en": "Reuters reported that nearly half of Fed policymakers see a 2026 hike as possible."
+    },
+    {
+      "ja": "高金利が長引くほど、住宅、企業借入、AIデータセンター投資の資金コストが上がる。",
+      "en": "Longer high rates raise financing costs for housing, corporate debt, and AI data centers."
+    },
+    {
+      "ja": "次のインフレ指標と雇用統計で、利上げ派が多数に近づくかを見る。",
+      "en": "Watch whether inflation and jobs data move hike supporters closer to a majority."
+    },
+    {
+      "ja": "日本の金利正常化は、円相場だけでなく世界の債券需給にも影響する。",
+      "en": "Japan's rate normalization affects the yen and global bond demand."
+    },
+    {
+      "ja": "Reutersは、日銀の一部政策委員が早めの追加利上げを求めたと報じた。",
+      "en": "Reuters reported that some BOJ members wanted faster follow-up hikes."
+    },
+    {
+      "ja": "円安と輸入物価の圧力が残るほど、日銀は景気配慮との両立を迫られる。",
+      "en": "Persistent yen and import-price pressure forces the BOJ to balance growth and inflation."
+    },
+    {
+      "ja": "賃金、サービス価格、国債市場の反応が次回会合の制約になる。",
+      "en": "Watch wages, service prices, and JGB-market reactions before the next meeting."
+    },
+    {
+      "ja": "原油市場は停戦合意そのものより、破られる兆候に敏感になっている。",
+      "en": "Oil markets are more sensitive to signs of breach than to the ceasefire text."
+    },
+    {
+      "ja": "Reutersは、停戦破りへの警告後にBrent価格が上昇したと報じた。",
+      "en": "Reuters reported Brent rose after warnings against breaking the ceasefire."
+    },
+    {
+      "ja": "エネルギー価格は、Fedと日銀のインフレ判断を同時に難しくする。",
+      "en": "Energy prices complicate inflation decisions for both the Fed and the BOJ."
+    },
+    {
+      "ja": "ホルムズ海峡の航行リスク、保険料、OPEC側の発言を追う。",
+      "en": "Track Hormuz shipping risk, insurance costs, and OPEC comments."
+    },
+    {
+      "ja": "株式市場は緊張緩和を買っても、原油が戻ればすぐ利益確定に傾く。",
+      "en": "Equities can buy de-escalation, then quickly fade when oil rebounds."
+    },
+    {
+      "ja": "APは、米株が前日の上昇分の一部を失い、原油が再び上がったと報じた。",
+      "en": "AP reported U.S. stocks slipped from the prior rally while oil resumed rising."
+    },
+    {
+      "ja": "地政学リスクの低下が短命なら、株式の高値更新には企業収益の裏付けが必要になる。",
+      "en": "If geopolitical relief is short-lived, new stock highs need earnings support."
+    },
+    {
+      "ja": "大型ハイテクとエネルギー株の動きが、指数全体の方向を分ける。",
+      "en": "Watch whether megacap tech or energy shares set the index direction."
+    },
+    {
+      "ja": "円安は日本の利上げ論を強めるが、急な利上げは成長と国債市場を揺らす。",
+      "en": "Yen weakness strengthens the hike case, but fast hikes can stress growth and bonds."
+    },
+    {
+      "ja": "Reutersは、停戦不透明感でドルが買われ、円は日銀遅延観測に押されたと報じた。",
+      "en": "Reuters reported the dollar rose on ceasefire uncertainty while yen pressure reflected BOJ-delay expectations."
+    },
+    {
+      "ja": "通貨の動きは、輸入インフレ、企業決算、海外投資家の日本株評価に直結する。",
+      "en": "Currency moves feed import inflation, earnings, and foreign investors' view of Japanese equities."
+    },
+    {
+      "ja": "日銀要旨後の円買いが続くか、Fed利上げ観測で相殺されるかを見る。",
+      "en": "Watch whether post-BOJ yen buying lasts or Fed-hike risk offsets it."
+    },
+    {
+      "ja": "AI相場は成長期待だけでなく、利益確定と資金コストにも左右される段階に入った。",
+      "en": "The AI trade now moves on profit-taking and financing costs as well as growth hopes."
+    },
+    {
+      "ja": "APは、AI関連株の急な反転がWall Streetを再び揺らしたと報じた。",
+      "en": "AP reported another sudden reversal in AI stocks rattled Wall Street."
+    },
+    {
+      "ja": "AI株が指数を主導するほど、データセンター投資や半導体受注の小さな変化も市場全体へ広がる。",
+      "en": "As AI shares lead indexes, small shifts in data-center spending or chip orders spread widely."
+    },
+    {
+      "ja": "決算発表で、クラウド企業がAI設備投資を維持するかを見る。",
+      "en": "Watch earnings calls for whether cloud firms keep AI capex plans intact."
+    },
+    {
+      "ja": "量子計算は研究テーマから、国家目標と調達計画の対象へ近づいている。",
+      "en": "Quantum computing is moving from research agenda toward national targets and procurement."
+    },
+    {
+      "ja": "Reuters配信記事は、米大統領令が2028年を目標に量子計算能力を求めたと伝えた。",
+      "en": "A Reuters-distributed story said U.S. orders called for powerful quantum capability by 2028."
+    },
+    {
+      "ja": "暗号、材料探索、安全保障で、政府目標が民間投資と人材獲得を加速させる。",
+      "en": "Government targets can speed private investment and hiring in cryptography, materials, and security."
+    },
+    {
+      "ja": "予算、調達先、標準化機関がどの企業・研究機関を中心に動くかを見る。",
+      "en": "Watch budgets, procurement channels, and standards bodies for favored firms and labs."
+    },
+    {
+      "ja": "AI半導体競争は設計だけでなく、材料探索と国内製造基盤へ広がっている。",
+      "en": "AI-chip competition now extends beyond design into materials discovery and domestic manufacturing."
+    },
+    {
+      "ja": "Reutersは、米政府がSandboxAQに新素材探索資金を出したと報じた。",
+      "en": "Reuters reported a U.S. award to SandboxAQ for new chipmaking materials."
+    },
+    {
+      "ja": "材料の制約が解けなければ、先端パッケージングや省電力化のロードマップが詰まる。",
+      "en": "Without materials breakthroughs, advanced packaging and power-efficiency roadmaps tighten."
+    },
+    {
+      "ja": "研究成果が商用製造プロセスへ移る時期と、輸出規制の扱いを確認する。",
+      "en": "Watch when research moves into production processes and how export controls treat it."
+    },
+    {
+      "ja": "AI防御を導入しない組織は、AIを使う攻撃者に対応速度で負ける。",
+      "en": "Organizations without AI-enabled defense risk losing on response speed."
+    },
+    {
+      "ja": "World Economic Forumは、AIが脆弱性発見を早め、攻撃側の速度を上げていると整理した。",
+      "en": "The World Economic Forum summarized how AI speeds flaw discovery and attacker operations."
+    },
+    {
+      "ja": "サイバー対策はツール導入だけでなく、検知、判断、封じ込めの人間系プロセスを変える必要がある。",
+      "en": "Cybersecurity needs changed detection, decision, and containment processes, not only new tools."
+    },
+    {
+      "ja": "企業がAI検知ツールを入れても、インシデント対応の承認経路を短縮できるかを見る。",
+      "en": "Watch whether firms shorten incident-response approval paths after deploying AI detection."
+    },
+    {
+      "ja": "AIインフラ競争は、GPU調達だけでなく国内サーバー組み立てと工場再利用へ広がる。",
+      "en": "AI infrastructure competition extends from GPU sourcing to domestic server assembly and factory reuse."
+    },
+    {
+      "ja": "Nikkei Asiaは、SoftBankが旧Sharp工場でAIサーバーを作る計画を報じた。",
+      "en": "Nikkei Asia reported SoftBank's plan to make AI servers at a former Sharp plant."
+    },
+    {
+      "ja": "日本企業が計算資源を国内で確保できるかは、クラウド費用、データ主権、産業政策に関わる。",
+      "en": "Domestic compute capacity affects cloud costs, data sovereignty, and industrial policy."
+    },
+    {
+      "ja": "電力契約、冷却設備、GPU調達先が計画の実現性を決める。",
+      "en": "Power contracts, cooling systems, and GPU sourcing will decide feasibility."
+    },
+    {
+      "ja": "安全保障の発言が、同じ日に原油、為替、株式、金利期待へ波及した。",
+      "en": "Security-policy comments moved oil, currencies, equities, and rate expectations in the same window."
+    },
+    {
+      "ja": "AI投資はモデル競争だけでなく、電力、サーバー、材料、サイバー運用の制約で評価され始めた。",
+      "en": "AI investment is being judged through power, servers, materials, and cybersecurity constraints, not only model capability."
+    },
+    {
+      "ja": "中央銀行はインフレ再燃と成長鈍化を同時に見ており、政策の余地は市場が期待するほど広くない。",
+      "en": "Central banks face inflation and growth risks at once, leaving less policy space than markets would like."
+    },
+    {
+      "ja": "NATO首脳会合後に米国の相互防衛コミットメントがどこまで明文化されるか。",
+      "en": "Whether NATO summit language narrows or widens uncertainty over U.S. mutual-defense commitments."
+    },
+    {
+      "ja": "イラン合意の履行状況が原油と海運保険料を再び押し上げるか。",
+      "en": "Whether Iran agreement compliance pushes oil and shipping insurance risk higher again."
+    },
+    {
+      "ja": "AI関連株の調整が、データセンター電力契約と半導体素材投資へ波及するか。",
+      "en": "Whether AI stock volatility spills into data-center power deals and semiconductor materials spending."
+    }
+  ]
+}

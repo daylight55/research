@@ -1,0 +1,26 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-06-26
+- Article slug: `daily-trends-2026-06-26`
+- Run Context: news digest, required content type `news`, required category `tech-news`, and exact topic counts of politics 5, economy 5, technology 5 within a 24-48 hour recency window.
+- Deliverable: structured JSON for the renderer, not hand-authored MDX or duplicate article copies.
+
+## 判断メモ
+
+- 一次情報と準一次情報を優先し、AP、Guardian、Axios、Investopediaの当日記事で3カテゴリを埋めた。
+- 政治は最高裁、選挙、戦費、収容施設の変化でまとめ、経済はPCE、GDP、住宅ローン、原油、ホルムズ航路でまとめた。
+- 技術は半導体決算、AI向け売上見通し、端末値上げ、雇用対策、モデル安全性を並べ、AI投資の連鎖が見える構成にした。
+- 記事画像は各ソースの代表写真を使い、重複を避けた。
+
+## 残課題
+
+- 議会の戦費審議と選挙関連訴訟の行方を追う。
+- ホルムズ海峡の航路再開が続くか、原油と保険料の反応を確認する。
+- AI部品高がApple以外の端末メーカーに波及するかを見る。

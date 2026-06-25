@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "26日の材料は、米最高裁の移民判断、連邦裁判所の選挙ルール差し止め、ホワイトハウスのイラン戦費追加要求、そしてPCEインフレの上振れだった。ホルムズ海峡の通行は少し落ち着き、MicronとQualcommはAI需要の強さを示し、Appleは部品高を販売価格に移した。政策、物価、供給制約が別々の回路で同時に市場へ跳ね返った。",
+      "en": "The day was driven by Supreme Court immigration rulings, a federal block on a voting-order push, a White House war-funding request, and an upside surprise in PCE inflation. Shipping through the Strait of Hormuz eased a little, while Micron and Qualcomm pointed to durable AI demand and Apple pushed higher component costs into device prices. Policy, prices, and supply constraints all fed back into markets through different channels."
+    },
+    {
+      "ja": "最高裁が、国境でのアサイラム申請を絞る旧運用の再開を認めた。",
+      "en": "The Supreme Court allowed the administration to revive a restrictive asylum practice at the border."
+    },
+    {
+      "ja": "下級審が止めていた国境でのメータリングを、6対3で差し止め解除した。",
+      "en": "In a 6-3 decision, the court lifted a lower-court block on border metering."
+    },
+    {
+      "ja": "待機、送還、交渉の余地が広がり、移民制限を強める政権の手が太くなる。",
+      "en": "It expands the administration's room to delay, turn back, and negotiate asylum flows."
+    },
+    {
+      "ja": "国土安全保障省が再導入に動くか、下級審の別訴訟が追随するかをみる。",
+      "en": "Watch for DHS implementation and for fresh lower-court challenges."
+    },
+    {
+      "ja": "最高裁が、ハイチとシリアのTPS終了を認めた。",
+      "en": "The Supreme Court allowed the administration to end TPS protections for Haitians and Syrians."
+    },
+    {
+      "ja": "6対3で、移民当局の判断を優先し、差し止めを外した。",
+      "en": "The court ruled 6-3 and removed a lower-court hold on the policy."
+    },
+    {
+      "ja": "在留資格、雇用、家族、送還計画に直結する判断だ。",
+      "en": "It directly affects legal status, work permits, families, and removal plans."
+    },
+    {
+      "ja": "DHSが終了手続きをどこまで急ぐか、他国のTPS案件へ波及するかをみる。",
+      "en": "Watch how quickly DHS moves and whether the ruling spills into other TPS cases."
+    },
+    {
+      "ja": "連邦判事が、有権者名簿と郵便投票をめぐる命令を止めた。",
+      "en": "A federal judge blocked the order on voter lists and mail voting."
+    },
+    {
+      "ja": "ボストンの判事が、州の選挙管理を超えると判断した。",
+      "en": "The Boston judge said the order went beyond federal authority over state elections."
+    },
+    {
+      "ja": "2026年中間選挙の投票ルールをめぐる争いが、州と連邦の対立に戻った。",
+      "en": "It resets the fight over voting rules for the 2026 midterms as a federal-state clash."
+    },
+    {
+      "ja": "政権の控訴と、州側の名簿・郵便投票運用の守り方をみる。",
+      "en": "Watch the appeal and how states defend their registration and mail-voting systems."
+    },
+    {
+      "ja": "ホワイトハウスは、イラン戦費を含む87.6bnドルの追加予算を議会に求めた。",
+      "en": "The White House asked Congress for an $87.6bn supplemental package that includes Iran war costs."
+    },
+    {
+      "ja": "戦費、災害、治安、D.C.の警備などを束ねた要求を前に出した。",
+      "en": "The request bundled war costs with disaster, security, and Washington-related spending."
+    },
+    {
+      "ja": "戦争コストの負担先と歳出規模が、議会との主要争点になる。",
+      "en": "It puts war costs and federal spending size at the center of the congressional fight."
+    },
+    {
+      "ja": "上下両院がどこまで承認するか、他の歳出取引に混ざるかをみる。",
+      "en": "Watch how much Congress approves and whether the request gets folded into other spending deals."
+    },
+    {
+      "ja": "フロリダの仮設収容施設「Alligator Alcatraz」が閉鎖された。",
+      "en": "Florida's temporary detention site known as Alligator Alcatraz has closed."
+    },
+    {
+      "ja": "州は、エバーグレーズの仮設施設を空にして移送を進めた。",
+      "en": "The state emptied the Everglades site and began moving detainees elsewhere."
+    },
+    {
+      "ja": "収容運用の象徴施設が消えても、移送と拘束の体制は残る。",
+      "en": "The symbol disappears, but the detention and transfer system stays in place."
+    },
+    {
+      "ja": "移送先、環境訴訟、再開の有無をみる。",
+      "en": "Watch the transfer sites, the environmental lawsuits, and any attempt to reopen it."
+    },
+    {
+      "ja": "PCEは4.1%まで上がり、Fedの目標を大きく上回った。",
+      "en": "PCE inflation rose to 4.1%, far above the Fed's target."
+    },
+    {
+      "ja": "5月のPCEとコアPCEが想定より強く、消費支出も底堅かった。",
+      "en": "May PCE and core PCE ran hotter than expected, and spending stayed firm."
+    },
+    {
+      "ja": "利下げ期待は後退し、年内の方針はもっと慎重になる。",
+      "en": "It pushes back rate-cut hopes and keeps the Fed cautious."
+    },
+    {
+      "ja": "エネルギー安が次回データにどこまで入るかをみる。",
+      "en": "Watch how much the recent drop in energy prices shows up in the next report."
+    },
+    {
+      "ja": "米GDPは第1四半期に年率2.1%へ上方修正された。",
+      "en": "US GDP was revised up to a 2.1% annual pace in the first quarter."
+    },
+    {
+      "ja": "企業投資が支え、消費の弱さを一部埋めた。",
+      "en": "Business investment helped offset some consumer weakness."
+    },
+    {
+      "ja": "景気はまだ崩れていないが、高金利の重みは残る。",
+      "en": "The economy is still holding up, but higher rates still bite."
+    },
+    {
+      "ja": "第2四半期の消費とAI設備投資が続くかをみる。",
+      "en": "Watch second-quarter consumer demand and whether AI capex keeps going."
+    },
+    {
+      "ja": "30年住宅ローン金利は6.49%に上がった。",
+      "en": "The average 30-year mortgage rate moved up to 6.49%."
+    },
+    {
+      "ja": "Freddie Macの週次平均が小幅上昇し、6.5%近辺に張り付いた。",
+      "en": "Freddie Mac's weekly average ticked higher and stayed near 6.5%."
+    },
+    {
+      "ja": "買い手の月額負担が増え、住宅取引は冷えやすい。",
+      "en": "Higher monthly payments make the housing market harder to move."
+    },
+    {
+      "ja": "長期金利と地政学がこの水準を保つかをみる。",
+      "en": "Watch whether long rates and geopolitics keep the rate near this level."
+    },
+    {
+      "ja": "原油はイラン戦争前の水準まで下がった。",
+      "en": "Oil prices fell back to pre-Iran war levels."
+    },
+    {
+      "ja": "ホルムズ海峡を出るタンカーが増え、Brentは72ドル台まで落ちた。",
+      "en": "More tankers were leaving Hormuz, and Brent slipped into the low $70s."
+    },
+    {
+      "ja": "インフレの上振れ圧力が少し和らぎ、消費にも追い風になる。",
+      "en": "It eases some inflation pressure and gives consumers a little relief."
+    },
+    {
+      "ja": "航路の安定が続くか、周辺戦闘で逆戻りしないかをみる。",
+      "en": "Watch whether shipping stays stable or flips back on another attack."
+    },
+    {
+      "ja": "ホルムズ海峡の船舶退避が、一時停止された。",
+      "en": "The evacuation pause through the Strait of Hormuz remains in force."
+    },
+    {
+      "ja": "船舶が攻撃を受け、国際機関が安全確認まで動きを止めた。",
+      "en": "After a vessel attack, the maritime agency paused movements until safety checks are done."
+    },
+    {
+      "ja": "航路再開はまだ脆く、エネルギーと保険のリスクが残る。",
+      "en": "The route is still fragile, so energy and insurance risk remain."
+    },
+    {
+      "ja": "犯人特定、護送路の再開、安全確認の条件をみる。",
+      "en": "Watch the attribution, the return of escorted shipping, and the safety conditions."
+    },
+    {
+      "ja": "MicronはAI需要を背景に、予想を上回る決算を出した。",
+      "en": "Micron posted results that beat expectations on AI demand."
+    },
+    {
+      "ja": "利益と売上が予想を超え、メモリ株が急伸した。",
+      "en": "Profit and revenue beat forecasts, and memory stocks jumped."
+    },
+    {
+      "ja": "AIデータセンター向けの記憶容量需要が、半導体相場を押し上げている。",
+      "en": "AI data-center memory demand is still driving the chip trade."
+    },
+    {
+      "ja": "メモリ価格と供給の締まりが続くかをみる。",
+      "en": "Watch whether memory pricing and supply stay tight."
+    },
+    {
+      "ja": "Qualcommは非スマホ売上目標を引き上げ、AIデータセンター向けの売上軸を強めた。",
+      "en": "Qualcomm lifted long-term non-phone sales targets and leaned harder into AI data centers."
+    },
+    {
+      "ja": "Meta向けCPU計画も示し、スマホ依存からの脱却を急いだ。",
+      "en": "It also outlined a CPU plan for Meta as it pushes beyond phone dependence."
+    },
+    {
+      "ja": "AIインフラ向けの受注が、チップ設計会社の評価を変え始めている。",
+      "en": "AI infrastructure orders are starting to change how chip designers are valued."
+    },
+    {
+      "ja": "Meta契約が実需につながるか、他社が追随するかをみる。",
+      "en": "Watch whether the Meta deal becomes real volume and whether rivals follow."
+    },
+    {
+      "ja": "AppleはMacとiPadの値上げに踏み切った。",
+      "en": "Apple has raised prices on Mac and iPad models."
+    },
+    {
+      "ja": "AIデータセンター向けの部材高が、端末価格に移された。",
+      "en": "Higher component costs tied to AI data centers are being pushed into device prices."
+    },
+    {
+      "ja": "AI投資の負担が、ついに消費者向け端末にも波及した。",
+      "en": "The cost of AI investment is now reaching consumer hardware."
+    },
+    {
+      "ja": "iPhoneや他製品へ波及するか、需要が鈍るかをみる。",
+      "en": "Watch whether the change spreads to other products and whether demand softens."
+    },
+    {
+      "ja": "AnthropicとOpenAIが、5億ドル規模の雇用対策基金に参加した。",
+      "en": "Anthropic and OpenAI joined a $500 million effort to address AI's labor impact."
+    },
+    {
+      "ja": "州と企業が再訓練や賃金補償の実験を進める。",
+      "en": "States and companies are testing retraining and wage-insurance ideas."
+    },
+    {
+      "ja": "AIの雇用影響を、企業自身が資金を出して埋めにいく段階に入った。",
+      "en": "Companies are now helping fund the response to AI's labor effects."
+    },
+    {
+      "ja": "4州での実験が他州へ広がるか、政策化されるかをみる。",
+      "en": "Watch whether the pilot spreads to more states and turns into policy."
+    },
+    {
+      "ja": "AnthropicのMythosは、機密系政府システムの脆弱性を見つけた。",
+      "en": "Anthropic's Mythos model found vulnerabilities in classified government systems."
+    },
+    {
+      "ja": "検証作業で、数時間のうちに脆弱性を特定した。",
+      "en": "In testing, the model identified weaknesses within hours."
+    },
+    {
+      "ja": "先端モデルは防御側の監査能力を押し上げるが、政府の規制も強まる。",
+      "en": "Frontier models can strengthen defense audits, but they also invite tighter government scrutiny."
+    },
+    {
+      "ja": "Anthropicと政府の調整、アクセス制限、他社への波及をみる。",
+      "en": "Watch the policy response, access limits, and whether rivals adopt the same approach."
+    },
+    {
+      "ja": "インフレとAI需要が同じ方向にコストを押し上げ、Fedの余地を狭めている。",
+      "en": "Inflation and AI demand are pushing costs in the same direction and narrowing the Fed's room to move."
+    },
+    {
+      "ja": "移民、選挙、戦費の争点は、裁判所と議会で同時に動いている。",
+      "en": "Immigration, elections, and war spending are moving through courts and Congress at the same time."
+    },
+    {
+      "ja": "ホルムズ海峡の再開は進んでも、供給不安の消え方はまだ不安定だ。",
+      "en": "Traffic through the Strait of Hormuz is improving, but the supply risk is still fragile."
+    },
+    {
+      "ja": "議会が戦費要求と選挙関連の争点をどう切り分けるか。",
+      "en": "How Congress separates the war-funding request from the election-rule fight."
+    },
+    {
+      "ja": "ホルムズ海峡の迂回航路が攻撃や再停止に耐えるか。",
+      "en": "Whether the Hormuz detour route can hold after another attack or disruption."
+    },
+    {
+      "ja": "PCE高止まりのままFedが年内方針をどう示すか。",
+      "en": "Whether the Fed keeps leaning hawkish if PCE stays hot."
+    }
+  ]
+}

@@ -1,0 +1,755 @@
+{
+  "version": 1,
+  "slug": "daily-trends-2026-06-26",
+  "date": "2026-06-26",
+  "category": "tech-news",
+  "tags": ["news", "politics", "economy", "technology"],
+  "generation": {
+    "model": "gpt-5.4-mini"
+  },
+  "heroImage": {
+    "query": "Strait of Hormuz cargo ships June 2026",
+    "alt": {
+      "ja": "ホルムズ海峡を進む貨物船とタンカーの写真",
+      "en": "Cargo ships and tankers moving through the Strait of Hormuz"
+    }
+  },
+  "locales": {
+    "ja": {
+      "title": "2026-06-26 政治判断とAI投資が交錯し、インフレとホルムズ航路が市場を揺らす",
+      "description": "米最高裁の移民判断、選挙規則の差し止め、戦費要求、PCEインフレ、そしてAI投資の値上げ波及が同じ日に重なった。",
+      "rssSummary": "最高裁の移民判断と選挙規則の争いに、インフレ高止まりとAI投資が重なった一日。",
+      "opening": "26日の材料は、米最高裁の移民判断、連邦裁判所の選挙ルール差し止め、ホワイトハウスのイラン戦費追加要求、そしてPCEインフレの上振れだった。ホルムズ海峡の通行は少し落ち着き、MicronとQualcommはAI需要の強さを示し、Appleは部品高を販売価格に移した。政策、物価、供給制約が別々の回路で同時に市場へ跳ね返った。",
+      "crossCutting": [
+        "インフレとAI需要が同じ方向にコストを押し上げ、Fedの余地を狭めている。",
+        "移民、選挙、戦費の争点は、裁判所と議会で同時に動いている。",
+        "ホルムズ海峡の再開は進んでも、供給不安の消え方はまだ不安定だ。"
+      ],
+      "watchItems": [
+        "議会が戦費要求と選挙関連の争点をどう切り分けるか。",
+        "ホルムズ海峡の迂回航路が攻撃や再停止に耐えるか。",
+        "PCE高止まりのままFedが年内方針をどう示すか。"
+      ],
+      "sourceNotes": {
+        "politics": [
+          "APの移民・選挙関連記事で、最高裁の2件と有権者名簿の差し止めを押さえた。Alligator Alcatraz閉鎖は、同じ日の移民運用の変化として補強に使った。",
+          "戦費要求はGuardianの報道を採用し、議会との予算対立を前面に出した。"
+        ],
+        "economy": [
+          "PCE、GDP上方修正、住宅ローン金利、ホルムズ海峡の船舶動向、原油低下を並べ、金利と物流コストの両方を見える化した。",
+          "株価指数の総括記事は、MicronやAppleの個別材料と重なるので除外した。"
+        ],
+        "technology": [
+          "Micron、Qualcomm、Apple、Raise Us、Anthropicの5件で、AI需要、端末価格、雇用、モデル監査を一通り拾った。",
+          "SpaceXや古いAI投資記事は、今回の24-48時間枠から外れるので落とした。"
+        ],
+        "decisions": [
+          "APの子ども送還計画は確認したが、最高裁の移民判断と有権者名簿差し止めの方が今日の政策影響が大きいと判断した。",
+          "株式市場の上げ下げは確認したが、内容がMicronと原油の反応の繰り返しだったため弱めた。",
+          "古いAI資金調達や上場期待の話題は、時点がずれるので採らなかった。"
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-26",
+          "Article slug: `daily-trends-2026-06-26`",
+          "Run Context: news digest, required content type `news`, required category `tech-news`, and exact topic counts of politics 5, economy 5, technology 5 within a 24-48 hour recency window.",
+          "Deliverable: structured JSON for the renderer, not hand-authored MDX or duplicate article copies."
+        ],
+        "decisionNotes": [
+          "一次情報と準一次情報を優先し、AP、Guardian、Axios、Investopediaの当日記事で3カテゴリを埋めた。",
+          "政治は最高裁、選挙、戦費、収容施設の変化でまとめ、経済はPCE、GDP、住宅ローン、原油、ホルムズ航路でまとめた。",
+          "技術は半導体決算、AI向け売上見通し、端末値上げ、雇用対策、モデル安全性を並べ、AI投資の連鎖が見える構成にした。",
+          "記事画像は各ソースの代表写真を使い、重複を避けた。"
+        ],
+        "followUps": [
+          "議会の戦費審議と選挙関連訴訟の行方を追う。",
+          "ホルムズ海峡の航路再開が続くか、原油と保険料の反応を確認する。",
+          "AI部品高がApple以外の端末メーカーに波及するかを見る。"
+        ]
+      }
+    },
+    "en": {
+      "title": "2026-06-26 Politics, AI spending, and inflation shake markets",
+      "description": "Supreme Court immigration rulings, an election-order block, a war-funding request, hot inflation, and AI-driven price pressure all landed on the same day.",
+      "rssSummary": "Immigration rulings, election fights, hot inflation, and AI spending shaped the day.",
+      "opening": "The day was driven by Supreme Court immigration rulings, a federal block on a voting-order push, a White House war-funding request, and an upside surprise in PCE inflation. Shipping through the Strait of Hormuz eased a little, while Micron and Qualcomm pointed to durable AI demand and Apple pushed higher component costs into device prices. Policy, prices, and supply constraints all fed back into markets through different channels.",
+      "crossCutting": [
+        "Inflation and AI demand are pushing costs in the same direction and narrowing the Fed's room to move.",
+        "Immigration, elections, and war spending are moving through courts and Congress at the same time.",
+        "Traffic through the Strait of Hormuz is improving, but the supply risk is still fragile."
+      ],
+      "watchItems": [
+        "How Congress separates the war-funding request from the election-rule fight.",
+        "Whether the Hormuz detour route can hold after another attack or disruption.",
+        "Whether the Fed keeps leaning hawkish if PCE stays hot."
+      ],
+      "sourceNotes": {
+        "politics": [
+          "AP's immigration bundle covered the two Supreme Court rulings and the voter-list injunction. I kept the Alligator Alcatraz closure as the operational immigration story of the day.",
+          "For the war-funding story, Guardian gave the cleanest account of the White House request and the congressional fight around it."
+        ],
+        "economy": [
+          "PCE, the GDP revision, mortgage rates, Hormuz shipping, and lower oil prices gave the clearest read on rates and logistics.",
+          "Stock-market roundups were checked but mostly repeated the same reaction already visible in the oil and chip stories."
+        ],
+        "technology": [
+          "Micron, Qualcomm, Apple, Raise Us, and Anthropic covered AI demand, device pricing, labor pressure, and model safety.",
+          "Older AI funding and IPO chatter was left out because it did not sit inside the 24-48 hour window."
+        ],
+        "decisions": [
+          "I downgraded AP's child-removal warning because the Supreme Court rulings and voter-list injunction had broader immediate policy impact.",
+          "I skipped the market-index recap because it duplicated the Micron and oil signals.",
+          "I left out older AI venture stories because the digest needed current decision-driving items."
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-26",
+          "Article slug: `daily-trends-2026-06-26`",
+          "Run Context: news digest, required content type `news`, required category `tech-news`, and exact topic counts of politics 5, economy 5, technology 5 within a 24-48 hour recency window.",
+          "Deliverable: structured JSON for the renderer, not hand-authored MDX or duplicate article copies."
+        ],
+        "decisionNotes": [
+          "I prioritized current primary or near-primary sources: AP, Guardian, Axios, and Investopedia.",
+          "Politics was balanced across courts, elections, immigration, and war spending; economy across inflation, GDP, mortgage rates, oil, and shipping; technology across chips, device pricing, jobs, and model safety.",
+          "I used distinct article images for each topic so the renderer can build a stable card set."
+        ],
+        "followUps": [
+          "Track congressional action on the war-funding request and any election-rule appeals.",
+          "Watch whether Hormuz shipping stays open and whether oil follows the current dip.",
+          "Check whether Apple's price move shows up at other hardware vendors."
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "tone": "politics",
+      "heading": {
+        "ja": "政治",
+        "en": "Politics"
+      },
+      "topics": [
+        {
+          "id": "politics-asylum-metering",
+          "title": {
+            "ja": "アサイラム制限再開",
+            "en": "Asylum metering returns"
+          },
+          "source": {
+            "href": "https://apnews.com/article/d36d0092617c7115780c06de38e2000f",
+            "source": "AP News",
+            "title": {
+              "ja": "米最高裁、国境でのアサイラム制限再開を認める",
+              "en": "Supreme Court lets Trump revive restrictive asylum policy"
+            },
+            "description": {
+              "ja": "APが、最高裁がトランプ政権の制限的な国境運用を再び動かせるようにしたと報じた。",
+              "en": "AP reported that the Supreme Court cleared the way for the Trump administration to bring back a restrictive border practice."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/2147483647/strip/true/crop/4513x3008%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe4%2Fae%2F00289ff819dcba4700d5efb52fa2%2F3231f6f224d84409a733302774f48270",
+            "imageAlt": {
+              "ja": "国境で移民と向き合う警備当局の写真",
+              "en": "Border officers meeting migrants at the border"
+            }
+          },
+          "bottomLine": {
+            "ja": "最高裁が、国境でのアサイラム申請を絞る旧運用の再開を認めた。",
+            "en": "The Supreme Court allowed the administration to revive a restrictive asylum practice at the border."
+          },
+          "whatHappened": {
+            "ja": "下級審が止めていた国境でのメータリングを、6対3で差し止め解除した。",
+            "en": "In a 6-3 decision, the court lifted a lower-court block on border metering."
+          },
+          "whyItMatters": {
+            "ja": "待機、送還、交渉の余地が広がり、移民制限を強める政権の手が太くなる。",
+            "en": "It expands the administration's room to delay, turn back, and negotiate asylum flows."
+          },
+          "whatToWatch": {
+            "ja": "国土安全保障省が再導入に動くか、下級審の別訴訟が追随するかをみる。",
+            "en": "Watch for DHS implementation and for fresh lower-court challenges."
+          }
+        },
+        {
+          "id": "politics-tps-haiti-syria",
+          "title": {
+            "ja": "TPS終了容認",
+            "en": "TPS end upheld"
+          },
+          "source": {
+            "href": "https://apnews.com/article/6d5af32cd91c6e6a6a083678f5d5b1d2",
+            "source": "AP News",
+            "title": {
+              "ja": "最高裁、ハイチとシリアのTPS終了を認める",
+              "en": "The Supreme Court lets Trump end TPS for Haitians and Syrians"
+            },
+            "description": {
+              "ja": "APは、最高裁がハイチとシリアの一時保護資格終了を許可したと伝えた。",
+              "en": "AP reported that the court allowed the administration to end temporary protected status for Haitians and Syrians."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/2147483647/strip/true/crop/8085x5390%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F30%2F79%2F8b4d5fb549d3325e6f144d7816fc%2F4d9b00cd71e9481c86b2b0bf8ad36dfa",
+            "imageAlt": {
+              "ja": "TPS受給者や支援団体の集まりの写真",
+              "en": "TPS recipients and supporters gathered outside court"
+            }
+          },
+          "bottomLine": {
+            "ja": "最高裁が、ハイチとシリアのTPS終了を認めた。",
+            "en": "The Supreme Court allowed the administration to end TPS protections for Haitians and Syrians."
+          },
+          "whatHappened": {
+            "ja": "6対3で、移民当局の判断を優先し、差し止めを外した。",
+            "en": "The court ruled 6-3 and removed a lower-court hold on the policy."
+          },
+          "whyItMatters": {
+            "ja": "在留資格、雇用、家族、送還計画に直結する判断だ。",
+            "en": "It directly affects legal status, work permits, families, and removal plans."
+          },
+          "whatToWatch": {
+            "ja": "DHSが終了手続きをどこまで急ぐか、他国のTPS案件へ波及するかをみる。",
+            "en": "Watch how quickly DHS moves and whether the ruling spills into other TPS cases."
+          }
+        },
+        {
+          "id": "politics-voter-list-blocked",
+          "title": {
+            "ja": "有権者名簿命令を差し止め",
+            "en": "Voter-list order blocked"
+          },
+          "source": {
+            "href": "https://apnews.com/article/3ae03581673c844c7c69b3d8e100315d",
+            "source": "AP News",
+            "title": {
+              "ja": "連邦判事、トランプの選挙命令を差し止め",
+              "en": "Federal judge blocks Trump election-order push"
+            },
+            "description": {
+              "ja": "APは、連邦判事が有権者名簿作成と郵便投票制限の命令を止めたと報じた。",
+              "en": "AP reported that a federal judge halted the administration's push for a federal voter list and mail-ballot limits."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/a129128/2147483647/strip/true/crop/4735x3157%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fd5%2Fae%2F6203e74370e72349100f2e79adcc%2F1728cdf1419f4a489c56af2d6af15419",
+            "imageAlt": {
+              "ja": "法廷の外観の写真",
+              "en": "The outside of a federal courthouse"
+            }
+          },
+          "bottomLine": {
+            "ja": "連邦判事が、有権者名簿と郵便投票をめぐる命令を止めた。",
+            "en": "A federal judge blocked the order on voter lists and mail voting."
+          },
+          "whatHappened": {
+            "ja": "ボストンの判事が、州の選挙管理を超えると判断した。",
+            "en": "The Boston judge said the order went beyond federal authority over state elections."
+          },
+          "whyItMatters": {
+            "ja": "2026年中間選挙の投票ルールをめぐる争いが、州と連邦の対立に戻った。",
+            "en": "It resets the fight over voting rules for the 2026 midterms as a federal-state clash."
+          },
+          "whatToWatch": {
+            "ja": "政権の控訴と、州側の名簿・郵便投票運用の守り方をみる。",
+            "en": "Watch the appeal and how states defend their registration and mail-voting systems."
+          }
+        },
+        {
+          "id": "politics-war-funding-request",
+          "title": {
+            "ja": "戦費追加要求",
+            "en": "War-funding request"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/25/white-house-iran-war-funding-request",
+            "source": "The Guardian",
+            "title": {
+              "ja": "ホワイトハウス、イラン戦費を含む追加予算を要求",
+              "en": "White House seeks extra funds for Iran war"
+            },
+            "description": {
+              "ja": "Guardianは、ホワイトハウスがイラン戦争関連の費用を含む87.6bnドルの追加要求を出したと報じた。",
+              "en": "The Guardian reported that the White House asked Congress for an $87.6bn package that includes Iran war costs."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/5917d6493d1dd84799ab00906f07132fd5652c49/0_0_8256_5504/master/8256.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "ホワイトハウス関連の政府会見の写真",
+              "en": "A White House government briefing"
+            }
+          },
+          "bottomLine": {
+            "ja": "ホワイトハウスは、イラン戦費を含む87.6bnドルの追加予算を議会に求めた。",
+            "en": "The White House asked Congress for an $87.6bn supplemental package that includes Iran war costs."
+          },
+          "whatHappened": {
+            "ja": "戦費、災害、治安、D.C.の警備などを束ねた要求を前に出した。",
+            "en": "The request bundled war costs with disaster, security, and Washington-related spending."
+          },
+          "whyItMatters": {
+            "ja": "戦争コストの負担先と歳出規模が、議会との主要争点になる。",
+            "en": "It puts war costs and federal spending size at the center of the congressional fight."
+          },
+          "whatToWatch": {
+            "ja": "上下両院がどこまで承認するか、他の歳出取引に混ざるかをみる。",
+            "en": "Watch how much Congress approves and whether the request gets folded into other spending deals."
+          }
+        },
+        {
+          "id": "politics-alligator-alcatraz-closed",
+          "title": {
+            "ja": "Alligator Alcatraz閉鎖",
+            "en": "Alligator Alcatraz closes"
+          },
+          "source": {
+            "href": "https://apnews.com/article/3c371f51fe71ed64b7ae9d22d0fab5cb",
+            "source": "AP News",
+            "title": {
+              "ja": "フロリダの収容施設「Alligator Alcatraz」が閉鎖",
+              "en": "Florida's 'Alligator Alcatraz' detention site closes"
+            },
+            "description": {
+              "ja": "APは、フロリダ州の仮設収容施設が閉鎖に向かったと報じた。",
+              "en": "AP reported that Florida moved to shut down its temporary Everglades detention site."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/c26a735/2147483647/strip/true/crop/5382x3588%2B0%2B0/resize/320x213%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F11%2F6f%2F10cd7f5c03102dba3d838eed9e54%2Fc2a14339275d46b6babcd38a03cb089c",
+            "imageAlt": {
+              "ja": "エバーグレーズ周辺の仮設収容施設の写真",
+              "en": "A temporary detention site near the Everglades"
+            }
+          },
+          "bottomLine": {
+            "ja": "フロリダの仮設収容施設「Alligator Alcatraz」が閉鎖された。",
+            "en": "Florida's temporary detention site known as Alligator Alcatraz has closed."
+          },
+          "whatHappened": {
+            "ja": "州は、エバーグレーズの仮設施設を空にして移送を進めた。",
+            "en": "The state emptied the Everglades site and began moving detainees elsewhere."
+          },
+          "whyItMatters": {
+            "ja": "収容運用の象徴施設が消えても、移送と拘束の体制は残る。",
+            "en": "The symbol disappears, but the detention and transfer system stays in place."
+          },
+          "whatToWatch": {
+            "ja": "移送先、環境訴訟、再開の有無をみる。",
+            "en": "Watch the transfer sites, the environmental lawsuits, and any attempt to reopen it."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "economy",
+      "heading": {
+        "ja": "経済",
+        "en": "Economy"
+      },
+      "topics": [
+        {
+          "id": "economy-pce-inflation",
+          "title": {
+            "ja": "PCEインフレ再加速",
+            "en": "PCE inflation heats up"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/25/inflation-consumer-spending-interest-rates",
+            "source": "Axios",
+            "title": {
+              "ja": "熱いインフレと強い景気がFedの新しい試練に",
+              "en": "Hot inflation and a strong economy give the Fed a new test"
+            },
+            "description": {
+              "ja": "Axiosは、5月のPCEと消費支出が金利見通しを難しくしたと整理した。",
+              "en": "Axios framed the May PCE and spending data as a tougher test for rate cuts."
+            },
+            "imageUrl": "https://images.axios.com/9HpCjnRVGJlfmyVMxCfa2Xjzkb8%3D/0x0%3A1920x1080/1920x1080/2026/04/01/1775080228134.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "物価統計を示すグラフの写真",
+              "en": "A chart showing inflation data"
+            }
+          },
+          "bottomLine": {
+            "ja": "PCEは4.1%まで上がり、Fedの目標を大きく上回った。",
+            "en": "PCE inflation rose to 4.1%, far above the Fed's target."
+          },
+          "whatHappened": {
+            "ja": "5月のPCEとコアPCEが想定より強く、消費支出も底堅かった。",
+            "en": "May PCE and core PCE ran hotter than expected, and spending stayed firm."
+          },
+          "whyItMatters": {
+            "ja": "利下げ期待は後退し、年内の方針はもっと慎重になる。",
+            "en": "It pushes back rate-cut hopes and keeps the Fed cautious."
+          },
+          "whatToWatch": {
+            "ja": "エネルギー安が次回データにどこまで入るかをみる。",
+            "en": "Watch how much the recent drop in energy prices shows up in the next report."
+          }
+        },
+        {
+          "id": "economy-gdp-revision",
+          "title": {
+            "ja": "GDP上方修正",
+            "en": "GDP revised higher"
+          },
+          "source": {
+            "href": "https://apnews.com/article/a3ecd4459a091458fd9b61772d79b7da",
+            "source": "AP News",
+            "title": {
+              "ja": "米経済、第1四半期は年率2.1%成長に上方修正",
+              "en": "US economy grew at a 2.1% annual rate in the first quarter"
+            },
+            "description": {
+              "ja": "APは、第1四半期GDPの改定値が2.1%成長になったと伝えた。",
+              "en": "AP reported that first-quarter GDP was revised up to a 2.1% annual pace."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/8bdbd0c/2147483647/strip/true/crop/3215x2412%2B0%2B0/resize/284x213%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe0%2F95%2F4442325decf3db908a0fbeccd994%2F507ea9a54fa8478b8ef0100a94a1d5b1",
+            "imageAlt": {
+              "ja": "経済指標のグラフを示す資料写真",
+              "en": "A chart showing economic data"
+            }
+          },
+          "bottomLine": {
+            "ja": "米GDPは第1四半期に年率2.1%へ上方修正された。",
+            "en": "US GDP was revised up to a 2.1% annual pace in the first quarter."
+          },
+          "whatHappened": {
+            "ja": "企業投資が支え、消費の弱さを一部埋めた。",
+            "en": "Business investment helped offset some consumer weakness."
+          },
+          "whyItMatters": {
+            "ja": "景気はまだ崩れていないが、高金利の重みは残る。",
+            "en": "The economy is still holding up, but higher rates still bite."
+          },
+          "whatToWatch": {
+            "ja": "第2四半期の消費とAI設備投資が続くかをみる。",
+            "en": "Watch second-quarter consumer demand and whether AI capex keeps going."
+          }
+        },
+        {
+          "id": "economy-mortgage-rates",
+          "title": {
+            "ja": "住宅ローン6.49%",
+            "en": "Mortgage rates at 6.49%"
+          },
+          "source": {
+            "href": "https://apnews.com/article/0e04db6e9a4dd7e0a6f7f7c41b4dd3e2",
+            "source": "AP News",
+            "title": {
+              "ja": "30年住宅ローン金利、6.49%に上昇",
+              "en": "30-year mortgage rate rises to 6.49%"
+            },
+            "description": {
+              "ja": "APは、30年固定の平均金利が6.49%まで上がったと報じた。",
+              "en": "AP reported that the average 30-year mortgage rate rose to 6.49%."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/f97867c/2147483647/strip/true/crop/8448x5632%2B0%2B0/resize/320x213%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F43%2F4d%2F54dc262ecbae0b0389f3424049cf%2Fe0d61c014195484c8e0a93f513a4897b",
+            "imageAlt": {
+              "ja": "住宅購入と金利を示す写真",
+              "en": "A home-buying and mortgage-rate image"
+            }
+          },
+          "bottomLine": {
+            "ja": "30年住宅ローン金利は6.49%に上がった。",
+            "en": "The average 30-year mortgage rate moved up to 6.49%."
+          },
+          "whatHappened": {
+            "ja": "Freddie Macの週次平均が小幅上昇し、6.5%近辺に張り付いた。",
+            "en": "Freddie Mac's weekly average ticked higher and stayed near 6.5%."
+          },
+          "whyItMatters": {
+            "ja": "買い手の月額負担が増え、住宅取引は冷えやすい。",
+            "en": "Higher monthly payments make the housing market harder to move."
+          },
+          "whatToWatch": {
+            "ja": "長期金利と地政学がこの水準を保つかをみる。",
+            "en": "Watch whether long rates and geopolitics keep the rate near this level."
+          }
+        },
+        {
+          "id": "economy-oil-falls-prewar",
+          "title": {
+            "ja": "原油は戦前水準へ",
+            "en": "Oil falls to prewar levels"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/2026/jun/25/oil-prices-pre-iran-war-levels-strait-of-hormuz",
+            "source": "The Guardian",
+            "title": {
+              "ja": "原油価格がイラン戦争前の水準まで低下",
+              "en": "Oil prices fall back to pre-Iran war levels"
+            },
+            "description": {
+              "ja": "Guardianは、ホルムズ海峡を出るタンカー増加で原油が下落したと報じた。",
+              "en": "The Guardian reported that crude fell as more tankers exited the Strait of Hormuz."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/de4b83fdc6aadd7139f78a68ff972dcead40d152/167_0_1711_1369/master/1711.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "海上を航行するタンカーの写真",
+              "en": "Oil tankers at sea"
+            }
+          },
+          "bottomLine": {
+            "ja": "原油はイラン戦争前の水準まで下がった。",
+            "en": "Oil prices fell back to pre-Iran war levels."
+          },
+          "whatHappened": {
+            "ja": "ホルムズ海峡を出るタンカーが増え、Brentは72ドル台まで落ちた。",
+            "en": "More tankers were leaving Hormuz, and Brent slipped into the low $70s."
+          },
+          "whyItMatters": {
+            "ja": "インフレの上振れ圧力が少し和らぎ、消費にも追い風になる。",
+            "en": "It eases some inflation pressure and gives consumers a little relief."
+          },
+          "whatToWatch": {
+            "ja": "航路の安定が続くか、周辺戦闘で逆戻りしないかをみる。",
+            "en": "Watch whether shipping stays stable or flips back on another attack."
+          }
+        },
+        {
+          "id": "economy-hormuz-evacuation-paused",
+          "title": {
+            "ja": "ホルムズ退避を停止",
+            "en": "Hormuz evacuation paused"
+          },
+          "source": {
+            "href": "https://apnews.com/article/e6039e5f3962ba001ed6b7abb74219b0",
+            "source": "AP News",
+            "title": {
+              "ja": "国際海事機関、ホルムズ海峡の船舶退避を一時停止",
+              "en": "UN agency pauses evacuation of ships through the Strait of Hormuz"
+            },
+            "description": {
+              "ja": "APは、船舶への攻撃を受けてホルムズ海峡の避難が止まったと報じた。",
+              "en": "AP reported that ship evacuations through the Strait of Hormuz were paused after an attack on a vessel."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/4e72919/2147483647/strip/true/crop/6000x4000%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fb0%2Faa%2F3c14de027cb60c36d377ed3ccd30%2F1600fe4f4bc7455f8bace0bcf940d0eb",
+            "imageAlt": {
+              "ja": "海峡で待機する船舶の写真",
+              "en": "Ships waiting near the strait"
+            }
+          },
+          "bottomLine": {
+            "ja": "ホルムズ海峡の船舶退避が、一時停止された。",
+            "en": "The evacuation pause through the Strait of Hormuz remains in force."
+          },
+          "whatHappened": {
+            "ja": "船舶が攻撃を受け、国際機関が安全確認まで動きを止めた。",
+            "en": "After a vessel attack, the maritime agency paused movements until safety checks are done."
+          },
+          "whyItMatters": {
+            "ja": "航路再開はまだ脆く、エネルギーと保険のリスクが残る。",
+            "en": "The route is still fragile, so energy and insurance risk remain."
+          },
+          "whatToWatch": {
+            "ja": "犯人特定、護送路の再開、安全確認の条件をみる。",
+            "en": "Watch the attribution, the return of escorted shipping, and the safety conditions."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "technology",
+      "heading": {
+        "ja": "技術",
+        "en": "Technology"
+      },
+      "topics": [
+        {
+          "id": "technology-micron-earnings-rally",
+          "title": {
+            "ja": "Micron決算が急伸",
+            "en": "Micron earnings spark rally"
+          },
+          "source": {
+            "href": "https://www.investopedia.com/micron-blockbuster-ai-fueled-results-ignite-huge-rally-for-memory-stocks-mu-12006391",
+            "source": "Investopedia",
+            "title": {
+              "ja": "AI需要でMicronの好決算がメモリ株を押し上げる",
+              "en": "Micron's AI-fueled results ignite a rally in memory stocks"
+            },
+            "description": {
+              "ja": "Investopediaは、Micronの決算がAI向けメモリ需要の強さを映したとまとめた。",
+              "en": "Investopedia framed Micron's results as proof that AI demand is still tight in memory."
+            },
+            "imageUrl": "https://www.investopedia.com/thmb/Ts38_-ePCWvXsAtEBQJMFmKDMeA%3D/1500x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/GettyImages-2277830126-7bb8edc723d14b898dea1c67ca0a9994.jpg",
+            "imageAlt": {
+              "ja": "半導体メモリのチップを示す写真",
+              "en": "Memory chips on a circuit board"
+            }
+          },
+          "bottomLine": {
+            "ja": "MicronはAI需要を背景に、予想を上回る決算を出した。",
+            "en": "Micron posted results that beat expectations on AI demand."
+          },
+          "whatHappened": {
+            "ja": "利益と売上が予想を超え、メモリ株が急伸した。",
+            "en": "Profit and revenue beat forecasts, and memory stocks jumped."
+          },
+          "whyItMatters": {
+            "ja": "AIデータセンター向けの記憶容量需要が、半導体相場を押し上げている。",
+            "en": "AI data-center memory demand is still driving the chip trade."
+          },
+          "whatToWatch": {
+            "ja": "メモリ価格と供給の締まりが続くかをみる。",
+            "en": "Watch whether memory pricing and supply stay tight."
+          }
+        },
+        {
+          "id": "technology-qualcomm-ai-targets",
+          "title": {
+            "ja": "QualcommがAI売上目標を上積み",
+            "en": "Qualcomm lifts AI targets"
+          },
+          "source": {
+            "href": "https://www.investopedia.com/qualcomm-stock-jumps-on-new-ai-boosted-sales-targets-11756117",
+            "source": "Investopedia",
+            "title": {
+              "ja": "新しいAI上振れ目標でQualcomm株が上昇",
+              "en": "New AI-boosted sales targets give Qualcomm's stock a boost"
+            },
+            "description": {
+              "ja": "Investopediaは、Qualcommの長期売上見通しとMeta向けCPU計画を紹介した。",
+              "en": "Investopedia highlighted Qualcomm's longer-term sales target and its Meta CPU plan."
+            },
+            "imageUrl": "https://www.investopedia.com/thmb/DdG6VE9qI3x7Jcxbht0mynqnYvE%3D/1500x0/filters%3Ano_upscale%28%29%3Amax_bytes%28150000%29%3Astrip_icc%28%29%3Aformat%28webp%29/GettyImages-2264701099-aea27b4264b24db9b661ac39ab1ea6f6.jpg",
+            "imageAlt": {
+              "ja": "Qualcommロゴのある半導体イベントの写真",
+              "en": "A Qualcomm event photo"
+            }
+          },
+          "bottomLine": {
+            "ja": "Qualcommは非スマホ売上目標を引き上げ、AIデータセンター向けの売上軸を強めた。",
+            "en": "Qualcomm lifted long-term non-phone sales targets and leaned harder into AI data centers."
+          },
+          "whatHappened": {
+            "ja": "Meta向けCPU計画も示し、スマホ依存からの脱却を急いだ。",
+            "en": "It also outlined a CPU plan for Meta as it pushes beyond phone dependence."
+          },
+          "whyItMatters": {
+            "ja": "AIインフラ向けの受注が、チップ設計会社の評価を変え始めている。",
+            "en": "AI infrastructure orders are starting to change how chip designers are valued."
+          },
+          "whatToWatch": {
+            "ja": "Meta契約が実需につながるか、他社が追随するかをみる。",
+            "en": "Watch whether the Meta deal becomes real volume and whether rivals follow."
+          }
+        },
+        {
+          "id": "technology-apple-price-hikes",
+          "title": {
+            "ja": "Appleが値上げへ",
+            "en": "Apple raises prices"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/25/apple-price-hike-mac-ipad",
+            "source": "Axios",
+            "title": {
+              "ja": "Apple、MacとiPadの値上げを発表",
+              "en": "Apple raises prices on Mac and iPad devices"
+            },
+            "description": {
+              "ja": "Axiosは、AppleがAI向けメモリや部材高を理由に値上げしたと伝えた。",
+              "en": "Axios reported that Apple raised prices because memory and other parts are getting more expensive."
+            },
+            "imageUrl": "https://images.axios.com/86vd_fRBfSKG_1Mj04ZhVHYY9nU%3D/0x140%3A2048x1292/1920x1080/2026/06/25/1782399695175.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "Apple製品の写真",
+              "en": "Apple devices on display"
+            }
+          },
+          "bottomLine": {
+            "ja": "AppleはMacとiPadの値上げに踏み切った。",
+            "en": "Apple has raised prices on Mac and iPad models."
+          },
+          "whatHappened": {
+            "ja": "AIデータセンター向けの部材高が、端末価格に移された。",
+            "en": "Higher component costs tied to AI data centers are being pushed into device prices."
+          },
+          "whyItMatters": {
+            "ja": "AI投資の負担が、ついに消費者向け端末にも波及した。",
+            "en": "The cost of AI investment is now reaching consumer hardware."
+          },
+          "whatToWatch": {
+            "ja": "iPhoneや他製品へ波及するか、需要が鈍るかをみる。",
+            "en": "Watch whether the change spreads to other products and whether demand softens."
+          }
+        },
+        {
+          "id": "technology-ai-jobs-push",
+          "title": {
+            "ja": "AI雇用対策基金",
+            "en": "AI jobs push"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/25/anthropic-labor-market-ai-jobs-crisis",
+            "source": "Axios",
+            "title": {
+              "ja": "AnthropicとOpenAI、5億ドルのAI雇用対策に参加",
+              "en": "Anthropic and OpenAI join a $500M AI jobs push"
+            },
+            "description": {
+              "ja": "Axiosは、AIによる雇用影響に備える再訓練基金の動きを報じた。",
+              "en": "Axios reported a $500 million effort to cushion workers from AI disruption."
+            },
+            "imageUrl": "https://images.axios.com/RugexeY_DI0tF_p4kvj8dzwOld8%3D/0x0%3A1920x1080/1920x1080/2025/10/02/1759423407162.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "AIと労働市場を示すイメージ写真",
+              "en": "An image representing AI and the labor market"
+            }
+          },
+          "bottomLine": {
+            "ja": "AnthropicとOpenAIが、5億ドル規模の雇用対策基金に参加した。",
+            "en": "Anthropic and OpenAI joined a $500 million effort to address AI's labor impact."
+          },
+          "whatHappened": {
+            "ja": "州と企業が再訓練や賃金補償の実験を進める。",
+            "en": "States and companies are testing retraining and wage-insurance ideas."
+          },
+          "whyItMatters": {
+            "ja": "AIの雇用影響を、企業自身が資金を出して埋めにいく段階に入った。",
+            "en": "Companies are now helping fund the response to AI's labor effects."
+          },
+          "whatToWatch": {
+            "ja": "4州での実験が他州へ広がるか、政策化されるかをみる。",
+            "en": "Watch whether the pilot spreads to more states and turns into policy."
+          }
+        },
+        {
+          "id": "technology-anthropic-mythos-vulnerabilities",
+          "title": {
+            "ja": "Mythosが脆弱性を発見",
+            "en": "Mythos finds vulnerabilities"
+          },
+          "source": {
+            "href": "https://apnews.com/article/3f4b7f9d56d84ae9ad4a0f8e9a8c2a30",
+            "source": "AP News",
+            "title": {
+              "ja": "AnthropicのMythosモデル、機密系システムの脆弱性を発見",
+              "en": "Anthropic's Mythos model found vulnerabilities in classified systems"
+            },
+            "description": {
+              "ja": "APは、Mythosが政府系の検証環境で脆弱性を見つけたと報じた。",
+              "en": "AP reported that Mythos found vulnerabilities in government-style testing environments."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/f6f7528/2147483647/strip/true/crop/4497x2998%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fc4%2Fc8%2F7307239b67c5f453c894355f4782%2F93d0ebe8c07340329767565acc0d387a",
+            "imageAlt": {
+              "ja": "Anthropicの画面や研究イメージの写真",
+              "en": "Anthropic interface and research image"
+            }
+          },
+          "bottomLine": {
+            "ja": "AnthropicのMythosは、機密系政府システムの脆弱性を見つけた。",
+            "en": "Anthropic's Mythos model found vulnerabilities in classified government systems."
+          },
+          "whatHappened": {
+            "ja": "検証作業で、数時間のうちに脆弱性を特定した。",
+            "en": "In testing, the model identified weaknesses within hours."
+          },
+          "whyItMatters": {
+            "ja": "先端モデルは防御側の監査能力を押し上げるが、政府の規制も強まる。",
+            "en": "Frontier models can strengthen defense audits, but they also invite tighter government scrutiny."
+          },
+          "whatToWatch": {
+            "ja": "Anthropicと政府の調整、アクセス制限、他社への波及をみる。",
+            "en": "Watch the policy response, access limits, and whether rivals adopt the same approach."
+          }
+        }
+      ]
+    }
+  ]
+}

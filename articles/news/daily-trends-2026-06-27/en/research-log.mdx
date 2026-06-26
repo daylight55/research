@@ -1,0 +1,24 @@
+# research-log
+
+## Environment
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## Research Instruction
+
+- Research date: 2026-06-27
+- Article slug: `daily-trends-2026-06-27`
+- Run Context: Daily Trend News digest, required content type news, required categories politics/economy/technology, exactly five topics per category, recency window 24-48 hours, deliverable is structured JSON for deterministic rendering.
+
+## Decision Notes
+
+- I used a mix of live coverage, official/primary posts, and major outlets, then cut to 15 items.
+- Politics centers on the Middle East, courts, state policy, and diplomacy. Economy centers on tariffs, tax policy, housing, automation, and pricing power. Technology centers on OpenAI, Apple, Meta, and Ford.
+- For publishability, the article-level framing stays factual and short; the renderer will handle the final MDX.
+
+## Follow-ups
+
+- Track how Middle East escalation affects shipping, oil, and defense names.
+- Check whether tariff and tax debates turn into actual pricing or legislative changes.
+- Watch for second-half guidance from OpenAI-adjacent, Apple, and platform companies if the current cycle continues.

@@ -1,0 +1,24 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-06-27
+- Article slug: `daily-trends-2026-06-27`
+- Run Context: Daily Trend News digest, required content type news, required categories politics/economy/technology, exactly five topics per category, recency window 24-48 hours, deliverable is structured JSON for deterministic rendering.
+
+## 判断メモ
+
+- 一次情報、ライブ更新、主要報道を併用して15本に絞った。
+- 政治は中東、司法、州政策、外交を中心に、経済は関税・税制・住宅・自動化・値上げを中心に、技術はOpenAI/Apple/Meta/Fordを中心に構成した。
+- 画像は記事内容に近いものを優先したが、公開用の安定性を優先してソースページに紐づくURLを選んだ。
+
+## 残課題
+
+- 中東情勢の続報で、海運・原油・防衛の3市場がどう連動するかを確認する。
+- 関税や税制の議論が、実際の企業価格や州レベルの立法にどう落ちるかを追う。
+- OpenAI、Apple、Metaの発表が、年内の製品投入やクラウド需要にどう影響するかを確認する。

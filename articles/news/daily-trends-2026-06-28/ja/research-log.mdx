@@ -1,0 +1,24 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-06-28
+- Article slug: `daily-trends-2026-06-28`
+- Run Context: tech-news daily digest, required counts politics 5 / economy 5 / technology 5, recency window 24-48 hours with a small number of slightly older items that still drive discussion, deliverable is structured JSON for the renderer.
+
+## 判断メモ
+
+- I verified a mix of Axios, Reuters, AP, MarketWatch, WSJ, and official references, then narrowed them to 15 topics with one source card each.
+- I chose the hero image from the Starmer resignation coverage because it was the cleanest current photo among the highest-signal items and had a stable image URL.
+- I kept the category balance exact and skipped several plausible but weaker duplicates once the same signal was already covered by a sharper source.
+
+## 残課題
+
+- Watch whether the Israel-Lebanon framework turns into a durable implementation plan or stalls at the pilot stage.
+- Watch whether Congress trims or enlarges the Iran supplemental request.
+- Watch whether Anthropic and OpenAI face tighter or looser limits on model access and cyber features.

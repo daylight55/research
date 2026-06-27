@@ -1,0 +1,758 @@
+{
+  "version": 1,
+  "slug": "daily-trends-2026-06-28",
+  "date": "2026-06-28",
+  "category": "tech-news",
+  "tags": ["news", "politics", "economy", "technology"],
+  "generation": {
+    "model": "gpt-5.4-mini"
+  },
+  "heroImage": {
+    "query": "Keir Starmer resignation June 2026",
+    "alt": {
+      "ja": "2026年6月に辞任したキア・スターマー英首相の報道写真",
+      "en": "A June 2026 news photo of Keir Starmer after his resignation"
+    }
+  },
+  "locales": {
+    "ja": {
+      "title": "2026-06-28 中東停戦、AI規制、家計物価が同時に動く",
+      "description": "中東の停戦交渉、米国内の予算と移民判決、AIの規制と価格転嫁が同日に重なった。",
+      "rssSummary": "中東、予算、AI価格の動きが同時に進んだ1日。",
+      "opening": "米国の対イラン対応が外交、予算、移民司法、家計コスト、AI規制を連結させた。イスラエルとレバノンの枠組み合意は前進だが、実装はヒズボラの扱い次第だ。家計側ではガソリン、航空運賃、端末価格が落ちにくく、投資側ではAI支出が成長とインフレの両方を押し上げている。",
+      "crossCutting": [
+        "中東の軍事緊張は、外交合意と財政要求を同時に動かす。",
+        "AIは市場の期待と家計の負担を同時に押し上げ始めた。",
+        "司法判断と党内再編が、米国内政治の意思決定速度を上げている。"
+      ],
+      "watchItems": [
+        "イスラエル・レバノン合意がパイロット区域を越えて進むか。",
+        "議会が対イラン追加予算を削るか積み増すか。",
+        "AnthropicとOpenAIの制限と許可が今後さらに揺れるか。"
+      ],
+      "sourceNotes": {
+        "politics": [
+          "Axios, Reuters, and AP coverage centered on Starmer's resignation, the U.S.-brokered Israel-Lebanon framework, the asylum ruling, the supplemental request, and New York's Democratic socialist upset.",
+          "I kept the U.K. and New York stories even though they are slightly older because both still shape leadership math and factional positioning today.",
+          "The Israel-Lebanon deal remains tentative because Hezbollah is still outside the agreement."
+        ],
+        "economy": [
+          "The selected stories link oil, travel, consumer sentiment, AI device pricing, market nerves, and AI-led growth.",
+          "The AI price shock item gave the clearest direct evidence that compute demand is reaching consumer prices.",
+          "I dropped broader tariff commentary and generic inflation recaps in favor of stories with a concrete household or market effect."
+        ],
+        "technology": [
+          "The tech set covers frontier-model access, cyber defense, phishing automation, workforce transition, and robotics safety.",
+          "Anthropic and OpenAI show tighter public scrutiny and stronger cyber tooling in the same week.",
+          "I rejected rumor-heavy launch chatter and kept only articles with dated company or reporter updates."
+        ],
+        "decisions": [
+          "I kept a few 2-5 day-old stories because they still drive current debate and have visible follow-on effects.",
+          "I rejected generic market wrapups and duplicated macro angles when a more specific downstream story existed.",
+          "I used stable topic-specific images from Axios, MarketWatch, WSJ, and Datawrapper instead of generic collage art."
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-28",
+          "Article slug: `daily-trends-2026-06-28`",
+          "Run Context: tech-news daily digest, required counts politics 5 / economy 5 / technology 5, recency window 24-48 hours with a small number of slightly older items that still drive discussion, deliverable is structured JSON for the renderer."
+        ],
+        "decisionNotes": [
+          "I verified a mix of Axios, Reuters, AP, MarketWatch, WSJ, and official references, then narrowed them to 15 topics with one source card each.",
+          "I chose the hero image from the Starmer resignation coverage because it was the cleanest current photo among the highest-signal items and had a stable image URL.",
+          "I kept the category balance exact and skipped several plausible but weaker duplicates once the same signal was already covered by a sharper source."
+        ],
+        "followUps": [
+          "Watch whether the Israel-Lebanon framework turns into a durable implementation plan or stalls at the pilot stage.",
+          "Watch whether Congress trims or enlarges the Iran supplemental request.",
+          "Watch whether Anthropic and OpenAI face tighter or looser limits on model access and cyber features."
+        ]
+      }
+    },
+    "en": {
+      "title": "2026-06-28 Middle East deals, AI rules, and consumer prices move together",
+      "description": "Middle East diplomacy, U.S. budget and immigration rulings, and AI-driven price pressure all moved at once.",
+      "rssSummary": "Middle East, budget, and AI price moves all landed on the same day.",
+      "opening": "The day's signal came from three linked pressure points: Middle East diplomacy, U.S. war funding, and AI policy. Israel and Lebanon signed a framework agreement, but implementation still depends on Hezbollah's role. At the same time, Washington's Iran-war supplement, the Supreme Court's asylum ruling, and New York's Democratic socialist upset kept domestic politics hot, while cheaper gas, sticky travel prices, and AI-driven device costs showed how conflict and computing demand are feeding into household budgets.",
+      "crossCutting": [
+        "Middle East conflict is moving diplomacy and budget fights at the same time.",
+        "AI is starting to shape both market expectations and household costs.",
+        "Court rulings and party realignment are speeding up U.S. political decision-making."
+      ],
+      "watchItems": [
+        "Whether the Israel-Lebanon framework moves beyond pilot zones.",
+        "Whether Congress trims or expands the Iran supplemental request.",
+        "Whether Anthropic and OpenAI face tighter or looser limits next."
+      ],
+      "sourceNotes": {
+        "politics": [
+          "Axios, Reuters, and AP coverage centered on Starmer's resignation, the U.S.-brokered Israel-Lebanon framework, the asylum ruling, the supplemental request, and New York's Democratic socialist upset.",
+          "I kept the U.K. and New York stories even though they are slightly older because both still shape leadership math and factional positioning today.",
+          "The Israel-Lebanon deal remains tentative because Hezbollah is still outside the agreement."
+        ],
+        "economy": [
+          "The selected stories connect oil, travel, consumer sentiment, AI device pricing, market nerves, and AI-led growth.",
+          "The AI price shock item gave the clearest direct evidence that compute demand is reaching consumer prices.",
+          "I dropped broader tariff commentary and generic inflation recaps in favor of stories with a concrete household or market effect."
+        ],
+        "technology": [
+          "The tech set covers frontier-model access, cyber defense, phishing automation, workforce transition, and robotics safety.",
+          "Anthropic and OpenAI show tighter public scrutiny and stronger cyber tooling in the same week.",
+          "I rejected rumor-heavy launch chatter and kept only articles with dated company or reporter updates."
+        ],
+        "decisions": [
+          "I kept a few 2-5 day-old stories because they still drive current debate and have visible follow-on effects.",
+          "I rejected generic market wrapups and duplicated macro angles when a more specific downstream story existed.",
+          "I used stable topic-specific images from Axios, MarketWatch, WSJ, and Datawrapper instead of generic collage art."
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-28",
+          "Article slug: `daily-trends-2026-06-28`",
+          "Run Context: tech-news daily digest, required counts politics 5 / economy 5 / technology 5, recency window 24-48 hours with a small number of slightly older items that still drive discussion, deliverable is structured JSON for the renderer."
+        ],
+        "decisionNotes": [
+          "I verified a mix of Axios, Reuters, AP, MarketWatch, WSJ, and official references, then narrowed them to 15 topics with one source card each.",
+          "I chose the hero image from the Starmer resignation coverage because it was the cleanest current photo among the highest-signal items and had a stable image URL.",
+          "I kept the category balance exact and skipped several plausible but weaker duplicates once the same signal was already covered by a sharper source."
+        ],
+        "followUps": [
+          "Watch whether the Israel-Lebanon framework turns into a durable implementation plan or stalls at the pilot stage.",
+          "Watch whether Congress trims or enlarges the Iran supplemental request.",
+          "Watch whether Anthropic and OpenAI face tighter or looser limits on model access and cyber features."
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "tone": "politics",
+      "heading": {
+        "ja": "政治",
+        "en": "Politics"
+      },
+      "topics": [
+        {
+          "id": "politics-israel-lebanon-framework",
+          "title": {
+            "ja": "イスラエルとレバノンが枠組み合意",
+            "en": "Israel and Lebanon sign framework agreement"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/26/israel-lebanon-framework-agreement-hezbollah",
+            "source": "Axios",
+            "title": {
+              "ja": "イスラエルとレバノンの枠組み合意",
+              "en": "Israel and Lebanon sign framework agreement"
+            },
+            "description": {
+              "ja": "ワシントン主導の枠組みは前進だが、ヒズボラの扱いが実施の壁として残る。",
+              "en": "The Washington-backed framework moves forward, but Hezbollah remains the main obstacle to implementation."
+            },
+            "imageUrl": "https://images.axios.com/9T_uAfmIOErpaqrdyQXOZqCGfqs%3D/0x206%3A8192x4814/1920x1080/2026/06/26/1782494330678.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "イスラエルとレバノンの枠組み合意を伝える現地写真",
+              "en": "News photo illustrating the Israel-Lebanon framework agreement"
+            }
+          },
+          "bottomLine": {
+            "ja": "合意は前進だが、ヒズボラを外したままでは実装が止まりやすい。",
+            "en": "The deal is a step forward, but it can stall if Hezbollah stays outside the plan."
+          },
+          "whatHappened": {
+            "ja": "イスラエルとレバノンがワシントンで枠組み合意に署名し、南レバノンの一部で撤収と再配置を始める道筋ができた。",
+            "en": "Israel and Lebanon signed a framework in Washington that opens a path to withdrawals and redeployments in parts of south Lebanon."
+          },
+          "whyItMatters": {
+            "ja": "停戦を恒久化するには、武装勢力の扱いと治安権限の移管をどう処理するかが決定打になる。",
+            "en": "Turning a cease-fire into a lasting settlement will hinge on how the deal handles armed groups and security control."
+          },
+          "whatToWatch": {
+            "ja": "パイロット区域の運用、ヒズボラの反応、米国の支援条件を追う。",
+            "en": "Watch the pilot zones, Hezbollah's response, and the conditions attached to U.S. support."
+          }
+        },
+        {
+          "id": "politics-trump-iran-supplemental",
+          "title": {
+            "ja": "トランプ政権が87.6億ドルの追加予算を要求",
+            "en": "Trump asks Congress for $87.6B, mostly for Iran war"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/25/trump-white-house-congress-request-iran-war-us-farmers-ebola",
+            "source": "Axios",
+            "title": {
+              "ja": "トランプ政権が対イラン追加予算を要請",
+              "en": "Trump asks Congress for $87.6B, mostly for Iran war"
+            },
+            "description": {
+              "ja": "ホワイトハウスは戦費と関連費用を含む87.6億ドルの追加予算を議会に求めた。",
+              "en": "The White House asked Congress for an $87.6 billion supplement that leans heavily toward war costs."
+            },
+            "imageUrl": "https://images.axios.com/Y0laZIJqO4-4BO2cJHgmWQxFN_Y%3D/0x151%3A6496x3805/1920x1080/2026/06/24/1782345373521.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "ホワイトハウスの対イラン予算要求を伝える写真",
+              "en": "News photo illustrating the White House Iran supplemental request"
+            }
+          },
+          "bottomLine": {
+            "ja": "議会は対イラン戦費を予算で通すかどうかで割れる。",
+            "en": "Congress now has to decide whether to turn Iran war costs into a budget line."
+          },
+          "whatHappened": {
+            "ja": "政権は87.6億ドルの追加予算を求め、国防費と関連支出を厚くする案を示した。",
+            "en": "The administration asked for an $87.6 billion supplement and signaled heavier spending for defense and related costs."
+          },
+          "whyItMatters": {
+            "ja": "戦争の費用を予算で通すかどうかが、議会の戦争権限論争をさらに強める。",
+            "en": "How Congress treats the war bill will deepen the fight over war powers and oversight."
+          },
+          "whatToWatch": {
+            "ja": "上下両院の歳出委員会が積み増しや条件修正を入れるかを見る。",
+            "en": "Watch for add-ons or conditions from the House and Senate appropriations panels."
+          }
+        },
+        {
+          "id": "politics-starmer-resigns",
+          "title": {
+            "ja": "英首相スターマーが辞任",
+            "en": "Keir Starmer resigns as U.K. prime minister"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/22/keir-starmer-resigns-prime-minister-labour-andy-burnham",
+            "source": "Axios",
+            "title": {
+              "ja": "英首相スターマーが辞任",
+              "en": "Keir Starmer resigns as U.K. prime minister"
+            },
+            "description": {
+              "ja": "地方選の惨敗と党内圧力が重なり、労働党の指導部が交代局面に入った。",
+              "en": "A bad local-election showing and internal pressure pushed Labour into a leadership reset."
+            },
+            "imageUrl": "https://images.axios.com/HJqXJPp_dgVu9oe7AA5IWpH4OBU%3D/0x32%3A3121x1787/1920x1080/2026/04/17/1776440706880.jpg?w=3840",
+            "imageAlt": {
+              "ja": "辞任が報じられたキア・スターマー英首相の写真",
+              "en": "News photo of Keir Starmer after his resignation"
+            }
+          },
+          "bottomLine": {
+            "ja": "労働党の支持低下は、党首交代を英国政治の新しい焦点に変えた。",
+            "en": "Labour's slide has turned leadership turnover into the new center of British politics."
+          },
+          "whatHappened": {
+            "ja": "スターマーは地方選の惨敗と党内圧力を受けて辞任し、次の党首選に道を開いた。",
+            "en": "Starmer resigned after poor local-election results and party pressure, opening the way to a new leadership contest."
+          },
+          "whyItMatters": {
+            "ja": "英国は経済低迷と外交負担のなかで、政策より先に指導部を立て直す局面に入った。",
+            "en": "Britain now has to rebuild its leadership before it can reset policy under weak growth and external pressure."
+          },
+          "whatToWatch": {
+            "ja": "有力後継の動きと、次の総選挙へ向けた路線転換を見る。",
+            "en": "Watch the leading successors and how quickly Labour shifts its election strategy."
+          }
+        },
+        {
+          "id": "politics-asylum-ruling",
+          "title": {
+            "ja": "米最高裁が厳しい庇護制限を容認",
+            "en": "Supreme Court backs Trump on stricter asylum rules"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/25/supreme-court-trump-asylum-border",
+            "source": "Axios",
+            "title": {
+              "ja": "移民庇護をめぐる最高裁判断",
+              "en": "Supreme Court backs Trump on stricter asylum rules"
+            },
+            "description": {
+              "ja": "最高裁は、国境を越えていない庇護申請者を拒む政権方針を認めた。",
+              "en": "The court upheld the administration's tougher policy toward asylum seekers who have not crossed the border."
+            },
+            "imageUrl": "https://images.axios.com/B3p26M0z0pyl95wjESIQ-NESPo4%3D/0x429%3A6134x3879/1920x1080/2026/06/25/1782401493204.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "移民庇護をめぐる最高裁判断を示す写真",
+              "en": "News photo illustrating the Supreme Court asylum ruling"
+            }
+          },
+          "bottomLine": {
+            "ja": "移民法をめぐる最高裁判断は、南部国境の運用をさらに厳しくした。",
+            "en": "The ruling gives the administration more room to tighten southern-border enforcement."
+          },
+          "whatHappened": {
+            "ja": "最高裁は、国境を越えていない庇護申請者を拒むトランプ政権の方針を認めた。",
+            "en": "The Supreme Court allowed Trump's administration to reject asylum claims from people who have not crossed the border."
+          },
+          "whyItMatters": {
+            "ja": "法的土台が強まり、国境の待機列と審査能力の差がより直接に結果を左右する。",
+            "en": "The legal footing for tougher screening is stronger, so border capacity matters even more."
+          },
+          "whatToWatch": {
+            "ja": "国境警備当局の実務変更、訴訟の次の波、支援団体の対応を追う。",
+            "en": "Watch for operational changes, the next round of lawsuits, and how aid groups respond."
+          }
+        },
+        {
+          "id": "politics-ny-socialist-upset",
+          "title": {
+            "ja": "NYの左派旋風で民主党が動揺",
+            "en": "Socialist earthquake in NY leaves Democrats reeling"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/24/mamdani-lander-valdez-chevalier-espaillat-goldman",
+            "source": "Axios",
+            "title": {
+              "ja": "NYの左派旋風で民主党が動揺",
+              "en": "Socialist earthquake in NY leaves Democrats reeling"
+            },
+            "description": {
+              "ja": "ニューヨークの予備選で左派候補が伸び、党内の路線対立が一気に表面化した。",
+              "en": "New York primaries boosted left-wing candidates and exposed a sharper fight over the party's direction."
+            },
+            "imageUrl": "https://images.axios.com/d6OwONvA8_rlUtzj6KPAmxWy_AA%3D/0x130%3A5934x3468/1920x1080/2026/06/24/1782270236859.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "ニューヨークの民主党予備選を伝える街頭写真",
+              "en": "Street photo illustrating New York's Democratic primary upset"
+            }
+          },
+          "bottomLine": {
+            "ja": "ニューヨークの左派勝利は、民主党の内部対立を選挙戦術の問題に押し上げた。",
+            "en": "The New York upset has turned Democratic infighting into a question of strategy."
+          },
+          "whatHappened": {
+            "ja": "DSA系候補が複数勝ち、民主党の有力議員が敗れる波乱になった。",
+            "en": "Several DSA-backed candidates won, while a few high-profile Democrats lost in upsets."
+          },
+          "whyItMatters": {
+            "ja": "党は中道と左派のどちらに寄せるかで、2028年まで引きずる路線争いを抱えた。",
+            "en": "The party now faces a left-versus-center fight that will shape its 2028 path."
+          },
+          "whatToWatch": {
+            "ja": "党指導部の立て直し、追加予備選、全国的な資金流入を追う。",
+            "en": "Watch the leadership response, follow-on primaries, and national fundraising signals."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "economy",
+      "heading": {
+        "ja": "経済",
+        "en": "Economy"
+      },
+      "topics": [
+        {
+          "id": "economy-ai-price-shock",
+          "title": {
+            "ja": "AI価格ショックが始まった",
+            "en": "AI price shock hits consumer devices"
+          },
+          "source": {
+            "href": "https://www.axios.com/newsletters/axios-closer-0c4d754b-e26b-47e8-9389-1103e19e6398",
+            "source": "Axios Closer",
+            "title": {
+              "ja": "AI価格ショックが始まった",
+              "en": "AI price shock is here"
+            },
+            "description": {
+              "ja": "メモリ高を背景に、端末やゲーム機の値上げが家計に広がり始めた。",
+              "en": "Higher memory costs are starting to show up in consumer electronics and game hardware prices."
+            },
+            "imageUrl": "https://images.axios.com/tGAXAa6j10_MdaLWBMqFTKD5PME%3D/0x0%3A1280x720/2026/03/06/1772834748978.gif?w=3840",
+            "imageAlt": {
+              "ja": "AI価格ショックを伝えるAxiosの図版",
+              "en": "Axios illustration for the AI price shock story"
+            }
+          },
+          "bottomLine": {
+            "ja": "AI投資は、企業の設備投資だけでなく家計の端末価格にも跳ね返り始めた。",
+            "en": "AI spending is starting to reach consumer prices, not just corporate capital budgets."
+          },
+          "whatHappened": {
+            "ja": "AppleとMicrosoftがメモリ高を理由に、端末やゲーム機の値上げを進めた。",
+            "en": "Apple and Microsoft moved to raise prices on devices and consoles as memory costs climbed."
+          },
+          "whyItMatters": {
+            "ja": "AIブームは仕事を奪う話だけでなく、消費者が払う価格を押し上げる段階に入った。",
+            "en": "The AI boom is now affecting what consumers pay, not just jobs or investment headlines."
+          },
+          "whatToWatch": {
+            "ja": "他の端末メーカー、メモリ価格、AIデータセンター投資の次の値上げ波を追う。",
+            "en": "Watch other device makers, memory prices, and the next round of AI-related price moves."
+          }
+        },
+        {
+          "id": "economy-gas-airfare-lag",
+          "title": {
+            "ja": "ガソリンと航空運賃はすぐ下がらない",
+            "en": "Gas and airfare prices stay elevated after Iran war"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/27/gas-airfare-oil-brent-prices-iran",
+            "source": "Axios",
+            "title": {
+              "ja": "ガソリンと航空運賃はすぐには戻らない",
+              "en": "Don't expect pre-war gas or airfare prices anytime soon"
+            },
+            "description": {
+              "ja": "原油の急変は、給油所と航空券の価格に遅れて反映される。",
+              "en": "Oil shocks reach gas pumps and airfare with a delay, so relief takes time."
+            },
+            "imageUrl": "https://datawrapper.dwcdn.net/0d4FQ/full.png",
+            "imageAlt": {
+              "ja": "原油価格とガソリン価格の推移を示すグラフ",
+              "en": "Chart showing oil and gas price movements"
+            }
+          },
+          "bottomLine": {
+            "ja": "イラン戦争が和らいでも、ガソリンと航空運賃はすぐには戻らない。",
+            "en": "Even if the Iran war cools, gas and airfare will not snap back quickly."
+          },
+          "whatHappened": {
+            "ja": "原油ショックは市場価格に遅れて伝わるため、家計の燃料費と旅行費は高止まりしやすい。",
+            "en": "Oil shocks pass through slowly, so household fuel and travel bills stay high for a while."
+          },
+          "whyItMatters": {
+            "ja": "家計は燃料と旅行費で痛みを感じ続け、政治の不満も長引く。",
+            "en": "Families keep feeling the pinch, and the political backlash lasts longer."
+          },
+          "whatToWatch": {
+            "ja": "原油の戻り方、ガソリン平均価格、航空会社の運賃改定を追う。",
+            "en": "Watch crude prices, the national gas average, and airline fare changes."
+          }
+        },
+        {
+          "id": "economy-gas-sentiment",
+          "title": {
+            "ja": "ガソリン安で消費者心理が改善",
+            "en": "Cheaper gas lifts consumer sentiment"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/26/gas-prices-consumer-confidence",
+            "source": "Axios",
+            "title": {
+              "ja": "ガソリン安が消費者心理を押し上げる",
+              "en": "Cheaper gas lifts consumer sentiment"
+            },
+            "description": {
+              "ja": "燃料安が6月のミシガン大学消費者信頼感を持ち直させた。",
+              "en": "Lower gas prices helped lift the University of Michigan's June consumer sentiment reading."
+            },
+            "imageUrl": "https://graphics.axios.com/hermesv2/2026-06-26-1035-university-of-michigan/fallbacks/2026-06-26-1035-university-of-michigan-fallback.png",
+            "imageAlt": {
+              "ja": "ミシガン大学の消費者信頼感を示す図",
+              "en": "Graphic showing the University of Michigan consumer sentiment index"
+            }
+          },
+          "bottomLine": {
+            "ja": "ガソリン安は、家計の気分を少しだけ持ち上げた。",
+            "en": "Cheaper gas gave household sentiment a modest lift."
+          },
+          "whatHappened": {
+            "ja": "ミシガン大学の消費者信頼感は6月に上昇し、見通しの改善が現在の評価より大きかった。",
+            "en": "The University of Michigan sentiment index rose in June, with expectations improving more than current conditions."
+          },
+          "whyItMatters": {
+            "ja": "物価全体の不満が残っても、燃料価格は景気心理を動かす最速の指標になっている。",
+            "en": "Even when inflation anger remains, fuel prices still move sentiment faster than most other signals."
+          },
+          "whatToWatch": {
+            "ja": "ガソリンが安い水準を保てるか、信頼感が春の悪化前まで戻るかを見る。",
+            "en": "Watch whether gas stays cheap and whether sentiment keeps recovering."
+          }
+        },
+        {
+          "id": "economy-ai-growth-market",
+          "title": {
+            "ja": "AI投資が景気を押し上げる",
+            "en": "AI boom is powering the economy"
+          },
+          "source": {
+            "href": "https://www.marketwatch.com/story/ai-turbocharged-the-stock-market-now-its-firing-up-the-economy-193d2eb1",
+            "source": "MarketWatch",
+            "title": {
+              "ja": "AI投資が株式市場と経済を押し上げる",
+              "en": "AI turbocharged the stock market. Now it's firing up the economy."
+            },
+            "description": {
+              "ja": "AI関連の設備投資が、株式市場だけでなく実体経済の成長にも効き始めた。",
+              "en": "AI infrastructure spending is now lifting the real economy, not just equity prices."
+            },
+            "imageUrl": "https://images.mktw.net/im-08307984?height=840&width=1260",
+            "imageAlt": {
+              "ja": "AI関連の投資と景気成長を示す市場写真",
+              "en": "Market photo illustrating AI spending and economic growth"
+            }
+          },
+          "bottomLine": {
+            "ja": "AI支出は、景気の重しではなく成長エンジンとしても効き始めた。",
+            "en": "AI spending is starting to act as a growth engine, not just a cost."
+          },
+          "whatHappened": {
+            "ja": "MarketWatchは、AIインフラ投資がGDPや株式市場を押し上げ、データセンター建設を拡大させていると報じた。",
+            "en": "MarketWatch said AI infrastructure spending is boosting GDP and markets while driving more data-center construction."
+          },
+          "whyItMatters": {
+            "ja": "AI関連支出は半導体、電力、建設の需要を広げ、実体経済の数字を動かす。",
+            "en": "AI-related spending now ripples into chips, power, construction, and the headline economy."
+          },
+          "whatToWatch": {
+            "ja": "設備投資の伸び、AI関連の利益化、電力制約が続くかを見る。",
+            "en": "Watch capex growth, profitability, and whether power constraints keep biting."
+          }
+        },
+        {
+          "id": "economy-stock-rally-worries",
+          "title": {
+            "ja": "株高に逆風が増える",
+            "en": "Stock rally collides with new worries"
+          },
+          "source": {
+            "href": "https://www.wsj.com/finance/stocks/stock-rally-collides-with-a-new-slate-of-worries-5843a9e0",
+            "source": "WSJ",
+            "title": {
+              "ja": "株高が新たな不安とぶつかる",
+              "en": "Stock rally collides with a new slate of worries"
+            },
+            "description": {
+              "ja": "AIと金利の見通しが揺れ、投資家は相場の持続力を再点検している。",
+              "en": "Investors are rechecking the durability of the rally as AI and rate expectations shift."
+            },
+            "imageUrl": "https://images.wsj.net/im-48259527?height=525&width=700",
+            "imageAlt": {
+              "ja": "株式市場の上昇と警戒感を示す写真",
+              "en": "Wall Street photo showing the rally and the new worries"
+            }
+          },
+          "bottomLine": {
+            "ja": "株高は続いても、AIと金利の逆風が相場を分断し始めた。",
+            "en": "The rally continues, but AI and rate worries are starting to split the market."
+          },
+          "whatHappened": {
+            "ja": "S&P 500とNasdaqは5日続落し、投資家はAI収益性と金利見通しを警戒した。",
+            "en": "The S&P 500 and Nasdaq fell for five straight sessions as investors worried about AI profitability and rates."
+          },
+          "whyItMatters": {
+            "ja": "市場は好決算だけでは支えきれず、成長期待と資金コストの綱引きが強まる。",
+            "en": "Markets are no longer carried by good earnings alone; growth hopes now meet higher funding costs."
+          },
+          "whatToWatch": {
+            "ja": "半導体株、信用市場、利下げ観測の修正を追う。",
+            "en": "Watch semiconductor stocks, credit spreads, and shifts in rate-cut bets."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "technology",
+      "heading": {
+        "ja": "技術",
+        "en": "Technology"
+      },
+      "topics": [
+        {
+          "id": "technology-anthropic-mythos",
+          "title": {
+            "ja": "AnthropicのMythosに限定復帰",
+            "en": "Anthropic's Mythos gets limited return"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/27/commerce-anthropic-mythos-restrictions-lift",
+            "source": "Axios",
+            "title": {
+              "ja": "AnthropicのMythosに限定復帰",
+              "en": "Commerce lifts limits on Anthropic's Mythos"
+            },
+            "description": {
+              "ja": "商務省は、サイバー懸念に対応したとして、Mythos 5の限定的な再開を認めた。",
+              "en": "The Commerce Department allowed a limited return for Mythos 5 after Anthropic addressed cybersecurity concerns."
+            },
+            "imageUrl": "https://images.axios.com/LVu9hY7twhh2Whx0-W3RMXb79-4%3D/0x33%3A4000x2283/1920x1080/2026/06/27/1782519102026.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "Anthropicのモデル制限解除を示すイメージ",
+              "en": "Image illustrating Anthropic's limited model reinstatement"
+            }
+          },
+          "bottomLine": {
+            "ja": "政府の許可は得たが、アクセスはまだ限定的だ。",
+            "en": "Anthropic won permission, but access is still limited."
+          },
+          "whatHappened": {
+            "ja": "商務省は、サイバー懸念への対応を受けて Mythos 5 の限定的な再開を認めた。",
+            "en": "The Commerce Department allowed a limited return of Mythos 5 after Anthropic addressed the earlier security concerns."
+          },
+          "whyItMatters": {
+            "ja": "最先端モデルの公開は、性能競争だけでなく輸出管理と安全審査に左右される。",
+            "en": "Frontier-model access now depends on export controls and safety review as much as performance."
+          },
+          "whatToWatch": {
+            "ja": "次の許可範囲、8月のサイバーEO実装、Mythos 5 の対象拡大を追う。",
+            "en": "Watch the next permission tier, the August cyber EO rollout, and whether Mythos 5 expands."
+          }
+        },
+        {
+          "id": "technology-openai-cyber-model",
+          "title": {
+            "ja": "OpenAIがサイバー版GPTを強化",
+            "en": "OpenAI gives GPT-5.5-Cyber more power"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/22/openai-rolls-out-more-capable-version-of-cyber-model",
+            "source": "Axios",
+            "title": {
+              "ja": "OpenAIのサイバー向けモデル更新",
+              "en": "OpenAI rolls out more capable version of cyber model"
+            },
+            "description": {
+              "ja": "OpenAIは、サイバー防御向けのモデルをより強力で使いやすい形に更新した。",
+              "en": "OpenAI updated its cyber-focused model to make it stronger and easier to use."
+            },
+            "imageUrl": "https://images.axios.com/OIIBxU_gTQGPlOHtwMl1Lrt2n4k%3D/0x0%3A1920x1080/1920x1080/2025/06/23/1750707432711.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "OpenAIのサイバー向けモデル更新を示すイメージ",
+              "en": "Image illustrating OpenAI's cyber-model update"
+            }
+          },
+          "bottomLine": {
+            "ja": "OpenAIは、防御側向けのサイバー機能をもう一段強くした。",
+            "en": "OpenAI pushed its defensive cyber tools up another notch."
+          },
+          "whatHappened": {
+            "ja": "同社は GPT-5.5-Cyber をより強力で、より広く使える形に更新した。",
+            "en": "The company refreshed GPT-5.5-Cyber with stronger capabilities and broader usability."
+          },
+          "whyItMatters": {
+            "ja": "防御側に高性能AIを配る流れが強まる一方、悪用リスクの管理が難しくなる。",
+            "en": "High-end AI is spreading to defenders, but misuse risk rises with it."
+          },
+          "whatToWatch": {
+            "ja": "認定パートナーの広がり、各国との提携、評価基準の更新を追う。",
+            "en": "Watch partner expansion, government deals, and changes to evaluation standards."
+          }
+        },
+        {
+          "id": "technology-phishing-automation",
+          "title": {
+            "ja": "フィッシングが自動化段階へ",
+            "en": "Phishing enters automation era"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/23/ai-automation-phishing-emails-hackers",
+            "source": "Axios",
+            "title": {
+              "ja": "フィッシングが自動化段階へ",
+              "en": "Phishing enters automation era"
+            },
+            "description": {
+              "ja": "Huntressは、device-code phishing の急増を受けて攻撃の自動化が進んだと報告した。",
+              "en": "Huntress reported a sharp rise in device-code phishing as attacks became more automated."
+            },
+            "imageUrl": "https://images.axios.com/-uFLEPHZFiAlh_uLJr1tM3pa4qo%3D/1920x1080/smart/2023/05/09/193918-1683661158642.jpg?w=3840",
+            "imageAlt": {
+              "ja": "自動化されたフィッシング攻撃を示す図",
+              "en": "Illustration of automated phishing attacks"
+            }
+          },
+          "bottomLine": {
+            "ja": "フィッシングは、メール作成から攻撃全体の自動化へ進んだ。",
+            "en": "Phishing is moving from email drafting to full attack automation."
+          },
+          "whatHappened": {
+            "ja": "device-code phishing が2026年上半期に急増し、AIと自動化が攻撃を量産している。",
+            "en": "Device-code phishing jumped in the first half of 2026, showing how AI and automation are scaling attacks."
+          },
+          "whyItMatters": {
+            "ja": "高度な技術がなくても使える攻撃キットが増え、認証トークンを狙う犯罪が広がる。",
+            "en": "Low-skill attack kits are spreading, and criminals are turning harder to stop on authentication tokens."
+          },
+          "whatToWatch": {
+            "ja": "Microsoft系認証の悪用、PhaaS市場、企業の多要素認証対策を追う。",
+            "en": "Watch Microsoft auth abuse, the PhaaS market, and how companies harden MFA."
+          }
+        },
+        {
+          "id": "technology-ai-jobs-push",
+          "title": {
+            "ja": "AnthropicとOpenAIが雇用対策へ",
+            "en": "Anthropic and OpenAI join jobs push"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/25/anthropic-labor-market-ai-jobs-crisis",
+            "source": "Axios",
+            "title": {
+              "ja": "AnthropicとOpenAIが雇用対策に参加",
+              "en": "Anthropic and OpenAI join $500 million AI jobs push"
+            },
+            "description": {
+              "ja": "州政府は、AIによる職務再編に備える再訓練の実験を始めた。",
+              "en": "States launched a retraining experiment to prepare workers for AI-driven job change."
+            },
+            "imageUrl": "https://images.axios.com/RugexeY_DI0tF_p4kvj8dzwOld8%3D/0x0%3A1920x1080/1920x1080/2025/10/02/1759423407162.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "AI雇用対策の立ち上げを示す写真",
+              "en": "Photo illustrating the AI jobs initiative"
+            }
+          },
+          "bottomLine": {
+            "ja": "AI業界は、雇用ショックを説明するだけでなく、対策の資金も出し始めた。",
+            "en": "The AI industry is starting to fund the response to the job shock it creates."
+          },
+          "whatHappened": {
+            "ja": "州政府と企業が組み、再訓練や賃金保険、キャリア支援の試験を立ち上げた。",
+            "en": "States and companies launched trials for retraining, wage insurance, and career coaching."
+          },
+          "whyItMatters": {
+            "ja": "AIによる職務再編は抽象論ではなく、州政府と企業が組む実務課題になった。",
+            "en": "AI job displacement is turning into a practical state-and-company policy problem."
+          },
+          "whatToWatch": {
+            "ja": "試験州の成果、企業の参加拡大、再訓練が別職種へ移るかを見る。",
+            "en": "Watch the pilot states, wider company participation, and whether retraining leads to new jobs."
+          }
+        },
+        {
+          "id": "technology-nvidia-humanoid-safety",
+          "title": {
+            "ja": "Nvidiaがヒューマノイド安全基盤を公開",
+            "en": "Nvidia debuts humanoid robotics safety software"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/22/nvidia-humanoid-ai-robotics",
+            "source": "Axios",
+            "title": {
+              "ja": "Nvidiaがヒューマノイド向け安全ソフトを公開",
+              "en": "Nvidia debuts AI humanoid software to advance robotics safety"
+            },
+            "description": {
+              "ja": "Nvidiaは、人の近くで動くヒューマノイド向けの安全ソフトを発表した。",
+              "en": "Nvidia introduced safety software for humanoid robots that operate around people."
+            },
+            "imageUrl": "https://images.axios.com/0T3qa_UlU_EuAXdCOzpHT9sgZqg%3D/0x74%3A4688x2711/1920x1080/2026/06/22/1782140108796.jpeg?w=3840",
+            "imageAlt": {
+              "ja": "ヒューマノイドロボット向け安全ソフトを示す写真",
+              "en": "Photo illustrating Nvidia's humanoid robotics safety software"
+            }
+          },
+          "bottomLine": {
+            "ja": "ヒューマノイドは、Nvidiaにとってソフトウエアと安全設計の勝負になった。",
+            "en": "Humanoid robots are becoming a software and safety contest for Nvidia."
+          },
+          "whatHappened": {
+            "ja": "Nvidiaは、人の近くで動くヒューマノイド向けの安全システムを発表した。",
+            "en": "Nvidia launched a safety system for humanoid robots that work around people."
+          },
+          "whyItMatters": {
+            "ja": "ロボットを現場へ入れる条件は、機能よりも安全性の証明に移っている。",
+            "en": "Getting robots into real workplaces now depends on proving safety as much as capability."
+          },
+          "whatToWatch": {
+            "ja": "最初の導入先、産業用途の拡大、制御層をめぐる競争を追う。",
+            "en": "Watch early deployments, industrial adoption, and the race over control software."
+          }
+        }
+      ]
+    }
+  ]
+}

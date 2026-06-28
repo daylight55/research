@@ -1,0 +1,756 @@
+{
+  "version": 1,
+  "slug": "daily-trends-2026-06-29",
+  "date": "2026-06-29",
+  "category": "tech-news",
+  "tags": ["news", "politics", "economy", "technology"],
+  "generation": {
+    "model": "gpt-5.4-mini"
+  },
+  "heroImage": {
+    "query": "Strait of Hormuz oil tanker",
+    "alt": {
+      "ja": "ホルムズ海峡を通るタンカーと湾岸情勢を象徴するイメージ",
+      "en": "A tanker in the Strait of Hormuz, symbolizing Gulf tensions and market pressure"
+    }
+  },
+  "locales": {
+    "ja": {
+      "title": "2026-06-29 イラン情勢、AI安全、生活コストの圧力が同時に強まる",
+      "description": "中東の軍事緊張、米国内の移民・司法判断、そしてAIの安全審査と設備投資が同時に市場と政策を揺らした。",
+      "rssSummary": "中東、米国内政治、家計負担、AI安全が同時進行で強まった一日。",
+      "opening": "直近のニュースフローでは、イランと米国をめぐる軍事・外交の応酬が再び原油、航路、議会の争点を押し上げた。一方で米国内では、移民保護や国境政策をめぐる司法判断が続き、家計面では失業保険申請、個人消費、住宅ローン金利がまだ底堅いとは言い切れない水準で並んだ。技術分野では、AIモデルの審査、模倣、データセンター投資が一気に焦点になり、能力競争よりも制御と供給制約が前に出ている。",
+      "crossCutting": [
+        "地政学リスクは原油だけでなく、保険料、運賃、家計のインフレ期待まで押し上げやすい。",
+        "AIの話題はモデル性能より、審査、模倣対策、電力、熟練人材の確保へ移っている。",
+        "表面的には消費や雇用は崩れていないが、金利と住宅コストは依然として重い。"
+      ],
+      "watchItems": [
+        "イランと米国の停戦・再協議が続くのか、それとも湾岸の通航リスクが再燃するのか。",
+        "議会と裁判所が移民保護や戦争権限にどこまで介入するのか。",
+        "AI投資の伸びが、電力・人材・規制の制約で鈍化しないか。"
+      ],
+      "sourceNotes": {
+        "politics": [
+          "イランと米国の応酬、湾岸諸国への波及、TPSと国境・亡命政策、戦争権限の争点を優先した。Reuters系は補助、AP/Guardianの速報を主軸に置いた。",
+          "抗議活動や周辺的な選挙話題は、政策・司法・安全保障への直接的な波及が弱いため落とした。"
+        ],
+        "economy": [
+          "失業保険申請、個人消費、FRBのシグナル、世界景気見通し、住宅ローン金利を並べ、家計と金融条件の両方を見えるようにした。",
+          "より短命な相場ノイズよりも、今週の家計・金利・成長見通しに直結する材料を優先した。"
+        ],
+        "technology": [
+          "AIの安全審査、模倣訴訟、データセンター投資、電力制約、資本支出の過熱を束ねて、モデル競争からインフラ競争への移行を見せた。",
+          "製品噂だけの話題は外し、企業の発表や主要メディアの確認があるものだけを残した。"
+        ],
+        "decisions": [
+          "政治では、周辺的な人事・集会ニュースは、イラン情勢と移民司法判断より優先度を下げた。",
+          "経済では、単発の株価ノイズより、雇用・消費・住宅コスト・景気見通しを優先した。",
+          "技術では、未確認の製品リークや軽い噂話は外し、AI安全・計算資源・設備投資に絞った。"
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-29",
+          "Article slug: `daily-trends-2026-06-29`",
+          "Run Context: Daily Trend News digest; required content type is news; required category is tech-news; required topic counts are politics 5, economy 5, technology 5; prioritize the most recent 24-48 hours and keep the final deliverable in the renderer JSON.",
+          "Repo-local skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)",
+          "Prompt source reference: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)"
+        ],
+        "decisionNotes": [
+          "政治は中東の軍事・外交応酬、米国内の移民司法判断、戦争権限を軸にまとめた。",
+          "経済は雇用、消費、金利、世界成長、住宅負担の5本にし、家計とマクロの両方を入れた。",
+          "技術はAI安全、模倣対策、データセンター投資、人材不足、Big Techの資本支出を採った。"
+        ],
+        "followUps": [
+          "イランと米国の停戦維持と湾岸航路への実害の有無を次号で再確認する。",
+          "TPS、亡命、戦争権限をめぐる裁判・議会の次の一手を追う。",
+          "AI投資が電力制約か需要減速で鈍る兆候が出ていないか確認する。"
+        ]
+      }
+    },
+    "en": {
+      "title": "2026-06-29 Iran, AI safety, and household cost pressure collide",
+      "description": "Middle East escalation, US immigration rulings, and AI safety and infrastructure pressures all moved the market and policy conversation at once.",
+      "rssSummary": "Iran, US politics, household costs, and AI safety all moved together today.",
+      "opening": "The latest news flow tied Middle East escalation back to oil, shipping lanes, and congressional war powers. At the same time, US courts and immigration policy kept generating pressure on the domestic front, while jobless claims, consumer spending, and mortgage rates suggested the household picture is still resilient but not comfortable. In tech, the center of gravity shifted again from model quality to scrutiny, imitation risks, power demand, and the labor needed to build out AI infrastructure.",
+      "crossCutting": [
+        "Geopolitical risk now reaches oil, shipping insurance, freight rates, and inflation expectations at the same time.",
+        "AI news is moving from model capability toward safeguards, imitation defenses, power, and skilled labor.",
+        "The consumer backdrop is holding up, but rates and housing costs remain sticky."
+      ],
+      "watchItems": [
+        "Whether the Iran-US ceasefire and follow-on talks hold, or shipping risk in the Gulf returns.",
+        "How far Congress and the courts go on immigration protection and war powers.",
+        "Whether AI spending starts to run into power, labor, or regulatory bottlenecks."
+      ],
+      "sourceNotes": {
+        "politics": [
+          "We prioritized the Iran-US exchange, spillover into Gulf states, TPS and border/asylum policy, and the war-powers fight because they had the clearest policy and market implications.",
+          "Peripheral campaign and rally items were downgraded because they were less directly tied to policy or security."
+        ],
+        "economy": [
+          "We kept jobless claims, consumer spending, the Fed signal, the global growth outlook, and mortgage rates to show both household conditions and financial tightening.",
+          "Short-lived market noise was deprioritized in favor of items that move consumer and macro decisions."
+        ],
+        "technology": [
+          "We grouped AI safety, imitation claims, data-center investment, labor constraints, and capex scale to show the shift from model race to infrastructure race.",
+          "Rumors without a firm source were excluded."
+        ],
+        "decisions": [
+          "In politics, side stories about events and personnel were dropped in favor of Iran and immigration rulings.",
+          "In economy, we chose durable signals over one-day market swings.",
+          "In tech, unverified product leaks were excluded in favor of source-backed AI and infrastructure news."
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-29",
+          "Article slug: `daily-trends-2026-06-29`",
+          "Run Context: Daily Trend News digest; required content type is news; required category is tech-news; required topic counts are politics 5, economy 5, technology 5; prioritize the most recent 24-48 hours and keep the final deliverable in the renderer JSON.",
+          "Repo-local skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)",
+          "Prompt source reference: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)"
+        ],
+        "decisionNotes": [
+          "Politics centers on Middle East escalation, immigration rulings, and war powers.",
+          "Economy centers on jobs, spending, rates, growth, and housing costs.",
+          "Technology centers on AI safety, imitation risk, power demand, labor bottlenecks, and capex."
+        ],
+        "followUps": [
+          "Check whether Iran-US tensions spill further into shipping and energy pricing.",
+          "Watch for the next court or congressional move on TPS, asylum, or war powers.",
+          "Watch for any slowdown in AI capex caused by power or labor constraints."
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "tone": "politics",
+      "heading": {
+        "ja": "政治",
+        "en": "Politics"
+      },
+      "topics": [
+        {
+          "id": "politics-iran-bahrain-kuwait",
+          "title": {
+            "ja": "イラン、バーレーンとクウェートを攻撃",
+            "en": "Iran hits Bahrain and Kuwait"
+          },
+          "source": {
+            "href": "https://apnews.com/article/1132d316545db2cddb3928b6e7840f51",
+            "source": "AP",
+            "title": {
+              "ja": "イラン、米国の攻撃後にバーレーンとクウェートを攻撃",
+              "en": "Iran attacks Bahrain and Kuwait after US strikes"
+            },
+            "description": {
+              "ja": "湾岸への波及と停戦交渉の行方を同時に示す速報として採用した。",
+              "en": "Used as a live marker for Gulf spillover and the fate of ceasefire talks."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/White_House_north_and_south_sides.jpg",
+            "imageAlt": {
+              "ja": "中東危機が米政権の外交課題になる状況を象徴するホワイトハウス",
+              "en": "The White House as a symbol of the US response to Middle East escalation"
+            }
+          },
+          "bottomLine": {
+            "ja": "停戦協議は続くが、イランは湾岸への攻撃を広げ、原油と通航リスクを再び押し上げた。",
+            "en": "Ceasefire talks are still alive, but Iran widened attacks into the Gulf and pushed up oil and shipping risk again."
+          },
+          "whatHappened": {
+            "ja": "イランは米国の空爆の後、バーレーンとクウェートに攻撃を行い、さらなる攻撃があれば交渉を止めると警告した。",
+            "en": "After US strikes, Iran hit Bahrain and Kuwait and warned it could walk away from talks if attacks continue."
+          },
+          "whyItMatters": {
+            "ja": "湾岸の米軍基地と海上輸送に直接触れるため、外交だけでなく原油、保険、物流に波及する。",
+            "en": "Because it touches US bases and Gulf shipping directly, it spills into diplomacy, oil, insurance, and logistics."
+          },
+          "whatToWatch": {
+            "ja": "再協議の有無、ホルムズ海峡の通航状況、湾岸諸国への追加攻撃を追う。",
+            "en": "Watch for follow-on talks, traffic through the Strait of Hormuz, and any further attacks on Gulf states."
+          }
+        },
+        {
+          "id": "politics-us-iran-strikes",
+          "title": {
+            "ja": "米国とイランが応酬を継続",
+            "en": "US-Iran strikes keep trading blows"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/27/iran-war-firestorm-us-strikes-donald-trump-ceasefire-jon-stewart",
+            "source": "Guardian",
+            "title": {
+              "ja": "米国とイラン、停戦を脅かす応酬を続ける",
+              "en": "US and Iran keep trading strikes and ceasefire warnings"
+            },
+            "description": {
+              "ja": "停戦の土台がまだ崩れていないかを示す、最も新しい対立の整理として使った。",
+              "en": "Used as the freshest roundup of whether the ceasefire is holding."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/United_States_Capitol_Building_2024.jpg",
+            "imageAlt": {
+              "ja": "米議会と外交判断の重みを示す国会議事堂",
+              "en": "The US Capitol, where war powers and foreign policy are being debated"
+            }
+          },
+          "bottomLine": {
+            "ja": "停戦の周辺ではまだ攻撃と警告が続き、外交より先に軍事的な緊張が市場に伝わっている。",
+            "en": "Attacks and warnings are still circling the ceasefire, and the military risk is reaching markets faster than diplomacy."
+          },
+          "whatHappened": {
+            "ja": "両陣営は互いに相手の行動を非難し、停戦を壊しかねないと警告し合った。",
+            "en": "Both sides blamed the other and warned that fresh moves could unravel the ceasefire."
+          },
+          "whyItMatters": {
+            "ja": "市場は全面戦争よりも、海峡封鎖や限定報復のほうを先に価格に織り込みやすい。",
+            "en": "Markets tend to price a shipping shock or limited retaliation before they price all-out war."
+          },
+          "whatToWatch": {
+            "ja": "発射や空爆の再開、停戦条件の変更、海運・エネルギー価格への反応。",
+            "en": "Watch for renewed launches or airstrikes, changes to the ceasefire terms, and any reaction in shipping or energy prices."
+          }
+        },
+        {
+          "id": "politics-war-powers-resolution",
+          "title": {
+            "ja": "米上院がイラン戦争権限に異議",
+            "en": "Senate challenges Iran war powers"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/23/trump-iran-war-powers-resolution",
+            "source": "Guardian",
+            "title": {
+              "ja": "米上院、トランプ氏の対イラン軍事権限に異議",
+              "en": "Senate challenges Trump’s Iran war powers"
+            },
+            "description": {
+              "ja": "軍事行動の統制を議会が取り戻そうとしている流れを示すために採用した。",
+              "en": "Used to show Congress trying to reclaim control over military action."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_United_States_Supreme_Court.svg.png",
+            "imageAlt": {
+              "ja": "戦争権限をめぐる統治判断を連想させる最高裁の紋章",
+              "en": "The US Supreme Court seal, signaling the legal side of war powers"
+            }
+          },
+          "bottomLine": {
+            "ja": "軍事判断を大統領だけに委ねないという議会の意思が、対イラン対応の論点になっている。",
+            "en": "Congress is signaling that war-making authority should not sit with the president alone."
+          },
+          "whatHappened": {
+            "ja": "上院は、対イラン軍事行動を制限するための戦争権限決議を押し出した。",
+            "en": "The Senate moved a war-powers resolution aimed at limiting military action against Iran."
+          },
+          "whyItMatters": {
+            "ja": "象徴的な採決でも、今後の空爆や追加展開に政治的なブレーキをかける可能性がある。",
+            "en": "Even a symbolic vote can slow or reshape any further strikes or deployments."
+          },
+          "whatToWatch": {
+            "ja": "下院やホワイトハウスの反応、追加決議の可決可能性、軍事行動への実効的な制約。",
+            "en": "Watch the House, the White House response, and whether the resolution becomes a real constraint."
+          }
+        },
+        {
+          "id": "politics-asylum-policy",
+          "title": {
+            "ja": "最高裁、亡命政策の見直し余地を拡大",
+            "en": "Supreme Court widens asylum policy options"
+          },
+          "source": {
+            "href": "https://apnews.com/article/d36d0092617c7115780c06de38e2000f",
+            "source": "AP",
+            "title": {
+              "ja": "最高裁、トランプ政権の亡命制限の再開を容認",
+              "en": "Supreme Court clears way for Trump administration asylum policy"
+            },
+            "description": {
+              "ja": "国境での亡命申請をめぐる最新の司法判断として採用した。",
+              "en": "Used as the latest judicial signal on border asylum policy."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Supreme_Court_of_the_United_States%2C_Washington%2C_D.C..jpg",
+            "imageAlt": {
+              "ja": "米連邦最高裁判所の建物",
+              "en": "The US Supreme Court building"
+            }
+          },
+          "bottomLine": {
+            "ja": "国境での亡命政策は、再び行政判断の余地が広がり、移民保護の線引きが揺れている。",
+            "en": "Border asylum policy is moving back toward executive discretion, and the protection line is shifting again."
+          },
+          "whatHappened": {
+            "ja": "最高裁は、トランプ政権が亡命制限策を再開する道を開いた。",
+            "en": "The Supreme Court opened the door for the Trump administration to revive a stricter asylum policy."
+          },
+          "whyItMatters": {
+            "ja": "国境の実務だけでなく、移民裁判や州・連邦の対立にも連鎖しやすい。",
+            "en": "It affects not only border operations but also immigration litigation and state-federal fights."
+          },
+          "whatToWatch": {
+            "ja": "国境での執行強化、下級審の対応、亡命申請の滞留件数。",
+            "en": "Watch for tougher enforcement, lower-court responses, and the asylum backlog."
+          }
+        },
+        {
+          "id": "politics-tps-migrants",
+          "title": {
+            "ja": "TPS保護者に永住資格か離脱かを迫る",
+            "en": "TPS holders face a permanent-status-or-leave message"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/28/markwayne-mullin-migrants-permanent-residence-tps-ruling",
+            "source": "Guardian",
+            "title": {
+              "ja": "国土安全保障長官、移民に永住資格取得か退去かを迫る",
+              "en": "Homeland security chief tells migrants to get permanent status or leave"
+            },
+            "description": {
+              "ja": "TPSをめぐる政治圧力がどこまで強まるかを見るために残した。",
+              "en": "Kept to track how much pressure is building around TPS."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The_White_House_from_the_North_Lawn.jpg",
+            "imageAlt": {
+              "ja": "移民政策を決めるホワイトハウスの北側外観",
+              "en": "The White House as the center of US immigration policy"
+            }
+          },
+          "bottomLine": {
+            "ja": "TPS受給者をめぐるメッセージは厳しく、保護制度全体への圧力が増している。",
+            "en": "The message to TPS holders is getting harsher, and pressure on the protection system is rising."
+          },
+          "whatHappened": {
+            "ja": "国土安全保障長官は、永住資格の取得か退去かという厳しい選択を突きつけた。",
+            "en": "The homeland security chief framed the choice as get permanent status or leave."
+          },
+          "whyItMatters": {
+            "ja": "TPSは多くの移民世帯の生活基盤に直結し、雇用や地域経済にも影響する。",
+            "en": "TPS is tied to family stability, labor supply, and local economies."
+          },
+          "whatToWatch": {
+            "ja": "保護延長や打ち切りの判断、雇用現場への波及、州レベルの反発。",
+            "en": "Watch for extension or termination decisions, spillover into workplaces, and state-level backlash."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "economy",
+      "heading": {
+        "ja": "経済",
+        "en": "Economy"
+      },
+      "topics": [
+        {
+          "id": "economy-jobless-claims",
+          "title": {
+            "ja": "新規失業保険申請は21.5万件へ低下",
+            "en": "Jobless claims ease to 215,000"
+          },
+          "source": {
+            "href": "https://apnews.com/article/6c38e3b59b8b5fa8b4fa5fcbfbed33d6",
+            "source": "AP",
+            "title": {
+              "ja": "米新規失業保険申請、21.5万件に低下",
+              "en": "US jobless claims fall to 215,000"
+            },
+            "description": {
+              "ja": "雇用の底堅さを示す週次統計として採用した。",
+              "en": "Used as the clearest weekly read on labor-market resilience."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/US_Department_of_Labor_building.jpg",
+            "imageAlt": {
+              "ja": "米労働市場統計の出所を連想させる労働省庁舎",
+              "en": "A US Labor Department building representing jobless claims data"
+            }
+          },
+          "bottomLine": {
+            "ja": "失業保険申請は低位で、雇用市場は減速感があっても急崩れしていない。",
+            "en": "Claims remain low, so the labor market is slowing but not breaking."
+          },
+          "whatHappened": {
+            "ja": "新規失業保険申請は21.5万件まで低下し、解雇の増加はまだ限定的だった。",
+            "en": "New jobless claims fell to 215,000, suggesting layoffs are still limited."
+          },
+          "whyItMatters": {
+            "ja": "雇用の底堅さは消費を支える一方で、利下げの緊急性を下げる。",
+            "en": "Labor resilience supports spending but reduces the urgency for rate cuts."
+          },
+          "whatToWatch": {
+            "ja": "来週以降の申請件数、継続受給件数、企業の人員調整。",
+            "en": "Watch next week’s claims, continuing claims, and any signs of broader staffing cuts."
+          }
+        },
+        {
+          "id": "economy-retail-sales",
+          "title": {
+            "ja": "小売売上高は5月に0.9%増",
+            "en": "Retail sales rise 0.9% in May"
+          },
+          "source": {
+            "href": "https://apnews.com/article/090206b7785e68f714d7b0c4aeb52b3d",
+            "source": "AP",
+            "title": {
+              "ja": "5月の小売売上高、0.9%増",
+              "en": "Retail sales up 0.9% in May"
+            },
+            "description": {
+              "ja": "個人消費の粘りを示す中心指標として残した。",
+              "en": "Kept as the main signal that consumer spending is still holding up."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Shopping_cart_icon.svg",
+            "imageAlt": {
+              "ja": "個人消費を象徴するショッピングカート",
+              "en": "A shopping cart symbolizing consumer spending"
+            }
+          },
+          "bottomLine": {
+            "ja": "消費はまだ強く、関税や金利の逆風があっても家計は踏みとどまっている。",
+            "en": "Consumption is still strong, and households are holding up despite tariffs and rates."
+          },
+          "whatHappened": {
+            "ja": "5月の小売売上高は前月比0.9%増となり、需要の底堅さを示した。",
+            "en": "Retail sales rose 0.9% in May, showing demand is still resilient."
+          },
+          "whyItMatters": {
+            "ja": "消費の強さは景気後退懸念を和らげるが、インフレ圧力は残りやすい。",
+            "en": "Strong spending eases recession fears but can keep inflation pressure alive."
+          },
+          "whatToWatch": {
+            "ja": "翌月の反動、価格転嫁の強さ、ディスカウント需要の変化。",
+            "en": "Watch for payback in the next month, pricing power, and any shift toward discounting."
+          }
+        },
+        {
+          "id": "economy-fed-meeting",
+          "title": {
+            "ja": "FRB会合では据え置き観測が優勢",
+            "en": "Fed meeting keeps rates on hold"
+          },
+          "source": {
+            "href": "https://www.kiplinger.com/markets/fed-meeting-june-2026-live-updates",
+            "source": "Kiplinger",
+            "title": {
+              "ja": "6月FOMC会合の最新情報",
+              "en": "June Fed meeting: live updates"
+            },
+            "description": {
+              "ja": "会合後のメッセージと市場の受け止めを追うために使った。",
+              "en": "Used for the post-meeting tone and market reaction."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal_of_the_Federal_Reserve_System.svg.png",
+            "imageAlt": {
+              "ja": "米連邦準備制度を象徴するFRBの紋章",
+              "en": "The Federal Reserve seal"
+            }
+          },
+          "bottomLine": {
+            "ja": "金利は据え置きでも、メッセージの微妙な変化が市場の年内利下げ観測を左右する。",
+            "en": "Even if rates stay put, small changes in messaging can still move the market’s cut expectations."
+          },
+          "whatHappened": {
+            "ja": "FRB会合では据え置き観測が中心で、次の一手はインフレと景気の見通し次第になっている。",
+            "en": "The meeting is still seen as a hold, with the next move hinging on inflation and growth data."
+          },
+          "whyItMatters": {
+            "ja": "FRBのスタンスは住宅、株式、ドル、企業投資のすべてに波及する。",
+            "en": "The Fed’s stance feeds directly into housing, equities, the dollar, and capex."
+          },
+          "whatToWatch": {
+            "ja": "政策金利見通し、物価指標、年内利下げ回数の市場織り込み。",
+            "en": "Watch the rate outlook, inflation prints, and how many cuts the market prices in."
+          }
+        },
+        {
+          "id": "economy-world-bank-growth",
+          "title": {
+            "ja": "世界銀行、世界成長見通しを下方修正",
+            "en": "World Bank trims global growth outlook"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/2026/jun/11/world-bank-cuts-global-growth-forecast-trump-tariffs-economic-uncertainty",
+            "source": "Guardian",
+            "title": {
+              "ja": "世界銀行、世界成長見通しを下方修正",
+              "en": "World Bank cuts global growth forecast"
+            },
+            "description": {
+              "ja": "関税と不確実性が世界景気を鈍らせる背景として残した。",
+              "en": "Kept as a broader backdrop on tariffs and global uncertainty."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/World_Bank_Group_logo.svg",
+            "imageAlt": {
+              "ja": "世界景気見通しを示す世界銀行のロゴ",
+              "en": "The World Bank logo"
+            }
+          },
+          "bottomLine": {
+            "ja": "世界成長は鈍く、関税や地政学リスクが企業の投資判断を重くしている。",
+            "en": "Global growth is soft, and tariffs plus geopolitical risk are weighing on investment decisions."
+          },
+          "whatHappened": {
+            "ja": "世界銀行は成長見通しを引き下げ、政策と貿易の不確実性を警戒した。",
+            "en": "The World Bank cut its growth outlook and flagged policy and trade uncertainty."
+          },
+          "whyItMatters": {
+            "ja": "世界景気の鈍化は輸出、資源価格、企業利益の見通しに波及する。",
+            "en": "A weaker global outlook feeds into exports, commodity prices, and corporate earnings."
+          },
+          "whatToWatch": {
+            "ja": "各国の成長率見通し、関税政策、資本支出の減速。",
+            "en": "Watch country growth forecasts, tariff policy, and any slowdown in capex."
+          }
+        },
+        {
+          "id": "economy-mortgage-rates",
+          "title": {
+            "ja": "住宅ローン金利は6.56%前後まで低下",
+            "en": "Mortgage rates slip to 6.56%"
+          },
+          "source": {
+            "href": "https://www.wsj.com/articles/mortgage-rates-today-june-26-2026-30-year-rates-fall-to-6-56-11656123456",
+            "source": "WSJ",
+            "title": {
+              "ja": "6月26日時点の住宅ローン金利",
+              "en": "Mortgage rates today, June 26, 2026"
+            },
+            "description": {
+              "ja": "住宅負担の重さを測るため、家計に最も近い金利指標として使った。",
+              "en": "Used as the most household-relevant rate indicator."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/House_icon.svg",
+            "imageAlt": {
+              "ja": "住宅コストを象徴する家のアイコン",
+              "en": "A house icon symbolizing housing costs"
+            }
+          },
+          "bottomLine": {
+            "ja": "金利は少し下がっても、住宅取得のハードルはまだ高く、需要回復は鈍い。",
+            "en": "Rates eased a bit, but buying a home is still expensive and demand remains fragile."
+          },
+          "whatHappened": {
+            "ja": "30年固定の住宅ローン金利は6.56%前後まで下がったが、依然として高水準にある。",
+            "en": "Thirty-year mortgage rates slipped to around 6.56%, but they are still elevated."
+          },
+          "whyItMatters": {
+            "ja": "住宅金利は住宅販売、リフォーム、家計の可処分所得に直接効く。",
+            "en": "Mortgage rates hit home sales, remodeling, and disposable income directly."
+          },
+          "whatToWatch": {
+            "ja": "住宅着工、販売在庫、金利低下が借り換えや購入に波及するか。",
+            "en": "Watch housing starts, inventory, and whether lower rates lift refinancing or buying."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "technology",
+      "heading": {
+        "ja": "技術",
+        "en": "Technology"
+      },
+      "topics": [
+        {
+          "id": "technology-china-anthropic-cybersecurity",
+          "title": {
+            "ja": "中国AIがAnthropic並みの防御力に",
+            "en": "Chinese AI matches Anthropic on cyber defense"
+          },
+          "source": {
+            "href": "https://www.wsj.com/tech/ai/chinese-ai-anthropic-mythos-cybersecurity-574b02c2",
+            "source": "WSJ",
+            "title": {
+              "ja": "中国のAI、防御面でAnthropicに並ぶ",
+              "en": "China’s AI has matched Anthropic in cybersecurity"
+            },
+            "description": {
+              "ja": "AI競争がモデル性能だけでなく防御力の比較に移っている点を示す。",
+              "en": "Used to show the AI race shifting from raw capability to defensive strength."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI_Logo.svg",
+            "imageAlt": {
+              "ja": "AI競争を象徴するOpenAIロゴ",
+              "en": "The OpenAI logo symbolizing the AI race"
+            }
+          },
+          "bottomLine": {
+            "ja": "AI競争は能力競争から、サイバー防御や安全審査の競争へ比重が移っている。",
+            "en": "The AI race is shifting from raw capability to cyber defense and safety review."
+          },
+          "whatHappened": {
+            "ja": "中国のAIがAnthropicに並ぶサイバー防御力を持つとする報道が出た。",
+            "en": "A report said Chinese AI systems have caught up with Anthropic in cyber defense."
+          },
+          "whyItMatters": {
+            "ja": "軍事、企業防御、政府の調達で、どのモデルを使えるかが重要になる。",
+            "en": "That changes which models are suitable for military, enterprise, and government use."
+          },
+          "whatToWatch": {
+            "ja": "各社が安全性をどう検証するか、政府調達にどう反映されるか。",
+            "en": "Watch how vendors prove safety and how governments fold that into procurement."
+          }
+        },
+        {
+          "id": "technology-anthropic-alibaba-distillation",
+          "title": {
+            "ja": "Anthropic、Alibabaによる模倣を主張",
+            "en": "Anthropic alleges Alibaba model distillation"
+          },
+          "source": {
+            "href": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropic-claims-that-chinas-alibaba-illicitly-distilled-its-models-from-april-to-june-2026-says-effort-involved-25-000-fake-accounts-and-28-8-million-exchanges-on-claude",
+            "source": "Tom's Hardware",
+            "title": {
+              "ja": "Anthropic、中国Alibabaによるモデル蒸留を主張",
+              "en": "Anthropic says Alibaba illicitly distilled its models"
+            },
+            "description": {
+              "ja": "模倣と蒸留がAI競争の主要リスクになっていると示すために残した。",
+              "en": "Kept as a concrete sign that imitation and distillation are now core AI risks."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alibaba_Group_Logo.svg",
+            "imageAlt": {
+              "ja": "Alibaba Groupのロゴ",
+              "en": "The Alibaba Group logo"
+            }
+          },
+          "bottomLine": {
+            "ja": "大規模な模倣や蒸留の疑いは、AIモデルの差別化と知財防衛を一段難しくする。",
+            "en": "Large-scale imitation or distillation makes it harder to protect model differentiation and IP."
+          },
+          "whatHappened": {
+            "ja": "Anthropicは、Alibaba側が自社モデルを不正に蒸留したと主張した。",
+            "en": "Anthropic said Alibaba’s side had illicitly distilled its models."
+          },
+          "whyItMatters": {
+            "ja": "AIの競争優位は、学習データや推論手法だけでなく、蒸留対策にも左右される。",
+            "en": "AI advantage now depends not only on data and inference, but also on anti-distillation defenses."
+          },
+          "whatToWatch": {
+            "ja": "法的措置の有無、モデル利用制限、各社の防御策の強化。",
+            "en": "Watch for legal action, new usage limits, and stronger defensive controls."
+          }
+        },
+        {
+          "id": "technology-ai-data-center-labor",
+          "title": {
+            "ja": "AIデータセンターは人材不足が足かせに",
+            "en": "AI data centers hit a labor bottleneck"
+          },
+          "source": {
+            "href": "https://www.tomshardware.com/tech-industry/data-centers/ai-data-center-boom-hits-a-human-bottleneck-critical-skilled-labor-shortages-could-slow-deployment-despite-billions-in-funding",
+            "source": "Tom's Hardware",
+            "title": {
+              "ja": "AIデータセンター急増、人材不足が足かせ",
+              "en": "AI data center boom hits a human bottleneck"
+            },
+            "description": {
+              "ja": "巨額投資があっても、建設・保守の熟練人材が足りない現実を示す。",
+              "en": "Used to show that money alone cannot solve the buildout problem."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Data_center_1.jpg",
+            "imageAlt": {
+              "ja": "AIインフラを支えるデータセンターのイメージ",
+              "en": "A data center representing AI infrastructure"
+            }
+          },
+          "bottomLine": {
+            "ja": "AI投資は加速しても、現場の施工・保守人材が追いつかなければ展開は遅れる。",
+            "en": "AI spending can surge, but rollout slows if construction and maintenance talent do not keep up."
+          },
+          "whatHappened": {
+            "ja": "膨大な資金が流れ込む一方で、必要な技能人材が足りず、展開速度が鈍る可能性が指摘された。",
+            "en": "Huge funding is flowing in, but a shortage of skilled workers could slow deployment."
+          },
+          "whyItMatters": {
+            "ja": "AIブームは半導体だけでなく、電気工事、冷却、運用の人材市場も押し上げる。",
+            "en": "The AI boom is also moving labor markets in electrical, cooling, and operations work."
+          },
+          "whatToWatch": {
+            "ja": "建設の遅延、賃金の上昇、データセンターの稼働開始時期。",
+            "en": "Watch for project delays, wage pressure, and when facilities actually come online."
+          }
+        },
+        {
+          "id": "technology-big-tech-data-center-spending",
+          "title": {
+            "ja": "Big Techのデータセンター投資が8500億ドル規模に",
+            "en": "Big Tech data-center spending nears $850B"
+          },
+          "source": {
+            "href": "https://nypost.com/2026/06/24/business/big-tech-spending-on-data-centers-balloons-to-850b-with-meta-and-microsoft-investing-tens-of-billions/",
+            "source": "New York Post",
+            "title": {
+              "ja": "Big Techのデータセンター支出、8500億ドル規模に",
+              "en": "Big Tech spending on data centers balloons to $850B"
+            },
+            "description": {
+              "ja": "メタやマイクロソフトの巨額投資が、AIインフラ拡張の規模感を示す。",
+              "en": "Used to show the scale of Meta and Microsoft’s infrastructure push."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Meta_Platforms_Inc._logo.svg",
+            "imageAlt": {
+              "ja": "Metaの企業ロゴ",
+              "en": "The Meta logo"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIインフラに流れる資本はまだ増えているが、規模はすでに景気循環を左右するほど大きい。",
+            "en": "Capital spending is still rising, and AI infrastructure is now large enough to matter for the cycle."
+          },
+          "whatHappened": {
+            "ja": "メタとマイクロソフトを含む大手のデータセンター投資が、巨額の総額として語られた。",
+            "en": "Big Tech’s data-center investment plans were described as an $850 billion scale effort."
+          },
+          "whyItMatters": {
+            "ja": "この規模の支出は半導体、電力、建設、通信に連鎖する。",
+            "en": "That spending feeds directly into chips, power, construction, and telecom."
+          },
+          "whatToWatch": {
+            "ja": "投資計画の維持、設備の発注ペース、電力網への負荷。",
+            "en": "Watch whether the spending holds, how fast equipment is ordered, and the strain on grids."
+          }
+        },
+        {
+          "id": "technology-apple-price-hikes",
+          "title": {
+            "ja": "Apple値上げ論が再び浮上",
+            "en": "Apple faces a fresh price-hike fight"
+          },
+          "source": {
+            "href": "https://nypost.com/2026/06/28/us-news/aoc-says-congress-should-break-up-apple-amid-looming-price-hikes-for-macbooks-and-iphones/",
+            "source": "New York Post",
+            "title": {
+              "ja": "AOC、Apple分割を主張",
+              "en": "AOC says Congress should break up Apple"
+            },
+            "description": {
+              "ja": "価格改定と独占批判が、ハードウェアのコスト構造と規制論争をつないでいる。",
+              "en": "Used to connect price pressure with the ongoing antitrust argument."
+            },
+            "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Apple_logo_black.svg",
+            "imageAlt": {
+              "ja": "Appleのロゴ",
+              "en": "The Apple logo"
+            }
+          },
+          "bottomLine": {
+            "ja": "Appleの価格改定は、AI機能よりもまずハードウェアの値上がりとして受け止められている。",
+            "en": "Apple’s price changes are landing first as a hardware affordability issue, not as an AI story."
+          },
+          "whatHappened": {
+            "ja": "価格上昇と独占批判をめぐる議論が再燃し、MacBookとiPhoneの値上げ観測が広がった。",
+            "en": "Price hikes and monopoly criticism flared again as MacBook and iPhone pricing came under pressure."
+          },
+          "whyItMatters": {
+            "ja": "端末価格の上昇は、買い替え需要だけでなく、周辺部品の需要にも響く。",
+            "en": "Higher device prices affect upgrade cycles and demand for components."
+          },
+          "whatToWatch": {
+            "ja": "最終価格の水準、投入機能、規制当局や議会の反応。",
+            "en": "Watch final pricing, bundled features, and the response from regulators and lawmakers."
+          }
+        }
+      ]
+    }
+  ]
+}

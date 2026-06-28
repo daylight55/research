@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "直近のニュースフローでは、イランと米国をめぐる軍事・外交の応酬が再び原油、航路、議会の争点を押し上げた。一方で米国内では、移民保護や国境政策をめぐる司法判断が続き、家計面では失業保険申請、個人消費、住宅ローン金利がまだ底堅いとは言い切れない水準で並んだ。技術分野では、AIモデルの審査、模倣、データセンター投資が一気に焦点になり、能力競争よりも制御と供給制約が前に出ている。",
+      "en": "The latest news flow tied Middle East escalation back to oil, shipping lanes, and congressional war powers. At the same time, US courts and immigration policy kept generating pressure on the domestic front, while jobless claims, consumer spending, and mortgage rates suggested the household picture is still resilient but not comfortable. In tech, the center of gravity shifted again from model quality to scrutiny, imitation risks, power demand, and the labor needed to build out AI infrastructure."
+    },
+    {
+      "ja": "停戦協議は続くが、イランは湾岸への攻撃を広げ、原油と通航リスクを再び押し上げた。",
+      "en": "Ceasefire talks are still alive, but Iran widened attacks into the Gulf and pushed up oil and shipping risk again."
+    },
+    {
+      "ja": "イランは米国の空爆の後、バーレーンとクウェートに攻撃を行い、さらなる攻撃があれば交渉を止めると警告した。",
+      "en": "After US strikes, Iran hit Bahrain and Kuwait and warned it could walk away from talks if attacks continue."
+    },
+    {
+      "ja": "湾岸の米軍基地と海上輸送に直接触れるため、外交だけでなく原油、保険、物流に波及する。",
+      "en": "Because it touches US bases and Gulf shipping directly, it spills into diplomacy, oil, insurance, and logistics."
+    },
+    {
+      "ja": "再協議の有無、ホルムズ海峡の通航状況、湾岸諸国への追加攻撃を追う。",
+      "en": "Watch for follow-on talks, traffic through the Strait of Hormuz, and any further attacks on Gulf states."
+    },
+    {
+      "ja": "停戦の周辺ではまだ攻撃と警告が続き、外交より先に軍事的な緊張が市場に伝わっている。",
+      "en": "Attacks and warnings are still circling the ceasefire, and the military risk is reaching markets faster than diplomacy."
+    },
+    {
+      "ja": "両陣営は互いに相手の行動を非難し、停戦を壊しかねないと警告し合った。",
+      "en": "Both sides blamed the other and warned that fresh moves could unravel the ceasefire."
+    },
+    {
+      "ja": "市場は全面戦争よりも、海峡封鎖や限定報復のほうを先に価格に織り込みやすい。",
+      "en": "Markets tend to price a shipping shock or limited retaliation before they price all-out war."
+    },
+    {
+      "ja": "発射や空爆の再開、停戦条件の変更、海運・エネルギー価格への反応。",
+      "en": "Watch for renewed launches or airstrikes, changes to the ceasefire terms, and any reaction in shipping or energy prices."
+    },
+    {
+      "ja": "軍事判断を大統領だけに委ねないという議会の意思が、対イラン対応の論点になっている。",
+      "en": "Congress is signaling that war-making authority should not sit with the president alone."
+    },
+    {
+      "ja": "上院は、対イラン軍事行動を制限するための戦争権限決議を押し出した。",
+      "en": "The Senate moved a war-powers resolution aimed at limiting military action against Iran."
+    },
+    {
+      "ja": "象徴的な採決でも、今後の空爆や追加展開に政治的なブレーキをかける可能性がある。",
+      "en": "Even a symbolic vote can slow or reshape any further strikes or deployments."
+    },
+    {
+      "ja": "下院やホワイトハウスの反応、追加決議の可決可能性、軍事行動への実効的な制約。",
+      "en": "Watch the House, the White House response, and whether the resolution becomes a real constraint."
+    },
+    {
+      "ja": "国境での亡命政策は、再び行政判断の余地が広がり、移民保護の線引きが揺れている。",
+      "en": "Border asylum policy is moving back toward executive discretion, and the protection line is shifting again."
+    },
+    {
+      "ja": "最高裁は、トランプ政権が亡命制限策を再開する道を開いた。",
+      "en": "The Supreme Court opened the door for the Trump administration to revive a stricter asylum policy."
+    },
+    {
+      "ja": "国境の実務だけでなく、移民裁判や州・連邦の対立にも連鎖しやすい。",
+      "en": "It affects not only border operations but also immigration litigation and state-federal fights."
+    },
+    {
+      "ja": "国境での執行強化、下級審の対応、亡命申請の滞留件数。",
+      "en": "Watch for tougher enforcement, lower-court responses, and the asylum backlog."
+    },
+    {
+      "ja": "TPS受給者をめぐるメッセージは厳しく、保護制度全体への圧力が増している。",
+      "en": "The message to TPS holders is getting harsher, and pressure on the protection system is rising."
+    },
+    {
+      "ja": "国土安全保障長官は、永住資格の取得か退去かという厳しい選択を突きつけた。",
+      "en": "The homeland security chief framed the choice as get permanent status or leave."
+    },
+    {
+      "ja": "TPSは多くの移民世帯の生活基盤に直結し、雇用や地域経済にも影響する。",
+      "en": "TPS is tied to family stability, labor supply, and local economies."
+    },
+    {
+      "ja": "保護延長や打ち切りの判断、雇用現場への波及、州レベルの反発。",
+      "en": "Watch for extension or termination decisions, spillover into workplaces, and state-level backlash."
+    },
+    {
+      "ja": "失業保険申請は低位で、雇用市場は減速感があっても急崩れしていない。",
+      "en": "Claims remain low, so the labor market is slowing but not breaking."
+    },
+    {
+      "ja": "新規失業保険申請は21.5万件まで低下し、解雇の増加はまだ限定的だった。",
+      "en": "New jobless claims fell to 215,000, suggesting layoffs are still limited."
+    },
+    {
+      "ja": "雇用の底堅さは消費を支える一方で、利下げの緊急性を下げる。",
+      "en": "Labor resilience supports spending but reduces the urgency for rate cuts."
+    },
+    {
+      "ja": "来週以降の申請件数、継続受給件数、企業の人員調整。",
+      "en": "Watch next week’s claims, continuing claims, and any signs of broader staffing cuts."
+    },
+    {
+      "ja": "消費はまだ強く、関税や金利の逆風があっても家計は踏みとどまっている。",
+      "en": "Consumption is still strong, and households are holding up despite tariffs and rates."
+    },
+    {
+      "ja": "5月の小売売上高は前月比0.9%増となり、需要の底堅さを示した。",
+      "en": "Retail sales rose 0.9% in May, showing demand is still resilient."
+    },
+    {
+      "ja": "消費の強さは景気後退懸念を和らげるが、インフレ圧力は残りやすい。",
+      "en": "Strong spending eases recession fears but can keep inflation pressure alive."
+    },
+    {
+      "ja": "翌月の反動、価格転嫁の強さ、ディスカウント需要の変化。",
+      "en": "Watch for payback in the next month, pricing power, and any shift toward discounting."
+    },
+    {
+      "ja": "金利は据え置きでも、メッセージの微妙な変化が市場の年内利下げ観測を左右する。",
+      "en": "Even if rates stay put, small changes in messaging can still move the market’s cut expectations."
+    },
+    {
+      "ja": "FRB会合では据え置き観測が中心で、次の一手はインフレと景気の見通し次第になっている。",
+      "en": "The meeting is still seen as a hold, with the next move hinging on inflation and growth data."
+    },
+    {
+      "ja": "FRBのスタンスは住宅、株式、ドル、企業投資のすべてに波及する。",
+      "en": "The Fed’s stance feeds directly into housing, equities, the dollar, and capex."
+    },
+    {
+      "ja": "政策金利見通し、物価指標、年内利下げ回数の市場織り込み。",
+      "en": "Watch the rate outlook, inflation prints, and how many cuts the market prices in."
+    },
+    {
+      "ja": "世界成長は鈍く、関税や地政学リスクが企業の投資判断を重くしている。",
+      "en": "Global growth is soft, and tariffs plus geopolitical risk are weighing on investment decisions."
+    },
+    {
+      "ja": "世界銀行は成長見通しを引き下げ、政策と貿易の不確実性を警戒した。",
+      "en": "The World Bank cut its growth outlook and flagged policy and trade uncertainty."
+    },
+    {
+      "ja": "世界景気の鈍化は輸出、資源価格、企業利益の見通しに波及する。",
+      "en": "A weaker global outlook feeds into exports, commodity prices, and corporate earnings."
+    },
+    {
+      "ja": "各国の成長率見通し、関税政策、資本支出の減速。",
+      "en": "Watch country growth forecasts, tariff policy, and any slowdown in capex."
+    },
+    {
+      "ja": "金利は少し下がっても、住宅取得のハードルはまだ高く、需要回復は鈍い。",
+      "en": "Rates eased a bit, but buying a home is still expensive and demand remains fragile."
+    },
+    {
+      "ja": "30年固定の住宅ローン金利は6.56%前後まで下がったが、依然として高水準にある。",
+      "en": "Thirty-year mortgage rates slipped to around 6.56%, but they are still elevated."
+    },
+    {
+      "ja": "住宅金利は住宅販売、リフォーム、家計の可処分所得に直接効く。",
+      "en": "Mortgage rates hit home sales, remodeling, and disposable income directly."
+    },
+    {
+      "ja": "住宅着工、販売在庫、金利低下が借り換えや購入に波及するか。",
+      "en": "Watch housing starts, inventory, and whether lower rates lift refinancing or buying."
+    },
+    {
+      "ja": "AI競争は能力競争から、サイバー防御や安全審査の競争へ比重が移っている。",
+      "en": "The AI race is shifting from raw capability to cyber defense and safety review."
+    },
+    {
+      "ja": "中国のAIがAnthropicに並ぶサイバー防御力を持つとする報道が出た。",
+      "en": "A report said Chinese AI systems have caught up with Anthropic in cyber defense."
+    },
+    {
+      "ja": "軍事、企業防御、政府の調達で、どのモデルを使えるかが重要になる。",
+      "en": "That changes which models are suitable for military, enterprise, and government use."
+    },
+    {
+      "ja": "各社が安全性をどう検証するか、政府調達にどう反映されるか。",
+      "en": "Watch how vendors prove safety and how governments fold that into procurement."
+    },
+    {
+      "ja": "大規模な模倣や蒸留の疑いは、AIモデルの差別化と知財防衛を一段難しくする。",
+      "en": "Large-scale imitation or distillation makes it harder to protect model differentiation and IP."
+    },
+    {
+      "ja": "Anthropicは、Alibaba側が自社モデルを不正に蒸留したと主張した。",
+      "en": "Anthropic said Alibaba’s side had illicitly distilled its models."
+    },
+    {
+      "ja": "AIの競争優位は、学習データや推論手法だけでなく、蒸留対策にも左右される。",
+      "en": "AI advantage now depends not only on data and inference, but also on anti-distillation defenses."
+    },
+    {
+      "ja": "法的措置の有無、モデル利用制限、各社の防御策の強化。",
+      "en": "Watch for legal action, new usage limits, and stronger defensive controls."
+    },
+    {
+      "ja": "AI投資は加速しても、現場の施工・保守人材が追いつかなければ展開は遅れる。",
+      "en": "AI spending can surge, but rollout slows if construction and maintenance talent do not keep up."
+    },
+    {
+      "ja": "膨大な資金が流れ込む一方で、必要な技能人材が足りず、展開速度が鈍る可能性が指摘された。",
+      "en": "Huge funding is flowing in, but a shortage of skilled workers could slow deployment."
+    },
+    {
+      "ja": "AIブームは半導体だけでなく、電気工事、冷却、運用の人材市場も押し上げる。",
+      "en": "The AI boom is also moving labor markets in electrical, cooling, and operations work."
+    },
+    {
+      "ja": "建設の遅延、賃金の上昇、データセンターの稼働開始時期。",
+      "en": "Watch for project delays, wage pressure, and when facilities actually come online."
+    },
+    {
+      "ja": "AIインフラに流れる資本はまだ増えているが、規模はすでに景気循環を左右するほど大きい。",
+      "en": "Capital spending is still rising, and AI infrastructure is now large enough to matter for the cycle."
+    },
+    {
+      "ja": "メタとマイクロソフトを含む大手のデータセンター投資が、巨額の総額として語られた。",
+      "en": "Big Tech’s data-center investment plans were described as an $850 billion scale effort."
+    },
+    {
+      "ja": "この規模の支出は半導体、電力、建設、通信に連鎖する。",
+      "en": "That spending feeds directly into chips, power, construction, and telecom."
+    },
+    {
+      "ja": "投資計画の維持、設備の発注ペース、電力網への負荷。",
+      "en": "Watch whether the spending holds, how fast equipment is ordered, and the strain on grids."
+    },
+    {
+      "ja": "Appleの価格改定は、AI機能よりもまずハードウェアの値上がりとして受け止められている。",
+      "en": "Apple’s price changes are landing first as a hardware affordability issue, not as an AI story."
+    },
+    {
+      "ja": "価格上昇と独占批判をめぐる議論が再燃し、MacBookとiPhoneの値上げ観測が広がった。",
+      "en": "Price hikes and monopoly criticism flared again as MacBook and iPhone pricing came under pressure."
+    },
+    {
+      "ja": "端末価格の上昇は、買い替え需要だけでなく、周辺部品の需要にも響く。",
+      "en": "Higher device prices affect upgrade cycles and demand for components."
+    },
+    {
+      "ja": "最終価格の水準、投入機能、規制当局や議会の反応。",
+      "en": "Watch final pricing, bundled features, and the response from regulators and lawmakers."
+    },
+    {
+      "ja": "地政学リスクは原油だけでなく、保険料、運賃、家計のインフレ期待まで押し上げやすい。",
+      "en": "Geopolitical risk now reaches oil, shipping insurance, freight rates, and inflation expectations at the same time."
+    },
+    {
+      "ja": "AIの話題はモデル性能より、審査、模倣対策、電力、熟練人材の確保へ移っている。",
+      "en": "AI news is moving from model capability toward safeguards, imitation defenses, power, and skilled labor."
+    },
+    {
+      "ja": "表面的には消費や雇用は崩れていないが、金利と住宅コストは依然として重い。",
+      "en": "The consumer backdrop is holding up, but rates and housing costs remain sticky."
+    },
+    {
+      "ja": "イランと米国の停戦・再協議が続くのか、それとも湾岸の通航リスクが再燃するのか。",
+      "en": "Whether the Iran-US ceasefire and follow-on talks hold, or shipping risk in the Gulf returns."
+    },
+    {
+      "ja": "議会と裁判所が移民保護や戦争権限にどこまで介入するのか。",
+      "en": "How far Congress and the courts go on immigration protection and war powers."
+    },
+    {
+      "ja": "AI投資の伸びが、電力・人材・規制の制約で鈍化しないか。",
+      "en": "Whether AI spending starts to run into power, labor, or regulatory bottlenecks."
+    }
+  ]
+}

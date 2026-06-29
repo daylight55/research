@@ -1,0 +1,746 @@
+{
+  "version": 1,
+  "slug": "daily-trends-2026-06-30",
+  "date": "2026-06-30",
+  "category": "tech-news",
+  "tags": ["news", "politics", "economy", "technology"],
+  "generation": {
+    "model": "gpt-5.4-mini"
+  },
+  "heroImage": {
+    "query": "United States Supreme Court Washington DC",
+    "alt": {
+      "ja": "ワシントンD.C.の米連邦最高裁判所庁舎",
+      "en": "The U.S. Supreme Court building in Washington, D.C."
+    }
+  },
+  "locales": {
+    "ja": {
+      "title": "2026-06-30 司法判断とAI投資が政策・市場・技術を動かす",
+      "description": "最高裁の権限判断、雇用とインフレの見通し、そしてAI投資と安全保障が同じ日に相場と政策を動かした。",
+      "rssSummary": "最高裁判断、雇用統計、AI投資とサイバー安全保障が同時進行した一日。",
+      "opening": "最高裁は独立機関の長の解任権を広げる一方で、FRBだけは別扱いにした。市場は今週の米雇用統計と欧州インフレを見ながら、AI向け半導体投資と電力制約がどこまで続くかを測っている。技術面では、AIモデルの事前審査、サイバー警告、PC向けAIチップ、データセンターの電力設計が同じ方向を向いた。",
+      "crossCutting": [
+        "独立機関の人事権は広がったが、FRBの独立性は別枠で守られた。",
+        "AIはモデル機能の競争から、半導体・電力・安全保障を含む基盤競争に移っている。",
+        "投資家は雇用統計とインフレ指標を、AI設備投資の持続性を測る材料として見ている。"
+      ],
+      "watchItems": [
+        "Cook氏とSlaughter氏をめぐる下級審の対応が、今回の判決の射程をどこまで広げるか。",
+        "米雇用統計と欧州インフレが、7月の金利見通しをどちらに動かすか。",
+        "AIモデルの審査とサイバー警告が、単発のニュースで終わるか制度化されるか。"
+      ],
+      "sourceNotes": {
+        "politics": [
+          "6/29の最高裁判断を軸に、独立機関、FRB、投票、プライバシー、Trump関連訴訟の5本に整理した。いずれも同日の法的インパクトが大きく、相互に重複しにくいものを優先した。"
+        ],
+        "economy": [
+          "雇用統計、ECB/Sintra、スペイン物価、韓国のAI向け半導体投資、半導体株の上昇を採用した。一般的な相場総括は、AI設備投資の項目と重なるため落とした。"
+        ],
+        "technology": [
+          "Five Eyesの警告、AIモデルの事前審査、NvidiaのPC向け新チップ、Codexの利用拡大、AIデータセンターの電力設計を採用した。古い政策論や単なる話題性の高い評論は、同日性が弱いため外した。"
+        ],
+        "decisions": [
+          "広い意味の中東情勢や一般論だけのAI相場コメントは、今回の3カテゴリに対して具体性が足りず見送った。",
+          "同じテーマでも、ソースが薄い候補より、同日性か一次性の高い記事を優先した。"
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-30",
+          "Article slug: `daily-trends-2026-06-30`",
+          "Run Context: topic hint = daily trend news; categories = politics / economy / technology; required counts = 5 / 5 / 5; recency window = recent 24-48 hours with slightly older items only when still driving decisions; deliverable = structured JSON for renderer-generated news digest."
+        ],
+        "decisionNotes": [
+          "同日の最高裁判断を政治の主軸に置き、FRB独立性、投票、プライバシー、Trump関連訴訟を別トピックに分解した。",
+          "経済は、米雇用統計とECB関連の前方指標を中心に、AI向け半導体投資と半導体株の上昇を組み合わせた。",
+          "技術は、AI安全保障、モデル審査、端末向けチップ、エージェント利用、データセンター電力の5面で整理した。",
+          "画像は各ソースの文脈に合う記事画像を優先し、同一URLの使い回しを避けた。"
+        ],
+        "followUps": [
+          "米雇用統計と欧州インフレの結果が出たら、翌日の追記候補を再評価する。",
+          "Cook氏とSlaughter氏の判決後の下級審対応を確認する。",
+          "AIモデル審査とサイバー警告が、実務ルールや調達条件に変わるか追う。"
+        ]
+      }
+    },
+    "en": {
+      "title": "2026-06-30 Courts, rates, and AI spending move politics, markets, and tech",
+      "description": "A split Supreme Court, a busy macro calendar, and fresh AI security and capital-spending news all pulled the day in the same direction.",
+      "rssSummary": "Courts, payrolls, chip spending, and AI security all hit the tape at once.",
+      "opening": "The Supreme Court widened presidential control over independent agencies while treating the Fed as a special case. Markets are now reading this alongside this week's U.S. jobs data and European inflation, while AI spending keeps pushing into chips, power, and security review. On the technology side, model vetting, cyber warnings, PC chips, and data-center power design all pointed the same way.",
+      "crossCutting": [
+        "Executive power widened for independent agencies, but the Fed was treated differently.",
+        "AI has moved from feature competition into an infrastructure race that includes chips, power, and security.",
+        "Investors are using payrolls and inflation prints as a test of whether AI capex can stay hot."
+      ],
+      "watchItems": [
+        "How lower courts handle the Cook and Slaughter cases will determine how far the rulings reach.",
+        "U.S. payrolls and euro-area inflation will decide whether July rate expectations move higher or lower.",
+        "Whether AI model vetting and cyber warnings become durable policy, or fade after the news cycle."
+      ],
+      "sourceNotes": {
+        "politics": [
+          "I centered the politics slate on the 6/29 Supreme Court batch and split it into five separate items: agency power, Fed independence, mail ballots, geofence warrants, and Trump-related litigation. The goal was to keep each item specific and non-overlapping."
+        ],
+        "economy": [
+          "I chose forward-looking macro markers plus market-moving industrial policy: payrolls, ECB/Sintra, Spanish inflation, South Korea's AI chip hub, and the chipmaker rally. A generic market recap was dropped because it repeated the chip-investment angle."
+        ],
+        "technology": [
+          "The tech set covers security, model gating, PC hardware, agentic AI usage, and data-center power. Older policy commentary and less source-backed opinion pieces were skipped in favor of fresher, more actionable items."
+        ],
+        "decisions": [
+          "Broader geopolitics and commentary-heavy AI market takes were downgraded because they were less specific than the selected items.",
+          "When a theme had multiple candidate stories, I kept the one with the clearest source support and freshest date."
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-06-30",
+          "Article slug: `daily-trends-2026-06-30`",
+          "Run Context: topic hint = daily trend news; categories = politics / economy / technology; required counts = 5 / 5 / 5; recency window = recent 24-48 hours with slightly older items only when they still drive decisions; deliverable = structured JSON for renderer-generated news digest."
+        ],
+        "decisionNotes": [
+          "The politics slate is built around the day’s Supreme Court rulings, then split into distinct items for agency power, Fed independence, voting rules, privacy, and Trump litigation.",
+          "The economy slate mixes near-term data, central-bank signaling, industrial policy, and the chip rally so the reader sees both macro and capex pressure points.",
+          "The tech slate covers AI security, release gating, consumer hardware, agentic usage, and power constraints so it stays practical instead of abstract.",
+          "I preferred article images or topic-matched visuals and avoided reusing the same image URL across cards."
+        ],
+        "followUps": [
+          "Recheck the U.S. jobs report and euro-area inflation once the data lands.",
+          "Track whether the Cook and Slaughter rulings trigger new lower-court actions.",
+          "Watch whether AI vetting and cyber warnings turn into durable procurement or release rules."
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "tone": "politics",
+      "heading": {
+        "ja": "政治",
+        "en": "Politics"
+      },
+      "topics": [
+        {
+          "id": "politics-agency-firing",
+          "title": {
+            "ja": "独立機関トップの解任権を認める",
+            "en": "Trump can fire independent-agency leaders"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/29/us-supreme-court-ftc-ruling-slaughter",
+            "source": "The Guardian",
+            "title": {
+              "ja": "最高裁、独立機関トップの解任権をトランプ氏に認める",
+              "en": "US supreme court rules Trump can fire leaders of independent agencies"
+            },
+            "description": {
+              "ja": "最高裁がFTCの指導部解任を認め、独立機関の扱いを大きく変えた。",
+              "en": "The Supreme Court let the president fire FTC leadership, shifting the balance of power over independent agencies."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/188032c78813bcbfdfd4e197de273189de5637e9/0_0_5732_3821/master/5732.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "ワシントンで撮影されたレベッカ・スローター氏の写真",
+              "en": "Rebecca Slaughter photographed in Washington, D.C."
+            }
+          },
+          "bottomLine": {
+            "ja": "独立機関の人事にホワイトハウスの裁量が広がった。",
+            "en": "The White House gained more room to shape independent agencies."
+          },
+          "whatHappened": {
+            "ja": "最高裁はTrump v. Slaughterで、トランプ大統領が独立機関の長を解任できると判断した。",
+            "en": "In Trump v. Slaughter, the Court said the president can remove the heads of independent agencies."
+          },
+          "whyItMatters": {
+            "ja": "FTCやNLRBなどの独立性が揺らぎ、規制判断に政治圧力がかかりやすくなる。",
+            "en": "The ruling weakens the practical independence of regulators such as the FTC and NLRB."
+          },
+          "whatToWatch": {
+            "ja": "他の独立機関や訴訟で、今回の判断がどこまで拡張されるか。",
+            "en": "Watch how far the reasoning spreads to other agencies and cases."
+          }
+        },
+        {
+          "id": "politics-fed-cook",
+          "title": {
+            "ja": "FRB解任は違憲、Cook氏は保護",
+            "en": "Cook firing at the Fed is blocked"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/29/supreme-court-trump-lisa-cook-ruling",
+            "source": "The Guardian",
+            "title": {
+              "ja": "最高裁、FRBのCook氏解任を違憲と判断",
+              "en": "US supreme court rules Trump's firing of Lisa Cook from Fed was unconstitutional"
+            },
+            "description": {
+              "ja": "独立機関の人事権を広げる一方で、FRBだけは別扱いにした判断だ。",
+              "en": "The Court expanded presidential removal power but treated the Federal Reserve as a special case."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/130560f/2147483647/strip/true/crop/5178x3452%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F6c%2F64%2F38a9e89b0d4d5ba13a4807234969%2F09f3d80097a64aef92eb77f287d50413",
+            "imageAlt": {
+              "ja": "ワシントンD.C.の米連邦最高裁判所庁舎",
+              "en": "The U.S. Supreme Court building in Washington, D.C."
+            }
+          },
+          "bottomLine": {
+            "ja": "FRBの独立性は当面保たれた。",
+            "en": "The Fed's independence held for now."
+          },
+          "whatHappened": {
+            "ja": "最高裁は、トランプ大統領によるLisa Cook氏の解任を認めない形を示した。",
+            "en": "The Court signaled that Trump cannot simply fire Lisa Cook from the Federal Reserve."
+          },
+          "whyItMatters": {
+            "ja": "金融政策への政治介入を抑える線が残り、債券市場と金利観測に安心材料を与える。",
+            "en": "It preserves a line against direct political interference in monetary policy."
+          },
+          "whatToWatch": {
+            "ja": "下級審での扱いと、FRB以外の独立機関への波及の有無。",
+            "en": "Watch the lower-court remedy and any spillover beyond the Fed."
+          }
+        },
+        {
+          "id": "politics-mail-ballots",
+          "title": {
+            "ja": "期日後到着の郵便投票を有効に",
+            "en": "Late mail ballots can still count"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/29/supreme-court-mail-in-ballots-election-ruling",
+            "source": "The Guardian",
+            "title": {
+              "ja": "最高裁、期日後到着の郵便投票を有効と判断",
+              "en": "US supreme court upholds ballot rule counting late-arriving mail votes"
+            },
+            "description": {
+              "ja": "選挙日後に届いた郵便投票でも、州のルール次第で集計できるとした。",
+              "en": "The Court backed a rule that can count mail ballots arriving after election day, depending on state law."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/aa8b22a4c9a90dcc1e2038c2a1ef17fac66f91ba/0_0_4494_2996/master/4494.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "郵便投票の封筒を示す写真",
+              "en": "Mail-in ballot envelopes"
+            }
+          },
+          "bottomLine": {
+            "ja": "州ごとの選挙実務に幅が残った。",
+            "en": "State-by-state election rules still have room to differ."
+          },
+          "whatHappened": {
+            "ja": "最高裁は、期日後に到着した郵便投票の扱いをめぐる州法を支持した。",
+            "en": "The Court upheld a state rule that can count ballots received after election day."
+          },
+          "whyItMatters": {
+            "ja": "接戦州の票の扱いと、2026年の選挙訴訟の争点に直結する。",
+            "en": "It matters for close-state vote counting and the next round of election litigation."
+          },
+          "whatToWatch": {
+            "ja": "他州が同様のルールを維持・変更するか、訴訟が広がるか。",
+            "en": "Watch for copycat rules, lawsuits, and new state-level changes."
+          }
+        },
+        {
+          "id": "politics-geofence-warrants",
+          "title": {
+            "ja": "ジオフェンス捜査に憲法上の歯止め",
+            "en": "Geofence warrants need privacy protections"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision",
+            "source": "The Guardian",
+            "title": {
+              "ja": "最高裁、ジオフェンス捜査に制限を課す",
+              "en": "US supreme court sets privacy limits on geofence warrants"
+            },
+            "description": {
+              "ja": "位置情報を広く集める令状に、第四修正の歯止めを強めた。",
+              "en": "The Court imposed Fourth Amendment limits on warrants that sweep up location data."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/ddb87e813bdb11401cf5abac3654ec9ff5b15d85/328_0_5001_4002/master/5001.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "スマートフォンの位置情報を示す写真",
+              "en": "A smartphone used for location tracking"
+            }
+          },
+          "bottomLine": {
+            "ja": "位置データ捜査のハードルが上がった。",
+            "en": "Location-data searches face a higher legal bar."
+          },
+          "whatHappened": {
+            "ja": "最高裁は、ジオフェンス令状を無制限に使えるとする解釈を退けた。",
+            "en": "The Court rejected an open-ended reading of geofence warrants."
+          },
+          "whyItMatters": {
+            "ja": "スマホ位置情報や広域捜査の扱いが、警察実務とプライバシー保護の両方に影響する。",
+            "en": "It affects both police practice and privacy protections for location data."
+          },
+          "whatToWatch": {
+            "ja": "連邦・州の捜査当局が、今後の令状運用をどう修正するか。",
+            "en": "Watch how federal and state investigators adjust their warrant practices."
+          }
+        },
+        {
+          "id": "politics-carroll-cnn",
+          "title": {
+            "ja": "E・ジーン・キャロル判決は維持",
+            "en": "Carroll verdict survives Trump's appeal"
+          },
+          "source": {
+            "href": "https://apnews.com/article/1a50d1e9e1d12898e78e0803c4627771",
+            "source": "AP News",
+            "title": {
+              "ja": "最高裁、E・ジーン・キャロル判決への上訴を退ける",
+              "en": "Supreme Court declines to take up E. Jean Carroll appeal"
+            },
+            "description": {
+              "ja": "トランプ氏に不利な判断を覆さず、民事責任をめぐる争いを残した。",
+              "en": "The Court left an adverse civil verdict in place and kept the Trump-related liability fight alive."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/b495324/2147483647/strip/true/crop/3612x2409%2B0%2B0/resize/599x399%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fea%2F4c%2F15354106202bc41495886f8f9e07%2Ff776fe1b1d98463dbec3ef09a785bfde",
+            "imageAlt": {
+              "ja": "ワシントンで記者団に対応するE・ジーン・キャロル氏",
+              "en": "E. Jean Carroll speaking to reporters in Washington"
+            }
+          },
+          "bottomLine": {
+            "ja": "Trump氏の法的リスクはまだ終わっていない。",
+            "en": "Trump's legal exposure is still not over."
+          },
+          "whatHappened": {
+            "ja": "最高裁は、E・ジーン・キャロル氏の訴訟をめぐる上訴受理を見送った。",
+            "en": "The Court declined to hear Trump's appeal in the E. Jean Carroll case."
+          },
+          "whyItMatters": {
+            "ja": "名誉毀損や性加害をめぐる民事責任の線引きが、今後の政治訴訟にも影響する。",
+            "en": "The decision keeps pressure on the boundaries of civil liability in high-profile political cases."
+          },
+          "whatToWatch": {
+            "ja": "別件の損害賠償判断や、Trump氏側の次の法廷対応。",
+            "en": "Watch the remaining damages fights and the next step from Trump's legal team."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "economy",
+      "heading": {
+        "ja": "経済",
+        "en": "Economy"
+      },
+      "topics": [
+        {
+          "id": "economy-jobs-fed-path",
+          "title": {
+            "ja": "今週の米雇用統計が金利観測の焦点",
+            "en": "U.S. jobs data is the key rate clue"
+          },
+          "source": {
+            "href": "https://www.wsj.com/economy/central-banking/week-ahead-for-fx-bonds-u-s-jobs-data-in-focus-as-markets-search-for-clues-on-fed-rate-path-a65678b4",
+            "source": "The Wall Street Journal",
+            "title": {
+              "ja": "週内のFX・債券市場、米雇用統計に注目",
+              "en": "Week Ahead for FX, Bonds: U.S. Jobs Data in Focus as Markets Search for Clues on Fed Rate Path"
+            },
+            "description": {
+              "ja": "市場は米雇用統計を、FRBの次の一手を読む材料として見ている。",
+              "en": "Markets are treating the U.S. payrolls data as the cleanest clue to the Fed's next move."
+            },
+            "imageUrl": "https://images.wsj.net/im-44435477?height=466&width=700",
+            "imageAlt": {
+              "ja": "米雇用統計を待つ市場のイメージ",
+              "en": "Markets waiting for U.S. payrolls data"
+            }
+          },
+          "bottomLine": {
+            "ja": "雇用の強弱が、7月以降の金利観測を左右する。",
+            "en": "Payroll strength will steer rate expectations into July."
+          },
+          "whatHappened": {
+            "ja": "週内の米雇用関連指標が、ドル・債券・株の相場材料として前面に出た。",
+            "en": "U.S. labor-market releases moved to the front of the market calendar."
+          },
+          "whyItMatters": {
+            "ja": "雇用の伸びが鈍ければ利下げ期待が強まり、強ければ高金利長期化の見方が残る。",
+            "en": "A softer labor print would revive cut bets; a stronger one would keep higher-for-longer alive."
+          },
+          "whatToWatch": {
+            "ja": "非農業部門雇用者数、失業率、賃金の3点がどうそろうか。",
+            "en": "Watch payrolls, unemployment, and wage growth together."
+          }
+        },
+        {
+          "id": "economy-ecb-sintra",
+          "title": {
+            "ja": "ラガルド氏がECBの利上げを擁護",
+            "en": "Lagarde defends the ECB's rate hike"
+          },
+          "source": {
+            "href": "https://apnews.com/article/27b96999040acc6b71b6452398a17daa",
+            "source": "AP News",
+            "title": {
+              "ja": "ラガルド氏、直近の利上げを擁護",
+              "en": "Lagarde defends the ECB's recent rate hike"
+            },
+            "description": {
+              "ja": "ラガルド総裁は、インフレ圧力が残る限りECBは警戒を解けないと示した。",
+              "en": "Lagarde argued the ECB still has work to do while inflation remains sticky."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/5a20dc6/2147483647/strip/true/crop/6881x4397%2B0%2B0/resize/599x383%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F55%2F85%2Fa0fae1081c009df6c372b5b194ec%2F283f3d3c09204c82acf22d8743b17c77",
+            "imageAlt": {
+              "ja": "シントラ会合で発言するラガルドECB総裁",
+              "en": "ECB President Christine Lagarde speaking at Sintra"
+            }
+          },
+          "bottomLine": {
+            "ja": "ECBはインフレが落ち着くまで慎重姿勢を崩しにくい。",
+            "en": "The ECB looks set to stay cautious until inflation clearly cools."
+          },
+          "whatHappened": {
+            "ja": "シントラ会合でラガルド氏が、ユーロ圏の金利判断を正当化した。",
+            "en": "At Sintra, Lagarde defended the ECB's rate stance."
+          },
+          "whyItMatters": {
+            "ja": "ユーロ圏の金利と為替の見通しは、今後の物価指標次第でなお揺れる。",
+            "en": "Euro-area rates and the euro still hinge on the next inflation prints."
+          },
+          "whatToWatch": {
+            "ja": "ECB幹部の追加発言と、7月会合に向けたデータの変化。",
+            "en": "Watch for follow-up remarks and the next round of data before the July meeting."
+          }
+        },
+        {
+          "id": "economy-spain-inflation",
+          "title": {
+            "ja": "スペインのインフレが予想超え",
+            "en": "Spain's inflation came in hotter than expected"
+          },
+          "source": {
+            "href": "https://www.wsj.com/economy/global/spanish-inflation-stronger-than-expected-in-june-d2103caa",
+            "source": "The Wall Street Journal",
+            "title": {
+              "ja": "スペインのインフレ、6月は予想以上に強い",
+              "en": "Spanish Inflation Stronger Than Expected in June"
+            },
+            "description": {
+              "ja": "スペインの物価が想定より強く、ユーロ圏のディスインフレ期待を少し押し戻した。",
+              "en": "Spanish price growth ran hotter than expected, nudging euro-area disinflation hopes back a bit."
+            },
+            "imageUrl": "https://images.wsj.net/im-85725674?height=475&width=700",
+            "imageAlt": {
+              "ja": "スペインの物価上昇を示すイメージ",
+              "en": "Spanish inflation pressure"
+            }
+          },
+          "bottomLine": {
+            "ja": "ユーロ圏の物価はまだ完全には落ち着いていない。",
+            "en": "Euro-area price pressure is not fully gone."
+          },
+          "whatHappened": {
+            "ja": "スペインの6月インフレは、市場予想より強い数字になった。",
+            "en": "June inflation in Spain came in stronger than markets expected."
+          },
+          "whyItMatters": {
+            "ja": "大国の物価が下がり切らなければ、ECBの早期緩和観測は弱まる。",
+            "en": "Sticky inflation in a major euro-area economy makes early ECB easing harder to justify."
+          },
+          "whatToWatch": {
+            "ja": "ユーロ圏全体のインフレ速報と、賃金の粘着性。",
+            "en": "Watch the euro-area flash CPI and wage stickiness."
+          }
+        },
+        {
+          "id": "economy-korea-chip-hub",
+          "title": {
+            "ja": "韓国がAI向け半導体拠点に巨額投資",
+            "en": "South Korea is building a huge AI chip hub"
+          },
+          "source": {
+            "href": "https://apnews.com/article/22352d95c7a821c5f4548b2d1a4ebde8",
+            "source": "AP News",
+            "title": {
+              "ja": "韓国、AI向け半導体拠点に大型投資へ",
+              "en": "South Korea plans massive chip hub investment for AI demand"
+            },
+            "description": {
+              "ja": "SamsungとSK Hynixの投資拡大が、AI向け供給網を韓国でさらに厚くする。",
+              "en": "Samsung and SK Hynix are expanding spending to deepen South Korea's AI chip supply chain."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/734a730/2147483647/strip/true/crop/4500x3098%2B0%2B0/resize/599x412%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F79%2F42%2F289c2e9c985a469afd49025fd8fd%2F2e4d9600bd2a4de9bb3a66136d178e93",
+            "imageAlt": {
+              "ja": "韓国の半導体工場とAI向け投資のイメージ",
+              "en": "A South Korean semiconductor plant tied to AI investment"
+            }
+          },
+          "bottomLine": {
+            "ja": "AI需要が国家レベルの産業投資を押し上げている。",
+            "en": "AI demand is still pulling national industrial policy with it."
+          },
+          "whatHappened": {
+            "ja": "韓国が半導体インフラと生産能力の拡張に大きく踏み込んだ。",
+            "en": "South Korea moved further into a large-scale chip infrastructure push."
+          },
+          "whyItMatters": {
+            "ja": "AI供給網、電力、用地、輸出競争のすべてに波及する。",
+            "en": "It affects the AI supply chain, power use, land use, and export competition."
+          },
+          "whatToWatch": {
+            "ja": "工場の立ち上げ時期と、電力・人材制約の処理。",
+            "en": "Watch buildout timing and how power and labor constraints are handled."
+          }
+        },
+        {
+          "id": "economy-chipmaker-surge",
+          "title": {
+            "ja": "半導体株の上昇がAI相場をけん引",
+            "en": "Chipmaker shares led the AI rally"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/2026/jun/29/shares-in-chipmakers-underpinning-ai-boom-surge-in-first-half-of-2026",
+            "source": "The Guardian",
+            "title": {
+              "ja": "AIブームを支える半導体株が上半期に急騰",
+              "en": "Shares in chipmakers underpinning AI boom surge in first half of 2026"
+            },
+            "description": {
+              "ja": "SK HynixやSamsungなどの銘柄が、AI期待の中心に残った。",
+              "en": "Chip stocks such as SK Hynix and Samsung stayed at the center of the AI trade."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/406c209aef3bb4248f6042a2c6d877c13a8037cb/249_0_2501_2001/master/2501.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "半導体株とAI相場を示す市場イメージ",
+              "en": "Semiconductor shares and the AI market rally"
+            }
+          },
+          "bottomLine": {
+            "ja": "AI投資の主役は、まだ半導体と記憶容量の供給網だ。",
+            "en": "The AI trade is still being led by chips and memory supply."
+          },
+          "whatHappened": {
+            "ja": "上半期の相場では、AI向け半導体の強さが株価を押し上げた。",
+            "en": "Chipmakers posted a powerful first-half run as AI spending stayed hot."
+          },
+          "whyItMatters": {
+            "ja": "AI関連の設備投資が、株式市場の物色テーマとして続いている。",
+            "en": "AI capex remains a dominant equity-market theme."
+          },
+          "whatToWatch": {
+            "ja": "メモリ価格と設備投資計画が、上昇相場を支え続けるか。",
+            "en": "Watch whether memory prices and capex plans keep supporting the rally."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "technology",
+      "heading": {
+        "ja": "技術",
+        "en": "Technology"
+      },
+      "topics": [
+        {
+          "id": "technology-five-eyes-cyber",
+          "title": {
+            "ja": "Five EyesがAI攻撃の現実化を警告",
+            "en": "Five Eyes warns that AI cyberattacks are near"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/commentisfree/2026/jun/29/cyber-attacks-ai",
+            "source": "The Guardian",
+            "title": {
+              "ja": "AI以前、サイバー攻撃は高度な技能を要した",
+              "en": "Once, cyber-attacks required great skill. AI is changing that"
+            },
+            "description": {
+              "ja": "Five Eyes圏の警告は、AIが攻撃者の作業を低コスト化していることを示している。",
+              "en": "The Five Eyes warning points to AI lowering the cost of offensive cyber work."
+            },
+            "imageUrl": "https://nym.com/_next/image?q=80&url=https%3A%2F%2Fassets.nym.com%2FMetadata_AI_2_3482f50de5.webp&w=3840",
+            "imageAlt": {
+              "ja": "監視とプライバシーを示すAIのイラスト",
+              "en": "An AI illustration about surveillance and privacy"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIは防御より先に、攻撃の低コスト化を進めている。",
+            "en": "AI is lowering the cost of attack faster than the cost of defense."
+          },
+          "whatHappened": {
+            "ja": "Five Eyes圏の当局が、AIが高度なサイバー攻撃を身近にすると警告した。",
+            "en": "Five Eyes officials warned that AI is making sophisticated cyberattacks more accessible."
+          },
+          "whyItMatters": {
+            "ja": "攻撃の敷居が下がれば、企業も政府も前提を変えて防御し直す必要がある。",
+            "en": "If the barrier to entry falls, both companies and governments have to redesign defenses."
+          },
+          "whatToWatch": {
+            "ja": "各国のサイバー機関が、AIを前提にした防御基準へ移るか。",
+            "en": "Watch whether national cyber agencies formalize AI-aware defense standards."
+          }
+        },
+        {
+          "id": "technology-openai-anthropic-review",
+          "title": {
+            "ja": "OpenAIとAnthropicが新モデルを絞る",
+            "en": "OpenAI and Anthropic are slowing model access"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/06/29/trump-ai-model-release-delays-tech-backlash",
+            "source": "Axios",
+            "title": {
+              "ja": "AIモデル公開をめぐる規制と反発",
+              "en": "The AI model release fight heats up"
+            },
+            "description": {
+              "ja": "OpenAIとAnthropicの新モデル公開が、政府審査や政治的反発と結びついた。",
+              "en": "OpenAI and Anthropic's model releases are running into government review and political pushback."
+            },
+            "imageUrl": "https://dims.apnews.com/dims4/default/70dc062/2147483647/strip/true/crop/4771x3181%2B0%2B0/resize/319x213%21/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fbe%2F45%2F86af1ec5ef1b9f5e0e115ade8d4d%2Fdf048727b111403e9acdb937a29ddbe9",
+            "imageAlt": {
+              "ja": "ホワイトハウスで語るトランプ氏の写真",
+              "en": "Donald Trump speaking at the White House"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIモデル公開は、性能競争だけでなく審査対応も必要になった。",
+            "en": "Model launches now have to clear security scrutiny, not just product deadlines."
+          },
+          "whatHappened": {
+            "ja": "OpenAIとAnthropicが、新モデルの公開や提供を一部制限した。",
+            "en": "OpenAI and Anthropic limited access to some new models while security review continued."
+          },
+          "whyItMatters": {
+            "ja": "生成AIの配布と政府監督が、より近い距離で結びつき始めた。",
+            "en": "Distribution of frontier AI is getting more tightly linked to government oversight."
+          },
+          "whatToWatch": {
+            "ja": "審査が恒常化するか、各社のローンチ計画に遅れが出るか。",
+            "en": "Watch whether the review becomes routine and delays future launches."
+          }
+        },
+        {
+          "id": "technology-nvidia-rtx-spark",
+          "title": {
+            "ja": "NvidiaがPC向けRTX Sparkを発表",
+            "en": "Nvidia unveils RTX Spark for PCs"
+          },
+          "source": {
+            "href": "https://bottleneckcalcs.com/blog/nvidia-n1x-rtx-spark-guide",
+            "source": "BottleneckCalcs",
+            "title": {
+              "ja": "Nvidia N1X / RTX Sparkの概要",
+              "en": "Nvidia N1X / RTX Spark guide"
+            },
+            "description": {
+              "ja": "PC側でもAI処理を回すための新しい小型スーパーシリコンが見えてきた。",
+              "en": "A new small-form-factor AI chip points to more local inference on PCs."
+            },
+            "imageUrl": "https://bottleneckcalcs.com/_next/image?q=75&url=%2Fnvidia-n1x-rtx-spark.png&w=3840",
+            "imageAlt": {
+              "ja": "NvidiaのPC向けAIチップのイメージ",
+              "en": "Nvidia PC AI chip concept"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIはクラウドだけでなく、端末側にも広がっていく。",
+            "en": "AI is moving from the cloud onto the device."
+          },
+          "whatHappened": {
+            "ja": "NvidiaのPC向け新チップ群が、ローカルAI実行を押し出した。",
+            "en": "Nvidia's new PC-focused silicon pushes local AI execution further."
+          },
+          "whyItMatters": {
+            "ja": "端末内推論が増えれば、レイテンシ、プライバシー、電力の設計が変わる。",
+            "en": "More on-device inference changes latency, privacy, and power design."
+          },
+          "whatToWatch": {
+            "ja": "OEM採用と、実際の出荷時期。",
+            "en": "Watch OEM adoption and the actual shipment timeline."
+          }
+        },
+        {
+          "id": "technology-codex-agentic-ai",
+          "title": {
+            "ja": "Codexで進むエージェントAI",
+            "en": "Codex points to faster agentic AI adoption"
+          },
+          "source": {
+            "href": "https://arxiv.org/abs/2606.26959",
+            "source": "arXiv",
+            "title": {
+              "ja": "Codex系の利用が急増する理由",
+              "en": "Why Codex-style agentic AI usage is rising"
+            },
+            "description": {
+              "ja": "エージェント型AIの利用が、開発現場でどこまで定着しているかを示す。",
+              "en": "The study tracks how quickly agentic AI usage is becoming routine in development work."
+            },
+            "imageUrl": "https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/robot.png",
+            "imageAlt": {
+              "ja": "ロボット型エージェントのイラスト",
+              "en": "A robot agent illustration"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIは会話相手から、作業を回す道具に変わりつつある。",
+            "en": "AI is shifting from a chat interface to a work executor."
+          },
+          "whatHappened": {
+            "ja": "Codex系の使われ方が増え、エージェント型の開発支援が広がった。",
+            "en": "Codex-style usage grew as agentic developer workflows spread."
+          },
+          "whyItMatters": {
+            "ja": "コード生成だけでなく、実作業の自動化が開発組織の設計を変える。",
+            "en": "It changes how teams think about automation, not just code generation."
+          },
+          "whatToWatch": {
+            "ja": "開発以外の業務にも、同じエージェント型ワークフローが広がるか。",
+            "en": "Watch for the same workflow pattern spreading beyond software teams."
+          }
+        },
+        {
+          "id": "technology-ai-data-centers-power",
+          "title": {
+            "ja": "AIデータセンターの電力設計が転換点",
+            "en": "AI data centers are hitting a power-design shift"
+          },
+          "source": {
+            "href": "https://arxiv.org/abs/2606.25095",
+            "source": "arXiv",
+            "title": {
+              "ja": "AIデータセンター電力設計の転換点",
+              "en": "AI data center power architecture is at a turning point"
+            },
+            "description": {
+              "ja": "高密度GPUラックでは、配電方式そのものが性能制約になり始めている。",
+              "en": "High-density GPU racks are making power delivery itself a performance constraint."
+            },
+            "imageUrl": "https://developer.qcloudimg.com/http-save/yehe-1383182/879d908fa783a19109e779d736840dab.png",
+            "imageAlt": {
+              "ja": "AIデータセンターのサーバーラック",
+              "en": "AI data center server racks"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIの次のボトルネックは、電力と配電になっている。",
+            "en": "The next AI bottleneck is power and distribution."
+          },
+          "whatHappened": {
+            "ja": "データセンターの設計では、ラック内DC/DCや新しい給電方式が重要になった。",
+            "en": "Data-center design is shifting toward new rack-level power conversion and delivery schemes."
+          },
+          "whyItMatters": {
+            "ja": "GPUの性能だけではなく、電力をどう届けるかが導入速度を決める。",
+            "en": "Delivery speed now depends as much on power architecture as on GPU performance."
+          },
+          "whatToWatch": {
+            "ja": "SSTや48V以外の方式が、実運用でどこまで採用されるか。",
+            "en": "Watch whether SSTs and alternatives to 48V move from papers into deployment."
+          }
+        }
+      ]
+    }
+  ]
+}

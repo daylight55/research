@@ -1,0 +1,25 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-06-30
+- Article slug: `daily-trends-2026-06-30`
+- Run Context: topic hint = daily trend news; categories = politics / economy / technology; required counts = 5 / 5 / 5; recency window = recent 24-48 hours with slightly older items only when still driving decisions; deliverable = structured JSON for renderer-generated news digest.
+
+## 判断メモ
+
+- 同日の最高裁判断を政治の主軸に置き、FRB独立性、投票、プライバシー、Trump関連訴訟を別トピックに分解した。
+- 経済は、米雇用統計とECB関連の前方指標を中心に、AI向け半導体投資と半導体株の上昇を組み合わせた。
+- 技術は、AI安全保障、モデル審査、端末向けチップ、エージェント利用、データセンター電力の5面で整理した。
+- 画像は各ソースの文脈に合う記事画像を優先し、同一URLの使い回しを避けた。
+
+## 残課題
+
+- 米雇用統計と欧州インフレの結果が出たら、翌日の追記候補を再評価する。
+- Cook氏とSlaughter氏の判決後の下級審対応を確認する。
+- AIモデル審査とサイバー警告が、実務ルールや調達条件に変わるか追う。

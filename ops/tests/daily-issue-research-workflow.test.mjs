@@ -681,6 +681,6 @@ assert.match(
 
 assert.match(
 	workflow,
-	/- name: Normalize generated build cache permissions[\s\S]*?sudo rm -rf "\$\{GITHUB_WORKSPACE\}\/\.astro"[\s\S]*?sudo chown -R runner:codex "\$\{RUNNER_TEMP\}\/astro-cache" "\$\{RUNNER_TEMP\}\/vite-cache"[\s\S]*?- name: Build generated site/,
-	'Daily Issue Research should clear Codex-owned Astro content state and restore runner-owned build caches before site build'
+	/- name: Normalize generated build cache permissions[\s\S]*?sudo rm -rf "\$\{GITHUB_WORKSPACE\}\/\.astro" "\$\{GITHUB_WORKSPACE\}\/dist"[\s\S]*?sudo chown -R runner:codex "\$\{RUNNER_TEMP\}\/astro-cache" "\$\{RUNNER_TEMP\}\/vite-cache"[\s\S]*?- name: Build generated site/,
+	'Daily Issue Research should clear Codex-owned Astro content state and dist output before site build'
 )

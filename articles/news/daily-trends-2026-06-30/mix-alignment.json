@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "最高裁は独立機関の長の解任権を広げる一方で、FRBだけは別扱いにした。市場は今週の米雇用統計と欧州インフレを見ながら、AI向け半導体投資と電力制約がどこまで続くかを測っている。技術面では、AIモデルの事前審査、サイバー警告、PC向けAIチップ、データセンターの電力設計が同じ方向を向いた。",
+      "en": "The Supreme Court widened presidential control over independent agencies while treating the Fed as a special case. Markets are now reading this alongside this week's U.S. jobs data and European inflation, while AI spending keeps pushing into chips, power, and security review. On the technology side, model vetting, cyber warnings, PC chips, and data-center power design all pointed the same way."
+    },
+    {
+      "ja": "独立機関の人事にホワイトハウスの裁量が広がった。",
+      "en": "The White House gained more room to shape independent agencies."
+    },
+    {
+      "ja": "最高裁はTrump v. Slaughterで、トランプ大統領が独立機関の長を解任できると判断した。",
+      "en": "In Trump v. Slaughter, the Court said the president can remove the heads of independent agencies."
+    },
+    {
+      "ja": "FTCやNLRBなどの独立性が揺らぎ、規制判断に政治圧力がかかりやすくなる。",
+      "en": "The ruling weakens the practical independence of regulators such as the FTC and NLRB."
+    },
+    {
+      "ja": "他の独立機関や訴訟で、今回の判断がどこまで拡張されるか。",
+      "en": "Watch how far the reasoning spreads to other agencies and cases."
+    },
+    {
+      "ja": "FRBの独立性は当面保たれた。",
+      "en": "The Fed's independence held for now."
+    },
+    {
+      "ja": "最高裁は、トランプ大統領によるLisa Cook氏の解任を認めない形を示した。",
+      "en": "The Court signaled that Trump cannot simply fire Lisa Cook from the Federal Reserve."
+    },
+    {
+      "ja": "金融政策への政治介入を抑える線が残り、債券市場と金利観測に安心材料を与える。",
+      "en": "It preserves a line against direct political interference in monetary policy."
+    },
+    {
+      "ja": "下級審での扱いと、FRB以外の独立機関への波及の有無。",
+      "en": "Watch the lower-court remedy and any spillover beyond the Fed."
+    },
+    {
+      "ja": "州ごとの選挙実務に幅が残った。",
+      "en": "State-by-state election rules still have room to differ."
+    },
+    {
+      "ja": "最高裁は、期日後に到着した郵便投票の扱いをめぐる州法を支持した。",
+      "en": "The Court upheld a state rule that can count ballots received after election day."
+    },
+    {
+      "ja": "接戦州の票の扱いと、2026年の選挙訴訟の争点に直結する。",
+      "en": "It matters for close-state vote counting and the next round of election litigation."
+    },
+    {
+      "ja": "他州が同様のルールを維持・変更するか、訴訟が広がるか。",
+      "en": "Watch for copycat rules, lawsuits, and new state-level changes."
+    },
+    {
+      "ja": "位置データ捜査のハードルが上がった。",
+      "en": "Location-data searches face a higher legal bar."
+    },
+    {
+      "ja": "最高裁は、ジオフェンス令状を無制限に使えるとする解釈を退けた。",
+      "en": "The Court rejected an open-ended reading of geofence warrants."
+    },
+    {
+      "ja": "スマホ位置情報や広域捜査の扱いが、警察実務とプライバシー保護の両方に影響する。",
+      "en": "It affects both police practice and privacy protections for location data."
+    },
+    {
+      "ja": "連邦・州の捜査当局が、今後の令状運用をどう修正するか。",
+      "en": "Watch how federal and state investigators adjust their warrant practices."
+    },
+    {
+      "ja": "Trump氏の法的リスクはまだ終わっていない。",
+      "en": "Trump's legal exposure is still not over."
+    },
+    {
+      "ja": "最高裁は、E・ジーン・キャロル氏の訴訟をめぐる上訴受理を見送った。",
+      "en": "The Court declined to hear Trump's appeal in the E. Jean Carroll case."
+    },
+    {
+      "ja": "名誉毀損や性加害をめぐる民事責任の線引きが、今後の政治訴訟にも影響する。",
+      "en": "The decision keeps pressure on the boundaries of civil liability in high-profile political cases."
+    },
+    {
+      "ja": "別件の損害賠償判断や、Trump氏側の次の法廷対応。",
+      "en": "Watch the remaining damages fights and the next step from Trump's legal team."
+    },
+    {
+      "ja": "雇用の強弱が、7月以降の金利観測を左右する。",
+      "en": "Payroll strength will steer rate expectations into July."
+    },
+    {
+      "ja": "週内の米雇用関連指標が、ドル・債券・株の相場材料として前面に出た。",
+      "en": "U.S. labor-market releases moved to the front of the market calendar."
+    },
+    {
+      "ja": "雇用の伸びが鈍ければ利下げ期待が強まり、強ければ高金利長期化の見方が残る。",
+      "en": "A softer labor print would revive cut bets; a stronger one would keep higher-for-longer alive."
+    },
+    {
+      "ja": "非農業部門雇用者数、失業率、賃金の3点がどうそろうか。",
+      "en": "Watch payrolls, unemployment, and wage growth together."
+    },
+    {
+      "ja": "ECBはインフレが落ち着くまで慎重姿勢を崩しにくい。",
+      "en": "The ECB looks set to stay cautious until inflation clearly cools."
+    },
+    {
+      "ja": "シントラ会合でラガルド氏が、ユーロ圏の金利判断を正当化した。",
+      "en": "At Sintra, Lagarde defended the ECB's rate stance."
+    },
+    {
+      "ja": "ユーロ圏の金利と為替の見通しは、今後の物価指標次第でなお揺れる。",
+      "en": "Euro-area rates and the euro still hinge on the next inflation prints."
+    },
+    {
+      "ja": "ECB幹部の追加発言と、7月会合に向けたデータの変化。",
+      "en": "Watch for follow-up remarks and the next round of data before the July meeting."
+    },
+    {
+      "ja": "ユーロ圏の物価はまだ完全には落ち着いていない。",
+      "en": "Euro-area price pressure is not fully gone."
+    },
+    {
+      "ja": "スペインの6月インフレは、市場予想より強い数字になった。",
+      "en": "June inflation in Spain came in stronger than markets expected."
+    },
+    {
+      "ja": "大国の物価が下がり切らなければ、ECBの早期緩和観測は弱まる。",
+      "en": "Sticky inflation in a major euro-area economy makes early ECB easing harder to justify."
+    },
+    {
+      "ja": "ユーロ圏全体のインフレ速報と、賃金の粘着性。",
+      "en": "Watch the euro-area flash CPI and wage stickiness."
+    },
+    {
+      "ja": "AI需要が国家レベルの産業投資を押し上げている。",
+      "en": "AI demand is still pulling national industrial policy with it."
+    },
+    {
+      "ja": "韓国が半導体インフラと生産能力の拡張に大きく踏み込んだ。",
+      "en": "South Korea moved further into a large-scale chip infrastructure push."
+    },
+    {
+      "ja": "AI供給網、電力、用地、輸出競争のすべてに波及する。",
+      "en": "It affects the AI supply chain, power use, land use, and export competition."
+    },
+    {
+      "ja": "工場の立ち上げ時期と、電力・人材制約の処理。",
+      "en": "Watch buildout timing and how power and labor constraints are handled."
+    },
+    {
+      "ja": "AI投資の主役は、まだ半導体と記憶容量の供給網だ。",
+      "en": "The AI trade is still being led by chips and memory supply."
+    },
+    {
+      "ja": "上半期の相場では、AI向け半導体の強さが株価を押し上げた。",
+      "en": "Chipmakers posted a powerful first-half run as AI spending stayed hot."
+    },
+    {
+      "ja": "AI関連の設備投資が、株式市場の物色テーマとして続いている。",
+      "en": "AI capex remains a dominant equity-market theme."
+    },
+    {
+      "ja": "メモリ価格と設備投資計画が、上昇相場を支え続けるか。",
+      "en": "Watch whether memory prices and capex plans keep supporting the rally."
+    },
+    {
+      "ja": "AIは防御より先に、攻撃の低コスト化を進めている。",
+      "en": "AI is lowering the cost of attack faster than the cost of defense."
+    },
+    {
+      "ja": "Five Eyes圏の当局が、AIが高度なサイバー攻撃を身近にすると警告した。",
+      "en": "Five Eyes officials warned that AI is making sophisticated cyberattacks more accessible."
+    },
+    {
+      "ja": "攻撃の敷居が下がれば、企業も政府も前提を変えて防御し直す必要がある。",
+      "en": "If the barrier to entry falls, both companies and governments have to redesign defenses."
+    },
+    {
+      "ja": "各国のサイバー機関が、AIを前提にした防御基準へ移るか。",
+      "en": "Watch whether national cyber agencies formalize AI-aware defense standards."
+    },
+    {
+      "ja": "AIモデル公開は、性能競争だけでなく審査対応も必要になった。",
+      "en": "Model launches now have to clear security scrutiny, not just product deadlines."
+    },
+    {
+      "ja": "OpenAIとAnthropicが、新モデルの公開や提供を一部制限した。",
+      "en": "OpenAI and Anthropic limited access to some new models while security review continued."
+    },
+    {
+      "ja": "生成AIの配布と政府監督が、より近い距離で結びつき始めた。",
+      "en": "Distribution of frontier AI is getting more tightly linked to government oversight."
+    },
+    {
+      "ja": "審査が恒常化するか、各社のローンチ計画に遅れが出るか。",
+      "en": "Watch whether the review becomes routine and delays future launches."
+    },
+    {
+      "ja": "AIはクラウドだけでなく、端末側にも広がっていく。",
+      "en": "AI is moving from the cloud onto the device."
+    },
+    {
+      "ja": "NvidiaのPC向け新チップ群が、ローカルAI実行を押し出した。",
+      "en": "Nvidia's new PC-focused silicon pushes local AI execution further."
+    },
+    {
+      "ja": "端末内推論が増えれば、レイテンシ、プライバシー、電力の設計が変わる。",
+      "en": "More on-device inference changes latency, privacy, and power design."
+    },
+    {
+      "ja": "OEM採用と、実際の出荷時期。",
+      "en": "Watch OEM adoption and the actual shipment timeline."
+    },
+    {
+      "ja": "AIは会話相手から、作業を回す道具に変わりつつある。",
+      "en": "AI is shifting from a chat interface to a work executor."
+    },
+    {
+      "ja": "Codex系の使われ方が増え、エージェント型の開発支援が広がった。",
+      "en": "Codex-style usage grew as agentic developer workflows spread."
+    },
+    {
+      "ja": "コード生成だけでなく、実作業の自動化が開発組織の設計を変える。",
+      "en": "It changes how teams think about automation, not just code generation."
+    },
+    {
+      "ja": "開発以外の業務にも、同じエージェント型ワークフローが広がるか。",
+      "en": "Watch for the same workflow pattern spreading beyond software teams."
+    },
+    {
+      "ja": "AIの次のボトルネックは、電力と配電になっている。",
+      "en": "The next AI bottleneck is power and distribution."
+    },
+    {
+      "ja": "データセンターの設計では、ラック内DC/DCや新しい給電方式が重要になった。",
+      "en": "Data-center design is shifting toward new rack-level power conversion and delivery schemes."
+    },
+    {
+      "ja": "GPUの性能だけではなく、電力をどう届けるかが導入速度を決める。",
+      "en": "Delivery speed now depends as much on power architecture as on GPU performance."
+    },
+    {
+      "ja": "SSTや48V以外の方式が、実運用でどこまで採用されるか。",
+      "en": "Watch whether SSTs and alternatives to 48V move from papers into deployment."
+    },
+    {
+      "ja": "独立機関の人事権は広がったが、FRBの独立性は別枠で守られた。",
+      "en": "Executive power widened for independent agencies, but the Fed was treated differently."
+    },
+    {
+      "ja": "AIはモデル機能の競争から、半導体・電力・安全保障を含む基盤競争に移っている。",
+      "en": "AI has moved from feature competition into an infrastructure race that includes chips, power, and security."
+    },
+    {
+      "ja": "投資家は雇用統計とインフレ指標を、AI設備投資の持続性を測る材料として見ている。",
+      "en": "Investors are using payrolls and inflation prints as a test of whether AI capex can stay hot."
+    },
+    {
+      "ja": "Cook氏とSlaughter氏をめぐる下級審の対応が、今回の判決の射程をどこまで広げるか。",
+      "en": "How lower courts handle the Cook and Slaughter cases will determine how far the rulings reach."
+    },
+    {
+      "ja": "米雇用統計と欧州インフレが、7月の金利見通しをどちらに動かすか。",
+      "en": "U.S. payrolls and euro-area inflation will decide whether July rate expectations move higher or lower."
+    },
+    {
+      "ja": "AIモデルの審査とサイバー警告が、単発のニュースで終わるか制度化されるか。",
+      "en": "Whether AI model vetting and cyber warnings become durable policy, or fade after the news cycle."
+    }
+  ]
+}

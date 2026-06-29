@@ -1,0 +1,25 @@
+# research-log
+
+## Environment
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## Research Instruction
+
+- Research date: 2026-06-30
+- Article slug: `daily-trends-2026-06-30`
+- Run Context: topic hint = daily trend news; categories = politics / economy / technology; required counts = 5 / 5 / 5; recency window = recent 24-48 hours with slightly older items only when they still drive decisions; deliverable = structured JSON for renderer-generated news digest.
+
+## Decision Notes
+
+- The politics slate is built around the day’s Supreme Court rulings, then split into distinct items for agency power, Fed independence, voting rules, privacy, and Trump litigation.
+- The economy slate mixes near-term data, central-bank signaling, industrial policy, and the chip rally so the reader sees both macro and capex pressure points.
+- The tech slate covers AI security, release gating, consumer hardware, agentic usage, and power constraints so it stays practical instead of abstract.
+- I preferred article images or topic-matched visuals and avoided reusing the same image URL across cards.
+
+## Follow-ups
+
+- Recheck the U.S. jobs report and euro-area inflation once the data lands.
+- Track whether the Cook and Slaughter rulings trigger new lower-court actions.
+- Watch whether AI vetting and cyber warnings turn into durable procurement or release rules.

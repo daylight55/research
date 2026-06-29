@@ -1,0 +1,171 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "core-theme",
+			"heading": { "ja": "1. このレポートの軸", "en": "1. Core Theme" },
+			"pairs": [
+				{
+					"ja": "蓮如を一言でいえば、親鸞の教えを戦乱期の生活者が聞き、読み、集まって確かめられる形に作り替えた本願寺第八代である。",
+					"en": "Rennyo was the eighth head of Hongwanji who made Shinran's teaching audible, readable, and socially repeatable for people living through war."
+				},
+				{
+					"ja": "彼の中心手段が『御文章』、真宗大谷派でいう『御文』だった。",
+					"en": "His central medium was the letters called Gobunsho in the Hongwanji-ha tradition and Ofumi in the Otani-ha tradition."
+				},
+				{
+					"ja": "本稿のテーマは「御文という媒体が、戦乱期の不安を信心と共同体のかたちへ変えた」である。",
+					"en": "This report uses one theme: Ofumi turned wartime anxiety into the form of shinjin and community."
+				},
+				{
+					"ja": "蓮如は新しい教義を一から作った人ではない。",
+					"en": "Rennyo did not invent a new religion from zero."
+				},
+				{
+					"ja": "親鸞の信心中心の教えを、短い手紙、勤行、名号、講の寄合、寺内町の形成と結びつけ、広い層が参加できる宗教運動へ変えた。",
+					"en": "He took Shinran's teaching centered on entrusting faith and tied it to short letters, daily liturgy, inscriptions of the Name, lay meetings, and temple-town organization."
+				}
+			]
+		},
+		{
+			"id": "biography-context",
+			"heading": {
+				"ja": "2. 貧しい本願寺から戦国期の中心へ",
+				"en": "2. From a Poor Hongwanji to a Sengoku Center"
+			},
+			"pairs": [
+				{
+					"ja": "蓮如は応永二十二年、一四一五年に京都東山大谷の本願寺で生まれた。",
+					"en": "Rennyo was born in 1415 at Otani Hongwanji in Kyoto's Higashiyama district."
+				},
+				{
+					"ja": "十七歳で得度し、二十代から聖教を書写して授与し、父である第七代存如を補佐した。",
+					"en": "He became a priest at seventeen, copied sacred writings in his twenties, assisted his father Zonnyo, and succeeded as the eighth Hongwanji leader in 1457 at the age of forty-three."
+				},
+				{
+					"ja": "四十三歳の一四五七年に法灯を継ぎ、本願寺第八代となった。",
+					"en": "He became a priest at seventeen, copied sacred writings in his twenties, assisted his father Zonnyo, and succeeded as the eighth Hongwanji leader in 1457 at the age of forty-three."
+				},
+				{
+					"ja": "継職時の本願寺は、後世の巨大教団とは違う。",
+					"en": "Hongwanji at his succession was not yet the later large institution."
+				},
+				{
+					"ja": "京都東山の本願寺は天台宗系の権威圏に置かれ、地方の真宗門流も複数に分かれていた。",
+					"en": "The Higashiyama temple stood inside older Tendai-centered religious authority, and Shinshu lineages were divided across regions."
+				},
+				{
+					"ja": "その直後に応仁・文明の乱が京都を壊した。",
+					"en": "The Onin-Bunmei War then broke Kyoto."
+				},
+				{
+					"ja": "京都では防御施設、避難生活、疫病、火災、町の自治組織が同時に現れた。",
+					"en": "Kyoto saw fortifications, refugee life, epidemics, fires, and early forms of urban self-defense."
+				}
+			]
+		},
+		{
+			"id": "yoshizaki-ofumi",
+			"heading": {
+				"ja": "3. 吉崎で御文が共同体の媒体になった",
+				"en": "3. Yoshizaki Made Ofumi a Community Medium"
+			},
+			"pairs": [
+				{
+					"ja": "一四七一年、蓮如は越前吉崎に拠点を移した。",
+					"en": "In 1471 Rennyo moved his base to Yoshizaki in Echizen."
+				},
+				{
+					"ja": "ここで彼は御文、名号、正信偈和讃、講の寄合を組み合わせる。",
+					"en": "There he joined letters, inscriptions of the Name, Shoshinge-Wasan, and lay meetings."
+				},
+				{
+					"ja": "吉崎滞在は一四七五年までの約四年間にすぎないが、本願寺門徒の広がりにとって決定的な時期になった。",
+					"en": "His stay lasted only about four years, until 1475, but it became decisive for Hongwanji expansion."
+				},
+				{
+					"ja": "御文の強みは、教義を短く、声に出して読める形にした点にある。",
+					"en": "The letters worked because they made doctrine short enough to read aloud."
+				},
+				{
+					"ja": "『御文章』の中身は多様だが、軸ははっきりしている。",
+					"en": "The contents vary, but the center is stable."
+				},
+				{
+					"ja": "第一に、救いの根本を信心に置く。",
+					"en": "First, Rennyo places the root of birth in the Pure Land in shinjin."
+				},
+				{
+					"ja": "第二に、念仏を往生を買い取る行為ではなく、阿弥陀の本願を受けたよろこびの表れとして読む。",
+					"en": "Second, he treats the nenbutsu not as a practice that buys salvation, but as gratitude after receiving Amida's vow."
+				}
+			]
+		},
+		{
+			"id": "thought-tension",
+			"heading": { "ja": "4. 思想と緊張", "en": "4. Thought and Tension" },
+			"pairs": [
+				{
+					"ja": "蓮如思想の要点は「信心正因」と「称名報恩」である。",
+					"en": "Rennyo's doctrinal core is shinjin sho'in, faith as the true cause, and shomyo hoon, saying the Name in gratitude."
+				},
+				{
+					"ja": "この整理は、当時の人びとにとって大きかった。",
+					"en": "This mattered for people in Rennyo's world."
+				},
+				{
+					"ja": "救いを寺院儀礼、修行量、身分、学問だけに閉じ込めず、阿弥陀の本願をたのむ信心へ移したからである。",
+					"en": "It moved salvation away from temple ritual, amount of practice, status, and learning as exclusive measures, and placed it in entrusting Amida's vow."
+				},
+				{
+					"ja": "もう一つの代表例が「白骨の御文」である。",
+					"en": "Another famous example is the letter known as White Ashes."
+				},
+				{
+					"ja": "御文は個人の読書だけを想定した文章ではない。",
+					"en": "Ofumi was not written only for private reading."
+				},
+				{
+					"ja": "門徒は講や寄合で集まり、正信偈和讃を唱え、御文を拝読し、意味を確かめた。",
+					"en": "Followers gathered in ko and other meetings, chanted Shoshinge-Wasan, heard the letters read, and checked their meaning."
+				},
+				{
+					"ja": "蓮如を一向一揆の単純な首謀者として描くと、彼の位置を誤る。",
+					"en": "It is misleading to portray Rennyo as a simple commander of the Ikko ikki."
+				}
+			]
+		},
+		{
+			"id": "death-impact",
+			"heading": { "ja": "6. 山科、石山、そして死", "en": "6. Yamashina, Ishiyama, and Death" },
+			"pairs": [
+				{
+					"ja": "七十五歳で実如へ寺務を譲った後も、蓮如は教化を続けた。",
+					"en": "After handing administration to Jitsunyo at age seventy-five, Rennyo continued teaching."
+				},
+				{
+					"ja": "八十二歳には大坂石山に坊舎を建て、水上交通の要地を伝道拠点にした。",
+					"en": "At eighty-two he established a temple at Ishiyama on Osaka Bay, using a site suited to river traffic and propagation."
+				},
+				{
+					"ja": "明応八年、一四九九年三月二十五日、蓮如は八十五歳で生涯を終えた。",
+					"en": "Rennyo died on the twenty-fifth day of the third month of Meio 8, 1499, at the age of eighty-five."
+				},
+				{
+					"ja": "蓮如の影響は、教義の平易化だけでは測れない。",
+					"en": "Rennyo's influence cannot be measured only as simplified doctrine."
+				},
+				{
+					"ja": "彼は、手紙を読む場、声に出す場、集まる場、寺を支える場を作った。",
+					"en": "He created places to read, chant, gather, and support a temple."
+				},
+				{
+					"ja": "『御文章』は、信心の説明であり、共同体の規律であり、死に向き合う言葉であり、本願寺を地方社会へ接続する媒体だった。",
+					"en": "Gobunsho was doctrinal explanation, community discipline, language for facing death, and a medium that connected Hongwanji to local society."
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,37 @@
+---
+title: '蓮如と御文章: 調査ログ'
+description: '蓮如と御文章・御文の記事作成にあたって確認した調査範囲、判断、残課題を記録する。'
+pubDate: '2026-06-29'
+generation:
+  model: 'gpt-5.4-mini'
+draft: false
+---
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [`.codex/skills/research-report/SKILL.md`](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- skill: [`.codex/skills/stop-slop/SKILL.md`](https://github.com/daylight55/research/blob/main/.codex/skills/stop-slop/SKILL.md)
+- prompt source: [`ops/codex/prompts/daily-issue-research.md`](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+蓮如がどういう人物かを、『御文章=御文』の中身、生涯、思想、宗教界への影響、当時の日本情勢と照らし合わせて説明する依頼。記事では、御文を軸にして一貫したテーマを置く必要があった。
+
+## 調査手順
+
+1. repo-local `research-report` と `stop-slop` の指示を確認した。
+2. 既存記事の frontmatter、日英対応、source notes、research log、MIX対応を確認した。
+3. 本願寺派総合研究所、本願寺派公式、Hongwanji英語史、福井県史、京都市都市史、Wikisource本文、Wikimedia Commons画像を確認した。
+4. 蓮如の年譜を、御文・吉崎・山科・石山・一揆との緊張に関係する転換点へ絞った。
+5. 日本語本文を正本として書き、英語本文を同じ構成で同期した。
+
+## 判断
+
+中心テーマは「御文という媒体が、戦乱期の不安を信心と共同体のかたちへ変えた」とした。これにより、『御文章』の中身、勤行、講、門徒共同体、戦乱期の政治状況を一つの筋で扱える。
+
+一向一揆は単純な「蓮如が率いた反乱」として扱わない。本文では、門徒共同体の組織化が政治的力を生み、蓮如がその制御に苦しんだという構図にした。
+
+## 残課題
+
+個別御文の成立年代、写本・版本差、真宗諸派の読法差、蓮如研究史の詳細な比較は扱っていない。必要なら、Rogers and Rogers や Dobbins などの英語研究書、龍谷大学・大谷大学系の研究紀要を加えた拡張版を作れる。

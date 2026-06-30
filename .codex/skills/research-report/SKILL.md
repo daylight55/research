@@ -37,8 +37,9 @@ If the report or digest must appear on the website, top page, category pages, or
 5. Keep reference pages in route parity: `src/pages/reference/<slug>.astro` and `src/pages/en/reference/<slug>.astro`.
 6. Use locale-aware shared data such as `getReferenceItems(locale)` for reference indexes and homepage cards.
 7. Avoid hardcoded homepage counts; derive values from content data such as collection lengths or `CATEGORIES.length`.
-8. Run `pnpm build` for public article changes.
-9. Confirm the build generated the expected pages:
+8. Use a source-traceable hero image for public articles. Prefer Unsplash, Wikimedia Commons, or official images with clear credit and rights context. Do not use Codex-generated abstract images for article heroes, and do not set `heroImageSourceId` to a `codex:` value.
+9. Run `pnpm build` for public article changes.
+10. Confirm the build generated the expected pages:
    - report: `dist/reports/<slug>/index.html`
    - report research log: `dist/reports/<slug>/research/index.html` when `research-log.mdx` exists
    - report source notes: `dist/reports/<slug>/sources/index.html` when `source-notes.mdx` exists
@@ -46,8 +47,8 @@ If the report or digest must appear on the website, top page, category pages, or
    - news source notes: `dist/news/<slug>/sources/index.html` when `source-notes.mdx` exists
    - category: `dist/category/<category-name>/1/index.html`
    - homepage: `dist/index.html`
-10. Check `dist/index.html` or a local preview with `curl` for the slug, title, and category link before saying the article is visible.
-11. If preview visibility is explicitly requested, identify the current preview URL from the repository's deploy mechanism and verify that URL with `curl` for the slug, title, and category link.
+11. Check `dist/index.html` or a local preview with `curl` for the slug, title, and category link before saying the article is visible.
+12. If preview visibility is explicitly requested, identify the current preview URL from the repository's deploy mechanism and verify that URL with `curl` for the slug, title, and category link.
 
 ## Research Workflow
 

@@ -48,6 +48,10 @@ test('published blog entries use concrete non-duplicated hero images', () => {
 			!/(placeholder|banner\.jpg|book\.jpg|placeholder-social)/i.test(heroImage),
 			`${file} should not use a placeholder hero image`
 		)
+		assert.ok(
+			!readScalar(frontmatter, 'heroImageSourceId').startsWith('codex:'),
+			`${file} should use a source-traceable hero image instead of Codex-generated artwork`
+		)
 
 		const imagePath = path.normalize(path.join(path.dirname(file), heroImage))
 		assert.ok(existsSync(imagePath), `${file} hero image should exist: ${imagePath}`)

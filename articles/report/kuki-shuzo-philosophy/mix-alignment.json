@@ -1,0 +1,428 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "1-main-argument",
+			"heading": {
+				"ja": "1. 要点",
+				"en": "1. Main Argument"
+			},
+			"pairs": [
+				{
+					"ja": "九鬼周造の哲学は、「日本的美意識の説明」として読むだけでは狭い。",
+					"en": "Shuzo Kuki’s philosophy becomes too small when readers treat it only as an explanation of Japanese taste."
+				},
+				{
+					"ja": "彼は西洋哲学の概念装置を使いながら、江戸の趣味、偶然の出会い、実存する個人、詩の音の働きを、同じ問いの周囲に置いた。",
+					"en": "He used Western philosophical tools to examine Edo style, accidental encounter, the existing individual, and the sonic work of poetry."
+				},
+				{
+					"ja": "問いはこう言い換えられる。",
+					"en": "One question runs through those fields: how can a person relate to another person or to the world without dissolving the distance between them?"
+				},
+				{
+					"ja": "「いき」は、その問いを最も目に見えやすくした著作である。",
+					"en": "_The Structure of Iki_ gives that question its clearest form."
+				},
+				{
+					"ja": "九鬼は「いき」を、媚態、意気地、諦めの三契機から説明した。",
+					"en": "Kuki describes iki through three moments: coquetry, pride, and resignation."
+				},
+				{
+					"ja": "近づきたいのに近づき切らない、相手に依存しない誇りを保つ、執着を手放して澄む。",
+					"en": "A person approaches without closing the relation, keeps a proud independence, and lets attachment clear."
+				},
+				{
+					"ja": "この三つがそろうと、関係は所有や同化へ落ちず、張りのある距離として立ち上がる。",
+					"en": "When these three moments meet, relation does not collapse into possession or fusion."
+				},
+				{
+					"ja": "偶然性の研究では、この距離が存在論に変わる。",
+					"en": "In Kuki’s work on contingency, the same distance becomes ontology."
+				},
+				{
+					"ja": "私は世界のどこかに一般例として置かれるのではなく、たまたまこの時、この場所、この相手と出会う。",
+					"en": "I do not enter the world as a general example of humanity."
+				},
+				{
+					"ja": "九鬼は偶然を、軽い「たまたま」ではなく、個体性が世界に現れる入口として扱った。",
+					"en": "Kuki treats contingency not as a casual accident but as a way individuality comes into view."
+				},
+				{
+					"ja": "九鬼を実践に引き寄せるなら、彼の哲学は「近づき方の技法」として読める。",
+					"en": "Kuki can be used as a practical thinker of approach."
+				},
+				{
+					"ja": "恋愛、会話、都市のふるまい、研究、デザイン、組織の意思決定では、対象をつかもうとするほど、対象を壊すことがある。",
+					"en": "In love, conversation, city life, research, design, and organizational judgment, a person can damage the object by trying to grasp it too completely."
+				},
+				{
+					"ja": "九鬼は、距離を消すのではなく、距離を形にする。",
+					"en": "Kuki gives form to distance instead of erasing it."
+				},
+				{
+					"ja": "偶然を排除するのではなく、偶然に輪郭を与える。",
+					"en": "He gives contour to chance instead of excluding it."
+				}
+			]
+		},
+		{
+			"id": "2-kukis-problem",
+			"heading": {
+				"ja": "2. 九鬼の問題設定",
+				"en": "2. Kuki’s Problem"
+			},
+			"pairs": [
+				{
+					"ja": "九鬼は1888年に生まれ、東京帝国大学で哲学を学び、1921年から約八年にわたってヨーロッパに滞在した。",
+					"en": "Kuki was born in 1888, studied philosophy at Tokyo Imperial University, spent roughly eight years in Europe from 1921, and taught at Kyoto Imperial University after returning to Japan in 1929."
+				},
+				{
+					"ja": "九鬼の独自性は、西洋哲学を翻訳して日本文化に当てはめた点だけにない。",
+					"en": "Kuki’s originality does not lie in applying imported philosophy to Japanese culture."
+				},
+				{
+					"ja": "彼は、文化の中で生きている感覚を、哲学の対象として扱った。",
+					"en": "He treated lived cultural feeling as a philosophical object."
+				},
+				{
+					"ja": "「いき」は、街、身ぶり、衣装、言葉、恋の距離に宿る。",
+					"en": "Iki appears in streets, gesture, clothing, speech, and erotic distance."
+				},
+				{
+					"ja": "偶然性は、出会い、出生、運命、選択に宿る。",
+					"en": "Contingency appears in encounter, birth, fate, and decision."
+				},
+				{
+					"ja": "詩の押韻や音は、意味に還元しきれない形の力として宿る。",
+					"en": "Rhyme and sound in poetry appear as formal force that cannot be reduced to meaning."
+				},
+				{
+					"ja": "彼は趣味を飾りとして扱わない。",
+					"en": "He does not treat taste as decoration."
+				},
+				{
+					"ja": "趣味は、人が世界と関係を結ぶ姿勢である。",
+					"en": "Taste names a posture by which a person relates to the world."
+				}
+			]
+		},
+		{
+			"id": "3-iki-as-non-possessive-relation",
+			"heading": {
+				"ja": "3. 「いき」は所有しない関係の構造である",
+				"en": "3. Iki as Non-Possessive Relation"
+			},
+			"pairs": [
+				{
+					"ja": "『「いき」の構造』で九鬼は、まず「いき」を経験の中でつかまえる。",
+					"en": "In _The Structure of Iki_, Kuki begins from experience."
+				},
+				{
+					"ja": "江戸の町、遊里、歌舞伎、衣装、言葉、音曲が素材になる。",
+					"en": "Edo city culture, pleasure quarters, kabuki, clothing, speech, and music all supply material."
+				},
+				{
+					"ja": "九鬼の「いき」には三つの柱がある。",
+					"en": "Kuki’s iki has three supports."
+				},
+				{
+					"ja": "媚態は、相手を誘うだけの心理ではない。",
+					"en": "Coquetry is not only a psychology of seduction."
+				},
+				{
+					"ja": "九鬼は、自己と異性の間に可能的関係を構成する二元的態度として説明する。",
+					"en": "Kuki defines it as a dual attitude that constitutes a possible relation between self and other."
+				},
+				{
+					"ja": "ここで重要なのは、関係が可能性として残る点である。",
+					"en": "The key point is that the relation remains possible."
+				},
+				{
+					"ja": "完全に得てしまえば、緊張は消える。",
+					"en": "If a person fully possesses the other, the tension disappears."
+				},
+				{
+					"ja": "近づくほど、なお届き切らない距離が必要になる。",
+					"en": "The closer the approach, the more the relation needs an unclosed distance."
+				},
+				{
+					"ja": "意気地は、その距離に背骨を入れる。",
+					"en": "Pride gives that distance a spine."
+				},
+				{
+					"ja": "相手に選ばれたいだけなら、媚態は弱くなる。",
+					"en": "If a person only wants to be chosen, coquetry loses force."
+				},
+				{
+					"ja": "諦めは、冷めた断念ではない。",
+					"en": "Resignation is not cold renunciation."
+				},
+				{
+					"ja": "欲望が消えるのではなく、欲望が所有へ走らない。",
+					"en": "Desire remains, but it does not run toward possession."
+				}
+			]
+		},
+		{
+			"id": "4-the-aesthetic-cube",
+			"heading": {
+				"ja": "4. 六面体の美学",
+				"en": "4. The Aesthetic Cube"
+			},
+			"pairs": [
+				{
+					"ja": "九鬼は「いき」を感想語のまま放置しなかった。",
+					"en": "Kuki did not leave iki as an impressionistic word."
+				},
+				{
+					"ja": "彼は、上品、下品、派手、地味、甘味、渋味、意気、野暮などを配置し、趣味の関係を直六面体で表そうとした。",
+					"en": "He arranged elegant, vulgar, showy, subdued, sweet, austere, iki, and boorish tastes in a cube."
+				},
+				{
+					"ja": "この図式化は、感覚を殺すためではない。",
+					"en": "The diagram does not kill feeling."
+				},
+				{
+					"ja": "逆に、感覚の内部にある差を見えるようにする。",
+					"en": "It makes internal differences visible."
+				},
+				{
+					"ja": "甘味は距離を溶かす方向へ行きやすい。",
+					"en": "Sweetness can dissolve distance."
+				},
+				{
+					"ja": "渋味はさらに否定が強くなり、情感がくすむ。",
+					"en": "Austerity strengthens negation and darkens feeling."
+				},
+				{
+					"ja": "九鬼はこうした微妙な違いを、立体の中に置いて考えた。",
+					"en": "Kuki placed these differences inside a structure."
+				}
+			]
+		},
+		{
+			"id": "5-contingency-reveals-this-i",
+			"heading": {
+				"ja": "5. 偶然性は「この私」を現す",
+				"en": "5. Contingency Reveals This I"
+			},
+			"pairs": [
+				{
+					"ja": "『偶然性の問題』では、九鬼の関心は美意識から存在論へ移る。",
+					"en": "In _The Problem of Contingency_, Kuki moves from aesthetics to ontology."
+				},
+				{
+					"ja": "九鬼の偶然論は、「偶然は必然性の否定である」という出発点を持つ。",
+					"en": "Kuki’s theory begins from the claim that contingency negates necessity."
+				},
+				{
+					"ja": "彼はまず必然性の型を考え、その否定として偶然性を分ける。",
+					"en": "He first examines forms of necessity and then classifies contingency as their negation."
+				},
+				{
+					"ja": "定言的偶然では、ある性質が本質として概念に含まれない。",
+					"en": "Categorical contingency appears when a property does not belong to a concept as its essence."
+				},
+				{
+					"ja": "そこには「常にそうである」という必然がない。",
+					"en": "There is no necessity that it always happen."
+				},
+				{
+					"ja": "仮説的偶然では、原因や目的の系列に別の系列が割り込む。",
+					"en": "Hypothetical contingency appears when another series interrupts a causal or purposive series."
+				},
+				{
+					"ja": "九鬼が重視する「邂逅」は、この系列同士の交差に宿る。",
+					"en": "Kuki’s concern with encounter belongs here."
+				},
+				{
+					"ja": "離接的偶然では、問いはさらに深くなる。",
+					"en": "Disjunctive contingency deepens the problem."
+				},
+				{
+					"ja": "全体としては複数の可能性があるのに、現実にはその一つだけが現れる。",
+					"en": "A whole contains several possibilities, yet only one becomes actual."
+				},
+				{
+					"ja": "人生も同じ構造を持つ。",
+					"en": "A life has the same structure."
+				},
+				{
+					"ja": "ここから九鬼は、原始偶然の問題へ向かう。",
+					"en": "From here Kuki moves toward primitive contingency."
+				},
+				{
+					"ja": "なぜ世界はこのようにあり、なぜ私はこの私としてあるのか。",
+					"en": "Why is the world this way, and why am I this I?"
+				},
+				{
+					"ja": "因果をたどっても、どこかで「この現実がある」という無根拠に突き当たる。",
+					"en": "Causal explanation eventually reaches the ungrounded fact that this reality exists."
+				},
+				{
+					"ja": "偶然とは、説明できない穴ではない。",
+					"en": "Contingency is not a hole in explanation."
+				},
+				{
+					"ja": "九鬼にとって偶然は、必然とぶつかりながら個体を浮かび上がらせる働きである。",
+					"en": "For Kuki, contingency brings individuality into view while pressing against necessity."
+				},
+				{
+					"ja": "私は人間一般として生まれるのではなく、この家、この時代、この身体、この言葉の中に生まれる。",
+					"en": "I am not born as humanity in general."
+				},
+				{
+					"ja": "偶然を軽く扱う人は、予定と計画だけで世界を理解しようとする。",
+					"en": "A person who treats contingency lightly tries to understand the world only through plans."
+				},
+				{
+					"ja": "九鬼は逆の方向から考える。",
+					"en": "Kuki thinks from the other direction."
+				},
+				{
+					"ja": "計画ではなく、出会いが私をつくる。",
+					"en": "Encounters shape the self."
+				},
+				{
+					"ja": "この読み方は、研究や仕事にも効く。",
+					"en": "This reading helps research and work."
+				},
+				{
+					"ja": "新しいテーマは、計画通りに見つかるとは限らない。",
+					"en": "A new question does not always appear on schedule."
+				},
+				{
+					"ja": "実践では、偶然を三段階で読むとよい。",
+					"en": "In practice, contingency can be read in three moves: notice a rare mark, record an encounter between series, and consider the weight of this one actual path among several possibilities."
+				}
+			]
+		},
+		{
+			"id": "6-existence-begins-from-this-i",
+			"heading": {
+				"ja": "6. 実存は抽象的人間ではなく「この私」から始まる",
+				"en": "6. Existence Begins From This I"
+			},
+			"pairs": [
+				{
+					"ja": "九鬼の実存理解を、孤独な内面主義として読むと弱くなる。",
+					"en": "Kuki’s existence becomes weaker if readers turn it into private inwardness."
+				},
+				{
+					"ja": "彼の「この私」は、他者との距離、偶然の出会い、文化の型、言葉の響きの中で形を取る。",
+					"en": "His “this I” takes shape through distance from others, accidental encounter, cultural form, and verbal resonance."
+				},
+				{
+					"ja": "つまり、実存は裸の自我ではない。",
+					"en": "Existence is not a bare ego."
+				},
+				{
+					"ja": "この実存の考え方は、現代の自己理解にも近い。",
+					"en": "That view of existence fits modern self-understanding."
+				},
+				{
+					"ja": "偶然の出会いに巻き込まれ、過去の型に支えられ、言葉にできない違和感に動かされる。",
+					"en": "A person gets drawn into encounters, relies on inherited forms, and moves because of discomfort that is not yet explicit."
+				}
+			]
+		},
+		{
+			"id": "7-poetry-and-sound",
+			"heading": {
+				"ja": "7. 詩と音は、意味になり切らないものを運ぶ",
+				"en": "7. Poetry and Sound Carry What Meaning Cannot Absorb"
+			},
+			"pairs": [
+				{
+					"ja": "九鬼は詩や押韻にも関心を向けた。",
+					"en": "Kuki also studied poetry and rhyme."
+				},
+				{
+					"ja": "これを余技と見ると、九鬼哲学の実践面を見落とす。",
+					"en": "That interest should not be treated as a side hobby."
+				},
+				{
+					"ja": "押韻は、意味の外側にある装飾ではない。",
+					"en": "Rhyme is not decoration outside meaning."
+				},
+				{
+					"ja": "九鬼は、言葉にしにくいものを切り捨てず、形式として考える。",
+					"en": "Kuki does not discard what resists paraphrase."
+				},
+				{
+					"ja": "詩論はその実験場になる。",
+					"en": "He treats it as form."
+				}
+			]
+		},
+		{
+			"id": "8-how-to-use-kuki",
+			"heading": {
+				"ja": "8. 九鬼哲学の使い方",
+				"en": "8. How To Use Kuki"
+			},
+			"pairs": [
+				{
+					"ja": "九鬼を読む価値は、概念を暗記することにない。",
+					"en": "Kuki is useful when his method enters judgment."
+				},
+				{
+					"ja": "相手の意図、顧客の欲望、読者の反応を、すぐに一つの答えへ閉じると、関係の張りが消える。",
+					"en": "When a team reduces another person’s intent, a customer’s desire, or a reader’s reaction to one answer too quickly, relation loses tension."
+				},
+				{
+					"ja": "「いき」は、可能性を可能性のまま保つ。",
+					"en": "Iki preserves possibility as possibility."
+				},
+				{
+					"ja": "人は便利さだけで動かない。",
+					"en": "People do not move only because something is convenient."
+				},
+				{
+					"ja": "計画から外れた出来事を、失敗ログとして捨てる前に見る。",
+					"en": "Before discarding a deviation from the plan as a failure log, look at it."
+				},
+				{
+					"ja": "九鬼は、感覚を構造として扱った。",
+					"en": "Kuki treats sensation as structure."
+				}
+			]
+		},
+		{
+			"id": "10-conclusion",
+			"heading": {
+				"ja": "10. まとめ",
+				"en": "10. Conclusion"
+			},
+			"pairs": [
+				{
+					"ja": "九鬼周造の哲学は、世界を完全に説明する体系ではない。",
+					"en": "Kuki’s philosophy is not a system that explains the whole world."
+				},
+				{
+					"ja": "むしろ、説明しようとするとこぼれるものを、構造として受け止める技法である。",
+					"en": "It is a technique for receiving what slips out of explanation as structure."
+				},
+				{
+					"ja": "「いき」は、所有しない関係の張りを示す。",
+					"en": "Iki shows the tension of non-possessive relation."
+				},
+				{
+					"ja": "偶然性は、「この私」が世界と出会う裂け目を示す。",
+					"en": "Contingency shows the opening where “this I” meets the world."
+				},
+				{
+					"ja": "実存は、抽象的人間ではなく、偶然と距離の中で生きる個体を問う。",
+					"en": "Existence asks about an individual who lives through chance and distance."
+				},
+				{
+					"ja": "詩と音は、意味になり切らない形式の力を見せる。",
+					"en": "Poetry and sound reveal the power of form that does not become pure meaning."
+				}
+			]
+		}
+	]
+}

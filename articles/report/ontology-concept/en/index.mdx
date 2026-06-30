@@ -244,15 +244,15 @@ At first, 5 to 10 pieces is enough.
 
 ### 10.4 Define relationships
 
-| Relation    | Domain            | Range            | Meaning                         |
-| ----------- | ----------------- | ---------------- | ------------------------------- |
-| hasSource   | Claim             | Source           |
-| supports    | Evidence          | Claim            |
-| contradicts | Source / Evidence | Claim            |
-| dependsOn   | Decision          | Claim / Risk     |
-| belongsTo   | Report            | Topic            | Report belongs to theme         |
-| hasConcept  | Report            | Concept          | Report deals with concepts      |
-| supersedes  | Claim / Decision  | Claim / Decision | New claim/decision replaces old |
+| Relation    | Domain            | Range            | Meaning                                 |
+| ----------- | ----------------- | ---------------- | --------------------------------------- |
+| hasSource   | Claim             | Source           | Claim refers to source                  |
+| supports    | Evidence          | Claim            | Evidence supports claim                 |
+| contradicts | Source / Evidence | Claim            | Source or evidence conflicts with claim |
+| dependsOn   | Decision          | Claim / Risk     | Decision depends on claim or risk       |
+| belongsTo   | Report            | Topic            | Report belongs to theme                 |
+| hasConcept  | Report            | Concept          | Report deals with concepts              |
+| supersedes  | Claim / Decision  | Claim / Decision | New claim/decision replaces old         |
 
 ### 10.5 Determine constraints and validation
 

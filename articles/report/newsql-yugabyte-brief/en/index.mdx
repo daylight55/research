@@ -105,13 +105,14 @@ Source note: Meko's official website says "The Data Layer for Agents That Learn 
 
 ## 6. Areas that Yugabyte seems to be focusing on now
 
-| Area                     | Movements visible from public information                                  | Things to ask at the interview                                                                       |
-| ------------------------ | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | --- | ---------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| PostgreSQL compatibility | PG15 base, EPCM, CBO, Read Committed, parallel query, DDL/DML improvements | Which PostgreSQL extensions/SQL functions are not supported? What to look for in compatibility tests |
-| Managed / BYOC           | Separating operational models between Aeon, Aeon BYOC, and Anywhere        | How to meet the network, KMS, audit, and data residency requirements of Japanese companies           |     | Database modernization | Promoting PostgreSQL/MySQL/Oracle migration and AI-powered assessment with Voyager | What schema/sequence/transaction patterns are likely to fail in Oracle/PostgreSQL migration |
-| Multi-region resilience  | Synchronous multi-region, geo-partitioning, xCluster, read replicas        | Track record, latency, RPO/RTO design for Tokyo/Osaka and Japan+overseas configurations              |
-| AI/agent workloads       | pgvector, MCP Server, LangChain/LlamaIndex collaboration, Meko             | Wins/limitations compared to dedicated vector DB for RAG/agent memory usage                          |
-| Operational tooling      | Performance Advisor, observability, rolling upgrades, backup/PITR          | SLOs, alerts, fault training, and upgrade frequency that production SREs should look at              |
+| Area                     | Movements visible from public information                                          | Things to ask at the interview                                                                       |
+| ------------------------ | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| PostgreSQL compatibility | PG15 base, EPCM, CBO, Read Committed, parallel query, DDL/DML improvements         | Which PostgreSQL extensions/SQL functions are not supported? What to look for in compatibility tests |
+| Managed / BYOC           | Separating operational models between Aeon, Aeon BYOC, and Anywhere                | How to meet the network, KMS, audit, and data residency requirements of Japanese companies           |
+| Database modernization   | Promoting PostgreSQL/MySQL/Oracle migration and AI-powered assessment with Voyager | What schema/sequence/transaction patterns are likely to fail in Oracle/PostgreSQL migration          |
+| Multi-region resilience  | Synchronous multi-region, geo-partitioning, xCluster, read replicas                | Track record, latency, RPO/RTO design for Tokyo/Osaka and Japan+overseas configurations              |
+| AI/agent workloads       | pgvector, MCP Server, LangChain/LlamaIndex collaboration, Meko                     | Wins/limitations compared to dedicated vector DB for RAG/agent memory usage                          |
+| Operational tooling      | Performance Advisor, observability, rolling upgrades, backup/PITR                  | SLOs, alerts, fault training, and upgrade frequency that production SREs should look at              |
 
 Source note: v2025.2 LTS release notes list features such as xCluster automatic mode, connection manager improvements, write pipelining, pgvector with indexing, HNSW, and PostgreSQL compatibility. See [YugabyteDB v2025.2 release notes](https://docs.yugabyte.com/stable/releases/ybdb-releases/v2025.2/). Focus areas are estimates from published releases and product pages rather than official roadmaps.
 

@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "ユマニチュードは、認知症ケアを「優しく接する」という抽象語で終わらせず、見る、話す、触れる、立つという行為を訓練可能な手順に落とす方法論である。",
+          "en": "Humanitude turns dementia care from a vague appeal to kindness into trainable actions: gaze, speech, touch, and standing support."
+        },
+        {
+          "ja": "発祥地のフランスでは Humanitude France / International が四つの柱を説明し、日本、ポルトガル、シンガポールでは研修や現場実装の研究が蓄積している。",
+          "en": "Humanitude France and Humanitude International describe these as three relational pillars and one identity pillar."
+        },
+        {
+          "ja": "政策上の焦点は、ユマニチュードを導入するかどうかより、福祉制度が「本人の尊厳を守るケア」を職員研修、勤務設計、権利擁護、家族支援、効果測定まで含めて扱えるかにある。",
+          "en": "The policy test is whether a welfare system can turn dignified care into staff training, shift design, rights protection, family support, and measurement."
+        },
+        {
+          "ja": "日本の認知症基本法と認知症施策推進基本計画は、本人の声、意思決定支援、地域生活の継続を掲げている。",
+          "en": "Japan's dementia basic law and basic plan already emphasize the voice of people living with dementia, decision-making support, and continuity of life in the community."
+        },
+        {
+          "ja": "ユマニチュードは、この政策語彙を日々の入浴、移乗、食事、口腔ケア、排泄介助へ翻訳する候補になる。",
+          "en": "Humanitude can translate those policy words into bathing, transfer, eating, oral care, and toileting practice."
+        },
+        {
+          "ja": "効果研究は、介護拒否、興奮、心理症状、介護者負担、職員の共感や満足度の改善可能性を示している。",
+          "en": "Studies suggest possible improvements in refusal of care, agitation, psychological symptoms, caregiver burden, empathy, and job satisfaction."
+        },
+        {
+          "ja": "ただし、研究数は限られ、短期評価、単施設、準実験、前後比較が多い。",
+          "en": "The evidence is encouraging but limited."
+        },
+        {
+          "ja": "したがって、国や自治体が採用する場合、標準研修を配るだけでは足りない。",
+          "en": "Many studies still use short follow-up, single-site designs, quasi-experiments, or pre-post comparisons."
+        },
+        {
+          "ja": "拘束、向精神薬、拒否行動、転倒、職員離職、家族苦情、本人の生活参加を同時に測る実装研究として組む必要がある。",
+          "en": "A national or municipal adoption plan should therefore treat Humanitude as implementation research."
+        }
+      ]
+    },
+    {
+      "id": "core-idea",
+      "heading": {
+        "ja": "2. 考え方: 人格を失わせない技法",
+        "en": "2. The Core Idea"
+      },
+      "pairs": [
+        {
+          "ja": "ユマニチュードの中核は、ケアを「処置」ではなく、相手に自分が人として扱われていると伝える関係行為として設計する点にある。",
+          "en": "Humanitude treats care as a relational practice before any procedure touches the body."
+        },
+        {
+          "ja": "視線は正面から近づき、声かけは相手が返答しなくても続け、触れるときは広く、ゆっくり、支える。",
+          "en": "The caregiver approaches from the front, keeps speaking even when the person does not answer, touches with broad and slow support, and preserves sitting or standing whenever possible."
+        },
+        {
+          "ja": "立位や座位を保つ支援は、身体機能だけでなく、自分で生活している感覚を守るための柱になる。",
+          "en": "Standing support matters because it protects function and the person's sense of living as an actor."
+        },
+        {
+          "ja": "この方法論は、介護職の善意に依存しない。",
+          "en": "The method does not rely on staff goodwill alone."
+        },
+        {
+          "ja": "むしろ、善意だけで行われてきた「声かけ」や「手を添える」行為を、観察、順序、距離、時間、チーム内共有の対象にする。",
+          "en": "It makes familiar acts such as speaking, entering a room, and placing a hand on someone observable and teachable."
+        },
+        {
+          "ja": "この細部が、本人の拒否を「問題行動」とだけ読まない入口になる。",
+          "en": "That level of detail prevents staff from reading refusal only as a behavioural problem."
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "heading": {
+        "ja": "3. 現場での実践例",
+        "en": "3. Practice Examples"
+      },
+      "pairs": [
+        {
+          "ja": "実践は、特別なリハビリ室より、日常の介助場面で起きる。",
+          "en": "Humanitude usually appears in ordinary care, not in a separate therapeutic room."
+        },
+        {
+          "ja": "入浴では、職員が背後から近づかず、正面で名乗り、これから行う動作を短く説明し、本人が受け入れやすい順番に変える。",
+          "en": "During bathing, the worker avoids approaching from behind, introduces the encounter from the front, explains the next action, and changes the sequence to fit the person."
+        },
+        {
+          "ja": "口腔ケアでは、口を開けさせる行為の前に、視線、声、手の接触で関係を作る。",
+          "en": "During oral care, the worker builds gaze, speech, and touch before asking the person to open the mouth."
+        },
+        {
+          "ja": "移乗では、身体を持ち上げるより、本人が立つ動きを残す。",
+          "en": "During transfer, the worker tries to preserve the person's own standing movement instead of lifting the body as an object."
+        },
+        {
+          "ja": "ユマニチュードはこのような小さい場面を、ケアの品質として見えるようにする。",
+          "en": "A Portuguese continuing-care implementation study followed staff as they learned the Humanitude Care Methodology."
+        },
+        {
+          "ja": "ポルトガルの継続ケア単位で行われた実装研究は、職員が Humanitude Care Methodology を学ぶ過程で、ケア手順の実施率、専門職の自己評価、患者への好影響を観察した。",
+          "en": "The researchers observed changes in the use of care procedures, professional self-assessment, and perceived effects for patients and workers."
+        },
+        {
+          "ja": "日本では、家族介護者、医学生、歯科職、医師向けの研修研究がある。",
+          "en": "Japan has studies involving family caregivers, medical students, oral health professionals, and physicians."
+        },
+        {
+          "ja": "家族介護者研究では、6時間の研修と継続的な情報提供の後、介護負担が3か月後に下がった。",
+          "en": "In one family-caregiver study, six hours of training plus continuing information were associated with lower caregiver burden after three months."
+        }
+      ]
+    },
+    {
+      "id": "effects-limits",
+      "heading": {
+        "ja": "4. 効果: 期待できることと証明できていないこと",
+        "en": "4. Effects and Limits"
+      },
+      "pairs": [
+        {
+          "ja": "既存研究から期待できる効果は三つある。",
+          "en": "Existing studies point to three likely effects."
+        },
+        {
+          "ja": "第一に、本人の拒否、興奮、心理症状が下がる可能性がある。",
+          "en": "First, refusal, agitation, and psychological symptoms may decrease."
+        },
+        {
+          "ja": "第二に、介護者が「どう接すればよいか」を具体化でき、負担感やバーンアウトが下がる可能性がある。",
+          "en": "Second, caregivers may gain concrete ways to respond, reducing burden and burnout."
+        },
+        {
+          "ja": "第三に、職員研修が共感やコミュニケーションの短期改善につながる可能性がある。",
+          "en": "Third, professional training may improve empathy and communication in the short term."
+        },
+        {
+          "ja": "証明できていないことも明確である。",
+          "en": "Several policy claims remain unproven."
+        },
+        {
+          "ja": "長期にわたって拘束、向精神薬、入院、転倒、離職率、介護費をどれだけ下げるかは、国際比較できるほどそろっていない。",
+          "en": "The literature does not yet allow a strong cross-country estimate of long-term effects on restraint, psychotropic medication, hospitalization, falls, turnover, or care cost."
+        }
+      ]
+    },
+    {
+      "id": "country-context",
+      "heading": {
+        "ja": "5. 各国の福祉事情と政策原典",
+        "en": "5. Country Policy Contexts"
+      },
+      "pairs": [
+        {
+          "ja": "WHO の行動計画は、認知症を単なる高齢者医療ではなく、社会、介護者、情報、研究を含む公衆衛生課題として扱う。",
+          "en": "WHO's dementia action plan treats dementia as a public-health issue involving society, caregivers, information, and research."
+        },
+        {
+          "ja": "OECD も、長期ケアでは家族介護者の負担、地域ケア、医療と介護の連携が制度上の弱点になりやすいと整理している。",
+          "en": "OECD long-term-care work also highlights family-caregiver burden, community care, and poor coordination between health and long-term care as recurring system problems."
+        },
+        {
+          "ja": "フランスの `Stratégie nationale Maladies Neurodégénératives 2025-2030` は、1.4 million 人のアルツハイマー病・神経認知症、225,000 の新規症例、2050年に向けた増加見通しを示し、6軸37施策で、見方を変える、早く見つける、介護者を支える、在宅を強める、施設の複雑ニーズに応える、研究を支えると整理している。",
+          "en": "France's `Stratégie nationale Maladies Neurodégénératives 2025-2030` cites 1.4 million people with Alzheimer's disease or other neurocognitive disorders, 225,000 new cases a year, and growth toward 2050."
+        },
+        {
+          "ja": "ポルトガルは、2018年の `Despacho n.º 5988/2018` で認知症領域の健康戦略を承認し、地域計画、生活の質、研究、権利、研修、継続評価を求めた。",
+          "en": "Portugal approved its dementia health strategy through `Despacho n.º 5988/2018`, requiring regional dementia plans, quality of life, research, rights, training, and monitoring."
+        },
+        {
+          "ja": "2026年には、国家認知症保健計画のガバナンスを更新した。",
+          "en": "In 2026, Portugal updated the governance model for the National Dementia Health Plan."
+        }
+      ]
+    },
+    {
+      "id": "japanese-adoption",
+      "heading": {
+        "ja": "6. 日本で導入するなら何が問われるか",
+        "en": "6. The Japanese Adoption Test"
+      },
+      "pairs": [
+        {
+          "ja": "日本では、認知症基本法と基本計画がすでに方向を定めている。",
+          "en": "Japan already has the policy direction: dignity, hope, the person's voice, decision-making support, and life in the community."
+        },
+        {
+          "ja": "本人が尊厳を持って希望ある生活を続けること、本人の声を起点にすること、意思決定支援を整えること、地域生活を続けることが中心である。",
+          "en": "Humanitude can help turn that direction into care technique."
+        },
+        {
+          "ja": "ユマニチュードは、この理念を現場技法に変える候補だが、制度が支えなければ、研修を受けた一部職員の属人的スキルで終わる。",
+          "en": "Without institutional support, however, the method will remain a personal skill held by a few trained workers."
+        },
+        {
+          "ja": "導入時に問われる条件は六つある。",
+          "en": "Six conditions should shape adoption."
+        },
+        {
+          "ja": "自治体が導入する場合、介護保険事業計画、認知症施策推進計画、地域包括支援センター、認知症カフェ、本人ミーティング、家族支援を分けて扱わない方がよい。",
+          "en": "Municipalities should avoid separating long-term care plans, dementia plans, community support centers, dementia cafés, meetings of people living with dementia, and family support."
+        }
+      ]
+    },
+    {
+      "id": "future-welfare",
+      "heading": {
+        "ja": "7. これからの福祉での論点",
+        "en": "7. Questions for Future Welfare"
+      },
+      "pairs": [
+        {
+          "ja": "第一の論点は、人手不足下で尊厳あるケアをどう標準化するかである。",
+          "en": "The first question is how to standardize dignified care during staff shortages."
+        },
+        {
+          "ja": "ユマニチュードは、職員の負担を増やす「追加の優しさ」として入れると失敗しやすい。",
+          "en": "Humanitude will fail if managers add it as extra kindness on top of existing workloads."
+        },
+        {
+          "ja": "勤務表、ケア記録、申し送り、研修時間、管理者評価に組み込む必要がある。",
+          "en": "It has to enter schedules, care records, handovers, training hours, and manager evaluation."
+        },
+        {
+          "ja": "第二の論点は、本人中心ケアを権利擁護で終わらせないことだ。",
+          "en": "The second question is how to keep person-centred care from staying at the level of rights language."
+        },
+        {
+          "ja": "本人の意思を尊重するなら、拒否を減らすための技術、拒否を受け止める時間、別の時間に再訪する裁量が必要になる。",
+          "en": "Respecting a person's will requires techniques to reduce refusal, time to accept refusal, and discretion to return later."
+        },
+        {
+          "ja": "第三の論点は、効果測定である。",
+          "en": "The third question is measurement."
+        }
+      ]
+    }
+  ]
+}

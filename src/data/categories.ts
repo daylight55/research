@@ -26,5 +26,6 @@ export const CATEGORIES = [
 	'cultural-anthropology',
 	'music-culture',
 	'global-popular-music',
-	'japan-religion'
+	'japan-religion',
+	'welfare-policy'
 ] as const

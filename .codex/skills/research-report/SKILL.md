@@ -131,6 +131,13 @@ Mermaid constraints:
 - Do not mix timeline, architecture, operational steps, and risks in one diagram.
 - Before publishing, verify rendered Mermaid in local preview or generated HTML and simplify unreadable diagrams.
 
+## Table Requirements
+
+- Use Markdown pipe tables only when the build pipeline renders GitHub Flavored Markdown tables. For this Astro site, keep `remark-gfm` enabled in both `markdown.remarkPlugins` and the MDX integration.
+- Keep article tables narrow: 2-4 columns, short headers, and cell text that can wrap cleanly. If a cell needs a full sentence or citation, move the explanation to the paragraph before or after the table.
+- After adding or editing a table in `index.mdx`, `source-notes.mdx`, or `research-log.mdx`, run `pnpm build` and verify the generated HTML contains `<table>` near the table text, not a paragraph that starts with a literal pipe such as `<p>| 観点 | ...`.
+- If the table remains hard to read in generated HTML or preview, replace it with a short list, multiple smaller tables, or a compact Mermaid diagram. Do not leave a pipe table that only looks correct in raw Markdown.
+
 ## Default Report Shape
 
 Use this shape unless the topic needs something else:
@@ -172,6 +179,7 @@ Before finishing:
 - Published prose passes the Stop Slop check for high-confidence filler, business jargon, mechanical contrasts, and Japanese summary crutches.
 - Current and unstable claims were verified against current sources.
 - Diagrams render as Mermaid-compatible Markdown where possible.
+- Markdown pipe tables render as `<table>` in generated HTML, not literal pipe text inside `<p>`.
 - The article distinguishes evidence from inference.
 - `git diff --check` passes.
 - `pnpm ci:pr` passes before push or PR readiness, especially when the base branch has advanced.

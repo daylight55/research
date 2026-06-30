@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import tailwind from '@astrojs/tailwind'
+import remarkGfm from 'remark-gfm'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 import { remarkGlossary } from './src/utils/remarkGlossary.ts'
 import { siteConfig } from './src/data/site.config'
@@ -21,7 +22,7 @@ export default defineConfig({
 		defaultLocale: 'ja'
 	},
 	markdown: {
-		remarkPlugins: [remarkReadingTime, remarkGlossary],
+		remarkPlugins: [remarkReadingTime, remarkGlossary, remarkGfm],
 		drafts: true,
 		shikiConfig: {
 			theme: 'material-theme-palenight',
@@ -30,7 +31,7 @@ export default defineConfig({
 	},
 	integrations: [
 		mdx({
-			remarkPlugins: [remarkGlossary],
+			remarkPlugins: [remarkGlossary, remarkGfm],
 			syntaxHighlight: 'shiki',
 			shikiConfig: {
 				experimentalThemes: {

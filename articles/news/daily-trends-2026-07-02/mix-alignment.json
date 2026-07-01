@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "米国では最高裁が出生地主義とトランス選手の扱いを巡る判断を相次いで示し、トランプ周辺では出生ツーリズム対策と資金開示が同時に前面へ出た。経済面では原油、金利、英国小売と銀行ブランド再編が同じ時間帯に動き、技術面ではAIモデルの安全審査、輸出規制、App Store規制、計算資源の逼迫が重なっている。日次の焦点は、政策の方向転換が市場価格と企業の投資判断にどう波及するかに移っている。",
+      "en": "In the U.S., the Supreme Court pushed birthright citizenship and transgender-athlete fights back into the center of politics, while Trump-world put tourism enforcement and financial disclosure on the same stage. In markets, oil, rates, UK retail restructuring, and bank-brand changes moved in one cluster, and in tech the pressure points were different but connected: safety reviews, export controls, app-store rules, and scarce AI compute. The common thread is that policy shifts are increasingly showing up as pricing, supply, and deployment constraints."
+    },
+    {
+      "ja": "最高裁が出生地主義を巡る争点を再び政治の中心に置いた。",
+      "en": "The Supreme Court put birthright citizenship back at the center of politics."
+    },
+    {
+      "ja": "出生地主義を巡る判断が出て、行政による一方的な移民対策の余地が狭まった。",
+      "en": "The court issued a ruling on birthright citizenship that narrowed the space for unilateral immigration enforcement."
+    },
+    {
+      "ja": "移民、選挙、州法の争いが同時に動くため、政策の実装と訴訟が長引く可能性がある。",
+      "en": "Immigration, elections, and state-law fights all move together here, so the policy battle is likely to stay in court and in Congress."
+    },
+    {
+      "ja": "州政府と議会がどこまで法案や追加訴訟で反撃するか。",
+      "en": "Watch for state and congressional pushback, including new bills or follow-on litigation."
+    },
+    {
+      "ja": "判決だけでなく、執行の強さそのものが争点になっている。",
+      "en": "The enforcement response is becoming part of the story, not just the ruling."
+    },
+    {
+      "ja": "出生地主義の議論に続いて、出生ツーリズムへの取り締まり強化が示された。",
+      "en": "The birthright-citizenship fight was followed by a sharper crackdown on birth tourism."
+    },
+    {
+      "ja": "入国、医療、州の行政運用にまで波及するため、政治論争が現場の手続きに落ちてくる。",
+      "en": "It reaches immigration, healthcare, and state administration, so the political fight quickly becomes an operational one."
+    },
+    {
+      "ja": "どの州で先に運用変更や法廷対応が始まるか。",
+      "en": "Watch which states move first on policy changes or legal resistance."
+    },
+    {
+      "ja": "スポーツ規則が文化戦争の中心にあることを、最高裁が改めて示した。",
+      "en": "The court showed again that sports rules remain a core culture-war issue."
+    },
+    {
+      "ja": "トランス選手の参加を巡る州法の扱いが、最高裁の判断で再び前面に出た。",
+      "en": "State restrictions on transgender athletes came back into focus after the court's ruling."
+    },
+    {
+      "ja": "学校、州政府、スポーツ団体が同じ基準で動けず、制度設計の摩擦が続く。",
+      "en": "Schools, states, and sports bodies still lack a single standard, so friction will continue."
+    },
+    {
+      "ja": "他州への波及と、連邦法との整合を巡る追加訴訟。",
+      "en": "Watch for spillover to other states and more litigation over federal preemption."
+    },
+    {
+      "ja": "政治と暗号資産が、収入源としても規制争点としても一体化している。",
+      "en": "Politics and crypto are becoming inseparable both as a revenue source and as a regulatory issue."
+    },
+    {
+      "ja": "2025年の資産開示で、暗号資産由来の収入が大きく浮き彫りになった。",
+      "en": "The 2025 disclosure highlighted just how large the crypto income stream has become."
+    },
+    {
+      "ja": "資産開示は選挙資金、規制、利益相反の議論に直結する。",
+      "en": "Financial disclosures feed directly into campaign-money, regulation, and conflict-of-interest debates."
+    },
+    {
+      "ja": "暗号資産関連の保有や収入に対する議会・監督当局の反応。",
+      "en": "Watch for congressional or regulatory reaction to the crypto-linked income and holdings."
+    },
+    {
+      "ja": "選挙戦はすでに中間選挙モードに入り、動員の演出が始まっている。",
+      "en": "The midterm campaign has already moved into mobilization mode."
+    },
+    {
+      "ja": "共和党が、秋の中間選挙前に全国党大会を開く計画を示した。",
+      "en": "Republicans signaled plans for a national convention before the fall midterms."
+    },
+    {
+      "ja": "資金集めと候補者動員を一気に進めるための政治イベントになる。",
+      "en": "It would serve as a fundraising and candidate-mobilization event rolled into one."
+    },
+    {
+      "ja": "会場、日程、そしてトランプ本人の関与の深さ。",
+      "en": "Watch the venue, the date, and how directly Trump is involved."
+    },
+    {
+      "ja": "金利高止まりの警戒は残るが、少なくとも直近の会合ではインフレ圧力にやや余裕が出た。",
+      "en": "Rate pressure remains, but the latest forum suggested a bit more room on inflation."
+    },
+    {
+      "ja": "Warshがインフレリスクは下がったと述べ、政策当局の視線がやや中立寄りになった。",
+      "en": "Warsh said inflation risks have come down, nudging the policy tone a little more neutral."
+    },
+    {
+      "ja": "金利見通しは住宅、企業投資、通貨まで連鎖する。",
+      "en": "Rate expectations feed directly into housing, investment, and currencies."
+    },
+    {
+      "ja": "次の中央銀行会合で、慎重姿勢が本当に緩むか。",
+      "en": "Watch whether the next central-bank meetings actually soften the cautious stance."
+    },
+    {
+      "ja": "物価の伸びが鈍る一方で、利下げの速度は依然として慎重に見られている。",
+      "en": "Inflation is cooling, but markets still see a cautious pace for any rate cuts."
+    },
+    {
+      "ja": "ユーロ圏インフレ率が2.8%へ鈍化し、ECBの見通しが再調整された。",
+      "en": "Eurozone inflation eased to 2.8%, prompting another read on the ECB outlook."
+    },
+    {
+      "ja": "ECBの一言は債券、銀行株、為替にすぐ反映される。",
+      "en": "A few ECB words can move bonds, bank stocks, and FX almost immediately."
+    },
+    {
+      "ja": "7月以降のデータで、減速が一過性か定着かを見極める。",
+      "en": "Watch July data to see whether the slowdown is temporary or durable."
+    },
+    {
+      "ja": "外交の進展ひとつで、エネルギー価格とインフレ見通しがすぐ動く。",
+      "en": "A single diplomatic update can move energy prices and inflation expectations quickly."
+    },
+    {
+      "ja": "米イラン協議が続くなかで、原油価格は1%程度下落した。",
+      "en": "Oil slipped about 1% as U.S.-Iran talks continued."
+    },
+    {
+      "ja": "原油は輸送費、物価、企業の利益率に直結する。",
+      "en": "Oil feeds directly into transport costs, inflation, and corporate margins."
+    },
+    {
+      "ja": "交渉の進展か失速かで、値動きが反転するか。",
+      "en": "Watch whether the next diplomatic step keeps prices down or reverses them."
+    },
+    {
+      "ja": "英国小売は需要の弱さだけでなく、業態再編そのものが重荷になっている。",
+      "en": "UK retail is under pressure from both weak demand and structural reorganization."
+    },
+    {
+      "ja": "旧WH Smith系店舗の閉鎖計画が拡大し、店舗網の縮小が進む。",
+      "en": "Closure plans for former WH Smith stores widened, shrinking the chain's footprint."
+    },
+    {
+      "ja": "雇用、駅ナカ需要、地方の商業空間に直接影響する。",
+      "en": "It affects jobs, travel-hub retail, and high-street footfall."
+    },
+    {
+      "ja": "どの地域の店舗が先に閉鎖されるか。",
+      "en": "Watch which locations are hit first."
+    },
+    {
+      "ja": "銀行は店舗とブランドを減らし、コストと顧客導線をまとめ直している。",
+      "en": "Banks are trimming branches and brands to simplify cost and customer flows."
+    },
+    {
+      "ja": "LloydsがHalifaxブランドの整理を進め、長年の名前が退場局面に入った。",
+      "en": "Lloyds moved to phase out the Halifax brand after years of overlap."
+    },
+    {
+      "ja": "銀行再編は雇用、支店網、顧客の口座移行に影響する。",
+      "en": "Bank consolidation affects jobs, branch access, and account migration."
+    },
+    {
+      "ja": "他の旧来ブランドにも同じ整理が広がるか。",
+      "en": "Watch for similar consolidation at other legacy brands."
+    },
+    {
+      "ja": "AIモデルは性能競争だけでなく、輸出規制の対象でもある。",
+      "en": "AI models are now subject to export-control politics as much as performance competition."
+    },
+    {
+      "ja": "FableとMythosを巡る規制上の制約が解除されたと報じられた。",
+      "en": "Restrictions around Anthropic's Fable and Mythos models were reported to have been lifted."
+    },
+    {
+      "ja": "モデル配備と販売の自由度が上がれば、企業の商用計画が変わる。",
+      "en": "If deployment and sales freedom improves, Anthropic's commercial plans can move faster."
+    },
+    {
+      "ja": "他社のモデルやGPU輸出管理にも同様の緩和が広がるか。",
+      "en": "Watch whether similar relief reaches other models or GPU export controls."
+    },
+    {
+      "ja": "AIは機能拡張だけでなく、防御側の更新速度も変えている。",
+      "en": "AI is changing not just product features but also the pace of defensive updates."
+    },
+    {
+      "ja": "Appleが、AI由来のサイバー脅威を背景に更新を早めた。",
+      "en": "Apple pushed updates sooner because of rising AI-driven cybersecurity concerns."
+    },
+    {
+      "ja": "端末の更新速度は、脆弱性の封じ込めとユーザー保護に直結する。",
+      "en": "Update speed directly affects how quickly vulnerabilities can be contained."
+    },
+    {
+      "ja": "同様の前倒し更新が他社にも広がるか。",
+      "en": "Watch whether other vendors also start shipping security fixes earlier."
+    },
+    {
+      "ja": "アプリ市場は、価格よりも配信ルールと手数料の争いが焦点になっている。",
+      "en": "The app market is increasingly about distribution rules and fees, not just prices."
+    },
+    {
+      "ja": "英国当局が、AppleとGoogleの実質的な二重寡占にメスを入れる方針を示した。",
+      "en": "The U.K. watchdog signaled a move against Apple's and Google's effective duopoly."
+    },
+    {
+      "ja": "課金や配信の条件が変われば、開発者の収益モデルが変わる。",
+      "en": "If app-store terms change, developers' revenue models change with them."
+    },
+    {
+      "ja": "EUや米国の規制当局が同様の措置を取るか。",
+      "en": "Watch whether regulators in the EU or U.S. follow with similar action."
+    },
+    {
+      "ja": "AIインフラは、モデル開発だけでなく余剰供給をどう収益化するかが焦点になっている。",
+      "en": "AI infrastructure is becoming a business in its own right, not just a support function."
+    },
+    {
+      "ja": "Metaが、余ったAI計算資源を外部に売る案を検討していると報じられた。",
+      "en": "Meta was reported to be considering selling spare AI compute externally."
+    },
+    {
+      "ja": "巨額のAI投資が、最終的にクラウドやインフラ販売へ転換される可能性がある。",
+      "en": "Huge AI capex may end up turning into cloud or infrastructure sales."
+    },
+    {
+      "ja": "この構想が正式な事業化に進むか、単なる観測で終わるか。",
+      "en": "Watch whether the idea becomes a real product or stays a market rumor."
+    },
+    {
+      "ja": "AI競争はモデル性能だけでなく、誰が計算資源を確保できるかの勝負になっている。",
+      "en": "AI competition is turning into a contest over who can secure enough compute."
+    },
+    {
+      "ja": "GoogleがMetaに十分なAI計算資源を供給できず、開発が遅れていると報じられた。",
+      "en": "Google was reported to be unable to supply Meta with enough AI compute, slowing development."
+    },
+    {
+      "ja": "計算資源の不足は、モデル公開日や機能差よりも深いボトルネックになる。",
+      "en": "Compute scarcity can matter more than release dates or feature lists."
+    },
+    {
+      "ja": "Metaが外部調達や自社インフラ増強で遅れを埋められるか。",
+      "en": "Watch whether Meta fills the gap through outside supply or more in-house capacity."
+    },
+    {
+      "ja": "最高裁とトランプ周辺の動きは、移民、性別ルール、選挙資金、中間選挙前の党大会まで一本の政治線でつながっている。",
+      "en": "The Supreme Court and Trump-aligned agenda are moving in parallel, tying immigration, gender rules, campaign money, and the midterm calendar into one storyline."
+    },
+    {
+      "ja": "原油と金利はなお地政学の影響を受けやすく、その波は住宅や小売、銀行ブランドの判断にも及んでいる。",
+      "en": "Oil and rates still trade as a geopolitics story, and that is spilling into housing, retail, and banking decisions."
+    },
+    {
+      "ja": "AIはモデル競争だけではなく、計算資源、輸出規制、配信ルールの制約が勝負所になっている。",
+      "en": "AI is no longer only a model race; compute scarcity, export controls, and distribution rules are now the bottlenecks."
+    },
+    {
+      "ja": "出生地主義を巡る圧力が、議会で実際の法案や修正案に結びつくか。",
+      "en": "Whether Congress can turn the birthright-citizenship push into actual legislation."
+    },
+    {
+      "ja": "米イラン協議が原油安を維持するのか、交渉の失速で反転するのか。",
+      "en": "Whether US-Iran talks keep Brent lower or snap back on any setback."
+    },
+    {
+      "ja": "Anthropic、Apple、英国CMAを起点に、米英欧のAIとアプリ配信規制が広がるか。",
+      "en": "Whether AI regulators in the U.S., U.K., and EU broaden oversight after Anthropic, Apple, and CMA moves."
+    }
+  ]
+}

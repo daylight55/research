@@ -1,0 +1,764 @@
+{
+  "version": 1,
+  "slug": "daily-trends-2026-07-02",
+  "date": "2026-07-02",
+  "category": "tech-news",
+  "tags": ["news", "politics", "economy", "technology"],
+  "generation": {
+    "model": "gpt-5.4-mini"
+  },
+  "heroImage": {
+    "query": "Donald Trump Supreme Court birthright citizenship ruling July 2026",
+    "alt": {
+      "ja": "出生地主義を巡る米最高裁判断とトランプ周辺の政治対応を象徴する写真",
+      "en": "A photo representing the Supreme Court's birthright citizenship ruling and the Trump political response"
+    }
+  },
+  "locales": {
+    "ja": {
+      "title": "2026-07-02 最高裁とAI規制が同時進行、制度と資本の圧力が表面化",
+      "description": "米最高裁の判断、トランプ周辺の政治資金と選挙戦術、そしてAI規制と計算資源の逼迫が同じ日に重なった。",
+      "rssSummary": "最高裁判断、トランプ資金開示、金利と原油、英国小売再編、AIの規制と供給制約が並んだ。",
+      "opening": "米国では最高裁が出生地主義とトランス選手の扱いを巡る判断を相次いで示し、トランプ周辺では出生ツーリズム対策と資金開示が同時に前面へ出た。経済面では原油、金利、英国小売と銀行ブランド再編が同じ時間帯に動き、技術面ではAIモデルの安全審査、輸出規制、App Store規制、計算資源の逼迫が重なっている。日次の焦点は、政策の方向転換が市場価格と企業の投資判断にどう波及するかに移っている。",
+      "crossCutting": [
+        "最高裁とトランプ周辺の動きは、移民、性別ルール、選挙資金、中間選挙前の党大会まで一本の政治線でつながっている。",
+        "原油と金利はなお地政学の影響を受けやすく、その波は住宅や小売、銀行ブランドの判断にも及んでいる。",
+        "AIはモデル競争だけではなく、計算資源、輸出規制、配信ルールの制約が勝負所になっている。"
+      ],
+      "watchItems": [
+        "出生地主義を巡る圧力が、議会で実際の法案や修正案に結びつくか。",
+        "米イラン協議が原油安を維持するのか、交渉の失速で反転するのか。",
+        "Anthropic、Apple、英国CMAを起点に、米英欧のAIとアプリ配信規制が広がるか。"
+      ],
+      "sourceNotes": {
+        "politics": [
+          "直近24-48時間の米国政治は、出生地主義、出生ツーリズム、トランス選手、資金開示、中間選挙前の党大会を分けて採用した。",
+          "財務開示は公開文書に基づく要約記事を使い、金額と比率は記事本文の数値に合わせた。",
+          "政治画像は各記事の主画像を使い、最高裁前、ホワイトハウス、抗議集会、トランプのコイン写真、オーバルオフィスを割り当てた。"
+        ],
+        "economy": [
+          "同一のGuardianライブ更新から、金利、ECB、原油、TG Jones、Halifax の5本を抽出した。",
+          "Paramount/WBDのEU承認案件は重要だが、この日付では経済5本に入れるよりも、英国の金利・小売・銀行ブランド再編を優先した。",
+          "原油と金利は相互連動が強いので、断定を避けて、値動きと政策反応の関係を短くまとめた。"
+        ],
+        "technology": [
+          "AIは Anthropic の輸出規制解除、Apple の前倒し更新、CMA のアプリ課金是正、Meta/Google の計算資源制約でまとめた。",
+          "Meta/Google の供給制約は一次報道を追い切れなかったため、FTを引いた再報で慎重に要約した。",
+          "Google Gemini 3.5 Pro の遅延は候補だったが、同日の compute shortage と重複するため除外した。"
+        ],
+        "decisions": [
+          "Reuters直送で画像が取れた素材を優先し、画像が弱い候補は落とした。",
+          "Paramount/WBDは画像は揃ったが、日次の主シグナルをつくる5本に入れず補欠扱いにした。",
+          "中東情勢は原油、住宅、金利に波及するため、経済セクションで横断参照に留めた。"
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-07-02",
+          "Article slug: `daily-trends-2026-07-02`",
+          "model: `gpt-5.4-mini`",
+          "skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)",
+          "prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)",
+          "Run Context: Daily Trend News digest for `tech-news`; cover politics 5, economy 5, technology 5; prioritize the most recent 24-48 hours and ship the structured JSON for renderer output."
+        ],
+        "decisionNotes": [
+          "政治は最高裁、トランプ周辺の資金開示、党大会、出生ツーリズム、トランス選手の5本に絞り、同日に動いた制度変更を束ねた。",
+          "経済は金利、原油、英国小売、銀行ブランド再編を同じライブ更新から採った。供給不足の説明は短くし、値動きの先行きを断定しないようにした。",
+          "技術はAIモデル規制、Appleのセキュリティ更新前倒し、アプリ配信規制、Meta/Googleの計算資源制約を選び、Google Geminiの遅延は重複候補として外した。"
+        ],
+        "followUps": [
+          "出生地主義とトランス選手の判断に対する州政府と連邦議会の反応を追う。",
+          "米イラン協議の進展で原油と金利が反転するかを確認する。",
+          "Anthropic、Apple、英国CMA、Meta/Googleの動きが7月前半の規制論に広がるかを見る。"
+        ]
+      }
+    },
+    "en": {
+      "title": "2026-07-02 Supreme Court rulings and AI capital shifts collide",
+      "description": "Supreme Court rulings, Trump-related political disclosures, oil and rate moves, UK retail restructuring, and AI regulation all hit the same day.",
+      "rssSummary": "Court rulings, Trump disclosures, oil and rate moves, UK retail restructuring, and AI supply and rule pressure moved together.",
+      "opening": "In the U.S., the Supreme Court pushed birthright citizenship and transgender-athlete fights back into the center of politics, while Trump-world put tourism enforcement and financial disclosure on the same stage. In markets, oil, rates, UK retail restructuring, and bank-brand changes moved in one cluster, and in tech the pressure points were different but connected: safety reviews, export controls, app-store rules, and scarce AI compute. The common thread is that policy shifts are increasingly showing up as pricing, supply, and deployment constraints.",
+      "crossCutting": [
+        "The Supreme Court and Trump-aligned agenda are moving in parallel, tying immigration, gender rules, campaign money, and the midterm calendar into one storyline.",
+        "Oil and rates still trade as a geopolitics story, and that is spilling into housing, retail, and banking decisions.",
+        "AI is no longer only a model race; compute scarcity, export controls, and distribution rules are now the bottlenecks."
+      ],
+      "watchItems": [
+        "Whether Congress can turn the birthright-citizenship push into actual legislation.",
+        "Whether US-Iran talks keep Brent lower or snap back on any setback.",
+        "Whether AI regulators in the U.S., U.K., and EU broaden oversight after Anthropic, Apple, and CMA moves."
+      ],
+      "sourceNotes": {
+        "politics": [
+          "The U.S. political cluster was split into birthright citizenship, birth tourism, transgender athletes, financial disclosure, and a pre-midterm party convention.",
+          "The financial-disclosure item was taken from a summary article backed by the public filing, so the money figures stay tied to the published numbers.",
+          "Image selection favored the lead image from each article page so the cards stay anchored to the same event framing."
+        ],
+        "economy": [
+          "One Guardian live update supplied the rate, oil, retail, and bank-rebranding items, which made the day feel more like a policy-and-prices cluster than isolated headlines.",
+          "Paramount/Warner Bros. Discovery EU approval was important but kept as a reserve candidate because the live macro and UK retail items better represented the day's pulse.",
+          "Oil and rates were described cautiously because the market reaction can change quickly with any new Middle East headline."
+        ],
+        "technology": [
+          "AI was summarized through Anthropic export relief, Apple's earlier security updates, the U.K. app-store duopoly push, and compute-capacity pressure on Meta and Google.",
+          "The Meta/Google compute story was cautious because it came through secondary reporting rather than a first-party announcement.",
+          "Google's Gemini 3.5 Pro delay was treated as a fallback candidate because it overlapped with the compute-scarcity story."
+        ],
+        "decisions": [
+          "I favored sources with stable article pages and image URLs over thinner social posts or unattributed summaries.",
+          "Paramount/WBD was kept out of the main economy five even though it had a solid source page and image, because the live UK macro cluster was more representative.",
+          "The oil topic was kept even with a less direct image match because it remains one of the key market-sensitive developments in the 24-48 hour window."
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-07-02",
+          "Article slug: `daily-trends-2026-07-02`",
+          "model: `gpt-5.4-mini`",
+          "skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)",
+          "prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)",
+          "Run Context: Daily Trend News digest for `tech-news`; cover politics 5, economy 5, technology 5; prioritize the latest 24-48 hours and deliver the structured JSON for the renderer."
+        ],
+        "decisionNotes": [
+          "Politics was anchored in the Supreme Court, Trump financial disclosure, birth tourism, transgender-athlete, and convention items that all moved inside the same 24-48 hour window.",
+          "Economy was built from a single live market update plus a few downstream UK restructuring items so the digest would stay compact and current.",
+          "Technology focused on AI regulation, AI security, app-store competition, and compute scarcity rather than trying to cover every AI headline of the day."
+        ],
+        "followUps": [
+          "Track state and congressional responses to the Supreme Court items.",
+          "Watch whether Middle East diplomacy keeps oil and rates under pressure.",
+          "See whether Anthropic, Apple, and the U.K. regulator prompt follow-on action in the U.S. and EU."
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "tone": "politics",
+      "heading": {
+        "ja": "政治",
+        "en": "Politics"
+      },
+      "topics": [
+        {
+          "id": "politics-birthright-citizenship",
+          "title": {
+            "ja": "出生地主義を巡る最高裁判断",
+            "en": "Birthright citizenship ruling"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/30/trump-news-at-a-glance-latest-updates-today",
+            "source": "The Guardian",
+            "title": {
+              "ja": "米最高裁、出生地主義を維持",
+              "en": "US Supreme Court upholds birthright citizenship"
+            },
+            "description": {
+              "ja": "最高裁が出生地主義を巡る争点を前面に戻し、行政側の強硬策に制約をかけた当日報道。",
+              "en": "A live update that put the Supreme Court's birthright-citizenship ruling back at the center of the Trump agenda."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/16a24332f3873b8cc500b6e042d02edc5849c46e/398_0_4626_3703/master/4626.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "出生地主義判決を受けて最高裁前に集まった人々",
+              "en": "People gathered outside the Supreme Court after the birthright-citizenship ruling"
+            }
+          },
+          "bottomLine": {
+            "ja": "最高裁が出生地主義を巡る争点を再び政治の中心に置いた。",
+            "en": "The Supreme Court put birthright citizenship back at the center of politics."
+          },
+          "whatHappened": {
+            "ja": "出生地主義を巡る判断が出て、行政による一方的な移民対策の余地が狭まった。",
+            "en": "The court issued a ruling on birthright citizenship that narrowed the space for unilateral immigration enforcement."
+          },
+          "whyItMatters": {
+            "ja": "移民、選挙、州法の争いが同時に動くため、政策の実装と訴訟が長引く可能性がある。",
+            "en": "Immigration, elections, and state-law fights all move together here, so the policy battle is likely to stay in court and in Congress."
+          },
+          "whatToWatch": {
+            "ja": "州政府と議会がどこまで法案や追加訴訟で反撃するか。",
+            "en": "Watch for state and congressional pushback, including new bills or follow-on litigation."
+          }
+        },
+        {
+          "id": "politics-birth-tourism",
+          "title": {
+            "ja": "出生ツーリズム対策を強化",
+            "en": "Birth-tourism crackdown"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/30/trump-news-at-a-glance-latest-updates-today",
+            "source": "The Guardian",
+            "title": {
+              "ja": "出生ツーリズムへの対策を強化",
+              "en": "Birth-tourism crackdown intensifies"
+            },
+            "description": {
+              "ja": "最高裁判断を受けて、出生ツーリズムの取り締まりを強める方針が前面に出た。",
+              "en": "The same live update showed the administration leaning harder into enforcement against birth tourism."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/051f83e17967b5acd21321bbd33d543c27ce8696/0_0_6350_4235/master/6350.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "出生ツーリズム対策を伝えるトランプ政権関連の写真",
+              "en": "A Trump-administration-related image tied to birth-tourism enforcement"
+            }
+          },
+          "bottomLine": {
+            "ja": "判決だけでなく、執行の強さそのものが争点になっている。",
+            "en": "The enforcement response is becoming part of the story, not just the ruling."
+          },
+          "whatHappened": {
+            "ja": "出生地主義の議論に続いて、出生ツーリズムへの取り締まり強化が示された。",
+            "en": "The birthright-citizenship fight was followed by a sharper crackdown on birth tourism."
+          },
+          "whyItMatters": {
+            "ja": "入国、医療、州の行政運用にまで波及するため、政治論争が現場の手続きに落ちてくる。",
+            "en": "It reaches immigration, healthcare, and state administration, so the political fight quickly becomes an operational one."
+          },
+          "whatToWatch": {
+            "ja": "どの州で先に運用変更や法廷対応が始まるか。",
+            "en": "Watch which states move first on policy changes or legal resistance."
+          }
+        },
+        {
+          "id": "politics-trans-athletes",
+          "title": {
+            "ja": "トランス選手の規則を巡る判断",
+            "en": "Trans-athlete rules"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/30/trump-news-at-a-glance-latest-updates-today",
+            "source": "The Guardian",
+            "title": {
+              "ja": "トランス選手を巡る州法争い",
+              "en": "State bans on transgender athletes"
+            },
+            "description": {
+              "ja": "女子スポーツを巡る州法と連邦法の綱引きが、最高裁判断で再び注目された。",
+              "en": "A Supreme Court decision kept the fight over transgender-athlete bans in the headlines."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/eb87f538a6954edf9cf79eae700aab0e57cdf0cc/1340_0_6827_5464/master/6827.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "トランス選手を巡る議論の文脈を示すスポーツ関連写真",
+              "en": "Sports-related photo tied to the transgender-athlete debate"
+            }
+          },
+          "bottomLine": {
+            "ja": "スポーツ規則が文化戦争の中心にあることを、最高裁が改めて示した。",
+            "en": "The court showed again that sports rules remain a core culture-war issue."
+          },
+          "whatHappened": {
+            "ja": "トランス選手の参加を巡る州法の扱いが、最高裁の判断で再び前面に出た。",
+            "en": "State restrictions on transgender athletes came back into focus after the court's ruling."
+          },
+          "whyItMatters": {
+            "ja": "学校、州政府、スポーツ団体が同じ基準で動けず、制度設計の摩擦が続く。",
+            "en": "Schools, states, and sports bodies still lack a single standard, so friction will continue."
+          },
+          "whatToWatch": {
+            "ja": "他州への波及と、連邦法との整合を巡る追加訴訟。",
+            "en": "Watch for spillover to other states and more litigation over federal preemption."
+          }
+        },
+        {
+          "id": "politics-crypto-disclosure",
+          "title": {
+            "ja": "トランプの資産開示に暗号資産収入",
+            "en": "Trump financial disclosure"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/30/trump-news-at-a-glance-latest-updates-today",
+            "source": "The Guardian",
+            "title": {
+              "ja": "トランプの資産開示、暗号資産が押し上げ",
+              "en": "Trump disclosure boosted by crypto income"
+            },
+            "description": {
+              "ja": "公開された資産開示で、暗号資産とライセンス収入が大きな比重を占めた。",
+              "en": "A public filing showed Trump's income leaning heavily on crypto and licensing."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/f2c8c7e5d4332a4502057ea84939e8721d977357/1359_2308_3673_2938/master/3673.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "暗号資産の利益が注目されたトランプ関連写真",
+              "en": "Trump-related image tied to the crypto-heavy disclosure"
+            }
+          },
+          "bottomLine": {
+            "ja": "政治と暗号資産が、収入源としても規制争点としても一体化している。",
+            "en": "Politics and crypto are becoming inseparable both as a revenue source and as a regulatory issue."
+          },
+          "whatHappened": {
+            "ja": "2025年の資産開示で、暗号資産由来の収入が大きく浮き彫りになった。",
+            "en": "The 2025 disclosure highlighted just how large the crypto income stream has become."
+          },
+          "whyItMatters": {
+            "ja": "資産開示は選挙資金、規制、利益相反の議論に直結する。",
+            "en": "Financial disclosures feed directly into campaign-money, regulation, and conflict-of-interest debates."
+          },
+          "whatToWatch": {
+            "ja": "暗号資産関連の保有や収入に対する議会・監督当局の反応。",
+            "en": "Watch for congressional or regulatory reaction to the crypto-linked income and holdings."
+          }
+        },
+        {
+          "id": "politics-gop-midterm-convention",
+          "title": {
+            "ja": "中間選挙前に党大会を開催へ",
+            "en": "Pre-midterm GOP convention"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jun/30/trump-republican-convention-midterms-dallas",
+            "source": "The Guardian",
+            "title": {
+              "ja": "共和党、中間選挙前に党大会へ",
+              "en": "Republicans plan a pre-midterm convention"
+            },
+            "description": {
+              "ja": "共和党が中間選挙に向けて、異例の全国党大会を準備していると伝えた。",
+              "en": "The report said Republicans are preparing an unusual national convention ahead of the midterms."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/a2cc468f880e085bb6555746571b1ada0bb2964a/0_0_3600_2401/master/3600.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "中間選挙前の政治集会を示すトランプ写真",
+              "en": "Trump image tied to the planned pre-midterm political convention"
+            }
+          },
+          "bottomLine": {
+            "ja": "選挙戦はすでに中間選挙モードに入り、動員の演出が始まっている。",
+            "en": "The midterm campaign has already moved into mobilization mode."
+          },
+          "whatHappened": {
+            "ja": "共和党が、秋の中間選挙前に全国党大会を開く計画を示した。",
+            "en": "Republicans signaled plans for a national convention before the fall midterms."
+          },
+          "whyItMatters": {
+            "ja": "資金集めと候補者動員を一気に進めるための政治イベントになる。",
+            "en": "It would serve as a fundraising and candidate-mobilization event rolled into one."
+          },
+          "whatToWatch": {
+            "ja": "会場、日程、そしてトランプ本人の関与の深さ。",
+            "en": "Watch the venue, the date, and how directly Trump is involved."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "economy",
+      "heading": {
+        "ja": "経済",
+        "en": "Economy"
+      },
+      "topics": [
+        {
+          "id": "economy-fed-inflation-sintra",
+          "title": {
+            "ja": "Sintraで金利リスクは後退",
+            "en": "Inflation risks ease at Sintra"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/live/2026/jul/01/uk-house-prices-flat-june-nationwide-higher-energy-bills-cap-inflation-bank-england-latest-news-updates",
+            "source": "The Guardian",
+            "title": {
+              "ja": "Warsh、インフレリスク後退と発言",
+              "en": "Warsh says inflation risks have come down"
+            },
+            "description": {
+              "ja": "Sintra会合で、米欧の金利見通しとインフレ見方がやや落ち着いた。",
+              "en": "The Sintra forum briefly cooled the rate and inflation debate."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/57b065171cb2a2a9633b9d42c571e90fb6c463f7/0_978_4724_3780/master/4724.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "Sintra会合で発言するKevin Warsh",
+              "en": "Kevin Warsh speaking at the Sintra forum"
+            }
+          },
+          "bottomLine": {
+            "ja": "金利高止まりの警戒は残るが、少なくとも直近の会合ではインフレ圧力にやや余裕が出た。",
+            "en": "Rate pressure remains, but the latest forum suggested a bit more room on inflation."
+          },
+          "whatHappened": {
+            "ja": "Warshがインフレリスクは下がったと述べ、政策当局の視線がやや中立寄りになった。",
+            "en": "Warsh said inflation risks have come down, nudging the policy tone a little more neutral."
+          },
+          "whyItMatters": {
+            "ja": "金利見通しは住宅、企業投資、通貨まで連鎖する。",
+            "en": "Rate expectations feed directly into housing, investment, and currencies."
+          },
+          "whatToWatch": {
+            "ja": "次の中央銀行会合で、慎重姿勢が本当に緩むか。",
+            "en": "Watch whether the next central-bank meetings actually soften the cautious stance."
+          }
+        },
+        {
+          "id": "economy-eurozone-inflation",
+          "title": {
+            "ja": "ユーロ圏インフレは2.8%に減速",
+            "en": "Eurozone inflation slows to 2.8%"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/live/2026/jul/01/uk-house-prices-flat-june-nationwide-higher-energy-bills-cap-inflation-bank-england-latest-news-updates",
+            "source": "The Guardian",
+            "title": {
+              "ja": "ラガルド、インフレリスクはより均衡と発言",
+              "en": "Lagarde says inflation risks are more balanced"
+            },
+            "description": {
+              "ja": "ECBフォーラムで、ユーロ圏インフレの減速と政策の距離感が確認された。",
+              "en": "The ECB forum reinforced the view that eurozone inflation is easing."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/f75a90fbbaa9fc1fb85bea5a42a6ed409f7e4852/0_0_4724_3390/master/4724.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "ECBフォーラムで発言するクリスティーヌ・ラガルド",
+              "en": "Christine Lagarde speaking at the ECB forum"
+            }
+          },
+          "bottomLine": {
+            "ja": "物価の伸びが鈍る一方で、利下げの速度は依然として慎重に見られている。",
+            "en": "Inflation is cooling, but markets still see a cautious pace for any rate cuts."
+          },
+          "whatHappened": {
+            "ja": "ユーロ圏インフレ率が2.8%へ鈍化し、ECBの見通しが再調整された。",
+            "en": "Eurozone inflation eased to 2.8%, prompting another read on the ECB outlook."
+          },
+          "whyItMatters": {
+            "ja": "ECBの一言は債券、銀行株、為替にすぐ反映される。",
+            "en": "A few ECB words can move bonds, bank stocks, and FX almost immediately."
+          },
+          "whatToWatch": {
+            "ja": "7月以降のデータで、減速が一過性か定着かを見極める。",
+            "en": "Watch July data to see whether the slowdown is temporary or durable."
+          }
+        },
+        {
+          "id": "economy-oil-us-iran-talks",
+          "title": {
+            "ja": "米イラン協議で原油が下落",
+            "en": "Oil falls on US-Iran talks"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/live/2026/jul/01/uk-house-prices-flat-june-nationwide-higher-energy-bills-cap-inflation-bank-england-latest-news-updates",
+            "source": "The Guardian",
+            "title": {
+              "ja": "原油は米イラン協議で1%下落",
+              "en": "Oil prices fall 1% as US-Iran talks continue"
+            },
+            "description": {
+              "ja": "中東交渉の進展観測が、原油とインフレ見通しを押し下げた。",
+              "en": "Talks between the U.S. and Iran pushed oil and inflation expectations lower."
+            },
+            "imageUrl": "https://media.guim.co.uk/e3d43299e85f27e579437406d4cbfb596d9d0c94/0_0_3000_3000/500.jpg",
+            "imageAlt": {
+              "ja": "原油価格の変動を示すシンプルな市場チャート",
+              "en": "A simple market chart showing oil price movement"
+            }
+          },
+          "bottomLine": {
+            "ja": "外交の進展ひとつで、エネルギー価格とインフレ見通しがすぐ動く。",
+            "en": "A single diplomatic update can move energy prices and inflation expectations quickly."
+          },
+          "whatHappened": {
+            "ja": "米イラン協議が続くなかで、原油価格は1%程度下落した。",
+            "en": "Oil slipped about 1% as U.S.-Iran talks continued."
+          },
+          "whyItMatters": {
+            "ja": "原油は輸送費、物価、企業の利益率に直結する。",
+            "en": "Oil feeds directly into transport costs, inflation, and corporate margins."
+          },
+          "whatToWatch": {
+            "ja": "交渉の進展か失速かで、値動きが反転するか。",
+            "en": "Watch whether the next diplomatic step keeps prices down or reverses them."
+          }
+        },
+        {
+          "id": "economy-tg-jones-closures",
+          "title": {
+            "ja": "TG Jonesが最大150店閉鎖へ",
+            "en": "TG Jones store closures"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/live/2026/jul/01/uk-house-prices-flat-june-nationwide-higher-energy-bills-cap-inflation-bank-england-latest-news-updates",
+            "source": "The Guardian",
+            "title": {
+              "ja": "旧WH Smith系店舗、最大150店閉鎖へ",
+              "en": "Up to 150 former WH Smith stores to close"
+            },
+            "description": {
+              "ja": "英国小売の再編で、旧WH Smith店舗の閉鎖が広がる見通し。",
+              "en": "UK retail restructuring is forcing a large closure wave among former WH Smith stores."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/186af30ec4fe30a49b5a33243b2d0f780f33e22e/0_0_3781_2772/master/3781.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "閉鎖対象となる旧WH Smith系店舗の写真",
+              "en": "Former WH Smith store tied to the closure plan"
+            }
+          },
+          "bottomLine": {
+            "ja": "英国小売は需要の弱さだけでなく、業態再編そのものが重荷になっている。",
+            "en": "UK retail is under pressure from both weak demand and structural reorganization."
+          },
+          "whatHappened": {
+            "ja": "旧WH Smith系店舗の閉鎖計画が拡大し、店舗網の縮小が進む。",
+            "en": "Closure plans for former WH Smith stores widened, shrinking the chain's footprint."
+          },
+          "whyItMatters": {
+            "ja": "雇用、駅ナカ需要、地方の商業空間に直接影響する。",
+            "en": "It affects jobs, travel-hub retail, and high-street footfall."
+          },
+          "whatToWatch": {
+            "ja": "どの地域の店舗が先に閉鎖されるか。",
+            "en": "Watch which locations are hit first."
+          }
+        },
+        {
+          "id": "economy-halifax-brand-phaseout",
+          "title": {
+            "ja": "Halifaxブランドが姿を消す",
+            "en": "Halifax brand phase-out"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/business/live/2026/jul/01/uk-house-prices-flat-june-nationwide-higher-energy-bills-cap-inflation-bank-england-latest-news-updates",
+            "source": "The Guardian",
+            "title": {
+              "ja": "Lloyds、Halifaxブランドを整理へ",
+              "en": "Lloyds phases out the Halifax brand"
+            },
+            "description": {
+              "ja": "英国の銀行ブランド再編が、歴史あるHalifaxの名前にまで及んだ。",
+              "en": "Bank-brand consolidation in the U.K. reached the long-running Halifax name."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/e542fa4fc7fc416c7e07736ae9d54ef0b9820bb1/0_0_8640_5760/master/8640.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "Halifaxブランドの整理を示す英国銀行店舗の写真",
+              "en": "A U.K. bank branch tied to the Halifax brand phase-out"
+            }
+          },
+          "bottomLine": {
+            "ja": "銀行は店舗とブランドを減らし、コストと顧客導線をまとめ直している。",
+            "en": "Banks are trimming branches and brands to simplify cost and customer flows."
+          },
+          "whatHappened": {
+            "ja": "LloydsがHalifaxブランドの整理を進め、長年の名前が退場局面に入った。",
+            "en": "Lloyds moved to phase out the Halifax brand after years of overlap."
+          },
+          "whyItMatters": {
+            "ja": "銀行再編は雇用、支店網、顧客の口座移行に影響する。",
+            "en": "Bank consolidation affects jobs, branch access, and account migration."
+          },
+          "whatToWatch": {
+            "ja": "他の旧来ブランドにも同じ整理が広がるか。",
+            "en": "Watch for similar consolidation at other legacy brands."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "technology",
+      "heading": {
+        "ja": "技術",
+        "en": "Technology"
+      },
+      "topics": [
+        {
+          "id": "technology-anthropic-models",
+          "title": {
+            "ja": "Anthropicの規制対象が解除",
+            "en": "Anthropic export controls lifted"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/technology/2026/jul/01/anthropic-fable-mythos-ai-models-us-export-controls-lifted",
+            "source": "The Guardian",
+            "title": {
+              "ja": "Anthropic、Fable/Mythosの輸出規制が解除",
+              "en": "Anthropic says export controls on Fable and Mythos have been lifted"
+            },
+            "description": {
+              "ja": "Anthropicのモデルを巡る輸出規制が外れ、AI供給の政治リスクが一段下がった。",
+              "en": "A report said Anthropic's model export restrictions were lifted, easing one layer of AI political risk."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/deb25693505fc9833c2bd26bd1dc5def55542723/0_0_5000_3333/master/5000.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "AnthropicのAIモデル報道を示すサーバー関連写真",
+              "en": "Server-related image tied to the Anthropic model report"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIモデルは性能競争だけでなく、輸出規制の対象でもある。",
+            "en": "AI models are now subject to export-control politics as much as performance competition."
+          },
+          "whatHappened": {
+            "ja": "FableとMythosを巡る規制上の制約が解除されたと報じられた。",
+            "en": "Restrictions around Anthropic's Fable and Mythos models were reported to have been lifted."
+          },
+          "whyItMatters": {
+            "ja": "モデル配備と販売の自由度が上がれば、企業の商用計画が変わる。",
+            "en": "If deployment and sales freedom improves, Anthropic's commercial plans can move faster."
+          },
+          "whatToWatch": {
+            "ja": "他社のモデルやGPU輸出管理にも同様の緩和が広がるか。",
+            "en": "Watch whether similar relief reaches other models or GPU export controls."
+          }
+        },
+        {
+          "id": "technology-apple-security-updates",
+          "title": {
+            "ja": "Appleがセキュリティ更新を前倒し",
+            "en": "Apple security updates accelerated"
+          },
+          "source": {
+            "href": "https://timesofindia.indiatimes.com/technology/tech-news/apple-is-releasing-updates-early-as-ai-powered-cybersecurity-concerns-rise/articleshow/132091284.cms",
+            "source": "Times of India",
+            "title": {
+              "ja": "Apple、AI由来の脅威で更新を前倒し",
+              "en": "Apple releases updates early as AI-powered cybersecurity concerns rise"
+            },
+            "description": {
+              "ja": "AIを使った攻撃への警戒から、Appleが通常より早い更新を出した。",
+              "en": "Apple moved security updates earlier than usual amid AI-driven cyber concerns."
+            },
+            "imageUrl": "https://static.toiimg.com/thumb/msid-132091279%2Cimgsize-36654%2Cwidth-400%2Cheight-225%2Cresizemode-4/apple-ios-security-update.jpg",
+            "imageAlt": {
+              "ja": "Appleのセキュリティ更新を伝えるiPhone画像",
+              "en": "An iPhone image tied to Apple's security update"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIは機能拡張だけでなく、防御側の更新速度も変えている。",
+            "en": "AI is changing not just product features but also the pace of defensive updates."
+          },
+          "whatHappened": {
+            "ja": "Appleが、AI由来のサイバー脅威を背景に更新を早めた。",
+            "en": "Apple pushed updates sooner because of rising AI-driven cybersecurity concerns."
+          },
+          "whyItMatters": {
+            "ja": "端末の更新速度は、脆弱性の封じ込めとユーザー保護に直結する。",
+            "en": "Update speed directly affects how quickly vulnerabilities can be contained."
+          },
+          "whatToWatch": {
+            "ja": "同様の前倒し更新が他社にも広がるか。",
+            "en": "Watch whether other vendors also start shipping security fixes earlier."
+          }
+        },
+        {
+          "id": "technology-app-store-duopoly",
+          "title": {
+            "ja": "英当局がApp Store寡占に圧力",
+            "en": "U.K. pressures the App Store duopoly"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/technology/2026/jun/30/how-the-watchdog-is-trying-to-break-apples-and-googles-effective-duopoly-on-app-stores",
+            "source": "The Guardian",
+            "title": {
+              "ja": "英当局、AppleとGoogleのアプリ課金支配を是正へ",
+              "en": "U.K. watchdog aims to curb Apple and Google app-store dominance"
+            },
+            "description": {
+              "ja": "英競争当局が、アプリ配信と課金の支配力を分散させる方針を示した。",
+              "en": "The U.K. competition watchdog moved to weaken Apple and Google's hold over app distribution and payments."
+            },
+            "imageUrl": "https://i.guim.co.uk/img/media/ad84b52ab41b9c2f075bbac386766cf028d9c191/330_0_4270_3419/master/4270.jpg?crop=none&dpr=1&s=none&width=465",
+            "imageAlt": {
+              "ja": "AppleとGoogleのアプリ市場支配を示す写真",
+              "en": "Image tied to Apple and Google app-store dominance"
+            }
+          },
+          "bottomLine": {
+            "ja": "アプリ市場は、価格よりも配信ルールと手数料の争いが焦点になっている。",
+            "en": "The app market is increasingly about distribution rules and fees, not just prices."
+          },
+          "whatHappened": {
+            "ja": "英国当局が、AppleとGoogleの実質的な二重寡占にメスを入れる方針を示した。",
+            "en": "The U.K. watchdog signaled a move against Apple's and Google's effective duopoly."
+          },
+          "whyItMatters": {
+            "ja": "課金や配信の条件が変われば、開発者の収益モデルが変わる。",
+            "en": "If app-store terms change, developers' revenue models change with them."
+          },
+          "whatToWatch": {
+            "ja": "EUや米国の規制当局が同様の措置を取るか。",
+            "en": "Watch whether regulators in the EU or U.S. follow with similar action."
+          }
+        },
+        {
+          "id": "technology-meta-cloud-business",
+          "title": {
+            "ja": "Meta、余剰AI計算資源の販売を検討",
+            "en": "Meta weighs selling excess AI compute"
+          },
+          "source": {
+            "href": "https://www.businessinsider.com/meta-stock-cloud-computing-ai-compute-tech-stocks-data-centers-2026-7",
+            "source": "Business Insider",
+            "title": {
+              "ja": "Meta、余剰AI計算資源を売る計画が浮上",
+              "en": "Meta reportedly plans to sell excess AI computing power"
+            },
+            "description": {
+              "ja": "AI向け設備を自社利用だけでなく、クラウド的な販売に回す案が報じられた。",
+              "en": "A report said Meta may try to turn unused AI infrastructure into a sellable cloud-like product."
+            },
+            "imageUrl": "https://i.insider.com/6a451336e218c3b62535fd00?width=700",
+            "imageAlt": {
+              "ja": "Meta関連の画面イメージ",
+              "en": "A Meta-related image used in the report"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIインフラは、モデル開発だけでなく余剰供給をどう収益化するかが焦点になっている。",
+            "en": "AI infrastructure is becoming a business in its own right, not just a support function."
+          },
+          "whatHappened": {
+            "ja": "Metaが、余ったAI計算資源を外部に売る案を検討していると報じられた。",
+            "en": "Meta was reported to be considering selling spare AI compute externally."
+          },
+          "whyItMatters": {
+            "ja": "巨額のAI投資が、最終的にクラウドやインフラ販売へ転換される可能性がある。",
+            "en": "Huge AI capex may end up turning into cloud or infrastructure sales."
+          },
+          "whatToWatch": {
+            "ja": "この構想が正式な事業化に進むか、単なる観測で終わるか。",
+            "en": "Watch whether the idea becomes a real product or stays a market rumor."
+          }
+        },
+        {
+          "id": "technology-google-meta-ai-compute",
+          "title": {
+            "ja": "GoogleがMeta向けAI供給を絞る",
+            "en": "Google limits AI supply to Meta"
+          },
+          "source": {
+            "href": "https://www.tomsguide.com/ai/google-couldnt-give-meta-enough-ai-power-heres-why-running-ai-locally-suddenly-makes-even-more-sense",
+            "source": "Tom's Guide",
+            "title": {
+              "ja": "GoogleがMetaに十分なAIパワーを渡せなかった",
+              "en": "Google couldn't give Meta enough AI power"
+            },
+            "description": {
+              "ja": "MetaのAIモデル開発が、計算資源の不足で遅れているというFT報道を要約したもの。",
+              "en": "A summary of FT reporting said Meta's AI model work is being slowed by a compute bottleneck."
+            },
+            "imageUrl": "https://static.toiimg.com/thumb/msid-132071354%2Cimgsize-29604%2Cwidth-400%2Cheight-225%2Cresizemode-4/meta-google.jpg",
+            "imageAlt": {
+              "ja": "GoogleとMetaのAI供給制約を示す写真",
+              "en": "Image tied to Google and Meta AI supply constraints"
+            }
+          },
+          "bottomLine": {
+            "ja": "AI競争はモデル性能だけでなく、誰が計算資源を確保できるかの勝負になっている。",
+            "en": "AI competition is turning into a contest over who can secure enough compute."
+          },
+          "whatHappened": {
+            "ja": "GoogleがMetaに十分なAI計算資源を供給できず、開発が遅れていると報じられた。",
+            "en": "Google was reported to be unable to supply Meta with enough AI compute, slowing development."
+          },
+          "whyItMatters": {
+            "ja": "計算資源の不足は、モデル公開日や機能差よりも深いボトルネックになる。",
+            "en": "Compute scarcity can matter more than release dates or feature lists."
+          },
+          "whatToWatch": {
+            "ja": "Metaが外部調達や自社インフラ増強で遅れを埋められるか。",
+            "en": "Watch whether Meta fills the gap through outside supply or more in-house capacity."
+          }
+        }
+      ]
+    }
+  ]
+}

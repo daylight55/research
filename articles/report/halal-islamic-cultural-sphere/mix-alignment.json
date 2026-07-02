@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": { "ja": "1. エグゼクティブサマリー", "en": "1. Executive Summary" },
+      "pairs": [
+        { "ja": "ハラールは、イスラム法で許されたものを指す言葉である。", "en": "Halal means what Islamic law permits." },
+        { "ja": "だが現代社会でハラールを読むには、豚肉と酒を避ける食規範だけでは足りない。", "en": "But in the contemporary world, halal cannot be reduced to avoiding pork and alcohol." },
+        { "ja": "現代のハラールは、信仰実践と品質保証の二重構造を持つ。", "en": "Modern halal has a double structure: religious practice and quality assurance." },
+        { "ja": "この構造は、イスラム文化圏の広さと多様性を反映している。", "en": "This structure reflects the breadth and diversity of Islamic cultural spheres." },
+        { "ja": "つまり、ハラールは一部地域の特殊な習慣ではなく、世界の消費、移動、規制、文化摩擦を読む入口である。", "en": "Halal is therefore not a local custom." },
+        { "ja": "起点は信仰だが、現代の争点は、信仰をどう証明し、誰が証明の権限を持ち、どこまで市場と国家が介入するかに移っている。", "en": "Faith remains the starting point, but the modern dispute concerns proof: who can certify halal status, how far markets and states should intervene, and how consumers can judge claims they cannot inspect themselves." }
+      ]
+    },
+    {
+      "id": "concepts",
+      "heading": { "ja": "2. ハラール、ハラーム、タイイブ、シュブハ", "en": "2. Halal, Haram, Tayyib, and Doubt" },
+      "pairs": [
+        { "ja": "ハラールを理解する最初の軸は、許可と禁止の二分法ではない。", "en": "The first mistake is to treat halal as a simple binary." },
+        { "ja": "イスラムの生活規範では、ハラールは許されたもの、ハラームは禁じられたものを指す。", "en": "Halal means permitted, and haram means forbidden." },
+        { "ja": "だが日常の多くは、その中間にある。", "en": "But much of everyday life sits between those poles." },
+        { "ja": "もう一つの軸は、タイイブである。", "en": "A second concept is tayyib: good, wholesome, clean, or sound." },
+        { "ja": "ハラールは最低限の合法性だけでなく、清潔、安全、身体への配慮、動物への扱い、公正な取引まで含むべきだという議論が生まれる。", "en": "That language allows many Muslims to connect halal with hygiene, safety, bodily care, animal treatment, and fair exchange." },
+        { "ja": "ただし、タイイブを広げすぎると、すべての倫理的消費をハラールに吸収してしまう危険がある。", "en": "Tayyib also creates a boundary problem." },
+        { "ja": "ここに、ハラールを単なる「イスラム版オーガニック」と読んではいけない理由がある。", "en": "That is why halal should not be treated as an Islamic version of organic labeling." }
+      ]
+    },
+    {
+      "id": "food-supply-chain",
+      "heading": { "ja": "3. 食品ハラールは供給網の制度である", "en": "3. Halal Food Is a Supply-Chain System" },
+      "pairs": [
+        { "ja": "食品のハラールは、成分表だけでは判定できない。", "en": "A food product cannot be judged only by its ingredients list." },
+        { "ja": "屠畜は最も議論が集中する領域である。", "en": "Slaughter remains the most contested food issue." },
+        { "ja": "争点は、事前スタニングを認めるかどうかである。", "en": "The most persistent dispute concerns pre-slaughter stunning." },
+        { "ja": "認証制度は、この複雑さを消費者に代わって処理する。", "en": "Certification systems process this complexity on behalf of consumers." },
+        { "ja": "食品ハラールの本質は、食卓に届くまでの不可視の工程を信頼できる形にすることだ。", "en": "The core issue is trust in invisible steps." },
+        { "ja": "消費者は自分では酵素、輸送タンク、屠畜記録、洗浄手順を検査できない。", "en": "Consumers cannot inspect enzymes, transport tanks, slaughter records, or cleaning protocols themselves." },
+        { "ja": "違いは、ハラールでは宗教的正当性と技術的監査が同じラベルに重なる点にある。", "en": "The difference is that halal combines technical audit and religious legitimacy in the same label." }
+      ]
+    },
+    {
+      "id": "states-standards",
+      "heading": { "ja": "4. 国家、標準化、ローカルな法学", "en": "4. States, Standards, and Local Legal Judgment" },
+      "pairs": [
+        { "ja": "ハラールは世界共通語のように見えるが、実際には国家ごとに制度が違う。", "en": "Halal looks like a global language, but institutions differ by country." },
+        { "ja": "この違いは、単なる行政手続きの差ではない。", "en": "These differences are not merely administrative." },
+        { "ja": "標準化は、このばらつきを減らす試みである。", "en": "Standardization tries to reduce that uncertainty." },
+        { "ja": "ハラール標準は、信仰の技術化であると同時に、国家による市場統治でもある。", "en": "Halal standards turn faith into technical infrastructure, and they also turn markets into objects of state governance." },
+        { "ja": "標準化には政治性もある。", "en": "But standardization is political." },
+        { "ja": "ある国でハラールとされた製品が、別の国でそのまま受け入れられるとは限らない。", "en": "A product certified in one country may still face questions in another." }
+      ]
+    },
+    {
+      "id": "halal-economy",
+      "heading": { "ja": "5. 食品を超えるハラール経済", "en": "5. The Halal Economy Beyond Food" },
+      "pairs": [
+        { "ja": "ハラールは食品から広がり、医薬品、化粧品、観光、メディア、ファッション、金融へ伸びている。", "en": "Halal has expanded from food into pharmaceuticals, cosmetics, tourism, media, fashion, and finance." },
+        { "ja": "これは市場レポートであり、宗教実践そのものではないが、企業と政府がハラールを成長産業として扱っていることを示す。", "en": "This is market research, not a measure of religious devotion." },
+        { "ja": "医薬品と化粧品では、摂取しないものまでハラール対象になる。", "en": "In pharmaceuticals and cosmetics, halal concerns extend to products that are not ordinary food." },
+        { "ja": "医療では、必要性の原理が重要になる。", "en": "Medicine also brings necessity into the center." },
+        { "ja": "イスラム金融では、ハラールは食品ラベルではなく、利子、過度な不確実性、賭博性、禁じられた事業への関与を避ける取引設計を意味する。", "en": "In Islamic finance, halal does not mean an ingredient label." },
+        { "ja": "観光では、ハラールは「食べられる店があるか」だけでは終わらない。", "en": "In tourism, halal is not only about finding a restaurant." },
+        { "ja": "ここでは、ハラールは拒否の論理だけでなく、必要な治療をどう正当化するかの論理にもなる。", "en": "In this setting, halal is not only a language of refusal." },
+        { "ja": "金融のハラールは、成分検査ではなく、契約、リスク配分、収益の根拠、監督機関の判断を問う。", "en": "Financial halal asks about contracts, risk allocation, the basis for profit, and the authority of supervisory bodies." }
+      ]
+    },
+    {
+      "id": "minority-settings",
+      "heading": { "ja": "6. 少数派環境でのハラール", "en": "6. Halal in Minority Settings" },
+      "pairs": [
+        { "ja": "イスラム教徒が少数派で暮らす社会では、ハラールは共同体の境界線であると同時に、公共サービスの設計問題になる。", "en": "Where Muslims live as minorities, halal is both a community boundary and a public-service design question." },
+        { "ja": "すべてを完全認証にする必要はないが、豚肉と酒の不使用、調理器具の分離、原材料開示、ベジタリアンやシーフードの代替、礼拝場所の案内だけでも、生活上の負担は大きく変わる。", "en": "Not every setting needs full certification." },
+        { "ja": "日本では、中央のハラール認証機関が一元的に制度を管理しているわけではない。", "en": "Japan has no single central halal accreditation agency that controls the entire field." },
+        { "ja": "少数派環境では、ハラール対応が過剰な特別扱いと見なされることもある。", "en": "In minority settings, halal accommodation can be misread as special treatment." },
+        { "ja": "重要なのは、宗教をマーケティング装飾にせず、当事者が判断できる情報を正直に出すことである。", "en": "The key is to avoid using religion as decoration and to give Muslims enough information to make their own decisions." }
+      ]
+    },
+    {
+      "id": "friction-limits",
+      "heading": { "ja": "7. 摩擦と限界", "en": "7. Friction and Limits" },
+      "pairs": [
+        { "ja": "ハラールを広げるほど、三つの摩擦が強くなる。", "en": "Three frictions grow as halal expands." },
+        { "ja": "第一に、認証の信頼である。", "en": "The first is certification trust." },
+        { "ja": "第二に、科学技術との摩擦である。", "en": "The second friction is technology." },
+        { "ja": "第三に、政治化である。", "en": "The third friction is politicization." },
+        { "ja": "どちらの場合も、ハラールは食の選択にとどまらず、誰の価値が公共空間で認められるかという問題になる。", "en": "In both directions, halal is no longer only a dietary choice." },
+        { "ja": "企業がラベルを乱用すると、ハラールは信仰の言葉から販売促進の言葉へ落ちる。", "en": "If firms misuse labels, halal shifts from a language of faith into a sales device." },
+        { "ja": "ハラール判定は、最終成分だけでなく、由来、変化、汚染、必要性、社会的利益を検討しなければならない。", "en": "Halal assessment has to consider origin, transformation, contamination, necessity, and social benefit." }
+      ]
+    },
+    {
+      "id": "japan-reading",
+      "heading": { "ja": "8. 日本での読み方", "en": "8. How Japan Should Read Halal" },
+      "pairs": [
+        { "ja": "日本でハラールを扱うなら、三つに分けて考えるとよい。", "en": "In Japan, halal should be separated into three questions." },
+        { "ja": "第一に、イスラム教徒の生活権としてのハラールである。", "en": "The first is halal as part of Muslim everyday life." },
+        { "ja": "第二に、輸出・観光・外食の市場としてのハラールである。", "en": "The second is halal as an export, tourism, and food-service market." },
+        { "ja": "第三に、文化理解としてのハラールである。", "en": "The third is halal as cultural understanding." },
+        { "ja": "ここまで見れば、ハラールは制限ではなく、信仰、技術、国家、市場が交差する現代的な制度として見えてくる。", "en": "Read this way, halal is not merely limitation." },
+        { "ja": "日本国内で通用する説明が、輸出先の税関、販売店、消費者、宗教当局に通用するとは限らない。", "en": "An explanation that works in Japan may not satisfy customs officials, retailers, consumers, or religious authorities abroad." },
+        { "ja": "ハラールは、イスラム教徒を「食べられないものが多い人」として見るための言葉ではない。", "en": "Halal is not a word for treating Muslims as people with many restrictions." }
+      ]
+    }
+  ]
+}

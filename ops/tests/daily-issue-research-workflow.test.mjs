@@ -243,13 +243,13 @@ assert.match(
 
 assert.match(
 	workflow,
-	/- name: Verify unique hero images[\s\S]*?run: pnpm test:hero-images[\s\S]*?- name: Run repository tests[\s\S]*?run: pnpm test[\s\S]*?- name: Verify generated mixed article alignment/,
+	/- name: Verify unique hero images[\s\S]*?id: hero_image_tests[\s\S]*?continue-on-error: true[\s\S]*?pnpm test:hero-images 2>&1 \| tee "\$\{RUNNER_TEMP\}\/daily-research-hero-images\.log"[\s\S]*?- name: Run repository tests[\s\S]*?run: pnpm test[\s\S]*?- name: Verify generated mixed article alignment/,
 	'Daily Issue Research should run the full repository test suite before creating and merging generated report PRs'
 )
 
 assert.match(
 	workflow,
-	/- name: Run repository tests[\s\S]*?id: repository_tests[\s\S]*?continue-on-error: true[\s\S]*?pnpm test[\s\S]*?- name: Run generated mixed article alignment check[\s\S]*?id: generated_mix_alignment[\s\S]*?continue-on-error: true[\s\S]*?node ops\/scripts\/validate-mix-alignment\.mjs --changed[\s\S]*?- name: Prepare generated article verification repair prompt[\s\S]*?if: \${\{ \(steps\.repository_tests\.outcome == 'failure' \|\| steps\.generated_mix_alignment\.outcome == 'failure'\) && steps\.restore_generated_article\.outputs\.cache-hit != 'true' \}\}[\s\S]*?daily-research-mix-alignment\.log[\s\S]*?- name: Repair generated article verification failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?effort: low[\s\S]*?- name: Require generated article verification[\s\S]*?INITIAL_MIX_ALIGNMENT_OUTCOME: \${\{ steps\.generated_mix_alignment\.outcome \}\}[\s\S]*?pnpm test[\s\S]*?- name: Verify generated mixed article alignment/,
+	/- name: Verify unique hero images[\s\S]*?id: hero_image_tests[\s\S]*?continue-on-error: true[\s\S]*?- name: Run repository tests[\s\S]*?id: repository_tests[\s\S]*?continue-on-error: true[\s\S]*?pnpm test[\s\S]*?- name: Run generated mixed article alignment check[\s\S]*?id: generated_mix_alignment[\s\S]*?continue-on-error: true[\s\S]*?node ops\/scripts\/validate-mix-alignment\.mjs --changed[\s\S]*?- name: Prepare generated article verification repair prompt[\s\S]*?if: \${\{ \(steps\.hero_image_tests\.outcome == 'failure' \|\| steps\.repository_tests\.outcome == 'failure' \|\| steps\.generated_mix_alignment\.outcome == 'failure'\) && steps\.restore_generated_article\.outputs\.cache-hit != 'true' \}\}[\s\S]*?daily-research-hero-images\.log[\s\S]*?daily-research-mix-alignment\.log[\s\S]*?- name: Repair generated article verification failure[\s\S]*?uses: openai\/codex-action@v1[\s\S]*?effort: low[\s\S]*?- name: Require generated article verification[\s\S]*?INITIAL_HERO_IMAGE_OUTCOME: \${\{ steps\.hero_image_tests\.outcome \}\}[\s\S]*?INITIAL_MIX_ALIGNMENT_OUTCOME: \${\{ steps\.generated_mix_alignment\.outcome \}\}[\s\S]*?pnpm test:hero-images[\s\S]*?pnpm test[\s\S]*?- name: Verify generated mixed article alignment/,
 	'Daily Issue Research should repair fresh generated articles when repository tests or MIX alignment validation fails'
 )
 

@@ -11,20 +11,24 @@
       },
       "pairs": [
         {
-          "ja": "世界の宗教人口を見るときは、「信仰の強さ」ではなく、まず「本人または統計がどの宗教所属に分類したか」を読む必要がある。",
-          "en": "Global religious demography measures affiliation before it measures intensity of belief."
+          "ja": "世界の宗教人口を見るときは、信仰の強さではなく、まず本人または統計がどの宗教所属に分類したかを読む必要がある。",
+          "en": "Global religious demography counts affiliation before it counts the intensity of belief."
         },
         {
-          "ja": "キリスト教は最大集団だが、2010年から2020年にかけて世界人口に占める比率を下げた。",
-          "en": "Christians remained the largest group, but their share of world population fell from 2010 to 2020."
+          "ja": "キリスト教は最大分類だが、2010年から2020年にかけて世界人口に占める比率を下げた。",
+          "en": "Christianity remained the largest category, but its share of world population fell between 2010 and 2020."
         },
         {
-          "ja": "イスラム教は主要分類の中で最も速く増え、無所属も改宗・離脱の影響で比率を上げた。",
-          "en": "Muslims grew faster than any other major category, and the unaffiliated share also rose through religious switching and disaffiliation."
+          "ja": "イスラム教は主要分類の中で最も速く増え、無所属も宗教離脱の影響で比率を上げた。",
+          "en": "Islam grew faster than any other major category, and the unaffiliated share also rose through religious disaffiliation."
         },
         {
-          "ja": "この表は、宗教人口を「大きい順」に並べるだけでは足りないことを示す。",
-          "en": "The table also shows why a ranking alone misleads."
+          "ja": "宗教人口は大きい順に並べるだけでは足りない。",
+          "en": "Ranking religions by size is not enough."
+        },
+        {
+          "ja": "少数宗教は、Pewの七分類では「その他の宗教」にまとめられるため、国別のまとまりと、別資料で確認できるシク教・ジャイナ教などを分けて読む必要がある。",
+          "en": "Smaller religions require a separate reading because Pew's seven-category table groups many traditions into \"other religions.\""
         }
       ]
     },
@@ -36,78 +40,109 @@
       },
       "pairs": [
         {
-          "ja": "宗教人口統計は、通常「何を信じているか」を直接測らない。",
-          "en": "Religious population statistics usually do not directly measure belief."
+          "ja": "宗教人口統計は、通常、何を信じているかを直接測らない。",
+          "en": "Religious population statistics usually do not directly measure what people believe."
         },
         {
-          "ja": "国勢調査や調査票は、回答者に宗教所属を尋ね、研究者が回答を集約する。",
+          "ja": "国勢調査や調査票は回答者に宗教所属を尋ね、研究者が回答を集約する。",
           "en": "Censuses and surveys ask people about religious affiliation, then researchers group those answers."
         },
         {
-          "ja": "このため、宗教人口は「礼拝に通う人の数」や「特定教義を信じる人の数」と一致しない。",
+          "ja": "Pewの2025年推計は、キリスト教、イスラム教、ヒンドゥー教、仏教、ユダヤ教、その他の宗教、宗教的無所属という七分類で世界201カ国・地域を整理する。",
+          "en": "Pew's 2025 estimates use seven categories: Christians, Muslims, Hindus, Buddhists, Jews, people who belong to other religions, and the religiously unaffiliated."
+        },
+        {
+          "ja": "このため、宗教人口は礼拝に通う人の数や特定教義を信じる人の数と一致しない。",
           "en": "Religious population therefore differs from the number of regular worshippers or doctrinal believers."
         },
         {
-          "ja": "宗教人口分布は、まず社会的・統計的な所属分布として読むのが妥当である。",
+          "ja": "宗教人口分布は、社会的・統計的な所属分布として読むのが妥当である。",
           "en": "Religious population distribution is best read as a social and statistical affiliation map."
         }
       ]
     },
     {
-      "id": "global-distribution",
+      "id": "major-religions",
       "heading": {
-        "ja": "3. 世界全体の大きな分布",
-        "en": "3. Global Distribution"
+        "ja": "3. 主要宗教別に見る",
+        "en": "3. Major Religions by Population"
       },
       "pairs": [
         {
-          "ja": "2020年時点の最大分類はキリスト教である。",
-          "en": "Christianity was the largest category in 2020."
+          "ja": "キリスト教徒は2020年に22.69億人、世界人口の28.8%だった。",
+          "en": "Christians numbered 2.269 billion in 2020, equal to 28.8% of world population."
         },
         {
-          "ja": "人口そのものは増えたが、世界人口全体の伸びに追いつかなかった。",
-          "en": "The Christian population grew in absolute terms, but it did not keep pace with total world population growth."
+          "ja": "上位10カ国を足しても世界のキリスト教徒の46.8%であり、キリスト教は主要宗教の中で地理的分散が大きい。",
+          "en": "The top 10 countries together accounted for 46.8% of the world's Christians, so Christianity is more geographically dispersed than several other major religions."
         },
         {
-          "ja": "イスラム教は2010年から2020年にかけて、人数で約3.47億人増えた。",
-          "en": "Muslims increased by about 347 million people from 2010 to 2020."
+          "ja": "宗派別の世界推計は、Pewの2020年七分類表には含まれない。",
+          "en": "Pew's 2020 seven-category table does not split Christians by denomination."
         },
         {
-          "ja": "宗教的無所属は、2020年時点で世界第3の分類である。",
-          "en": "The religiously unaffiliated formed the third-largest category in 2020."
+          "ja": "イスラム教徒は2020年に20.23億人、世界人口の25.6%だった。",
+          "en": "Muslims numbered 2.023 billion in 2020, equal to 25.6% of world population."
+        },
+        {
+          "ja": "インドはヒンドゥー教徒が多数派の国だが、人数では世界有数のイスラム教徒人口を持つ。",
+          "en": "India has a Hindu majority, but it also has one of the world's largest Muslim populations in absolute terms."
+        },
+        {
+          "ja": "宗教的無所属は2020年に19.05億人、世界人口の24.2%だった。",
+          "en": "The religiously unaffiliated numbered 1.905 billion in 2020, equal to 24.2% of world population."
+        },
+        {
+          "ja": "中国だけで世界の無所属の67.1%を占める。",
+          "en": "China alone accounted for 67.1% of the world's unaffiliated population."
+        },
+        {
+          "ja": "ヒンドゥー教徒は2020年に11.78億人、世界人口の14.9%だった。",
+          "en": "Hindus numbered 1.178 billion in 2020, equal to 14.9% of world population."
+        },
+        {
+          "ja": "インドだけで世界のヒンドゥー教徒の94.5%を占める。",
+          "en": "India alone accounted for 94.5% of the world's Hindus."
+        },
+        {
+          "ja": "ヒンドゥー教内部には、ヴィシュヌを中心にするヴァイシュナヴァ、シヴァを中心にするシヴァ派、女神信仰を重視するシャークタなどの系統がある。",
+          "en": "Hindu traditions include Vaishnavism, centered on Vishnu; Shaivism, centered on Shiva; and Shaktism, centered on goddess traditions."
+        },
+        {
+          "ja": "仏教徒は2020年に3.24億人、世界人口の4.1%だった。",
+          "en": "Buddhists numbered 324 million in 2020, equal to 4.1% of world population."
+        },
+        {
+          "ja": "仏教の大きな系統は、大乗、上座部、金剛乗として説明されることが多い。",
+          "en": "Buddhism is often described through three broad branches: Mahayana, Theravada, and Vajrayana."
+        },
+        {
+          "ja": "Pewの2020年七分類では、その他の宗教が1.72億人、世界人口の2.2%だった。",
+          "en": "Pew's 2020 seven-category table put other religions at 172 million people, or 2.2% of world population."
+        },
+        {
+          "ja": "国別には中国、インド、台湾、ブラジルが大きいが、同じ「その他」でも内容は国によって違う。",
+          "en": "China, India, Taiwan, and Brazil are large in this combined category, but the category means different things in different countries."
+        },
+        {
+          "ja": "少数宗教を個別名で把握するには、Pewの七分類だけでは足りない。",
+          "en": "Pew's seven-category table is not enough to count smaller religions by name."
+        },
+        {
+          "ja": "ユダヤ教徒は2020年に約1,478万人、世界人口の0.2%だった。",
+          "en": "Jews numbered about 14.78 million in 2020, equal to 0.2% of world population."
+        },
+        {
+          "ja": "イスラエルと米国だけで世界のユダヤ教徒の84.7%を占める。",
+          "en": "Israel and the United States together accounted for 84.7% of the world's Jews."
         }
       ]
     },
     {
-      "id": "regional-distribution",
+      "id": "country-diversity",
       "heading": {
-        "ja": "4. 地域で見ると構図が変わる",
-        "en": "4. Regional Distribution"
-      },
-      "pairs": [
-        {
-          "ja": "宗教人口の地理は、世界全体の順位とは違う読み方を求める。",
-          "en": "Regional geography changes the story."
-        },
-        {
-          "ja": "キリスト教は欧州発の近代史だけでは説明できない。",
-          "en": "Christianity cannot be explained through Europe alone."
-        },
-        {
-          "ja": "イスラム教人口は中東・北アフリカだけに集中していない。",
-          "en": "Islam is also broader than the Middle East and North Africa."
-        },
-        {
-          "ja": "ヒンドゥー教は世界人口比で約15%と大きいが、地理的には非常に集中している。",
-          "en": "Hinduism is large globally but geographically concentrated."
-        }
-      ]
-    },
-    {
-      "id": "diversity",
-      "heading": {
-        "ja": "5. 多様性は国単位で見る",
-        "en": "5. Diversity at Country Scale"
+        "ja": "4. 国別多様性で見る",
+        "en": "4. Country-Level Diversity"
       },
       "pairs": [
         {
@@ -115,8 +150,8 @@
           "en": "The world looks religiously plural, but most countries have one dominant category."
         },
         {
-          "ja": "宗教が複数ある社会と、日常生活で宗教間接触が多い社会は同じではない。",
-          "en": "A world with several large religions does not automatically produce daily interreligious contact everywhere."
+          "ja": "世界に複数の大宗教があることと、各国の日常生活で宗教間接触が多いことは同じではない。",
+          "en": "A world with several large religions does not automatically produce high interreligious contact inside every country."
         },
         {
           "ja": "宗教多様性が高い国は、必ずしも人口大国ではない。",
@@ -127,8 +162,8 @@
     {
       "id": "projections",
       "heading": {
-        "ja": "6. 将来予測は慎重に読む",
-        "en": "6. Reading Projections"
+        "ja": "5. 将来予測は慎重に読む",
+        "en": "5. Reading Projections"
       },
       "pairs": [
         {
@@ -136,12 +171,12 @@
           "en": "Religious population projections depend on assumptions about fertility, age structure, mortality, migration, and religious switching."
         },
         {
-          "ja": "2050年の厳密な数字としてではなく、人口学的な方向性を読む材料として使うべきである。",
-          "en": "Treat the 2050 numbers as a scenario for demographic direction, not as a current best estimate."
+          "ja": "Pewの2015年予測は、2050年にキリスト教徒が世界人口の31%、イスラム教徒が30%になると見積もった。",
+          "en": "Pew's 2015 projection estimated that Christians would account for 31% and Muslims for 30% of world population in 2050."
         },
         {
           "ja": "2020年代以降の宗教人口を読む軸は二つある。",
-          "en": "Two forces matter most for the 2020s and beyond."
+          "en": "Two forces matter for the 2020s and beyond."
         },
         {
           "ja": "地域別の人口成長と宗教離脱を一緒に見る必要がある。",
@@ -152,12 +187,12 @@
     {
       "id": "limits",
       "heading": {
-        "ja": "7. 使い方と限界",
-        "en": "7. Uses and Limits"
+        "ja": "6. 使い方と限界",
+        "en": "6. Uses and Limits"
       },
       "pairs": [
         {
-          "ja": "宗教人口分布は、国際関係、移民、教育、福祉、政党政治、紛争研究、ビジネスの地域理解に役立つ。",
+          "ja": "宗教人口分布は、国際関係、移民、教育、福祉、政党政治、紛争研究、地域ビジネス理解に役立つ。",
           "en": "Religious population distribution helps with international relations, migration, education, welfare, party politics, conflict research, and regional business analysis."
         },
         {
@@ -165,11 +200,11 @@
           "en": "The numbers do not explain societies on their own."
         },
         {
-          "ja": "最も安全な読み方は、三段階に分けることだ。",
-          "en": "A careful reading uses three steps."
+          "ja": "Pewの七分類は世界比較に向くが、地域ごとの宗教生活を大きく圧縮する。",
+          "en": "Pew's seven categories support global comparison, but they compress local religious life."
         },
         {
-          "ja": "宗教人口は世界観の地図ではなく、人口学と社会分類の地図である。",
+          "ja": "宗教人口は世界観そのものの地図ではなく、人口学と社会分類の地図である。",
           "en": "Religious demography is a map of population and social classification, not a map of inner belief."
         }
       ]

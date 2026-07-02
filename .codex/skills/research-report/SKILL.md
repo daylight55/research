@@ -37,8 +37,9 @@ If the report or digest must appear on the website, top page, category pages, or
 5. Keep reference pages in route parity: `src/pages/reference/<slug>.astro` and `src/pages/en/reference/<slug>.astro`.
 6. Use locale-aware shared data such as `getReferenceItems(locale)` for reference indexes and homepage cards.
 7. Avoid hardcoded homepage counts; derive values from content data such as collection lengths or `CATEGORIES.length`.
-8. Run `pnpm build` for public article changes.
-9. Confirm the build generated the expected pages:
+8. Use a source-traceable hero image for public articles. Prefer Unsplash, Wikimedia Commons, or official images with clear credit and rights context. Do not use Codex-generated abstract images for article heroes, and do not set `heroImageSourceId` to a `codex:` value.
+9. Run `pnpm build` for public article changes.
+10. Confirm the build generated the expected pages:
    - report: `dist/reports/<slug>/index.html`
    - report research log: `dist/reports/<slug>/research/index.html` when `research-log.mdx` exists
    - report source notes: `dist/reports/<slug>/sources/index.html` when `source-notes.mdx` exists
@@ -46,8 +47,8 @@ If the report or digest must appear on the website, top page, category pages, or
    - news source notes: `dist/news/<slug>/sources/index.html` when `source-notes.mdx` exists
    - category: `dist/category/<category-name>/1/index.html`
    - homepage: `dist/index.html`
-10. Check `dist/index.html` or a local preview with `curl` for the slug, title, and category link before saying the article is visible.
-11. If preview visibility is explicitly requested, identify the current preview URL from the repository's deploy mechanism and verify that URL with `curl` for the slug, title, and category link.
+11. Check `dist/index.html` or a local preview with `curl` for the slug, title, and category link before saying the article is visible.
+12. If preview visibility is explicitly requested, identify the current preview URL from the repository's deploy mechanism and verify that URL with `curl` for the slug, title, and category link.
 
 ## Research Workflow
 
@@ -130,6 +131,13 @@ Mermaid constraints:
 - Do not mix timeline, architecture, operational steps, and risks in one diagram.
 - Before publishing, verify rendered Mermaid in local preview or generated HTML and simplify unreadable diagrams.
 
+## Table Requirements
+
+- Use Markdown pipe tables only when the build pipeline renders GitHub Flavored Markdown tables. For this Astro site, keep `remark-gfm` enabled in both `markdown.remarkPlugins` and the MDX integration.
+- Keep article tables narrow: 2-4 columns, short headers, and cell text that can wrap cleanly. If a cell needs a full sentence or citation, move the explanation to the paragraph before or after the table.
+- After adding or editing a table in `index.mdx`, `source-notes.mdx`, or `research-log.mdx`, run `pnpm build` and verify the generated HTML contains `<table>` near the table text, not a paragraph that starts with a literal pipe such as `<p>| 観点 | ...`.
+- If the table remains hard to read in generated HTML or preview, replace it with a short list, multiple smaller tables, or a compact Mermaid diagram. Do not leave a pipe table that only looks correct in raw Markdown.
+
 ## Default Report Shape
 
 Use this shape unless the topic needs something else:
@@ -171,6 +179,7 @@ Before finishing:
 - Published prose passes the Stop Slop check for high-confidence filler, business jargon, mechanical contrasts, and Japanese summary crutches.
 - Current and unstable claims were verified against current sources.
 - Diagrams render as Mermaid-compatible Markdown where possible.
+- Markdown pipe tables render as `<table>` in generated HTML, not literal pipe text inside `<p>`.
 - The article distinguishes evidence from inference.
 - `git diff --check` passes.
 - `pnpm ci:pr` passes before push or PR readiness, especially when the base branch has advanced.

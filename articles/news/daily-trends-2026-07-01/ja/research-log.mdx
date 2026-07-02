@@ -1,0 +1,24 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-07-01
+- Article slug: `daily-trends-2026-07-01`
+- Run Context: politics、economy、technology を各5本、直近24-48時間を優先し、出力は news 用の structured JSON から自動レンダリングする。
+
+## 判断メモ
+
+- 同日性が高い最高裁判断、主要マクロ指標、AIモデル更新を優先し、古い候補は外した。
+- 一次情報が薄い項目は、Reuters、AP、Guardian、FT、Axios、Business Insider、Barron's の速報を優先した。
+- 画像は外部のプレースホルダーURLに統一し、カードの視認性と重複回避を優先した。
+
+## 残課題
+
+- 翌日の雇用統計と7月のFRB発言で、経済面の重心がどう動くかを確認する。
+- イラン資産交渉とレバノン停戦枠組みの続報を、同一文脈で追う。
+- OpenAI、Anthropic、Googleの配布条件と安全審査の更新を比較する。

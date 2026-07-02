@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "米国では最高裁が移民、性別、選挙資金をめぐる争点を一気に前に進め、外交ではイラン資産と中東停戦の交渉が続いた。経済面では米株が前半戦を締め、消費者心理と雇用指標は底堅さを示した一方、住宅金利はなお高止まりした。技術面ではOpenAI、Anthropic、GoogleがAIモデル競争を続けるなか、資本投資とメモリー不足が評価軸を変えている。",
+      "en": "In the US, the Supreme Court pushed immigration, gender, and campaign finance disputes forward in a single day, while diplomacy kept moving on Iranian assets and a Middle East ceasefire track. Markets ended the first half with strength, and consumer sentiment and hiring stayed resilient even as mortgage rates remained elevated. In technology, OpenAI, Anthropic, and Google kept the model race moving, while capital spending and memory shortages reshaped the scorecard."
+    },
+    {
+      "ja": "出生地主義は当面そのまま残り、移民政策の争点は議会と下級審に戻った。",
+      "en": "Birthright citizenship stays in place for now, and the fight shifts back to Congress and lower courts."
+    },
+    {
+      "ja": "最高裁は、米国生まれの子どもに市民権を与える憲法上の扱いを維持した。トランプ氏の大統領令は退けられ、行政での上書きは止まった。",
+      "en": "The Supreme Court kept the constitutional treatment of children born in the US intact. Trump's executive move failed, and the executive branch could not override it."
+    },
+    {
+      "ja": "家族の在留設計、州の行政実務、移民反対派の次の攻撃点に直結する。",
+      "en": "It shapes family planning, state administration, and the next line of attack for immigration opponents."
+    },
+    {
+      "ja": "トランプ氏が議会に求める代替策と、類似訴訟の動き。",
+      "en": "Watch for Trump's push for an alternative in Congress and for similar lawsuits."
+    },
+    {
+      "ja": "学校と州政府は、参加資格の基準を見直す圧力を受ける。",
+      "en": "Schools and state governments now face pressure to rewrite eligibility rules."
+    },
+    {
+      "ja": "アイダホ州とウェストバージニア州の規制をめぐる訴訟で、最高裁は州側に軍配を上げた。連邦法のTitle IX解釈をめぐる争いは続くが、州法の追い風は強まった。",
+      "en": "In cases over Idaho and West Virginia restrictions, the Supreme Court sided with the states. The fight over Title IX interpretation continues, but state laws gained momentum."
+    },
+    {
+      "ja": "競技の参加条件、保護者の訴訟、州議会の法改正に波及する。",
+      "en": "It affects eligibility rules, parent-led lawsuits, and state legislative changes."
+    },
+    {
+      "ja": "他州の訴訟と、学校区が採る運用ルール。",
+      "en": "Watch the next lawsuits and the rules school districts adopt."
+    },
+    {
+      "ja": "政党は候補と一体で、より大きな金額を使えるようになった。",
+      "en": "Parties can now spend far more money alongside their candidates."
+    },
+    {
+      "ja": "連邦の共同支出規制を、最高裁は言論の制限だとして退けた。共和党の資金力に追い風が吹き、民主党は腐敗リスクを警戒している。",
+      "en": "The court treated the federal joint spending rule as a speech restriction and struck it down. Republicans gain a funding edge, while Democrats warn about corruption risk."
+    },
+    {
+      "ja": "選挙広告、党本部の役割、スーパーPACとの資金の流れが変わる。",
+      "en": "It changes campaign ads, the role of party headquarters, and how money moves with super PACs."
+    },
+    {
+      "ja": "FECの対応と、今年後半の州別・連邦別レースへの即時影響。",
+      "en": "Watch the FEC response and the immediate effect on state and federal races later this year."
+    },
+    {
+      "ja": "交渉は進んだが、資金解放の条件と海峡の扱いはなお詰まっていない。",
+      "en": "The talks advanced, but the release terms and the treatment of the strait are still unresolved."
+    },
+    {
+      "ja": "米国とイランは、凍結した60億ドルの資産をめぐる協議再開を準備した。レバノン、海峡通航料、核協議の順番は固まらず、仲介役のカタールが間に立つ。",
+      "en": "The US and Iran prepared to restart talks over $6 billion in frozen assets. The sequencing of Lebanon, transit fees, and nuclear talks is still open, with Qatar mediating."
+    },
+    {
+      "ja": "原油、海上輸送、レバノンの停戦枠組みまで一度に動く。",
+      "en": "It can move oil, shipping, and the shape of a Lebanon ceasefire framework at once."
+    },
+    {
+      "ja": "資金放出の条件が明文化されるか、海峡通航料案が後退するか。",
+      "en": "Watch for written release conditions and for any retreat from a transit-fee idea."
+    },
+    {
+      "ja": "テック寄付と反ワシントン感情が、地方選を全国論争に引き上げた。",
+      "en": "Tech money and anti-Washington anger pushed a local race into a national argument."
+    },
+    {
+      "ja": "APの報道では、下院・上院・知事選の複数レースで、進歩派が現職に挑み、シリコンバレー系の献金も流れ込んだ。",
+      "en": "AP reported that progressives challenged incumbents across House, Senate, and governor contests, with Silicon Valley money also flowing in."
+    },
+    {
+      "ja": "2026年中間選挙で、民主党が左に寄るか中道を守るかの試金石になる。",
+      "en": "It is a test of whether Democrats lean left or hold the center in the 2026 midterms."
+    },
+    {
+      "ja": "初期開票で、進歩派支援と投票率がどこまで届くか。",
+      "en": "Watch early counts to see how far progressive support and turnout reach."
+    },
+    {
+      "ja": "株式市場は、地政学の揺れを越えて前半戦を上向きで終えた。",
+      "en": "Stocks finished the first half higher despite geopolitical turbulence."
+    },
+    {
+      "ja": "主要指数は6月末に上昇し、半導体株とAI関連銘柄が相場を押し上げた。原油安と好決算が、Q2の上昇を支えた。",
+      "en": "Major indexes rose into month-end, helped by chip and AI shares. Lower oil prices and solid earnings supported the second-quarter move."
+    },
+    {
+      "ja": "投資家は、景気後退よりも金利とAI投資の持続性を次の論点に置いている。",
+      "en": "Investors are now focused more on rates and the durability of AI spending than on recession risk."
+    },
+    {
+      "ja": "7月の指標と、AI株の上昇が続くかどうか。",
+      "en": "Watch July data and whether the AI trade keeps climbing."
+    },
+    {
+      "ja": "消費者は少し安心したが、雇用感覚はまだ弱い。",
+      "en": "Consumers feel a bit better, but job anxiety is still there."
+    },
+    {
+      "ja": "Conference Boardの指数は6月に91.2へ上がったが、予想には届かなかった。職探しの難しさを示す項目は悪化し、先行きの慎重姿勢は残った。",
+      "en": "The Conference Board index rose to 91.2 in June but missed expectations. Measures of job-finding difficulty worsened, so caution remained."
+    },
+    {
+      "ja": "家計の支出余力と、夏の小売・サービス需要を読む材料になる。",
+      "en": "It informs household spending power and the summer outlook for retail and services."
+    },
+    {
+      "ja": "7月の雇用統計と、ガソリン安が続くかどうか。",
+      "en": "Watch July payrolls and whether cheaper gasoline sticks."
+    },
+    {
+      "ja": "労働市場は冷え切っていないが、勢いも強くない。",
+      "en": "The labor market is not cold, but it is not hot either."
+    },
+    {
+      "ja": "求人件数は7.6百万件で横ばい、採用率も変わらなかった。辞職率も安定し、労働市場は静かな回復を続けた。",
+      "en": "Job openings held at 7.6 million, and hiring stayed flat. Quit rates were steady, showing a quiet labor market recovery."
+    },
+    {
+      "ja": "FRBの判断、賃金交渉、消費者の支出意欲に直結する。",
+      "en": "It feeds directly into Fed decisions, wage talks, and consumer spending appetite."
+    },
+    {
+      "ja": "木曜公表の雇用統計で、減速が本物かどうか。",
+      "en": "Watch Thursday's payroll report for signs of real cooling."
+    },
+    {
+      "ja": "小幅低下でも、住宅市場の息苦しさは続く。",
+      "en": "Even with a small dip, the housing market still feels tight."
+    },
+    {
+      "ja": "30年固定は6.52%、15年固定は5.93%まで下がったが、パンデミック前後の水準からは遠い。金利の高止まりが、買い替えを鈍らせている。",
+      "en": "The 30-year fixed fell to 6.52% and the 15-year to 5.93%, but both remain far above pre-pandemic levels. Sticky rates keep churn low."
+    },
+    {
+      "ja": "住宅販売、建設、家計の可処分所得に波及する。",
+      "en": "It affects home sales, construction, and household disposable income."
+    },
+    {
+      "ja": "FRBの会合前後で、金利が6%台前半に向かうか。",
+      "en": "Watch whether rates move toward the low 6s around the next Fed meeting."
+    },
+    {
+      "ja": "外需は強いが、内需はまだ脆い。",
+      "en": "External demand is strong, but domestic demand is still fragile."
+    },
+    {
+      "ja": "中国の6月製造業PMIは50.3に上がり、AI関連ハードの輸出が支えた。建設は弱く、消費と投資の回復はまだ不十分だ。",
+      "en": "China's June manufacturing PMI rose to 50.3, helped by exports of AI-related hardware. Construction stayed weak, and consumption and investment are still not fully back."
+    },
+    {
+      "ja": "中国景気は、テック輸出に依存したまま次の政策支援を待っている。",
+      "en": "China's economy is still leaning on tech exports while it waits for the next policy lift."
+    },
+    {
+      "ja": "北京が内需刺激を追加するか、輸出の勢いが続くか。",
+      "en": "Watch for more domestic stimulus from Beijing and for export momentum to hold."
+    },
+    {
+      "ja": "OpenAIは新モデルを出したが、公開範囲は絞ったままだ。",
+      "en": "OpenAI shipped the new model, but kept the rollout narrow."
+    },
+    {
+      "ja": "Guardianによると、OpenAIはGPT 5.6の公開を段階化した。米政府の要請が背景にあり、危険性の高い機能は慎重に扱われている。",
+      "en": "According to The Guardian, OpenAI staged the GPT 5.6 rollout. A US government request sat behind the move, and higher-risk features are being handled carefully."
+    },
+    {
+      "ja": "モデル性能だけでなく、配布条件と国家安全保障が製品設計に入った。",
+      "en": "Distribution terms and national security are now part of product design, not just model quality."
+    },
+    {
+      "ja": "米国内限定の扱いが他地域にも広がるか。",
+      "en": "Watch whether the US-only treatment spreads to other regions."
+    },
+    {
+      "ja": "Anthropicは、安さと実務性能の両立を前面に出した。",
+      "en": "Anthropic is pushing price-performance balance to the front."
+    },
+    {
+      "ja": "Axiosによると、Sonnet 5はブラウジング、コーディング、計画立案に向くモデルとして出た。FreeとProの既定モデルにもなり、利用範囲が広い。",
+      "en": "Axios reported that Sonnet 5 is aimed at browsing, coding, and planning. It also becomes the default model for Free and Pro users, so reach expands."
+    },
+    {
+      "ja": "企業導入では、最高性能よりも価格と自律実行のバランスが重くなる。",
+      "en": "For enterprise adoption, the balance between cost and autonomous execution matters more than peak performance."
+    },
+    {
+      "ja": "上位モデルの制限解除と、企業向け採用の広がり。",
+      "en": "Watch for higher-tier access changes and broader enterprise adoption."
+    },
+    {
+      "ja": "Anthropicは会話AIから研究用途へ、売り先を広げた。",
+      "en": "Anthropic is widening its market from chat to research use."
+    },
+    {
+      "ja": "FTによると、Claude Scienceは3Dタンパク質モデリングや創薬の用途を狙う。生物学的リスクへの警戒が強く、アクセス管理も組み込まれている。",
+      "en": "The FT says Claude Science targets 3D protein modeling and drug discovery. Bio-risk concerns are high, so access controls are built in."
+    },
+    {
+      "ja": "AIの競争軸が、一般用途から規制付きの専門領域へ移っている。",
+      "en": "The AI race is shifting from general-purpose tools to regulated specialist domains."
+    },
+    {
+      "ja": "製薬企業との提携と、利用制限の具体化。",
+      "en": "Watch for pharma partnerships and the exact usage limits."
+    },
+    {
+      "ja": "Googleは急がず、公開前の詰めを優先した。",
+      "en": "Google chose polish over speed."
+    },
+    {
+      "ja": "Business Insiderによると、Gemini 3.5 Proは6月公開予定から7月へずれた。長時間タスクやエージェント用途の仕上げを進めている。",
+      "en": "Business Insider reported that Gemini 3.5 Pro slipped from a June launch to July. Google is still refining long-task and agent use cases."
+    },
+    {
+      "ja": "大規模モデルの競争は、速度よりも安定性と長いタスク性能で比べられている。",
+      "en": "Large-model competition is increasingly about stability and long-task performance, not launch speed."
+    },
+    {
+      "ja": "7月の正式公開と、初期テスターの反応。",
+      "en": "Watch the July launch and early tester reaction."
+    },
+    {
+      "ja": "不足しているのはGPUだけではなく、メモリーそのものだ。",
+      "en": "The shortage is not just GPUs; memory itself is tight."
+    },
+    {
+      "ja": "Barron's は、MicronやApple、Microsoftなどがコスト上昇に直面していると伝えた。メモリー不足はノートPC、スマホ、ゲーム機の値上げへ広がった。",
+      "en": "Barron's said Micron, Apple, and Microsoft are facing higher costs. The memory squeeze is spreading into laptops, phones, and game consoles."
+    },
+    {
+      "ja": "AIブームは計算資源だけでなく、一般向けハードの値札まで動かしている。",
+      "en": "The AI boom is moving prices on consumer hardware, not just compute resources."
+    },
+    {
+      "ja": "次の製品サイクルで、値上げがさらに広がるか。",
+      "en": "Watch whether the next product cycle brings wider price increases."
+    },
+    {
+      "ja": "米最高裁の判断が、移民、トランス権利、選挙資金を同時に動かした。",
+      "en": "The Supreme Court moved immigration, trans rights, and campaign finance at the same time."
+    },
+    {
+      "ja": "景気は崩れていないが、金利と住宅コストは家計の重しのままだ。",
+      "en": "The economy is not breaking, but rates and housing costs still weigh on households."
+    },
+    {
+      "ja": "AIはモデル性能競争だけでなく、供給網と資本配分の競争になった。",
+      "en": "AI competition now runs through supply chains and capital allocation, not just model quality."
+    },
+    {
+      "ja": "今週の雇用統計が、景気の底堅さをどこまで裏づけるか。",
+      "en": "The next jobs report will show whether the labor market still has room."
+    },
+    {
+      "ja": "イラン資産交渉が実際の資金解放に進むか。",
+      "en": "Whether Iran asset talks reach an actual release mechanism."
+    },
+    {
+      "ja": "OpenAI、Anthropic、Googleの次のモデル配布条件がどう変わるか。",
+      "en": "How OpenAI, Anthropic, and Google change model access and rollout terms next."
+    }
+  ]
+}

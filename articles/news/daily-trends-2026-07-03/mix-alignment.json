@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "政治では、トランプ政権が出生市民権、投票、暗号資産、文化的な象徴行事をまたいで存在感を強めた。経済では6月雇用統計が減速を示し、技術ではOpenAIとAnthropicの公開条件が政策と安全保障の影響を受け続けた。",
+      "en": "Politics centered on Trump administration pressure across birthright citizenship, voting, crypto, and symbolic statecraft. The economy slowed in the June jobs report, while technology kept shifting toward policy-shaped release rules for OpenAI and Anthropic."
+    },
+    {
+      "ja": "出生市民権をめぐる判決の直後に、政権は出生ツーリズムの摘発を前面に出した。",
+      "en": "The administration is pushing birth-tourism enforcement immediately after the citizenship ruling."
+    },
+    {
+      "ja": "司法省当局者が、観光ビザなどで米国出産を狙うケースを狙い撃ちにする考えを示した。最高裁は出生市民権を維持し、政権は執行強化を先に進めている。",
+      "en": "Justice Department officials signaled they will target cases where visitors seek to give birth in the US. The Supreme Court kept birthright citizenship in place, and the administration is moving through enforcement first."
+    },
+    {
+      "ja": "例外を広げるのか、執行だけを強めるのかで、移民政策の実務が変わる。",
+      "en": "Whether Washington narrows the rule or just tightens enforcement changes the practical scope of immigration policy."
+    },
+    {
+      "ja": "議会に修正法案が出るか、出生ツーリズムの規模を示すデータが出るかを見る。",
+      "en": "Watch for any bill in Congress and for data on how large the birth-tourism problem really is."
+    },
+    {
+      "ja": "郵便投票の制限は、少なくとも当面は裁判所で止まった。",
+      "en": "The mail-in voting restriction is blocked for now."
+    },
+    {
+      "ja": "連邦地裁が、郵便投票のやり方を変えようとする大統領令系の動きを差し止めた。州が握る選挙管理の権限を侵すかどうかが焦点になった。",
+      "en": "A federal court blocked the push to change how mail-in voting works. The fight turned on whether the move intruded on state control of elections."
+    },
+    {
+      "ja": "投票制度は、結果だけでなく事務運営でも裁判の対象になっている。",
+      "en": "Election administration is now a courtroom issue, not just a campaign issue."
+    },
+    {
+      "ja": "控訴が出るか、州側が独自の投票ルールで対抗するかを見る。",
+      "en": "Watch for an appeal and for any state-level response."
+    },
+    {
+      "ja": "暗号資産は、トランプ陣営の収益源であると同時に、利益相反の火種にもなっている。",
+      "en": "Crypto is both a revenue stream and a conflict-of-interest flash point for Trump."
+    },
+    {
+      "ja": "2025年の財務開示で、トランプ氏の暗号資産関連収入が大きく目立った。ホワイトハウスは利益相反の見方を退けたが、批判は収まっていない。",
+      "en": "The 2025 financial disclosures showed Trump taking in large crypto-related income. The White House rejected conflict concerns, but the criticism did not stop."
+    },
+    {
+      "ja": "デジタル資産政策が、個人の利益と切り離せるのかが改めて問われる。",
+      "en": "The story raises again whether digital-asset policy can be separated from personal gain."
+    },
+    {
+      "ja": "監督当局や議会が、倫理・開示・選挙資金の論点で反応するかを見る。",
+      "en": "Watch for responses from ethics, oversight, or campaign-finance channels."
+    },
+    {
+      "ja": "America250 の語り口は、トランプの祝賀行事だけではない。",
+      "en": "The America250 narrative is no longer only Trump's to frame."
+    },
+    {
+      "ja": "Mamdaniは、自然化したばかりの市民に囲まれた演説を予告し、移民と国家の物語を前面に出した。トランプの儀礼的イベントと同じ日に、別の象徴政治を打ち出している。",
+      "en": "Mamdani previewed remarks framed around newly naturalized citizens and the city's place in the national story. He is offering a rival symbolic message on the same day as Trump's ceremonial event."
+    },
+    {
+      "ja": "移民、都市政治、国家記念の物語が、同じ記念日に競り合っている。",
+      "en": "Immigration, urban politics, and national symbolism are competing on the same commemorative stage."
+    },
+    {
+      "ja": "演説の中身と、それに対するトランプ陣営の反応を見る。",
+      "en": "Watch the speech itself and the Trump camp's response."
+    },
+    {
+      "ja": "トランプの法廷闘争は、上訴が終わってもなお続いている。",
+      "en": "Trump's legal fight continues even after the appeal was turned away."
+    },
+    {
+      "ja": "キャロル氏は、最高裁が上訴審を受理しないと決めた後、判事に500万ドルの支払い命令を求めた。争点は賠償の有無ではなく、いつ支払わせるかに移っている。",
+      "en": "Carroll asked a judge to order payment after the Supreme Court declined to hear Trump's appeal. The question has shifted from liability to timing."
+    },
+    {
+      "ja": "民事責任の判断が固まると、執行段階の争いが次の焦点になる。",
+      "en": "Once civil liability is set, the enforcement fight becomes the next front."
+    },
+    {
+      "ja": "判事が支払いを直ちに命じるか、さらに遅延が続くかを見る。",
+      "en": "Watch for whether the judge orders immediate payment or permits more delay."
+    },
+    {
+      "ja": "雇用は伸びたが、予想には届かなかった。",
+      "en": "Jobs still grew, but not by the amount analysts expected."
+    },
+    {
+      "ja": "6月の非農業部門雇用者数は57,000人増にとどまり、予想を大きく下回った。前月分の修正も含め、勢いの鈍化が目立った。",
+      "en": "June nonfarm payrolls rose by 57,000, far below expectations. Revisions to prior months also reinforced the slowdown."
+    },
+    {
+      "ja": "雇用の勢いは、成長率と金利見通しの両方に直結する。",
+      "en": "Payroll momentum feeds directly into growth expectations and rate policy."
+    },
+    {
+      "ja": "7月のFOMCまでに、修正値と追加指標が雇用減速を補強するかを見る。",
+      "en": "Watch whether revisions and other data reinforce the slowdown before the July FOMC."
+    },
+    {
+      "ja": "失業率の低下は、労働参加率の低下を伴っていた。",
+      "en": "The drop in unemployment came alongside weaker participation."
+    },
+    {
+      "ja": "失業率は下がったが、それは就業者が急増したからではなく、労働市場から外れる人が増えたためだった。見かけほど強い数字ではない。",
+      "en": "Unemployment fell, but not because hiring suddenly surged. More people were outside the labor force, which makes the headline look stronger than it is."
+    },
+    {
+      "ja": "労働参加の鈍化は、景気の底堅さをそのまま意味しない。",
+      "en": "Weaker participation does not mean the labor market is healthier."
+    },
+    {
+      "ja": "prime-age participation が戻るか、7月以降の労働供給が持ち直すかを見る。",
+      "en": "Watch whether prime-age participation and labor supply recover in July."
+    },
+    {
+      "ja": "賃金は上がったが、実質ベースではまだ物価の後ろにいる。",
+      "en": "Wages rose, but real earnings still lag inflation."
+    },
+    {
+      "ja": "平均時給は前年比で3.5%増だったが、インフレ率との関係では家計の余地は薄いままだった。",
+      "en": "Average hourly earnings rose 3.5% year over year, but inflation still leaves households under pressure."
+    },
+    {
+      "ja": "消費の粘り強さは、名目賃金ではなく実質賃金で決まる。",
+      "en": "Household spending depends on real wages, not just nominal pay."
+    },
+    {
+      "ja": "次のCPIで実質賃金の圧迫が和らぐかを見る。",
+      "en": "Watch the next CPI release to see whether real wage pressure eases."
+    },
+    {
+      "ja": "弱い雇用は、7月の利上げ観測を後退させた。",
+      "en": "The weak payroll report pushed rate-hike expectations lower."
+    },
+    {
+      "ja": "債券・株式市場は、雇用減速を受けて政策据え置きか緩和寄りの見方を強めた。市場は利上げよりも、景気減速への備えを織り込み始めた。",
+      "en": "Bonds and equities leaned toward a hold-or-easier policy path after the slowdown. Markets started pricing in caution over growth rather than a hike."
+    },
+    {
+      "ja": "金利見通しが変わると、住宅ローン、社債、株式の評価まで連鎖する。",
+      "en": "When rate expectations shift, mortgages, credit, and equity valuations move with them."
+    },
+    {
+      "ja": "7月FOMC前の発言と、債券市場の利下げ織り込みの広がりを見る。",
+      "en": "Watch pre-FOMC comments and how far bond traders extend rate-cut pricing."
+    },
+    {
+      "ja": "雇用の弱さは、一部の業種だけにとどまらなかった。",
+      "en": "The labor slowdown was not confined to one sector."
+    },
+    {
+      "ja": "レジャー・外食などの消費関連分野が想定より弱く、前月修正も含めて景気の足取りが鈍いことを示した。",
+      "en": "Leisure, hospitality, and related consumer-facing sectors were weaker than expected, and prior-month revisions also pointed to a slower pace."
+    },
+    {
+      "ja": "サービス業の弱さは、家計の節約行動が企業の採用に伝わっているサインになりうる。",
+      "en": "Weak service-sector hiring can be an early sign that household caution is reaching employers."
+    },
+    {
+      "ja": "夏の消費関連指標と、レジャー業種の採用計画を見る。",
+      "en": "Watch summer spending data and hiring plans in the leisure sector."
+    },
+    {
+      "ja": "AIの公開日程そのものが、政府の要請で動く局面に入った。",
+      "en": "AI release timing itself is now being shaped by government pressure."
+    },
+    {
+      "ja": "Guardianは、OpenAIが新モデルの公開を段階化し、トランプ政権の要請がその判断に影響したと報じた。製品公開は研究だけで決まらなくなっている。",
+      "en": "The Guardian reported that OpenAI staggered a new model release and that a Trump administration request influenced the decision. Product launches are no longer set by research alone."
+    },
+    {
+      "ja": "モデル公開の条件が、政策と安全保障の接点になっている。",
+      "en": "Release conditions are becoming a policy and security issue."
+    },
+    {
+      "ja": "OpenAIが公開基準を正式化するか、他社が追随するかを見る。",
+      "en": "Watch for formal release criteria from OpenAI and whether rivals follow."
+    },
+    {
+      "ja": "AI企業と政府の関係は、助言や規制を超えて資本の話に入りつつある。",
+      "en": "The government-AI relationship is moving beyond advice and regulation into capital questions."
+    },
+    {
+      "ja": "報道では、政府がOpenAIに5%の持分を取る案が浮上したとされた。まだ確定取引ではないが、政策と資本が近づいていることは明らかだ。",
+      "en": "Reports said a 5% government stake in OpenAI was floated. It is not a finalized deal, but it shows policy and capital moving closer together."
+    },
+    {
+      "ja": "政府が出資する構図は、独立性、監督、調達の線引きを変える。",
+      "en": "A government equity position would change how independence, oversight, and procurement are handled."
+    },
+    {
+      "ja": "実際の契約条項や、政府側の正式説明が出るかを見る。",
+      "en": "Watch for actual terms or a formal explanation from government officials."
+    },
+    {
+      "ja": "AIモデルの可用性は、製品判断だけでなく輸出管理にも左右される。",
+      "en": "AI availability is being shaped by export-control rules as much as product choices."
+    },
+    {
+      "ja": "輸出管理や安全保障上の懸念で停止していたFable 5が、再びオンラインになったと報じられた。公開と停止の判断が、地政学の影響を受けている。",
+      "en": "Fable 5 reportedly returned after export-control and security concerns forced it offline. The launch-and-shutdown cycle is now affected by geopolitics."
+    },
+    {
+      "ja": "最先端モデルの配布は、国境をまたぐ規制判断の対象になっている。",
+      "en": "Distribution of frontier models is becoming a cross-border regulatory issue."
+    },
+    {
+      "ja": "他のモデルにも同様の制限や復帰が波及するかを見る。",
+      "en": "Watch for the same pattern spreading to other models."
+    },
+    {
+      "ja": "OpenAIは、モデルだけでなく操作デバイスの話でも開発者を引き寄せている。",
+      "en": "OpenAI is drawing attention not only with models, but with the hardware around them."
+    },
+    {
+      "ja": "Business Insiderは、OpenAIが小型のコーディング用デバイスを示唆したと伝えた。モデル出力を使う入口を、専用機として切り出す発想だ。",
+      "en": "Business Insider reported that OpenAI teased a small coding device. The idea is to turn model access into a dedicated hardware workflow."
+    },
+    {
+      "ja": "AIの競争は、モデル性能だけでなく使い方の設計にも広がっている。",
+      "en": "AI competition now extends beyond model quality into how people access and use it."
+    },
+    {
+      "ja": "製品化の有無と、開発者向けにどこまで公開されるかを見る。",
+      "en": "Watch whether it becomes a real product and how much OpenAI opens to developers."
+    },
+    {
+      "ja": "OS更新は、派手な発表よりも日々の使い勝手を変える。",
+      "en": "OS updates change daily use more than splashy announcements do."
+    },
+    {
+      "ja": "Windows Centralは、7月のWindows 11更新に複数の新機能が含まれると整理した。ユーザー向けの変更は、地味でも積み上がる。",
+      "en": "Windows Central said the July Windows 11 update includes a cluster of new features. User-facing changes add up even when they are not flashy."
+    },
+    {
+      "ja": "OS更新は企業端末の管理、サポート負荷、ユーザー教育に直結する。",
+      "en": "OS updates affect device management, support load, and user training."
+    },
+    {
+      "ja": "配信対象の広がりと、既存機能への不具合報告を見る。",
+      "en": "Watch rollout scope and any bug reports on existing features."
+    },
+    {
+      "ja": "政策判断が、移民、選挙、AI公開、企業統治の境界をまたいで市場の前提条件になっている。",
+      "en": "Policy choices are now shaping the operating conditions for elections, labor markets, and AI product launches at the same time."
+    },
+    {
+      "ja": "雇用統計の弱さは景気後退の確定ではなく、労働参加の鈍化と賃金の粘着性を同時に示した。",
+      "en": "The jobs data pointed to a softer labor market, but the headline unemployment drop came with weaker participation."
+    },
+    {
+      "ja": "AIでは、誰が何を出すかより先に、いつ誰に配るかが政治と規制の論点になっている。",
+      "en": "In AI, the main question is no longer just what launches, but who can release it, when, and to whom."
+    },
+    {
+      "ja": "出生ツーリズム対策が、執行強化で終わるのか法改正まで進むのかを見る。",
+      "en": "Watch whether birth-tourism enforcement stays at the level of policing or turns into legislation."
+    },
+    {
+      "ja": "6月雇用統計を受けた7月のFOMCと債券市場の反応を追う。",
+      "en": "Watch the July Fed meeting and the bond-market reaction to the June payroll miss."
+    },
+    {
+      "ja": "OpenAIとAnthropicの公開条件が、正式な政策や製品仕様に落ちるかを確認する。",
+      "en": "Watch whether OpenAI and Anthropic turn reported pressure into formal release rules."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+---
+title: '調査プロセス: 世界の宗教人口分布'
+---
+
+# 調査プロセス: 世界の宗教人口分布
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- skill: [.codex/skills/stop-slop/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/stop-slop/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+- repository rule: `AGENTS.md` のResearch Repository Instructions
+
+## 調査命令
+
+ユーザー依頼は「世界の宗教についてまとめて。宗教人口の分布など。」である。リポジトリ規約に従い、チャット回答ではなく公開レポートとして保存し、日英本文、調査素材、調査ログを同期した。
+
+## 調査手順
+
+1. Pew Research Centerの2025年世界宗教構成推計を確認した。
+2. Pewのデータセット説明、国別表、方法説明、2026年宗教多様性レポートを照合した。
+3. Our World in Dataの宗教ページで、自己申告データの限界と地域分布の説明を確認した。
+4. 2015年のPew 2050年予測は、2025年の改訂推計と基準が違うため、本文では古いシナリオとして扱った。
+5. 記事本文では、世界順位、地域分布、国単位の多様性、将来予測の読み方、測定限界を分けた。
+
+## 判断ログ
+
+- 宗教人口の表は、Pewの2020年推計を採用した。
+- 2026年7月時点の世界人口に2020年比率を掛け直すことは避けた。
+- 「無宗教」は狭すぎるため、「宗教的無所属」を使った。
+- 地域分布では、キリスト教のサハラ以南アフリカ移動、イスラム教のアジア・アフリカ分布、ヒンドゥー教のインド集中を中心にした。
+- hero画像は抽象的な宗教シンボルではなく、本文の分布表を要約する横棒グラフとして生成した。
+
+## 残る確認事項
+
+- Pewが2025年推計に基づく新しい2050年以降の宗教人口予測を公表した場合、本稿の将来予測セクションを更新する。
+- 宗教別の内部宗派、宗教実践頻度、各国の宗教法制は別稿の対象にする。

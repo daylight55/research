@@ -1,0 +1,38 @@
+---
+title: '調査プロセス: 世界の宗教人口分布'
+---
+
+# 調査プロセス: 世界の宗教人口分布
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [.codex/skills/research-report/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- skill: [.codex/skills/stop-slop/SKILL.md](https://github.com/daylight55/research/blob/main/.codex/skills/stop-slop/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+- repository rule: `AGENTS.md` のResearch Repository Instructions
+
+## 調査命令
+
+調査入力は「世界の宗教についてまとめて。宗教人口の分布など。」および追加要望「主要宗教別にどうなっているか見出し別でまとめてほしい。数値とどの国がどれだけの割合なのか、また、何派なのかなどがわかるようにして。マイナーな宗教についても数と国を把握できるように。」である。リポジトリ規約に従い、公開レポートとして保存し、日英本文、調査素材、調査ログを同期した。
+
+## 調査手順
+
+1. Pew Research Centerの2025年世界宗教構成推計を確認し、七分類の世界人数と比率を基礎データにした。
+2. Pew 2025年報告PDFの国別付表から、キリスト教、イスラム教、無所属、ヒンドゥー教、仏教、その他の宗教、ユダヤ教の国別上位表を抽出した。
+3. 宗派・系統の補足として、Pew 2011年Global Christianity、Pew 2009年Global Muslim Population、Pew 2012年Buddhists、Pew 2021年India survey、Pew 2020年Jewish Americansを確認した。
+4. 少数宗教の個別人数について、Pewの「その他の宗教」では分離できないため、インド政府PIBの2011年国勢調査系公表値を確認した。
+5. World in DataとPewの方法説明で、自己申告、国勢調査、宗教的無所属、東アジアの儀礼実践に関する限界を確認した。
+6. Pew 2015年の2050年予測は、2025年の改訂推計と基準が違うため、本文では古いシナリオとして扱った。
+
+## 判断
+
+- 本文は「世界全体の順位」「主要宗教別の国別表」「宗派・系統」「国別多様性」「将来予測と限界」の順に組み替えた。
+- 宗派別の世界表は作らず、出典年と対象範囲を明示した補足にした。
+- 少数宗教は、Pewの「その他の宗教」上位国表と、インド国内のシク教・ジャイナ教などの個別人数を併記した。
+- 英語本文は日本語本文の公開同期版として、同じ表構成と出典メモを持つ形にした。
+
+## 残課題
+
+- 宗派・系統データは2020年統一基準ではないため、人手レビューでは「国別人数」と「宗派補足」を混同していないかを見る必要がある。
+- Pew 2025年の機械可読データが公開・更新された場合、PDF付表から抽出した国別表を再照合する余地がある。

@@ -139,10 +139,59 @@
       ]
     },
     {
+      "id": "judaism-evangelicals-palestine",
+      "heading": {
+        "ja": "4. ユダヤ教・福音派・パレスチナをどう分けて読むか",
+        "en": "4. How to Connect Judaism, Evangelicals, and Palestine"
+      },
+      "pairs": [
+        {
+          "ja": "ユダヤ教と福音派をつなげて読むべき場面はある。",
+          "en": "Judaism and evangelical Protestantism should be connected in one specific setting: when explaining the pro-Israel political coalition in the United States."
+        },
+        {
+          "ja": "ただし、その接続は「米国の親イスラエル政治連合」を説明するときに限定したほうがよい。",
+          "en": "The connection should not become a claim that Jews and evangelicals form one religious or political bloc."
+        },
+        {
+          "ja": "米国ユダヤ人と白人福音派は、イスラエルをめぐる米国世論では近い位置に出ることが多い。",
+          "en": "U.S. Jews and White evangelical Protestants often appear close in U.S. opinion data on Israel."
+        },
+        {
+          "ja": "親イスラエルという同じ外形でも、政府批判の余地は同じではない。",
+          "en": "Similar pro-Israel toplines can hide different room for criticizing the Israeli government."
+        },
+        {
+          "ja": "米国ユダヤ人をイスラエルと切り離しすぎる読み方も、完全に同一視する読み方も危うい。",
+          "en": "It is risky both to detach U.S. Jews from Israel too much and to equate them with Israel."
+        },
+        {
+          "ja": "パレスチナの見方は、少なくとも四つに分ける必要がある。",
+          "en": "Views of Palestine need at least four separate objects: Palestinians as a people, the Palestinian Authority, Hamas, and the Israeli government's conduct."
+        },
+        {
+          "ja": "つまり、パレスチナ人への同情や支持が、PAやHamasへの支持と一致するわけではない。",
+          "en": "Sympathy for Palestinians therefore does not imply support for the PA or Hamas."
+        },
+        {
+          "ja": "米国外では、全体の空気はイスラエルに厳しくなっている。",
+          "en": "Outside the United States, the broader climate has become much more critical of Israel."
+        },
+        {
+          "ja": "イスラエル国内の見方も一枚岩ではない。",
+          "en": "Israeli public opinion is also not monolithic."
+        },
+        {
+          "ja": "宗教人口の表から直接、外交姿勢や戦争観を推定しないほうがよい。",
+          "en": "Religious population tables should not be used to infer diplomatic positions or views of war directly."
+        }
+      ]
+    },
+    {
       "id": "country-diversity",
       "heading": {
-        "ja": "4. 国別多様性で見る",
-        "en": "4. Country-Level Diversity"
+        "ja": "5. 国別多様性で見る",
+        "en": "5. Country-Level Diversity"
       },
       "pairs": [
         {
@@ -162,8 +211,8 @@
     {
       "id": "projections",
       "heading": {
-        "ja": "5. 将来予測は慎重に読む",
-        "en": "5. Reading Projections"
+        "ja": "6. 将来予測は慎重に読む",
+        "en": "6. Reading Projections"
       },
       "pairs": [
         {
@@ -187,8 +236,8 @@
     {
       "id": "limits",
       "heading": {
-        "ja": "6. 使い方と限界",
-        "en": "6. Uses and Limits"
+        "ja": "7. 使い方と限界",
+        "en": "7. Uses and Limits"
       },
       "pairs": [
         {

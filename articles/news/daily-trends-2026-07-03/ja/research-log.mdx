@@ -1,0 +1,26 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-07-03
+- Article slug: `daily-trends-2026-07-03`
+- Run Context: required content type is news, category is tech-news, topic counts are politics 5, economy 5, technology 5, and the recency window is 24-48 hours with a few slightly older items allowed if they still drive policy, market, or product decisions.
+- Deliverable: write `articles/news/daily-trends-2026-07-03/daily-trend-news.json` and let the renderer create the public MDX, source notes, research log, and mix alignment files.
+
+## 判断メモ
+
+- The politics set centers on Trump-era legal and symbolic fights because that cluster dominated current coverage and gave five distinct, source-backed topics.
+- The economy set uses one strong payroll package because the jobs report supplied enough current evidence for five distinct angles without stretching to weaker sources.
+- The technology set favors current platform decisions and release gating over older product history so the digest stays anchored to present decisions.
+- Hero image selection is intentionally specific to OpenAI and Washington politics rather than a generic newsroom collage.
+
+## 残課題
+
+- Check whether any birthright-citizenship or birth-tourism action turns into a filed bill or formal rule.
+- Track the July Fed meeting and any revisions to the June payroll data.
+- Watch for a formal OpenAI or Anthropic announcement that converts reported policy pressure into a published product rule.

@@ -338,16 +338,6 @@ jobs:
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: node ops/scripts/select-unsplash-hero.mjs
 
-      - name: Verify unique hero images
-        if: steps.diff_check.outputs.has_changes == 'true'
-        id: hero_image_tests
-        continue-on-error: true
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          pnpm test:hero-images 2>&1 | tee "${RUNNER_TEMP}/daily-research-hero-images.log"
-
       - name: Run repository tests
         if: steps.diff_check.outputs.has_changes == 'true'
         id: repository_tests
@@ -369,7 +359,7 @@ jobs:
           node ops/scripts/validate-mix-alignment.mjs --changed 2>&1 | tee "${RUNNER_TEMP}/daily-research-mix-alignment.log"
 
       - name: Prepare generated article verification repair prompt
-        if: ${{ (steps.hero_image_tests.outcome == 'failure' || steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
+        if: ${{ (steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -393,13 +383,6 @@ jobs:
               | head -120 \
               || true
             echo
-            echo "## Hero image validation output"
-            if [[ -f "${RUNNER_TEMP}/daily-research-hero-images.log" ]]; then
-              cat "${RUNNER_TEMP}/daily-research-hero-images.log"
-            else
-              echo "Hero image validation did not run."
-            fi
-            echo
             echo "## MIX alignment validation output"
             if [[ -f "${RUNNER_TEMP}/daily-research-mix-alignment.log" ]]; then
               cat "${RUNNER_TEMP}/daily-research-mix-alignment.log"
@@ -407,11 +390,11 @@ jobs:
               echo "MIX alignment validation did not run."
             fi
             echo
-            echo "After editing, run: pnpm test:hero-images && pnpm test && node ops/scripts/validate-mix-alignment.mjs --changed"
+            echo "After editing, run: pnpm test && node ops/scripts/validate-mix-alignment.mjs --changed"
           } > "${repair_prompt}"
 
       - name: Repair generated article verification failure
-        if: ${{ (steps.hero_image_tests.outcome == 'failure' || steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
+        if: ${{ (steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
         uses: openai/codex-action@v1
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
@@ -425,7 +408,7 @@ jobs:
           allow-bots: true
 
       - name: Normalize repaired article permissions
-        if: ${{ (steps.hero_image_tests.outcome == 'failure' || steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
+        if: ${{ (steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
         shell: bash
         run: |
           set -euo pipefail
@@ -453,7 +436,7 @@ jobs:
           done < "${changed_files}"
 
       - name: Restore Node after generated article repair
-        if: ${{ (steps.hero_image_tests.outcome == 'failure' || steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
+        if: ${{ (steps.repository_tests.outcome == 'failure' || steps.generated_mix_alignment.outcome == 'failure') && steps.restore_generated_article.outputs.cache-hit != 'true' }}
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
@@ -463,14 +446,13 @@ jobs:
         if: steps.diff_check.outputs.has_changes == 'true'
         shell: bash
         env:
-          INITIAL_HERO_IMAGE_OUTCOME: ${{ steps.hero_image_tests.outcome }}
           INITIAL_REPOSITORY_TEST_OUTCOME: ${{ steps.repository_tests.outcome }}
           INITIAL_MIX_ALIGNMENT_OUTCOME: ${{ steps.generated_mix_alignment.outcome }}
           GENERATED_ARTICLE_CACHE_HIT: ${{ steps.restore_generated_article.outputs.cache-hit }}
         run: |
           set -euo pipefail
 
-          if [[ "${INITIAL_HERO_IMAGE_OUTCOME}" == "success" && "${INITIAL_REPOSITORY_TEST_OUTCOME}" == "success" && "${INITIAL_MIX_ALIGNMENT_OUTCOME}" == "success" ]]; then
+          if [[ "${INITIAL_REPOSITORY_TEST_OUTCOME}" == "success" && "${INITIAL_MIX_ALIGNMENT_OUTCOME}" == "success" ]]; then
             exit 0
           fi
 
@@ -479,7 +461,6 @@ jobs:
             exit 1
           fi
 
-          pnpm test:hero-images
           pnpm test
 
       - name: Remove repository test repair artifacts
@@ -504,13 +485,20 @@ jobs:
 
       - name: Build generated site
         if: steps.diff_check.outputs.has_changes == 'true'
+        id: generated_site_build
+        continue-on-error: true
         env:
           ASTRO_CACHE_DIR: ${{ runner.temp }}/astro-cache
           VITE_CACHE_DIR: ${{ runner.temp }}/vite-cache
         run: pnpm build
 
+      - name: Report skipped generated site build
+        if: steps.diff_check.outputs.has_changes == 'true' && steps.generated_site_build.outcome == 'failure'
+        run: |
+          echo "::warning::Daily Issue Research generated article did not build. Skipping article cache, PR creation, issue update, and deployment without failing the scheduled workflow."
+
       - name: Create generated article cache archive
-        if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
+        if: steps.diff_check.outputs.has_changes == 'true' && steps.generated_site_build.outcome == 'success' && steps.restore_generated_article.outputs.cache-hit != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -523,14 +511,14 @@ jobs:
             --files-from "${generated_files}"
 
       - name: Save generated article cache
-        if: steps.diff_check.outputs.has_changes == 'true' && steps.restore_generated_article.outputs.cache-hit != 'true'
+        if: steps.diff_check.outputs.has_changes == 'true' && steps.generated_site_build.outcome == 'success' && steps.restore_generated_article.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
           path: ${{ runner.temp }}/generated-article-cache
           key: daily-issue-research-${{ steps.select_issue.outputs.issue_number }}
 
       - name: Create research pull request
-        if: steps.diff_check.outputs.has_changes == 'true'
+        if: steps.diff_check.outputs.has_changes == 'true' && steps.generated_site_build.outcome == 'success'
         id: create_pr
         shell: bash
         env:

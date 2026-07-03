@@ -29,6 +29,14 @@ const IMAGE_DIR = path.join('src', 'assets', 'images', 'hero')
 const PLACEHOLDER_RE = /placeholder|banner\.jpg|book\.jpg|placeholder-social/i
 const BLOG_GLOB = 'articles/*/*/*/index.mdx'
 const NEWS_GENERIC_QUERY_RE = /\b(news|daily|trend|trends|hot|collage|headline|headlines)\b/gi
+const DEFAULT_HERO = {
+	heroImage: '../../../../src/assets/images/hero/generative-ai-investment-map.jpg',
+	heroImageAlt: 'Data center infrastructure used as a fallback hero image',
+	heroImageCredit: 'Photo by İsmail Enes Ayhan on Unsplash',
+	heroImageCreditUrl:
+		'https://unsplash.com/@ismailenesayhan?utm_source=daylight_research_atlas&utm_medium=referral',
+	heroImageSourceId: 'fallback:unsplash:lVZjvw-u9V8'
+}
 const SHARED_HERO_FIELDS = [
 	'heroImage',
 	'heroImageCredit',
@@ -114,6 +122,36 @@ function upsertScalar(frontmatter, key, value, afterKey) {
 	}
 
 	return `${frontmatter}\n${line}`
+}
+
+export function applyDefaultHeroFallback(frontmatter) {
+	let nextFrontmatter = frontmatter
+	nextFrontmatter = upsertScalar(nextFrontmatter, 'heroImage', DEFAULT_HERO.heroImage, 'pubDate')
+	nextFrontmatter = upsertScalar(
+		nextFrontmatter,
+		'heroImageAlt',
+		DEFAULT_HERO.heroImageAlt,
+		'heroImage'
+	)
+	nextFrontmatter = upsertScalar(
+		nextFrontmatter,
+		'heroImageCredit',
+		DEFAULT_HERO.heroImageCredit,
+		'heroImageAlt'
+	)
+	nextFrontmatter = upsertScalar(
+		nextFrontmatter,
+		'heroImageCreditUrl',
+		DEFAULT_HERO.heroImageCreditUrl,
+		'heroImageCredit'
+	)
+	nextFrontmatter = upsertScalar(
+		nextFrontmatter,
+		'heroImageSourceId',
+		DEFAULT_HERO.heroImageSourceId,
+		'heroImageCreditUrl'
+	)
+	return nextFrontmatter
 }
 
 function sharedHeroFields(frontmatter) {
@@ -404,7 +442,10 @@ async function selectHero(file) {
 	const state = existingHeroState({ currentFile: file })
 	if (currentHero && !PLACEHOLDER_RE.test(currentHero) && !state.duplicateCurrentHero) return false
 	if (!ACCESS_KEY) {
-		throw new Error('UNSPLASH_ACCESS_KEY is required when heroImageQuery is set')
+		const nextFrontmatter = applyDefaultHeroFallback(raw)
+		await writeFile(file, source.replace(full, `---\n${nextFrontmatter}\n---`))
+		console.warn(`UNSPLASH_ACCESS_KEY is not set for ${file}; using default heroImage: ${query}`)
+		return { file }
 	}
 
 	const queries = buildRetryQueries(query, {
@@ -421,8 +462,10 @@ async function selectHero(file) {
 	})
 
 	if (!selected) {
-		console.warn(`No Unsplash photo found for ${file}; keeping existing heroImage: ${query}`)
-		return false
+		const nextFrontmatter = applyDefaultHeroFallback(raw)
+		await writeFile(file, source.replace(full, `---\n${nextFrontmatter}\n---`))
+		console.warn(`No Unsplash photo found for ${file}; using default heroImage: ${query}`)
+		return { file }
 	}
 
 	const slug = articleSlugFromFile(file)

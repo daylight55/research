@@ -6,6 +6,7 @@ import { join } from 'node:path'
 import { test } from 'node:test'
 
 import {
+	applyDefaultHeroFallback,
 	articleSlugFromFile,
 	buildRetryQueries,
 	existingHeroState,
@@ -40,6 +41,31 @@ test('articleSlugFromFile derives the article slug rather than the locale direct
 		articleSlugFromFile('articles/report/cognitive-schema-update-language-learning/ja/index.mdx'),
 		'cognitive-schema-update-language-learning'
 	)
+})
+
+test('applyDefaultHeroFallback replaces placeholder heroes with source-traceable default image', () => {
+	const frontmatter = `title: Generated
+pubDate: '2026-07-03'
+heroImage: '../../../../src/assets/images/hero/placeholder-social.jpg'
+heroImageAlt: 'Old placeholder'
+heroImageCredit: 'Placeholder'
+heroImageCreditUrl: ''
+heroImageSourceId: 'placeholder'
+draft: false`
+
+	const next = applyDefaultHeroFallback(frontmatter)
+
+	assert.match(
+		next,
+		/heroImage: '\.\.\/\.\.\/\.\.\/\.\.\/src\/assets\/images\/hero\/generative-ai-investment-map\.jpg'/
+	)
+	assert.match(next, /heroImageAlt: 'Data center infrastructure used as a fallback hero image'/)
+	assert.match(next, /heroImageCredit: 'Photo by İsmail Enes Ayhan on Unsplash'/)
+	assert.match(
+		next,
+		/heroImageCreditUrl: 'https:\/\/unsplash\.com\/@ismailenesayhan\?utm_source=daylight_research_atlas&utm_medium=referral'/
+	)
+	assert.match(next, /heroImageSourceId: 'fallback:unsplash:lVZjvw-u9V8'/)
 })
 
 test('selectUniqueUnsplashPhoto retries with another query when a candidate duplicates an existing hero image', async () => {

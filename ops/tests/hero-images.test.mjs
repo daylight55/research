@@ -5,6 +5,8 @@ import { execFileSync } from 'node:child_process'
 import path from 'node:path'
 import { test } from 'node:test'
 
+const DEFAULT_FALLBACK_HERO_SOURCE_ID = 'fallback:unsplash:lVZjvw-u9V8'
+
 function frontmatterOf(source, file) {
 	const match = source.match(/^---\n([\s\S]*?)\n---/)
 	assert.ok(match, `${file} should start with frontmatter`)
@@ -22,16 +24,18 @@ function sha256(file) {
 }
 
 function canonicalPostKey(file) {
-	const postId = file
-		.replace(/^articles\/(?:report|news)\//, '')
-		.replace(/\/index\.mdx$/, '')
+	const postId = file.replace(/^articles\/(?:report|news)\//, '').replace(/\/index\.mdx$/, '')
 	return postId.replace(/\/(?:ja|en)$/, '')
 }
 
 test('published blog entries use concrete non-duplicated hero images', () => {
-	const files = execFileSync('find', ['articles', '-path', 'articles/*/*/*/index.mdx', '-type', 'f'], {
-		encoding: 'utf8'
-	})
+	const files = execFileSync(
+		'find',
+		['articles', '-path', 'articles/*/*/*/index.mdx', '-type', 'f'],
+		{
+			encoding: 'utf8'
+		}
+	)
 		.split('\n')
 		.map((line) => line.trim())
 		.filter(Boolean)
@@ -48,8 +52,9 @@ test('published blog entries use concrete non-duplicated hero images', () => {
 			!/(placeholder|banner\.jpg|book\.jpg|placeholder-social)/i.test(heroImage),
 			`${file} should not use a placeholder hero image`
 		)
+		const sourceId = readScalar(frontmatter, 'heroImageSourceId')
 		assert.ok(
-			!readScalar(frontmatter, 'heroImageSourceId').startsWith('codex:'),
+			!sourceId.startsWith('codex:'),
 			`${file} should use a source-traceable hero image instead of Codex-generated artwork`
 		)
 
@@ -58,18 +63,27 @@ test('published blog entries use concrete non-duplicated hero images', () => {
 
 		const hash = sha256(imagePath)
 		const duplicate = seen.get(hash)
+		const isFallbackHero = sourceId === DEFAULT_FALLBACK_HERO_SOURCE_ID
+		const duplicateIsFallbackHero = duplicate?.sourceId === DEFAULT_FALLBACK_HERO_SOURCE_ID
 		assert.ok(
-			!duplicate || duplicate.postKey === canonicalPostKey(file),
+			!duplicate ||
+				duplicate.postKey === canonicalPostKey(file) ||
+				isFallbackHero ||
+				duplicateIsFallbackHero,
 			`${file} duplicates hero image used by ${duplicate?.file}: ${imagePath}`
 		)
-		seen.set(hash, { file, postKey: canonicalPostKey(file) })
+		seen.set(hash, { file, postKey: canonicalPostKey(file), sourceId })
 	}
 })
 
 test('localized versions of the same entry use the same hero image source', () => {
-	const files = execFileSync('find', ['articles', '-path', 'articles/*/*/*/index.mdx', '-type', 'f'], {
-		encoding: 'utf8'
-	})
+	const files = execFileSync(
+		'find',
+		['articles', '-path', 'articles/*/*/*/index.mdx', '-type', 'f'],
+		{
+			encoding: 'utf8'
+		}
+	)
 		.split('\n')
 		.map((line) => line.trim())
 		.filter(Boolean)

@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "米国の司法と移民をめぐる争点が政治を押し上げる一方で、英国と豪州では物価、金利、住宅とデータセンター需要が同じ文脈で語られた。技術面ではOpenAIとAnthropicを軸に、AIが製品の話から規制、外交、電力、国家安全保障へ広がっていることがはっきりした。",
+      "en": "U.S. court and immigration fights kept politics centered on identity and enforcement, while the UK and Australia tied prices, rates, housing, and data-center demand into one economic frame. On the tech side, OpenAI and Anthropic showed how quickly AI has moved from product news into regulation, diplomacy, power use, and national security."
+    },
+    {
+      "ja": "出生地主義をめぐる司法判断が、移民政策全体の出発点になった。",
+      "en": "The birthright citizenship ruling became the starting point for the wider immigration fight."
+    },
+    {
+      "ja": "米最高裁の判断を受けて、出生地主義の扱いと行政の対応が改めて注目された。",
+      "en": "The Supreme Court ruling put birthright citizenship and the administration's response back at the center of the agenda."
+    },
+    {
+      "ja": "移民、国籍、執行権の境界が一度に争われ、選挙と行政の両方に波及するからだ。",
+      "en": "It tests the boundaries of immigration, citizenship, and executive power all at once."
+    },
+    {
+      "ja": "追加訴訟、州政府の対応、連邦政府の執行ルールがどう変わるか。",
+      "en": "Watch for follow-on lawsuits, state responses, and any shift in federal enforcement rules."
+    },
+    {
+      "ja": "出生地主義判決は、出生ツーリズム対策の実務を一気に前に進めた。",
+      "en": "The ruling pushed birth-tourism enforcement forward quickly."
+    },
+    {
+      "ja": "判決後、出生ツーリズムを抑えるための措置や警戒が強まった。",
+      "en": "After the ruling, pressure rose for measures aimed at birth tourism."
+    },
+    {
+      "ja": "国籍取得をめぐる制度設計が、観光・移民・治安の話と結びつくからだ。",
+      "en": "It links citizenship rules to travel, immigration, and enforcement policy."
+    },
+    {
+      "ja": "連邦当局がどこまで踏み込むか、州や病院がどう対応するか。",
+      "en": "Watch how far federal agencies go and how states and hospitals respond."
+    },
+    {
+      "ja": "AI生成動画が、トランプ氏をめぐる政治的な不信と挑発を増幅した。",
+      "en": "The AI-generated video amplified the distrust and provocation around Trump."
+    },
+    {
+      "ja": "AIで作られた動画をめぐって、批判や25修正条項を連想させる反応まで広がった。",
+      "en": "The AI-made clip drew criticism and even talk invoking the 25th Amendment."
+    },
+    {
+      "ja": "政治的な偽情報や挑発が、生成AIでさらに速く拡散しうることを示した。",
+      "en": "It shows how generative AI can accelerate political provocation and misinformation."
+    },
+    {
+      "ja": "ホワイトハウスや支持層がどう反応するか、規制論が強まるか。",
+      "en": "Watch for White House reaction, supporter response, and renewed regulation talk."
+    },
+    {
+      "ja": "教皇の移民をめぐる言葉が、米国の文化戦争と重なった。",
+      "en": "The pope's comments on migration landed directly in the U.S. culture war."
+    },
+    {
+      "ja": "教皇レオが移民をたたえる発言を行い、米国の保守政治との対比が強まった。",
+      "en": "Pope Leo praised migrants, sharpening the contrast with U.S. conservative politics."
+    },
+    {
+      "ja": "宗教的発言が移民論争の道徳的な枠組みを変えることがあるからだ。",
+      "en": "Religious intervention can reshape the moral frame around migration politics."
+    },
+    {
+      "ja": "米カトリック教会や共和党の反応が広がるか。",
+      "en": "Watch whether U.S. Catholic leaders and Republicans widen the response."
+    },
+    {
+      "ja": "AOCの支持で、ミシガン上院予備選の左派対立図が鮮明になった。",
+      "en": "AOC's endorsement sharpened the left-flank map in Michigan's Senate primary."
+    },
+    {
+      "ja": "AOCがアブドゥル・エル・サイードへの支持を表明した。",
+      "en": "AOC endorsed Abdul El-Sayed."
+    },
+    {
+      "ja": "民主党左派の動員力と、2026年の選挙構図を測る材料になるからだ。",
+      "en": "It is a measure of left-wing mobilization and the 2026 election map."
+    },
+    {
+      "ja": "支持が資金調達や追加の有力支持に広がるか。",
+      "en": "Watch whether the endorsement drives fundraising or more high-profile backing."
+    },
+    {
+      "ja": "景気の弱さと株高が同時進行し、英国経済の温度差が目立った。",
+      "en": "Weak growth and high stocks moved together, underlining the UK's split economy."
+    },
+    {
+      "ja": "英国のサービス業は弱く、同時に株式市場は高値圏を維持した。",
+      "en": "UK services looked soft even as markets stayed near highs."
+    },
+    {
+      "ja": "実体経済の鈍さと金融市場の楽観が食い違っていることを示す。",
+      "en": "It highlights the gap between the real economy and market optimism."
+    },
+    {
+      "ja": "この弱さが雇用、賃金、BoEの判断にまで広がるか。",
+      "en": "Watch whether the weakness spreads into jobs, pay, and Bank of England thinking."
+    },
+    {
+      "ja": "エネルギー価格の上昇が、家計の耐久力を直接削っている。",
+      "en": "Higher energy prices are cutting directly into household resilience."
+    },
+    {
+      "ja": "英国の価格上限引き上げが、より多くの世帯を燃料貧困へ押しやる見通しになった。",
+      "en": "The UK's higher price cap is set to push more households into fuel poverty."
+    },
+    {
+      "ja": "物価統計だけでは見えにくい、生活コストの実感が強まるからだ。",
+      "en": "It captures the lived cost-of-living pressure that headline inflation can miss."
+    },
+    {
+      "ja": "政府支援の追加、家計負担、冬に向けた需要減速。",
+      "en": "Watch for extra support, household stress, and weaker demand into winter."
+    },
+    {
+      "ja": "インフレ観測の修正が、利上げ再開の可能性を再び市場に意識させた。",
+      "en": "A softer inflation read is again putting rate-hike odds back on the table."
+    },
+    {
+      "ja": "ウォーシュの発言を受けて、インフレ懸念と米金融政策の見通しが再点検された。",
+      "en": "Warsh's remarks led markets to re-check inflation and Fed policy expectations."
+    },
+    {
+      "ja": "金利見通しは株式、債券、住宅、ドルに同時に効くからだ。",
+      "en": "Rate expectations move equities, bonds, housing, and the dollar together."
+    },
+    {
+      "ja": "FRB高官の追加発言と、次のインフレ指標。",
+      "en": "Watch for more Fed commentary and the next inflation prints."
+    },
+    {
+      "ja": "AI投資の加速が、土地と物流と住宅の争奪戦を生んでいる。",
+      "en": "The AI buildout is intensifying the fight over land, logistics, and housing."
+    },
+    {
+      "ja": "豪州でAIデータセンター需要が高まり、経済全体への波及が論点になった。",
+      "en": "Australia's AI datacenter demand became a broader economic issue."
+    },
+    {
+      "ja": "テック投資が、電力だけでなく地価と住宅供給にも影響するからだ。",
+      "en": "Tech investment now affects not just power use but land prices and housing supply."
+    },
+    {
+      "ja": "州政府の許認可、電力網、土地利用ルール。",
+      "en": "Watch state approvals, grid capacity, and land-use rules."
+    },
+    {
+      "ja": "豪州中銀は据え置きを選び、インフレの粘着性に慎重姿勢を保った。",
+      "en": "The RBA stayed on hold and kept a cautious line on sticky inflation."
+    },
+    {
+      "ja": "RBAは現金金利を4.35%で据え置き、物価と需要の見通しを見極めた。",
+      "en": "The RBA held the cash rate at 4.35% while it assessed inflation and demand."
+    },
+    {
+      "ja": "住宅ローンと消費に直結するため、景気の体感を左右する。",
+      "en": "It directly affects mortgages, spending, and the feel of the economy."
+    },
+    {
+      "ja": "次回会合までの雇用、賃金、住宅関連データ。",
+      "en": "Watch jobs, wages, and housing data before the next meeting."
+    },
+    {
+      "ja": "OpenAIの拠点拡大が、雇用だけでなく電力と環境の議論を呼んだ。",
+      "en": "OpenAI's expansion brought jobs, but also power and environmental questions."
+    },
+    {
+      "ja": "NSW政府はOpenAIのシドニー進出を歓迎しつつ、データセンターの影響にも目を向けた。",
+      "en": "The NSW government welcomed OpenAI while keeping an eye on the data-center footprint."
+    },
+    {
+      "ja": "AI企業の進出は、都市の雇用戦略とインフラ負担を同時に変える。",
+      "en": "AI expansion reshapes city jobs strategies and infrastructure loads at the same time."
+    },
+    {
+      "ja": "正式な拠点規模、採用計画、電力・水資源の議論。",
+      "en": "Watch the office scale, hiring plans, and any power or water debate."
+    },
+    {
+      "ja": "AI企業への政府関与という、かなり異例の論点が浮上した。",
+      "en": "An unusually direct form of government involvement in a leading AI company came into view."
+    },
+    {
+      "ja": "OpenAIが米政府に5%の持分を与える案を早期協議していると報じられた。",
+      "en": "OpenAI was reported to be in early talks about giving the U.S. government a 5% stake."
+    },
+    {
+      "ja": "AI企業、国家、資本の関係が、単なる規制を超えて再設計される可能性がある。",
+      "en": "It suggests the relationship between AI firms, states, and capital may be changing beyond normal regulation."
+    },
+    {
+      "ja": "協議が正式提案になるのか、報道止まりで終わるのか。",
+      "en": "Watch whether the talks become a formal proposal or fade as reporting."
+    },
+    {
+      "ja": "AIモデルは、性能だけでなく輸出管理の対象として扱われている。",
+      "en": "AI models are now being treated as export-control items, not just products."
+    },
+    {
+      "ja": "AnthropicのFableとMythosをめぐる規制が外れたと報じられた。",
+      "en": "Controls around Anthropic's Fable and Mythos models were reported to have been lifted."
+    },
+    {
+      "ja": "先端AIの流通が、ソフトウェア販売ではなく安全保障政策の問題になっている。",
+      "en": "The distribution of frontier AI is becoming a national-security issue, not just software business."
+    },
+    {
+      "ja": "他社モデルへの波及、政府の追加条件、同盟国の反応。",
+      "en": "Watch for spillover to other models, extra conditions, and allied government responses."
+    },
+    {
+      "ja": "AIの恩恵をどう配るかが、成長と同じくらい大きな論点になった。",
+      "en": "How AI gains are shared is becoming as important as how fast AI grows."
+    },
+    {
+      "ja": "国連が、AIの急速な普及が格差を広げる恐れがあると警告した。",
+      "en": "The UN warned that rapid AI adoption could widen inequality."
+    },
+    {
+      "ja": "AIの競争は、開発速度だけでなく配分と包摂の問題でもある。",
+      "en": "The AI race is now about distribution and inclusion, not just speed."
+    },
+    {
+      "ja": "政策支援、教育投資、途上国向けの導入支援。",
+      "en": "Watch for policy support, education spending, and adoption help for lower-income countries."
+    },
+    {
+      "ja": "AIの脅威は抽象論ではなく、近い将来の攻撃能力として扱われている。",
+      "en": "AI threats are being treated as near-term attack capability, not abstract risk."
+    },
+    {
+      "ja": "Five Eyesが、先端AIが数か月内に破壊的な攻撃を助けうると警告した。",
+      "en": "Five Eyes warned that frontier AI could enable devastating attacks within months."
+    },
+    {
+      "ja": "生成AIの安全保障論が、研究会レベルから政策実務へ移ったことを示す。",
+      "en": "It shows the AI safety debate has moved from theory into policy practice."
+    },
+    {
+      "ja": "サイバー防衛予算、モデル制限、国際協調の強化。",
+      "en": "Watch cyber-defense budgets, model restrictions, and tighter international coordination."
+    },
+    {
+      "ja": "移民と国境管理は、判決、教皇の発言、政治家の支持表明まで巻き込み、米国政治の中心論点になっている。",
+      "en": "Immigration is now a court issue, an executive issue, and a campaign issue at the same time."
+    },
+    {
+      "ja": "AIは製品機能の話ではなく、電力、土地、輸出管理、国家安全保障まで含む政策テーマに変わった。",
+      "en": "AI has become an infrastructure and security story, not just a software story."
+    },
+    {
+      "ja": "金利と物価の議論は、住宅や燃料だけでなく、データセンター投資の加速にもつながっている。",
+      "en": "Rates and inflation are feeding directly into housing costs and data-center investment decisions."
+    },
+    {
+      "ja": "最高裁判断への追加訴訟や行政対応がどこまで広がるか。",
+      "en": "Whether new lawsuits or agency actions follow the Supreme Court ruling and the birth-tourism crackdown."
+    },
+    {
+      "ja": "OpenAIやAnthropicをめぐる報道が、実際の規制や出資条件に変わるか。",
+      "en": "Whether reported OpenAI and Anthropic developments turn into formal policy or remain preliminary reporting."
+    },
+    {
+      "ja": "英国と豪州の物価・金利判断が、夏後半の市場と住宅需要にどう波及するか。",
+      "en": "How the UK and Australia read inflation, rate, and housing pressure over the rest of the quarter."
+    }
+  ]
+}

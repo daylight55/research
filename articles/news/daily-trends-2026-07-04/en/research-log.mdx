@@ -1,0 +1,25 @@
+# research-log
+
+## Environment
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## Research Instruction
+
+- Research date: 2026-07-04
+- Article slug: `daily-trends-2026-07-04`
+- Run Context: Daily Trend News digest, required content type `news`, required category `tech-news`, and exactly 5 topics each for politics, economy, and technology within a 24-48 hour recency window, with slightly older items allowed only when they still drive the current debate.
+- Deliverable: structured JSON for the deterministic renderer; no hand-authored MDX or duplicate article body.
+
+## Decision Notes
+
+- Guardian coverage provided the cleanest mix of timeliness, article structure, and directly reusable hero images.
+- I retained one slightly older security item because the AI-risk conversation is still active and the report remains relevant.
+- All image URLs were chosen to be topic-specific and stable, rather than generic news collage assets.
+
+## Follow-ups
+
+- Check whether the OpenAI government-stake discussion becomes policy or fades after initial reporting.
+- Watch for legal responses to the Supreme Court ruling and any broader immigration enforcement moves.
+- Reassess the economy mix if rate guidance or energy prices stop being the main driver of the story.

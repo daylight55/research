@@ -1,0 +1,46 @@
+---
+title: 'フランスの国際政治プロファイル 2026年版 調査ログ'
+description: 'フランスの国際政治プロファイル 2026年版の作成時に確認した論点と判断。'
+pubDate: '2026-07-03'
+category: 'country-profiles'
+tags: ['France', 'Geopolitics', 'Research Log']
+generation:
+  model: 'gpt-5.4-mini'
+draft: false
+---
+
+# フランスの国際政治プロファイル 2026年版 調査ログ
+
+## 利用環境
+
+- model: `gpt-5.4-mini`
+- skill: [research-report](https://github.com/daylight55/research/blob/main/.codex/skills/research-report/SKILL.md)
+- prompt source: [ops/codex/prompts/daily-issue-research.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-issue-research.md)
+
+## 調査命令
+
+- issue number: #43
+- issue title: [08/50][欧州] フランスの国際政治上の論点を調査する
+- request summary: フランスを、大統領制、極右・左派、移民、世俗主義、社会抗議、EU戦略的自律、NATO、アフリカ政策、インド太平洋領土、原子力、農業、財政、産業政策、旧植民地関係、フランス語圏への影響力の観点から整理する。
+- inferred deliverable: `articles/report/france-geopolitical-profile/ja/index.mdx` を日本語正本として作成し、英語版、出典メモ、調査ログ、MIX対応表を同期する。
+
+## 目的
+
+Daily Issue Research の失敗後にCIログへ残っていた `france-geopolitical-profile` の記事内容を引き継ぎ、2026年7月3日時点の確認可能な資料で再構成した。対象はニュース読解用の国別プロファイルであり、詳細な政策史ではなく、読者が主要争点を同じ地図に置けることを優先した。
+
+## 確認した軸
+
+- 政府構成と国民議会の会派別勢力を確認し、強い大統領制と分裂議会の組み合わせを中心軸にした。
+- 移民、世俗主義、社会抗議は、国内政治を動かす共通言語として扱った。
+- EU戦略的自律は反米主義ではなく、欧州の選択肢を増やす発想として整理した。
+- アフリカ政策は旧植民地関係だけに閉じず、2026年のナイロビ文脈を踏まえて英語圏との関係づくりも入れた。
+- インド太平洋は海外領土が根拠になるため、域外大国の観察者ではなく領土保有国として説明した。
+- 財政、原子力、産業政策は外交実装の制約として本文へ組み込んだ。
+
+## 判断
+
+CIログに残っていた草稿は英語の文法崩れや本文混入があったため、そのまま復元せず、同じ論点を維持して日英を再執筆した。本文内の SourceNote は、主張の根拠が政府・国際機関・報道資料へ戻れる箇所に限定した。MIX表示用の `mix-alignment.json` は、本文の主要文を抜き出して対応させ、記事全体の厳密な逐語訳ではなく読解上の同期を目的にした。
+
+## 残る注意点
+
+政治指導者、会派勢力、財政見通しは変わりやすい。将来の更新時は、政府構成ページ、国民議会の会派数、IMF・欧州委員会・Banque de France の最新見通しを先に確認する必要がある。

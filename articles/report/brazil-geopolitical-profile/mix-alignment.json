@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "ブラジルは、2億530万人、850万平方キロ超の連邦大統領制国家であり、アマゾン保護、農業輸出、BRICS外交、都市治安が同じ内閣の議題に載る国である。",
+      "en": "Brazil is a federal presidential state of more than 205.3 million people and more than 8.5 million square kilometres, where Amazon protection, agribusiness, BRICS diplomacy, and urban security all sit on the same cabinet agenda."
+    },
+    {
+      "ja": "ルラ政権は気候外交と社会包摂を掲げるが、分断した議会、強い司法、軍の記憶、そして高い格差が、政策の速度と射程を毎回削る。",
+      "en": "Lula’s government speaks the language of climate diplomacy and social inclusion, but a fragmented Congress, a strong judiciary, military memory, and deep inequality keep cutting back what the executive can do."
+    },
+    {
+      "ja": "ブラジルを「左派政権の国」とだけ見ると、実際の制約を見落とす。",
+      "en": "Do not read Brazil as if it were only a left-wing government."
+    },
+    {
+      "ja": "実際には、森林、穀物、鉱物、港湾、都市暴力、連邦予算が互いに絡み、対米、対中、対南米の立ち回りを決めている。",
+      "en": "Forest, grain, minerals, ports, urban violence, and the federal budget all interact, and they shape how Brasília handles the United States, China, and South America."
+    },
+    {
+      "ja": "現在の体制は、植民地化、帝国、奴隷制、1888年の奴隷廃止、1889年の共和国、1964年の軍事クーデター、1988年憲法、2023年1月8日の暴動という層の上に立っている。",
+      "en": "The current order sits on top of colonisation, empire, slavery, abolition in 1888, the republic in 1889, the 1964 military coup, the 1988 constitution, and the January 8, 2023 riot."
+    },
+    {
+      "ja": "この記憶は、国家に対する信頼と不信を同時に残した。",
+      "en": "That memory left trust in the state and suspicion of the state at the same time."
+    },
+    {
+      "ja": "ブラジルの政治制度は、直接選挙の大統領、二院制の国民会議、憲法裁判所として機能する連邦最高裁、そして州と連邦区に分かれた連邦制でできている。",
+      "en": "Brazil’s political system is built around a directly elected president, a bicameral National Congress, a Supreme Federal Court that acts as a constitutional court, and a federation split into states and a federal district."
+    },
+    {
+      "ja": "大統領は議題設定力を持つが、法律、予算、人事、命令の実装には議会と司法の合意が要る。",
+      "en": "The president has agenda-setting power, but laws, budgets, appointments, and executive implementation all need some level of legislative and judicial consent."
+    },
+    {
+      "ja": "2026年時点のルラ政権は、政党規律の弱い議会と交渉しながら、農業、宗教、治安、財政の各ブロックに同時に向き合っている。",
+      "en": "By 2026, Lula’s government is negotiating with a legislature that has weak party discipline and has to face the farm bloc, religious conservatives, security hawks, and fiscal hardliners at the same time."
+    },
+    {
+      "ja": "連立の相手は一つの政党ではなく、中央派の議員群と州レベルの利害の寄せ集めである。",
+      "en": "The governing partner is not a single party, but a shifting mix of centrist lawmakers and state-level interests."
+    },
+    {
+      "ja": "最高裁は選挙と民主主義を守る最後の砦として見られる一方、司法化が進むほど政治対立は裁判所へ移る。",
+      "en": "The Supreme Federal Court is seen as the last line of defence for elections and democracy, but the more politics judicialises, the more conflicts move into the court."
+    },
+    {
+      "ja": "軍は2023年1月8日以後、政治の表舞台に戻ることへの警戒を強めた。",
+      "en": "After January 8, 2023, the military became more cautious about returning to the centre of politics."
+    },
+    {
+      "ja": "世界銀行は、ブラジルの温室効果ガス排出の4分の3が土地利用変化と農業に由来すると説明し、アマゾンは生態学的転換点に近づいていると警告する。",
+      "en": "The World Bank says about three quarters of Brazil’s greenhouse gas emissions come from land-use change and agriculture, and it warns that the Amazon is nearing an ecological tipping point."
+    },
+    {
+      "ja": "同じページは、違法森林破壊を2030年までにゼロにする目標を挙げている。",
+      "en": "The same page sets a target of zero illegal deforestation by 2030."
+    },
+    {
+      "ja": "このため、森林保護は環境政策ではなく、雨量、農業、水力発電、電力系統、外貨獲得をまとめて左右する産業政策になった。",
+      "en": "That makes forest protection less a moral climate story than an industrial policy that shapes rainfall, farming, hydropower, the power grid, and foreign exchange earnings."
+    },
+    {
+      "ja": "先住民の土地区画指定は憲法上の権利だが、実務では違法伐採、鉱山、土地投機、農牧業の圧力で遅れやすい。",
+      "en": "Indigenous land demarcation is a constitutional right, but in practice it slows under pressure from illegal logging, mining, land speculation, and agribusiness."
+    },
+    {
+      "ja": "ブラジルでは、アマゾンを守る国家目的と、穀物と牛肉を増やしたい農業ロビーの目的が衝突する。",
+      "en": "Brazil therefore lives with a direct clash between a state goal to protect the Amazon and a farm lobby that wants more grain and beef output."
+    },
+    {
+      "ja": "対外関係では、米国との摩擦、中国との相互依存、BRICSでの多極志向、MercosurとCELACでの地域主義が同時に動く。",
+      "en": "Brazil’s external relations move on several tracks at once: friction with the United States, interdependence with China, a multipolar tilt through BRICS, and regionalism through Mercosur and CELAC."
+    },
+    {
+      "ja": "2025年の米国との通商・政治対立は、ブラジルが主権と市場アクセスを同時に守ろうとすると、ワシントンが関税と司法問題を結びつけて圧力をかけうることを示した。",
+      "en": "The 2025 trade and political dispute with the United States showed that, when Brazil tries to defend sovereignty and market access at the same time, Washington can use tariffs and legal issues as pressure points."
+    },
+    {
+      "ja": "中国は2009年以来ブラジルの最大貿易相手であり、穀物、鉱石、エネルギー、インフラ投資の需要がブラジルの外交余地を広げる一方で、対中依存への警戒も生む。",
+      "en": "China has been Brazil’s largest trading partner since 2009, and demand for grain, ore, energy, and infrastructure investment expands Brasília’s room for manoeuvre even as it raises concern about dependence on China."
+    },
+    {
+      "ja": "BRICSはブラジルにとって、米国への従属でも中国への同調でもない、交渉余地を残すための場である。",
+      "en": "For Brazil, BRICS is a space to preserve bargaining room, not a way to become subordinate to the United States or aligned with China."
+    },
+    {
+      "ja": "ただし、BRICSは西側資本市場、技術、ドル決済の代替にはならない。",
+      "en": "But BRICS is not a substitute for Western capital markets, technology, or dollar settlement."
+    },
+    {
+      "ja": "南米統合も重要だが、Mercosurの制度力は国境を越える政治の熱量より弱い。",
+      "en": "South American integration matters too, but Mercosur’s institutional strength is weaker than the political heat that crosses its borders."
+    },
+    {
+      "ja": "安全保障の中心は、対外戦争ではなく都市暴力、組織犯罪、警察暴力、刑務所の過密である。",
+      "en": "The core security issue is not foreign war but urban violence, organised crime, police violence, and prison overcrowding."
+    },
+    {
+      "ja": "ブラジルの治安は州ごとの差が大きく、サンパウロと北東部、都市中心部と周縁の違いが、選挙の争点をそのまま地域化する。",
+      "en": "Security problems vary sharply by state, and the differences between São Paulo and the northeast, and between city centres and peripheries, localise electoral conflict."
+    },
+    {
+      "ja": "世界銀行は、ブラジルの人間開発係数を55%とし、失業を考慮すると33%に下がると示す。",
+      "en": "The World Bank puts Brazil’s Human Capital Index at 55 percent, or 33 percent when unemployment is taken into account."
+    },
+    {
+      "ja": "2024年の貧困率は6.85ドル/日基準で20.9%まで下がったが、地域格差と財政制約はなお残る。",
+      "en": "The 2024 poverty rate fell to 20.9 percent at the $6.85-a-day line, but regional gaps and fiscal constraints remain."
+    },
+    {
+      "ja": "ブラジルの社会問題は成長の不足というより、成長の分配と国家実装の不足にある。",
+      "en": "Brazil’s social problem is therefore less a shortage of growth than a shortage of distribution and state execution."
+    },
+    {
+      "ja": "市民感情は、親ルラ対反ルラの二分法だけでは読めない。",
+      "en": "Citizen sentiment cannot be reduced to pro-Lula versus anti-Lula."
+    },
+    {
+      "ja": "福音派、カトリック、黒人、先住民、白人、中間層、都市周縁、農村のあいだで、国家に求めるものは違う。",
+      "en": "Evangelicals, Catholics, Black Brazilians, Indigenous communities, whites, the middle class, peripheral urban neighbourhoods, and rural areas all ask different things from the state."
+    },
+    {
+      "ja": "日本から見ると、ブラジルは食料、バイオ燃料、鉱物、航空機、脱炭素投資の相手国である。",
+      "en": "For Japan, Brazil matters as a partner on food, biofuels, minerals, aircraft, and decarbonisation investment."
+    },
+    {
+      "ja": "中国需要と米国政策の両方がブラジルの輸出と関税を揺らすため、日本企業はブラジルを単独市場ではなく、世界商品市況と地政学が交差する供給拠点として扱う必要がある。",
+      "en": "Because both China demand and U.S. policy can move Brazil’s exports and tariffs, Japanese firms need to treat Brazil as a supply base where global commodity markets and geopolitics meet."
+    },
+    {
+      "ja": "日系社会の存在も重要だが、外交の実務で効くのは、ブラジルがG20、BRICS、気候交渉で南半球の交渉軸を動かすことである。",
+      "en": "The Japanese-Brazilian community matters, but the practical diplomatic weight comes from Brazil’s role in G20 talks, BRICS, and climate negotiations across the Global South."
+    },
+    {
+      "ja": "ブラジルは、日本にとって遠い中南米の一国ではない。",
+      "en": "Brazil is not a distant Latin American country for Japan."
+    },
+    {
+      "ja": "食料安全保障、資源、脱炭素、外交標準の交差点として読む必要がある。",
+      "en": "It should be read as a junction of food security, resources, decarbonisation, and diplomatic norms."
+    },
+    {
+      "ja": "今後の注視点は四つある。",
+      "en": "There are four watchpoints."
+    },
+    {
+      "ja": "第一に、ルラ政権が森林保護と農業ロビーを同時に維持できるか。",
+      "en": "First, can Lula’s government keep forest protection and the agribusiness bloc together."
+    },
+    {
+      "ja": "第二に、議会交渉が税制、予算、治安政策をどこまで遅らせるか。",
+      "en": "Second, how much will congressional bargaining slow tax policy, the budget, and security policy."
+    },
+    {
+      "ja": "第三に、2026年の選挙サイクルが、司法と軍の距離を再び詰めるか。",
+      "en": "Third, will the 2026 election cycle pull the judiciary and the military closer into politics again."
+    },
+    {
+      "ja": "第四に、米中の圧力がブラジルの自主外交をどこまで狭めるか。",
+      "en": "Fourth, how far will pressure from the United States and China narrow Brazil’s room for autonomous diplomacy."
+    },
+    {
+      "ja": "この国を読むときは、アマゾンと穀倉地帯、都市と内陸、主権と市場が同じ地図に重なっていることを忘れない方がよい。",
+      "en": "When you read Brazil, remember that Amazon and grain land, cities and the interior, and sovereignty and market access all sit on the same map."
+    }
+  ]
+}

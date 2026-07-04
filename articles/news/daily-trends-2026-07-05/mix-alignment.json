@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "政治では米最高裁の判断、欧州の投票、中東の権力移行が重なり、経済では雇用の減速、物価と燃料コスト、金利見通しが市場の軸になった。技術ではAnthropicとMetaのAI競争に加え、WindowsとChromeの更新・終了告知が運用面の注目点になっている。",
+      "en": "Politics was shaped by a Supreme Court ruling, elections and referendums in Europe and North Africa, and power-transition signals in Iran. Economics was driven by softer hiring, fuel costs, inflation, and rate expectations. Technology focused on AI competition and the practical effects of Windows and Chrome update cycles."
+    },
+    {
+      "ja": "政党と候補者の資金ルールが少し緩み、来季の選挙戦の設計に影響が出る。",
+      "en": "The ruling loosens a piece of the campaign-finance framework and changes how parties plan for the next cycle."
+    },
+    {
+      "ja": "最高裁が政党支出をめぐる争点で判断を示し、選挙資金の上限や協調支出の扱いが再び注目された。",
+      "en": "The Court issued a decision on party spending, putting contribution rules and coordinated spending back in focus."
+    },
+    {
+      "ja": "資金の流れは候補者選びや広告戦略に直結するため、少しの法解釈でも実務の設計が変わる。",
+      "en": "Money flows shape candidate recruitment and ad strategy, so even a narrow legal change can alter campaign planning."
+    },
+    {
+      "ja": "党本部とスーパーPACが、どこまで支出設計を組み替えるかを見る。",
+      "en": "Watch how party committees and super PACs adjust their spending plans."
+    },
+    {
+      "ja": "国内政治の論点が、汚職対策と権力の集中をどう扱うかに収束している。",
+      "en": "The domestic fight has narrowed to how Slovakia handles anti-graft rules and the concentration of power."
+    },
+    {
+      "ja": "スロバキアでは、Fico氏に近い制度設計や汚職対策のあり方をめぐる投票が行われた。",
+      "en": "Slovakia voted on questions tied to Fico-era perks and the shape of anti-corruption institutions."
+    },
+    {
+      "ja": "政権与党の運営能力だけでなく、EU内での政治的信頼にも響くテーマだからだ。",
+      "en": "The result affects not just governing capacity but also Slovakia’s standing inside the EU."
+    },
+    {
+      "ja": "結果が議会運営や次の制度改革にどう反映されるかを確認したい。",
+      "en": "Watch whether the result feeds into coalition management or institutional reform."
+    },
+    {
+      "ja": "物価の圧力が強い国では、選挙結果より投票率と抗議の広がりが重要になる。",
+      "en": "In a high-cost environment, turnout and protest energy matter as much as the seat count."
+    },
+    {
+      "ja": "アルジェリアで議会選挙が行われ、生活費の上昇と政治参加の薄さが同時に見られた。",
+      "en": "Algeria held a parliamentary vote while living costs and weak participation remained central concerns."
+    },
+    {
+      "ja": "経済不満が制度への不信に変わるかどうかを測る材料になる。",
+      "en": "The result helps show whether economic frustration is turning into broader institutional distrust."
+    },
+    {
+      "ja": "連立交渉や与党の議席維持だけでなく、抗議や棄権の広がりも見る。",
+      "en": "Watch coalition math, but also protest levels and abstention."
+    },
+    {
+      "ja": "葬儀は追悼ではなく、次の権力構造を示す政治イベントになっている。",
+      "en": "The funeral is functioning less as mourning and more as a signal of the next power structure."
+    },
+    {
+      "ja": "テヘランでは大規模な葬列が報じられ、後継や体制内の力学が読み取れる状況になった。",
+      "en": "A large funeral procession in Tehran highlighted the succession questions and internal dynamics around Iran’s leadership."
+    },
+    {
+      "ja": "核交渉、地域紛争、制裁のいずれにも、次の指導部の姿勢が波及する。",
+      "en": "The next leadership line will shape nuclear talks, regional conflict, and sanctions policy."
+    },
+    {
+      "ja": "後継候補や治安機関の動きが、交渉スタンスにどう結び付くか。",
+      "en": "Watch for succession cues and how security organs shape the negotiation line."
+    },
+    {
+      "ja": "記念日イベントでも、選挙モードと対立構図は消えていない。",
+      "en": "Even a national anniversary event remains folded into campaign politics and polarization."
+    },
+    {
+      "ja": "トランプ氏は建国250年の記念行事を開幕しつつ、政治的な対立軸を前面に出した。",
+      "en": "Trump launched the 250th-anniversary celebrations while leaning into a partisan message."
+    },
+    {
+      "ja": "2026年後半の国内政治が、祝賀行事よりも選挙動員の文脈で語られることを示している。",
+      "en": "It shows how quickly 2026 domestic politics turns national pageantry into campaign framing."
+    },
+    {
+      "ja": "記念イベントが今後の支持層固めや対立の拡大に使われるかを見る。",
+      "en": "Watch whether the anniversary campaign becomes a tool for base mobilization."
+    },
+    {
+      "ja": "雇用が鈍ると、次の利下げ時期より景気の持久力が先に問われる。",
+      "en": "When hiring weakens, the bigger question becomes economic stamina, not just the next cut."
+    },
+    {
+      "ja": "6月の雇用は伸びが鈍く、労働市場の勢いが少し弱まった。",
+      "en": "June hiring cooled, suggesting the labor market lost some momentum."
+    },
+    {
+      "ja": "賃金、消費、住宅、金融の前提が少しずつ変わる。",
+      "en": "Wages, consumption, housing, and credit all lean on the labor outlook."
+    },
+    {
+      "ja": "失業率と賃金が、鈍化なのか悪化なのかを見分ける鍵になる。",
+      "en": "Watch unemployment and wage growth to tell slowdown from deterioration."
+    },
+    {
+      "ja": "小口の制度でも、長期貯蓄と投資の習慣を変える入口になる。",
+      "en": "Even a small program can shift long-term saving and investing habits."
+    },
+    {
+      "ja": "財務省の種銭を伴うTrump accounts制度が始まり、対象世帯の利用がスタートした。",
+      "en": "The Treasury-backed Trump accounts program started rolling out to eligible families."
+    },
+    {
+      "ja": "教育資金や資産形成の初期設計に影響し、政治と家計の両面で注目される。",
+      "en": "It matters for early wealth building and for the politics of family finance."
+    },
+    {
+      "ja": "どの世帯が使い始めるか、追加拠出がどこまで伸びるかを見る。",
+      "en": "Watch adoption rates and whether families add their own contributions."
+    },
+    {
+      "ja": "休暇前の燃料高は、家計とインフレ感覚を同時に刺激する。",
+      "en": "High holiday fuel costs affect both household budgets and inflation sentiment."
+    },
+    {
+      "ja": "7月4日連休を前に、ガソリン価格が2022年以来の高水準と伝えられた。",
+      "en": "Gas prices were reported at their highest level since 2022 ahead of the July 4 holiday."
+    },
+    {
+      "ja": "燃料は旅行需要だけでなく、物価期待の足元を左右する。",
+      "en": "Fuel costs shape travel demand and near-term inflation expectations."
+    },
+    {
+      "ja": "原油安で小売価格が追随するか、それとも遅れて高止まりするか。",
+      "en": "Watch whether retail prices follow crude lower or stay sticky."
+    },
+    {
+      "ja": "中東の緊張が和らぐだけで、原油はすぐに供給懸念を織り込み直す。",
+      "en": "Even a hint of easing tension in the Middle East can quickly reprice oil supply risk."
+    },
+    {
+      "ja": "原油相場は、Hormuz周辺の緊張緩和や供給増の見方を受けて動いた。",
+      "en": "Oil prices moved on easing tensions around Hormuz and expectations of firmer supply."
+    },
+    {
+      "ja": "原油はガソリン、輸送コスト、インフレ期待に直接波及する。",
+      "en": "Crude feeds directly into gasoline, freight costs, and inflation expectations."
+    },
+    {
+      "ja": "中東交渉の進展と、夏場の需要で在庫がどう減るかを見る。",
+      "en": "Watch diplomatic progress and how seasonal demand affects inventories."
+    },
+    {
+      "ja": "利下げを急ぐより、物価の再加速を避ける姿勢がまだ強い。",
+      "en": "The priority remains avoiding a renewed inflation flare-up rather than rushing cuts."
+    },
+    {
+      "ja": "ワーシュ氏は欧州での発言で、インフレ抑制をFedの中心課題として強調した。",
+      "en": "Warsh used a Europe appearance to emphasize inflation control as the Fed’s core task."
+    },
+    {
+      "ja": "金利の先行きは、単に雇用の弱さだけでなく、物価の粘着性でも決まる。",
+      "en": "The rate path will be set by sticky prices as much as by weak hiring."
+    },
+    {
+      "ja": "次のCPIと雇用が、ハト派寄りの解釈を支えるかどうか。",
+      "en": "Watch whether the next CPI and labor prints support a more dovish read."
+    },
+    {
+      "ja": "AIは性能競争だけでなく、どこで配れるかが重要になっている。",
+      "en": "AI competition is now about distribution as much as raw capability."
+    },
+    {
+      "ja": "AnthropicはFable 5の提供を再開し、政策変更が製品 доступに直結した。",
+      "en": "Anthropic restored access to Fable 5 after policy conditions changed."
+    },
+    {
+      "ja": "モデルの入手性が変わると、企業の採用計画と競争環境も変わる。",
+      "en": "Availability shifts change enterprise adoption plans and the competitive map."
+    },
+    {
+      "ja": "提供範囲、利用制限、企業向け条件がどう整うかを見る。",
+      "en": "Watch the rollout scope, usage limits, and enterprise terms."
+    },
+    {
+      "ja": "モデル競争は、発売済み製品の比較より先に社内指標の更新が話題になる段階にある。",
+      "en": "The model race is now driven by internal benchmarks almost as much as public launches."
+    },
+    {
+      "ja": "Metaは次期AIモデルがOpenAIの旗艦に追いついたとみる内部評価を示した。",
+      "en": "Meta signaled an internal view that its next model is closing the gap with OpenAI’s flagship."
+    },
+    {
+      "ja": "フロントエンド機能だけでなく、基盤モデルの差が製品群全体を左右する。",
+      "en": "Foundation-model strength increasingly determines the whole product stack."
+    },
+    {
+      "ja": "外部公開があるのか、また実利用で差が埋まるのかを見る。",
+      "en": "Watch for an external release and whether the claimed gap closes in real use."
+    },
+    {
+      "ja": "大型の新機能というより、復旧と細かな使い勝手の更新が中心だ。",
+      "en": "This is more about recovery and usability than a headline-grabbing feature drop."
+    },
+    {
+      "ja": "Windows 11の7月更新で、回復や設定まわりの改善がまとまって入ると報じられた。",
+      "en": "The July Windows 11 update is bringing a cluster of recovery and settings improvements."
+    },
+    {
+      "ja": "OS更新は機能追加よりも、運用停止時間の短縮に効く。",
+      "en": "OS updates matter because they reduce downtime and operational friction."
+    },
+    {
+      "ja": "企業配布で不具合が出ないか、旧機種の影響がどうかを見る。",
+      "en": "Watch enterprise rollout issues and any edge cases on older hardware."
+    },
+    {
+      "ja": "期限切れは見落としやすいが、放置すると起動時の保護が弱まる。",
+      "en": "Certificate expiry is easy to miss but can quietly weaken boot-time protection."
+    },
+    {
+      "ja": "MicrosoftがSecure Boot証明書の期限切れと、旧機種でのセキュリティ低下を警告した。",
+      "en": "Microsoft warned that expiring Secure Boot certificates could degrade security on older systems."
+    },
+    {
+      "ja": "企業の更新計画と、個人のPC延命判断に直結する。",
+      "en": "It affects enterprise update planning and whether consumers can safely keep older PCs."
+    },
+    {
+      "ja": "BIOS/UEFI更新が配られるか、機種別の影響範囲がどう出るかを見る。",
+      "en": "Watch for firmware updates and any model-specific impact list."
+    },
+    {
+      "ja": "ブラウザのサポート終了は、OS更新の遅れを一気に顕在化させる。",
+      "en": "Browser support deadlines expose how far behind old OS versions really are."
+    },
+    {
+      "ja": "Google ChromeはmacOS Montereyのサポートを7月で打ち切る方針と報じられた。",
+      "en": "Chrome was reported to be ending support for macOS Monterey in July."
+    },
+    {
+      "ja": "更新を止めると、機能不足より先にセキュリティ面の負債が積み上がる。",
+      "en": "Stopping updates piles up security debt faster than it creates feature gaps."
+    },
+    {
+      "ja": "対象外になるMacの利用者が、どのブラウザとOSに移るかを見る。",
+      "en": "Watch what browser and OS path Monterey users choose next."
+    },
+    {
+      "ja": "司法・選挙・外交の変化が、株式やエネルギーより先に政策の前提を動かしている。",
+      "en": "Judicial, electoral, and diplomatic changes are moving policy assumptions faster than markets can digest them."
+    },
+    {
+      "ja": "雇用とインフレの同時減速感が、Fedだけでなく家計のガソリン代や節約行動にも波及している。",
+      "en": "Slower hiring and sticky fuel costs keep pressure on both the Fed and household budgets."
+    },
+    {
+      "ja": "AIモデル競争は性能比較だけでなく、提供可否、更新通知、サポート終了といった運用判断に移っている。",
+      "en": "AI competition is now about availability, update cadence, and support windows, not just benchmark claims."
+    },
+    {
+      "ja": "スロバキア、アルジェリア、イランで投票・葬儀・権力移行が次の政策判断にどうつながるか。",
+      "en": "Whether the Slovakia, Algeria, and Iran stories turn into concrete policy shifts or stay at the level of signaling."
+    },
+    {
+      "ja": "7月の雇用と物価データが、年後半の利下げ観測をどこまで変えるか。",
+      "en": "How the July data flow changes the odds of rate cuts later in the year."
+    },
+    {
+      "ja": "Anthropic、Meta、Microsoft、Googleの更新が実利用にどう反映されるか。",
+      "en": "Whether Anthropic, Meta, Microsoft, and Google turn these announcements into real user-facing changes."
+    }
+  ]
+}

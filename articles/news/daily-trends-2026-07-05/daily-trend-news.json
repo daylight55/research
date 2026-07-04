@@ -1,0 +1,798 @@
+{
+  "version": 1,
+  "slug": "daily-trends-2026-07-05",
+  "date": "2026-07-05",
+  "category": "tech-news",
+  "tags": ["news", "politics", "economy", "technology"],
+  "generation": {
+    "model": "gpt-5.4-mini"
+  },
+  "heroImage": {
+    "query": "Ali Khamenei funeral Tehran",
+    "alt": {
+      "ja": "テヘランで行われたカーネイ氏の葬列を報じる写真",
+      "en": "A photo from the funeral procession in Tehran for Ali Khamenei."
+    }
+  },
+  "locales": {
+    "ja": {
+      "title": "2026-07-05 米最高裁、中東外交、雇用減速とAI更新が同時進行",
+      "description": "司法、選挙、中東情勢、景気指標、AIとOS更新が一斉に動いた一日を、政治・経済・技術の15本で整理する。",
+      "rssSummary": "米最高裁と中東外交、雇用減速、AI更新が同時進行した一日。",
+      "opening": "政治では米最高裁の判断、欧州の投票、中東の権力移行が重なり、経済では雇用の減速、物価と燃料コスト、金利見通しが市場の軸になった。技術ではAnthropicとMetaのAI競争に加え、WindowsとChromeの更新・終了告知が運用面の注目点になっている。",
+      "crossCutting": [
+        "司法・選挙・外交の変化が、株式やエネルギーより先に政策の前提を動かしている。",
+        "雇用とインフレの同時減速感が、Fedだけでなく家計のガソリン代や節約行動にも波及している。",
+        "AIモデル競争は性能比較だけでなく、提供可否、更新通知、サポート終了といった運用判断に移っている。"
+      ],
+      "watchItems": [
+        "スロバキア、アルジェリア、イランで投票・葬儀・権力移行が次の政策判断にどうつながるか。",
+        "7月の雇用と物価データが、年後半の利下げ観測をどこまで変えるか。",
+        "Anthropic、Meta、Microsoft、Googleの更新が実利用にどう反映されるか。"
+      ],
+      "sourceNotes": {
+        "politics": [
+          "米最高裁の政党支出をめぐる判断、スロバキアの国民投票、アルジェリア総選挙、イランの権力移行、トランプ氏の建国250年演説を、制度・選挙・外交の変化として拾った。APとThe Guardianを中心に、短期の政治シグナルが強いものを優先した。",
+          "中東は葬儀報道と対米交渉の両面で追ったが、軍事衝突の新規拡大よりも、権力移行と交渉停滞が政策判断を左右している点を重視した。",
+          "ローカル選挙や単発の演説は、全国的影響が弱いものを落とし、制度変更や外交の波及が読めるものに絞った。"
+        ],
+        "economy": [
+          "米雇用統計、7月4日休暇前のガソリン高、原油、Fed発言、ユーロ圏インフレを、金利・燃料・購買力の三つの経路で束ねた。",
+          "Jobs Reportは市場反応が大きいので最優先に置き、Trump accounts は家計と投資の実務に効くため経済側で扱った。",
+          "金利やエネルギーは日次で動くため、速報性の高いWSJ、AP、Axios、El Paisを組み合わせ、見出しだけでなく政策含意が読めるものを採用した。"
+        ],
+        "technology": [
+          "AIモデルの可用性、性能主張、OS更新、証明書期限、ブラウザのサポート終了を優先し、単発の製品噂よりも運用に直結する変更を選んだ。",
+          "AnthropicとMetaはモデル競争、Windowsはセキュリティと回復機能、Chromeは旧macOS切り捨てとして扱い、消費者と管理者の双方に影響する構図に整理した。",
+          "画像は各トピックに近い記事・企業・制度のページを優先し、汎用的な合成画像や無関係なコラージュは避けた。"
+        ],
+        "decisions": [
+          "Bangkokのローカル選挙やMelania氏の法案推進は、今回の主要3カテゴリに比べて見出しの持続力が弱かったため見送った。",
+          "中東関連は似た話題が重なったが、葬儀・権力移行・交渉停滞を別トピックとして分け、同じ事件の言い換えにしないようにした。",
+          "一部の経済テーマは前日比の変化が小さくても、雇用・燃料・インフレ・金利の決定に直接つながるものだけを残した。"
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-07-05",
+          "Article slug: `daily-trends-2026-07-05`",
+          "Run Context: political, economic, and technology news digest; exactly five topics per category; prioritize the most recent 24-48 hours and allow one slightly older item when it still drives policy, market, or operational decisions; deliver structured JSON for the renderer."
+        ],
+        "decisionNotes": [
+          "The final set favors source-backed stories with clear decision relevance over broad background items.",
+          "I kept the digest balanced across judicial, electoral, geopolitical, macroeconomic, and platform-operation themes so the page reads as one daily signal rather than fifteen unrelated headlines.",
+          "The research trail records one or two downgraded candidates in the source notes rather than expanding the public digest beyond the required 15 topics."
+        ],
+        "followUps": [
+          "Check whether the Slovakia and Algeria stories develop into longer vote-count or coalition narratives.",
+          "Watch for follow-up on Hormuz-related diplomacy and any clarification on Iranian succession signaling.",
+          "Track whether the July update cycle for Windows, Chrome, and the major AI vendors changes deployment guidance or support windows."
+        ]
+      }
+    },
+    "en": {
+      "title": "2026-07-05 Supreme Court, Middle East diplomacy, softer jobs, and AI churn",
+      "description": "A 15-item digest of the day’s political, economic, and technology signals, centered on courts, elections, inflation, energy, and platform updates.",
+      "rssSummary": "A day where the Supreme Court, Middle East diplomacy, softer jobs, and AI updates all moved at once.",
+      "opening": "Politics was shaped by a Supreme Court ruling, elections and referendums in Europe and North Africa, and power-transition signals in Iran. Economics was driven by softer hiring, fuel costs, inflation, and rate expectations. Technology focused on AI competition and the practical effects of Windows and Chrome update cycles.",
+      "crossCutting": [
+        "Judicial, electoral, and diplomatic changes are moving policy assumptions faster than markets can digest them.",
+        "Slower hiring and sticky fuel costs keep pressure on both the Fed and household budgets.",
+        "AI competition is now about availability, update cadence, and support windows, not just benchmark claims."
+      ],
+      "watchItems": [
+        "Whether the Slovakia, Algeria, and Iran stories turn into concrete policy shifts or stay at the level of signaling.",
+        "How the July data flow changes the odds of rate cuts later in the year.",
+        "Whether Anthropic, Meta, Microsoft, and Google turn these announcements into real user-facing changes."
+      ],
+      "sourceNotes": {
+        "politics": [
+          "I selected the Supreme Court campaign-finance ruling, Slovakia’s referendum, Algeria’s parliamentary vote, Iran’s succession signal, and Trump’s 250th-anniversary speech because they show institutional, electoral, or diplomatic movement with short-term follow-through.",
+          "For Iran, I treated the funeral coverage and the negotiation stall as separate signals rather than one repeated story, because they point to different decision paths.",
+          "I downgraded smaller local political items where the source trail was thinner and the practical impact was less clear."
+        ],
+        "economy": [
+          "I used the June jobs report, July 4 gas prices, oil moves, Fed commentary, and euro-zone inflation because they affect rates, energy costs, and consumer behavior.",
+          "Trump accounts were kept on the economy side because the live issue is household saving and investing, even though the policy itself is political.",
+          "The mix leans on Reuters-like market framing, AP coverage, and official or semi-official data where possible."
+        ],
+        "technology": [
+          "I prioritized AI availability, model claims, OS security updates, certificate expiration, and browser support changes over consumer gadget chatter.",
+          "Anthropic and Meta represent model competition, while Windows and Chrome are operational stories for admins and end users.",
+          "I avoided generic collage-style imagery and kept the card visuals close to the institution or product each story is about."
+        ],
+        "decisions": [
+          "Bangkok local elections and Melania Trump’s foster-care bill were downgraded because the source coverage was weaker than the final set.",
+          "Iran-related items were split into succession and negotiation signals so the digest does not collapse distinct developments into one vague headline.",
+          "I left out several plausible but stale market items that had less direct effect on policy, pricing, or deployment decisions."
+        ]
+      },
+      "researchLog": {
+        "instruction": [
+          "Research date: 2026-07-05",
+          "Article slug: `daily-trends-2026-07-05`",
+          "Run Context: political, economic, and technology news digest; exactly five topics in each category; prioritize the last 24-48 hours and allow one slightly older item only when it still drives policy, market, or operational decisions; deliver structured JSON for the renderer."
+        ],
+        "decisionNotes": [
+          "The final list favors source-backed, decision-relevant stories over background explainers.",
+          "I kept the digest balanced across courts, elections, diplomacy, macro data, energy, and platform operations so it reads like one day’s signal rather than fifteen disconnected headlines.",
+          "Any downgraded candidates are recorded in source notes instead of expanding the public digest beyond the required 15 topics."
+        ],
+        "followUps": [
+          "Check whether the Slovakia and Algeria stories turn into longer vote-count or coalition narratives.",
+          "Watch for follow-up on Hormuz-related diplomacy and any clarification on Iranian succession signaling.",
+          "Track whether the July update cycle for Windows, Chrome, and major AI vendors changes deployment guidance or support windows."
+        ]
+      }
+    }
+  },
+  "sections": [
+    {
+      "tone": "politics",
+      "heading": {
+        "ja": "政治",
+        "en": "Politics"
+      },
+      "topics": [
+        {
+          "id": "politics-supreme-court-campaign-finance",
+          "title": {
+            "ja": "最高裁、政党支出の規制を縮小",
+            "en": "Supreme Court cuts party-spending limits"
+          },
+          "source": {
+            "href": "https://apnews.com/article/91e49ee112197ae1210a9abfa46986ed",
+            "source": "AP News",
+            "title": {
+              "ja": "最高裁、政党支出をめぐる判断を下す",
+              "en": "Supreme Court rules on party spending"
+            },
+            "description": {
+              "ja": "政党の支出ルールをめぐる最高裁判断を伝える速報で、選挙資金の前提に触れる。",
+              "en": "A breaking update on the Supreme Court ruling that resets part of the campaign-finance debate."
+            },
+            "imageUrl": "https://apnews.com/article/91e49ee112197ae1210a9abfa46986ed",
+            "imageAlt": {
+              "ja": "米連邦最高裁判所の外観",
+              "en": "The U.S. Supreme Court building"
+            }
+          },
+          "bottomLine": {
+            "ja": "政党と候補者の資金ルールが少し緩み、来季の選挙戦の設計に影響が出る。",
+            "en": "The ruling loosens a piece of the campaign-finance framework and changes how parties plan for the next cycle."
+          },
+          "whatHappened": {
+            "ja": "最高裁が政党支出をめぐる争点で判断を示し、選挙資金の上限や協調支出の扱いが再び注目された。",
+            "en": "The Court issued a decision on party spending, putting contribution rules and coordinated spending back in focus."
+          },
+          "whyItMatters": {
+            "ja": "資金の流れは候補者選びや広告戦略に直結するため、少しの法解釈でも実務の設計が変わる。",
+            "en": "Money flows shape candidate recruitment and ad strategy, so even a narrow legal change can alter campaign planning."
+          },
+          "whatToWatch": {
+            "ja": "党本部とスーパーPACが、どこまで支出設計を組み替えるかを見る。",
+            "en": "Watch how party committees and super PACs adjust their spending plans."
+          }
+        },
+        {
+          "id": "politics-slovakia-referendum",
+          "title": {
+            "ja": "スロバキア、Fico優遇の是非を投票",
+            "en": "Slovakia votes on Fico perks"
+          },
+          "source": {
+            "href": "https://apnews.com/article/60d7cb3ae150739a926056afae9dc2a8",
+            "source": "AP News",
+            "title": {
+              "ja": "スロバキアでFico氏関連の是非を問う投票",
+              "en": "Slovakia holds a referendum tied to Fico"
+            },
+            "description": {
+              "ja": "Fico政権をめぐる優遇や汚職対策の扱いが争点になった投票を報じる。",
+              "en": "Coverage of a referendum that puts Fico-linked perks and anti-graft institutions on the ballot."
+            },
+            "imageUrl": "https://apnews.com/article/60d7cb3ae150739a926056afae9dc2a8",
+            "imageAlt": {
+              "ja": "ブラチスラバの政府庁舎",
+              "en": "A government building in Bratislava"
+            }
+          },
+          "bottomLine": {
+            "ja": "国内政治の論点が、汚職対策と権力の集中をどう扱うかに収束している。",
+            "en": "The domestic fight has narrowed to how Slovakia handles anti-graft rules and the concentration of power."
+          },
+          "whatHappened": {
+            "ja": "スロバキアでは、Fico氏に近い制度設計や汚職対策のあり方をめぐる投票が行われた。",
+            "en": "Slovakia voted on questions tied to Fico-era perks and the shape of anti-corruption institutions."
+          },
+          "whyItMatters": {
+            "ja": "政権与党の運営能力だけでなく、EU内での政治的信頼にも響くテーマだからだ。",
+            "en": "The result affects not just governing capacity but also Slovakia’s standing inside the EU."
+          },
+          "whatToWatch": {
+            "ja": "結果が議会運営や次の制度改革にどう反映されるかを確認したい。",
+            "en": "Watch whether the result feeds into coalition management or institutional reform."
+          }
+        },
+        {
+          "id": "politics-algeria-election",
+          "title": {
+            "ja": "アルジェリア総選挙、生活費高騰が焦点",
+            "en": "Algeria vote shadowed by living costs"
+          },
+          "source": {
+            "href": "https://apnews.com/article/34653095427e8d0a4cae36ade1b2d5c1",
+            "source": "AP News",
+            "title": {
+              "ja": "アルジェリア総選挙を報じる",
+              "en": "Algeria parliamentary election coverage"
+            },
+            "description": {
+              "ja": "議席争いだけでなく、物価や参加率が政権への信認を左右する総選挙の報道。",
+              "en": "A parliamentary-vote report that treats turnout and living costs as the real political tests."
+            },
+            "imageUrl": "https://apnews.com/article/34653095427e8d0a4cae36ade1b2d5c1",
+            "imageAlt": {
+              "ja": "アルジェの議会関連施設",
+              "en": "A parliamentary or civic building in Algiers"
+            }
+          },
+          "bottomLine": {
+            "ja": "物価の圧力が強い国では、選挙結果より投票率と抗議の広がりが重要になる。",
+            "en": "In a high-cost environment, turnout and protest energy matter as much as the seat count."
+          },
+          "whatHappened": {
+            "ja": "アルジェリアで議会選挙が行われ、生活費の上昇と政治参加の薄さが同時に見られた。",
+            "en": "Algeria held a parliamentary vote while living costs and weak participation remained central concerns."
+          },
+          "whyItMatters": {
+            "ja": "経済不満が制度への不信に変わるかどうかを測る材料になる。",
+            "en": "The result helps show whether economic frustration is turning into broader institutional distrust."
+          },
+          "whatToWatch": {
+            "ja": "連立交渉や与党の議席維持だけでなく、抗議や棄権の広がりも見る。",
+            "en": "Watch coalition math, but also protest levels and abstention."
+          }
+        },
+        {
+          "id": "politics-khamenei-funeral",
+          "title": {
+            "ja": "カーネイ葬儀が権力移行を映す",
+            "en": "Khamenei funeral signals a power shift"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/world/2026/jul/04/crowds-gather-six-day-funeral-former-iranian-supreme-leader-ali-khamenei",
+            "source": "The Guardian",
+            "title": {
+              "ja": "テヘランでカーネイ葬儀が進む",
+              "en": "Crowds gather for Khamenei funeral in Tehran"
+            },
+            "description": {
+              "ja": "テヘランでの葬儀報道を通じて、イランの権力移行と対外姿勢の手がかりを拾う。",
+              "en": "Coverage of the Tehran funeral that offers clues on Iran’s succession politics and external posture."
+            },
+            "imageUrl": "https://www.theguardian.com/world/2026/jul/04/crowds-gather-six-day-funeral-former-iranian-supreme-leader-ali-khamenei",
+            "imageAlt": {
+              "ja": "テヘランでの葬列の様子",
+              "en": "A funeral procession in Tehran"
+            }
+          },
+          "bottomLine": {
+            "ja": "葬儀は追悼ではなく、次の権力構造を示す政治イベントになっている。",
+            "en": "The funeral is functioning less as mourning and more as a signal of the next power structure."
+          },
+          "whatHappened": {
+            "ja": "テヘランでは大規模な葬列が報じられ、後継や体制内の力学が読み取れる状況になった。",
+            "en": "A large funeral procession in Tehran highlighted the succession questions and internal dynamics around Iran’s leadership."
+          },
+          "whyItMatters": {
+            "ja": "核交渉、地域紛争、制裁のいずれにも、次の指導部の姿勢が波及する。",
+            "en": "The next leadership line will shape nuclear talks, regional conflict, and sanctions policy."
+          },
+          "whatToWatch": {
+            "ja": "後継候補や治安機関の動きが、交渉スタンスにどう結び付くか。",
+            "en": "Watch for succession cues and how security organs shape the negotiation line."
+          }
+        },
+        {
+          "id": "politics-trump-250th-speech",
+          "title": {
+            "ja": "トランプ氏、建国250年式典で対立色",
+            "en": "Trump marks 250 years with a partisan tone"
+          },
+          "source": {
+            "href": "https://www.theguardian.com/us-news/2026/jul/04/trump-launches-americas-250th-birthday-celebrations-with-partisan-attack",
+            "source": "The Guardian",
+            "title": {
+              "ja": "米建国250年式典でトランプ氏が演説",
+              "en": "Trump opens America’s 250th birthday celebrations"
+            },
+            "description": {
+              "ja": "建国250年の記念行事をめぐり、祝賀と対立が同居する政治的演出を報じる。",
+              "en": "A report on a 250th-anniversary event that mixed celebration with partisan messaging."
+            },
+            "imageUrl": "https://www.theguardian.com/us-news/2026/jul/04/trump-launches-americas-250th-birthday-celebrations-with-partisan-attack",
+            "imageAlt": {
+              "ja": "建国記念行事で演説するトランプ氏",
+              "en": "Donald Trump speaking at a 250th-anniversary event"
+            }
+          },
+          "bottomLine": {
+            "ja": "記念日イベントでも、選挙モードと対立構図は消えていない。",
+            "en": "Even a national anniversary event remains folded into campaign politics and polarization."
+          },
+          "whatHappened": {
+            "ja": "トランプ氏は建国250年の記念行事を開幕しつつ、政治的な対立軸を前面に出した。",
+            "en": "Trump launched the 250th-anniversary celebrations while leaning into a partisan message."
+          },
+          "whyItMatters": {
+            "ja": "2026年後半の国内政治が、祝賀行事よりも選挙動員の文脈で語られることを示している。",
+            "en": "It shows how quickly 2026 domestic politics turns national pageantry into campaign framing."
+          },
+          "whatToWatch": {
+            "ja": "記念イベントが今後の支持層固めや対立の拡大に使われるかを見る。",
+            "en": "Watch whether the anniversary campaign becomes a tool for base mobilization."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "economy",
+      "heading": {
+        "ja": "経済",
+        "en": "Economy"
+      },
+      "topics": [
+        {
+          "id": "economy-jobs-report-slowdown",
+          "title": {
+            "ja": "米雇用は減速、利下げ観測が再調整",
+            "en": "U.S. hiring slows and markets reprice the Fed"
+          },
+          "source": {
+            "href": "https://www.wsj.com/livecoverage/june-jobs-report-stock-market-07-02-2026/card/hiring-slowed-in-june-lpNken34eDPd9YHpoDJ5",
+            "source": "The Wall Street Journal",
+            "title": {
+              "ja": "6月の米雇用は伸びが鈍化",
+              "en": "Hiring slowed in June"
+            },
+            "description": {
+              "ja": "雇用の減速を市場の文脈で整理した速報で、金利見通しの修正につながる。",
+              "en": "A market-facing jobs-report update that feeds directly into rate expectations."
+            },
+            "imageUrl": "https://www.wsj.com/livecoverage/june-jobs-report-stock-market-07-02-2026/card/hiring-slowed-in-june-lpNken34eDPd9YHpoDJ5",
+            "imageAlt": {
+              "ja": "米雇用統計のチャート",
+              "en": "A chart of U.S. payroll data"
+            }
+          },
+          "bottomLine": {
+            "ja": "雇用が鈍ると、次の利下げ時期より景気の持久力が先に問われる。",
+            "en": "When hiring weakens, the bigger question becomes economic stamina, not just the next cut."
+          },
+          "whatHappened": {
+            "ja": "6月の雇用は伸びが鈍く、労働市場の勢いが少し弱まった。",
+            "en": "June hiring cooled, suggesting the labor market lost some momentum."
+          },
+          "whyItMatters": {
+            "ja": "賃金、消費、住宅、金融の前提が少しずつ変わる。",
+            "en": "Wages, consumption, housing, and credit all lean on the labor outlook."
+          },
+          "whatToWatch": {
+            "ja": "失業率と賃金が、鈍化なのか悪化なのかを見分ける鍵になる。",
+            "en": "Watch unemployment and wage growth to tell slowdown from deterioration."
+          }
+        },
+        {
+          "id": "economy-trump-accounts-launch",
+          "title": {
+            "ja": "Trump accountsが始動、家計投資の新経路に",
+            "en": "Trump accounts launch with Treasury seed money"
+          },
+          "source": {
+            "href": "https://apnews.com/article/c0a6f07548acb9f792be160965fbfbec",
+            "source": "AP News",
+            "title": {
+              "ja": "Trump accountsが始まる",
+              "en": "Trump accounts begin"
+            },
+            "description": {
+              "ja": "子ども向けの投資口座制度が動き出したことを伝え、家計金融の新しい入口を示す。",
+              "en": "A report on the rollout of child-focused investment accounts that changes the household-finance picture."
+            },
+            "imageUrl": "https://apnews.com/article/c0a6f07548acb9f792be160965fbfbec",
+            "imageAlt": {
+              "ja": "財務省関連の建物",
+              "en": "The U.S. Treasury building"
+            }
+          },
+          "bottomLine": {
+            "ja": "小口の制度でも、長期貯蓄と投資の習慣を変える入口になる。",
+            "en": "Even a small program can shift long-term saving and investing habits."
+          },
+          "whatHappened": {
+            "ja": "財務省の種銭を伴うTrump accounts制度が始まり、対象世帯の利用がスタートした。",
+            "en": "The Treasury-backed Trump accounts program started rolling out to eligible families."
+          },
+          "whyItMatters": {
+            "ja": "教育資金や資産形成の初期設計に影響し、政治と家計の両面で注目される。",
+            "en": "It matters for early wealth building and for the politics of family finance."
+          },
+          "whatToWatch": {
+            "ja": "どの世帯が使い始めるか、追加拠出がどこまで伸びるかを見る。",
+            "en": "Watch adoption rates and whether families add their own contributions."
+          }
+        },
+        {
+          "id": "economy-gas-prices-july-fourth",
+          "title": {
+            "ja": "7月4日向けガソリン高、家計を圧迫",
+            "en": "Gas prices stay high into July 4 travel"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/07/02/july-4-gas-prices-highest-since-2022",
+            "source": "Axios",
+            "title": {
+              "ja": "7月4日休暇前のガソリン高",
+              "en": "Gas prices are the highest since 2022"
+            },
+            "description": {
+              "ja": "休暇シーズンの燃料コスト高を伝える記事で、消費者心理と政治の両方に効く。",
+              "en": "A holiday-travel piece that shows fuel costs still bite households and politicians."
+            },
+            "imageUrl": "https://www.axios.com/2026/07/02/july-4-gas-prices-highest-since-2022",
+            "imageAlt": {
+              "ja": "ガソリンスタンドの給油機",
+              "en": "A gas pump at a filling station"
+            }
+          },
+          "bottomLine": {
+            "ja": "休暇前の燃料高は、家計とインフレ感覚を同時に刺激する。",
+            "en": "High holiday fuel costs affect both household budgets and inflation sentiment."
+          },
+          "whatHappened": {
+            "ja": "7月4日連休を前に、ガソリン価格が2022年以来の高水準と伝えられた。",
+            "en": "Gas prices were reported at their highest level since 2022 ahead of the July 4 holiday."
+          },
+          "whyItMatters": {
+            "ja": "燃料は旅行需要だけでなく、物価期待の足元を左右する。",
+            "en": "Fuel costs shape travel demand and near-term inflation expectations."
+          },
+          "whatToWatch": {
+            "ja": "原油安で小売価格が追随するか、それとも遅れて高止まりするか。",
+            "en": "Watch whether retail prices follow crude lower or stay sticky."
+          }
+        },
+        {
+          "id": "economy-oil-futures-hormuz",
+          "title": {
+            "ja": "原油はHormuz交渉で小幅上昇",
+            "en": "Oil prices edge up as Hormuz talks stabilize supply"
+          },
+          "source": {
+            "href": "https://www.wsj.com/finance/commodities-futures/oil-falls-as-supply-increases-amid-easing-mideast-tensions-518c2f51",
+            "source": "The Wall Street Journal",
+            "title": {
+              "ja": "中東緊張の緩和で原油相場が動く",
+              "en": "Oil moves as Middle East tensions ease"
+            },
+            "description": {
+              "ja": "中東情勢と供給見通しが原油相場にどう反映されたかを示すマーケット記事。",
+              "en": "A commodities update linking Middle East diplomacy to crude-supply expectations."
+            },
+            "imageUrl": "https://www.wsj.com/finance/commodities-futures/oil-falls-as-supply-increases-amid-easing-mideast-tensions-518c2f51",
+            "imageAlt": {
+              "ja": "原油タンクとパイプライン",
+              "en": "Oil tanks and pipelines"
+            }
+          },
+          "bottomLine": {
+            "ja": "中東の緊張が和らぐだけで、原油はすぐに供給懸念を織り込み直す。",
+            "en": "Even a hint of easing tension in the Middle East can quickly reprice oil supply risk."
+          },
+          "whatHappened": {
+            "ja": "原油相場は、Hormuz周辺の緊張緩和や供給増の見方を受けて動いた。",
+            "en": "Oil prices moved on easing tensions around Hormuz and expectations of firmer supply."
+          },
+          "whyItMatters": {
+            "ja": "原油はガソリン、輸送コスト、インフレ期待に直接波及する。",
+            "en": "Crude feeds directly into gasoline, freight costs, and inflation expectations."
+          },
+          "whatToWatch": {
+            "ja": "中東交渉の進展と、夏場の需要で在庫がどう減るかを見る。",
+            "en": "Watch diplomatic progress and how seasonal demand affects inventories."
+          }
+        },
+        {
+          "id": "economy-fed-warsh-sintra",
+          "title": {
+            "ja": "ワーシュFRB議長、インフレ警戒を維持",
+            "en": "Warsh keeps the Fed focused on inflation"
+          },
+          "source": {
+            "href": "https://apnews.com/article/18c005515444abd2043ad113c9849407",
+            "source": "AP News",
+            "title": {
+              "ja": "ワーシュ氏が欧州でインフレ警戒を示す",
+              "en": "Warsh flags inflation risks in Europe"
+            },
+            "description": {
+              "ja": "シントラでの発言を通じて、Fedの優先順位が依然として物価安定にあることを伝える。",
+              "en": "Coverage of a Sintra appearance that keeps inflation at the center of the Fed debate."
+            },
+            "imageUrl": "https://apnews.com/article/18c005515444abd2043ad113c9849407",
+            "imageAlt": {
+              "ja": "中央銀行の会合会場",
+              "en": "A central bank conference setting"
+            }
+          },
+          "bottomLine": {
+            "ja": "利下げを急ぐより、物価の再加速を避ける姿勢がまだ強い。",
+            "en": "The priority remains avoiding a renewed inflation flare-up rather than rushing cuts."
+          },
+          "whatHappened": {
+            "ja": "ワーシュ氏は欧州での発言で、インフレ抑制をFedの中心課題として強調した。",
+            "en": "Warsh used a Europe appearance to emphasize inflation control as the Fed’s core task."
+          },
+          "whyItMatters": {
+            "ja": "金利の先行きは、単に雇用の弱さだけでなく、物価の粘着性でも決まる。",
+            "en": "The rate path will be set by sticky prices as much as by weak hiring."
+          },
+          "whatToWatch": {
+            "ja": "次のCPIと雇用が、ハト派寄りの解釈を支えるかどうか。",
+            "en": "Watch whether the next CPI and labor prints support a more dovish read."
+          }
+        },
+        {
+          "id": "economy-eurozone-inflation",
+          "title": {
+            "ja": "ユーロ圏インフレは2.8%へ鈍化",
+            "en": "Eurozone inflation eases to 2.8%"
+          },
+          "source": {
+            "href": "https://elpais.com/economia/2026-07-01/la-inflacion-de-la-eurozona-retrocede-al-28-en-junio-tras-cuatro-subidas-consecutivas.html",
+            "source": "El País",
+            "title": {
+              "ja": "ユーロ圏インフレ、6月に2.8%へ低下",
+              "en": "Eurozone inflation falls to 2.8% in June"
+            },
+            "description": {
+              "ja": "6月のユーロ圏インフレが鈍化したことを伝え、ECBの政策判断に直結する。",
+              "en": "A euro-area inflation update that feeds directly into ECB policy thinking."
+            },
+            "imageUrl": "https://elpais.com/economia/2026-07-01/la-inflacion-de-la-eurozona-retrocede-al-28-en-junio-tras-cuatro-subidas-consecutivas.html",
+            "imageAlt": {
+              "ja": "ユーロ紙幣とコイン",
+              "en": "Euro banknotes and coins"
+            }
+          },
+          "bottomLine": {
+            "ja": "インフレの鈍化は進んでも、ECBがすぐに安心できる水準ではない。",
+            "en": "Inflation is easing, but not enough for the ECB to relax quickly."
+          },
+          "whatHappened": {
+            "ja": "ユーロ圏の6月インフレ率は2.8%まで低下し、4回連続の上昇局面に一服が入った。",
+            "en": "June euro-area inflation eased to 2.8%, ending a run of consecutive increases."
+          },
+          "whyItMatters": {
+            "ja": "ECBの金利経路と欧州の成長期待に直接つながる。",
+            "en": "It matters for ECB rate path expectations and the broader growth outlook."
+          },
+          "whatToWatch": {
+            "ja": "サービス価格と賃金が、鈍化トレンドを壊さないかを見たい。",
+            "en": "Watch services inflation and wage data for signs the cooling trend holds."
+          }
+        }
+      ]
+    },
+    {
+      "tone": "technology",
+      "heading": {
+        "ja": "技術",
+        "en": "Technology"
+      },
+      "topics": [
+        {
+          "id": "technology-anthropic-fable-5",
+          "title": {
+            "ja": "AnthropicのFable 5が再び利用可能に",
+            "en": "Anthropic restores Fable 5 access"
+          },
+          "source": {
+            "href": "https://www.axios.com/2026/07/01/anthropic-fable-5-back-online-trump-export-controls-lifted",
+            "source": "Axios",
+            "title": {
+              "ja": "AnthropicのFable 5が復帰",
+              "en": "Anthropic’s Fable 5 is back online"
+            },
+            "description": {
+              "ja": "輸出規制の解除を受けてモデル提供が戻ったという、AI配備と政策の接点を示す記事。",
+              "en": "A report tying AI model availability to export-control policy."
+            },
+            "imageUrl": "https://www.axios.com/2026/07/01/anthropic-fable-5-back-online-trump-export-controls-lifted",
+            "imageAlt": {
+              "ja": "AIモデルを表すサーバー群",
+              "en": "AI model servers in a data center"
+            }
+          },
+          "bottomLine": {
+            "ja": "AIは性能競争だけでなく、どこで配れるかが重要になっている。",
+            "en": "AI competition is now about distribution as much as raw capability."
+          },
+          "whatHappened": {
+            "ja": "AnthropicはFable 5の提供を再開し、政策変更が製品 доступに直結した。",
+            "en": "Anthropic restored access to Fable 5 after policy conditions changed."
+          },
+          "whyItMatters": {
+            "ja": "モデルの入手性が変わると、企業の採用計画と競争環境も変わる。",
+            "en": "Availability shifts change enterprise adoption plans and the competitive map."
+          },
+          "whatToWatch": {
+            "ja": "提供範囲、利用制限、企業向け条件がどう整うかを見る。",
+            "en": "Watch the rollout scope, usage limits, and enterprise terms."
+          }
+        },
+        {
+          "id": "technology-meta-ai-model-gpt-5-5",
+          "title": {
+            "ja": "Metaの次期AIがGPT-5.5に並ぶという主張",
+            "en": "Meta says its next model catches OpenAI"
+          },
+          "source": {
+            "href": "https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7",
+            "source": "Business Insider",
+            "title": {
+              "ja": "Metaの新AIモデルがOpenAIに迫る",
+              "en": "Meta’s new AI model closes in on OpenAI"
+            },
+            "description": {
+              "ja": "Meta内部の比較を伝える記事で、モデル性能競争の温度感を示す。",
+              "en": "An internal-comparison story that shows how hot the model race remains."
+            },
+            "imageUrl": "https://www.businessinsider.com/meta-ai-model-catches-up-openai-gpt-5-says-2026-7",
+            "imageAlt": {
+              "ja": "Metaのロゴとデータセンター",
+              "en": "Meta branding and a data center"
+            }
+          },
+          "bottomLine": {
+            "ja": "モデル競争は、発売済み製品の比較より先に社内指標の更新が話題になる段階にある。",
+            "en": "The model race is now driven by internal benchmarks almost as much as public launches."
+          },
+          "whatHappened": {
+            "ja": "Metaは次期AIモデルがOpenAIの旗艦に追いついたとみる内部評価を示した。",
+            "en": "Meta signaled an internal view that its next model is closing the gap with OpenAI’s flagship."
+          },
+          "whyItMatters": {
+            "ja": "フロントエンド機能だけでなく、基盤モデルの差が製品群全体を左右する。",
+            "en": "Foundation-model strength increasingly determines the whole product stack."
+          },
+          "whatToWatch": {
+            "ja": "外部公開があるのか、また実利用で差が埋まるのかを見る。",
+            "en": "Watch for an external release and whether the claimed gap closes in real use."
+          }
+        },
+        {
+          "id": "technology-windows-11-july-update",
+          "title": {
+            "ja": "Windows 11の7月更新は回復機能が目玉",
+            "en": "Windows 11 July update adds recovery and polish"
+          },
+          "source": {
+            "href": "https://www.windowscentral.com/microsoft/windows-11/windows-11s-july-2026-update-is-packed-with-new-features-and-these-are-the-top-ones",
+            "source": "Windows Central",
+            "title": {
+              "ja": "Windows 11の7月2026更新を解説",
+              "en": "Windows 11’s July 2026 update explained"
+            },
+            "description": {
+              "ja": "7月更新の新機能を整理し、運用と回復の観点から何が変わるかを示す。",
+              "en": "A rundown of the July update that focuses on recovery and operational tweaks."
+            },
+            "imageUrl": "https://www.windowscentral.com/microsoft/windows-11/windows-11s-july-2026-update-is-packed-with-new-features-and-these-are-the-top-ones",
+            "imageAlt": {
+              "ja": "Windows 11のデスクトップ画面",
+              "en": "A Windows 11 desktop"
+            }
+          },
+          "bottomLine": {
+            "ja": "大型の新機能というより、復旧と細かな使い勝手の更新が中心だ。",
+            "en": "This is more about recovery and usability than a headline-grabbing feature drop."
+          },
+          "whatHappened": {
+            "ja": "Windows 11の7月更新で、回復や設定まわりの改善がまとまって入ると報じられた。",
+            "en": "The July Windows 11 update is bringing a cluster of recovery and settings improvements."
+          },
+          "whyItMatters": {
+            "ja": "OS更新は機能追加よりも、運用停止時間の短縮に効く。",
+            "en": "OS updates matter because they reduce downtime and operational friction."
+          },
+          "whatToWatch": {
+            "ja": "企業配布で不具合が出ないか、旧機種の影響がどうかを見る。",
+            "en": "Watch enterprise rollout issues and any edge cases on older hardware."
+          }
+        },
+        {
+          "id": "technology-secure-boot-cert-expiry",
+          "title": {
+            "ja": "Secure Boot証明書の期限切れが旧PCを直撃",
+            "en": "Secure Boot certificate expiry threatens older PCs"
+          },
+          "source": {
+            "href": "https://www.windowscentral.com/microsoft/windows-11/microsoft-warns-secure-boot-certificates-expiring-2026-degraded-security-state",
+            "source": "Windows Central",
+            "title": {
+              "ja": "Secure Boot証明書の期限切れに注意",
+              "en": "Microsoft warns about Secure Boot certificate expiry"
+            },
+            "description": {
+              "ja": "証明書期限の到来が旧世代PCのセキュリティ状態に影響する点を解説する。",
+              "en": "An explainer on how expiring certificates can push older PCs into a weaker security posture."
+            },
+            "imageUrl": "https://www.windowscentral.com/microsoft/windows-11/microsoft-warns-secure-boot-certificates-expiring-2026-degraded-security-state",
+            "imageAlt": {
+              "ja": "PCのセキュリティ設定画面",
+              "en": "A PC security settings screen"
+            }
+          },
+          "bottomLine": {
+            "ja": "期限切れは見落としやすいが、放置すると起動時の保護が弱まる。",
+            "en": "Certificate expiry is easy to miss but can quietly weaken boot-time protection."
+          },
+          "whatHappened": {
+            "ja": "MicrosoftがSecure Boot証明書の期限切れと、旧機種でのセキュリティ低下を警告した。",
+            "en": "Microsoft warned that expiring Secure Boot certificates could degrade security on older systems."
+          },
+          "whyItMatters": {
+            "ja": "企業の更新計画と、個人のPC延命判断に直結する。",
+            "en": "It affects enterprise update planning and whether consumers can safely keep older PCs."
+          },
+          "whatToWatch": {
+            "ja": "BIOS/UEFI更新が配られるか、機種別の影響範囲がどう出るかを見る。",
+            "en": "Watch for firmware updates and any model-specific impact list."
+          }
+        },
+        {
+          "id": "technology-chrome-monterey-support",
+          "title": {
+            "ja": "Chrome、macOS Montereyのサポートを終了へ",
+            "en": "Chrome will end Monterey support in July"
+          },
+          "source": {
+            "href": "https://timesofindia.indiatimes.com/technology/tech-news/google-chrome-to-drop-macos-monterey-support-by-july-2026/articleshow/127387732.cms",
+            "source": "Times of India",
+            "title": {
+              "ja": "ChromeがmacOS Montereyのサポートを終了",
+              "en": "Chrome to drop macOS Monterey support"
+            },
+            "description": {
+              "ja": "古いmacOSの切り捨てが、ブラウザ更新と端末の買い替え判断にどう響くかを示す。",
+              "en": "A browser-support story that affects update decisions for older Macs."
+            },
+            "imageUrl": "https://timesofindia.indiatimes.com/technology/tech-news/google-chrome-to-drop-macos-monterey-support-by-july-2026/articleshow/127387732.cms",
+            "imageAlt": {
+              "ja": "Macの画面に表示されたChrome",
+              "en": "Google Chrome on a Mac"
+            }
+          },
+          "bottomLine": {
+            "ja": "ブラウザのサポート終了は、OS更新の遅れを一気に顕在化させる。",
+            "en": "Browser support deadlines expose how far behind old OS versions really are."
+          },
+          "whatHappened": {
+            "ja": "Google ChromeはmacOS Montereyのサポートを7月で打ち切る方針と報じられた。",
+            "en": "Chrome was reported to be ending support for macOS Monterey in July."
+          },
+          "whyItMatters": {
+            "ja": "更新を止めると、機能不足より先にセキュリティ面の負債が積み上がる。",
+            "en": "Stopping updates piles up security debt faster than it creates feature gaps."
+          },
+          "whatToWatch": {
+            "ja": "対象外になるMacの利用者が、どのブラウザとOSに移るかを見る。",
+            "en": "Watch what browser and OS path Monterey users choose next."
+          }
+        }
+      ]
+    }
+  ]
+}

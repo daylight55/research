@@ -1,0 +1,24 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-07-06
+- Article slug: `daily-trends-2026-07-06`
+- Run Context: required category tech-news, required content type news, and exact topic counts of politics 5, economy 5, technology 5 within a 24-48 hour recency window, with a structured JSON handoff for deterministic rendering.
+
+## 判断メモ
+
+- 最初に政策、景気、技術の横断で候補を集め、一次・準一次ソースに寄せて15本へ絞り込んだ。
+- 各カテゴリは5本ずつに固定し、ニュース性が弱い候補やソースが薄い候補は外した。
+- heroImage はトルコとNATOの可視性が高い人物名検索に寄せた。
+
+## 残課題
+
+- NATO首脳会議の共同声明と防衛費コミットメントを翌日の更新候補として確認する。
+- 米雇用統計の改定値と7月FOMCに向けた市場織り込みを追う。
+- メモリ価格とAI関連調達の再値上げが、PCとサーバーの見積もりに出るか確認する。

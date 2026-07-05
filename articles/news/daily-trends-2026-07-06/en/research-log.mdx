@@ -1,0 +1,24 @@
+# research-log
+
+## Environment
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## Research Instruction
+
+- Research date: 2026-07-06
+- Article slug: `daily-trends-2026-07-06`
+- Run Context: required category tech-news, required content type news, and exact topic counts of politics 5, economy 5, technology 5 within a 24-48 hour recency window, delivered as structured JSON for deterministic rendering.
+
+## Decision Notes
+
+- I built the set from current policy, macro, and technology sources, then cut it to 15 items with five per category.
+- Each category stays compact and source-backed so the renderer can generate the public pages without hand-written MDX.
+- The hero image query is centered on Turkey and NATO because that is the clearest visual anchor for the day's cross-category mix.
+
+## Follow-ups
+
+- Check the NATO summit statement and defense-spending language on the next pass.
+- Track the payroll revision and Fed pricing after the weaker labor print.
+- Watch whether memory shortages and AI-related procurement delay hardware delivery estimates.

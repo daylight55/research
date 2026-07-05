@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "週末のニュースは、政策、景気、技術の三つが同時に動いた。米最高裁の移民判断が法廷闘争を広げ、トルコはNATO首脳会議を前に国内統制を強め、米雇用統計は景気減速の見方を押し上げた。同時に、AI向けハードウェア、メモリ不足、検索とモバイルの規制圧力が、年後半の投資と価格に直結する論点として残っている。",
+      "en": "The weekend's signal came from three directions at once. The U.S. Supreme Court set off a new immigration fight, Turkey tightened control before a NATO summit, and a weak U.S. jobs report strengthened the case for slower growth and a more cautious Federal Reserve. At the same time, AI hardware plans, memory shortages, and pressure on Google's mobile business kept supply, pricing, and regulation on the same screen."
+    },
+    {
+      "ja": "最高裁はホワイトハウスの動きを止めたが、移民論争そのものはむしろ長引く。",
+      "en": "The Court stopped the White House move, but the immigration fight is still alive."
+    },
+    {
+      "ja": "米最高裁が出生地主義をめぐる行政判断に歯止めをかけた。裁判所の判断で、子どもの市民権をめぐる争点が再び前面に出た。",
+      "en": "The Supreme Court stepped in on birthright citizenship and pushed the child-citizenship fight back to the front."
+    },
+    {
+      "ja": "移民政策の核心に触れるため、法廷判断でも行政判断でもすぐには収束しない。州や連邦の追加訴訟に直結する。",
+      "en": "It goes straight to the core of immigration policy and will feed more state and federal litigation."
+    },
+    {
+      "ja": "次は差し止めの範囲、追加訴訟、議会や州政府の反応を見る。",
+      "en": "Watch the scope of the injunction, new suits, and responses from Congress and state governments."
+    },
+    {
+      "ja": "裁判の負けを、入国と査証の運用強化で埋めにいく構図だ。",
+      "en": "The administration is trying to turn a courtroom loss into tighter entry and visa enforcement."
+    },
+    {
+      "ja": "政権が出生ツーリズムへの取り締まりを強める構えを示した。最高裁判断で終わらず、行政措置が次の焦点になった。",
+      "en": "The administration signaled a tougher line on birth tourism, shifting the focus to executive action."
+    },
+    {
+      "ja": "出生地主義の議論は、入国審査、査証発給、国境運用に波及する。企業や家族の渡航判断にも影響する。",
+      "en": "The fight spills into screening, visas, and border policy, which can affect travel and family planning."
+    },
+    {
+      "ja": "査証ガイダンス、入国審査の変更、法的な差し止め申立てを追う。",
+      "en": "Watch visa guidance, screening changes, and any legal challenge."
+    },
+    {
+      "ja": "NATOの議論は、トルコの地政学的な立ち回りを抜きに進まない。",
+      "en": "NATO's agenda now runs through Turkey's geopolitical leverage."
+    },
+    {
+      "ja": "NATO首脳会議を前に、エルドアン政権が交渉力を強めている。防衛費や対ロシア姿勢の文言が注目点になった。",
+      "en": "Ahead of the NATO summit, Erdogan's government pushed its bargaining power to the front."
+    },
+    {
+      "ja": "同盟の結束、ウクライナ支援、ロシア抑止の文言にトルコの意向が入りやすい。",
+      "en": "Turkey can shape the language on alliance unity, Ukraine support, and deterrence toward Russia."
+    },
+    {
+      "ja": "共同声明の文言、追加支援の約束、トルコの交換条件を見る。",
+      "en": "Watch the joint statement, any new support pledges, and Turkey's demands."
+    },
+    {
+      "ja": "国際会議の前に、政権は国内の異論を先に押さえ込んだ。",
+      "en": "Before the summit, the government moved first against domestic dissent."
+    },
+    {
+      "ja": "記者やコメディアンの拘束が伝わり、NATO前夜の空気は一段と硬くなった。",
+      "en": "Detentions of journalists and a comedian hardened the political mood before NATO."
+    },
+    {
+      "ja": "同盟外交の場で見えるのは、対外姿勢だけでなく国内統制の強さでもある。",
+      "en": "At summit time, outside partners also read the government's domestic control."
+    },
+    {
+      "ja": "追加拘束、抗議行動、会議運営への影響を見る。",
+      "en": "Watch for more detentions, protests, and any effect on the summit itself."
+    },
+    {
+      "ja": "判決の中身より、支払い時期をずらす手続き戦が続いている。",
+      "en": "The fight is now about timing and procedure, not just the underlying verdict."
+    },
+    {
+      "ja": "トランプ氏が支払い延期を狙う動きを続けた。最高裁が介入を見送っても、争いは終わらなかった。",
+      "en": "Trump kept pressing for delay even after the Supreme Court stayed out."
+    },
+    {
+      "ja": "政治リスクだけでなく、訴訟コストと資金繰りの問題としても残る。",
+      "en": "The case remains both a political liability and a cash-flow issue."
+    },
+    {
+      "ja": "下級審の期限、支払い条件、追加上訴の有無を見る。",
+      "en": "Watch the lower-court deadline, payment terms, and any further appeal."
+    },
+    {
+      "ja": "雇用の弱さが、景気と利下げ期待の両方を動かした。",
+      "en": "Weak hiring moved both growth expectations and rate bets."
+    },
+    {
+      "ja": "6月の雇用統計は、雇用の勢いが弱いことを示した。市場は景気減速を前提にし始めた。",
+      "en": "The June payroll print showed weaker momentum and pushed markets to price slower growth."
+    },
+    {
+      "ja": "雇用は消費の土台なので、失速は金利見通しだけでなく個人支出にも響く。",
+      "en": "Jobs drive spending, so the slowdown hits both rates and household demand."
+    },
+    {
+      "ja": "改定値、失業率、次の物価指標で弱さが一時的かどうかを見る。",
+      "en": "Watch revisions, unemployment, and the next inflation print."
+    },
+    {
+      "ja": "景気が鈍るほど、FRBは急いで動きにくくなる。",
+      "en": "The slower the economy looks, the less reason the Fed has to rush."
+    },
+    {
+      "ja": "弱い雇用統計を受け、7月会合での据え置き見方が強まった。",
+      "en": "A weak jobs report made a July hold look more likely."
+    },
+    {
+      "ja": "金利が動かなければ、住宅ローン、カード金利、企業の資金調達条件も変わりにくい。",
+      "en": "If rates stay put, mortgages, card rates, and corporate funding conditions stay sticky too."
+    },
+    {
+      "ja": "FRB高官の発言とCPIを見て、据え置きが本線かを確認する。",
+      "en": "Watch Fed speeches and CPI for confirmation of the hold case."
+    },
+    {
+      "ja": "金利低下は、為替、債券、株式の全部を同時に揺らす。",
+      "en": "Lower yields move FX, bonds, and equities together."
+    },
+    {
+      "ja": "雇用統計の弱さで、ドルと国債利回りが下落した。円相場も次の介入観測と重なった。",
+      "en": "The weak jobs data pushed the dollar and Treasury yields down, with the yen story still in view."
+    },
+    {
+      "ja": "利回り低下は借入コストを通じて企業投資と住宅需要に波及する。",
+      "en": "Lower yields feed through borrowing costs into investment and housing demand."
+    },
+    {
+      "ja": "次の物価指標と円の水準、米10年債利回りの底を追う。",
+      "en": "Watch the next inflation print, the yen, and the floor in 10-year yields."
+    },
+    {
+      "ja": "連休のドライブ需要が、家計の見えるコストを押し上げた。",
+      "en": "Holiday driving kept a visible household cost high."
+    },
+    {
+      "ja": "連休前の週に、ガソリン価格が2022年以来の高水準に達した。",
+      "en": "Ahead of the holiday, gas prices hit their highest level since 2022."
+    },
+    {
+      "ja": "燃料価格は、消費者心理と旅行支出にすぐ効く。",
+      "en": "Fuel prices hit consumer sentiment and travel spending quickly."
+    },
+    {
+      "ja": "原油市況と小売価格の遅れを見て、夏の家計負担を測る。",
+      "en": "Watch crude moves and the lag into retail prices through the summer."
+    },
+    {
+      "ja": "関税は発表よりも、裁判と期限で企業計画を揺らす。",
+      "en": "Tariffs move business plans through court dates as much as through announcements."
+    },
+    {
+      "ja": "トランプ関税をめぐる司法判断で、輸入コストと通商政策の先行きが読みにくいままになった。",
+      "en": "The tariff ruling left trade policy and import costs unsettled."
+    },
+    {
+      "ja": "企業は価格転嫁、在庫、契約条件をすぐには決めにくい。",
+      "en": "Companies cannot lock in pricing, inventory, or contract terms with confidence."
+    },
+    {
+      "ja": "控訴、執行停止の有無、別の関税権限の使い方を見る。",
+      "en": "Watch appeals, stays, and any new tariff authority the White House leans on."
+    },
+    {
+      "ja": "OpenAIはモデルだけでなく、開発体験の器も押しに来ている。",
+      "en": "OpenAI is pushing beyond models into the hardware and workflow around them."
+    },
+    {
+      "ja": "Codex Microとみられるハードウェアの示唆が出た。開発者向けの次の一手として受け止められた。",
+      "en": "A Codex Micro hardware tease surfaced and was read as a developer-facing next step."
+    },
+    {
+      "ja": "AI企業はソフトの改善だけでなく、実行環境ごと囲い込もうとしている。",
+      "en": "AI firms are trying to own not just the model, but the environment it runs in."
+    },
+    {
+      "ja": "仕様、価格、提供形態がイベントで出るかを見る。",
+      "en": "Watch for specs, pricing, and how the hardware is actually offered."
+    },
+    {
+      "ja": "企業AIはPoCから運用設計の段階に入った。",
+      "en": "Enterprise AI is moving from pilots to operating models."
+    },
+    {
+      "ja": "MicrosoftがFrontier Companyを立ち上げ、AIを現場に入れる企業支援を前面に出した。",
+      "en": "Microsoft put enterprise support for deployed AI systems under the Frontier Company banner."
+    },
+    {
+      "ja": "導入支援、監視、運用責任が、AIソフトそのものと同じくらい重要になる。",
+      "en": "Deployment support, monitoring, and accountability are becoming as important as the model itself."
+    },
+    {
+      "ja": "既存のAzure製品との役割分担と、最初の採用企業を見る。",
+      "en": "Watch how it overlaps with Azure products and who signs up first."
+    },
+    {
+      "ja": "MicrosoftはOSの入口からAIを組み直す余地を探っている。",
+      "en": "Microsoft is still testing how far it can rebuild the OS around AI."
+    },
+    {
+      "ja": "リーク動画で、Copilotを中心にした軽量Windows案が確認された。デスクトップのUI再設計が見えてきた。",
+      "en": "A leaked video showed a lightweight Windows concept built around Copilot and a new desktop UI."
+    },
+    {
+      "ja": "OSはAI機能の置き場であると同時に、デバイス戦略の分岐点でもある。",
+      "en": "The OS is both the place AI features live and the point where device strategy changes."
+    },
+    {
+      "ja": "実機投入の有無と、既存Windowsへの反映を追う。",
+      "en": "Watch whether the concept reaches shipping devices or stays an experiment."
+    },
+    {
+      "ja": "Googleは検索だけでなく、Androidの配り方でも規制と向き合う。",
+      "en": "Google is dealing with regulation not just in search, but in Android distribution too."
+    },
+    {
+      "ja": "EUの裁判所がGoogleの罰金を支持し、Androidをめぐる規制圧力は続いた。",
+      "en": "An EU court upheld the fine, keeping regulatory pressure on Android in place."
+    },
+    {
+      "ja": "アプリストア、既定検索、提携条件に波及し、収益配分を揺らす。",
+      "en": "It can spill into app stores, default search, and partner terms."
+    },
+    {
+      "ja": "Googleの対応策と、他の規制当局への波及を見る。",
+      "en": "Watch Google's response and whether other regulators follow."
+    },
+    {
+      "ja": "AIブームはモデル性能だけでなく、DRAMとHBMの価格にも効く。",
+      "en": "The AI boom is moving DRAM and HBM prices, not just model performance."
+    },
+    {
+      "ja": "AIデータセンターの需要がメモリ供給を圧迫し、短期的な不足感が強まった。",
+      "en": "AI data center demand tightened supply and made the shortage feel worse."
+    },
+    {
+      "ja": "PC、スマホ、サーバー、AIアクセラレータの仕入れ値に広く波及する。",
+      "en": "It spreads into pricing for PCs, phones, servers, and AI accelerators."
+    },
+    {
+      "ja": "主要サプライヤーの値上げと、2027年までの在庫水準を見る。",
+      "en": "Watch supplier price hikes and inventory through 2027."
+    },
+    {
+      "ja": "司法判断が政策の終点ではなく、次の執行と訴訟の起点になっている。",
+      "en": "Court rulings are acting as the start of the next enforcement round, not the end of the fight."
+    },
+    {
+      "ja": "労働市場の弱さは金利だけでなく、消費と輸入コストの見通しにも波及している。",
+      "en": "A softer labor market is feeding into rate expectations, consumer demand, and import-cost planning."
+    },
+    {
+      "ja": "AI関連の供給制約はソフトの進展より遅れて現れ、価格と調達で効いてくる。",
+      "en": "AI constraints are showing up in chips, operating systems, and enterprise deployment faster than in model demos."
+    },
+    {
+      "ja": "米最高裁判断の後、移民と出生地主義をめぐる追加の訴訟や行政措置が出るか。",
+      "en": "Watch for new immigration filings or administrative steps after the Supreme Court ruling."
+    },
+    {
+      "ja": "NATO首脳会議で防衛費、対ロシア、対ウクライナの文言がどこまで具体化するか。",
+      "en": "Watch the NATO summit text on defense spending, Ukraine, and Russia."
+    },
+    {
+      "ja": "弱い雇用統計を受けた米連邦準備制度理事会の7月会合と、メモリ価格の上昇がどこまで広がるか。",
+      "en": "Watch the July Fed meeting and whether memory prices keep climbing into late summer."
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "サウジアラビアは、石油で成り立つ王国というより、石油で統治を延命しながら統治の土台を組み替えている王国である。",
+          "en": "Saudi Arabia is less a kingdom that lives on oil than a kingdom that keeps rule alive with oil while rebuilding its governing base."
+        },
+        {
+          "ja": "王権、宗教権威、治安国家、Vision 2030、対外均衡が同じ国家装置に乗っているため、国内改革と外交の変化は切り離せない。",
+          "en": "The crown, religious authority, the security state, Vision 2030, and external balancing all sit inside the same governing machine, so domestic reform and foreign policy cannot be separated."
+        },
+        {
+          "ja": "国王サルマンと皇太子ムハンマド・ビン・サルマンを中心とする体制は、国家の近代化を進めつつ、政治参加は厳しく管理する。",
+          "en": "The Salman-MBS center tries to modernize the state while keeping political participation tightly managed."
+        },
+        {
+          "ja": "日本にとっては、原油と航路の供給国であるだけでなく、湾岸秩序と対米・対中・対イラン関係を読むための節点でもある。",
+          "en": "For Japan, Saudi Arabia is not just a crude supplier and shipping node; it is also a key point for reading Gulf order and Saudi-U.S., Saudi-China, and Saudi-Iran relations."
+        }
+      ]
+    },
+    {
+      "id": "historical-and-state-formation",
+      "heading": {
+        "ja": "2. 歴史と国家形成",
+        "en": "2. Historical and State Formation"
+      },
+      "pairs": [
+        {
+          "ja": "現代サウジの骨格は、1932年の建国、宗教権威との連携、石油収入の国家化、1979年の大モスク占拠、1990-91年の湾岸戦争で形づくられた。",
+          "en": "Modern Saudi Arabia was shaped by the 1932 founding, its alliance with religious authority, the nationalization of oil revenue, the 1979 Grand Mosque seizure, and the 1990-91 Gulf War."
+        },
+        {
+          "ja": "1979年は、イラン革命と国内の宗教的衝撃が同時に起きた年であり、以後の安全保障と社会統制の感覚を強めた。",
+          "en": "1979 matters because the Iranian Revolution and a domestic religious shock happened at the same time, which sharpened Saudi Arabia’s sense of security and social control."
+        },
+        {
+          "ja": "2010年代後半以降の変化は、MBSの権力集中、2018年のカショギ事件、2023年の対イラン国交回復、2025年以降のパレスチナ外交の再強化として読むと整理しやすい。",
+          "en": "Since the late 2010s, the main turning points have been MBS’s consolidation of power, the 2018 Khashoggi killing, the 2023 restoration of relations with Iran, and the renewed emphasis on Palestinian diplomacy after 2025."
+        }
+      ]
+    },
+    {
+      "id": "political-system-and-power-structure",
+      "heading": {
+        "ja": "3. 政治体制と権力構造",
+        "en": "3. Political System and Power Structure"
+      },
+      "pairs": [
+        {
+          "ja": "法制度上、王国はモナキーであり、国政はクルアーンとスンナに基づくとされる。",
+          "en": "Legally, the kingdom is a monarchy, and its basic law says the Qur'an and the Sunna are the basis of governance."
+        },
+        {
+          "ja": "全国レベルの政党政治や競争選挙はなく、諮問評議会の議員は国王が任命する。",
+          "en": "There is no national party competition or competitive election at the top level, and the members of the Shura Council are appointed by the king."
+        },
+        {
+          "ja": "そのため、立法、監督、予算、治安、宗教行政は、形式上の分立があっても最終的には王室の統合判断に収斂する。",
+          "en": "As a result, legislation, oversight, the budget, security, and religious administration all converge on royal consolidation even when they appear institutionally separate."
+        },
+        {
+          "ja": "実際に国を動かしているのは、国王、皇太子兼首相、内務・国防・外務の官僚機構、PIF、宗教エスタブリッシュメントである。",
+          "en": "In practice, the kingdom is driven by the king, the crown prince and prime minister, the ministries of interior, defense, and foreign affairs, the PIF, and the religious establishment."
+        }
+      ]
+    },
+    {
+      "id": "foreign-relations",
+      "heading": {
+        "ja": "4. 対外関係の要点",
+        "en": "4. Foreign Relations"
+      },
+      "pairs": [
+        {
+          "ja": "対米関係は、1945年のクインシー会談以来の安全保障協力を土台にしている。",
+          "en": "The U.S. relationship rests on security cooperation that dates back to the 1945 Quincy meeting."
+        },
+        {
+          "ja": "ただし近年の関係は、対イラン抑止、ガザ停戦、原油政策、人権をめぐって、かつてより条件つきになっている。",
+          "en": "But in recent years the relationship has become more conditional around deterrence against Iran, Gaza ceasefire diplomacy, oil policy, and human rights."
+        },
+        {
+          "ja": "対中関係は、石油と投資、産業協力、外交仲介の三層で深い。",
+          "en": "The China relationship is deep at three layers: oil and investment, industrial cooperation, and diplomatic mediation."
+        },
+        {
+          "ja": "北京で成立した2023年のサウジ・イラン和解は、サウジが中国を安全保障の代替ではなく、緊張管理の仲介者としても使うことを示した。",
+          "en": "The 2023 Saudi-Iran rapprochement brokered in Beijing showed that Saudi Arabia can use China not as a security substitute, but as a mediator for tension management."
+        },
+        {
+          "ja": "イランとの関係は改善したが、地域覇権をめぐる競争そのものは消えていない。",
+          "en": "Relations with Iran have improved, but the regional competition itself has not disappeared."
+        },
+        {
+          "ja": "イエメンでは、サウジは長期戦の出口を探っているが、国境安全保障と紅海航路の不安定さは残っている。",
+          "en": "In Yemen, Saudi Arabia is looking for an exit from a long war, but border security and Red Sea instability remain."
+        },
+        {
+          "ja": "イスラエルとの正常化は、サウジが明確に示すとおり、独立したパレスチナ国家の承認なしには進まない。",
+          "en": "Normalization with Israel will not move forward, as Riyadh has made clear, without recognition of an independent Palestinian state."
+        }
+      ]
+    },
+    {
+      "id": "society-economy-and-everyday-life",
+      "heading": {
+        "ja": "5. 社会・経済・市民生活",
+        "en": "5. Society, Economy, and Everyday Life"
+      },
+      "pairs": [
+        {
+          "ja": "Vision 2030は、非石油化を合言葉にした単なる広報ではなく、国家投資、観光、物流、娯楽、女性雇用を束ねる公式な再配分計画である。",
+          "en": "Vision 2030 is not just branding around de-oilization; it is an official redistribution plan that bundles state investment, tourism, logistics, entertainment, and women’s employment."
+        },
+        {
+          "ja": "2024年のVision 2030年報告では、国際観光客が増え、女性の労働参加率も上がり、非石油輸出も拡大した。",
+          "en": "The 2024 Vision 2030 report says international tourism rose, women’s labor-force participation increased, and non-oil exports expanded."
+        },
+        {
+          "ja": "それでも経済の基礎はなお石油にあり、IMFは非石油成長が強くても、構造改革と需要管理が必要だとみている。",
+          "en": "Still, oil remains the base of the economy, and the IMF sees strong non-oil growth as requiring structural reform and demand management."
+        },
+        {
+          "ja": "人口は2024年半ばで3530万人に達し、そのうち非サウジ住民は約1570万人、つまり約44%だった。",
+          "en": "The population reached 35.3 million in mid-2024, and non-Saudis were about 15.7 million, or about 44 percent."
+        },
+        {
+          "ja": "この人口構成は、若年化と都市化の利点を持つ一方で、移民労働と社会統治の摩擦を抱え込む。",
+          "en": "That population mix offers the advantages of youth and urbanization, but it also imports the frictions of migrant labor and social control."
+        },
+        {
+          "ja": "Freedom Houseは2026年版でもサウジアラビアを Not Free とし、HRWとAmnestyは表現の自由、労働搾取、旅券没収、移動制限を引き続き問題視している。",
+          "en": "Freedom House still classifies Saudi Arabia as Not Free in 2026, while HRW and Amnesty continue to flag restrictions on speech, labor exploitation, passport confiscation, and freedom of movement."
+        },
+        {
+          "ja": "女性の公的参加は増えたが、政治的自由の拡大と同義ではない。",
+          "en": "Women's public participation has increased, but that does not mean political freedom has expanded in parallel."
+        }
+      ]
+    },
+    {
+      "id": "what-it-means-for-japan-and-east-asia",
+      "heading": {
+        "ja": "6. 日本・東アジアへの含意",
+        "en": "6. What It Means for Japan and East Asia"
+      },
+      "pairs": [
+        {
+          "ja": "日本にとって最も重要なのは、サウジを「原油供給国」と「湾岸の政治秩序の作り手」の両方として扱うことだ。",
+          "en": "For Japan, the most important thing is to treat Saudi Arabia both as a crude supplier and as a maker of Gulf political order."
+        },
+        {
+          "ja": "ホルムズ海峡、紅海、イエメン、イラン、イスラエルのどれかが揺れると、エネルギー価格だけでなく、保険、海運、建設、投資案件にも波及する。",
+          "en": "When the Strait of Hormuz, the Red Sea, Yemen, Iran, or Israel shifts, the shock spreads not only to energy prices but also to insurance, shipping, construction, and investment projects."
+        },
+        {
+          "ja": "投資面では、PIF主導の大型案件は魅力が大きいが、契約執行、労務、制裁、評判のリスクを同時に見る必要がある。",
+          "en": "On the investment side, PIF-led megaprojects are attractive, but contract enforcement, labor, sanctions, and reputational risk all have to be assessed at once."
+        }
+      ]
+    },
+    {
+      "id": "monitoring-points-and-limits",
+      "heading": {
+        "ja": "7. 監視点と限界",
+        "en": "7. Monitoring Points and Limits"
+      },
+      "pairs": [
+        {
+          "ja": "今後の監視点は、原油政策、対米防衛協力、対中経済依存、対イラン緊張、ガザ停戦後の地域再編である。",
+          "en": "The key monitoring points are oil policy, defense cooperation with the United States, economic dependence on China, tension with Iran, and regional reordering after the Gaza ceasefire debate."
+        },
+        {
+          "ja": "この国は、自由化と統制、近代化と保守、地域安定と外向きの強硬さを同時に進めるため、単線の物語では読めない。",
+          "en": "This country cannot be read through a single line because it pushes liberalization and control, modernization and conservatism, regional stability and outward assertiveness at the same time."
+        },
+        {
+          "ja": "したがって、ニュースでは改革の演出よりも、権力配置、資金配分、外交の優先順位がどこへ動いたかを追う方がよい。",
+          "en": "So in news reading, it is better to track power distribution, cash allocation, and diplomatic priorities than the performance of reform rhetoric."
+        },
+        {
+          "ja": "公表情報からの推定として、サウジは石油国家からの離脱ではなく、石油収入で統治を再設計する方向へ進んでいる。",
+          "en": "On the basis of public information, Saudi Arabia looks less like a state leaving oil behind than a state redesigning governance with oil money."
+        }
+      ]
+    }
+  ]
+}

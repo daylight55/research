@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "イランは、選挙や閣僚や議会を持ちながら、最終的な権力が最高指導者と革命防衛隊に集中する体制で動いている。",
+          "en": "Iran runs on a system that still holds elections, ministers, and a parliament, but concentrates final authority in the supreme leader and the Revolutionary Guard."
+        },
+        {
+          "ja": "2026年9月時点の公表報道では、最高指導者はモフタバ・ハメネイ、文民の顔はマスード・ペゼシュキアン大統領であり、米国とイスラエルとの戦争とホルムズ海峡の封鎖が対外関係を覆っている。",
+          "en": "As of September 2026, public reporting says the supreme leader is Mojtaba Khamenei, the civilian face is President Masoud Pezeshkian, and war with the United States and Israel plus the closure of the Strait of Hormuz dominate foreign relations."
+        },
+        {
+          "ja": "この国をニュースで読むときは、核交渉の行方だけでなく、制裁、海上交通、国内統制、代理勢力の連動を一体で追う必要がある。",
+          "en": "When you read Iran in the news, you have to follow sanctions, sea lanes, domestic control, and proxy networks together, not nuclear diplomacy alone."
+        }
+      ]
+    },
+    {
+      "id": "history-and-memory",
+      "heading": {
+        "ja": "2. 歴史と政治記憶",
+        "en": "2. History and Political Memory"
+      },
+      "pairs": [
+        {
+          "ja": "現代イランの記憶の底には、1906年の立憲革命、1953年のモサデグ失脚、1979年のイスラム革命がある。",
+          "en": "Modern Iran still carries the memory of the 1906 constitutional revolution, the 1953 fall of Mossadegh, and the 1979 Islamic Revolution."
+        },
+        {
+          "ja": "1979年革命は、君主制を倒し、神権的な共和制を作り、革命防衛隊と監督機構を国家の中枢に置いた。",
+          "en": "The 1979 revolution overthrew the monarchy, built a theocratic republic, and placed the Revolutionary Guard and supervisory institutions at the center of the state."
+        },
+        {
+          "ja": "2022年以降の「女性・生命・自由」運動は、道徳統治と市民の尊厳の緊張を再び可視化した。",
+          "en": "The 2022 Women, Life, Freedom movement made the tension between moral governance and civic dignity visible again."
+        }
+      ]
+    },
+    {
+      "id": "structure-of-power",
+      "heading": {
+        "ja": "3. 体制の骨格",
+        "en": "3. The Structure of Power"
+      },
+      "pairs": [
+        {
+          "ja": "憲法上、イランは選挙制のある共和国だが、候補者の適格審査と最終的な権限は上から管理される。",
+          "en": "On paper, Iran is a republic with elections, but candidate vetting and final authority are tightly managed from above."
+        },
+        {
+          "ja": "現在の権力配置は、モフタバ・ハメネイ最高指導者、ペゼシュキアン大統領、IRGC、司法、Guardian Council、専門家会議の相互作用として見ると分かりやすい。",
+          "en": "The current power map is easier to read as an interaction among Supreme Leader Mojtaba Khamenei, President Pezeshkian, the IRGC, the judiciary, the Guardian Council, and the Assembly of Experts."
+        },
+        {
+          "ja": "この構造のため、選挙は競争の代わりに正統性の再配分として機能しやすい。",
+          "en": "That structure makes elections function more as a redistribution of legitimacy than as real competition."
+        }
+      ]
+    },
+    {
+      "id": "nuclear-sanctions-war",
+      "heading": {
+        "ja": "4. 核・制裁・戦争",
+        "en": "4. Nuclear Politics, Sanctions, and War"
+      },
+      "pairs": [
+        {
+          "ja": "IAEAの2025年6月の報告では、イランは60%濃縮ウランの生産を拡大し続け、JCPOAの制限を大きく超える在庫を積み上げていた。",
+          "en": "In its June 2025 report, the IAEA said Iran continued to expand production of 60 percent enriched uranium and had accumulated stocks far above JCPOA limits."
+        },
+        {
+          "ja": "IMFの2026年7月の見通しでは、2026年の実質GDP成長率は-5.4%、消費者物価は68.9%と見込まれている。",
+          "en": "The IMF's July 2026 outlook puts Iran's 2026 real GDP growth at -5.4 percent and consumer inflation at 68.9 percent."
+        },
+        {
+          "ja": "2026年9月のAP報道では、仲介国が米国とイランの間でホルムズ海峡再開と停戦を結びつける案を探っているが、隔たりは大きい。",
+          "en": "In September 2026, AP reported that mediators were exploring ways to connect a ceasefire with the reopening of the Strait of Hormuz, but the gaps remain wide."
+        }
+      ]
+    },
+    {
+      "id": "civilian-life-and-repression",
+      "heading": {
+        "ja": "5. 市民生活と抑圧",
+        "en": "5. Civilian Life and Repression"
+      },
+      "pairs": [
+        {
+          "ja": "Freedom Houseは2026年版でもイランを Not Free と評価し、表現の自由、信教の自由、オンライン空間、手続的権利の制約を指摘している。",
+          "en": "Freedom House still rates Iran Not Free in 2026 and points to restrictions on speech, religion, online space, and due process."
+        },
+        {
+          "ja": "市民生活を一枚岩で見ると外す。",
+          "en": "You miss the country if you treat civilian life as uniform."
+        },
+        {
+          "ja": "女性の公的参加は広がったが、政治的自由が自動的に広がったわけではない。",
+          "en": "Women's public participation has grown, but political freedom has not expanded automatically."
+        }
+      ]
+    },
+    {
+      "id": "regional-networks",
+      "heading": {
+        "ja": "6. 地域ネットワーク",
+        "en": "6. Regional Networks"
+      },
+      "pairs": [
+        {
+          "ja": "イランの地域ネットワークは、ひとつの代理勢力ではなく、レバノン、イエメン、イラク、シリアにまたがる半自律的な接点の集合として見る方が実態に近い。",
+          "en": "Iran's regional network is closer to a set of semi-autonomous nodes spread across Lebanon, Yemen, Iraq, and Syria than to a single proxy force."
+        },
+        {
+          "ja": "この表の読みどころは、各地の勢力が同じ速度で動かないことだ。",
+          "en": "The point of this table is that local actors do not move at the same speed."
+        },
+        {
+          "ja": "イランが地域で影響力を持つとしても、その影響力は一斉に動く歯車ではなく、地元の争点に応じて噛み合ったり外れたりする。",
+          "en": "Even when Iran has influence across the region, that influence is not one gear that turns all at once; it meshes with or slips against local disputes."
+        }
+      ]
+    },
+    {
+      "id": "japan-east-asia",
+      "heading": {
+        "ja": "7. 日本・東アジアへの含意",
+        "en": "7. What It Means for Japan and East Asia"
+      },
+      "pairs": [
+        {
+          "ja": "日本にとっての焦点は、イランを「遠い制裁対象国」としてだけ見ないことだ。",
+          "en": "For Japan, the key is not to treat Iran only as a distant sanctions target."
+        },
+        {
+          "ja": "東アジアの企業や政策担当者にとっての判断軸は、イラン市場に入るかどうかではなく、どのリスクが許容可能で、どの接触が制裁・物流・評判の三重リスクを越えるかである。",
+          "en": "For companies and policy teams in East Asia, the real question is not whether to enter the Iranian market, but which risks are still acceptable and which exposures cross the line into sanctions, logistics, and reputational risk at the same time."
+        }
+      ]
+    },
+    {
+      "id": "monitoring-points-and-limits",
+      "heading": {
+        "ja": "8. 監視点と限界",
+        "en": "8. Monitoring Points and Limits"
+      },
+      "pairs": [
+        {
+          "ja": "今後の監視点は、最高指導者とIRGCの足並み、ホルムズ海峡をめぐる停戦交渉、IAEA査察へのアクセス、制裁の例外措置、そして国内の抑圧が再び抗議を呼ぶかどうかである。",
+          "en": "The next monitoring points are the alignment between the supreme leader and the IRGC, ceasefire talks around Hormuz, access for IAEA inspectors, sanction exceptions, and whether repression triggers another wave of protest."
+        },
+        {
+          "ja": "公表情報からの推定として、イランは当面、核・戦争・制裁の三つを別々に扱えない。",
+          "en": "On the basis of public information, Iran cannot separate nuclear politics, war, and sanctions in the near term."
+        },
+        {
+          "ja": "ニュースで見るべきなのは、声明の強さよりも、誰がどのコストを払い始めたかである。",
+          "en": "In news reading, the question is less who sounds toughest than who has started paying what cost."
+        }
+      ]
+    }
+  ]
+}

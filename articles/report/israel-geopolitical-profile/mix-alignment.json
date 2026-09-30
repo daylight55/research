@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "イスラエルは自由選挙を持つ議会制民主主義だが、120議席の比例代表制と3.25%の阻止条項が小党連立を常態化させ、首相官邸の交渉が政策の重心になる。",
+          "en": "Israel is a parliamentary democracy with free elections, but its 120-seat proportional system and 3.25 percent threshold make small-party coalitions routine and put bargaining at the prime minister's office at the center of policy."
+        },
+        {
+          "ja": "2026年時点ではベンヤミン・ネタニヤフが第37次政府の首相を務めている。",
+          "en": "As of 2026, Benjamin Netanyahu is serving as prime minister of the 37th government."
+        },
+        {
+          "ja": "司法制度をめぐる対立は収まっておらず、Freedom Houseも司法への政治圧力と少数派格差を継続的な論点として扱っている。",
+          "en": "The fight over the judiciary has not gone away, and Freedom House still treats political pressure on the courts and unequal treatment of minorities as live issues."
+        },
+        {
+          "ja": "ガザ戦争、ヨルダン川西岸の治安、レバノン国境、イランとの対立が同時に動くため、イスラエルのニュースは国内政治と地域戦争を分けて読めない。",
+          "en": "You cannot read Israel's news by separating domestic politics from regional war, because Gaza, the West Bank, the Lebanese border, and confrontation with Iran all move at once."
+        },
+        {
+          "ja": "経済面では、イノベーションと高技術輸出が強みだが、IMFは2026年成長率を3.5%と見込み、防衛支出の高止まりと動員による労働供給制約を重く見ている。",
+          "en": "The economy still leans on innovation and high-tech exports, but the IMF expects 2026 growth at 3.5 percent and flags heavy defense spending and mobilization-related labor constraints."
+        },
+        {
+          "ja": "日本にとっての論点は、イスラエルを単なる中東紛争地ではなく、対米同盟、湾岸正常化、サイバー・防衛技術、海上交通リスクが交差する節点として読むことにある。",
+          "en": "For Japan, the useful frame is not Israel as a distant conflict zone, but Israel as a node where the U.S. alliance, Gulf normalization, cyber and defense technology, and maritime risk intersect."
+        }
+      ]
+    },
+    {
+      "id": "history-and-state-formation",
+      "heading": {
+        "ja": "2. 歴史と国家形成",
+        "en": "2. History and State Formation"
+      },
+      "pairs": [
+        {
+          "ja": "1948年の建国は、独立宣言と同時に始まった戦争の記憶と結びついている。",
+          "en": "The 1948 founding of Israel is tied to the memory of war that began with independence."
+        },
+        {
+          "ja": "1967年戦争、1973年戦争、1979年のエジプト和平、2020年のアブラハム合意は、イスラエルの安全保障観と外交の輪郭を段階的に塗り替えた。",
+          "en": "The 1967 war, the 1973 war, the 1979 peace with Egypt, and the 2020 Abraham Accords each redrew Israel's security outlook and diplomacy in stages."
+        },
+        {
+          "ja": "2023年10月7日の攻撃とその後のガザ戦争、さらに2025年の司法任命制度改革は、外戦と内戦の境界を一段と曖昧にした。",
+          "en": "The October 7, 2023 attack, the Gaza war that followed, and the 2025 reform of judicial appointments blurred the line between external war and internal conflict even more."
+        }
+      ]
+    },
+    {
+      "id": "political-system-and-power-structure",
+      "heading": {
+        "ja": "3. 政治体制と権力構造",
+        "en": "3. Political System and Power Structure"
+      },
+      "pairs": [
+        {
+          "ja": "Knessetは120議席で、全国比例・直接・秘密・平等選挙によって選ばれる。",
+          "en": "The Knesset has 120 seats and is elected by nationwide, proportional, direct, secret, and equal voting."
+        },
+        {
+          "ja": "首相は大統領の指名を受けて政府を組織し、政府はKnessetに対して連帯責任を負う。",
+          "en": "The president asks a member of Knesset to form a government, and the government is collectively responsible to the Knesset."
+        },
+        {
+          "ja": "法律の骨格はBasic Lawsであり、憲法の代替物として働く。",
+          "en": "The legal backbone is the Basic Laws, which work as a substitute for a single written constitution."
+        },
+        {
+          "ja": "司法任命委員会は裁判官と上級書記官を選任し、司法の独立を支えると同時に、改革争点の中心にもなる。",
+          "en": "The Judicial Selection Committee appoints judges and senior clerks, so it supports judicial independence and sits at the center of reform fights."
+        },
+        {
+          "ja": "この構図では、政党名よりも、誰が連立をつなぎ止めるか、誰が治安を説明するか、誰が司法に手を入れるかが重要になる。",
+          "en": "In this setup, party labels matter less than who can keep the coalition together, who can explain security, and who can change the courts."
+        }
+      ]
+    },
+    {
+      "id": "security-and-foreign-relations",
+      "heading": {
+        "ja": "4. 安全保障と対外関係",
+        "en": "4. Security and Foreign Relations"
+      },
+      "pairs": [
+        {
+          "ja": "ガザは人道危機と治安作戦が重なる空間であり、西岸は移動制限、入植、家屋破壊、武装襲撃が日常的な政治変数になっている。",
+          "en": "Gaza is a space where humanitarian crisis and security operations overlap, while the West Bank has become a daily political variable through movement restrictions, settlement expansion, home demolitions, and armed attacks."
+        },
+        {
+          "ja": "イランはイスラエルの主敵であり、ミサイル、無人機、代理勢力、核の組み合わせが戦略環境を決める。",
+          "en": "Iran is Israel's principal adversary, and the mix of missiles, drones, proxy forces, and nuclear risk defines the strategic environment."
+        },
+        {
+          "ja": "レバノン国境では、ヒズボラとの衝突が2024年11月の停戦後に弱まったとしても、再燃余地は残る。",
+          "en": "On the Lebanese border, even a weaker Hezbollah front after the November 2024 ceasefire leaves room for renewed escalation."
+        },
+        {
+          "ja": "シリアでは、イスラエル政府が領土的野心を否定する一方で、国境と空域の安全保障は残る。",
+          "en": "In Syria, the Israeli government denies territorial ambitions, but border and airspace security remain part of the picture."
+        },
+        {
+          "ja": "米国との関係は、軍事支援、外交保護、技術協力を束ねる安全保障の基礎であり、アブラハム合意はUAE、バーレーン、モロッコとの関係を別の層で広げた。",
+          "en": "The U.S. relationship bundles military aid, diplomatic cover, and technical cooperation, while the Abraham Accords extend the relationship with the UAE, Bahrain, and Morocco on a separate track."
+        }
+      ]
+    },
+    {
+      "id": "economy-and-technology",
+      "heading": {
+        "ja": "5. 経済と技術産業",
+        "en": "5. Economy and Technology"
+      },
+      "pairs": [
+        {
+          "ja": "CBSによると、2026年のイスラエル人口は1,024万4千人で、76%がユダヤ系とその他、21.1%がアラブ系、2.9%が外国人だった。",
+          "en": "CBS says Israel's population on the eve of Independence Day 2026 stood at 10.244 million, with 76 percent Jewish and other, 21.1 percent Arab, and 2.9 percent foreign residents."
+        },
+        {
+          "ja": "この人口構成は、都市部の世俗層、宗教層、ハレディ層、アラブ系市民、移民出身者が同じ政治言語を共有していないことを示している。",
+          "en": "That mix shows why secular urban Israelis, religious Israelis, Haredi communities, Arab citizens, and immigrants do not share one political language."
+        },
+        {
+          "ja": "イスラエルの強みは、軍事技術、サイバー、防衛産業、ソフトウェア、医療・農業技術が近接している点にある。",
+          "en": "Israel's strength comes from the close overlap between military technology, cyber, defense industry, software, and medical and agricultural technology."
+        },
+        {
+          "ja": "その強みは戦時動員と切り離せない。",
+          "en": "That strength is not detached from wartime mobilization."
+        },
+        {
+          "ja": "IMFは、防衛支出の高止まりと労働供給の制約が成長の重しになると見ている。",
+          "en": "The IMF says heavy defense spending and labor-supply constraints will keep weighing on growth."
+        },
+        {
+          "ja": "技術大国としてのイスラエルは、ベンチャーと防衛の両方で強いが、政治不安が投資、採用、研究移転、海外拠点化を同時に押す。",
+          "en": "Israel looks like a tech powerhouse in both venture and defense, but political instability can push investment, hiring, research transfer, and overseas relocation at the same time."
+        }
+      ]
+    },
+    {
+      "id": "civic-life-and-social-fault-lines",
+      "heading": {
+        "ja": "6. 市民生活と社会の割れ目",
+        "en": "6. Civic Life and Social Fault Lines"
+      },
+      "pairs": [
+        {
+          "ja": "市民感情は一枚岩ではなく、世代、階級、宗教、民族、都市と地方、軍務経験の差で大きく分かれる。",
+          "en": "Public sentiment is not uniform, because age, class, religion, ethnicity, city and periphery, and military service experience all split the country differently."
+        },
+        {
+          "ja": "都市の中間層は司法の独立と生活費を結びつけて見る一方、宗教政党の支持層は学校、家族、共同体への国家介入を問題にする。",
+          "en": "Urban middle-class Israelis often connect judicial independence with living costs, while supporters of religious parties focus on state intervention in schools, family life, and communal autonomy."
+        },
+        {
+          "ja": "アラブ系市民は、形式的な市民権があっても、治安、土地、予算配分、政治参加で別の制約に直面する。",
+          "en": "Arab citizens have formal citizenship, but they still face different constraints in security, land, budget allocation, and political participation."
+        },
+        {
+          "ja": "ハレディ層の人口増加は、兵役、労働参加、教育、福祉をめぐる国家の設計を長く揺らす。",
+          "en": "The growth of the Haredi population will keep unsettling the state's design around conscription, labor participation, education, and welfare."
+        }
+      ]
+    },
+    {
+      "id": "implications-for-japan-and-east-asia",
+      "heading": {
+        "ja": "7. 日本・東アジアへの含意",
+        "en": "7. Implications for Japan and East Asia"
+      },
+      "pairs": [
+        {
+          "ja": "日本が見るべきなのは、イスラエルの国内論争そのものより、そこから波及するサイバー協力、装備調達、海上輸送、米国政策、湾岸の地政学である。",
+          "en": "Japan should watch not just Israel's domestic fights but the spillovers into cyber cooperation, defense procurement, shipping, U.S. policy, and Gulf geopolitics."
+        },
+        {
+          "ja": "公表情報からの推定として、イスラエル情勢の悪化は、原油やLNGの価格だけでなく、保険料、迂回航路、調達審査、対サイバー警戒を同時に押し上げる。",
+          "en": "The public record suggests that a deterioration in Israel can lift not only oil and LNG risk, but also insurance costs, diversion routes, procurement screening, and cyber alert levels."
+        },
+        {
+          "ja": "日本企業が実務で見るべき監視点は、連立の安定、司法改革の次段、ガザと西岸の治安、レバノンとイランの再燃、そして米国の対イスラエル姿勢である。",
+          "en": "For business and policy readers, the main watch points are coalition stability, the next judicial move, security conditions in Gaza and the West Bank, the risk of renewed friction with Lebanon and Iran, and Washington's posture toward Israel."
+        },
+        {
+          "ja": "イスラエルは、民主主義国家であると同時に、戦時の例外が常に政治に入り込む国家である。",
+          "en": "Israel is a democracy, but it is also a state where emergency logic is always close to the center of politics."
+        },
+        {
+          "ja": "その前提を外すと、選挙、司法、外交、技術産業、社会分断のどれも、ニュースとして半分しか読めない。",
+          "en": "If you miss that point, you will read elections, courts, diplomacy, technology, and social division as separate stories when they are actually one system."
+        }
+      ]
+    }
+  ]
+}

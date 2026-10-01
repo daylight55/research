@@ -1,0 +1,275 @@
+{
+	"version": 1,
+	"sourceLocale": "ja",
+	"targetLocale": "en",
+	"sections": [
+		{
+			"id": "executive-summary",
+			"heading": {
+				"ja": "1. エグゼクティブサマリー",
+				"en": "1. Executive Summary"
+			},
+			"pairs": [
+				{
+					"ja": "ウクライナを読むときの中心軸は、ロシアとの全面戦争、戦時法制、欧州統合、そして復興の四つである。",
+					"en": "When you read Ukraine, the core frame is the full-scale war with Russia, wartime law, European integration, and reconstruction."
+				},
+				{
+					"ja": "2026年10月時点のウクライナは、独立国家であると同時に、国家機能のかなりの部分を動員と防衛に振り向けた戦時国家として運営されている。",
+					"en": "As of October 2026, Ukraine is still a sovereign state, but it is operating as a wartime state that has redirected a large share of national capacity toward mobilization and defense."
+				},
+				{
+					"ja": "戦時下の選挙延期は、制度の停止というより、憲法秩序を戦時法制の上に載せている状態と理解したほうがよい。",
+					"en": "Election delay under martial law is better understood as wartime constitutional order than as a simple suspension of institutions."
+				},
+				{
+					"ja": "欧州統合は、抽象的な将来像ではなく、財政支援、制度改革、腐敗対策、法の支配を束ねる現在進行形の条件である。",
+					"en": "European integration is not an abstract future goal."
+				},
+				{
+					"ja": "市民生活では、避難、物価、雇用、住宅、電力、家族分断が同時に重なる。",
+					"en": "Daily life is shaped by displacement, inflation, jobs, housing, power supply, and family separation at the same time."
+				},
+				{
+					"ja": "国民感情は単純な戦意高揚でも厭戦でもなく、独立、防衛、欧州帰属を支えつつ、長期化する負担に耐えている姿として読むのが近い。",
+					"en": "Public sentiment is not a simple blend of morale or fatigue; it is closer to a society that still backs independence, defense, and a European future while absorbing a long war's costs."
+				}
+			]
+		},
+		{
+			"id": "historical-background-and-state-formation",
+			"heading": {
+				"ja": "2. 歴史的背景と国家形成",
+				"en": "2. Historical Background and State Formation"
+			},
+			"pairs": [
+				{
+					"ja": "現代ウクライナの政治記憶は、1991年の独立、2004年のオレンジ革命、2014年のマイダン革命とロシアによるクリミア占領、そして2022年の全面侵攻で層をなしている。",
+					"en": "Modern Ukrainian political memory has layered 1991 independence, the 2004 Orange Revolution, the 2014 Maidan Revolution and Russian occupation of Crimea, and the 2022 full-scale invasion."
+				},
+				{
+					"ja": "国家はソ連の後継国家として出発したが、ロシアとの関係は「同じ帝国空間からの分離」をめぐる争いとして再定義されてきた。",
+					"en": "The state began as a successor to the Soviet Union, but its relation with Russia has been redefined as a struggle over separation from the same imperial space."
+				},
+				{
+					"ja": "この歴史を踏まえると、ウクライナの国民的争点は「どこまでロシア的な秩序に戻るか」ではない。",
+					"en": "Seen through that history, Ukraine's national question is not how far to drift back toward a Russian order."
+				},
+				{
+					"ja": "むしろ、どこまで主権を守り、どの制度を欧州標準に接続し、どの地域を再統合できるかである。",
+					"en": "It is how much sovereignty to preserve, which institutions to align with European standards, and which territories can be reintegrated."
+				}
+			]
+		},
+		{
+			"id": "wartime-governance-and-political-institutions",
+			"heading": {
+				"ja": "3. 戦時体制と政治制度",
+				"en": "3. Wartime Governance and Political Institutions"
+			},
+			"pairs": [
+				{
+					"ja": "現在の政治制度は、憲法、戦時法制、軍、地方行政、司法、そして大統領府の強い調整機能が重なってできている。",
+					"en": "The current system is built from the overlap of the constitution, wartime law, the military, local administration, the courts, and a powerful coordinating role for the presidential office."
+				},
+				{
+					"ja": "形式上は議会制と選挙制を維持しながら、実務上は安全保障優先の集中型ガバナンスになっている。",
+					"en": "Formally, Ukraine still keeps parliamentary and electoral institutions, but in practice it operates with security-first centralized governance."
+				},
+				{
+					"ja": "選挙延期は、戦時法制の恣意的利用としてだけ見ると外れる。",
+					"en": "Election delay is not explained well if you treat wartime law as arbitrary."
+				},
+				{
+					"ja": "より正確には、戦闘継続、避難民の移動、占領地の不在有権者、安全な投票管理の不足が重なり、通常選挙の前提が崩れている。",
+					"en": "More precisely, continued fighting, population displacement, absent voters from occupied territories, and the lack of safe election administration have broken the normal preconditions for nationwide voting."
+				},
+				{
+					"ja": "汚職対策は、道徳論ではなく統治能力の問題である。",
+					"en": "Anti-corruption is not a moral sidebar."
+				},
+				{
+					"ja": "IMF と EU は、司法、検察、資産透明性、国有企業統治の改善を、資金供与と加盟交渉の前提として扱っている。",
+					"en": "The IMF and the EU treat judicial reform, prosecutorial independence, asset transparency, and state-owned enterprise governance as conditions for financing and accession."
+				}
+			]
+		},
+		{
+			"id": "main-international-disputes",
+			"heading": {
+				"ja": "4. 国際政治の争点",
+				"en": "4. Main International Disputes"
+			},
+			"pairs": [
+				{
+					"ja": "対外関係は、EU、NATO、米国、G7、国際金融機関、そして国連人道機関の六つでおおむね整理できる。",
+					"en": "Ukraine's external relations are best read through six channels: the EU, NATO, the United States, the G7, international financial institutions, and UN humanitarian agencies."
+				},
+				{
+					"ja": "EU は加盟交渉と制度改革を結びつけ、NATO は防空、訓練、装備、相互運用性を支え、金融機関はマクロ安定と復興を支える。",
+					"en": "The EU links accession talks to institutional reform, NATO supports air defense, training, equipment, and interoperability, and the financial institutions support macro stability and reconstruction."
+				},
+				{
+					"ja": "安全保障保証は、まだ戦後の最終合意ではない。",
+					"en": "Security guarantees are still not the final postwar settlement."
+				},
+				{
+					"ja": "現時点では、二国間の安全保障協定、多国間の支援枠、軍事援助の継続が、ウクライナの抑止力を補う主な仕組みである。",
+					"en": "For now, bilateral security agreements, multilateral support lines, and continuing military assistance are the main devices that reinforce Ukraine's deterrence."
+				},
+				{
+					"ja": "占領地の問題は、外交の付属論点ではない。",
+					"en": "The occupied territories question is not a side issue."
+				},
+				{
+					"ja": "ロシアの占領は、クリミア、セヴァストポリ、ドネツク、ルハンシク、ヘルソン、ザポリージャに及ぶとウクライナ政府は扱っており、停戦や交渉のたびに領土と主権が同時に争点化する。",
+					"en": "The Ukrainian government treats Russian occupation as covering Crimea, Sevastopol, Donetsk, Luhansk, Kherson, and Zaporizhzhia, so territory and sovereignty become joint issues whenever ceasefire or talks appear."
+				}
+			]
+		},
+		{
+			"id": "civilian-life-displacement-language-identity",
+			"heading": {
+				"ja": "5. 市民生活、避難、言語、アイデンティティ",
+				"en": "5. Civilian Life, Displacement, Language, and Identity"
+			},
+			"pairs": [
+				{
+					"ja": "市民生活の重さは、軍事ニュースだけでは見えない。",
+					"en": "The weight of civilian life does not show up in military headlines alone."
+				},
+				{
+					"ja": "世界銀行の春季アップデートでは、貧困率の高さ、雇用の弱さ、家計の借り入れ、電力・暖房・水道の断続的な障害が並び、戦争が生活インフラの問題でもあることが示されている。",
+					"en": "The World Bank's spring update points to high poverty, weak employment, household borrowing, and intermittent electricity, heating, and water disruptions, which shows that the war is also a question of infrastructure for daily life."
+				},
+				{
+					"ja": "避難はなお大規模で、UNHCR はウクライナ国内避難民と国外避難民の双方が依然として大きいと整理している。",
+					"en": "Displacement is still large, and UNHCR continues to treat both internal displacement and cross-border displacement as major features of the country."
+				},
+				{
+					"ja": "したがって、復興は「停戦後に始まる事業」ではなく、帰還、賃貸住宅、学校、医療、地方財政を同時に再建する長期課題である。",
+					"en": "Reconstruction is therefore not a project that starts after a ceasefire."
+				},
+				{
+					"ja": "社会的なアイデンティティも変化している。",
+					"en": "Social identity is changing too."
+				},
+				{
+					"ja": "KIIS の2026年春の調査では、ロシア語の公的使用を減らしたいという傾向や、独立支持、欧州的自己認識が強く示されており、言語は分裂の線であると同時に、戦時の国家統合を測る指標でもある。",
+					"en": "KIIS's spring 2026 survey shows a strong tendency to reduce the public role of Russian, continued support for independence, and a strong European self-identification, so language is both a fault line and a measure of wartime cohesion."
+				},
+				{
+					"ja": "公表情報からの推定として、ウクライナ社会の主流は「単純な戦意高揚」ではなく、「独立の維持、欧州帰属、生活再建を同時に求める現実主義」に近い。",
+					"en": "The public-information inference is that the mainstream social mood is not simple wartime euphoria."
+				},
+				{
+					"ja": "戦争が長引くほど、軍事的忍耐だけではなく、行政の信頼、雇用、住宅、教育が支持基盤を左右する。",
+					"en": "The longer the war lasts, the more trust in administration, jobs, housing, and education shape the support base, not military endurance alone."
+				}
+			]
+		},
+		{
+			"id": "implications-for-japan-and-east-asia",
+			"heading": {
+				"ja": "6. 日本・東アジアへの含意",
+				"en": "6. Implications for Japan and East Asia"
+			},
+			"pairs": [
+				{
+					"ja": "日本にとってのウクライナは、遠い欧州戦争ではない。",
+					"en": "For Japan, Ukraine is not a distant European war."
+				},
+				{
+					"ja": "制裁順守、エネルギーと海運の混乱、復興需要、防空と無人機、国際秩序への姿勢が、間接的にではなく政策判断として戻ってくる。",
+					"en": "Sanctions compliance, energy and shipping disruption, reconstruction demand, air defense and drones, and the posture of the international order all come back as policy choices, not just as indirect effects."
+				},
+				{
+					"ja": "日本企業の実務で重要なのは、ウクライナ復興を単発の寄付や広報で捉えないことだ。",
+					"en": "For Japanese firms, reconstruction should not be treated as a one-off donation or a communications exercise."
+				},
+				{
+					"ja": "エネルギー、建設、通信、物流、医療、保険、金融のどこに参加するかで、必要な制裁確認、契約相手確認、サイバー対策、紛争リスク管理は変わる。",
+					"en": "Energy, construction, telecoms, logistics, health care, insurance, and finance each create different needs for sanctions screening, counterparty checks, cyber defense, and conflict-risk management."
+				},
+				{
+					"ja": "東アジアの安全保障に引きつけると、ウクライナ戦争は、武力による現状変更、制裁の実効性、同盟支援の持続性を測る試験紙である。",
+					"en": "For East Asian security, the war is a stress test for territorial revision by force, the effectiveness of sanctions, and the durability of allied support."
+				},
+				{
+					"ja": "日本は、欧州の危機として距離を取るより、対露制裁、対中抑止、軍民両用技術、復興金融を一本の線で読む必要がある。",
+					"en": "Japan should read it as one line that connects sanctions on Russia, deterrence toward China, dual-use technology, and reconstruction finance, rather than as a crisis that belongs only to Europe."
+				}
+			]
+		},
+		{
+			"id": "monitoring-points",
+			"heading": {
+				"ja": "7. 監視点",
+				"en": "7. Monitoring Points"
+			},
+			"pairs": [
+				{
+					"ja": "今後のウクライナを見るときは、次の五点を追うと変化が掴みやすい。",
+					"en": "When you track Ukraine going forward, five points make change easier to see."
+				},
+				{
+					"ja": "第一に、戦時法制と選挙再開の条件がどう整えられるか。",
+					"en": "First, how the legal conditions for ending martial law and restarting elections are shaped."
+				},
+				{
+					"ja": "第二に、EU 加盟交渉と反汚職改革がどこまで実装されるか。",
+					"en": "Second, how far EU accession talks and anti-corruption reforms are implemented."
+				},
+				{
+					"ja": "第三に、避難民の帰還と人口流出が労働市場にどう反映されるか。",
+					"en": "Third, how return migration and outward displacement feed back into the labor market."
+				},
+				{
+					"ja": "第四に、米欧の支援が財政・防空・復興のどこで細るか。",
+					"en": "Fourth, where US and European support begins to thin out across fiscal aid, air defense, and reconstruction."
+				},
+				{
+					"ja": "第五に、言語とアイデンティティの統合が世代差を超えて維持されるか。",
+					"en": "Fifth, whether language and identity integration stays resilient across generations."
+				},
+				{
+					"ja": "この五点は、ロシアとの戦争を単独で見るより、国家形成、社会再編、欧州統合の重なりとして読むための実務的な観測軸である。",
+					"en": "These five points are the practical way to read Ukraine as the overlap of state formation, social reorganization, and European integration, rather than as a war story alone."
+				}
+			]
+		},
+		{
+			"id": "risks-and-limits",
+			"heading": {
+				"ja": "8. リスク・限界",
+				"en": "8. Risks and Limits"
+			},
+			"pairs": [
+				{
+					"ja": "本稿の限界は三つある。",
+					"en": "This report has three limits."
+				},
+				{
+					"ja": "第一に、戦況と制裁は短期間で変わるため、固定的な結論は危険である。",
+					"en": "First, the war and sanctions change quickly, so fixed conclusions are risky."
+				},
+				{
+					"ja": "第二に、占領地、死傷者、財政、復興額は定義が混ざりやすく、同じ数字でも意味が異なる。",
+					"en": "Second, occupied territory, casualties, fiscal figures, and reconstruction numbers are easy to mix up because the same number can refer to different definitions."
+				},
+				{
+					"ja": "第三に、公開世論調査は戦時の沈黙や避難の偏りを完全には反映できない。",
+					"en": "Third, public opinion polling cannot fully capture the silence of wartime or the bias created by displacement."
+				},
+				{
+					"ja": "公表情報からの推定として、当面の争点は「戦争を終える条件」より「戦時国家をどの制度で持続させるか」に移りやすい。",
+					"en": "The public-information inference is that the issue is more likely to shift from \"how to end the war\" to \"how to sustain a wartime state under the remaining institutions.\""
+				},
+				{
+					"ja": "したがって、政策担当者は、軍事の勝敗だけでなく、選挙、財政、復興、社会的疲労の四つを同時に見なければならない。",
+					"en": "Policymakers therefore need to watch elections, budgets, reconstruction, and social fatigue alongside military outcomes."
+				}
+			]
+		}
+	]
+}

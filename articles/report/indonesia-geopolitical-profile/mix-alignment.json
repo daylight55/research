@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "インドネシアは、ASEAN最大の経済と人口を抱える群島国家であり、海上交通、資源、宗教、多民族社会が一つの政治空間に重なっている。",
+          "en": "Indonesia is an archipelagic state with ASEAN's largest economy and population, where sea lanes, resources, religion, and multiethnic society all sit inside one political space."
+        },
+        {
+          "ja": "プラボウォ政権は、成長、治安、外交上の自立を同時に追いながら、ニッケル、首都移転、対中関係、対米関係を一本の線で扱おうとしている。",
+          "en": "Prabowo's government is trying to handle growth, security, and strategic autonomy at the same time, while treating nickel, the capital move, China, and the United States as one strategic set."
+        },
+        {
+          "ja": "この国を見るときは、民主化の成功例かどうかだけでなく、巨大な人口と鉱物資源を制度と雇用に変えられるかを読むほうがよい。",
+          "en": "When you read Indonesia, the key question is not only whether it is a democratic success story, but whether scale can be converted into institutions and jobs."
+        },
+        {
+          "ja": "この図は、インドネシアの対外行動が国内の人口圧力と産業政策に引っ張られていることを示している。",
+          "en": "This diagram shows that Indonesia's external posture is pulled by domestic population pressure and industrial policy."
+        }
+      ]
+    },
+    {
+      "id": "history-and-state-formation",
+      "heading": {
+        "ja": "2. 歴史と国家形成",
+        "en": "2. History and State Formation"
+      },
+      "pairs": [
+        {
+          "ja": "現代インドネシアの政治記憶は、1945年の独立宣言、スハルトの長期統治、1998年の改革、地方分権化でできている。",
+          "en": "Modern Indonesian political memory is made of the 1945 independence proclamation, the Suharto era, the 1998 Reformasi, and decentralization."
+        },
+        {
+          "ja": "改革は、強い大統領制を残したまま、地方選挙、地方財政、市民社会、メディア空間を広げた。",
+          "en": "Reformasi kept a strong presidency, but expanded local elections, local finance, civil society, and media space."
+        },
+        {
+          "ja": "その結果、中央権力は弱まったが消えたわけではなく、首都ジャカルタと地方の力関係は今も組み替えが続いている。",
+          "en": "The center has weakened, but it has not disappeared, and the balance between Jakarta and the regions is still being renegotiated."
+        },
+        {
+          "ja": "この歴史のため、インドネシアは民主化の成功例であると同時に、統治の未完を抱える国でもある。",
+          "en": "For that reason, Indonesia is both a democratic success story and an unfinished state-building project."
+        },
+        {
+          "ja": "この年表は、体制の変化が独立、権威主義、地方分権、選挙競争、再中央集権の引き合いで進んだことを示している。",
+          "en": "This timeline shows state change moving through independence, authoritarian rule, decentralization, electoral competition, and recent re-centralization."
+        }
+      ]
+    },
+    {
+      "id": "institutions-and-power",
+      "heading": {
+        "ja": "3. 体制と権力配置",
+        "en": "3. Institutions and Power"
+      },
+      "pairs": [
+        {
+          "ja": "インドネシアは直接選挙の大統領制を持ち、2024年2月の選挙でプラボウォ・スビアントとジブラン・ラカブミン・ラカが勝利し、同年10月に就任した。",
+          "en": "Indonesia has a directly elected presidential system, and in the February 2024 election Prabowo Subianto and Gibran Rakabuming Raka won and took office in October."
+        },
+        {
+          "ja": "制度上は民主制だが、Freedom House は 2026 年もインドネシアを Partly Free と評価し、体系的な汚職、パプアの紛争、名誉毀損や冒涜罪の政治的運用を指摘している。",
+          "en": "In institutional terms, the country is democratic, but Freedom House still rates it Partly Free in 2026 and points to systemic corruption, conflict in Papua, and the politicized use of defamation and blasphemy laws."
+        },
+        {
+          "ja": "選挙は定期的に行われるが、勝敗だけで政策が一気に動くわけではない。",
+          "en": "Elections are regular, but policy does not move all at once when someone wins."
+        },
+        {
+          "ja": "分権化のため、地方政治は国政の付属物ではない。",
+          "en": "Decentralization means that local politics is not a mere annex to national politics."
+        }
+      ]
+    },
+    {
+      "id": "asean-and-sea-lanes",
+      "heading": {
+        "ja": "4. ASEANと海上交通",
+        "en": "4. ASEAN and Sea Lanes"
+      },
+      "pairs": [
+        {
+          "ja": "インドネシアの外交は、同盟に入って誰かの前線基地になるより、自由な裁量を保ったまま複数の相手と話すことを重視する。",
+          "en": "Indonesia's diplomacy prefers to keep room for manoeuvre rather than become someone else's forward base."
+        },
+        {
+          "ja": "ASEAN の事務局はジャカルタにあり、インドネシアは創設メンバーでもある。",
+          "en": "ASEAN's Secretariat is in Jakarta, and Indonesia is one of ASEAN's founding members."
+        },
+        {
+          "ja": "南シナ海では、インドネシアは主張国ではないが、北ナトゥナの ZEE が中国の nine-dash line の主張と衝突する。",
+          "en": "In the South China Sea, Indonesia is not a claimant state, but its EEZ in northern Natuna overlaps with China's nine-dash line claim."
+        },
+        {
+          "ja": "日本の外務省は、インドネシアをインド太平洋の安定にとって要の国で、重要な海上交通路に面した国として扱っている。",
+          "en": "Japan's Foreign Ministry treats Indonesia as pivotal to Indo-Pacific stability and as a country facing important sea lanes."
+        },
+        {
+          "ja": "この表のポイントは、インドネシアがどこか一方にきれいに寄る国ではないことだ。",
+          "en": "The point of this table is that Indonesia does not lean cleanly toward any one side."
+        }
+      ]
+    },
+    {
+      "id": "resource-state-and-industrial-policy",
+      "heading": {
+        "ja": "5. 資源国家と産業政策",
+        "en": "5. A Resource State and Industrial Policy"
+      },
+      "pairs": [
+        {
+          "ja": "インドネシアはニッケル鉱石の世界的な供給国であり、いまは原材料輸出よりも国内加工を重視する downstreaming を軸に動いている。",
+          "en": "Indonesia is a major global supplier of nickel ore, and its current industrial policy is centered on downstreaming rather than raw-material exports."
+        },
+        {
+          "ja": "政府はこの政策を EV 電池、精錬、鉱物加工、輸出競争力の話につなげている。",
+          "en": "The government is tying this to EV batteries, smelters, mineral processing, and export competitiveness."
+        },
+        {
+          "ja": "だが、下流化は自動的に高付加価値雇用を生むわけではない。",
+          "en": "But downstreaming does not automatically create large numbers of high-value jobs."
+        },
+        {
+          "ja": "首都移転の Nusantara も、象徴政策では終わっていない。",
+          "en": "Nusantara, the capital relocation project, is not just symbolic either."
+        },
+        {
+          "ja": "一方で、気候と森林は外周の話ではない。",
+          "en": "Climate and forests are not a side file."
+        },
+        {
+          "ja": "森林火災、煙害、土地利用の監視は、環境政策であると同時に、近隣諸国との摩擦管理でもある。",
+          "en": "Forest fires, haze, and land-use monitoring are therefore environmental policy and neighborhood-risk management at the same time."
+        }
+      ]
+    },
+    {
+      "id": "society-and-daily-life",
+      "heading": {
+        "ja": "6. 社会と市民生活",
+        "en": "6. Society and Daily Life"
+      },
+      "pairs": [
+        {
+          "ja": "インドネシアはイスラム教徒が多数派だが、単一宗教国家ではない。",
+          "en": "Indonesia is Muslim-majority, but it is not a single-religion state."
+        },
+        {
+          "ja": "World Bank は、この国を 300 を超える民族集団を抱える多様な群島国家と説明している。",
+          "en": "The World Bank describes the country as a diverse archipelago with more than 300 ethnic groups."
+        },
+        {
+          "ja": "労働市場でも、人口の多さは自動的な強みではない。",
+          "en": "The labor market shows why population size is not an automatic advantage."
+        },
+        {
+          "ja": "つまり、若年人口は「人口ボーナス」でもあり「雇用ボトルネック」でもある。",
+          "en": "So the youth question is both a demographic dividend and an employment bottleneck."
+        },
+        {
+          "ja": "Freedom House が挙げるパプア、腐敗、オンライン空間、名誉毀損や冒涜罪の運用は、インドネシアの市民的自由がまだ安定した解決に至っていないことを示している。",
+          "en": "Freedom House's references to Papua, corruption, online space, and the use of defamation and blasphemy laws show that civil liberties are still not settled."
+        }
+      ]
+    },
+    {
+      "id": "what-it-means-for-japan-and-east-asia",
+      "heading": {
+        "ja": "7. 日本・東アジアへの含意",
+        "en": "7. What It Means for Japan and East Asia"
+      },
+      "pairs": [
+        {
+          "ja": "日本にとってインドネシアは、遠い新興国ではなく、海上交通、エネルギー、資源、製造業、安保が重なる相手である。",
+          "en": "For Japan, Indonesia is not a distant emerging market, but a partner where sea lanes, energy, resources, manufacturing, and security overlap."
+        },
+        {
+          "ja": "この関係は、貿易だけでは終わらない。",
+          "en": "The relationship does not end with trade."
+        },
+        {
+          "ja": "日本企業の実務では、現地調達、ローカルコンテンツ、規制変更、政治リスクを別々に扱うと遅い。",
+          "en": "For Japanese companies, local sourcing, local-content rules, regulatory change, and political risk are too slow when they are handled separately."
+        },
+        {
+          "ja": "東アジアの安全保障から見ても、インドネシアは ASEAN の真ん中にいるだけではない。",
+          "en": "From East Asia's security perspective, Indonesia is more than the center of ASEAN."
+        }
+      ]
+    },
+    {
+      "id": "monitoring-points-and-limits",
+      "heading": {
+        "ja": "8. 監視点と限界",
+        "en": "8. Monitoring Points and Limits"
+      },
+      "pairs": [
+        {
+          "ja": "今後の監視点は五つで足りる。",
+          "en": "Five watchpoints are enough."
+        },
+        {
+          "ja": "第一に、プラボウォ政権の連立が経済成長と安全保障の双方を支え続けられるか。第二に、ニッケル下流化が雇用と地域分配まで実装されるか。第三に、Nusantara の工事と財源が 2028 年目標に追いつくか。第四に、ナトゥナと南シナ海をめぐる圧力が高まるか。第五に、人口ボーナスが雇用ボトルネックに変わらないか。",
+          "en": "Whether Prabowo's coalition can support both growth and security, whether downstreaming reaches jobs and regional distribution, whether Nusantara keeps pace with the 2028 target, whether Natuna and South China Sea pressure rises, and whether the demographic dividend slips into an employment bottleneck."
+        },
+        {
+          "ja": "公表情報からの推定として、インドネシアの本当の争点は、同盟か非同盟かではない。",
+          "en": "The public-information inference is that Indonesia's real question is not alignment versus nonalignment."
+        },
+        {
+          "ja": "争点は、巨大な人口と資源を、よりよい制度、雇用、対外自律に変えられるかどうかである。",
+          "en": "It is whether the country can turn scale into institutions, jobs, and strategic autonomy without drifting toward heavier oligarchy or sharper coercion."
+        },
+        {
+          "ja": "そのバランスが崩れたとき、インドネシアは巨大なままでも、読み方は一気に変わる。",
+          "en": "That balance will shape how Indonesia reads in every future news cycle."
+        }
+      ]
+    }
+  ]
+}

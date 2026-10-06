@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "sections": [
+    {
+      "id": "executive-summary",
+      "heading": {
+        "ja": "1. エグゼクティブサマリー",
+        "en": "1. Executive Summary"
+      },
+      "pairs": [
+        {
+          "ja": "カナダは温和で予測しやすい国に見えるが、実際には連邦制、ケベック、先住民権利、移民、住宅不足、そして対米関係の調整が同時に動く国である。",
+          "en": "Canada can look mild and predictable, but in practice it is a country where federalism, Quebec, Indigenous rights, immigration, housing scarcity, and the management of the United States all move at once."
+        },
+        {
+          "ja": "2025年の連邦選挙では自由党が169議席、保守党が144議席を得て、少数与党が続いた。",
+          "en": "In the 2025 federal election, the Liberal Party won 169 seats and the Conservative Party won 144, so minority government continued."
+        },
+        {
+          "ja": "Mark Carneyは2025年3月に首相に就き、2026年のカナダ政治は防衛、北極、産業政策を前面に出す形で動いている。",
+          "en": "Mark Carney became prime minister in March 2025, and Canada’s politics in 2026 are being shaped by defense, the Arctic, and industrial policy."
+        },
+        {
+          "ja": "このレポートの結論は、カナダを「穏健な中道国家」として読むよりも、「同盟国でありながら国内調整コストの高い国家」として読む方が、ニュースを外しにくいという点にある。",
+          "en": "The key reading is that Canada is easier to understand as an ally with high domestic coordination costs than as a “quiet middle-power” story."
+        }
+      ]
+    },
+    {
+      "id": "historical-and-institutional-base",
+      "heading": {
+        "ja": "2. 歴史と制度の骨格",
+        "en": "2. Historical and Institutional Base"
+      },
+      "pairs": [
+        {
+          "ja": "1867年の連邦成立は、英領北アメリカの複数の植民地が、防衛、通商、そして対米不安への対応のために一つの国家にまとまった結果だった。",
+          "en": "Confederation in 1867 brought several British North American colonies into one state in response to defense, trade, and uncertainty about the United States."
+        },
+        {
+          "ja": "1982年の憲法は、権利章典と同時に、先住民の既存権利と条約権利を憲法上保護する枠組みを置いた。",
+          "en": "The Constitution of 1982 added the Charter of Rights and Freedoms and gave constitutional protection to existing Aboriginal and treaty rights."
+        },
+        {
+          "ja": "1988年の Canadian Multiculturalism Act は、多文化主義を社会の基本原理として法文化した。2021年の United Nations Declaration on the Rights of Indigenous Peoples Act は、先住民権利を国内法と政策に実装するための枠組みを与えた。",
+          "en": "The Canadian Multiculturalism Act of 1988 turned multiculturalism into law, and the United Nations Declaration on the Rights of Indigenous Peoples Act of 2021 created a framework for implementation in federal law and policy."
+        },
+        {
+          "ja": "制度の要点は、中央がすべてを決める国ではないことだ。国会は Crown、上院、下院の三部構成で、連邦と州・準州の権限は憲法上に分かれている。",
+          "en": "The institutional point is that Canada is not a country where the center decides everything. Parliament is made up of the Crown, the Senate, and the House of Commons, and federal and provincial powers are divided in the Constitution."
+        }
+      ]
+    },
+    {
+      "id": "current-power-configuration",
+      "heading": {
+        "ja": "3. 現在の権力配置",
+        "en": "3. Current Power Configuration"
+      },
+      "pairs": [
+        {
+          "ja": "2025年選挙後の下院では、自由党169、保守党144、ブロック・ケベコワ22、NDP7、緑1という構図になった。",
+          "en": "After the 2025 election, the House of Commons stood at 169 Liberals, 144 Conservatives, 22 Bloc Québécois, 7 New Democrats, and 1 Green."
+        },
+        {
+          "ja": "少数与党のため、住宅、税制、移民、防衛、産業政策は、連邦政府が単独で押し切るよりも、州政府と議会内の合意形成を通じて進む。",
+          "en": "Because the government is a minority government, housing, tax policy, immigration, defense, and industrial policy move more through bargaining with provinces and Parliament than through command from Ottawa alone."
+        },
+        {
+          "ja": "カナダの政治を読むとき、ケベックと先住民は別々の「周辺」ではない。どちらも、国家の正統性と政策の実装速度を左右する中心的な交渉相手である。",
+          "en": "When you read Canada, Quebec and Indigenous peoples are not peripheral stories. Both are central bargaining partners that shape the legitimacy of the state and the speed of policy delivery."
+        }
+      ]
+    },
+    {
+      "id": "main-external-fronts",
+      "heading": {
+        "ja": "4. 対外関係の主戦場",
+        "en": "4. The Main External Fronts"
+      },
+      "pairs": [
+        {
+          "ja": "米国との関係は、カナダの対外関係の中心であり続けるが、もはや自動運転ではない。連邦政府は、米国市場へのアクセスを守りながら、関税、CUSMA見直し、供給網の再配置に同時対応している。",
+          "en": "The U.S. remains the center of Canada’s external relations, but the relationship is no longer automatic. Ottawa is trying to protect access to the U.S. market while managing tariffs, the CUSMA review, and supply-chain reordering at the same time."
+        },
+        {
+          "ja": "対米政策は同盟維持だけではなく、経済安全保障の国内政策でもある。",
+          "en": "U.S. policy for Canada is not just alliance maintenance. It is also domestic economic security policy."
+        },
+        {
+          "ja": "カナダは2026年3月にNATOの防衛費2%基準を達成した。これは、長く続いた「防衛支出は足りるのか」という問いに対する政治的な転換点である。",
+          "en": "Canada achieved NATO’s 2% defense-spending benchmark in March 2026. That is a political turning point in a long-running debate over whether Canada spends enough on defense."
+        },
+        {
+          "ja": "北極では、2024年の [Canada’s Arctic Foreign Policy](https://international.canada.ca/en/global-affairs/corporate/reports/arctic-policy-2024) が、気候変動で開かれる海と、ロシアの軍事活動、中国の戦略的関心を同時に扱っている。2026年の北極安全保障共同声明も、北極が「経済機会」と「安全保障上の課題」を同時に含む空間になったことを示した。",
+          "en": "In the Arctic, the 2024 [Canada’s Arctic Foreign Policy](https://international.canada.ca/en/global-affairs/corporate/reports/arctic-policy-2024) treats a warming Arctic, Russian military activity, and Chinese strategic interest as one problem set. The 2026 Arctic security statement likewise showed that the region is now understood as both an economic opportunity and a security challenge."
+        },
+        {
+          "ja": "カナダの Indo-Pacific Strategy は、中国と「世界的課題には協力しつつ、利益と価値は守る」という二重の姿勢を採る。",
+          "en": "Canada’s Indo-Pacific Strategy says it will keep working with China on global challenges while defending Canadian interests and values."
+        },
+        {
+          "ja": "一方で、CSIS の2025年公表資料では、外国による干渉の主要行為者として中国とインドが引き続き挙げられている。インドとは高等弁務官の再交換と安全保障対話の再開で関係改善が進んだが、信頼の修復はまだ途上である。",
+          "en": "At the same time, CSIS’s 2025 public report says that China and India remain among the main foreign-interference actors targeting Canada. Relations with India have improved with the restoration of high commissioners and renewed security dialogue, but trust repair is still incomplete."
+        },
+        {
+          "ja": "カナダの対中・対印関係は、通商と diaspora だけでなく、外国干渉、治安、国内コミュニティの安心を含む問題になっている。",
+          "en": "Canada’s China and India files are not only about trade and diaspora. They also involve foreign interference, security, and the safety of domestic communities."
+        },
+        {
+          "ja": "カナダは資源国だが、資源は単なる輸出品ではない。Natural Resources Canada は、2024年の自然資源部門が名目GDPの16%を占めたと示し、Critical Minerals Strategy は、重要鉱物をグリーン経済とデジタル経済、そして国家安全保障の接点に置いている。",
+          "en": "Canada is a resource economy, but resources are not just exports. Natural Resources Canada says the natural-resources sector accounted for 16% of nominal GDP in 2024, and the Critical Minerals Strategy places critical minerals at the intersection of the green economy, the digital economy, and national security."
+        },
+        {
+          "ja": "森林も同じで、雇用と輸出に効く一方、米国との通商摩擦を受けやすい。2025年の森林年次報告は、2024年の森林部門名目GDPが307億カナダドル、輸出が372億カナダドルだったと示した。",
+          "en": "Forestry matters in the same way. It supports jobs and exports, while also being exposed to trade friction with the United States. Natural Resources Canada’s 2025 forest report says the sector’s nominal GDP was CAD 30.7 billion in 2024, and exports were CAD 37.2 billion."
+        },
+        {
+          "ja": "気候政策は、単なる環境政策ではなく、電力、鉱物、建設、産業の再編を伴う。カナダは2050年ネットゼロと2030年目標、さらに2035年目標を公表済みであり、政策の論点は目標の有無ではなく、どの産業と地域が負担を持つかに移っている。",
+          "en": "Climate policy is not only environmental policy. It is also a reorganization of power, electricity, minerals, construction, and industry. Canada has already published its 2050 net-zero commitment, its 2030 emissions reduction plan, and its 2035 target, so the live debate is less about whether the target exists and more about who bears the cost."
+        }
+      ]
+    },
+    {
+      "id": "social-life-and-integration",
+      "heading": {
+        "ja": "5. 市民生活と社会統合",
+        "en": "5. Social Life and Integration"
+      },
+      "pairs": [
+        {
+          "ja": "人口は2026年4月1日時点で41,417,056人、非永住者は2,558,562人だった。IRCC は、2026-2028年計画で一時滞在者を人口比5%未満へ戻し、永住者受け入れを人口比1%未満へ収める方向を打ち出している。",
+          "en": "Canada’s population was 41,417,056 on April 1, 2026, and the number of non-permanent residents was 2,558,562. IRCC’s 2026–2028 plan aims to bring temporary residents back below 5% of the population and keep permanent-resident admissions below 1% of the population beyond 2027."
+        },
+        {
+          "ja": "住宅不足は、この移民調整を政治問題に変える。CMHC は、2025年の住宅着工が増えた一方で、2019年水準の affordability を取り戻すには年417,000〜469,000戸の着工が必要だと示している。",
+          "en": "Housing scarcity turns that migration adjustment into a political issue. CMHC says housing starts rose in 2025, but Canada would need about 417,000 to 469,000 starts a year to restore affordability to pre-pandemic levels by 2036."
+        },
+        {
+          "ja": "このため、移民は「多文化主義の成功物語」であると同時に、住宅、交通、学校、医療の処理能力を試す負荷でもある。",
+          "en": "That means immigration is both a success story of multiculturalism and a test of housing, transit, schools, health care, and municipal capacity."
+        },
+        {
+          "ja": "多文化主義はカナダの自己理解の中心だが、万能薬ではない。1988年の法制度と、英仏二言語政策、そして先住民言語を含む現場の多言語化は、包摂の枠組みを与える一方で、ケベックの言語政治や地方の行政能力との摩擦も生む。",
+          "en": "Multiculturalism is central to Canadian self-understanding, but it is not a cure-all. The 1988 legal framework, bilingual policy, and the multilingual reality that includes Indigenous languages create an inclusion framework, but they also generate friction with Quebec’s language politics and local administrative capacity."
+        }
+      ]
+    },
+    {
+      "id": "what-this-means-for-japan-and-east-asia",
+      "heading": {
+        "ja": "6. 日本・東アジアへの含意",
+        "en": "6. What This Means for Japan and East Asia"
+      },
+      "pairs": [
+        {
+          "ja": "日本から見ると、カナダは単なる資源供給国ではない。北極航路、重要鉱物、クリーンエネルギー、森林製品、そしてG7とNATOでの立場を通じて、日本の経済安全保障と標準外交に関わる相手である。",
+          "en": "From Japan’s point of view, Canada is more than a resource supplier. It matters for the Arctic route, critical minerals, clean energy, forest products, and the G7 and NATO settings that shape rules and standards."
+        },
+        {
+          "ja": "同時に、カナダは米国との制度的な結びつきが強いので、対日関係も「北米の安全保障環境」を介して動く。サプライチェーン、車載電池、データ、港湾、北極の監視、NORAD 近代化の議論は、太平洋だけを見ていては追い切れない。",
+          "en": "Canada is also tightly linked to the United States, so its Asia policy is filtered through the North American security environment. Supply chains, battery materials, data, ports, Arctic surveillance, and NORAD modernization are all connected to Canada even when the Pacific is the visible theater."
+        },
+        {
+          "ja": "日本企業にとっては、カナダは安定した法制度を持つ一方、州ごとの規制、先住民との協議、環境認可、住宅コスト、労働力不足が案件の速度を左右する市場でもある。",
+          "en": "For Japanese firms, Canada is a market with a stable legal system, but provincial regulation, Indigenous consultation, environmental review, housing costs, and labor shortages can all slow projects."
+        }
+      ]
+    },
+    {
+      "id": "monitoring-points",
+      "heading": {
+        "ja": "7. 監視点",
+        "en": "7. Monitoring Points"
+      },
+      "pairs": [
+        {
+          "ja": "カナダをニュース読解用の国別プロファイルとして使うなら、次の5点を定点観測するとよい。",
+          "en": "If you use Canada as a country profile for news reading, five indicators are worth watching."
+        },
+        {
+          "ja": "少数与党が、予算、防衛、住宅、移民のいずれで失速するか。",
+          "en": "Whether the minority government keeps support on budgets, defense, housing, and immigration."
+        },
+        {
+          "ja": "一時滞在者の抑制が、住宅賃料と労働市場の両方にどう効くか。",
+          "en": "Whether temporary-resident reductions actually ease rents without choking labor supply."
+        },
+        {
+          "ja": "米国との関税、CUSMA、産業補助の交渉が、どこで政治争点化するか。",
+          "en": "Where U.S. tariff fights, CUSMA negotiations, and industrial subsidies become political flashpoints."
+        },
+        {
+          "ja": "北極での軍事・海上・沿岸警備のプレゼンスが、どの速度で増えるか。",
+          "en": "How quickly military, maritime, and coast-guard presence in the Arctic expands."
+        },
+        {
+          "ja": "中国とインドをめぐる外国干渉の警戒が、国内の信頼回復を妨げるか。",
+          "en": "Whether concern over Chinese and Indian interference undermines trust repair at home."
+        }
+      ]
+    },
+    {
+      "id": "risks-and-limits",
+      "heading": {
+        "ja": "8. リスクと限界",
+        "en": "8. Risks and Limits"
+      },
+      "pairs": [
+        {
+          "ja": "本稿の限界は三つある。第一に、公開情報に依拠しているため、連邦与党内や州政府間の非公開交渉までは見えない。第二に、移民、住宅、国防、エネルギーの統計は更新が速く、数か月後には一部が上書きされる。第三に、北極、中国、インドに関する将来像は、公表情報からの推定にとどまる。",
+          "en": "There are three limits to this profile. First, public information does not reveal private bargaining inside the federal government or between provinces. Second, statistics on migration, housing, defense, and energy move quickly, so parts of this report will be updated by later releases. Third, any forecast for the Arctic, China, or India remains an inference from public information rather than a guarantee."
+        },
+        {
+          "ja": "それでも、カナダの現在地は読みやすい。国内では統合コストが上がり、対外では同盟の重みが増している。ニュースでカナダを見るときは、善意のイメージよりも、連邦、州、先住民、そして対米関係の四つ巴を先に置いた方が、外れにくい。",
+          "en": "Even so, Canada’s position is readable. Domestic coordination costs are rising, and external alliance obligations are getting heavier. When you read Canada in the news, it is usually safer to start with the four-way tension between the federal center, the provinces, Indigenous governments, and the United States than with the country’s self-image as a calm middle power."
+        }
+      ]
+    }
+  ]
+}

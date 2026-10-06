@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "直近24〜48時間は、街頭抗議と選挙の緊張、米雇用の減速、そしてAIをめぐる投資・訴訟・供給制約が同じ時間帯に動きました。政治では選挙の正統性や制度への不信が前面に出て、経済では金利見通しと資本市場が再調整され、技術ではモデル競争よりも電力、チップ、法務リスクのほうが目立っています。",
+      "en": "Over the past 24 to 48 hours, street protests, election pressure, softer U.S. labor signals, and AI-related investment, litigation, and supply constraints have all moved at once. Politics is testing institutional trust, markets are recalibrating rate expectations, and technology is looking less like a model race and more like a contest over power, chips, and legal risk."
+    },
+    {
+      "ja": "選挙名簿の修正をめぐる抗議が、選管の正統性と政権への不信を同時に強めています。",
+      "en": "The voter-roll fight is now testing both the election commission and trust in the government."
+    },
+    {
+      "ja": "APによると、ムンバイなどで抗議が続き、参加者は選挙管理委員長の辞任を求めました。",
+      "en": "AP says protests continued in Mumbai and elsewhere, with demonstrators demanding the election chief step down."
+    },
+    {
+      "ja": "有権者名簿の透明性は選挙の正当性に直結し、反発が広がれば野党運動の追い風になります。",
+      "en": "Voter-roll transparency goes straight to election legitimacy and could fuel broader opposition pressure."
+    },
+    {
+      "ja": "抗議が全国規模に広がるか、選管が説明や見直しを迫られるかを見ます。",
+      "en": "Watch whether the protests spread nationally or force the commission into further explanation or review."
+    },
+    {
+      "ja": "戦争犯罪法廷をめぐる対立が、コソボ国内の政治分断を再び表面化させています。",
+      "en": "The fight over the war-crimes court is again exposing Kosovo’s internal political split."
+    },
+    {
+      "ja": "議会が権限縮小案の前進を止めた後、首都プリシュティナで不満が街頭に出ました。",
+      "en": "After parliament stalled the bill, anger spilled into the streets in Pristina."
+    },
+    {
+      "ja": "この法廷は戦後責任の象徴であり、扱いを誤ると対外関係と国内統治の両方に響きます。",
+      "en": "The court is a symbol of postwar accountability, so mishandling it can damage both diplomacy and domestic politics."
+    },
+    {
+      "ja": "与野党が法案を修正するのか、抗議が欧州との関係に波及するのかを見ます。",
+      "en": "Watch whether lawmakers revise the bill or whether the protests spill into Kosovo’s ties with Europe."
+    },
+    {
+      "ja": "学校問題の抗議は、教育予算だけでなく政権全体への不満の受け皿になっています。",
+      "en": "The school protests have become a proxy for wider anger at the government, not just education spending."
+    },
+    {
+      "ja": "APによると、学校の設備や人員をめぐる不満が、全国の抗議の一部として前面に出ました。",
+      "en": "AP reports that concerns over facilities and staffing surfaced as part of wider nationwide protests."
+    },
+    {
+      "ja": "公共サービスへの不満は、財政調整よりも先に政治的な支持率を削ることがあります。",
+      "en": "Discontent with public services can erode political support faster than budget fixes can restore it."
+    },
+    {
+      "ja": "抗議が教育以外の要求に広がるか、政府が追加措置を出すかを確認します。",
+      "en": "Watch whether the protests broaden beyond education or force new concessions from the government."
+    },
+    {
+      "ja": "中西部での集会は、支持層の引き締めと経済不安への対処を同時に狙う動きです。",
+      "en": "The rally was aimed at tightening support in the Midwest while addressing voter unease about the economy."
+    },
+    {
+      "ja": "APによると、トランプ氏はネブラスカで支持者向けの集会を行い、選挙戦を続けました。",
+      "en": "AP says Trump held a rally in Nebraska as he kept pressing his campaign message."
+    },
+    {
+      "ja": "中西部の票は選挙地図を左右し、地元の景気認識が全国政治の空気を決めます。",
+      "en": "Midwestern votes can swing the map, and local economic sentiment still shapes national politics."
+    },
+    {
+      "ja": "共和党の地盤固めが進むか、経済をめぐるメッセージが変わるかを見ます。",
+      "en": "Watch whether the GOP base holds and whether the campaign shifts its economic message."
+    },
+    {
+      "ja": "安全保障不安が、ラトビアの政権維持と対ロ姿勢を左右しています。",
+      "en": "Security anxiety is shaping both Latvia’s government survival and its stance toward Russia."
+    },
+    {
+      "ja": "APによると、ラトビアでは有権者が新議会を選び、対ロ警戒が大きな論点になりました。",
+      "en": "AP says Latvians chose a new parliament with concern over Russia very much in the background."
+    },
+    {
+      "ja": "バルト海地域の安全保障は欧州全体の対ロ政策に直結し、選挙結果はその一部になります。",
+      "en": "Baltic security feeds directly into Europe’s Russia policy, so this vote matters beyond Riga."
+    },
+    {
+      "ja": "連立交渉が親ウクライナ路線を維持できるかどうかを見ます。",
+      "en": "Watch whether coalition talks keep Latvia on a firm pro-Ukraine line."
+    },
+    {
+      "ja": "雇用の鈍化は、景気減速と利下げ観測を同時に強めました。",
+      "en": "Slower hiring is reinforcing both the slowdown story and rate-cut expectations."
+    },
+    {
+      "ja": "APによると、米国の雇用者数は伸びが鈍く、失業率もやや上がりました。",
+      "en": "AP says U.S. payroll growth slowed and the unemployment rate inched higher."
+    },
+    {
+      "ja": "労働市場の減速はFRBの判断と家計消費の見通しに直結します。",
+      "en": "Labor-market cooling matters because it feeds directly into the Fed path and consumer demand."
+    },
+    {
+      "ja": "次のインフレ指標とFRB発言が、利下げの時期をどう示唆するかを見ます。",
+      "en": "Watch the next inflation data and Fed comments for any shift in the timing of cuts."
+    },
+    {
+      "ja": "弱い雇用で利上げ懸念が和らぎ、米株は再び上値を試しています。",
+      "en": "Weaker jobs data is cooling hike worries and letting U.S. equities test new highs."
+    },
+    {
+      "ja": "APによると、主要株価指数は高値圏まで上昇し、投資家は利下げ期待を織り込みました。",
+      "en": "AP reports that major indexes moved back near highs as investors priced in easier policy."
+    },
+    {
+      "ja": "株高は資金調達と消費心理を支えますが、バリュエーションの高さも意識されます。",
+      "en": "Higher stocks support financing and sentiment, but they also keep valuation risk in view."
+    },
+    {
+      "ja": "テック株主導の上昇が広がるか、金利上昇で失速するかを見ます。",
+      "en": "Watch whether the rally broadens beyond tech or fades if yields climb again."
+    },
+    {
+      "ja": "産業ソフトの大型買収は、製造業のAI・自動化投資を押し上げる動きです。",
+      "en": "The big industrial-software deal signals more spending on automation and AI in manufacturing."
+    },
+    {
+      "ja": "Schneider Electricは、PTCを約226億ドルの現金で買収する方針を開示しました。",
+      "en": "Schneider Electric disclosed plans to buy PTC for about $22.6 billion in cash."
+    },
+    {
+      "ja": "大型M&amp;Aは、工場や設備のデジタル化需要がなお強いことを示します。",
+      "en": "The deal shows demand remains strong for digitizing factories and industrial operations."
+    },
+    {
+      "ja": "規制審査の行方と、買収がPTCの成長率をどう変えるかを見ます。",
+      "en": "Watch regulatory review and whether the deal changes PTC’s growth profile."
+    },
+    {
+      "ja": "フランスの財政不安が、ユーロと周辺国債を同時に圧迫しています。",
+      "en": "French fiscal concern is weighing on the euro and spilling into nearby bond markets."
+    },
+    {
+      "ja": "ユーロはフランスの債務・政治不安を受けて17カ月ぶり安値圏まで下げました。",
+      "en": "The euro fell to its weakest level in about 17 months as France debt and political worries grew."
+    },
+    {
+      "ja": "通貨安は輸入インフレと資金流出を招き、欧州中銀の判断も難しくします。",
+      "en": "Currency weakness can stoke import inflation, capital outflows, and harder ECB decisions."
+    },
+    {
+      "ja": "仏政局の安定化と、債券市場の落ち着きが戻るかを見ます。",
+      "en": "Watch whether French politics stabilizes and whether bond markets calm down."
+    },
+    {
+      "ja": "供給増が続けば、エネルギー価格は地政学リスクに反して伸び悩みやすくなります。",
+      "en": "If supply keeps rising, energy prices can stay capped even with geopolitical risks in the background."
+    },
+    {
+      "ja": "中東の輸出増とG7の在庫放出が重なり、原油は下押しされました。",
+      "en": "Oil came under pressure as higher Middle East exports met the G7 stock release."
+    },
+    {
+      "ja": "原油はインフレ期待と企業コストの両方に効くため、マクロ全体への波及が大きいです。",
+      "en": "Oil feeds directly into inflation expectations and business costs, so the macro impact is broad."
+    },
+    {
+      "ja": "産油国の供給姿勢と、年末にかけた需要見通しを見ます。",
+      "en": "Watch producer supply behavior and the demand outlook into year-end."
+    },
+    {
+      "ja": "OpenAIはチャットから常時稼働するエージェント型AIへ、製品の重心を動かしています。",
+      "en": "OpenAI is shifting its center of gravity from chat to always-on agentic AI."
+    },
+    {
+      "ja": "Reuters Connectの報道では、OpenAIがMeta対抗を意識しつつ企業向けの常時稼働エージェントを押し出しました。",
+      "en": "Reuters Connect says OpenAI emphasized always-on enterprise agents while framing the launch against Meta."
+    },
+    {
+      "ja": "企業向けAIは、デモよりも業務に張り付く常時稼働性が差別化要因になっています。",
+      "en": "For enterprise AI, being embedded in workflows matters more than a flashy demo."
+    },
+    {
+      "ja": "実運用の導入例と、競合各社の追随が出るかを見ます。",
+      "en": "Watch for real customer adoption and any fast follow from competitors."
+    },
+    {
+      "ja": "法務向けAIは、一般用途から専門業務へAIが浸透する次の競争軸です。",
+      "en": "Legal AI is the next front in the shift from general-purpose tools to specialized workflow products."
+    },
+    {
+      "ja": "OpenAIは法律業界向けのAIプラットフォームを打ち出し、法務向けの争いを強めました。",
+      "en": "OpenAI introduced a legal-focused AI platform, intensifying the race for law firm users."
+    },
+    {
+      "ja": "法務は高単価で、文書処理が多く、AIの採用余地が大きい市場です。",
+      "en": "Legal work is high-value and document-heavy, which makes it a prime AI adoption market."
+    },
+    {
+      "ja": "大手法律事務所が本格導入するか、規制上の懸念が出るかを見ます。",
+      "en": "Watch for big-law adoption and any pushback over confidentiality or regulation."
+    },
+    {
+      "ja": "中国勢は、AIモデルだけでなく自国チップ向けの開発環境でも独立を急いでいます。",
+      "en": "Chinese AI players are also pushing independence in the software stack around domestic chips."
+    },
+    {
+      "ja": "Reutersは、DeepSeekがHuaweiと組み、Nvidia依存を下げるツール開発を進めていると報じました。",
+      "en": "Reuters says DeepSeek and Huawei are working on tools meant to reduce reliance on Nvidia."
+    },
+    {
+      "ja": "AI競争はモデル性能だけでなく、コンパイラや開発環境の主導権にも広がっています。",
+      "en": "AI competition now extends beyond model quality to compilers, toolchains, and developer ecosystems."
+    },
+    {
+      "ja": "Ascend向け開発ツールが実運用で使われるか、Nvidia代替の進展があるかを見ます。",
+      "en": "Watch whether the Ascend tools see real adoption and whether Nvidia alternatives improve."
+    },
+    {
+      "ja": "GPUの不足よりも、電力とデータセンター容量のほうが新しい制約になりつつあります。",
+      "en": "Power and data-center capacity are becoming the newer constraint, not just GPU availability."
+    },
+    {
+      "ja": "Morgan Stanleyの分析を受け、AI需要の拡大が供給網と電力インフラを圧迫していると報じられました。",
+      "en": "Morgan Stanley’s analysis highlighted how AI demand is stressing the supply chain and power grid."
+    },
+    {
+      "ja": "AI投資の実現性は、モデル開発よりもインフラ拡張の速度に左右されます。",
+      "en": "The pace of AI spending now depends as much on infrastructure expansion as on model development."
+    },
+    {
+      "ja": "データセンター投資、送電、冷却設備の増強が追いつくかを見ます。",
+      "en": "Watch whether data-center buildouts, transmission, and cooling can catch up."
+    },
+    {
+      "ja": "大規模委託と機密データの組み合わせは、サプライチェーンの弱点を一気に広げます。",
+      "en": "Large outsourcing deals can widen the blast radius when sensitive data is exposed."
+    },
+    {
+      "ja": "Reutersは、FBI関連のデータ侵害を受けてAccentureの委託先が役割を外れたと伝えました。",
+      "en": "Reuters says the contractor was removed after the FBI-related breach came to light."
+    },
+    {
+      "ja": "政府系ITでは、委託先管理とアクセス制御の甘さが即座に政治問題になります。",
+      "en": "In government IT, contractor oversight and access control become immediate political and operational issues."
+    },
+    {
+      "ja": "追加の漏えい範囲、契約見直し、監査の強化が出るかを見ます。",
+      "en": "Watch for the breach scope, contract changes, and whether oversight gets tightened."
+    },
+    {
+      "ja": "政治では抗議と選挙が同時進行し、制度への信頼が各国で試されています。",
+      "en": "Politics and protest pressure are testing trust in institutions across several countries."
+    },
+    {
+      "ja": "経済では弱い雇用と欧州の財政不安が、金利・為替・株価に連鎖しています。",
+      "en": "Softer U.S. labor data and European fiscal worries are feeding into rates, currencies, and equities."
+    },
+    {
+      "ja": "技術ではAIの競争軸がモデル性能から電力、部材、法務の制約へ移っています。",
+      "en": "AI competition is shifting from model demos toward power, components, and legal exposure."
+    },
+    {
+      "ja": "各国の抗議が政権交代や制度改正にどこまで波及するか。",
+      "en": "Whether the protests turn into policy change or leadership pressure."
+    },
+    {
+      "ja": "9月雇用の弱さが次のFRB判断にどう反映されるか。",
+      "en": "How the softer September jobs data shapes the Fed path next."
+    },
+    {
+      "ja": "AI投資の加速が電力制約と訴訟リスクで鈍るか。",
+      "en": "Whether AI investment slows as power and litigation constraints bite."
+    }
+  ]
+}

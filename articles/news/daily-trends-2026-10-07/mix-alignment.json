@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "直近24〜48時間は、司法、選挙管理、放送規制が同時に動き、経済ではインフレ鈍化と雇用減速が並んだ。AI分野では規制強化と自己規律の両方が進み、政治と技術が互いに引き寄せられている。",
+      "en": "Over the last 24 to 48 hours, court fights, election-admin disputes, and media-regulation cases moved together while the economy delivered softer inflation and weaker hiring. On the tech side, AI oversight kept shifting from broad warnings to concrete rules, probes, and state-level guardrails."
+    },
+    {
+      "ja": "緊急申立ての増加が、最高裁を日常的な政治対立の最前線に押し上げている。",
+      "en": "The emergency docket is turning the Supreme Court into a day-to-day battlefield."
+    },
+    {
+      "ja": "アリート判事は、緊急審理の件数が増え続けているが、裁判所にできることは限られると述べた。",
+      "en": "Alito said the volume of emergency appeals is climbing and that the court has little power to stop it."
+    },
+    {
+      "ja": "トランプ政権の政策が、通常審理よりも先に緊急手続きで争われる構図が強まっている。",
+      "en": "Trump-era policy fights are increasingly reaching the court through emergency procedures instead of normal review."
+    },
+    {
+      "ja": "今後、関税や選挙制度、出生地主義をめぐる緊急申立てがさらに増えるかどうか。",
+      "en": "Watch for more emergency filings over tariffs, elections, and birthright citizenship."
+    },
+    {
+      "ja": "わずかな事務ミスでも、アリゾナでは投票への不信と結びつきやすい。",
+      "en": "Even a small administrative mistake can feed election distrust in Arizona."
+    },
+    {
+      "ja": "郡の委託業者の誤りで、約3,000人に投票用紙が早く送られた。",
+      "en": "A vendor error led to about 3,000 ballots being mailed early."
+    },
+    {
+      "ja": "マリコパ郡は激戦州の選挙結果を左右するため、管理の不備がすぐ政治問題になる。",
+      "en": "Maricopa is pivotal in Arizona, so any election glitch becomes a political flashpoint."
+    },
+    {
+      "ja": "郡の説明で騒ぎが収まるか、再点検や法的争いに発展するか。",
+      "en": "Watch whether the county can contain the fallout or faces fresh legal scrutiny."
+    },
+    {
+      "ja": "放送免許の審査が、報道の自由をめぐる争点に変わっている。",
+      "en": "Broadcast licensing has become a free-speech fight."
+    },
+    {
+      "ja": "ABCは、FCCの早期審査は違憲で報道への報復だと主張した。",
+      "en": "ABC argued the review is unconstitutional and retaliatory."
+    },
+    {
+      "ja": "選挙戦が近づくなか、規制当局の動きが放送局の編集判断に影響しかねない。",
+      "en": "With elections near, regulator pressure could shape newsroom behavior."
+    },
+    {
+      "ja": "10月中旬までに裁判所が差し止めを認めるかどうか。",
+      "en": "Watch for a mid-October ruling on ABC's request."
+    },
+    {
+      "ja": "治安は、共和党がなお動員材料として頼る定番の争点だ。",
+      "en": "Crime remains a familiar mobilizing theme for Republicans."
+    },
+    {
+      "ja": "党の広告や集会では、警察支持と法と秩序の訴えが前面に出ている。",
+      "en": "GOP ads and events are putting police support and law-and-order rhetoric front and center."
+    },
+    {
+      "ja": "有権者の不安に刺されば、経済以外の争点でも投票行動を左右しうる。",
+      "en": "If the message lands, crime can still shape turnout beyond the economy."
+    },
+    {
+      "ja": "犯罪率の認識と実際の治安指標のギャップが、選挙終盤でどう扱われるか。",
+      "en": "Watch how the gap between perceptions and crime data plays out in the final stretch."
+    },
+    {
+      "ja": "海外に住む有権者の投票しやすさが、選挙の公平性と直結している。",
+      "en": "Overseas voting access is now part of the fairness fight."
+    },
+    {
+      "ja": "セルビアは、国外投票の受付時間を国内の投票時間にそろえた。",
+      "en": "Serbia aligned voting hours abroad with the domestic voting window."
+    },
+    {
+      "ja": "ディアスポラ票の扱いは、接戦の行方と選挙の正当性の両方に影響する。",
+      "en": "Diaspora voting rules can affect both outcomes and legitimacy in a close race."
+    },
+    {
+      "ja": "10月25日の総選挙までに、抗議や運用見直しが広がるか。",
+      "en": "Watch whether the Oct. 25 election brings legal or political pushback."
+    },
+    {
+      "ja": "物価はやや落ち着いても、家計の痛みが消えたわけではない。",
+      "en": "Prices cooled a little, but households still feel the squeeze."
+    },
+    {
+      "ja": "8月のインフレはやや鈍化し、消費者支出は増えた。",
+      "en": "August inflation eased slightly while consumer spending rose."
+    },
+    {
+      "ja": "成長が続くなら景気は底堅いが、政治的には物価高の不満が残る。",
+      "en": "The economy still looks resilient, but cost-of-living anger remains."
+    },
+    {
+      "ja": "次の物価統計で、鈍化が続くかどうか。",
+      "en": "Watch whether the next inflation report confirms the slowdown."
+    },
+    {
+      "ja": "雇用の鈍化は、利上げ余地よりも景気減速への警戒を強める。",
+      "en": "Slower hiring shifts the debate toward growth risks, not just rates."
+    },
+    {
+      "ja": "9月の非農業部門雇用者数は29,000人増にとどまり、失業率は4.2%に上がった。",
+      "en": "Payrolls rose by just 29,000 and unemployment edged up to 4.2%."
+    },
+    {
+      "ja": "労働市場の弱さは、次の金融政策判断と家計感情の両方に効く。",
+      "en": "A softer labor market affects both the Fed path and consumer sentiment."
+    },
+    {
+      "ja": "修正値と次回の雇用統計で、減速が一時的かどうか。",
+      "en": "Watch the next jobs report for signs that the slowdown is broadening."
+    },
+    {
+      "ja": "相場は高いが、支えはAI関連投資と企業利益の強さだ。",
+      "en": "The market is high, but the support comes from profits and AI spending."
+    },
+    {
+      "ja": "S&amp;P 500は記録更新し、企業収益の上振れ期待が株高を支えた。",
+      "en": "The S&amp;P 500 set a fresh record as profit expectations stayed strong."
+    },
+    {
+      "ja": "家計が景気に悲観的でも、利益と金利の組み合わせが株価を押し上げている。",
+      "en": "Stocks can keep rising even when households feel gloomy about the economy."
+    },
+    {
+      "ja": "決算シーズンが本当に利益の強さを裏付けるかどうか。",
+      "en": "Watch whether earnings season confirms the profit story."
+    },
+    {
+      "ja": "政策よりも投資額を見せることで、景気不安への応答を狙っている。",
+      "en": "The pitch is simple: point to investment dollars to answer economic anxiety."
+    },
+    {
+      "ja": "トランプ氏はメリーランドの造船所で、アンドゥリルの投資を前面に押し出した。",
+      "en": "Trump highlighted Anduril's multibillion-dollar shipyard project in Maryland."
+    },
+    {
+      "ja": "防衛と製造業の投資は、中間選挙前の経済メッセージの柱になっている。",
+      "en": "Defense and manufacturing investment are becoming central campaign economics."
+    },
+    {
+      "ja": "実際の雇用創出と、州知事との政治的な綱引きがどう進むか。",
+      "en": "Watch for follow-through on jobs and the politics around state cooperation."
+    },
+    {
+      "ja": "燃料価格への不満が、選挙前の経済政策を直接動かしている。",
+      "en": "Fuel-price anger is still steering campaign-season economic policy."
+    },
+    {
+      "ja": "トランプ氏はネブラスカの集会で、赤色ディーゼルの税制上の制限を緩める命令に署名した。",
+      "en": "Trump signed an order in Nebraska to ease restrictions on tax-free red-dyed diesel use."
+    },
+    {
+      "ja": "農家や輸送業者のコストは、家計の物価感覚に直結する。",
+      "en": "Diesel costs feed straight into the broader cost-of-living picture."
+    },
+    {
+      "ja": "この措置が実際に物流コストや燃料価格を押し下げるかどうか。",
+      "en": "Watch whether the order actually lowers transport and fuel costs."
+    },
+    {
+      "ja": "AIの論点は、抽象的な安全論から消費者保護の監督へ移っている。",
+      "en": "AI oversight is shifting from abstract safety talk to consumer protection."
+    },
+    {
+      "ja": "FTCは、AIエージェントが人の指示を超えて動く事例を含め、企業のリスクを調査している。",
+      "en": "The FTC is looking at cases where AI agents went beyond human instructions."
+    },
+    {
+      "ja": "規制当局が、モデルの安全性だけでなく実際の利用被害にも目を向け始めた。",
+      "en": "Regulators are focusing on real-world harms, not just model performance."
+    },
+    {
+      "ja": "調査が、より広いAI規制や開示ルールにつながるかどうか。",
+      "en": "Watch whether the probe leads to broader disclosure or safety rules."
+    },
+    {
+      "ja": "AIの安全対策は、連邦より先に地方政府で制度化が進んでいる。",
+      "en": "Local governments are moving faster than Washington on AI safety."
+    },
+    {
+      "ja": "ニューヨーク市議会で、AI企業の元関係者が安全性のリスクを訴えた。",
+      "en": "Former workers and AI staff testified before New York City Council on risks."
+    },
+    {
+      "ja": "巨大AI企業の周辺で、都市レベルの規制が政策実験場になりつつある。",
+      "en": "Cities are becoming testing grounds for practical AI oversight."
+    },
+    {
+      "ja": "この議論が、他都市や州の規制案に広がるかどうか。",
+      "en": "Watch whether this hearing shapes rules in other cities and states."
+    },
+    {
+      "ja": "AIインフラの拡大は、地域への電力・水・雇用の配分も伴う。",
+      "en": "AI infrastructure now comes with local fights over power, water, and jobs."
+    },
+    {
+      "ja": "アマゾンは、データセンター地域への1億ドル超ではなく10億ドル超の追加投資を表明した。",
+      "en": "Amazon said it will invest more than $1 billion over five years in data center communities."
+    },
+    {
+      "ja": "データセンターの拡大は、地域経済と公共インフラへの負荷を同時に増やす。",
+      "en": "Data-center growth boosts local economies while raising utility and infrastructure pressure."
+    },
+    {
+      "ja": "地方の建設規制やモラトリアムが、投資計画をどこまで遅らせるか。",
+      "en": "Watch whether local moratoriums slow future data-center buildouts."
+    },
+    {
+      "ja": "州政府は、AIの現場導入に対して連邦より先に歯止めをかけている。",
+      "en": "States are setting workplace AI limits before Washington does."
+    },
+    {
+      "ja": "Newsomは、労働者の感情予測や自動解雇に関わるAI利用を制限する法案に署名した。",
+      "en": "Newsom signed laws limiting AI use for emotion prediction, layoffs, and firing."
+    },
+    {
+      "ja": "AI導入の恩恵と監視のリスクを、労働法の形で切り分け始めている。",
+      "en": "California is turning AI workplace concerns into concrete labor law."
+    },
+    {
+      "ja": "他州が同様の枠組みを採るか、企業が州ごとの規制をどう扱うか。",
+      "en": "Watch whether other states copy the model and how companies adapt."
+    },
+    {
+      "ja": "AIの子ども向け安全策は、SNSでの遅れを繰り返せるかが問われている。",
+      "en": "The question is whether AI safety for kids can avoid the delays seen with social media."
+    },
+    {
+      "ja": "APは、SNS安全策の教訓がAI利用にも生かせるかを検証した。",
+      "en": "AP examined whether the social-media safety playbook can work for AI."
+    },
+    {
+      "ja": "チャットボットやAI玩具は、子どもにより深く入り込む可能性がある。",
+      "en": "Chatbots and AI toys can reach children more intimately than old social apps."
+    },
+    {
+      "ja": "年齢確認やティーン向け制限が、実際に業界標準になるかどうか。",
+      "en": "Watch whether age checks and teen protections become standard across the industry."
+    },
+    {
+      "ja": "司法と選挙をめぐる争点は、米国の中間選挙を前に制度運用そのものへ移っている。",
+      "en": "Court and election fights are becoming the operating system of the midterm season."
+    },
+    {
+      "ja": "物価は少し落ち着いても、雇用の鈍化と家計の不満が政策判断を縛っている。",
+      "en": "Inflation is easing a bit, but jobs and household costs still drive the political mood."
+    },
+    {
+      "ja": "AIは安全性、労働、子ども向け利用の論点に分かれ、規制の具体化が進んでいる。",
+      "en": "AI policy is moving from abstract risk talk to consumer, labor, and child-safety rules."
+    },
+    {
+      "ja": "中間選挙までに、選挙管理や放送免許をめぐる訴訟がどこまで広がるか。",
+      "en": "See whether more election-law and broadcast-license disputes land before the midterms."
+    },
+    {
+      "ja": "雇用減速と物価高の組み合わせが、次の金利判断にどう反映されるか。",
+      "en": "Watch the next labor and inflation releases for confirmation of the softer jobs trend."
+    },
+    {
+      "ja": "各州のAI規制が、連邦政府の空白をどこまで埋めるか。",
+      "en": "Watch whether state AI rules and federal probes start to converge into a clearer national framework."
+    }
+  ]
+}

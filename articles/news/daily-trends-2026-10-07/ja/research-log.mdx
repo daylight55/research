@@ -1,0 +1,24 @@
+# research-log
+
+## 利用環境
+
+- Automation model: `gpt-5.4-mini`
+- Prompt source: [ops/codex/prompts/daily-trend-news.md](https://github.com/daylight55/research/blob/main/ops/codex/prompts/daily-trend-news.md)
+
+## 調査命令
+
+- Research date: 2026-10-07
+- Article slug: `daily-trends-2026-10-07`
+- Run Context: tech-news digest with exactly 5 topics each for politics, economy, and technology; prioritize the most recent 24-48 hours and deliver the structured JSON for the renderer.
+
+## 判断メモ
+
+- Selected AP-first coverage where possible and kept the set inside the requested recency window, allowing a few slightly older but still active items when they carried the clearest current signal.
+- Used direct AP photo URLs for source cards so the renderer can build the public digest without inventing imagery or placeholders.
+- Kept the article balanced across three beats: election/司法, inflation/jobs/markets, and AI regulation/safety.
+
+## 残課題
+
+- Check whether the Maricopa ballot issue and the Serbia overseas-voting rule develop into broader legal challenges.
+- Watch whether the next labor and inflation releases confirm the softer jobs read and the still-sticky price backdrop.
+- Watch whether state-level AI rules accelerate after the FTC probe and the California worker-protection measures.

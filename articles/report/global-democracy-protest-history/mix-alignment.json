@@ -1,0 +1,1175 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "民主化の歴史には、王権や軍政に抗議して選挙を実現した運動、既存の憲法を使って排除された人びとの権利を広げた運動、選挙で成立した権力の暴走を止めようとした運動がある。",
+      "en": "The history of democratization includes movements that challenged monarchies and military regimes to establish elections, movements that used existing constitutions to extend rights to excluded people, and movements that tried to restrain elected rulers."
+    },
+    {
+      "ja": "指導者を退陣させても、軍が実権を保持したり、新しい政権が反対派を抑圧したりすれば、参加者が求めた自由は定着しない。",
+      "en": "Removing a leader does not secure the freedoms participants sought if the military retains power or the new government represses its opponents."
+    },
+    {
+      "ja": "ここでは「何人集まったか」に加えて、誰が権力を制限できるようになったか、誰が投票・発言・組織化に参加できるようになったかを問う。",
+      "en": "Alongside the number of people in the streets, this report asks who gained the ability to constrain power and who gained access to voting, expression, and organization."
+    },
+    {
+      "ja": "国連加盟193か国と聖座・パレスチナを国別記録の基準とし、台湾・コソボは別枠で扱う。",
+      "en": "Its country records cover the 193 UN member states plus the Holy See and Palestine, with Taiwan and Kosovo treated separately."
+    },
+    {
+      "ja": "国別概説と出典・比較上の限界は[国別記録と重要事件の資料集](/reports/global-democracy-protest-history/sources/)に、選定・検証方法は[調査ログ](/reports/global-democracy-protest-history/research/)に収めた。",
+      "en": "The [country index and evidence notes](/en/reports/global-democracy-protest-history/sources/) contain national summaries, sources, and comparative limitations, while the [research log](/en/reports/global-democracy-protest-history/research/) explains selection and verification."
+    },
+    {
+      "ja": "すべての国を同じ深さで研究したという意味ではない。",
+      "en": "This does not imply equally detailed research on every country."
+    },
+    {
+      "ja": "民主主義の評価には、競争的選挙、市民の権利、政府を制約する法と司法、政治参加を含める。",
+      "en": "An assessment of democracy includes competitive elections, civil rights, laws and courts that constrain government, and political participation."
+    },
+    {
+      "ja": "International IDEAはこれらを代表、権利、法の支配、参加の四領域で測る。",
+      "en": "International IDEA measures these through four categories: Representation, Rights, Rule of Law, and Participation."
+    },
+    {
+      "ja": "民主化はその保障を広げる過程、民主主義擁護は既存の保障を維持・回復する過程として読める。",
+      "en": "Democratization can be understood as the process of extending these protections, and democratic defense as maintaining or restoring existing protections."
+    },
+    {
+      "ja": "デモは要求を可視化する手段である。",
+      "en": "Demonstrations make demands visible."
+    },
+    {
+      "ja": "生活費の引下げ、独立、宗教的規範、排外的政策、選挙結果の否定など、参加者が掲げる目的は異なる。",
+      "en": "Participants may seek lower living costs, independence, religious rules, exclusionary policies, or rejection of election results."
+    },
+    {
+      "ja": "大規模であることや反政府であることから、その目的が多元主義や平等な参加権を広げるとは判断できない。",
+      "en": "Neither a large turnout nor opposition to a government establishes that a movement promotes pluralism or equal political participation."
+    },
+    {
+      "ja": "独立、共和制、複数政党制、民主主義も、それぞれ別に確認する必要がある。",
+      "en": "Independence, republican government, multiparty politics, and democracy also require separate assessment."
+    },
+    {
+      "ja": "年次指数と今日の情勢も分ける。",
+      "en": "Annual indices must also be distinguished from current events."
+    },
+    {
+      "ja": "V-Demの2026年報告は2025年末を中心に評価し、Regimes of the World分類で民主政87、専制政92とする。",
+      "en": "V-Dem's 2026 report primarily assesses conditions at the end of 2025 and identifies 87 democracies and 92 autocracies under its Regimes of the World classification."
+    },
+    {
+      "ja": "対象の179単位を、本稿の195か国の分母に置き換えることはできない。",
+      "en": "Its 179 classified units cannot be replaced with this report's denominator of 195 countries."
+    },
+    {
+      "ja": "2026年の刊行物というだけで、10月の抗議まで評価した資料とは限らない。",
+      "en": "A publication dated 2026 does not necessarily assess protests in October."
+    },
+    {
+      "ja": "次の図は一本道の発展段階ではなく、同じ動員が異なる結果に分かれる関係を示す。",
+      "en": "The diagram shows how similar mobilization can lead to different outcomes, rather than a single sequence of development."
+    },
+    {
+      "ja": "非暴力抵抗の比較研究では、参加者の多様性や組織の持続力が成果と関係する一方、2010年代には成功率が低下した。",
+      "en": "Comparative research on nonviolent resistance links outcomes to factors including diversity of participation and durable organization, while also finding that success rates declined in the 2010s."
+    },
+    {
+      "ja": "動員の大きさを一日の写真だけで測ったり、特定の人口比率を超えれば必ず成功すると考えたりするのは適切でない。",
+      "en": "A single day's photographs cannot measure mobilization, and crossing a particular population threshold does not guarantee success."
+    },
+    {
+      "ja": "以下の因果説明は、各事件の文脈と資料を踏まえた解釈であり、普遍的な成功法則ではない。",
+      "en": "The causal accounts below are interpretations grounded in the context and evidence of each event, not universal formulas for success."
+    },
+    {
+      "ja": "1688～89年の王位交代と権利章典は、国王による法の停止や課税を制限し、議会の地位を強めた。",
+      "en": "The change of monarch in 1688–89 and the Bill of Rights restricted the monarch's powers to suspend laws and impose taxes, strengthening Parliament's position."
+    },
+    {
+      "ja": "宗教対立と王権・議会の争いから生まれた体制であり、住民全体が等しく参加する民主主義ではなかった。",
+      "en": "This system grew out of religious conflict and struggles between the Crown and Parliament; it was not a democracy in which all inhabitants participated equally."
+    },
+    {
+      "ja": "1832年の選挙法改革も、都市の代表を増やす一方で財産資格を残した。",
+      "en": "The electoral reform of 1832 also retained property qualifications even as it expanded urban representation."
+    },
+    {
+      "ja": "その排除に対して、チャーティストは1838年の人民憲章で男性普通選挙、秘密投票、議員への財産資格撤廃などを要求した。",
+      "en": "In response to that exclusion, the Chartists' People's Charter of 1838 demanded universal male suffrage, a secret ballot, and the abolition of property qualifications for members of Parliament, among other reforms."
+    },
+    {
+      "ja": "請願は当時の議会に退けられたが、要求の多くは後年に制度化された。",
+      "en": "Parliament rejected their petitions at the time, but many of their demands later became law."
+    },
+    {
+      "ja": "女性の参政権運動も請願、組織化、直接行動を重ねた。",
+      "en": "Women's suffrage campaigners also pursued petitions, organizing, and direct action."
+    },
+    {
+      "ja": "1918年法は男女に異なる資格を設定し、同じ選挙資格を認めたのは1928年だった。",
+      "en": "The 1918 act set different qualifications for men and women; equal voting qualifications came in 1928."
+    },
+    {
+      "ja": "短期に退けられた運動が制度変更の論点を残した例である。",
+      "en": "These movements show how campaigns rejected in the short term could leave issues on the agenda for institutional change."
+    },
+    {
+      "ja": "ニュージーランドでは、ケイト・シェパードらの組織と大規模な署名運動が1893年の女性の議会選挙投票権につながった。",
+      "en": "In New Zealand, organizing by Kate Sheppard and others, together with large-scale petition campaigns, led to women's right to vote in parliamentary elections in 1893."
+    },
+    {
+      "ja": "ただし女性の被選挙権は別の時期に実現した。",
+      "en": "Women gained the right to stand for election at a different time."
+    },
+    {
+      "ja": "オーストラリアの1902年法も女性の国政参加を広げたが、人種的排除を残した。",
+      "en": "Australia's 1902 act also expanded women's participation in national politics but retained racial exclusions."
+    },
+    {
+      "ja": "先住民全体への連邦投票権拡大は1962年であり、1967年国民投票による憲法改正とは違う出来事である。",
+      "en": "The extension of federal voting rights to all Indigenous people came in 1962, a separate event from the constitutional amendment approved in the 1967 referendum."
+    },
+    {
+      "ja": "「女性が投票できた最初の年」だけでは、誰がなお排除されていたかを捉えられない。",
+      "en": "Focusing only on “the first year women could vote” obscures who remained excluded."
+    },
+    {
+      "ja": "1776年の独立宣言と1787年憲法は人民による統治、共和制、権力分立の基礎となった。",
+      "en": "The Declaration of Independence of 1776 and the Constitution of 1787 laid the foundations for government by the people, republicanism, and the separation of powers."
+    },
+    {
+      "ja": "しかし奴隷制、先住民の排除、女性の参政権欠如、州ごとの財産資格と併存した。",
+      "en": "Yet they coexisted with slavery, the exclusion of Indigenous peoples, women's lack of voting rights, and state-level property qualifications."
+    },
+    {
+      "ja": "憲法の「5分の3条項」は奴隷に部分的な投票権を与えた規定ではなく、投票できない奴隷人口を代表配分に算入して奴隷保有州の政治力を増す妥協だった。",
+      "en": "The Constitution's Three-Fifths Clause did not grant enslaved people partial voting rights; it was a compromise that strengthened slaveholding states' political power by counting an enslaved population that could not vote when apportioning representation."
+    },
+    {
+      "ja": "南北戦争と再建期には、奴隷化された人びとの逃亡・軍務・組織化、奴隷廃止運動、連邦の立法が重なり、修正13～15条で奴隷制廃止、市民権、法の平等保護、人種を理由とする投票権否定の禁止が進んだ。",
+      "en": "During the Civil War and Reconstruction, enslaved people's escapes, military service, and organizing converged with abolitionism and federal legislation, and the Thirteenth through Fifteenth Amendments advanced the abolition of slavery, citizenship, equal protection under the law, and a ban on denying voting rights on racial grounds."
+    },
+    {
+      "ja": "だが白人至上主義の暴力、連邦の保護後退、人頭税や識字試験は黒人の政治参加を再び奪った。",
+      "en": "But white supremacist violence, the retreat of federal protection, poll taxes, and literacy tests once again stripped Black people of political participation."
+    },
+    {
+      "ja": "憲法の文言を残したまま権利を使えなくする逆行だった。",
+      "en": "This reversal left the constitutional text intact while making its rights unusable."
+    },
+    {
+      "ja": "1920年の修正19条も性別による投票権否定を禁じたが、人種的な障壁まで取り除いたわけではない。",
+      "en": "The Nineteenth Amendment of 1920 also prohibited denial of voting rights on the basis of sex, but it did not remove racial barriers."
+    },
+    {
+      "ja": "1950～60年代の公民権運動では、黒人の教会、地域組織、女性活動家、学生がボイコット、座り込み、行進、訴訟を組み合わせた。",
+      "en": "In the civil rights movement of the 1950s and 1960s, Black churches, community organizations, women activists, and students combined boycotts, sit-ins, marches, and litigation."
+    },
+    {
+      "ja": "モンゴメリー、バーミングハム、ワシントン、セルマでの動員と弾圧の可視化が、議会内交渉や連邦政府への圧力につながった。",
+      "en": "Mobilization in Montgomery, Birmingham, Washington, and Selma, and the public visibility of repression, fed into negotiations in Congress and pressure on the federal government."
+    },
+    {
+      "ja": "1964年公民権法と1965年投票権法は、街頭の要求を執行可能な法律へ変えた成果である。",
+      "en": "The Civil Rights Act of 1964 and the Voting Rights Act of 1965 translated demands from the streets into enforceable law."
+    },
+    {
+      "ja": "英雄一人や一日の行進だけが法律を成立させたわけではない。",
+      "en": "Neither a single hero nor a single day's march alone secured those laws."
+    },
+    {
+      "ja": "法的な隔離廃止後も、住宅・資産・警察との関係の不平等は残った。",
+      "en": "Inequalities in housing, wealth, and relations with the police persisted after the abolition of legal segregation."
+    },
+    {
+      "ja": "2020年のBlack Lives Matterの大動員は、ジョージ・フロイド殺害を契機に警察の説明責任と人種的平等を要求した。",
+      "en": "The mass Black Lives Matter mobilizations of 2020 followed the murder of George Floyd and demanded police accountability and racial equality."
+    },
+    {
+      "ja": "ACLEDが記録した特定期間の抗議の多くは非暴力だったが、個別の略奪や暴力、警察の過剰な実力行使は別々に検証する必要がある。",
+      "en": "Many of the protests that ACLED recorded during a specified period were nonviolent, but individual incidents of looting or violence and police use of excessive force require separate examination."
+    },
+    {
+      "ja": "議題を変えたことと、全国一律の制度改善を達成したことは異なる。",
+      "en": "Changing the agenda and achieving uniform institutional improvements nationwide are different outcomes."
+    },
+    {
+      "ja": "対照的に2021年1月6日の議事堂襲撃は、有効な選挙結果の確定を妨げた。",
+      "en": "By contrast, the attack on the Capitol on January 6, 2021, obstructed certification of a valid election result."
+    },
+    {
+      "ja": "下院調査委員会は、選挙結果を覆そうとする一連の働きかけの中に事件を位置づけた。",
+      "en": "The House select committee situated the attack within a series of efforts to overturn the election result."
+    },
+    {
+      "ja": "街頭に集まることや制度に異議を唱えることだけでは、民主化運動と呼べない。",
+      "en": "Gathering in the streets or challenging institutions does not by itself make a movement one of democratization."
+    },
+    {
+      "ja": "2025～26年のNo Kings抗議は権力集中などへの反対を掲げ、2026年10月17日の集会では次の選挙参加が呼びかけられた。",
+      "en": "The No Kings protests of 2025–26 voiced opposition to the concentration of power, among other objections, and rallies on October 17, 2026, called for participation in the coming elections."
+    },
+    {
+      "ja": "11月の選挙結果は基準日時点で未確定であり、街頭の規模から勝敗を予測しない。",
+      "en": "The November election results remained undetermined as of the research cutoff date, and crowd size does not provide a basis for predicting winners and losers."
+    },
+    {
+      "ja": "ハイチでは1791年に始まった奴隷化された人びとの蜂起が、植民地支配との戦争を経て1804年の独立につながった。",
+      "en": "In Haiti, an uprising of enslaved people that began in 1791 led, through war against colonial rule, to independence in 1804."
+    },
+    {
+      "ja": "自由と平等の普遍性を、奴隷所有社会そのものに突きつけた世界史的転換である。",
+      "en": "This turning point in world history confronted slaveholding society itself with the universality of freedom and equality."
+    },
+    {
+      "ja": "ただし奴隷制廃止と独立は、安定した競争的議会制の完成を意味しなかった。",
+      "en": "Yet the abolition of slavery and independence did not establish a stable, competitive parliamentary system."
+    },
+    {
+      "ja": "フランスが1825年に課した賠償、国際的孤立、国内の権力対立なども国家形成を制約した。",
+      "en": "The indemnity France imposed in 1825, international isolation, and domestic power struggles also constrained state formation."
+    },
+    {
+      "ja": "1986年のデュバリエ体制崩壊、1990年のアリスティド当選と翌年のクーデターは、さらに別の民主化過程だった。",
+      "en": "The collapse of the Duvalier regime in 1986, Aristide's election in 1990, and the coup the following year belonged to a further, distinct process of democratization."
+    },
+    {
+      "ja": "メキシコの1910年革命は、ディアスの長期支配と再選、土地・労働の問題をめぐる異なる勢力の闘争だった。",
+      "en": "Mexico's revolution of 1910 involved different forces struggling over Díaz's prolonged rule and reelection, land, and labor."
+    },
+    {
+      "ja": "1917年憲法は社会権を取り入れたが、その後の長期与党優位体制は対等な競争を制限した。",
+      "en": "The Constitution of 1917 incorporated social rights, but the long period of ruling-party dominance that followed restricted equal political competition."
+    },
+    {
+      "ja": "1968年の学生運動へのトラテロルコでの弾圧、1988年選挙への不信を経て、選挙制度改革と監視の蓄積が2000年の政権交代を可能にした。",
+      "en": "After the repression of the student movement at Tlatelolco in 1968 and distrust of the 1988 election, accumulated electoral reforms and monitoring made the transfer of power in 2000 possible."
+    },
+    {
+      "ja": "革命、社会権、競争選挙は同時に完成したのではない。",
+      "en": "Revolution, social rights, and competitive elections did not all reach fulfillment at the same time."
+    },
+    {
+      "ja": "ブラジルの1984年Diretas Jáは、大統領直接選挙を求めて労働者、学生、野党、市民を結びつけた。",
+      "en": "Brazil's Diretas Já campaign of 1984 united workers, students, opposition parties, and citizens in demanding direct presidential elections."
+    },
+    {
+      "ja": "直接選挙を直ちに実現する憲法改正は議会で成立しなかったが、軍政の正統性を弱め、1985年の文民移行、1988年憲法、1989年直接選挙につながる圧力となった。",
+      "en": "Although Congress did not pass the constitutional amendment that would have introduced direct elections at once, the campaign weakened the legitimacy of military rule and generated pressure that contributed to the civilian transition in 1985, the Constitution of 1988, and direct elections in 1989."
+    },
+    {
+      "ja": "一つの採決の敗北と長期の政治効果を区別できる。",
+      "en": "The defeat in a single vote can be distinguished from the campaign's long-term political effects."
+    },
+    {
+      "ja": "アルゼンチンでは1976年以降の軍政による失踪・拷問に対し、五月広場の母たちなどが家族の行方と国家の責任を問い続けた。",
+      "en": "In Argentina, the Mothers of the Plaza de Mayo and others continued to demand the whereabouts of their relatives and state accountability for the disappearances and torture carried out by the military regime from 1976 onward."
+    },
+    {
+      "ja": "経済危機、労働運動、1982年の戦争敗北も軍の支配を弱め、1983年に選挙による文民政権が成立した。",
+      "en": "Economic crisis, the labor movement, and defeat in the 1982 war also weakened military rule, and an elected civilian government took office in 1983."
+    },
+    {
+      "ja": "民主化後の真相究明と裁判は重要な成果だったが、免責をめぐる後退と再開もあり、選挙後に国家暴力の責任をどう問うかが長期の争点となった。",
+      "en": "Truth-seeking and trials after democratization were important achievements, but efforts to address impunity suffered reversals and later resumed, making accountability for state violence a long-term issue after elections returned."
+    },
+    {
+      "ja": "チリでは労組、市民社会、政党の抵抗と組織化が、1988年国民投票でのピノチェト続投否決、1990年の文民移行へつながった。",
+      "en": "In Chile, resistance and organizing by trade unions, civil society, and political parties contributed to the rejection of Pinochet's continued rule in the 1988 referendum and the civilian transition in 1990."
+    },
+    {
+      "ja": "旧体制の憲法と軍の影響は移行後にも残った。",
+      "en": "The former regime's constitution and military influence persisted after the transition."
+    },
+    {
+      "ja": "2019年には地下鉄運賃を引き金とする抗議が、年金、格差、社会保障への不満を集めたが、新憲法案は2022年と2023年にそれぞれ否決された。",
+      "en": "In 2019, protests triggered by metro fares brought together grievances over pensions, inequality, and social protection, but voters rejected proposed new constitutions in both 2022 and 2023."
+    },
+    {
+      "ja": "抗議が制憲の議題を開いたことと、有権者が特定の草案を承認したかは別の結果である。",
+      "en": "The protests' opening of a constitutional agenda and voters' approval or rejection of a particular draft are separate outcomes."
+    },
+    {
+      "ja": "グアテマラの1944年の民主的開放は1954年の米国が支援したクーデターで断たれ、その後の内戦ではマヤ先住民が甚大な被害を受けた。",
+      "en": "A United States-backed coup in 1954 cut short Guatemala's democratic opening of 1944, and Indigenous Maya suffered devastating harm in the civil war that followed."
+    },
+    {
+      "ja": "1985年憲法と1996年和平後も、司法と政治への権力集中は残った。",
+      "en": "Concentrations of power over the judiciary and politics persisted after the Constitution of 1985 and the peace settlement of 1996."
+    },
+    {
+      "ja": "2023～24年に先住民組織などがアレバロの選挙勝利と就任を守るため動員したことは、既にある選挙の結果を実効的な権力移譲へつなぐ民主主義擁護として位置づけられる。",
+      "en": "The mobilization of Indigenous organizations and others in 2023–24 to defend Arévalo's election victory and inauguration can be understood as a defense of democracy that helped translate an existing electoral result into an effective transfer of power."
+    },
+    {
+      "ja": "1989年の中国では、経済改革に伴う物価上昇、腐敗、特権への反発と、政治参加・言論の拡大を求める期待が重なった。",
+      "en": "In China in 1989, anger at rising prices, corruption, and privilege associated with economic reform converged with hopes for greater political participation and freedom of expression."
+    },
+    {
+      "ja": "4月の胡耀邦の死と追悼を契機に、学生の集会は北京だけでなく他の都市にも広がり、労働者や市民も参加した。",
+      "en": "Hu Yaobang's death and commemorations in April prompted student gatherings that spread beyond Beijing to other cities, drawing workers and other citizens as well."
+    },
+    {
+      "ja": "ただし学生と労働者、改革派知識人の要求や組織は同一ではなかった。",
+      "en": "Students, workers, and reformist intellectuals did not, however, share identical demands or organizations."
+    },
+    {
+      "ja": "指導部内の対話・改革をめぐる対立の後、戒厳令と軍の投入が進み、6月3日夜から4日にかけて軍が北京で市民を殺傷し、抗議を鎮圧した。",
+      "en": "After divisions within the leadership over dialogue and reform, the authorities imposed martial law and deployed troops, and from the night of June 3 into June 4 the military killed and wounded civilians in Beijing and suppressed the protests."
+    },
+    {
+      "ja": "犠牲者は広場の内部だけでなく周辺道路などでも生じており、独立した検証が制限される中で死者の確定総数を置くことはできない。",
+      "en": "Casualties occurred not only inside the square but also on surrounding roads and elsewhere, and restrictions on independent investigation prevent a definitive total death toll."
+    },
+    {
+      "ja": "拘束、処罰、検閲は運動を公然と続ける可能性を奪った。",
+      "en": "Detention, punishment, and censorship denied the movement the possibility of continuing in public."
+    },
+    {
+      "ja": "短期の結果は政治的開放の後退だった。",
+      "en": "The short-term result was a retreat from political opening."
+    },
+    {
+      "ja": "その後に市場化や成長が進んだことを、競争的選挙や権力制限の拡大と同じものとみなせない。",
+      "en": "Subsequent marketization and growth cannot be equated with an expansion of competitive elections or constraints on power."
+    },
+    {
+      "ja": "天安門は、動員規模や経済発展だけでは、軍の忠誠と支配層の選択を乗り越えられない事例として比較できる。",
+      "en": "In comparative terms, Tiananmen shows that the scale of mobilization or economic development alone cannot overcome the military's loyalty and the ruling elite's choices."
+    },
+    {
+      "ja": "同時に、亡命、記憶の継承、遺族の責任追及という長期の活動を、街頭運動の鎮圧によって消えたものとして扱わない。",
+      "en": "Nor did the suppression of the street movement extinguish the longer-term activities of exiles, those preserving its memory, and bereaved families seeking accountability."
+    },
+    {
+      "ja": "1988年には経済停滞、紙幣廃止の損失、学生への暴力に反発する全国的蜂起が起きた。",
+      "en": "In 1988, a nationwide uprising erupted against economic stagnation, losses from the invalidation of banknotes, and violence against students."
+    },
+    {
+      "ja": "軍は殺傷と逮捕で抑圧し、1990年にNLDが選挙で勝っても政権を移譲しなかった。",
+      "en": "The military suppressed it through killings, injuries, and arrests, and refused to transfer power even after the NLD won the 1990 election."
+    },
+    {
+      "ja": "2007年のサフラン革命は燃料値上げから広がり、僧侶への暴力を受けて宗教者と市民の連携が強まったが、軍政は僧院への突入、発砲、拘束で鎮圧した。",
+      "en": "The Saffron Revolution of 2007 spread from fuel-price increases, and violence against monks strengthened cooperation between religious figures and citizens, but the military government crushed the movement through monastery raids, gunfire, and detention."
+    },
+    {
+      "ja": "両運動は別の引き金と組織を持つ。",
+      "en": "The two movements had different triggers and organizations."
+    },
+    {
+      "ja": "2011年以降の部分開放は政治活動と選挙の余地を広げたが、2008年憲法は軍に議席の4分の1と重要な治安権限を残した。",
+      "en": "The partial opening from 2011 expanded the space for political activity and elections, but the Constitution of 2008 reserved one-quarter of parliamentary seats and key security powers for the military."
+    },
+    {
+      "ja": "ロヒンギャの排除と迫害も続き、選挙の多数派の自由だけを民主化の尺度にできない。",
+      "en": "The exclusion and persecution of the Rohingya also continued, so the freedoms of an electoral majority alone cannot measure democratization."
+    },
+    {
+      "ja": "2021年2月1日のクーデターで軍が拘束したのはウィンミン大統領と、国家顧問のアウンサンスーチーらである。",
+      "en": "Those the military detained in the coup of February 1, 2021, included President Win Myint and State Counsellor Aung San Suu Kyi."
+    },
+    {
+      "ja": "スーチーは大統領ではなかった。",
+      "en": "Suu Kyi was not the president."
+    },
+    {
+      "ja": "医療者、公務員、労働者らの市民的不服従運動と街頭抗議は、軍の暴力が続く中で、一部の武装抵抗とも結びついた。",
+      "en": "As military violence continued, the civil disobedience movement and street protests by health professionals, civil servants, workers, and others also became connected with some armed resistance."
+    },
+    {
+      "ja": "非暴力の参加者、人民防衛隊、以前から戦っていた民族武装組織には異なる目標と指揮系統があり、「同じデモ隊」とは呼べない。",
+      "en": "Nonviolent participants, the People's Defence Forces, and ethnic armed organizations that had been fighting for years had different objectives and chains of command and cannot be described as “the same protesters.”"
+    },
+    {
+      "ja": "2025年末～2026年初めの軍主導選挙と、4月のミンアウンフライン大統領就任も、自由で包摂的な選択への転換とは評価できない。",
+      "en": "The military-led elections of late 2025 and early 2026 and Min Aung Hlaing's inauguration as president in April likewise cannot be assessed as a transition to free, inclusive choice."
+    },
+    {
+      "ja": "役職の変更と、軍を市民が統制できる制度の成立を分ける必要がある。",
+      "en": "A change of office must be distinguished from the establishment of institutions that allow civilians to control the military."
+    },
+    {
+      "ja": "1906年の立憲革命では、商人、宗教者、知識人、地方の結社が、恣意的な統治と外国の影響に対し議会と法による王権制限を求めた。",
+      "en": "In the Constitutional Revolution of 1906, merchants, religious figures, intellectuals, and local associations sought parliamentary and legal limits on royal power in response to arbitrary rule and foreign influence."
+    },
+    {
+      "ja": "1906年憲法と1907年補則はその成果だったが、王権側の攻撃、外国介入、財政難が制度を弱めた。",
+      "en": "The Constitution of 1906 and its 1907 Supplement were achievements of that movement, but royalist attacks, foreign intervention, and fiscal difficulties weakened the institutions."
+    },
+    {
+      "ja": "1953年には石油国有化を進めたモサッデク首相が、米英の関与と国内勢力の行動によるクーデターで倒された。",
+      "en": "In 1953, Prime Minister Mosaddegh, who had pursued oil nationalization, was overthrown in a coup involving the United States and Britain and the actions of domestic forces."
+    },
+    {
+      "ja": "彼は直接選ばれた大統領ではなく、議会政治の下の首相だった。",
+      "en": "He was a prime minister within a parliamentary political system, not a directly elected president."
+    },
+    {
+      "ja": "1979年の革命では、シャーの抑圧、急速な社会変化と格差、政治参加の閉鎖に対し、宗教勢力、自由主義者、左派、学生、商人、労働者が王制打倒で連携した。",
+      "en": "In the revolution of 1979, religious forces, liberals, leftists, students, merchants, and workers united to overthrow the monarchy in response to the shah's repression, rapid social change and inequality, and the closure of political participation."
+    },
+    {
+      "ja": "追悼集会とストライキが支配を揺さぶったが、革命後にはホメイニと宗教機関が権力を固め、競合勢力を排除した。",
+      "en": "Commemorative gatherings and strikes shook the regime, but after the revolution Khomeini and religious institutions consolidated power and excluded their rivals."
+    },
+    {
+      "ja": "選挙と、最高指導者・監督者評議会による非選挙的な権限が併存する体制となった。",
+      "en": "The resulting system combined elections with the unelected authority of the Supreme Leader and the Guardian Council."
+    },
+    {
+      "ja": "共通の敵を倒す連合は、その後の多元的制度への合意を意味しなかった。",
+      "en": "A coalition to overthrow a common enemy did not imply agreement on pluralist institutions afterward."
+    },
+    {
+      "ja": "2009年の緑の運動は大統領選挙への不信を中心に説明責任を求め、2022年の「女性・生命・自由」はジナ（マフサ）・アミニの拘束後の死を契機に、服装の強制、尊厳、差別、統治体制を争点にした。",
+      "en": "The Green Movement of 2009 sought accountability primarily over distrust of the presidential election, while “Woman, Life, Freedom” in 2022 arose after the death of Jina (Mahsa) Amini following her detention and brought compulsory dress rules, dignity, discrimination, and the governing system into question."
+    },
+    {
+      "ja": "女性、若者、民族的少数者らの街頭行動と日常的な不服従は、票の集計だけに還元できない権利要求だった。",
+      "en": "Street actions and everyday disobedience by women, young people, ethnic minorities, and others expressed demands for rights that cannot be reduced to the counting of votes."
+    },
+    {
+      "ja": "国連事実調査団は殺害、拷問、性暴力などを認定している。",
+      "en": "The United Nations fact-finding mission has established killings, torture, sexual violence, and other violations."
+    },
+    {
+      "ja": "調査団の法的評価は、個人の刑事責任についての確定判決とは区別する。",
+      "en": "The mission's legal assessments must be distinguished from final judgments on individuals' criminal responsibility."
+    },
+    {
+      "ja": "2025年末～2026年初めには通貨・物価危機から抗議が広がり、当局による大規模な殺傷と通信制限が報告された。",
+      "en": "In late 2025 and early 2026, protests spread from a currency and price crisis, amid reports of large-scale killings and injuries inflicted by the authorities and restrictions on communications."
+    },
+    {
+      "ja": "国連人権理事会は調査の継続を決めた。",
+      "en": "The United Nations Human Rights Council decided to continue the investigation."
+    },
+    {
+      "ja": "抗議への弾圧、後の外国の軍事行動、体制内部の指導者継承はそれぞれ別の過程であり、いずれかを市民の民主化要求の達成と読み替えない。",
+      "en": "The repression of protests, subsequent foreign military action, and leadership succession within the regime are separate processes, none of which should be reinterpreted as the fulfillment of citizens' demands for democratization."
+    },
+    {
+      "ja": "1998年のReformasiは、金融危機下のマハティールとアンワルの対立、アンワルの解任・拘束を直接の契機とした。",
+      "en": "The immediate triggers of Reformasi in 1998 were the conflict between Mahathir and Anwar during the financial crisis and Anwar's dismissal and detention."
+    },
+    {
+      "ja": "若者、市民団体、野党などは腐敗、司法・警察の政治利用、権威主義を批判した。",
+      "en": "Young people, civic groups, opposition parties, and others criticized corruption, the political use of the judiciary and police, and authoritarianism."
+    },
+    {
+      "ja": "直ちに与党を退かせることはできなかったが、後の野党協力と市民組織の基盤を作った。",
+      "en": "Although they could not immediately remove the ruling party, they laid the foundations for later opposition cooperation and civic organizing."
+    },
+    {
+      "ja": "Bersihは2007年以降の大集会や選挙監視を通じ、有権者名簿、選挙制度、メディアへの接近など競争の入口を争った。",
+      "en": "Through mass rallies and election monitoring from 2007 onward, Bersih contested the conditions of entry into political competition, including electoral rolls, electoral rules, and access to the media."
+    },
+    {
+      "ja": "多民族の市民の連携は、長期与党優位の選挙政治に対抗する組織的な力となった。",
+      "en": "Cooperation among citizens across ethnic lines developed into an organized force challenging electoral politics long dominated by the ruling party."
+    },
+    {
+      "ja": "2018年の初の連邦政権交代には、この蓄積に加え、1MDB問題、生活費への不満、支配層の分裂が作用した。",
+      "en": "The first change of federal government in 2018 reflected this accumulated work, along with the 1MDB scandal, grievances over the cost of living, and divisions within the ruling elite."
+    },
+    {
+      "ja": "単一のデモで政権が倒れたわけではない。",
+      "en": "A single demonstration did not bring down the government."
+    },
+    {
+      "ja": "2020年の連立再編による政権崩壊と、2022年選挙後の統一政府は、交代可能性の実現後も制度改革が不安定であることを示した。",
+      "en": "The government's collapse through coalition realignment in 2020 and the unity government formed after the 2022 election showed that institutional reform remained unstable even after alternation in power became possible."
+    },
+    {
+      "ja": "改革を掲げた勢力が勝つこと、選挙を公正にすること、司法と表現の自由を守ることは、同じ達成ではない。",
+      "en": "The victory of forces campaigning for reform, the establishment of fair elections, and the protection of the judiciary and freedom of expression are distinct achievements."
+    },
+    {
+      "ja": "韓国の1960年四月革命は不正選挙と警察暴力に反発して李承晩を退陣させたが、翌年の軍事クーデターで民主的な開放は覆された。",
+      "en": "South Korea's April Revolution of 1960 forced Syngman Rhee from office in response to electoral fraud and police violence, but a military coup the following year reversed the democratic opening."
+    },
+    {
+      "ja": "1980年光州では軍の暴力に対する市民の抗議と抵抗を軍が鎮圧した。",
+      "en": "In Gwangju in 1980, the military crushed citizens' protests and resistance against military violence."
+    },
+    {
+      "ja": "短期の敗北後も犠牲者家族、市民組織、宗教者の記録と活動が残り、民主化の正統性を支えた。",
+      "en": "Despite this immediate defeat, victims' families, civic organizations, and religious figures continued to document events and organize, sustaining the legitimacy of democratization."
+    },
+    {
+      "ja": "1987年には拷問死と隠蔽、改憲拒否に反発する学生、労働者、会社員、教会、野党の動員が拡大し、政府側は大統領直接選挙を受け入れた。",
+      "en": "In 1987, students, workers, office employees, churches, and opposition parties expanded their mobilization against a death under torture and its cover-up, and against the refusal to amend the constitution, prompting the government to accept direct presidential elections."
+    },
+    {
+      "ja": "その年の選挙には旧軍政側の盧泰愚が勝った。",
+      "en": "Roh Tae-woo, who represented the former military regime, won that year's election."
+    },
+    {
+      "ja": "成果はその場で野党へ政権を渡したことではなく、交代を可能にするルールを変えたことにあった。",
+      "en": "The achievement lay in changing the rules to make alternation in power possible, rather than transferring power to the opposition at once."
+    },
+    {
+      "ja": "2016～17年のろうそく集会は議会の弾劾と憲法裁判所による朴槿恵罷免へ接続した。",
+      "en": "The candlelight rallies of 2016–17 fed into parliamentary impeachment and the Constitutional Court's removal of Park Geun-hye from office."
+    },
+    {
+      "ja": "2024年末の戒厳令に対しても議会と市民が抵抗し、憲法裁判所は2025年4月に尹錫悦を罷免した。",
+      "en": "Parliament and citizens also resisted the declaration of martial law in late 2024, and the Constitutional Court removed Yoon Suk Yeol from office in April 2025."
+    },
+    {
+      "ja": "街頭の人数が判決に代わったのではなく、市民の行動と憲法手続が権力を制約した。",
+      "en": "The number of people on the streets did not substitute for a judicial ruling; citizens' actions and constitutional procedures constrained power."
+    },
+    {
+      "ja": "台湾では白色テロと長期戒厳令の下でも、地方選挙、党外運動、被告の家族や弁護団が政治活動を続けた。",
+      "en": "In Taiwan, political activity continued through local elections, the tangwai opposition movement, and the families and defense lawyers of defendants, even under the White Terror and prolonged martial law."
+    },
+    {
+      "ja": "1979年美麗島事件の弾圧、1986年の民進党結成、1987年の戒厳令解除、1990年の野百合学生運動、1996年の総統直接選挙、2000年の政権交代は、それぞれ異なる転機である。",
+      "en": "The crackdown in the 1979 Kaohsiung Incident, the formation of the Democratic Progressive Party in 1986, the lifting of martial law in 1987, the Wild Lily student movement of 1990, the direct presidential election of 1996, and the transfer of power in 2000 each marked a distinct turning point."
+    },
+    {
+      "ja": "市民の圧力、経済・社会の変化、国民党内部の改革判断を組み合わせて説明する必要がある。",
+      "en": "An explanation needs to consider citizens' pressure, economic and social changes, and decisions to pursue reform within the Kuomintang together."
+    },
+    {
+      "ja": "民主化後の2014年ひまわり運動は、対中サービス貿易協定の審議過程と監督を争った。",
+      "en": "After democratization, the Sunflower Movement of 2014 challenged the deliberation process and oversight of the services trade agreement with China."
+    },
+    {
+      "ja": "独裁を終える要求と、民主制内部で決定の透明性を求める要求は区別できる。",
+      "en": "Demands to end dictatorship can be distinguished from demands for transparent decision-making within a democracy."
+    },
+    {
+      "ja": "台湾の経験を特定文化に民主主義が「向く／向かない」とする説明に使うのではなく、支配層、組織、制度改革がどう結びついたかを比較する。",
+      "en": "Taiwan's experience calls for comparing how ruling elites, organizations, and institutional reforms interacted, rather than using it to argue that particular cultures are \"suited\" or \"unsuited\" to democracy."
+    },
+    {
+      "ja": "フィリピンではマルコスの権力集中と縁故経済、経済危機への不満に、1983年のベニグノ・アキノ暗殺、1986年選挙の不正が重なった。",
+      "en": "In the Philippines, the assassination of Benigno Aquino in 1983 and electoral fraud in 1986 compounded discontent with Marcos's concentration of power, crony capitalism, and the economic crisis."
+    },
+    {
+      "ja": "野党の結集、教会と放送による呼びかけ、市民の非暴力行動に、軍幹部の離反と米国の支持変更が加わり、EDSAのPeople Powerはマルコス退陣へ至った。",
+      "en": "Opposition unity, appeals through churches and broadcasting, and citizens' nonviolent action combined with defections by senior military officers and a change in United States support, and the EDSA People Power movement forced Marcos from office."
+    },
+    {
+      "ja": "1987年憲法は権利と権力分立を再構成したが、土地・富の集中、政治家一族、軍の影響は残った。",
+      "en": "The 1987 Constitution rebuilt protections for rights and the separation of powers, but concentrated ownership of land and wealth, political dynasties, and military influence persisted."
+    },
+    {
+      "ja": "首都の数日間だけで長期の抵抗史を説明しない。",
+      "en": "A few days in the capital cannot explain this long history of resistance."
+    },
+    {
+      "ja": "インドネシアでは1997年の金融危機が物価、雇用、銀行・政商関係の問題を深め、スハルト体制の支持を崩した。",
+      "en": "In Indonesia, the financial crisis of 1997 deepened problems involving prices, employment, banks, and politically connected businesses, eroding support for Suharto's regime."
+    },
+    {
+      "ja": "1998年5月の学生射殺、全国の学生動員、議会占拠、閣僚や議会指導者の離反が重なり、5月21日にスハルトは辞任した。",
+      "en": "The shooting of students in May 1998, nationwide student mobilization, the occupation of parliament, and defections by ministers and parliamentary leaders culminated in Suharto's resignation on May 21."
+    },
+    {
+      "ja": "同時期の華人への殺害・略奪・性暴力を、民主化の正当な手段や必要な犠牲として扱ってはならない。",
+      "en": "The killings, looting, and sexual violence against ethnic Chinese people during the same period must not be treated as legitimate means of democratization or as necessary sacrifices."
+    },
+    {
+      "ja": "その後の1999年選挙、地方分権、憲法改正、2004年大統領直接選挙は、退陣を制度変更へつないだ。",
+      "en": "The 1999 election, decentralization, constitutional amendments, and the direct presidential election of 2004 translated his departure into institutional change."
+    },
+    {
+      "ja": "ただし旧来の経済エリートは新制度に適応し、汚職、軍の関与、少数者の権利、過去の暴力の責任追及は未解決のまま残った。",
+      "en": "However, established economic elites adapted to the new institutions, while corruption, military involvement, minority rights, and accountability for past violence remained unresolved."
+    },
+    {
+      "ja": "両国では「指導者を去らせる力」と「その後の権力を分散する力」を別々に見る必要がある。",
+      "en": "Both countries require separate assessments of \"the capacity to remove a leader\" and \"the capacity to disperse power afterward.\""
+    },
+    {
+      "ja": "インドの独立運動には、ガンディーや国民会議に加え、農民、労働者、女性、ムスリムの組織、アンベードカルら被差別者の運動が参加し、独立後の構想は異なった。",
+      "en": "India's independence movement included Gandhi and the Indian National Congress alongside peasants, workers, women, Muslim organizations, and movements of people facing discrimination led by figures such as Ambedkar; these participants held different visions for the post-independence order."
+    },
+    {
+      "ja": "非協力、不買、塩の行進は日常の要求を主権の問題へ結びつけたが、1947年の独立は分割と大規模な暴力・移動を伴った。",
+      "en": "Noncooperation, boycotts, and the Salt March connected everyday demands to sovereignty, but independence in 1947 brought partition, large-scale violence, and displacement."
+    },
+    {
+      "ja": "1950年憲法と1951～52年総選挙が、貧困や識字を参政権制限の理由にせず普通選挙を制度化したことは重要である。",
+      "en": "The 1950 Constitution and the 1951–52 general election established universal suffrage without using poverty or literacy as grounds to restrict voting rights, a significant institutional choice."
+    },
+    {
+      "ja": "政治的平等だけでカースト、土地、ジェンダーの格差が消えたわけではない。",
+      "en": "Political equality alone did not eliminate inequalities of caste, land, or gender."
+    },
+    {
+      "ja": "1975年には経済不満と反政府運動、首相の選挙をめぐる判決を背景に、インディラ・ガンディー政権が非常事態を宣言し、検閲と野党拘禁を進めた。",
+      "en": "In 1975, amid economic discontent, antigovernment mobilization, and a court ruling concerning the prime minister's election, Indira Gandhi's government declared an emergency and imposed censorship and the detention of opposition figures."
+    },
+    {
+      "ja": "1977年に選挙を実施して与党が敗北を受け入れたことが、自由の回復を可能にした。",
+      "en": "Holding an election in 1977 and the ruling party's acceptance of defeat made the restoration of liberties possible."
+    },
+    {
+      "ja": "後の第44次憲法改正は非常事態権限に制約を加えた。",
+      "en": "The subsequent Forty-fourth Amendment to the Constitution placed limits on emergency powers."
+    },
+    {
+      "ja": "選出された指導者による後退と、選挙を通じた修復の両方を示す事例である。",
+      "en": "This case demonstrates both democratic backsliding under an elected leader and repair through elections."
+    },
+    {
+      "ja": "バングラデシュの1971年独立は、東パキスタンへの地域・言語差別と、1970年選挙で多数を得たアワミ連盟への権力移譲拒否から、弾圧と戦争を経て成立した。",
+      "en": "Bangladesh's independence in 1971 followed repression and war arising from regional and linguistic discrimination against East Pakistan and the refusal to transfer power to the Awami League after it won a majority in the 1970 election."
+    },
+    {
+      "ja": "その後も一党化と軍事支配を経験し、1990年の反軍政運動が議会制の回復へつながった。",
+      "en": "The country subsequently experienced one-party and military rule, and the antimilitary movement of 1990 led to the restoration of parliamentary government."
+    },
+    {
+      "ja": "2024年には公務員採用枠をめぐる学生抗議が、治安部隊などの殺傷への怒りによって反政権運動へ拡大し、ハシナ退陣に至った。",
+      "en": "In 2024, student protests over quotas in civil-service recruitment expanded into an antigovernment movement amid anger at killings and injuries inflicted by security forces and others, culminating in Hasina's departure."
+    },
+    {
+      "ja": "生活上の不公平への要求を、政府自身の暴力が統治の正統性の問題へ変えた。",
+      "en": "The government's own violence turned demands over everyday unfairness into a challenge to the legitimacy of its rule."
+    },
+    {
+      "ja": "暫定統治を経て2026年2月に選挙と新首相就任へ進んでも、少数者への攻撃、報復、旧与党の排除、警察・司法の党派性は別に評価する必要がある。",
+      "en": "Even after interim rule gave way to elections and the inauguration of a new prime minister in February 2026, attacks on minorities, reprisals, exclusion of the former ruling party, and partisanship in the police and judiciary require separate assessment."
+    },
+    {
+      "ja": "勝者の権利だけを守る移行では、以前の排除を繰り返す危険が残る。",
+      "en": "A transition that protects only the winners' rights risks repeating earlier forms of exclusion."
+    },
+    {
+      "ja": "ネパールでは1990年の人民運動が国王中心の体制を立憲君主制と複数政党制へ変えたが、社会的排除と貧困は残り、1996年からマオイスト武装闘争が続いた。",
+      "en": "In Nepal, the People's Movement of 1990 transformed a king-centered system into a constitutional monarchy and multiparty system, but social exclusion and poverty persisted, and the Maoists waged an armed struggle from 1996."
+    },
+    {
+      "ja": "2005年の国王の直接統治に対し、主要政党とマオイストが接近し、2006年の市民の抗議とストが議会復活を促した。",
+      "en": "In response to the king's imposition of direct rule in 2005, the major political parties and the Maoists drew closer, and citizens' protests and strikes in 2006 prompted the restoration of parliament."
+    },
+    {
+      "ja": "同年の包括的和平合意、制憲議会、2008年共和制、2015年連邦憲法へと進んだ。",
+      "en": "Nepal proceeded through the Comprehensive Peace Agreement that year, a constituent assembly, the establishment of a republic in 2008, and a federal constitution in 2015."
+    },
+    {
+      "ja": "街頭運動、敵対勢力との政治合意、戦争の終結、制憲を連結した例であり、過去の加害責任と包摂的な代表の問題は残った。",
+      "en": "The transition connected street mobilization, political agreement with an adversary, the end of war, and constitution-making, while accountability for past abuses and inclusive representation remained unresolved."
+    },
+    {
+      "ja": "日本でも、自由民権、大正期の政党政治と1925年男性普通選挙、軍国主義による抑圧、敗戦・占領下の改革を区別する必要がある。",
+      "en": "Japan's history likewise requires distinguishing the Freedom and People's Rights Movement, party politics in the Taishō era and universal male suffrage in 1925, repression under militarism, and reforms following defeat and under occupation."
+    },
+    {
+      "ja": "1946年に女性が初めて総選挙で投票し、1947年憲法は国民主権と基本的人権を制度化した。",
+      "en": "Women first voted in a general election in 1946, and the 1947 Constitution institutionalized popular sovereignty and fundamental human rights."
+    },
+    {
+      "ja": "1960年の安保反対運動は岸首相の退陣を促した一方、条約改定の発効を阻止しなかった。",
+      "en": "The 1960 movement against the security treaty helped force Prime Minister Kishi's resignation but did not prevent the revised treaty from taking effect."
+    },
+    {
+      "ja": "占領という外部条件、国内の運動、立法と選挙の働きを分ければ、民主化と民主制内部の政策抗議の違いが見える。",
+      "en": "Separating the external condition of occupation from domestic movements and the roles of legislation and elections clarifies the distinction between democratization and policy protests within a democracy."
+    },
+    {
+      "ja": "アパルトヘイトは人種によって投票、土地、居住、教育、移動を制限した。",
+      "en": "Apartheid restricted voting, landholding, residence, education, and movement according to race."
+    },
+    {
+      "ja": "1952年の不服従運動、1955年自由憲章、1960年シャープビル、1976年ソウェトは、異なる世代と組織を動員した。",
+      "en": "The Defiance Campaign of 1952, the Freedom Charter of 1955, Sharpeville in 1960, and Soweto in 1976 mobilized different generations and organizations."
+    },
+    {
+      "ja": "1980年代にはUDF、労組、教会、地域組織の活動が広がった。",
+      "en": "The activities of the UDF, trade unions, churches, and community organizations expanded during the 1980s."
+    },
+    {
+      "ja": "非暴力運動、地下活動、武装闘争、国家暴力が併存する歴史を、一つの戦術や指導者だけへ還元できない。",
+      "en": "This history, in which nonviolent movements, underground activity, armed struggle, and state violence coexisted, cannot be reduced to a single tactic or leader."
+    },
+    {
+      "ja": "国内の抗議と統治の困難、制裁と経済的負担、軍事的決着の難しさ、冷戦の終結が交渉の条件を変えた。",
+      "en": "Domestic protests and difficulties in governing, sanctions and economic costs, the difficulty of achieving a military resolution, and the end of the Cold War changed the conditions for negotiation."
+    },
+    {
+      "ja": "1990年の解放組織合法化とマンデラ釈放後も、暴力と交渉の決裂は続いた。",
+      "en": "Violence and breakdowns in negotiations continued after the legalization of liberation organizations and Mandela's release in 1990."
+    },
+    {
+      "ja": "暫定的な権力分有と全人種の選挙権を組み合わせ、1994年選挙、1996年憲法へ進んだ点に制度的意義がある。",
+      "en": "The institutional significance lay in combining interim power-sharing with suffrage for people of all races and proceeding to the 1994 election and the 1996 Constitution."
+    },
+    {
+      "ja": "多数決で勝った政府にも権利章典と司法による制限を設けた。",
+      "en": "The Bill of Rights and the judiciary constrained even a government that had won majority support."
+    },
+    {
+      "ja": "政治的平等を保障しても、人種化された資産・雇用・居住の格差は消えなかった。",
+      "en": "Guarantees of political equality did not erase racialized inequalities in assets, employment, and residence."
+    },
+    {
+      "ja": "2024年にANCが議会過半数を失ったことも、解放運動の正統性と有権者の現在の判断が同じではないことを示す。",
+      "en": "The ANC's loss of its parliamentary majority in 2024 also shows that the legitimacy of a liberation movement and voters' present judgments are not the same."
+    },
+    {
+      "ja": "民主化の成果と、生活条件・汚職・公共サービスへの批判は両立する。",
+      "en": "The achievements of democratization can coexist with criticism of living conditions, corruption, and public services."
+    },
+    {
+      "ja": "ベナンでは一党体制の財政危機と賃金不払いに、公務員、学生、教員らが抗議した。",
+      "en": "In Benin, civil servants, students, teachers, and others protested the fiscal crisis of the one-party system and unpaid wages."
+    },
+    {
+      "ja": "1990年の国民会議は単なる意見聴取を超えて主権的な権限を主張し、暫定制度と憲法制定へ進んだ。",
+      "en": "The National Conference of 1990 went beyond consultation to assert sovereign authority and proceed toward interim institutions and a constitution."
+    },
+    {
+      "ja": "1991年にケレクが選挙での敗北を受け入れたことが、交渉を実際の権力移譲へ変えた。",
+      "en": "Kérékou's acceptance of electoral defeat in 1991 turned negotiations into an actual transfer of power."
+    },
+    {
+      "ja": "他のフランス語圏諸国にも参照されたが、会議という形式だけで同じ成果が得られるわけではない。",
+      "en": "Other Francophone countries drew on this example, but the conference format alone could not guarantee the same results."
+    },
+    {
+      "ja": "その後の選挙規則や司法を通じた競争制限は、一度の成功の脆さも示す。",
+      "en": "Subsequent restrictions on competition through electoral rules and the judiciary also show the fragility of an initial success."
+    },
+    {
+      "ja": "ガーナでは軍政が国内の民主化要求に応じて開放を管理し、1992年憲法と複数政党選挙へ進んだ。",
+      "en": "In Ghana, the military regime managed an opening in response to domestic demands for democratization, proceeding to the 1992 Constitution and multiparty elections."
+    },
+    {
+      "ja": "当初は現職側が有利で、野党の不信も強かった。",
+      "en": "The incumbents initially held an advantage, and opposition distrust remained strong."
+    },
+    {
+      "ja": "選挙管理、報道、市民社会、政党間の競争が積み重なり、2000年選挙と翌年の就任で野党への交代が実現した。",
+      "en": "Through the cumulative work of electoral administration, the press, civil society, and competition between parties, the 2000 election and the inauguration the following year brought the opposition to power."
+    },
+    {
+      "ja": "選挙を実施する段階から、現職が負けてもルールを維持する段階への変化である。",
+      "en": "The country moved from holding elections to maintaining the rules even when incumbents lost."
+    },
+    {
+      "ja": "チュニジアでは地域格差、失業、腐敗、警察の恣意的な扱いが蓄積し、2010年12月のブアジジの焼身を契機に抗議が拡大した。",
+      "en": "In Tunisia, regional inequalities, unemployment, corruption, and arbitrary police treatment had accumulated, and Bouazizi's self-immolation in December 2010 triggered expanding protests."
+    },
+    {
+      "ja": "地方の若者、労組、弁護士、人権活動家が動員を支え、2011年1月にベンアリは退いた。",
+      "en": "Young people in the provinces, trade unions, lawyers, and human rights activists sustained the mobilization, and Ben Ali left power in January 2011."
+    },
+    {
+      "ja": "SNSだけで成立した運動ではない。",
+      "en": "Social media alone did not create the movement."
+    },
+    {
+      "ja": "2013年の暗殺と政治対立による危機には、労組、経営者、人権団体、弁護士会の対話カルテットが妥協を仲介し、2014年憲法と選挙を支えた。",
+      "en": "During the crisis of assassinations and political conflict in 2013, the National Dialogue Quartet of trade unions, employers, a human rights organization, and the bar association brokered compromise and supported the 2014 Constitution and elections."
+    },
+    {
+      "ja": "雇用と地域格差の未解決、政党への失望は民主制への支持を弱めたが、後退が自動的に起きたわけではない。",
+      "en": "Unresolved employment problems and regional inequalities, along with disappointment in political parties, weakened support for democracy, but backsliding did not occur automatically."
+    },
+    {
+      "ja": "2021年以降、サイード大統領が議会機能を停止し、司法や選挙管理への権限を集中した。",
+      "en": "From 2021, President Saied suspended parliament and concentrated authority over the judiciary and electoral administration."
+    },
+    {
+      "ja": "革命、憲法制定、選挙を経験した国でも、選出された指導者の行動によって競争と自由は侵食され得る。",
+      "en": "Even in a country that has undergone revolution, constitution-making, and elections, an elected leader's actions can erode competition and freedom."
+    },
+    {
+      "ja": "エジプトでは非常事態法、警察暴力、腐敗、生活苦に対する抗議が2011年1月から広がり、労働者のストやタハリール広場の占拠を経てムバラクが退陣した。",
+      "en": "In Egypt, protests against emergency law, police violence, corruption, and economic hardship spread from January 2011, and Mubarak stepped down after workers' strikes and the occupation of Tahrir Square."
+    },
+    {
+      "ja": "しかし実権は軍最高評議会へ移った。",
+      "en": "Effective power, however, passed to the Supreme Council of the Armed Forces."
+    },
+    {
+      "ja": "2012年の大統領選挙でムルシが選ばれても、軍の自律性、旧体制の機構、宗教と国家をめぐる対立は解消しなかった。",
+      "en": "Morsi's victory in the 2012 presidential election did not resolve the military's autonomy, the persistence of the old regime's institutions, or conflicts over religion and the state."
+    },
+    {
+      "ja": "2013年の反ムルシ大動員後、軍が大統領を排除し、ラバアなどの座り込みを大量の殺傷を伴って排除した。",
+      "en": "Following mass mobilization against Morsi in 2013, the military removed the president and dispersed sit-ins at Rabaa and elsewhere, killing and injuring large numbers of people."
+    },
+    {
+      "ja": "群衆の支持があっても、軍による権力奪取を民主的な交代と同一視できない。",
+      "en": "Popular support does not make a military seizure of power equivalent to a democratic transfer."
+    },
+    {
+      "ja": "スーダンでは1964年と1985年の学生、専門職、労働者の動員が軍政を退かせたが、後に再び軍事政変が起きた。",
+      "en": "In Sudan, mobilization by students, professionals, and workers forced military rulers out in 1964 and 1985, but later military takeovers followed."
+    },
+    {
+      "ja": "2018年末のパン価格などへの抗議も、長期支配への拒否へ広がった。",
+      "en": "Protests over bread prices and other grievances in late 2018 also expanded into a rejection of prolonged rule."
+    },
+    {
+      "ja": "専門職協会、地域の抵抗委員会、女性、若者らが支え、2019年4月に軍がバシールを排除した後も、文民統治を求めて座り込みを続けた。",
+      "en": "Professional associations, neighborhood resistance committees, women, and young people sustained the movement and continued sit-ins demanding civilian rule after the military removed Bashir in April 2019."
+    },
+    {
+      "ja": "6月の武力排除後の交渉は軍と文民の権力分有を作ったが、軍とRSFの独立した強制力を残した。",
+      "en": "Negotiations after the armed dispersal in June established military-civilian power-sharing but left the military and the RSF with independent coercive power."
+    },
+    {
+      "ja": "2021年のクーデターは文民側を排除し、2023年にはSAFとRSFの戦争が始まった。",
+      "en": "The 2021 coup removed the civilian side, and war between the SAF and the RSF began in 2023."
+    },
+    {
+      "ja": "この戦争をそのまま民主派と独裁派の戦いと呼ぶことはできない。",
+      "en": "This war cannot simply be described as a struggle between democrats and supporters of dictatorship."
+    },
+    {
+      "ja": "市民が繰り返し動員できても、軍の政治・経済的権力、地方の排除、武装勢力の統合を解決しなければ、移行は覆され得る。",
+      "en": "Even when citizens can mobilize repeatedly, a transition remains vulnerable to reversal unless it addresses the military's political and economic power, the exclusion of the provinces, and the integration of armed groups."
+    },
+    {
+      "ja": "1848～49年の欧州革命には、食糧・経済危機、検閲、君主制への反発が重なった。",
+      "en": "The European revolutions of 1848–49 arose from overlapping food and economic crises, censorship, and opposition to monarchy."
+    },
+    {
+      "ja": "自由主義者、学生、労働者、農民は憲法、国民国家、生活保障、領主的負担の廃止を求めたが、要求は一致しなかった。",
+      "en": "Liberals, students, workers, and peasants sought constitutions, nation-states, secure livelihoods, and the abolition of seigneurial obligations, but their demands differed."
+    },
+    {
+      "ja": "フランクフルト国民議会は憲法を採択しても君主の軍事力を制御できず、主要な革命は敗れた。",
+      "en": "Although the Frankfurt National Assembly adopted a constitution, it could not control the monarchs' military power, and the major revolutions failed."
+    },
+    {
+      "ja": "一方で農民解放など残った成果もある。",
+      "en": "Some gains, including peasant emancipation, nevertheless endured."
+    },
+    {
+      "ja": "民族的自決の要求が少数民族の権利と衝突し、社会革命への恐れが連合を割るという問題も現れた。",
+      "en": "The revolutions also exposed conflicts between demands for national self-determination and minority rights, and fears of social revolution that split coalitions."
+    },
+    {
+      "ja": "1918年の戦争敗北と兵士・労働者の反乱から成立したドイツのワイマール共和制も不可逆ではなかった。",
+      "en": "Germany's Weimar Republic, established after military defeat and soldiers' and workers' revolts in 1918, was not irreversible either."
+    },
+    {
+      "ja": "恐慌、政治的暴力、議会を迂回する統治、保守エリートの判断が重なり、1933年のヒトラー首相任命後に弾圧と制度破壊が進んだ。",
+      "en": "Economic depression, political violence, government that bypassed parliament, and decisions by conservative elites combined, and repression and the destruction of institutions followed Hitler's appointment as chancellor in 1933."
+    },
+    {
+      "ja": "ナチ党は最大党となったが、自由な選挙で単独過半数を得て独裁の白紙委任を受けたわけではない。",
+      "en": "The Nazi Party became the largest party, but it did not win an outright majority in a free election and receive a blank check for dictatorship."
+    },
+    {
+      "ja": "戦後の基本法による再建は、権利と権力分立を守る制度を強める別の出発だった。",
+      "en": "Postwar reconstruction under the Basic Law marked a new beginning that strengthened institutions protecting rights and the separation of powers."
+    },
+    {
+      "ja": "ポルトガルでは長期独裁と植民地戦争の負担が軍内のMFAを動かし、1974年4月25日のカーネーション革命を起こした。",
+      "en": "In Portugal, prolonged dictatorship and the burden of colonial wars spurred the MFA within the armed forces to launch the Carnation Revolution on April 25, 1974."
+    },
+    {
+      "ja": "市民と労働者の参加が社会改革を広げたが、革命後には路線をめぐる激しい対立が続いた。",
+      "en": "Participation by citizens and workers broadened social reform, but fierce struggles over the direction of the revolution continued afterward."
+    },
+    {
+      "ja": "1975年の制憲議会選挙、1976年憲法、1982年の軍の制度的監督権縮小までを見ると、軍による政変が民主制になるには後続の文民化が必要だったことが分かる。",
+      "en": "The 1975 constituent assembly election, the 1976 Constitution, and the reduction of the military's institutional oversight powers in 1982 show that a military-led change of regime required subsequent civilianization to become a democracy."
+    },
+    {
+      "ja": "スペインでは1975年のフランコ死後、労働運動、野党、地域自治の要求と体制内改革派の交渉が重なった。",
+      "en": "In Spain after Franco's death in 1975, demands from the labor movement, opposition parties, and advocates of regional autonomy coincided with negotiations by reformers within the regime."
+    },
+    {
+      "ja": "1976年政治改革法、1977年選挙、1978年憲法が議会君主制を制度化した。",
+      "en": "The Political Reform Act of 1976, the 1977 election, and the 1978 Constitution institutionalized parliamentary monarchy."
+    },
+    {
+      "ja": "国王や一人の政治家が自由を与えたという説明では、社会の圧力と妥協が見えなくなる。",
+      "en": "Accounts that attribute the granting of freedom to the king or a single politician obscure social pressure and compromise."
+    },
+    {
+      "ja": "旧体制の責任追及、地域自治、記憶をめぐる問題は移行後も残った。",
+      "en": "Questions of accountability for the old regime, regional autonomy, and historical memory persisted after the transition."
+    },
+    {
+      "ja": "1956年のハンガリー蜂起と1968年のプラハの春は、自由や主権、体制内の改革を求めたが、ソ連の軍事介入で挫折した。",
+      "en": "The Hungarian uprising of 1956 and the Prague Spring of 1968 sought freedom, sovereignty, and reform within the system, but Soviet military intervention defeated them."
+    },
+    {
+      "ja": "1989年との違いを国内の人数や勇気だけに求めることはできない。",
+      "en": "The difference from 1989 cannot be explained solely by the number or courage of domestic participants."
+    },
+    {
+      "ja": "外部の軍事力が既存支配を維持するかどうかが、移行の可能性を変えた。",
+      "en": "The prospects for transition depended on whether an external military power would uphold the existing rulers."
+    },
+    {
+      "ja": "ポーランドの「連帯」は1980年の労働争議から独立労組と自由を求める大きな運動となり、労働者、知識人、教会が支えた。",
+      "en": "Poland's Solidarity grew out of labor disputes in 1980 into a broad movement demanding independent trade unions and freedom, supported by workers, intellectuals, and the church."
+    },
+    {
+      "ja": "1981年の戒厳令で地下化しても組織と出版は続き、経済危機とストを経て1989年の円卓会議へ至った。",
+      "en": "Organization and publishing continued even after martial law drove the movement underground in 1981, and economic crisis and strikes preceded the Round Table talks of 1989."
+    },
+    {
+      "ja": "6月選挙は下院に与党側の留保を残す部分的自由選挙だったが、反対派の勝利は非共産党主導政府への移行を促した。",
+      "en": "The June election was only partly free, with seats in the lower house reserved for the ruling side, but the opposition's victory encouraged the transition to a government led by noncommunists."
+    },
+    {
+      "ja": "全面的自由選挙が一日で完成したという物語とは異なる。",
+      "en": "This was not a transition to fully free elections completed in a single day."
+    },
+    {
+      "ja": "チェコスロバキアでは学生デモへの警察暴力を受けて市民フォーラムなどが組織され、1989年の集会、スト、交渉が共産党の独占撤廃につながった。",
+      "en": "In Czechoslovakia, police violence against student demonstrators prompted the formation of Civic Forum and other organizations, and rallies, strikes, and negotiations in 1989 led to the abolition of the Communist Party's monopoly."
+    },
+    {
+      "ja": "東ドイツでは教会を拠点とする運動、市民団体、出国者が異なる形で体制へ圧力を加えた。",
+      "en": "In East Germany, church-based movements, civic groups, and people leaving the country put pressure on the regime in different ways."
+    },
+    {
+      "ja": "11月の壁開放は象徴的な転機だったが、民主的政府の成立、1990年3月の自由選挙、統一の国際交渉は別の手続を要した。",
+      "en": "The opening of the Wall in November marked a symbolic turning point, but establishing a democratic government, the free election of March 1990, and international negotiations over reunification required separate procedures."
+    },
+    {
+      "ja": "バルト三国の歌う革命や1989年「バルトの道」は、文化、歴史の記憶、選挙と議会活動を独立回復へ結びつけた。",
+      "en": "The Singing Revolution in the three Baltic states and the Baltic Way of 1989 connected culture, historical memory, elections, and parliamentary activity to the restoration of independence."
+    },
+    {
+      "ja": "民主化と国家の自決は結びつく一方、新国家内部の少数者の包摂は別に問われる。",
+      "en": "Democratization and national self-determination can be intertwined, while the inclusion of minorities within new states remains a separate question."
+    },
+    {
+      "ja": "ウクライナの2004年オレンジ革命は選挙不正を、2013～14年ユーロマイダンはEUとの協定停止から広がった腐敗・警察暴力・権力濫用を争った。",
+      "en": "Ukraine's Orange Revolution of 2004 challenged electoral fraud, while Euromaidan in 2013–14 challenged corruption, police violence, and abuses of power in a movement that expanded from opposition to the suspension of an agreement with the European Union."
+    },
+    {
+      "ja": "後のロシアの侵略戦争と、国内の民主的説明責任を求める運動を同一視せず、戦時の制度制約を明記して評価する。",
+      "en": "Assessment must distinguish Russia's subsequent war of aggression from domestic movements seeking democratic accountability and state the wartime constraints on institutions."
+    },
+    {
+      "ja": "1789年の革命では、財政危機、身分制、代表権と生活をめぐる不満が重なった。",
+      "en": "The Revolution of 1789 combined a fiscal crisis, the estate system, and grievances over representation and livelihoods."
+    },
+    {
+      "ja": "第三身分の国民議会形成、都市の蜂起、農村の反乱を経て、特権の廃止と権利宣言が進んだ。",
+      "en": "The Third Estate's formation of the National Assembly, urban uprisings, and rural revolts helped bring the abolition of privileges and the Declaration of Rights."
+    },
+    {
+      "ja": "しかし女性や財産を持たない人びとを含む平等な参政権は直ちに成立しなかった。",
+      "en": "Yet equal political participation for women and people without property did not immediately follow."
+    },
+    {
+      "ja": "戦争、恐怖政治、1799年のクーデターまでを含めると、王権の打倒と持続する自由な政治の間にある隔たりが分かる。",
+      "en": "The wars, Terror, and coup of 1799 reveal the distance between overthrowing royal authority and sustaining free politics."
+    },
+    {
+      "ja": "1830年の七月革命は出版の自由と議会への攻撃に対抗したが、成立した七月王政は普通選挙を実現しなかった。",
+      "en": "The July Revolution of 1830 resisted attacks on press freedom and parliament, but the resulting July Monarchy did not establish universal suffrage."
+    },
+    {
+      "ja": "1848年の二月革命では第二共和政と男性普通選挙が成立したものの、仕事と生活の保障を求める運動との対立が六月蜂起の鎮圧へ進んだ。",
+      "en": "The February Revolution of 1848 brought the Second Republic and universal male suffrage, yet conflict with movements demanding work and subsistence led to the suppression of the June uprising."
+    },
+    {
+      "ja": "1851年のクーデターと翌年の帝政復活は、選挙制度の導入だけでは権力集中を防げないことを示す。",
+      "en": "The coup of 1851 and restoration of an empire the following year show that introducing elections alone cannot prevent concentrated power."
+    },
+    {
+      "ja": "1871年のパリ・コミューンは自治と社会的共和国を試みたが、軍事的鎮圧で終わった。",
+      "en": "The Paris Commune of 1871 attempted self-government and a social republic, but ended in military suppression."
+    },
+    {
+      "ja": "第三共和政は別の議会的な妥協を経て1875年に制度化した。",
+      "en": "A separate parliamentary compromise institutionalized the Third Republic in 1875."
+    },
+    {
+      "ja": "女性の選挙権・被選挙権は1944年の政令、初の投票は1945年である。",
+      "en": "Women gained the right to vote and stand for election through the ordinance of 1944, and first voted in 1945."
+    },
+    {
+      "ja": "共和国という国名や形式と、実際に権利を持つ人の範囲は一致しなかった。",
+      "en": "A republic's name or constitutional form did not determine who could exercise political rights."
+    },
+    {
+      "ja": "1936年には人民戦線の選挙勝利と労働者のストが重なり、労使交渉と立法を通じて有給休暇や週40時間労働が導入された。",
+      "en": "In 1936, the Popular Front's electoral victory coincided with workers' strikes, and labor negotiations and legislation introduced paid leave and the 40-hour working week."
+    },
+    {
+      "ja": "1968年には学生の反権威主義的な運動が労働争議と接続し、グルネル交渉で最低賃金引上げなどを引き出した。",
+      "en": "In 1968, students' anti-authoritarian movement connected with industrial conflict, and the Grenelle negotiations secured measures including a higher minimum wage."
+    },
+    {
+      "ja": "両事件は、民主制内部で働く権利や社会規範を変える運動として読む必要がある。",
+      "en": "Both episodes should be understood as movements that changed labor rights and social norms within a democracy."
+    },
+    {
+      "ja": "1968年の街頭動員の直後、6月の議会選挙では政権側が大勝した。",
+      "en": "Immediately after the street mobilization of 1968, the government's supporters won a large parliamentary majority in June."
+    },
+    {
+      "ja": "ドゴールの辞任は1969年の国民投票敗北後である。",
+      "en": "De Gaulle resigned only after losing the referendum of 1969."
+    },
+    {
+      "ja": "1995年の交通・公共部門の長期ストは年金改革の一部撤回を引き出したが、社会保障改革を全て撤回させたわけではない。",
+      "en": "The prolonged transport and public-sector strikes of 1995 secured withdrawal of part of the pension reform, but not the entire social-security reform."
+    },
+    {
+      "ja": "街頭での優勢、選挙の勝利、政策の変更を一つの「勝敗」にまとめると、こうした差を見失う。",
+      "en": "Treating street strength, electoral victory, and policy change as a single win or loss obscures these differences."
+    },
+    {
+      "ja": "2018年の黄色いベスト運動は燃料課税を引き金とし、生活費、地域間の不平等、政治に声が届かない感覚を表した。",
+      "en": "The Yellow Vest movement of 2018 began with fuel taxation and expressed grievances about living costs, regional inequality, and the sense that political leaders did not listen."
+    },
+    {
+      "ja": "政府は燃料課税引上げを撤回し所得支援を発表したが、政治制度に関する要求まで全面的に受け入れたわけではない。",
+      "en": "The government withdrew the fuel-tax increase and announced income support, without accepting all the demands for political reform."
+    },
+    {
+      "ja": "運動の分散した構造と、警察による対応も争点になった。",
+      "en": "The movement's decentralized organization and the police response also became contested issues."
+    },
+    {
+      "ja": "2023年には法定退職年齢を62歳から64歳へ段階的に引き上げる改革に対して労組横断の大動員が起きた。",
+      "en": "In 2023, a cross-union mobilization challenged the reform that would gradually raise the statutory retirement age from 62 to 64."
+    },
+    {
+      "ja": "政府の49条3項の利用など、決定手続きも対立点となったが、改革の主要部分は同年4月に公布された。",
+      "en": "The government's use of Article 49.3 and other decision-making procedures also became points of conflict, but the main provisions were promulgated in April of that year."
+    },
+    {
+      "ja": "その時点の短期結果は、運動が成立を阻止できなかったということである。",
+      "en": "The immediate outcome was that the movement did not prevent enactment."
+    },
+    {
+      "ja": "その後の政策は同じ状態ではない。",
+      "en": "Policy subsequently changed."
+    },
+    {
+      "ja": "公的案内は2026年度社会保障財政法による引上げ日程の停止・調整を説明し、2026年9月からの適用と2028年までの停止を示す。",
+      "en": "Official guidance explains the suspension and adjustment of the increase schedule under the 2026 social-security financing law, with application from September 2026 and suspension through 2028."
+    },
+    {
+      "ja": "全面撤回ではなく、出生年による違いも残る。",
+      "en": "This is not a full repeal, and differences by birth year remain."
+    },
+    {
+      "ja": "後年の議会交渉の成果を2023年のデモ単独の効果と断定せず、成立時と後の変更を分ける必要がある。",
+      "en": "Enactment and later amendments must be separated, without attributing the outcome of later parliamentary negotiations solely to the demonstrations of 2023."
+    },
+    {
+      "ja": "2026年9月の高校生・学生の動員では、教員不足、施設、授業や進路選択が争点となった。",
+      "en": "The mobilization of secondary-school and university students in September 2026 concerned teacher shortages, facilities, teaching, and educational pathways."
+    },
+    {
+      "ja": "公務員・労組の賃金と公共サービスの要求、生活費への抗議が並走し、10月には広い動員に接続した。",
+      "en": "Public employees' and unions' demands over pay and public services ran alongside protests over living costs, connecting with broader mobilization in October."
+    },
+    {
+      "ja": "2023年の年金抗議や2025年の「Bloquons tout」を、そのまま現在の一つの運動として扱うことはできない。",
+      "en": "The pension protests of 2023 or the \"Bloquons tout\" movement of 2025 cannot simply be treated as the same continuing movement today."
+    },
+    {
+      "ja": "10月17日の全国動員について、内相集計は約55万人、CGTの推計は約80万人だった。",
+      "en": "For the nationwide mobilization on October 17, the interior minister reported about 550,000 participants, while the CGT estimated about 800,000."
+    },
+    {
+      "ja": "Reutersは平和的な参加者と、放火・略奪を行った一部集団を区別している。",
+      "en": "Reuters distinguished peaceful participants from groups that committed arson and looting."
+    },
+    {
+      "ja": "推計の中間値を「正しい人数」としたり、参加者全体に暴力の責任を帰したりする根拠はない。",
+      "en": "There is no basis for treating the midpoint of the estimates as the true attendance, or for assigning responsibility for violence to all participants."
+    },
+    {
+      "ja": "教育省は高校生団体との対話、意見募集、代替教員の配置などを公表した。",
+      "en": "The education ministry announced dialogue with secondary-school student organizations, a consultation, and measures including the deployment of substitute teachers."
+    },
+    {
+      "ja": "意見募集は10月23日まで、取りまとめは10月末とされる。",
+      "en": "The consultation was scheduled to close on October 23, with a synthesis at the end of October."
+    },
+    {
+      "ja": "これで確認できるのは政府の応答と措置の発表であり、全国の学校で教員不足が解消したという結果ではない。",
+      "en": "This verifies a government response and announced measures, not an end to teacher shortages nationwide."
+    },
+    {
+      "ja": "既存教員の配置と新規採用も区別する。",
+      "en": "Reassigning existing teachers must also be distinguished from new recruitment."
+    },
+    {
+      "ja": "10月18日の大統領演説は破壊行為と正当な要求を持つ参加者を分けて説明し、司法対応を強調した。",
+      "en": "The president's address of October 18 distinguished destructive acts from participants with legitimate demands, while emphasizing judicial action."
+    },
+    {
+      "ja": "20日までには一部都市・区域で外出制限が確認できるが、全国・全住民への一律の外出禁止とは異なる。",
+      "en": "By October 20, restrictions on movement were confirmed in some cities or areas, but these were not a uniform nationwide curfew applying to everyone."
+    },
+    {
+      "ja": "例えばボルドーの公表措置は、一部区域で保護者など法定代理人を伴わない未成年に対する特定期間の夜間制限である。",
+      "en": "Bordeaux's published measure, for example, restricted minors without an accompanying legal representative at night in specified areas for a limited period."
+    },
+    {
+      "ja": "政府の公式説明と、個別の警察行為が適法・比例的だったかは別に検証しなければならない。",
+      "en": "The government's explanation and the legality and proportionality of individual police actions require separate scrutiny."
+    },
+    {
+      "ja": "予算も係争中である。",
+      "en": "The budget also remains contested."
+    },
+    {
+      "ja": "国民議会が示す2027年度予算の歳入部分の日程は、10月27日から審議を再開し、11月3日に採決予定というものだった。",
+      "en": "The National Assembly's schedule for the revenue section of the 2027 budget provided for debate to resume on October 27 and a vote on November 3."
+    },
+    {
+      "ja": "歳入部分の採決予定を予算全体の成立と読み替えない。",
+      "en": "A scheduled vote on the revenue section must not be described as enactment of the whole budget."
+    },
+    {
+      "ja": "CGTは10月19日に交渉と11月5日の行動準備を求めており、合意による終結は確認できない。",
+      "en": "On October 19, the CGT called for negotiations and preparations for action on November 5, so a negotiated conclusion to the dispute has not been established."
+    },
+    {
+      "ja": "2026年10月21日日本時間までに確認した資料からは、現在を「大規模動員を経て、部分的な応答・交渉と治安対応が並走し、再動員の準備も続く未決着の局面」と評価できる。",
+      "en": "Evidence checked by October 21, 2026, Japan time, supports an assessment of an unresolved phase in which partial responses and negotiations coexist with security measures after mass mobilization, while preparations for renewed action continue."
+    },
+    {
+      "ja": "これは本稿の分析であり、政府や運動団体の公式な段階区分ではない。",
+      "en": "This is the report's analysis, not an official stage classification by the government or movement organizations."
+    },
+    {
+      "ja": "民主化への一本道、革命前夜、抗議の完全な終結と断定する証拠はない。",
+      "en": "The evidence does not establish an inevitable path to democratization, an imminent revolution, or the complete end of protest."
+    },
+    {
+      "ja": "10月24日の再デモと11月5日のストライキは、この基準日では呼びかけ・予定である。",
+      "en": "The further demonstration on October 24 and strike on November 5 were calls or plans at the cutoff date."
+    },
+    {
+      "ja": "実施、参加数、合意の有無はまだ結果として書けない。",
+      "en": "Their occurrence, turnout, and any resulting agreement cannot yet be reported as outcomes."
+    },
+    {
+      "ja": "学校休暇、参加者の疲労、取締り、譲歩のいずれも動員を減らし得るため、一晩の静穏から理由を決めつけない。",
+      "en": "School holidays, participant fatigue, enforcement, and concessions could all reduce mobilization, so one quiet night does not identify the cause."
+    },
+    {
+      "ja": "その後の判定を変える証拠は、実際の学校人員の改善、合意文書と実施期限、予算修正の採決、次の動員の地域・職業構成、制限措置の解除や司法判断である。",
+      "en": "Evidence that could change this assessment includes actual improvements in school staffing, written agreements and implementation deadlines, votes on budget amendments, the regional and occupational composition of subsequent mobilization, and the lifting of restrictions or judicial decisions."
+    },
+    {
+      "ja": "運動の要求への支持、参加手段への支持、政府への評価は分けて観察する。",
+      "en": "Support for a movement's demands, support for its methods, and approval of the government should be observed separately."
+    }
+  ]
+}

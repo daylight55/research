@@ -1,27 +1,16 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout'
-import ListCategories from '@/components/ListCategories'
-import ListPosts from '@/components/ListPosts'
-import Pagination from '@/components/Pagination'
-import TitlePage from '@/components/TitlePage'
-import { createArticleListPage, getReportPosts } from '@/utils'
+import ArticleArchive from '@/components/ArticleArchive'
+import { getReportPosts } from '@/utils'
 
 const locale = 'en'
-const reportPosts = await getReportPosts(undefined, locale)
-const page = createArticleListPage(reportPosts, 'reports', 1, locale)
-const posts = page.data
+const posts = await getReportPosts(undefined, locale)
 ---
 
 <BaseLayout title='Reports' locale={locale}>
-	<TitlePage title='Reports' />
-	<div class='mb-6 grid gap-2'>
-		<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>
-			Long-form research reports translated from the Japanese atlas.
-		</p>
-	</div>
-	<div class='mb-6 min-w-0'>
-		<ListCategories locale={locale} />
-	</div>
-	<ListPosts posts={posts} locale={locale} />
-	<Pagination page={page} />
+	<header class='archive-heading'>
+		<h1>Reports</h1>
+		<p>Explore research by country, topic and publication date.</p>
+	</header>
+	<ArticleArchive posts={posts} locale={locale} section='reports' />
 </BaseLayout>

@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, render } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
 import PostCard from '@/components/PostCard'
 import { DEFAULT_LOCALE, getPostSlug, type Locale } from '@/utils'
 
@@ -7,31 +7,21 @@ type Props = {
 	posts: CollectionEntry<'blog'>[]
 	locale?: Locale
 	variant?: 'card' | 'compact'
+	headingLevel?: 2 | 3
 }
-
-const { posts, locale = DEFAULT_LOCALE, variant = 'card' } = Astro.props
+const { posts, locale = DEFAULT_LOCALE, variant = 'card', headingLevel = 2 } = Astro.props
 ---
 
-<section
-	class={variant === 'compact'
-		? 'mt-3 grid grid-cols-1 gap-4 lg:grid-cols-2'
-		: 'mt-3 grid grid-cols-[repeat(auto-fit,minmax(min(100%,17rem),1fr))] gap-8 lg:grid-cols-3'}
->
+<div class:list={['post-list', variant === 'compact' && 'post-list-compact']}>
 	{
-		posts.map(async (post, index) => {
-			const { remarkPluginFrontmatter } = await render(post)
-
-			return (
-				<PostCard
-					id={post.id}
-					data={post.data}
-					locale={locale}
-					slug={getPostSlug(post)}
-					readTime={remarkPluginFrontmatter.minutesRead}
-					isPriority={index === 0}
-					variant={variant}
-				/>
-			)
-		})
+		posts.map((post) => (
+			<PostCard
+				data={post.data}
+				slug={getPostSlug(post)}
+				locale={locale}
+				variant={variant}
+				headingLevel={headingLevel}
+			/>
+		))
 	}
-</section>
+</div>

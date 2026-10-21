@@ -177,3 +177,6 @@ Return a concise summary including:
 - Files created or updated.
 - Verification commands run and their results.
 - Any residual risks or follow-up questions.
+
+
+Country-focused article title rule: declare the geographic subjects in frontmatter `countries` using codes from `src/data/countries.json`. Start Japanese titles with those Japanese names joined by `・`, and English titles with those English names joined by ` / `. Put the topic after the country names; do not hide the country behind a metaphor. Match H1 to frontmatter and synchronize country codes between Japanese and English. Broad global comparisons do not need a single-country prefix. Keep historical publication dates when editing existing reports.

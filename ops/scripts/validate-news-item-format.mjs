@@ -69,7 +69,43 @@ function candidateFiles(args) {
 		: positional.length > 0
 			? positional
 			: allNewsIndexFiles()
-	return candidates.filter((file) => NEWS_INDEX_RE.test(file)).sort()
+	const files = candidates.filter((file) => NEWS_INDEX_RE.test(file)).sort()
+	if (!changedOnly) return files
+	const range = positional[0]
+	let baseline = range?.split(/\.{2,3}/)[0] || 'HEAD'
+	if (range?.includes('...')) {
+		const head = range.split('...')[1] || 'HEAD'
+		baseline = execFileSync('git', ['merge-base', baseline, head], { encoding: 'utf8' }).trim()
+	}
+	return files.filter((file) => {
+		let previous
+		try {
+			previous = execFileSync('git', ['show', `${baseline}:${file}`], {
+				encoding: 'utf8',
+				stdio: ['ignore', 'pipe', 'ignore']
+			})
+		} catch {
+			// New articles always receive the current news format checks.
+		}
+		return hasNewsBodyChanges(previous, readFileSync(file, 'utf8'))
+	})
+}
+
+// Editing an archive title must not force a rewrite of an unchanged historical body.
+// New publications and any story/source edits still receive the complete validator.
+export function hasNewsBodyChanges(previous, current) {
+	if (previous === undefined) return true
+	const before = frontmatterOf(previous)
+	const after = frontmatterOf(current)
+	if (readScalar(before, 'draft') === 'true' && readScalar(after, 'draft') !== 'true') return true
+	if (readScalar(before, 'contentType') !== 'news' && readScalar(after, 'contentType') === 'news')
+		return true
+	const body = (source) =>
+		source
+			.replace(/^---\n[\s\S]*?\n---\n?/, '')
+			.replace(/^# .+$/m, '')
+			.trim()
+	return body(previous) !== body(current)
 }
 
 function topicBlocks(lines) {

@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content'
 import BlogPost from '@/layouts/BlogPost'
 import Code from '@/components/mdx/Code'
+import ArticleBodyTitle from '@/components/mdx/ArticleBodyTitle'
 import ListRelatedPosts from '@/components/ListRelatedPosts'
 import FormattedDate from '@/components/FormattedDate'
 import ArticleGenerationModel from '@/components/ArticleGenerationModel'
@@ -68,12 +69,13 @@ const disqusEnabled = disqusConfig.enabled
 	readTime={remarkPluginFrontmatter.minutesRead}
 	locale={locale}
 >
-	<div
-		class='grid grid-cols-1 gap-8 mt-8 lg:grid-cols-[10rem_minmax(0,1fr)_9rem] lg:justify-center xl:grid-cols-[12rem_minmax(0,56rem)_10rem] 2xl:grid-cols-[14rem_minmax(0,62rem)_12rem]'
-	>
-		<aside
-			class='hidden min-w-0 lg:flex flex-col gap-6 pr-5 text-sm text-gray-600 dark:text-gray-400'
-		>
+	<div class='article-layout'>
+		<details class='article-context'>
+			<summary
+				>{
+					locale === 'ja' ? '記事の情報・関連資料' : 'Article information and related reading'
+				}</summary
+			>
 			<div class='sticky top-24 flex w-full min-w-0 flex-col gap-6 self-start'>
 				<section class='flex flex-col gap-2'>
 					<p
@@ -83,7 +85,7 @@ const disqusEnabled = disqusConfig.enabled
 					</p>
 					<div class='flex flex-col gap-1.5 leading-snug'>
 						<span>{post.data.category}</span>
-						<FormattedDate date={post.data.pubDate} />
+						<FormattedDate date={post.data.pubDate} locale={locale} />
 						<span>{remarkPluginFrontmatter.minutesRead}</span>
 					</div>
 				</section>
@@ -166,28 +168,26 @@ const disqusEnabled = disqusConfig.enabled
 
 				<Share title={post.data.title} />
 			</div>
-		</aside>
+		</details>
 
-		<article class='max-w-none w-full'>
-			<div
-				class='prose prose-base md:prose-lg dark:prose-invert mb-12 min-w-full max-w-none prose-p:leading-8 prose-li:leading-8'
-			>
-				<Content components={{ pre: Code, SButton, SourceNote, ArticleFigure }} />
+		<article class='article-content'>
+			<div class='article-prose prose dark:prose-invert'>
+				<Content
+					components={{ h1: ArticleBodyTitle, pre: Code, SButton, SourceNote, ArticleFigure }}
+				/>
 			</div>
 
-			<footer class='lg:hidden'>
+			<footer class='hidden'>
 				<h2 class='font-bold text-lg dark:text-white mb-6'>Related Posts</h2>
 				<ListRelatedPosts posts={relatedPosts} />
 			</footer>
 		</article>
 
-		<aside
-			class='hidden min-w-0 lg:flex flex-col gap-6 pl-2 text-sm text-gray-600 dark:text-gray-400'
-		>
+		<aside class='article-toc'>
 			<div
 				class='sticky top-24 self-start hidden w-full min-w-0 lg:block transition-all duration-200'
 			>
-				{headings && headings.length > 0 && <TableOfContents {headings} />}
+				{headings && headings.length > 0 && <TableOfContents {headings} locale={locale} />}
 			</div>
 		</aside>
 	</div>

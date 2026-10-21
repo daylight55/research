@@ -14,13 +14,16 @@ const {
 
 const { pathname } = Astro.url
 const currentPath = stripLocaleFromPath(pathname)
-const isActive = href === currentPath || href === currentPath.replace(/\/$/, '')
+const isActive =
+	typeof href === 'string' &&
+	(href === currentPath || (href !== '/' && currentPath.startsWith(href.replace(/\/$/, '') + '/')))
 const isInternalPath = typeof href === 'string' && href.startsWith('/')
 const resolvedHref = isInternalPath ? localizedPath(locale, href) : href
 ---
 
 <a
 	href={resolvedHref}
+	aria-current={isActive ? 'page' : undefined}
 	class={cn(isActive ? 'text-opacity-100' : 'text-opacity-60', className)}
 	rel='noopener noreferrer '
 	{...props}

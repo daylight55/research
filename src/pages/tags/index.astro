@@ -7,13 +7,10 @@ const tags = await getTags()
 
 <BaseLayout title='Tags'>
 	<TitlePage title='Tags' />
-	<div class='flex justify-center flex-wrap gap-4'>
+	<div class='tag-index'>
 		{
 			tags.map((tag) => (
-				<a
-					href={withBase(`/tags/${tagSlug(tag)}/`)}
-					class='inline-block bg-gray-200  rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'
-				>
+				<a href={withBase(`/tags/${tagSlug(tag)}/`)} class='tag-index-link'>
 					#{tag}
 				</a>
 			))

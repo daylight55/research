@@ -31,7 +31,7 @@ export default defineConfig({
 	},
 	integrations: [
 		mdx({
-			remarkPlugins: [remarkGlossary, remarkGfm],
+			remarkPlugins: [remarkReadingTime, remarkGlossary, remarkGfm],
 			syntaxHighlight: 'shiki',
 			shikiConfig: {
 				experimentalThemes: {

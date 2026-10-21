@@ -1,0 +1,6 @@
+---
+// The article layout owns the H1. Keep the Markdown title anchor for inbound links.
+const { id } = Astro.props
+---
+
+<span id={id} class='article-title-anchor' aria-hidden='true'></span>

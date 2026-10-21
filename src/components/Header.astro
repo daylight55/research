@@ -2,89 +2,63 @@
 import HeaderLink from '@/components/HeaderLink'
 import LocaleToggle from '@/components/LocaleToggle'
 import MenuIcon from './icons/MenuIcon.astro'
-import NewsIcon from './icons/NewsIcon.astro'
-import ReferenceIcon from './icons/ReferenceIcon.astro'
-import ReportIcon from './icons/ReportIcon.astro'
 import Search from '@/components/Search'
-import TagIcon from './icons/TagIcon.astro'
 import ToggleTheme from './ToggleTheme.astro'
-import { SOCIALNETWORKS } from '@/data/links'
 import { DEFAULT_LOCALE, localizedPath, type Locale } from '@/utils'
-
 const { locale = DEFAULT_LOCALE } = Astro.props as { locale?: Locale }
-const drawerLinkClass =
-	'inline-flex shrink-0 items-center gap-1 whitespace-nowrap text-lg leading-7 md:text-base md:leading-normal [&_svg]:h-6 [&_svg]:w-6'
+const links = [
+	{ href: '/news/', label: 'News' },
+	{ href: '/reports/', label: 'Reports' },
+	{ href: '/reference/', label: 'Reference' },
+	{ href: '/glossary/', label: 'Glossary' },
+	{ href: '/tags/', label: 'Tags' }
+]
 ---
 
-<header class='relative flex h-14 items-center font-semibold'>
-	<a class='text-lg mr-auto' href={localizedPath(locale, '/')}>Home</a>
-
-	<div
-		id='astro-header-drawer'
-		class='shadow rounded-l-lg md:bg-transparent dark:md:bg-transparent bg-white dark:bg-[#0a0910] md:shadow-none md:rounded-none md:border-none md:h-auto md:w-auto md:static absolute transition-transform duration-300 ease-in translate-x-96 md:translate-x-0 top-12 -right-5 pl-4 pt-6 pb-4 md:p-0 h-auto w-[220px] z-50'
+<header class='site-header'>
+	<a class='home-link' href={localizedPath(locale, '/')}>Home</a>
+	<nav
+		class='desktop-navigation'
+		aria-label={locale === 'ja' ? 'メインナビゲーション' : 'Main navigation'}
 	>
-		<nav
-			class='flex h-full flex-col justify-between gap-12 text-left md:flex-row md:w-full md:items-center md:gap-6'
-		>
-			<div
-				class='flex flex-col gap-4 md:flex-row md:flex-nowrap md:items-center md:gap-5 md:border-r md:border-black/70 md:pr-5 dark:md:border-white/70'
-			>
-				<HeaderLink href='/news/' locale={locale} class={drawerLinkClass}>
-					<NewsIcon /> News
-				</HeaderLink>
-				<HeaderLink href='/reports/' locale={locale} class={drawerLinkClass}>
-					<ReportIcon /> Reports
-				</HeaderLink>
-				<HeaderLink href='/reference/' locale={locale} class={drawerLinkClass}>
-					<ReferenceIcon /> Reference
-				</HeaderLink>
-				<HeaderLink href='/glossary/' locale={locale} class={drawerLinkClass}>
-					<ReferenceIcon /> Glossary
-				</HeaderLink>
-				<HeaderLink href='/tags' locale={locale} class={drawerLinkClass}>
-					<TagIcon /> Tags
-				</HeaderLink>
-			</div>
-		</nav>
-	</div>
-
-	<div class='flex shrink-0 items-center gap-2 md:pl-2'>
-		<div class='hidden sm:block'>
-			<LocaleToggle locale={locale} />
-		</div>
 		{
-			SOCIALNETWORKS.map((network) => (
-				<HeaderLink
-					locale={locale}
-					class='inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md transition-colors hover:bg-black/5 dark:hover:bg-white/10 [&_svg]:h-6 [&_svg]:w-6'
-					href={network.url}
-					target='_blank'
-					aria-label={network.name}
-				>
-					<network.icon />
+			links.map((link) => (
+				<HeaderLink href={link.href} locale={locale}>
+					{link.label}
 				</HeaderLink>
 			))
 		}
-		<Search />
+	</nav>
+	<div class='header-tools'>
+		<div class='hidden sm:block'><LocaleToggle locale={locale} /></div>
+		<Search locale={locale} />
 		<ToggleTheme />
-		<button id='astro-header-drawer-button' type='button' class='shrink-0 md:ml-6 md:hidden'>
-			<MenuIcon />
-			<span class='sr-only'>Show Menu</span>
-		</button>
+		<details class='mobile-navigation'>
+			<summary
+				><MenuIcon /><span class='sr-only'>{locale === 'ja' ? 'メニュー' : 'Menu'}</span></summary
+			>
+			<nav aria-label={locale === 'ja' ? 'モバイルナビゲーション' : 'Mobile navigation'}>
+				{
+					links.map((link) => (
+						<HeaderLink href={link.href} locale={locale}>
+							{link.label}
+						</HeaderLink>
+					))
+				}
+			</nav>
+		</details>
 	</div>
 </header>
 <script>
 	document.addEventListener('click', (event) => {
-		const menu = document.getElementById('astro-header-drawer')
-		const menuButton = document.getElementById('astro-header-drawer-button')
-		const isClickInside =
-			menu?.contains(event.target as HTMLDivElement) ||
-			menuButton?.contains(event.target as HTMLButtonElement)
-
-		if (isClickInside) {
-			menu?.classList.toggle('translate-x-96')
-		} else {
-			menu?.classList.add('translate-x-96')
+		const menu = document.querySelector<HTMLDetailsElement>('.mobile-navigation')
+		if (menu?.open && !menu.contains(event.target as Node)) menu.open = false
+	})
+	document.addEventListener('keydown', (event) => {
+		const menu = document.querySelector<HTMLDetailsElement>('.mobile-navigation')
+		if (event.key === 'Escape' && menu?.open) {
+			menu.open = false
+			menu.querySelector('summary')?.focus()
 		}
 	})
 </script>

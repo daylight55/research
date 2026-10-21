@@ -1,0 +1,114 @@
+---
+import BaseLayout from '@/layouts/BaseLayout'
+import ListPosts from '@/components/ListPosts'
+import { Image } from 'astro:assets'
+import { getNewsPosts, getPostUrl, getReportPosts, localizedPath, type Locale } from '@/utils'
+import { formatArticleDate } from '@/utils/archive'
+import { getReferenceItems } from '@/data/references'
+import { siteConfig } from '@/site-config'
+
+const { locale = 'ja' } = Astro.props as { locale?: Locale }
+const ja = locale === 'ja'
+const allNews = await getNewsPosts(undefined, locale)
+const allReports = await getReportPosts(undefined, locale)
+const [leadNews, ...recentNews] = allNews.slice(0, 4)
+const reportPosts = allReports.slice(0, 6)
+const references = getReferenceItems(locale)
+const newsTitle = (title: string) => title.replace(/^\d{4}-\d{2}-\d{2}\s+/, '')
+---
+
+<BaseLayout title='Home' locale={locale}>
+	<section class='atlas-intro'>
+		<h1>{siteConfig.title}</h1>
+		<p>
+			{
+				ja
+					? 'ニュースの変化を追い、調査レポートで背景を読む。'
+					: 'Follow the news. Read the research behind it.'
+			}
+		</p>
+	</section>
+	<section aria-labelledby='home-news-title' class='home-section'>
+		<div class='section-heading'>
+			<h2 id='home-news-title'>{ja ? '最新ニュース' : 'Latest news'}</h2>
+			<a href={localizedPath(locale, '/news/')}
+				>{ja ? `日付から探す・全${allNews.length}件` : `Browse all ${allNews.length} by date`}
+				<span aria-hidden='true'>→</span></a
+			>
+		</div>
+		{
+			leadNews ? (
+				<div class='home-news-layout'>
+					<article class='home-news-lead'>
+						<a class='home-news-image' href={getPostUrl(leadNews)} tabindex='-1' aria-hidden='true'>
+							<Image
+								src={leadNews.data.heroImage}
+								width={720}
+								height={460}
+								format='webp'
+								loading='eager'
+								fetchpriority='high'
+								alt=''
+							/>
+						</a>
+						<div>
+							<time datetime={leadNews.data.pubDate.toISOString()}>
+								{formatArticleDate(leadNews.data.pubDate, locale)}
+							</time>
+							<h3>
+								<a href={getPostUrl(leadNews)}>{newsTitle(leadNews.data.title)}</a>
+							</h3>
+							<p>{leadNews.data.rssSummary ?? leadNews.data.description}</p>
+						</div>
+					</article>
+					<ol class='home-news-recent'>
+						{recentNews.map((post) => (
+							<li>
+								<time datetime={post.data.pubDate.toISOString()}>
+									{formatArticleDate(post.data.pubDate, locale)}
+								</time>
+								<h3>
+									<a href={getPostUrl(post)}>{newsTitle(post.data.title)}</a>
+								</h3>
+							</li>
+						))}
+					</ol>
+				</div>
+			) : (
+				<p>{ja ? '公開中のニュースはありません。' : 'No news has been published yet.'}</p>
+			)
+		}
+	</section>
+	<section aria-labelledby='home-reports-title' class='home-section'>
+		<div class='section-heading'>
+			<h2 id='home-reports-title'>{ja ? '最近の調査レポート' : 'Recent research'}</h2>
+			<a href={localizedPath(locale, '/reports/')}
+				>{
+					ja
+						? `国・テーマから探す・全${allReports.length}件`
+						: `Browse all ${allReports.length} by country or topic`
+				}
+				<span aria-hidden='true'>→</span></a
+			>
+		</div>
+		<ListPosts posts={reportPosts} locale={locale} headingLevel={3} />
+	</section>
+	<section aria-labelledby='home-reference-title' class='home-section'>
+		<div class='section-heading'>
+			<h2 id='home-reference-title'>{ja ? '調べるための資料' : 'Research references'}</h2>
+			<a href={localizedPath(locale, '/reference/')}>Reference <span aria-hidden='true'>→</span></a>
+		</div>
+		<div class='reference-links'>
+			{
+				references.map((item) => (
+					<a href={localizedPath(locale, item.href)}>
+						<>
+							<h3>{item.title}</h3>
+							<p>{item.description}</p>
+						</>
+					</a>
+				))
+			}
+		</div>
+	</section>
+</BaseLayout>

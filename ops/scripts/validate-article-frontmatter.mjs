@@ -54,6 +54,10 @@ function candidateFiles(args) {
 	return candidates.filter((file) => file.endsWith('.mdx')).sort()
 }
 
+const countryNames = JSON.parse(
+	readFileSync(new URL('../../src/data/countries.json', import.meta.url), 'utf8')
+)
+
 function frontmatterOf(source) {
 	const match = source.match(/^---\n([\s\S]*?)\n---/)
 	return match?.[1]
@@ -74,6 +78,28 @@ export function validateArticleFrontmatter({ file, source }) {
 		(error) => `${file}:${errorLine(error)} should contain valid YAML frontmatter: ${error.message}`
 	)
 
+	if (errors.length === 0 && /\/index\.mdx$/.test(file)) {
+		const data = document.toJSON()
+		const heading = source.match(/^# (.+)$/m)?.[1]
+		if (heading && heading !== data.title)
+			errors.push(`${file}: article H1 must match the frontmatter title`)
+		const countries = data.countries ?? []
+		if (data.category === 'country-profiles' && countries.length === 0) {
+			errors.push(`${file}: country profiles must declare countries`)
+		}
+		if (!Array.isArray(countries) || countries.some((code) => !Object.hasOwn(countryNames, code))) {
+			errors.push(`${file}: countries must contain registered country codes`)
+		} else if (new Set(countries).size !== countries.length) {
+			errors.push(`${file}: countries must not contain duplicate codes`)
+		} else if (countries.length) {
+			const locale = file.includes('/en/') ? 'en' : 'ja'
+			const prefix = countries
+				.map((code) => countryNames[code][locale])
+				.join(locale === 'ja' ? '・' : ' / ')
+			if (!String(data.title).startsWith(prefix))
+				errors.push(`${file}: title must start with ${prefix}`)
+		}
+	}
 	return { errors }
 }
 

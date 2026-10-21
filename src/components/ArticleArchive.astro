@@ -1,0 +1,254 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
+import { COUNTRIES, type CountryCode, countryTitlePrefix } from '@/data/countries'
+import { getCategoryLabel } from '@/data/categoryLabels'
+import { getPostUrl, type Locale } from '@/utils'
+import { articleDay, formatArticleDate } from '@/utils/archive'
+
+type Props = { posts: CollectionEntry<'blog'>[]; locale?: Locale; section: 'news' | 'reports' }
+const { posts, locale = 'ja', section } = Astro.props
+const ja = locale === 'ja'
+const categories = [...new Set(posts.map((post) => post.data.category))]
+const countries = [...new Set(posts.flatMap((post) => post.data.countries))].sort((a, b) =>
+	countryTitlePrefix([a], locale).localeCompare(countryTitlePrefix([b], locale), ja ? 'ja' : 'en')
+)
+const months = [...new Set(posts.map((post) => articleDay(post.data.pubDate).slice(0, 7)))]
+	.sort()
+	.reverse()
+---
+
+<article-archive class='article-archive' data-locale={locale} data-section={section}>
+	<form
+		class='archive-controls'
+		data-archive-controls
+		hidden
+		role='search'
+		aria-label={ja ? '記事を絞り込む' : 'Filter articles'}
+	>
+		<div class='archive-query'>
+			<label for='archive-query'>{ja ? 'キーワード' : 'Keyword'}</label>
+			<input
+				id='archive-query'
+				name='q'
+				type='search'
+				placeholder={ja ? 'タイトル・概要・タグから探す' : 'Search titles, summaries and tags'}
+			/>
+		</div>
+		<div>
+			<label for='archive-month'>{ja ? '掲載年月' : 'Published month'}</label>
+			<select id='archive-month' name='month'>
+				<option value=''>{ja ? 'すべての年月' : 'All months'}</option>
+				{months.map((month) => <option value={month}>{month.replace('-', ' / ')}</option>)}
+			</select>
+		</div>
+		{
+			section === 'reports' && (
+				<>
+					<div>
+						<label for='archive-country'>{ja ? '国・地域' : 'Country / region'}</label>
+						<select id='archive-country' name='country'>
+							<option value=''>{ja ? 'すべての国・地域' : 'All countries / regions'}</option>
+							{countries.map((code) => (
+								<option value={code}>{COUNTRIES[code as CountryCode][ja ? 'ja' : 'en']}</option>
+							))}
+						</select>
+					</div>
+					<div>
+						<label for='archive-category'>{ja ? 'カテゴリ' : 'Category'}</label>
+						<select id='archive-category' name='category'>
+							<option value=''>{ja ? 'すべてのカテゴリ' : 'All categories'}</option>
+							{categories.map((category) => (
+								<option value={category}>{getCategoryLabel(category, locale)}</option>
+							))}
+						</select>
+					</div>
+				</>
+			)
+		}
+		<div>
+			<label for='archive-order'>{ja ? '表示順' : 'Order'}</label>
+			<select id='archive-order' name='order'>
+				<option value='newest'>{ja ? '新しい順' : 'Newest first'}</option>
+				<option value='oldest'>{ja ? '古い順' : 'Oldest first'}</option>
+			</select>
+		</div>
+		<button type='reset' class='archive-reset'>{ja ? '条件をクリア' : 'Clear filters'}</button>
+	</form>
+	<div class='archive-status'>
+		<p data-archive-status role='status' aria-live='polite'>
+			{ja ? `${posts.length}件の記事` : `${posts.length} articles`}
+		</p>
+		<p>{ja ? '日付は掲載時点を示します' : 'Dates refer to the time of publication'}</p>
+	</div>
+	<ul class='archive-list' data-archive-list>
+		{
+			posts.map((post) => {
+				const date = articleDay(post.data.pubDate)
+				const countryNames = post.data.countries
+					.map((code) => countryTitlePrefix([code], locale))
+					.join(' ')
+				return (
+					<li
+						data-archive-row
+						data-date={date}
+						data-category={post.data.category}
+						data-countries={post.data.countries.join(' ')}
+						data-search={[
+							post.data.title,
+							post.data.description,
+							...post.data.tags,
+							countryNames
+						].join(' ')}
+					>
+						<article class='archive-entry'>
+							<div class='archive-entry-meta'>
+								<time datetime={post.data.pubDate.toISOString()}>
+									{formatArticleDate(post.data.pubDate, locale)}
+								</time>
+								{section === 'reports' && (
+									<span>{getCategoryLabel(post.data.category, locale)}</span>
+								)}
+							</div>
+							<div class='archive-entry-copy'>
+								<h2>
+									<a href={getPostUrl(post)}>
+										{post.data.title.replace(/^\d{4}-\d{2}-\d{2}\s+/, '')}
+									</a>
+								</h2>
+								<p>{post.data.rssSummary ?? post.data.description}</p>
+							</div>
+							<Image
+								src={post.data.heroImage}
+								width={176}
+								height={120}
+								format='webp'
+								loading='lazy'
+								alt=''
+								class='archive-entry-image'
+							/>
+						</article>
+					</li>
+				)
+			})
+		}
+	</ul>
+	<p data-archive-empty class='archive-empty' hidden>
+		{
+			ja
+				? '条件に一致する記事はありません。キーワードや絞り込み条件を変えてください。'
+				: 'No articles match. Try another keyword or clear the filters.'
+		}
+	</p>
+	<button data-archive-more type='button' class='archive-more' hidden
+		>{ja ? 'さらに表示' : 'Show more'}</button
+	>
+</article-archive>
+
+<script>
+	import { emptyArchiveFilters, filterArchiveEntries, type ArchiveFilters } from '@/utils/archive'
+	class ArticleArchive extends HTMLElement {
+		private popstateHandler?: () => void
+
+		disconnectedCallback() {
+			if (this.popstateHandler) window.removeEventListener('popstate', this.popstateHandler)
+		}
+
+		connectedCallback() {
+			if (this.dataset.ready) return
+			this.dataset.ready = 'true'
+			const form = this.querySelector<HTMLFormElement>('form')!
+			const list = this.querySelector('[data-archive-list]')!
+			const status = this.querySelector('[data-archive-status]')!
+			const empty = this.querySelector<HTMLElement>('[data-archive-empty]')!
+			const more = this.querySelector<HTMLButtonElement>('[data-archive-more]')!
+			const ja = this.dataset.locale === 'ja'
+			const entries = [...this.querySelectorAll<HTMLElement>('[data-archive-row]')].map(
+				(element) => ({
+					element,
+					search: element.dataset.search ?? '',
+					date: element.dataset.date ?? '',
+					category: element.dataset.category ?? '',
+					countries: (element.dataset.countries ?? '').split(' ')
+				})
+			)
+			let shown = 20
+			const getFilters = () => {
+				const data = new FormData(form)
+				return Object.fromEntries(
+					Object.entries(emptyArchiveFilters).map(([key, fallback]) => [
+						key,
+						String(data.get(key) ?? fallback)
+					])
+				) as ArchiveFilters
+			}
+			const update = (writeUrl = false) => {
+				const filters = getFilters()
+				const matches = filterArchiveEntries(entries, filters)
+				entries.forEach(({ element }) => {
+					element.hidden = true
+				})
+				matches.slice(0, shown).forEach(({ element }) => {
+					element.hidden = false
+					list.append(element)
+				})
+				status.textContent = ja
+					? `${matches.length}件中 ${Math.min(shown, matches.length)}件を表示`
+					: `Showing ${Math.min(shown, matches.length)} of ${matches.length} articles`
+				empty.hidden = matches.length > 0
+				more.hidden = matches.length <= shown
+				if (writeUrl) {
+					const url = new URL(location.href)
+					Object.entries(filters).forEach(([key, value]) => {
+						if (value && value !== emptyArchiveFilters[key as keyof ArchiveFilters])
+							url.searchParams.set(key, value)
+						else url.searchParams.delete(key)
+					})
+					history.replaceState(null, '', url)
+				}
+			}
+			const readUrl = () => {
+				const params = new URLSearchParams(location.search)
+				for (const [key, fallback] of Object.entries(emptyArchiveFilters)) {
+					const control = form.elements.namedItem(key)
+					if (control instanceof HTMLInputElement || control instanceof HTMLSelectElement) {
+						control.value = params.get(key) ?? fallback
+					}
+				}
+				shown = 20
+				update()
+			}
+			form.addEventListener('submit', (event) => event.preventDefault())
+			form.addEventListener('input', () => {
+				shown = 20
+				update(true)
+			})
+			form.addEventListener('reset', (event) => {
+				event.preventDefault()
+				for (const [key, value] of Object.entries(emptyArchiveFilters)) {
+					const control = form.elements.namedItem(key)
+					if (control instanceof HTMLInputElement || control instanceof HTMLSelectElement) {
+						control.value = value
+					}
+				}
+				shown = 20
+				update(true)
+			})
+			more.addEventListener('click', () => {
+				const previousCount = shown
+				shown += 20
+				update()
+				const nextLink = [...this.querySelectorAll<HTMLElement>('[data-archive-row]')]
+					.filter((row) => !row.hidden)
+					[previousCount]?.querySelector('a')
+				nextLink?.focus()
+			})
+			this.popstateHandler = readUrl
+			window.addEventListener('popstate', readUrl)
+			form.hidden = false
+			readUrl()
+		}
+	}
+	if (!customElements.get('article-archive'))
+		customElements.define('article-archive', ArticleArchive)
+</script>

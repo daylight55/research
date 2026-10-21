@@ -3,11 +3,15 @@
 
 import '@pagefind/default-ui/css/ui.css'
 import SearchIcon from '@/components/icons/SearchIcon'
+const { locale = 'ja' } = Astro.props
+const ja = locale === 'ja'
 ---
 
 <site-search id='search' class='inline-flex'>
 	<button
 		data-open-modal
+		aria-label={ja ? 'サイト内を検索' : 'Search the site'}
+		type='button'
 		disabled
 		class='flex h-9 w-9 items-center justify-center rounded-md transition-colors hover:bg-black/5 dark:hover:bg-white/10'
 	>
@@ -15,15 +19,15 @@ import SearchIcon from '@/components/icons/SearchIcon'
 		<!-- <span class='md:hidden text-2xl'> Search</span> -->
 	</button>
 	<dialog
-		aria-label='search'
-		class='h-full max-h-full w-full max-w-full border border-zinc-400 bg-white dark:bg-[#0a0910ec] shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0'
+		aria-label={ja ? 'サイト内検索' : 'Site search'}
+		class='h-full max-h-full w-full max-w-full border border-zinc-400 bg-white dark:bg-[#0a0910ec] shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md'
 	>
 		<div class='dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6'>
 			<form method='dialog' class='ms-auto'>
 				<button
 					data-close-modal
 					class='cursor-pointer rounded-full bg-black text-white px-4 py-2 dark:bg-white dark:text-black'
-					>Close</button
+					>{ja ? '閉じる' : 'Close'}</button
 				>
 			</form>
 			{
@@ -45,8 +49,15 @@ import SearchIcon from '@/components/icons/SearchIcon'
 </site-search>
 
 <script>
-	import { animate } from 'motion'
 	class SiteSearch extends HTMLElement {
+		private lifecycle = new AbortController()
+
+		disconnectedCallback() {
+			this.lifecycle.abort()
+			this.querySelector('dialog')?.close()
+			document.body.classList.remove('overflow-hidden')
+		}
+
 		constructor() {
 			super()
 			const openBtn = this.querySelector<HTMLButtonElement>('button[data-open-modal]')!
@@ -75,21 +86,22 @@ import SearchIcon from '@/components/icons/SearchIcon'
 				}
 			}
 			const openModal = (event?: MouseEvent) => {
+				if (!this.isConnected || dialog.open) return
 				dialog.showModal()
 
-				animate(
-					dialog,
-					{
-						clipPath: [
-							'polygon(0 0, 100% 0, 100% -200%, -200% -200%)',
-							'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'
-						],
-						opacity: [0, 1]
-					},
-					{ duration: 0.2 }
-				)
 				document.body.classList.add('overflow-hidden')
-				loadPagefind().then(() => this.querySelector('input')?.focus())
+				loadPagefind()
+					.then(() => {
+						if (dialog.open && this.isConnected) this.querySelector('input')?.focus()
+					})
+					.catch(() => {
+						const container = this.querySelector('#pagefind__search')
+						if (container)
+							container.textContent =
+								document.documentElement.lang === 'ja'
+									? '検索を読み込めませんでした。ページを再読み込みしてください。'
+									: 'Search could not load. Please reload the page.'
+					})
 				event?.stopPropagation()
 				dialog.addEventListener('click', onDialogClick)
 			}
@@ -107,19 +119,33 @@ import SearchIcon from '@/components/icons/SearchIcon'
 				document.body.classList.remove('overflow-hidden')
 				dialog.removeEventListener('click', onDialogClick)
 			})
-			document.addEventListener('astro:after-swap', closeModal)
+			document.addEventListener('astro:after-swap', closeModal, { signal: this.lifecycle.signal })
 
 			// Listen for `/` keyboard shortcut
-			window.addEventListener('keydown', (e) => {
-				if (e.key === '/' && !dialog.open) {
-					openModal()
-					e.preventDefault()
-				}
-			})
+			window.addEventListener(
+				'keydown',
+				(e) => {
+					if (
+						e.key === '/' &&
+						!dialog.open &&
+						!e.ctrlKey &&
+						!e.metaKey &&
+						!e.altKey &&
+						!(
+							e.target instanceof HTMLElement &&
+							(e.target.matches('input, textarea, select') || e.target.isContentEditable)
+						)
+					) {
+						openModal()
+						e.preventDefault()
+					}
+				},
+				{ signal: this.lifecycle.signal }
+			)
 		}
 	}
 
-	customElements.define('site-search', SiteSearch)
+	if (!customElements.get('site-search')) customElements.define('site-search', SiteSearch)
 </script>
 
 <style is:global>

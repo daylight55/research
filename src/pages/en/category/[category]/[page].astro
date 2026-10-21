@@ -1,4 +1,5 @@
 ---
+import { getCategoryLabel } from '@/data/categoryLabels'
 import BaseLayout from '@/layouts/BaseLayout'
 import ListPosts from '@/components/ListPosts'
 import ListCategories from '@/components/ListCategories'
@@ -37,7 +38,7 @@ const posts = page.data
 ---
 
 <BaseLayout title={categoryName} locale={locale}>
-	<TitlePage title={categoryName} />
+	<TitlePage title={getCategoryLabel(categoryName ?? '', 'en')} />
 	<ListCategories activeCategory={params.category} locale={locale} />
 	<ListPosts posts={posts} locale={locale} />
 	<Pagination page={page} />

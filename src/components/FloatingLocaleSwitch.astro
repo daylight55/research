@@ -5,4 +5,4 @@ import { DEFAULT_LOCALE, type Locale } from '@/utils'
 const { locale = DEFAULT_LOCALE } = Astro.props as { locale?: Locale }
 ---
 
-<LocaleToggle locale={locale} variant='floating' />
+<div class='sm:hidden'><LocaleToggle locale={locale} variant='floating' /></div>

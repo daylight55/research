@@ -32,13 +32,21 @@ The conclusions of this report are as follows.
    This report crosses the literature on AI research history, LLM research, knowledge representation, cognitive science, organizational knowledge theory, and agent-based literature. Although not an exhaustive systematic review, we will read the Dartmouth Proposal, Newell and Simon, Rumelhart et al., Vaswani et al., Brown et al., Ouyang et al., Bai et al., Harnad, Gruber, Berners-Lee et al., Nonaka, Graphiti/Zep, Palantir, Anthropic, and MCP specifications in a way that connects them to design decisions for practical implementation.
 
 ```mermaid
-flowchart LR
-  A["AI history"] --> B["LLM structure"]
-  B --> C["Symbol grounding"]
-  C --> D["Ontology"]
-  D --> E["Memory"]
-  E --> F["MCP connections"]
-  F --> G["Evaluation and audit"]
+flowchart TD
+  accTitle: Connect LLMs, ontologies and memory in a workflow
+  accDescr: LLMs generate, ontologies define objects and actions, and memory retains time-linked experience. MCP supplies an interface; approval and evaluation remain separate.
+  N0["LLM<br/>Generation and<br/>reasoning"]
+  N1["Ontology<br/>Objects, links and<br/>actions"]
+  N2["Memory<br/>Experience, time and<br/>sources"]
+  N3["MCP<br/>Retrieval and action<br/>interface"]
+  N4["Workflow proposals and<br/>actions"]
+  N5["Approval, evaluation<br/>and audit"]
+  N1 -->|Meaning and constraints| N0
+  N2 -->|Past context| N0
+  N0 -->|External connection| N3
+  N3 -->|Action request| N4
+  N5 -->|Gate execution| N4
+  N4 -.->|Record outcomes| N2
 ```
 
 ## 2. How should we understand the history of AI?
@@ -56,7 +64,10 @@ The focus in practice after 2024 will shift from a single model to agents, tool 
 
 ```mermaid
 timeline
-  title AI paradigm shifts
+  accTitle: From symbolic AI to externally connected agents
+  accDescr: These approaches coexist rather than simply replacing one another. The timeline marks changes in symbolic representation, learning and external connections.
+  accTitle: From symbolic AI to externally connected agents
+  accDescr: These approaches coexist rather than simply replacing one another. The timeline marks changes in symbolic representation, learning and external connections.
   1950s : Symbolic AI
   1970s : Symbol manipulation
   1980s : Neural network revival
@@ -100,11 +111,20 @@ Source note: [Bender et al. (2021)](https://dl.acm.org/doi/10.1145/3442188.34459
 
 ```mermaid
 flowchart TD
-  T["Input"] --> Tok["Tokenization"]
-  Tok --> Attn["Context processing"]
-  Attn --> Out["Next-token generation"]
-  Out --> Align["Instruction tuning"]
-  Align --> Use["Assisted action"]
+  accTitle: How a trained model generates text
+  accDescr: Input becomes tokens and the model predicts the next token from context. Instruction tuning prepares the model during training rather than occurring as an inference step.
+  N0["Input text and history"]
+  N1["Tokenization and<br/>embeddings"]
+  N2["Context processing"]
+  N3["Next-token<br/>probabilities"]
+  N4["Append to output"]
+  N5["Pretraining and<br/>instruction tuning"]
+  N0 --> N1
+  N1 --> N2
+  N5 -.->|Trained weights| N2
+  N2 --> N3
+  N3 -->|Select| N4
+  N4 -.->|Generate the next token| N2
 ```
 
 ## 4. Where should we find the difference with humans?
@@ -124,11 +144,17 @@ Rather than viewing AI as a replacement for humans, it is important to design it
 
 ```mermaid
 flowchart LR
-  H["Human"] --> HC["Body, purpose, responsibility"]
-  L["LLM"] --> LC["Representation, reasoning, tools"]
-  HC --> G["Understand the gap"]
-  LC --> G
-  G --> D["Design and audit"]
+  accTitle: Compare human and LLM capabilities and responsibility
+  accDescr: Design operations around the distinction between human embodied experience, goals and responsibility, and LLM representation, reasoning and tool use.
+  N0["Human"]
+  N1["Embodied experience,<br/>goals and<br/>responsibility"]
+  N2["LLM"]
+  N3["Representation,<br/>reasoning and tools"]
+  N4["Approval and evaluation<br/>design"]
+  N0 --> N1
+  N2 --> N3
+  N1 -->|Accountability| N4
+  N3 -->|Capabilities and limits| N4
 ```
 
 ## 5. Information that can be input to AI in practice
@@ -159,12 +185,18 @@ Record which results were produced by AI or human decisions. Without this, AI ut
 
 ```mermaid
 flowchart TD
-  D["Documents and data"] --> AI["AI input layer"]
-  BO["Business objects"] --> AI
-  AI --> W["Judgment and proposals"]
-  W --> L["Decision logs"]
-  L --> F["Outcome feedback"]
-  F --> AI
+  accTitle: Connect workflow context with execution results
+  accDescr: Include workflow objects and states alongside documents, then return decision logs and outcomes to future context.
+  N0["Documents and data"]
+  N1["Workflow objects and<br/>state"]
+  N2["Assemble context"]
+  N3["Decisions and proposals"]
+  N4["Decision logs and<br/>outcomes"]
+  N0 --> N2
+  N1 --> N2
+  N2 --> N3
+  N3 -->|Record| N4
+  N4 -.->|Inform future decisions| N2
 ```
 
 ## 6. Symbol grounding method
@@ -182,13 +214,19 @@ Symbolic grounding in practical AI does not necessarily mean having a robot body
    In this perspective, ontology is not a dictionary but a grounding layer that operationalizes organizational reality.
 
 ```mermaid
-flowchart LR
-  S["Symbols<br/>Customer A, incident B, approval C"] --> O["Business objects"]
-  O --> St["State<br/>Open, approved, in incident"]
-  St --> Ac["Actions<br/>Send, approve, recover"]
-  Ac --> Re["Outcomes<br/>Revenue, quality, risk"]
-  Re --> Au["Accountability and audit"]
-  Au --> S
+flowchart TD
+  accTitle: Link symbols to objects, states and actions
+  accDescr: Track what a customer name or incident ID denotes and which action changes its state. Retain outcomes and the responsible actor for audit.
+  N0["Symbols<br/>Customer names,<br/>incident IDs"]
+  N1["Workflow objects and<br/>state"]
+  N2["Permitted actions"]
+  N3["Workflow outcomes"]
+  N4["Actor and change<br/>history"]
+  N0 -->|Define the referent| N1
+  N1 -->|Choose by state| N2
+  N2 -->|Change state| N3
+  N3 -->|Trace and audit| N4
+  N4 -.->|Update state| N1
 ```
 
 ## 7. How to understand ontology
@@ -207,11 +245,18 @@ Source note: The definition that treats ontologies as "explicit specifications" 
 
 ```mermaid
 flowchart TD
-  BO["Business objects"] --> Rel["Relations and state"]
-  BO --> Act["Permitted actions"]
-  Act --> Pol["Permissions and approvals"]
-  Pol --> Aud["Audit logs"]
-  Aud --> FB["Outcome learning"]
+  accTitle: Control ontology actions with permissions
+  accDescr: Object, relationship and state definitions identify possible actions; execution still requires permissions and approval.
+  N0["Objects, relationships<br/>and state"]
+  N1["Candidate actions"]
+  N2["Permissions and<br/>approval"]
+  N3["Authorized execution"]
+  N4["History and outcome<br/>checks"]
+  N0 -->|Possible operations| N1
+  N1 -->|Check before execution| N2
+  N2 -->|Allow| N3
+  N3 -->|Record and verify| N4
+  N4 -.->|Update definitions and<br/>state| N0
 ```
 
 ## 8. Pros and cons of Graphiti's approach
@@ -246,13 +291,21 @@ However, implementing Graphiti does not automatically improve organizational mem
 Graphiti is promising as an external memory for LLM. However, rather than creating a company-wide knowledge base from the beginning, it is preferable to have a PoC with a limited scope. For example, you should start with areas where time change and relationships are important, such as customer service history, troubleshooting, technical research, design decisions, and sales proposals.
 
 ```mermaid
-flowchart LR
-  Src["Conversations, documents, events"] --> Ext["Relation extraction"]
-  Ext --> TKG["Temporal KG"]
-  TKG --> Ctx["Context assembly"]
-  TKG --> Aud["Sources and timestamps"]
-  Ctx --> Agent["LLM Agent"]
-  Aud --> Rev["Human review"]
+flowchart TD
+  accTitle: Retrieve context from memory with time and provenance
+  accDescr: Extract relationships from conversations, documents and events, then return provenance and timestamps with retrieved context.
+  N0["Conversations,<br/>documents, events"]
+  N1["Relationship extraction"]
+  N2["Temporal knowledge<br/>graph"]
+  N3["Context retrieval"]
+  N4["Provenance and validity<br/>time"]
+  N5["LLM context and human<br/>review"]
+  N0 --> N1
+  N1 --> N2
+  N2 --> N3
+  N2 --> N4
+  N3 --> N5
+  N4 -->|Enable verification| N5
 ```
 
 ## 9. Strategies for utilizing tacit knowledge in organizations
@@ -272,13 +325,19 @@ The practical measures are as follows.
 7. **Create a space for re-internalization**: Humans will re-embodi themselves not only through reading documents created by AI, but also through pair work, reviews, role-plays, and reflections.
 
 ```mermaid
-flowchart LR
-  Tacit["Tacit knowledge<br/>Experience, intuition, situational judgment"] --> Capture["Situation capture<br/>Conversations, reviews, incidents"]
-  Capture --> Externalize["Externalization<br/>Issues, criteria, cases"]
-  Externalize --> Structure["Structuring<br/>Objects, relations, state"]
-  Structure --> Reuse["Reuse<br/>Search, suggestions, training"]
-  Reuse --> Internalize["Re-internalization<br/>Practice, review, training"]
-  Internalize --> Tacit
+flowchart TD
+  accTitle: Record tacit knowledge and test it in practice
+  accDescr: Edit recorded situations into decision criteria and cases for retrieval and teaching. Practice after reuse reveals missing context.
+  N0["Record conversations<br/>and decisions"]
+  N1["Edit into criteria and<br/>cases"]
+  N2["Organize objects, links<br/>and state"]
+  N3["Reuse in retrieval and<br/>teaching"]
+  N4["Test conditions and<br/>exceptions"]
+  N0 -->|Externalize| N1
+  N1 -->|Structure| N2
+  N2 -->|Use| N3
+  N3 -->|Internalize| N4
+  N4 -.->|Recover missing context| N0
 ```
 
 ## 10. Connection with the concept of Palantir
@@ -299,12 +358,18 @@ The strength of Palantir-type thinking is that it connects AI to changes in the 
 
 ```mermaid
 flowchart TD
-  Data["Data assets"] --> Ont["Ontology"]
-  Logic["Functions and models"] --> Ont
-  Ont --> Obj["Objects and relations"]
-  Obj --> Act["Actions"]
-  Act --> Ops["Business outcomes"]
-  Ops --> Ont
+  accTitle: Connect data and workflow actions through an ontology
+  accDescr: Connect data and functions to object and relationship definitions, then reflect action outcomes in object state.
+  N0["Data assets"]
+  N1["Functions and models"]
+  N2["Ontology<br/>Objects, links and<br/>actions"]
+  N3["Workflow action"]
+  N4["Outcome and object<br/>state"]
+  N0 -->|Map to definitions| N2
+  N1 -->|Action logic| N2
+  N2 -->|Execute| N3
+  N3 -->|Change| N4
+  N4 -.->|Reflect state| N2
 ```
 
 ## 11. How do you read Anthropic's future roadmap?
@@ -330,12 +395,17 @@ However, you should avoid making a definitive statement that "Anthropic will def
 
 ```mermaid
 flowchart LR
-  MCP["MCP"] --> Conn["Connections"]
-  Skills["Skills"] --> Work["Repeatable procedures"]
-  Sub["Subagents"] --> Team["Distributed execution"]
-  Conn --> Platform["Agent platform"]
-  Work --> Platform
-  Team --> Platform
+  accTitle: Separate the roles of MCP, skills and subagents
+  accDescr: MCP provides connections, skills reusable procedures, and subagents task division. None replaces approval or evaluation.
+  N0["MCP"]
+  N1["Connect external data<br/>and actions"]
+  N2["Skills"]
+  N3["Reusable work<br/>procedures"]
+  N4["Subagents"]
+  N5["Execute delegated tasks"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
 ```
 
 ## 12. To what extent can MCP be used?
@@ -391,11 +461,19 @@ MCP is a "standard for connectivity" and Operational Ontology is "a layer that d
 
 ```mermaid
 flowchart TD
-  Agent["LLM Agent"] --> Client["MCP Client"]
-  Client --> Surface["Tools / Resources"]
-  Surface --> Data["APIs and documents"]
-  Data --> Ont["Ontology"]
-  Ont --> Aud["Audit and approval"]
+  accTitle: Distinguish retrieval from execution through MCP
+  accDescr: Read the path from client to data separately from the approval required for writes.
+  N0["LLM agent and MCP<br/>client"]
+  N1["MCP server<br/>Tools and resources"]
+  N2["APIs, documents and<br/>ontology"]
+  N3["Human approval and<br/>permissions"]
+  N4["Writes and workflow<br/>actions"]
+  N0 -->|Read request| N1
+  N1 -->|Retrieve| N2
+  N2 -->|Return context| N0
+  N0 -->|Action request| N3
+  N3 -->|Authorized scope only| N4
+  N4 -->|Update state| N2
 ```
 
 ## 13. Recommended policy for practical implementation
@@ -438,13 +516,19 @@ The effectiveness of the introduction will be measured not only by the quality o
 8. Zero security incidents
 
 ```mermaid
-flowchart LR
-  Scope["Narrow scope"] --> Build["Small ontology"]
-  Build --> Connect["Connect via MCP"]
-  Connect --> Memory["Temporal Memory PoC"]
-  Memory --> Review["Human Review"]
-  Review --> Metrics["Evaluation metrics"]
-  Metrics --> Expand["Expand only proven areas"]
+flowchart TD
+  accTitle: Evaluate a small pilot before expanding it
+  accDescr: Limit the workflow, pilot connections and memory, then use human review and metrics to decide whether to expand.
+  N0["Bounded workflow and<br/>questions"]
+  N1["Small ontology and MCP<br/>connection"]
+  N2["Temporal memory pilot"]
+  N3["Human review and<br/>metrics"]
+  N4["Expand successful scope"]
+  N0 --> N1
+  N1 --> N2
+  N2 --> N3
+  N3 -->|Verified value| N4
+  N3 -.->|Repair gaps| N1
 ```
 
 ## 14. Final recommendation

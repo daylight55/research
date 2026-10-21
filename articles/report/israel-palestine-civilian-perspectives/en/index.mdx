@@ -37,11 +37,18 @@ The reason to use this lens is that sentiment is not a side effect of politics. 
 
 ```mermaid
 flowchart TD
-    Memory[Loss and memory] --> Threat[Threat perception]
-    Threat --> Security[Security first]
-    Security --> Controls[Movement / surveillance / blockade]
-    Controls --> Daily[Daily pressure]
-    Daily --> Memory
+  accTitle: Loss, perceived threats and restrictions on daily life
+  accDescr: Without equating different communities' experiences, trace how memories of loss, security policies and daily restrictions influence perceived threats.
+  N0["Memories of loss and<br/>harm"]
+  N1["Perceived threats"]
+  N2["Security-first policies"]
+  N3["Movement limits,<br/>surveillance, blockade"]
+  N4["Daily pressures and<br/>further harm"]
+  N0 -->|Background to<br/>interpretation| N1
+  N1 -->|Seeking safety| N2
+  N2 -->|Rules and measures| N3
+  N3 -->|Effects on daily life| N4
+  N4 -.->|Reshape memories| N0
 ```
 
 This diagram shows a loop, not a linear story. Sentiment is reproduced through policy and daily life, then fed back into the next round of politics. <SourceNote>[OCHA updates](https://www.ochaopt.org/), [UNRWA Gaza / West Bank pages](https://www.unrwa.org/), [PCPSR joint poll](https://www.pcpsr.org/en/node/987).</SourceNote>
@@ -54,7 +61,10 @@ Oslo opened a framework for mutual recognition and interim administration, but i
 
 ```mermaid
 timeline
-    title Key Turning Points
+  accTitle: From partition to occupation, negotiations and Gaza's crisis
+  accDescr: Review the milestones that shaped territory, refugees, occupation, autonomy, blockade and the humanitarian crisis.
+  accTitle: From partition to occupation, negotiations and Gaza's crisis
+  accDescr: Review the milestones that shaped territory, refugees, occupation, autonomy, blockade and the humanitarian crisis.
     1947 : Partition plan
     1948 : War and refugee displacement
     1967 : Occupation begins
@@ -108,12 +118,19 @@ The broader lesson is that the surveys do not only show hardening. They also sho
 Sentiment hardens politics not because it is irrational, but because it is tied directly to security, movement, education, return, and trust in governance. For people who have lost homes, peace is not an abstract aim but a promise built on top of the fear of losing again. For people who have experienced hostages or rocket alerts, compromise is also a calculation about recurrence risk. <SourceNote>[OCHA Gaza and West Bank updates](https://www.ochaopt.org/), [IDI, Israeli Voice Index 2025](https://en.idi.org.il/articles/61845), [PCPSR joint poll](https://www.pcpsr.org/en/node/987).</SourceNote>
 
 ```mermaid
-flowchart LR
-    Memory[Repeated memory] --> Fear[Reframed threat]
-    Fear --> Policy[Security-first policy]
-    Policy --> Restrictions[Movement / blockade / surveillance]
-    Restrictions --> Alienation[Alienation and anger]
-    Alienation --> Memory
+flowchart TD
+  accTitle: How memory and security policy can reinforce each other
+  accDescr: This conceptual model links memories of harm, interpretations of threat, and movement, surveillance and blockade policies; it does not represent all residents' views.
+  N0["Memory of harm"]
+  N1["Reinterpretation of<br/>threats"]
+  N2["Policies prioritizing<br/>security"]
+  N3["Movement restrictions,<br/>surveillance, blockade"]
+  N4["Alienation and anger"]
+  N0 --> N1
+  N1 --> N2
+  N2 --> N3
+  N3 -->|Effects on residents| N4
+  N4 -.->|Accumulate new<br/>experiences| N0
 ```
 
 The loop moves in both directions, but in different forms. On the Israeli side, the memory of insufficient protection strengthens security-first politics. On the Palestinian side, the memory of occupation and blockade erodes trust in negotiation. Publicly available information suggests that authorities tend to prioritize fragmented surveillance and punishment over symbolic concessions. In that sense, sentiment is both the foundation of politics and one of the mechanisms by which politics reproduces sentiment. <SourceNote>[ICJ advisory opinion 2024](https://www.icj-cij.org/node/204176), [OCHA updates](https://www.ochaopt.org/), [UNRWA, Palestine refugees](https://www.unrwa.org/palestine-refugees).</SourceNote>

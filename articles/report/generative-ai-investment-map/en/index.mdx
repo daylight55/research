@@ -31,12 +31,20 @@ The conclusion is straightforward. In the short run, the market usually rewards 
 5. The biggest risk is not missing AI demand, but misreading margins, power limits, regulation, and valuation.
 
 ```mermaid
-flowchart LR
-  A["GenAI demand"] --> B["GPU / HBM / Foundry"]
-  B --> C["Cloud / DC"]
-  C --> D["Power / cooling"]
-  C --> E["Software"]
-  E --> F["Security / industrial AI"]
+flowchart TD
+  accTitle: Read generative AI demand by supply-chain layer
+  accDescr: Semiconductors, cloud and data centres, power and cooling, and software face different constraints and returns.
+  N0["Generative AI demand"]
+  N1["Semiconductors<br/>GPU, HBM and foundry"]
+  N2["Cloud and data centres"]
+  N3["Power and cooling"]
+  N4["Workflow software"]
+  N5["Security and industrial<br/>AI"]
+  N0 -->|Compute resources| N1
+  N1 -->|Delivery infrastructure| N2
+  N3 -->|Operating conditions| N2
+  N2 -->|Usage environment| N4
+  N4 -->|Specialized uses| N5
 ```
 
 The diagram is meant to show the capital chain, not a single winner-take-all model race. Even a strong layer can stall if another layer becomes the bottleneck.

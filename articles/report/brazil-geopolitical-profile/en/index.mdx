@@ -30,12 +30,18 @@ Do not read Brazil as if it were only a left-wing government.
 Forest, grain, minerals, ports, urban violence, and the federal budget all interact, and they shape how Brasília handles the United States, China, and South America.
 
 ```mermaid
-flowchart LR
-  A["Lula government"] --> B["Forest and climate"]
-  A --> C["Agribusiness"]
-  A --> D["Congress bargaining"]
-  A --> E["U.S.-China balance"]
-  D --> F["Budget and security"]
+flowchart TD
+  accTitle: Brazil's governing negotiations and policy pressures
+  accDescr: Forest protection, agricultural interests, congressional budgets and US–China relations shape the government's room to act.
+  N0["Lula government"]
+  N1["Forest and climate<br/>policy"]
+  N2["Agricultural interests"]
+  N3["Congress, budget and<br/>security"]
+  N4["Relations with the US<br/>and China"]
+  N0 -->|Policy goals| N1
+  N2 -->|Land and export<br/>bargaining| N0
+  N3 -->|Delivery constraints| N0
+  N4 -->|Market and diplomatic<br/>balance| N0
 ```
 
 ## 2. Historical and Institutional Frame
@@ -46,7 +52,10 @@ That memory left trust in the state and suspicion of the state at the same time.
 
 ```mermaid
 timeline
-  title Brazilian political milestones
+  accTitle: Milestones in Brazil's state formation and democracy
+  accDescr: The chronology links colonization, abolition, republican rule, military government, constitutional democracy and attacks on its institutions.
+  accTitle: Milestones in Brazil's state formation and democracy
+  accDescr: The chronology links colonization, abolition, republican rule, military government, constitutional democracy and attacks on its institutions.
   1500 : Portuguese arrival
   1888 : Abolition
   1889 : Republic
@@ -101,11 +110,20 @@ Indigenous land demarcation is a constitutional right, but in practice it slows 
 Brazil therefore lives with a direct clash between a state goal to protect the Amazon and a farm lobby that wants more grain and beef output.
 
 ```mermaid
-flowchart LR
-  A["Forest protection"] --> B["Rainfall and power"]
-  A --> C["Climate diplomacy"]
-  D["Agricultural exports"] --> E["Foreign exchange and jobs"]
-  D --> F["Land pressure"]
+flowchart TD
+  accTitle: Land use links forest protection and agricultural exports
+  accDescr: Forests affect rainfall, power and climate diplomacy; agricultural exports connect foreign earnings, jobs and land use.
+  N0["Forest protection"]
+  N1["Rainfall and hydropower"]
+  N2["Climate diplomacy"]
+  N3["Agricultural exports"]
+  N4["Foreign earnings and<br/>jobs"]
+  N5["Land-use pressure"]
+  N0 --> N1
+  N0 --> N2
+  N3 --> N4
+  N3 --> N5
+  N5 -.->|Tension with protection| N0
 ```
 
 Brazil’s climate diplomacy does not end with a moral case for forests.
@@ -128,10 +146,17 @@ South American integration matters too, but Mercosur’s institutional strength 
 
 ```mermaid
 flowchart LR
-  A["United States"] --> B["Tariffs and market access"]
-  C["China"] --> D["Commodity demand"]
-  E["BRICS"] --> F["Multipolar bargaining"]
-  G["Mercosur"] --> H["Regional integration"]
+  accTitle: Four negotiating arenas in Brazilian diplomacy
+  accDescr: US markets, Chinese commodity demand, BRICS and Mercosur involve distinct partners and interests.
+  N0["Brazil"]
+  N1["United States<br/>Tariffs and markets"]
+  N2["China<br/>Commodity demand"]
+  N3["BRICS<br/>Multipolar bargaining"]
+  N4["Mercosur<br/>Regional integration"]
+  N0 -->|Market access| N1
+  N0 -->|Export demand| N2
+  N0 -->|Diplomatic forum| N3
+  N0 -->|Regional cooperation| N4
 ```
 
 Brazilian diplomacy is less about picking a camp than about adjusting distance so it can keep options open.

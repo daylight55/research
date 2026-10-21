@@ -28,13 +28,20 @@ draft: false
 <SourceNote>ポランニーの tacit knowing と `from-to` 構造は Polanyi Society の [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) と UChicago Press の [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html) が基本文献である。価値判断が科学実践の一部である点は [The Republic of Science](https://www.nobelprize.org/prizes/economic-sciences/1975/polanyi/lecture/) が示す。言い換えの損失をめぐる認知科学の区別は Martin Davies の [Knowledge, explicit, implicit and tacit](https://mkdavies.net/Martin_Davies/CogSci_files/KnowledgeExpImpTacit.pdf) が有用で、AI 要約の文脈情報喪失は AAAI 2023 の [Few-Shot Long-Document Summarization](https://ojs.aaai.org/index.php/AAAI/article/view/26631) で確認できる。</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["経験・観察"] --> B["周辺手がかり"]
-  B --> C["焦点的把握<br/>focal awareness"]
-  C --> D["包括的理解"]
-  D --> E["言い換え・要約"]
-  E --> F["利得<br/>共有・検索・教育"]
-  E --> G["損失<br/>関係・身体性・価値・文脈"]
+flowchart TD
+  accTitle: 包括的理解を要約すると何が残るか
+  accDescr: 手がかりを統合した判断を短文化すると、共有しやすくなる一方で身体性や状況の関係が抜ける。
+  N0["経験・観察の手がかり"]
+  N1["焦点的な全体の把握"]
+  N2["言い換え・要約"]
+  N3["共有・検索・教育"]
+  N4["身体性・関係・文脈の脱落"]
+  N5["元ケースとの照合"]
+  N0 -->|統合する| N1
+  N1 -->|短文化| N2
+  N2 -->|得られる利点| N3
+  N2 -->|生じうる損失| N4
+  N4 -->|補うための確認| N5
 ```
 
 ## 2. 問題設定
@@ -67,11 +74,16 @@ flowchart LR
 このとき、包括的理解とは単なる「総合」ではない。手がかり同士の関係、注意の配分、失敗しやすい境界、そしてその全体を `comprehensive entity` として捉える統合が含まれる。したがって、言い換えが手がかりを抜き出して別々の命題へ分解すると、総合される前の結びつきが見えなくなる。
 
 ```mermaid
-flowchart TB
-  S["周辺手がかり"] --> I["内在化"]
-  I --> F["焦点的把握"]
-  F --> C["意味ある全体"]
-  C --> J["判断・行為"]
+flowchart TD
+  accTitle: 周辺的な手がかりを焦点的な判断へ統合する
+  accDescr: 手がかりは単独で理解を作らず、内在化を通じて意味のある全体と判断を支える。
+  N0["周辺的な気づき"]
+  N1["内在化"]
+  N2["焦点的な全体"]
+  N3["判断・行為"]
+  N0 -->|手がかりに依拠| N1
+  N1 -->|意味を統合| N2
+  N2 -->|状況に適用| N3
 ```
 
 <SourceNote>Polanyi Society の [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) は、`subsidiary awareness`、`focal awareness`、`comprehensive entity` の関係を説明する。UChicago Press の [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html) は、暗黙知を「語れる以上に知っている」こととして定式化する。Polanyi Society の glossary では、`understanding` をポランニーが用いる最も包括的な知の形として説明している。</SourceNote>
@@ -154,15 +166,18 @@ AI 要約は、検索性と配布効率を上げるが、正本にはできな�
 
 ```mermaid
 sequenceDiagram
+  accTitle: AI要約から原文・実践者へ戻る確認経路
+  accDescr: 読み手は要約から元ケースへ戻り、実践者に反例と適用条件を確認する。
   participant P as 実践者
-  participant S as ソース
+  participant S as 原文・ケース
   participant A as AI要約
   participant R as 読み手
-  P->>S: ケース・発話・判断を記録
-  S->>A: 要約・再表現
-  A->>R: 共有しやすい短文
-  R->>S: 元ケースと原文を参照
-  R->>P: 反例と境界条件を確認
+  P->>S: 場面・発話・判断を記録
+  S->>A: 要約する資料
+  A-->>R: 短い再表現
+  R->>S: 元ケース・原文と照合
+  R->>P: 反例・適用条件を確認
+  P-->>R: 状況・判断条件を補う
 ```
 
 <SourceNote>教育と熟達の観点は [Cognitive Task Analysis](https://journals.sagepub.com/doi/10.1177/10944281241271216) が参考になる。AI 要約の文脈情報喪失は [Few-Shot Long-Document Summarization](https://ojs.aaai.org/index.php/AAAI/article/view/26631) が示しており、要約を正本にしない方がよい理由を補強する。</SourceNote>

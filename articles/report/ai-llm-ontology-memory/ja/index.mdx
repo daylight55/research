@@ -34,13 +34,21 @@ draft: false
 本レポートは、AI研究史、LLM研究、知識表現、認知科学、組織知識論、エージェント基盤の文献を横断する。網羅的なシステマティックレビューではないが、Dartmouth Proposal、Newell and Simon、Rumelhart et al.、Vaswani et al.、Brown et al.、Ouyang et al.、Bai et al.、Harnad、Gruber、Berners-Lee et al.、Nonaka、Graphiti/Zep、Palantir、Anthropic、MCP仕様を、実務導入の設計判断に接続する形で読む。
 
 ```mermaid
-flowchart LR
-  A["AI研究史"] --> B["LLM構造"]
-  B --> C["記号接地"]
-  C --> D["Ontology"]
-  D --> E["Memory"]
-  E --> F["MCP接続"]
-  F --> G["評価・監査"]
+flowchart TD
+  accTitle: LLM・Ontology・Memoryを業務で接続する
+  accDescr: LLMは生成、Ontologyは対象と行為の定義、Memoryは時刻付きの経験保持を担う。MCPは接続面であり、承認と評価を別に設ける。
+  N0["LLM<br/>生成・推論"]
+  N1["Ontology<br/>対象・関係・行為"]
+  N2["Memory<br/>時刻・出典付き経験"]
+  N3["MCP<br/>取得・操作の接続"]
+  N4["業務への提案・実行"]
+  N5["人間承認・評価・監査"]
+  N1 -->|意味と制約| N0
+  N2 -->|過去の文脈| N0
+  N0 -->|外部へ接続| N3
+  N3 -->|操作要求| N4
+  N5 -->|実行を制御| N4
+  N4 -.->|結果を記録| N2
 ```
 
 ## 2. AIの歴史をどう捉えるべきか
@@ -67,7 +75,10 @@ AIの歴史は、単純な「人間に近づく技術の進歩」ではなく、
 
 ```mermaid
 timeline
-  title AIパラダイムの推移
+  accTitle: 記号AIから外部接続するエージェントへ
+  accDescr: 手法は単純に置き換わったのではなく併存している。記号表現、学習、外部接続の節目を時系列で示す。
+  accTitle: 記号AIから外部接続するエージェントへ
+  accDescr: 手法は単純に置き換わったのではなく併存している。記号表現、学習、外部接続の節目を時系列で示す。
   1950s : 記号AI
   1970s : 記号操作
   1980s : NN復興
@@ -119,11 +130,20 @@ Bender et al. (2021) は、大規模言語モデルの環境負荷、データ�
 
 ```mermaid
 flowchart TD
-  T["入力"] --> Tok["トークン化"]
-  Tok --> Attn["文脈処理"]
-  Attn --> Out["次トークン生成"]
-  Out --> Align["指示調整"]
-  Align --> Use["支援行動"]
+  accTitle: 学習済みモデルが文章を生成する流れ
+  accDescr: 入力をトークンに変え、文脈から次のトークンを予測する。指示調整は推論中の工程ではなく、モデルを準備する学習工程である。
+  N0["入力文・履歴"]
+  N1["トークン化・埋め込み"]
+  N2["文脈処理"]
+  N3["次トークンの確率"]
+  N4["出力へ追加"]
+  N5["事前学習・指示調整"]
+  N0 --> N1
+  N1 --> N2
+  N5 -.->|学習済みの重み| N2
+  N2 --> N3
+  N3 -->|選択| N4
+  N4 -.->|次の生成へ| N2
 ```
 
 ## 4. 人間との違いをどこに見出すべきか
@@ -147,11 +167,17 @@ LLMと人間の違いを「人間には心がある、AIにはない」という
 
 ```mermaid
 flowchart LR
-  H["人間"] --> HC["身体・目的・責任"]
-  L["LLM"] --> LC["表現・推論・ツール"]
-  HC --> G["差分の理解"]
-  LC --> G
-  G --> D["設計と監査"]
+  accTitle: 人間とLLMの能力・責任を比較する
+  accDescr: 人間の身体経験・目的・責任と、LLMの表現処理・推論・ツール利用を区別して運用を設計する。
+  N0["人間"]
+  N1["身体経験・目的・責任"]
+  N2["LLM"]
+  N3["表現処理・推論・ツール"]
+  N4["承認・評価の設計"]
+  N0 --> N1
+  N2 --> N3
+  N1 -->|責任を引き受ける| N4
+  N3 -->|能力と限界を確認| N4
 ```
 
 ## 5. 実務でAIにインプット可能な情報
@@ -184,12 +210,18 @@ AIまたは人間の判断が、どの結果を生んだかを記録する。こ
 
 ```mermaid
 flowchart TD
-  D["文書・データ"] --> AI["AI入力層"]
-  BO["業務オブジェクト"] --> AI
-  AI --> W["判断・提案"]
-  W --> L["判断ログ"]
-  L --> F["結果フィードバック"]
-  F --> AI
+  accTitle: 業務の文脈と実行結果を接続する
+  accDescr: 文書だけでなく業務対象と状態を入力に含め、判断ログと結果を次の文脈へ戻す。
+  N0["文書・データ"]
+  N1["業務対象・状態"]
+  N2["文脈を組み立てる"]
+  N3["判断・提案"]
+  N4["判断ログ・実行結果"]
+  N0 --> N2
+  N1 --> N2
+  N2 --> N3
+  N3 -->|記録| N4
+  N4 -.->|次の判断に使う| N2
 ```
 
 ## 6. 記号接地の方法
@@ -211,13 +243,19 @@ LLM時代の記号接地は、古典的な「記号AI対コネクショニズム
 この観点では、オントロジーは辞書ではなく、組織の現実を操作可能にする接地レイヤーである。
 
 ```mermaid
-flowchart LR
-  S["記号<br/>顧客A・障害B・承認C"] --> O["業務オブジェクト"]
-  O --> St["状態<br/>未対応・承認済み・障害中"]
-  St --> Ac["行為<br/>送信・承認・復旧"]
-  Ac --> Re["結果<br/>売上・品質・リスク"]
-  Re --> Au["責任・監査"]
-  Au --> S
+flowchart TD
+  accTitle: 記号を対象・状態・行為へ結び付ける
+  accDescr: 顧客名や障害IDが何を指し、どの操作で状態が変わったかを追えるようにする。結果と実行者を監査に残す。
+  N0["記号<br/>顧客名・障害ID"]
+  N1["業務対象・状態"]
+  N2["許可された行為"]
+  N3["業務上の結果"]
+  N4["実行者・変更履歴"]
+  N0 -->|指す対象を定義| N1
+  N1 -->|状態に応じて選ぶ| N2
+  N2 -->|状態を変える| N3
+  N3 -->|追跡・監査| N4
+  N4 -.->|状態を更新| N1
 ```
 
 ## 7. オントロジーの捉え方
@@ -242,11 +280,18 @@ Palantir FoundryのOntologyはこの点を強く押し出している。Palantir
 
 ```mermaid
 flowchart TD
-  BO["業務オブジェクト"] --> Rel["関係・状態"]
-  BO --> Act["許可された行為"]
-  Act --> Pol["権限・承認"]
-  Pol --> Aud["監査ログ"]
-  Aud --> FB["結果学習"]
+  accTitle: 業務Ontologyの操作を権限で制御する
+  accDescr: 対象・関係・状態の定義から操作候補を得ても、実行には権限と承認が必要になる。
+  N0["業務対象・関係・状態"]
+  N1["操作候補"]
+  N2["権限・承認"]
+  N3["許可された実行"]
+  N4["履歴・結果の検証"]
+  N0 -->|操作可能性| N1
+  N1 -->|実行前に審査| N2
+  N2 -->|許可| N3
+  N3 -->|記録・検証| N4
+  N4 -.->|定義・状態を更新| N0
 ```
 
 ## 8. Graphitiのアプローチの是非
@@ -284,13 +329,21 @@ Graphitiの方向性は、以下の理由で妥当性が高い。
 Graphitiは、LLMの外部記憶として有望である。ただし、最初から全社知識基盤にするのではなく、対象を限定したPoCが望ましい。たとえば、顧客対応履歴、障害対応、技術調査、設計判断、営業提案など、時間変化と関係性が重要な領域から始めるべきである。
 
 ```mermaid
-flowchart LR
-  Src["会話・文書・イベント"] --> Ext["関係抽出"]
-  Ext --> TKG["Temporal KG"]
-  TKG --> Ctx["文脈組み立て"]
-  TKG --> Aud["出典・時刻"]
-  Ctx --> Agent["LLM Agent"]
-  Aud --> Rev["人間レビュー"]
+flowchart TD
+  accTitle: 時刻と出典を持つMemoryから文脈を取得する
+  accDescr: 会話・文書・イベントから関係を抽出し、検索結果と一緒に出典と時刻を返す。
+  N0["会話・文書・イベント"]
+  N1["関係の抽出"]
+  N2["時刻付き知識グラフ"]
+  N3["文脈検索"]
+  N4["出典・有効時刻"]
+  N5["LLMへの文脈・人間確認"]
+  N0 --> N1
+  N1 --> N2
+  N2 --> N3
+  N2 --> N4
+  N3 --> N5
+  N4 -->|検証可能にする| N5
 ```
 
 ## 9. 暗黙知を組織活用する方策
@@ -314,13 +367,19 @@ AI時代の暗黙知活用は、暗黙知を完全に形式知化することで
 7. **再内面化の場を作る**: AIが作った文書を読むだけでなく、ペア作業、レビュー、ロールプレイ、振り返りで人間が再び身体化する。
 
 ```mermaid
-flowchart LR
-  Tacit["暗黙知<br/>経験・勘・状況判断"] --> Capture["場面捕捉<br/>会話・レビュー・障害対応"]
-  Capture --> Externalize["外化<br/>論点・判断基準・ケース"]
-  Externalize --> Structure["構造化<br/>オブジェクト・関係・状態"]
-  Structure --> Reuse["再利用<br/>検索・提案・教育"]
-  Reuse --> Internalize["再内面化<br/>実践・レビュー・訓練"]
-  Internalize --> Tacit
+flowchart TD
+  accTitle: 暗黙知を記録し実践で確かめる
+  accDescr: 場面の記録を判断基準やケースへ編集し、検索・教育に使う。再利用後の実践で抜けた文脈を補う。
+  N0["会話・判断場面を記録"]
+  N1["判断基準・ケースへ編集"]
+  N2["対象・関係・状態で整理"]
+  N3["検索・教育で再利用"]
+  N4["実践で条件・例外を確認"]
+  N0 -->|外化| N1
+  N1 -->|構造化| N2
+  N2 -->|利用| N3
+  N3 -->|再内面化| N4
+  N4 -.->|抜けた文脈を補う| N0
 ```
 
 ## 10. Palantirの概念との関連
@@ -346,12 +405,18 @@ Palantir型の発想の強みは、AIを単なるチャットUIに閉じ込め�
 
 ```mermaid
 flowchart TD
-  Data["データ資産"] --> Ont["Ontology"]
-  Logic["関数・モデル"] --> Ont
-  Ont --> Obj["対象・関係"]
-  Obj --> Act["行為"]
-  Act --> Ops["業務結果"]
-  Ops --> Ont
+  accTitle: Ontologyを介してデータと業務操作を接続する
+  accDescr: データと関数を対象・関係の定義に接続し、操作の結果を対象の状態へ反映する。
+  N0["データ資産"]
+  N1["関数・モデル"]
+  N2["Ontology<br/>対象・関係・操作"]
+  N3["業務操作"]
+  N4["結果・対象の状態"]
+  N0 -->|定義へ接続| N2
+  N1 -->|操作ロジック| N2
+  N2 -->|実行| N3
+  N3 -->|変更| N4
+  N4 -.->|状態を反映| N2
 ```
 
 ## 11. Anthropicの今後のロードマップをどう読むか
@@ -380,12 +445,17 @@ Anthropicの方向性は、モデル単体の性能競争から、業務エー�
 
 ```mermaid
 flowchart LR
-  MCP["MCP"] --> Conn["接続"]
-  Skills["Skills"] --> Work["反復手順"]
-  Sub["Subagents"] --> Team["分担実行"]
-  Conn --> Platform["Agent基盤"]
-  Work --> Platform
-  Team --> Platform
+  accTitle: MCP・Skills・Subagentsの役割を分ける
+  accDescr: MCPは接続、Skillsは再利用する手順、Subagentsは作業分担を担う。いずれも承認や評価の代替にはならない。
+  N0["MCP"]
+  N1["外部データ・操作の接続"]
+  N2["Skills"]
+  N3["再利用する作業手順"]
+  N4["Subagents"]
+  N5["分担した作業の実行"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
 ```
 
 ## 12. MCPでどこまで対応可能か
@@ -444,11 +514,19 @@ MCPは「接続の標準」であり、Operational Ontologyは「接続された
 
 ```mermaid
 flowchart TD
-  Agent["LLM Agent"] --> Client["MCP Client"]
-  Client --> Surface["Tools / Resources"]
-  Surface --> Data["API・文書"]
-  Data --> Ont["Ontology"]
-  Ont --> Aud["監査・承認"]
+  accTitle: MCP越しの取得と実行を区別する
+  accDescr: クライアントから接続先のデータへ到達する経路と、書き込みに必要な承認を分けて読む。
+  N0["LLM Agent・MCP Client"]
+  N1["MCP Server<br/>Tools・Resources"]
+  N2["API・文書・Ontology"]
+  N3["人間承認・権限制御"]
+  N4["書き込み・業務操作"]
+  N0 -->|読み取り要求| N1
+  N1 -->|取得| N2
+  N2 -->|文脈を返す| N0
+  N0 -->|操作要求| N3
+  N3 -->|許可した範囲だけ| N4
+  N4 -->|状態を更新| N2
 ```
 
 ## 13. 実務導入の推奨方針
@@ -494,13 +572,19 @@ flowchart TD
 8. セキュリティインシデントゼロ
 
 ```mermaid
-flowchart LR
-  Scope["限定テーマ"] --> Build["小さなOntology"]
-  Build --> Connect["MCPで接続"]
-  Connect --> Memory["Temporal Memory PoC"]
-  Memory --> Review["Human Review"]
-  Review --> Metrics["評価指標"]
-  Metrics --> Expand["成功領域だけ拡張"]
+flowchart TD
+  accTitle: 小さな実証を評価して拡張を決める
+  accDescr: 対象業務を限定して接続とMemoryを試し、人間レビューと指標で拡張の可否を判断する。
+  N0["限定した業務と問い"]
+  N1["小さなOntology・MCP接続"]
+  N2["時刻付きMemoryの実証"]
+  N3["人間レビュー・評価指標"]
+  N4["成功範囲を拡張"]
+  N0 --> N1
+  N1 --> N2
+  N2 --> N3
+  N3 -->|効果を確認| N4
+  N3 -.->|不足を修正| N1
 ```
 
 ## 14. 最終提言

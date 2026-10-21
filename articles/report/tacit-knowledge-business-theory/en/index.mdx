@@ -27,12 +27,18 @@ The trend in the era of generative AI is not to "extract all tacit knowledge to 
 
 ```mermaid
 flowchart TD
-  A["Practice<br/>Judgment and discomfort"] --> B["Observation<br/>Record clues"]
-  B --> C["Narrative<br/>Own words"]
-  C --> D["Dialogue<br/>Probe reasons"]
-  D --> E["Tentative formalization<br/>Steps and principles"]
-  E --> F["Field validation<br/>Exceptions and counterexamples"]
-  F -. update .-> B
+  accTitle: Turn experience into provisional procedures and revise in practice
+  accDescr: Use observation and practitioner interviews to propose criteria, then test and update them with exceptions and counterexamples.
+  N0["Practical judgments and<br/>mismatches"]
+  N1["Observation and<br/>practitioner accounts"]
+  N2["Explore criteria<br/>through dialogue"]
+  N3["Provisional procedures<br/>and principles"]
+  N4["Test exceptions and<br/>counterexamples"]
+  N0 -->|Record the situation| N1
+  N1 -->|Ask for reasons| N2
+  N2 -->|Externalize| N3
+  N3 -->|Apply| N4
+  N4 -.->|Recover missing<br/>conditions| N1
 ```
 
 ## 2. Definition of tacit knowledge
@@ -73,10 +79,16 @@ A representative theory that spread tacit knowledge in the business field is Non
 
 ```mermaid
 flowchart TD
-  S["Socialization: shared experience"] --> E["Externalization: metaphor and dialogue"]
-  E --> C["Combination: documents and systematization"]
-  C --> I["Internalization: practice and training"]
-  I --> S
+  accTitle: Four knowledge conversions in the SECI model
+  accDescr: Socialization shares experience, externalization uses dialogue, combination organizes knowledge and internalization uses practice. The cycle is a conceptual model.
+  N0["Socialization<br/>Shared experience"]
+  N1["Externalization<br/>Metaphor and dialogue"]
+  N2["Combination<br/>Documents and<br/>organization"]
+  N3["Internalization<br/>Practice and training"]
+  N0 -->|Articulate experience| N1
+  N1 -->|Combine explicit<br/>knowledge| N2
+  N2 -->|Learn through use| N3
+  N3 -.->|Return to shared<br/>experience| N0
 ```
 
 The strength of this model is that it views knowledge not as mere information processing, but as a creative process that extends to individuals, teams, organizations, and between organizations. In particular, his approach to treating tacit knowledge as an object for organizations to design "places", "dialogues", "metaphors", and "practices" rather than confining it to individuals had a major impact on the practice of knowledge management.
@@ -145,12 +157,18 @@ The recommended process is as follows.
 
 ```mermaid
 flowchart TD
-  P["Target work"] --> C["Real cases"]
-  C --> A["Observation and interviews"]
-  A --> K["Knowledge assets<br/>Cases and procedures"]
-  K --> AI["AI support<br/>Search and training"]
-  AI --> V["Field validation"]
-  V -. update .-> A
+  accTitle: Design knowledge assets and AI support from work cases
+  accDescr: Choose a workflow and real cases, turn observation and interviews into knowledge assets, and validate retrieval and training uses in the field.
+  N0["Bound the workflow and<br/>real cases"]
+  N1["Observe and interview"]
+  N2["Case and procedure<br/>knowledge assets"]
+  N3["Use in AI retrieval and<br/>training"]
+  N4["Test value and<br/>exceptions in practice"]
+  N0 -->|Investigate| N1
+  N1 -->|Edit| N2
+  N2 -->|Reuse| N3
+  N3 -->|Evaluate| N4
+  N4 -.->|Update cases| N1
 ```
 
 ## 12. Principles to follow in the AI ​​era

@@ -31,12 +31,19 @@ draft: false
 ## 2. いまの戦況をどう読むか
 
 ```mermaid
-flowchart LR
-    Front[前線の消耗戦] --> Strikes[後方への長距離攻撃]
-    Strikes --> Civilians[民間被害・停電・避難]
-    Civilians --> Support[EU/IMF/復興支援]
-    Support --> Talks[停戦交渉・捕虜交換]
-    Talks --> Front
+flowchart TD
+  accTitle: 前線・後方攻撃・支援・交渉を分けて読む
+  accDescr: 前線と後方への攻撃、民間生活、軍事・財政支援、交渉は並行して進む。単純な一巡の循環として扱わない。
+  N0["前線の消耗戦"]
+  N1["後方への長距離攻撃"]
+  N2["民間被害・停電・避難"]
+  N3["軍事・財政・復興支援"]
+  N4["停戦交渉・捕虜交換"]
+  N0 -->|生活・居住への被害| N2
+  N1 -->|インフラへの被害| N2
+  N3 -->|防衛を支える| N0
+  N3 -->|生活と復旧を支える| N2
+  N4 -.->|停止・縮小を交渉| N0
 ```
 
 この戦争は、単純な「占領線の前進」ではなく、前線の圧力、都市への長距離攻撃、経済・電力インフラへの打撃、そして支援と交渉の循環で動いている。したがって、1日の前進・後退だけを見るより、どの戦域で損耗が積み上がっているか、どの攻撃が民間生活に波及しているか、そして支援がどの期間をつなぐのかで理解したほうが正確である。<SourceNote>[OHCHR civilian casualty update](https://www.ohchr.org/en/news/2026/05/ukraine-civilian-casualty-update-april-2026), [Reuters front-line reporting](https://www.investing.com/news/world-news/ukraine-war-live-russia-and-ukraine-to-hold-talks-after-brief-ceasefire-3959412), [EU/IMF/World Bank support links](https://www.consilium.europa.eu/en/press/press-releases/2026/04/23/council-finalises-90-billion-support-loan-to-ukraine/).</SourceNote>

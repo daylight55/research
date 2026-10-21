@@ -33,15 +33,16 @@ Source Note: The functions of proxy forces are supported by US Treasury and Stat
 
 ```mermaid
 timeline
-    title Key turning points in Iran nuclear, sanctions, and proxy issues
-    2015 : JCPOA adopted: nuclear limits, monitoring, sanctions relief exchanged
-    2016 : Implementation Day: IAEA monitoring and verification begin in full
-    2018 : US withdraws from JCPOA and reimposes sanctions
-    2021 : Iran halts JCPOA performance and provisional application of the Additional Protocol
-    2025-05 : IAEA reports expanded high-enrichment stockpile
-    2025-06 : Iranian nuclear sites attacked, turning the issue into direct military risk
-    2025-09 : UN and EU reimpose sanctions
-    2026 : Sanctions pressure and limited negotiations continue
+  accTitle: Iran's nuclear agreement, withdrawal and monitoring changes
+  accDescr: The chronology traces how limits, verification and sanctions relief changed with US withdrawal, suspended commitments, facility attacks and renewed sanctions.
+  2015 : JCPOA agreed
+  2016 : Monitoring and verification
+  2018 : US withdrawal and sanctions
+  2021 : Suspended commitments; monitoring limits
+  2025-05 : Highly enriched stockpile grows
+  2025-06 : Nuclear facilities attacked
+  2025-09 : UN and EU sanctions return
+  2026 : Sanctions pressure and limited talks
 ```
 
 The JCPOA was a "trade-off" that granted sanctions relief in exchange for restricting Iran's enrichment, centrifuges, inventories, and verification for a period of time. In other words, it is not a treaty that will finally resolve nuclear weapons, but a political deal to buy time. The deal collapsed when the US withdrew in 2018, and Iran gradually removed the cap.
@@ -87,13 +88,18 @@ Sanctions have an impact on the domestic economy not only by reducing government
 Source note: The World Bank describes constraints on Iran's economy as a combination of sanctions, as well as conflict, water and energy shortages, and social unrest [World Bank, Iran overview](https://www.worldbank.org/ext/en/country/iran). "Direct spillover" here refers to price increases and supply disruptions of import-dependent goods.
 
 ```mermaid
-flowchart LR
-    A[Sanctions and shipping controls] --> B[Foreign-currency income destabilizes]
-    B --> C[Currency weakness and higher import costs]
-    C --> D[Inflation and lower real income]
-    D --> E[Household burden and frustration build]
-    E --> F[Protests and security tightening]
-    F --> A
+flowchart TD
+  accTitle: How sanctions transmit pressure to households
+  accDescr: Export and payment constraints reach households through foreign earnings, currency and import costs. Protest and repression are not inevitable results.
+  N0["Sanctions, export and<br/>payment limits"]
+  N1["Unstable foreign<br/>earnings"]
+  N2["Currency weakness and<br/>import costs"]
+  N3["Inflation and falling<br/>real income"]
+  N4["Household grievances<br/>and political pressure"]
+  N0 --> N1
+  N1 --> N2
+  N2 --> N3
+  N3 -->|One source of<br/>grievances| N4
 ```
 
 In its 2026 briefing, the World Bank expects real GDP to contract by 2.7% in 2025/26, as sanctions, conflict, social unrest, and water and energy shortages weigh on activity. This shows that Iran's economy is not simply "sustainable because it has resources," but is constrained by vulnerabilities in export channels, payments, and domestic supplies.
@@ -116,18 +122,22 @@ Publicly available information suggests that proxy forces will be used for both 
 Source Note: This paragraph is an estimate based on the sanctions announcement above. The reason for clearly stating that it is an estimate is because the full details of funding, command, and decision-making cannot be determined from public information alone.
 
 ```mermaid
-flowchart TB
-    Iran[Iranian state\nIRGC-QF] --> Funding[Funds, weapons, training, technical support]
-    Funding --> Hizb[Hezbollah]
-    Funding --> Houthis[Houthis]
-    Funding --> Iraq[Iran-aligned Iraqi militias]
-    Hizb --> Israel[Tension with Israel]
-    Houthis --> SeaLanes[Red Sea and Bab el-Mandeb]
-    Iraq --> USforces[US forces and security bodies in Iraq]
-    Israel --> Escalation[Retaliation, sanctions, military pressure]
-    SeaLanes --> Escalation
-    USforces --> Escalation
-    Escalation --> Iran
+flowchart LR
+  accTitle: Iran's supported groups and regional friction
+  accDescr: Read support for Hezbollah, the Houthis and Iraqi militias alongside distinct tensions involving Israel, Red Sea shipping and US forces in Iraq.
+  N0["Iran<br/>IRGC and Quds Force"]
+  N1["Hezbollah"]
+  N2["Houthis"]
+  N3["Iran-aligned Iraqi<br/>militias"]
+  N4["Tensions with Israel"]
+  N5["Red Sea shipping<br/>disruption"]
+  N6["Tensions with US forces<br/>in Iraq"]
+  N0 -->|Funding, arms and<br/>training| N1
+  N0 -->|Arms and technical<br/>support| N2
+  N0 -->|Funding and training| N3
+  N1 --> N4
+  N2 --> N5
+  N3 --> N6
 ```
 
 ## 7. Conflict between Israel and the Gulf States

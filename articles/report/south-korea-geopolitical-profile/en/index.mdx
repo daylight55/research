@@ -35,7 +35,10 @@ The result is that South Korean news often looks like separate stories about dip
 
 ```mermaid
 timeline
-  title Key political milestones
+  accTitle: Milestones in Korean division, war and democratization
+  accDescr: Review liberation and division, state formation, war, democratization and the recent government chronologically.
+  accTitle: Milestones in Korean division, war and democratization
+  accDescr: Review liberation and division, state formation, war, democratization and the recent government chronologically.
   1945 : Liberation and division
   1948 : Republic founded
   1950 : Korean War
@@ -73,11 +76,19 @@ By 2025, the Korea-Japan relationship had moved past the 60th anniversary of nor
 
 ```mermaid
 flowchart LR
-  A["US-ROK alliance"] --> B["Deterrence of North Korea"]
-  A --> C["Advanced-industry cooperation"]
-  D["China"] --> E["Largest trading partner"]
-  F["Japan"] --> G["Practical cooperation"]
-  H["Domestic division"] --> A
+  accTitle: South Korea's US alliance, China trade and Japan cooperation
+  accDescr: North Korean deterrence, advanced industries, Chinese markets and Japanese cooperation involve distinct interests; domestic politics affects continuity.
+  N0["US–South Korea alliance"]
+  N1["North Korean deterrence<br/>and advanced industry"]
+  N2["China"]
+  N3["Trade relations"]
+  N4["Japan"]
+  N5["Practical cooperation"]
+  N6["Domestic political<br/>division"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
+  N6 -.->|Policy-continuity<br/>constraints| N0
 ```
 
 The diagram shows that South Korea’s foreign relations move as a bundle of alliances, trade, memory, and deterrence rather than as a single diplomatic line. <SourceNote>This is an analytical inference from public information.</SourceNote>

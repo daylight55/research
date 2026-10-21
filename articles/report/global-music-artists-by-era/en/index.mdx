@@ -26,10 +26,17 @@ This is not a strict ranking. The selections combine sales, chart performance, c
 
 ```mermaid
 flowchart LR
-  A["Market scale"] --> E["Representative value"]
-  B["Charts"] --> E
-  C["Genre formation"] --> E
-  D["Global spillover"] --> E
+  accTitle: Compare musical influence across four dimensions
+  accDescr: Market size, charts, genre formation and international reach measure different achievements. No single ranking captures representation.
+  N0["Assess representation"]
+  N1["Market scale<br/>Sales and listening"]
+  N2["Charts<br/>Contemporary popularity"]
+  N3["Genre formation<br/>Influence on later<br/>artists"]
+  N4["International reach<br/>Reception across<br/>regions"]
+  N1 -->|Commercial record| N0
+  N2 -->|Support at the time| N0
+  N3 -->|Artistic contribution| N0
+  N4 -->|Cross-border impact| N0
 ```
 
 ## 2. United States

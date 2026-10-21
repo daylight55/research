@@ -27,10 +27,17 @@ The Commons numbers make the government look stable. The post-May 2026 local and
 
 ```mermaid
 flowchart TD
-  A["Large Commons majority"] --> D["Delivery burden"]
-  B["Narrow fiscal room"] --> D
-  C["Public-service pressure"] --> D
-  D --> E["Government rating"]
+  accTitle: The UK government's seats and constraints on delivery
+  accDescr: A Commons majority supports legislation, while fiscal room and public-service demand constrain delivery.
+  N0["Large Commons majority"]
+  N1["Basis for legislation<br/>and delivery"]
+  N2["Limited fiscal room"]
+  N3["Pressure on public<br/>services"]
+  N4["Assessment of<br/>government delivery"]
+  N0 -->|Parliamentary support| N1
+  N1 -->|Delivery responsibility| N4
+  N2 -->|Spending limits| N4
+  N3 -->|Demand for improvement| N4
 ```
 
 ## 2. Party Distribution

@@ -44,13 +44,14 @@ Source note: 1980s purges and 1988 genocide see [OHCHR 特別報告者の2024年
 
 ```mermaid
 timeline
-    title Repetition of civic repression and protest in post-revolution Iran
-    1979-1988 : Post-revolution purges, opposition exclusion, 1988 mass executions
-    1999 : Student movement against campus and press repression
-    2009 : Green Movement after disputed election claims
-    2019 : Fuel-price protests, internet shutdowns, broad gunfire
-    2022-2024 : Women, Life, Freedom。Women's rights and regime criticism combine
-    2025-2026 : Executions rise, women's control continues, minority repression persists
+  accTitle: Major episodes of protest and repression in Iran
+  accDescr: Student, electoral, fuel-price and women's-rights protests differ in triggers and participants. Distinguish these differences from recurring repression.
+  1979–1988 : Purges, opposition exclusion and executions
+  1999 : Student protests and repression
+  2009 : Green Movement
+  2019 : Fuel protests, internet shutdown and shootings
+  2022–2024 : Woman, Life, Freedom
+  2025–2026 : Executions, controls on women and minorities
 ```
 
 ## 4. Purges and executions of political prisoners in the 1980s
@@ -85,25 +86,22 @@ In 2026, Human Rights Watch reports that compulsory hijab, arbitrary detention, 
 Source note: The main sources after 2022 are [OHCHR 2024年更新報告](https://www.ohchr.org/sites/default/files/documents/hrbodies/hrcouncil/ffmi-iran/FFM-Iran-Update-13-September-2024.pdf) and [Human Rights Watch, World Report 2026: Iran](https://www.hrw.org/world-report/2026/country-chapters/iran). The compulsory hijab, its impact on education, the workplace, and mobility, and the pressure on minorities can generally be traced through these two books.
 
 ```mermaid
-flowchart LR
-    subgraph Repression["Institutional repression"]
-        A["Supreme Leader / Guardian Council"] --> B["Candidate exclusion and bill review"]
-        A --> C["Judiciary, intelligence, IRGC"]
-        C --> D["Detention / torture / forced confession"]
-        C --> E["Execution / long sentences / disappearance"]
-        C --> F["Internet shutdown / censorship / surveillance"]
-        C --> G["Mandatory hijab / morality police"]
-    end
-    subgraph Resistance["Social resistance"]
-        H["Students"] --> I["Campus protests"]
-        J["Women"] --> K["Dress resistance and street action"]
-        L["Workers"] --> M["Strikes"]
-        N["Ethnic minorities"] --> O["Local protests"]
-        P["Exile media / NGOs / UN"] --> Q["Documentation, accusation, visibility"]
-    end
-    D -.pushback.-> I
-    E -.pushback.-> K
-    F -.pushback.-> Q
+flowchart TD
+  accTitle: Institutional repression, civic resistance and documentation
+  accDescr: Students, women, workers and minorities resist electoral exclusion, judicial and security pressure, and information controls in different ways; outside organizations document abuses.
+  N0["Guardian Council<br/>Candidate and bill<br/>review"]
+  N1["Judiciary, intelligence<br/>and IRGC"]
+  N2["Detention, execution,<br/>surveillance"]
+  N3["Students, women,<br/>workers, minorities"]
+  N4["Protest, dress<br/>resistance, strikes"]
+  N5["NGOs, exile media and<br/>UN"]
+  N6["Documentation and<br/>reporting"]
+  N0 -.->|Restrict institutional<br/>participation| N3
+  N1 -->|Enforce| N2
+  N2 -.->|Repress| N3
+  N3 -->|Resist| N4
+  N4 -->|Testimony and records| N6
+  N5 -->|Investigate and publish| N6
 ```
 
 ## 9. Citizen narratives, exile media, and the limits of UN reporting

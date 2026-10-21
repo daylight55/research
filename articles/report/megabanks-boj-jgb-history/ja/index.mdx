@@ -26,6 +26,10 @@ draft: false
 
 ```mermaid
 timeline
+  accTitle: 金融危機から資本注入・銀行再編へ
+  accDescr: 危機の顕在化、法整備、公的資金、金融緩和、統合の時期を区別する。
+  accTitle: 金融危機から資本注入・銀行再編へ
+  accDescr: 危機の顕在化、法整備、公的資金、金融緩和、統合の時期を区別する。
   1997 : 金融不安が表面化
   1998 : 金融再生法・早期健全化法
   1999 : 主要15行へ資本注入
@@ -42,11 +46,18 @@ timeline
 この流れの中で銀行は、自己資本を厚くし、不良債権を処理し、システム投資や国際業務を支える規模を確保する必要に迫られた。みずほは第一勧業銀行、富士銀行、日本興業銀行の統合で2000年に持株会社を作り、2002年に銀行機能を再編した。三井住友銀行は住友銀行とさくら銀行の2001年合併で発足した。三菱UFJは、三菱東京フィナンシャル・グループとUFJグループの2005年統合、2006年の銀行合併で現在の形に近づいた。<SourceNote>各社の沿革は [Mizuho Financial Group, Our History](https://www.mizuhogroup.com/who-we-are/company-information/history)、[SMBC Group, The 20-Year History of SMBC Group](https://www.smfg.co.jp/english/chronicle20/company/smbc.html)、[MUFG EMEA, Introducing MUFG Bank](https://www.mufgemea.com/mufg-bank/) を参照。</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["不良債権"] --> B["自己資本不足"]
-  B --> C["公的資金注入"]
-  C --> D["再編・統合"]
-  D --> E["三大グループ"]
+flowchart TD
+  accTitle: 不良債権処理と銀行統合の関係
+  accDescr: 不良債権で傷んだ自己資本を公的資金で補い、再編を通じて三大グループが成立した経路を示す。
+  N0["不良債権の増加"]
+  N1["自己資本の不足"]
+  N2["公的資金による資本注入"]
+  N3["銀行の再編・統合"]
+  N4["三大金融グループ"]
+  N0 -->|損失の拡大| N1
+  N1 -->|健全化| N2
+  N2 -->|再建と統合| N3
+  N3 -->|統合の結果| N4
 ```
 
 ## 3. 公的資金注入はどう資金化されたのか

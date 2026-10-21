@@ -26,12 +26,20 @@ draft: false
 2024年総選挙で、BJPは単独過半数を失い、NDA連立で政権を維持した。これはモディ首相の権威消失ではなく、州政党、連立相手、地方利害が中央政治へ戻ったことを意味する。<SourceNote>[Election Commission of India, General Elections](https://www.eci.gov.in/general-elections)、[Results of the 2024 Indian general election](https://en.wikipedia.org/wiki/Results_of_the_2024_Indian_general_election) は、NDA 293議席、BJP 240議席という結果を示す。</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["中央政権"] --> B["成長戦略"]
-  A --> C["安全保障"]
-  C --> D["中国・パキスタン"]
-  B --> E["雇用・インフラ"]
-  A --> F["連立調整"]
+flowchart TD
+  accTitle: インドの成長・安全保障・連立政治
+  accDescr: 雇用とインフラの成長課題、中国・パキスタンへの安全保障、連立調整が中央政権の政策を形作る。
+  N0["中央政権"]
+  N1["雇用・インフラ・成長"]
+  N2["中国・パキスタン<br/>安全保障"]
+  N3["連立相手・議会"]
+  N4["政策の実行余地"]
+  N0 -->|成長政策| N1
+  N0 -->|対外・防衛政策| N2
+  N3 -->|支持・調整| N0
+  N1 --> N4
+  N2 --> N4
+  N3 --> N4
 ```
 
 ## 2. 歴史と政治体制
@@ -40,7 +48,10 @@ flowchart LR
 
 ```mermaid
 timeline
-  title インド政治の節目
+  accTitle: インドの独立・戦争・経済自由化の節目
+  accDescr: 独立と分割、周辺国との戦争、経済自由化、政権と議会基盤の変化を並べる。
+  accTitle: インドの独立・戦争・経済自由化の節目
+  accDescr: 独立と分割、周辺国との戦争、経済自由化、政権と議会基盤の変化を並べる。
   1947 : 独立と分割
   1962 : 対中戦争
   1971 : バングラデシュ独立戦争

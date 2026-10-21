@@ -22,13 +22,19 @@ Source note: The Bank of Japan explains that monetary policy is conducted with t
 This mechanism is not a simple straight line. When wages rise, households' purchasing power increases, but companies' labor costs also rise. As the yen depreciates, import prices tend to rise, pushing up the cost of living. When governments and authorities intervene by selling dollars and buying yen, the aim is to suppress the yen's depreciation and cushion the rise in import prices. However, foreign exchange intervention alone cannot eliminate fundamental factors such as interest rate differentials and trade balances.
 
 ```mermaid
-flowchart LR
-  P["Inflation pressure"] --> R["Rate hikes"]
-  R --> B["Higher borrowing costs"]
-  B --> D["Demand restraint"]
-  D --> S["Slower price growth"]
-  R --> FX["Spillover to FX and bonds"]
-  FX --> S
+flowchart TD
+  accTitle: How rate increases reach prices through demand and exchange rates
+  accDescr: Separate demand restraint through borrowing costs from exchange-rate and asset-price channels. Transmission takes time.
+  N0["Central-bank rate<br/>increase"]
+  N1["Lending and market<br/>rates"]
+  N2["Reduced consumption and<br/>investment"]
+  N3["Exchange rates and<br/>asset prices"]
+  N4["Changes in price<br/>pressure"]
+  N0 -->|Borrowing costs| N1
+  N1 -->|Spending decisions| N2
+  N0 -->|Relative returns and<br/>valuation| N3
+  N2 -->|Effects with a lag| N4
+  N3 -->|Import prices and other<br/>channels| N4
 ```
 
 ## 2. Terms to know first
@@ -52,12 +58,18 @@ Source note: The Fed explains that interest rates spill over into the cost of bo
 On the other hand, lowering interest rates makes it easier to borrow money. It will be easier for households to buy housing and durable consumer goods, and it will be easier for companies to increase capital investment and hiring. This effect is useful when the economy is weak. However, if demand is too strong, it will cause inflation and asset prices to rise.
 
 ```mermaid
-flowchart TB
-  A["Rate hikes"] --> B["Market rates rise"]
-  B --> C["Spillover to households and firms"]
-  C --> D["Consumption and investment slow"]
-  D --> E["Demand cools"]
-  E --> F["Price pressure weakens"]
+flowchart TD
+  accTitle: The demand channel from policy rates to prices
+  accDescr: Rates affect demand through market financing and household and business spending. A hike does not immediately reduce prices.
+  N0["Policy-rate increase"]
+  N1["Market rates and<br/>borrowing costs"]
+  N2["Household and business<br/>spending"]
+  N3["Consumption, investment<br/>and demand"]
+  N4["Easing price pressure"]
+  N0 -->|Transmission| N1
+  N1 -->|Financing becomes<br/>costlier| N2
+  N2 -->|Restrain spending| N3
+  N3 -->|With a time lag| N4
 ```
 
 Interest rate policy works with a time lag. Raising interest rates today does not mean that all prices will fall tomorrow. It works over months or years through variable rate loans, corporate refinancing, foreign exchange, wage negotiations, and corporate pricing changes.
@@ -82,13 +94,20 @@ Debt is debt. When interest rates rise, the burden increases for new borrowers, 
 In household finances, the burden of housing loans and credit card loans increases. For companies, it affects the profitability of bank loans, corporate bonds, and capital investment. For the government, interest payments on national bonds are likely to increase. However, not all debts will be affected at the same time. For long-term fixed-rate debt, the impact is delayed until maturity or refinancing.
 
 ```mermaid
-flowchart LR
-  R["Higher interest rates"] --> HH["Households: mortgages and consumer loans"]
-  R --> CO["Firms: bank loans, bonds, investment returns"]
-  R --> GOV["Government: debt rollover and interest payments"]
-  HH --> DEM["Consumption restraint"]
-  CO --> INV["Investment and hiring restraint"]
-  GOV --> FISC["Reduced fiscal room"]
+flowchart TD
+  accTitle: How higher rates affect households, firms and government
+  accDescr: Mortgage costs, capital spending and government refinancing transmit burdens through different channels and at different times.
+  N0["Higher interest rates"]
+  N1["Households<br/>Loan payment burdens"]
+  N2["Firms<br/>Borrowing, bonds,<br/>investment returns"]
+  N3["Government<br/>Interest costs on<br/>refinancing"]
+  N4["Consumption,<br/>investment, fiscal room"]
+  N0 -->|Variable-rate exposure| N1
+  N0 -->|Financing costs| N2
+  N0 -->|Transmission on<br/>refinancing| N3
+  N1 -->|Pressure on consumption| N4
+  N2 -->|Investment and hiring<br/>changes| N4
+  N3 -->|Budget constraints| N4
 ```
 
 What is easy to misunderstand here is that "interest rate hikes are not just an issue for people who are in debt." If companies pass on increased borrowing costs to prices, it will affect consumers. If the government's interest payments increase, it will affect future tax and spending discussions. If banks' lending stance becomes stricter, it will also affect the employment of people who are not in debt.
@@ -114,13 +133,18 @@ Source note: The Ministry of Finance publishes its track record of foreign excha
 Foreign exchange intervention is not price policy itself. The purpose is to suppress excessive fluctuations in the foreign exchange market. Although it affects prices through import prices, its role is different from that of the central bank's interest rate policy. In particular, when the difference in interest rates between Japan and the US is large, it becomes more attractive to invest in dollars, and pressure on the yen to depreciate remains. Although intervention can temporarily change the flow, it is not a means to completely eliminate interest rate differentials and market expectations.
 
 ```mermaid
-flowchart TB
-  A["High US rates"] --> B["Buy dollars, sell yen"]
-  B --> C["Yen weakness, dollar strength"]
-  C --> D["Higher import prices"]
-  D --> E["Domestic price pressure"]
-
-  F["Intervention: yen-buying demand"] --> C
+flowchart TD
+  accTitle: Interest differentials, exchange rates and import prices
+  accDescr: Relatively high US rates can support dollar demand; yen-buying intervention acts in the other direction. Interest differentials do not determine exchange rates alone.
+  N0["Relatively high US<br/>interest rates"]
+  N1["Demand for dollar<br/>assets"]
+  N2["Yen depreciation<br/>pressure"]
+  N3["Import costs and<br/>domestic prices"]
+  N4["Yen-buying intervention"]
+  N0 -->|Yield differential| N1
+  N1 -->|Dollar buying and yen<br/>selling| N2
+  N2 -->|Import channel| N3
+  N4 -.->|Demand in the opposite<br/>direction| N2
 ```
 
 ## 8. Chains that are especially easy to see in Japan
@@ -131,14 +155,20 @@ Second, whether wages catch up with prices will determine how people feel about 
 Third, the impact on the government bond market is significant. In an economy with long periods of low interest rates, interest rate hikes have a wide impact on financial institutions' bond valuations, government interest payments, and corporate borrowing costs. Raising interest rates may be necessary to keep prices in check, but the side effects of raising interest rates are also significant.
 
 ```mermaid
-flowchart LR
-  FX["Yen weakness"] --> IMP["Higher import prices"]
-  IMP --> CPI["Domestic inflation"]
-  CPI --> W["Wage pressure"]
-  W --> PT["Price pass-through"]
-  PT --> CPI
-  CPI --> BOJ["BOJ decision"]
-  BOJ --> FX
+flowchart TD
+  accTitle: Where yen depreciation, wages and prices meet BOJ decisions
+  accDescr: Distinguish import-price effects of yen depreciation from wage and price-setting feedback. The BOJ considers both in its outlook.
+  N0["Yen depreciation"]
+  N1["Import prices"]
+  N2["Domestic prices"]
+  N3["Wages and price setting"]
+  N4["BOJ outlook and<br/>decisions"]
+  N0 -->|Import costs| N1
+  N1 -->|Pass-through| N2
+  N2 -->|Wage pressure| N3
+  N3 -->|Costs and prices| N2
+  N2 -->|Evidence for policy| N4
+  N4 -.->|Policy expectations<br/>affect FX| N0
 ```
 
 ## 9. Common misconceptions

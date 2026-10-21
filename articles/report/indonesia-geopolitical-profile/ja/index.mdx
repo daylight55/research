@@ -28,12 +28,18 @@ draft: false
 この国を見るときは、民主化の成功例かどうかだけでなく、巨大な人口と鉱物資源を制度と雇用に変えられるかを読むほうがよい。
 
 ```mermaid
-flowchart LR
-  A["島嶼と人口"] --> B["分権と多元性"]
-  B --> C["非同盟外交"]
-  A --> D["若年雇用圧力"]
-  D --> E["資源・産業政策"]
-  C --> E
+flowchart TD
+  accTitle: インドネシアの島嶼・雇用・産業政策
+  accDescr: 地理的な多様性は分権に、若い人口は雇用需要に関わる。資源政策と非同盟外交をこれらと結び付けて読む。
+  N0["島嶼の多様性・若い人口"]
+  N1["分権・多元性"]
+  N2["若年雇用の需要"]
+  N3["資源・産業政策"]
+  N4["非同盟外交"]
+  N0 -->|統治の条件| N1
+  N0 -->|雇用の圧力| N2
+  N2 -->|産業育成| N3
+  N4 -->|提携・投資の選択| N3
 ```
 
 この図は、インドネシアの対外行動が国内の人口圧力と産業政策に引っ張られていることを示している。<SourceNote>[BPS-Statistics Indonesia](https://www.bps.go.id/en/) と [Kemlu](https://www.kemlu.go.id/berita/siaran-pers/Pages/berita/menlu-sugiono-pada-jakarta-geopolitical-forum-multilateralisme-tidak-bisa-berjalan-autopilot?type=publication) を踏まえた構図であり、政策の連動は公表情報からの推定である。</SourceNote>
@@ -50,7 +56,10 @@ flowchart LR
 
 ```mermaid
 timeline
-  title インドネシア政治の節目
+  accTitle: インドネシアの独立から改革・政権継承へ
+  accDescr: 独立、1998年改革、直接選挙、近年の政権継承とBRICS加盟を年代順に示す。
+  accTitle: インドネシアの独立から改革・政権継承へ
+  accDescr: 独立、1998年改革、直接選挙、近年の政権継承とBRICS加盟を年代順に示す。
   1945 : 独立宣言
   1998 : 改革
   2004 : 直接選挙の定着

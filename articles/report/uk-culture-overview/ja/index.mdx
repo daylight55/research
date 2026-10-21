@@ -22,12 +22,20 @@ draft: false
 イギリス文化は、単一の「英国らしさ」ではなく、England、Scotland、Wales、Northern Ireland、移民コミュニティ、階級、地域、メディア、帝国の記憶、都市と地方の生活が重なった文化である。王室、議会、紅茶、パブ、サッカー、BBC、British Museum、文学、ロック音楽だけを並べても足りない。むしろ英国文化の特徴は、古い制度と現代的多様性が同時に存在することにある。
 
 ```mermaid
-flowchart TD
-  A["地域性"] --> E["英国文化"]
-  B["階級と教育"] --> E
-  C["言語と宗教"] --> E
-  D["メディアと産業"] --> E
-  F["帝国の記憶"] --> E
+flowchart LR
+  accTitle: 英国文化を地域・階級・歴史の重なりで読む
+  accDescr: 構成国、教育と階級、言語・宗教、メディア産業、帝国の記憶は、英国文化を読む異なる入口になる。
+  N0["英国文化の見取り図"]
+  N1["構成国・地域性"]
+  N2["階級・教育"]
+  N3["言語・宗教"]
+  N4["メディア・文化産業"]
+  N5["帝国と移民の記憶"]
+  N0 -->|場所| N1
+  N0 -->|社会階層| N2
+  N0 -->|日常の実践| N3
+  N0 -->|流通と表現| N4
+  N0 -->|歴史的な背景| N5
 ```
 
 英国文化を理解する入口は、言語である。英語は世界語であり、英国の文化輸出の基盤である。一方、WalesのWelsh、ScotlandのGaelicとScots、Northern IrelandのIrishやUlster Scotsは、単なる方言や観光資源ではなく、地域アイデンティティ、教育、公共表示、放送、政治意識に結びつく。2021年Censusでは、Walesの3歳以上の17.8%、約538,000人がWelshを話せると回答した。Scotlandの2022年Censusでは、3歳以上の2.5%がGaelic技能を持ち、46.2%がScots技能を持つとされた。<SourceNote>[ONS, Welsh language, Wales: Census 2021](https://www.ons.gov.uk/peoplepopulationandcommunity/culturalidentity/language/bulletins/welshlanguagewales/census2021), [Scotland's Census 2022, Ethnic group, national identity, language and religion](https://www.scotlandscensus.gov.uk/2022-reports/scotland-s-census-2022-ethnic-group-national-identity-language-and-religion/) に基づく。</SourceNote>

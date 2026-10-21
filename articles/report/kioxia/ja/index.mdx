@@ -45,12 +45,20 @@ draft: false
 この表が重要なのは、キオクシアの評価で混同しやすい数字が三種類あるためである。第一は連結製造事業の収益力、第二は持株会社単体の配当・資本返還による利益、第三は外部市場調査会社が推定するNAND市場シェアやベンダー売上である。これらを一つの「純利益が何倍」という言葉にまとめると、事業の実力と会計上の見え方を取り違える。
 
 ```mermaid
-flowchart TB
-  A["NANDの源流"] --> B["Kioxia"]
-  B --> C["製造基盤 / WD連携"]
-  B --> E["BiCS / SSD"]
-  E --> F["AI・クラウド需要"]
-  F --> G["市況リスク"]
+flowchart TD
+  accTitle: キオクシアの製造・製品・需要の接点
+  accDescr: NAND技術と製造連携を基盤にSSDを供給する。AI・クラウド需要の伸びとNAND市況の変動は分けて評価する。
+  N0["NANDの研究・製造基盤"]
+  N1["キオクシア"]
+  N2["製造連携"]
+  N3["BiCS NAND・SSD"]
+  N4["AI・クラウドの需要"]
+  N5["NANDの需給・価格"]
+  N0 -->|事業基盤| N1
+  N2 -->|製造能力| N1
+  N1 -->|製品化| N3
+  N4 -->|必要容量・性能| N3
+  N5 -.->|収益の変動| N1
 ```
 
 ## 2. 会社の位置付け
@@ -86,12 +94,21 @@ AIデータセンター向けには、二つの製品方向が見える。第一
 <SourceNote>5TB/64GB/s/40W未満、PCIe 6.0、128Gbps PAM4、NEDO委託事業は [Kioxia high-bandwidth flash memory module announcement, 2025-08-20](https://www.kioxia.com/en-jp/about/news/2025/20250820-1.html)。</SourceNote>
 
 ```mermaid
-flowchart TB
-  A["BiCS NAND"] --> B["CBA"]
-  B --> C["TLC / QLC"]
-  C --> D["SSD制御"]
-  D --> E["Enterprise / 大容量SSD"]
-  C --> F["HBF試作 / AI需要"]
+flowchart TD
+  accTitle: NAND構造からSSD製品へ至る技術要素
+  accDescr: BiCS、CBA、TLC・QLC、コントローラは役割が異なる。SSD製品とHBF試作を同じ成熟段階として扱わない。
+  N0["BiCS NAND<br/>3D NANDの構造"]
+  N1["CBA<br/>接合による構成"]
+  N2["TLC・QLC<br/>セルの記録密度"]
+  N3["コントローラ・SSD製品"]
+  N4["企業・大容量ストレージ"]
+  N5["HBF試作<br/>別の開発段階"]
+  N0 -->|構造の進化| N1
+  N0 -->|記録方式| N2
+  N1 -->|製品設計| N3
+  N2 -->|制御・性能との調整| N3
+  N3 -->|用途| N4
+  N0 -.->|技術展開| N5
 ```
 
 ## 4. 需給と業績

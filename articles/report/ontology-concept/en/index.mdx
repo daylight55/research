@@ -30,11 +30,17 @@ The conclusions of this report are as follows.
 
 ```mermaid
 flowchart TD
-  Phil["Philosophical ontology"] --> KR["Knowledge representation"]
-  KR --> Web["Semantic Web"]
-  Web --> KG["Knowledge Graph"]
-  KG --> Ops["Business ontology"]
-  Ops --> AI["LLM use"]
+  accTitle: Objects, relationships and constraints defined by an ontology
+  accDescr: Go beyond a vocabulary list to define objects, relationships, constraints and responsibility for revision.
+  N0["Ontology<br/>Domain definitions"]
+  N1["Classes and objects"]
+  N2["Relationships<br/>What connects to what"]
+  N3["Constraints and axioms<br/>Conditions that must<br/>hold"]
+  N4["Provenance, revision<br/>and governance"]
+  N0 -->|What exists| N1
+  N0 -->|How it relates| N2
+  N0 -->|What is valid| N3
+  N4 -->|Manage definitions| N0
 ```
 
 ## 2. First of all, what is confusing?
@@ -74,37 +80,18 @@ In practice, an ontology consists of the following elements:
 As you can see from this list, ontology is not a "dictionary that explains the meaning of words". If you just want to define a vocabulary, a controlled vocabulary is sufficient. If only hierarchical classification is required, taxonomy is sufficient. If only the data item type and required conditions are required, schema is sufficient. Ontologies include these and specify how to conceptualize the domain and which relationships and constraints are to be treated as legitimate.
 
 ```mermaid
-classDiagram
-  class Ontology {
-    +Domain scope
-    +CompetencyQuestion[] questions
-    +Class[] classes
-    +Relation[] relations
-    +Axiom[] axioms
-    +Constraint[] constraints
-    +ProvenancePolicy provenance
-    +GovernancePolicy governance
-  }
-  class ConceptClass {
-    +name
-    +definition
-    +synonyms
-    +examples
-  }
-  class Relation {
-    +domain
-    +range
-    +meaning
-    +cardinality
-  }
-  class Constraint {
-    +target
-    +rule
-    +severity
-  }
-  Ontology --> ConceptClass
-  Ontology --> Relation
-  Ontology --> Constraint
+flowchart TD
+  accTitle: Ontology components and their definitions
+  accDescr: Start with scope and questions, then define class meaning, relationship scope, constraints, provenance and revision policy.
+  N0["Scope and competency<br/>questions"]
+  N1["Classes<br/>Names, definitions,<br/>examples"]
+  N2["Relationships<br/>Domain, range,<br/>cardinality"]
+  N3["Constraints<br/>Target, rule, severity"]
+  N4["Provenance and revision<br/>policy"]
+  N0 --> N1
+  N0 --> N2
+  N0 --> N3
+  N4 -->|Manage changes and<br/>evidence| N0
 ```
 
 Noy and McGuinness describe ontology development as a process of defining a target area and purpose, listing important terms, and iteratively creating class hierarchies, properties, constraints, and instances, rather than a definition process that can be completed in one go. The first question to ask is not "How can I completely classify the world?" but "What questions do I want to answer with this ontology?" These questions are called competency questions.
@@ -145,13 +132,20 @@ RDF is a data model, OWL is an ontology language, and SHACL is a verification la
 Source note: W3C [RDF 1.1 Primer](https://www.w3.org/TR/rdf-primer/) describes RDF statements as triples of subject, predicate, and object. W3C [OWL 2 Primer](https://www.w3.org/TR/owl-primer/) describes OWL as an ontology language for the Semantic Web that deals with classes, properties, individuals, and data values. W3C [SHACL](https://www.w3.org/TR/shacl/) is defined as a constraint language that validates RDF graphs against shapes graphs.
 
 ```mermaid
-flowchart LR
-  RDF["RDF<br/>Graph data model"] --> RDFS["RDFS<br/>Basic vocabulary and class hierarchy"]
-  RDFS --> OWL["OWL 2<br/>Logical expression and reasoning"]
-  RDF --> SPARQL["SPARQL<br/>Query"]
-  RDF --> SKOS["SKOS<br/>Classification and thesaurus"]
-  RDF --> SHACL["SHACL<br/>Data validation"]
-  Vocab["schema.org vocabularies"] --> RDF
+flowchart TD
+  accTitle: Distinguish RDF-related standards by purpose
+  accDescr: RDF represents data; RDFS and OWL provide vocabulary and reasoning; SPARQL queries, SKOS organizes concepts and SHACL validates.
+  N0["RDF<br/>Graph representation"]
+  N1["RDFS and OWL<br/>Vocabulary, classes,<br/>reasoning"]
+  N2["SPARQL<br/>Querying"]
+  N3["SKOS<br/>Concept schemes and<br/>thesauri"]
+  N4["SHACL<br/>Data validation"]
+  N5["Vocabularies such as<br/>schema.org"]
+  N0 -->|Define meaning| N1
+  N0 -->|Query| N2
+  N0 -->|Organize concepts| N3
+  N0 -->|Check conditions| N4
+  N5 -->|Reuse terms| N0
 ```
 
 OWL 2 has multiple profiles. OWL 2 EL, QL, and RL make certain reasoning tasks more pragmatically tractable at the cost of limiting their expressive power. This is a counterexample to the idea that a more rigorous ontology is always better. When designing an ontology, it is necessary to choose the degree of formality according to the questions to be answered, the amount of data, the need for inference, the frequency of updates, and the skills of the operator.
@@ -185,10 +179,18 @@ Rather than directly erasing the weaknesses of LLM, ontology creates a scaffoldi
 
 ```mermaid
 flowchart TD
-  Ctx["Requirements and knowledge"] --> LLM["LLM"]
-  LLM --> Draft["Proposals and answers"]
-  Draft --> Val["Validation"]
-  Val --> Human["Human approval"]
+  accTitle: Validate and approve an LLM proposal
+  accDescr: Validate a proposal against constraints and evidence before a human approves execution.
+  N0["Requirements and domain<br/>knowledge"]
+  N1["LLM proposal or answer"]
+  N2["Evidence and constraint<br/>checks"]
+  N3["Human approval"]
+  N4["Execution or use"]
+  N0 -->|Generate| N1
+  N1 -->|Check| N2
+  N2 -->|Passes checks| N3
+  N3 -->|Authorize| N4
+  N2 -.->|Revise on failure| N1
 ```
 
 ## 9. Operational ontology in business AI
@@ -198,13 +200,17 @@ Palantir Foundry Ontology brings this idea to the fore. It includes not only sem
 Source note: Palantir [Ontology overview](https://www.palantir.com/docs/foundry/ontology/overview) explains that Ontology sits on top of datasets, virtual tables, and models and connects them to real-world objects. Palantir [Platform overview](https://www.palantir.com/docs/foundry/platform-overview/overview) describes Actions as corporate verbs that persist decisions into ontology or external systems.
 
 ```mermaid
-flowchart LR
-  Data["Data sources"] --> Obj["Business object"]
-  Obj --> Links["Relations"]
-  Obj --> State["State"]
-  State --> Act["Actions"]
-  Act --> Audit["Audit"]
-  Audit --> Obj
+flowchart TD
+  accTitle: Update workflow object state through actions and audit
+  accDescr: Read relationships and state, execute a permitted action and retain its change history as state is updated.
+  N0["Data sources"]
+  N1["Workflow objects<br/>Relationships and state"]
+  N2["Permitted actions"]
+  N3["Change history and<br/>audit"]
+  N0 -->|Map to objects| N1
+  N1 -->|State-dependent action| N2
+  N2 -->|Who changed what| N3
+  N3 -.->|Reflect state| N1
 ```
 
 This idea is not unique to Palantir. All platforms face the same issues in safely running business AI. Even if you can search for documents using RAG, whether the search results are currently valid, who can see them, and what operations they can be used for are other issues. Ontology makes these "meaning," "state," "possibility of action," and "responsibility" into one design target.
@@ -267,11 +273,18 @@ The initial constraints may be fewer.
 
 ```mermaid
 flowchart TD
-  Scope["Define scope"] --> CQ["Set questions"]
-  CQ --> Model["Concepts and relations"]
-  Model --> Rule["Add constraints"]
-  Rule --> Review["Domain review"]
-  Review --> Iterate["Revision"]
+  accTitle: Design a small ontology around questions it must answer
+  accDescr: Choose scope and questions first, add concepts, relationships and constraints, then revise after domain review.
+  N0["Choose scope and<br/>questions"]
+  N1["Define concepts and<br/>relationships"]
+  N2["Add required<br/>constraints"]
+  N3["Domain-expert review"]
+  N4["Revise definitions"]
+  N0 --> N1
+  N1 --> N2
+  N2 -->|Check against cases| N3
+  N3 -->|Repair gaps and<br/>contradictions| N4
+  N4 -.->|Reconsider scope| N0
 ```
 
 ## 11. How formal should it be?
@@ -288,15 +301,21 @@ Failures in ontology design arise from both under-formalization and over-formali
 For knowledge management by individuals or small teams, it is better to create an ontology lite in Markdown/JSON/YAML and graph only the necessary relationships, rather than suddenly defining all concepts in OWL. Consider RDF/OWL/SHACL when you need large-scale interoperability, external exposure, connectivity with standard vocabularies, and logical reasoning.
 
 ```mermaid
-flowchart TD
-  Q["Define purpose"] --> Tax["Classification only"]
-  Q --> KG["Relation exploration"]
-  Q --> Val["InputValidation"]
-  Q --> Ops["Business operations"]
-  Tax --> Gov["Revision and governance"]
-  KG --> Gov
-  Val --> Gov
-  Ops --> Gov
+flowchart LR
+  accTitle: Choose the degree of formalization for the goal
+  accDescr: Classification, relationship exploration, input validation and workflow operations need different forms. All require revision and governance.
+  N0["Classify"]
+  N1["Taxonomy and vocabulary"]
+  N2["Explore relationships"]
+  N3["Knowledge graph"]
+  N4["Validate input"]
+  N5["Constraints and<br/>validation rules"]
+  N6["Operate a workflow"]
+  N7["Objects, permissions<br/>and actions"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
+  N6 --> N7
 ```
 
 ## 12. Risks and limitations
@@ -335,12 +354,19 @@ The recommendations are as follows.
 6. Consider OWL only when logical reasoning and rigorous interoperability with external vocabularies are needed.
 
 ```mermaid
-graph TD
-  Topic["Ontology article"] --> Claims["Key claims"]
-  Claims --> Sources["Sources"]
-  Claims --> Risks["Over-formalization"]
-  Claims --> Decision["Start lightweight"]
-  Decision --> Review["Continuous review"]
+flowchart TD
+  accTitle: Check claims, evidence and scope in ontology adoption
+  accDescr: Start with a lightweight model, check sources and over-formalization costs, and adjust scope through continued review.
+  N0["Bounded workflow<br/>question"]
+  N1["Supporting sources and<br/>cases"]
+  N2["Try a lightweight model"]
+  N3["Value and formalization<br/>costs"]
+  N4["Continued review and<br/>scope revision"]
+  N0 -->|Investigate| N1
+  N1 -->|Build definitions| N2
+  N2 -->|Application results| N3
+  N3 -->|Decide whether to<br/>continue| N4
+  N4 -.->|Adjust scope| N0
 ```
 
 As a minimal implementation, a frontmatter like the one below is quite valuable.

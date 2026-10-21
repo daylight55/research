@@ -34,13 +34,15 @@ EU は財政支援と訓練の重心を担っている。2026年4月には、EU�
 
 ```mermaid
 flowchart LR
-    NATO[NATO: 調整・標準化]
-    EU[EU: 財政・訓練]
-    States[各国: 装備・資金]
-    Ukraine[ウクライナ]
-    NATO --> Ukraine
-    EU --> Ukraine
-    States --> Ukraine
+  accTitle: NATO・EU・各国のウクライナ支援を分ける
+  accDescr: NATOの調整・標準化、EUの財政・訓練、各国の装備・資金は異なる経路でウクライナを支える。
+  N0["NATO<br/>調整・標準化"]
+  N1["EU<br/>財政・訓練"]
+  N2["各国<br/>装備・資金"]
+  N3["ウクライナ"]
+  N0 -->|調整する| N3
+  N1 -->|支える| N3
+  N2 -->|供与する| N3
 ```
 
 NATO は「資金の財布」ではなく、同盟国の支援を束ねる制度設計の場である。NATO 公式資料では、NATO 自体は NSATU、CAP、JATEC、PURL などを通じて支援の調整、訓練、機材の標準化を担い、実際の供給の大半は加盟国とパートナー国が負担している。したがって、読者が「NATO がどれだけ拠出したか」を見るだけでは、実態の半分しか見えない。<SourceNote>[NATO, Ukraine support and NATO's role](https://www.nato.int/cps/en/natohq/topics_192648.htm), [NATO Summit declaration](https://www.nato.int/cps/en/natohq/official_texts_236621.htm).</SourceNote>

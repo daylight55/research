@@ -29,13 +29,20 @@ draft: false
 日本にとって重要なのは、湾岸を「富裕で安定した地域」とだけ見ないことである。エネルギー、港湾、建設、物流、観光、スポーツ、データセンター、金融の案件では、労働監督、人権デューデリジェンス、輸出管理、対外評判のリスクが一緒に動く。近代化の看板が大きいほど、内部統制も強いという前提で見ておいた方が安全である。<SourceNote>[Human Rights Watch, World Report 2026](https://www.hrw.org/world-report/2026) と [ILO Qatar programme](https://www.ilo.org/beirut/whatwedo/projects/WCMS_885822/lang--en/index.htm) に基づく。</SourceNote>
 
 ```mermaid
-flowchart LR
-  R["資源収入"] --> S["国家の配分力"]
-  S --> C["市民への便益"]
-  S --> L["移民労働依存"]
-  S --> P["政治参加の制限"]
-  S --> I["対外イメージ戦略"]
-  I --> D["投資・観光・スポーツ"]
+flowchart TD
+  accTitle: 湾岸国家の資源収入・配分・統治
+  accDescr: 資源収入は市民向け便益と投資を支えるが、移民労働への依存や政治参加の制限も別に検討する必要がある。
+  N0["資源収入"]
+  N1["国家の配分力"]
+  N2["市民向け便益"]
+  N3["移民労働への依存"]
+  N4["投資・観光・スポーツ"]
+  N5["政治参加の制限"]
+  N0 -->|財源| N1
+  N1 -->|給付・雇用| N2
+  N1 -->|経済多角化・対外発信| N4
+  N3 -->|労働供給| N4
+  N1 -.->|配分と統治の関係| N5
 ```
 
 この図は、湾岸の統治を「石油で豊か」という一語で片づけないための最小モデルである。資源収入は、便益供与、移民労働の制度化、政治参加の制限、対外イメージづくりを同時に支える。<SourceNote>[World Bank, GCC Economies Update](https://www.worldbank.org/en/region/mena/publication/gcc-economies-update)、[Freedom House country reports](https://freedomhouse.org/countries/freedom-world/scores) に基づく。</SourceNote>

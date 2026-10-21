@@ -29,7 +29,10 @@ Source note: The framework of the Constitution is based on [Constitute Project, 
 
 ```mermaid
 timeline
-    title Institutionalization after 1979
+  accTitle: Institutional formation and constitutional revision after Iran's revolution
+  accDescr: Distinguish the 1979 institutional foundation, the 1989 redesign and the later consolidation of candidate vetting.
+  accTitle: Institutional formation and constitutional revision after Iran's revolution
+  accDescr: Distinguish the 1979 institutional foundation, the 1989 redesign and the later consolidation of candidate vetting.
     1979 : Revolutionary constitution established
     1989 : Constitutional revision
     1990s : Gatekeeping entrenched
@@ -56,21 +59,21 @@ The following is a correspondence table of the minimum number of institutions th
 Source note: The above table was organized by comparing [Constitute Project の憲法本文](https://www.constituteproject.org/constitution/Iran_1989?lang=en) with [USIP Iran Primer: The Supreme Leader](https://iranprimer.usip.org/resource/supreme-leader), [The Guardian Council](https://iranprimer.usip.org/resource/guardian-council), [The Judiciary](https://iranprimer.usip.org/resource/judiciary), [The Assembly of Experts](https://iranprimer.usip.org/resource/assembly-experts), [The Islamic Revolutionary Guard Corps](https://iranprimer.usip.org/resource/islamic-revolutionary-guard-corps).
 
 ```mermaid
-flowchart TB
-    ExpertAssembly["Assembly of Experts"]
-    SupremeLeader["Supreme Leader"]
-    GuardianCouncil["Guardian Council"]
-    Elected["President and parliament"]
-    IRGC["Revolutionary Guard (IRGC)"]
-    Elections["Elections and referendums"]
-
-    ExpertAssembly --> SupremeLeader
-    SupremeLeader --> GuardianCouncil
-    SupremeLeader --> IRGC
-    SupremeLeader --> Elected
-    GuardianCouncil --> Elections
-    Elections --> Elected
-    Elections --> ExpertAssembly
+flowchart TD
+  accTitle: Leadership selection, candidate vetting and elections in Iran
+  accDescr: Distinguish Assembly selection and supervision, the leader's appointment powers, Guardian Council candidate vetting and popular elections.
+  N0["Popular elections"]
+  N1["Assembly of Experts"]
+  N2["Supreme leader"]
+  N3["Guardian Council"]
+  N4["President and<br/>parliament"]
+  N5["IRGC"]
+  N0 -->|Elect| N1
+  N1 -->|Select and supervise| N2
+  N2 -->|Appoint clerical<br/>members| N3
+  N2 -->|Command| N5
+  N3 -->|Vet candidates| N0
+  N0 -->|Elect| N4
 ```
 
 There are three points in the diagram. First, the supreme leader is placed at a higher level across military, judicial, and supervisory institutions. Second, the Constitutional Guardian Council controls not only legal review but also the entry point for elections. Third, although the Expert Council can choose the supreme leader, candidate members are also examined by the Constitutional Guardian Council.

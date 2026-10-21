@@ -29,12 +29,19 @@ draft: false
 3. 入力だけで終わらせず、出力とフィードバックで仮説を更新する。
 
 ```mermaid
-flowchart LR
-  A["Japanese frame"] --> B["English input"]
-  B --> C["Notice mismatch"]
-  C --> D["Attempt output"]
-  D --> E["Feedback / repair"]
-  E --> F["Updated schema"]
+flowchart TD
+  accTitle: 英語での試行から解釈の枠組みを更新する
+  accDescr: 日本語の枠組みとのずれを発見し、発話と修正で英語の意味の捉え方を確かめる。
+  N0["日本語での意味の枠組み"]
+  N1["英語の入力とずれ"]
+  N2["自分で表現を試す"]
+  N3["反応・訂正を確認"]
+  N4["英語の枠組みを更新"]
+  N0 -->|予測と比較| N1
+  N1 -->|仮説を試す| N2
+  N2 --> N3
+  N3 -->|修正を取り込む| N4
+  N4 -.->|新しい入力で確認| N1
 ```
 
 <SourceNote>この学習ループは、Schmidt の noticing 仮説、Long の interaction hypothesis、Swain の output hypothesis、そして corrective feedback のメタ分析を合わせた公表文献からの設計上の整理である。[Schmidt (1990)](https://doi.org/10.1093/applin/11.2.129)、[Long (1996)](https://doi.org/10.1016/B978-012589042-7/50015-3)、[Swain (1995)](https://doi.org/10.1093/applin/16.3.371) を起点に、後続の corrective feedback 研究を参照するとよい。</SourceNote>

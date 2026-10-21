@@ -50,13 +50,22 @@ Annual indices must also be distinguished from current events. V-Dem's 2026 repo
 The diagram shows how similar mobilization can lead to different outcomes, rather than a single sequence of development.
 
 ```mermaid
-flowchart LR
-  A["Grievances and triggers"] --> B["Organization and mobilization"]
-  B --> C["Negotiation and elite splits"]
-  B --> D["Repression and movement splits"]
-  C --> E["Institutions and wider rights"]
-  C --> F["Limited concessions"]
-  D --> G["Reversal and prolonged resistance"]
+flowchart TD
+  accTitle: How protest movements reach institutional change or setbacks
+  accDescr: Crowd size alone does not determine outcomes. Elite division, negotiation, repression and movement cohesion shape rights expansion, limited concessions or setbacks.
+  N0["Grievances, repression,<br/>living costs"]
+  N1["Organization and mass<br/>mobilization"]
+  N2["Elite division and<br/>negotiation"]
+  N3["Repression and movement<br/>division"]
+  N4["Institutional change<br/>and rights"]
+  N5["Limited concessions"]
+  N6["Setbacks and prolonged<br/>resistance"]
+  N0 -->|Build solidarity| N1
+  N1 -->|Opening for negotiation| N2
+  N1 -->|Intensified repression| N3
+  N2 -->|Institutionalize<br/>agreements| N4
+  N2 -->|Partial response| N5
+  N3 -->|Conditions for<br/>resistance change| N6
 ```
 
 Comparative research on nonviolent resistance links outcomes to factors including diversity of participation and durable organization, while also finding that success rates declined in the 2010s. A single day's photographs cannot measure mobilization, and crossing a particular population threshold does not guarantee success. The causal accounts below are interpretations grounded in the context and evidence of each event, not universal formulas for success.<SourceNote>[Erica Chenoweth: The Future of Nonviolent Resistance](https://www.journalofdemocracy.org/articles/the-future-of-nonviolent-resistance-2/)</SourceNote>
@@ -271,12 +280,20 @@ The budget also remains contested. The National Assembly's schedule for the reve
 Evidence checked by October 21, 2026, Japan time, supports an assessment of an unresolved phase in which partial responses and negotiations coexist with security measures after mass mobilization, while preparations for renewed action continue. This is the report's analysis, not an official stage classification by the government or movement organizations. The evidence does not establish an inevitable path to democratization, an imminent revolution, or the complete end of protest.
 
 ```mermaid
-flowchart LR
-  A["Education and living conditions"] --> B["Wider mobilization"]
-  B --> C["Dialogue and budget negotiations"]
-  B --> D["Security measures and courts"]
-  C --> E["Possible concessions and decline"]
-  D --> F["Possible renewed mobilization"]
+flowchart TD
+  accTitle: Branches from protest to policy response in France
+  accDescr: After living-cost and education grievances mobilize protest, budget dialogue and policing or judicial measures affect it differently. These are possible pathways, not predictions.
+  N0["Living-cost and<br/>education grievances"]
+  N1["Broad mobilization"]
+  N2["Dialogue and budget<br/>negotiation"]
+  N3["Policing and judicial<br/>measures"]
+  N4["Concessions and<br/>declining mobilization"]
+  N5["Renewed grievances and<br/>mobilization"]
+  N0 -->|Participation grows| N1
+  N1 -->|Policy channel| N2
+  N1 -->|Enforcement channel| N3
+  N2 -->|Depends on responses| N4
+  N3 -.->|Possible renewed<br/>protest| N5
 ```
 
 The further demonstration on October 24 and strike on November 5 were calls or plans at the cutoff date. Their occurrence, turnout, and any resulting agreement cannot yet be reported as outcomes. School holidays, participant fatigue, enforcement, and concessions could all reduce mobilization, so one quiet night does not identify the cause.<SourceNote>[Reuters: October 20 outlook, syndicated](https://www.marketscreener.com/news/france-in-turmoil-what-might-follow-a-weekend-of-riots-ce785cd8d889f527), [AP: October 20](https://apnews.com/article/13189fcb1481614dc65c2125deb8333d)</SourceNote>

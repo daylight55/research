@@ -68,17 +68,6 @@ const readingTime = ja ? readTime?.replace(/(\d+) min read/, '約$1分') : readT
 				</p>
 				<h1>{displayTitle}</h1>
 				<p class='article-description'>{description}</p>
-				<p class='article-date-note'>
-					{
-						ja
-							? contentType === 'news'
-								? '掲載日の発表・報道をまとめています。'
-								: '制度・情勢・数値は掲載時点の調査に基づきます。'
-							: contentType === 'news'
-								? 'A digest of announcements and reporting at the publication date.'
-								: 'Policies, events and figures reflect research at the publication date.'
-					}
-				</p>
 			</div>
 			{
 				heroImage && (

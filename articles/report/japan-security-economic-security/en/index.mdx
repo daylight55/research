@@ -26,13 +26,20 @@ Japan’s foreign security agenda and its economic-security agenda are no longer
 The reading is straightforward. First, how can Japan sustain deterrence and alliance operations? Second, how can it protect critical goods, semiconductors, cloud systems, power, and telecom networks? Third, how do those policy choices show up in procurement, inventory, investment, and cyber controls inside firms? This article uses current primary sources to separate those three layers. <SourceNote>[Cabinet Office, Economic Security Promotion Act portal](https://www.cao.go.jp/keizai_anzen_hosho/index.html), [METI, semiconductor supply-security initiatives](https://www.meti.go.jp/policy/economy/economic_security/semicon/index.html), [Cabinet Secretariat, cyber security policy efforts](https://www.cas.go.jp/jp/seisaku/cyber_anzen_hosyo_torikumi/)</SourceNote>
 
 ```mermaid
-flowchart LR
-  Threat["China, North Korea, Russia"] --> Defense["Defense, alliance, counterstrike"]
-  Threat --> Supply["Supply chains, semiconductors"]
-  Threat --> Cyber["Cyber defense, information security"]
-  Defense --> Firms["Corporate procurement, investment"]
-  Supply --> Firms
-  Cyber --> Firms
+flowchart TD
+  accTitle: How security changes reach business procurement and investment
+  accDescr: Defence and alliances, critical supply chains, and cyber and information safeguards provide three channels affecting business decisions.
+  N0["China, North Korea and<br/>Russia"]
+  N1["Defence, alliances,<br/>counterstrike"]
+  N2["Critical supply chains<br/>and chips"]
+  N3["Cyber and information<br/>safeguards"]
+  N4["Business procurement<br/>and investment"]
+  N0 -->|Security| N1
+  N0 -->|Economic security| N2
+  N0 -->|Information response| N3
+  N1 -->|Defence procurement| N4
+  N2 -->|Suppliers and<br/>production sites| N4
+  N3 -->|Control requirements| N4
 ```
 
 The diagram shows how geopolitical pressure flows beyond defense policy into procurement and investment decisions. Treating defense, supply chains, and cyber as separate topics makes it easy to miss the operational risk. <SourceNote>The structure is a simplified synthesis of the Defense White Paper 2025, Diplomatic Bluebook 2025, the economic-security portal, and the semiconductor supply-security page. The “flow” here is an inference from public information, not an official roadmap.</SourceNote>

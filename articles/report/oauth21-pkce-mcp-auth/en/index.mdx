@@ -33,14 +33,21 @@ The implementation points are as follows.
    Source note: See [MCP Authorization](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization). The handling of OpenAPI-only is estimated based on this specification.
 
 ```mermaid
-flowchart LR
-  U["User"] --> C["Claude-style MCP client"]
-  C --> M["MCP server"]
-  M --> PRM["Resource Metadata"]
-  C --> AS["Authorization server"]
-  AS --> TOK["Token endpoint"]
-  C -->|Bearer token| M
-  M --> API["Upstream API"]
+flowchart TD
+  accTitle: Separate discovery and token issuance in MCP authorization
+  accDescr: Discover authorization details through MCP resource metadata, then attach the authorization server's token to MCP requests.
+  N0["User and MCP client"]
+  N1["MCP server"]
+  N2["Protected resource<br/>metadata"]
+  N3["Authorization server"]
+  N4["Upstream API"]
+  N0 -->|Request protected<br/>resource| N1
+  N1 -->|Advertise authorization<br/>details| N2
+  N2 -->|Discover authorization<br/>server| N0
+  N0 -->|Consent and PKCE| N3
+  N3 -->|Access token| N0
+  N0 -->|Retry with token| N1
+  N1 -->|Connect with upstream<br/>authorization| N4
 ```
 
 ## 2. Terms you should know first
@@ -63,23 +70,23 @@ Source note: See [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636) and [draft-i
 
 ```mermaid
 sequenceDiagram
-  participant User as User
-  participant Client as MCP client
-  participant MCP as MCP server
-  participant AS as Authorization Server / OIDC Provider
-
-  User->>Client: Run MCP tool
-  Client->>MCP: Request without token
-  MCP-->>Client: 401 + resource metadata
-  Client->>MCP: Fetch metadata
-  MCP-->>Client: Authorization server information
-  Client->>AS: discovery / authorization request
-  AS-->>User: Login and consent in browser
-  AS-->>Client: authorization code
-  Client->>AS: token request + PKCE code_verifier
-  AS-->>Client: access token
-  Client->>MCP: Retry with Bearer token
-  MCP-->>Client: Tool result
+  accTitle: Retry an MCP request with authorization code and PKCE
+  accDescr: Discover authorization after a 401, then obtain a token with PKCE after user consent. The token targets the MCP resource.
+  participant U as User
+  participant C as MCP client
+  participant M as MCP server
+  participant A as Auth server
+  C->>M: Request without token
+  M-->>C: 401 and resource metadata location
+  C->>M: Fetch resource metadata
+  M-->>C: Authorization server details
+  C->>A: Authorization request and PKCE challenge
+  A->>U: Login and consent
+  A-->>C: Authorization code
+  C->>A: Code and PKCE verifier
+  A-->>C: Access token for MCP
+  C->>M: Retry with bearer token
+  M-->>C: Tool result
 ```
 
 ### 3.1 First response
@@ -165,10 +172,17 @@ Source note: See [MCP Authorization](https://modelcontextprotocol.io/specificati
 
 ```mermaid
 flowchart TD
-  A["OpenAPI-only API"] --> B["MCP adapter/server"]
-  B --> C["OAuth 2.1 PKCE"]
-  C --> D["Claude / MCP client"]
-  B --> E["Business DB / internal API"]
+  accTitle: Expose an existing OpenAPI service through an MCP adapter
+  accDescr: The client connects to an adapter that calls the existing API. Authorization is a gate, not a later sequential API step.
+  N0["MCP client"]
+  N1["MCP adapter and server"]
+  N2["Existing OpenAPI<br/>service"]
+  N3["Business DB and<br/>internal APIs"]
+  N4["OAuth and PKCE<br/>authorization"]
+  N0 -->|Tool request| N1
+  N4 -->|Token validation| N1
+  N1 -->|Translate to API| N2
+  N1 -->|Retrieve or act on data| N3
 ```
 
 With this configuration, OpenAPI operations can be exposed as tools as they are. Conversely, even if you add only authorization with OpenAPI, what the MCP client understands is the MCP tool schema, so a conversion layer is necessary.
@@ -224,21 +238,19 @@ The easiest configuration to use is:
 6. Wrap existing OpenAPI services with MCP adapter.
 
 ```mermaid
-flowchart LR
-  subgraph "Client"
-    C["Claude / MCP Client"]
-  end
-  subgraph "Auth"
-    AS["OIDC / OAuth Server"]
-  end
-  subgraph "Resource"
-    M["MCP Server"]
-    A["OpenAPI Adapter"]
-    S["Existing Service"]
-  end
-  C -->|auth code + PKCE| AS
-  C -->|tool call + bearer token| M
-  M --> A --> S
+flowchart TD
+  accTitle: Boundaries between MCP, authorization server and upstream API
+  accDescr: Separate token issuance from tool execution; the adapter handles the upstream API connection.
+  N0["MCP client"]
+  N1["Authorization server"]
+  N2["MCP server"]
+  N3["OpenAPI adapter"]
+  N4["Existing service"]
+  N0 -->|Authorization code and<br/>PKCE| N1
+  N1 -->|Issue token| N0
+  N0 -->|Bearer token and tool<br/>request| N2
+  N2 -->|Validate and translate| N3
+  N3 -->|Call upstream API| N4
 ```
 
 With this configuration, it is easy to separate authorization responsibilities and it is easy to reuse it for MCP clients other than Claude.

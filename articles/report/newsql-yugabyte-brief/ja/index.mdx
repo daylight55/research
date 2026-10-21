@@ -44,11 +44,17 @@ NewSQLはその反動として現れた。重要なのは、NewSQLが単一の�
 
 ```mermaid
 flowchart LR
-  RDB["従来RDBMS"] --> Gap["スケール限界"]
-  NoSQL["NoSQL"] --> Trade["一貫性の代償"]
-  Gap --> NewSQL["NewSQL"]
-  Trade --> NewSQL
-  NewSQL --> Goal["SQL + 分散"]
+  accTitle: 分散SQLが応える二つの要件
+  accDescr: 従来RDBMSの拡張要件とNoSQLでの整合性・SQL要件を分け、分散SQLの選択理由を検討する。
+  N0["従来RDBMS"]
+  N1["水平拡張の要件"]
+  N2["NoSQL"]
+  N3["SQL・整合性の要件"]
+  N4["分散SQL・NewSQL"]
+  N0 -->|規模を拡張したい| N1
+  N2 -->|機能を確保したい| N3
+  N1 --> N4
+  N3 --> N4
 ```
 
 重要概念は次の通りである。
@@ -90,13 +96,20 @@ YugabyteDBは、大きく見ると `YSQL/YCQLのquery layer` と `DocDB storage 
 <SourceNote>YugabyteDB architectureは、query layerとstorage layer、YSQL/YCQL、DocDB on RocksDB、sharding、Raft replication、YB-Master/YB-TServerを説明している。[YugabyteDB Architecture](https://docs.yugabyte.com/stable/architecture/) を参照。</SourceNote>
 
 ```mermaid
-flowchart TB
-  App["アプリ"] --> API["YSQL / YCQL"]
-  API --> TS["YB-TServer群"]
-  Master["YB-Master"] --> TS
-  TS --> Doc["DocDB / RocksDB"]
-  Doc --> Raft["Raft複製"]
-  Raft --> Doc
+flowchart TD
+  accTitle: YugabyteDBのAPI・保存・複製の役割
+  accDescr: YSQL・YCQLからTServerの分散保存へ進み、Masterが配置を管理し、Raftが複製を支える。
+  N0["アプリケーション"]
+  N1["YSQL・YCQL"]
+  N2["YB-TServer群"]
+  N3["DocDB・RocksDB"]
+  N4["Raftによる複製"]
+  N5["YB-Master"]
+  N0 -->|API| N1
+  N1 -->|要求を処理| N2
+  N2 -->|保存| N3
+  N3 -->|複製・合意| N4
+  N5 -->|配置・メタデータ管理| N2
 ```
 
 YugabyteDBを理解するうえで重要なのは、「PostgreSQLをそのまま複数台で動かしている」のではなく、PostgreSQL互換のquery layerを分散ストレージ層に接続している点である。このため、PostgreSQLのエコシステム互換性は強い価値だが、性能特性は単一PostgreSQLと同じではない。分散DBでは、primary key設計、tablet分割、region配置、connection pooling、長いトランザクション、schema migration、sequence利用が設計対象になる。
@@ -139,12 +152,20 @@ YugabyteDBが向いているのは、単一PostgreSQLの運用限界が明確で
 
 ```mermaid
 flowchart TD
-  Q1["現行DBで足りる?"] -->|Yes| Keep["継続・最適化"]
-  Q1 -->|No| Q2["SQL互換が必要?"]
-  Q2 -->|No| Alt["別方式も検討"]
-  Q2 -->|Yes| Q3["分散要件が明確?"]
-  Q3 -->|Yes| PoC["比較PoC"]
-  Q3 -->|No| Keep
+  accTitle: 分散DBの必要性から比較PoCへ進む
+  accDescr: 現行DBで足りるか、SQL互換と分散要件が必要かを順に確認して比較実証を決める。
+  N0["現行DBで要件を満たすか"]
+  N1["継続・最適化"]
+  N2["SQL互換が必要か"]
+  N3["別方式も比較"]
+  N4["分散要件が明確か"]
+  N5["比較PoC"]
+  N0 -->|満たす| N1
+  N0 -->|満たさない| N2
+  N2 -->|不要| N3
+  N2 -->|必要| N4
+  N4 -->|明確| N5
+  N4 -.->|不明確・再検討| N1
 ```
 
 ## 8. Yugabyte担当者に聞くとよい質問

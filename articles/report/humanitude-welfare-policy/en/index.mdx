@@ -28,13 +28,19 @@ The evidence is encouraging but limited. Studies suggest possible improvements i
 
 ```mermaid
 flowchart TD
-  A["Gaze"] --> E["Start relation"]
-  B["Speech"] --> E
-  C["Touch"] --> E
-  D["Standing"] --> F["Preserve function"]
-  E --> G["Reduce refusal"]
-  F --> G
-  G --> H["Measure in policy"]
+  accTitle: Humanitude's four techniques and evaluation
+  accDescr: Looking, speaking and touching support a relationship; help with standing supports daily function. Assess observed changes in care refusal and daily life.
+  N0["Looking, speaking and<br/>touching"]
+  N1["Relationship,<br/>anticipation, consent"]
+  N2["Support for standing"]
+  N3["Maintain daily function"]
+  N4["Observe refusal and<br/>daily life"]
+  N5["Care evaluation and<br/>policy"]
+  N0 --> N1
+  N2 --> N3
+  N1 --> N4
+  N3 --> N4
+  N4 -->|Check effects and<br/>conditions| N5
 ```
 
 ## 2. The Core Idea

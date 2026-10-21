@@ -38,14 +38,21 @@ Claude系の remote connector では、ユーザーは接続先URLを追加し�
 <SourceNote>[MCP Authorization](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization) を参照。OpenAPI-only の扱いはこの仕様を踏まえた推定である。</SourceNote>
 
 ```mermaid
-flowchart LR
-  U["利用者"] --> C["Claude系MCPクライアント"]
-  C --> M["MCPサーバー"]
-  M --> PRM["Resource Metadata"]
-  C --> AS["認可サーバー"]
-  AS --> TOK["Token endpoint"]
-  C -->|Bearer token| M
-  M --> API["上流API"]
+flowchart TD
+  accTitle: MCP認可で情報取得とトークン発行を分ける
+  accDescr: MCPサーバーのメタデータから認可先を確認し、認可サーバーが発行するトークンをMCPへの要求に付ける。
+  N0["利用者・MCP Client"]
+  N1["MCP Server"]
+  N2["Protected Resource Metadata"]
+  N3["認可サーバー"]
+  N4["上流API"]
+  N0 -->|保護リソースへ要求| N1
+  N1 -->|認可先を案内| N2
+  N2 -->|認可先を確認| N0
+  N0 -->|同意・PKCE| N3
+  N3 -->|アクセストークン| N0
+  N0 -->|トークン付きで再試行| N1
+  N1 -->|上流の権限で接続| N4
 ```
 
 ## 2. まず押さえるべき用語
@@ -72,23 +79,23 @@ MCP仕様の認可章では、HTTPサーバーは Protected Resource Metadata �
 
 ```mermaid
 sequenceDiagram
-  participant User as 利用者
-  participant Client as MCPクライアント
-  participant MCP as MCPサーバー
-  participant AS as Authorization Server / OIDC Provider
-
-  User->>Client: MCPツール実行
-  Client->>MCP: リクエスト(トークンなし)
-  MCP-->>Client: 401 + resource metadata
-  Client->>MCP: metadata取得
-  MCP-->>Client: 認可サーバー情報
-  Client->>AS: discovery / authorization request
-  AS-->>User: ブラウザでログイン・同意
-  AS-->>Client: authorization code
-  Client->>AS: token request + PKCE code_verifier
-  AS-->>Client: access token
-  Client->>MCP: Bearer token付き再試行
-  MCP-->>Client: ツール結果
+  accTitle: 認可コードとPKCEでMCP要求を再試行する
+  accDescr: 401応答から認可先を確認し、利用者の同意後にPKCEでトークンを取得する。トークンの宛先はMCPリソースである。
+  participant U as 利用者
+  participant C as MCP Client
+  participant M as MCP Server
+  participant A as 認可サーバー
+  C->>M: トークンなしの要求
+  M-->>C: 401・リソースメタデータの案内
+  C->>M: メタデータを取得
+  M-->>C: 認可サーバー情報
+  C->>A: 認可要求・PKCE challenge
+  A->>U: ログイン・同意
+  A-->>C: 認可コード
+  C->>A: コード・PKCE verifier
+  A-->>C: MCP向けaccess token
+  C->>M: Bearer tokenで再試行
+  M-->>C: ツールの結果
 ```
 
 ### 3.1 最初の応答
@@ -188,10 +195,17 @@ Anthropic の公式案内では、remote MCP connector に接続先を追加し�
 
 ```mermaid
 flowchart TD
-  A["OpenAPI-only API"] --> B["MCP adapter/server"]
-  B --> C["OAuth 2.1 PKCE"]
-  C --> D["Claude / MCP client"]
-  B --> E["業務DB / 内部API"]
+  accTitle: 既存OpenAPIサービスをMCPアダプターで公開する
+  accDescr: クライアントはアダプターへ接続し、アダプターが既存APIを呼ぶ。認可はAPI呼び出しの後に直列で追加する工程ではない。
+  N0["MCP Client"]
+  N1["MCPアダプター・Server"]
+  N2["既存OpenAPIサービス"]
+  N3["業務DB・内部API"]
+  N4["OAuth・PKCEの認可"]
+  N0 -->|ツール要求| N1
+  N4 -->|トークン検証| N1
+  N1 -->|APIへ変換| N2
+  N1 -->|業務データの取得・操作| N3
 ```
 
 この構成にすると、OpenAPIの operation をそのままツールとして露出できる。逆に言うと、OpenAPIのまま認可だけを足しても、MCPクライアントが理解するのはMCPの tool schema であるため、その変換層が必要である。
@@ -252,21 +266,19 @@ OpenAPIは API 記述、MCPはツール接続プロトコルである。役割�
 6. 既存のOpenAPIサービスは MCP adapter で包む。
 
 ```mermaid
-flowchart LR
-  subgraph "Client"
-    C["Claude / MCP Client"]
-  end
-  subgraph "Auth"
-    AS["OIDC / OAuth Server"]
-  end
-  subgraph "Resource"
-    M["MCP Server"]
-    A["OpenAPI Adapter"]
-    S["Existing Service"]
-  end
-  C -->|auth code + PKCE| AS
-  C -->|tool call + bearer token| M
-  M --> A --> S
+flowchart TD
+  accTitle: MCP・認可サーバー・上流APIの境界
+  accDescr: トークン発行とツール実行を分離し、上流APIへの接続はアダプター側で扱う。
+  N0["MCP Client"]
+  N1["認可サーバー"]
+  N2["MCP Server"]
+  N3["OpenAPI Adapter"]
+  N4["既存サービス"]
+  N0 -->|認可コード・PKCE| N1
+  N1 -->|トークンを発行| N0
+  N0 -->|Bearer token・ツール要求| N2
+  N2 -->|権限を確認して変換| N3
+  N3 -->|上流APIを呼ぶ| N4
 ```
 
 この構成なら、認可の責務が分離しやすく、Claude 以外の MCP クライアントにも再利用しやすい。

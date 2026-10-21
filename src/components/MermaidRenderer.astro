@@ -1,146 +1,62 @@
+<!-- Diagrams are generated at build time. JavaScript only enables enlargement. -->
+<dialog class='diagram-dialog' data-diagram-dialog>
+	<form method='dialog'><button type='submit' data-diagram-close>閉じる / Close</button></form>
+	<div data-diagram-detail></div>
+</dialog>
+
 <script>
-	const renderMermaid = async () => {
-		const blocks = Array.from(document.querySelectorAll('pre code')).filter((code) =>
-			/^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram|erDiagram|journey|gantt|pie|timeline|mindmap|quadrantChart|requirementDiagram|c4Context)\b/.test(
-				(code.textContent || '').trim()
-			)
-		)
-		if (blocks.length === 0) return
-
-		const { default: mermaid } = await import('mermaid')
-		const { renderMermaidSVG } = await import('beautiful-mermaid')
-		mermaid.initialize({
-			startOnLoad: false,
-			securityLevel: 'strict',
-			htmlLabels: true,
-			theme: 'base',
-			look: 'classic',
-			flowchart: {
-				curve: 'basis',
-				htmlLabels: true,
-				padding: 12
-			},
-			themeVariables: document.documentElement.classList.contains('dark')
-				? {
-						background: 'transparent',
-						primaryColor: '#182033',
-						primaryTextColor: '#f8fafc',
-						primaryBorderColor: '#64748b',
-						lineColor: '#94a3b8',
-						tertiaryColor: '#111827',
-						fontFamily: 'Manrope, ui-sans-serif, system-ui, sans-serif',
-						fontSize: '15px'
-					}
-				: {
-						background: 'transparent',
-						primaryColor: '#f8fafc',
-						primaryTextColor: '#111827',
-						primaryBorderColor: '#cbd5e1',
-						lineColor: '#64748b',
-						tertiaryColor: '#eef2ff',
-						fontFamily: 'Manrope, ui-sans-serif, system-ui, sans-serif',
-						fontSize: '15px'
-					}
+	const enableDiagramControls = () => {
+		document.querySelectorAll<HTMLButtonElement>('[data-diagram-expand]').forEach((button) => {
+			button.hidden = false
 		})
-		const beautifulMermaidPattern =
-			/^(flowchart|graph|sequenceDiagram|classDiagram|stateDiagram|stateDiagram-v2|erDiagram|xychart-beta)\b/
-		const beautifulMermaidTheme = document.documentElement.classList.contains('dark')
-			? {
-					bg: '#0f172a',
-					fg: '#f8fafc',
-					line: '#94a3b8',
-					accent: '#38bdf8',
-					muted: '#cbd5e1',
-					surface: '#111827',
-					border: '#64748b',
-					transparent: true,
-					padding: 32,
-					nodeSpacing: 52,
-					layerSpacing: 56,
-					thoroughness: 6
-				}
-			: {
-					bg: '#ffffff',
-					fg: '#111827',
-					line: '#64748b',
-					accent: '#2563eb',
-					muted: '#475569',
-					surface: '#f8fafc',
-					border: '#cbd5e1',
-					transparent: true,
-					padding: 32,
-					nodeSpacing: 52,
-					layerSpacing: 56,
-					thoroughness: 6
-				}
-		const removeExternalFontImport = (svg) =>
-			svg.replace(/@import url\('https:\/\/fonts\.googleapis\.com[^;]+;\n?/g, '')
-
-		for (const [index, code] of blocks.entries()) {
-			const pre = code.closest('pre')
-			if (!pre || pre.dataset.mermaidRendered === 'true') continue
-
-			try {
-				const id = `mermaid-${index}-${crypto.randomUUID()}`
-				const source = (code.textContent || '').trim()
-				let svg = ''
-				let renderer = 'mermaid'
-				if (beautifulMermaidPattern.test(source)) {
-					try {
-						svg = removeExternalFontImport(renderMermaidSVG(source, beautifulMermaidTheme))
-						renderer = 'beautiful-mermaid'
-					} catch (error) {
-						console.warn('Falling back to Mermaid renderer', error)
-					}
-				}
-				if (!svg) {
-					const rendered = await mermaid.render(id, source)
-					svg = rendered.svg
-				}
-				const figure = document.createElement('figure')
-				figure.className =
-					'mermaid-figure my-8 rounded-md border border-black/10 bg-white shadow-sm dark:border-white/10 dark:bg-white/5'
-				const viewport = document.createElement('div')
-				viewport.className = 'mermaid-viewport'
-				viewport.dataset.renderer = renderer
-				viewport.dataset.diagram = source.match(/^\S+/)?.[0] || 'mermaid'
-				const diagramDirection = source.match(/^(?:flowchart|graph)\s+([A-Z]{2})\b/)?.[1]
-				if (diagramDirection) {
-					viewport.dataset.direction = diagramDirection
-					if (diagramDirection === 'TD' || diagramDirection === 'TB') {
-						figure.dataset.layout = 'compact'
-					}
-				}
-				viewport.innerHTML = svg
-				const svgElement = viewport.querySelector('svg')
-				if (svgElement) {
-					const viewBox = svgElement.getAttribute('viewBox')?.split(/\s+/).map(Number)
-					const viewBoxWidth = viewBox && viewBox.length === 4 ? viewBox[2] : 0
-					const viewBoxHeight = viewBox && viewBox.length === 4 ? viewBox[3] : 0
-					svgElement.removeAttribute('height')
-					svgElement.setAttribute('width', '100%')
-					svgElement.setAttribute('preserveAspectRatio', 'xMidYMid meet')
-					svgElement.style.maxWidth = 'none'
-					if (viewBoxWidth > 0) {
-						svgElement.style.setProperty(
-							'--mermaid-intrinsic-width',
-							`${Math.ceil(Math.min(viewBoxWidth, 1280))}px`
-						)
-					}
-					if (viewBoxWidth > 0 && viewBoxHeight / viewBoxWidth > 1.15) {
-						viewport.dataset.aspect = 'portrait'
-						figure.dataset.layout = 'compact'
-					}
-				}
-				figure.append(viewport)
-				pre.dataset.mermaidRendered = 'true'
-				pre.replaceWith(figure)
-			} catch (error) {
-				console.warn('Failed to render Mermaid diagram', error)
-			}
-		}
 	}
-
-	renderMermaid()
-	document.addEventListener('astro:after-swap', renderMermaid)
+	const closeDiagram = () => {
+		document.querySelector<HTMLDialogElement>('[data-diagram-dialog]')?.close()
+	}
+	let diagramTrigger: HTMLButtonElement | undefined
+	const setupDiagramDialog = () => {
+		const dialog = document.querySelector<HTMLDialogElement>('[data-diagram-dialog]')
+		if (!dialog || dialog.dataset.initialized) return
+		dialog.dataset.initialized = 'true'
+		dialog.addEventListener('close', () => {
+			dialog.querySelector('[data-diagram-detail]')?.replaceChildren()
+			diagramTrigger?.focus()
+		})
+		dialog.addEventListener('click', (event) => {
+			if (event.target !== dialog) return
+			const box = dialog.getBoundingClientRect()
+			if (
+				event.clientX < box.left ||
+				event.clientX > box.right ||
+				event.clientY < box.top ||
+				event.clientY > box.bottom
+			)
+				dialog.close()
+		})
+		enableDiagramControls()
+	}
+	document.addEventListener('click', (event) => {
+		const target = event.target
+		if (!(target instanceof Element)) return
+		const button = target.closest<HTMLButtonElement>('[data-diagram-expand]')
+		const figure = button?.closest<HTMLElement>('.article-diagram')
+		const dialog = document.querySelector<HTMLDialogElement>('[data-diagram-dialog]')
+		const detail = dialog?.querySelector('[data-diagram-detail]')
+		if (!button || !figure || !dialog || !detail) return
+		const clone = figure.cloneNode(true) as HTMLElement
+		// Scope the cloned SVG styles, markers and accessible names to the dialog.
+		clone.innerHTML = clone.innerHTML.replaceAll(figure.id, `${figure.id}-zoom`)
+		clone.id = `${figure.id}-zoom`
+		clone.setAttribute('aria-labelledby', `${figure.id}-zoom-title`)
+		clone.querySelector('[data-diagram-expand]')?.remove()
+		detail.replaceChildren(clone)
+		dialog.setAttribute('aria-labelledby', `${clone.id}-title`)
+		const close = dialog.querySelector<HTMLButtonElement>('[data-diagram-close]')
+		if (close) close.textContent = document.documentElement.lang === 'ja' ? '閉じる' : 'Close'
+		diagramTrigger = button
+		dialog.showModal()
+	})
+	setupDiagramDialog()
+	document.addEventListener('astro:page-load', setupDiagramDialog)
+	document.addEventListener('astro:before-swap', closeDiagram)
 </script>

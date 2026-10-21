@@ -43,12 +43,20 @@ The conclusions of this report are as follows.
 This table is important because there are three types of numbers that can be easily confused when evaluating Kioxia. The first is the profitability of the consolidated manufacturing business, the second is the holding company's profit from dividends and capital returns, and the third is the NAND market share and vendor sales estimated by an external market research company. If we combine these into a single phrase, "how many times the net income is," we confuse the actual performance of the business with the way it looks in accounting terms.
 
 ```mermaid
-flowchart TB
-  A["NAND lineage"] --> B["Kioxia"]
-  B --> C["Manufacturing base / WD alliance"]
-  B --> E["BiCS / SSD"]
-  E --> F["AI and cloud demand"]
-  F --> G["Market-cycle risk"]
+flowchart TD
+  accTitle: Kioxia's manufacturing, products and demand
+  accDescr: NAND technology and manufacturing partnerships support SSD supply. Assess AI and cloud demand separately from NAND market cycles.
+  N0["NAND research and<br/>manufacturing"]
+  N1["Kioxia"]
+  N2["Manufacturing<br/>partnerships"]
+  N3["BiCS NAND and SSDs"]
+  N4["AI and cloud demand"]
+  N5["NAND supply, demand and<br/>prices"]
+  N0 -->|Business foundation| N1
+  N2 -->|Production capacity| N1
+  N1 -->|Products| N3
+  N4 -->|Capacity and<br/>performance needs| N3
+  N5 -.->|Earnings volatility| N1
 ```
 
 ## 2. Company positioning
@@ -72,12 +80,21 @@ Furthermore, as part of our research and development efforts, we are prototyping
 Source note: Less than 5TB/64GB/s/40W, PCIe 6.0, 128Gbps PAM4, NEDO commissioned project is [Kioxia high-bandwidth flash memory module announcement, 2025-08-20](https://www.kioxia.com/en-jp/about/news/2025/20250820-1.html).
 
 ```mermaid
-flowchart TB
-  A["BiCS NAND"] --> B["CBA"]
-  B --> C["TLC / QLC"]
-  C --> D["SSD control"]
-  D --> E["Enterprise / high-capacity SSD"]
-  C --> F["HBF prototype / AI demand"]
+flowchart TD
+  accTitle: Technical elements from NAND structures to SSD products
+  accDescr: BiCS, CBA, TLC and QLC, and controllers serve different roles. SSD products and HBF prototypes are at different maturity levels.
+  N0["BiCS NAND<br/>3D NAND structure"]
+  N1["CBA<br/>Bonded architecture"]
+  N2["TLC and QLC<br/>Bits per cell"]
+  N3["Controllers and SSD<br/>products"]
+  N4["Enterprise and<br/>high-capacity storage"]
+  N5["HBF prototype<br/>Different development<br/>stage"]
+  N0 -->|Architecture<br/>development| N1
+  N0 -->|Recording scheme| N2
+  N1 -->|Product design| N3
+  N2 -->|Control and performance<br/>trade-offs| N3
+  N3 -->|Use| N4
+  N0 -.->|Technology extension| N5
 ```
 
 ## 4. Supply and demand and performance

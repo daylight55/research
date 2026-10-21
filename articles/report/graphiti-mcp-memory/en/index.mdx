@@ -28,15 +28,22 @@ To conclude first, the deployment judgment as of 2026 is as follows.
    Source note: Graphiti is exposed as Zep's knowledge graph infrastructure, and the documentation provides temporal knowledge graph, hybrid search, custom entity/edge types, and MCP server. MCP is a standard connection layer for host / client / server, and is a specification that exposes tools, resources, and prompts. These are based on [Graphiti docs](https://help.getzep.com/graphiti/graphiti/overview), [Graphiti MCP server README](https://github.com/getzep/graphiti/blob/main/mcp_server/README.md), [MCP specification](https://modelcontextprotocol.io/docs/getting-started/intro).
 
 ```mermaid
-flowchart LR
-  U["User / Agent"] --> H["Host"]
-  H --> M["MCP Server"]
-  M --> G["Graphiti"]
-  G --> S["Sources"]
-  G --> A["Audit"]
-  A --> G
-  H --> P["Policy"]
-  P -->|allow write| M
+flowchart TD
+  accTitle: Graphiti retrieval, writes and approval boundaries
+  accDescr: The host retrieves temporal knowledge through MCP. Keep persistence and updates separate from reads and gate them with policy.
+  N0["User and agent"]
+  N1["Host and MCP client"]
+  N2["Memory server"]
+  N3["Graphiti<br/>Time-linked knowledge<br/>and sources"]
+  N4["Search results and<br/>audit"]
+  N5["Policy and human<br/>approval"]
+  N0 -->|Question or persistence<br/>request| N1
+  N1 -->|Search| N2
+  N2 -->|Retrieve| N3
+  N3 -->|Return evidence| N4
+  N4 -->|Use as context| N1
+  N1 -->|Check before writes| N5
+  N5 -->|Authorized writes only| N2
 ```
 
 ## 2. The problem Graphiti is trying to solve
@@ -48,10 +55,17 @@ Graphiti's value goes beyond simply "saving conversation logs." The goal is to t
 
 ```mermaid
 flowchart TD
-  E["Episode"] --> X["Extraction"]
-  X --> G["Temporal KG"]
-  G --> H["Hybrid search"]
-  H --> Ans["Answer context"]
+  accTitle: From an episode to retrievable context
+  accDescr: Store extracted relationships in a temporal graph and use hybrid search to retrieve facts and provenance for an answer.
+  N0["Episode<br/>Conversation, document<br/>or event"]
+  N1["Extract facts and<br/>relationships"]
+  N2["Temporal knowledge<br/>graph"]
+  N3["Hybrid search"]
+  N4["Facts and sources for<br/>an answer"]
+  N0 --> N1
+  N1 -->|Store and update| N2
+  N2 -->|Specify time| N3
+  N3 -->|Retrieve evidence| N4
 ```
 
 ## 3. Differences from traditional RAG / Vector DB / Knowledge Graph
@@ -90,23 +104,27 @@ The risks of becoming an MCP are also clear.
 
 ```mermaid
 sequenceDiagram
+  accTitle: The sequence of retrieval and approved writes
+  accDescr: Build an answer from retrieval and seek approval only when persistence is needed. Do not execute a denied write.
   participant U as User
   participant H as Host
-  participant M as MCP Memory Server
+  participant M as Memory MCP
   participant G as Graphiti
-  participant P as Policy/Approval
-
+  participant P as Approval and policy
   U->>H: Question
-  H->>M: search/query tool call
-  M->>G: temporal search
-  G-->>M: facts / entities / provenance
-  M-->>H: context
-  H-->>U: Answer
-  alt Writeback needed
-    H->>P: approval request
-    P-->>H: allow / deny
-    H->>M: write tool call
-    M->>G: ingest / update
+  H->>M: Search request
+  M->>G: Time-scoped search
+  G-->>H: Return facts and sources via MCP
+  H-->>U: Answer with evidence
+  opt Persistence needed
+    H->>P: Request write approval
+    alt Allowed
+      P-->>H: Authorized scope
+      H->>M: Write request
+      M->>G: Ingest or update
+    else Denied
+      P-->>H: Do not write
+    end
   end
 ```
 
@@ -158,12 +176,20 @@ In business agents, it is important to separate memory and action. The memory MC
 
 ```mermaid
 flowchart TD
-  U["User / Agent"] --> R["Read MCP"]
-  U --> W["Write MCP"]
-  R --> KG["Temporal KG"]
-  W --> SYS["System of record"]
-  SYS --> KG
-  AP["Approval"] --> W
+  accTitle: Separate reference memory from changes to the system of record
+  accDescr: Read MCP queries the graph; Write MCP updates the system of record after approval, and its changes feed the graph.
+  N0["User and agent"]
+  N1["Read MCP"]
+  N2["Temporal knowledge<br/>graph"]
+  N3["Approval and<br/>permissions"]
+  N4["Write MCP"]
+  N5["System of record"]
+  N0 -->|Search| N1
+  N1 -->|Read| N2
+  N0 -->|Change request| N3
+  N3 -->|Allow| N4
+  N4 -->|Update the record| N5
+  N5 -.->|Reflect changes| N2
 ```
 
 In this pattern, Graphiti is the "layer for remembering" and the business system is the "layer for finalizing." By separating the two, it is difficult for incorrect memories to corrupt business data.
@@ -218,12 +244,17 @@ If you want to combine Graphiti and MCP, it is best to proceed in the following 
 
 ```mermaid
 flowchart TD
-  A["Document RAG"] --> B["Extract changing relations"]
-  B --> C["Graphiti KG"]
-  C --> D["Read-only MCP"]
-  D --> E["Host / client"]
-  E --> F["Human approval"]
-  F --> C
+  accTitle: Move from document RAG to a read-only pilot
+  accDescr: Extract changing relationships into a graph and test a read-only connection before considering write access.
+  N0["Existing document RAG"]
+  N1["Extract changing<br/>relationships"]
+  N2["Graphiti knowledge<br/>graph"]
+  N3["Read-only MCP and host"]
+  N4["Value and permission<br/>review"]
+  N0 -->|Relationships beyond<br/>documents| N1
+  N1 -->|Store| N2
+  N2 -->|Validate retrieval| N3
+  N3 -->|Decide on write access| N4
 ```
 
 ## Reference information

@@ -29,12 +29,19 @@ Under this view, the core of learning is not memorizing isolated words. It is:
 3. using output and feedback to update the learner's hypothesis.
 
 ```mermaid
-flowchart LR
-  A["Japanese frame"] --> B["English input"]
-  B --> C["Notice mismatch"]
-  C --> D["Attempt output"]
-  D --> E["Feedback / repair"]
-  E --> F["Updated schema"]
+flowchart TD
+  accTitle: Update an interpretive schema through English practice
+  accDescr: Notice mismatches with a Japanese schema, then use speaking and repair to test how English organizes meaning.
+  N0["Japanese meaning schema"]
+  N1["English input and<br/>mismatches"]
+  N2["Try expressing it<br/>independently"]
+  N3["Check responses and<br/>corrections"]
+  N4["Update the English<br/>schema"]
+  N0 -->|Compare with<br/>expectations| N1
+  N1 -->|Test a hypothesis| N2
+  N2 --> N3
+  N3 -->|Incorporate repairs| N4
+  N4 -.->|Check with new input| N1
 ```
 
 <SourceNote>This learning loop is a practical synthesis of Schmidt's noticing hypothesis, Long's interaction hypothesis, Swain's output hypothesis, and later corrective feedback research.[Schmidt (1990)](https://doi.org/10.1093/applin/11.2.129), [Long (1996)](https://doi.org/10.1016/B978-012589042-7/50015-3), and [Swain (1995)](https://doi.org/10.1093/applin/16.3.371) are the starting points.</SourceNote>

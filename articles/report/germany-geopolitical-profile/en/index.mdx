@@ -24,12 +24,20 @@ draft: false
 Germany combines one of the EU’s largest economies, a rear base for NATO’s eastern posture, fiscal weight inside the euro area, and standard-setting power in climate and industrial policy. After the 2025 federal election, Chancellor Friedrich Merz leads a CDU/CSU-SPD government that is trying to rebuild growth, expand defence, control migration, and strengthen Europe at the same time. <SourceNote>[Federal Government, Federal Cabinet](https://www.bundesregierung.de/breg-en/federal-cabinet) and [Federal Government, first government statement](https://www.bundesregierung.de/breg-en/news/first-government-statement-chancellor-merz-2347710)</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["Coalition government"] --> B["Growth agenda"]
-  A --> C["Defence build-up"]
-  A --> D["Migration control"]
-  B --> E["EU competitiveness"]
-  C --> F["Ukraine support"]
+flowchart TD
+  accTitle: Where German economic, defence and migration policy meet
+  accDescr: Separate the coalition's economic recovery, defence and migration policies, then trace their links to the EU and Ukraine support.
+  N0["Coalition government"]
+  N1["Economic recovery"]
+  N2["Defence expansion"]
+  N3["Migration management"]
+  N4["EU competitiveness"]
+  N5["Support for Ukraine"]
+  N0 -->|Domestic economy| N1
+  N0 -->|Security| N2
+  N0 -->|Domestic policy| N3
+  N1 -->|European effects| N4
+  N2 -->|Equipment and funding| N5
 ```
 
 Germany should not be read only as the EU’s central state. AfD growth, east-west divides, industrial stagnation, energy prices, and permanent defence funding constrain Berlin’s foreign policy. For Japan, the main issue is how German climate, industrial, and sanctions decisions move into EU-wide rules.
@@ -40,7 +48,10 @@ Modern German politics rests on the 1949 Basic Law, Cold War division, European 
 
 ```mermaid
 timeline
-  title German political milestones
+  accTitle: Milestones in German reunification, integration and security
+  accDescr: The chronology covers the post-war constitution, reunification, the euro, refugee policy, security change and a new government.
+  accTitle: Milestones in German reunification, integration and security
+  accDescr: The chronology covers the post-war constitution, reunification, the euro, refugee policy, security change and a new government.
   1949 : Basic Law
   1990 : Reunification
   2002 : Euro cash

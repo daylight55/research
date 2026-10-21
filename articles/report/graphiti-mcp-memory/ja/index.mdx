@@ -30,15 +30,22 @@ Graphiti と MCP を組み合わせると、AI エージェントに「会話セ
 <SourceNote>Graphiti は Zep の知識グラフ基盤として公開されており、ドキュメントでは temporal knowledge graph、hybrid search、custom entity / edge types、MCP server を提供する。MCP は host / client / server の標準接続層であり、tools、resources、prompts を公開する仕様である。これらは [Graphiti docs](https://help.getzep.com/graphiti/graphiti/overview)、[Graphiti MCP server README](https://github.com/getzep/graphiti/blob/main/mcp_server/README.md)、[MCP specification](https://modelcontextprotocol.io/docs/getting-started/intro) に基づく。</SourceNote>
 
 ```mermaid
-flowchart LR
-  U["User / Agent"] --> H["Host"]
-  H --> M["MCP Server"]
-  M --> G["Graphiti"]
-  G --> S["Sources"]
-  G --> A["Audit"]
-  A --> G
-  H --> P["Policy"]
-  P -->|allow write| M
+flowchart TD
+  accTitle: Graphitiの検索・書き込みと承認の境界
+  accDescr: HostがMCP越しに時刻付き知識を取得する。保存や更新は読み取りと分け、Policyで実行可否を決める。
+  N0["User・Agent"]
+  N1["Host・MCP Client"]
+  N2["Memory Server"]
+  N3["Graphiti<br/>時刻・出典付き知識"]
+  N4["検索結果・監査"]
+  N5["Policy・人間承認"]
+  N0 -->|質問・保存要求| N1
+  N1 -->|検索| N2
+  N2 -->|取得| N3
+  N3 -->|根拠を返す| N4
+  N4 -->|文脈に使う| N1
+  N1 -->|書き込み前の審査| N5
+  N5 -->|許可した書き込みだけ| N2
 ```
 
 ## 2. Graphiti が解こうとしている問題
@@ -53,10 +60,17 @@ Graphiti の価値は、単なる「会話ログの保存」ではない。会�
 
 ```mermaid
 flowchart TD
-  E["Episode"] --> X["抽出"]
-  X --> G["Temporal KG"]
-  G --> H["Hybrid search"]
-  H --> Ans["回答文脈"]
+  accTitle: エピソードが検索可能な文脈になるまで
+  accDescr: 抽出した関係を時刻付きグラフに保存し、ハイブリッド検索で回答に必要な事実と出典を取り出す。
+  N0["Episode<br/>会話・文書・出来事"]
+  N1["事実・関係の抽出"]
+  N2["時刻付き知識グラフ"]
+  N3["Hybrid Search"]
+  N4["回答用の事実・出典"]
+  N0 --> N1
+  N1 -->|保存・更新| N2
+  N2 -->|時点を指定| N3
+  N3 -->|根拠を取得| N4
 ```
 
 ## 3. 従来の RAG / ベクトル DB / Knowledge Graph との違い
@@ -105,23 +119,27 @@ Graphiti MCP server の README は experimental と位置づけているため�
 
 ```mermaid
 sequenceDiagram
-  participant U as User
+  accTitle: 検索回答と承認付き書き込みの順序
+  accDescr: 検索で回答を作り、保存が必要な場合だけ承認を求める。拒否された書き込みは実行しない。
+  participant U as 利用者
   participant H as Host
-  participant M as MCP Memory Server
+  participant M as Memory MCP
   participant G as Graphiti
-  participant P as Policy/Approval
-
+  participant P as 承認・Policy
   U->>H: 質問
-  H->>M: search/query tool call
-  M->>G: temporal search
-  G-->>M: facts / entities / provenance
-  M-->>H: context
-  H-->>U: 回答
-  alt 書き込みが必要
-    H->>P: approval request
-    P-->>H: allow / deny
-    H->>M: write tool call
-    M->>G: ingest / update
+  H->>M: 検索要求
+  M->>G: 時点を指定した検索
+  G-->>H: MCP経由で事実・出典を返す
+  H-->>U: 根拠付きの回答
+  opt 保存が必要
+    H->>P: 書き込み承認を要求
+    alt 許可
+      P-->>H: 許可した範囲
+      H->>M: 書き込み要求
+      M->>G: 取り込み・更新
+    else 拒否
+      P-->>H: 書き込みしない
+    end
   end
 ```
 
@@ -178,12 +196,20 @@ Graphiti を選ぶ理由は、関係と時系列を扱えることにある。Me
 
 ```mermaid
 flowchart TD
-  U["User / Agent"] --> R["Read MCP"]
-  U --> W["Write MCP"]
-  R --> KG["Temporal KG"]
-  W --> SYS["System of record"]
-  SYS --> KG
-  AP["Approval"] --> W
+  accTitle: 参照用Memoryと正本への変更を分離する
+  accDescr: Read MCPはグラフを参照し、Write MCPは承認後に正本を更新する。正本の変更をグラフへ反映する。
+  N0["User・Agent"]
+  N1["Read MCP"]
+  N2["Temporal KG"]
+  N3["承認・権限制御"]
+  N4["Write MCP"]
+  N5["System of Record"]
+  N0 -->|検索| N1
+  N1 -->|参照| N2
+  N0 -->|変更要求| N3
+  N3 -->|許可| N4
+  N4 -->|正本を更新| N5
+  N5 -.->|変更を反映| N2
 ```
 
 このパターンでは、Graphiti は「思い出すための層」であり、業務システムは「確定するための層」である。両者を分けると、間違った記憶が業務データを汚しにくい。
@@ -241,12 +267,17 @@ Graphiti と MCP を組み合わせるなら、次の順で進めるのがよい
 
 ```mermaid
 flowchart TD
-  A["文書RAG"] --> B["変化する関係を抽出"]
-  B --> C["Graphiti KG"]
-  C --> D["Read-only MCP"]
-  D --> E["Host / client"]
-  E --> F["人間承認"]
-  F --> C
+  accTitle: 文書RAGから読み取り専用の実証へ進む
+  accDescr: 変化する関係を抽出してグラフ化し、読み取り専用接続で価値を確かめてから書き込み権限を検討する。
+  N0["既存の文書RAG"]
+  N1["変化する関係を抽出"]
+  N2["Graphiti KG"]
+  N3["読み取り専用MCP・Host"]
+  N4["価値・権限のレビュー"]
+  N0 -->|文書で足りない関係| N1
+  N1 -->|保存| N2
+  N2 -->|検索で検証| N3
+  N3 -->|書き込み導入を判断| N4
 ```
 
 ## 参考情報

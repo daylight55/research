@@ -33,12 +33,18 @@ This report ranks the issues by combining four criteria: immediate household imp
 This order is not absolute. But as a practical guide to what will dominate Diet debate over time, it is reasonable to put households and social security first, then fiscal constraints, foreign affairs and security, demographic decline, and political reform.
 
 ```mermaid
-flowchart TD
-  A["Immediate household impact"] --> R["Priority"]
-  B["Fiscal scale"] --> R
-  C["Urgency"] --> R
-  D["Irreversibility"] --> R
-  E["Governing capacity"] --> R
+flowchart LR
+  accTitle: Compare Japanese policy issues by priority
+  accDescr: Use immediate household effects, fiscal scale, urgency, irreversibility and governing capacity as criteria. Arrows indicate inputs to judgment, not causation.
+  N0["Immediate household<br/>impact"]
+  N1["Fiscal scale"]
+  N2["Urgency and<br/>irreversibility"]
+  N3["Government delivery<br/>capacity"]
+  N4["Policy priorities"]
+  N0 -->|Living conditions| N4
+  N1 -->|Funding and scale| N4
+  N2 -->|Cost of delay| N4
+  N3 -->|Feasibility| N4
 ```
 
 ## 2. How the ranking is built

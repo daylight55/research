@@ -34,11 +34,18 @@ The economy still leans on innovation and high-tech exports, but the IMF expects
 For Japan, the useful frame is not Israel as a distant conflict zone, but Israel as a node where the U.S. alliance, Gulf normalization, cyber and defense technology, and maritime risk intersect. <SourceNote>[U.S. Relations With Israel](https://www.state.gov/u-s-relations-with-israel/) and [IMF, Israel country page](https://www.imf.org/en/Countries/ISR) support this reading.</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["Prime minister"] --> B["Knesset"]
-  A --> C["Judiciary"]
-  A --> D["Security agencies"]
-  A --> E["Foreign ties"]
+flowchart TD
+  accTitle: Israel's coalition, parliament, judiciary and security
+  accDescr: Coalition policy depends on parliamentary support, judicial disputes, security institutions and external relations. These are not a single chain of command.
+  N0["Prime minister and<br/>coalition"]
+  N1["Knesset<br/>Parliamentary support"]
+  N2["Judiciary<br/>Review and<br/>institutional disputes"]
+  N3["Security institutions"]
+  N4["External relations"]
+  N1 -->|Support and legislation| N0
+  N0 -->|Institutional reform<br/>disputes| N2
+  N0 -->|Policy and security| N3
+  N0 -->|Alliances and diplomacy| N4
 ```
 
 ## 2. History and State Formation
@@ -51,7 +58,10 @@ The October 7, 2023 attack, the Gaza war that followed, and the 2025 reform of j
 
 ```mermaid
 timeline
-  title State formation milestones
+  accTitle: Israel's formation, occupation, peace and recent crises
+  accDescr: The chronology covers state formation, territorial change, peace and normalization, and the crisis since 2023.
+  accTitle: Israel's formation, occupation, peace and recent crises
+  accDescr: The chronology covers state formation, territorial change, peace and normalization, and the crisis since 2023.
   1948 : Founding
   1967 : Six-Day War
   1979 : Peace with Egypt

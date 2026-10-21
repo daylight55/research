@@ -30,15 +30,22 @@ The United States remains central to NATO and to support for Ukraine, while also
 The central reading is not whether the United States is simply strong or weak. What matters is that different domestic coalitions push different policies through different institutional channels, which changes alliances, sanctions, export controls, migration, and AI standards. For Japan, it is more useful to read the United States as a system in which domestic politics rewires diplomacy, trade, and technology control.
 
 ```mermaid
-flowchart TD
-  A["Constitutional separation"] --> B["President"]
-  A --> C["Congress"]
-  A --> D["Federal agencies"]
-  A --> E["States"]
-  B --> F["Foreign policy"]
-  C --> F
-  D --> F
-  E --> F
+flowchart LR
+  accTitle: Separate US policy direction, funding and implementation
+  accDescr: The president, Congress, federal agencies and state governments are not one command chain. Distinguish their powers and policy roles.
+  N0["President"]
+  N1["Congress"]
+  N2["Federal agencies"]
+  N3["State governments"]
+  N4["Foreign and security<br/>direction"]
+  N5["Budgets, laws and<br/>oversight"]
+  N6["Policy implementation"]
+  N0 -->|Direction and executive<br/>power| N4
+  N1 -->|Legislative and<br/>spending powers| N5
+  N2 -->|Administration| N6
+  N3 -->|State powers by field| N6
+  N4 --> N6
+  N5 --> N6
 ```
 
 ## 2. Historical and Institutional Base
@@ -47,7 +54,10 @@ The basic structure of the United States is a constitutional system that divides
 
 ```mermaid
 timeline
-  title Key turning points in United States external engagement
+  accTitle: Changes in US state formation and external engagement
+  accDescr: Trace independence and the constitution, post-war alliances, the war on terror, recent external crises and administration priorities.
+  accTitle: Changes in US state formation and external engagement
+  accDescr: Trace independence and the constitution, post-war alliances, the war on terror, recent external crises and administration priorities.
   1776 : Independence
   1787 : Constitution
   1861 : Civil War
@@ -103,12 +113,20 @@ OFAC sanctions show how the United States turns finance and trade rules into geo
 I am not quantifying dollar dominance here, but in practice United States sanctions can change the operating conditions of third-country firms very quickly. For Japanese firms, counterpart screening, end use, re-export, shipping insurance, and payment rails need to be treated as one compliance problem.
 
 ```mermaid
-flowchart LR
-  A["White House priorities"] --> B["AI and compute"]
-  A --> C["Border and migration"]
-  A --> D["Energy and security"]
-  D --> E["Alliances and sanctions"]
-  B --> F["Semiconductors and data centers"]
+flowchart TD
+  accTitle: Connections in US AI, border and energy policy
+  accDescr: Separate AI and compute, migration, and energy and security policies, then trace links to semiconductors, data centres, alliances and sanctions.
+  N0["Administration<br/>priorities"]
+  N1["AI and compute"]
+  N2["Chips and data centres"]
+  N3["Borders and migration"]
+  N4["Energy and security"]
+  N5["Alliances and sanctions"]
+  N0 -->|Technology policy| N1
+  N1 -->|Investment and supply<br/>chains| N2
+  N0 -->|Border management| N3
+  N0 -->|Economic and security<br/>policy| N4
+  N4 -->|External tools| N5
 ```
 
 ## 5. Civil Society and Polarization

@@ -34,10 +34,17 @@ Landmine contamination remains both an active-conflict and a legacy-war issue. L
 
 ```mermaid
 flowchart TD
-    Legacy[Legacy wars and borders] --> Survey[Suspected areas]
-    Current[Current conflicts] --> Survey
-    Survey --> Release[Land release]
-    Release --> Use[Farming, roads, return]
+  accTitle: From mine contamination to safe land use
+  accDescr: Survey contamination from past and current conflicts, then connect land release and quality assurance to farming, roads and return.
+  N0["Past conflicts and<br/>border areas"]
+  N1["Current conflicts"]
+  N2["Survey the affected<br/>area"]
+  N3["Land release and<br/>quality assurance"]
+  N4["Farming, roads and safe<br/>return"]
+  N0 -->|Legacy contamination| N2
+  N1 -->|New contamination| N2
+  N2 -->|Act on evidence| N3
+  N3 -->|Handover| N4
 ```
 
 The key unit is not only the number of mines. It is land that cannot be used. Contamination blocks farming, school routes, roads, power lines, housing, and the return of displaced people even when no explosion has occurred. Mine action outcomes should therefore be judged by safe land release, restored movement, and public-service recovery as well as mines destroyed. <SourceNote>[IMAS 07.11 Land Release](https://www.mineactionstandards.org/standards/07-11/) defines land release as the process of identifying, defining, and removing all presence and suspicion of explosive ordnance.</SourceNote>
@@ -55,11 +62,20 @@ Technical survey then uses intrusive methods to confirm the presence, type, dist
 Clearance itself may use manual detection and excavation, mechanical vegetation and soil processing, animal detection systems, explosive ordnance disposal teams, and remotely operated machines. No method is universal. Low-metal plastic mines, deeply buried mines in sand, rocks, forest, rice fields, urban rubble, improvised mines, and anti-handling devices require different combinations. IMAS 09.10 defines clearance as ensuring removal or destruction of all mines and explosive remnants of war from a specified area to a specified depth. <SourceNote>[IMAS 09.10 Clearance Requirements](https://www.mineactionstandards.org/standards/09-10/) and [IMAS 09.50 Mechanical Land Release](https://www.mineactionstandards.org/standards/09-50/) describe clearance and mechanical methods.</SourceNote>
 
 ```mermaid
-flowchart LR
-    NTS[Non-technical survey] --> TS[Technical survey]
-    TS --> Clear[Clearance and disposal]
-    Clear --> QA[Quality assurance]
-    QA --> Handover[Land handover]
+flowchart TD
+  accTitle: The roles of survey, clearance and quality assurance
+  accDescr: Non-technical survey narrows suspicion, while technical survey and clearance establish evidence. Not all land requires the same amount of clearance.
+  N0["Non-technical survey"]
+  N1["Technical survey"]
+  N2["Clearance and disposal"]
+  N3["Quality assurance and<br/>control"]
+  N4["Land handover"]
+  N0 -->|More evidence needed| N1
+  N1 -->|Confirmed contamination| N2
+  N0 -->|Evidence-based<br/>cancellation| N3
+  N1 -->|Evidence-based<br/>reduction| N3
+  N2 -->|Verify clearance| N3
+  N3 -->|Return to users| N4
 ```
 
 Quality assurance is not an afterthought. Accreditation, procedures, safety distances, equipment, daily records, supervision, community liaison, and post-clearance inspection create the confidence needed for residents to use the land. Mine action is therefore not only an engineering task. It is also information management, public administration, community participation, medicine, education, and reconstruction planning. <SourceNote>[IMAS 09.10 Clearance Requirements](https://www.mineactionstandards.org/standards/09-10/) requires QA, QC, community involvement, NMAA responsibilities, and registries of cleared and uncleared land.</SourceNote>

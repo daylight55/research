@@ -33,11 +33,19 @@ For Japan, the point is not to read China as either a giant market or a pure mil
 
 ```mermaid
 flowchart TD
-  A["Party leadership"] --> B["State apparatus"]
-  A --> C["Military and security"]
-  A --> D["Media and society"]
-  B --> E["Economic steering"]
-  C --> F["External pressure"]
+  accTitle: Distinguish party, state and military in China
+  accDescr: Party leadership extends through state institutions, the military, security and information control, shaping economic governance and foreign policy.
+  N0["Communist Party<br/>leadership"]
+  N1["State institutions"]
+  N2["Military and security"]
+  N3["Information and media<br/>controls"]
+  N4["Economic management"]
+  N5["Foreign and security<br/>policy"]
+  N0 -->|Direct policy| N1
+  N0 -->|Control| N2
+  N0 -->|Disseminate priorities| N3
+  N1 -->|Implement| N4
+  N2 -->|Military and security<br/>tools| N5
 ```
 
 ## 2. Historical and Institutional Base
@@ -48,7 +56,10 @@ The Xi Jinping era since 2012 is best understood as a further tightening of that
 
 ```mermaid
 timeline
-  title Key Milestones in Modern China
+  accTitle: China's political formation and declared future goals
+  accDescr: Separate historical events from the declared future goal for 2049.
+  accTitle: China's political formation and declared future goals
+  accDescr: Separate historical events from the declared future goal for 2049.
   1949 : PRC founded
   1978 : Reform and opening
   2012 : Xi era begins
@@ -79,11 +90,18 @@ China’s state machine works by setting party direction first, then having the 
 The media operate under party leadership, and security, surveillance, and speech control are treated as part of political stability. Xinjiang and Tibet are therefore not just minority-policy issues; they are also questions of integration and control. <SourceNote>[China](https://en.wikipedia.org/wiki/China), [Military and Security Developments Involving the People’s Republic of China 2025](https://media.defense.gov/2025/Dec/23/2003849070/-1/-1/1/ANNUAL-REPORT-TO-CONGRESS-MILITARY-AND-SECURITY-DEVELOPMENTS-INVOLVING-THE-PEOPLES-REPUBLIC-OF-CHINA-2025.PDF)</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["Party line"] --> B["State apparatus"]
-  B --> C["Economy"]
-  B --> D["Security and surveillance"]
-  D --> E["Social control"]
+flowchart TD
+  accTitle: How party priorities reach the economy and social control
+  accDescr: Distinguish policy implementation through state institutions from social control through security and surveillance.
+  N0["Party priorities"]
+  N1["State institutions"]
+  N2["Economic policy<br/>implementation"]
+  N3["Security and<br/>surveillance"]
+  N4["Social control"]
+  N0 -->|Set policy| N1
+  N1 -->|Economic governance| N2
+  N1 -->|Institutions and<br/>budgets| N3
+  N3 -->|Monitor and enforce| N4
 ```
 
 ## 4. Main International Disputes
@@ -111,11 +129,21 @@ The Pentagon report also stresses that China treats AI and dual-use technologies
 Belt and Road should be read not just as infrastructure export, but as a strategy that ties together finance, ports, resources, and diplomacy. China’s external engagement can support regional cooperation, but it also extends influence through dependence. <SourceNote>[Military and Security Developments Involving the People’s Republic of China 2025](https://media.defense.gov/2025/Dec/23/2003849070/-1/-1/1/ANNUAL-REPORT-TO-CONGRESS-MILITARY-AND-SECURITY-DEVELOPMENTS-INVOLVING-THE-PEOPLES-REPUBLIC-OF-CHINA-2025.PDF)</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["Taiwan"] --> B["Military pressure"]
-  A --> C["Information warfare"]
-  D["South China Sea"] --> B
-  E["Technology controls"] --> C
+flowchart TD
+  accTitle: Pressure around Taiwan, the South China Sea and technology
+  accDescr: Separate military, information and technology channels rather than treating them as one kind of pressure.
+  N0["Taiwan"]
+  N1["Military pressure"]
+  N2["Information operations"]
+  N3["South China Sea"]
+  N4["Technology competition<br/>and controls"]
+  N5["Security friction"]
+  N0 --> N1
+  N0 --> N2
+  N3 --> N1
+  N1 --> N5
+  N2 --> N5
+  N4 --> N5
 ```
 
 ## 5. Economic and Social Pressures

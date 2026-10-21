@@ -26,13 +26,20 @@ draft: false
 しかし2026年のフランス政治は、強い大統領制と弱い議会多数派が同居する状態にある。エマニュエル・マクロン大統領の下で、セバスチャン・ルコルニュ首相が政権を運営し、国民議会は国民連合、与党系会派、左派、社会党、共和右派などに割れている。<SourceNote>[info.gouv.fr, Composition du Gouvernement](https://www.info.gouv.fr/composition-du-gouvernement) はルコルニュ首相を掲載し、[Assemblée nationale, Effectif des groupes politiques](https://www2.assemblee-nationale.fr/instances/liste/groupes_politiques/effectif) は国民連合122、与党系 Ensemble 91、LFI-NFP 71、社会党系68などの分裂を示す。</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["大統領制"] --> B["EU・安全保障"]
-  A --> C["財政運営"]
-  D["分裂議会"] --> C
-  D --> E["移民・世俗主義"]
-  B --> F["ウクライナ・NATO"]
-  B --> G["アフリカ・インド太平洋"]
+flowchart TD
+  accTitle: フランスの大統領権限と議会・財政制約
+  accDescr: 外交・安全保障の裁量と、分裂議会の下での予算・国内改革を分けて読む。
+  N0["大統領・政府"]
+  N1["外交・安全保障"]
+  N2["分裂議会"]
+  N3["予算・国内改革"]
+  N4["EU・NATO・ウクライナ"]
+  N5["アフリカ・インド太平洋"]
+  N0 -->|外交方針| N1
+  N0 -->|政策の実行| N3
+  N2 -->|支持・予算の制約| N3
+  N1 -->|欧州と同盟| N4
+  N1 -->|対外関与| N5
 ```
 
 ニュースを読むときは、フランスを「欧州統合を進める強い国家」とだけ見ない方がよい。国内では移民、世俗主義、治安、購買力、農業、年金、財政赤字が対立軸をつくり、国外ではEU戦略的自律、NATO、ウクライナ支援、旧植民地関係、海外領土が政策の射程を広げている。
@@ -43,7 +50,10 @@ flowchart LR
 
 ```mermaid
 timeline
-  title フランス政治の節目
+  accTitle: フランスの制度形成から分裂議会まで
+  accDescr: 革命、第五共和政、脱植民地化、欧州統合、近年の議会構成を時系列で示す。
+  accTitle: フランスの制度形成から分裂議会まで
+  accDescr: 革命、第五共和政、脱植民地化、欧州統合、近年の議会構成を時系列で示す。
   1789 : フランス革命
   1958 : 第五共和政
   1960s : 脱植民地化

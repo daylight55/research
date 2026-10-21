@@ -37,13 +37,22 @@ draft: false
 <SourceNote>`@playwright/mcp` の npm 最新は 2026年5月26日時点で `0.0.75`、`chrome-devtools-mcp` は同日 `1.1.0`、`@playwright/cli` は 2026年5月7日時点で `0.1.13`、`agent-browser` は 2026年5月18日時点で `0.27.0`、`@browserbasehq/mcp` は 2026年3月31日時点で `3.0.0` と確認した。npmの [@playwright/mcp](https://www.npmjs.com/package/@playwright/mcp)、[chrome-devtools-mcp](https://www.npmjs.com/package/chrome-devtools-mcp)、[@playwright/cli](https://www.npmjs.com/package/@playwright/cli)、[agent-browser](https://www.npmjs.com/package/agent-browser)、[@browserbasehq/mcp](https://www.npmjs.com/package/@browserbasehq/mcp) を参照。</SourceNote>
 
 ```mermaid
-flowchart TD
-  Goal["目的"] --> Login["ログイン済み活用"]
-  Goal --> CI["CI再現性"]
-  Goal --> Debug["実ブラウザ調査"]
-  Login --> CDP["CDP / Extension"]
-  CI --> Test["Playwright Test"]
-  Debug --> DevTools["DevTools MCP"]
+flowchart LR
+  accTitle: ブラウザ検証の目的から接続方法を選ぶ
+  accDescr: ログイン状態の利用、CIでの再現、実ブラウザの診断では必要な接続と検証手段が変わる。
+  N0["検証の目的"]
+  N1["既存のログインを使う"]
+  N2["CDP・Extension"]
+  N3["CIで反復・再現する"]
+  N4["Playwright Test"]
+  N5["実ブラウザを診断する"]
+  N6["DevTools MCP"]
+  N0 --> N1
+  N1 --> N2
+  N0 --> N3
+  N3 --> N4
+  N0 --> N5
+  N5 --> N6
 ```
 
 ## 2. 何が違うのか
@@ -157,12 +166,16 @@ browser-useは、PythonベースのAIブラウザエージェントで、CLI、C
 | Browserbase/Stagehand             | クラウドセッション   | 外部Web操作、スケール      | ローカルログインの即時流用ではない |
 
 ```mermaid
-flowchart LR
-  Human["人間ログイン"] --> Profile["専用Profile"]
-  Profile --> CDP["CDP接続"]
-  CDP --> Agent["エージェント検証"]
-  Agent --> Script["再実行スクリプト"]
-  Script --> Test["E2E正本"]
+flowchart TD
+  accTitle: 探索した操作を再現可能なE2Eへ移す
+  accDescr: 専用プロファイルで確認した操作をスクリプト化し、繰り返し実行できるテストへ移す。
+  N0["専用Profileで人間が認証"]
+  N1["CDPで接続・操作を確認"]
+  N2["再実行スクリプト"]
+  N3["E2Eテストとして保存"]
+  N0 --> N1
+  N1 -->|操作を記録| N2
+  N2 -->|反復できるか確認| N3
 ```
 
 ## 5. 実務導入方針

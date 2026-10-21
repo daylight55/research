@@ -25,7 +25,10 @@ draft: false
 
 ```mermaid
 timeline
-  title 国名の主要転換
+  accTitle: 連合王国の国名・領域・対欧関係の変化
+  accDescr: 合同とアイルランドの分離、北アイルランド和平、EU離脱・再接近を年代で読む。
+  accTitle: 連合王国の国名・領域・対欧関係の変化
+  accDescr: 合同とアイルランドの分離、北アイルランド和平、EU離脱・再接近を年代で読む。
   1707 : Great Britain
   1801 : Great Britain and Ireland
   1922 : Irish Free State
@@ -62,11 +65,20 @@ timeline
 
 ```mermaid
 flowchart LR
-  A["UK Government"] --> B["外交・防衛・通貨"]
-  A --> C["England政策"]
-  D["Scottish Government"] --> E["分権行政"]
-  F["Welsh Government"] --> E
-  G["NI Executive"] --> E
+  accTitle: 英国政府と分権政府の担当を区別する
+  accDescr: 外交・防衛・通貨と、分権された行政分野を分ける。イングランドには同型の分権政府がない。
+  N0["UK政府"]
+  N1["外交・防衛・通貨"]
+  N2["イングランドの政策"]
+  N3["スコットランド政府"]
+  N4["ウェールズ政府"]
+  N5["北アイルランド行政府"]
+  N6["分権された行政分野"]
+  N0 -->|全英の権限| N1
+  N0 -->|分権政府の不在| N2
+  N3 --> N6
+  N4 --> N6
+  N5 --> N6
 ```
 
 ## 4. 周辺諸国との関係性

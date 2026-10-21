@@ -31,12 +31,19 @@ An LLM does not “understand the whole sentence” in one step. It first splits
 The pipeline can be sketched like this.
 
 ```mermaid
-flowchart LR
-  A["Text"] --> B["Tokenization"]
-  B --> C["Embedding"]
-  C --> D["Self-attention"]
-  D --> E["Next-token probability"]
-  E --> F["Generated text"]
+flowchart TD
+  accTitle: From text input to next-token generation
+  accDescr: Tokenization, embeddings, contextual processing and probabilities lead to one token selection. Append that token to the context and repeat.
+  N0["Split text into tokens"]
+  N1["Convert to vector<br/>representations"]
+  N2["Process context with<br/>attention"]
+  N3["Compute next-token<br/>probabilities"]
+  N4["Select one and append<br/>to output"]
+  N0 -->|Embedding| N1
+  N1 -->|Aggregate context| N2
+  N2 -->|Output distribution| N3
+  N3 -->|Selection| N4
+  N4 -.->|Extend context and<br/>repeat| N2
 ```
 
 This diagram is simplified, but it is good enough as a map for a first reading. In real models, the flow includes multiple Transformer blocks, normalization, feed-forward layers, and a learned output head. <SourceNote>[Attention Is All You Need](https://arxiv.org/abs/1706.03762) defines Transformer as a stacked sequence-to-sequence architecture built from attention and feed-forward layers.</SourceNote>
@@ -57,11 +64,17 @@ Self-attention often uses the terms Q, K, and V. It helps to think of them as th
 
 ```mermaid
 flowchart TD
-  A["Input tokens"] --> B["Q/K/V"]
-  B --> C["Relevance scoring"]
-  C --> D["Context aggregation"]
-  D --> E["Representation update"]
-  E --> F["Next layer"]
+  accTitle: How self-attention updates contextual representations
+  accDescr: Compute attention weights from Q–K relevance, aggregate V, and update the representation.
+  N0["Input representations"]
+  N1["Create Q, K and V"]
+  N2["Q–K relevance and<br/>weights"]
+  N3["Aggregate V using the<br/>weights"]
+  N4["Update context and pass<br/>to next layer"]
+  N0 -->|Linear projections| N1
+  N1 -->|Compare| N2
+  N2 -->|Weighted sum| N3
+  N3 -->|Representation update| N4
 ```
 
 Self-attention is powerful because it can pick up the relevant clue wherever it appears in the context. At the same time, the attention weights themselves should not be treated as a full explanation, and the actual basis for a model’s answer still needs separate verification. <SourceNote>The practical lesson from Transformer is that attention helps model context, but output verification must be handled in the surrounding system design.</SourceNote>

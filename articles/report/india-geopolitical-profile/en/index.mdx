@@ -26,12 +26,20 @@ India combines population scale, a growing economy, nuclear deterrence, Indian O
 In the 2024 general election, the BJP lost its single-party majority and kept power through the NDA coalition. This did not erase Prime Minister Narendra Modi’s authority, but it brought state parties, coalition partners, and local interests back into national politics. <SourceNote>[Election Commission of India, General Elections](https://www.eci.gov.in/general-elections) and [Results of the 2024 Indian general election](https://en.wikipedia.org/wiki/Results_of_the_2024_Indian_general_election) show 293 seats for the NDA and 240 seats for the BJP.</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["Central government"] --> B["Growth strategy"]
-  A --> C["Security policy"]
-  C --> D["China and Pakistan"]
-  B --> E["Jobs and infrastructure"]
-  A --> F["Coalition bargaining"]
+flowchart TD
+  accTitle: India's growth, security and coalition politics
+  accDescr: Jobs and infrastructure, security concerns involving China and Pakistan, and coalition negotiations shape central policy.
+  N0["Central government"]
+  N1["Jobs, infrastructure<br/>and growth"]
+  N2["China and Pakistan<br/>Security"]
+  N3["Coalition partners and<br/>parliament"]
+  N4["Room for policy<br/>delivery"]
+  N0 -->|Growth policy| N1
+  N0 -->|Foreign and defence<br/>policy| N2
+  N3 -->|Support and negotiation| N0
+  N1 --> N4
+  N2 --> N4
+  N3 --> N4
 ```
 
 ## 2. History and Political System
@@ -40,7 +48,10 @@ Modern Indian politics rests on independence and partition in 1947, the 1962 war
 
 ```mermaid
 timeline
-  title Turning points in Indian politics
+  accTitle: Milestones in Indian independence, war and liberalization
+  accDescr: The chronology covers independence and partition, regional wars, liberalization, and changes in government and parliamentary support.
+  accTitle: Milestones in Indian independence, war and liberalization
+  accDescr: The chronology covers independence and partition, regional wars, liberalization, and changes in government and parliamentary support.
   1947 : Independence partition
   1962 : War with China
   1971 : Bangladesh war

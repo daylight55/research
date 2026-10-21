@@ -30,7 +30,10 @@ draft: false
 
 ```mermaid
 timeline
-    title 台湾史の主要転換点
+  accTitle: 台湾の統治主体と民主化の転換点
+  accDescr: 各政権の支配開始と、戒厳令解除・総統直接選挙という民主化の節目を区別する。
+  accTitle: 台湾の統治主体と民主化の転換点
+  accDescr: 各政権の支配開始と、戒厳令解除・総統直接選挙という民主化の節目を区別する。
     1624 : オランダ拠点
     1662 : 鄭氏政権
     1683 : 清朝支配
@@ -57,15 +60,16 @@ timeline
 <SourceNote>中国政府2022年白書は、台湾が中国の一部であり、国家統一を実現するという立場を示す。参照: [PRC State Council, 2022 Taiwan White Paper](https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html?wptouch_preview_theme=enabled)。台湾政府は、1949年以降、ROCが台湾等を統治し、PRCはROC統治地域を統治していないと説明する。参照: [Taiwan.gov.tw, History](https://www.taiwan.gov.tw/content_3.php)。</SourceNote>
 
 ```mermaid
-flowchart LR
-    Taiwan["台湾: 実効統治"]
-    PRC["中国: 統一目標"]
-    US["米国: 抑止支援"]
-    StatusQuo["現状維持"]
-
-    Taiwan --> StatusQuo
-    PRC --> StatusQuo
-    US --> StatusQuo
+flowchart TD
+  accTitle: 台湾の実効統治・中国の統一目標・米国の抑止
+  accDescr: 三者は同じ意味で現状維持を求めているわけではない。統一圧力、実効統治、抑止支援という異なる作用を示す。
+  N0["台湾<br/>実効統治と民主制"]
+  N1["中国<br/>統一の目標"]
+  N2["米国<br/>抑止と支援"]
+  N3["台湾海峡の現状"]
+  N0 -->|統治を継続| N3
+  N1 -.->|変更を求める圧力| N3
+  N2 -->|一方的変更の抑止| N3
 ```
 
 台湾海峡の安定は、完全な合意ではなく、曖昧さと抑止の組み合わせで成立してきた。台湾は独自の民主政治と防衛能力を強める。中国は統一目標を掲げ、軍事・外交・経済的圧力を維持する。米国は台湾を国家として正式承認しない一方、台湾関係法に基づいて防衛装備を提供し、武力・威圧による現状変更に反対する。

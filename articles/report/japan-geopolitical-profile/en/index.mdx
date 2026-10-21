@@ -28,11 +28,19 @@ Prime Minister Takaichi's government is framing "a strong Japanese economy" whil
 Read Japan as a country where security and economics overlap. Population, fiscal policy, labor, and security move at the same time, so one-off measures rarely last.
 
 ```mermaid
-flowchart LR
-  A["Population decline"] --> B["Local contraction"]
-  A --> C["Social spending"]
-  B --> D["Labor shortages"]
-  C --> E["Fiscal rigidity"]
+flowchart TD
+  accTitle: How population decline constrains Japan's regions and finances
+  accDescr: Regional labour and service losses and welfare and fiscal pressures constrain policy through different channels.
+  N0["Ageing, low fertility<br/>and population decline"]
+  N1["Fewer regional workers"]
+  N2["Service provision<br/>burdens"]
+  N3["Rising welfare spending"]
+  N4["Reduced fiscal<br/>discretion"]
+  N0 -->|Labour supply| N1
+  N1 -->|Regional administration| N2
+  N0 -->|Population structure| N3
+  N3 -->|Spending structure| N4
+  N2 -->|Local finances| N4
 ```
 
 The diagram shows how population decline tightens local services, labor, social spending, and fiscal room at the same time. No single ministry can solve that on its own. <SourceNote>[Statistics Bureau of Japan, Population Estimates](https://www.stat.go.jp/english/data/jinsui/2.html) and [Ministry of Finance, FY2026 budget](https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2026/index.html) support the structure; the policy coupling is an inference from public information.</SourceNote>
@@ -43,7 +51,10 @@ Postwar Japan's institutional memory comes from the 1947 Constitution, the 1960 
 
 ```mermaid
 timeline
-  title Japan's political milestones
+  accTitle: Milestones in Japanese institutions, economy and security
+  accDescr: The chronology covers the constitution, alliance, bubble collapse, earthquake, security policy and government changes.
+  accTitle: Milestones in Japanese institutions, economy and security
+  accDescr: The chronology covers the constitution, alliance, bubble collapse, earthquake, security policy and government changes.
   1947 : Constitution
   1960 : Alliance revision
   1990 : Bubble burst
@@ -82,11 +93,17 @@ Foreign residents help fill labor gaps, but they also create more work for schoo
 Fiscal policy now tends to work through an annual budget and a supplemental budget layered on top. The FY2026 budget was enacted on 7 April, and a supplemental budget followed on 5 June. <SourceNote>[Ministry of Finance, FY2026 budget](https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2026/index.html)</SourceNote>
 
 ```mermaid
-flowchart LR
-  X["Population decline"] --> Y["Smaller local services"]
-  Y --> Z["Higher municipal burden"]
-  X --> W["Rising social spending"]
-  W --> Z
+flowchart TD
+  accTitle: Population decline and local service burdens
+  accDescr: Fewer workers and users complicate service provision, while rising welfare costs also constrain local administration.
+  N0["Population and<br/>workforce decline"]
+  N1["Reduced local services"]
+  N2["Rising welfare costs"]
+  N3["Local administration<br/>burdens"]
+  N0 -->|Changes in users and<br/>staff| N1
+  N0 -->|Demographic composition| N2
+  N1 -->|Maintenance and<br/>restructuring| N3
+  N2 -->|Funding adjustment| N3
 ```
 
 Social spending rises faster than revenue flexibility, so it narrows the room for other spending. The public record shows that allocation strategy matters as much as growth strategy. <SourceNote>[Ministry of Finance, FY2026 budget](https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2026/index.html) and [Statistics Bureau of Japan, Population Estimates](https://www.stat.go.jp/english/data/jinsui/2.html) support this reading; future fiscal room is an inference from public information.</SourceNote>
@@ -100,11 +117,19 @@ The U.S.-Japan alliance is an operational framework that links bases, intelligen
 Defence spending now hinges on whether Japan can turn budget increases into equipment, personnel, ammunition, and joint operations. <SourceNote>[Ministry of Defense, Defence budget](https://www.mod.go.jp/en/d_act/d_budget/index.html)</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["China, North Korea, Russia"] --> B["Alliance operations"]
-  B --> C["Defence spending and deterrence"]
-  C --> D["Corporate procurement"]
-  A --> D
+flowchart TD
+  accTitle: Regional threats, alliances and defence procurement
+  accDescr: Separate alliance operations from equipment and supply-chain procurement in responses to China, North Korea and Russia.
+  N0["China, North Korea and<br/>Russia"]
+  N1["Alliance operations"]
+  N2["Defence spending and<br/>deterrence"]
+  N3["Equipment and critical<br/>procurement"]
+  N4["Business supply chains<br/>and investment"]
+  N0 -->|Threat assessment| N1
+  N1 -->|Operations and<br/>capability| N2
+  N2 -->|Equipment needs| N3
+  N0 -->|Economic security| N4
+  N3 -->|Orders and production| N4
 ```
 
 The diagram shows how external pressure reaches corporate procurement and investment as well as defence policy. It is cheaper to review inventories, communications, and vendors in peacetime than after a crisis hits. <SourceNote>[Ministry of Defense, Defense of Japan 2025](https://www.mod.go.jp/j/press/wp/wp2025/html/nd200000.html) and [Ministry of Defense, Defence budget](https://www.mod.go.jp/en/d_act/d_budget/index.html) support the structure; the spillover into corporate behavior is an inference from public information.</SourceNote>

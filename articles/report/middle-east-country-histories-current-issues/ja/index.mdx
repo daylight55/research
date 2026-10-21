@@ -28,7 +28,10 @@ draft: false
 
 ```mermaid
 timeline
-    title 中東国家形成の主要転換点
+  accTitle: 中東の国家形成と地域秩序の転換
+  accDescr: 帝国解体、国家形成、革命、2011年以降の変動を年代で追う。異なる国の経路を一つに還元しない。
+  accTitle: 中東の国家形成と地域秩序の転換
+  accDescr: 帝国解体、国家形成、革命、2011年以降の変動を年代で追う。異なる国の経路を一つに還元しない。
     1916 : オスマン帝国の解体と委任統治
     1948 : イスラエル建国とパレスチナ難民化
     1952 : エジプト革命と軍主導国家
@@ -112,20 +115,21 @@ timeline
 
 ```mermaid
 flowchart LR
-  Iran["イラン軸"]
-  Levant["レバント危機帯"]
-  IsraelPal["イスラエル・パレスチナ"]
-  Gulf["湾岸資源国家"]
-  Egypt["エジプト"]
-  Turkey["トルコ"]
-
-  Iran --> Levant
-  Iran --> Gulf
-  IsraelPal --> Egypt
-  IsraelPal --> Levant
-  Gulf --> Egypt
-  Turkey --> Levant
-  Turkey --> Gulf
+  accTitle: 中東の関係を地域と交渉材料で読む
+  accDescr: イラン、レバント、湾岸、エジプト、トルコをつなぐ安全保障・経済の関係を区別する。
+  N0["イラン"]
+  N1["レバント危機帯"]
+  N2["イスラエル・パレスチナ"]
+  N3["湾岸諸国"]
+  N4["エジプト"]
+  N5["トルコ"]
+  N0 -->|支援ネットワーク| N1
+  N0 -->|対立と調整| N3
+  N2 -->|戦争の波及| N1
+  N2 -->|ガザ・国境| N4
+  N3 -->|経済関係| N4
+  N5 -->|シリア・安全保障| N1
+  N5 -->|外交・投資| N3
 ```
 
 この図は軍事同盟図ではない。むしろ、衝突、資金、避難、海上輸送、仲介、制裁の流れを表した関係図である。イランは代理勢力と抑止を通じてレバント全体に圧力をかけ、イスラエル・パレスチナは地域の感情的中心であり続ける。湾岸は資源と投資の供給源であり、エジプトはガザとスエズの結節点、トルコは難民と安全保障、レバントは国家崩壊と再建の集積地である。<SourceNote>[World Bank, MENAAP Economic Update 2026](https://www.worldbank.org/en/region/mena/publication/economy-update)、[IMF, Regional Economic Outlook for the Middle East and Central Asia 2026](https://www.imf.org/en/Publications/REO/MCD)、[OCHA, Gaza updates](https://www.ochaopt.org/)、[Freedom House, country reports](https://freedomhouse.org/countries/freedom-world/scores) に基づく。</SourceNote>

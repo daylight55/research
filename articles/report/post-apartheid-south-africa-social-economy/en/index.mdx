@@ -27,11 +27,19 @@ The key takeaways are threefold. First, democracy delivered real gains, but it d
 
 ```mermaid
 flowchart TD
-  A[Democratic rights] --> B[Old land and spatial order]
-  B --> C[Labor and education gaps]
-  C --> D[Low growth and unemployment]
-  D --> E[Power, safety, corruption]
-  E --> F[Coalition pressure]
+  accTitle: Socioeconomic constraints after rights expansion in South Africa
+  accDescr: Distinguish expanded political rights from persistent divisions in land, cities and education. Low growth and weak services shape coalition challenges.
+  N0["Democracy and political<br/>rights"]
+  N1["Legacy land, urban and<br/>education structures"]
+  N2["Divided jobs and<br/>opportunities"]
+  N3["Electricity, security<br/>and corruption"]
+  N4["Low growth and<br/>unemployment"]
+  N5["Coalition policy<br/>challenges"]
+  N1 -->|Constraints on<br/>opportunity| N2
+  N2 --> N4
+  N3 -->|Business and daily-life<br/>constraints| N4
+  N0 -->|Making rights effective| N5
+  N4 -->|Pressure for<br/>improvement| N5
 ```
 
 This diagram shows South Africa's social economy as a loop linking historical space, current state capacity, and coalition politics, not as a single policy failure. <SourceNote>The diagram synthesizes [World Bank, South Africa overview](https://www.worldbank.org/en/country/southafrica/overview), [AP News, South Africa's ANC loses majority, setting up coalition talks](https://apnews.com/article/d9da7582ca98a4e00fec2da6a5fe1e91), and [South African History Online](https://www.sahistory.org.za/article/history-apartheid-south-africa).</SourceNote>
@@ -76,11 +84,19 @@ Education and urban space sit underneath the land question. If school quality de
 Eskom's power crisis is more than an outage problem. It lowers factory utilization, disrupts logistics, weakens hospitals and schools, and pulls down tax revenues by reducing output. AP reported, in its coverage of World Bank support, that repeated blackouts have hurt mining and auto manufacturing. Even if South Africa is past the worst stage of rolling outages, the system remains fragile enough to cap growth quickly. <SourceNote>[AP News, World Bank loan backs South Africa reforms as blackouts, joblessness and crime bite](https://apnews.com/article/ceb8af11c31241e9508ec612fccdc2a5)</SourceNote>
 
 ```mermaid
-flowchart LR
-  A[Blackouts] --> B[Higher business costs]
-  B --> C[Weaker hiring]
-  C --> D[Lower tax revenue]
-  D --> A
+flowchart TD
+  accTitle: A feedback loop between power shortages, firms and finances
+  accDescr: Outage costs constrain firms and jobs, while weak tax revenue can reduce room for infrastructure improvement.
+  N0["Outages and power<br/>shortages"]
+  N1["Higher business costs"]
+  N2["Reduced activity and<br/>employment"]
+  N3["Weak tax base"]
+  N4["Constrained<br/>infrastructure<br/>investment"]
+  N0 --> N1
+  N1 --> N2
+  N2 --> N3
+  N3 --> N4
+  N4 -.->|May impede improvement| N0
 ```
 
 The diagram shows how outages spill from household inconvenience into a loop that hits investment, employment, and the state budget. <SourceNote>The diagram simplifies the power-and-jobs linkage reported by [AP News](https://apnews.com/article/ceb8af11c31241e9508ec612fccdc2a5).</SourceNote>

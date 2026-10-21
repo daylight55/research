@@ -25,13 +25,20 @@ In other words, the question is not "should we make it explicit?" but "what shou
 Source note: The basic sources for Polanyi's tacit knowing and `from-to` structure are Polanyi Society's [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) and UChicago Press' [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html). [The Republic of Science](https://www.nobelprize.org/prizes/economic-sciences/1975/polanyi/lecture/) shows that value judgments are part of scientific practice. Martin Davies' [Knowledge, explicit, implicit and tacit](https://mkdavies.net/Martin_Davies/CogSci_files/KnowledgeExpImpTacit.pdf) is useful for the cognitive science distinction surrounding loss of paraphrase, and the loss of context information in AI summaries can be found in [Few-Shot Long-Document Summarization](https://ojs.aaai.org/index.php/AAAI/article/view/26631) of AAAI 2023.
 
 ```mermaid
-flowchart LR
-  A["Experience and observation"] --> B["Subsidiary clues"]
-  B --> C["Focal awareness"]
-  C --> D["Comprehensive understanding"]
-  D --> E["Paraphrase and summary"]
-  E --> F["Gains<br/>Sharing, search, training"]
-  E --> G["Losses<br/>Relations, embodiment, values, context"]
+flowchart TD
+  accTitle: What remains when comprehensive understanding is summarized
+  accDescr: Compressing an integrated judgment makes it easier to share but can omit embodied and situational relationships.
+  N0["Clues from experience<br/>and observation"]
+  N1["Focal grasp of a whole"]
+  N2["Paraphrase and summary"]
+  N3["Sharing, retrieval and<br/>teaching"]
+  N4["Loss of embodied,<br/>relational context"]
+  N5["Check against the<br/>original case"]
+  N0 -->|Integrate| N1
+  N1 -->|Compress| N2
+  N2 -->|Benefits| N3
+  N2 -->|Possible losses| N4
+  N4 -->|Check to recover<br/>context| N5
 ```
 
 ## 2. Problem setting
@@ -60,11 +67,16 @@ Polanyi's core lies in the fact that knowing is not explained solely by "symboli
 In this case, comprehensive understanding is not just "synthesis." It includes the relationship between cues, the allocation of attention, boundaries that are susceptible to failure, and the integration of the whole as `comprehensive entity`. Therefore, when paraphrasing extracts clues and breaks them down into separate propositions, the connections before being synthesized become invisible.
 
 ```mermaid
-flowchart TB
-  S["Subsidiary clues"] --> I["Interiorization"]
-  I --> F["Focal awareness"]
-  F --> C["Meaningful whole"]
-  C --> J["Judgment and action"]
+flowchart TD
+  accTitle: Integrate subsidiary clues into focal judgment
+  accDescr: Clues support a meaningful whole and judgment through indwelling rather than creating understanding in isolation.
+  N0["Subsidiary awareness"]
+  N1["Indwelling"]
+  N2["Focal whole"]
+  N3["Judgment and action"]
+  N0 -->|Rely on clues| N1
+  N1 -->|Integrate meaning| N2
+  N2 -->|Apply in context| N3
 ```
 
 Source note: Polanyi Society's [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) explains the relationship between `subsidiary awareness`, `focal awareness`, and `comprehensive entity`. UChicago Press's [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html) formulates tacit knowledge as "knowing more than you can say." The Polanyi Society glossary describes `understanding` as the most comprehensive form of knowledge used by Polanyi.
@@ -136,15 +148,18 @@ AI summaries improve searchability and distribution efficiency, but cannot be us
 
 ```mermaid
 sequenceDiagram
+  accTitle: Check an AI summary against its source and practitioner
+  accDescr: Readers return from a summary to the original case and check counterexamples and conditions with the practitioner.
   participant P as Practitioner
-  participant S as Source
+  participant S as Source and case
   participant A as AI summary
   participant R as Reader
-  P->>S: Record cases, utterances, judgments
-  S->>A: Summarize and rephrase
-  A->>R: Shareable short text
-  R->>S: Refer to original cases and wording
-  R->>P: Check counterexamples and boundaries
+  P->>S: Record situation, words and judgment
+  S->>A: Material to summarize
+  A-->>R: Compressed representation
+  R->>S: Check against original case and text
+  R->>P: Ask about exceptions and conditions
+  P-->>R: Restore context and decision conditions
 ```
 
 Source note: For the perspective of education and mastery, [Cognitive Task Analysis](https://journals.sagepub.com/doi/10.1177/10944281241271216) is helpful. The loss of context information in AI summaries is demonstrated by [Few-Shot Long-Document Summarization](https://ojs.aaai.org/index.php/AAAI/article/view/26631), reinforcing why summaries should not be authenticated.

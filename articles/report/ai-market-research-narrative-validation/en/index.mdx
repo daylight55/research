@@ -31,11 +31,18 @@ The core conclusion is threefold. First, AI spending is real and still rising. S
 5. The most uncertain question is not whether AI will be used broadly, but whether it will be monetized broadly.
 
 ```mermaid
-flowchart LR
-  A["Forecast"] --> B["Scope match"]
-  B --> C["Adoption check"]
-  C --> D["IR validation"]
-  D --> E["Hypothesis test"]
+flowchart TD
+  accTitle: Test AI market forecasts against adoption and financial results
+  accDescr: Align the market definition and period, then test whether adoption evidence and company disclosures support the forecast.
+  N0["Market definition and<br/>period"]
+  N1["Align forecast scope"]
+  N2["Adoption and usage<br/>evidence"]
+  N3["Revenue, profit and<br/>cost disclosures"]
+  N4["Support, revise or<br/>reject"]
+  N0 --> N1
+  N1 --> N2
+  N2 -->|Compare with financials| N3
+  N3 -->|Evaluate evidence| N4
 ```
 
 The diagram shows the basic workflow: do not accept a forecast as-is. Match definitions, check actual adoption, and then validate the claim against company reporting.

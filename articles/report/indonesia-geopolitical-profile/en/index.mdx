@@ -28,12 +28,18 @@ Prabowo's government is trying to handle growth, security, and strategic autonom
 When you read Indonesia, the key question is not only whether it is a democratic success story, but whether scale can be converted into institutions and jobs.
 
 ```mermaid
-flowchart LR
-  A["Archipelago and population"] --> B["Decentralization and diversity"]
-  B --> C["Nonaligned diplomacy"]
-  A --> D["Youth employment pressure"]
-  D --> E["Resource and industrial policy"]
-  C --> E
+flowchart TD
+  accTitle: Indonesia's islands, employment and industrial policy
+  accDescr: Geographic diversity relates to decentralization, while a young population raises employment needs. Read resource policy and non-aligned diplomacy in that context.
+  N0["Island diversity and<br/>young population"]
+  N1["Decentralization and<br/>pluralism"]
+  N2["Youth employment needs"]
+  N3["Resource and industrial<br/>policy"]
+  N4["Non-aligned diplomacy"]
+  N0 -->|Governance conditions| N1
+  N0 -->|Employment pressure| N2
+  N2 -->|Industrial development| N3
+  N4 -->|Partnership and<br/>investment choices| N3
 ```
 
 This diagram shows that Indonesia's external posture is pulled by domestic population pressure and industrial policy. <SourceNote>The structure follows [BPS-Statistics Indonesia](https://www.bps.go.id/en/) and [Kemlu](https://www.kemlu.go.id/berita/siaran-pers/Pages/berita/menlu-sugiono-pada-jakarta-geopolitical-forum-multilateralisme-tidak-bisa-berjalan-autopilot?type=publication); the policy coupling is a public-information inference.</SourceNote>
@@ -50,7 +56,10 @@ For that reason, Indonesia is both a democratic success story and an unfinished 
 
 ```mermaid
 timeline
-  title Indonesia's political milestones
+  accTitle: From Indonesian independence to reform and succession
+  accDescr: The chronology follows independence, the 1998 reforms, direct elections, recent succession and BRICS membership.
+  accTitle: From Indonesian independence to reform and succession
+  accDescr: The chronology follows independence, the 1998 reforms, direct elections, recent succession and BRICS membership.
   1945 : Independence proclamation
   1998 : Reformasi
   2004 : Direct elections settle in

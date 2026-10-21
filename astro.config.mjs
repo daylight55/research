@@ -4,6 +4,7 @@ import tailwind from '@astrojs/tailwind'
 import remarkGfm from 'remark-gfm'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 import { remarkGlossary } from './src/utils/remarkGlossary.ts'
+import { remarkArticleDiagrams } from './src/utils/remarkArticleDiagrams.mjs'
 import { siteConfig } from './src/data/site.config'
 
 const site = process.env.ASTRO_SITE ?? siteConfig.site
@@ -22,7 +23,7 @@ export default defineConfig({
 		defaultLocale: 'ja'
 	},
 	markdown: {
-		remarkPlugins: [remarkReadingTime, remarkGlossary, remarkGfm],
+		remarkPlugins: [remarkReadingTime, remarkGlossary, remarkGfm, remarkArticleDiagrams],
 		drafts: true,
 		shikiConfig: {
 			theme: 'material-theme-palenight',
@@ -31,7 +32,7 @@ export default defineConfig({
 	},
 	integrations: [
 		mdx({
-			remarkPlugins: [remarkReadingTime, remarkGlossary, remarkGfm],
+			remarkPlugins: [remarkReadingTime, remarkGlossary, remarkGfm, remarkArticleDiagrams],
 			syntaxHighlight: 'shiki',
 			shikiConfig: {
 				experimentalThemes: {

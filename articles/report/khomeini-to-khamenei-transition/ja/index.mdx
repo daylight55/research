@@ -28,7 +28,10 @@ draft: false
 
 ```mermaid
 timeline
-    title 1989年以降の体制移行
+  accTitle: イラン指導者継承後の政権路線の変化
+  accDescr: 1989年の指導者交代と、その後の大統領ごとの再建・改革・核交渉路線を区別する。
+  accTitle: イラン指導者継承後の政権路線の変化
+  accDescr: 1989年の指導者交代と、その後の大統領ごとの再建・改革・核交渉路線を区別する。
     1989 : ハメネイ選出
     1990s : 再建路線
     1997-2005 : 改革路線
@@ -47,19 +50,20 @@ timeline
 憲法本文もこの再配置を裏づける。第5条は法学者統治を、第107条は専門家会議による指導者選出を、第110条は軍の最高指揮、司法長任命、護憲評議会法学者任命などの権限を定める。第91条・第94条・第99条は護憲評議会による法案審査と選挙監督を、第143条・第150条は通常軍と革命防衛隊の役割分担を示す。つまり、1989年の継承は、単なる人事ではなく、制度の配線変更だった。<SourceNote>条文確認は [Constitute Project, Constitution of the Islamic Republic of Iran](https://www.constituteproject.org/constitution/Iran_1989.pdf) を参照した。</SourceNote>
 
 ```mermaid
-flowchart TB
-    Khomeini["ホメイニのカリスマ的革命権威"]
-    Assembly["専門家会議"]
-    Revision["1989年憲法改正"]
-    Khamenei["ハメネイ"]
-    Leader["最高指導者"]
-    Institutions["統治機関への権限配分"]
-
-    Khomeini -->|死去後の空白| Assembly
-    Assembly -->|選出| Khamenei
-    Revision -->|資格要件・行政配置を再設計| Leader
-    Khamenei --> Leader
-    Leader --> Institutions
+flowchart TD
+  accTitle: 1989年の選出と憲法改正の関係
+  accDescr: 専門家会議によるハメネイ選出と、最高指導者の資格・行政配置を変えた憲法改正を分けて読む。
+  N0["ホメイニ死去"]
+  N1["専門家会議"]
+  N2["ハメネイの選出"]
+  N3["1989年憲法改正"]
+  N4["最高指導者の制度・権限"]
+  N5["統治機関への権限配分"]
+  N0 -->|継承を決定| N1
+  N1 -->|選出| N2
+  N2 -->|指導者に就く| N4
+  N3 -->|資格・行政配置の変更| N4
+  N4 -->|任命・統制| N5
 ```
 
 ## 3. ハメネイの権威基盤は何に支えられたか
@@ -99,20 +103,21 @@ flowchart TB
 2024年のライシ死去後、暫定体制を経てペゼシュキアンが当選した。これは対外関係のトーンを多少和らげる可能性を示したが、最高指導者の戦略権限が変わったわけではない。Reuters は、2024年7月の選挙でペゼシュキアンが勝利したことを報じ、同時にイランの権力構造では大統領の権限がなお制約されることを示唆している。ここでの結論は、選挙結果の変化と体制の中枢変化は別物だということだ。<SourceNote>[Reuters, Moderate Pezeshkian wins Iran's presidential runoff](https://www.investing.com/news/world-news/iranians-vote-in-runoff-presidential-election-amid-widespread-apathy-3508560) と [USIP Iran Primer, The Supreme Leader](https://iranprimer.usip.org/resource/supreme-leader) を参照した。大統領交代があっても戦略権限は最高指導者側に残るという見立ては公表情報からの推定である。</SourceNote>
 
 ```mermaid
-flowchart LR
-    SL["最高指導者"]
-    EXP["専門家会議"]
-    GC["護憲評議会"]
-    IRGC["IRGC"]
-    PRS["大統領"]
-    ELEC["選挙"]
-
-    EXP -->|選出・監督| SL
-    SL --> GC
-    SL --> IRGC
-    ELEC --> GC
-    PRS -->|行政| SL
-    GC --> ELEC
+flowchart TD
+  accTitle: 最高指導者・護憲評議会・選挙の関係
+  accDescr: 専門家会議は指導者を選出・監督し、護憲評議会は候補者を審査する。選挙結果だけで権力全体が交代する構造ではない。
+  N0["専門家会議"]
+  N1["最高指導者"]
+  N2["護憲評議会"]
+  N3["革命防衛隊"]
+  N4["国民による選挙"]
+  N5["大統領・議会"]
+  N0 -->|選出・監督| N1
+  N1 -->|聖職者委員を任命| N2
+  N1 -->|統率| N3
+  N2 -->|候補者審査| N4
+  N4 -->|選出| N0
+  N4 -->|選出| N5
 ```
 
 ## 5. 核開発・制裁・地域代理勢力へどうつながるか

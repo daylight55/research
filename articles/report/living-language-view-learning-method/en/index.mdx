@@ -33,11 +33,18 @@ The practical conclusion is straightforward.
 
 ```mermaid
 flowchart TD
-  A["Life event"] --> B["Short task"]
-  B --> C["Self output"]
-  C --> D["Notice the gap"]
-  D --> E["Human / AI repair"]
-  E --> F["Reuse next week"]
+  accTitle: Turn daily events into repeatable language practice
+  accDescr: Express a short daily-life task independently, repair mismatches, then check the repair through output again the following week.
+  N0["Choose a daily-life<br/>event"]
+  N1["Express a short task<br/>independently"]
+  N2["Record mismatches"]
+  N3["Repair once with a<br/>person or AI"]
+  N4["Produce it again the<br/>next week"]
+  N0 -->|Speak or write| N1
+  N1 -->|Where meaning fails| N2
+  N2 -->|Check the reason| N3
+  N3 -->|Check usability| N4
+  N4 -.->|Try another situation| N1
 ```
 
 The recommendation in this report is to make the loop `collect in life context -> produce on your own -> repair the difference -> reuse again` small enough to run every week. <SourceNote>This loop is a practical synthesis of communicative and task-based design, noticing, output, interaction, and informal learning. It should be treated as a `public-information inference`, not as an official roadmap.</SourceNote>
@@ -101,10 +108,17 @@ A practical weekly protocol can be kept small.
 
 ```mermaid
 flowchart TD
-  A["Collect material from life"] --> B["Turn it into a task"]
-  B --> C["Produce on your own"]
-  C --> D["Repair once"]
-  D --> E["Reproduce"]
+  accTitle: From choosing material to one repair and another attempt
+  accDescr: Separate collecting material, defining a task, producing output, repairing it and trying again.
+  N0["Choose material from<br/>life"]
+  N1["Define one task"]
+  N2["Produce output<br/>independently"]
+  N3["Repair once"]
+  N4["Produce output<br/>independently again"]
+  N0 -->|Bound the situation| N1
+  N1 -->|Try| N2
+  N2 -->|Check responses| N3
+  N3 -->|Check retention| N4
 ```
 
 The point of this protocol is not to make study bigger. It is to keep language alive by running a small loop of `find it in life -> say it once -> repair it once -> use it again`. <SourceNote>This weekly design is a practical synthesis of task-based learning, noticing, output, feedback, and informal learning. It should be read as a `public-information inference`.</SourceNote>

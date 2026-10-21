@@ -109,6 +109,18 @@ Good pattern:
 Anthropicの方向性は、MCP、長文脈、エージェント実行、企業統制に寄っている。<SourceNote>MCP発表は [Anthropic, Introducing the Model Context Protocol](...)。ここでの「方向性」は公式ロードマップではなく、公表済み機能からの推定である。</SourceNote>
 ```
 
+## Article Images
+
+Place useful images near the passages they explain, especially when discussing artworks. A hero alone does not replace an in-body figure. Use the registered `ArticleFigure` component with an imported local image, descriptive `alt`, `caption`, `credit`, `sourceUrl`, `rights`, and `locale`. It preserves the image ratio, adds a full-size/source link, and generates responsive image sizes. Public SVGs also accept explicit `width` and `height`.
+
+```mdx
+import artwork from '../../../../src/assets/images/article/example.jpg'
+
+<ArticleFigure image={artwork} alt="A description of the visible work" caption="Work, date, and the feature being discussed." credit="Museum or photographer" sourceUrl="https://museum.example/collection/work" rights="CC0" rightsUrl="https://creativecommons.org/publicdomain/zero/1.0/" locale="en" />
+```
+
+Keep whole-work context when adding a cropped detail. Set `detail` and `position` only for an explicitly described display crop, retaining a full-size link. Identify critical image quotations separately from reusable licenses, record their purpose and scope in source notes, and synchronize captions and credits across locales. `pnpm build` validates rendered figure assets, dimensions, captions, credits, and rights; also inspect desktop and mobile layouts.
+
 ## Diagram Requirements
 
 Substantial reports should include diagrams when they materially improve understanding.

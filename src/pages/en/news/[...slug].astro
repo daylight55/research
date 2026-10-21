@@ -20,6 +20,7 @@ import {
 } from '@/utils'
 import SButton from '@/components/mdx/SButton'
 import SourceNote from '@/components/mdx/SourceNote'
+import ArticleFigure from '@/components/mdx/ArticleFigure'
 import Disqus from '@/components/Disqus'
 import { disqusConfig } from '@/data/disqus.config'
 
@@ -171,7 +172,7 @@ const disqusEnabled = disqusConfig.enabled
 			<div
 				class='prose prose-base md:prose-lg dark:prose-invert mb-12 min-w-full max-w-none prose-p:leading-8 prose-li:leading-8'
 			>
-				<Content components={{ pre: Code, SButton, SourceNote }} />
+				<Content components={{ pre: Code, SButton, SourceNote, ArticleFigure }} />
 			</div>
 
 			<footer class='lg:hidden'>

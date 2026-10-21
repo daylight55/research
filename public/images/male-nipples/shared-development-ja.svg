@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="788" viewBox="0 0 640 788" xml:lang="ja" role="img" aria-labelledby="title desc">
+  <title id="title">発生には、共通の土台がある</title>
+  <desc id="desc">ヒトの男性と女性の乳腺発生を並列に示す。男女とも胎児期に乳腺の原基を形成し、乳頭を保持する。思春期には乳房の発達に差が生じる。性の決定や性腺分化の前後関係を示す図ではない。</desc>
+  <defs>
+  <marker id="teal-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+  <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#226e68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="coral-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+  <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#ac4835" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="ink-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+  <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#24394a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="muted-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+  <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#53646c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  </defs>
+  <style>text { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Noto Sans', sans-serif; } text { dominant-baseline: auto; }</style>
+  <rect width="640" height="788" rx="8" fill="#faf8f2"/>
+  <path d="M 32 18 H 608" stroke="#24394a" stroke-width="2"/>
+  <text x="320" y="62" font-size="30" fill="#24394a" font-weight="700" text-anchor="middle">発生には、共通の土台がある</text>
+  <text x="320" y="99" font-size="23" fill="#53646c" font-weight="400" text-anchor="middle">ヒトの乳腺発生を簡略化</text>
+  <text x="320" y="152" font-size="26" fill="#226e68" font-weight="600" text-anchor="middle">胎児期：乳腺の原基を形成</text>
+  <text x="176" y="199" font-size="27" fill="#24394a" font-weight="700" text-anchor="middle">男性</text>
+  <g transform="translate(176 0)">
+  <path d="M -90 257 H -35 Q -30 282 0 285 Q 30 282 35 257 H 90" stroke="#226e68" stroke-width="3" fill="#d5e7df" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M -90 232 H 90" stroke="#226e68" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="-72" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="-48" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="-24" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="0" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="24" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="48" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="72" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  </g>
+  <path d="M 176 304 V 361" stroke="#53646c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#muted-arrow)"/>
+  <g transform="translate(176 469) scale(0.86)">
+  <path d="M -29 -78 L -29 -57 Q -43 -42 -85 -34 Q -104 -21 -106 25 L -87 32 L -73 1 L -67 110 Q 0 130 67 110 L 73 1 L 87 32 L 106 25 Q 104 -21 85 -34 Q 43 -42 29 -57 L 29 -78" stroke="#24394a" stroke-width="3" fill="#e8e5dc" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M -25 -50 Q 0 -34 25 -50 M 0 -30 L 0 10" stroke="#a4aaa8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="-36" cy="20" r="10" fill="#d2b8a2" stroke="none" stroke-width="2"/>
+  <circle cx="36" cy="20" r="10" fill="#d2b8a2" stroke="none" stroke-width="2"/>
+  <circle cx="-36" cy="20" r="3.5" fill="#ac4835" stroke="none" stroke-width="2"/>
+  <circle cx="36" cy="20" r="3.5" fill="#ac4835" stroke="none" stroke-width="2"/>
+  </g>
+  <text x="176" y="604" font-size="26" fill="#226e68" font-weight="600" text-anchor="middle">乳頭を保持</text>
+  <text x="464" y="199" font-size="27" fill="#24394a" font-weight="700" text-anchor="middle">女性</text>
+  <g transform="translate(464 0)">
+  <path d="M -90 257 H -35 Q -30 282 0 285 Q 30 282 35 257 H 90" stroke="#226e68" stroke-width="3" fill="#d5e7df" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M -90 232 H 90" stroke="#226e68" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="-72" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="-48" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="-24" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="0" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="24" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="48" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="72" cy="244" r="3.5" fill="#226e68" stroke="none" stroke-width="2"/>
+  </g>
+  <path d="M 464 304 V 361" stroke="#53646c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#muted-arrow)"/>
+  <g transform="translate(464 469) scale(0.86)">
+  <path d="M -29 -78 L -29 -57 Q -43 -42 -85 -34 Q -104 -21 -106 25 L -87 32 L -73 1 L -67 110 Q 0 130 67 110 L 73 1 L 87 32 L 106 25 Q 104 -21 85 -34 Q 43 -42 29 -57 L 29 -78" stroke="#24394a" stroke-width="3" fill="#e8e5dc" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M -25 -50 Q 0 -34 25 -50 M 0 -30 L 0 10" stroke="#a4aaa8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="-36" cy="20" r="10" fill="#d2b8a2" stroke="none" stroke-width="2"/>
+  <circle cx="36" cy="20" r="10" fill="#d2b8a2" stroke="none" stroke-width="2"/>
+  <circle cx="-36" cy="20" r="3.5" fill="#ac4835" stroke="none" stroke-width="2"/>
+  <circle cx="36" cy="20" r="3.5" fill="#ac4835" stroke="none" stroke-width="2"/>
+  </g>
+  <text x="464" y="604" font-size="26" fill="#226e68" font-weight="600" text-anchor="middle">乳頭を保持</text>
+  <text x="320" y="348" font-size="23" fill="#53646c" font-weight="400" text-anchor="middle">乳管・乳頭も形成</text>
+  <rect x="40" y="647" width="560" height="75" rx="5" fill="#eae7dd"/>
+  <text x="320" y="678" font-size="25" fill="#24394a" font-weight="600" text-anchor="middle">思春期には乳房の発達に差</text>
+  <text x="320" y="708" font-size="22" fill="#53646c" font-weight="400" text-anchor="middle">乳首の有無とは別の変化</text>
+  <text x="320" y="760" font-size="21" fill="#53646c" font-weight="400" text-anchor="middle">性の分化と並行する過程の模式図</text>
+</svg>

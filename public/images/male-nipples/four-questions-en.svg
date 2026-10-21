@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="760" viewBox="0 0 640 760" xml:lang="en" role="img" aria-labelledby="title desc">
+  <title id="title">One body part, four questions</title>
+  <desc id="desc">Development asks how a body forms, evolution about retention across generations, current roles about sensation and secretion, and meaning about norms and personal experience. These are different questions, not a causal sequence.</desc>
+  <defs>
+  <marker id="teal-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+  <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#226e68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="coral-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+  <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#ac4835" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="ink-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+  <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#24394a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="muted-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+  <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#53646c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  </defs>
+  <style>text { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Noto Sans', sans-serif; } text { dominant-baseline: auto; }</style>
+  <rect width="640" height="760" rx="8" fill="#faf8f2"/>
+  <path d="M 32 18 H 608" stroke="#24394a" stroke-width="2"/>
+  <text x="320" y="65" font-size="32" fill="#24394a" font-weight="700" text-anchor="middle">One body part, four questions</text>
+  <text x="320" y="103" font-size="23" fill="#53646c" font-weight="400" text-anchor="middle">Development / evolution / roles / meaning</text>
+  <path d="M 169 279 Q 174 340 262 366" stroke="#a9b2af" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 7"/>
+  <path d="M 471 279 Q 466 340 378 366" stroke="#a9b2af" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 7"/>
+  <path d="M 169 552 Q 175 493 265 475" stroke="#a9b2af" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 7"/>
+  <path d="M 471 552 Q 465 493 375 475" stroke="#a9b2af" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 7"/>
+  <g transform="translate(320 398) scale(0.88)">
+  <path d="M -29 -78 L -29 -57 Q -43 -42 -85 -34 Q -104 -21 -106 25 L -87 32 L -73 1 L -67 110 Q 0 130 67 110 L 73 1 L 87 32 L 106 25 Q 104 -21 85 -34 Q 43 -42 29 -57 L 29 -78" stroke="#24394a" stroke-width="3" fill="#e8e5dc" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M -25 -50 Q 0 -34 25 -50 M 0 -30 L 0 10" stroke="#a4aaa8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="-36" cy="20" r="10" fill="#d2b8a2" stroke="none" stroke-width="2"/>
+  <circle cx="36" cy="20" r="10" fill="#d2b8a2" stroke="none" stroke-width="2"/>
+  <circle cx="-36" cy="20" r="3.5" fill="#ac4835" stroke="none" stroke-width="2"/>
+  <circle cx="36" cy="20" r="3.5" fill="#ac4835" stroke="none" stroke-width="2"/>
+  </g>
+  <text x="320" y="537" font-size="23" fill="#53646c" font-weight="400" text-anchor="middle">The same body</text>
+  <circle cx="146" cy="162" r="14" fill="#d5e7df" stroke="#226e68" stroke-width="2"/>
+  <circle cx="146" cy="162" r="3" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="169" cy="154" r="14" fill="#d5e7df" stroke="#226e68" stroke-width="2"/>
+  <circle cx="169" cy="154" r="3" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="192" cy="162" r="14" fill="#d5e7df" stroke="#226e68" stroke-width="2"/>
+  <circle cx="192" cy="162" r="3" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="138" cy="187" r="14" fill="#d5e7df" stroke="#226e68" stroke-width="2"/>
+  <circle cx="138" cy="187" r="3" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="161" cy="184" r="14" fill="#d5e7df" stroke="#226e68" stroke-width="2"/>
+  <circle cx="161" cy="184" r="3" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="186" cy="185" r="14" fill="#d5e7df" stroke="#226e68" stroke-width="2"/>
+  <circle cx="186" cy="185" r="3" fill="#226e68" stroke="none" stroke-width="2"/>
+  <circle cx="173" cy="208" r="14" fill="#d5e7df" stroke="#226e68" stroke-width="2"/>
+  <circle cx="173" cy="208" r="3" fill="#226e68" stroke="none" stroke-width="2"/>
+  <path d="M 471 207 L 471 172 M 471 172 L 435 146 M 471 172 L 507 146" stroke="#ac4835" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="471" cy="207" r="10" fill="#efd3c5" stroke="#ac4835" stroke-width="2"/>
+  <circle cx="435" cy="146" r="10" fill="#efd3c5" stroke="#ac4835" stroke-width="2"/>
+  <circle cx="507" cy="146" r="10" fill="#efd3c5" stroke="#ac4835" stroke-width="2"/>
+  <circle cx="169" cy="593" r="8" fill="#f0dfb8" stroke="#926016" stroke-width="2"/>
+  <path d="M 146 593 A 23 23 0 0 1 192 593" stroke="#926016" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 131 593 A 38 38 0 0 1 207 593" stroke="#926016" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="430" y="558" width="64" height="50" fill="none" stroke="#655082" stroke-width="3"/>
+  <rect x="451" y="574" width="60" height="43" fill="#faf8f2" stroke="#655082" stroke-width="3"/>
+  <circle cx="481" cy="596" r="6" fill="#c9b9d9" stroke="#655082" stroke-width="2"/>
+  <text x="169" y="246" font-size="29" fill="#226e68" font-weight="700" text-anchor="middle">Development</text>
+  <text x="169" y="280" font-size="23" fill="#24394a" font-weight="400" text-anchor="middle">How does it form?</text>
+  <text x="471" y="246" font-size="29" fill="#ac4835" font-weight="700" text-anchor="middle">Evolution</text>
+  <text x="471" y="280" font-size="23" fill="#24394a" font-weight="400" text-anchor="middle">Why is it retained?</text>
+  <text x="169" y="656" font-size="29" fill="#926016" font-weight="700" text-anchor="middle">Current roles</text>
+  <text x="169" y="690" font-size="23" fill="#24394a" font-weight="400" text-anchor="middle">What does it do now?</text>
+  <text x="471" y="656" font-size="29" fill="#655082" font-weight="700" text-anchor="middle">Meaning</text>
+  <text x="471" y="690" font-size="23" fill="#24394a" font-weight="400" text-anchor="middle">How is it understood?</text>
+  <text x="320" y="733" font-size="21" fill="#53646c" font-weight="400" text-anchor="middle">Conceptual map of distinct questions</text>
+</svg>

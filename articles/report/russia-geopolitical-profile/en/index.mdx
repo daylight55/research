@@ -31,12 +31,19 @@ The right way to read Russia is not to ask whether it is simply strong or weak. 
 
 ```mermaid
 flowchart TD
-  A["Kremlin"] --> B["Security organs"]
-  A --> C["State firms"]
-  A --> D["War budget"]
-  B --> E["External coercion"]
-  C --> E
-  D --> E
+  accTitle: Concentrated power and wartime resources in Russia
+  accDescr: Read how the presidency, security institutions, state-owned firms and wartime finances support foreign policy.
+  N0["Presidency"]
+  N1["Security institutions"]
+  N2["State-owned enterprises"]
+  N3["Wartime finances"]
+  N4["Foreign policy and war<br/>effort"]
+  N0 -->|Control| N1
+  N0 -->|State resources| N2
+  N0 -->|Resource allocation| N3
+  N1 -->|Military and security| N4
+  N2 -->|Industry and supply| N4
+  N3 -->|Spending| N4
 ```
 
 ## 2. Historical and Institutional Base
@@ -45,7 +52,10 @@ The Russian state sits on top of discontinuities: empire, revolution, the Soviet
 
 ```mermaid
 timeline
-  title Key turning points in the Russian state
+  accTitle: Milestones in Russia's state formation, power and arms control
+  accDescr: Separate the Soviet collapse, constitution, Putin presidency, term rules and arms-control changes chronologically.
+  accTitle: Milestones in Russia's state formation, power and arms control
+  accDescr: Separate the Soviet collapse, constitution, Putin presidency, term rules and arms-control changes chronologically.
   1991 : Soviet collapse
   1993 : New constitution
   2000 : Putin rises
@@ -81,10 +91,17 @@ The New START treaty expired in February 2026, and the last major nuclear arms-c
 
 ```mermaid
 flowchart LR
-  A["Russia"] --> B["China"]
-  A --> C["Iran"]
-  A --> D["North Korea"]
-  A --> E["NATO and Ukraine"]
+  accTitle: Russia's partners and adversaries
+  accDescr: Show cooperation with China, Iran and North Korea separately from conflict with Ukraine and NATO.
+  N0["Russia"]
+  N1["China"]
+  N2["Iran"]
+  N3["North Korea"]
+  N4["Ukraine and NATO"]
+  N0 -->|Economic and diplomatic<br/>ties| N1
+  N0 -->|Cooperation| N2
+  N0 -->|Cooperation| N3
+  N0 -.->|Invasion and<br/>confrontation| N4
 ```
 
 China is the most important external pillar, while Iran and North Korea function as alternative channels under sanctions. Public reporting in 2025 and 2026 shows Russia deepening ties with those partners both to sustain the war and to reduce the pressure of sanctions. <SourceNote>[AP News, Xi heads to Russia to show support for Putin as the Ukraine war drags on](https://apnews.com/article/0c0086341e9694122a49fb7054b41d97), [AP News, North Korea says it sent troops to Russia and may send more to help in Ukraine war](https://apnews.com/article/559e604356bdd6976a7cb6dd159663e3)</SourceNote>

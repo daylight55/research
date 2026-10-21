@@ -31,11 +31,17 @@ draft: false
 
 ```mermaid
 flowchart TD
-  Phil["哲学的存在論"] --> KR["知識表現"]
-  KR --> Web["Semantic Web"]
-  Web --> KG["Knowledge Graph"]
-  KG --> Ops["業務Ontology"]
-  Ops --> AI["LLM活用"]
+  accTitle: Ontologyが定義する対象・関係・制約
+  accDescr: 分類語の一覧から進み、何を対象とし、どんな関係や制約を定義し、誰が改訂するかを示す。
+  N0["Ontology<br/>対象領域の定義"]
+  N1["クラス・対象"]
+  N2["関係<br/>誰が何に結び付くか"]
+  N3["制約・公理<br/>成立する条件"]
+  N4["出典・改訂・統制"]
+  N0 -->|何があるか| N1
+  N0 -->|どう関わるか| N2
+  N0 -->|何を認めるか| N3
+  N4 -->|定義を管理する| N0
 ```
 
 ## 2. まず何が紛らわしいのか
@@ -89,37 +95,18 @@ Gruber (1993) の定義は、オントロジーを「特定システムの内部
 この一覧から分かる通り、オントロジーは「単語の意味を説明する辞書」ではない。語彙を定義するだけなら controlled vocabulary で足りる。階層分類だけなら taxonomy で足りる。データ項目の型と必須条件だけなら schema で足りる。オントロジーは、それらを含みつつ、領域をどう概念化し、どの関係と制約を正当なものとして扱うかを明示する。
 
 ```mermaid
-classDiagram
-  class Ontology {
-    +Domain scope
-    +CompetencyQuestion[] questions
-    +Class[] classes
-    +Relation[] relations
-    +Axiom[] axioms
-    +Constraint[] constraints
-    +ProvenancePolicy provenance
-    +GovernancePolicy governance
-  }
-  class ConceptClass {
-    +name
-    +definition
-    +synonyms
-    +examples
-  }
-  class Relation {
-    +domain
-    +range
-    +meaning
-    +cardinality
-  }
-  class Constraint {
-    +target
-    +rule
-    +severity
-  }
-  Ontology --> ConceptClass
-  Ontology --> Relation
-  Ontology --> Constraint
+flowchart TD
+  accTitle: Ontologyの構成要素と定義項目
+  accDescr: 対象領域と問いを中心に、クラスの意味、関係の範囲、制約、出典と改訂方針を設計する。
+  N0["対象領域・答える問い"]
+  N1["クラス<br/>名称・定義・例"]
+  N2["関係<br/>始点・終点・多重度"]
+  N3["制約<br/>対象・規則・重大度"]
+  N4["出典・改訂方針"]
+  N0 --> N1
+  N0 --> N2
+  N0 --> N3
+  N4 -->|改訂と根拠を管理| N0
 ```
 
 Noy and McGuinness は、オントロジー開発を「一度で完成する定義作業」ではなく、対象領域と目的を定め、重要な用語を列挙し、クラス階層、プロパティ、制約、インスタンスを反復的に作る工程として説明している。最初に問うべきなのは「世界を完全に分類するにはどうするか」ではなく、「このオントロジーで答えたい質問は何か」である。この質問は competency questions と呼ばれる。
@@ -169,12 +156,19 @@ RDFはデータモデルであり、OWLはオントロジー言語であり、SH
 
 ```mermaid
 flowchart LR
-  RDF["RDF<br/>グラフデータモデル"] --> RDFS["RDFS<br/>基本語彙・クラス階層"]
-  RDFS --> OWL["OWL 2<br/>論理表現・推論"]
-  RDF --> SPARQL["SPARQL<br/>問い合わせ"]
-  RDF --> SKOS["SKOS<br/>分類・シソーラス"]
-  RDF --> SHACL["SHACL<br/>データ検証"]
-  Vocab["schema.org等の語彙"] --> RDF
+  accTitle: RDF周辺の標準を用途で区別する
+  accDescr: RDFは表現、RDFS・OWLは語彙と推論、SPARQLは検索、SKOSは分類、SHACLは検証を担う。
+  N0["RDF<br/>グラフ表現"]
+  N1["RDFS・OWL<br/>語彙・クラス・推論"]
+  N2["SPARQL<br/>問い合わせ"]
+  N3["SKOS<br/>分類・シソーラス"]
+  N4["SHACL<br/>データ検証"]
+  N5["schema.org等の語彙"]
+  N0 -->|意味を定義| N1
+  N0 -->|検索する| N2
+  N0 -->|概念を整理| N3
+  N0 -->|条件を検査| N4
+  N5 -->|用語を再利用| N0
 ```
 
 OWL 2には複数のプロファイルがある。OWL 2 EL、QL、RLは、表現力を制限する代わりに特定の推論タスクを実用的に扱いやすくする。これは「より厳密なオントロジーほど常に良い」という発想への反例である。オントロジー設計では、答えたい質問、データ量、推論の必要性、更新頻度、運用者のスキルに合わせて形式度を選ぶ必要がある。
@@ -215,10 +209,18 @@ Pan et al. (2023) は、LLMと知識グラフの統合を、KG-enhanced LLMs、L
 
 ```mermaid
 flowchart TD
-  Ctx["要求・知識"] --> LLM["LLM"]
-  LLM --> Draft["提案・回答"]
-  Draft --> Val["検証"]
-  Val --> Human["人間承認"]
+  accTitle: LLMの提案を検証して承認する
+  accDescr: 要求と知識から生成した提案を制約と根拠で検証し、人間が実行を承認する。
+  N0["要求・業務知識"]
+  N1["LLMの提案・回答"]
+  N2["根拠・制約の検証"]
+  N3["人間の承認"]
+  N4["実行・利用"]
+  N0 -->|生成| N1
+  N1 -->|検査| N2
+  N2 -->|条件を満たす| N3
+  N3 -->|許可| N4
+  N2 -.->|不合格なら修正| N1
 ```
 
 ## 9. 業務AIでの operational ontology
@@ -230,13 +232,17 @@ Palantir Foundry Ontology はこの発想を前面に出している。Objects�
 <SourceNote>Palantir [Ontology overview](https://www.palantir.com/docs/foundry/ontology/overview) は、Ontologyが datasets、virtual tables、models の上に位置し、それらを現実世界の対象に接続すると説明する。Palantir [Platform overview](https://www.palantir.com/docs/foundry/platform-overview/overview) は、Actionsを企業の verbs として、意思決定をOntologyや外部システムへ永続化するものとして説明している。</SourceNote>
 
 ```mermaid
-flowchart LR
-  Data["データ源"] --> Obj["業務対象"]
-  Obj --> Links["関係"]
-  Obj --> State["状態"]
-  State --> Act["行為"]
-  Act --> Audit["監査"]
-  Audit --> Obj
+flowchart TD
+  accTitle: 業務対象の状態を操作と監査で更新する
+  accDescr: 対象の関係・状態を読み、許可された操作を実行し、変更履歴を残して状態へ反映する。
+  N0["データ源"]
+  N1["業務対象<br/>関係・状態"]
+  N2["許可された操作"]
+  N3["変更履歴・監査"]
+  N0 -->|対象へ対応付け| N1
+  N1 -->|状態に応じた操作| N2
+  N2 -->|誰が何を変えたか| N3
+  N3 -.->|状態を反映| N1
 ```
 
 この考え方はPalantir固有ではない。業務AIを安全に動かすには、どのプラットフォームでも同じ問題に直面する。RAGで文書を検索できても、検索結果が現在有効か、誰に見せてよいか、どの操作に使ってよいかは別問題である。オントロジーは、この「意味」「状態」「行為可能性」「責任」を一つの設計対象にする。
@@ -302,11 +308,18 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-  Scope["範囲を決める"] --> CQ["問いを置く"]
-  CQ --> Model["概念と関係"]
-  Model --> Rule["制約を加える"]
-  Rule --> Review["ドメイン確認"]
-  Review --> Iterate["改訂"]
+  accTitle: 答える問いからOntologyを小さく設計する
+  accDescr: 範囲と問いを先に決め、概念・関係・制約を加え、ドメイン確認から改訂へ戻す。
+  N0["範囲と答える問いを決める"]
+  N1["概念・関係を定義"]
+  N2["必要な制約を加える"]
+  N3["ドメイン担当者が確認"]
+  N4["定義を改訂"]
+  N0 --> N1
+  N1 --> N2
+  N2 -->|実例で確認| N3
+  N3 -->|不足・矛盾を修正| N4
+  N4 -.->|範囲も見直す| N0
 ```
 
 ## 11. どの程度形式化すべきか
@@ -325,15 +338,21 @@ flowchart TD
 個人や小規模チームの知識管理では、いきなりOWLで全概念を定義するより、Markdown/JSON/YAMLで ontology lite を作り、必要になった関係だけをグラフ化するほうがよい。大規模な相互運用、外部公開、標準語彙との接続、論理推論が必要になった段階で、RDF/OWL/SHACLを検討する。
 
 ```mermaid
-flowchart TD
-  Q["目的を決める"] --> Tax["分類だけ"]
-  Q --> KG["関係探索"]
-  Q --> Val["入力検証"]
-  Q --> Ops["業務操作"]
-  Tax --> Gov["改訂・統制"]
-  KG --> Gov
-  Val --> Gov
-  Ops --> Gov
+flowchart LR
+  accTitle: 目的に必要な形式化を選ぶ
+  accDescr: 分類、関係探索、入力検証、業務操作では必要な形式が違う。改訂と統制はどの選択にも必要になる。
+  N0["分類したい"]
+  N1["分類体系・語彙"]
+  N2["関係を探索したい"]
+  N3["知識グラフ"]
+  N4["入力を検証したい"]
+  N5["制約・検証規則"]
+  N6["業務を操作したい"]
+  N7["対象・権限・Action"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
+  N6 --> N7
 ```
 
 ## 12. リスクと限界
@@ -374,12 +393,19 @@ LLMは語彙候補、関係候補、定義文、例外パターンを出す補�
 6. OWLは、論理推論や外部語彙との厳密な相互運用が必要になってから検討する。
 
 ```mermaid
-graph TD
-  Topic["Ontology記事"] --> Claims["主要主張"]
-  Claims --> Sources["出典"]
-  Claims --> Risks["過剰形式化"]
-  Claims --> Decision["軽量開始"]
-  Decision --> Review["継続レビュー"]
+flowchart TD
+  accTitle: Ontology導入で主張・出典・適用範囲を確かめる
+  accDescr: 軽量なモデルから始め、出典と過剰形式化のコストを確認し、継続レビューで範囲を調整する。
+  N0["限定した業務の問い"]
+  N1["根拠となる出典・実例"]
+  N2["軽量なモデルで試す"]
+  N3["効果・形式化のコスト"]
+  N4["継続レビュー・範囲の改訂"]
+  N0 -->|調査| N1
+  N1 -->|定義を作る| N2
+  N2 -->|適用結果| N3
+  N3 -->|継続の判断| N4
+  N4 -.->|範囲を調整| N0
 ```
 
 最小実装としては、以下のようなfrontmatterでも十分に価値がある。

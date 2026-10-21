@@ -31,15 +31,21 @@ Three rules cover most decisions.
 3. Techniques that add external actions can automate real work, but they require permissions, logging, and blast-radius control.
 
 ```mermaid
-flowchart TD
-  Q["What changes?"] --> W["Weights"]
-  Q --> C["Context"]
-  Q --> A["External actions"]
-  Q --> L["Control loop"]
-  W --> P["Pretraining / fine-tuning"]
-  C --> R["Prompting / RAG"]
-  A --> T["Tools / MCP"]
-  L --> G["Agents"]
+flowchart LR
+  accTitle: Distinguish weights, context, external actions and control
+  accDescr: Pretraining and fine-tuning change weights, RAG retrieved context, and tools external actions. Agents coordinate repeated use of these capabilities.
+  N0["Change weights"]
+  N1["Pretraining and<br/>fine-tuning"]
+  N2["Change context"]
+  N3["Prompting and RAG"]
+  N4["Act externally"]
+  N5["Tools and MCP"]
+  N6["Control iteration and<br/>stopping"]
+  N7["Agents"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
+  N6 --> N7
 ```
 
 This diagram separates the options by layer. Once you touch weights, you usually need retraining to change behavior again. Once you rely on runtime context, you can change behavior immediately, but the change is only as strong as the input you provide. Once you add tools and agents, the design problem shifts from intelligence alone to safe execution.
@@ -80,10 +86,20 @@ This ordering is an inference from public information, not an official universal
 
 ```mermaid
 flowchart LR
-  A["Stable format"] --> B["Prompting / fine-tuning"]
-  C["Fresh knowledge"] --> D["RAG"]
-  E["External action"] --> F["Tools"]
-  G["Multi-step work"] --> H["Agents"]
+  accTitle: Choose a method from the requirement
+  accDescr: Format, current knowledge, external actions and multi-step work are distinct needs. Combine methods when necessary.
+  N0["Stable format and<br/>response patterns"]
+  N1["Prompting and<br/>fine-tuning"]
+  N2["Current or specific<br/>knowledge"]
+  N3["RAG"]
+  N4["External actions"]
+  N5["Tool calls"]
+  N6["Repeated multi-step<br/>work"]
+  N7["Agent control"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
+  N6 --> N7
 ```
 
 ## 4. MCP and External Tooling

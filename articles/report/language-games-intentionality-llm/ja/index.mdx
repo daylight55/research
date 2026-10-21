@@ -34,11 +34,17 @@ LLMをめぐる哲学的な争点は、「LLMは本当に理解しているか�
 <SourceNote>中心文献は O'Connor の [AIs as fellow participants in the language game](https://link.springer.com/article/10.1007/s00146-025-02663-6)、Grindrod の [Large language models and linguistic intentionality](https://link.springer.com/article/10.1007/s11229-024-04723-8)、Fenoglio の [Large Language Models and Language Games: Asymmetric Communication](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6678558)。懐疑側の基礎として Bender and Koller の [Climbing towards NLU](https://aclanthology.org/2020.acl-main.463/) と Shanahan の [Talking About Large Language Models](https://arxiv.org/abs/2212.03551) を参照した。</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["LLM出力"] --> B["人間の解釈"]
-  B --> C["言語ゲームへ取込"]
-  C --> D["規範的評価"]
-  D --> E["責任と修正"]
+flowchart TD
+  accTitle: LLMの出力が人間の実践で評価されるまで
+  accDescr: 生成文は、人間が使う場面の規範・訂正・責任を通じて評価される。流暢さだけから志向性を判断しない。
+  N0["LLMの生成文"]
+  N1["人間による使用・解釈"]
+  N2["場面の規範で評価"]
+  N3["訂正・承認・責任"]
+  N0 -->|実践へ取り込む| N1
+  N1 -->|使用の適否| N2
+  N2 -->|結果を引き受ける| N3
+  N3 -.->|使用を修正| N1
 ```
 
 この図の要点は、LLMの出力が単独で意味や責任を完結させるわけではないことだ。意味は、出力が人間の実践に入り、訂正・引用・採用・拒否される過程で制度的な効力を持つ。
@@ -83,12 +89,15 @@ O'Connor の議論は、この点を最も強く押し出す。彼女は、LLM�
 
 ```mermaid
 flowchart TD
-  A["志向性の問い"] --> B["心的志向性"]
-  A --> C["言語的志向性"]
-  A --> D["規範的地位"]
-  B --> E["接地と経験"]
-  C --> F["使用履歴"]
-  D --> G["責任と承認"]
+  accTitle: 志向性を三つの問いに分ける
+  accDescr: 心的経験、言葉の使用、規範的な責任は別の問題であり、一つの能力指標にまとめない。
+  N0["志向性をめぐる問い"]
+  N1["心的志向性<br/>経験・接地"]
+  N2["言語的志向性<br/>意味・使用履歴"]
+  N3["規範的地位<br/>責任・承認"]
+  N0 -->|心的経験の問い| N1
+  N0 -->|言葉の働きの問い| N2
+  N0 -->|誰が引き受けるか| N3
 ```
 
 ## 5. 非対称コミュニケーションという中間案

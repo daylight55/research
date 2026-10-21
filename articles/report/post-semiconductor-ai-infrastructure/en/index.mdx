@@ -34,11 +34,22 @@ As a public-information inference, short-term monetization should be strongest i
 
 ```mermaid
 flowchart LR
-  GPU["GPU demand"] --> Power["Power and grid"]
-  Power --> Cool["Cooling"]
-  Cool --> Site["Data center sites"]
-  Site --> Net["Optics and networking"]
-  Net --> Store["Storage"]
+  accTitle: Physical infrastructure required for GPU expansion
+  accDescr: Power and grid access, cooling and sites, and networking and storage all condition operation. They are not simply sequential substitutes for investment.
+  N0["GPU and AI facility<br/>expansion"]
+  N1["Power and grid<br/>connection"]
+  N2["Cooling and sites"]
+  N3["Optical links and<br/>networks"]
+  N4["Storage"]
+  N5["Operational compute<br/>infrastructure"]
+  N0 -->|Power intake| N1
+  N0 -->|Heat and space| N2
+  N0 -->|Data movement| N3
+  N0 -->|Data retention| N4
+  N1 --> N5
+  N2 --> N5
+  N3 --> N5
+  N4 --> N5
 ```
 
 The ordering is not a fixed causal chain, but in practice it tends to clog in this sequence. If power is unavailable, more cooling does not matter. If the building exists but cannot be energized, revenue does not start. Networking and storage benefit later, once compute and data volumes are actually deployed.
@@ -48,12 +59,16 @@ The ordering is not a fixed causal chain, but in practice it tends to clog in th
 AI GPUs move as systems, not as isolated chips. The real constraint is not whether a GPU can be purchased. It is whether a dense rack can be powered, cooled, and operated continuously at the required density. The IEA estimates that data centers and data transmission networks consumed about 415 TWh in 2024 and could exceed 1,000 TWh by 2030. That makes AI a core infrastructure demand, not a side effect. <SourceNote>[IEA, Energy and AI](https://www.iea.org/reports/energy-and-ai) and [IEA, Powering Data Centres in the Age of AI](https://www.iea.org/reports/powering-data-centres-in-the-age-of-ai) provide the underlying estimates.</SourceNote>
 
 ```mermaid
-flowchart TD
-  A["GPU buildout"] --> B["Power capacity"]
-  B --> C["Cooling capacity"]
-  C --> D["Floor space"]
-  D --> E["Network density"]
-  E --> F["Data retention"]
+flowchart LR
+  accTitle: Check AI infrastructure bottlenecks by function
+  accDescr: Separate power intake, heat removal, floor area, data movement and retention capacity to identify the constraint on expansion.
+  N0["Power intake and<br/>connection"]
+  N1["Cooling and floor area"]
+  N2["Network density and<br/>retention"]
+  N3["Room to expand AI<br/>facilities"]
+  N0 -->|Power limit| N3
+  N1 -->|Heat and space limits| N3
+  N2 -->|Data limits| N3
 ```
 
 The point is simple. More GPUs require more power. More power requires more cooling. Once power and cooling are in place, floor space becomes the next issue. As clusters get larger, network density rises, and as training and inference expand, retained data grows as well.

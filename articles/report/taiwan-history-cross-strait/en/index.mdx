@@ -27,7 +27,10 @@ Source note: Taiwan's statistics authority estimates the real GDP growth rate in
 
 ```mermaid
 timeline
-    title Key turning points in Taiwanese history
+  accTitle: Changes in Taiwan's rule and democratization
+  accDescr: Distinguish changes in governing authority from democratization milestones such as lifting martial law and direct presidential elections.
+  accTitle: Changes in Taiwan's rule and democratization
+  accDescr: Distinguish changes in governing authority from democratization milestones such as lifting martial law and direct presidential elections.
     1624 : Dutch base
     1662 : Kingdom of Tungning
     1683 : Qing rule
@@ -50,15 +53,16 @@ The core of China-Taiwan relations lies in the mismatch between the "claims of s
 Source note: The Chinese government's 2022 White Paper states that Taiwan is part of China and aims to achieve national unification. Reference: [PRC State Council, 2022 Taiwan White Paper](https://english.www.gov.cn/archive/whitepaper/202208/10/content_WS62f34f46c6d02e533532f0ac.html?wptouch_preview_theme=enabled). The Taiwanese government explains that the ROC has ruled Taiwan and other areas since 1949, and that the PRC does not govern the ROC-administered areas. Reference: [Taiwan.gov.tw, History](https://www.taiwan.gov.tw/content_3.php).
 
 ```mermaid
-flowchart LR
-    Taiwan["Taiwan: effective control"]
-    PRC["China: unification goal"]
-    US["US: deterrence support"]
-    StatusQuo["Status quo"]
-
-    Taiwan --> StatusQuo
-    PRC --> StatusQuo
-    US --> StatusQuo
+flowchart TD
+  accTitle: Taiwan's self-rule, China's unification goal and US deterrence
+  accDescr: The three actors do not pursue the status quo in the same sense. Distinguish unification pressure, effective self-rule and deterrence support.
+  N0["Taiwan<br/>Effective self-rule and<br/>democracy"]
+  N1["China<br/>Goal of unification"]
+  N2["United States<br/>Deterrence and support"]
+  N3["Taiwan Strait status<br/>quo"]
+  N0 -->|Maintain governance| N3
+  N1 -.->|Pressure for change| N3
+  N2 -->|Deter unilateral change| N3
 ```
 
 Practical stability has been achieved through a combination of ambiguity and deterrence rather than complete agreement. Taiwan will strengthen its own democratic politics and defense capabilities. China will pursue unification goals and maintain military, diplomatic, and economic pressure. While the United States does not officially recognize Taiwan as a nation, it provides defense equipment based on the Taiwan Relations Act and opposes changes to the status quo through force or coercion.

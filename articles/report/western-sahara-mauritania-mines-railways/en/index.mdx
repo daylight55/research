@@ -28,16 +28,17 @@ The mine-affected area is better understood as a linear hazard around the Berm t
 Mauritania's SNIM railway links the mining zone around Zouerate with the ore port at Nouadhibou. SNIM's 2024 stakeholder participation plan describes the existing railway as a 704 km single-track line from the M'Haoudatt side to Nouadhibou, with 17 passing sidings. The iron-ore train that appears in travel writing and film discussion is industrial infrastructure, not the mine belt or the Western Sahara military boundary. <SourceNote>[SNIM, RAPPORT P3P SNIM V FINAL OCT 2024 PDF](https://snim.com/sites/default/files/RAPPORT%20P3P%20SNIM%20V%20FINAL%20OCT%202024.pdf).</SourceNote>
 
 ```mermaid
-flowchart LR
-  Conflict["Western Sahara conflict"]
-  Berm["Berm contamination"]
-  Mobility["Mobility risk"]
-  Rail["SNIM railway"]
-  Mining["Iron-ore exports"]
-
-  Conflict --> Berm
-  Berm --> Mobility
-  Rail --> Mining
+flowchart TD
+  accTitle: Western Saharan contamination and Mauritanian railways
+  accDescr: Show conflict-related mine and unexploded-ordnance movement risks separately from SNIM's mineral transport.
+  N0["Western Sahara conflict"]
+  N1["Mines and UXO near the<br/>berm"]
+  N2["Movement risks for<br/>people and vehicles"]
+  N3["SNIM railway"]
+  N4["Iron-ore transport and<br/>export"]
+  N0 -->|Residual contamination| N1
+  N1 -->|Check survey and safety<br/>information| N2
+  N3 -->|Mining logistics| N4
 ```
 
 ## 2. How Large Are the Mine-Affected Areas?

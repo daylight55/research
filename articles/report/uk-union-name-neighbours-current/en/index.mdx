@@ -25,7 +25,10 @@ The naming layers are easiest to separate into three steps. First, **Great Brita
 
 ```mermaid
 timeline
-  title Main Naming Turns
+  accTitle: Changes in the UK's name, territory and European relations
+  accDescr: Read the unions, Irish separation, Northern Ireland peace, EU exit and rapprochement chronologically.
+  accTitle: Changes in the UK's name, territory and European relations
+  accDescr: Read the unions, Irish separation, Northern Ireland peace, EU exit and rapprochement chronologically.
   1707 : Great Britain
   1801 : Great Britain and Ireland
   1922 : Irish Free State
@@ -62,11 +65,20 @@ England has overwhelming demographic weight. ONS mid-2024 estimates put the UK p
 
 ```mermaid
 flowchart LR
-  A["UK Government"] --> B["Foreign affairs, defence, currency"]
-  A --> C["England policy"]
-  D["Scottish Government"] --> E["Devolved administration"]
-  F["Welsh Government"] --> E
-  G["NI Executive"] --> E
+  accTitle: Distinguish UK and devolved government responsibilities
+  accDescr: Separate foreign affairs, defence and currency from devolved administration. England has no equivalent devolved government.
+  N0["UK government"]
+  N1["Foreign affairs,<br/>defence and currency"]
+  N2["Policy for England"]
+  N3["Scottish government"]
+  N4["Welsh government"]
+  N5["Northern Ireland<br/>executive"]
+  N6["Devolved administrative<br/>areas"]
+  N0 -->|UK-wide powers| N1
+  N0 -->|No equivalent devolved<br/>government| N2
+  N3 --> N6
+  N4 --> N6
+  N5 --> N6
 ```
 
 ## 4. Relations with Neighbouring Countries and Jurisdictions

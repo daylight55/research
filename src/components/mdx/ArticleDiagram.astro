@@ -1,0 +1,72 @@
+---
+import { createHash } from 'node:crypto'
+import { readDiagram, renderArticleDiagram } from '@/utils/articleDiagram.mjs'
+
+type Props = { source: string; number: string; locale: 'ja' | 'en' }
+const { source, number, locale } = Astro.props
+const { title, description, code, events, relations } = readDiagram(source)
+const id = `diagram-${locale}-${number}-${createHash('sha256').update(source).digest('hex').slice(0, 10)}`
+const rendered = events ? undefined : renderArticleDiagram(code, id)
+---
+
+<figure class='article-diagram not-prose' id={id} aria-labelledby={`${id}-title`}>
+	<figcaption>
+		<span class='diagram-number'>{locale === 'ja' ? `図 ${number}` : `Figure ${number}`}</span>
+		<strong id={`${id}-title`}>{title}</strong>
+		{
+			rendered && (
+				<button
+					type='button'
+					class='diagram-expand'
+					data-diagram-expand
+					hidden
+					aria-label={locale === 'ja' ? `${title}を拡大` : `Enlarge ${title}`}
+				>
+					{locale === 'ja' ? '拡大' : 'Enlarge'} <span aria-hidden='true'>↗</span>
+				</button>
+			)
+		}
+	</figcaption>
+	{
+		events ? (
+			<ol class='diagram-timeline'>
+				{events.map(({ year, label }) => (
+					<li>
+						<span>{year}</span>
+						<p>{label}</p>
+					</li>
+				))}
+			</ol>
+		) : (
+			<div
+				class='diagram-viewport'
+				role='img'
+				aria-labelledby={`${id}-title`}
+				aria-describedby={`${id}-description`}
+				style={`--diagram-width: ${rendered.width}px`}
+			>
+				{/* SVG is generated at build time from repository-owned Mermaid; labels are escaped. */}
+				{/* eslint-disable-next-line astro/no-set-html-directive */}
+				<Fragment set:html={rendered.svg} />
+			</div>
+		)
+	}
+	{
+		relations && (
+			<ol class='diagram-relations'>
+				{relations.map(({ from, to, label, dotted, condition }) => (
+					<li>
+						{condition && <span class='diagram-condition'>{condition}</span>}
+						<div class='diagram-relation-nodes'>
+							<span>{from}</span>
+							<span aria-hidden='true'>{dotted ? '⇢' : '→'}</span>
+							<span>{to}</span>
+						</div>
+						{label && <p>{label}</p>}
+					</li>
+				))}
+			</ol>
+		)
+	}
+	<p class='diagram-description' id={`${id}-description`}>{description}</p>
+</figure>

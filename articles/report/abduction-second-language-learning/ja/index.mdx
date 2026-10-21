@@ -66,12 +66,18 @@ Peirce にとってアブダクションは、驚くべき事実に対して説�
 
 ```mermaid
 flowchart TD
-  Input["入力を読む"] --> Surprise["違和感を見つける"]
-  Surprise --> Hypothesis["仮説を立てる"]
-  Hypothesis --> Test["発話や課題で試す"]
-  Test --> Feedback["訂正・反応を受ける"]
-  Feedback --> Revise["仮説を修正する"]
-  Revise --> Input
+  accTitle: 予想外の表現から学習仮説を更新する
+  accDescr: 入力の違和感を仮説に変え、発話とフィードバックで確かめる。訂正を次の観察に戻す反復が学習を支える。
+  N0["表現への違和感"]
+  N1["説明できる仮説"]
+  N2["発話・課題で試す"]
+  N3["訂正・反応を観察"]
+  N4["仮説を修正"]
+  N0 -->|理由を考える| N1
+  N1 -->|予想を立てる| N2
+  N2 -->|結果を見る| N3
+  N3 -->|合わなければ直す| N4
+  N4 -.->|次の入力で再確認| N0
 ```
 
 この循環は、第二言語学習を「入力の蓄積」ではなく「仮説の反復更新」として理解するための最小モデルである。入力はそのまま知識にならない。まず、学習者は違和感や不一致を見つける必要がある。次に、何が起きているのかについて暫定仮説を立てる。最後に、発話、作文、復唱、確認質問などで試し、反応によって修正する。<SourceNote>この流れは Peirce の abduction と、SLA の interaction / corrective feedback 文献をつないだ公表情報からの推定である。学習者が仮説を明示的に更新する枠組みとしては、[Interaction and instructed second language acquisition](https://www.cambridge.org/core/journals/language-teaching/article/interaction-and-instructed-second-language-acquisition/78A156EE200F744F5978F99BFB073DBE) と [corrective feedback の研究](https://www.cambridge.org/core/books/cambridge-handbook-of-corrective-feedback-in-second-language-learning-and-teaching/written-corrective-feedback/11FC3A1C544105E3D6A3509032A72F81) が実用的である。</SourceNote>

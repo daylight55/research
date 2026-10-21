@@ -28,12 +28,18 @@ Modern halal has a double structure: religious practice and quality assurance. O
 This structure reflects the breadth and diversity of Islamic cultural spheres. Indonesia, Malaysia, Gulf states, Turkey, South Asia, Europe, North America, and Japan all use the word halal, but their state involvement, legal schools, migration histories, food industries, secular laws, and consumer-protection systems differ. Pew Research Center estimated in 2025 that Muslims were the fastest-growing major religious group from 2010 to 2020 and reached 25.6% of the world's population. Halal is therefore not a local custom. It is an entry point into global consumption, mobility, regulation, and cultural friction. <SourceNote>[Pew Research Center, How the Global Religious Landscape Changed From 2010 to 2020](https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/) provides the demographic estimate.</SourceNote>
 
 ```mermaid
-flowchart LR
-  N["Religious norms"] --> P["Everyday practice"]
-  P --> T["Demand for trust"]
-  T --> C["Certification and audit"]
-  C --> S["Supply-chain control"]
-  S --> M["Markets and state systems"]
+flowchart TD
+  accTitle: How halal norms extend into supply-chain verification
+  accDescr: Certification, auditing and supply-chain controls help verify permissibility in everyday consumption. Implementation varies by country and institution.
+  N0["Religious norms<br/>Permitted and<br/>prohibited"]
+  N1["Food and everyday<br/>practice"]
+  N2["Trust in ingredients<br/>and processes"]
+  N3["Certification and audit"]
+  N4["Supply chains and state<br/>systems"]
+  N0 -->|Criteria for choices| N1
+  N1 -->|Need for verification| N2
+  N2 -->|Institutional<br/>verification| N3
+  N3 -->|From inputs to<br/>distribution| N4
 ```
 
 The diagram shows how halal moves from personal discipline into industrial infrastructure. Faith remains the starting point, but the modern dispute concerns proof: who can certify halal status, how far markets and states should intervene, and how consumers can judge claims they cannot inspect themselves.

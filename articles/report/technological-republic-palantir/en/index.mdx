@@ -34,14 +34,20 @@ This report’s conclusion is:
 4. The governing question is not whether technologists should serve the state, but how public purpose, military power, corporate incentives, and democratic control can be designed together.
 
 ```mermaid
-flowchart LR
-  A["Book thesis"] --> B["AI deterrence"]
-  A --> C["Loss of belief"]
-  A --> D["Engineering culture"]
-  B --> E["State and market"]
-  C --> E
-  D --> E
-  E --> F["Technological republic"]
+flowchart TD
+  accTitle: State, technology and organization in The Technological Republic
+  accDescr: Read AI deterrence, commitment to public purpose and engineering organization as parts of the authors' argument for reconnecting state and market.
+  N0["The authors'<br/>technological republic"]
+  N1["Deterrence through AI<br/>and technology"]
+  N2["Commitment to public<br/>purpose"]
+  N3["Building engineering<br/>organizations"]
+  N4["Reconnecting state and<br/>market"]
+  N0 -->|Security argument| N1
+  N0 -->|Argument about values<br/>and purpose| N2
+  N0 -->|Organizational argument| N3
+  N1 --> N4
+  N2 --> N4
+  N3 --> N4
 ```
 
 ## 2. Before Reading
@@ -97,11 +103,17 @@ Palantir’s Maven Smart System is the operational example. Palantir describes M
 
 ```mermaid
 flowchart TD
-  A["Government R&D"] --> B["Basic technology"]
-  B --> C["Commercial software"]
-  C --> D["AI capability"]
-  D --> E["Military and public operations"]
-  E --> F["Deterrence and state capacity"]
+  accTitle: The authors' path from government research to public use
+  accDescr: This proposed path links government R&D, basic technology, commercial software and AI operations; it does not prove that the effects follow automatically.
+  N0["Government R&D and<br/>basic technology"]
+  N1["Commercial software"]
+  N2["AI capabilities"]
+  N3["Military and<br/>administrative<br/>operation"]
+  N4["Deterrence and public<br/>capacity"]
+  N0 -->|Proposed technology<br/>transfer| N1
+  N1 -->|Capability development| N2
+  N2 -->|Institutional<br/>deployment| N3
+  N3 -.->|Effects expected by the<br/>authors| N4
 ```
 
 ## 5. Part II: The Hollowing Out of the American Mind

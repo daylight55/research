@@ -28,12 +28,19 @@ Source note: This article prioritizes primary information from Reuters and publi
 ## 2. How to read the current war situation
 
 ```mermaid
-flowchart LR
-    Front[Frontline attrition] --> Strikes[Long-range rear-area strikes]
-    Strikes --> Civilians[Civilian harm, outages, displacement]
-    Civilians --> Support[EU/IMF/reconstruction support]
-    Support --> Talks[Ceasefire talks and prisoner exchange]
-    Talks --> Front
+flowchart TD
+  accTitle: Distinguish the front, rear strikes, support and talks
+  accDescr: Front-line and rear strikes, civilian life, military and financial support, and talks develop in parallel, not as one simple cycle.
+  N0["Attrition at the front"]
+  N1["Long-range strikes in<br/>the rear"]
+  N2["Civilian harm, outages,<br/>displacement"]
+  N3["Military, financial and<br/>recovery support"]
+  N4["Ceasefire talks and<br/>prisoner exchanges"]
+  N0 -->|Harm to daily life and<br/>housing| N2
+  N1 -->|Infrastructure damage| N2
+  N3 -->|Sustain defence| N0
+  N3 -->|Support life and<br/>recovery| N2
+  N4 -.->|Negotiate a halt or<br/>reduction| N0
 ```
 
 This war is not a simple "advancement of the occupation line," but is driven by front-line pressure, long-range attacks on cities, damage to economic and power infrastructure, and a cycle of support and negotiation. Therefore, rather than looking only at advances and retreats on a single day, it is more practical to understand in which theaters losses are accumulating, which attacks are spilling over into civilian life, and over what period of time support. Source notes: [OHCHR civilian casualty update](https://www.ohchr.org/en/news/2026/05/ukraine-civilian-casualty-update-april-2026), [Reuters front-line reporting](https://www.investing.com/news/world-news/ukraine-war-live-russia-and-ukraine-to-hold-talks-after-brief-ceasefire-3959412), [EU/IMF/World Bank support links](https://www.consilium.europa.eu/en/press/press-releases/2026/04/23/council-finalises-90-billion-support-loan-to-ukraine/).

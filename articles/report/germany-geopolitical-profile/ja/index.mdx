@@ -24,12 +24,20 @@ draft: false
 ドイツは、EU最大級の経済、NATO東翼の後方基盤、ユーロ圏財政の重し、気候政策の標準設定国という複数の顔を持つ。2025年総選挙後は、Friedrich Merz首相の下でCDU/CSUとSPDが政権を組み、経済再建、防衛拡大、移民管理、欧州の自立を同時に進めようとしている。<SourceNote>[Federal Government, Federal Cabinet](https://www.bundesregierung.de/breg-en/federal-cabinet) と [Federal Government, first government statement](https://www.bundesregierung.de/breg-en/news/first-government-statement-chancellor-merz-2347710) を参照した。</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["連立政権"] --> B["経済再建"]
-  A --> C["防衛拡大"]
-  A --> D["移民管理"]
-  B --> E["EU競争力"]
-  C --> F["ウクライナ支援"]
+flowchart TD
+  accTitle: ドイツの経済・防衛・移民政策の接点
+  accDescr: 連立政権の政策を経済再建、防衛拡大、移民管理に分け、EUとウクライナ支援への接続を読む。
+  N0["連立政権"]
+  N1["経済再建"]
+  N2["防衛拡大"]
+  N3["移民管理"]
+  N4["EUの競争力"]
+  N5["ウクライナ支援"]
+  N0 -->|国内経済| N1
+  N0 -->|安全保障| N2
+  N0 -->|内政| N3
+  N1 -->|欧州への波及| N4
+  N2 -->|装備・財政支援| N5
 ```
 
 ニュースを読むときは、ドイツを「EUの中心国家」とだけ見ない方がよい。AfDの伸長、東西差、産業の停滞、エネルギー価格、防衛費の恒久財源が、ベルリンの対外政策を毎回制約する。日本企業や政策担当者にとっては、ドイツ発の気候・産業・制裁ルールがEU全体の規制へ広がる経路を読むことが重要になる。
@@ -40,7 +48,10 @@ flowchart LR
 
 ```mermaid
 timeline
-  title ドイツ政治の節目
+  accTitle: ドイツの再統一・欧州統合・安全保障の節目
+  accDescr: 戦後憲法、再統一、ユーロ、難民政策、安全保障転換、政権交代を年代で並べる。
+  accTitle: ドイツの再統一・欧州統合・安全保障の節目
+  accDescr: 戦後憲法、再統一、ユーロ、難民政策、安全保障転換、政権交代を年代で並べる。
   1949 : 基本法
   1990 : 再統一
   2002 : ユーロ現金化

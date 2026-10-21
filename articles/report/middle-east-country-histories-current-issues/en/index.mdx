@@ -28,7 +28,10 @@ For Japan, the region is one connected risk space. The region is a single risk s
 
 ```mermaid
 timeline
-    title Major turning points in Middle Eastern state formation
+  accTitle: State formation and regional-order changes in the Middle East
+  accDescr: Trace imperial dissolution, state formation, revolution and changes since 2011 without reducing different countries to a single trajectory.
+  accTitle: State formation and regional-order changes in the Middle East
+  accDescr: Trace imperial dissolution, state formation, revolution and changes since 2011 without reducing different countries to a single trajectory.
     1916 : Ottoman collapse and mandates
     1948 : Israel's founding and Palestinian displacement
     1952 : The Egyptian revolution and military rule
@@ -112,20 +115,21 @@ Egypt became a military-led republic after the 1952 Revolution and remains a maj
 
 ```mermaid
 flowchart LR
-  Iran["Iran axis"]
-  Levant["Levant crisis belt"]
-  IsraelPal["Israel-Palestine"]
-  Gulf["Gulf resource states"]
-  Egypt["Egypt"]
-  Turkey["Turkey"]
-
-  Iran --> Levant
-  Iran --> Gulf
-  IsraelPal --> Egypt
-  IsraelPal --> Levant
-  Gulf --> Egypt
-  Turkey --> Levant
-  Turkey --> Gulf
+  accTitle: Read Middle Eastern relations by region and bargaining issue
+  accDescr: Distinguish the security and economic relationships linking Iran, the Levant, the Gulf, Egypt and Türkiye.
+  N0["Iran"]
+  N1["Levant crisis zone"]
+  N2["Israel and Palestine"]
+  N3["Gulf states"]
+  N4["Egypt"]
+  N5["Türkiye"]
+  N0 -->|Support networks| N1
+  N0 -->|Rivalry and<br/>accommodation| N3
+  N2 -->|War spillover| N1
+  N2 -->|Gaza and borders| N4
+  N3 -->|Economic ties| N4
+  N5 -->|Syria and security| N1
+  N5 -->|Diplomacy and<br/>investment| N3
 ```
 
 This is not a military alliance chart. It is a map of spillovers: conflict, money, displacement, shipping, mediation, and sanctions. Iran projects pressure through proxies into the Levant, Israel-Palestine remains the emotional center of the region, the Gulf supplies capital and energy, Egypt is the hinge between Gaza and the Suez route, and Turkey connects refugee flows with security and economic pressure. <SourceNote>[World Bank, MENAAP Economic Update 2026](https://www.worldbank.org/en/region/mena/publication/economy-update), [IMF, Regional Economic Outlook for the Middle East and Central Asia 2026](https://www.imf.org/en/Publications/REO/MCD), [OCHA, Gaza updates](https://www.ochaopt.org/), [Freedom House country reports](https://freedomhouse.org/countries/freedom-world/scores) support this map.</SourceNote>

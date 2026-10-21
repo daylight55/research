@@ -32,17 +32,19 @@ Islamic mysticism, usually called Sufism in English and taṣawwuf in Arabic, is
 Landmines, the Mauritanian iron-ore railway, and the Western Sahara conflict matter, but they are not the central subject of this report. They are not supporting details about rave organizers; they are a separate question about mobility, security, infrastructure, and conflict history. This PR therefore separates them into a second report, "Landmine belts and railways in Western Sahara and Mauritania." <SourceNote>The mine, railway, and conflict-history analysis is separated into `/reports/western-sahara-mauritania-mines-railways/`.</SourceNote>
 
 ```mermaid
-flowchart LR
-  Film["Film imagery"]
-  Psy["Psytrance circuit"]
-  Culture["Local culture work"]
-  Religion["Religion and norms"]
-  Security["Security is separate"]
-
-  Film --> Psy
-  Psy --> Culture
-  Culture --> Religion
-  Religion --> Security
+flowchart TD
+  accTitle: Distinguish desert music events by type and context
+  accDescr: Distinguish film representations, psytrance and local cultural projects, then examine religious and social context. A separate article addresses security risks.
+  N0["Desert music images and<br/>events"]
+  N1["Film representations of<br/>raves"]
+  N2["Psytrance events"]
+  N3["Local cultural projects<br/>and festivals"]
+  N4["Religious and social<br/>context"]
+  N0 -->|Read as a work| N1
+  N0 -->|Check organizers and<br/>participants| N2
+  N0 -->|Check local actors| N3
+  N2 -->|Local context| N4
+  N3 -->|Cultural and ritual<br/>connections| N4
 ```
 
 ## 2. Who Is Leading These Events?
@@ -75,15 +77,19 @@ In the Moroccan context, the most relevant bridge is not abstract Sufism but Gna
 The Sufism-rave link is therefore indirect. It is not evidence that Sufi orders organize desert raves. The connection lies in repeated rhythm, all-night collective bodily experience, trance, sacred/secular boundary work, and the relocation of ritual aesthetics into tourism, world music, and electronic-music festival settings. Essaouira's Gnaoua and World Music Festival and MOGA-style electronic festival contexts show how Gnawa heritage and electronic/world music can share festival space. They do not prove that Transahara or similar desert raves are religiously led. <SourceNote>[Gnaoua Festival official](https://www.festival-gnaoua.net/en/home/), [MOGA Festival](https://www.mogafestival.com/), [Mixmag MENA on MOGA](https://mixmagmena.com/read/the-sixth-moroccan-edition-of-moga-festival-arrives-in-essaouira-this-week-news), and [OpenEdition Gradhiva](https://journals.openedition.org/gradhiva/1014) support the festival and recontextualization point. The link here is an inference from public information, not confirmation of organizer identity.</SourceNote>
 
 ```mermaid
-flowchart TD
-  Sufi["Sufism"]
-  Gnawa["Gnawa ritual"]
-  Festival["Festival context"]
-  Rave["Electronic music"]
-
-  Sufi --> Gnawa
-  Gnawa --> Festival
-  Festival --> Rave
+flowchart LR
+  accTitle: Distinguish religious ritual from electronic music origins
+  accDescr: Sufism, Gnawa ritual, festivals and raves can intersect without implying that one directly originated from another.
+  N0["Sufism"]
+  N1["Religious practice"]
+  N2["Gnawa ritual"]
+  N3["Local ritual and<br/>tradition"]
+  N4["Festivals and raves"]
+  N5["Staged and electronic<br/>music events"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
+  N3 -.->|Connections and<br/>recontextualization| N5
 ```
 
 ## 5. How Raves and Religion Intersect

@@ -27,11 +27,19 @@ draft: false
 
 ```mermaid
 flowchart TD
-  A[民主化後の権利拡大] --> B[土地・都市の旧構造]
-  B --> C[雇用・教育の分断]
-  C --> D[低成長と失業]
-  D --> E[電力・治安・汚職]
-  E --> F[連立政治の圧力]
+  accTitle: 南アフリカで権利拡大後も残る社会経済制約
+  accDescr: 政治的権利の拡大と、土地・都市・教育の分断が残ることを区別する。低成長や公共サービスの弱さが連立政治の課題になる。
+  N0["民主化・政治的権利の拡大"]
+  N1["土地・都市・教育の旧構造"]
+  N2["雇用・機会の分断"]
+  N3["電力・治安・汚職"]
+  N4["低成長・失業"]
+  N5["連立政治の政策課題"]
+  N1 -->|機会の制約| N2
+  N2 --> N4
+  N3 -->|企業・生活への制約| N4
+  N0 -->|権利を実質化する課題| N5
+  N4 -->|改善への要求| N5
 ```
 
 この図は、南アフリカの社会経済問題を単独の政策失敗ではなく、歴史的な空間配置と現在の統治能力が結びついた循環として示したものである。<SourceNote>図は [World Bank, South Africa overview](https://www.worldbank.org/en/country/southafrica/overview)、[AP News, South Africa's ANC loses majority, setting up coalition talks](https://apnews.com/article/d9da7582ca98a4e00fec2da6a5fe1e91)、[South African History Online](https://www.sahistory.org.za/article/history-apartheid-south-africa) を要約した公開情報の整理である。</SourceNote>
@@ -76,11 +84,19 @@ B-BBEE は、人種排除で形成された所有権、調達、技能、取引�
 Eskom の電力危機は、単なる停電問題ではない。工場、物流、鉱山、病院、学校、小売の稼働率をまとめて下げる供給制約であり、雇用と税収の両方を圧迫する。AP は世界銀行の支援報道の中で、頻発する停電が鉱業や自動車産業を含む経済活動を損ねていると伝えた。電力危機は最悪期を脱した局面があるとしても、供給網と送電網が脆弱なままでは、成長率はすぐに頭打ちになる。<SourceNote>[AP News, World Bank loan backs South Africa reforms as blackouts, joblessness and crime bite](https://apnews.com/article/ceb8af11c31241e9508ec612fccdc2a5)</SourceNote>
 
 ```mermaid
-flowchart LR
-  A[停電] --> B[企業コスト増]
-  B --> C[雇用抑制]
-  C --> D[税収の弱さ]
-  D --> A
+flowchart TD
+  accTitle: 電力不足・企業活動・財政の悪循環
+  accDescr: 停電による費用増は企業活動と雇用を圧迫し、弱い税収がインフラ改善の余地を狭めうる。
+  N0["停電・電力供給不足"]
+  N1["企業の費用増"]
+  N2["活動・雇用の抑制"]
+  N3["弱い税収基盤"]
+  N4["インフラ改善の制約"]
+  N0 --> N1
+  N1 --> N2
+  N2 --> N3
+  N3 --> N4
+  N4 -.->|改善を妨げる可能性| N0
 ```
 
 この図は、停電が家計の不便だけでなく、投資、雇用、財政に波及する循環を示している。<SourceNote>図は [AP News](https://apnews.com/article/ceb8af11c31241e9508ec612fccdc2a5) の電力・雇用・治安に関する報道を単純化したものである。</SourceNote>

@@ -38,13 +38,19 @@ draft: false
 この比較では、当事者の発言をそのまま「本音」とみなさない。代わりに、国内向け、対外向け、交渉向けのメッセージを分けて読む。<SourceNote>[President of Ukraine official news archive](https://www.president.gov.ua/en/news), [Kremlin official events archive](https://en.kremlin.ru/events/president).</SourceNote>
 
 ```mermaid
-flowchart LR
-    Z[ゼレンスキー] --> Z1[守る戦争]
-    Z --> Z2[停戦を起点にする]
-    P[プーチン] --> P1[達成する戦争]
-    P --> P2[安全保障要求を通す]
-    Z1 --> Z3[支援国向け発信]
-    P1 --> P3[国内統合向け発信]
+flowchart TD
+  accTitle: 両首脳の戦争目的と発信先を比較する
+  accDescr: ゼレンスキーは防衛と停戦・支援、プーチンは要求達成と安全保障を強調する。発言上の主張と実際の行動は分けて検証する。
+  N0["ゼレンスキーの発言"]
+  N1["防衛・停戦・支援の維持"]
+  N2["国内・支援国への発信"]
+  N3["プーチンの発言"]
+  N4["要求達成・安全保障条件"]
+  N5["国内統合・対外交渉"]
+  N0 -->|強調する目的| N1
+  N1 -->|想定する聴衆| N2
+  N3 -->|強調する目的| N4
+  N4 -->|想定する聴衆| N5
 ```
 
 <SourceNote>図は、ゼレンスキーの 2026-05-07 / 05-24 発言と、プーチンの 2026-02-24 / 2025-12-17 発言を要約したものだ。目的は時系列ではなく、戦争観の違いを一目で確認することにある。</SourceNote>

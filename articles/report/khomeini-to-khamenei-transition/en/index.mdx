@@ -26,7 +26,10 @@ In foreign policy, the regime moved toward a combination of deterrence and negot
 
 ```mermaid
 timeline
-    title Regime transition after 1989
+  accTitle: Government policy shifts after Iran's leadership succession
+  accDescr: Distinguish the 1989 leadership succession from successive presidents' reconstruction, reform and nuclear-negotiation policies.
+  accTitle: Government policy shifts after Iran's leadership succession
+  accDescr: Distinguish the 1989 leadership succession from successive presidents' reconstruction, reform and nuclear-negotiation policies.
     1989 : Khamenei selected
     1990s : Reconstruction line
     1997-2005 : Reform line
@@ -43,19 +46,20 @@ The 1989 revision has great institutional significance. IRANICA shows that short
 The text of the Constitution also supports this relocation. Article 5 provides for the governance of jurists, Article 107 provides for the selection of leaders by the Assembly of Experts, and Article 110 provides for the supreme command of the military, the appointment of the chief justice, and the authority to appoint jurists to the Guardian Council. Articles 91, 94, and 99 provide for bill review and election supervision by the Guardian Council, while Articles 143 and 150 provide for the division of roles between the conventional military and the Revolutionary Guards. In other words, the succession in 1989 was not just a personnel matter, but a rewiring of the system. Source note: Refer to [Constitute Project, Constitution of the Islamic Republic of Iran](https://www.constituteproject.org/constitution/Iran_1989.pdf) for article confirmation.
 
 ```mermaid
-flowchart TB
-    Khomeini["Khomeini's charismatic revolutionary authority"]
-    Assembly["Assembly of Experts"]
-    Revision["1989 constitutional revision"]
-    Khamenei["Khamenei"]
-    Leader["Supreme Leader"]
-    Institutions["Authority distribution to governing institutions"]
-
-    Khomeini -->|post-death vacuum| Assembly
-    Assembly -->|selection| Khamenei
-    Revision -->|redesign qualifications and executive structure| Leader
-    Khamenei --> Leader
-    Leader --> Institutions
+flowchart TD
+  accTitle: Selection and constitutional revision in 1989
+  accDescr: Distinguish the Assembly of Experts' selection of Khamenei from constitutional changes to leadership qualifications and executive arrangements.
+  N0["Khomeini's death"]
+  N1["Assembly of Experts"]
+  N2["Selection of Khamenei"]
+  N3["1989 constitutional<br/>revision"]
+  N4["Leadership institution<br/>and powers"]
+  N5["Allocation of<br/>institutional powers"]
+  N0 -->|Determine succession| N1
+  N1 -->|Select| N2
+  N2 -->|Assume leadership| N4
+  N3 -->|Change qualifications<br/>and administration| N4
+  N4 -->|Appointment and control| N5
 ```
 
 ## 3. What supported Khamenei's authority base?
@@ -92,20 +96,21 @@ When Raisi became president in 2021, the regime shifted back towards hardliners.
 After Raisi's death in 2024, Pezeshkian was elected after an interim system. Although this indicated the possibility of softening the tone of foreign relations somewhat, it did not change the strategic authority of the supreme leader. Reuters reported that Pezeshkian won the July 2024 elections, while also suggesting that the president's powers will remain constrained in Iran's power structure. The conclusion here is that changes in election results and changes at the core of the system are two different things. Source note: Referenced [Reuters, Moderate Pezeshkian wins Iran's presidential runoff](https://www.investing.com/news/world-news/iranians-vote-in-runoff-presidential-election-amid-widespread-apathy-3508560) and [USIP Iran Primer, The Supreme Leader](https://iranprimer.usip.org/resource/supreme-leader). The assumption that strategic authority will remain with the supreme leader even if there is a presidential change is an estimate based on publicly available information.
 
 ```mermaid
-flowchart LR
-    SL["Supreme Leader"]
-    EXP["Assembly of Experts"]
-    GC["Guardian Council"]
-    IRGC["IRGC"]
-    PRS["President"]
-    ELEC["Elections"]
-
-    EXP -->|selection and oversight| SL
-    SL --> GC
-    SL --> IRGC
-    ELEC --> GC
-    PRS -->|administration| SL
-    GC --> ELEC
+flowchart TD
+  accTitle: The supreme leader, Guardian Council and elections
+  accDescr: The Assembly selects and supervises the leader; the Guardian Council vets candidates. Elections do not replace the entire power structure.
+  N0["Assembly of Experts"]
+  N1["Supreme leader"]
+  N2["Guardian Council"]
+  N3["IRGC"]
+  N4["Popular elections"]
+  N5["President and<br/>parliament"]
+  N0 -->|Select and supervise| N1
+  N1 -->|Appoint clerical<br/>members| N2
+  N1 -->|Command| N3
+  N2 -->|Vet candidates| N4
+  N4 -->|Elect| N0
+  N4 -->|Elect| N5
 ```
 
 ## 5. How does it lead to nuclear development, sanctions, and regional proxy forces?

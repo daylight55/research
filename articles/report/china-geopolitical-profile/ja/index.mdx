@@ -33,11 +33,19 @@ draft: false
 
 ```mermaid
 flowchart TD
-  A["党の指導"] --> B["国家機構"]
-  A --> C["軍と治安"]
-  A --> D["メディアと社会"]
-  B --> E["経済運営"]
-  C --> F["対外圧力"]
+  accTitle: 中国の党・国家・軍を分けて読む
+  accDescr: 党の指導が国家機構、軍・治安、情報統制へ及び、それぞれ経済運営と対外政策を支える。
+  N0["中国共産党の指導"]
+  N1["国家機構"]
+  N2["軍・治安"]
+  N3["情報・メディア統制"]
+  N4["経済運営"]
+  N5["対外・安全保障政策"]
+  N0 -->|政策を統括| N1
+  N0 -->|統制| N2
+  N0 -->|方針を浸透| N3
+  N1 -->|実施| N4
+  N2 -->|軍事・治安手段| N5
 ```
 
 ## 2. 歴史と制度の骨格
@@ -48,7 +56,10 @@ flowchart TD
 
 ```mermaid
 timeline
-  title 中国現代史の節目
+  accTitle: 中国の体制形成と公表された将来目標
+  accDescr: 成立済みの出来事と、2049年の強国化という将来目標を分けて読む。
+  accTitle: 中国の体制形成と公表された将来目標
+  accDescr: 成立済みの出来事と、2049年の強国化という将来目標を分けて読む。
   1949 : 中華人民共和国成立
   1978 : 改革開放
   2012 : 習近平体制
@@ -79,11 +90,18 @@ timeline
 中国のメディアは党の指導の下に置かれ、治安・監視・言論統制は政治的安定の一部として扱われる。新疆やチベットは、民族政策だけでなく、国家の統合と統制の問題として扱われてきた。<SourceNote>[China](https://en.wikipedia.org/wiki/China), [Military and Security Developments Involving the People’s Republic of China 2025](https://media.defense.gov/2025/Dec/23/2003849070/-1/-1/1/ANNUAL-REPORT-TO-CONGRESS-MILITARY-AND-SECURITY-DEVELOPMENTS-INVOLVING-THE-PEOPLES-REPUBLIC-OF-CHINA-2025.PDF)</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["党の方針"] --> B["国家機構"]
-  B --> C["経済"]
-  B --> D["治安・監視"]
-  D --> E["社会統制"]
+flowchart TD
+  accTitle: 党の方針が経済と社会統制へ届く経路
+  accDescr: 国家機構を介する政策実施と、治安・監視を介する社会統制を分けて示す。
+  N0["党の方針"]
+  N1["国家機構"]
+  N2["経済政策の実施"]
+  N3["治安・監視機構"]
+  N4["社会への統制"]
+  N0 -->|政策を定める| N1
+  N1 -->|経済運営| N2
+  N1 -->|組織と予算| N3
+  N3 -->|監視・執行| N4
 ```
 
 ## 4. 国際政治の争点
@@ -111,11 +129,21 @@ flowchart LR
 一帯一路は、インフラ輸出だけでなく、金融、港湾、資源、外交関係を束ねる対外戦略として読むべきである。中国の対外関与は、地域秩序を支える協力でもある一方、依存関係を通じた影響力の拡張でもある。<SourceNote>[Military and Security Developments Involving the People’s Republic of China 2025](https://media.defense.gov/2025/Dec/23/2003849070/-1/-1/1/ANNUAL-REPORT-TO-CONGRESS-MILITARY-AND-SECURITY-DEVELOPMENTS-INVOLVING-THE-PEOPLES-REPUBLIC-OF-CHINA-2025.PDF)</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["台湾"] --> B["軍事圧力"]
-  A --> C["情報戦"]
-  D["南シナ海"] --> B
-  E["技術統制"] --> C
+flowchart TD
+  accTitle: 台湾・南シナ海・技術競争の圧力経路
+  accDescr: 軍事、情報、技術の経路を区別し、すべてを同じ種類の圧力として扱わない。
+  N0["台湾"]
+  N1["軍事圧力"]
+  N2["情報戦"]
+  N3["南シナ海"]
+  N4["技術競争・統制"]
+  N5["安全保障上の摩擦"]
+  N0 --> N1
+  N0 --> N2
+  N3 --> N1
+  N1 --> N5
+  N2 --> N5
+  N4 --> N5
 ```
 
 ## 5. 経済・社会の圧力

@@ -134,6 +134,9 @@ Preferred order:
 
 Mermaid constraints:
 
+- Include localized `accTitle:` (the figure's reading purpose) and `accDescr:` (one or two concrete sentences explaining its relationships or comparison) in every Mermaid fence. Keep diagram types, node IDs and connections synchronized between Japanese and English.
+- The site generates figures at build time. Use `flowchart` / `graph`, `sequenceDiagram` or `timeline`; timelines become semantic chronological lists. Extend the renderer and tests before adding another type.
+- Name the meaning of arrows. Do not turn a list or comparison into an unsupported causal chain. Run `node --test ops/tests/article-diagrams.test.mjs` and inspect desktop/mobile readability and enlargement controls.
 - Use Mermaid as a compact aid to the prose, not as a replacement for prose.
 - Keep one Mermaid diagram to 3-7 nodes by default; do not exceed 9 nodes unless explicitly requested.
 - Keep node labels short: target about 15 Japanese characters, cap around 25.

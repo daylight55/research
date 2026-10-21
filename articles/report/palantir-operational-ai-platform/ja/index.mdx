@@ -32,15 +32,22 @@ Palantirは、単なる分析ツール企業でも、LLMアプリ企業でもな
 <SourceNote>2026年Q1数値はPalantirのSEC提出プレスリリース [a2026q1ex991pressrelease.htm](https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm) と [Q1 2026 Business Update PDF](https://investors.palantir.com/files/Palantir%20-%20Q1%202026%20Business%20Update.pdf) に基づく。</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["外部データ"] --> B["Foundry"]
-  B --> C["Ontology"]
-  C --> D["AIP"]
-  D --> E["業務アプリ"]
-  E --> F["監査ログ"]
-  F --> C
-  G["Apollo"] --> B
-  G --> D
+flowchart TD
+  accTitle: Palantirのデータ・業務モデル・AI・配備
+  accDescr: Foundryがデータを統合し、Ontologyが業務対象と操作を定義し、AIPがAI利用を接続する。Apolloは配備・運用を担う。
+  N0["外部データ"]
+  N1["Foundry<br/>統合とデータ処理"]
+  N2["Ontology<br/>対象・関係・Action"]
+  N3["AIP・業務アプリ"]
+  N4["実行結果・監査ログ"]
+  N5["Apollo<br/>配備・運用"]
+  N0 -->|取り込み| N1
+  N1 -->|業務へ対応付け| N2
+  N2 -->|文脈と操作| N3
+  N3 -->|実行を記録| N4
+  N4 -.->|状態を反映| N2
+  N5 -->|配備を管理| N1
+  N5 -->|運用を管理| N3
 ```
 
 ## 2. Palantirとは何か
@@ -65,7 +72,10 @@ S-1でPalantirは、2003年に counterterrorism operations 向けソフトウェ
 
 ```mermaid
 timeline
-  title Palantirの進化を貫く軸
+  accTitle: Palantirの事業・製品展開の節目
+  accDescr: 創業からGotham、Foundry、上場、AIPへの展開を年代で示し、製品の役割は構造図と分ける。
+  accTitle: Palantirの事業・製品展開の節目
+  accDescr: 創業からGotham、Foundry、上場、AIPへの展開を年代で示し、製品の役割は構造図と分ける。
   2003 : 創業
   2008 : Gotham拡大
   2010s : Foundry展開
@@ -112,21 +122,19 @@ Palantirを理解する鍵はOntologyである。一般的なRDF/OWL型のオン
 <SourceNote>PalantirのAction logは、Action提出をオブジェクトとしてモデル化し、意思決定やデータ編集をOntology内で分析可能にする仕組みである。[Action log](https://www.palantir.com/docs/foundry/action-types/action-log) を参照。</SourceNote>
 
 ```mermaid
-flowchart TB
-  subgraph "Semantic Layer"
-    M["Objects / Links"]
-    I["Interfaces"]
-  end
-  subgraph "Kinetic Layer"
-    A["Actions / Functions"]
-    S["Security"]
-    AL["Action Log"]
-  end
-  M --> A
-  I --> A
-  A --> AL
-  S --> A
-  AL --> M
+flowchart TD
+  accTitle: 意味の定義と状態を変える操作を結ぶ
+  accDescr: Objects・Links・Interfacesで対象を定義し、権限制御の下でActions・Functionsを実行し履歴を残す。
+  N0["Objects・Links・Interfaces"]
+  N1["Actions・Functions"]
+  N2["Security<br/>権限・実行条件"]
+  N3["Action Log<br/>変更履歴"]
+  N4["対象の状態"]
+  N0 -->|対象と意味| N1
+  N2 -->|実行を制御| N1
+  N1 -->|記録| N3
+  N1 -->|変更| N4
+  N3 -.->|追跡可能性| N0
 ```
 
 ## 4. AIP: LLMを業務に接続する層
@@ -139,21 +147,23 @@ PalantirのAIPは、LLMを「回答生成エンジン」から「業務状態を
 
 ```mermaid
 sequenceDiagram
-  participant User as 現場ユーザー
-  participant Agent as AIP Agent
-  participant Ont as Ontology
-  participant LLM as LLM / Model
-  participant Act as Action / Function
-  participant Log as Audit Log
-
-  User->>Agent: 業務質問・依頼
-  Agent->>Ont: 権限内のオブジェクト取得
-  Agent->>LLM: 文脈付き推論
-  LLM-->>Agent: 提案・実行計画
-  Agent->>Act: 承認済みActionを呼び出し
-  Act->>Ont: 状態変更
-  Act->>Log: 誰が何を変えたか記録
-  Log-->>User: 監査可能な結果
+  accTitle: AIPの提案から承認済みAction・監査へ
+  accDescr: 取得権限内の文脈で推論し、承認済みの操作だけが状態を変更する。誰が何を変えたかを記録する。
+  participant U as 現場ユーザー
+  participant A as AIP Agent
+  participant O as Ontology
+  participant L as LLM
+  participant X as Action・監査
+  U->>A: 業務上の質問・依頼
+  A->>O: 権限内の対象・状態を取得
+  O-->>A: 業務の文脈
+  A->>L: 文脈を含めて推論
+  L-->>A: 提案・実行計画
+  A-->>U: 操作内容を確認
+  U->>A: 承認
+  A->>X: 承認済みActionを呼ぶ
+  X->>O: 状態変更
+  X-->>U: 実行者・変更内容・結果を記録
 ```
 
 ## 5. Apollo: Palantirの隠れた強み
@@ -214,20 +224,21 @@ Palantirの強みは、AIモデルではなく「業務をAI化するための�
 Palantirのリスクは、機能不足よりも「強すぎる統合」にある。分断されたデータ、意思決定、権限、現場行為を一つの運用層に統合すると、業務効率は上がる。しかし、その統合層が不透明、外部ベンダー依存、政治的に争点化しやすい領域に置かれると、説明責任と民主的統制が難しくなる。
 
 ```mermaid
-quadrantChart
-  title Palantir導入リスクの整理
-  x-axis "限定的な業務影響" --> "基幹意思決定への影響大"
-  y-axis "低い個人・公共リスク" --> "高い個人・公共リスク"
-  quadrant-1 "最も厳格な統制が必要"
-  quadrant-2 "透明性・同意・監査が必要"
-  quadrant-3 "通常のIT統制で足りる可能性"
-  quadrant-4 "業務継続・ロックイン中心"
-  "製造ライン最適化": [0.55, 0.35]
-  "サプライチェーン計画": [0.62, 0.42]
-  "医療待機リスト管理": [0.72, 0.78]
-  "警察・移民執行": [0.86, 0.93]
-  "軍事状況認識": [0.90, 0.88]
-  "社内文書検索": [0.30, 0.25]
+flowchart LR
+  accTitle: 利用場面ごとに異なる統制の重点
+  accDescr: 文書検索、製造・供給網、医療、警察・移民、軍事では影響と必要な統制が違う。数値評価ではなく定性的な整理である。
+  N0["文書検索"]
+  N1["アクセス制御・誤答確認"]
+  N2["製造・供給網"]
+  N3["継続性・依存関係"]
+  N4["医療・警察・移民"]
+  N5["権利・説明・異議申立て"]
+  N6["軍事的な利用"]
+  N7["人間の判断・厳格な監査"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
+  N6 --> N7
 ```
 
 ### 9.1 監視・軍事・治安利用

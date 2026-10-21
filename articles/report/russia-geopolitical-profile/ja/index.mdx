@@ -31,12 +31,19 @@ draft: false
 
 ```mermaid
 flowchart TD
-  A["大統領府"] --> B["安全保障機構"]
-  A --> C["国営企業"]
-  A --> D["戦時財政"]
-  B --> E["対外強硬"]
-  C --> E
-  D --> E
+  accTitle: ロシアの権力集中と戦時資源の配分
+  accDescr: 大統領府、安全保障機構、国営企業、戦時財政が対外政策を支える仕組みを読む。
+  N0["大統領府"]
+  N1["安全保障機構"]
+  N2["国営企業"]
+  N3["戦時財政"]
+  N4["対外政策・戦争遂行"]
+  N0 -->|統制| N1
+  N0 -->|国家資源| N2
+  N0 -->|資源配分| N3
+  N1 -->|軍事・治安| N4
+  N2 -->|産業・供給| N4
+  N3 -->|支出| N4
 ```
 
 ## 2. 背景と制度の骨格
@@ -45,7 +52,10 @@ flowchart TD
 
 ```mermaid
 timeline
-  title ロシア国家の節目
+  accTitle: ロシアの国家形成・権力集中・軍備管理の節目
+  accDescr: ソ連崩壊、憲法制定、プーチン政権、任期制度、軍備管理の変化を年代で区別する。
+  accTitle: ロシアの国家形成・権力集中・軍備管理の節目
+  accDescr: ソ連崩壊、憲法制定、プーチン政権、任期制度、軍備管理の変化を年代で区別する。
   1991 : ソ連崩壊
   1993 : 新憲法
   2000 : プーチン台頭
@@ -81,10 +91,17 @@ timeline
 
 ```mermaid
 flowchart LR
-  A["ロシア"] --> B["中国"]
-  A --> C["イラン"]
-  A --> D["北朝鮮"]
-  A --> E["NATO・ウクライナ"]
+  accTitle: ロシアの協力相手と対立相手
+  accDescr: 中国・イラン・北朝鮮との協力と、ウクライナ・NATOとの対立は、異なる関係として示す。
+  N0["ロシア"]
+  N1["中国"]
+  N2["イラン"]
+  N3["北朝鮮"]
+  N4["ウクライナ・NATO"]
+  N0 -->|経済・外交関係| N1
+  N0 -->|協力| N2
+  N0 -->|協力| N3
+  N0 -.->|侵攻・対立| N4
 ```
 
 中国との関係は最も重要な対外支柱であり、イランと北朝鮮は制裁下の代替回路として働く。2025年から2026年にかけての公表情報は、ロシアがこれらの相手国との連携を戦争遂行と制裁回避の両面で深めていることを示す。<SourceNote>[AP News, Xi heads to Russia to show support for Putin as the Ukraine war drags on](https://apnews.com/article/0c0086341e9694122a49fb7054b41d97), [AP News, North Korea says it sent troops to Russia and may send more to help in Ukraine war](https://apnews.com/article/559e604356bdd6976a7cb6dd159663e3)</SourceNote>

@@ -26,6 +26,10 @@ It does not follow that all fiscal-risk arguments about Japan are baseless becau
 
 ```mermaid
 timeline
+  accTitle: From financial crisis to recapitalization and bank consolidation
+  accDescr: Distinguish the timing of crisis, legislation, public capital, monetary easing and consolidation.
+  accTitle: From financial crisis to recapitalization and bank consolidation
+  accDescr: Distinguish the timing of crisis, legislation, public capital, monetary easing and consolidation.
   1997 : Financial stress surfaces
   1998 : Financial reconstruction laws
   1999 : Capital into 15 major banks
@@ -42,11 +46,18 @@ The crisis forced institutional reform. In 1998, the Financial Supervisory Agenc
 Banks then had to thicken capital, dispose of bad loans, and secure enough scale to support system investment and international operations. Mizuho created a holding company in 2000 from Dai-Ichi Kangyo Bank, Fuji Bank, and the Industrial Bank of Japan, then reorganized banking operations in 2002. Sumitomo Mitsui Banking Corporation was formed by the 2001 merger of Sumitomo Bank and Sakura Bank. Mitsubishi UFJ took shape through the 2005 merger of Mitsubishi Tokyo Financial Group and UFJ Group, followed by the 2006 merger of their core banking units. <SourceNote>For the group histories, see [Mizuho Financial Group, Our History](https://www.mizuhogroup.com/who-we-are/company-information/history), [SMBC Group, The 20-Year History of SMBC Group](https://www.smfg.co.jp/english/chronicle20/company/smbc.html), and [MUFG EMEA, Introducing MUFG Bank](https://www.mufgemea.com/mufg-bank/).</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["Bad loans"] --> B["Capital shortage"]
-  B --> C["Public capital"]
-  C --> D["Mergers"]
-  D --> E["Three major groups"]
+flowchart TD
+  accTitle: Bad-loan resolution and bank consolidation
+  accDescr: Trace how public capital repaired equity weakened by bad loans and consolidation led to three major groups.
+  N0["Rising bad loans"]
+  N1["Insufficient equity<br/>capital"]
+  N2["Public recapitalization"]
+  N3["Bank restructuring and<br/>mergers"]
+  N4["Three major financial<br/>groups"]
+  N0 -->|Growing losses| N1
+  N1 -->|Repair capital| N2
+  N2 -->|Reconstruction and<br/>consolidation| N3
+  N3 -->|Consolidated structure| N4
 ```
 
 ## 3. How public capital was funded

@@ -29,13 +29,20 @@ Three conclusions matter most.
 3. Among sectors, developer tools and CRM are the clearest early wins, followed by business automation and then regulated vertical workflows in finance, healthcare, and legal.
 
 ```mermaid
-flowchart LR
-  A["Foundation model"] --> B["API / seat pricing"]
-  B --> C["Business app"]
-  C --> D["Business outcome"]
-  D --> E["Pricing power"]
-  F["Data / permissions"] --> C
-  G["Regulation / audit"] --> C
+flowchart TD
+  accTitle: Separate application value from pricing power
+  accDescr: Model spending alone does not explain an advantage. Check workflow outcomes alongside proprietary data, permissions and audit requirements.
+  N0["Foundation model<br/>API or seat costs"]
+  N1["Workflow application"]
+  N2["Unique data and<br/>permissions"]
+  N3["Compliance and audit"]
+  N4["Workflow outcomes"]
+  N5["Pricing power"]
+  N0 -->|Usage cost| N1
+  N2 -->|Differentiation| N1
+  N3 -->|Adoption conditions| N1
+  N1 -->|Change the workflow| N4
+  N4 -->|Willingness to pay| N5
 ```
 
 The diagram shows that value capture does not depend on model intelligence alone. If context, data, permissions, and audit are weak, AI becomes a polished feature with weak economics. If AI is embedded in the workflow, pricing can expand from seats to usage, actions, and outcome-linked billing.

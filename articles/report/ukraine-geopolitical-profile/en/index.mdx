@@ -30,13 +30,20 @@ European integration is not an abstract future goal. It is a live bundle of fisc
 Daily life is shaped by displacement, inflation, jobs, housing, power supply, and family separation at the same time. Public sentiment is not a simple blend of morale or fatigue; it is closer to a society that still backs independence, defense, and a European future while absorbing a long war's costs. <SourceNote>[UNHCR, Ukraine situation](https://data.unhcr.org/en/situations/ukraine), [World Bank, Ukraine overview](https://www.worldbank.org/en/country/ukraine/overview), [KIIS, Survey of public sentiment in Ukraine, spring 2026](https://www.kiis.com.ua/?cat=reports&id=1619&lang=eng&page=1)</SourceNote>
 
 ```mermaid
-flowchart LR
-  A[Presidential Office] --> B[Parliament]
-  A --> C[Military and security]
-  B --> D[Martial-law rules]
-  C --> E[Defense and mobilization]
-  D --> F[Election delay]
-  C --> G[EU/NATO support]
+flowchart TD
+  accTitle: Ukraine's wartime governance and external support
+  accDescr: The presidency and military, parliamentary lawmaking, electoral restrictions under martial law, and EU and NATO-country support play different roles.
+  N0["Presidency and military<br/>command"]
+  N1["Defence and<br/>mobilization"]
+  N2["Verkhovna Rada"]
+  N3["Wartime law and martial<br/>law"]
+  N4["Wartime electoral<br/>restrictions"]
+  N5["Support from EU and<br/>NATO states"]
+  N0 -->|Command and operation| N1
+  N2 -->|Legislation| N3
+  N3 -->|Legal restrictions| N4
+  N5 -->|Equipment, finance and<br/>coordination| N1
+  N3 -->|Legal basis for wartime<br/>operations| N1
 ```
 
 ## 2. Historical Background and State Formation
@@ -45,7 +52,10 @@ Modern Ukrainian political memory has layered 1991 independence, the 2004 Orange
 
 ```mermaid
 timeline
-  title Ukraine's political milestones
+  accTitle: Milestones in Ukrainian independence, political change and invasion
+  accDescr: The chronology covers independence, democratic movements, the occupation of Crimea, full-scale invasion and wartime government.
+  accTitle: Milestones in Ukrainian independence, political change and invasion
+  accDescr: The chronology covers independence, democratic movements, the occupation of Crimea, full-scale invasion and wartime government.
   1991 : Independence
   2004 : Orange Revolution
   2014 : Maidan Revolution

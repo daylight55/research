@@ -34,11 +34,18 @@ draft: false
 日本にとっての論点は、イスラエルを単なる中東紛争地ではなく、対米同盟、湾岸正常化、サイバー・防衛技術、海上交通リスクが交差する節点として読むことにある。<SourceNote>[U.S. Relations With Israel](https://www.state.gov/u-s-relations-with-israel/) と [IMF, Israel country page](https://www.imf.org/en/Countries/ISR) を参照した。</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["首相・連立"] --> B["Knesset"]
-  A --> C["司法"]
-  A --> D["治安機関"]
-  A --> E["対外関係"]
+flowchart TD
+  accTitle: イスラエルの連立・議会・司法・治安
+  accDescr: 首相・連立の政策は議会の支持、司法との対立、治安機関、対外関係に左右される。各機関を単純な指揮命令系統にしない。
+  N0["首相・連立政権"]
+  N1["クネセト<br/>議会の支持"]
+  N2["司法<br/>審査・制度対立"]
+  N3["治安機関"]
+  N4["対外関係"]
+  N1 -->|支持と立法| N0
+  N0 -->|制度改革の争点| N2
+  N0 -->|政策と安全保障| N3
+  N0 -->|同盟・外交| N4
 ```
 
 ## 2. 歴史と国家形成
@@ -51,7 +58,10 @@ flowchart LR
 
 ```mermaid
 timeline
-  title イスラエル国家形成の節目
+  accTitle: イスラエルの建国・占領・和平と近年の危機
+  accDescr: 国家形成、領土支配の変化、和平・国交正常化、2023年以降の危機を時系列で並べる。
+  accTitle: イスラエルの建国・占領・和平と近年の危機
+  accDescr: 国家形成、領土支配の変化、和平・国交正常化、2023年以降の危機を時系列で並べる。
   1948 : 建国
   1967 : 六日戦争
   1979 : エジプト和平

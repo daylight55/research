@@ -30,13 +30,20 @@ draft: false
 市民生活では、避難、物価、雇用、住宅、電力、家族分断が同時に重なる。国民感情は単純な戦意高揚でも厭戦でもなく、独立、防衛、欧州帰属を支えつつ、長期化する負担に耐えている姿として読むのが近い。<SourceNote>[UNHCR, Ukraine situation](https://data.unhcr.org/en/situations/ukraine), [World Bank, Ukraine overview](https://www.worldbank.org/en/country/ukraine/overview), [KIIS, Survey of public sentiment in Ukraine, spring 2026](https://www.kiis.com.ua/?cat=reports&id=1619&lang=eng&page=1)</SourceNote>
 
 ```mermaid
-flowchart LR
-  A[大統領府] --> B[最高会議]
-  A --> C[軍・治安]
-  B --> D[戦時法制]
-  C --> E[防衛と動員]
-  D --> F[選挙延期]
-  C --> G[EU/NATO支援]
+flowchart TD
+  accTitle: ウクライナの戦時統治と外部支援
+  accDescr: 大統領・軍、最高会議の法制、戒厳令下の選挙制限、EU・NATO諸国の支援は役割の異なる要素である。
+  N0["大統領・軍の指揮"]
+  N1["防衛・動員"]
+  N2["最高会議"]
+  N3["戦時法制・戒厳令"]
+  N4["戦時下の選挙制限"]
+  N5["EU・NATO諸国の支援"]
+  N0 -->|指揮・運用| N1
+  N2 -->|法制| N3
+  N3 -->|法的制限| N4
+  N5 -->|装備・資金・調整| N1
+  N3 -->|戦時運用の根拠| N1
 ```
 
 ## 2. 歴史的背景と国家形成
@@ -45,7 +52,10 @@ flowchart LR
 
 ```mermaid
 timeline
-  title ウクライナ政治の節目
+  accTitle: ウクライナの独立・政変・侵攻の節目
+  accDescr: 独立、民主化運動、クリミア占領、全面侵攻、戦時統治を年代で並べる。
+  accTitle: ウクライナの独立・政変・侵攻の節目
+  accDescr: 独立、民主化運動、クリミア占領、全面侵攻、戦時統治を年代で並べる。
   1991 : 独立
   2004 : オレンジ革命
   2014 : マイダン革命

@@ -29,13 +29,21 @@ The practical arguments of this paper are the following four points.
    Source note: Polanyi's tacit knowledge can be found in [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html) from the University of Chicago Press and [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) from the Polanyi Society. For SECI, Nonaka & Takeuchi's [The Knowledge-Creating Company](https://hbr.org/1991/11/the-knowledge-creating-company-2) and the book version [Google Books 項目](https://books.google.com/books/about/The_Knowledge_Creating_Company.html?id=pSHhzwEACAAJ) are the primary information entry points. The limitations of LLM can be easily identified by reading [Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf), which presents a grounding critique of text-only learning, and [Brown et al.](https://arxiv.org/abs/2005.14165), which presents the expansion and versatility of language models, side by side.
 
 ```mermaid
-flowchart LR
-  A["Tacit knowledge"] --> B["Observation and recording"]
-  B --> C["AI summary"]
-  C --> D["Explicit knowledge"]
-  D --> E["HumanValidation"]
-  E --> F["Return to practice"]
-  X["Lost context"] -.-> C
+flowchart TD
+  accTitle: Recording tacit knowledge, AI summaries and field validation
+  accDescr: Explicit material made from observation must be checked in practice against original situations and omitted clues.
+  N0["Practical experience<br/>and tacit knowing"]
+  N1["Observation and case<br/>records"]
+  N2["AI summary and explicit<br/>formulation"]
+  N3["Human check against<br/>original cases"]
+  N4["Use and validate in<br/>practice"]
+  N5["Omitted situations and<br/>clues"]
+  N0 -->|Capture part of<br/>experience| N1
+  N1 -->|Rework| N2
+  N2 -->|Check evidence| N3
+  N5 -->|Find omissions| N3
+  N3 -->|Apply| N4
+  N4 -.->|Record exceptions| N1
 ```
 
 ## 2. Background and research history
@@ -82,12 +90,19 @@ There are at least four mechanisms by which summaries create distortions.
    If the information about who made the decision and under what conditions disappears, it is likely to be misused in subsequent processes.
 
 ```mermaid
-flowchart TB
-  A["Field experience"] --> B["Observation notes / AI summary"]
-  B --> C["Readable procedure"]
-  C --> D["Field application"]
-  D --> E["Encounter an exception"]
-  E --> F["Correct but unusable"]
+flowchart TD
+  accTitle: When a readable procedure fails in practice
+  accDescr: If a summary drops exceptions and decision conditions, users cannot recognize the situation. Feed exceptions back into records and revise the procedure.
+  N0["Observation notes and<br/>AI summary"]
+  N1["Readable procedure"]
+  N2["Application in the<br/>field"]
+  N3["Encounter missing<br/>exceptions or<br/>conditions"]
+  N4["Restore decision<br/>conditions and revise"]
+  N0 -->|Organize and compress| N1
+  N1 -->|Use| N2
+  N2 -->|Unexpected situation| N3
+  N3 -->|Record why it failed| N4
+  N4 -.->|Update records and<br/>summary| N0
 ```
 
 What's important about this diagram is that it's not just the "details" that are lost. Details include exception conditions, decision thresholds, and lines of responsibility. Therefore, the failure of AI summarization appears not as a lack of information but as a lack of practical control. This is an estimate from published literature.

@@ -32,7 +32,10 @@ draft: false
 
 ```mermaid
 timeline
-    title 1979年以後の制度化の流れ
+  accTitle: イラン革命後の制度形成と憲法改正
+  accDescr: 1979年の制度成立、1989年の再設計、その後の候補者審査の定着を分ける。
+  accTitle: イラン革命後の制度形成と憲法改正
+  accDescr: 1979年の制度成立、1989年の再設計、その後の候補者審査の定着を分ける。
     1979 : 革命憲法成立
     1989 : 憲法改正
     1990s : 入口管理の定着
@@ -64,21 +67,21 @@ timeline
 <SourceNote>上表は [Constitute Project の憲法本文](https://www.constituteproject.org/constitution/Iran_1989?lang=en) と [USIP Iran Primer: The Supreme Leader](https://iranprimer.usip.org/resource/supreme-leader)、[The Guardian Council](https://iranprimer.usip.org/resource/guardian-council)、[The Judiciary](https://iranprimer.usip.org/resource/judiciary)、[The Assembly of Experts](https://iranprimer.usip.org/resource/assembly-experts)、[The Islamic Revolutionary Guard Corps](https://iranprimer.usip.org/resource/islamic-revolutionary-guard-corps) を突き合わせて整理した。</SourceNote>
 
 ```mermaid
-flowchart TB
-    ExpertAssembly["専門家会議"]
-    SupremeLeader["最高指導者"]
-    GuardianCouncil["護憲評議会"]
-    Elected["大統領・議会"]
-    IRGC["革命防衛隊（IRGC）"]
-    Elections["選挙・国民投票"]
-
-    ExpertAssembly --> SupremeLeader
-    SupremeLeader --> GuardianCouncil
-    SupremeLeader --> IRGC
-    SupremeLeader --> Elected
-    GuardianCouncil --> Elections
-    Elections --> Elected
-    Elections --> ExpertAssembly
+flowchart TD
+  accTitle: イランの指導者選出・候補者審査・選挙
+  accDescr: 専門家会議の選出・監督、最高指導者の任命権、護憲評議会の候補者審査、国民による選挙を区別する。
+  N0["国民による選挙"]
+  N1["専門家会議"]
+  N2["最高指導者"]
+  N3["護憲評議会"]
+  N4["大統領・議会"]
+  N5["革命防衛隊"]
+  N0 -->|選出| N1
+  N1 -->|選出・監督| N2
+  N2 -->|聖職者委員を任命| N3
+  N2 -->|統率| N5
+  N3 -->|候補者審査| N0
+  N0 -->|選出| N4
 ```
 
 図のポイントは三つある。第一に、最高指導者は軍事・司法・監督機構をまたいで上位に置かれる。第二に、護憲評議会は法律審査だけでなく、選挙の入口も管理する。第三に、専門家会議は最高指導者を選べるが、その構成員候補は同じく護憲評議会に審査される。

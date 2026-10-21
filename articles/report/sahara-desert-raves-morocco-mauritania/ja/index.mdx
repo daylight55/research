@@ -32,17 +32,19 @@ draft: false
 地雷帯、モーリタニアの鉄鉱石鉄道、西サハラ紛争は重要だが、このレポートの主題ではない。これらは砂漠レイブの主催者や宗教文脈を説明する補助線ではなく、移動・安全保障・紛争史の独立した論点である。そのため、別レポート「西サハラ・モーリタニアの地雷帯と鉄道」で扱う。<SourceNote>地雷・鉄道・紛争史の詳細は同PR内の別記事 `/reports/western-sahara-mauritania-mines-railways/` に分離した。</SourceNote>
 
 ```mermaid
-flowchart LR
-  Film["映画表象"]
-  Psy["psytrance系"]
-  Culture["地域文化事業"]
-  Religion["宗教・社会規範"]
-  Security["安全保障は別稿"]
-
-  Film --> Psy
-  Psy --> Culture
-  Culture --> Religion
-  Religion --> Security
+flowchart TD
+  accTitle: 砂漠の音楽イベントを種類と文脈で区別する
+  accDescr: 映画表象、psytrance、地域文化事業を分け、宗教・社会規範との接点を読む。安全保障リスクは別の記事で扱う。
+  N0["砂漠の音楽表象・催事"]
+  N1["映画でのレイブ表象"]
+  N2["psytranceのイベント"]
+  N3["地域文化の事業・祭典"]
+  N4["宗教・社会規範との関係"]
+  N0 -->|作品として読む| N1
+  N0 -->|主催・参加者を確認| N2
+  N0 -->|地域の担い手を確認| N3
+  N2 -->|場所ごとの文脈| N4
+  N3 -->|文化・儀礼との接点| N4
 ```
 
 ## 2. 主導しているグループは何者か
@@ -75,15 +77,19 @@ Oasis: Into the Wild のような商業電子音楽フェスは、モロッコ�
 したがって、Sufism とレイブの関係は「Sufi 教団が砂漠レイブを主催している」という直接関係ではなく、反復リズム、夜通しの身体経験、トランス、聖俗の境界、観光・フェス市場への再配置という間接的な関係である。Essaouira の Gnaoua and World Music Festival や MOGA のような electronic / world music 文脈は、Gnawa 的なトランスや地域文化が現代フェスの語彙に接続される場を作る。ただし、これは文化的・音楽的な接点であって、Transahara などの砂漠レイブ主催者が Sufi 系宗教団体であることを示す根拠ではない。<SourceNote>[Gnaoua Festival official](https://www.festival-gnaoua.net/en/home/)、[MOGA Festival](https://www.mogafestival.com/)、[Mixmag MENA on MOGA](https://mixmagmena.com/read/the-sixth-moroccan-edition-of-moga-festival-arrives-in-essaouira-this-week-news)、[OpenEdition Gradhiva](https://journals.openedition.org/gradhiva/1014) に基づく。ここでの接続は公表情報からの推定であり、主催関係の確認ではない。</SourceNote>
 
 ```mermaid
-flowchart TD
-  Sufi["Sufism"]
-  Gnawa["Gnawa儀礼"]
-  Festival["フェス化"]
-  Rave["電子音楽文化"]
-
-  Sufi --> Gnawa
-  Gnawa --> Festival
-  Festival --> Rave
+flowchart LR
+  accTitle: 宗教的儀礼と電子音楽を同じ起源にしない
+  accDescr: Sufism、Gnawa儀礼、フェスティバル、レイブには接点があるが、一方から他方が直接生まれたとは限らない。
+  N0["Sufism"]
+  N1["宗教的な実践"]
+  N2["Gnawa儀礼"]
+  N3["地域の儀礼・伝統"]
+  N4["フェスティバル・レイブ"]
+  N5["舞台化・電子音楽の催事"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
+  N3 -.->|接点・再文脈化| N5
 ```
 
 ## 5. レイブと宗教の関係

@@ -33,11 +33,19 @@ This report compares demand forecasts, regional grid constraints, PPAs, nuclear,
 
 ```mermaid
 flowchart LR
-  AI["AI data centers"] --> Grid["Grid and interconnect"]
-  Grid --> PPA["PPAs and renewables"]
-  Grid --> Gas["Gas generation"]
-  Grid --> Nuke["Nuclear and SMRs"]
-  Grid --> Batt["Batteries"]
+  accTitle: AI power options and grid constraints
+  accDescr: Renewables, gas, nuclear and batteries differ in role and lead time. Grid access can constrain operation even when generation exists.
+  N0["AI data-centre demand"]
+  N1["Grid access and<br/>capacity"]
+  N2["Renewables and PPAs"]
+  N3["Gas generation"]
+  N4["Nuclear and SMRs"]
+  N5["Batteries"]
+  N0 -->|Required supply| N1
+  N2 -->|Power supply| N1
+  N3 -->|Dispatchable supply| N1
+  N4 -->|Firm supply and lead<br/>time| N1
+  N5 -->|Time shifting| N1
 ```
 
 ## 2. Demand Forecasts: How Fast Is Demand Rising?

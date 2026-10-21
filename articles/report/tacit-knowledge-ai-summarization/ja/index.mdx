@@ -31,13 +31,21 @@ draft: false
 <SourceNote>Polanyi の暗黙知は University of Chicago Press の [The Tacit Dimension](https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html) と Polanyi Society の [The Structure of Consciousness](https://polanyisociety.org/mp-structure.htm) で確認できる。SECI は Nonaka & Takeuchi の [The Knowledge-Creating Company](https://hbr.org/1991/11/the-knowledge-creating-company-2) と書籍版の [Google Books 項目](https://books.google.com/books/about/The_Knowledge_Creating_Company.html?id=pSHhzwEACAAJ) が一次情報の入口になる。LLM の限界は、テキストだけの学習に対する grounding 批判を示す [Bender & Koller](https://aclanthology.org/2020.acl-main.463.pdf) と、言語モデルの規模拡大と汎用性を示す [Brown et al.](https://arxiv.org/abs/2005.14165) を並べて読むと位置づけやすい。</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["暗黙知"] --> B["観察・記録"]
-  B --> C["AI要約"]
-  C --> D["形式知"]
-  D --> E["人間検証"]
-  E --> F["実践へ戻す"]
-  X["失われる文脈"] -.-> C
+flowchart TD
+  accTitle: 暗黙知の記録・AI要約・現場検証
+  accDescr: 観察・記録から作った形式知は、元の状況や失われた手がかりを参照し、実践で確かめる必要がある。
+  N0["現場の経験・暗黙知"]
+  N1["観察・ケースの記録"]
+  N2["AIで要約・形式化"]
+  N3["人間が元ケースと照合"]
+  N4["現場で使って検証"]
+  N5["省略された状況・手がかり"]
+  N0 -->|一部を記録| N1
+  N1 -->|再編集| N2
+  N2 -->|根拠を確認| N3
+  N5 -->|抜けを探す| N3
+  N3 -->|適用| N4
+  N4 -.->|例外を記録へ戻す| N1
 ```
 
 ## 2. 背景と研究史
@@ -92,12 +100,19 @@ LLM は、文章の中に既に表れているパターンを強く扱える。�
    誰が、どの条件で、その判断を下したかが消えると、後工程で誤用されやすい。
 
 ```mermaid
-flowchart TB
-  A["現場の経験"] --> B["観察メモ / AI要約"]
-  B --> C["読みやすい手順書"]
-  C --> D["現場での適用"]
-  D --> E["例外に遭遇"]
-  E --> F["正しいが使えない"]
+flowchart TD
+  accTitle: 読みやすい手順書が現場で使えない条件
+  accDescr: 要約で例外や判断条件が落ちると、現場で状況を識別できない。例外を記録へ戻して手順を修正する。
+  N0["観察メモ・AI要約"]
+  N1["読みやすい手順書"]
+  N2["現場での適用"]
+  N3["例外・条件の欠落に遭遇"]
+  N4["判断条件を補って修正"]
+  N0 -->|整理・短文化| N1
+  N1 -->|利用| N2
+  N2 -->|想定外の場面| N3
+  N3 -->|使えなかった理由を記録| N4
+  N4 -.->|記録と要約を更新| N0
 ```
 
 この図で重要なのは、失われるのが「詳細」だけではないことだ。詳細の中には、例外条件、判断のしきい値、責任の線引きが含まれる。したがって、AI要約の失敗は情報欠落ではなく、実務制御の欠落として現れる。これは公表文献からの推定である。

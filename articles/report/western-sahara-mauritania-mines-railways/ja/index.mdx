@@ -28,16 +28,17 @@ draft: false
 モーリタニアの SNIM 鉄道は、Zouerate 周辺の鉱山地帯と Nouadhibou の鉱石港を結ぶ産業鉄道である。SNIM の2024年ステークホルダー参加計画は、既存鉄道を M'Haoudatt 側から Nouadhibou までの 704km 単線と説明し、17か所の待避線があるとする。旅行記や映像で目立つ鉄鉱石列車は、地雷帯や軍事境界ではなく、鉱業輸出と国家収入に結びつくインフラである。<SourceNote>[SNIM, RAPPORT P3P SNIM V FINAL OCT 2024 PDF](https://snim.com/sites/default/files/RAPPORT%20P3P%20SNIM%20V%20FINAL%20OCT%202024.pdf) に基づく。</SourceNote>
 
 ```mermaid
-flowchart LR
-  Conflict["西サハラ紛争"]
-  Berm["Berm周辺汚染"]
-  Mobility["移動リスク"]
-  Rail["SNIM鉄道"]
-  Mining["鉱業輸出"]
-
-  Conflict --> Berm
-  Berm --> Mobility
-  Rail --> Mining
+flowchart TD
+  accTitle: 西サハラの汚染地帯とモーリタニアの鉄道
+  accDescr: 紛争由来の地雷・不発弾による移動リスクと、SNIM鉄道の鉱業輸送を別の構造として示す。
+  N0["西サハラ紛争"]
+  N1["Berm周辺の地雷・不発弾"]
+  N2["人・車両の移動リスク"]
+  N3["SNIM鉄道"]
+  N4["鉄鉱石の輸送・輸出"]
+  N0 -->|残存汚染| N1
+  N1 -->|調査・安全情報を確認| N2
+  N3 -->|鉱業の物流| N4
 ```
 
 ## 2. 地雷帯はどこまで広がっているのか

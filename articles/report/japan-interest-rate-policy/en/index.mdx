@@ -29,13 +29,18 @@ The conclusions of this report are as follows.
 5. Raising interest rates too quickly or too slowly is dangerous. The most realistic policy is a data-based normalization based on gradual interest rate hikes in 0.25% increments and simultaneous monitoring of wages, service prices, expected inflation, yen depreciation and import prices, mortgage delinquencies, and unrealized losses of regional financial institutions.
 
 ```mermaid
-flowchart LR
-  BOJ["BOJ policy rate"] --> Short["Short-term rates"]
-  Short --> Loan["Deposits and loans"]
-  BOJ --> JGB["Long-term rates"]
-  JGB --> Fixed["Fixed-rate mortgages"]
-  FX["FX and import prices"] --> Inf["Inflation outlook"]
-  Inf --> BOJ
+flowchart TD
+  accTitle: Two routes from BOJ policy to household interest rates
+  accDescr: Short rates influence deposits and lending; long rates affect fixed mortgages. Exchange rates and import prices feed back into policy through the inflation outlook.
+  N0["BOJ policy rate"]
+  N1["Short rates<br/>Deposits and lending"]
+  N2["Long rates<br/>Fixed-rate mortgages"]
+  N3["Exchange rates and<br/>import prices"]
+  N4["Inflation outlook"]
+  N0 -->|Short-rate transmission| N1
+  N0 -.->|Policy expectations and<br/>other factors| N2
+  N3 -->|Import channel| N4
+  N4 -->|Policy decision| N0
 ```
 
 ## 2. Interest rate relationship: from policy interest rates to banks and housing loans
@@ -91,11 +96,19 @@ YCC was rational during the deflationary period. At a time when expected inflati
 
 ```mermaid
 flowchart TD
-  A["Low inflation"] --> B["Suppress rates with YCC"]
-  B --> C["Support financing"]
-  B --> D["Price discovery weakens"]
-  D --> E["Exit risk"]
-  F["Inflation phase"] --> E
+  accTitle: YCC's financing support and effects on price discovery
+  accDescr: Suppressing long rates supports financing but also affects bond-market price discovery and risks when policy changes.
+  N0["YCC under low inflation"]
+  N1["Suppressed long-term<br/>yields"]
+  N2["Support financing"]
+  N3["Weaker price discovery"]
+  N4["Risks when policy<br/>changes"]
+  N5["Shift toward inflation"]
+  N0 --> N1
+  N1 -->|Low financing costs| N2
+  N1 -->|Market-function effects| N3
+  N3 --> N4
+  N5 -->|Pressure to adjust| N4
 ```
 
 In March 2024, the Bank of Japan determined that QQE with YCC and the negative interest rate policy had played their role, and shifted to a framework in which short-term interest rates are the main policy tool. This is an important institutional change. The Bank of Japan has not completely ignored long-term interest rates, and has said that it can respond to sudden increases in long-term interest rates by increasing its purchases of government bonds and limit-market operations, but its permanent 10-year interest rate target has ended.

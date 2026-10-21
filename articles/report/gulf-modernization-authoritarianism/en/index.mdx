@@ -29,13 +29,20 @@ As a regional comparison, the three countries are easiest to distinguish this wa
 For Japan, the point is straightforward: Gulf opportunities are real, but they are conditional markets. Energy, ports, construction, logistics, tourism, sports, data centers, and finance all carry labor, compliance, export-control, and reputation risks. The larger the modernization headline, the more important it is to assume strong internal control until proven otherwise. <SourceNote>[Human Rights Watch, World Report 2026](https://www.hrw.org/world-report/2026) and [ILO Qatar programme](https://www.ilo.org/beirut/whatwedo/projects/WCMS_885822/lang--en/index.htm) are useful starting points.</SourceNote>
 
 ```mermaid
-flowchart LR
-  R["Hydrocarbon rents"] --> S["State distributive power"]
-  S --> C["Benefits for citizens"]
-  S --> L["Migrant-labor dependence"]
-  S --> P["Restricted participation"]
-  S --> I["Image strategy"]
-  I --> D["Investment, tourism, sports"]
+flowchart TD
+  accTitle: Resource income, distribution and rule in Gulf states
+  accDescr: Resource income supports citizen benefits and investment; migrant-labour dependence and political restrictions require separate examination.
+  N0["Resource income"]
+  N1["State distribution<br/>capacity"]
+  N2["Benefits for citizens"]
+  N3["Migrant-labour<br/>dependence"]
+  N4["Investment, tourism and<br/>sport"]
+  N5["Restricted political<br/>participation"]
+  N0 -->|Funding| N1
+  N1 -->|Transfers and jobs| N2
+  N1 -->|Diversification and<br/>image| N4
+  N3 -->|Labour supply| N4
+  N1 -.->|Distribution and rule| N5
 ```
 
 The diagram is the smallest useful model of Gulf governance. Resource rents support benefits, migration systems, political limits, and outward branding at the same time. <SourceNote>[World Bank, GCC Economies Update](https://www.worldbank.org/en/region/mena/publication/gcc-economies-update) and [Freedom House country reports](https://freedomhouse.org/countries/freedom-world/scores) support this framing.</SourceNote>

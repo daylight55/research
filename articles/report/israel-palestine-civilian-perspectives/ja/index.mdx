@@ -37,11 +37,18 @@ draft: false
 
 ```mermaid
 flowchart TD
-    Memory[喪失と記憶] --> Threat[脅威認知]
-    Threat --> Security[安全保障優先]
-    Security --> Controls[移動・監視・封鎖]
-    Controls --> Daily[日常の圧迫]
-    Daily --> Memory
+  accTitle: 喪失・脅威認知・生活制約の循環
+  accDescr: 異なる集団の経験を同一視せず、喪失の記憶と安全保障政策、生活上の制約が次の脅威認知に関わる経路を読む。
+  N0["喪失・被害の記憶"]
+  N1["脅威の認知"]
+  N2["安全保障優先の政策"]
+  N3["移動・監視・封鎖"]
+  N4["生活の圧迫・新たな被害"]
+  N0 -->|解釈の背景| N1
+  N1 -->|安全を求める| N2
+  N2 -->|制度・措置| N3
+  N3 -->|生活への影響| N4
+  N4 -.->|記憶を更新| N0
 ```
 
 この図は、感情が政治へ戻っていく循環を示す。感情は個人の内面に閉じず、政策と生活を介して再生産される。<SourceNote>[OCHA の人道更新](https://www.ochaopt.org/)、[UNRWA のガザ・西岸情報](https://www.unrwa.org/)、[PCPSR の共同調査](https://www.pcpsr.org/en/node/987) に基づく。</SourceNote>
@@ -54,7 +61,10 @@ flowchart TD
 
 ```mermaid
 timeline
-    title 主要転換点
+  accTitle: 分割案から占領・和平交渉・ガザの危機へ
+  accDescr: 領土、難民、占領、自治、封鎖、人道危機が形成された節目を年代で確認する。
+  accTitle: 分割案から占領・和平交渉・ガザの危機へ
+  accDescr: 領土、難民、占領、自治、封鎖、人道危機が形成された節目を年代で確認する。
     1947 : 分割案
     1948 : 戦争と難民化
     1967 : 占領の始まり
@@ -108,12 +118,19 @@ timeline
 感情が政治を硬直させる理由は、感情が非合理だからではない。むしろ、感情が安全保障、移動、教育、帰還、統治への信頼と直結しているからだ。家を失った人にとっては、和平は抽象的な目標ではなく、再び失うかもしれない不安の上に乗る。人質やロケット警報を経験した人にとっても、譲歩は抽象論ではなく、再発リスクの計算になる。<SourceNote>[OCHA, Gaza and West Bank updates](https://www.ochaopt.org/)、[IDI, Israeli Voice Index 2025](https://en.idi.org.il/articles/61845)、[PCPSR, joint poll](https://www.pcpsr.org/en/node/987) に基づく。</SourceNote>
 
 ```mermaid
-flowchart LR
-    Memory[記憶の反復] --> Fear[脅威の再解釈]
-    Fear --> Policy[安全保障優先の政策]
-    Policy --> Restrictions[移動・封鎖・監視]
-    Restrictions --> Alienation[疎外と怒り]
-    Alienation --> Memory
+flowchart TD
+  accTitle: 記憶と安全保障政策が相互に強まる経路
+  accDescr: 被害の記憶、脅威の解釈、移動・監視・封鎖の政策を結び付ける概念図であり、すべての住民の考えを代表しない。
+  N0["被害の記憶"]
+  N1["脅威の再解釈"]
+  N2["安全保障を優先する政策"]
+  N3["移動制限・監視・封鎖"]
+  N4["疎外感・怒り"]
+  N0 --> N1
+  N1 --> N2
+  N2 --> N3
+  N3 -->|住民への影響| N4
+  N4 -.->|新たな経験を蓄積| N0
 ```
 
 この循環は、双方で形を変えながら同時に進む。イスラエル側では、国家の保護が十分でなかった記憶が安全保障優先を強め、パレスチナ側では、占領と封鎖の記憶が交渉への信頼を削る。公表情報からの推定として、当局は象徴的な譲歩より、監視と処罰の細分化を優先しやすい。こうして、感情は政治の土台であると同時に、政治が感情を再生産する装置にもなる。<SourceNote>[ICJ 2024 advisory opinion](https://www.icj-cij.org/node/204176)、[OCHA, occupied Palestinian territory updates](https://www.ochaopt.org/)、[UNRWA, Palestine refugees](https://www.unrwa.org/palestine-refugees) に基づく。</SourceNote>

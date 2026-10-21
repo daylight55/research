@@ -34,11 +34,17 @@ This report reaches seven conclusions.
 <SourceNote>Core sources include O'Connor's [AIs as fellow participants in the language game](https://link.springer.com/article/10.1007/s00146-025-02663-6), Grindrod's [Large language models and linguistic intentionality](https://link.springer.com/article/10.1007/s11229-024-04723-8), and Fenoglio's [Large Language Models and Language Games: Asymmetric Communication](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6678558). The skeptical baseline is supported by Bender and Koller's [Climbing towards NLU](https://aclanthology.org/2020.acl-main.463/) and Shanahan's [Talking About Large Language Models](https://arxiv.org/abs/2212.03551).</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["LLM output"] --> B["Human interpretation"]
-  B --> C["Language-game uptake"]
-  C --> D["Normative assessment"]
-  D --> E["Responsibility and repair"]
+flowchart TD
+  accTitle: How LLM outputs are evaluated within human practice
+  accDescr: Generated text is assessed through norms, correction and responsibility in human use. Fluency alone does not establish intentionality.
+  N0["LLM-generated text"]
+  N1["Human use and<br/>interpretation"]
+  N2["Evaluation by<br/>contextual norms"]
+  N3["Correction, approval,<br/>responsibility"]
+  N0 -->|Integrate into practice| N1
+  N1 -->|Appropriateness of use| N2
+  N2 -->|Account for<br/>consequences| N3
+  N3 -.->|Revise use| N1
 ```
 
 The key point is that an LLM output does not complete meaning or responsibility by itself. It gains practical force when humans cite it, correct it, rely on it, reject it, or embed it in institutional workflows.
@@ -83,12 +89,15 @@ The important move is not to treat intentionality as all-or-nothing. Denying hum
 
 ```mermaid
 flowchart TD
-  A["Intentionality"] --> B["Mental intentionality"]
-  A --> C["Linguistic intentionality"]
-  A --> D["Normative standing"]
-  B --> E["Grounding and experience"]
-  C --> F["History of use"]
-  D --> G["Responsibility and recognition"]
+  accTitle: Three distinct questions about intentionality
+  accDescr: Mental experience, linguistic use and normative responsibility are different questions, not one capability score.
+  N0["Questions of<br/>intentionality"]
+  N1["Mental intentionality<br/>Experience and<br/>grounding"]
+  N2["Linguistic<br/>intentionality<br/>Meaning and use history"]
+  N3["Normative status<br/>Responsibility and<br/>recognition"]
+  N0 -->|Question of experience| N1
+  N0 -->|Question of linguistic<br/>function| N2
+  N0 -->|Question of<br/>accountability| N3
 ```
 
 ## 5. Asymmetric Communication

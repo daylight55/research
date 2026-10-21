@@ -64,12 +64,18 @@ Pragmatics matters because meaning often exceeds literal form. Learners have to 
 
 ```mermaid
 flowchart TD
-  Input["Read or hear input"] --> Surprise["Notice a mismatch"]
-  Surprise --> Hypothesis["Form a hypothesis"]
-  Hypothesis --> Test["Test it in output"]
-  Test --> Feedback["Receive correction"]
-  Feedback --> Revise["Revise the hypothesis"]
-  Revise --> Input
+  accTitle: Update a learning hypothesis from a surprising expression
+  accDescr: Turn a mismatch in input into a hypothesis, test it in speech, and use feedback to guide the next observation.
+  N0["Surprising expression"]
+  N1["Explanatory hypothesis"]
+  N2["Test in speech or a<br/>task"]
+  N3["Observe repair and<br/>response"]
+  N4["Revise the hypothesis"]
+  N0 -->|Seek an explanation| N1
+  N1 -->|Make a prediction| N2
+  N2 -->|Observe the result| N3
+  N3 -->|Revise a mismatch| N4
+  N4 -.->|Check against new input| N0
 ```
 
 This is the smallest useful model of second language learning as hypothesis revision. Input does not become knowledge by itself. The learner has to notice something surprising, propose an explanation, try it out, and then revise it. <SourceNote>The loop above is a synthesis of Peircean abduction with SLA interaction and feedback research. The practical anchors are [Interaction and instructed second language acquisition](https://www.cambridge.org/core/journals/language-teaching/article/interaction-and-instructed-second-language-acquisition/78A156EE200F744F5978F99BFB073DBE) and [corrective feedback](https://www.cambridge.org/core/books/cambridge-handbook-of-corrective-feedback-in-second-language-learning-and-teaching/written-corrective-feedback/11FC3A1C544105E3D6A3509032A72F81).</SourceNote>

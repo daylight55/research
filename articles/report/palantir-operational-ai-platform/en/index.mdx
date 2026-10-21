@@ -29,15 +29,22 @@ The conclusions of this report are as follows.
    Source Note: Q1 2026 numbers based on Palantir's SEC-filed press releases [a2026q1ex991pressrelease.htm](https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm) and [Q1 2026 Business Update PDF](https://investors.palantir.com/files/Palantir%20-%20Q1%202026%20Business%20Update.pdf).
 
 ```mermaid
-flowchart LR
-  A["External data"] --> B["Foundry"]
-  B --> C["Ontology"]
-  C --> D["AIP"]
-  D --> E["Business apps"]
-  E --> F["Audit logs"]
-  F --> C
-  G["Apollo"] --> B
-  G --> D
+flowchart TD
+  accTitle: Palantir's data, operational model, AI and deployment
+  accDescr: Foundry integrates data, the Ontology defines workflow objects and actions, and AIP connects AI use. Apollo handles deployment and operation.
+  N0["External data"]
+  N1["Foundry<br/>Integration and data<br/>processing"]
+  N2["Ontology<br/>Objects, links and<br/>actions"]
+  N3["AIP and workflow<br/>applications"]
+  N4["Execution results and<br/>audit logs"]
+  N5["Apollo<br/>Deployment and<br/>operation"]
+  N0 -->|Ingest| N1
+  N1 -->|Map to operations| N2
+  N2 -->|Context and actions| N3
+  N3 -->|Record execution| N4
+  N4 -.->|Reflect state| N2
+  N5 -->|Manage deployment| N1
+  N5 -->|Manage operation| N3
 ```
 
 ## 2. What is Palantir?
@@ -56,7 +63,10 @@ This origin remains consistent up to the present AIP. Gotham's theme was "findin
 
 ```mermaid
 timeline
-  title Through-line in Palantir's evolution
+  accTitle: Milestones in Palantir's business and products
+  accDescr: Trace the chronology from founding through Gotham, Foundry, listing and AIP; use the architecture figure for product roles.
+  accTitle: Milestones in Palantir's business and products
+  accDescr: Trace the chronology from founding through Gotham, Foundry, listing and AIP; use the architecture figure for product roles.
   2003 : Founded
   2008 : GothamExpansion
   2010s : FoundryRollout
@@ -88,21 +98,19 @@ This difference is significant in practice. While traditional BI can display the
 Source note: Palantir's Action log is a mechanism that models action submissions as objects, allowing decision-making and data editing to be analyzed within Ontology. See [Action log](https://www.palantir.com/docs/foundry/action-types/action-log).
 
 ```mermaid
-flowchart TB
-  subgraph "Semantic Layer"
-    M["Objects / Links"]
-    I["Interfaces"]
-  end
-  subgraph "Kinetic Layer"
-    A["Actions / Functions"]
-    S["Security"]
-    AL["Action Log"]
-  end
-  M --> A
-  I --> A
-  A --> AL
-  S --> A
-  AL --> M
+flowchart TD
+  accTitle: Connect semantic definitions with state-changing actions
+  accDescr: Define objects through Objects, Links and Interfaces, execute Actions and Functions under access controls, and retain history.
+  N0["Objects, links and<br/>interfaces"]
+  N1["Actions and functions"]
+  N2["Security<br/>Permissions and<br/>conditions"]
+  N3["Action log<br/>Change history"]
+  N4["Object state"]
+  N0 -->|Objects and semantics| N1
+  N2 -->|Gate execution| N1
+  N1 -->|Record| N3
+  N1 -->|Change| N4
+  N3 -.->|Traceability| N0
 ```
 
 ## 4. AIP: The layer that connects LLM to business operations
@@ -113,21 +121,23 @@ Palantir's AIP aims to transform LLMs from "answer generation engines" to "agent
 
 ```mermaid
 sequenceDiagram
-  participant User as Operational user
-  participant Agent as AIP Agent
-  participant Ont as Ontology
-  participant LLM as LLM / Model
-  participant Act as Action / Function
-  participant Log as Audit Log
-
-  User->>Agent: Business question or request
-  Agent->>Ont: Fetch authorized objects
-  Agent->>LLM: Reason with context
-  LLM-->>Agent: Proposal and execution plan
-  Agent->>Act: Call approved action
-  Act->>Ont: State change
-  Act->>Log: Record who changed what
-  Log-->>User: Auditable result
+  accTitle: From an AIP proposal to approved action and audit
+  accDescr: Reason over authorized context, let only approved actions change state, and record who changed what.
+  participant U as User
+  participant A as AIP agent
+  participant O as Ontology
+  participant L as LLM
+  participant X as Action and audit
+  U->>A: Workflow question or request
+  A->>O: Read authorized objects and state
+  O-->>A: Workflow context
+  A->>L: Reason over context
+  L-->>A: Proposal and plan
+  A-->>U: Confirm proposed action
+  U->>A: Approve
+  A->>X: Invoke approved action
+  X->>O: Change state
+  X-->>U: Record actor, change and result
 ```
 
 ## 5. Apollo: Palantir's hidden strengths
@@ -173,20 +183,21 @@ Source note: The Privacy and Governance Whitepaper explains that Foundry is the 
 Palantir's risk lies in "too much integration" rather than a lack of functionality. Integrating siled data, decisions, authority, and field actions into a single operational layer increases operational efficiency. However, accountability and democratic control become difficult when the integration layer is opaque, dependent on external vendors, and in politically contested areas.
 
 ```mermaid
-quadrantChart
-  title Mapping Palantir adoption risk
-  x-axis "Limited business impact" --> "High impact on core decisions"
-  y-axis "Low personal and public risk" --> "High personal and public risk"
-  quadrant-1 "Strictest controls needed"
-  quadrant-2 "Transparency, consent, audit needed"
-  quadrant-3 "Standard IT controls may suffice"
-  quadrant-4 "Business continuity and lock-in focus"
-  "Production-line optimization": [0.55, 0.35]
-  "Supply-chain planning": [0.62, 0.42]
-  "Healthcare waitlist management": [0.72, 0.78]
-  "Police and immigration enforcement": [0.86, 0.93]
-  "Military situational awareness": [0.90, 0.88]
-  "Internal document search": [0.30, 0.25]
+flowchart LR
+  accTitle: Control priorities differ by use case
+  accDescr: Document search, production and supply chains, healthcare, policing and migration, and military use differ in consequences and controls. This is a qualitative comparison, not a numerical risk score.
+  N0["Document search"]
+  N1["Access control and<br/>answer checks"]
+  N2["Production and supply<br/>chains"]
+  N3["Continuity and<br/>dependencies"]
+  N4["Healthcare, policing,<br/>migration"]
+  N5["Rights, explanation and<br/>recourse"]
+  N6["Military use"]
+  N7["Human judgment and<br/>strict audit"]
+  N0 --> N1
+  N2 --> N3
+  N4 --> N5
+  N6 --> N7
 ```
 
 ### 9.1 Surveillance/Military/Security Use

@@ -25,12 +25,19 @@ Mexico is a country shaped by the border economy with the United States, fragmen
 
 ```mermaid
 flowchart TD
-  A["Presidency"] --> B["Congress majority"]
-  A --> C["Judicial reform"]
-  A --> D["U.S. negotiations"]
-  D --> E["Border and migration"]
-  D --> F["USMCA review"]
-  C --> G["Rule-of-law distrust"]
+  accTitle: Mexico's domestic reforms and US negotiations
+  accDescr: Separate the domestic axis of parliamentary support and judicial reform from the US axis of borders, migration and USMCA.
+  N0["Presidency"]
+  N1["Parliamentary majority"]
+  N2["Judicial reform and<br/>legitimacy disputes"]
+  N3["US negotiations"]
+  N4["Borders and migration"]
+  N5["USMCA review"]
+  N1 -->|Governing support| N0
+  N0 -->|Domestic reform| N2
+  N0 -->|External negotiation| N3
+  N3 -->|Border policy| N4
+  N3 -->|Trade relations| N5
 ```
 
 ## 2. Historical Background and Institutions
@@ -39,6 +46,10 @@ The 1917 Constitution and the post-independence republic established federalism,
 
 ```mermaid
 timeline
+  accTitle: Mexico's constitution, electoral institutions and succession
+  accDescr: The chronology covers constitutional and electoral change, alternation in power, the recent government and USMCA review.
+  accTitle: Mexico's constitution, electoral institutions and succession
+  accDescr: The chronology covers constitutional and electoral change, alternation in power, the recent government and USMCA review.
   1917 : Constitution
   1990 : IFE created
   2000 : Alternation

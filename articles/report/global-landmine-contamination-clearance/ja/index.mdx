@@ -34,10 +34,17 @@ draft: false
 
 ```mermaid
 flowchart TD
-    Legacy[旧戦争・国境] --> Survey[疑わしい区域]
-    Current[現行紛争] --> Survey
-    Survey --> Release[土地解放]
-    Release --> Use[農地・道路・帰還]
+  accTitle: 地雷汚染から土地の安全な利用まで
+  accDescr: 旧紛争と現行紛争の汚染を調査し、土地解放と品質保証を経て農地・道路・帰還に接続する。
+  N0["過去の紛争・国境地帯"]
+  N1["現在の紛争"]
+  N2["調査で範囲を確認"]
+  N3["土地解放・品質保証"]
+  N4["農地・道路・安全な帰還"]
+  N0 -->|残存汚染| N2
+  N1 -->|新たな汚染| N2
+  N2 -->|証拠に基づき処理| N3
+  N3 -->|引渡し| N4
 ```
 
 この図は、地雷問題を「地雷の個数」ではなく「使えない土地」として読むためのものだ。地雷が残ると、実際に爆発していない土地でも、農業、通学、道路補修、送電線、住宅再建、難民帰還が止まる。したがって、地雷対策の成果は、破壊した地雷数だけでなく、安全に解放された土地、住民の移動再開、公共サービスの復旧で測る必要がある。<SourceNote>[IMAS 07.11 Land Release](https://www.mineactionstandards.org/standards/07-11/) は、地雷・爆発物の存在または疑いを特定・定義・除去する工程として land release を定義している。</SourceNote>
@@ -55,11 +62,20 @@ flowchart TD
 実際の除去には、手作業の探知と掘削、機械による植生除去・土壌処理・破砕、探知犬や動物探知、爆発物処理班による現場処理、遠隔操作機械による処理が使われる。万能の方法はない。金属量が少ないプラスチック地雷、砂で深く埋まった地雷、岩場・森林・水田・都市がれき、即席地雷、対処妨害装置付き地雷では、方法を組み合わせる必要がある。IMAS 09.10 は、指定区域と指定深度からすべての地雷・爆発性戦争残存物を除去・破壊したと確認できる状態を clearance とする。<SourceNote>[IMAS 09.10 Clearance Requirements](https://www.mineactionstandards.org/standards/09-10/) と [IMAS 09.50 Mechanical Land Release](https://www.mineactionstandards.org/standards/09-50/) に基づく。</SourceNote>
 
 ```mermaid
-flowchart LR
-    NTS[非技術調査] --> TS[技術調査]
-    TS --> Clear[除去・爆破処理]
-    Clear --> QA[品質保証]
-    QA --> Handover[土地引渡し]
+flowchart TD
+  accTitle: 調査・除去・品質保証の役割
+  accDescr: 非技術調査で疑いを絞り、技術調査と除去で確認する。すべての土地で同じ量の除去が必要なわけではない。
+  N0["非技術調査"]
+  N1["技術調査"]
+  N2["除去・爆発物処理"]
+  N3["品質保証・管理"]
+  N4["土地の引渡し"]
+  N0 -->|追加調査が必要| N1
+  N1 -->|確認した汚染| N2
+  N0 -->|証拠で区域を解除| N3
+  N1 -->|証拠で範囲を縮小| N3
+  N2 -->|処理結果を確認| N3
+  N3 -->|利用者へ返す| N4
 ```
 
 品質保証は、除去後に初めて重要になるのではない。組織の認証、作業手順、安全距離、装備、日々の記録、現場監督、住民説明、事後検査までを通じて、土地を受け取る住民が「使ってよい」と判断できる信頼を作る工程である。地雷対策は純粋な工兵作業ではなく、情報管理、行政、住民参加、医療、教育、復興計画の仕事でもある。<SourceNote>[IMAS 09.10 Clearance Requirements](https://www.mineactionstandards.org/standards/09-10/) は、QA、QC、住民関与、NMAA の責任、除去済み・未除去土地の登録を求めている。</SourceNote>

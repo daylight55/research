@@ -26,11 +26,19 @@ draft: false
 ここで分けて考えるべきなのは、`法的正統性` と `選挙正統性` である。ウクライナは前者を優先して制度を止め、ロシアは後者の見かけを維持しながら競争条件を狭めている。したがって、両国は同じ「戦時下」でも、正統性の作り方が違う。<SourceNote>この区別は、ウクライナの憲法・戒厳令法と、ロシアに関する OSCE/UN の評価を並べて読んだ場合に導かれる公表情報からの推定である。ウクライナ側は [Zakon Rada, Constitution of Ukraine, Article 108](https://zakon.rada.gov.ua/laws/show/en/254%D0%BA/96-%D0%B2%D1%80)、[Law on Martial Law](https://zakon.rada.gov.ua/laws/show/en/389-19/ed20210801/print) に基づく。</SourceNote>
 
 ```mermaid
-flowchart LR
-    U[Ukraine: martial law] --> U1[No elections]
-    U1 --> U2[Constitutional continuity]
-    R[Russia: wartime elections] --> R1[Controlled competition]
-    R1 --> R2[Legitimacy disputed]
+flowchart TD
+  accTitle: 戦時下の選挙実施と正統性を別に検討する
+  accDescr: ウクライナは戒厳令と憲法上の職務継続、ロシアは実施された選挙の競争条件が論点になる。選挙の有無だけでは比較できない。
+  N0["ウクライナ"]
+  N1["戒厳令下の選挙制限"]
+  N2["憲法上の職務継続"]
+  N3["ロシア"]
+  N4["戦時下でも選挙を実施"]
+  N5["競争条件・正統性への異議"]
+  N0 -->|法的条件| N1
+  N1 -->|継続の根拠| N2
+  N3 -->|実施の事実| N4
+  N4 -->|制度と運用を審査| N5
 ```
 
 <SourceNote>この図は時系列ではなく、正統性の判定基準を左右で比較するためのものだ。ウクライナ側は [Constitution of Ukraine Article 108](https://zakon.rada.gov.ua/laws/show/en/254%D0%BA/96-%D0%B2%D1%80) と [Law on Martial Law](https://zakon.rada.gov.ua/laws/show/en/389-19/ed20210801/print) を、ロシア側は [OSCE/ODIHR の 2024 年ロシア大統領選ページ](https://www.osce.org/odihr/elections/russia) と [UN Special Rapporteur report](https://digitallibrary.un.org/record/4071308) を要約している。</SourceNote>

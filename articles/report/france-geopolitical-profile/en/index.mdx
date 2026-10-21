@@ -26,13 +26,20 @@ France combines nuclear weapons, a permanent UN Security Council seat, instituti
 Yet French politics in 2026 combines a strong presidency with a weak parliamentary majority. Under President Emmanuel Macron, Prime Minister Sébastien Lecornu runs the government, while the National Assembly is split among the National Rally, presidential groups, the left, Socialists, and conservative right. <SourceNote>[info.gouv.fr, Composition du Gouvernement](https://www.info.gouv.fr/composition-du-gouvernement) lists Lecornu as prime minister, and [Assemblée nationale, Effectif des groupes politiques](https://www2.assemblee-nationale.fr/instances/liste/groupes_politiques/effectif) shows a fragmented chamber, including National Rally 122, Ensemble 91, LFI-NFP 71, and Socialist-linked groups 68.</SourceNote>
 
 ```mermaid
-flowchart LR
-  A["Presidency"] --> B["EU and security"]
-  A --> C["Fiscal policy"]
-  D["Fragmented parliament"] --> C
-  D --> E["Migration and secularism"]
-  B --> F["Ukraine and NATO"]
-  B --> G["Africa and Indo-Pacific"]
+flowchart TD
+  accTitle: France's presidential powers and parliamentary constraints
+  accDescr: Distinguish foreign and security policy discretion from budget and domestic reform constraints under a fragmented parliament.
+  N0["President and<br/>government"]
+  N1["Foreign and security<br/>policy"]
+  N2["Fragmented parliament"]
+  N3["Budget and domestic<br/>reform"]
+  N4["EU, NATO and Ukraine"]
+  N5["Africa and Indo-Pacific"]
+  N0 -->|Foreign-policy<br/>direction| N1
+  N0 -->|Policy delivery| N3
+  N2 -->|Support and budget<br/>constraints| N3
+  N1 -->|Europe and alliances| N4
+  N1 -->|External engagement| N5
 ```
 
 France should not be read only as a strong state pushing European integration. At home, immigration, secularism, security, purchasing power, agriculture, pensions, and deficits create conflict lines. Abroad, EU strategic autonomy, NATO, Ukraine support, former colonial ties, and overseas territories widen the policy map.
@@ -43,7 +50,10 @@ Modern French politics rests on the 1789 Revolution, the Fifth Republic, memorie
 
 ```mermaid
 timeline
-  title French political milestones
+  accTitle: From French institutional formation to a fragmented parliament
+  accDescr: The chronology connects revolution, the Fifth Republic, decolonization, European integration and recent parliamentary fragmentation.
+  accTitle: From French institutional formation to a fragmented parliament
+  accDescr: The chronology connects revolution, the Fifth Republic, decolonization, European integration and recent parliamentary fragmentation.
   1789 : French Revolution
   1958 : Fifth Republic
   1960s : Decolonization

@@ -31,12 +31,19 @@ The report's core conclusions are:
 5. Public benchmarks are useful, but local success probability should be measured with evaluation sets and operational logs that reflect your own codebase.
 
 ```mermaid
-flowchart LR
-  A["Task design"] --> B["Context"]
-  B --> C["Interface"]
-  C --> D["Verification"]
-  D --> E["Review"]
-  E --> F["Success rate"]
+flowchart TD
+  accTitle: Move AI implementation toward a reviewable change
+  accDescr: Bound the task, provide relevant context and tools, then verify the change through execution and review.
+  N0["Scope and completion<br/>criteria"]
+  N1["Relevant code and<br/>specification"]
+  N2["Implementation and<br/>tools"]
+  N3["Tests and execution<br/>results"]
+  N4["Diff review and PR"]
+  N0 -->|Bound the context| N1
+  N1 -->|Make the change| N2
+  N2 -->|Check the result| N3
+  N3 -->|Passing changes| N4
+  N3 -.->|Repair failures| N2
 ```
 
 The point of the diagram is that one strong layer is not enough. A stronger model will still produce plausible but wrong diffs if tests are missing. A detailed instruction file will not help if the task itself is ambiguous. Broad permissions may increase speed, but without rollback and auditability the cost of failure increases as well.
@@ -75,6 +82,10 @@ Since 2025, practical guidance has shifted from model-only thinking toward harne
 
 ```mermaid
 timeline
+  accTitle: How coding evaluations and execution environments evolved
+  accDescr: Following benchmarks, search approaches and execution environments helps separate model progress from workflow design.
+  accTitle: How coding evaluations and execution environments evolved
+  accDescr: Following benchmarks, search approaches and execution environments helps separate model progress from workflow design.
   2023 : SWE-bench
   2024 : SWE-agent
   2024 : Agentless
@@ -127,11 +138,18 @@ The highest-value feedback for an agent is executable verification. Unit tests, 
 
 ```mermaid
 flowchart TD
-  S["Spec"] --> T["Tests"]
-  T --> A["Agent patch"]
-  A --> R["Run result"]
-  R -->|Fail| A
-  R -->|Pass| P["PR review"]
+  accTitle: Feed failed checks back into implementation
+  accDescr: Translate the specification into checks. Return failed results to implementation and review passing changes in a PR.
+  N0["Specification and<br/>completion criteria"]
+  N1["Tests and verification<br/>steps"]
+  N2["Agent implementation"]
+  N3["Execution results"]
+  N4["Review the diff in a PR"]
+  N0 -->|Make verifiable| N1
+  N1 --> N2
+  N2 -->|Validate| N3
+  N3 -.->|Repair failures| N2
+  N3 -->|Passing changes| N4
 ```
 
 No single evaluation layer is enough. Unit tests are fast but do not catch every UX problem. LLM judges are flexible but noisy and costly. Human review is strong but slow. The practical approach is to combine deterministic tests, logs, screenshots, and human review according to task risk.

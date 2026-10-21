@@ -27,10 +27,18 @@ The key distinction is between `legal continuity` and `electoral legitimacy`. Uk
 
 ```mermaid
 flowchart LR
-    U[Ukraine: martial law] --> U1[No elections]
-    U1 --> U2[Constitutional continuity]
-    R[Russia: wartime elections] --> R1[Controlled competition]
-    R1 --> R2[Legitimacy disputed]
+  accTitle: Assess wartime elections separately from legitimacy
+  accDescr: Ukraine raises martial-law and constitutional-continuity questions; Russia raises questions about competition in held elections. Presence or absence alone is insufficient.
+  N0["Ukraine"]
+  N1["Election restrictions<br/>under martial law"]
+  N2["Constitutional<br/>continuity in office"]
+  N3["Russia"]
+  N4["Elections held during<br/>war"]
+  N5["Disputes over<br/>competition and<br/>legitimacy"]
+  N0 -->|Legal conditions| N1
+  N1 -->|Basis for continuity| N2
+  N3 -->|Fact of holding<br/>elections| N4
+  N4 -->|Examine rules and<br/>practice| N5
 ```
 
 <SourceNote>This diagram compares the standards used to judge legitimacy, not a timeline. On the Ukraine side it summarizes [Article 108 of the Constitution of Ukraine](https://zakon.rada.gov.ua/laws/show/en/254%D0%BA/96-%D0%B2%D1%80) and [the Law on Martial Law](https://zakon.rada.gov.ua/laws/show/en/389-19/ed20210801/print); on the Russia side it summarizes [OSCE/ODIHR's Russia 2024 election page](https://www.osce.org/odihr/elections/russia) and [the UN Special Rapporteur report](https://digitallibrary.un.org/record/4071308).</SourceNote>

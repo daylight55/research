@@ -37,13 +37,22 @@ The practical conclusion is:
 <SourceNote>NPM versions checked during this research: `@playwright/mcp` `0.0.75` on May 26, 2026, `chrome-devtools-mcp` `1.1.0` on May 26, 2026, `@playwright/cli` `0.1.13` on May 7, 2026, `agent-browser` `0.27.0` on May 18, 2026, and `@browserbasehq/mcp` `3.0.0` on March 31, 2026. See [@playwright/mcp](https://www.npmjs.com/package/@playwright/mcp), [chrome-devtools-mcp](https://www.npmjs.com/package/chrome-devtools-mcp), [@playwright/cli](https://www.npmjs.com/package/@playwright/cli), [agent-browser](https://www.npmjs.com/package/agent-browser), and [@browserbasehq/mcp](https://www.npmjs.com/package/@browserbasehq/mcp).</SourceNote>
 
 ```mermaid
-flowchart TD
-  Goal["Goal"] --> Login["Logged-in reuse"]
-  Goal --> CI["CI repeatability"]
-  Goal --> Debug["Live debugging"]
-  Login --> CDP["CDP / Extension"]
-  CI --> Test["Playwright Test"]
-  Debug --> DevTools["DevTools MCP"]
+flowchart LR
+  accTitle: Choose browser tooling from the verification goal
+  accDescr: Reusing a login session, reproducing checks in CI and diagnosing a live browser require different connections and verification tools.
+  N0["Verification goal"]
+  N1["Reuse an existing login"]
+  N2["CDP or extension"]
+  N3["Repeat and reproduce in<br/>CI"]
+  N4["Playwright Test"]
+  N5["Diagnose a live browser"]
+  N6["DevTools MCP"]
+  N0 --> N1
+  N1 --> N2
+  N0 --> N3
+  N3 --> N4
+  N0 --> N5
+  N5 --> N6
 ```
 
 ## 2. The Core Difference
@@ -157,12 +166,16 @@ The same capability creates risk. A tool connected to a logged-in browser can ac
 | Browserbase/Stagehand             | Cloud session state               | External web tasks at scale               | Not local Chrome reuse            |
 
 ```mermaid
-flowchart LR
-  Human["Human login"] --> Profile["Dedicated profile"]
-  Profile --> CDP["CDP connection"]
-  CDP --> Agent["Agent check"]
-  Agent --> Script["Rerunnable script"]
-  Script --> Test["E2E source"]
+flowchart TD
+  accTitle: Turn exploratory actions into reproducible E2E checks
+  accDescr: Script actions verified in a dedicated profile and turn them into repeatable tests.
+  N0["Human login in a<br/>dedicated profile"]
+  N1["Connect with CDP and<br/>inspect actions"]
+  N2["Replayable script"]
+  N3["Retain as an E2E test"]
+  N0 --> N1
+  N1 -->|Record actions| N2
+  N2 -->|Verify repeatability| N3
 ```
 
 ## 5. Adoption Strategy

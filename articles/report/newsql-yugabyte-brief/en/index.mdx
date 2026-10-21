@@ -37,11 +37,17 @@ Source note: The Google Spanner paper describes a globally synchronously replica
 
 ```mermaid
 flowchart LR
-  RDB["Traditional RDBMS"] --> Gap["Scale limits"]
-  NoSQL["NoSQL"] --> Trade["Consistency trade-off"]
-  Gap --> NewSQL["NewSQL"]
-  Trade --> NewSQL
-  NewSQL --> Goal["SQL + distributed"]
+  accTitle: Two requirements addressed by distributed SQL
+  accDescr: Examine relational scaling needs and NoSQL consistency and SQL needs separately when considering distributed SQL.
+  N0["Traditional RDBMS"]
+  N1["Horizontal-scaling<br/>requirements"]
+  N2["NoSQL"]
+  N3["SQL and consistency<br/>requirements"]
+  N4["Distributed SQL and<br/>NewSQL"]
+  N0 -->|Need to scale| N1
+  N2 -->|Need relational<br/>guarantees| N3
+  N1 --> N4
+  N3 --> N4
 ```
 
 The key concepts are:
@@ -77,13 +83,20 @@ YugabyteDB is broadly divided into `YSQL/YCQLのquery layer` and `DocDB storage 
 Source note: YugabyteDB architecture describes the query layer and storage layer, YSQL/YCQL, DocDB on RocksDB, sharding, Raft replication, and YB-Master/YB-TServer. See [YugabyteDB Architecture](https://docs.yugabyte.com/stable/architecture/).
 
 ```mermaid
-flowchart TB
-  App["Application"] --> API["YSQL / YCQL"]
-  API --> TS["YB-TServer group"]
-  Master["YB-Master"] --> TS
-  TS --> Doc["DocDB / RocksDB"]
-  Doc --> Raft["Raft replication"]
-  Raft --> Doc
+flowchart TD
+  accTitle: YugabyteDB's API, storage and replication roles
+  accDescr: YSQL and YCQL reach distributed storage through TServers; Masters manage placement and Raft supports replication.
+  N0["Application"]
+  N1["YSQL and YCQL"]
+  N2["YB-TServers"]
+  N3["DocDB and RocksDB"]
+  N4["Raft replication"]
+  N5["YB-Master"]
+  N0 -->|API| N1
+  N1 -->|Handle requests| N2
+  N2 -->|Store| N3
+  N3 -->|Replicate and agree| N4
+  N5 -->|Placement and metadata| N2
 ```
 
 YugabyteDB does not simply run PostgreSQL on multiple machines. It connects a PostgreSQL-compatible query layer to a distributed storage layer. Therefore, while PostgreSQL's ecosystem compatibility is a strong value, its performance characteristics are not the same as a single PostgreSQL. Distributed DB design targets include primary key design, tablet partitioning, region placement, connection pooling, long transactions, schema migration, and sequence usage.
@@ -123,12 +136,20 @@ Conversely, if PostgreSQL/Aurora, which scales vertically in a single region, is
 
 ```mermaid
 flowchart TD
-  Q1["Is the current DB enough?"] -->|Yes| Keep["Continue and optimize"]
-  Q1 -->|No| Q2["Need SQL compatibility?"]
-  Q2 -->|No| Alt["Consider other approaches"]
-  Q2 -->|Yes| Q3["Are distributed requirements clear?"]
-  Q3 -->|Yes| PoC["Comparative PoC"]
-  Q3 -->|No| Keep
+  accTitle: From distributed-database requirements to a comparative pilot
+  accDescr: Check whether the current database suffices, then whether SQL compatibility and distribution are required before choosing a pilot.
+  N0["Does the current DB<br/>meet requirements?"]
+  N1["Continue and optimize"]
+  N2["Is SQL compatibility<br/>needed?"]
+  N3["Compare other<br/>approaches"]
+  N4["Are distribution needs<br/>clear?"]
+  N5["Comparative pilot"]
+  N0 -->|Yes| N1
+  N0 -->|No| N2
+  N2 -->|No| N3
+  N2 -->|Yes| N4
+  N4 -->|Yes| N5
+  N4 -.->|Unclear; reassess| N1
 ```
 
 ## 8. Questions to ask a Yugabyte representative

@@ -29,12 +29,19 @@ The key point is that Iran is not a detached problem country. Nuclear politics, 
 
 ```mermaid
 flowchart TD
-  A["Supreme leader"] --> B["Revolutionary Guard"]
-  A --> C["Guardian Council"]
-  C --> D["Election screening"]
-  B --> E["Regional network"]
-  A --> F["Judiciary and security"]
-  D --> G["Civilian government"]
+  accTitle: Iran's unelected power and elected institutions
+  accDescr: Military, security and judicial powers operate under the supreme leader, while the Guardian Council vets candidates. Distinguish them from elected government.
+  N0["Supreme leader"]
+  N1["IRGC, security and<br/>judiciary"]
+  N2["Guardian Council"]
+  N3["Candidate vetting"]
+  N4["Elected civilian<br/>government"]
+  N5["Regional networks"]
+  N0 -->|Appointment and control| N1
+  N0 -->|Appointment of clerical<br/>members| N2
+  N2 -->|Electoral entry| N3
+  N3 -->|Limit competition| N4
+  N1 -->|External activity| N5
 ```
 
 ## 2. History and Political Memory
@@ -47,7 +54,10 @@ The 2022 Women, Life, Freedom movement made the tension between moral governance
 
 ```mermaid
 timeline
-  title Turning points in modern Iran
+  accTitle: From Iran's constitutional revolution to external conflict
+  accDescr: The chronology covers constitutionalism, the 1953 coup, revolution, leadership succession, civic protest and external war.
+  accTitle: From Iran's constitutional revolution to external conflict
+  accDescr: The chronology covers constitutionalism, the 1953 coup, revolution, leadership succession, civic protest and external war.
   1906 : Constitutional Revolution
   1953 : Mossadegh falls
   1979 : Islamic Revolution

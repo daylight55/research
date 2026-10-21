@@ -28,11 +28,18 @@ The culturally useful research theme is not whether present-day rave-like trance
 The answer requires three layers. First, there are contemporary groups and scenes in which repetitive sound, dance, chant, fasting, sleep loss, or drugs are used to cultivate altered states. Gnawa, Mevlevi Sema, zār, shamanic practices, charismatic worship, rave, and psytrance festivals all belong in the comparison, but they do not mean the same thing. Second, these cases are not fossils of early religion. They show how similar bodily affordances can be institutionalized in different ways. Third, physiology matters, but it does not settle interpretation. Rhythm, synchrony, exertion, attention, reward, arousal, and pain threshold can help produce powerful states; communities decide whether those states count as spirit possession, mystical discipline, divine presence, healing, awe, or a festival vibe.
 
 ```mermaid
-flowchart LR
-  Beat["repetitive sound"] --> Sync["body synchrony"]
-  Sync --> State["altered state"]
-  State --> Meaning["religious meaning"]
-  Meaning --> Institution["ritual institution"]
+flowchart TD
+  accTitle: A conceptual model linking repeated sound and ritual meaning
+  accDescr: This hypothesis links bodily synchronization, altered states, religious interpretation and institutionalization; it is not a single-origin claim that music creates religion.
+  N0["Repeated sound"]
+  N1["Bodily synchronization"]
+  N2["Changes in<br/>consciousness"]
+  N3["Religious<br/>interpretation"]
+  N4["Ritual repetition and<br/>institutionalization"]
+  N0 -.->|Hypothesized<br/>synchronization| N1
+  N1 -.->|Possible contribution| N2
+  N2 -->|Cultural interpretation| N3
+  N3 -->|Transmission in a<br/>community| N4
 ```
 
 This is not a linear claim that sound automatically causes religion. It is a research model: sound can coordinate bodies; coordinated bodies can enter unusual states; communities interpret those states; repeated interpretation can become ritual institution.
@@ -128,11 +135,18 @@ The unit of analysis is not "groups that enter trance through sound." It is the 
 
 ```mermaid
 flowchart TD
-  Field["field observation"] --> Sound["sound and movement"]
-  Field --> Interview["participant accounts"]
-  Sound --> Compare["case comparison"]
-  Interview --> Compare
-  Compare --> Theory["institution model"]
+  accTitle: Compare ritual through sound, bodies and participant accounts
+  accDescr: Combine field records with participants' interpretations, then examine the model through similarities and differences across cases.
+  N0["Observe rituals in the<br/>field"]
+  N1["Record sound and bodies"]
+  N2["Participant accounts"]
+  N3["Compare cases"]
+  N4["Examine an<br/>institutionalization<br/>model"]
+  N0 -->|Observation data| N1
+  N0 -->|Interpretive interviews| N2
+  N1 -->|Similarities and<br/>differences| N3
+  N2 --> N3
+  N3 -->|Test hypotheses| N4
 ```
 
 The design should be comparative ethnography, not a short impressionistic visit. Candidate cases include Gnawa lila, Mevlevi Sema, private zār practice, psytrance festivals, and charismatic worship. Each case should be observed through the same units: preparation, first sound, bodily synchrony, peak experience, expert intervention, post-event interpretation, and connection to future participation.

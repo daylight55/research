@@ -35,11 +35,20 @@ The core conclusion is straightforward.
 
 ```mermaid
 flowchart TD
-  A["Low fertility"] --> B["Less labor supply"]
-  B --> C["Slower tax growth"]
-  C --> D["Tighter welfare budgets"]
-  D --> E["Higher worker burden"]
-  E --> A
+  accTitle: Population pressures on taxes, welfare and households
+  accDescr: Distinguish labour supply and the tax base, ageing-related benefits and working-age burdens. Fiscal burdens alone do not explain low fertility.
+  N0["Low fertility and<br/>demographic change"]
+  N1["Falling labour supply"]
+  N2["Pressure on the tax<br/>base"]
+  N3["Ageing-related benefit<br/>demand"]
+  N4["Welfare and fiscal<br/>adjustment"]
+  N5["Working-age and<br/>household burdens"]
+  N0 --> N1
+  N1 --> N2
+  N0 --> N3
+  N2 -->|Funding constraints| N4
+  N3 -->|Spending pressure| N4
+  N4 -->|Burden and benefit<br/>choices| N5
 ```
 
 ## 2. What Is Constraining Policy Now?

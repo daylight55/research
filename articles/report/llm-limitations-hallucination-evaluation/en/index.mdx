@@ -39,12 +39,19 @@ The key takeaways are four.
 
 ```mermaid
 flowchart TD
-  A["Training objective"] --> B["Guessing is rewarded"]
-  C["Evaluation pressure"] --> B
-  B --> D["Uncertain input"]
-  D --> E["Plausible generation"]
-  E --> F["Hallucination"]
-  D --> G["Refuse or defer"]
+  accTitle: When uncertain questions lead to guessed answers
+  accDescr: When training and evaluation incentives reward guessing, plausible errors can result. Provide an abstention path when evidence is insufficient.
+  N0["Training objectives and<br/>evaluation pressure"]
+  N1["Rewards favouring<br/>guesses"]
+  N2["Question with uncertain<br/>evidence"]
+  N3["Plausible generation"]
+  N4["Answer containing false<br/>information"]
+  N5["Express uncertainty and<br/>abstain"]
+  N0 -->|Scoring errors and<br/>abstention| N1
+  N1 -->|Encourage guessing| N3
+  N2 -->|When filling gaps with<br/>guesses| N3
+  N3 -->|Hallucination risk| N4
+  N2 -->|Detect insufficient<br/>evidence| N5
 ```
 
 This diagram treats hallucination as a design outcome rather than a mysterious failure. In practice, the important control point is the ability to stop at D by refusing or verifying.
@@ -129,12 +136,19 @@ Then measure the following every time.
 
 ```mermaid
 flowchart TD
-  A["Question classification"] --> B["Gather evidence"]
-  B --> C["Automated checks"]
-  C --> D["Human review"]
-  D --> E["Post-launch monitoring"]
-  C --> F["Fix and rerun"]
-  F --> C
+  accTitle: A verification loop from retrieval to post-release monitoring
+  accDescr: Move from question classification to evidence retrieval, automated evaluation and human review, returning failures for repair and re-evaluation.
+  N0["Classify question and<br/>retrieve evidence"]
+  N1["Automated evaluation"]
+  N2["Human review"]
+  N3["Post-release monitoring"]
+  N4["Repair and<br/>re-evaluation"]
+  N0 -->|Validate| N1
+  N1 -->|Passing output| N2
+  N2 -->|Release| N3
+  N1 -->|Failure| N4
+  N3 -->|Detect problems| N4
+  N4 -.->|Check again| N1
 ```
 
 The point of the flow is not to hope that the model becomes correct. The point is to find failures early, reproduce them, isolate them, and watch for regressions. <SourceNote>[NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) emphasizes ongoing management, and [Holistic Evaluation of Language Models](https://arxiv.org/abs/2211.09110) emphasizes multi-dimensional measurement.</SourceNote>

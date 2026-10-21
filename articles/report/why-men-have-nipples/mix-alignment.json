@@ -1,0 +1,499 @@
+{
+  "version": 1,
+  "sourceLocale": "ja",
+  "targetLocale": "en",
+  "pairs": [
+    {
+      "ja": "男性にも乳首がある。",
+      "en": "Men have nipples."
+    },
+    {
+      "ja": "たいてい授乳はしないのに、なぜだろう。",
+      "en": "They usually do not breastfeed, so why are they there?"
+    },
+    {
+      "ja": "この小さな疑問には、身体がどうつくられるかという問いと、役に立つものだけが進化で残るのかという問いが重なっている。",
+      "en": "This small puzzle brings together two questions: how bodies develop, and whether evolution preserves only useful features."
+    },
+    {
+      "ja": "生物学的な説明の中心にあるのは、 男女が乳腺をつくる発生過程を共有し、ヒトの男性では乳頭が保持されること だ。",
+      "en": "The central biological explanation is that males and females share pathways of mammary development, and human males retain nipples ."
+    },
+    {
+      "ja": "進化を考えるときも、男性だけを切り離して、その乳首に固有の目的を探す必要はない。",
+      "en": "An evolutionary explanation need not isolate men and search for a unique purpose for their nipples."
+    },
+    {
+      "ja": "女性の授乳器官と共通する発生基盤が、男性にも構造を生じさせるという説明がある。",
+      "en": "A developmental basis shared with female lactation organs can also produce structures in males."
+    },
+    {
+      "ja": "数学を使うと、この説明のどこに仮定があり、何を測れば確かめられるかが見えてくる。",
+      "en": "Mathematics helps identify the assumptions in this explanation and the measurements needed to test them."
+    },
+    {
+      "ja": "ただし、式を書けばヒトの乳首の進化史が証明されるわけではない。",
+      "en": "Writing an equation does not prove the evolutionary history of human nipples."
+    },
+    {
+      "ja": "以下の数式は、受容体結合や遺伝的な連動を理解するための一般モデルであり、男性乳頭の測定値に当てはめた予測モデルではない。",
+      "en": "The equations below are general models of receptor binding and genetic correlation, rather than predictive models fitted to measurements of male nipples."
+    },
+    {
+      "ja": "ヒトでは、胎児期に乳腺のもとになる原基が男女とも形成される。",
+      "en": "During fetal development, mammary primordia form in both sexes."
+    },
+    {
+      "ja": "乳腺の原基、乳管、乳頭は、発生の段階を経てつくられる別々の構造だ。",
+      "en": "Primordia, ducts, and nipples are distinct structures that develop through successive stages."
+    },
+    {
+      "ja": "その後、思春期のホルモン環境によって乳房の発達に大きな差が生じる。",
+      "en": "Hormonal conditions during puberty later produce substantial differences in breast development."
+    },
+    {
+      "ja": "男性にも乳頭と乳腺組織の一部は残る。",
+      "en": "Males retain nipples and some mammary tissue."
+    },
+    {
+      "ja": "「乳首ができたあとで性別が決まるから」という説明は、この過程を一列の順番にしすぎている。",
+      "en": "The familiar explanation that nipples form before sex is determined compresses several processes into a single sequence."
+    },
+    {
+      "ja": "染色体構成、性腺の分化、ホルモン分泌、各組織の応答は区別する必要がある。",
+      "en": "Chromosome constitution, gonadal differentiation, hormone secretion, and tissue responses need to be distinguished."
+    },
+    {
+      "ja": "1987年のヒト胎児の観察では、精巣からのアンドロゲン分泌がすでに始まっていても、観察範囲の乳腺上皮と間葉には男女差が見られなかった。",
+      "en": "A 1987 observation of human fetuses found no sex differences in the mammary epithelium and mesenchyme examined, even after testicular androgen secretion had begun."
+    },
+    {
+      "ja": "他の哺乳類との比較も示唆的だ。",
+      "en": "Comparisons with other mammals add another clue."
+    },
+    {
+      "ja": "雄マウスは乳首を失うが、雄モルモットは保持する。",
+      "en": "Male mice lose their nipples, while male guinea pigs retain them."
+    },
+    {
+      "ja": "マウスの古典的研究では、乳腺上皮と周囲の間葉の相互作用が、間葉のアンドロゲン応答に関わることが示された。",
+      "en": "Classical mouse research showed that interactions between mammary epithelium and surrounding mesenchyme contribute to androgen responsiveness in the mesenchyme."
+    },
+    {
+      "ja": "2025年のマウスとモルモットの比較研究は、この違いを受容体の発現から調べた。",
+      "en": "A 2025 comparison of mice and guinea pigs examined receptor expression as a basis for this difference."
+    },
+    {
+      "ja": "乳腺間葉のアンドロゲン受容体を欠失させた雄マウスでは乳首が保持され、モルモットでは発生中の受容体発現が異なったという。",
+      "en": "The researchers reported nipple retention in male mice lacking androgen receptors in mammary mesenchyme, together with different developmental receptor expression in guinea pigs."
+    },
+    {
+      "ja": "この論文は未査読プレプリントで、ヒトでも同じ制御が働くと直接示したものではない。",
+      "en": "The paper was treated as an unreviewed preprint in this investigation and does not directly demonstrate the same regulation in humans."
+    },
+    {
+      "ja": "それでも、ホルモンの出始める時期だけに説明を求めず、受け取る側の組織を調べる理由になる。",
+      "en": "It nevertheless gives a reason to examine the responding tissue rather than explain everything through the timing of hormone secretion."
+    },
+    {
+      "ja": "同じ濃度のホルモンがあっても、受容体が多い組織と少ない組織では、結合する分子の量が違う。",
+      "en": "At the same hormone concentration, tissues with many receptors and tissues with few receptors bind different amounts."
+    },
+    {
+      "ja": "この関係を、最も単純な1対1の平衡結合で表してみよう。",
+      "en": "The simplest one-to-one equilibrium binding model expresses this relationship as follows."
+    },
+    {
+      "ja": "L は 遊離しているリガンドの濃度 、R T は総受容体濃度、K d は解離定数、C は結合した複合体の濃度である。",
+      "en": "Here L is the free ligand concentration , R T the total receptor concentration, K d the dissociation constant, and C the concentration of bound complexes."
+    },
+    {
+      "ja": "ここでは、同じ性質の結合部位が1種類あり、協同性を考えず、反応が平衡に達していると仮定する。",
+      "en": "The model assumes one class of identical binding sites, no cooperativity, and equilibrium."
+    },
+    {
+      "ja": "遊離濃度を総リガンド濃度で代用するなら、結合によるリガンドの枯渇も無視できる必要がある。",
+      "en": "Replacing free ligand concentration with total ligand concentration also requires negligible depletion through binding."
+    },
+    {
+      "ja": "たとえば L＝K d なら、受容体の半分が占有される。",
+      "en": "For example, when L equals K d , half the receptors are occupied."
+    },
+    {
+      "ja": "総受容体量が1なら複合体量は0.5、総受容体量が0.2なら0.1になる。",
+      "en": "With a total receptor amount of 1, the complex amount is 0.5; with 0.2, it is 0.1."
+    },
+    {
+      "ja": "占有率が同じでも、結合した複合体の量は違う。",
+      "en": "Equal occupancy fractions can coexist with different amounts of bound complexes."
+    },
+    {
+      "ja": "受容体がゼロなら、このモデルでの複合体もゼロだ。",
+      "en": "If there are no receptors, this model also gives no complexes."
+    },
+    {
+      "ja": "この式が説明するのは結合量までである。",
+      "en": "The equation describes binding only."
+    },
+    {
+      "ja": "アンドロゲン受容体の核内移行、転写制御、細胞死、周囲組織との相互作用をここには含めていない。",
+      "en": "It excludes androgen receptor entry into the nucleus, transcriptional regulation, cell death, and interactions with surrounding tissue."
+    },
+    {
+      "ja": "複合体量から乳頭の保持や消失を計算するには、それらをつなぐ機構とデータが必要になる。",
+      "en": "Calculating nipple retention or loss from complex concentration would require mechanisms and data connecting these processes."
+    },
+    {
+      "ja": "それでも「ホルモンが存在する」という情報だけでは発生の結果が決まらないことは、式の上でも分かる。",
+      "en": "Even this simple model shows why the presence of a hormone alone cannot determine the developmental outcome."
+    },
+    {
+      "ja": "男性の乳首に独自の利益が見つからなければ、なぜ進化で消えなかったのか。",
+      "en": "If male nipples provide no distinct benefit, why did evolution not remove them?"
+    },
+    {
+      "ja": "この問いでは、男女の形質が遺伝的に連動しうることを考える必要がある。",
+      "en": "Answering this question requires considering genetic correlations between traits in males and females."
+    },
+    {
+      "ja": "雌雄に現れる一つの量的形質を、加算的な遺伝効果のモデルで考える。",
+      "en": "Consider a quantitative trait expressed in both sexes under an additive genetic model."
+    },
+    {
+      "ja": "Landeの雌雄版の応答式を1形質ずつに縮めると、男性側の平均値の変化は次のように書ける。",
+      "en": "Reducing the two-sex version of Lande's response equation to one trait per sex gives the following change in the male mean."
+    },
+    {
+      "ja": "Δz̄ m ：男性側の形質平均の、1世代の変化",
+      "en": "Δz̄ m : change in the male trait mean over one generation"
+    },
+    {
+      "ja": "G m ：男性側の加算遺伝分散",
+      "en": "G m : additive genetic variance in males"
+    },
+    {
+      "ja": "B：男性側と女性側の形質の加算遺伝共分散",
+      "en": "B: additive genetic covariance between male and female traits"
+    },
+    {
+      "ja": "β m 、β f ：それぞれの性で、形質への選択の方向と強さを表す選択勾配",
+      "en": "β m , β f : selection gradients describing the direction and strength of selection in each sex"
+    },
+    {
+      "ja": "右辺には、男性側の選択だけでなく、女性側の選択に由来する項がある。",
+      "en": "The right-hand side includes a term arising from selection in females as well as selection in males."
+    },
+    {
+      "ja": "したがって、このモデルでは次のことが起こりうる。",
+      "en": "The model therefore permits the following result."
+    },
+    {
+      "ja": "男性側に直接の選択がなくても、正の遺伝共分散を介して、女性側への選択が男性側の変化を生む。",
+      "en": "Even without direct selection in males, selection in females can produce a correlated male response through positive genetic covariance."
+    },
+    {
+      "ja": "男女の発生に共通部分があるなら、片方にとって有用な構造が、もう片方にも現れることは不思議ではない。",
+      "en": "Shared developmental pathways make it unsurprising that a structure useful in one sex can also appear in the other."
+    },
+    {
+      "ja": "この式の射程。",
+      "en": "The scope of this equation."
+    },
+    {
+      "ja": "雌雄異体の種の、量的形質に対する短期的な応答を表す一般式である。",
+      "en": "It is a general expression for the short-term response of quantitative traits in species with separate sexes."
+    },
+    {
+      "ja": "係数1/2はその遺伝の扱いに由来する。",
+      "en": "The factor of one-half comes from the treatment of inheritance."
+    },
+    {
+      "ja": "乳頭の有無という二値の形質を、そのままこの式で予測しているわけではない。",
+      "en": "It does not directly predict the binary presence or absence of nipples."
+    },
+    {
+      "ja": "ヒト乳頭の G m 、B、β の値を示すものでもない。",
+      "en": "Nor does it supply values for G m , B, or β in human nipples."
+    },
+    {
+      "ja": "男性乳首を発生上の副産物とみる考え方を、共有する遺伝基盤の一般理論と結び付けるために使っている。",
+      "en": "It connects the developmental by-product account with a general theory of shared genetic foundations."
+    },
+    {
+      "ja": "遺伝的に連動するからといって、性差が進化できないわけではない。",
+      "en": "Genetic correlation does not prevent the evolution of sex differences."
+    },
+    {
+      "ja": "性に応じた遺伝子制御が変われば、片方の性だけで形が変わる可能性がある。",
+      "en": "Changes in sex-specific gene regulation can alter a structure in one sex."
+    },
+    {
+      "ja": "雄の乳首を失う種が存在すること自体、ヒトを含むすべての哺乳類に「消失は不可能」という制約があるわけではないことを示している。",
+      "en": "The existence of species whose males lose nipples shows that nipple loss is not impossible across all mammals, including humans."
+    },
+    {
+      "ja": "有限の集団では、遺伝子が次世代へ伝わること自体に偶然性がある。",
+      "en": "In a finite population, chance affects which genes reach the next generation."
+    },
+    {
+      "ja": "選択係数を s、有効集団サイズを N e とすると、集団遺伝学では次の尺度を使って、選択が弱い領域を考える。",
+      "en": "Population genetics uses the following scale to consider weak selection, where s is a selection coefficient and N e is effective population size."
+    },
+    {
+      "ja": "この領域では、変異は中立に近く振る舞いうる。",
+      "en": "In this range, a variant can behave as nearly neutral."
+    },
+    {
+      "ja": "正確な係数は倍数性や s の定義によって変わり、普遍的な境界線ではない。",
+      "en": "The precise factor depends on ploidy and the definition of s, so this is not a universal boundary."
+    },
+    {
+      "ja": "Kimuraの固定確率の理論は、選択と偶然を含む世代をまたいだ過程を扱う。",
+      "en": "Kimura's fixation theory addresses processes across generations that involve selection and chance."
+    },
+    {
+      "ja": "ここから男性乳頭の実際の選択係数が分かるわけではなく、「男性乳首は浮動で残った」と結論することもできない。",
+      "en": "It does not reveal the actual selection coefficient of male nipples or establish that drift preserved them."
+    },
+    {
+      "ja": "発生の際、遺伝子の働きは細胞の移動や収縮を通じて身体の形へつながる。",
+      "en": "During development, gene activity contributes to body shape through cell movement and contraction."
+    },
+    {
+      "ja": "2021年のマウス乳腺芽の研究では、周囲からの細胞流入が初期成長を担い、周囲の細胞のアクトミオシン収縮が、芽を内部へ陥入させる機構に関わると報告された。",
+      "en": "A 2021 study of mouse mammary buds reported that cell influx drives early growth, while surrounding actomyosin contraction contributes to inward invagination."
+    },
+    {
+      "ja": "非筋ミオシンIIAを欠失させると、陥入と芽の形状が損なわれた。",
+      "en": "Loss of nonmuscle myosin IIA impaired invagination and bud shape."
+    },
+    {
+      "ja": "こうした薄い組織を連続的な曲面として扱う一般理論では、張力の分布と周囲からの力を釣り合わせる。",
+      "en": "General theories that treat such thin tissues as continuous surfaces balance the distribution of stresses with external forces."
+    },
+    {
+      "ja": "SalbreuxとJülicherの曲面理論の式から、慣性項を無視すると、局所的な力のつり合いは次の形になる。",
+      "en": "Neglecting inertia in the surface theory of Salbreux and Jülicher gives this local force balance."
+    },
+    {
+      "ja": "第1項は表面の張力分布がつくる力、第2項は表面にかかる外力を表す。",
+      "en": "The first term describes forces associated with surface stress distributions, and the second describes external forces on the surface."
+    },
+    {
+      "ja": "i は表面上の座標を区別する添字である。",
+      "en": "The index i labels surface coordinates."
+    },
+    {
+      "ja": "これは 一般的な曲面の力学式 で、乳腺芽の形や乳首の数を、この式だけから計算した結果ではない。",
+      "en": "This is a general equation of surface mechanics , rather than a calculation of mammary bud shape or nipple number from this equation alone."
+    },
+    {
+      "ja": "力が釣り合うことは、組織が動かないこととも違う。",
+      "en": "Force balance does not mean tissue must remain still."
+    },
+    {
+      "ja": "細胞が能動的に力を生み、粘性抵抗などと釣り合いながら組織が流動する場合がある。",
+      "en": "Cells can actively generate forces while tissue flows against viscous resistance."
+    },
+    {
+      "ja": "発生中の組織を理解するには、力の式に加え、材料の性質、能動的な収縮、境界条件、時間変化を指定する必要がある。",
+      "en": "Understanding developing tissue requires material properties, active contraction, boundary conditions, and time dependence in addition to force equations."
+    },
+    {
+      "ja": "物理学は、与えられた細胞と制御のもとで、形がどう実現するかを説明する。",
+      "en": "Physics explains how shape arises given particular cells and regulatory conditions."
+    },
+    {
+      "ja": "雄マウスとヒトの男性で乳首の有無が違う理由には、その制御が異なるに至った発生と進化の説明も要る。",
+      "en": "Explaining the difference between male mice and human males also requires developmental and evolutionary accounts of those conditions."
+    },
+    {
+      "ja": "エネルギー最小化や熱力学の法則だけから、男性乳首の有無が一意に決まるわけではない。",
+      "en": "Energy minimization or thermodynamic laws alone do not uniquely determine whether male nipples exist."
+    },
+    {
+      "ja": "男性の乳首にも、現在の身体の働きがある。",
+      "en": "Male nipples also have present-day bodily roles."
+    },
+    {
+      "ja": "2006年の質問紙研究は、性的経験のある大学生301人を調べ、男性の回答者では51.7%が乳頭刺激により性的興奮が生じるか強まると報告した。",
+      "en": "A 2006 questionnaire study of 301 sexually experienced university students reported that nipple stimulation caused or increased sexual arousal in 51.7% of its male respondents."
+    },
+    {
+      "ja": "男性の参加者は148人だった。",
+      "en": "The male subsample contained 148 participants."
+    },
+    {
+      "ja": "この数字は、その標本と質問に対する自己申告であり、すべての男性の生理反応を測った値ではない。",
+      "en": "This percentage describes self-reports from that sample and question, rather than measured physiological responses in all men."
+    },
+    {
+      "ja": "乳汁分泌も、生物学的に絶対不可能というわけではない。",
+      "en": "Milk secretion is not biologically impossible in men."
+    },
+    {
+      "ja": "高プロラクチン血症などを伴う男性の異常乳汁分泌の症例がある。",
+      "en": "Case reports describe male galactorrhea associated with conditions such as hyperprolactinemia."
+    },
+    {
+      "ja": "ただし、病的な分泌能力があることと、通常の男性が乳児を十分に養えること、男性乳首が授乳のために進化したことは、別々の主張である。",
+      "en": "Pathological secretion, sufficient milk production to nourish an infant under ordinary conditions, and evolution for male lactation are three different claims."
+    },
+    {
+      "ja": "現在の用途から進化の起源を逆算すると、説明を飛び越えてしまう。",
+      "en": "Inferring evolutionary origins directly from current uses skips a necessary step."
+    },
+    {
+      "ja": "男性の性的な利益を主因とするモデルと、共通発生による副産物を主因とするモデルのどちらでも、現在は快感が生じると予測する可能性がある。",
+      "en": "Both a model emphasizing male sexual benefits and one emphasizing shared development could predict present-day pleasure."
+    },
+    {
+      "ja": "現在の快感を確認しただけで、両者を区別できるとは限らない。",
+      "en": "Demonstrating pleasure alone may therefore fail to distinguish these accounts."
+    },
+    {
+      "ja": "比較するモデルを H A と H B 、観察データを D とする。",
+      "en": "Let H A and H B denote competing models, and D the observed data."
+    },
+    {
+      "ja": "ベイズの定理から、両者の事後オッズは次のように書ける。",
+      "en": "Bayes' theorem expresses their posterior odds as follows."
+    },
+    {
+      "ja": "中央の比は、観察データが各モデルでどれだけ生じやすいかを比べる尤度比である。",
+      "en": "The middle ratio is a likelihood ratio comparing how readily each model predicts the observations."
+    },
+    {
+      "ja": "仮に両モデルが同じ程度にそのデータを予測するなら、この比は1に近くなり、その観察だけではモデル間の判断はあまり進まない。",
+      "en": "If both models predict the data about equally well, this ratio is near 1 and the observation does little to distinguish them."
+    },
+    {
+      "ja": "これは考え方を整理する式で、男性乳首について数値の尤度や事前確率を求めた分析ではない。",
+      "en": "This equation organizes the reasoning; it is not an analysis that estimates numerical likelihoods or priors for male nipples."
+    },
+    {
+      "ja": "実際には複数の要因が関わるモデルも比較する必要がある。",
+      "en": "Real comparisons must also consider models involving multiple contributing factors."
+    },
+    {
+      "ja": "男性にも女性にも乳首がある一方で、何を見せてよいかの規範には差がある。",
+      "en": "Both men and women have nipples, yet norms about displaying them differ."
+    },
+    {
+      "ja": "文化人類学の問いは、その差がどの場面でつくられ、身体にどんな意味を与えるかというものになる。",
+      "en": "Cultural anthropology asks where these distinctions arise and what meanings they assign to bodies."
+    },
+    {
+      "ja": "Faustの2017年のデジタル民族誌は、Instagramの女性アーティストや運動を追跡し、インタビューも行っている。",
+      "en": "Faust's 2017 digital ethnography followed female artists and movements on Instagram and included interviews."
+    },
+    {
+      "ja": "そこには、当時の規約が女性と認識される乳首を規制しつつ、授乳や乳房切除後の傷痕などを例外とする記述がある。",
+      "en": "It describes rules at the time that restricted nipples perceived as female while making exceptions for breastfeeding and postmastectomy scars."
+    },
+    {
+      "ja": "これは2010年代の具体的なプラットフォームと事例の研究である。",
+      "en": "This research concerns a particular platform and cases in the 2010s."
+    },
+    {
+      "ja": "身体の一部分が性的なものとして扱われる過程には、利用規約、画像の文脈、性別の分類も関わっている。",
+      "en": "Platform rules, image context, and gender classification all contribute to how a body part is treated as sexual."
+    },
+    {
+      "ja": "露出と欲望の関係は、別に調べる必要がある。",
+      "en": "The relationship between exposure and desire requires separate investigation."
+    },
+    {
+      "ja": "2025年のDani男性80人の研究では、女性の胸の露出が一般的だった時代に育った世代と、覆う習慣が広がってから育った世代を比べ、乳房に対する性的な反応などの自己申告に差が見られなかったと報告された。",
+      "en": "A 2025 study of 80 Dani men compared generations raised when female chest exposure was common with those raised after covering became more widespread, and reported no detected differences in self-reported responses including breast-related arousal."
+    },
+    {
+      "ja": "この比較を、露出の文化は欲望と無関係だという証明にすることはできない。",
+      "en": "This comparison does not prove that exposure norms are unrelated to desire."
+    },
+    {
+      "ja": "対象は一地域の二つの世代であり、露出環境を無作為に割り当てた実験ではない。",
+      "en": "It compares two generations in one region rather than randomly assigning exposure environments."
+    },
+    {
+      "ja": "年齢、世代、他の社会環境の違いも考える必要がある。",
+      "en": "Age, cohort, and other social differences also need consideration."
+    },
+    {
+      "ja": "逆に、胸を覆う規範の存在だけから、それが性的欲望の原因だと結論することもできない。",
+      "en": "Conversely, the existence of covering norms alone does not establish that they cause sexual desire."
+    },
+    {
+      "ja": "差が見つからないことと、差がないと示すこと。",
+      "en": "Failing to detect a difference is different from establishing equivalence."
+    },
+    {
+      "ja": "統計的に明確な差が出なかったという報告は、効果が正確にゼロという証明ではない。",
+      "en": "A report of no statistically clear difference does not prove an exactly zero effect."
+    },
+    {
+      "ja": "実用上の同等性を問うなら、無視できる差の幅 δ を定め、真の差 Δ が次の範囲にあることを、推定の不確実さも含めて評価する必要がある。",
+      "en": "Assessing practical equivalence requires choosing a negligible-difference margin δ and evaluating whether the true difference Δ lies within it, including estimation uncertainty."
+    },
+    {
+      "ja": "この不等式は同等性という問いを表したもので、Dani研究を再解析して同等性を確認した結果ではない。",
+      "en": "This inequality states the equivalence question; it is not a reanalysis establishing equivalence in the Dani study."
+    },
+    {
+      "ja": "露出を規制すること、性的に惹かれること、本人の乳首に触れて快不快を感じることも、同じ現象ではない。",
+      "en": "Regulating exposure, experiencing attraction, and feeling pleasure or discomfort when one's own nipples are touched are different phenomena."
+    },
+    {
+      "ja": "女性の乳房に対する男性の反応を測った研究を、そのまま男性自身の乳首の経験に広げることはできない。",
+      "en": "Research measuring men's responses to women's breasts cannot directly describe men's experiences of their own nipples."
+    },
+    {
+      "ja": "「何のためにあるのか」と聞くとき、現在できることを知りたいのか、進化で選ばれた理由を知りたいのかで、答えが変わる。",
+      "en": "Asking what something is for can mean asking what it does now or why selection preserved it."
+    },
+    {
+      "ja": "生物学の哲学では、身体の一部が全体の能力にどう寄与するかを問う 因果的役割としての機能 と、ある効果をもつために選ばれてきた歴史を問う 選択効果としての機能 が区別される。",
+      "en": "Philosophy of biology distinguishes causal-role function , which concerns contributions to a system's capacities, from selected-effect function , which concerns the history of selection for an effect."
+    },
+    {
+      "ja": "たとえば、乳頭が性的興奮に寄与するという説明は、現在の働きについての説明になる。",
+      "en": "For example, explaining a nipple's contribution to sexual arousal describes a current role."
+    },
+    {
+      "ja": "その働きのために男性乳頭が進化したという主張には、歴史や選択についての証拠がさらに要る。",
+      "en": "Claiming that male nipples evolved for that role requires further historical and selection evidence."
+    },
+    {
+      "ja": "発生の機構、進化で保持される条件、現在の用途を区別すると、男性乳首に唯一の目的を与えなくても、複数の説明を組み合わせられる。",
+      "en": "Distinguishing developmental mechanisms, conditions of evolutionary retention, and current uses allows several explanations to work together without assigning a single purpose."
+    },
+    {
+      "ja": "数学のモデルも、何を説明するかを先に選んでいる。",
+      "en": "Mathematical models also begin by choosing what to explain."
+    },
+    {
+      "ja": "受容体の式は結合量を、遺伝の式は形質の変化を、力学の式は局所的な力の関係を扱う。",
+      "en": "The receptor equation addresses binding, the genetic equation trait change, and the mechanical equation local forces."
+    },
+    {
+      "ja": "文化の規範や本人の経験の価値まで、それらの変数から決まるわけではない。",
+      "en": "Those variables do not determine cultural norms or the value of someone's experiences."
+    },
+    {
+      "ja": "授乳への寄与が小さいことから、その身体の部分や本人の経験に価値がないとは導けない。",
+      "en": "A small contribution to lactation does not imply that a body part or a person's experience lacks value."
+    },
+    {
+      "ja": "同様に、生物学的な性差の存在だけでは、露出を別に規制することの正当性までは決まらない。",
+      "en": "Biological sex differences alone likewise cannot justify different exposure rules."
+    },
+    {
+      "ja": "身体の自己決定や公平さを論じるには、何を尊重すべきかという判断を加える必要がある。",
+      "en": "Arguments about bodily autonomy and fairness require judgments about what deserves respect."
+    },
+    {
+      "ja": "男性の乳首は、役に立つかどうかという一つの尺度だけでは、身体の形も、その身体を生きる経験も説明しきれないことを示す身近な例になる。",
+      "en": "Male nipples offer an everyday example of why usefulness alone cannot explain either bodily form or the experience of living in a body."
+    }
+  ]
+}

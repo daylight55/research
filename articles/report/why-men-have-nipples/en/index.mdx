@@ -1,0 +1,146 @@
+---
+title: "Why Do Men Have Nipples?"
+description: "Why keep nipples without breastfeeding? An accessible guide to development, evolution, mechanics, mathematics, culture, and the philosophy of function."
+pubDate: "2026-10-21"
+heroImage: "../../../../src/assets/images/male-nipples-torsos.jpg"
+heroImageAlt: "Battista Franco anatomical drawing of torsos and rib cages, early 1540s."
+heroImageCredit: "Battista Franco, Torsos with Rib Cages, early 1540s / The Cleveland Museum of Art (CC0)"
+heroImageCreditUrl: "https://www.clevelandart.org/art/1964.378"
+heroImageSourceId: "cleveland:1964.378"
+contentType: "report"
+category: "philosophy-knowledge"
+tags: ["biology", "evolution", "mathematics", "body", "philosophy"]
+generation:
+  model: 'gpt-5.4-mini'
+draft: false
+---
+
+Men have nipples. They usually do not breastfeed, so why are they there? This small puzzle brings together two questions: how bodies develop, and whether evolution preserves only useful features.
+
+The central biological explanation is that <strong>males and females share pathways of mammary development, and human males retain nipples</strong>. An evolutionary explanation need not isolate men and search for a unique purpose for their nipples. A developmental basis shared with female lactation organs can also produce structures in males. <SourceNote>[Javed & Lteif 2013](https://pmc.ncbi.nlm.nih.gov/articles/PMC3706056/); [Gould 1997](https://pmc.ncbi.nlm.nih.gov/articles/PMC23474/)</SourceNote>
+
+Mathematics helps identify the assumptions in this explanation and the measurements needed to test them. Writing an equation does not prove the evolutionary history of human nipples. The equations below are general models of receptor binding and genetic correlation, rather than predictive models fitted to measurements of male nipples.
+
+## How nipples develop
+
+During fetal development, mammary primordia form in both sexes. Primordia, ducts, and nipples are distinct structures that develop through successive stages. Hormonal conditions during puberty later produce substantial differences in breast development. Males retain nipples and some mammary tissue. <SourceNote>[Javed & Lteif 2013](https://pmc.ncbi.nlm.nih.gov/articles/PMC3706056/)</SourceNote>
+
+The familiar explanation that nipples form before sex is determined compresses several processes into a single sequence. Chromosome constitution, gonadal differentiation, hormone secretion, and tissue responses need to be distinguished. A 1987 observation of human fetuses found no sex differences in the mammary epithelium and mesenchyme examined, even after testicular androgen secretion had begun. <SourceNote>[Kellokumpu-Lehtinen et al. 1987](https://pubmed.ncbi.nlm.nih.gov/3605662/)</SourceNote>
+
+Comparisons with other mammals add another clue. Male mice lose their nipples, while male guinea pigs retain them. Classical mouse research showed that interactions between mammary epithelium and surrounding mesenchyme contribute to androgen responsiveness in the mesenchyme. <SourceNote>[Heuberger et al. 1982](https://pmc.ncbi.nlm.nih.gov/articles/PMC346327/)</SourceNote>
+
+A 2025 comparison of mice and guinea pigs examined receptor expression as a basis for this difference. The researchers reported nipple retention in male mice lacking androgen receptors in mammary mesenchyme, together with different developmental receptor expression in guinea pigs. <strong>The paper was treated as an unreviewed preprint in this investigation and does not directly demonstrate the same regulation in humans.</strong> It nevertheless gives a reason to examine the responding tissue rather than explain everything through the timing of hormone secretion. <SourceNote>[Zheng et al. 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12633513/)</SourceNote>
+
+## Hormone concentration is only part of the response
+
+At the same hormone concentration, tissues with many receptors and tissues with few receptors bind different amounts. The simplest one-to-one equilibrium binding model expresses this relationship as follows.
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Bound complex concentration equals total receptor concentration times free ligand concentration divided by the dissociation constant plus free ligand concentration."><mi>C</mi><mo>=</mo><msub><mi>R</mi><mtext>T</mtext></msub><mfrac><mrow><mi>L</mi></mrow><mrow><msub><mi>K</mi><mi>d</mi></msub><mo>+</mo><mi>L</mi></mrow></mfrac></math>
+
+Here *L* is the <strong>free ligand concentration</strong>, *R*<sub>T</sub> the total receptor concentration, *K*<sub>d</sub> the dissociation constant, and *C* the concentration of bound complexes. The model assumes one class of identical binding sites, no cooperativity, and equilibrium. Replacing free ligand concentration with total ligand concentration also requires negligible depletion through binding. <SourceNote>[Hulme & Trevethick 2010](https://pmc.ncbi.nlm.nih.gov/articles/PMC3000649/)</SourceNote>
+
+![Equilibrium binding curves for receptor amounts of 1 and 0.2. Illustrative, not measured data.](/images/male-nipples/receptor-binding-en.svg)
+
+For example, when *L* equals *K*<sub>d</sub>, half the receptors are occupied. With a total receptor amount of 1, the complex amount is 0.5; with 0.2, it is 0.1. <strong>Equal occupancy fractions can coexist with different amounts of bound complexes.</strong> If there are no receptors, this model also gives no complexes.
+
+The equation describes binding only. It excludes androgen receptor entry into the nucleus, transcriptional regulation, cell death, and interactions with surrounding tissue. Calculating nipple retention or loss from complex concentration would require mechanisms and data connecting these processes. Even this simple model shows why the presence of a hormone alone cannot determine the developmental outcome.
+
+## Evolution does not separate the sexes completely
+
+If male nipples provide no distinct benefit, why did evolution not remove them? Answering this question requires considering genetic correlations between traits in males and females.
+
+Consider a quantitative trait expressed in both sexes under an additive genetic model. Reducing the two-sex version of Lande's response equation to one trait per sex gives the following change in the male mean. <SourceNote>[Cheng & Houle 2020](https://www.bio.fsu.edu/~dhoule/Publications/Cheng%20and%20Houle%2020.pdf)</SourceNote>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Change in the male trait mean equals one-half of male genetic variance times male selection gradient plus cross-sex genetic covariance times female selection gradient."><mo>Δ</mo><msub><mi>z̄</mi><mi>m</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac><mo>(</mo><msub><mi>G</mi><mi>m</mi></msub><msub><mi>β</mi><mi>m</mi></msub><mo>+</mo><mi>B</mi><msub><mi>β</mi><mi>f</mi></msub><mo>)</mo></math>
+
+- Δz̄<sub>m</sub>: change in the male trait mean over one generation
+
+- G<sub>m</sub>: additive genetic variance in males
+
+- B: additive genetic covariance between male and female traits
+
+- β<sub>m</sub>, β<sub>f</sub>: selection gradients describing the direction and strength of selection in each sex
+
+The right-hand side includes a term arising from selection in females as well as selection in males. The model therefore permits the following result.
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Zero direct male selection, positive cross-sex covariance, and positive female selection can produce a positive male response."><msub><mi>β</mi><mi>m</mi></msub><mo>=</mo><mn>0</mn><mo>,</mo><mi>B</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><msub><mi>β</mi><mi>f</mi></msub><mo>&gt;</mo><mn>0</mn><mo>⇒</mo><mo>Δ</mo><msub><mi>z̄</mi><mi>m</mi></msub><mo>&gt;</mo><mn>0</mn></math>
+
+Even without direct selection in males, selection in females can produce a correlated male response through positive genetic covariance. Shared developmental pathways make it unsurprising that a structure useful in one sex can also appear in the other.
+
+<strong>The scope of this equation.</strong> It is a general expression for the short-term response of quantitative traits in species with separate sexes. The factor of one-half comes from the treatment of inheritance. It does not directly predict the binary presence or absence of nipples. Nor does it supply values for *G*<sub>m</sub>, *B*, or *β* in human nipples. It connects the developmental by-product account with a general theory of shared genetic foundations. <SourceNote>[Cheng & Houle 2020](https://www.bio.fsu.edu/~dhoule/Publications/Cheng%20and%20Houle%2020.pdf); [Gould 1997](https://pmc.ncbi.nlm.nih.gov/articles/PMC23474/)</SourceNote>
+
+Genetic correlation does not prevent the evolution of sex differences. Changes in sex-specific gene regulation can alter a structure in one sex. The existence of species whose males lose nipples shows that nipple loss is not impossible across all mammals, including humans. <SourceNote>[Zheng et al. 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12633513/); [Cheng & Houle 2020](https://www.bio.fsu.edu/~dhoule/Publications/Cheng%20and%20Houle%2020.pdf)</SourceNote>
+
+### Weak selection and genetic drift
+
+In a finite population, chance affects which genes reach the next generation. Population genetics uses the following scale to consider weak selection, where *s* is a selection coefficient and *N*<sub>e</sub> is effective population size.
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="The absolute value of effective population size times the selection coefficient is much smaller than one."><mo>|</mo><msub><mi>N</mi><mi>e</mi></msub><mi>s</mi><mo>|</mo><mo>≪</mo><mn>1</mn></math>
+
+In this range, a variant can behave as nearly neutral. The precise factor depends on ploidy and the definition of *s*, so this is not a universal boundary. Kimura's fixation theory addresses processes across generations that involve selection and chance. It does not reveal the actual selection coefficient of male nipples or establish that drift preserved them. <SourceNote>[Kimura 1962](https://www.physics.rutgers.edu/~morozov/677_f2018/Physics_677_2018_files/Kimura_Genetics1962_classic.pdf)</SourceNote>
+
+## Cells exert the forces that shape tissue
+
+During development, gene activity contributes to body shape through cell movement and contraction. A 2021 study of mouse mammary buds reported that cell influx drives early growth, while surrounding actomyosin contraction contributes to inward invagination. Loss of nonmuscle myosin IIA impaired invagination and bud shape. <SourceNote>[Trela et al. 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC8164091/)</SourceNote>
+
+General theories that treat such thin tissues as continuous surfaces balance the distribution of stresses with external forces. Neglecting inertia in the surface theory of Salbreux and Jülicher gives this local force balance. <SourceNote>[Salbreux & Jülicher 2017](https://www.pks.mpg.de/fileadmin/user_upload/MPIPKS/group_pages/BiologicalPhysics/juelicher/publications/2017/MoAS2017.pdf)</SourceNote>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="The surface divergence of stress plus external force is approximately zero."><msub><mo>∇</mo><mi>i</mi></msub><msup><mi mathvariant="bold">t</mi><mi>i</mi></msup><mo>+</mo><msup><mi mathvariant="bold">f</mi><mtext>ext</mtext></msup><mo>≈</mo><mn>0</mn></math>
+
+The first term describes forces associated with surface stress distributions, and the second describes external forces on the surface. The index *i* labels surface coordinates. This is a <strong>general equation of surface mechanics</strong>, rather than a calculation of mammary bud shape or nipple number from this equation alone.
+
+Force balance does not mean tissue must remain still. Cells can actively generate forces while tissue flows against viscous resistance. Understanding developing tissue requires material properties, active contraction, boundary conditions, and time dependence in addition to force equations.
+
+Physics explains how shape arises given particular cells and regulatory conditions. Explaining the difference between male mice and human males also requires developmental and evolutionary accounts of those conditions. Energy minimization or thermodynamic laws alone do not uniquely determine whether male nipples exist.
+
+## Feeling something is different from evolving for it
+
+Male nipples also have present-day bodily roles. A 2006 questionnaire study of 301 sexually experienced university students reported that nipple stimulation caused or increased sexual arousal in 51.7% of its male respondents. The male subsample contained 148 participants. This percentage describes self-reports from that sample and question, rather than measured physiological responses in all men. <SourceNote>[Levin & Meston 2006](https://labs.la.utexas.edu/mestonlab/files/2014/10/2006-Levin-Meston.pdf)</SourceNote>
+
+Milk secretion is not biologically impossible in men. Case reports describe male galactorrhea associated with conditions such as hyperprolactinemia. Pathological secretion, sufficient milk production to nourish an infant under ordinary conditions, and evolution for male lactation are three different claims. <SourceNote>[Yoshiyama et al. 1980](https://www.jstage.jst.go.jp/article/jpnjnephrol1959/22/6/22_6_689/_article/-char/ja/)</SourceNote>
+
+Inferring evolutionary origins directly from current uses skips a necessary step. Both a model emphasizing male sexual benefits and one emphasizing shared development could predict present-day pleasure. Demonstrating pleasure alone may therefore fail to distinguish these accounts. <SourceNote>[Gould 1997](https://pmc.ncbi.nlm.nih.gov/articles/PMC23474/)</SourceNote>
+
+### Reading the problem with Bayes' theorem
+
+Let *H*<sub>A</sub> and *H*<sub>B</sub> denote competing models, and *D* the observed data. Bayes' theorem expresses their posterior odds as follows.
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Posterior odds equal likelihood ratio times prior odds."><mfrac><mrow><mi>P</mi><mo>(</mo><msub><mi>H</mi><mi>A</mi></msub><mo>|</mo><mi>D</mi><mo>)</mo></mrow><mrow><mi>P</mi><mo>(</mo><msub><mi>H</mi><mi>B</mi></msub><mo>|</mo><mi>D</mi><mo>)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>P</mi><mo>(</mo><mi>D</mi><mo>|</mo><msub><mi>H</mi><mi>A</mi></msub><mo>)</mo></mrow><mrow><mi>P</mi><mo>(</mo><mi>D</mi><mo>|</mo><msub><mi>H</mi><mi>B</mi></msub><mo>)</mo></mrow></mfrac><mo>×</mo><mfrac><mrow><mi>P</mi><mo>(</mo><msub><mi>H</mi><mi>A</mi></msub><mo>)</mo></mrow><mrow><mi>P</mi><mo>(</mo><msub><mi>H</mi><mi>B</mi></msub><mo>)</mo></mrow></mfrac></math>
+
+The middle ratio is a likelihood ratio comparing how readily each model predicts the observations. If both models predict the data about equally well, this ratio is near 1 and the observation does little to distinguish them. This equation organizes the reasoning; it is not an analysis that estimates numerical likelihoods or priors for male nipples. Real comparisons must also consider models involving multiple contributing factors.
+
+## Exposure, desire, and cultural rules
+
+Both men and women have nipples, yet norms about displaying them differ. Cultural anthropology asks where these distinctions arise and what meanings they assign to bodies.
+
+Faust's 2017 digital ethnography followed female artists and movements on Instagram and included interviews. It describes rules at the time that restricted nipples perceived as female while making exceptions for breastfeeding and postmastectomy scars. This research concerns a particular platform and cases in the 2010s. Platform rules, image context, and gender classification all contribute to how a body part is treated as sexual. <SourceNote>[Faust 2017](https://www.genderopen.de/bitstreams/2fbfbf5e-72fc-4753-aaaa-392775b0cd52/download)</SourceNote>
+
+The relationship between exposure and desire requires separate investigation. A 2025 study of 80 Dani men compared generations raised when female chest exposure was common with those raised after covering became more widespread, and reported no detected differences in self-reported responses including breast-related arousal. <SourceNote>[Stefanczyk et al. 2025](https://www.stir.ac.uk/research/hub/publication/2109733)</SourceNote>
+
+This comparison does not prove that exposure norms are unrelated to desire. It compares two generations in one region rather than randomly assigning exposure environments. Age, cohort, and other social differences also need consideration. Conversely, the existence of covering norms alone does not establish that they cause sexual desire.
+
+<strong>Failing to detect a difference is different from establishing equivalence.</strong> A report of no statistically clear difference does not prove an exactly zero effect. Assessing practical equivalence requires choosing a negligible-difference margin *δ* and evaluating whether the true difference *Δ* lies within it, including estimation uncertainty. <SourceNote>[Altman & Bland 2004](https://pmc.ncbi.nlm.nih.gov/articles/PMC404543/)</SourceNote>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="The true difference lies between minus delta and delta."><mo>−</mo><mi>δ</mi><mo>&lt;</mo><mi>Δ</mi><mo>&lt;</mo><mi>δ</mi></math>
+
+This inequality states the equivalence question; it is not a reanalysis establishing equivalence in the Dani study.
+
+Regulating exposure, experiencing attraction, and feeling pleasure or discomfort when one's own nipples are touched are different phenomena. Research measuring men's responses to women's breasts cannot directly describe men's experiences of their own nipples.
+
+## Purpose and value are different questions
+
+Asking what something is for can mean asking what it does now or why selection preserved it. Philosophy of biology distinguishes <strong>causal-role function</strong>, which concerns contributions to a system's capacities, from <strong>selected-effect function</strong>, which concerns the history of selection for an effect. <SourceNote>[Cummins 1975](https://mechanism.ucsd.edu/bill/teaching/w10/cummins.functions.1975.pdf); [Stanford Encyclopedia of Philosophy, revised 2026](https://plato.stanford.edu/entries/teleology-biology/)</SourceNote>
+
+For example, explaining a nipple's contribution to sexual arousal describes a current role. Claiming that male nipples evolved for that role requires further historical and selection evidence. Distinguishing developmental mechanisms, conditions of evolutionary retention, and current uses allows several explanations to work together without assigning a single purpose.
+
+Mathematical models also begin by choosing what to explain. The receptor equation addresses binding, the genetic equation trait change, and the mechanical equation local forces. Those variables do not determine cultural norms or the value of someone's experiences.
+
+A small contribution to lactation does not imply that a body part or a person's experience lacks value. Biological sex differences alone likewise cannot justify different exposure rules. Arguments about bodily autonomy and fairness require judgments about what deserves respect.
+
+Male nipples offer an everyday example of why usefulness alone cannot explain either bodily form or the experience of living in a body.
+
+## Read further
+
+- [Why So Much Attention to Male Nipples in Art?](/en/reports/male-nipples-in-art/)
+- [Source notes](/en/reports/why-men-have-nipples/sources/)
+- [Research log](/en/reports/why-men-have-nipples/research/)

@@ -1,0 +1,106 @@
+{
+	"US": {
+		"ja": "アメリカ",
+		"en": "United States"
+	},
+	"GB": {
+		"ja": "イギリス",
+		"en": "United Kingdom"
+	},
+	"JP": {
+		"ja": "日本",
+		"en": "Japan"
+	},
+	"CN": {
+		"ja": "中国",
+		"en": "China"
+	},
+	"TW": {
+		"ja": "台湾",
+		"en": "Taiwan"
+	},
+	"KR": {
+		"ja": "韓国",
+		"en": "South Korea"
+	},
+	"IN": {
+		"ja": "インド",
+		"en": "India"
+	},
+	"ID": {
+		"ja": "インドネシア",
+		"en": "Indonesia"
+	},
+	"FR": {
+		"ja": "フランス",
+		"en": "France"
+	},
+	"DE": {
+		"ja": "ドイツ",
+		"en": "Germany"
+	},
+	"RU": {
+		"ja": "ロシア",
+		"en": "Russia"
+	},
+	"UA": {
+		"ja": "ウクライナ",
+		"en": "Ukraine"
+	},
+	"BY": {
+		"ja": "ベラルーシ",
+		"en": "Belarus"
+	},
+	"IR": {
+		"ja": "イラン",
+		"en": "Iran"
+	},
+	"IL": {
+		"ja": "イスラエル",
+		"en": "Israel"
+	},
+	"PS": {
+		"ja": "パレスチナ",
+		"en": "Palestine"
+	},
+	"SA": {
+		"ja": "サウジアラビア",
+		"en": "Saudi Arabia"
+	},
+	"TR": {
+		"ja": "トルコ",
+		"en": "Türkiye"
+	},
+	"SY": {
+		"ja": "シリア",
+		"en": "Syria"
+	},
+	"BR": {
+		"ja": "ブラジル",
+		"en": "Brazil"
+	},
+	"CA": {
+		"ja": "カナダ",
+		"en": "Canada"
+	},
+	"MX": {
+		"ja": "メキシコ",
+		"en": "Mexico"
+	},
+	"ZA": {
+		"ja": "南アフリカ",
+		"en": "South Africa"
+	},
+	"MA": {
+		"ja": "モロッコ",
+		"en": "Morocco"
+	},
+	"MR": {
+		"ja": "モーリタニア",
+		"en": "Mauritania"
+	},
+	"EH": {
+		"ja": "西サハラ",
+		"en": "Western Sahara"
+	}
+}

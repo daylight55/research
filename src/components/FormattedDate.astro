@@ -1,17 +1,11 @@
 ---
+import { formatArticleDate } from '@/utils/archive'
 export interface Props {
 	date: Date
+	locale?: string
 }
-
-const { date } = Astro.props
+const pathLocale = /^\/(?:en|mix)(?:\/|$)/.test(Astro.url.pathname) ? 'en' : 'ja'
+const { date, locale = pathLocale } = Astro.props
 ---
 
-<time class='text-sm font-bold text-opacity-60' datetime={date.toISOString()}>
-	{
-		date.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric'
-		})
-	}
-</time>
+<time datetime={date.toISOString()}>{formatArticleDate(date, locale)}</time>

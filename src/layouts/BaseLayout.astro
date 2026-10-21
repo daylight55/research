@@ -20,20 +20,18 @@ const htmlLang = locale === 'mix' ? 'en' : locale
 		<ProviderAnimations />
 	</head>
 
-	<body class='bg-[#f8f7f2] text-[#181713] dark:bg-[#11110f] dark:text-[#f4efe4]'>
-		<main
-			class='px-5 sm:mx-auto sm:max-w-2xl sm:px-8 xl:px-0 antialiased md:max-w-[82rem] 2xl:max-w-[90rem] grid gap-12 mt-4 overflow-hidden md:overflow-visible'
+	<body class='text-[#181713] dark:text-[#f4efe4]'>
+		<a class='skip-link' href='#main-content'
+			>{locale === 'ja' ? '本文へスキップ' : 'Skip to content'}</a
 		>
+		<div class='site-shell'>
 			<Header locale={locale} />
-			<slot />
+			<main id='main-content' class='site-main' tabindex='-1'>
+				<slot />
+			</main>
 			<Footer />
-		</main>
+		</div>
 		<FloatingLocaleSwitch locale={locale} />
 		<TwSizeIndicator />
-		<style>
-			body {
-				margin-left: calc(100vw - 100%); /* prevent layout shift */
-			}
-		</style>
 	</body>
 </html>

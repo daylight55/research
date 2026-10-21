@@ -1,32 +1,17 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout'
-import ListCategories from '@/components/ListCategories'
-import ListPosts from '@/components/ListPosts'
-import Pagination from '@/components/Pagination'
-import TitlePage from '@/components/TitlePage'
-import { createArticleListPage, getReportPosts, withBase } from '@/utils'
+import ArticleArchive from '@/components/ArticleArchive'
+import { getReportPosts, withBase } from '@/utils'
 
-const reportPosts = await getReportPosts()
-const page = createArticleListPage(reportPosts, 'reports')
-const posts = page.data
+const locale = 'ja'
+const posts = await getReportPosts(undefined, locale)
 ---
 
-<BaseLayout title='Reports'>
-	<TitlePage title='Reports' />
-	<div class='mb-6 grid gap-2'>
-		<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>
-			調査レポートの一覧です。AI、データ、組織ナレッジ、地政学、金融、技術基盤などの長文レポートをまとめています。
-		</p>
-		<a
-			href={withBase('/reports/rss.xml')}
-			class='w-fit text-sm font-semibold text-gray-900 underline-offset-4 hover:underline dark:text-gray-100'
-		>
-			Reports RSS
-		</a>
-	</div>
-	<div class='mb-6 min-w-0'>
-		<ListCategories />
-	</div>
-	<ListPosts posts={posts} />
-	<Pagination page={page} />
+<BaseLayout title='Reports' locale={locale}>
+	<header class='archive-heading'>
+		<h1>Reports</h1>
+		<p>国・テーマ・掲載時期から、調査レポートを探す。</p>
+		<a href={withBase('/reports/rss.xml')}>Reports RSS <span aria-hidden='true'>↗</span></a>
+	</header>
+	<ArticleArchive posts={posts} locale={locale} section='reports' />
 </BaseLayout>

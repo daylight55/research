@@ -2,24 +2,31 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import test from 'node:test'
 
-test('site shell uses a wider desktop container', () => {
-	const baseLayout = readFileSync('src/layouts/BaseLayout.astro', 'utf8')
-
-	assert.match(baseLayout, /md:max-w-\[82rem\]/)
-	assert.match(baseLayout, /2xl:max-w-\[90rem\]/)
-	assert.match(baseLayout, /xl:px-0/)
-	assert.doesNotMatch(baseLayout, /lg:px-0/)
+test('site shell separates navigation from the main reading landmark', () => {
+	const layout = readFileSync('src/layouts/BaseLayout.astro', 'utf8')
+	const css = readFileSync('src/styles/global.css', 'utf8')
+	assert.match(layout, /href='#main-content'/)
+	assert.match(layout, /<main id='main-content'/)
+	assert.ok(layout.indexOf('<Header') < layout.indexOf('<main'))
+	assert.match(css, /max-width: 86rem/)
+	assert.doesNotMatch(layout, /overflow-hidden/)
 })
 
-test('post layout keeps readable spacing around sidebars on wide screens', () => {
-	const postPage = readFileSync('src/pages/reports/[...slug].astro', 'utf8')
-	const newsPage = readFileSync('src/pages/news/[...slug].astro', 'utf8')
-
-	for (const source of [postPage, newsPage]) {
-		assert.match(source, /lg:grid-cols-\[10rem_minmax\(0,1fr\)_9rem\]/)
-		assert.match(source, /xl:grid-cols-\[12rem_minmax\(0,56rem\)_10rem\]/)
-		assert.match(source, /2xl:grid-cols-\[14rem_minmax\(0,62rem\)_12rem\]/)
+test('article pages reserve a bounded reading column and a separate table of contents', () => {
+	const css = readFileSync('src/styles/global.css', 'utf8')
+	assert.match(css, /minmax\(0, 46rem\) minmax\(0, 14rem\)/)
+	for (const prefix of ['', 'en/', 'mix/']) {
+		for (const section of ['reports', 'news']) {
+			const source = readFileSync(`src/pages/${prefix}${section}/[...slug].astro`, 'utf8')
+			assert.match(source, /class='article-layout'/)
+			assert.match(source, /class='article-content'/)
+			assert.match(source, /class='article-toc'/)
+			assert.match(source, /h1: ArticleBodyTitle/)
+		}
 	}
+	const layout = readFileSync('src/layouts/BlogPost.astro', 'utf8')
+	assert.match(layout, /class='mobile-toc'/)
+	assert.match(layout, /<h1>/)
 })
 
 test('post sidebar keeps the research trail link immediately before share', () => {
@@ -69,19 +76,19 @@ test('English research process route links back to the English article', () => {
 	assert.match(englishResearchPage, /Back to article/)
 })
 
-test('post lists keep cards readable at intermediate viewport widths', () => {
-	const listPosts = readFileSync('src/components/ListPosts.astro', 'utf8')
-
-	assert.match(listPosts, /repeat\(auto-fit,minmax\(min\(100%,17rem\),1fr\)\)/)
-	assert.match(listPosts, /lg:grid-cols-3/)
-	assert.doesNotMatch(listPosts, /md:grid-cols-3/)
+test('post lists use at most two columns without hiding long titles', () => {
+	const card = readFileSync('src/components/PostCard.astro', 'utf8')
+	const css = readFileSync('src/styles/global.css', 'utf8')
+	assert.match(css, /\.post-list\s*\{\s*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\)/)
+	assert.doesNotMatch(card, /line-clamp/)
+	assert.match(card, /<Heading>\s*<a href=\{postUrl\}>/)
 })
 
 test('mobile theme toggle has a visible light-mode fallback', () => {
 	const header = readFileSync('src/components/Header.astro', 'utf8')
 	const toggleTheme = readFileSync('src/components/ToggleTheme.astro', 'utf8')
 
-	assert.match(header, /class='flex shrink-0 items-center gap-2 md:pl-2'/)
+	assert.match(header, /class='header-tools'/)
 	assert.match(toggleTheme, /<theme-toggle class='relative block h-9 w-9 shrink-0'>/)
 	assert.match(toggleTheme, /type='button'/)
 	assert.match(toggleTheme, /aria-pressed='false'/)

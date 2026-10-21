@@ -1,4 +1,5 @@
 ---
+import { getCategoryLabel } from '@/data/categoryLabels'
 import {
 	cn,
 	DEFAULT_LOCALE,
@@ -37,5 +38,11 @@ const isActive =
 			`border-gray-950 bg-gray-950 text-white shadow-md hover:bg-gray-950 hover:text-white dark:border-white dark:bg-white dark:text-gray-950 dark:hover:bg-white dark:hover:text-gray-950`
 	)}
 >
-	{name}
+	{
+		name === 'View All'
+			? locale === 'ja'
+				? 'すべての記事'
+				: 'All articles'
+			: getCategoryLabel(name, locale)
+	}
 </a>

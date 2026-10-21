@@ -2,6 +2,7 @@ import { defineCollection } from 'astro:content'
 import { glob } from 'astro/loaders'
 import { z } from 'astro/zod'
 import { CATEGORIES } from '@/data/categories'
+import { COUNTRY_CODES } from '@/data/countries'
 
 const blog = defineCollection({
 	loader: glob({ base: './articles', pattern: '**/index.{md,mdx}' }),
@@ -19,6 +20,7 @@ const blog = defineCollection({
 			heroImageSourceId: z.string().optional(),
 			contentType: z.enum(['report', 'news']).default('report'),
 			category: z.enum(CATEGORIES),
+			countries: z.array(z.enum(COUNTRY_CODES)).default([]),
 			tags: z.array(z.string()),
 			generation: z
 				.object({

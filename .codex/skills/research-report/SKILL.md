@@ -198,3 +198,13 @@ Before finishing:
 - Unresolved placeholders such as `TBD`, `TODO`, `FIXME`, `未定`, and `要確認` are absent or intentionally explained outside published prose.
 - If public content changed, `pnpm build` generated the expected report/news/category/home pages and the homepage HTML contains the slug, title, and category link.
 - If creating a PR, the PR title and body are Japanese, follow `.github/PULL_REQUEST_TEMPLATE.md`, CI has been checked, conflicts with `main` have been checked, and final output includes verified PR metadata.
+
+
+## Country Article Titles
+
+- 国・地域を主題とする記事は、日英ともに国名・地域名をタイトルの先頭に置く。比喩や論点は国名の後に書く。
+- frontmatter に `countries: ['JP']` のように主題となる国・地域コードを指定する。コードと日英名は `src/data/countries.json` を正本とし、新しい対象はそこへ追加する。
+- 複数国を主題とする場合は、日本語は `ウクライナ・ロシア`、英語は `Ukraine / Russia` のように指定順に並べる。本文で言及するだけの国は追加しない。
+- 国別プロファイルでは `countries` を必須とする。frontmatter と本文のタイトルを同期し、`ja` と `en` の対象コードも揃える。
+- 世界横断のニュースダイジェストは、従来どおり日付で始める。過去記事の見直しで掲載日を現在日に変更しない。単一国の記事と、各国を比較する記事・世界全体の概説を区別する。
+- `pnpm test` のfrontmatter検証は国名の接頭辞とコードを検査する。UI・記事変更はローカルでまとめ、push前に `pnpm ci:pr` を通してCIの再実行を抑える。

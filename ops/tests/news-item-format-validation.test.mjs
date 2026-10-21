@@ -2,7 +2,10 @@ import { strict as assert } from 'node:assert'
 import { execFileSync } from 'node:child_process'
 import { test } from 'node:test'
 
-import { validateNewsItemFormat } from '../scripts/validate-news-item-format.mjs'
+import {
+	hasNewsBodyChanges,
+	validateNewsItemFormat
+} from '../scripts/validate-news-item-format.mjs'
 
 const japaneseSmartBrevityNews = `---
 title: '2026-06-12 テスト'
@@ -123,4 +126,24 @@ test('changed news item format validation succeeds when the changed range has no
 	)
 
 	assert.match(output, /Validated news item format for 0 file\(s\)\./)
+})
+
+test('title-only archive edits preserve legacy bodies while story edits stay validated', () => {
+	const legacy = japaneseSmartBrevityNews.replace(/^要点:.*\n\n/m, '')
+	const titleOnly = legacy.replaceAll('2026-06-12 テスト', '2026-06-12 政策と市場の動き')
+	assert.equal(hasNewsBodyChanges(legacy, titleOnly), false)
+	assert.equal(
+		hasNewsBodyChanges(legacy, legacy.replace('政府は新しい規制案', '政府は別の規制案')),
+		true
+	)
+	assert.equal(
+		hasNewsBodyChanges(legacy, legacy.replace('https://example.com', 'https://other.example')),
+		true
+	)
+	assert.equal(hasNewsBodyChanges(undefined, legacy), true)
+	assert.equal(hasNewsBodyChanges(legacy.replace('draft: false', 'draft: true'), legacy), true)
+	assert.equal(
+		hasNewsBodyChanges(legacy.replace('contentType: news', 'contentType: report'), legacy),
+		true
+	)
 })

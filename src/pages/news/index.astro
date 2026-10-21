@@ -1,38 +1,17 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout'
-import ListPosts from '@/components/ListPosts'
-import Pagination from '@/components/Pagination'
-import TitlePage from '@/components/TitlePage'
-import { createArticleListPage, getNewsPosts, withBase } from '@/utils'
+import ArticleArchive from '@/components/ArticleArchive'
+import { getNewsPosts, withBase } from '@/utils'
 
-const newsPosts = await getNewsPosts()
-const page = createArticleListPage(newsPosts, 'news')
-const posts = page.data
+const locale = 'ja'
+const posts = await getNewsPosts(undefined, locale)
 ---
 
-<BaseLayout title='News'>
-	<TitlePage title='News' />
-	<div class='mb-6 grid gap-2'>
-		<p class='max-w-3xl leading-7 text-gray-700 dark:text-gray-300'>
-			世界・日本の技術トレンド、公式発表、研究動向、脆弱性情報、政策・規制、日本・国際政治情勢の変化を継続的に追うためのニュース記事一覧。
-		</p>
-		<a
-			href={withBase('/news/rss.xml')}
-			class='w-fit text-sm font-semibold text-gray-900 underline-offset-4 hover:underline dark:text-gray-100'
-		>
-			News RSS
-		</a>
-	</div>
-	{
-		posts.length > 0 ? (
-			<>
-				<ListPosts posts={posts} variant='compact' />
-				<Pagination page={page} />
-			</>
-		) : (
-			<p class='rounded-md border border-black/10 bg-white/70 p-5 leading-7 text-gray-700 dark:border-white/10 dark:bg-white/10 dark:text-gray-300'>
-				現在公開中のニュース記事はありません。調査方針や情報源は Reference に移しました。
-			</p>
-		)
-	}
+<BaseLayout title='News' locale={locale}>
+	<header class='archive-heading'>
+		<h1>News</h1>
+		<p>政治・経済・技術の動きを、日付ごとにたどる。</p>
+		<a href={withBase('/news/rss.xml')}>News RSS <span aria-hidden='true'>↗</span></a>
+	</header>
+	<ArticleArchive posts={posts} locale={locale} section='news' />
 </BaseLayout>
